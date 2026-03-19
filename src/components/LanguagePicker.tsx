@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "@/navigation";
 import { Globe, X, Check } from "lucide-react";
 
 type LanguageOption = {
@@ -43,16 +43,7 @@ export function LanguagePicker() {
   function selectLanguage(code: string) {
     setOpen(false);
     startTransition(() => {
-      // Strip current locale prefix and push with new locale
-      const segments = pathname.split("/");
-      // If current locale is in URL, remove it
-      const cleanPath =
-        segments[1] && LANGUAGES.some((l) => l.code === segments[1])
-          ? "/" + segments.slice(2).join("/")
-          : pathname;
-
-      const newPath = code === "en" ? cleanPath || "/" : `/${code}${cleanPath}`;
-      router.push(newPath);
+      router.replace(pathname, { locale: code as "en" | "sq" | "rom" | "ro" | "hu" | "sk" | "cs" | "bg" | "sr" | "hr" | "bs" | "mk" | "sl" | "el" | "tr" });
       router.refresh();
     });
   }

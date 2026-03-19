@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight, ChevronRight, MapPin } from "lucide-react";
 import { Header } from "@/components/Header";
