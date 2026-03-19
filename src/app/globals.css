@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* ─── Sastipe brand palette ─────────────────────────────────────────────────
+   Defined as CSS custom properties so they work with Tailwind v4's @theme.
+   Roma red (brand) anchors the identity; each health zone gets its own hue.
+   ─────────────────────────────────────────────────────────────────────── */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  /* Typography */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Surface (warm neutral) */
+  --color-surface-50:  #faf9f7;
+  --color-surface-100: #f2eeea;
+  --color-surface-200: #e5ddd5;
+  --color-surface-800: #3d342b;
+  --color-surface-900: #261f18;
+
+  /* Brand — Roma red */
+  --color-brand-50:  #fdf2f2;
+  --color-brand-100: #fde8e8;
+  --color-brand-200: #fac9c9;
+  --color-brand-400: #e8706b;
+  --color-brand-500: #d84040;
+  --color-brand-600: #c0392b;
+  --color-brand-700: #922b21;
+  --color-brand-800: #6b2018;
+  --color-brand-900: #4a1510;
+
+  /* Gold — secondary accent */
+  --color-gold-400: #f6c84a;
+  --color-gold-500: #f39c12;
+  --color-gold-600: #d68910;
+
+  /* Health zones */
+  --color-zone-prevention: #16a34a;   /* green  — preventim   */
+  --color-zone-nutrition:  #2563eb;   /* blue   — ushqyerja   */
+  --color-zone-maternal:   #9333ea;   /* purple — nëna        */
+  --color-zone-children:   #ea580c;   /* orange — fëmijët     */
+  --color-zone-chronic:    #dc2626;   /* red    — kronike      */
+  --color-zone-mental:     #0891b2;   /* cyan   — mendore      */
+
+  /* Semantic surface colours */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0d0b09;
+    --foreground: #f0ebe4;
+  }
+}
+
+/* Base reset */
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Ensure full-height layout for flex pages */
+html,
+body {
+  height: 100%;
+}
