@@ -127,7 +127,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
   };
 
   return (
-    <div className="flex h-[calc(100vh-7rem)] flex-col">
+    <div className="flex min-h-[60dvh] flex-1 flex-col">
       {/* Emergency banner */}
       <div className="flex items-center gap-2 rounded-2xl bg-red-50 px-4 py-2.5 text-xs font-semibold text-red-700 border border-red-100">
         <AlertTriangle className="h-4 w-4 flex-shrink-0" />

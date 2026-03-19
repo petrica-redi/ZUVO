@@ -27,10 +27,10 @@ export default async function LearnPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "pillars" });
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#F5F5F7]">
+    <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
       <Header />
-      <main className="flex-1 pb-28 pt-14">
-        <div className="mx-auto max-w-lg px-5 py-8">
+      <main className="flex-1 pb-2">
+        <div className="px-5 py-8">
           <h1 className="mb-6 text-2xl font-bold text-gray-900">{t("title")}</h1>
           <div className="flex flex-col gap-2">
             {PILLARS.map((pillar) => (

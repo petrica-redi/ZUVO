@@ -32,13 +32,13 @@ export function SosButton() {
     return (
       <button
         onClick={() => setOpen(true)}
-        className="fixed right-4 top-16 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-2xl animate-pulse-glow"
+        className="absolute right-3 top-14 z-50 flex h-12 w-12 items-center justify-center rounded-full shadow-lg animate-pulse-glow"
         style={{ background: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)" }}
         aria-label="Emergency SOS — tap for emergency numbers and first aid"
       >
         <div className="flex flex-col items-center">
-          <Phone className="h-5 w-5 text-white" />
-          <span className="text-[8px] font-black text-white tracking-wider">SOS</span>
+          <Phone className="h-4 w-4 text-white" />
+          <span className="text-[7px] font-black text-white tracking-wider">SOS</span>
         </div>
       </button>
     );

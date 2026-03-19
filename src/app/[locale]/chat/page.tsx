@@ -27,12 +27,10 @@ export default async function ChatPage({ params }: Props) {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#F5F5F7]">
+    <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
       <Header />
-      <main className="flex-1 pt-14 pb-20">
-        <div className="mx-auto max-w-lg px-3">
-          <ChatAdvisor labels={labels} locale={locale} />
-        </div>
+      <main className="flex-1 px-3">
+        <ChatAdvisor labels={labels} locale={locale} />
       </main>
       <BottomNav />
     </div>
