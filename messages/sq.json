@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Sastipe — Shëndeti për Komunitetet Rome",
+    "description": "Mjete arsimimi shëndetësor për komunitetet rome. Mëso, ndiq dhe qëndro mirë."
+  },
+  "nav": {
+    "home": "Kreu",
+    "learn": "Mëso",
+    "track": "Ndjek",
+    "mediator": "Ndërmjetës",
+    "profile": "Profili"
+  },
+  "hero": {
+    "tagline": "Shëndeti juaj, gjuha juaj",
+    "title": "Njohuri shëndetësore\npër çdo komunitet",
+    "subtitle": "Edukim falas shëndetësor në gjuhën tuaj, ndërtuar për komunitetet rome nëpër Europë.",
+    "cta": "Fillo të mësosh",
+    "learnMore": "Mëso më shumë"
+  },
+  "pillars": {
+    "title": "Zona shëndetësore",
+    "prevention": "Preventim",
+    "nutrition": "Ushqyerja",
+    "maternal": "Shëndeti i nënës",
+    "children": "Shëndeti i fëmijëve",
+    "chronic": "Sëmundje kronike",
+    "mental": "Shëndeti mendor"
+  },
+  "regions": {
+    "title": "Rajoni juaj",
+    "subtitle": "Shërbime shëndetësore pranë komuniteteve rome",
+    "romania": "Rumani",
+    "bulgaria": "Bullgari",
+    "hungary": "Hungari",
+    "slovakia": "Sllovaki",
+    "czech": "Republika Çeke",
+    "serbia": "Serbi",
+    "northMacedonia": "Maqedonia e V.",
+    "albania": "Shqipëri",
+    "greece": "Greqi",
+    "turkey": "Turqi",
+    "croatia": "Kroaci",
+    "bosnia": "Bosnjë",
+    "kosovo": "Kosovë",
+    "slovenia": "Slloveni"
+  },
+  "language": {
+    "title": "Gjuha",
+    "select": "Zgjidhni gjuhën tuaj",
+    "current": "Gjuha aktuale"
+  },
+  "common": {
+    "loading": "Duke ngarkuar…",
+    "error": "Diçka shkoi keq",
+    "retry": "Provo përsëri",
+    "comingSoon": "Së shpejti",
+    "close": "Mbyll",
+    "back": "Kthehu"
+  }
+}

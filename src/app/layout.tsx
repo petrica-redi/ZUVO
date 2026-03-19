@@ -1,55 +1,19 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { ReactNode } from "react";
+import { getLocale } from "next-intl/server";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { getAppConfig } from "@/lib/env";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const inter = Inter({
+  subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext", "greek"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const { appName, appUrl } = getAppConfig();
-const baseUrl = appUrl ? new URL(appUrl) : new URL("http://localhost:3000");
-
-export const metadata: Metadata = {
-  metadataBase: baseUrl,
-  title: {
-    default: appName,
-    template: `%s | ${appName}`,
-  },
-  description: "Health literacy tools built for Roma communities. Learn, track, and be well.",
-  openGraph: {
-    title: appName,
-    description: "Health literacy tools built for Roma communities.",
-    url: baseUrl.toString(),
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: appName,
-    description: "Health literacy tools built for Roma communities.",
-  },
-  alternates: {
-    canonical: baseUrl.toString(),
-  },
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default async function RootLayout({ children }: { children: ReactNode }) {
+  const locale = await getLocale();
   return (
-    <html
-      lang="sq"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang={locale} className={inter.variable}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }

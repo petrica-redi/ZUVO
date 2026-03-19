@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Sastipe — Roman Toplulukları için Sağlık",
+    "description": "Roman toplulukları için modern sağlık okuryazarlığı araçları. Öğren, takip et ve sağlıklı kal."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "learn": "Öğren",
+    "track": "Takip Et",
+    "mediator": "Arabulucu",
+    "profile": "Profil"
+  },
+  "hero": {
+    "tagline": "Sağlığın, dilin",
+    "title": "Her topluluk için\nsağlık bilgisi",
+    "subtitle": "Avrupa genelinde Roman toplulukları için kendi dilinde ücretsiz sağlık eğitimi.",
+    "cta": "Öğrenmeye başla",
+    "learnMore": "Daha fazla bilgi"
+  },
+  "pillars": {
+    "title": "Sağlık bölgeleri",
+    "prevention": "Önleme",
+    "nutrition": "Beslenme",
+    "maternal": "Anne sağlığı",
+    "children": "Çocuk sağlığı",
+    "chronic": "Kronik hastalıklar",
+    "mental": "Ruh sağlığı"
+  },
+  "regions": {
+    "title": "Bölgeniz",
+    "subtitle": "Roman topluluklarına yakın sağlık hizmetleri",
+    "romania": "Romanya",
+    "bulgaria": "Bulgaristan",
+    "hungary": "Macaristan",
+    "slovakia": "Slovakya",
+    "czech": "Çek Cumhuriyeti",
+    "serbia": "Sırbistan",
+    "northMacedonia": "K. Makedonya",
+    "albania": "Arnavutluk",
+    "greece": "Yunanistan",
+    "turkey": "Türkiye",
+    "croatia": "Hırvatistan",
+    "bosnia": "Bosna",
+    "kosovo": "Kosova",
+    "slovenia": "Slovenya"
+  },
+  "language": {
+    "title": "Dil",
+    "select": "Dilinizi seçin",
+    "current": "Mevcut dil"
+  },
+  "common": {
+    "loading": "Yükleniyor…",
+    "error": "Bir şeyler ters gitti",
+    "retry": "Tekrar dene",
+    "comingSoon": "Yakında",
+    "close": "Kapat",
+    "back": "Geri"
+  }
+}

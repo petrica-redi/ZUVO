@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Sastipe — Zdravlje za romske zajednice",
+    "description": "Moderni alati zdravstvene pismenosti za romske zajednice. Uči, prati i ostani zdrav."
+  },
+  "nav": {
+    "home": "Početna",
+    "learn": "Uči",
+    "track": "Prati",
+    "mediator": "Medijator",
+    "profile": "Profil"
+  },
+  "hero": {
+    "tagline": "Vaše zdravlje, vaš jezik",
+    "title": "Zdravstveno znanje\nza svaku zajednicu",
+    "subtitle": "Besplatno zdravstveno obrazovanje na vašem jeziku, napravljeno za romske zajednice diljem Europe.",
+    "cta": "Počni učiti",
+    "learnMore": "Saznaj više"
+  },
+  "pillars": {
+    "title": "Zdravstvene zone",
+    "prevention": "Prevencija",
+    "nutrition": "Prehrana",
+    "maternal": "Zdravlje majke",
+    "children": "Zdravlje djece",
+    "chronic": "Kronične bolesti",
+    "mental": "Mentalno zdravlje"
+  },
+  "regions": {
+    "title": "Vaša regija",
+    "subtitle": "Zdravstvene usluge blizu romskih zajednica",
+    "romania": "Rumunjska",
+    "bulgaria": "Bugarska",
+    "hungary": "Mađarska",
+    "slovakia": "Slovačka",
+    "czech": "Češka",
+    "serbia": "Srbija",
+    "northMacedonia": "S. Makedonija",
+    "albania": "Albanija",
+    "greece": "Grčka",
+    "turkey": "Turska",
+    "croatia": "Hrvatska",
+    "bosnia": "Bosna",
+    "kosovo": "Kosovo",
+    "slovenia": "Slovenija"
+  },
+  "language": {
+    "title": "Jezik",
+    "select": "Odaberi jezik",
+    "current": "Trenutni jezik"
+  },
+  "common": {
+    "loading": "Učitavanje…",
+    "error": "Nešto je pošlo po zlu",
+    "retry": "Pokušaj ponovo",
+    "comingSoon": "Uskoro",
+    "close": "Zatvori",
+    "back": "Natrag"
+  }
+}

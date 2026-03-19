@@ -1,5 +1,8 @@
 import type { NextConfig } from "next";
 import { withSentryConfig } from "@sentry/nextjs";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
@@ -28,19 +31,13 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withSentryConfig(nextConfig, {
+export default withSentryConfig(withNextIntl(nextConfig), {
   org: process.env.SENTRY_ORG,
   project: process.env.SENTRY_PROJECT,
   authToken: process.env.SENTRY_AUTH_TOKEN,
-  // Route error reports through a tunnel to avoid ad-blocker interference.
   tunnelRoute: "/monitoring",
-  // Upload source maps to Sentry and remove them from the production bundle.
   sourcemaps: {
     deleteSourcemapsAfterUpload: true,
   },
-  // Suppress verbose Sentry CLI output unless running in CI.
   silent: !process.env.CI,
-  // Tree-shake Sentry debug logging from production builds.
-  // `disableLogger` is deprecated; webpack.treeshake is the new API but
-  // not yet supported with Turbopack, so we omit it until stable.
 });

@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Sastipe — Health for Roma Communities",
+    "description": "Modern health literacy tools for Roma communities. Learn, track, and stay well."
+  },
+  "nav": {
+    "home": "Home",
+    "learn": "Learn",
+    "track": "Track",
+    "mediator": "Mediator",
+    "profile": "Profile"
+  },
+  "hero": {
+    "tagline": "Your health, your language",
+    "title": "Health knowledge\nfor every community",
+    "subtitle": "Free health education in your language, built for Roma communities across Europe.",
+    "cta": "Start learning",
+    "learnMore": "Learn more"
+  },
+  "pillars": {
+    "title": "Health zones",
+    "prevention": "Prevention",
+    "nutrition": "Nutrition",
+    "maternal": "Maternal health",
+    "children": "Child health",
+    "chronic": "Chronic disease",
+    "mental": "Mental health"
+  },
+  "regions": {
+    "title": "Your region",
+    "subtitle": "Health services near Roma communities",
+    "romania": "Romania",
+    "bulgaria": "Bulgaria",
+    "hungary": "Hungary",
+    "slovakia": "Slovakia",
+    "czech": "Czech Republic",
+    "serbia": "Serbia",
+    "northMacedonia": "N. Macedonia",
+    "albania": "Albania",
+    "greece": "Greece",
+    "turkey": "Turkey",
+    "croatia": "Croatia",
+    "bosnia": "Bosnia",
+    "kosovo": "Kosovo",
+    "slovenia": "Slovenia"
+  },
+  "language": {
+    "title": "Language",
+    "select": "Select your language",
+    "current": "Current language"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "comingSoon": "Coming soon",
+    "close": "Close",
+    "back": "Back"
+  }
+}

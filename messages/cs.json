@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Sastipe — Zdraví pro romské komunity",
+    "description": "Moderní nástroje zdravotní gramotnosti pro romské komunity. Uč se, sleduj a zůstaň zdravý."
+  },
+  "nav": {
+    "home": "Domov",
+    "learn": "Učit se",
+    "track": "Sledovat",
+    "mediator": "Mediátor",
+    "profile": "Profil"
+  },
+  "hero": {
+    "tagline": "Vaše zdraví, váš jazyk",
+    "title": "Zdravotní znalosti\npro každou komunitu",
+    "subtitle": "Bezplatné zdravotní vzdělávání ve vašem jazyce, vytvořené pro romské komunity v Evropě.",
+    "cta": "Začít se učit",
+    "learnMore": "Zjistit více"
+  },
+  "pillars": {
+    "title": "Zdravotní zóny",
+    "prevention": "Prevence",
+    "nutrition": "Výživa",
+    "maternal": "Zdraví matky",
+    "children": "Zdraví dětí",
+    "chronic": "Chronická onemocnění",
+    "mental": "Duševní zdraví"
+  },
+  "regions": {
+    "title": "Váš region",
+    "subtitle": "Zdravotní služby blízko romských komunit",
+    "romania": "Rumunsko",
+    "bulgaria": "Bulharsko",
+    "hungary": "Maďarsko",
+    "slovakia": "Slovensko",
+    "czech": "Česká republika",
+    "serbia": "Srbsko",
+    "northMacedonia": "S. Makedonie",
+    "albania": "Albánie",
+    "greece": "Řecko",
+    "turkey": "Turecko",
+    "croatia": "Chorvatsko",
+    "bosnia": "Bosna",
+    "kosovo": "Kosovo",
+    "slovenia": "Slovinsko"
+  },
+  "language": {
+    "title": "Jazyk",
+    "select": "Vyberte svůj jazyk",
+    "current": "Aktuální jazyk"
+  },
+  "common": {
+    "loading": "Načítá se…",
+    "error": "Něco se pokazilo",
+    "retry": "Zkusit znovu",
+    "comingSoon": "Brzy",
+    "close": "Zavřít",
+    "back": "Zpět"
+  }
+}

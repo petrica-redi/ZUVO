@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Sastipe — Sastipen sar Romenge",
+    "description": "Sastipen sikhavipe sar Romenge manušenge. Sikh, čhiv thaj ačh sastó."
+  },
+  "nav": {
+    "home": "Kher",
+    "learn": "Sikh",
+    "track": "Čhiv",
+    "mediator": "Posrednici",
+    "profile": "Portret"
+  },
+  "hero": {
+    "tagline": "Tiro sastipen, tiri čhib",
+    "title": "Sastipen džaniben\nsar amenge manušenge",
+    "subtitle": "Bilaćhes sastipen sikhavipe tiri čhiběndar, kerdo vaš Roma žuže Europate.",
+    "cta": "Šuru te sikhaves",
+    "learnMore": "Džan maj but"
+  },
+  "pillars": {
+    "title": "Sastipen zoni",
+    "prevention": "Prevencija",
+    "nutrition": "Xaben",
+    "maternal": "Daj sastipen",
+    "children": "Čhavore sastipen",
+    "chronic": "Lungo nasvalipen",
+    "mental": "Gondolisagos sastipen"
+  },
+  "regions": {
+    "title": "Tiri than",
+    "subtitle": "Sastipen servici paše Romenge",
+    "romania": "Rumunija",
+    "bulgaria": "Bulgarija",
+    "hungary": "Ungrija",
+    "slovakia": "Slovakija",
+    "czech": "Čehija",
+    "serbia": "Serbija",
+    "northMacedonia": "Makedonija",
+    "albania": "Albanija",
+    "greece": "Grečija",
+    "turkey": "Turkija",
+    "croatia": "Hrvatija",
+    "bosnia": "Bosnija",
+    "kosovo": "Kosovo",
+    "slovenia": "Slovenija"
+  },
+  "language": {
+    "title": "Čhib",
+    "select": "Čhun tiri čhib",
+    "current": "Akana čhib"
+  },
+  "common": {
+    "loading": "Ačhel…",
+    "error": "Khonik nasul kerdo",
+    "retry": "Phirav aver drom",
+    "comingSoon": "Avela",
+    "close": "Band",
+    "back": "Pale"
+  }
+}

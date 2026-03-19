@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Sastipe — Sănătate pentru Comunități Rome",
+    "description": "Instrumente moderne de educație sanitară pentru comunitățile rome. Învață, monitorizează și rămâi sănătos."
+  },
+  "nav": {
+    "home": "Acasă",
+    "learn": "Învață",
+    "track": "Urmărire",
+    "mediator": "Mediator",
+    "profile": "Profil"
+  },
+  "hero": {
+    "tagline": "Sănătatea ta, limba ta",
+    "title": "Cunoaștere medicală\npentru fiecare comunitate",
+    "subtitle": "Educație medicală gratuită în limba ta, creată pentru comunitățile rome din Europa.",
+    "cta": "Începe să înveți",
+    "learnMore": "Află mai mult"
+  },
+  "pillars": {
+    "title": "Zone de sănătate",
+    "prevention": "Prevenție",
+    "nutrition": "Nutriție",
+    "maternal": "Sănătatea mamei",
+    "children": "Sănătatea copilului",
+    "chronic": "Boli cronice",
+    "mental": "Sănătate mintală"
+  },
+  "regions": {
+    "title": "Regiunea ta",
+    "subtitle": "Servicii medicale lângă comunitățile rome",
+    "romania": "România",
+    "bulgaria": "Bulgaria",
+    "hungary": "Ungaria",
+    "slovakia": "Slovacia",
+    "czech": "Republica Cehă",
+    "serbia": "Serbia",
+    "northMacedonia": "Macedonia de N.",
+    "albania": "Albania",
+    "greece": "Grecia",
+    "turkey": "Turcia",
+    "croatia": "Croația",
+    "bosnia": "Bosnia",
+    "kosovo": "Kosovo",
+    "slovenia": "Slovenia"
+  },
+  "language": {
+    "title": "Limbă",
+    "select": "Selectează limba ta",
+    "current": "Limba curentă"
+  },
+  "common": {
+    "loading": "Se încarcă…",
+    "error": "Ceva a mers greșit",
+    "retry": "Încearcă din nou",
+    "comingSoon": "În curând",
+    "close": "Închide",
+    "back": "Înapoi"
+  }
+}

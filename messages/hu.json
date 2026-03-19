@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Sastipe — Egészség a Roma Közösségeknek",
+    "description": "Modern egészségügyi oktatási eszközök roma közösségek számára. Tanulj, kövesd és maradj egészséges."
+  },
+  "nav": {
+    "home": "Főoldal",
+    "learn": "Tanulás",
+    "track": "Követés",
+    "mediator": "Mediátor",
+    "profile": "Profil"
+  },
+  "hero": {
+    "tagline": "Az egészséged, a nyelved",
+    "title": "Egészségügyi tudás\nminden közösség számára",
+    "subtitle": "Ingyenes egészségügyi oktatás a te nyelvedén, európai roma közösségek számára építve.",
+    "cta": "Kezdj el tanulni",
+    "learnMore": "Tudj meg többet"
+  },
+  "pillars": {
+    "title": "Egészségügyi területek",
+    "prevention": "Megelőzés",
+    "nutrition": "Táplálkozás",
+    "maternal": "Anyai egészség",
+    "children": "Gyermekegészség",
+    "chronic": "Krónikus betegségek",
+    "mental": "Mentális egészség"
+  },
+  "regions": {
+    "title": "A te régiód",
+    "subtitle": "Egészségügyi szolgáltatások roma közösségek közelében",
+    "romania": "Románia",
+    "bulgaria": "Bulgária",
+    "hungary": "Magyarország",
+    "slovakia": "Szlovákia",
+    "czech": "Csehország",
+    "serbia": "Szerbia",
+    "northMacedonia": "É. Macedónia",
+    "albania": "Albánia",
+    "greece": "Görögország",
+    "turkey": "Törökország",
+    "croatia": "Horvátország",
+    "bosnia": "Bosznia",
+    "kosovo": "Koszovó",
+    "slovenia": "Szlovénia"
+  },
+  "language": {
+    "title": "Nyelv",
+    "select": "Válassz nyelvet",
+    "current": "Jelenlegi nyelv"
+  },
+  "common": {
+    "loading": "Betöltés…",
+    "error": "Valami hiba történt",
+    "retry": "Próbáld újra",
+    "comingSoon": "Hamarosan",
+    "close": "Bezárás",
+    "back": "Vissza"
+  }
+}
