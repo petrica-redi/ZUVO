@@ -71,7 +71,7 @@ export default async function HomePage({ params }: Props) {
       <Header />
       <SosButton />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* ── Hero ──────────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden bg-white px-5 pb-5 pt-6">
           <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full opacity-[0.08] blur-3xl" style={{ background: "radial-gradient(circle, #C0392B 0%, #F39C12 60%, transparent 80%)" }} />

@@ -29,7 +29,7 @@ export default async function LearnPage({ params }: Props) {
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
       <Header />
-      <main className="flex-1 pb-2">
+      <main id="main-content" className="flex-1 pb-2">
         <div className="px-5 py-8">
           <h1 className="mb-6 text-2xl font-bold text-gray-900">{t("title")}</h1>
           <div className="flex flex-col gap-2">

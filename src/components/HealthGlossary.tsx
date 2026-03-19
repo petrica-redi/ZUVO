@@ -35,7 +35,7 @@ export function HealthGlossary() {
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search terms..."
+          aria-label="Search medical terms" placeholder="Search terms..."
           className="flex-1 bg-transparent text-[14px] focus:outline-none"
         />
         {search && (

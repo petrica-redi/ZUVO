@@ -47,7 +47,7 @@ export default async function MediatorPage({ params }: Props) {
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
       <Header />
-      <main className="flex-1 pb-2">
+      <main id="main-content" className="flex-1 pb-2">
         <div className="px-5 py-6">
           <MediatorDashboard labels={labels} />
         </div>

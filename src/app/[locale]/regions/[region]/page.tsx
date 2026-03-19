@@ -59,7 +59,7 @@ export default async function RegionPage({ params }: Props) {
     <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
       <Header />
       <SosButton />
-      <main className="flex-1 pb-2">
+      <main id="main-content" className="flex-1 pb-2">
         <div className="px-4 py-4">
           <Link href="/" className="mb-4 inline-flex items-center gap-1 text-[13px] font-semibold text-gray-500">
             <ChevronLeft className="h-4 w-4" /> Back

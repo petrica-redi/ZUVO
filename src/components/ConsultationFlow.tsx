@@ -163,6 +163,7 @@ export function ConsultationFlow({ locale }: { locale: string }) {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); startConsultation(input.trim()); } }}
               placeholder="I have a headache since yesterday..."
+              aria-label="Describe your health concern"
               className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
             />
             <button
@@ -224,7 +225,7 @@ export function ConsultationFlow({ locale }: { locale: string }) {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); sendMessage(); } }}
-              placeholder="Type your answer..."
+              aria-label="Your answer" placeholder="Type your answer..."
               className="flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
               disabled={loading}
             />

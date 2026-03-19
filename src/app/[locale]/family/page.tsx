@@ -16,7 +16,7 @@ export default function FamilyPage() {
     <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
       <Header />
       <SosButton />
-      <main className="flex-1 pb-2">
+      <main id="main-content" className="flex-1 pb-2">
         <div className="px-5 py-6">
           <FamilyHub />
         </div>

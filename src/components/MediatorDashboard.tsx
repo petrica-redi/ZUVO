@@ -154,12 +154,14 @@ export function MediatorDashboard({ labels }: { labels: Labels }) {
             placeholder={labels.memberName}
             value={visitName}
             onChange={(e) => setVisitName(e.target.value)}
+            aria-label="Community member name"
             className="mb-3 w-full rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm focus:border-[#C0392B] focus:outline-none"
           />
           <textarea
             placeholder={labels.notes}
             value={visitNotes}
             onChange={(e) => setVisitNotes(e.target.value)}
+            aria-label="Visit notes"
             rows={3}
             className="mb-3 w-full rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm focus:border-[#C0392B] focus:outline-none"
           />

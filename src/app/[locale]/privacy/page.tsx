@@ -40,7 +40,7 @@ export default function PrivacyPage() {
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
       <Header />
-      <main className="flex-1 pb-2">
+      <main id="main-content" className="flex-1 pb-2">
         <div className="px-5 py-6">
           <div className="mb-6 text-center animate-fade-in-up">
             <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-gray-700 to-gray-900 shadow-xl">

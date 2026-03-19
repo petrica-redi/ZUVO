@@ -118,7 +118,7 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
           value={claim}
           onChange={(e) => { setClaim(e.target.value); setResult(null); }}
           onKeyDown={handleKeyDown}
-          placeholder={labels.placeholder}
+          aria-label="Paste health claim to fact-check" placeholder={labels.placeholder}
           rows={3}
           className="w-full resize-none rounded-xl border-none bg-transparent px-4 py-3 text-sm focus:outline-none"
         />

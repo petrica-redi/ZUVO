@@ -237,9 +237,9 @@ export function BodyMap({ locale }: { locale: string }) {
 
         <div className="mb-4">
           <input
-            value={extraInfo}
             onChange={(e) => setExtraInfo(e.target.value)}
             placeholder="Anything else? (how long, how bad...)"
+            aria-label="Additional symptom details"
             className="w-full rounded-2xl border-2 border-gray-100 bg-white px-5 py-4 text-sm shadow-sm focus:border-[#C0392B] focus:outline-none focus:ring-2 focus:ring-[#C0392B]/20"
           />
         </div>

@@ -93,6 +93,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           onChange={(e) => { setInput(e.target.value); setResult(null); }}
           onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); handleExplain(); } }}
           placeholder={"Type your diagnosis, medication name, or paste your prescription...\n\nExample: \"Hipertensiune\" or \"Metformin 500mg\""}
+          aria-label="Enter your diagnosis or medication name"
           rows={3}
           className="w-full resize-none rounded-xl border-none bg-transparent px-4 py-3 text-sm focus:outline-none"
         />

@@ -20,7 +20,7 @@ export default async function ExplainPage({ params }: Props) {
     <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
       <Header />
       <SosButton />
-      <main className="flex-1 pb-2">
+      <main id="main-content" className="flex-1 pb-2">
         <div className="px-5 py-6">
           {/* Disclaimer */}
           <div className="mb-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-700 animate-fade-in">

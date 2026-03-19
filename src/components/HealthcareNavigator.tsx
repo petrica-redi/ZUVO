@@ -130,6 +130,7 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
           value={issueDetail}
           onChange={(e) => setIssueDetail(e.target.value)}
           placeholder="Describe what's happening... How long has it been? How bad is it?"
+          aria-label="Describe your health issue"
           rows={4}
           className="mb-4 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20"
         />

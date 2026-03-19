@@ -169,7 +169,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
             value={qaQuestion}
             onChange={(e) => setQaQuestion(e.target.value)}
             onKeyDown={(e) => { if (e.key === "Enter") askQuestion(); }}
-            placeholder="Type your vaccine question..."
+            aria-label="Ask a vaccine question" placeholder="Type your vaccine question..."
             className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20"
           />
           <button
@@ -227,7 +227,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
         </p>
         <div className="flex gap-2">
           <select
-            value={childAge}
+            aria-label="Select child age" value={childAge}
             onChange={(e) => setChildAge(e.target.value)}
             className="flex-1 rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm focus:outline-none"
           >

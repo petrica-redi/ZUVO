@@ -238,13 +238,14 @@ export function FamilyHub() {
                 type="number"
                 value={logValue}
                 onChange={(e) => setLogValue(Number(e.target.value))}
+                aria-label="Log value"
                 className="mb-3 w-full rounded-lg border border-gray-200 px-3 py-2 text-center text-lg font-bold focus:outline-none"
               />
             )}
             <input
               value={logNote}
               onChange={(e) => setLogNote(e.target.value)}
-              placeholder="Add a note (optional)"
+              aria-label="Add a note" placeholder="Add a note (optional)"
               className="mb-3 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none"
             />
             <button
@@ -339,12 +340,13 @@ export function FamilyHub() {
             <input
               value={formName}
               onChange={(e) => setFormName(e.target.value)}
-              placeholder="Name"
+              aria-label="Family member name" placeholder="Name"
               className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:border-pink-500 focus:outline-none"
             />
             <select
               value={formRelationship}
               onChange={(e) => setFormRelationship(e.target.value as FamilyMember["relationship"])}
+              aria-label="Relationship"
               className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none"
             >
               <option value="self">Me</option>
@@ -358,12 +360,13 @@ export function FamilyHub() {
                 type="number"
                 value={formAge}
                 onChange={(e) => setFormAge(e.target.value)}
-                placeholder="Age"
+                aria-label="Age" placeholder="Age"
                 className="flex-1 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none"
               />
               <select
                 value={formGender}
                 onChange={(e) => setFormGender(e.target.value as FamilyMember["gender"])}
+                aria-label="Gender"
                 className="flex-1 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none"
               >
                 <option value="female">Female</option>
