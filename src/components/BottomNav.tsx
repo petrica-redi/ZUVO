@@ -1,28 +1,25 @@
 "use client";
 
 import { Link, usePathname } from "@/navigation";
-import { useTranslations } from "next-intl";
-import { Home, BookOpen, MessageCircle, Activity, User } from "lucide-react";
+import { Home, Search, MessageCircle, Users, MoreHorizontal } from "lucide-react";
 
 const TABS = [
-  { key: "home",    href: "/",       Icon: Home,          labelKey: "home" },
-  { key: "learn",   href: "/learn",  Icon: BookOpen,      labelKey: "learn" },
-  { key: "chat",    href: "/chat",   Icon: MessageCircle, labelKey: "ask",    isPrimary: true },
-  { key: "track",   href: "/track",  Icon: Activity,      labelKey: "track" },
-  { key: "profile", href: "/profile", Icon: User,          labelKey: "profile" },
+  { key: "home", href: "/", Icon: Home, label: "Home" },
+  { key: "scan", href: "/scan", Icon: Search, label: "Scan" },
+  { key: "chat", href: "/chat", Icon: MessageCircle, label: "Ask", isPrimary: true },
+  { key: "family", href: "/track", Icon: Users, label: "Family" },
+  { key: "more", href: "/learn", Icon: MoreHorizontal, label: "More" },
 ] as const;
 
 export function BottomNav() {
   const pathname = usePathname();
-  const t = useTranslations("nav");
-
   const cleanPath = pathname.replace(/^\/[a-z]{2,3}(?=\/|$)/, "") || "/";
 
   return (
     <nav className="fixed inset-x-0 bottom-0 z-40">
-      <div className="border-t border-black/[0.06] bg-white/90 pb-safe-bottom backdrop-blur-xl">
+      <div className="border-t border-black/[0.04] bg-white/95 pb-safe-bottom backdrop-blur-2xl">
         <div className="mx-auto flex max-w-lg items-center">
-          {TABS.map(({ key, href, Icon, labelKey, ...rest }) => {
+          {TABS.map(({ key, href, Icon, label, ...rest }) => {
             const isPrimary = "isPrimary" in rest && rest.isPrimary;
             const isActive = cleanPath === href || (href !== "/" && cleanPath.startsWith(href));
 
@@ -31,18 +28,15 @@ export function BottomNav() {
                 <Link
                   key={key}
                   href={href}
-                  className="flex flex-1 flex-col items-center gap-0.5 py-2"
+                  className="flex flex-1 flex-col items-center gap-0.5 py-1.5"
                 >
                   <div
-                    className={`flex h-11 w-11 items-center justify-center rounded-full shadow-md transition-all active:scale-90 ${
-                      isActive ? "bg-[#C0392B]" : "bg-[#C0392B]"
-                    }`}
+                    className="flex h-12 w-12 items-center justify-center rounded-full shadow-lg transition-transform active:scale-90"
+                    style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" }}
                   >
-                    <Icon className="h-5 w-5 text-white stroke-[2.2]" />
+                    <Icon className="h-5 w-5 text-white stroke-[2.5]" />
                   </div>
-                  <span className="text-[10px] font-semibold text-[#C0392B]">
-                    {labelKey === "ask" ? "Ask" : t(labelKey as Parameters<typeof t>[0])}
-                  </span>
+                  <span className="text-[10px] font-bold text-[#C0392B]">{label}</span>
                 </Link>
               );
             }
@@ -56,9 +50,9 @@ export function BottomNav() {
                 }`}
               >
                 <Icon
-                  className={`h-6 w-6 transition-all ${isActive ? "stroke-[2.2]" : "stroke-[1.5]"}`}
+                  className={`h-[22px] w-[22px] transition-all ${isActive ? "stroke-[2.2]" : "stroke-[1.5]"}`}
                 />
-                <span>{t(labelKey as Parameters<typeof t>[0])}</span>
+                <span>{label}</span>
               </Link>
             );
           })}
