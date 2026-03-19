@@ -74,14 +74,14 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
   return (
     <div>
       {/* Header */}
-      <div className="mb-6 text-center">
-        <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-lg">
-          <FileText className="h-7 w-7 text-white" />
+      <div className="mb-6 text-center animate-fade-in-up">
+        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl shadow-blue-500/25">
+          <FileText className="h-10 w-10 text-white" />
         </div>
-        <h1 className="text-xl font-bold text-gray-900">
+        <h1 className="text-2xl font-black text-gray-900">
           Understand Your Prescription
         </h1>
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-2 text-sm text-gray-500">
           Type your diagnosis or medication name. We explain it in simple words.
         </p>
       </div>
@@ -133,9 +133,12 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
 
       {/* Loading state */}
       {loading && (
-        <div className="flex flex-col items-center gap-3 py-12">
-          <div className="h-12 w-12 animate-spin rounded-full border-4 border-blue-100 border-t-blue-500" />
-          <p className="text-sm text-gray-500">Reading your prescription...</p>
+        <div className="flex flex-col items-center gap-4 py-16 animate-fade-in">
+          <div className="h-16 w-16 animate-spin rounded-full border-4 border-blue-100 border-t-blue-500" />
+          <p className="text-sm font-semibold text-gray-500">Reading your prescription...</p>
+          <div className="mx-auto h-2 w-48 overflow-hidden rounded-full bg-gray-100">
+            <div className="h-full w-full animate-shimmer rounded-full" />
+          </div>
         </div>
       )}
 

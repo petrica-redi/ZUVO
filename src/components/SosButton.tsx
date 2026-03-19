@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, X, Heart, Shield, Flame, Pill, MapPin } from "lucide-react";
+import { Phone, X, Heart, Shield, Flame, Pill, MapPin, AlertTriangle } from "lucide-react";
 
 const EMERGENCY_NUMBERS: Record<string, { ambulance: string; police: string; fire: string; domestic: string; poison: string }> = {
   albania:   { ambulance: "127", police: "129", fire: "128", domestic: "116 117", poison: "127" },
@@ -26,109 +26,103 @@ export function SosButton() {
   const [open, setOpen] = useState(false);
   const [showFirstAid, setShowFirstAid] = useState<string | null>(null);
 
-  const numbers = EMERGENCY_NUMBERS.default; // TODO: detect from locale/GPS
+  const numbers = EMERGENCY_NUMBERS.default;
 
   if (!open) {
     return (
       <button
         onClick={() => setOpen(true)}
-        className="fixed right-4 top-16 z-50 flex h-12 w-12 items-center justify-center rounded-full shadow-lg animate-pulse"
+        className="fixed right-4 top-16 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-2xl animate-pulse-glow"
         style={{ background: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)" }}
-        aria-label="Emergency SOS"
+        aria-label="Emergency SOS — tap for emergency numbers and first aid"
       >
-        <Phone className="h-5 w-5 text-white" />
+        <div className="flex flex-col items-center">
+          <Phone className="h-5 w-5 text-white" />
+          <span className="text-[8px] font-black text-white tracking-wider">SOS</span>
+        </div>
       </button>
     );
   }
 
   return (
-    <div className="fixed inset-0 z-[100] flex flex-col bg-black/95 text-white">
-      {/* Close */}
-      <div className="flex items-center justify-between p-4">
-        <span className="text-lg font-bold">🆘 Emergency</span>
-        <button onClick={() => { setOpen(false); setShowFirstAid(null); }} className="rounded-full bg-white/10 p-2">
+    <div className="fixed inset-0 z-[100] flex flex-col bg-black/95 text-white animate-fade-in" role="dialog" aria-label="Emergency information">
+      <div className="flex items-center justify-between p-5">
+        <div className="flex items-center gap-3">
+          <AlertTriangle className="h-7 w-7 text-red-400" />
+          <span className="text-xl font-black tracking-tight">Emergency</span>
+        </div>
+        <button
+          onClick={() => { setOpen(false); setShowFirstAid(null); }}
+          className="rounded-full bg-white/10 p-3 transition-colors hover:bg-white/20"
+          aria-label="Close emergency panel"
+        >
           <X className="h-5 w-5" />
         </button>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 pb-8">
-        {/* Primary: Call 112 */}
+      <div className="flex-1 overflow-y-auto px-5 pb-10">
         <a
           href="tel:112"
-          className="mb-6 flex items-center justify-center gap-3 rounded-2xl p-6 text-xl font-bold shadow-lg"
+          className="mb-6 flex items-center justify-center gap-4 rounded-3xl p-7 text-2xl font-black shadow-2xl transition-transform active:scale-95"
           style={{ background: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)" }}
         >
-          <Phone className="h-7 w-7" />
-          Call 112 — European Emergency
+          <Phone className="h-8 w-8" />
+          Call 112
         </a>
 
-        {/* Country numbers */}
-        <div className="mb-6 grid grid-cols-2 gap-2">
-          <a href={`tel:${numbers.ambulance}`} className="flex items-center gap-2 rounded-xl bg-white/10 p-3 active:bg-white/20">
-            <Heart className="h-5 w-5 text-red-400" />
-            <div>
-              <div className="text-xs text-gray-400">Ambulance</div>
-              <div className="text-lg font-bold">{numbers.ambulance}</div>
-            </div>
-          </a>
-          <a href={`tel:${numbers.police}`} className="flex items-center gap-2 rounded-xl bg-white/10 p-3 active:bg-white/20">
-            <Shield className="h-5 w-5 text-blue-400" />
-            <div>
-              <div className="text-xs text-gray-400">Police</div>
-              <div className="text-lg font-bold">{numbers.police}</div>
-            </div>
-          </a>
-          <a href={`tel:${numbers.domestic}`} className="flex items-center gap-2 rounded-xl bg-white/10 p-3 active:bg-white/20">
-            <Phone className="h-5 w-5 text-purple-400" />
-            <div>
-              <div className="text-xs text-gray-400">Domestic violence</div>
-              <div className="text-sm font-bold">{numbers.domestic}</div>
-            </div>
-          </a>
-          <a href={`tel:${numbers.poison}`} className="flex items-center gap-2 rounded-xl bg-white/10 p-3 active:bg-white/20">
-            <Pill className="h-5 w-5 text-green-400" />
-            <div>
-              <div className="text-xs text-gray-400">Poison center</div>
-              <div className="text-sm font-bold">{numbers.poison}</div>
-            </div>
-          </a>
+        <div className="mb-6 grid grid-cols-2 gap-3">
+          {[
+            { icon: Heart, label: "Ambulance", number: numbers.ambulance, color: "text-red-400" },
+            { icon: Shield, label: "Police", number: numbers.police, color: "text-blue-400" },
+            { icon: Phone, label: "Domestic violence", number: numbers.domestic, color: "text-purple-400" },
+            { icon: Pill, label: "Poison center", number: numbers.poison, color: "text-green-400" },
+          ].map((item) => (
+            <a
+              key={item.label}
+              href={`tel:${item.number.replace(/\s/g, "")}`}
+              className="flex items-center gap-3 rounded-2xl bg-white/10 p-4 transition-colors active:bg-white/20"
+            >
+              <item.icon className={`h-6 w-6 ${item.color}`} />
+              <div>
+                <div className="text-xs text-gray-400">{item.label}</div>
+                <div className="text-lg font-bold">{item.number}</div>
+              </div>
+            </a>
+          ))}
         </div>
 
-        {/* Nearest hospital */}
         <a
           href="https://www.google.com/maps/search/hospital+near+me"
           target="_blank"
           rel="noopener"
-          className="mb-6 flex items-center gap-3 rounded-xl bg-white/10 p-4 active:bg-white/20"
+          className="mb-8 flex items-center gap-4 rounded-2xl bg-white/10 p-5 transition-colors active:bg-white/20"
         >
-          <MapPin className="h-5 w-5 text-amber-400" />
+          <MapPin className="h-6 w-6 text-amber-400" />
           <div>
-            <div className="font-semibold">Find nearest hospital</div>
-            <div className="text-xs text-gray-400">Opens map with directions</div>
+            <div className="text-base font-bold">Find nearest hospital</div>
+            <div className="text-sm text-gray-400">Opens map with directions</div>
           </div>
         </a>
 
-        {/* First aid cards */}
-        <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400">First Aid</h3>
-        <div className="grid grid-cols-3 gap-2">
+        <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-gray-400">First Aid</h3>
+        <div className="grid grid-cols-3 gap-3">
           {FIRST_AID.map((fa) => (
             <button
               key={fa.id}
               onClick={() => setShowFirstAid(showFirstAid === fa.id ? null : fa.id)}
-              className={`flex flex-col items-center gap-1 rounded-xl p-3 transition-all ${
-                showFirstAid === fa.id ? "bg-red-900/50 ring-1 ring-red-500" : "bg-white/10"
+              className={`flex flex-col items-center gap-2 rounded-2xl p-4 transition-all ${
+                showFirstAid === fa.id ? "bg-red-900/50 ring-2 ring-red-500 scale-105" : "bg-white/10"
               }`}
             >
-              <span className="text-2xl">{fa.emoji}</span>
-              <span className="text-[10px] font-medium">{fa.label}</span>
+              <span className="text-3xl">{fa.emoji}</span>
+              <span className="text-xs font-semibold">{fa.label}</span>
             </button>
           ))}
         </div>
 
-        {/* First aid detail */}
         {showFirstAid && (
-          <div className="mt-3 rounded-xl bg-red-900/30 p-4 ring-1 ring-red-800">
-            <p className="text-sm font-semibold leading-relaxed">
+          <div className="mt-4 rounded-2xl bg-red-900/40 p-5 ring-1 ring-red-700 animate-scale-in">
+            <p className="text-base font-bold leading-relaxed">
               {FIRST_AID.find((f) => f.id === showFirstAid)?.steps}
             </p>
           </div>

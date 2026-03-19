@@ -16,9 +16,9 @@ export function BottomNav() {
   const cleanPath = pathname.replace(/^\/[a-z]{2,3}(?=\/|$)/, "") || "/";
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-40">
-      <div className="border-t border-black/[0.04] bg-white/95 pb-safe-bottom backdrop-blur-2xl">
-        <div className="mx-auto flex max-w-lg items-center">
+    <nav className="fixed inset-x-0 bottom-0 z-40" role="navigation" aria-label="Main navigation">
+      <div className="border-t border-black/[0.04] bg-white/90 pb-safe-bottom backdrop-blur-2xl">
+        <div className="mx-auto flex max-w-lg items-center justify-around px-2">
           {TABS.map(({ key, href, Icon, label, ...rest }) => {
             const isPrimary = "isPrimary" in rest && rest.isPrimary;
             const isActive = cleanPath === href || (href !== "/" && cleanPath.startsWith(href));
@@ -28,13 +28,14 @@ export function BottomNav() {
                 <Link
                   key={key}
                   href={href}
-                  className="flex flex-1 flex-col items-center gap-0.5 py-1.5"
+                  aria-label={label}
+                  className="flex flex-col items-center gap-0.5 py-1"
                 >
                   <div
-                    className="flex h-12 w-12 items-center justify-center rounded-full shadow-lg transition-transform active:scale-90"
-                    style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" }}
+                    className="flex h-14 w-14 items-center justify-center rounded-full shadow-xl transition-transform active:scale-90 animate-pulse-glow"
+                    style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 50%, #F39C12 100%)" }}
                   >
-                    <Icon className="h-5 w-5 text-white stroke-[2.5]" />
+                    <Icon className="h-6 w-6 text-white stroke-[2.5]" />
                   </div>
                   <span className="text-[10px] font-bold text-[#C0392B]">{label}</span>
                 </Link>
@@ -45,12 +46,13 @@ export function BottomNav() {
               <Link
                 key={key}
                 href={href}
-                className={`flex flex-1 flex-col items-center gap-0.5 py-3 text-[10px] font-medium transition-colors ${
+                aria-label={label}
+                className={`flex flex-col items-center gap-0.5 px-3 py-2.5 text-[10px] font-semibold transition-all ${
                   isActive ? "text-[#C0392B]" : "text-gray-400"
                 }`}
               >
                 <Icon
-                  className={`h-[22px] w-[22px] transition-all ${isActive ? "stroke-[2.2]" : "stroke-[1.5]"}`}
+                  className={`h-6 w-6 transition-all ${isActive ? "stroke-[2.2]" : "stroke-[1.5]"}`}
                 />
                 <span>{label}</span>
               </Link>

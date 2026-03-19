@@ -104,12 +104,12 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
   return (
     <div>
       {/* Header */}
-      <div className="mb-6 text-center">
-        <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-red-500 shadow-lg">
-          <Search className="h-7 w-7 text-white" />
+      <div className="mb-6 text-center animate-fade-in-up">
+        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-amber-400 to-red-500 shadow-xl shadow-amber-500/25">
+          <Search className="h-10 w-10 text-white" />
         </div>
-        <h1 className="text-xl font-bold text-gray-900">{labels.title}</h1>
-        <p className="mt-1 text-sm text-gray-500">{labels.subtitle}</p>
+        <h1 className="text-2xl font-black text-gray-900">{labels.title}</h1>
+        <p className="mt-2 text-sm text-gray-500">{labels.subtitle}</p>
       </div>
 
       {/* Input area */}
@@ -148,14 +148,14 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
 
       {/* Result card */}
       {result && (
-        <div className={`mb-6 overflow-hidden rounded-2xl border ${VERDICT_STYLES[result.verdict].border} ${VERDICT_STYLES[result.verdict].bg} shadow-sm`}>
+        <div className={`mb-6 overflow-hidden rounded-3xl border-2 ${VERDICT_STYLES[result.verdict].border} ${VERDICT_STYLES[result.verdict].bg} shadow-lg animate-scale-in`}>
           {/* Verdict badge */}
-          <div className={`flex items-center gap-2 bg-gradient-to-r ${VERDICT_STYLES[result.verdict].gradient} px-4 py-3`}>
+          <div className={`flex items-center gap-3 bg-gradient-to-r ${VERDICT_STYLES[result.verdict].gradient} px-5 py-4`}>
             {(() => {
               const Icon = VERDICT_STYLES[result.verdict].icon;
-              return <Icon className="h-5 w-5 text-white" />;
+              return <Icon className="h-6 w-6 text-white" />;
             })()}
-            <span className="text-sm font-bold uppercase tracking-wider text-white">
+            <span className="text-base font-black uppercase tracking-wider text-white">
               {result.verdict === "verified" ? labels.verdictVerified :
                result.verdict === "misleading" ? labels.verdictMisleading :
                labels.verdictFalse}

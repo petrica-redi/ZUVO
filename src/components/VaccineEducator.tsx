@@ -210,12 +210,12 @@ export function VaccineEducator({ locale }: { locale: string }) {
   // Main schedule view
   return (
     <div>
-      <div className="mb-6 text-center">
-        <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 shadow-lg">
-          <Syringe className="h-7 w-7 text-white" />
+      <div className="mb-6 text-center animate-fade-in-up">
+        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-green-500 to-emerald-600 shadow-xl shadow-emerald-500/25">
+          <Syringe className="h-10 w-10 text-white" />
         </div>
-        <h1 className="text-xl font-bold text-gray-900">Vaccine Guide</h1>
-        <p className="mt-1 text-sm text-gray-500">
+        <h1 className="text-2xl font-black text-gray-900">Vaccine Guide</h1>
+        <p className="mt-2 text-sm text-gray-500">
           Every vaccine explained simply. Tap any vaccine to learn more.
         </p>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Send, AlertTriangle, Mic, MicOff } from "lucide-react";
+import { Send, AlertTriangle, MessageCircle } from "lucide-react";
 
 type Message = {
   id: string;
@@ -32,7 +32,6 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [messages]);
 
-  // Auto-resize textarea
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.style.height = "auto";
@@ -57,7 +56,6 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
     setMessages((prev) => [...prev, userMsg]);
     setIsLoading(true);
 
-    // Build message history for API
     const apiMessages = [...messages, userMsg].map((m) => ({
       role: m.role,
       content: m.content,
@@ -81,7 +79,6 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
 
       setMessages((prev) => [...prev, assistantMsg]);
 
-      // Read streaming response
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
 
@@ -98,9 +95,9 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
           for (const line of lines) {
             if (line.startsWith("data: ") && line !== "data: [DONE]") {
               try {
-                const { text } = JSON.parse(line.slice(6));
-                if (text) {
-                  assistantMsg.content += text;
+                const { text: t } = JSON.parse(line.slice(6));
+                if (t) {
+                  assistantMsg.content += t;
                   setMessages((prev) => {
                     const updated = [...prev];
                     updated[updated.length - 1] = { ...assistantMsg };
@@ -108,7 +105,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
                   });
                 }
               } catch {
-                // skip
+                /* skip */
               }
             }
           }
@@ -132,33 +129,35 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
   return (
     <div className="flex h-[calc(100vh-7rem)] flex-col">
       {/* Emergency banner */}
-      <div className="flex items-center gap-2 rounded-xl bg-red-50 px-4 py-2 text-xs text-red-700">
-        <AlertTriangle className="h-3.5 w-3.5 flex-shrink-0" />
+      <div className="flex items-center gap-2 rounded-2xl bg-red-50 px-4 py-2.5 text-xs font-semibold text-red-700 border border-red-100">
+        <AlertTriangle className="h-4 w-4 flex-shrink-0" />
         <span>
           {labels.emergencyCall}{" "}
-          <a href="tel:112" className="font-bold underline">
-            112
-          </a>
+          <a href="tel:112" className="font-black underline">112</a>
         </span>
       </div>
 
       {/* Messages area */}
       <div ref={scrollRef} className="flex-1 overflow-y-auto px-1 py-4">
         {messages.length === 0 && (
-          <div className="flex flex-col items-center px-4 py-8 text-center">
-            <div className="mb-4 text-4xl">🤝</div>
-            <p className="mb-6 text-sm text-gray-500">{labels.disclaimer}</p>
+          <div className="flex flex-col items-center px-4 py-6 text-center animate-fade-in-up">
+            <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-3xl shadow-xl shadow-red-500/20"
+              style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 50%, #F39C12 100%)" }}
+            >
+              <MessageCircle className="h-10 w-10 text-white" />
+            </div>
+            <h2 className="mb-2 text-xl font-black text-gray-900">Ask me anything</h2>
+            <p className="mb-6 max-w-xs text-sm text-gray-500">{labels.disclaimer}</p>
 
-            {/* Suggested questions */}
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+            <p className="mb-3 text-xs font-black uppercase tracking-widest text-gray-400">
               {labels.suggestedQuestions}
             </p>
-            <div className="flex flex-col gap-2 w-full">
+            <div className="flex flex-col gap-2.5 w-full">
               {labels.suggestions.map((q, i) => (
                 <button
                   key={i}
                   onClick={() => sendMessage(q)}
-                  className="rounded-2xl border border-gray-200 bg-white px-4 py-3 text-left text-sm text-gray-700 shadow-sm transition-all hover:shadow-md active:scale-[0.98]"
+                  className={`card-hover rounded-2xl border-2 border-gray-100 bg-white px-5 py-4 text-left text-sm font-medium text-gray-700 shadow-sm animate-fade-in-up delay-${(i + 1) * 100}`}
                 >
                   {q}
                 </button>
@@ -170,14 +169,15 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
         {messages.map((msg) => (
           <div
             key={msg.id}
-            className={`mb-3 flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+            className={`mb-3 flex ${msg.role === "user" ? "justify-end" : "justify-start"} animate-fade-in`}
           >
             <div
-              className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+              className={`max-w-[85%] rounded-3xl px-5 py-3.5 text-sm leading-relaxed ${
                 msg.role === "user"
-                  ? "bg-[#C0392B] text-white rounded-br-md"
-                  : "bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-md"
+                  ? "rounded-br-lg text-white shadow-lg shadow-red-500/20"
+                  : "bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-lg"
               }`}
+              style={msg.role === "user" ? { background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" } : undefined}
             >
               {msg.role === "assistant" && msg.content === "" && isLoading ? (
                 <div className="flex items-center gap-2 text-gray-400">
@@ -186,7 +186,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
                     <span className="inline-block h-2 w-2 animate-bounce rounded-full bg-gray-300" style={{ animationDelay: "150ms" }} />
                     <span className="inline-block h-2 w-2 animate-bounce rounded-full bg-gray-300" style={{ animationDelay: "300ms" }} />
                   </div>
-                  <span className="text-xs">{labels.thinking}</span>
+                  <span className="text-xs font-semibold">{labels.thinking}</span>
                 </div>
               ) : (
                 <div className="whitespace-pre-wrap">{msg.content}</div>
@@ -196,14 +196,14 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
         ))}
 
         {error && (
-          <div className="mx-4 mb-3 rounded-xl bg-red-50 p-3 text-center text-sm text-red-600">
+          <div className="mx-4 mb-3 rounded-2xl bg-red-50 p-4 text-center text-sm font-semibold text-red-600 border border-red-100 animate-scale-in">
             {error}
           </div>
         )}
       </div>
 
       {/* Input area */}
-      <div className="border-t border-gray-100 bg-white p-3">
+      <div className="border-t border-gray-100 bg-white/90 backdrop-blur-xl p-3">
         <div className="flex items-end gap-2">
           <textarea
             ref={inputRef}
@@ -212,15 +212,18 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
             onKeyDown={handleKeyDown}
             placeholder={labels.placeholder}
             rows={1}
-            className="flex-1 resize-none rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-[#C0392B] focus:outline-none focus:ring-2 focus:ring-[#C0392B]/20"
+            className="flex-1 resize-none rounded-2xl border-2 border-gray-100 bg-gray-50 px-5 py-3.5 text-sm focus:border-[#C0392B] focus:outline-none focus:ring-2 focus:ring-[#C0392B]/20"
             disabled={isLoading}
+            aria-label="Type your health question"
           />
           <button
             onClick={() => sendMessage()}
             disabled={!input.trim() || isLoading}
-            className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#C0392B] text-white shadow-md transition-all active:scale-95 disabled:bg-gray-300"
+            className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full text-white shadow-lg transition-all active:scale-90 disabled:bg-gray-300"
+            style={{ background: !input.trim() || isLoading ? undefined : "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" }}
+            aria-label="Send message"
           >
-            <Send className="h-4 w-4" />
+            <Send className="h-5 w-5" />
           </button>
         </div>
       </div>

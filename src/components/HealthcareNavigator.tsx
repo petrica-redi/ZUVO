@@ -82,12 +82,12 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
   if (step === 1) {
     return (
       <div>
-        <div className="mb-6 text-center">
-          <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg">
-            <Navigation className="h-7 w-7 text-white" />
+        <div className="mb-6 text-center animate-fade-in-up">
+          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-xl shadow-cyan-500/25">
+            <Navigation className="h-10 w-10 text-white" />
           </div>
-          <h1 className="text-xl font-bold text-gray-900">I need to see a doctor</h1>
-          <p className="mt-1 text-sm text-gray-500">
+          <h1 className="text-2xl font-black text-gray-900">I need to see a doctor</h1>
+          <p className="mt-2 text-sm text-gray-500">
             We&apos;ll help you prepare — what to bring, what to say, your rights.
           </p>
         </div>
@@ -95,17 +95,17 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
           What&apos;s the issue?
         </p>
-        <div className="grid grid-cols-2 gap-2">
-          {ISSUE_TYPES.map((issue) => (
+        <div className="grid grid-cols-2 gap-3">
+          {ISSUE_TYPES.map((issue, i) => (
             <button
               key={issue.id}
               onClick={() => { setIssueType(issue.label); setStep(2); }}
-              className="flex items-center gap-3 rounded-xl border border-gray-100 bg-white p-3 text-left shadow-sm transition-all active:scale-[0.98]"
+              className={`card-hover flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm animate-fade-in-up delay-${(i + 1) * 100}`}
             >
-              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl" style={{ backgroundColor: issue.color + "15" }}>
-                <issue.icon className="h-5 w-5" style={{ color: issue.color }} />
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl shadow-sm" style={{ backgroundColor: issue.color + "15" }}>
+                <issue.icon className="h-6 w-6" style={{ color: issue.color }} />
               </div>
-              <span className="text-xs font-semibold text-gray-700">{issue.label}</span>
+              <span className="text-sm font-bold text-gray-700">{issue.label}</span>
             </button>
           ))}
         </div>

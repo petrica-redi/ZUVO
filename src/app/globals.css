@@ -1,14 +1,8 @@
 @import "tailwindcss";
 
-/* ─── Sastipe Design System ─────────────────────────────────────────────────
-   Tailwind v4 inline @theme — all tokens become utility classes automatically.
-   ─────────────────────────────────────────────────────────────────────────── */
-
 @theme inline {
-  /* ── Typography ───────────────────────────────────────────────────────── */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
 
-  /* ── Brand — Roma red ─────────────────────────────────────────────────── */
   --color-brand-50:  #fdf2f2;
   --color-brand-100: #fde8e8;
   --color-brand-200: #fac9c9;
@@ -19,12 +13,10 @@
   --color-brand-800: #922b21;
   --color-brand-900: #6b2018;
 
-  /* ── Gold — secondary accent ──────────────────────────────────────────── */
   --color-gold-400: #f6c84a;
   --color-gold-500: #f39c12;
   --color-gold-600: #d68910;
 
-  /* ── Apple-style system surfaces ─────────────────────────────────────── */
   --color-system-bg:           #ffffff;
   --color-system-bg-secondary: #f5f5f7;
   --color-system-bg-tertiary:  #ebebeb;
@@ -34,7 +26,6 @@
   --color-system-tertiary:     #aeaeb2;
   --color-system-separator:    rgba(60,60,67,0.18);
 
-  /* ── Health zone colours ──────────────────────────────────────────────── */
   --color-zone-prevention: #16a34a;
   --color-zone-nutrition:  #2563eb;
   --color-zone-maternal:   #9333ea;
@@ -43,7 +34,6 @@
   --color-zone-mental:     #0891b2;
 }
 
-/* ─── Base resets ────────────────────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -62,12 +52,10 @@ body {
   color: #1d1d1f;
 }
 
-/* ─── Safe-area helpers for iOS bottom bar ───────────────────────────────── */
 .pb-safe-bottom {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-/* ─── Scrollbar hide utility ─────────────────────────────────────────────── */
 .scrollbar-none {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -76,8 +64,93 @@ body {
   display: none;
 }
 
-/* ─── Smooth tap highlight removal on mobile ─────────────────────────────── */
 a,
 button {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* ─── Animations ──────────────────────────────────────────────────────────── */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.4); }
+  50%      { box-shadow: 0 0 0 12px rgba(192, 57, 43, 0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.35s ease-out both;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+
+/* ─── Premium card hover ──────────────────────────────────────────────────── */
+.card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px -8px rgba(0,0,0,0.12);
+}
+.card-hover:active {
+  transform: scale(0.97);
 }

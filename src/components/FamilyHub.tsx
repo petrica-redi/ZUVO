@@ -287,12 +287,12 @@ export function FamilyHub() {
   // Family list view
   return (
     <div>
-      <div className="mb-6 text-center">
-        <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 shadow-lg">
-          <Heart className="h-7 w-7 text-white" />
+      <div className="mb-6 text-center animate-fade-in-up">
+        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-pink-500 to-rose-600 shadow-xl shadow-pink-500/25">
+          <Heart className="h-10 w-10 text-white" />
         </div>
-        <h1 className="text-xl font-bold text-gray-900">Family Health</h1>
-        <p className="mt-1 text-sm text-gray-500">
+        <h1 className="text-2xl font-black text-gray-900">Family Health</h1>
+        <p className="mt-2 text-sm text-gray-500">
           Track health for your whole family. All data stays on your phone.
         </p>
       </div>
@@ -399,10 +399,10 @@ export function FamilyHub() {
       )}
 
       {members.length === 0 && (
-        <div className="mt-6 rounded-2xl bg-white p-6 text-center shadow-sm">
-          <span className="text-4xl">👨‍👩‍👧‍👦</span>
-          <h3 className="mt-3 text-sm font-bold text-gray-800">Your family health hub</h3>
-          <p className="mt-1 text-xs text-gray-500">
+        <div className="mt-6 rounded-3xl bg-white p-8 text-center shadow-sm animate-fade-in-up delay-200">
+          <span className="text-6xl">👨‍👩‍👧‍👦</span>
+          <h3 className="mt-4 text-base font-black text-gray-800">Your family health hub</h3>
+          <p className="mt-2 text-sm text-gray-500">
             Add family members to track their health, vaccinations, and medications.
             Everything stays on your phone — no account needed.
           </p>
