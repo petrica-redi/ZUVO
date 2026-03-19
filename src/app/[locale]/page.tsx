@@ -100,17 +100,17 @@ export default async function HomePage({ params }: Props) {
               {t("subtitle")}
             </p>
 
-            {/* CTAs */}
+            {/* CTAs — chat is primary */}
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/learn"
-                className="inline-flex h-12 items-center gap-2 rounded-full bg-[#C0392B] px-6 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#A93226] active:scale-95"
+                href="/chat"
+                className="inline-flex h-12 items-center gap-2 rounded-full bg-[#C0392B] px-6 text-sm font-semibold text-white shadow-lg transition-all hover:bg-[#A93226] active:scale-95"
               >
                 {t("cta")}
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/about"
+                href="/learn"
                 className="inline-flex h-12 items-center gap-1 rounded-full border border-gray-200 bg-white px-5 text-sm font-semibold text-gray-700 shadow-sm transition-all hover:border-gray-300 active:scale-95"
               >
                 {t("learnMore")}

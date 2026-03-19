@@ -12,10 +12,24 @@
   },
   "hero": {
     "tagline": "Your health, your language",
-    "title": "Health knowledge\nfor every community",
-    "subtitle": "Free health education in your language, built for Roma communities across Europe.",
-    "cta": "Start learning",
-    "learnMore": "Learn more"
+    "title": "Ask anything\nabout your health",
+    "subtitle": "A trusted health advisor who speaks your language, knows your community, and gives you the truth — not misinformation.",
+    "cta": "Ask a question",
+    "learnMore": "Browse topics"
+  },
+  "chat": {
+    "placeholder": "Ask me anything about health...",
+    "thinking": "Thinking...",
+    "errorMessage": "Could not connect. Check your internet and try again.",
+    "disclaimer": "I am a health advisor, not a doctor. For emergencies, always call 112.",
+    "emergencyCall": "Emergency? Call",
+    "suggestedQuestions": "People often ask",
+    "q1": "My mother-in-law says vaccines cause autism. Is that true?",
+    "q2": "My child has had a fever for 2 days. What should I do?",
+    "q3": "Someone on Facebook says diabetes medicine is poison and you should use herbs instead",
+    "q4": "I am pregnant and afraid to go to the hospital. What are my rights?",
+    "q5": "I feel sad all the time and I cannot sleep. Is this normal?",
+    "q6": "How do I register with a doctor if I do not have documents?"
   },
   "pillars": {
     "title": "Health zones",
