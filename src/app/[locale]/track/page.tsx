@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { Activity } from "lucide-react";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
+import { DailyCheckin } from "@/components/DailyCheckin";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -14,18 +14,37 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function TrackPage({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "common" });
+  const t = await getTranslations({ locale, namespace: "track" });
+
+  const labels = {
+    title: t("title"),
+    subtitle: t("subtitle"),
+    moodTitle: t("moodTitle"),
+    moodGreat: t("moodGreat"),
+    moodGood: t("moodGood"),
+    moodOkay: t("moodOkay"),
+    moodLow: t("moodLow"),
+    moodBad: t("moodBad"),
+    waterTitle: t("waterTitle"),
+    waterSubtitle: t("waterSubtitle"),
+    waterGoal: t("waterGoal"),
+    activityTitle: t("activityTitle"),
+    activityWalk: t("activityWalk"),
+    activityExercise: t("activityExercise"),
+    activityRest: t("activityRest"),
+    saveCheckin: t("saveCheckin"),
+    savedSuccess: t("savedSuccess"),
+    streakDays: t("streakDays"),
+    loggedToday: t("loggedToday"),
+    noLogsYet: t("noLogsYet"),
+  };
 
   return (
     <div className="flex min-h-screen flex-col bg-[#F5F5F7]">
       <Header />
-      <main className="flex flex-1 flex-col items-center justify-center pb-28 pt-14">
-        <div className="flex flex-col items-center gap-4 px-5 text-center">
-          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-100">
-            <Activity className="h-10 w-10 text-gray-400" />
-          </div>
-          <h1 className="text-xl font-bold text-gray-900">Track your health</h1>
-          <p className="max-w-xs text-gray-500">{t("comingSoon")}</p>
+      <main className="flex-1 pb-28 pt-14">
+        <div className="mx-auto max-w-lg px-5 py-6">
+          <DailyCheckin labels={labels} />
         </div>
       </main>
       <BottomNav />

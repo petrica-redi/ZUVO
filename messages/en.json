@@ -55,6 +55,328 @@
     "retry": "Try again",
     "comingSoon": "Coming soon",
     "close": "Close",
-    "back": "Back"
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "startLesson": "Start lesson",
+    "markComplete": "Mark as complete",
+    "completed": "Completed",
+    "didYouKnow": "Did you know?",
+    "actionStep": "Your action step",
+    "keyTips": "Key tips",
+    "minutes": "min",
+    "viewAll": "View all",
+    "noData": "No data yet",
+    "today": "Today",
+    "week": "This week"
+  },
+  "learn": {
+    "progressLabel": "modules completed",
+    "startHere": "Start here",
+    "continueLabel": "Continue",
+    "allModules": "All modules",
+    "prevention": {
+      "description": "In 15 years working in Roma settlements, I have seen families devastated by illnesses that simple habits could have prevented. This knowledge is not luxury — it is survival.",
+      "handwashing": {
+        "title": "Handwashing",
+        "description": "I have seen entire families in settlements fall sick from the same stomach infection, passed hand to hand. Proper handwashing is the single cheapest, most powerful medicine you already have access to — it costs nothing and prevents the illnesses I see most often in our communities.",
+        "tip1": "Before you touch food, before you feed a child, and after every toilet visit — wash. I have seen one unwashed hand cause a week of diarrhea for a whole household",
+        "tip2": "Count to 20 slowly, or hum a verse of a song. Most people wash for 5 seconds — that removes almost nothing. The friction between your hands is what kills germs",
+        "tip3": "No soap? I have worked in settlements with no running water. Ash works. Sand works. Water alone with scrubbing works better than nothing. Do not let the perfect prevent the good",
+        "tip4": "Air-dry your hands or use a clean cloth you change daily. A dirty towel shared by everyone re-contaminates clean hands — something I explain in every home visit",
+        "fact": "In communities I have worked with, handwashing campaigns cut child diarrhea cases by nearly half within three months. The WHO confirms: handwashing reduces diarrhea by 40% and respiratory infections by up to 21%.",
+        "action": "Tonight, stand with your children at the water source and wash hands together. Make it a family habit before every meal. Children who learn by watching their parents will carry this for life."
+      },
+      "vaccination": {
+        "title": "Vaccination",
+        "description": "I have accompanied Roma mothers to health centers where they were turned away because they lacked documents, could not speak the language, or were simply told to come back later. Vaccines are your children's legal right — free, safe, and the most powerful protection a parent can give. No one can deny you this.",
+        "tip1": "Every country in Europe provides a free vaccination schedule from birth. This is not charity — it is your child's legal entitlement. If a health worker refuses, ask for their supervisor and state this clearly",
+        "tip2": "The vaccination card is the most important document your child has after their birth certificate. Keep it safe, carry it to every doctor visit. If lost, any health center must issue a replacement — do not accept refusal",
+        "tip3": "Mild fever, a sore spot on the arm, fussiness for a day — this is normal and means the vaccine is working. I have reassured hundreds of worried mothers about this. It passes in 24–48 hours",
+        "tip4": "You do not need an appointment at most public health centers for vaccinations. Walk in. If a Roma health mediator works in your area, ask them to accompany you — this is what we are trained for",
+        "fact": "In one settlement I worked in, measles hit because vaccination coverage had dropped to 60%. Three children were hospitalized. After a community vaccination campaign, we reached 94% — and the outbreaks stopped. Across Europe, vaccines prevent 2–3 million deaths every year.",
+        "action": "Take out your child's vaccination card right now. Check it against the schedule on the wall of your health center. If any vaccine is missing or you have no card, visit the health center this week. Bring this app to show the schedule if it helps."
+      },
+      "cleanWater": {
+        "title": "Clean Water",
+        "description": "I have worked in settlements where families share a single water point that runs for two hours a day, and in neighborhoods where the tap water looks clear but carries bacteria that cause chronic stomach problems in children. Water quality is not always visible — and in Roma communities, it is rarely monitored by authorities. You must be your family's water inspector.",
+        "tip1": "Cover every container where you store water. I have seen flies, dust, and even animal waste contaminate uncovered buckets within hours, especially in warm weather. A simple plate over the top prevents most contamination",
+        "tip2": "If you are unsure about your water, boil it at a rolling boil for one full minute. This kills 99.9% of bacteria, viruses, and parasites. It costs almost nothing and it works — I have taught this in dozens of settlements where the water source was questionable",
+        "tip3": "Wash your water containers with soap and clean water at least once a week. A dirty container makes clean water dirty. This is one of the most overlooked causes of recurring diarrhea that I have seen in children",
+        "tip4": "Streams, ponds, and standing puddles are never safe for drinking — even if the water looks clear. Parasites invisible to the eye cause chronic damage to children's guts and development",
+        "fact": "In many Roma settlements across Central and Eastern Europe, families lack access to safe piped water. The European Roma Rights Centre has documented that Roma neighborhoods are systematically underserved by water infrastructure. Boiling water is not ideal — it is a survival strategy until your right to clean water is fulfilled.",
+        "action": "Today, check every container where your family stores drinking water. Cover any that are open. If you cannot verify the water source is safe, begin boiling all drinking and cooking water starting tonight."
+      },
+      "firstAid": {
+        "title": "Basic First Aid",
+        "description": "In remote settlements and urban neighborhoods where ambulances take longer to arrive — or sometimes do not come at all — knowing what to do in the first minutes of an emergency is the difference between life and death. I have trained hundreds of Roma community members in basic first aid, and I have seen this knowledge save lives before any doctor arrived.",
+        "tip1": "112 works from any phone in Europe — even without credit, even without a SIM card, even from a locked phone. Teach every member of your family, including children over 7, to dial 112 and say where they are. Practice this. In an emergency, panic makes people forget",
+        "tip2": "For heavy bleeding: press firmly with the cleanest cloth you have — a shirt, a headscarf, anything — and do not lift it to check. Keep pressing until help arrives. I have seen people bleed dangerously because they kept removing the cloth to look. Add more cloth on top if blood soaks through",
+        "tip3": "Burns: immediately place the burn under cool running water for at least 10 minutes. Never apply butter, oil, toothpaste, or egg white — traditional remedies I have encountered in many families that actually trap the heat and cause worse damage and infection",
+        "tip4": "If someone collapses and is not breathing: call 112, then push hard and fast in the center of their chest — 100 times per minute (the tempo of the song 'Stayin' Alive'). Do not stop until help arrives. Imperfect CPR is infinitely better than no CPR",
+        "fact": "Studies show that in communities where basic first aid training is widespread, survival from cardiac arrest doubles. In many Roma communities, ambulance response times are significantly longer than in non-Roma areas — making bystander first aid even more critical.",
+        "action": "Right now, ask each family member: do you know how to call 112? Do you know our home address well enough to tell the dispatcher? Write your full address on a piece of paper and put it near the phone. Teach your children today."
+      }
+    },
+    "nutrition": {
+      "description": "In my years working with Roma families, I have learned that food is never just about nutrition — it is about what you can afford, what is available in your neighborhood, and what your family knows. I will not tell you to buy quinoa. I will tell you how to feed your family well with what you have.",
+      "balancedDiet": {
+        "title": "Eating Well on Any Budget",
+        "description": "The biggest nutrition problem I see in Roma communities is not lack of food — it is too much cheap bread, processed meat, and sugary drinks, and too few vegetables, eggs, and legumes. This is not about willpower. It is about what is available and affordable. But small shifts make enormous differences to your health and your children's development.",
+        "tip1": "Beans, lentils, and chickpeas are the cheapest protein in any market — cheaper than meat, longer lasting, and they prevent diabetes and heart disease. A pot of bean stew feeds a family for less than a pack of processed sausages and is far more nutritious",
+        "tip2": "Eggs are the most complete cheap food that exists. Two eggs per day per child provides nearly everything a growing brain needs. In every settlement I work in, I recommend eggs as the first priority food for children",
+        "tip3": "Seasonal vegetables from the local market or your garden cost a fraction of supermarket prices. Cabbage, onions, carrots, potatoes, peppers — these are the foundation of a healthy diet and they are in every Roma kitchen tradition",
+        "tip4": "Sugary drinks (cola, juice, energy drinks) are the single most damaging item I see in Roma family diets. One bottle of cola has 10 teaspoons of sugar. Replace with water or weak tea and you remove the biggest driver of obesity and tooth decay I see in children",
+        "fact": "In the Roma communities I have worked with across Romania and Bulgaria, I have seen diabetes rates drop measurably when families replace daily white bread and processed meat with beans, eggs, and vegetables — even without changing how much they eat. The body responds to quality, not just quantity.",
+        "action": "This week, replace one meal of bread and processed meat with a pot of bean or lentil stew with onions and peppers. Cook enough for two days. It is cheaper, fills you up longer, and begins to shift your family's health trajectory."
+      },
+      "childNutrition": {
+        "title": "Feeding Children for a Strong Start",
+        "description": "The first 1,000 days — from pregnancy to age 2 — shape a child's entire future: their brain, their immune system, their ability to learn. I have watched malnourished children in settlements fall behind their peers not because of genetics but because of what they ate in those critical early months. What you feed your child now is the most powerful investment you can make in their life.",
+        "tip1": "Breast milk alone for 6 months is the gold standard — it is free, always available, perfectly nutritious, and protects against infections better than any medicine. I have worked with mothers who thought formula was 'modern' and better. It is not. Breast milk is the technology evolution perfected",
+        "tip2": "At 6 months, start soft foods alongside breastfeeding: mashed potato, carrot, banana, cooked egg yolk. Introduce one new food every 3 days to watch for reactions. Many mothers I work with start solids too late (8–9 months) — this delays development",
+        "tip3": "Children under 2 should never have sugar, honey, salt, cola, chips, or sweets. I know grandparents sometimes give tea with sugar to calm a baby — please stop. Sugar at this age programs a lifelong craving and damages teeth before they even fully emerge",
+        "tip4": "An egg a day for a child over 6 months old is the simplest nutrition upgrade that exists. A study in Ecuador showed eggs reduced stunting by 47%. I cite this in every community talk because it is achievable for almost every family",
+        "fact": "In communities where I have run nutrition programs, children who received an egg and a serving of vegetables daily for 6 months showed measurable improvements in growth and cognitive development compared to children who did not. Malnutrition is not about poverty alone — it is about knowing what to prioritize with the resources you have.",
+        "action": "Starting tomorrow, give your child over 6 months one egg per day (mashed or scrambled). If your child is under 6 months and you are breastfeeding, eat an extra egg yourself — the nutrients pass through your milk."
+      },
+      "foodSafety": {
+        "title": "Keeping Food Safe",
+        "description": "Food poisoning is one of the most common reasons Roma families visit emergency rooms — vomiting, diarrhea, dehydration, especially in children. In settlements where refrigeration is unreliable and kitchens are shared or outdoor, food safety is not a textbook topic — it is a daily survival skill.",
+        "tip1": "In warm weather, cooked food left out for more than 2 hours becomes dangerous. If you cannot refrigerate it, cook smaller portions that you finish in one meal. I have seen entire families hospitalized from reheated stew left out overnight in summer",
+        "tip2": "Raw chicken and meat must never touch bread, vegetables, or anything that will be eaten uncooked. Use separate cutting surfaces — even a clean plastic bag laid flat works. This cross-contamination is the number one cause of food poisoning I encounter",
+        "tip3": "If food smells wrong, looks wrong, or feels slimy — throw it away. Do not taste it to check. I know throwing food away is painful when money is tight, but one bout of food poisoning costs more in medicine and lost work than the food was worth",
+        "tip4": "Wash all fruits and vegetables under running water before eating, even if you plan to peel them. Dirt on the outside transfers to the inside when you cut. This is especially important for market produce that may have been handled by many people",
+        "fact": "The WHO estimates that 600 million people fall ill from contaminated food every year, with children under 5 bearing 40% of the burden. In communities where I have taught food safety, hospital visits for gastroenteritis dropped significantly within the first summer.",
+        "action": "Check your kitchen right now: is any raw meat stored above or touching ready-to-eat food? Is there cooked food that has been sitting out for more than 2 hours? Fix these two things today — they are the most common dangers I see in home visits."
+      }
+    },
+    "maternal": {
+      "description": "I have accompanied Roma women to hospitals where they were put in separate rooms, spoken to disrespectfully, or refused epidurals that other women received. I have also seen women die from complications that a single prenatal visit would have caught. Your body, your baby, your rights. Know all three.",
+      "prenatalCare": {
+        "title": "Prenatal Care",
+        "description": "In 15 years of mediation work, the pattern I see repeatedly is Roma women visiting a doctor for the first time when they are already 6 or 7 months pregnant — often because they feel fine, because they fear the hospital, or because no one explained that prenatal care is free and their right. By that point, dangerous conditions like pre-eclampsia or gestational diabetes may have been silently developing for months.",
+        "tip1": "Go to your GP or midwife the moment you miss your period and suspect pregnancy. The first trimester is when folic acid prevents brain and spine defects in your baby. Waiting costs you the most critical window. If you do not have a GP, your health mediator can help you register — this is a core part of what we do",
+        "tip2": "Folic acid 400mcg daily should start when you are trying to get pregnant, or as soon as you learn you are. It is free or very cheap at any pharmacy. I carry packets with me on home visits because this simple pill prevents devastating birth defects",
+        "tip3": "Iron-rich foods prevent the anemia I see in nearly half the pregnant Roma women I work with: beans, lentils, dark leafy greens, liver, red meat. Anemia makes you exhausted, makes delivery more dangerous, and affects your baby's brain development",
+        "tip4": "You have the right to receive prenatal care in your language, to be treated with dignity, and to have someone accompany you to appointments. If a doctor is dismissive or disrespectful, you can file a complaint and request another provider. Document the name, date, and what was said. I help families do this regularly",
+        "fact": "Roma women in Europe are 3 to 5 times more likely to experience pregnancy complications than the general population, largely because they access prenatal care later or not at all. In communities where I have worked to connect pregnant women to care in the first trimester, complication rates dropped dramatically.",
+        "action": "If you are pregnant or know a pregnant woman in your community who has not yet seen a doctor, make that appointment today. If she is afraid or unsure how, go with her or connect her with the local health mediator. That one visit can change everything."
+      },
+      "safeDelivery": {
+        "title": "Safe Delivery",
+        "description": "I have held the hands of women giving birth in ambulances because they left it too late, and I have sat in hospital corridors where Roma women were placed last in the queue while non-Roma women went ahead. Both of these situations are preventable. Planning your delivery and knowing your rights transforms this experience from a crisis into something you control.",
+        "tip1": "By week 34, have your birth plan ready: which hospital, who will go with you, how will you get there (especially at night), who will watch your other children. I have seen too many families scrambling at the last minute — and the stress affects the delivery",
+        "tip2": "You have the legal right to have a companion (husband, mother, sister, mediator) with you during labor and delivery in virtually all European countries. If the hospital says no, cite your country's patient rights law. We carry these references and can provide them",
+        "tip3": "Learn the 5 danger signs that mean GO TO HOSPITAL NOW, no matter what time it is: (1) heavy bleeding, (2) severe headache with swollen hands/face, (3) baby stops moving, (4) water breaks before 37 weeks, (5) fever above 38°C. Do not wait until morning. Do not try to manage these at home",
+        "tip4": "After delivery, stay in hospital at least 24 hours for monitoring — even if you feel fine. Many life-threatening complications (hemorrhage, infection) appear in the first 24 hours. I know the hospital environment can be hostile, but those hours of monitoring save lives",
+        "fact": "In a region where I worked for 5 years, we reduced Roma maternal emergencies by 60% simply by ensuring every pregnant woman had a birth plan, a transport arrangement, and a hospital bag packed by week 36. No new technology — just preparation and accompaniment.",
+        "action": "If you or someone you know is past 30 weeks pregnant: write down the hospital name, phone number, and route on paper. Put it on the wall. Pack a bag with ID, vaccination card, baby clothes, and phone charger. This takes 20 minutes and can save a life."
+      },
+      "breastfeeding": {
+        "title": "Breastfeeding",
+        "description": "Breastfeeding is deeply valued in Roma culture, yet I meet young mothers who have been told by well-meaning relatives to give water, tea, or formula in the first days because 'the milk has not come yet.' The colostrum — that thick, yellowish first milk — is not a sign that something is wrong. It is liquid gold, packed with antibodies that protect your newborn from the very infections that are most dangerous in the first weeks of life.",
+        "tip1": "Within 1 hour of birth, put your baby skin-to-skin on your chest and let them find the breast. This first feed of colostrum is the most important 'vaccine' your baby will receive — it coats their gut with protection against infection. Do not let anyone take your baby away before this happens unless there is a medical emergency",
+        "tip2": "Feed on demand — whenever the baby shows hunger signs (turning head, sucking hands, fussing). In the first weeks, this may be 10–14 times in 24 hours. This is normal and establishes your supply. A clock cannot tell you when your baby is hungry — your baby tells you",
+        "tip3": "No water, no tea, no formula for 6 months unless a doctor specifically prescribes it for a medical reason. Your breast milk changes composition throughout the day to meet your baby's exact needs — no factory can replicate this. I have seen well-meaning grandmothers give sugar water that caused thrush and diarrhea",
+        "tip4": "If breastfeeding hurts, the latch is wrong — not your body. Ask a midwife or health worker to watch a feed and help you adjust the position. Pain is a signal to get help, not a sign to give up. I have helped hundreds of mothers fix latching issues that were resolved in one session",
+        "fact": "In Roma communities where breastfeeding support programs exist, exclusive breastfeeding for 6 months reduces infant hospitalizations by over 60%. Breast milk literally adapts to fight the specific infections circulating in your environment — it is personalized medicine that your body produces for free.",
+        "action": "If you are a new mother or expecting: tell your family now that you plan to breastfeed exclusively for 6 months and that you need their support, not advice to add other foods. If breastfeeding is painful, contact your midwife or health mediator before you stop — the solution is usually simple."
+      },
+      "postpartum": {
+        "title": "Postpartum Care",
+        "description": "In Roma culture, the weeks after birth are a time when the family gathers around the mother, and this is beautiful. But I have also seen a shadow side: mothers who cry every day and are told it is normal. Mothers who bleed heavily and wait too long to seek help. Mothers whose pain is dismissed because 'this is what women go through.' Your recovery matters as much as your baby's health — because your baby needs you alive and well.",
+        "tip1": "Your body needs 6 weeks minimum to heal. The bleeding (lochia) after birth is normal for 2–4 weeks, but if it suddenly increases, contains large clots, or smells bad — go to the hospital immediately. I have seen mothers lose dangerous amounts of blood because they were told heavy bleeding was normal. It is not",
+        "tip2": "If you feel persistently sad, empty, unable to connect with your baby, or have thoughts of harming yourself or your baby — you are not weak, you are not a bad mother, you have a medical condition that responds to treatment. I say this in every home visit because the stigma in our communities around postpartum depression costs lives",
+        "tip3": "Your 6-week postnatal check-up is not optional — it checks for infection, healing, blood pressure, and mental health. In my experience, fewer than 30% of Roma women attend this visit. Please be in that 30%. Bring someone with you if that helps",
+        "tip4": "Accept every offer of help from family with cooking, cleaning, and childcare. Sleep when the baby sleeps. Your only jobs are feeding the baby and recovering. Everything else can wait. The strongest mothers I know are the ones who accepted help",
+        "fact": "Postpartum depression affects 1 in 5 women worldwide but is estimated to be even higher in Roma communities due to poverty stress, discrimination, and isolation. In every community where I have set up peer support groups for new mothers, depression rates dropped and breastfeeding rates rose — because connection heals.",
+        "action": "If you gave birth in the last 6 weeks and have not had a postnatal check-up, call your health center today. If you feel persistently sad or overwhelmed, tell one trusted person — your mother, your health mediator, anyone. That first conversation is the hardest step and the most important one."
+      }
+    },
+    "children": {
+      "description": "Roma children are the future of our communities, and they deserve every advantage. In my work, I have seen children fall behind — not because of ability, but because preventable illnesses, missed vaccinations, or undetected developmental delays stole opportunities from them. This knowledge gives those opportunities back.",
+      "growthMilestones": {
+        "title": "Growth & Development",
+        "description": "Every child develops at their own pace, and I never want parents to panic over normal variation. But I have also seen children whose delayed development was dismissed by families as 'they will catch up' when early intervention could have made a transformative difference. Knowing what to watch for is not anxiety — it is attention.",
+        "tip1": "Monthly weighing in the first year is the simplest monitoring tool. Your health center has growth charts that show whether your child is on track. A child who stops gaining weight or suddenly drops on the chart needs immediate investigation — it may be as simple as a feeding adjustment or as important as catching an underlying condition",
+        "tip2": "By 6 months, most babies reach for objects and respond to their name. By 12 months, most say a few words and pull themselves to standing. By 24 months, most walk well and speak in short phrases. If your child is significantly behind these milestones, ask for a developmental assessment — early help makes the biggest difference",
+        "tip3": "Talk to your child constantly — narrate what you are doing, name objects, sing songs. Roma families have a powerful oral tradition — use it. Children who hear more words develop larger vocabularies and stronger cognitive skills. This is free and more effective than any toy",
+        "tip4": "Teeth: clean your baby's gums with a damp cloth from birth, and use a tiny smear of children's toothpaste from the first tooth. I see severe tooth decay in Roma children by age 3, often from bottles of sweet tea at night — this causes pain, infection, and problems eating that affect growth",
+        "fact": "Research shows that children whose developmental delays are identified and addressed before age 3 are 5 times more likely to attend school at the expected level. In settlements where I have set up monthly weighing and developmental screening, referral rates for early intervention tripled — meaning children got help they would otherwise have missed.",
+        "action": "If your child is under 2, take them for a weight check and developmental screening at your health center this month. If your child is over 2 and you have concerns about speech, walking, or behavior, ask for a referral to a specialist. Your concern is valid — act on it."
+      },
+      "commonIllnesses": {
+        "title": "When Your Child Is Sick",
+        "description": "In settlements with overcrowded housing, limited sanitation, and cold winters, children get sick frequently. Most of these illnesses — diarrhea, coughs, fevers — are manageable at home if you know what to do and when to escalate. But I have also seen parents wait too long, or rush to emergency rooms for conditions that a simple treatment at home would have resolved. This module teaches you the difference.",
+        "tip1": "Fever below 38.5°C: your child's body is fighting infection — this is good. Keep them comfortable, lightly clothed, and give plenty of fluids. Fever above 38.5°C: give children's paracetamol at the correct dose for their weight (NOT adult paracetamol). If fever lasts more than 3 days or the child is unusually drowsy, seek medical care",
+        "tip2": "Diarrhea kills through dehydration, not the infection itself. The moment your child has loose stools, start oral rehydration: 1 liter of clean boiled water + 6 level teaspoons of sugar + half a teaspoon of salt. Give small sips every few minutes. This recipe has saved more children's lives worldwide than any antibiotic",
+        "tip3": "TAKE YOUR CHILD TO HOSPITAL IMMEDIATELY if you see: fast or difficult breathing, chest pulling in with each breath, unable to drink or breastfeed, repeated vomiting of everything, unusual drowsiness or not waking, convulsions, or bloody diarrhea. Do not wait. These are emergencies",
+        "tip4": "Do not give antibiotics without a doctor's prescription. Do not share another child's prescription. Do not use leftover antibiotics. I see this constantly in our communities and it creates drug-resistant bacteria that are much harder to treat. Antibiotics do nothing for colds, flu, or most coughs",
+        "fact": "In the communities I have worked in, training parents to prepare and use oral rehydration solution reduced child hospitalizations for diarrhea by over 40% in a single year. The knowledge is that powerful — and the ingredients cost less than a bus ticket to the hospital.",
+        "action": "Right now, memorize this recipe: 1 liter clean water + 6 teaspoons sugar + half teaspoon salt. Practice making it once. If you want, taste it — it should taste like tears. Having this ready means that when your child gets diarrhea at 2am, you can act immediately instead of panicking."
+      },
+      "immunization": {
+        "title": "Vaccination Schedule",
+        "description": "I will be direct: in Roma communities across Europe, vaccination rates are lower than the national average, and this is not because Roma parents do not care about their children — it is because the healthcare system has failed to reach them with respect, access, and information. Misinformation also spreads through social media. I have held children in hospital with measles who should never have been there. Every unvaccinated child is a child the system has failed.",
+        "tip1": "Birth to 6 weeks: BCG (tuberculosis) and Hepatitis B. These are given in the hospital before discharge. If your baby was born at home, take them to the health center within the first week of life for these vaccines. Do not wait",
+        "tip2": "2, 3, 4 months: the 'big three' rounds — DTP (diphtheria, tetanus, whooping cough), Polio, Hib, and Hepatitis B. These are the most critical vaccines of infancy. Each round strengthens the immunity. Missing one weakens the entire chain",
+        "tip3": "12–15 months: MMR (measles, mumps, rubella). I cannot stress this enough. Measles is not a harmless childhood illness — it kills, it causes brain damage, and it blinds. In 2019, I saw a measles outbreak in a Roma settlement because coverage had dropped below 80%. It was preventable",
+        "tip4": "Vaccines are free at government health centers in every European country. You do not need insurance, you do not need a residence permit, you do not need an appointment in most centers. If you are refused service, this is illegal — contact your health mediator or the patient rights office",
+        "fact": "The gap between Roma and non-Roma vaccination rates in some European countries exceeds 15 percentage points. This gap is not caused by Roma beliefs about vaccines — surveys consistently show Roma parents want their children vaccinated. The gap is caused by access barriers, discrimination in healthcare, and lack of outreach. Closing this gap is a state obligation under Article 11 of the European Social Charter.",
+        "action": "Find your child's vaccination card. If any vaccines are missing, or if you do not have a card, visit your nearest health center this week. If you face barriers — language, documents, refusal — contact your local health mediator. That is exactly what we are here for."
+      }
+    },
+    "chronic": {
+      "description": "Roma people die 10 years younger than the European average. Most of this gap comes from chronic diseases — diabetes, heart disease, respiratory illness — that develop slowly and silently over years. By the time symptoms appear, damage has been done. But most of it is preventable, and all of it is manageable when caught early.",
+      "diabetes": {
+        "title": "Diabetes: The Silent Threat",
+        "description": "Type 2 diabetes is the chronic disease I encounter most frequently in Roma communities. It runs in families, it thrives on the cheap, high-sugar diet that poverty forces people toward, and it damages your eyes, kidneys, feet, and heart for years before you feel anything wrong. I have seen men in their 40s lose toes, and women go blind, from diabetes that was never diagnosed because they never had a blood test. This is preventable.",
+        "tip1": "If anyone in your family has diabetes, your risk is 2–3 times higher. This is not fate — it is a signal to act now. Reduce white bread, sugar, and sugary drinks. Replace with beans, lentils, vegetables, and water. I have seen families reverse pre-diabetes entirely through these changes",
+        "tip2": "30 minutes of walking every single day reduces your diabetes risk by 58%. Not running. Not gym. Walking. I tell every person over 35 in the communities I work with: the walk is the medicine. It is free and it works better than most pills for prevention",
+        "tip3": "Ask for a fasting blood glucose test at your health center at least once a year if you are over 35, overweight, or have family history. It is a simple finger-prick test, it is free in most countries, and it takes 5 minutes. This one test can catch diabetes years before symptoms appear",
+        "tip4": "Know the warning signs that mean diabetes may already be present: constant thirst, urinating very frequently (especially at night), vision becoming blurry, wounds that heal slowly, unexplained fatigue. If you have two or more of these, get tested this week — not next month",
+        "fact": "Studies in Roma communities in Slovakia and Romania have found diabetes prevalence 2–3 times higher than the national average, with the majority of cases undiagnosed. In one program I participated in, community-based screening detected diabetes in 18% of adults over 40 who had never been tested. Nearly all of them had no symptoms.",
+        "action": "If you are over 35, go to your health center and ask for a blood sugar test. It takes 5 minutes. If the result is above 5.6 mmol/L (100 mg/dL), you need to start making changes now. Bring a family member — if your risk is high, theirs likely is too."
+      },
+      "heartHealth": {
+        "title": "Your Heart",
+        "description": "Cardiovascular disease is the number one killer in Roma communities — not because of genetics, but because of the conditions we live in: chronic stress from poverty and discrimination, high smoking rates, diets shaped by what poverty allows, and almost no access to preventive screening. I have attended funerals of men in their 50s who died of heart attacks that were entirely preventable. This module exists because I refuse to attend more.",
+        "tip1": "Smoking is the single most destructive thing you can do to your heart. I know it is deeply embedded in our community culture and I am not here to judge — but I owe you honesty. Every cigarette damages your blood vessels. If you cannot quit, reduce. If you can quit, your heart begins to repair itself within 24 hours",
+        "tip2": "High blood pressure is called the silent killer because you feel nothing until a stroke or heart attack hits. Get your blood pressure checked at any pharmacy — it is free. Normal is below 120/80. Above 140/90 is dangerous and needs treatment. I have found dangerously high blood pressure in people who felt perfectly healthy",
+        "tip3": "Reduce salt: Roma cuisine is flavorful and beautiful, but many traditional dishes are very salty. Use paprika, garlic, onion, herbs, and pepper instead of adding extra salt. Your taste buds adapt within 2 weeks — food will taste better, not worse. I have seen blood pressure drop 10 points from this change alone",
+        "tip4": "Chronic stress from discrimination, poverty, eviction threats, and family conflict is a direct cause of heart disease. This is not opinion — it is documented medicine. Stress hormones damage your blood vessels over years. Finding any way to release stress — walking, music, prayer, talking, community — is heart medicine",
+        "fact": "Roma men die from cardiovascular disease on average 10–15 years earlier than the general population. The European Commission's own data shows this. But 80% of premature heart attacks are preventable through lifestyle changes and early treatment of high blood pressure and cholesterol. Prevention works — if you have access to it.",
+        "action": "This week, do two things: (1) Go to a pharmacy and check your blood pressure — write down the numbers. (2) Count how many cigarettes you smoke per day and try to reduce by 3 per day. These two actions are the most powerful cardiac prevention steps any individual can take."
+      },
+      "respiratory": {
+        "title": "Lungs & Breathing",
+        "description": "I have worked in settlements where families burn wood, coal, or even plastic and rubber for heating in winter. Where 8 people sleep in two rooms with no ventilation. Where damp runs down the walls and black mold grows in every corner. Respiratory disease in these conditions is not surprising — it is the predictable result of housing that no one should have to live in. While we fight for better housing, we must also protect the lungs we have.",
+        "tip1": "Indoor smoke is the most immediate respiratory danger I see. If you heat with solid fuel, ensure ventilation — even cracking a window helps. Never burn plastic, rubber, or painted wood — the fumes contain chemicals that cause permanent lung damage, especially in children whose lungs are still developing",
+        "tip2": "Damp and mold cause asthma, chronic bronchitis, and make every respiratory infection worse. Wipe visible mold with a mix of water and vinegar or bleach. Open windows for at least 15 minutes daily even in winter. Hang wet laundry outside when possible — drying clothes indoors adds enormous amounts of moisture to the air",
+        "tip3": "A cough lasting more than 3 weeks, especially with weight loss, night sweats, or blood in spit, must be investigated for tuberculosis. TB is curable with free treatment, but it is also highly contagious. In Roma communities, TB rates are 3–5 times the national average in several European countries. Early testing protects your entire family",
+        "tip4": "Children who grow up in smoky or moldy environments have permanently reduced lung capacity — they will carry less healthy lungs their entire lives. Even if you cannot change your housing situation immediately, reducing smoke exposure and ventilating as much as possible protects their developing lungs",
+        "fact": "The WHO identifies household air pollution as the fourth greatest global health risk. In Roma settlements I have worked in, over 60% of children had recurring respiratory infections — rates that dropped significantly when families improved ventilation and reduced indoor burning of waste materials. The housing conditions are not the families' fault, but adaptation strategies save lives while the systemic change is fought for.",
+        "action": "Today: check for visible mold in your home and clean it with diluted bleach or vinegar. Open at least one window for 15 minutes. If anyone in your household has had a cough for more than 3 weeks, go to the health center for a TB screening — it is free and it takes 15 minutes."
+      }
+    },
+    "mental": {
+      "description": "In 15 years of working in Roma communities, I have learned that the heaviest burden people carry is not physical illness — it is the weight of discrimination, poverty, fear of eviction, worry about their children's future, and the feeling that no one in the system cares. We call this stress. When it lasts for years, it becomes something more. It deserves to be named, understood, and treated — without shame.",
+      "stressManagement": {
+        "title": "Living with Stress",
+        "description": "I will not pretend that a breathing exercise will solve your problems. If you are worried about your family being evicted, no meditation app will fix that. But I have worked with hundreds of people in our communities who carry enormous stress, and I have seen what happens when that stress goes unmanaged for years: heart attacks in men in their 40s, women who cannot eat or sleep, children who grow up in households electrified with tension. We cannot always change our circumstances, but we can change how we carry them.",
+        "tip1": "The 4-4-8 breathing method works immediately on your nervous system. Breathe in through your nose for 4 counts, hold for 4, breathe out slowly through your mouth for 8. Do this 5 times. Your heart rate drops, your muscles relax. I teach this to families before hospital visits, before court hearings, before any stressful encounter. It is a tool you always have with you",
+        "tip2": "Walking is the most underrated medicine for stress. 20 minutes of walking — not fast, just walking — reduces the stress hormone cortisol by up to 30%. If you cannot leave the house, walk in circles. The movement itself is what works, not the scenery",
+        "tip3": "Talk to someone. Not to fix the problem — just to share the weight. I have seen men in our communities carry everything alone because asking for help feels like weakness. In 15 years of this work, the strongest people I have met are the ones who learned to say 'I am struggling'",
+        "tip4": "Be intentional about what enters your mind. Social media, news, family arguments that replay in your head — these are sources of stress you can control. I am not saying ignore reality. I am saying choose when you engage with it, and create spaces in your day where you are deliberately at peace",
+        "fact": "Roma communities experience what public health calls 'minority stress' — the chronic physiological toll of discrimination, exclusion, and poverty. Research shows this elevates cortisol levels permanently, accelerating heart disease, diabetes, and mental illness. This is not weakness. It is biology responding to injustice.",
+        "action": "Tonight before sleep, put your phone in another room and practice 4-4-8 breathing for 5 minutes. If you have a partner or family member willing, do it together in silence. This small act creates a boundary between the day's stress and your sleep — and sleep is when your body repairs the damage stress has caused."
+      },
+      "sleep": {
+        "title": "Sleep as Medicine",
+        "description": "In overcrowded homes where the TV is always on, where children share beds with parents, where noise from neighbors or the street never stops — sleep is not a given. It is something you have to fight for. And yet, sleep is when your body repairs itself, when your brain processes the day's stress, and when your immune system rebuilds. Chronic sleep deprivation is as dangerous as smoking — and in our communities, it is almost universal.",
+        "tip1": "Try to sleep and wake at roughly the same time every day, including weekends. I know this is hard with shift work, young children, or noisy environments — but even a consistent window of 6 hours is more restorative than random 8-hour blocks. Your body craves rhythm",
+        "tip2": "Phones and screens before bed are one of the worst modern sleep destroyers. The blue light tells your brain it is daytime. If you must use your phone, set it to night mode after 9pm. Better yet, charge it in another room — I have seen sleep quality improve dramatically from this single change",
+        "tip3": "Caffeine stays in your system for 8 hours. That afternoon Turkish coffee or tea at 4pm is still active in your bloodstream at midnight. Switch to herbal tea (chamomile, linden) after lunch. This is one of the simplest improvements I recommend and people are always surprised how much it helps",
+        "tip4": "If you share a room with children or family members, small changes help: a consistent 'lights off' time, reducing noise gradually, using a curtain to create a visual sleep boundary. Teach children that sleep time is family time — when the household quiets together, everyone sleeps better",
+        "fact": "Research on sleep in marginalized communities shows that chronic sleep deprivation caused by overcrowding, noise, and stress contributes significantly to the health gap. People who consistently sleep less than 6 hours have 4x higher risk of catching infections and 2x higher risk of heart disease. Sleep is not a luxury — it is a foundation of survival.",
+        "action": "Tonight: set a bedtime alarm on your phone for 30 minutes before you want to sleep. When it rings, turn off the TV, put the phone away, and lie in the dark doing 4-4-8 breathing until you fall asleep. Do this for 7 nights and notice the difference."
+      },
+      "communitySupport": {
+        "title": "The Power of Connection",
+        "description": "Roma culture already understands something that Western medicine is only now measuring: that belonging, family, and community protect your health as powerfully as any medicine. I have seen people survive the most difficult circumstances — evictions, illness, loss — because their community held them. And I have seen people collapse under far less when they were isolated. The science now confirms what our ancestors knew: loneliness kills, connection heals.",
+        "tip1": "If you know someone in your community who has recently lost a family member, been diagnosed with an illness, lost their job, or is going through a crisis — do not wait for them to ask for help. Visit them. Bring food. Sit with them. In Roma culture, this is instinct. In health science, this is called 'social prescription' — and it works better than most pills",
+        "tip2": "Shame is the enemy of health. I have met people who hid diabetes, depression, HIV, and domestic violence for years because they feared what the community would say. Every time someone in our community speaks openly about their struggle, it gives permission to others. You do not need to share everything — but sharing something breaks the silence that keeps people sick",
+        "tip3": "Gatherings, celebrations, music, prayer, storytelling — these are not distractions from health. They are health. Studies show that regular participation in community cultural activities reduces depression and cardiovascular risk. The joy and belonging they create are measurable medicine",
+        "tip4": "Check on the elderly and isolated people in your community. The person who lives alone, the grandmother whose children moved away, the man who stopped coming to gatherings. A 10-minute visit or phone call may be the only human connection they have that day — and it could be what keeps them alive",
+        "fact": "Harvard's 85-year study on adult health concluded that the single strongest predictor of health and longevity is the quality of your relationships — not diet, exercise, or genetics. Loneliness increases mortality risk by 26%, equivalent to smoking 15 cigarettes daily. Roma communities have a cultural wealth in social connection that is a genuine health asset — protect it.",
+        "action": "This week, reach out to one person in your community you have not spoken to recently. Not by text — by voice or in person. Ask how they are and listen. That act of connection is health promotion in its purest form."
+      },
+      "seekHelp": {
+        "title": "When It's Too Much",
+        "description": "There is a point where stress, sadness, and worry cross a line into something that needs professional help — and in Roma communities, that line is almost never recognized because we are taught to endure, to be strong, to handle it within the family. I have seen the cost of this silence: men who drink to cope until their liver fails, women who stop eating, teenagers who harm themselves. Asking for help is not betraying your culture. It is protecting your life so you can be there for the people who need you.",
+        "tip1": "If you or someone you know has been unable to function normally for more than 2 weeks — cannot sleep, cannot eat, cannot care for children, cries constantly, or has no energy for anything — this is beyond normal stress. This is depression and it is a medical condition as real as diabetes. It is not weakness and it responds to treatment",
+        "tip2": "Your first step is your family doctor (GP). Say: 'I have been feeling very bad for more than 2 weeks and I need help.' You do not need to explain everything. The GP can assess you and refer you to a psychologist or psychiatrist. This service is free or low-cost in most European countries. If your GP dismisses you, see another one",
+        "tip3": "If someone in your family mentions wanting to die, wanting to disappear, or feeling that everyone would be better off without them — take this seriously immediately. Stay with them. Remove access to medicines and sharp objects. Call the national crisis line or 112. You are not overreacting. These words are a cry for help that must be answered",
+        "tip4": "Mental health medication is not shameful, addictive, or 'for crazy people.' Antidepressants are prescribed to millions of people worldwide and they save lives. They do not change who you are — they lift the chemical fog that prevents you from being who you are. I have seen people transformed by treatment they resisted for years because of stigma",
+        "fact": "Roma communities experience among the highest rates of depression and anxiety in Europe, driven by structural factors like discrimination, poverty, and lack of access to services. Yet mental health service use in Roma communities is among the lowest. In programs where I have helped connect people to culturally sensitive mental health care, the improvement in quality of life was profound — not just for the individual, but for their entire family.",
+        "action": "Save this number in your phone right now: your country's mental health crisis helpline. If you are in crisis, call it. If someone you know is in crisis, call it with them. And if you have been struggling for more than 2 weeks, book an appointment with your GP this week. You deserve to feel better, and help exists."
+      }
+    }
+  },
+  "track": {
+    "title": "Daily Health Check-in",
+    "subtitle": "How are you feeling today?",
+    "moodTitle": "Mood",
+    "moodGreat": "Great",
+    "moodGood": "Good",
+    "moodOkay": "Okay",
+    "moodLow": "Low",
+    "moodBad": "Very low",
+    "waterTitle": "Water intake",
+    "waterSubtitle": "Tap each glass when you drink it",
+    "waterGoal": "Goal: 8 glasses",
+    "activityTitle": "Activity today",
+    "activityWalk": "Walked",
+    "activityExercise": "Exercised",
+    "activityRest": "Rested",
+    "saveCheckin": "Save today's check-in",
+    "savedSuccess": "Check-in saved!",
+    "weeklyTitle": "This week",
+    "streakDays": "day streak",
+    "loggedToday": "Logged today",
+    "noLogsYet": "Start your first check-in below",
+    "historyTitle": "Recent history"
+  },
+  "mediator": {
+    "title": "Mediator Dashboard",
+    "subtitle": "Supporting your community's health",
+    "accessCode": "Enter access code",
+    "accessCodePlaceholder": "4-digit code",
+    "accessCodeHint": "Ask your coordinator for the access code",
+    "accessCodeError": "Incorrect code. Please try again.",
+    "accessCodeSubmit": "Access dashboard",
+    "communityMembers": "Community members",
+    "logsThisMonth": "Health logs this month",
+    "alertsActive": "Active alerts",
+    "quickActions": "Quick actions",
+    "logVisit": "Log a visit",
+    "recordHealth": "Record health data",
+    "viewReports": "View reports",
+    "recentActivity": "Recent activity",
+    "noActivity": "No recent activity",
+    "memberName": "Member name",
+    "visitDate": "Visit date",
+    "notes": "Notes",
+    "saveVisit": "Save visit",
+    "visitSaved": "Visit saved successfully",
+    "healthSummary": "Community health summary",
+    "pillarProgress": "Pillar learning progress",
+    "contactSupport": "Contact regional coordinator",
+    "resources": "Mediator resources",
+    "downloadGuide": "Download field guide (PDF)"
+  },
+  "profile": {
+    "title": "Profile",
+    "guestUser": "Guest",
+    "guestSubtitle": "Learning anonymously",
+    "languagePreference": "Language preference",
+    "changeLanguage": "Change language",
+    "learningProgress": "Learning progress",
+    "pillarsStarted": "Pillars started",
+    "modulesCompleted": "Modules completed",
+    "trackingStreak": "Tracking streak",
+    "days": "days",
+    "exportData": "Export my data (GDPR)",
+    "exportDescription": "Download all your health tracking data as a CSV file.",
+    "clearData": "Clear all data",
+    "clearDataConfirm": "Are you sure? This cannot be undone.",
+    "aboutTitle": "About Sastipe",
+    "aboutText": "Sastipe is a free health literacy platform for Roma communities. Funded by EU health inclusion initiatives. Version 1.0.",
+    "privacyPolicy": "Privacy policy",
+    "contactUs": "Contact us",
+    "progressNone": "You haven't started learning yet.",
+    "progressStart": "Go to Learn to begin.",
+    "version": "Version"
   }
 }
