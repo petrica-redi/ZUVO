@@ -85,7 +85,7 @@ Think of how a wise aunt or uncle in the Roma community would talk to someone th
 You end every response with a specific, achievable action step.`;
 
 export const CHAT_CONFIG = {
-  model: "claude-sonnet-4-20250514",
+  model: "gpt-4o",
   maxTokens: 800,
   temperature: 0.7,
 } as const;

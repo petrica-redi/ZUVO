@@ -2,13 +2,13 @@
  * POST /api/chat — Zuvo health advisor conversation
  *
  * Accepts: { messages: [{ role, content }], locale: string }
- * Returns: streaming text response from Claude
+ * Returns: streaming text response from OpenAI
  */
 import { NextRequest } from "next/server";
 import { SYSTEM_PROMPT, CHAT_CONFIG } from "@/lib/ai/system-prompt";
 
 export async function POST(req: NextRequest) {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     return new Response(
       JSON.stringify({ error: "AI service not configured" }),
@@ -29,31 +29,31 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Add locale instruction to system prompt
   const localeInstruction = locale
     ? `\n\nIMPORTANT: The user's preferred language is "${locale}". Respond in this language. If they write in a different language, respond in the language they wrote in.`
     : "";
 
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": apiKey,
-      "anthropic-version": "2023-06-01",
+      Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
       model: CHAT_CONFIG.model,
       max_tokens: CHAT_CONFIG.maxTokens,
       temperature: CHAT_CONFIG.temperature,
-      system: SYSTEM_PROMPT + localeInstruction,
-      messages: messages.slice(-10), // Keep last 10 messages for context
       stream: true,
+      messages: [
+        { role: "system", content: SYSTEM_PROMPT + localeInstruction },
+        ...messages.slice(-10),
+      ],
     }),
   });
 
   if (!response.ok) {
     const err = await response.text();
-    console.error("Claude API error:", err);
+    console.error("OpenAI API error:", err);
     return new Response(
       JSON.stringify({ error: "AI service temporarily unavailable" }),
       { status: 502, headers: { "Content-Type": "application/json" } }
@@ -85,16 +85,17 @@ export async function POST(req: NextRequest) {
           for (const line of lines) {
             if (line.startsWith("data: ")) {
               const data = line.slice(6).trim();
-              if (data === "[DONE]") continue;
+              if (data === "[DONE]") {
+                controller.enqueue(encoder.encode("data: [DONE]\n\n"));
+                continue;
+              }
 
               try {
                 const parsed = JSON.parse(data);
-                if (
-                  parsed.type === "content_block_delta" &&
-                  parsed.delta?.type === "text_delta"
-                ) {
+                const text = parsed.choices?.[0]?.delta?.content;
+                if (text) {
                   controller.enqueue(
-                    encoder.encode(`data: ${JSON.stringify({ text: parsed.delta.text })}\n\n`)
+                    encoder.encode(`data: ${JSON.stringify({ text })}\n\n`)
                   );
                 }
               } catch {
@@ -106,7 +107,6 @@ export async function POST(req: NextRequest) {
       } catch (err) {
         console.error("Stream error:", err);
       } finally {
-        controller.enqueue(encoder.encode("data: [DONE]\n\n"));
         controller.close();
       }
     },
