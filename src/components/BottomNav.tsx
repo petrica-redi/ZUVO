@@ -1,14 +1,14 @@
 "use client";
 
 import { Link, usePathname } from "@/navigation";
-import { Home, Search, MessageCircle, Users, MoreHorizontal } from "lucide-react";
+import { Home, FileText, MessageCircle, Users, Menu } from "lucide-react";
 
 const TABS = [
   { key: "home", href: "/", Icon: Home, label: "Home" },
-  { key: "scan", href: "/scan", Icon: Search, label: "Scan" },
+  { key: "explain", href: "/explain", Icon: FileText, label: "Explain" },
   { key: "chat", href: "/chat", Icon: MessageCircle, label: "Ask", isPrimary: true },
-  { key: "family", href: "/track", Icon: Users, label: "Family" },
-  { key: "more", href: "/learn", Icon: MoreHorizontal, label: "More" },
+  { key: "family", href: "/family", Icon: Users, label: "Family" },
+  { key: "more", href: "/more", Icon: Menu, label: "More" },
 ] as const;
 
 export function BottomNav() {
