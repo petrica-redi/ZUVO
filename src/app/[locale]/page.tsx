@@ -5,7 +5,8 @@ import {
   ChevronRight, FileText, Search,
   Stethoscope, Syringe, Navigation, Phone, MessageCircle,
   AlertTriangle, XCircle, Heart, Users, Sparkles,
-  Activity, Globe, Shield, ArrowRight,
+  Activity, Globe, Shield, ArrowRight, Scale, BookOpen,
+  GraduationCap,
 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
@@ -216,6 +217,35 @@ export default async function HomePage({ params }: Props) {
                   {pillar.emoji}
                 </div>
                 <span className="text-[11px] font-bold text-gray-700">{tPillars(pillar.id)}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Digital Literacy ────────────────────────────────────────── */}
+        <section className="px-4 pt-6 pb-2">
+          <h2 className="mb-3 text-[16px] font-black text-gray-900">Learn & Grow</h2>
+          <div className="space-y-2.5">
+            {[
+              { href: "/quiz", icon: GraduationCap, label: "Health Quiz", desc: "Test your knowledge", gradient: "from-amber-500 to-orange-600", shadow: "shadow-amber-500/20" },
+              { href: "/glossary", icon: BookOpen, label: "Health Glossary", desc: "Medical terms, simply explained", gradient: "from-teal-500 to-cyan-600", shadow: "shadow-teal-500/20" },
+              { href: "/rights", icon: Scale, label: "Know Your Rights", desc: "Patient rights & legal help", gradient: "from-indigo-500 to-purple-600", shadow: "shadow-indigo-500/20" },
+              { href: "/stories", icon: Heart, label: "Community Stories", desc: "Real experiences from Roma communities", gradient: "from-rose-500 to-pink-600", shadow: "shadow-rose-500/20" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="card-hover flex items-center gap-3.5 rounded-2xl bg-white p-3.5 shadow-sm"
+                style={{ border: "1px solid rgba(0,0,0,0.04)" }}
+              >
+                <div className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br ${item.gradient} shadow-md ${item.shadow}`}>
+                  <item.icon className="h-[22px] w-[22px] text-white" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <span className="text-[14px] font-bold text-gray-900">{item.label}</span>
+                  <p className="text-[12px] text-gray-500">{item.desc}</p>
+                </div>
+                <ChevronRight className="h-4 w-4 flex-shrink-0 text-gray-300" />
               </Link>
             ))}
           </div>

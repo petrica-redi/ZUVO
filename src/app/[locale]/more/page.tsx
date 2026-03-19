@@ -6,6 +6,7 @@ import { SosButton } from "@/components/SosButton";
 import {
   Search, Stethoscope, Syringe, Navigation, BookOpen,
   MapPin, Shield, User, Settings, ChevronRight, Heart, Activity,
+  Scale, GraduationCap,
 } from "lucide-react";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -26,9 +27,13 @@ const SECTIONS = [
     ],
   },
   {
-    title: "Learn",
+    title: "Learn & Grow",
     items: [
       { href: "/learn", icon: BookOpen, label: "Health Topics", desc: "6 health zones with lessons", color: "#3B82F6", gradient: "from-blue-500 to-indigo-600" },
+      { href: "/quiz", icon: GraduationCap, label: "Health Quiz", desc: "Test your knowledge", color: "#F59E0B", gradient: "from-amber-500 to-orange-600" },
+      { href: "/glossary", icon: BookOpen, label: "Health Glossary", desc: "Medical terms explained simply", color: "#0D9488", gradient: "from-teal-500 to-cyan-600" },
+      { href: "/rights", icon: Scale, label: "Know Your Rights", desc: "Patient rights & legal help", color: "#8B5CF6", gradient: "from-indigo-500 to-purple-600" },
+      { href: "/stories", icon: Heart, label: "Community Stories", desc: "Real experiences from Roma families", color: "#EC4899", gradient: "from-rose-500 to-pink-600" },
       { href: "/regions/romania", icon: MapPin, label: "Roma Communities", desc: "Health info by country", color: "#C0392B", gradient: "from-red-500 to-red-700" },
     ],
   },
