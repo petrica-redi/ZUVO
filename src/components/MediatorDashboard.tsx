@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { getOrCreateClientAnonId } from "@/lib/client-anon-id";
 import {
   Users,
   ClipboardList,
@@ -44,8 +45,7 @@ export function MediatorDashboard({ labels }: { labels: Labels }) {
   };
 
   const handleSaveVisit = async () => {
-    const anonId = localStorage.getItem("sastipe_anon_id") ?? crypto.randomUUID();
-    localStorage.setItem("sastipe_anon_id", anonId);
+    const anonId = getOrCreateClientAnonId();
 
     await fetch("/api/mediator/visits", {
       method: "POST",

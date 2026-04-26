@@ -5,7 +5,7 @@ import { SosButton } from "@/components/SosButton";
 import { CommunityStories } from "@/components/CommunityStories";
 
 export const metadata: Metadata = {
-  title: "Community Stories — Zuvo",
+  title: "Community Stories — Sastipe",
   description: "Real health experiences from Roma communities across Europe",
 };
 

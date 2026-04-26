@@ -15,6 +15,7 @@ export function ProfileView({ labels }: { labels: Labels }) {
   const [clearConfirm, setClearConfirm] = useState(false);
 
   useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect -- hydrate stats from localStorage on mount */
     // Count progress
     try {
       const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) ?? "{}");
@@ -35,7 +36,6 @@ export function ProfileView({ labels }: { labels: Labels }) {
       const history = JSON.parse(localStorage.getItem(CHECKIN_KEY) ?? "{}");
       let s = 0;
       const d = new Date();
-      // eslint-disable-next-line no-constant-condition
       while (true) {
         if (history[d.toISOString().slice(0, 10)]) {
           s++;
@@ -46,6 +46,7 @@ export function ProfileView({ labels }: { labels: Labels }) {
     } catch {
       /* empty */
     }
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
   const handleClear = () => {

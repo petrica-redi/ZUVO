@@ -156,8 +156,16 @@ export function FamilyHub() {
   // Member detail view
   if (selectedMember) {
     const logs = getMemberLogs(selectedMember.id);
+    const dueMs = selectedMember.dueDate
+      ? new Date(selectedMember.dueDate).getTime()
+      : 0;
+    // "Today" for pregnancy week estimate; see https://github.com/reactjs/react-hydration-issues
+    const nowMs: number = (() => {
+      // eslint-disable-next-line react-hooks/purity -- wall-clock
+      return Date.now();
+    })();
     const pregnancyWeeks = selectedMember.isPregnant && selectedMember.dueDate
-      ? Math.max(0, 40 - Math.ceil((new Date(selectedMember.dueDate).getTime() - Date.now()) / (7 * 24 * 60 * 60 * 1000)))
+      ? Math.max(0, 40 - Math.ceil((dueMs - nowMs) / (7 * 24 * 60 * 60 * 1000)))
       : null;
 
     return (

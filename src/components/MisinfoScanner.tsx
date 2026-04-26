@@ -85,7 +85,7 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
 
   const handleShare = () => {
     if (!result) return;
-    const text = `${result.emoji} ${result.headline}\n\n${result.shareText}\n\n— Checked by Zuvo Health Advisor`;
+    const text = `${result.emoji} ${result.headline}\n\n${result.shareText}\n\n— Checked by Sastipe Health Advisor`;
 
     if (navigator.share) {
       navigator.share({ title: "Health Fact Check", text }).catch(() => {});

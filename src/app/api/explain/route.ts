@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { openaiChatCompletion } from "@/lib/openai";
 
 const EXPLAIN_PROMPT = `You are a medical translator for Roma communities in Europe. Your job is to take medical terms, diagnoses, and prescription medications and explain them in the simplest possible language — as if explaining to someone who never finished school but is intelligent and deserves to understand their own health.
 
@@ -42,11 +43,6 @@ Rules:
 - Always include at least 3 questions for the doctor and 3 daily tips`;
 
 export async function POST(req: NextRequest) {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
-  }
-
   const { input, locale } = (await req.json()) as { input: string; locale?: string };
   if (!input?.trim()) {
     return NextResponse.json({ error: "No input provided" }, { status: 400 });
@@ -56,28 +52,27 @@ export async function POST(req: NextRequest) {
     ? `\nThe user's language is "${locale}". Respond in that language. If the medical terms are in another language, keep the medical terms but explain everything else in the user's language.`
     : "";
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o",
+  const response = await openaiChatCompletion(
+    {
       max_tokens: 1500,
       temperature: 0.3,
       messages: [
         { role: "system", content: EXPLAIN_PROMPT + localeNote },
         { role: "user", content: `Explain this prescription or diagnosis: "${input}"` },
       ],
-    }),
-  });
+    },
+    "explain.prescription",
+    { locale },
+  );
 
+  if (response.status === 503) {
+    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
+  }
   if (!response.ok) {
     return NextResponse.json({ error: "AI service error" }, { status: 502 });
   }
 
-  const data = await response.json();
+  const data = (await response.json()) as { choices?: { message?: { content?: string } }[] };
   const content = data.choices?.[0]?.message?.content ?? "";
 
   try {

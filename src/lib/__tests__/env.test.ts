@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest";
+import { LOCALES } from "@/i18n/routing";
 import {
   getAppConfig,
   getSentryConfig,
@@ -6,6 +7,7 @@ import {
   getLangfuseConfig,
   getSupabaseConfig,
   getAnthropicConfig,
+  getOpenAIConfig,
   getTriggerSecretKey,
 } from "../env";
 
@@ -13,8 +15,8 @@ describe("getAppConfig", () => {
   it("returns safe defaults when env vars are absent", () => {
     const cfg = getAppConfig();
     expect(cfg.appName).toBe("Sastipe");
-    expect(cfg.defaultLocale).toBe("sq");
-    expect(cfg.supportedLocales).toEqual(["sq", "rom", "en"]);
+    expect(cfg.defaultLocale).toBe("en");
+    expect(cfg.supportedLocales).toEqual(LOCALES);
     expect(cfg.appUrl).toBeNull();
   });
 });
@@ -38,6 +40,10 @@ describe("optional service configs", () => {
 
   it("getAnthropicConfig returns null when key is absent", () => {
     expect(getAnthropicConfig()).toBeNull();
+  });
+
+  it("getOpenAIConfig returns null when key is absent", () => {
+    expect(getOpenAIConfig()).toBeNull();
   });
 
   it("getTriggerSecretKey returns null when key is absent", () => {

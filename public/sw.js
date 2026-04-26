@@ -46,7 +46,7 @@ self.addEventListener("fetch", (event) => {
         .catch(() => {
           if (event.request.mode === "navigate") {
             return caches.match("/") || new Response(
-              "<html><body style='font-family:system-ui;text-align:center;padding:40px'><h1>You are offline</h1><p>Zuvo needs an internet connection for AI features. Some cached content may be available.</p></body></html>",
+              "<html><body style='font-family:system-ui;text-align:center;padding:40px'><h1>You are offline</h1><p>Sastipe needs an internet connection for AI features. Some cached content may be available.</p></body></html>",
               { headers: { "Content-Type": "text/html" } }
             );
           }

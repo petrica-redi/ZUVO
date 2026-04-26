@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { LOCALES } from "@/i18n/routing";
 
 /**
  * NOTE:
@@ -6,21 +7,22 @@ import { z } from "zod";
  * - Service wrappers are responsible for returning `null` when their config is unavailable.
  */
 
-export const supportedLocaleSchema = z.enum(["sq", "rom", "en"]);
-export type SupportedLocale = z.infer<typeof supportedLocaleSchema>;
+const localeEnum = z.enum(LOCALES);
+export const supportedLocaleSchema = localeEnum;
+export type SupportedLocale = z.infer<typeof localeEnum>;
 
-const supportedLocalesFallback: SupportedLocale[] = ["sq", "rom", "en"];
+const ALL_LOCALES = [...LOCALES] as SupportedLocale[];
 
 function parseSupportedLocales(raw: string | undefined): SupportedLocale[] {
-  if (!raw) return supportedLocalesFallback;
+  if (!raw) return ALL_LOCALES;
   const parts = raw
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
   const parsed = parts
-    .map((p) => (supportedLocaleSchema.options.includes(p as SupportedLocale) ? (p as SupportedLocale) : null))
+    .map((p) => (supportedLocaleSchema.safeParse(p).success ? (p as SupportedLocale) : null))
     .filter((v): v is SupportedLocale => v !== null);
-  return parsed.length ? parsed : supportedLocalesFallback;
+  return parsed.length ? parsed : ALL_LOCALES;
 }
 
 // -------------------------
@@ -36,11 +38,31 @@ export type AppConfig = {
 export function getAppConfig(): AppConfig {
   const appName = process.env.NEXT_PUBLIC_APP_NAME?.trim() || "Sastipe";
   const defaultLocaleRaw = process.env.NEXT_PUBLIC_DEFAULT_LOCALE?.trim();
-  const defaultLocale = defaultLocaleRaw && supportedLocaleSchema.safeParse(defaultLocaleRaw).success ? (defaultLocaleRaw as SupportedLocale) : "sq";
+  const defaultLocale =
+    defaultLocaleRaw && supportedLocaleSchema.safeParse(defaultLocaleRaw).success
+      ? (defaultLocaleRaw as SupportedLocale)
+      : "en";
   const supportedLocales = parseSupportedLocales(process.env.NEXT_PUBLIC_SUPPORTED_LOCALES);
   const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim() || null;
 
   return { appName, appUrl, defaultLocale, supportedLocales };
+}
+
+// -------------------------
+// OpenAI (or compatible) — used for all AI features
+// -------------------------
+export type OpenAIConfig = {
+  apiKey: string;
+  baseUrl: string;
+  model: string;
+};
+
+export function getOpenAIConfig(): OpenAIConfig | null {
+  const apiKey = process.env.OPENAI_API_KEY?.trim();
+  if (!apiKey) return null;
+  const baseUrl = process.env.OPENAI_BASE_URL?.trim() || "https://api.openai.com/v1";
+  const model = process.env.OPENAI_MODEL?.trim() || "gpt-4o";
+  return { apiKey, baseUrl, model };
 }
 
 // -------------------------

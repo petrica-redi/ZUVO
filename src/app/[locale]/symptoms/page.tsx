@@ -8,7 +8,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Symptom Checker — Zuvo",
+    title: "Symptom Checker — Sastipe",
     description: "Tap where it hurts. Get guidance on what to do.",
   };
 }

@@ -1,10 +1,9 @@
 import type { MetadataRoute } from "next";
-import { getAppConfig } from "@/lib/env";
+import { getBaseUrlString } from "@/lib/app-url";
 import { LOCALES } from "@/i18n/routing";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const { appUrl } = getAppConfig();
-  const base = appUrl ?? "http://localhost:3000";
+  const base = getBaseUrlString();
   const now = new Date();
 
   const routes = ["/", "/learn", "/track", "/mediator", "/regions"];

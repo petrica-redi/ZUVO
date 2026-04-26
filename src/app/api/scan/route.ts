@@ -1,9 +1,8 @@
 /**
  * POST /api/scan — Misinformation Scanner
- *
- * Takes a health claim and returns a verdict with explanation.
  */
 import { NextRequest, NextResponse } from "next/server";
+import { openaiChatCompletion } from "@/lib/openai";
 
 const SCAN_PROMPT = `You are a health misinformation fact-checker for Roma communities in Europe.
 
@@ -31,11 +30,6 @@ Rules:
 - Respond in the same language as the claim`;
 
 export async function POST(req: NextRequest) {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
-  }
-
   const { claim, locale } = (await req.json()) as { claim: string; locale?: string };
   if (!claim?.trim()) {
     return NextResponse.json({ error: "No claim provided" }, { status: 400 });
@@ -43,35 +37,33 @@ export async function POST(req: NextRequest) {
 
   const localeNote = locale ? `\nThe user's language is "${locale}". Respond in that language.` : "";
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o",
+  const response = await openaiChatCompletion(
+    {
       max_tokens: 600,
-      temperature: 0.3, // Lower temp for factual accuracy
+      temperature: 0.3,
       messages: [
         { role: "system", content: SCAN_PROMPT + localeNote },
         { role: "user", content: `Check this claim: "${claim}"` },
       ],
-    }),
-  });
+    },
+    "scan.claim",
+    { locale },
+  );
 
+  if (response.status === 503) {
+    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
+  }
   if (!response.ok) {
     return NextResponse.json({ error: "AI service error" }, { status: 502 });
   }
 
-  const data = await response.json();
+  const data = (await response.json()) as { choices?: { message?: { content?: string } }[] };
   const content = data.choices?.[0]?.message?.content ?? "";
 
   try {
-    const result = JSON.parse(content);
+    const result = JSON.parse(content) as unknown;
     return NextResponse.json({ success: true, data: result });
   } catch {
-    // If AI didn't return valid JSON, wrap it
     return NextResponse.json({
       success: true,
       data: {
@@ -80,7 +72,7 @@ export async function POST(req: NextRequest) {
         headline: "Could not fully analyze this claim",
         explanation: content,
         shareText: "Always verify health claims with a trusted health worker.",
-        source: "Zuvo Health Advisor",
+        source: "Sastipe Health Advisor",
       },
     });
   }

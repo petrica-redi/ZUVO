@@ -5,7 +5,7 @@ import { SosButton } from "@/components/SosButton";
 import { HealthGlossary } from "@/components/HealthGlossary";
 
 export const metadata: Metadata = {
-  title: "Health Glossary — Zuvo",
+  title: "Health Glossary — Sastipe",
   description: "Medical terms explained in simple words",
 };
 

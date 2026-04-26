@@ -12,7 +12,7 @@ import {
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata(): Promise<Metadata> {
-  return { title: "More — Zuvo", description: "All Zuvo features" };
+  return { title: "More — Sastipe", description: "All Sastipe features" };
 }
 
 const SECTIONS = [
@@ -47,7 +47,7 @@ const SECTIONS = [
     title: "Account",
     items: [
       { href: "/profile", icon: User, label: "Profile", desc: "Language, progress, data", color: "#64748B", gradient: "from-gray-500 to-gray-600" },
-      { href: "/about", icon: Settings, label: "About Zuvo", desc: "Version, privacy, contact", color: "#94A3B8", gradient: "from-gray-400 to-gray-500" },
+      { href: "/about", icon: Settings, label: "About Sastipe", desc: "Version, privacy, contact", color: "#94A3B8", gradient: "from-gray-400 to-gray-500" },
     ],
   },
 ];

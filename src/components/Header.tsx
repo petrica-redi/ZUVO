@@ -12,7 +12,7 @@ export function Header() {
           >
             <span className="text-sm font-black text-white tracking-tight">Z</span>
           </div>
-          <span className="text-[17px] font-extrabold tracking-tight text-gray-900">Zuvo</span>
+          <span className="text-[17px] font-extrabold tracking-tight text-gray-900">Sastipe</span>
         </Link>
       </div>
     </header>

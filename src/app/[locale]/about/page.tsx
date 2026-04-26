@@ -5,8 +5,8 @@ import { BottomNav } from "@/components/BottomNav";
 import { Heart, Shield, Globe, Users, ChevronRight, FileText, Lock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About — Zuvo",
-  description: "About Zuvo Health Literacy Platform",
+  title: "About — Sastipe",
+  description: "About Sastipe Health Literacy Platform",
 };
 
 export default function AboutPage() {
@@ -21,14 +21,14 @@ export default function AboutPage() {
             >
               <span className="text-3xl font-black text-white">Z</span>
             </div>
-            <h1 className="text-2xl font-black text-gray-900">Zuvo</h1>
+            <h1 className="text-2xl font-black text-gray-900">Sastipe</h1>
             <p className="mt-1 text-sm text-gray-500">Health literacy for Roma communities</p>
             <p className="mt-1 text-xs text-gray-400">Version 1.0.0</p>
           </div>
 
           <div className="mb-6 rounded-3xl border border-gray-100 bg-white p-5 shadow-sm animate-fade-in-up delay-100">
             <p className="text-sm leading-relaxed text-gray-600">
-              Zuvo is an AI-powered health companion designed specifically for Roma communities across Europe.
+              Sastipe is an AI-powered health companion designed specifically for Roma communities across Europe.
               Our mission is to bridge the health literacy gap by providing trusted, culturally sensitive
               health information in simple language.
             </p>
@@ -67,7 +67,7 @@ export default function AboutPage() {
 
           <div className="mt-6 rounded-3xl border-2 border-amber-200 bg-amber-50 p-5 animate-fade-in-up delay-700">
             <p className="text-xs font-bold text-amber-800">
-              Zuvo is not a medical device. All information is for educational purposes only.
+              Sastipe is not a medical device. All information is for educational purposes only.
               Always consult a qualified healthcare professional for medical decisions.
             </p>
           </div>

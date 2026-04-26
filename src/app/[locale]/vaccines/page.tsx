@@ -8,7 +8,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Vaccine Guide — Zuvo",
+    title: "Vaccine Guide — Sastipe",
     description: "Every vaccine explained simply. Protect your family with knowledge.",
   };
 }
