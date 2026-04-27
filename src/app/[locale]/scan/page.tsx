@@ -4,6 +4,8 @@ import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { SosButton } from "@/components/SosButton";
 import { MisinfoScanner } from "@/components/MisinfoScanner";
+import { AppShell, ScreenMain } from "@/components/layout/AppShell";
+import { PageHeader } from "@/components/layout/PageHeader";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -22,10 +24,9 @@ export default async function ScanPage({ params }: Props) {
   const tLegal = await getTranslations({ locale, namespace: "legal" });
 
   const labels = {
-    title: t("title"),
-    subtitle: t("subtitle"),
     legalTitle: tLegal("aiEducationalTitle"),
     legalBody: tLegal("aiEducationalBody"),
+    claimTextareaAria: t("claimTextareaAria"),
     placeholder: t("placeholder"),
     checkButton: t("checkButton"),
     checking: t("checking"),
@@ -38,15 +39,16 @@ export default async function ScanPage({ params }: Props) {
   };
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
+    <AppShell>
       <Header />
       <SosButton />
-      <main id="main-content" className="flex-1 pb-2">
+      <ScreenMain>
         <div className="px-5 py-6">
+          <PageHeader eyebrow={t("pageEyebrow")} title={t("title")} subtitle={t("subtitle")} />
           <MisinfoScanner labels={labels} locale={locale} />
         </div>
-      </main>
+      </ScreenMain>
       <BottomNav />
-    </div>
+    </AppShell>
   );
 }

@@ -5,14 +5,15 @@ type Props = {
   subtitle?: string;
   eyebrow?: string;
   action?: ReactNode;
+  className?: string;
 };
 
 /**
  * Consistent top-of-screen title block (Level 3 typography hierarchy).
  */
-export function PageHeader({ title, subtitle, eyebrow, action }: Props) {
+export function PageHeader({ title, subtitle, eyebrow, action, className = "" }: Props) {
   return (
-    <div className="mb-6 flex items-start justify-between gap-3 px-1">
+    <div className={`mb-6 flex items-start justify-between gap-3 px-1 ${className}`.trim()}>
       <div className="min-w-0">
         {eyebrow ? (
           <p className="mb-1.5 text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#A93226]/90">

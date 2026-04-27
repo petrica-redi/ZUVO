@@ -1,11 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import {
-  Stethoscope, Send, Loader2, AlertTriangle, CheckCircle2,
-  Clock, Siren, FileText, ArrowLeft, Thermometer, Baby,
-  Brain, Wind, Eye, Bone, HeartPulse,
+  Stethoscope,
+  Send,
+  Loader2,
+  AlertTriangle,
+  CheckCircle2,
+  Clock,
+  Siren,
+  FileText,
+  ArrowLeft,
+  Thermometer,
+  Baby,
+  Brain,
+  Wind,
+  Eye,
+  Bone,
+  HeartPulse,
 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FrostPanel } from "@/components/ui/FrostPanel";
+import { getEmergencyRegionForLocale } from "@/lib/locale-to-region";
+import { getPrimaryEmergencyTel } from "@/lib/emergency-numbers";
+import { pageEnter, staggerContainer, staggerItem } from "@/lib/motion-variants";
 
 type Message = { role: "user" | "assistant"; content: string };
 
@@ -36,31 +54,29 @@ const QUICK_CONCERNS: {
 
 const SEVERITY_CONFIG = {
   green: {
-    bg: "bg-green-50",
-    border: "border-green-200",
-    gradient: "from-green-500 to-emerald-600",
-    text: "text-green-800",
+    border: "border-emerald-200/80",
+    cardBg: "bg-emerald-50/60 backdrop-blur-sm",
+    gradient: "from-emerald-500 to-teal-600",
+    text: "text-emerald-900",
     icon: CheckCircle2,
   },
   amber: {
-    bg: "bg-amber-50",
-    border: "border-amber-200",
+    border: "border-amber-200/80",
+    cardBg: "bg-amber-50/60 backdrop-blur-sm",
     gradient: "from-amber-500 to-orange-600",
-    text: "text-amber-800",
+    text: "text-amber-900",
     icon: Clock,
   },
   red: {
-    bg: "bg-red-50",
-    border: "border-red-200",
-    gradient: "from-red-600 to-red-800",
-    text: "text-red-800",
+    border: "border-red-200/80",
+    cardBg: "bg-red-50/60 backdrop-blur-sm",
+    gradient: "from-red-600 to-rose-800",
+    text: "text-red-900",
     icon: Siren,
   },
 };
 
 export type ConsultationLabels = {
-  title: string;
-  subtitle: string;
   legalTitle: string;
   legalBody: string;
   whatBrings: string;
@@ -71,7 +87,8 @@ export type ConsultationLabels = {
   backTitle: string;
   backSubtitle: string;
   newConsultation: string;
-  call112Now: string;
+  callEmergencyNow: string;
+  connectionError: string;
   assessment: string;
   whatToDo: string;
   homeCare: string;
@@ -84,6 +101,10 @@ export type ConsultationLabels = {
   severityGreen: string;
   severityAmber: string;
   severityRed: string;
+  concernInputAria: string;
+  answerInputAria: string;
+  backButtonAria: string;
+  sendAnswerAria: string;
 };
 
 export function ConsultationFlow({ locale, labels }: { locale: string; labels: ConsultationLabels }) {
@@ -93,12 +114,33 @@ export function ConsultationFlow({ locale, labels }: { locale: string; labels: C
   const [loading, setLoading] = useState(false);
   const [summary, setSummary] = useState<Summary | null>(null);
   const [showVisitCard, setShowVisitCard] = useState(false);
+  const chatScrollRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  const primaryEmergency = useMemo(
+    () => getPrimaryEmergencyTel(getEmergencyRegionForLocale(locale)),
+    [locale],
+  );
+  const emergencyCta = labels.callEmergencyNow.replace("{number}", primaryEmergency);
+
+  useEffect(() => {
+    if (chatScrollRef.current) {
+      chatScrollRef.current.scrollTo({ top: chatScrollRef.current.scrollHeight, behavior: "smooth" });
+    }
+  }, [messages, loading]);
+
+  useEffect(() => {
+    if (stage === "chat" && inputRef.current) {
+      inputRef.current.style.height = "auto";
+      inputRef.current.style.height = Math.min(inputRef.current.scrollHeight, 100) + "px";
+    }
+  }, [input, stage]);
 
   const startConsultation = (concern: string) => {
     const userMsg: Message = { role: "user", content: concern };
     setMessages([userMsg]);
     setStage("chat");
-    fetchResponse([userMsg]);
+    void fetchResponse([userMsg]);
   };
 
   const fetchResponse = async (msgs: Message[]) => {
@@ -115,17 +157,11 @@ export function ConsultationFlow({ locale, labels }: { locale: string; labels: C
           setSummary(data.data);
           setStage("summary");
         } else {
-          setMessages((prev) => [
-            ...prev,
-            { role: "assistant", content: data.data.message },
-          ]);
+          setMessages((prev) => [...prev, { role: "assistant", content: data.data.message }]);
         }
       }
     } catch {
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: "I'm having trouble connecting. Please try again." },
-      ]);
+      setMessages((prev) => [...prev, { role: "assistant", content: labels.connectionError }]);
     } finally {
       setLoading(false);
     }
@@ -137,7 +173,7 @@ export function ConsultationFlow({ locale, labels }: { locale: string; labels: C
     const newMessages = [...messages, userMsg];
     setMessages(newMessages);
     setInput("");
-    fetchResponse(newMessages);
+    void fetchResponse(newMessages);
   };
 
   const reset = () => {
@@ -148,122 +184,165 @@ export function ConsultationFlow({ locale, labels }: { locale: string; labels: C
     setInput("");
   };
 
-  // Stage 1: Select concern
   if (stage === "select") {
     return (
-      <div>
-        <div className="mb-6 text-center animate-fade-in-up">
-          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-600 shadow-xl shadow-emerald-500/25">
-            <Stethoscope className="h-10 w-10 text-white" />
-          </div>
-          <h1 className="text-2xl font-black text-gray-900">{labels.title}</h1>
-          <p className="mt-2 text-sm text-gray-500">{labels.subtitle}</p>
-          <div className="mt-4 rounded-2xl border border-amber-100 bg-amber-50/90 px-4 py-3 text-left">
-            <p className="text-xs font-bold text-amber-950">{labels.legalTitle}</p>
-            <p className="mt-1 text-[11px] leading-relaxed text-amber-950/90">{labels.legalBody}</p>
+      <motion.div {...pageEnter} className="space-y-5">
+        <div className="flex flex-col items-center text-center">
+          <div
+            className="relative mb-4 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-3xl shadow-[0_12px_40px_rgba(16,185,129,0.25)] ring-1 ring-white/30"
+            style={{ background: "linear-gradient(145deg, #10B981 0%, #0D9488 55%, #14B8A6 100%)" }}
+          >
+            <Stethoscope className="relative h-10 w-10 text-white drop-shadow" />
           </div>
         </div>
 
-        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
-          {labels.whatBrings}
-        </p>
+        <FrostPanel padding="md" className="border-amber-200/50">
+          <p className="text-xs font-extrabold uppercase tracking-wider text-amber-900/90">{labels.legalTitle}</p>
+          <p className="mt-1.5 text-[12px] leading-relaxed text-amber-950/85">{labels.legalBody}</p>
+        </FrostPanel>
 
-        <div className="grid grid-cols-2 gap-3">
+        <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-slate-400">{labels.whatBrings}</p>
+
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          animate="show"
+          className="grid grid-cols-2 gap-2.5"
+        >
           {QUICK_CONCERNS.map((c, i) => (
-            <button
-              key={c.id}
-              onClick={() => startConsultation(labels.quick[i] ?? c.id)}
-              className={`card-hover flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm animate-fade-in-up delay-${(i + 1) * 100}`}
-            >
-              <div
-                className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl shadow-sm"
-                style={{ backgroundColor: c.color + "15" }}
+            <motion.div key={c.id} variants={staggerItem} className="min-w-0">
+              <button
+                type="button"
+                onClick={() => startConsultation(labels.quick[i] ?? c.id)}
+                className="surface-frosted card-hover flex w-full min-h-[4.5rem] items-center gap-2.5 rounded-2xl border border-white/60 bg-white/80 p-3 text-left shadow-sm backdrop-blur-md"
               >
-                <c.icon className="h-6 w-6" style={{ color: c.color }} />
-              </div>
-              <span className="text-sm font-bold text-gray-700">{labels.quick[i]}</span>
-            </button>
-          ))}
-        </div>
-
-        <div className="mt-4">
-          <p className="mb-2 text-center text-xs text-gray-400">{labels.orOwnWords}</p>
-          <div className="flex gap-2">
-            <input
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); startConsultation(input.trim()); } }}
-              placeholder={labels.freePlaceholder}
-              aria-label="Describe your health concern"
-              className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
-            />
-            <button
-              onClick={() => input.trim() && startConsultation(input.trim())}
-              disabled={!input.trim()}
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-500 text-white shadow-md disabled:opacity-40"
-            >
-              <Send className="h-4 w-4" />
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Stage 2: Chat / gathering info
-  if (stage === "chat") {
-    return (
-      <div className="flex h-[calc(100vh-10rem)] flex-col">
-        <div className="mb-3 flex items-center gap-3">
-          <button onClick={reset} className="rounded-full bg-gray-100 p-2">
-            <ArrowLeft className="h-4 w-4 text-gray-600" />
-          </button>
-          <div>
-            <h2 className="text-sm font-bold text-gray-900">{labels.backTitle}</h2>
-            <p className="text-xs text-gray-400">{labels.backSubtitle}</p>
-          </div>
-        </div>
-
-        <div className="flex-1 overflow-y-auto space-y-3 pb-4">
-          {messages.map((msg, i) => (
-            <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
-              <div
-                className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
-                  msg.role === "user"
-                    ? "bg-emerald-500 text-white rounded-br-md"
-                    : "bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-md"
-                }`}
-              >
-                <div className="whitespace-pre-wrap">{msg.content}</div>
-              </div>
-            </div>
-          ))}
-          {loading && (
-            <div className="flex justify-start">
-              <div className="rounded-2xl rounded-bl-md border border-gray-100 bg-white px-4 py-3 shadow-sm">
-                <div className="flex items-center gap-2 text-gray-400">
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                  <span className="text-xs">{labels.thinking}</span>
+                <div
+                  className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl shadow-inner ring-1 ring-black/5"
+                  style={{ backgroundColor: c.color + "18" }}
+                >
+                  <c.icon className="h-5 w-5" style={{ color: c.color }} />
                 </div>
-              </div>
-            </div>
-          )}
-        </div>
+                <span className="line-clamp-2 text-xs font-bold leading-tight text-slate-800">{labels.quick[i]}</span>
+              </button>
+            </motion.div>
+          ))}
+        </motion.div>
 
-        <div className="border-t border-gray-100 bg-white pt-3">
+        <div>
+          <p className="mb-2.5 text-center text-[11px] font-medium text-slate-400">{labels.orOwnWords}</p>
           <div className="flex items-end gap-2">
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); sendMessage(); } }}
-              aria-label="Your answer" placeholder={labels.answerPlaceholder}
-              className="flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  if (input.trim()) startConsultation(input.trim());
+                }
+              }}
+              placeholder={labels.freePlaceholder}
+              aria-label={labels.concernInputAria}
+              className="min-h-[48px] flex-1 rounded-2xl border border-white/60 bg-slate-50/90 px-4 py-3 text-sm text-slate-800 shadow-inner focus:border-[#0D9488]/40 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+            />
+            <button
+              type="button"
+              onClick={() => input.trim() && startConsultation(input.trim())}
+              disabled={!input.trim()}
+              className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full text-white transition active:scale-95 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:shadow-none"
+              style={
+                input.trim()
+                  ? {
+                      background: "linear-gradient(145deg, #10B981 0%, #0D9488 100%)",
+                      boxShadow: "0 6px 20px rgba(16, 185, 129, 0.35)",
+                    }
+                  : undefined
+              }
+            >
+              <Send className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
+  if (stage === "chat") {
+    return (
+      <div className="flex min-h-0 flex-1 flex-col">
+        <div className="mb-3 flex items-center gap-2">
+          <button
+            type="button"
+            onClick={reset}
+            className="rounded-2xl border border-white/60 bg-white/80 p-2.5 text-slate-600 shadow-sm backdrop-blur-sm transition active:scale-95"
+            aria-label={labels.backButtonAria}
+          >
+            <ArrowLeft className="h-4 w-4" />
+          </button>
+          <div className="min-w-0">
+            <h2 className="text-sm font-extrabold text-slate-900">{labels.backTitle}</h2>
+            <p className="text-xs text-slate-500">{labels.backSubtitle}</p>
+          </div>
+        </div>
+
+        <div
+          ref={chatScrollRef}
+          className="min-h-0 flex-1 space-y-2 overflow-y-auto px-0.5 pb-3"
+        >
+          {messages.map((msg, i) => (
+            <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`max-w-[88%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+                  msg.role === "user"
+                    ? "rounded-br-md text-white shadow-[0_6px_20px_rgba(16,185,129,0.25)]"
+                    : "border border-white/70 bg-white/90 text-slate-800 shadow-sm backdrop-blur-md"
+                } ${msg.role === "assistant" ? "rounded-bl-md" : "rounded-br-md"}`}
+                style={
+                  msg.role === "user" ? { background: "linear-gradient(135deg, #059669 0%, #0D9488 100%)" } : undefined
+                }
+              >
+                <div className="whitespace-pre-wrap">{msg.content}</div>
+              </motion.div>
+            </div>
+          ))}
+          {loading && (
+            <div className="flex justify-start">
+              <FrostPanel padding="sm" className="max-w-[85%]">
+                <div className="flex items-center gap-2 text-slate-500">
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  <span className="text-xs font-semibold">{labels.thinking}</span>
+                </div>
+              </FrostPanel>
+            </div>
+          )}
+        </div>
+
+        <div className="shrink-0 border-t border-white/50 bg-white/55 p-3 backdrop-blur-xl">
+          <div className="flex items-end gap-2">
+            <textarea
+              ref={inputRef}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  sendMessage();
+                }
+              }}
+              aria-label={labels.answerInputAria}
+              placeholder={labels.answerPlaceholder}
+              rows={1}
+              className="min-h-[48px] flex-1 resize-none rounded-2xl border border-white/60 bg-slate-50/90 px-4 py-3 text-sm text-slate-800 focus:border-[#0D9488]/40 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
               disabled={loading}
             />
             <button
+              type="button"
               onClick={sendMessage}
               disabled={!input.trim() || loading}
-              className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white shadow-md transition-all active:scale-95 disabled:bg-gray-300"
+              className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full text-white shadow-[0_6px_20px_rgba(16,185,129,0.3)] transition active:scale-95 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:shadow-none"
+              style={{ background: !input.trim() || loading ? undefined : "linear-gradient(145deg, #10B981 0%, #0D9488 100%)" }}
+              aria-label={labels.sendAnswerAria}
             >
               <Send className="h-4 w-4" />
             </button>
@@ -273,7 +352,6 @@ export function ConsultationFlow({ locale, labels }: { locale: string; labels: C
     );
   }
 
-  // Stage 3: Summary
   if (stage === "summary" && summary) {
     const config = SEVERITY_CONFIG[summary.severity];
     const SeverityIcon = config.icon;
@@ -285,89 +363,98 @@ export function ConsultationFlow({ locale, labels }: { locale: string; labels: C
           : labels.severityRed;
 
     return (
-      <div className="space-y-4">
-        <button onClick={reset} className="flex items-center gap-2 text-sm text-gray-500">
+      <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
+        <button
+          type="button"
+          onClick={reset}
+          className="inline-flex items-center gap-2 rounded-2xl border border-white/60 bg-white/70 px-3 py-2 text-sm font-semibold text-slate-600 shadow-sm backdrop-blur-sm transition active:scale-[0.99]"
+        >
           <ArrowLeft className="h-4 w-4" /> {labels.newConsultation}
         </button>
 
-        {/* Severity banner */}
-        <div className={`overflow-hidden rounded-2xl border ${config.border} shadow-sm`}>
-          <div className={`flex items-center gap-3 bg-gradient-to-r ${config.gradient} px-4 py-4`}>
+        <div
+          className={`overflow-hidden rounded-3xl border-2 ${config.border} ${config.cardBg} shadow-[0_8px_40px_rgba(15,23,42,0.08)]`}
+        >
+          <div className={`flex items-center gap-3 bg-gradient-to-r ${config.gradient} px-5 py-4`}>
             <SeverityIcon className="h-6 w-6 text-white" />
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-white/80">
-                {severityLabel}
-              </span>
-              <h2 className="text-base font-bold text-white">{summary.title}</h2>
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-white/90">{severityLabel}</span>
+              <h2 className="text-base font-black text-white drop-shadow-sm">{summary.title}</h2>
             </div>
           </div>
 
-          <div className={`space-y-4 p-4 ${config.bg}`}>
+          <div className="space-y-4 p-4">
             {summary.severity === "red" && (
               <a
-                href="tel:112"
-                className="flex items-center justify-center gap-2 rounded-xl bg-red-600 py-4 text-lg font-bold text-white shadow-lg"
+                href={`tel:${primaryEmergency}`}
+                className="flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-red-600 to-rose-700 py-3.5 text-base font-extrabold text-white shadow-[0_8px_28px_rgba(220,38,38,0.35)]"
               >
-                <Siren className="h-6 w-6" /> {labels.call112Now}
+                <Siren className="h-6 w-6" />
+                {emergencyCta}
               </a>
             )}
 
-            <div>
-              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-500">
+            <FrostPanel padding="md" className="border-slate-200/60">
+              <p className="mb-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">
                 {labels.assessment}
               </p>
-              <p className="text-sm leading-relaxed text-gray-700">{summary.assessment}</p>
-            </div>
+              <p className="text-sm leading-relaxed text-slate-700">{summary.assessment}</p>
+            </FrostPanel>
 
-            <div className="rounded-xl bg-white p-3 shadow-sm">
-              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-emerald-600">
+            <FrostPanel padding="md" className="border-emerald-200/50">
+              <p className="mb-1 text-[10px] font-extrabold uppercase tracking-wider text-emerald-700">
                 {labels.whatToDo}
               </p>
-              <p className="text-sm leading-relaxed text-gray-700">{summary.whatToDo}</p>
-            </div>
+              <p className="text-sm leading-relaxed text-slate-700">{summary.whatToDo}</p>
+            </FrostPanel>
 
             {summary.homeRemedies && (
-              <div className="rounded-xl bg-white p-3 shadow-sm">
-                <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-blue-600">
+              <FrostPanel padding="md" className="border-sky-200/50">
+                <p className="mb-1 text-[10px] font-extrabold uppercase tracking-wider text-sky-700">
                   {labels.homeCare}
                 </p>
-                <p className="text-sm leading-relaxed text-gray-700">{summary.homeRemedies}</p>
-              </div>
+                <p className="text-sm leading-relaxed text-slate-700">{summary.homeRemedies}</p>
+              </FrostPanel>
             )}
 
-            <div className="rounded-xl bg-amber-50 p-3">
-              <p className="mb-1 flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-amber-700">
+            <FrostPanel padding="md" className="border-amber-200/60 bg-amber-50/50">
+              <p className="mb-1 flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-wider text-amber-800">
                 <AlertTriangle className="h-3 w-3" /> {labels.watchFor}
               </p>
-              <p className="text-sm leading-relaxed text-amber-700">{summary.watchFor}</p>
-            </div>
+              <p className="text-sm leading-relaxed text-amber-900">{summary.watchFor}</p>
+            </FrostPanel>
           </div>
         </div>
 
-        {/* Doctor visit card */}
         <button
+          type="button"
           onClick={() => setShowVisitCard(!showVisitCard)}
-          className="flex w-full items-center justify-center gap-2 rounded-xl border border-indigo-200 bg-indigo-50 py-3 text-sm font-semibold text-indigo-700 shadow-sm transition-all active:scale-[0.98]"
+          className="flex w-full min-h-[48px] items-center justify-center gap-2 rounded-2xl border border-indigo-200/60 bg-indigo-50/90 py-3.5 text-sm font-bold text-indigo-800 shadow-sm backdrop-blur-sm transition active:scale-[0.99]"
         >
           <FileText className="h-4 w-4" />
           {showVisitCard ? labels.hideVisitCard : labels.showVisitCard}
         </button>
 
-        {showVisitCard && (
-          <div className="rounded-2xl border-2 border-dashed border-indigo-200 bg-white p-5">
-            <div className="mb-3 flex items-center gap-2 border-b border-gray-100 pb-3">
-              <Stethoscope className="h-5 w-5 text-indigo-500" />
-              <span className="text-sm font-bold text-gray-900">{labels.patientSummaryTitle}</span>
-            </div>
-            <p className="text-sm leading-relaxed text-gray-700">
-              {summary.doctorVisitSummary}
-            </p>
-            <p className="mt-3 text-[10px] text-gray-400">
-              {labels.visitCardFooter}
-            </p>
-          </div>
-        )}
-      </div>
+        <AnimatePresence>
+          {showVisitCard && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="overflow-hidden"
+            >
+              <FrostPanel padding="lg" className="border-2 border-dashed border-indigo-200/70">
+                <div className="mb-3 flex items-center gap-2 border-b border-slate-100 pb-3">
+                  <Stethoscope className="h-5 w-5 text-indigo-500" />
+                  <span className="text-sm font-extrabold text-slate-900">{labels.patientSummaryTitle}</span>
+                </div>
+                <p className="text-sm leading-relaxed text-slate-700">{summary.doctorVisitSummary}</p>
+                <p className="mt-3 text-[10px] text-slate-400">{labels.visitCardFooter}</p>
+              </FrostPanel>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
     );
   }
 

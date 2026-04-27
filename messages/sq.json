@@ -23,8 +23,10 @@
     "aiEducationalBody": "Sastipe përdor inteligjencë artificiale për njohuri të përgjithshme shëndetësore dhe udhëzim. Nuk është një pajisje mjekësore, nuk jep diagnozë klinike dhe nuk zëvendëson mjekun, infermierin, farmacistin ose shërbimet e urgjencës. Në urgjencë, telefono 112, 127 ose numrin vendor përkatës. Ndiq gjithmonë udhëzimet e profesionistëve të kualifikuar."
   },
   "scan": {
+    "pageEyebrow": "Kontroll pretendimesh",
     "title": "Kontrollo një pretendim shëndetësor",
     "subtitle": "Ngjit diçka që pe në rrjet. Kjo është për arsim, jo vendim klinik.",
+    "claimTextareaAria": "Ngjit një pretendim shëndetësor për ta kontrolluar",
     "placeholder": "Ngjit këtu pretendimin…\n\nShembull: “Vaksinat ndryshojnë ADN-në”",
     "checkButton": "Kontrollo",
     "checking": "Duke kontrolluar…",
@@ -36,6 +38,7 @@
     "verdictFalse": "E pavërtetë"
   },
   "consult": {
+    "pageEyebrow": "Udhëzim i udhëhequr",
     "title": "Konsultë shëndetësore (jo klinike)",
     "subtitle": "Thuaj çfarë të shqetëson. Unë bëj disa pyetje për t’i ndihmuar të mendosh hapat e ardhshëm. Kjo është vetëm arsimore — nuk është diagnozë mjekësore ose triazh i licencuar nga autoritetet shëndetësore.",
     "whatBrings": "Çfarë të sjell sot këtu?",
@@ -45,6 +48,7 @@
     "thinking": "Duke menduar…",
     "backTitle": "Konsultë (jo klinike)",
     "backSubtitle": "Edhe disa pyetje për t’i dhënë udhëzim (arsimore, jo diagnozë klinike).",
+    "connectionError": "Lidhja dështoi. Provo sërish.",
     "fever": "Ethe / temperaturë e lartë",
     "pain": "Dhimbje diku",
     "breathing": "Vështirësi në frymëmarrje",
@@ -54,6 +58,11 @@
     "mental": "Stres / ankth / trishtim",
     "heart": "Problem zemre ose gjoksi",
     "newConsultation": "Konsultë e re",
+    "callEmergencyNow": "Telefono {number} tani",
+    "concernInputAria": "Përshkruaj shqetësimin tënd shëndetësor me fjalët e tua",
+    "answerInputAria": "Përgjigjja jote për pyetjet",
+    "backButtonAria": "Kthehu te fillimi",
+    "sendAnswerAria": "Dërgo përgjigjen",
     "call112Now": "Telefono 112 TANI",
     "assessment": "Vlerësim (jo klinik)",
     "whatToDo": "Çfarë të bësh",

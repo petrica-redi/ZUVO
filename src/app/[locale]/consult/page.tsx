@@ -4,6 +4,8 @@ import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { SosButton } from "@/components/SosButton";
 import { ConsultationFlow } from "@/components/ConsultationFlow";
+import { AppShell, ScreenMain } from "@/components/layout/AppShell";
+import { PageHeader } from "@/components/layout/PageHeader";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -33,44 +35,55 @@ export default async function ConsultPage({ params }: Props) {
   ];
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
+    <AppShell>
       <Header />
       <SosButton />
-      <main id="main-content" className="flex-1 pb-2">
-        <div className="px-5 py-6">
-          <ConsultationFlow
-            locale={locale}
-            labels={{
-              title: t("title"),
-              subtitle: t("subtitle"),
-              legalTitle: tLegal("aiEducationalTitle"),
-              legalBody: tLegal("aiEducationalBody"),
-              whatBrings: t("whatBrings"),
-              orOwnWords: t("orOwnWords"),
-              freePlaceholder: t("freePlaceholder"),
-              answerPlaceholder: t("answerPlaceholder"),
-              thinking: t("thinking"),
-              backTitle: t("backTitle"),
-              backSubtitle: t("backSubtitle"),
-              newConsultation: t("newConsultation"),
-              call112Now: t("call112Now"),
-              assessment: t("assessment"),
-              whatToDo: t("whatToDo"),
-              homeCare: t("homeCare"),
-              watchFor: t("watchFor"),
-              showVisitCard: t("showVisitCard"),
-              hideVisitCard: t("hideVisitCard"),
-              patientSummaryTitle: t("patientSummaryTitle"),
-              visitCardFooter: t("visitCardFooter"),
-              quick,
-              severityGreen: t("severityGreen"),
-              severityAmber: t("severityAmber"),
-              severityRed: t("severityRed"),
-            }}
+      <ScreenMain className="flex min-h-0 flex-1 flex-col">
+        <div className="flex min-h-0 flex-1 flex-col px-5 py-6">
+          <PageHeader
+            className="shrink-0"
+            eyebrow={t("pageEyebrow")}
+            title={t("title")}
+            subtitle={t("subtitle")}
           />
+          <div className="min-h-0 flex-1">
+            <ConsultationFlow
+              locale={locale}
+              labels={{
+                legalTitle: tLegal("aiEducationalTitle"),
+                legalBody: tLegal("aiEducationalBody"),
+                whatBrings: t("whatBrings"),
+                orOwnWords: t("orOwnWords"),
+                freePlaceholder: t("freePlaceholder"),
+                answerPlaceholder: t("answerPlaceholder"),
+                thinking: t("thinking"),
+                backTitle: t("backTitle"),
+                backSubtitle: t("backSubtitle"),
+                newConsultation: t("newConsultation"),
+                callEmergencyNow: t("callEmergencyNow"),
+                connectionError: t("connectionError"),
+                assessment: t("assessment"),
+                whatToDo: t("whatToDo"),
+                homeCare: t("homeCare"),
+                watchFor: t("watchFor"),
+                showVisitCard: t("showVisitCard"),
+                hideVisitCard: t("hideVisitCard"),
+                patientSummaryTitle: t("patientSummaryTitle"),
+                visitCardFooter: t("visitCardFooter"),
+                quick,
+                severityGreen: t("severityGreen"),
+                severityAmber: t("severityAmber"),
+                severityRed: t("severityRed"),
+                concernInputAria: t("concernInputAria"),
+                answerInputAria: t("answerInputAria"),
+                backButtonAria: t("backButtonAria"),
+                sendAnswerAria: t("sendAnswerAria"),
+              }}
+            />
+          </div>
         </div>
-      </main>
+      </ScreenMain>
       <BottomNav />
-    </div>
+    </AppShell>
   );
 }

@@ -23,8 +23,10 @@
     "aiEducationalBody": "Sastipe uses AI for general health literacy and guidance. It is not a medical device, does not provide a clinical diagnosis, and does not replace a doctor, nurse, pharmacist, or emergency services. In an emergency, call 112, 127, or the appropriate local number. Always follow the advice of qualified health professionals."
   },
   "scan": {
+    "pageEyebrow": "Claim check",
     "title": "Check a health claim",
     "subtitle": "Paste something you saw on social media. This is for education, not a clinical judgment.",
+    "claimTextareaAria": "Paste a health claim to check",
     "placeholder": "Paste the claim here...\n\nExample: \"Vaccines change your DNA\"",
     "checkButton": "Check this",
     "checking": "Checking...",
@@ -36,6 +38,7 @@
     "verdictFalse": "False"
   },
   "consult": {
+    "pageEyebrow": "Guided support",
     "title": "Health Consultation",
     "subtitle": "Tell me what is bothering you. I will ask a few questions to help you think about what to do next. This is educational only — it is not a medical diagnosis or emergency triage from a licenced service.",
     "whatBrings": "What brings you here today?",
@@ -45,6 +48,7 @@
     "thinking": "Thinking...",
     "backTitle": "Health Consultation",
     "backSubtitle": "A few more questions to guide you (educational, not a clinical diagnosis).",
+    "connectionError": "I can't connect right now. Please try again.",
     "fever": "Fever / high temperature",
     "pain": "Pain somewhere",
     "breathing": "Breathing problems",
@@ -54,6 +58,11 @@
     "mental": "Stress / anxiety / low mood",
     "heart": "Heart or chest problem",
     "newConsultation": "New consultation",
+    "callEmergencyNow": "Call {number} now",
+    "concernInputAria": "Describe your health concern in your own words",
+    "answerInputAria": "Your answer to the follow-up questions",
+    "backButtonAria": "Back to start",
+    "sendAnswerAria": "Send answer",
     "call112Now": "Call 112 NOW",
     "assessment": "Assessment",
     "whatToDo": "What to do",
