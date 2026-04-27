@@ -45,8 +45,8 @@ export function SosButton() {
     return (
       <button
         onClick={() => setOpen(true)}
-        className="absolute right-3 top-14 z-50 flex h-12 w-12 items-center justify-center rounded-full shadow-lg animate-pulse-glow"
-        style={{ background: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)" }}
+        className="absolute right-3 top-14 z-50 flex h-12 w-12 items-center justify-center rounded-full shadow-[0_4px_14px_rgba(220,38,38,0.45)] animate-pulse-glow ring-2 ring-white/30"
+        style={{ background: "linear-gradient(145deg, #ef4444 0%, #b91c1c 55%, #991b1b 100%)" }}
         aria-label={t("ariaFab")}
       >
         <div className="flex flex-col items-center">

@@ -17,7 +17,7 @@ export const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
   viewportFit: "cover",
-  themeColor: "#ffffff",
+  themeColor: "#c0392b",
 };
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
@@ -31,7 +31,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Sastipe" />
       </head>
-      <body className="font-sans antialiased bg-gray-950">
+      <body className="app-body font-sans antialiased">
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <ServiceWorkerRegistrar />
         <div className="mobile-shell" role="application" aria-label="Sastipe Health App">

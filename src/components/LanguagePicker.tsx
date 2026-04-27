@@ -53,11 +53,11 @@ export function LanguagePicker() {
       {/* Trigger button */}
       <button
         onClick={() => setOpen(true)}
-        className="flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:border-gray-300 hover:shadow active:scale-95"
+        className="flex items-center gap-1.5 rounded-full border border-white/80 bg-white/70 px-2.5 py-1.5 text-xs font-semibold text-slate-700 shadow-sm backdrop-blur-md transition-all hover:border-slate-200/90 hover:bg-white/90 active:scale-95"
         aria-label={t("select")}
         disabled={isPending}
       >
-        <Globe className="h-3.5 w-3.5 text-gray-500" />
+        <Globe className="h-3.5 w-3.5 text-slate-500" />
         <span>{current.flag}</span>
         <span className="uppercase text-xs tracking-wide">{current.code}</span>
       </button>
@@ -70,7 +70,7 @@ export function LanguagePicker() {
 
           {/* Sheet */}
           <div
-            className="mx-auto w-full max-w-lg rounded-t-3xl bg-white pb-safe-bottom"
+            className="mx-auto w-full max-w-lg rounded-t-[1.4rem] border border-b-0 border-white/50 bg-white/95 pb-safe-bottom shadow-[0_-8px_40px_rgba(0,0,0,0.12)] backdrop-blur-xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Handle */}

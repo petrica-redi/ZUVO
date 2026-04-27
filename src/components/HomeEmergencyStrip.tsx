@@ -13,10 +13,10 @@ export async function HomeEmergencyStrip({ locale }: Props) {
   return (
     <a
       href={`tel:${tel}`}
-      className="flex items-center gap-3.5 rounded-2xl p-4 shadow-lg active:scale-[0.98]"
-      style={{ background: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)" }}
+      className="flex items-center gap-3.5 rounded-2xl p-4 shadow-[0_4px_16px_rgba(220,38,38,0.35),inset_0_1px_0_rgba(255,255,255,0.12)] active:scale-[0.99]"
+      style={{ background: "linear-gradient(130deg, #ef4444 0%, #b91c1c 50%, #991b1b 100%)" }}
     >
-      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20">
+      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 ring-1 ring-white/20">
         <Phone className="h-5 w-5 text-white" />
       </div>
       <div>
