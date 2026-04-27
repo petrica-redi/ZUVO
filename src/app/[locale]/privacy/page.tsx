@@ -4,15 +4,15 @@ import { BottomNav } from "@/components/BottomNav";
 import { Shield, Lock, Eye, Trash2, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Zuvo",
-  description: "How Zuvo handles your data",
+  title: "Privacy Policy — Sastipe",
+  description: "How Sastipe handles your data",
 };
 
 const SECTIONS = [
   {
     icon: Lock,
     title: "What data we collect",
-    content: "Zuvo collects minimal data. Chat conversations are processed in real-time and not stored on our servers. Family health data is stored locally on your device only — we never see it.",
+    content: "Sastipe collects minimal data. Chat conversations are processed in real-time and not stored on our servers. Family health data is stored locally on your device only — we never see it.",
   },
   {
     icon: Eye,
@@ -66,7 +66,7 @@ export default function PrivacyPage() {
 
           <div className="mt-6 rounded-3xl border-2 border-amber-200 bg-amber-50 p-5 animate-fade-in-up delay-600">
             <p className="text-xs font-bold text-amber-800">
-              Zuvo is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.
+              Sastipe is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.
             </p>
           </div>
         </div>

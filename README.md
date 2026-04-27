@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sastipe
 
-## Getting Started
+A Next.js app for health literacy, community navigation, and AI-assisted (non-clinical) guidance for Roma communities across Europe. It is not a medical device.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Required for | Description |
+|----------|--------------|-------------|
+| `OPENAI_API_KEY` | AI chat, scan, consult, etc. | OpenAI (or compatible) API key |
+| `OPENAI_BASE_URL` | Optional | Default `https://api.openai.com/v1` (use a proxy or Azure-compatible base if needed) |
+| `OPENAI_MODEL` | Optional | Default `gpt-4o` |
+| `DATABASE_URL` | Progress, health log, mediator visits | Neon / Postgres connection string (Drizzle) |
+| `NEXT_PUBLIC_APP_URL` | Canonical URLs, sitemap | Production URL, e.g. `https://app.example.org` |
+| `NEXT_PUBLIC_APP_NAME` | Optional | Display name (default `Sastipe`) |
+| `NEXT_PUBLIC_DEFAULT_LOCALE` | Optional | Default `en` |
+| `NEXT_PUBLIC_SUPPORTED_LOCALES` | Optional | Comma list; defaults to all locales in `src/i18n/routing.ts` |
+| `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase, audit log | Supabase project |
+| `SUPABASE_SERVICE_ROLE_KEY` | Server-only | Admin client (rare) |
+| `LANGFUSE_*` | Optional | Tracing for AI calls (when set) |
+| Sentry, Resend, Trigger.dev | Optional | As wired in `src/lib/env.ts` |
 
-## Learn More
+Anonymous users get an `HttpOnly` `sastipe_anon_id` cookie (see `src/middleware.ts`); server routes do not trust a client-supplied `x-anonymous-id` for identity.
 
-To learn more about Next.js, take a look at the following resources:
+**Translations:** The Albanian file `messages/sq.json` is **merged** on top of `messages/en.json` (see `src/i18n/request.ts`) so the demo can ship full Albanian for key namespaces without duplicating the entire app copy.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Stakeholder briefs (in app):** **More** includes printable policy-oriented pages — **Ministry briefing** (`/moh-brief`, e.g. `/sq/moh-brief` in Albanian) and **Council of Europe briefing** (`/coe-brief`, health literacy, inclusion, CoE-relevant framing, e.g. `/en/coe-brief` or `/sq/coe-brief`). Use a second screen or print for meetings.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Scripts
 
-## Deploy on Vercel
+- `npm run build` — production build
+- `npm run typecheck` — TypeScript
+- `npm test` — Vitest
+- `npm run test:e2e` — Playwright
+- `npm run db:generate` / `db:push` — Drizzle (requires `DATABASE_URL`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `package.json` for the full list.

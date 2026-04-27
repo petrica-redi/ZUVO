@@ -17,3 +17,8 @@ test("sitemap.xml is accessible", async ({ page }) => {
   const res = await page.goto("/sitemap.xml");
   expect(res?.status()).toBe(200);
 });
+
+test("Albanian locale home loads Sastipe branding", async ({ page }) => {
+  await page.goto("/sq");
+  await expect(page).toHaveTitle(/Sastipe/);
+});

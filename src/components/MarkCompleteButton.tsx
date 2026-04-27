@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { getOrCreateClientAnonId } from "@/lib/client-anon-id";
 
 type Props = {
   pillarId: string;
@@ -36,14 +37,14 @@ export function MarkCompleteButton({
   pillarColor,
 }: Props) {
   const [completed, setCompleted] = useState(false);
-  const [animating, setAnimating] = useState(false);
-
   useEffect(() => {
     const p = getProgress();
     if (p[`${pillarId}:${moduleId}`] === "completed") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- hydrate from localStorage when route changes
       setCompleted(true);
     }
   }, [pillarId, moduleId]);
+  const [animating, setAnimating] = useState(false);
 
   const handleComplete = async () => {
     if (completed) return;
@@ -51,9 +52,7 @@ export function MarkCompleteButton({
     setProgress(pillarId, moduleId);
 
     // Fire-and-forget API call
-    const anonId =
-      localStorage.getItem("sastipe_anon_id") ?? crypto.randomUUID();
-    localStorage.setItem("sastipe_anon_id", anonId);
+    const anonId = getOrCreateClientAnonId();
 
     fetch("/api/progress", {
       method: "POST",

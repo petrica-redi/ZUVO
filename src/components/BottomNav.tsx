@@ -16,9 +16,20 @@ export function BottomNav() {
   const cleanPath = pathname.replace(/^\/[a-z]{2,3}(?=\/|$)/, "") || "/";
 
   return (
-    <nav className="sticky bottom-0 z-40" role="navigation" aria-label="Main navigation">
-      <div className="bg-white/95 pb-safe-bottom backdrop-blur-2xl" style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-        <div className="flex items-end justify-around px-1 pt-1.5 pb-2">
+    <nav
+      className="sticky bottom-0 z-40"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div
+        className="border-t border-white/60 pb-safe-bottom shadow-[0_-4px_24px_rgba(15,23,42,0.06)]"
+        style={{
+          background: "linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(250,251,252,0.95) 100%)",
+          backdropFilter: "blur(20px) saturate(180%)",
+          WebkitBackdropFilter: "blur(20px) saturate(180%)",
+        }}
+      >
+        <div className="mx-auto flex max-w-md items-end justify-around px-1 pb-1.5 pt-1">
           {TABS.map(({ key, href, Icon, label, ...rest }) => {
             const isPrimary = "isPrimary" in rest && rest.isPrimary;
             const isActive = cleanPath === href || (href !== "/" && cleanPath.startsWith(href));
@@ -29,15 +40,27 @@ export function BottomNav() {
                   key={key}
                   href={href}
                   aria-label={label}
-                  className="flex flex-col items-center -mt-5"
+                  className="group flex -mt-6 flex-col items-center"
                 >
                   <div
-                    className="flex h-[56px] w-[56px] items-center justify-center rounded-full shadow-lg transition-transform active:scale-90 animate-pulse-glow"
-                    style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 50%, #F39C12 100%)" }}
+                    className="relative flex h-[58px] w-[58px] items-center justify-center rounded-full transition-transform active:scale-90"
+                    style={{
+                      background: "linear-gradient(145deg, #E85D4C 0%, #C0392B 45%, #A93226 100%)",
+                      boxShadow:
+                        "0 4px 4px rgba(0,0,0,0.12), 0 12px 28px rgba(192, 57, 43, 0.4), inset 0 1px 0 rgba(255,255,255,0.25)",
+                    }}
                   >
-                    <Icon className="h-[26px] w-[26px] text-white" strokeWidth={2.5} />
+                    <span
+                      className="pointer-events-none absolute inset-0 rounded-full"
+                      style={{
+                        background: "radial-gradient(120% 80% at 30% 0%, rgba(255,255,255,0.22), transparent 55%)",
+                      }}
+                    />
+                    <Icon className="relative h-[26px] w-[26px] text-white drop-shadow-sm" strokeWidth={2.4} />
                   </div>
-                  <span className="mt-0.5 text-[11px] font-bold text-[#C0392B]">{label}</span>
+                  <span className="mt-1 text-[10px] font-bold uppercase tracking-wide text-[#A93226]">
+                    {label}
+                  </span>
                 </Link>
               );
             }
@@ -47,13 +70,25 @@ export function BottomNav() {
                 key={key}
                 href={href}
                 aria-label={label}
-                className="flex flex-col items-center gap-0.5 py-1 touch-target"
+                className="flex min-w-[3.5rem] flex-col items-center gap-0.5 py-1.5 touch-target"
               >
-                <Icon
-                  className={`h-[24px] w-[24px] transition-all ${isActive ? "text-[#C0392B]" : "text-gray-400"}`}
-                  strokeWidth={isActive ? 2.2 : 1.6}
-                />
-                <span className={`text-[11px] font-semibold ${isActive ? "text-[#C0392B]" : "text-gray-400"}`}>
+                <div
+                  className={`flex h-9 w-9 items-center justify-center rounded-2xl transition-all duration-200 ${
+                    isActive
+                      ? "bg-[#FDF2F2] text-[#C0392B] shadow-sm"
+                      : "text-slate-400"
+                  }`}
+                >
+                  <Icon
+                    className="h-[22px] w-[22px]"
+                    strokeWidth={isActive ? 2.25 : 1.7}
+                  />
+                </div>
+                <span
+                  className={`text-[10px] font-bold tracking-tight ${
+                    isActive ? "text-[#A93226]" : "text-slate-400"
+                  }`}
+                >
                   {label}
                 </span>
               </Link>

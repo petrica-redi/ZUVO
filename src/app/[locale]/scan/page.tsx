@@ -4,41 +4,51 @@ import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { SosButton } from "@/components/SosButton";
 import { MisinfoScanner } from "@/components/MisinfoScanner";
+import { AppShell, ScreenMain } from "@/components/layout/AppShell";
+import { PageHeader } from "@/components/layout/PageHeader";
 
 type Props = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata(): Promise<Metadata> {
-  return { title: "Fact Check — Zuvo", description: "Check health claims against evidence" };
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "scan" });
+  return {
+    title: `${t("title")} — Sastipe`,
+    description: t("subtitle"),
+  };
 }
 
 export default async function ScanPage({ params }: Props) {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "scan" });
+  const tLegal = await getTranslations({ locale, namespace: "legal" });
 
-  // These labels should be in the i18n files — hardcoded for now, Cursor should extract them
   const labels = {
-    title: "Check a health claim",
-    subtitle: "Paste something you saw on Facebook, TikTok, or WhatsApp. We'll tell you the truth.",
-    placeholder: "Paste the claim here...\n\nExample: \"Vaccines change your DNA\"",
-    checkButton: "Check this",
-    checking: "Checking...",
-    shareButton: "Share the truth",
-    recentChecks: "Recent checks",
-    orDescribe: "or describe what you heard",
-    verdictVerified: "Verified",
-    verdictMisleading: "Misleading",
-    verdictFalse: "False",
+    legalTitle: tLegal("aiEducationalTitle"),
+    legalBody: tLegal("aiEducationalBody"),
+    claimTextareaAria: t("claimTextareaAria"),
+    placeholder: t("placeholder"),
+    checkButton: t("checkButton"),
+    checking: t("checking"),
+    shareButton: t("shareButton"),
+    recentChecks: t("recentChecks"),
+    orDescribe: t("orDescribe"),
+    verdictVerified: t("verdictVerified"),
+    verdictMisleading: t("verdictMisleading"),
+    verdictFalse: t("verdictFalse"),
   };
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
+    <AppShell>
       <Header />
       <SosButton />
-      <main id="main-content" className="flex-1 pb-2">
+      <ScreenMain>
         <div className="px-5 py-6">
+          <PageHeader eyebrow={t("pageEyebrow")} title={t("title")} subtitle={t("subtitle")} />
           <MisinfoScanner labels={labels} locale={locale} />
         </div>
-      </main>
+      </ScreenMain>
       <BottomNav />
-    </div>
+    </AppShell>
   );
 }

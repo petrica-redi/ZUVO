@@ -5,7 +5,7 @@ import { SosButton } from "@/components/SosButton";
 import { HealthQuiz } from "@/components/HealthQuiz";
 
 export const metadata: Metadata = {
-  title: "Health Quiz — Zuvo",
+  title: "Health Quiz — Sastipe",
   description: "Test your health knowledge with interactive quizzes",
 };
 

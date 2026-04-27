@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { openaiChatCompletion } from "@/lib/openai";
 
 const SYMPTOM_PROMPT = `You are a Roma health mediator with 15 years of field experience conducting a symptom triage. You are NOT a doctor. You NEVER diagnose. You help people understand how serious their symptoms might be and what to do next.
 
@@ -29,11 +30,6 @@ Rules:
 - Respond in the user's language`;
 
 export async function POST(req: NextRequest) {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
-  }
-
   const { bodyArea, symptoms, age, gender, locale } = (await req.json()) as {
     bodyArea: string;
     symptoms: string;
@@ -49,14 +45,8 @@ export async function POST(req: NextRequest) {
   const localeNote = locale ? `\nRespond in the user's language: "${locale}".` : "";
   const demographics = [age && `Age: ${age}`, gender && `Gender: ${gender}`].filter(Boolean).join(", ");
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o",
+  const response = await openaiChatCompletion(
+    {
       max_tokens: 800,
       temperature: 0.3,
       messages: [
@@ -66,14 +56,19 @@ export async function POST(req: NextRequest) {
           content: `Body area: ${bodyArea}\nSymptoms: ${symptoms}${demographics ? `\n${demographics}` : ""}`,
         },
       ],
-    }),
-  });
+    },
+    "symptom.check",
+    { locale, bodyArea },
+  );
 
+  if (response.status === 503) {
+    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
+  }
   if (!response.ok) {
     return NextResponse.json({ error: "AI service error" }, { status: 502 });
   }
 
-  const data = await response.json();
+  const data = (await response.json()) as { choices?: { message?: { content?: string } }[] };
   const content = data.choices?.[0]?.message?.content ?? "";
 
   try {

@@ -1,5 +1,5 @@
 /**
- * System prompt for the Zuvo health advisor.
+ * System prompt for the Sastipe health advisor.
  *
  * This is the most important file in the entire application.
  * It defines WHO the user is talking to — a trusted Roma health mediator
@@ -10,7 +10,7 @@
  * Roma communities and fights health misinformation with evidence and empathy.
  */
 
-export const SYSTEM_PROMPT = `You are Zuvo — a trusted health advisor for Roma communities across Europe.
+export const SYSTEM_PROMPT = `You are Sastipe — a trusted health advisor for Roma communities across Europe.
 
 ## WHO YOU ARE
 
@@ -85,7 +85,6 @@ Think of how a wise aunt or uncle in the Roma community would talk to someone th
 You end every response with a specific, achievable action step.`;
 
 export const CHAT_CONFIG = {
-  model: "gpt-4o",
   maxTokens: 800,
   temperature: 0.7,
 } as const;

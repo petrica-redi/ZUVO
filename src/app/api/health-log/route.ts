@@ -6,15 +6,17 @@ import { NextRequest, NextResponse } from "next/server";
 import { getDb } from "@/db/client";
 import { healthLogs } from "@/db/schema";
 import { eq, and, desc, gte } from "drizzle-orm";
+import { getResolvedAnonymousId } from "@/lib/resolve-anon-id";
+import { auditLog } from "@/lib/audit";
 
-function userId(req: NextRequest): string | null {
-  return req.headers.get("x-anonymous-id");
+function userId(req: NextRequest): string {
+  return getResolvedAnonymousId(req);
 }
 
 export async function GET(req: NextRequest) {
   const db = getDb();
   const uid = userId(req);
-  if (!db || !uid) {
+  if (!db) {
     return NextResponse.json({ success: true, data: [] });
   }
 
@@ -41,8 +43,8 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   const db = getDb();
   const uid = userId(req);
-  if (!db || !uid) {
-    return NextResponse.json({ success: false, error: "No database or user" }, { status: 400 });
+  if (!db) {
+    return NextResponse.json({ success: false, error: "No database" }, { status: 400 });
   }
 
   const body = await req.json();
@@ -71,6 +73,14 @@ export async function POST(req: NextRequest) {
       metadata: metadata ?? null,
     })
     .returning();
+
+  void auditLog({
+    userId: uid,
+    action: "health_log.created",
+    resourceType: "health_log",
+    resourceId: row.id,
+    metadata: { type },
+  });
 
   return NextResponse.json({ success: true, data: row }, { status: 201 });
 }

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { region } = await params;
   const data = REGIONS.find((r) => r.id === region);
   if (!data) return {};
-  return { title: `Roma Health — ${data.id.charAt(0).toUpperCase() + data.id.slice(1)} — Zuvo` };
+  return { title: `Roma Health — ${data.id.charAt(0).toUpperCase() + data.id.slice(1)} — Sastipe` };
 }
 
 export async function generateStaticParams() {

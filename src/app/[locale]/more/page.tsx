@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/navigation";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
@@ -6,13 +7,30 @@ import { SosButton } from "@/components/SosButton";
 import {
   Search, Stethoscope, Syringe, Navigation, BookOpen,
   MapPin, Shield, User, Settings, ChevronRight, Heart, Activity,
-  Scale, GraduationCap,
+  Scale, GraduationCap, Building2, Landmark,
 } from "lucide-react";
+
+const ACCOUNT_EXTRAS = [
+  {
+    href: "/moh-brief",
+    icon: Building2,
+    color: "#B45309",
+    gradient: "from-amber-500 to-red-600",
+    ns: "moh" as const,
+  },
+  {
+    href: "/coe-brief",
+    icon: Landmark,
+    color: "#0369A1",
+    gradient: "from-sky-500 to-indigo-700",
+    ns: "coe" as const,
+  },
+] as const;
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata(): Promise<Metadata> {
-  return { title: "More — Zuvo", description: "All Zuvo features" };
+  return { title: "More — Sastipe", description: "All Sastipe features" };
 }
 
 const SECTIONS = [
@@ -47,13 +65,30 @@ const SECTIONS = [
     title: "Account",
     items: [
       { href: "/profile", icon: User, label: "Profile", desc: "Language, progress, data", color: "#64748B", gradient: "from-gray-500 to-gray-600" },
-      { href: "/about", icon: Settings, label: "About Zuvo", desc: "Version, privacy, contact", color: "#94A3B8", gradient: "from-gray-400 to-gray-500" },
+      { href: "/about", icon: Settings, label: "About Sastipe", desc: "Version, privacy, contact", color: "#94A3B8", gradient: "from-gray-400 to-gray-500" },
     ],
   },
 ];
 
 export default async function MorePage({ params }: Props) {
-  await params;
+  const { locale } = await params;
+  const tMoh = await getTranslations({ locale, namespace: "moh" });
+  const tCoe = await getTranslations({ locale, namespace: "coe" });
+  const accountWithBriefs = {
+    title: "Account",
+    items: [
+      ...SECTIONS[3].items,
+      ...ACCOUNT_EXTRAS.map((e) => ({
+        href: e.href,
+        icon: e.icon,
+        color: e.color,
+        gradient: e.gradient,
+        label: (e.ns === "moh" ? tMoh : tCoe)("linkTitle"),
+        desc: (e.ns === "moh" ? tMoh : tCoe)("linkDescription"),
+      })),
+    ],
+  };
+  const sections = [...SECTIONS.slice(0, 3), accountWithBriefs];
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
@@ -63,7 +98,7 @@ export default async function MorePage({ params }: Props) {
         <div className="px-5 py-6">
           <h1 className="mb-6 text-2xl font-black text-gray-900 animate-fade-in-up">All Features</h1>
 
-          {SECTIONS.map((section, si) => (
+          {sections.map((section, si) => (
             <div key={section.title} className={`mb-6 animate-fade-in-up delay-${(si + 1) * 100}`}>
               <h2 className="mb-3 text-xs font-black uppercase tracking-widest text-gray-400">
                 {section.title}

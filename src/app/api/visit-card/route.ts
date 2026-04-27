@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { openaiChatCompletion } from "@/lib/openai";
 
 const VISIT_CARD_PROMPT = `You are a Roma health mediator helping someone prepare for a doctor visit. Generate a clear, professional patient summary card that the person can show to their doctor.
 
@@ -20,11 +21,6 @@ Rules:
 - ALWAYS return valid JSON`;
 
 export async function POST(req: NextRequest) {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
-  }
-
   const { concern, symptoms, country, locale } = (await req.json()) as {
     concern: string;
     symptoms?: string;
@@ -43,28 +39,27 @@ export async function POST(req: NextRequest) {
     locale && `Patient's language: ${locale}`,
   ].filter(Boolean).join("\n");
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o",
+  const response = await openaiChatCompletion(
+    {
       max_tokens: 800,
       temperature: 0.3,
       messages: [
         { role: "system", content: VISIT_CARD_PROMPT },
         { role: "user", content: context },
       ],
-    }),
-  });
+    },
+    "visit.card",
+    { locale, country },
+  );
 
+  if (response.status === 503) {
+    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
+  }
   if (!response.ok) {
     return NextResponse.json({ error: "AI service error" }, { status: 502 });
   }
 
-  const data = await response.json();
+  const data = (await response.json()) as { choices?: { message?: { content?: string } }[] };
   const content = data.choices?.[0]?.message?.content ?? "";
 
   try {

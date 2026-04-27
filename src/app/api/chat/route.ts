@@ -1,19 +1,21 @@
 /**
- * POST /api/chat — Zuvo health advisor conversation
+ * POST /api/chat — Sastipe health advisor conversation
  *
  * Accepts: { messages: [{ role, content }], locale: string }
- * Returns: streaming text response from OpenAI
+ * Returns: streaming text (supports OPENAI_BASE_URL, OPENAI_MODEL, Langfuse)
  */
 import { NextRequest } from "next/server";
 import { SYSTEM_PROMPT, CHAT_CONFIG } from "@/lib/ai/system-prompt";
+import { getOpenAIClientConfig } from "@/lib/openai";
+import { traceAsync } from "@/lib/langfuse";
 
 export async function POST(req: NextRequest) {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    return new Response(
-      JSON.stringify({ error: "AI service not configured" }),
-      { status: 503, headers: { "Content-Type": "application/json" } }
-    );
+  const cfg = getOpenAIClientConfig();
+  if (!cfg) {
+    return new Response(JSON.stringify({ error: "AI service not configured" }), {
+      status: 503,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 
   const body = await req.json();
@@ -23,44 +25,47 @@ export async function POST(req: NextRequest) {
   };
 
   if (!messages || messages.length === 0) {
-    return new Response(
-      JSON.stringify({ error: "No messages provided" }),
-      { status: 400, headers: { "Content-Type": "application/json" } }
-    );
+    return new Response(JSON.stringify({ error: "No messages provided" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 
   const localeInstruction = locale
     ? `\n\nIMPORTANT: The user's preferred language is "${locale}". Respond in this language. If they write in a different language, respond in the language they wrote in.`
     : "";
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: CHAT_CONFIG.model,
-      max_tokens: CHAT_CONFIG.maxTokens,
-      temperature: CHAT_CONFIG.temperature,
-      stream: true,
-      messages: [
-        { role: "system", content: SYSTEM_PROMPT + localeInstruction },
-        ...messages.slice(-10),
-      ],
-    }),
-  });
+  const response = await traceAsync(
+    { name: "chat.stream", metadata: { locale, model: cfg.model } },
+    () =>
+      fetch(`${cfg.baseUrl}/chat/completions`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cfg.apiKey}`,
+        },
+        body: JSON.stringify({
+          model: cfg.model,
+          max_tokens: CHAT_CONFIG.maxTokens,
+          temperature: CHAT_CONFIG.temperature,
+          stream: true,
+          messages: [
+            { role: "system", content: SYSTEM_PROMPT + localeInstruction },
+            ...messages.slice(-10),
+          ],
+        }),
+      }),
+  );
 
   if (!response.ok) {
     const err = await response.text();
     console.error("OpenAI API error:", err);
-    return new Response(
-      JSON.stringify({ error: "AI service temporarily unavailable" }),
-      { status: 502, headers: { "Content-Type": "application/json" } }
-    );
+    return new Response(JSON.stringify({ error: "AI service temporarily unavailable" }), {
+      status: 502,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 
-  // Stream the response back to the client
   const encoder = new TextEncoder();
   const readable = new ReadableStream({
     async start(controller) {
@@ -74,7 +79,7 @@ export async function POST(req: NextRequest) {
       let buffer = "";
 
       try {
-        while (true) {
+        for (;;) {
           const { done, value } = await reader.read();
           if (done) break;
 
@@ -94,12 +99,10 @@ export async function POST(req: NextRequest) {
                 const parsed = JSON.parse(data);
                 const text = parsed.choices?.[0]?.delta?.content;
                 if (text) {
-                  controller.enqueue(
-                    encoder.encode(`data: ${JSON.stringify({ text })}\n\n`)
-                  );
+                  controller.enqueue(encoder.encode(`data: ${JSON.stringify({ text })}\n\n`));
                 }
               } catch {
-                // Skip non-JSON lines
+                // skip
               }
             }
           }

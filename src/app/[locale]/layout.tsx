@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import { getAppConfig } from "@/lib/env";
+import { getBaseUrlString } from "@/lib/app-url";
 
 type Props = {
   children: ReactNode;
@@ -14,14 +14,13 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
-  const { appUrl } = getAppConfig();
-  const baseUrl = appUrl ? new URL(appUrl) : new URL("http://localhost:3000");
+  const baseUrl = new URL(getBaseUrlString());
 
   return {
     metadataBase: baseUrl,
     title: {
       default: t("title"),
-      template: `%s | Sastipe`,
+      template: `%s | ${t("titleTemplate")}`,
     },
     description: t("description"),
     openGraph: {

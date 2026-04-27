@@ -6,7 +6,7 @@ import { FamilyHub } from "@/components/FamilyHub";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Family Health — Zuvo",
+    title: "Family Health — Sastipe",
     description: "Track health for your whole family. No account needed.",
   };
 }
