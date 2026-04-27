@@ -118,7 +118,10 @@
     "q3": "Someone on Facebook says diabetes medicine is poison and you should use herbs instead",
     "q4": "I am pregnant and afraid to go to the hospital. What are my rights?",
     "q5": "I feel sad all the time and I cannot sleep. Is this normal?",
-    "q6": "How do I register with a doctor if I do not have documents?"
+    "q6": "How do I register with a doctor if I do not have documents?",
+    "emptyStateTitle": "Ask me anything",
+    "inputAria": "Type your health question",
+    "sendAria": "Send message"
   },
   "pillars": {
     "title": "Health zones",
@@ -174,6 +177,8 @@
     "week": "This week"
   },
   "learn": {
+    "pageEyebrow": "Your learning path",
+    "pageIntro": "Pick a topic. Bite-sized lessons you can finish in minutes.",
     "progressLabel": "modules completed",
     "startHere": "Start here",
     "continueLabel": "Continue",

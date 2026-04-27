@@ -118,7 +118,10 @@
     "q3": "Dikush në Facebook thotë se ilaçi i diabetit është helm dhe duhen barë",
     "q4": "Jam shtatzënë dhe kam frikë nga spitali. Cilat janë të drejtat e mia?",
     "q5": "Më duket e trishtuar gjatë ditës dhe s’fl dot të fle. A është normale?",
-    "q6": "Si regjistrohem te mjeku pa dokumente?"
+    "q6": "Si regjistrohem te mjeku pa dokumente?",
+    "emptyStateTitle": "Pyet çfarë të duash",
+    "inputAria": "Shkruaj pyetjen tënde për shëndetin",
+    "sendAria": "Dërgo mesazhin"
   },
   "home": {
     "aiBadge": "Shoqërues shëndetësor (AI) — arsimor",
@@ -187,6 +190,10 @@
     "stepsCpr": "Thirr urgjencën. Shtyp fort dhe shpejt në qendër të gjoksit. Mos ndal derisa të vijë ndihmja.",
     "stepsSeizure": "Lësho hapësirën. Mos i mbaj as mos i fut gjë në gojë. Mat kohën. Nëse zgjat mbi 5 minuta, thirr urgjencën.",
     "stepsPoison": "Thirr qendrën e helmimit. Mos provoko të vjellë. Ruaj etiketën. Nëse është rëndë, thirr urgjencën."
+  },
+  "learn": {
+    "pageEyebrow": "Rruga jote e të mësuarit",
+    "pageIntro": "Zgjidh një temë. Mësime të shkurtra që i mbaron për minuta."
   },
   "common": {
     "loading": "Duke ngarkuar…",

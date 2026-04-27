@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { ChatAdvisor } from "@/components/ChatAdvisor";
+import { AppShell, ScreenMain } from "@/components/layout/AppShell";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -24,16 +25,21 @@ export default async function ChatPage({ params }: Props) {
     legalFooter: t("legalFooter"),
     emergencyCall: t("emergencyCall"),
     suggestedQuestions: t("suggestedQuestions"),
+    emptyStateTitle: t("emptyStateTitle"),
+    inputAria: t("inputAria"),
+    sendAria: t("sendAria"),
     suggestions: [t("q1"), t("q2"), t("q3"), t("q4"), t("q5"), t("q6")],
   };
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
+    <AppShell>
       <Header />
-      <main id="main-content" className="flex-1 px-3">
-        <ChatAdvisor labels={labels} locale={locale} />
-      </main>
+      <ScreenMain className="flex min-h-0 flex-1 flex-col">
+        <div className="flex min-h-0 flex-1 flex-col px-3 sm:px-4">
+          <ChatAdvisor labels={labels} locale={locale} />
+        </div>
+      </ScreenMain>
       <BottomNav />
-    </div>
+    </AppShell>
   );
 }

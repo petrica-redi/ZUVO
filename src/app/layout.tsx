@@ -4,6 +4,7 @@ import { getLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
+import { MotionConfig } from "framer-motion";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext", "greek"],
@@ -34,9 +35,11 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       <body className="app-body font-sans antialiased">
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <ServiceWorkerRegistrar />
-        <div className="mobile-shell" role="application" aria-label="Sastipe Health App">
-          {children}
-        </div>
+        <MotionConfig reducedMotion="user">
+          <div className="mobile-shell" role="application" aria-label="Sastipe Health App">
+            {children}
+          </div>
+        </MotionConfig>
       </body>
     </html>
   );
