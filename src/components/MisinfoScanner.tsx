@@ -15,6 +15,8 @@ type Verdict = {
 type Labels = {
   title: string;
   subtitle: string;
+  legalTitle: string;
+  legalBody: string;
   placeholder: string;
   checkButton: string;
   checking: string;
@@ -110,6 +112,10 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
         </div>
         <h1 className="text-2xl font-black text-gray-900">{labels.title}</h1>
         <p className="mt-2 text-sm text-gray-500">{labels.subtitle}</p>
+        <div className="mt-4 rounded-2xl border border-amber-100 bg-amber-50/90 px-4 py-3 text-left">
+          <p className="text-xs font-bold text-amber-950">{labels.legalTitle}</p>
+          <p className="mt-1 text-[11px] leading-relaxed text-amber-950/90">{labels.legalBody}</p>
+        </div>
       </div>
 
       {/* Input area */}

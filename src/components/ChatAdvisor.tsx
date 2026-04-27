@@ -15,6 +15,7 @@ type Labels = {
   thinking: string;
   errorMessage: string;
   disclaimer: string;
+  legalFooter: string;
   emergencyCall: string;
   suggestedQuestions: string;
   suggestions: string[];
@@ -128,12 +129,18 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
 
   return (
     <div className="flex min-h-[60dvh] flex-1 flex-col">
+      <p className="mb-2 rounded-2xl border border-amber-100 bg-amber-50/90 px-4 py-2.5 text-[11px] leading-snug text-amber-950">
+        {labels.legalFooter}
+      </p>
+
       {/* Emergency banner */}
       <div className="flex items-center gap-2 rounded-2xl bg-red-50 px-4 py-2.5 text-xs font-semibold text-red-700 border border-red-100">
         <AlertTriangle className="h-4 w-4 flex-shrink-0" />
         <span>
           {labels.emergencyCall}{" "}
           <a href="tel:112" className="font-black underline">112</a>
+          {" / "}
+          <a href="tel:127" className="font-black underline">127</a>
         </span>
       </div>
 

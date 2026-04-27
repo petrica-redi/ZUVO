@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/navigation";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
@@ -6,8 +7,15 @@ import { SosButton } from "@/components/SosButton";
 import {
   Search, Stethoscope, Syringe, Navigation, BookOpen,
   MapPin, Shield, User, Settings, ChevronRight, Heart, Activity,
-  Scale, GraduationCap,
+  Scale, GraduationCap, Building2,
 } from "lucide-react";
+
+const ACCOUNT_EXTRA = {
+  href: "/moh-brief",
+  icon: Building2,
+  color: "#B45309",
+  gradient: "from-amber-500 to-red-600",
+} as const;
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -53,7 +61,20 @@ const SECTIONS = [
 ];
 
 export default async function MorePage({ params }: Props) {
-  await params;
+  const { locale } = await params;
+  const tMoh = await getTranslations({ locale, namespace: "moh" });
+  const accountWithBrief = {
+    title: "Account",
+    items: [
+      ...SECTIONS[3].items,
+      {
+        ...ACCOUNT_EXTRA,
+        label: tMoh("linkTitle"),
+        desc: tMoh("linkDescription"),
+      },
+    ],
+  };
+  const sections = [...SECTIONS.slice(0, 3), accountWithBrief];
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
@@ -63,7 +84,7 @@ export default async function MorePage({ params }: Props) {
         <div className="px-5 py-6">
           <h1 className="mb-6 text-2xl font-black text-gray-900 animate-fade-in-up">All Features</h1>
 
-          {SECTIONS.map((section, si) => (
+          {sections.map((section, si) => (
             <div key={section.title} className={`mb-6 animate-fade-in-up delay-${(si + 1) * 100}`}>
               <h2 className="mb-3 text-xs font-black uppercase tracking-widest text-gray-400">
                 {section.title}

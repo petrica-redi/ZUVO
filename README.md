@@ -30,6 +30,10 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Anonymous users get an `HttpOnly` `sastipe_anon_id` cookie (see `src/middleware.ts`); server routes do not trust a client-supplied `x-anonymous-id` for identity.
 
+**Translations:** The Albanian file `messages/sq.json` is **merged** on top of `messages/en.json` (see `src/i18n/request.ts`) so the demo can ship full Albanian for key namespaces without duplicating the entire app copy.
+
+**Ministry demo:** In the app, open **More → Ministry briefing (pilot overview)** (`/moh-brief`, e.g. `/sq/moh-brief` in Albanian) for a short policy-oriented summary. Print or show on a second screen for the meeting.
+
 ## Scripts
 
 - `npm run build` — production build
