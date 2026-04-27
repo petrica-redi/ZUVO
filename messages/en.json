@@ -71,6 +71,26 @@
     "linkTitle": "Ministry briefing (pilot overview)",
     "linkDescription": "What Sastipe is and is not — for a policy discussion"
   },
+  "coe": {
+    "linkTitle": "Council of Europe briefing (health literacy)",
+    "linkDescription": "Inclusion, literacy, and European values — for dialogue"
+  },
+  "coebrief": {
+    "pageTitle": "Sastipe — health literacy and inclusion (Council of Europe audience)",
+    "kicker": "Health literacy · social inclusion · evidence-informed education",
+    "section1Title": "Why health literacy matters here",
+    "section1Body": "Health literacy — the ability to find, understand, and use information to protect your own health and that of your family — is a practical foundation of the right to health. Many Roma and other marginalized communities in Europe face overlapping barriers: language, discrimination in care, digital exclusion, and widespread health misinformation. Sastipe is designed as a literacy-first tool: it explains concepts plainly, builds confidence to seek care, and counters false claims that harm communities.",
+    "section2Title": "What the product emphasises",
+    "section2Body": "Structured learning (topics and modules), myth-busting (claim checking in plain language), and guided conversation that supports people to prepare for real appointments — always framed as educational support, not clinical diagnosis. The tone is grounded in community health mediation: respectful, non-judgemental, and aligned with public health evidence. Multilingual support and low-friction access matter for inclusion across member States.",
+    "section3Title": "Inclusion, non-discrimination, and trust",
+    "section3Body": "The project starts from the reality that Roma communities often experience stigma and unequal access to information and care. Sastipe does not replace national health systems or mediators; it can complement them by giving people clearer language and stronger agency. Any deployment should be evaluated with community input and in line with anti-discrimination norms and data-protection standards that apply in Europe.",
+    "section4Title": "Technology, AI, and boundaries",
+    "section4Body": "Where AI is used, it is for explanation, orientation, and literacy — not for replacing professionals or emergency services. Users are clearly told that output is educational. Data are minimised by design for pilot use; future phases can be specified with explicit governance. This framing is consistent with responsible use of digital tools in public health communication.",
+    "section5Title": "Relevance to the Council of Europe’s work",
+    "section5Body": "The Council of Europe’s work spans human rights, social cohesion, and Roma inclusion, including in health. A tool focused on literacy, access to understandable information, and combating health misinformation can support those priorities in a practical, field-oriented way. Partnership might include content review, evaluation methodology, or linking to standard-setting and good-practice exchange across States.",
+    "section6Title": "Contact and next steps",
+    "section6Body": "For a non-binding discussion of collaboration, evaluation, or knowledge exchange, use the project’s official contact channel (as published by the implementing organisation). This text is a briefing aid for dialogue; it is not a legal or policy commitment by any institution."
+  },
   "mohbrief": {
     "pageTitle": "Sastipe — information for a Ministry of Health dialogue",
     "kicker": "Non-clinical, inclusive health literacy",

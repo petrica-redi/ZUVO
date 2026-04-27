@@ -32,7 +32,7 @@ Anonymous users get an `HttpOnly` `sastipe_anon_id` cookie (see `src/middleware.
 
 **Translations:** The Albanian file `messages/sq.json` is **merged** on top of `messages/en.json` (see `src/i18n/request.ts`) so the demo can ship full Albanian for key namespaces without duplicating the entire app copy.
 
-**Ministry demo:** In the app, open **More → Ministry briefing (pilot overview)** (`/moh-brief`, e.g. `/sq/moh-brief` in Albanian) for a short policy-oriented summary. Print or show on a second screen for the meeting.
+**Stakeholder briefs (in app):** **More** includes printable policy-oriented pages — **Ministry briefing** (`/moh-brief`, e.g. `/sq/moh-brief` in Albanian) and **Council of Europe briefing** (`/coe-brief`, health literacy, inclusion, CoE-relevant framing, e.g. `/en/coe-brief` or `/sq/coe-brief`). Use a second screen or print for meetings.
 
 ## Scripts
 

@@ -71,6 +71,26 @@
     "linkTitle": "Fletëpërmbledhje për Ministri (piloti)",
     "linkDescription": "Çfarë është Sastipe dhe çfarë nuk është — për dialog politik"
   },
+  "coe": {
+    "linkTitle": "Fletëpërmbledhje për Këshillin e Evropës (arsimi shëndetësor)",
+    "linkDescription": "Përfshirje, letërsi shëndetësore, vlera evropiane — për dialog"
+  },
+  "coebrief": {
+    "pageTitle": "Sastipe — letërsi shëndetësore dhe përfshirje (publik Këshillit të Evropës)",
+    "kicker": "Letërsi shëndetësore · përfshirje sociale · arsim i bazuar në evidencë",
+    "section1Title": "Pse ka rëndësi letërsia shëndetësore këtu",
+    "section1Body": "Letërsia shëndetësore — aftësia të gjesh, kuptosh dhe përdorësh informacion për të mbrojtur shëndetin tënd dhe të familjes — është baza praktike e të drejtës për shëndet. Shumë romë dhe komunitete të tjera të margjinalizuara në Evropë hasin pengesa të shumëfishta: gjuhë, diskriminim në kujdes, përjashtim dixhital dhe disinformacion të gjerë. Sastipe është konceptuar si mjet me thelb letërsinë: shpjegon thjesht, ndërton besim për të kërkuar kujdes dhe kundërshton pretendime të rreme që dëmtojnë njerëzit.",
+    "section2Title": "Çfarë thekson produkti",
+    "section2Body": "Mësim i strukturuar (tema dhe module), kundërshtim i mitit (kontroll pretendimesh në gjuhë të thjeshtë), dhe bisedë e udhëzuar që ndihmon përgatitjen për takime reale — gjithmonë si mbështetje arsimore, jo diagnozë klinike. Tonin e ka nga ndërmjetësimi shëndetësor në komunitet: respektues, pa gjyq, në përputhje me evidencën e shëndetit publik. Shumëgjuhësia dhe aksesi i lehtë kanë rëndësi për përfshirjen në shtete anëtare.",
+    "section3Title": "Përfshirje, jo-diskriminim dhe besim",
+    "section3Body": "Projekti nis nga realiteti që komunitetet rom shpesh përballin stigmë dhe akses të pabarabartë ndaj informacionit dhe kujdesit. Sastipe nuk zëvendëson sistemet kombëtare shëndetësore ose ndërmjetësit; mund t’i plotësojë duke i dhënë njerëzve gjuhë më të qartë dhe më shumë vendimmarrje. Çdo përdorim duhet vlerësuar me kontribut nga komuniteti dhe në përputhje me normat kundër diskriminimit dhe mbrojtjen e të dhënave që vlejnë në Evropë.",
+    "section4Title": "Teknologjia, inteligjenca artificiale dhe kufijtë",
+    "section4Body": "Ku përdoret AI, është për shpjegim, orientim dhe letërsi — jo për të zëvendësuar profesionistët ose shërbimet e urgjencës. Përdoruesit informohen qartë se rezultatet janë arsimore. Të dhënat minimizohen sipas dizajnit për pilot; fazat e ardhshme mund të specifikohen me qeverisje të qartë. Kjo përputhet me përdorimin e përgjegjshëm të mjeteve dixhitale në komunikimin e shëndetit publik.",
+    "section5Title": "Lidhja me punën e Këshillit të Evropës",
+    "section5Body": "Puna e Këshillit të Evropës shtrihet mbi të drejta të njeriut, kohezionin social dhe përfshirjen e romëve, përfshirë në shëndet. Një mjet i fokusuar në letërsi, akses në informacion të kuptueshëm dhe luftë kundër disinformacionit shëndetësor mund t’i mbështesë ato prioritete në mënyrë praktike. Partneriteti mund të përfshijë rishikim përmbajtjeje, metodologji vlerësimi, ose lidhje me standardet dhe shkëmbimin e praktikave të mira midis shteteve.",
+    "section6Title": "Kontakti dhe hapat e ardhshëm",
+    "section6Body": "Për bisedë joligjore bashkëpunimi, vlerësimi ose shkëmbimi njohjesh, përdorni kanalin zyrtar të kontaktit të organizatës implementuese. Ky tekst ndihmon dialogun; nuk është zotim ligjor apo politik nga asnjë institucion."
+  },
   "mohbrief": {
     "pageTitle": "Sastipe — informacion për dialogun me Ministrinë e Shëndetësisë",
     "kicker": "Jo klinik, përfshirës, arsim shëndetësor",

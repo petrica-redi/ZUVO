@@ -7,15 +7,25 @@ import { SosButton } from "@/components/SosButton";
 import {
   Search, Stethoscope, Syringe, Navigation, BookOpen,
   MapPin, Shield, User, Settings, ChevronRight, Heart, Activity,
-  Scale, GraduationCap, Building2,
+  Scale, GraduationCap, Building2, Landmark,
 } from "lucide-react";
 
-const ACCOUNT_EXTRA = {
-  href: "/moh-brief",
-  icon: Building2,
-  color: "#B45309",
-  gradient: "from-amber-500 to-red-600",
-} as const;
+const ACCOUNT_EXTRAS = [
+  {
+    href: "/moh-brief",
+    icon: Building2,
+    color: "#B45309",
+    gradient: "from-amber-500 to-red-600",
+    ns: "moh" as const,
+  },
+  {
+    href: "/coe-brief",
+    icon: Landmark,
+    color: "#0369A1",
+    gradient: "from-sky-500 to-indigo-700",
+    ns: "coe" as const,
+  },
+] as const;
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -63,18 +73,22 @@ const SECTIONS = [
 export default async function MorePage({ params }: Props) {
   const { locale } = await params;
   const tMoh = await getTranslations({ locale, namespace: "moh" });
-  const accountWithBrief = {
+  const tCoe = await getTranslations({ locale, namespace: "coe" });
+  const accountWithBriefs = {
     title: "Account",
     items: [
       ...SECTIONS[3].items,
-      {
-        ...ACCOUNT_EXTRA,
-        label: tMoh("linkTitle"),
-        desc: tMoh("linkDescription"),
-      },
+      ...ACCOUNT_EXTRAS.map((e) => ({
+        href: e.href,
+        icon: e.icon,
+        color: e.color,
+        gradient: e.gradient,
+        label: (e.ns === "moh" ? tMoh : tCoe)("linkTitle"),
+        desc: (e.ns === "moh" ? tMoh : tCoe)("linkDescription"),
+      })),
     ],
   };
-  const sections = [...SECTIONS.slice(0, 3), accountWithBrief];
+  const sections = [...SECTIONS.slice(0, 3), accountWithBriefs];
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
