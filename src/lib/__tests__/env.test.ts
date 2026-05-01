@@ -36,10 +36,10 @@ describe("Resend from address (Papposhop)", () => {
     expect(isPapposhopDeployment()).toBe(true);
   });
 
-  it("does not use @redi-ngo.eu as from when on Papposhop", () => {
+  it("falls back to Papposhop sender when shared from is @redi-ngo.eu", () => {
     vi.stubEnv("NEXT_PUBLIC_APP_URL", "https://papposhop.org");
     vi.stubEnv("RESEND_FROM_EMAIL", "petrica@redi-ngo.eu");
-    expect(resolveResendFromEmail()).toBeNull();
+    expect(resolveResendFromEmail()).toBe("orders@papposhop.org");
   });
 
   it("uses RESEND_FROM_EMAIL on Papposhop when it is a verified-domain address", () => {
@@ -62,11 +62,11 @@ describe("Resend from address (Papposhop)", () => {
     expect(resolveResendFromEmail()).toBe("orders@papposhop.org");
   });
 
-  it("getResendConfig returns null on Papposhop when only sandbox from is set", () => {
+  it("getResendConfig uses Papposhop sender when only sandbox from is set", () => {
     vi.stubEnv("NEXT_PUBLIC_APP_URL", "https://papposhop.org");
     vi.stubEnv("RESEND_API_KEY", "re_test_key");
     vi.stubEnv("RESEND_FROM_EMAIL", "petrica@redi-ngo.eu");
-    expect(getResendConfig()).toBeNull();
+    expect(getResendConfig()).toEqual({ apiKey: "re_test_key", fromEmail: "orders@papposhop.org" });
   });
 
   it("getResendConfig works on Papposhop with verified-domain from", () => {
