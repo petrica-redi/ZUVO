@@ -7,10 +7,11 @@ import { getDb } from "@/db/client";
 import { healthLogs } from "@/db/schema";
 import { eq, and, desc, gte } from "drizzle-orm";
 import { z } from "zod";
-import { parseJsonBody } from "@/lib/api/validation";
+import { getAnonymousId, parseJsonBody } from "@/lib/api/validation";
+import { rateLimit } from "@/lib/api/rate-limit";
 
 function userId(req: NextRequest): string | null {
-  return req.headers.get("x-anonymous-id");
+  return getAnonymousId(req);
 }
 
 const healthLogBodySchema = z.object({
@@ -51,6 +52,9 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const limited = rateLimit(req, { key: "health-log:post", limit: 60, windowMs: 60_000 });
+  if (!limited.ok) return limited.response;
+
   const db = getDb();
   const uid = userId(req);
   if (!db || !uid) {

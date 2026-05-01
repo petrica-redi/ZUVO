@@ -3,6 +3,7 @@ import { z } from "zod";
 import { parseJsonBody, validationError } from "@/lib/api/validation";
 import { parseAiJson } from "@/lib/ai/json";
 import { buildEmergencyConsultSummary, detectEmergencyRedFlag } from "@/lib/health/red-flags";
+import { checkRateLimit, getClientIp, rateLimitResponse } from "@/lib/api/rate-limit";
 
 const chatMessageSchema = z.object({
   role: z.enum(["user", "assistant"]),
@@ -73,6 +74,13 @@ Rules:
 - Respond in the same language the user writes in`;
 
 export async function POST(req: NextRequest) {
+  const rate = checkRateLimit({
+    key: `consult:${getClientIp(req)}`,
+    limit: 12,
+    windowMs: 60_000,
+  });
+  if (!rate.allowed) return rateLimitResponse(rate);
+
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: "AI service not configured" }, { status: 503 });

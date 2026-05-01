@@ -5,8 +5,9 @@
  */
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { parseJsonBody, validationErrorResponse } from "@/lib/api/validation";
+import { getClientIp, parseJsonBody, validationErrorResponse } from "@/lib/api/validation";
 import { parseAiJson } from "@/lib/ai/json";
+import { checkRateLimit, rateLimitResponse } from "@/lib/api/rate-limit";
 
 const scanRequestSchema = z.object({
   claim: z.string().trim().min(3).max(1200),
@@ -48,6 +49,13 @@ Rules:
 - Respond in the same language as the claim`;
 
 export async function POST(req: NextRequest) {
+  const rate = checkRateLimit({
+    key: `scan:${getClientIp(req)}`,
+    limit: 20,
+    windowMs: 60_000,
+  });
+  if (!rate.allowed) return rateLimitResponse(rate);
+
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: "AI service not configured" }, { status: 503 });

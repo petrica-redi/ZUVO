@@ -3,6 +3,7 @@ import { z } from "zod";
 import { parseJsonBody } from "@/lib/api/validation";
 import { parseAiJson } from "@/lib/ai/json";
 import { detectRedFlag, redFlagSymptomResult } from "@/lib/health/red-flags";
+import { checkRateLimit, getClientIp, rateLimitExceeded } from "@/lib/api/rate-limit";
 
 const SYMPTOM_PROMPT = `You are a Roma health mediator with 15 years of field experience conducting a symptom triage. You are NOT a doctor. You NEVER diagnose. You help people understand how serious their symptoms might be and what to do next.
 
@@ -33,6 +34,13 @@ Rules:
 - Respond in the user's language`;
 
 export async function POST(req: NextRequest) {
+  const rate = checkRateLimit({
+    key: `symptom:${getClientIp(req)}`,
+    limit: 15,
+    windowMs: 60_000,
+  });
+  if (!rate.allowed) return rateLimitExceeded(rate);
+
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: "AI service not configured" }, { status: 503 });

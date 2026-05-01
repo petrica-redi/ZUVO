@@ -7,11 +7,8 @@ import { getDb } from "@/db/client";
 import { progress } from "@/db/schema";
 import { eq, and } from "drizzle-orm";
 import { z } from "zod";
-import { parseJsonBody } from "@/lib/api/validation";
-
-function userId(req: NextRequest): string | null {
-  return req.headers.get("x-anonymous-id");
-}
+import { getAnonymousId, invalidAnonymousIdResponse, parseJsonBody } from "@/lib/api/validation";
+import { checkRateLimit, rateLimitResponse } from "@/lib/api/rate-limit";
 
 const progressSchema = z.object({
   pillarId: z.string().trim().min(1).max(80),
@@ -21,7 +18,7 @@ const progressSchema = z.object({
 
 export async function GET(req: NextRequest) {
   const db = getDb();
-  const uid = userId(req);
+  const uid = getAnonymousId(req);
   if (!db || !uid) {
     return NextResponse.json({ success: true, data: [] });
   }
@@ -36,10 +33,13 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   const db = getDb();
-  const uid = userId(req);
-  if (!db || !uid) {
+  const uid = getAnonymousId(req);
+  if (!uid) return invalidAnonymousIdResponse();
+  if (!db) {
     return NextResponse.json({ success: false, error: "No database or user" }, { status: 400 });
   }
+  const rate = checkRateLimit({ key: uid, bucket: "progress-write", limit: 120, windowMs: 60_000 });
+  if (!rate.ok) return rateLimitResponse(rate);
 
   const parsed = await parseJsonBody(req, progressSchema);
   if (!parsed.success) return parsed.response;

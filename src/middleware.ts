@@ -1,7 +1,20 @@
 import createMiddleware from "next-intl/middleware";
+import { NextRequest } from "next/server";
 import { routing } from "./i18n/routing";
 
-export default createMiddleware(routing);
+const intlMiddleware = createMiddleware(routing);
+
+export default function middleware(req: NextRequest) {
+  const res = intlMiddleware(req);
+  res.headers.set("X-Content-Type-Options", "nosniff");
+  res.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.headers.set("X-Frame-Options", "DENY");
+  res.headers.set(
+    "Permissions-Policy",
+    "camera=(), microphone=(), geolocation=(self)"
+  );
+  return res;
+}
 
 export const config = {
   matcher: ["/((?!_next|_vercel|monitoring|.*\\.(?:svg|png|jpg|ico|css|js|txt|xml|woff2?|ttf)).*)"],

@@ -1,11 +1,38 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
+export const anonymousIdSchema = z
+  .string()
+  .trim()
+  .min(12)
+  .max(80)
+  .regex(/^[A-Za-z0-9_-]+$/);
+
 export const localeSchema = z
   .string()
   .trim()
   .regex(/^[a-z]{2,3}(-[A-Z]{2})?$/)
   .optional();
+
+export function getAnonymousId(req: NextRequest): string | null {
+  const parsed = anonymousIdSchema.safeParse(req.headers.get("x-anonymous-id"));
+  return parsed.success ? parsed.data : null;
+}
+
+export function invalidAnonymousIdResponse() {
+  return NextResponse.json(
+    { success: false, error: "Missing or invalid anonymous session id" },
+    { status: 400 }
+  );
+}
+
+export function getClientIp(req: NextRequest): string {
+  return (
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    req.headers.get("x-real-ip")?.trim() ||
+    "unknown"
+  );
+}
 
 export async function parseJsonBody<T>(
   req: NextRequest,
