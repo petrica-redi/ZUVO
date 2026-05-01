@@ -3,8 +3,10 @@
 import { useState, useRef } from "react";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-import { ArrowLeft, CheckCircle2, XCircle } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Flag, XCircle } from "lucide-react";
 import {
+  getModulesByStage,
+  getNextStage,
   STAGE_QUIZZES,
   STAGE_QUIZ_PASS_PCT,
   studentHealthMessageKey,
@@ -66,6 +68,16 @@ export function StudentHealthStageQuiz({ stage }: Props) {
   if (showResult && resultSnapshot) {
     const { correct, total, passed } = resultSnapshot;
     const pct = Math.round((correct / total) * 100);
+    const nextStage = getNextStage(stage);
+    const nextStageModules = nextStage ? getModulesByStage(nextStage) : [];
+    const nextHref =
+      passed && nextStage && nextStageModules[0]
+        ? `/students/${nextStage}/${nextStageModules[0].id}`
+        : "/students";
+    const nextLabel =
+      passed && nextStage
+        ? t("quiz.continueNextStage", { stage: t(`stages.${nextStage}`) })
+        : t("quiz.continueHub");
 
     return (
       <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
@@ -96,11 +108,11 @@ export function StudentHealthStageQuiz({ stage }: Props) {
               {t("quiz.retry")}
             </button>
             <Link
-              href="/students"
+              href={nextHref}
               className="flex flex-1 items-center justify-center rounded-2xl py-3 text-sm font-bold text-white"
               style={{ background: "linear-gradient(135deg, #4338CA 0%, #6366F1 100%)" }}
             >
-              {t("quiz.continueHub")}
+              {nextLabel}
             </Link>
           </div>
         </div>
@@ -117,6 +129,15 @@ export function StudentHealthStageQuiz({ stage }: Props) {
         <ArrowLeft className="h-4 w-4" />
         {t("quiz.back")}
       </Link>
+      <div className="mb-4 rounded-2xl border border-indigo-100 bg-indigo-50 p-4">
+        <h1 className="flex items-center gap-2 text-base font-black text-indigo-900">
+          <Flag className="h-4 w-4" />
+          {t("quiz.stageBriefTitle", { stage: t(`stages.${stage}`) })}
+        </h1>
+        <p className="mt-1 text-sm leading-relaxed text-indigo-800">
+          {t("quiz.stageBriefBody", { pct: STAGE_QUIZ_PASS_PCT })}
+        </p>
+      </div>
       <div className="mb-4 flex items-center gap-2">
         <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-100">
           <div

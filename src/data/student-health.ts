@@ -215,6 +215,12 @@ export function getModulesByStage(stage: StageId): StudentModule[] {
   return STUDENT_MODULES.filter((m) => m.stageId === stage);
 }
 
+export function getNextStage(stage: StageId): StageId | undefined {
+  const index = STAGE_ORDER.indexOf(stage);
+  if (index < 0) return undefined;
+  return STAGE_ORDER[index + 1];
+}
+
 export function getStudentModule(
   stage: StageId,
   moduleId: string
@@ -225,6 +231,16 @@ export function getStudentModule(
 export function getModuleIndexInStage(stage: StageId, moduleId: string): number {
   const mods = getModulesByStage(stage);
   return mods.findIndex((m) => m.id === moduleId);
+}
+
+export function getPreviousModuleInStage(
+  stage: StageId,
+  moduleId: string
+): StudentModule | undefined {
+  const mods = getModulesByStage(stage);
+  const idx = mods.findIndex((m) => m.id === moduleId);
+  if (idx <= 0) return undefined;
+  return mods[idx - 1];
 }
 
 export function getNextModuleInStage(

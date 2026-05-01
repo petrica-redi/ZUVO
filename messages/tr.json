@@ -121,7 +121,10 @@
       "scoreLine": "You got {correct} out of {total} correct ({pct}%).",
       "needPct": "You need at least 70% to unlock the next stage.",
       "retry": "Try again",
-      "continueHub": "Back to academy"
+      "continueHub": "Back to academy",
+      "stageBriefTitle": "{stage} checkpoint",
+      "stageBriefBody": "Show you can use this stage in real life. Score {pct}% or more to unlock the next mission.",
+      "continueNextStage": "Start {stage} stage"
     },
     "lesson": {
       "scenarioTitle": "Real-life scenario",
@@ -129,7 +132,9 @@
       "supportTitle": "Private help is available",
       "supportText": "If this topic connects to something happening in your life, you deserve confidential, respectful support. A trusted adult, school nurse, doctor, sexual-health clinic, or helpline can help you understand your options.",
       "findCare": "Find care",
-      "knowRights": "Know your rights"
+      "knowRights": "Know your rights",
+      "stepLabel": "Lesson {current} of {total}",
+      "completedNote": "Mission logged. You earned XP and your path has been updated."
     },
     "modules": {
       "local": {
@@ -386,6 +391,22 @@
           "explanation": "It is about skills to navigate real information and services, not encyclopedic memorization."
         }
       }
+    },
+    "workflow": {
+      "nextMission": "Next mission",
+      "nextMissionBody": "Follow this recommended step to keep the Academy moving without guessing what to do next.",
+      "continueLesson": "{stage}: {title}",
+      "takeQuiz": "{stage} stage checkpoint",
+      "finishedTitle": "Academy complete",
+      "finishedBody": "You finished the current Academy path. Review any lesson or retake a quiz to stay sharp.",
+      "startMission": "Start mission",
+      "startQuiz": "Take checkpoint",
+      "reviewPath": "Review path",
+      "takeStageQuiz": "Take stage checkpoint",
+      "lockedStatus": "Locked",
+      "completeStatus": "Complete",
+      "quizReadyStatus": "Checkpoint ready",
+      "inProgressStatus": "In progress"
     }
   }
 }

@@ -3,7 +3,16 @@
 import { useEffect, useState } from "react";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-import { CheckCircle2, ChevronRight, Lock, MapPin, Sparkles, Trophy } from "lucide-react";
+import {
+  CheckCircle2,
+  ChevronRight,
+  Compass,
+  Lock,
+  MapPin,
+  PlayCircle,
+  Sparkles,
+  Trophy,
+} from "lucide-react";
 import {
   getModulesByStage,
   STUDENT_HUB_THEME,
@@ -14,6 +23,7 @@ import { getRegion, REGIONS, type RegionSlug } from "@/data/regions";
 import {
   allStageModulesCompleted,
   getAcademyLevel,
+  getAcademyNextStep,
   getCompletedModuleIdSet,
   getOverallCompletion,
   getStageCompletion,
@@ -43,6 +53,7 @@ export function StudentAcademyHub() {
   const countryValue = state.countryId ?? "";
   const overall = getOverallCompletion();
   const academyLevel = getAcademyLevel(state.xp);
+  const nextStep = getAcademyNextStep();
 
   return (
     <div className="space-y-6">
@@ -158,6 +169,39 @@ export function StudentAcademyHub() {
         </div>
       </div>
 
+      <div className="rounded-3xl border border-indigo-100 bg-gradient-to-br from-indigo-600 to-violet-600 p-5 text-white shadow-lg shadow-indigo-500/20">
+        <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1 text-xs font-black uppercase tracking-wider">
+          <Compass className="h-3.5 w-3.5" />
+          {t("workflow.nextMission")}
+        </span>
+        <h2 className="mt-3 text-2xl font-black">
+          {nextStep.type === "lesson"
+            ? t("workflow.continueLesson", {
+                stage: t(`stages.${nextStep.stage}`),
+                title: t(`modules.${nextStep.stage}.${nextStep.module.id}.title`),
+              })
+            : nextStep.type === "quiz"
+              ? t("workflow.takeQuiz", { stage: t(`stages.${nextStep.stage}`) })
+              : t("workflow.finishedTitle")}
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-indigo-100">
+          {nextStep.type === "complete"
+            ? t("workflow.finishedBody")
+            : t("workflow.nextMissionBody")}
+        </p>
+        <Link
+          href={nextStep.href}
+          className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-black text-indigo-700 shadow-sm active:scale-[0.98] sm:w-auto"
+        >
+          <PlayCircle className="h-5 w-5" />
+          {nextStep.type === "lesson"
+            ? t("workflow.startMission")
+            : nextStep.type === "quiz"
+              ? t("workflow.startQuiz")
+              : t("workflow.reviewPath")}
+        </Link>
+      </div>
+
       <h2 className="text-sm font-bold uppercase tracking-wider text-gray-400">
         {t("hub.stageMapTitle")}
       </h2>
@@ -190,6 +234,13 @@ function StageBlock({ stage }: { stage: StageId }) {
   const allDone = allStageModulesCompleted(stage);
   const quizDone = isStageQuizPassed(stage);
   const locked = !unlocked;
+  const statusText = locked
+    ? t("workflow.lockedStatus")
+    : quizDone
+      ? t("workflow.completeStatus")
+      : allDone
+        ? t("workflow.quizReadyStatus")
+        : t("workflow.inProgressStatus");
 
   return (
     <div
@@ -205,9 +256,12 @@ function StageBlock({ stage }: { stage: StageId }) {
           </h3>
           <p className="text-sm text-gray-500">{t(`stages.${stage}Desc`)}</p>
         </div>
-        <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-black text-gray-600">
-          {completion.completed}/{completion.total}
-        </span>
+        <div className="flex flex-col items-end gap-1">
+          <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-black text-gray-600">
+            {completion.completed}/{completion.total}
+          </span>
+          <span className="text-[11px] font-bold text-gray-400">{statusText}</span>
+        </div>
       </div>
 
       <div className="mb-4">

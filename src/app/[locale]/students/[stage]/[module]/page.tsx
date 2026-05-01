@@ -7,6 +7,7 @@ import {
   CheckCircle2,
   ChevronLeft,
   Clock,
+  Flag,
   Lightbulb,
   MessageSquare,
   ShieldCheck,
@@ -17,7 +18,9 @@ import { BottomNav } from "@/components/BottomNav";
 import { StudentAcademyLessonFooter } from "@/components/StudentAcademyLessonFooter";
 import {
   getNextModuleInStage,
+  getModuleIndexInStage,
   getStudentModule,
+  getModulesByStage,
   STUDENT_HUB_THEME,
   STUDENT_MODULES,
   STAGE_ORDER,
@@ -59,7 +62,12 @@ export default async function StudentModulePage({ params }: Props) {
 
   const tk = (fullKey: string) => t(studentHealthMessageKey(fullKey));
   const nextMod = getNextModuleInStage(stage, moduleId);
-
+  const stageModules = getModulesByStage(stage);
+  const moduleIndex = getModuleIndexInStage(stage, moduleId);
+  const previousMod = moduleIndex > 0 ? stageModules[moduleIndex - 1] : undefined;
+  const nextHref = nextMod
+    ? `/students/${stage}/${nextMod.id}`
+    : `/students/quiz/${stage}`;
   const showStiNote = STI_MODULES.has(moduleId);
   const showSexualHealthSupport = SEXUAL_HEALTH_MODULES.has(moduleId);
 
@@ -75,6 +83,19 @@ export default async function StudentModulePage({ params }: Props) {
             <ChevronLeft className="h-4 w-4" />
             {t("quiz.back")}
           </Link>
+
+          <div className="mb-4 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
+            <div className="mb-2 flex items-center justify-between text-xs font-bold text-gray-500">
+              <span>{t("lesson.stepLabel", { current: moduleIndex + 1, total: stageModules.length })}</span>
+              <span>{t(`stages.${stage}`)}</span>
+            </div>
+            <div className="h-2 overflow-hidden rounded-full bg-gray-100">
+              <div
+                className="h-full rounded-full bg-indigo-500"
+                style={{ width: `${((moduleIndex + 1) / stageModules.length) * 100}%` }}
+              />
+            </div>
+          </div>
 
           {showStiNote && (
             <div className="mb-4 rounded-xl border border-indigo-100 bg-indigo-50/80 p-3 text-sm text-indigo-900">
@@ -193,20 +214,44 @@ export default async function StudentModulePage({ params }: Props) {
           <StudentAcademyLessonFooter
             pillarId="student_health"
             moduleId={moduleId}
+            stage={stage}
             completeLabel={tCommon("markComplete")}
             completedLabel={tCommon("completed")}
             pillarColor={STUDENT_HUB_THEME.color}
+            nextLessonLabel={t("workflow.startMission")}
+            quizLabel={t("workflow.startQuiz")}
+            backToAcademyLabel={t("quiz.continueHub")}
+            completedTitle={tCommon("completed")}
+            completedBody={t("lesson.completedNote")}
           />
 
-          {nextMod && (
+          <div className="mt-4 grid gap-2 sm:grid-cols-2">
+            {previousMod && (
+              <Link
+                href={`/students/${stage}/${previousMod.id}`}
+                className="flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white p-3 text-sm font-medium text-gray-600 shadow-sm transition-all hover:shadow-md active:scale-[0.99]"
+              >
+                <ChevronLeft className="h-4 w-4" />
+                {tCommon("previous")}: {previousMod.emoji}
+              </Link>
+            )}
             <Link
-              href={`/students/${stage}/${nextMod.id}`}
-              className="mt-4 flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white p-3 text-sm font-medium text-gray-600 shadow-sm transition-all hover:shadow-md active:scale-[0.99]"
+              href={nextHref}
+              className="flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white p-3 text-sm font-medium text-gray-600 shadow-sm transition-all hover:shadow-md active:scale-[0.99]"
             >
-              {tCommon("next")}: {nextMod.emoji} {tk(nextMod.titleKey)}
-              <ArrowRight className="h-4 w-4" />
+              {nextMod ? (
+                <>
+                  {tCommon("next")}: {nextMod.emoji} {tk(nextMod.titleKey)}
+                  <ArrowRight className="h-4 w-4" />
+                </>
+              ) : (
+                <>
+                  <Flag className="h-4 w-4" />
+                  {t("workflow.takeStageQuiz")}
+                </>
+              )}
             </Link>
-          )}
+          </div>
         </div>
       </main>
       <BottomNav />

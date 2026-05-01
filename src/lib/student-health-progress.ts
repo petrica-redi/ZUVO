@@ -1,7 +1,12 @@
 "use client";
 
-import type { StageId } from "@/data/student-health";
-import { getModulesByStage, STAGE_ORDER, STUDENT_HEALTH_PILLAR_ID } from "@/data/student-health";
+import type { StageId, StudentModule } from "@/data/student-health";
+import {
+  getModulesByStage,
+  getNextStage,
+  STAGE_ORDER,
+  STUDENT_HEALTH_PILLAR_ID,
+} from "@/data/student-health";
 
 const ACADEMY_KEY = "sastipe_student_health";
 const LEGACY_PROGRESS_KEY = "sastipe_progress";
@@ -116,6 +121,82 @@ export function getAcademyLevel(xp: number): {
   return { level, nextLevelXp, progressPercent };
 }
 
+export type AcademyNextStep =
+  | { type: "lesson"; stage: StageId; module: StudentModule; href: string }
+  | { type: "quiz"; stage: StageId; href: string }
+  | { type: "complete"; href: string };
+
+export function getAcademyNextStep(): AcademyNextStep {
+  const done = getCompletedModuleIdSet();
+
+  for (const stage of STAGE_ORDER) {
+    if (!isStageUnlockedForPlay(stage)) {
+      continue;
+    }
+
+    const firstIncomplete = getModulesByStage(stage).find((m) => !done.has(m.id));
+    if (firstIncomplete) {
+      return {
+        type: "lesson",
+        stage,
+        module: firstIncomplete,
+        href: `/students/${stage}/${firstIncomplete.id}`,
+      };
+    }
+
+    if (!isStageQuizPassed(stage)) {
+      return {
+        type: "quiz",
+        stage,
+        href: `/students/quiz/${stage}`,
+      };
+    }
+  }
+
+  return { type: "complete", href: "/students" };
+}
+
+export function getLessonNextStep(stage: StageId, moduleId: string): AcademyNextStep {
+  const done = getCompletedModuleIdSet();
+  const modules = getModulesByStage(stage);
+  const currentIndex = modules.findIndex((m) => m.id === moduleId);
+  const nextIncomplete = modules
+    .slice(Math.max(0, currentIndex + 1))
+    .find((m) => !done.has(m.id));
+
+  if (nextIncomplete) {
+    return {
+      type: "lesson",
+      stage,
+      module: nextIncomplete,
+      href: `/students/${stage}/${nextIncomplete.id}`,
+    };
+  }
+
+  if (allStageModulesCompleted(stage) && !isStageQuizPassed(stage)) {
+    return {
+      type: "quiz",
+      stage,
+      href: `/students/quiz/${stage}`,
+    };
+  }
+
+  const nextStage = getNextStage(stage);
+  if (nextStage && isStageUnlockedForPlay(nextStage)) {
+    const firstModule = getModulesByStage(nextStage)[0];
+    if (firstModule) {
+      return {
+        type: "lesson",
+        stage: nextStage,
+        module: firstModule,
+        href: `/students/${nextStage}/${firstModule.id}`,
+      };
+    }
+  }
+
+  return getAcademyNextStep();
+}
+
 export function allStageModulesCompleted(stage: StageId): boolean {
   const completion = getStageCompletion(stage);
   return completion.total > 0 && completion.completed === completion.total;
@@ -135,10 +216,11 @@ export function isStageUnlockedForPlay(stage: StageId): boolean {
 
 export function recordQuizPass(stage: StageId): void {
   const s = readAcademyState();
+  const alreadyPassed = Boolean(s.quizPassed[stage]);
   s.quizPassed[stage] = true;
   const badge = stage as StudentAcademyBadge;
   if (!s.badges.includes(badge)) s.badges.push(badge);
-  s.xp += 50;
+  if (!alreadyPassed) s.xp += 50;
   writeAcademyState(s);
 }
 
