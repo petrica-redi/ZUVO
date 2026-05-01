@@ -58,6 +58,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
   const [streak, setStreak] = useState(0);
 
   useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect -- Hydrates client-only localStorage state after mount. */
     const history = getCheckinHistory();
     const today = history[getTodayKey()];
     if (today) {
@@ -70,7 +71,6 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
     // Calculate streak
     let s = 0;
     const d = new Date();
-    // eslint-disable-next-line no-constant-condition
     while (true) {
       const key = d.toISOString().slice(0, 10);
       if (history[key]) {
@@ -79,6 +79,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
       } else break;
     }
     setStreak(s);
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
   const handleSave = () => {
