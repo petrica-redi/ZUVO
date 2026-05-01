@@ -1,4 +1,37 @@
 import { NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
+import { parseJsonBody, validationError } from "@/lib/api/validation";
+import { parseAiJson } from "@/lib/ai/json";
+import { buildEmergencyConsultSummary, detectEmergencyRedFlag } from "@/lib/health/red-flags";
+
+const chatMessageSchema = z.object({
+  role: z.enum(["user", "assistant"]),
+  content: z.string().trim().min(1).max(2000),
+});
+
+const consultRequestSchema = z.object({
+  messages: z.array(chatMessageSchema).min(1).max(12),
+  locale: z.string().trim().min(2).max(16).optional(),
+});
+
+const consultGatheringSchema = z.object({
+  stage: z.literal("gathering"),
+  message: z.string().min(1).max(1600),
+  questionsAsked: z.number().int().min(0).max(5).default(1),
+});
+
+const consultSummarySchema = z.object({
+  stage: z.literal("summary"),
+  severity: z.enum(["green", "amber", "red"]),
+  title: z.string().min(1).max(120),
+  assessment: z.string().min(1).max(1200),
+  whatToDo: z.string().min(1).max(1200),
+  watchFor: z.string().min(1).max(1000),
+  homeRemedies: z.string().max(1000).optional(),
+  doctorVisitSummary: z.string().min(1).max(1200),
+});
+
+const consultResponseSchema = z.union([consultGatheringSchema, consultSummarySchema]);
 
 const CONSULT_PROMPT = `You are a Roma health mediator conducting a guided health consultation. You have 15 years of field experience in Roma communities across Europe. You are NOT a doctor. You NEVER diagnose. You help people understand their symptoms and decide what to do next.
 
@@ -45,13 +78,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
   }
 
-  const { messages, locale } = (await req.json()) as {
-    messages: { role: "user" | "assistant"; content: string }[];
-    locale?: string;
-  };
+  const parsed = await parseJsonBody(req, consultRequestSchema);
+  if (!parsed.success) return validationError(parsed.error);
 
-  if (!messages?.length) {
-    return NextResponse.json({ error: "No messages provided" }, { status: 400 });
+  const { messages, locale } = parsed.data;
+  const redFlag = detectEmergencyRedFlag(messages.map((m) => m.content).join("\n"));
+  if (redFlag) {
+    return NextResponse.json({
+      success: true,
+      data: buildEmergencyConsultSummary(redFlag),
+      safetyOverride: true,
+    });
   }
 
   const localeNote = locale
@@ -82,14 +119,18 @@ export async function POST(req: NextRequest) {
   const data = await response.json();
   const content = data.choices?.[0]?.message?.content ?? "";
 
-  try {
-    const jsonMatch = content.match(/\{[\s\S]*\}/);
-    const result = JSON.parse(jsonMatch ? jsonMatch[0] : content);
-    return NextResponse.json({ success: true, data: result });
-  } catch {
+  const result = parseAiJson(content, consultResponseSchema);
+  if (!result.success) {
     return NextResponse.json({
       success: true,
-      data: { stage: "gathering", message: content, questionsAsked: 1 },
+      data: {
+        stage: "gathering",
+        message: "I need one more detail to answer safely. What is the main symptom, how long has it been happening, and is there any trouble breathing, chest pain, heavy bleeding, fainting, or suicidal thoughts?",
+        questionsAsked: 1,
+      },
+      fallback: true,
     });
   }
+
+  return NextResponse.json({ success: true, data: result.data });
 }

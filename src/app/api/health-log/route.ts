@@ -6,10 +6,21 @@ import { NextRequest, NextResponse } from "next/server";
 import { getDb } from "@/db/client";
 import { healthLogs } from "@/db/schema";
 import { eq, and, desc, gte } from "drizzle-orm";
+import { z } from "zod";
+import { parseJsonBody } from "@/lib/api/validation";
 
 function userId(req: NextRequest): string | null {
   return req.headers.get("x-anonymous-id");
 }
+
+const healthLogBodySchema = z.object({
+  type: z.string().trim().min(1).max(60),
+  value: z.number().finite(),
+  unit: z.string().trim().max(40).optional(),
+  note: z.string().trim().max(500).optional(),
+  pillarId: z.string().trim().max(80).optional(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
+});
 
 export async function GET(req: NextRequest) {
   const db = getDb();
@@ -20,7 +31,8 @@ export async function GET(req: NextRequest) {
 
   const url = new URL(req.url);
   const type = url.searchParams.get("type");
-  const days = parseInt(url.searchParams.get("days") ?? "30", 10);
+  const parsedDays = parseInt(url.searchParams.get("days") ?? "30", 10);
+  const days = Number.isFinite(parsedDays) ? Math.min(Math.max(parsedDays, 1), 365) : 30;
 
   const since = new Date();
   since.setDate(since.getDate() - days);
@@ -45,19 +57,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: false, error: "No database or user" }, { status: 400 });
   }
 
-  const body = await req.json();
-  const { type, value, unit, note, pillarId, metadata } = body as {
-    type: string;
-    value: number;
-    unit?: string;
-    note?: string;
-    pillarId?: string;
-    metadata?: Record<string, unknown>;
-  };
+  const parsed = await parseJsonBody(req, healthLogBodySchema);
+  if (!parsed.success) return parsed.response;
 
-  if (!type || value === undefined) {
-    return NextResponse.json({ success: false, error: "Missing type or value" }, { status: 400 });
-  }
+  const { type, value, unit, note, pillarId, metadata } = parsed.data;
 
   const [row] = await db
     .insert(healthLogs)

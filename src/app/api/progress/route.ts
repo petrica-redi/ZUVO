@@ -6,10 +6,18 @@ import { NextRequest, NextResponse } from "next/server";
 import { getDb } from "@/db/client";
 import { progress } from "@/db/schema";
 import { eq, and } from "drizzle-orm";
+import { z } from "zod";
+import { parseJsonBody } from "@/lib/api/validation";
 
 function userId(req: NextRequest): string | null {
   return req.headers.get("x-anonymous-id");
 }
+
+const progressSchema = z.object({
+  pillarId: z.string().trim().min(1).max(80),
+  moduleId: z.string().trim().min(1).max(120),
+  status: z.enum(["in_progress", "completed"]),
+});
 
 export async function GET(req: NextRequest) {
   const db = getDb();
@@ -33,16 +41,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: false, error: "No database or user" }, { status: 400 });
   }
 
-  const body = await req.json();
-  const { pillarId, moduleId, status } = body as {
-    pillarId: string;
-    moduleId: string;
-    status: "in_progress" | "completed";
-  };
-
-  if (!pillarId || !moduleId || !status) {
-    return NextResponse.json({ success: false, error: "Missing fields" }, { status: 400 });
-  }
+  const parsed = await parseJsonBody(req, progressSchema);
+  if (!parsed.success) return parsed.response;
+  const { pillarId, moduleId, status } = parsed.data;
 
   // Check if record exists
   const existing = await db

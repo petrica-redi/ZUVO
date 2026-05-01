@@ -4,6 +4,23 @@
  * Takes a health claim and returns a verdict with explanation.
  */
 import { NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
+import { parseJsonBody, validationErrorResponse } from "@/lib/api/validation";
+import { parseAiJson } from "@/lib/ai/json";
+
+const scanRequestSchema = z.object({
+  claim: z.string().trim().min(3).max(1200),
+  locale: z.string().trim().max(12).optional(),
+});
+
+const scanResponseSchema = z.object({
+  verdict: z.enum(["verified", "misleading", "false"]),
+  emoji: z.string().max(8),
+  headline: z.string().min(1).max(180),
+  explanation: z.string().min(1).max(1400),
+  shareText: z.string().min(1).max(320),
+  source: z.string().min(1).max(240),
+});
 
 const SCAN_PROMPT = `You are a health misinformation fact-checker for Roma communities in Europe.
 
@@ -36,10 +53,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
   }
 
-  const { claim, locale } = (await req.json()) as { claim: string; locale?: string };
-  if (!claim?.trim()) {
-    return NextResponse.json({ error: "No claim provided" }, { status: 400 });
-  }
+  const parsed = await parseJsonBody(req, scanRequestSchema);
+  if (!parsed.success) return validationErrorResponse(parsed.error);
+  const { claim, locale } = parsed.data;
 
   const localeNote = locale ? `\nThe user's language is "${locale}". Respond in that language.` : "";
 
@@ -67,21 +83,21 @@ export async function POST(req: NextRequest) {
   const data = await response.json();
   const content = data.choices?.[0]?.message?.content ?? "";
 
-  try {
-    const result = JSON.parse(content);
-    return NextResponse.json({ success: true, data: result });
-  } catch {
-    // If AI didn't return valid JSON, wrap it
+  const parsedAi = parseAiJson(content, scanResponseSchema);
+  if (!parsedAi.success) {
+    const safeExplanation = content.slice(0, 1400) || "The AI service did not return a structured fact-check.";
     return NextResponse.json({
       success: true,
       data: {
         verdict: "misleading",
         emoji: "⚠️",
         headline: "Could not fully analyze this claim",
-        explanation: content,
+        explanation: safeExplanation,
         shareText: "Always verify health claims with a trusted health worker.",
         source: "Zuvo Health Advisor",
       },
     });
   }
+
+  return NextResponse.json({ success: true, data: parsedAi.data });
 }

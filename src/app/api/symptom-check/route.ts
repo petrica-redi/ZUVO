@@ -1,4 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
+import { parseJsonBody } from "@/lib/api/validation";
+import { parseAiJson } from "@/lib/ai/json";
+import { detectRedFlag, redFlagSymptomResult } from "@/lib/health/red-flags";
 
 const SYMPTOM_PROMPT = `You are a Roma health mediator with 15 years of field experience conducting a symptom triage. You are NOT a doctor. You NEVER diagnose. You help people understand how serious their symptoms might be and what to do next.
 
@@ -34,16 +38,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
   }
 
-  const { bodyArea, symptoms, age, gender, locale } = (await req.json()) as {
-    bodyArea: string;
-    symptoms: string;
-    age?: string;
-    gender?: string;
-    locale?: string;
-  };
+  const parsed = await parseJsonBody(req, symptomRequestSchema);
+  if (!parsed.success) return parsed.response;
+  const { bodyArea, symptoms, age, gender, locale } = parsed.data;
 
-  if (!bodyArea || !symptoms) {
-    return NextResponse.json({ error: "Missing body area or symptoms" }, { status: 400 });
+  const redFlag = detectRedFlag([bodyArea, symptoms, age, gender].filter(Boolean).join(" "));
+  if (redFlag) {
+    return NextResponse.json({ success: true, data: redFlagSymptomResult(redFlag) });
   }
 
   const localeNote = locale ? `\nRespond in the user's language: "${locale}".` : "";
@@ -75,24 +76,41 @@ export async function POST(req: NextRequest) {
 
   const data = await response.json();
   const content = data.choices?.[0]?.message?.content ?? "";
-
-  try {
-    const jsonMatch = content.match(/\{[\s\S]*\}/);
-    const result = JSON.parse(jsonMatch ? jsonMatch[0] : content);
-    return NextResponse.json({ success: true, data: result });
-  } catch {
-    return NextResponse.json({
-      success: true,
-      data: {
-        severity: "amber",
-        title: "Could not fully assess",
-        assessment: content || "Please describe your symptoms in more detail.",
-        immediateAction: "If you feel very unwell, call 112.",
-        homeCare: [],
-        warningSignsToEscalate: ["Difficulty breathing", "Severe pain", "Loss of consciousness"],
-        commonCauses: [],
-        preventionTips: [],
-      },
-    });
+  const result = parseAiJson(content, symptomResultSchema);
+  if (result.success) {
+    return NextResponse.json({ success: true, data: result.data });
   }
+
+  return NextResponse.json({
+    success: true,
+    data: {
+      severity: "amber",
+      title: "Could not fully assess",
+      assessment: content || "Please describe your symptoms in more detail.",
+      immediateAction: "If you feel very unwell, call 112.",
+      homeCare: [],
+      warningSignsToEscalate: ["Difficulty breathing", "Severe pain", "Loss of consciousness"],
+      commonCauses: [],
+      preventionTips: [],
+    },
+  });
 }
+
+const symptomRequestSchema = z.object({
+  bodyArea: z.string().trim().min(1).max(80),
+  symptoms: z.string().trim().min(1).max(1500),
+  age: z.string().trim().max(40).optional(),
+  gender: z.string().trim().max(40).optional(),
+  locale: z.string().trim().max(12).optional(),
+});
+
+const symptomResultSchema = z.object({
+  severity: z.enum(["green", "amber", "red"]),
+  title: z.string().min(1).max(120),
+  assessment: z.string().min(1).max(1200),
+  immediateAction: z.string().min(1).max(1000),
+  homeCare: z.array(z.string().max(300)).max(6).default([]),
+  warningSignsToEscalate: z.array(z.string().max(300)).max(8).default([]),
+  commonCauses: z.array(z.string().max(300)).max(6).default([]),
+  preventionTips: z.array(z.string().max(300)).max(6).default([]),
+});
