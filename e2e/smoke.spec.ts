@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 test("home page loads with Sastipe branding", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveTitle(/Sastipe/);
-  await expect(page.getByRole("heading", { name: "Sastipe" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Your health,\s*explained simply\./ })).toBeVisible();
 });
 
 test("robots.txt is accessible", async ({ page }) => {

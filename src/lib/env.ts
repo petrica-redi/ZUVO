@@ -141,9 +141,50 @@ export type ResendConfig = {
   fromEmail: string;
 };
 
+const papposhopDefaultFromEmail = "orders@papposhop.org";
+
+/** True when this build is deployed for Papposhop (public site / order emails). */
+export function isPapposhopDeployment(): boolean {
+  const name = process.env.NEXT_PUBLIC_APP_NAME?.trim().toLowerCase();
+  if (name?.includes("papposhop")) return true;
+  const url = process.env.NEXT_PUBLIC_APP_URL?.trim().toLowerCase();
+  if (!url) return false;
+  try {
+    const host = new URL(url).hostname;
+    return host === "papposhop.org" || host.endsWith(".papposhop.org");
+  } catch {
+    return url.includes("papposhop.org");
+  }
+}
+
+function isRediNgoFromAddress(email: string): boolean {
+  const lower = email
+    .toLowerCase()
+    .replace(/^.*<([^>]+)>.*$/, "$1")
+    .trim();
+  return lower === "petrica@redi-ngo.eu" || lower.endsWith("@redi-ngo.eu");
+}
+
+/**
+ * Resolves the Resend `from` address. For Papposhop production we must not use
+ * sandbox-only addresses like @redi-ngo.eu.
+ */
+export function resolveResendFromEmail(): string | null {
+  const defaultFrom = process.env.RESEND_FROM_EMAIL?.trim();
+  const papposhopFrom = process.env.RESEND_FROM_EMAIL_PAPPOSHOP?.trim();
+
+  if (isPapposhopDeployment()) {
+    if (papposhopFrom && !isRediNgoFromAddress(papposhopFrom)) return papposhopFrom;
+    if (defaultFrom && !isRediNgoFromAddress(defaultFrom)) return defaultFrom;
+    return papposhopDefaultFromEmail;
+  }
+
+  return defaultFrom || null;
+}
+
 export function getResendConfig(): ResendConfig | null {
   const apiKey = process.env.RESEND_API_KEY?.trim();
-  const fromEmail = process.env.RESEND_FROM_EMAIL?.trim();
+  const fromEmail = resolveResendFromEmail();
   if (!apiKey || !fromEmail) return null;
   return { apiKey, fromEmail };
 }

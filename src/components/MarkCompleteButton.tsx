@@ -42,10 +42,13 @@ export function MarkCompleteButton({
   const [animating, setAnimating] = useState(false);
 
   useEffect(() => {
-    const p = getProgress();
-    if (p[`${pillarId}:${moduleId}`] === "completed") {
-      setCompleted(true);
-    }
+    const id = window.setTimeout(() => {
+      const p = getProgress();
+      if (p[`${pillarId}:${moduleId}`] === "completed") {
+        setCompleted(true);
+      }
+    }, 0);
+    return () => window.clearTimeout(id);
   }, [pillarId, moduleId]);
 
   const handleComplete = async () => {

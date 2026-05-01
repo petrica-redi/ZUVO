@@ -24,8 +24,10 @@ export function ProfileView({ labels }: { labels: Labels }) {
           .filter((k) => progress[k] === "completed")
           .map((k) => k.split(":")[0])
       );
-      setModulesCompleted(completed);
-      setPillarsStarted(pillars.size);
+      queueMicrotask(() => {
+        setModulesCompleted(completed);
+        setPillarsStarted(pillars.size);
+      });
     } catch {
       /* empty */
     }
@@ -35,14 +37,13 @@ export function ProfileView({ labels }: { labels: Labels }) {
       const history = JSON.parse(localStorage.getItem(CHECKIN_KEY) ?? "{}");
       let s = 0;
       const d = new Date();
-      // eslint-disable-next-line no-constant-condition
       while (true) {
         if (history[d.toISOString().slice(0, 10)]) {
           s++;
           d.setDate(d.getDate() - 1);
         } else break;
       }
-      setStreak(s);
+      queueMicrotask(() => setStreak(s));
     } catch {
       /* empty */
     }
