@@ -1,13 +1,20 @@
 import type { MetadataRoute } from "next";
 import { getAppConfig } from "@/lib/env";
 import { LOCALES } from "@/i18n/routing";
+import { STUDENT_MODULES, STAGE_ORDER } from "@/data/student-health";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { appUrl } = getAppConfig();
   const base = appUrl ?? "http://localhost:3000";
   const now = new Date();
 
-  const routes = ["/", "/learn", "/track", "/mediator", "/regions"];
+  const studentRoutes = [
+    "/students",
+    ...STAGE_ORDER.map((s) => `/students/quiz/${s}`),
+    ...STUDENT_MODULES.map((m) => `/students/${m.stageId}/${m.id}`),
+  ];
+
+  const routes = ["/", "/learn", "/track", "/mediator", "/regions", ...studentRoutes];
 
   const entries: MetadataRoute.Sitemap = [];
 

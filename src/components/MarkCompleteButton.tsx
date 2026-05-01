@@ -9,6 +9,8 @@ type Props = {
   completeLabel: string;
   completedLabel: string;
   pillarColor: string;
+  /** Called after local + server progress is written (e.g. award XP). */
+  onCompleted?: () => void;
 };
 
 const STORAGE_KEY = "sastipe_progress";
@@ -34,6 +36,7 @@ export function MarkCompleteButton({
   completeLabel,
   completedLabel,
   pillarColor,
+  onCompleted,
 }: Props) {
   const [completed, setCompleted] = useState(false);
   const [animating, setAnimating] = useState(false);
@@ -69,6 +72,7 @@ export function MarkCompleteButton({
     setTimeout(() => {
       setCompleted(true);
       setAnimating(false);
+      onCompleted?.();
     }, 600);
   };
 

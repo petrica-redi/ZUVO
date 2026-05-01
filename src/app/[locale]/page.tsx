@@ -6,7 +6,7 @@ import {
   Stethoscope, Syringe, Navigation, Phone, MessageCircle,
   AlertTriangle, XCircle, Heart, Users, Sparkles,
   Activity, Globe, Shield, ArrowRight, Scale, BookOpen,
-  GraduationCap,
+  GraduationCap, Trophy,
 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
@@ -227,6 +227,7 @@ export default async function HomePage({ params }: Props) {
           <h2 className="mb-3 text-[16px] font-black text-gray-900">Learn & Grow</h2>
           <div className="space-y-2.5">
             {[
+              { href: "/students", icon: Trophy, label: "Student Health Academy", desc: "Staged lessons: first aid, STIs, vaccines", gradient: "from-indigo-500 to-violet-600", shadow: "shadow-indigo-500/20" },
               { href: "/quiz", icon: GraduationCap, label: "Health Quiz", desc: "Test your knowledge", gradient: "from-amber-500 to-orange-600", shadow: "shadow-amber-500/20" },
               { href: "/glossary", icon: BookOpen, label: "Health Glossary", desc: "Medical terms, simply explained", gradient: "from-teal-500 to-cyan-600", shadow: "shadow-teal-500/20" },
               { href: "/rights", icon: Scale, label: "Know Your Rights", desc: "Patient rights & legal help", gradient: "from-indigo-500 to-purple-600", shadow: "shadow-indigo-500/20" },

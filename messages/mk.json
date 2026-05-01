@@ -56,5 +56,294 @@
     "comingSoon": "Наскоро",
     "close": "Затвори",
     "back": "Назад"
+  },
+  "studentHealth": {
+    "meta": {
+      "title": "Student Health Academy",
+      "description": "Gamified health literacy for high school: first aid, STIs, vaccines, and more."
+    },
+    "hub": {
+      "title": "Student Health Academy",
+      "subtitle": "Learn in three stages — local, regional, and national. Earn XP, badges, and unlock the next level.",
+      "disclaimer": "This section is for education only. It is not medical advice and not a substitute for a doctor, nurse, or school nurse. For emergencies, call your local emergency number (e.g. 112 in many European countries).",
+      "countryLabel": "Your country (for tips)",
+      "countryPlaceholder": "Select country (optional)",
+      "countryHint": "Used only on this device to show relevant context. You can change it anytime.",
+      "countryContext": "Context for tips: {country}",
+      "xpLabel": "XP",
+      "badgesTitle": "Your badges",
+      "stageMapTitle": "Your path",
+      "modulesInStage": "modules",
+      "takeStageQuiz": "Stage quiz",
+      "quizLocked": "Complete all modules in this stage to unlock the stage quiz.",
+      "quizIntro": "Answer at least 70% correctly to unlock the next stage.",
+      "stageComplete": "Stage complete!",
+      "nextStageUnlocked": "You unlocked the next stage.",
+      "badgeLocal": "Local champion",
+      "badgeRegional": "Regional explorer",
+      "badgeNational": "National scholar",
+      "badgeLocalDesc": "Finished the local stage quiz.",
+      "badgeRegionalDesc": "Finished the regional stage quiz.",
+      "badgeNationalDesc": "Finished the national stage quiz.",
+      "allStagesComplete": "You completed the full academy path. Keep revisiting lessons to stay sharp."
+    },
+    "stages": {
+      "local": "Local",
+      "localDesc": "School and community basics",
+      "regional": "Regional",
+      "regionalDesc": "Broader skills and context",
+      "national": "National",
+      "nationalDesc": "Capstone and health literacy"
+    },
+    "progress": {
+      "xp": "Experience points",
+      "stageLocked": "Locked — complete the previous stage quiz.",
+      "quizRequired": "Quiz required",
+      "allModulesDone": "All modules done — take the quiz!"
+    },
+    "quiz": {
+      "title": "Stage quiz",
+      "back": "Back to academy",
+      "progress": "Question",
+      "of": "of",
+      "submit": "Next",
+      "seeResults": "See results",
+      "pass": "You passed!",
+      "fail": "Not quite yet",
+      "scoreLine": "You got {correct} out of {total} correct ({pct}%).",
+      "needPct": "You need at least 70% to unlock the next stage.",
+      "retry": "Try again",
+      "continueHub": "Back to academy"
+    },
+    "modules": {
+      "local": {
+        "emergency101": {
+          "title": "Calling for help",
+          "description": "The first skill in any emergency is getting professional help fast. Learn what to say and what not to do.",
+          "tip1": "In many European countries you can dial 112 for police, ambulance, or fire — it often works without phone credit.",
+          "tip2": "Stay calm enough to say where you are: address, school name, or visible landmarks. Dispatchers cannot guess your location.",
+          "tip3": "Do not hang up until the operator says you can. They may need more details to send the right help.",
+          "tip4": "If you are not sure it is an emergency, it is still OK to call — describe the situation and follow their advice.",
+          "fact": "Quick access to emergency services saves lives in bleeding, choking, severe allergic reactions, and many other situations.",
+          "action": "With a family member, practice saying your home address and school name out loud as if you were on a call."
+        },
+        "bleedingBasics": {
+          "title": "Bleeding: first steps",
+          "description": "Serious bleeding needs pressure and help — not panic. These steps are widely taught in first aid courses.",
+          "tip1": "Wash your hands if you can, or use gloves — protect yourself from blood-borne infections.",
+          "tip2": "Apply firm, steady pressure with a clean cloth or clothing directly on the wound. Do not keep lifting the cloth to peek.",
+          "tip3": "Raise the injured limb above heart level if possible, unless you suspect a broken bone.",
+          "tip4": "If blood soaks through, add another layer on top — do not remove the first cloth.",
+          "fact": "Most life-threatening bleeding can be slowed by strong, continuous pressure until medics arrive.",
+          "action": "Find where the first-aid kit is at school or home. Know who to tell if someone is hurt."
+        },
+        "burnsBasics": {
+          "title": "Burns: cool and cover",
+          "description": "Small burns need cooling; large or deep burns need emergency care. Avoid harmful home remedies.",
+          "tip1": "Cool the burn under cool running water for at least 10 minutes as soon as you can — it reduces pain and depth of injury.",
+          "tip2": "Do not use ice directly on the skin; it can cause more tissue damage.",
+          "tip3": "Do not put butter, oil, toothpaste, or egg on a burn — they trap heat and increase infection risk.",
+          "tip4": "Large burns, burns on face/hands/genitals, or burns from chemicals or electricity need emergency services.",
+          "fact": "Proper cooling within minutes can reduce how deep a burn goes — that affects healing and scarring.",
+          "action": "Tell one friend: if someone gets burned, cool water for 10 minutes, then cover loosely with clean cloth — no butter."
+        },
+        "stiBasics": {
+          "title": "STIs: facts, not fear",
+          "description": "Sexually transmitted infections (STIs) are common and treatable or manageable. Knowing facts reduces stigma and helps people seek care.",
+          "tip1": "Many STIs have no symptoms at first — testing is the only way to know for sure if you have been exposed.",
+          "tip2": "Condoms used correctly reduce the risk of many STIs; they do not remove all risk but are an important tool.",
+          "tip3": "Talking honestly with partners about testing and protection is part of mutual respect — no one should pressure you.",
+          "tip4": "Youth clinics and doctors offer confidential care in many places; ask what confidentiality means where you live.",
+          "fact": "Untreated STIs like chlamydia can cause long-term health problems, but testing and treatment are effective when people get care.",
+          "action": "Save the name of a trusted clinic or helpline for sexual health in your area — even if you do not need it yet."
+        },
+        "consentBasics": {
+          "title": "Consent and boundaries",
+          "description": "Healthy relationships require clear, ongoing consent. Everyone has the right to say no at any time.",
+          "tip1": "Consent must be freely given — not pressured by guilt, threats, alcohol, or drugs.",
+          "tip2": "Silence or not fighting back is not the same as yes. Only an enthusiastic, informed yes counts.",
+          "tip3": "You can change your mind at any moment. A yes earlier does not mean yes forever.",
+          "tip4": "If someone crosses your boundaries, you deserve support from a trusted adult, counselor, or helpline.",
+          "fact": "Schools and youth organizations increasingly teach consent because it prevents harm and builds healthier communities.",
+          "action": "Think of one person you could talk to if you felt pressured or unsafe — a teacher, relative, or hotline."
+        }
+      },
+      "regional": {
+        "chokingBasics": {
+          "title": "Choking: when to act",
+          "description": "A person who cannot breathe needs help immediately. Formal training (e.g. first aid course) is best for back blows and abdominal thrusts.",
+          "tip1": "If someone is coughing forcefully, encourage them to keep coughing — do not slap their back randomly.",
+          "tip2": "If they cannot speak, breathe, or cough, call emergency services right away.",
+          "tip3": "Learn choking relief from a certified instructor — doing it wrong can injure someone.",
+          "tip4": "After any choking episode where breathing was blocked, medical evaluation is wise even if they seem fine.",
+          "fact": "Bystander action plus EMS response dramatically improves outcomes in complete airway obstruction.",
+          "action": "Ask your school if a first aid or CPR course is available and sign up if you can."
+        },
+        "stiTesting": {
+          "title": "Testing and treatment",
+          "description": "Getting tested is responsible, not shameful. Treatment works for many bacterial STIs; viral ones can often be managed.",
+          "tip1": "A sexual health clinic can explain which tests you need — often urine, blood, or a swab.",
+          "tip2": "Tell clinicians honestly about symptoms or exposures so they test the right things.",
+          "tip3": "Partners may need testing or treatment too — clinics can advise how to have that conversation safely.",
+          "tip4": "Finish all antibiotics if prescribed — stopping early can lead to resistant bacteria.",
+          "fact": "Early treatment prevents complications like pelvic inflammatory disease and reduces spread to partners.",
+          "action": "Look up one official public health website from your country about STI testing and bookmark it."
+        },
+        "vaccineLiteracy": {
+          "title": "How vaccines work",
+          "description": "Vaccines train your immune system using weakened germs, pieces of germs, or instructions (like mRNA) — they do not replace your DNA.",
+          "tip1": "Your national schedule lists which vaccines you should get and when — ask your doctor or school nurse.",
+          "tip2": "Mild sore arm or fever for a day can happen — it usually means your immune system is responding.",
+          "tip3": "Serious allergic reactions are rare and happen soon after the shot — clinics know how to treat them.",
+          "tip4": "If you missed a dose, you can often catch up — ask a health professional rather than guessing.",
+          "fact": "High vaccination coverage protects whole communities, including people who cannot be vaccinated for medical reasons.",
+          "action": "Check whether your HPV or hepatitis B vaccines are up to date with a parent or nurse — and catch up if needed."
+        },
+        "vpdExamples": {
+          "title": "Vaccine-preventable diseases",
+          "description": "Diseases like measles, HPV-related cancers, and hepatitis B are partly preventable through vaccines — understanding them fights myths.",
+          "tip1": "Measles spreads very easily and can cause brain inflammation — vaccination has prevented countless deaths worldwide.",
+          "tip2": "HPV vaccine is recommended for teens in many countries before sexual activity begins — it reduces cancer risk later.",
+          "tip3": "Hepatitis B can become chronic and damage the liver — infant and adolescent doses are part of many schedules.",
+          "tip4": "Rumors on social media are not evidence — compare claims with national health ministry or WHO pages.",
+          "fact": "Before the measles vaccine, millions of children died each year; vaccines remain one of public health's biggest wins.",
+          "action": "Read one short article from your ministry of health about a vaccine on your schedule and note one fact you learned."
+        }
+      },
+      "national": {
+        "firstAidReview": {
+          "title": "First aid: putting it together",
+          "description": "Review emergencies, bleeding, burns, and when to call for help — readiness beats panic.",
+          "tip1": "Start every serious situation with safety for you and others, then call for help if needed.",
+          "tip2": "Pressure + elevation (when appropriate) remains the core response for many external bleeds.",
+          "tip3": "Burns: cool water first; seek care for large, deep, chemical, electrical, or airway burns.",
+          "tip4": "Stay with the person until help arrives if it is safe — reassurance matters.",
+          "fact": "Communities where many people know basic first aid respond faster and save more lives before professionals arrive.",
+          "action": "Draw a simple flowchart on paper: Emergency? → Call help → Safe to approach? → Basic steps you remember."
+        },
+        "stiMyths": {
+          "title": "STI myths vs reality",
+          "description": "Myths stop people from getting tested. Replace rumors with facts from health authorities.",
+          "tip1": "Myth: You can always tell who has an STI. Reality: Many infections are invisible without testing.",
+          "tip2": "Myth: Only certain kinds of people get STIs. Reality: Anyone sexually active can be exposed.",
+          "tip3": "Myth: Two condoms are safer than one. Reality: Double condoms cause friction and breakage — use one correctly.",
+          "tip4": "Myth: Antibiotics someone gives you are enough. Reality: Only take medicine prescribed for you after proper diagnosis.",
+          "fact": "Stigma is a barrier to testing; factual education and confidential care improve outcomes for everyone.",
+          "action": "If you hear a myth at school, practice responding with: \"I think that's a myth — we should check a health site.\""
+        },
+        "sourceLiteracy": {
+          "title": "Trustworthy health information",
+          "description": "Learn to spot reliable sources: government health sites, WHO, and recognized hospitals — not random influencers.",
+          "tip1": "Check who wrote the page, whether it cites studies, and when it was last updated.",
+          "tip2": "If a claim sounds extreme (\"miracle cure\", \"doctors don't want you to know\"), be extra skeptical.",
+          "tip3": "Use this app's misinformation scanner or similar tools to check viral health claims.",
+          "tip4": "Your school librarian or biology teacher can often help you evaluate online health pages.",
+          "fact": "Health literacy — finding and understanding reliable information — is linked to better decisions and outcomes.",
+          "action": "Compare one TikTok or social claim about health with the same topic on your national health website — note differences."
+        },
+        "capstoneMix": {
+          "title": "Health literacy capstone",
+          "description": "Bring together vaccines, STIs, first aid, and critical thinking about information you see online.",
+          "tip1": "Before sharing a health post, ask: source, date, and whether experts agree.",
+          "tip2": "Your body: you have the right to ask questions in any medical visit and to bring a trusted person.",
+          "tip3": "Prevention stacks: vaccines + safer behaviors + regular checkups when available.",
+          "tip4": "Peer support matters — encourage friends to seek real help instead of self-diagnosing online.",
+          "fact": "Students who combine knowledge with trusted adults and services navigate health decisions more safely.",
+          "action": "Teach one thing you learned in this academy to a sibling or friend in five minutes — teaching deepens memory."
+        }
+      }
+    },
+    "stageQuiz": {
+      "local": {
+        "q0": {
+          "question": "What should you tell an emergency dispatcher first if possible?",
+          "a0": "Your full medical history",
+          "a1": "Where you are and what happened",
+          "a2": "Your social media handle",
+          "explanation": "Location and a brief description of the emergency help them send the right resources quickly."
+        },
+        "q1": {
+          "question": "For heavy bleeding that soaks through a cloth, you should:",
+          "a0": "Remove the cloth to look at the wound",
+          "a1": "Add another layer on top and keep pressing",
+          "a2": "Wait an hour to see if it stops",
+          "explanation": "Removing the cloth can disturb clots. Add pressure on top until help arrives."
+        },
+        "q2": {
+          "question": "For a small fresh burn, the best first step is usually:",
+          "a0": "Put butter on it",
+          "a1": "Cool with running cool water for several minutes",
+          "a2": "Wrap tightly with plastic",
+          "explanation": "Cool running water reduces heat in the tissue. Butter traps heat and increases infection risk."
+        },
+        "q3": {
+          "question": "Why might someone get an STI test even without symptoms?",
+          "a0": "Tests are only for people with symptoms",
+          "a1": "Many STIs can be silent but still harmful or spreadable",
+          "a2": "Testing cures all STIs instantly",
+          "explanation": "Many infections have no early symptoms; testing finds them so you can get care and protect partners."
+        }
+      },
+      "regional": {
+        "q0": {
+          "question": "If an adult suddenly cannot speak or breathe and holds their throat, you should:",
+          "a0": "Ignore them until they cough",
+          "a1": "Call emergency services immediately",
+          "a2": "Give them a glass of water",
+          "explanation": "Complete airway blockage is an emergency — trained help and EMS are needed urgently."
+        },
+        "q1": {
+          "question": "If prescribed antibiotics for an STI, you should:",
+          "a0": "Stop when you feel better",
+          "a1": "Finish all pills as directed",
+          "a2": "Share extras with a partner",
+          "explanation": "Stopping early can fail to kill the bacteria and contribute to resistance. Never share antibiotics."
+        },
+        "q2": {
+          "question": "Vaccines mainly work by:",
+          "a0": "Replacing your blood",
+          "a1": "Training the immune system to recognize a germ",
+          "a2": "Curing active disease instantly",
+          "explanation": "Vaccines prepare your immune system so a future encounter with the real germ is much safer."
+        },
+        "q3": {
+          "question": "Measles is:",
+          "a0": "Harmless in all children",
+          "a1": "A serious disease that vaccines have greatly reduced",
+          "a2": "Only spread by animals",
+          "explanation": "Measles can cause severe complications; vaccination is a key reason cases dropped worldwide."
+        }
+      },
+      "national": {
+        "q0": {
+          "question": "In a medical emergency at school, the best first step is usually:",
+          "a0": "Only post on social media",
+          "a1": "Get adult help and emergency services if needed",
+          "a2": "Wait until the end of class",
+          "explanation": "Trained adults and EMS are equipped to respond; time matters in emergencies."
+        },
+        "q1": {
+          "question": "A reliable place to check vaccine facts is often:",
+          "a0": "Anonymous forum threads only",
+          "a1": "Your country's ministry of health or WHO",
+          "a2": "Memes with many likes",
+          "explanation": "Official health agencies review evidence and update guidance — use them to verify claims."
+        },
+        "q2": {
+          "question": "Two condoms at once are:",
+          "a0": "Safer than one",
+          "a1": "Not recommended — friction can cause breakage",
+          "a2": "Required by law",
+          "explanation": "Using one condom correctly is safer than double-layering, which increases tear risk."
+        },
+        "q3": {
+          "question": "Health literacy means:",
+          "a0": "Memorizing every disease name",
+          "a1": "Finding, understanding, and using reliable health information",
+          "a2": "Never seeing a doctor",
+          "explanation": "It is about skills to navigate real information and services, not encyclopedic memorization."
+        }
+      }
+    }
   }
 }

@@ -30,6 +30,7 @@ const SECTIONS = [
     title: "Learn & Grow",
     items: [
       { href: "/learn", icon: BookOpen, label: "Health Topics", desc: "6 health zones with lessons", color: "#3B82F6", gradient: "from-blue-500 to-indigo-600" },
+      { href: "/students", icon: GraduationCap, label: "Student Health Academy", desc: "First aid, STIs, vaccines — staged learning", color: "#4F46E5", gradient: "from-indigo-500 to-violet-600" },
       { href: "/quiz", icon: GraduationCap, label: "Health Quiz", desc: "Test your knowledge", color: "#F59E0B", gradient: "from-amber-500 to-orange-600" },
       { href: "/glossary", icon: BookOpen, label: "Health Glossary", desc: "Medical terms explained simply", color: "#0D9488", gradient: "from-teal-500 to-cyan-600" },
       { href: "/rights", icon: Scale, label: "Know Your Rights", desc: "Patient rights & legal help", color: "#8B5CF6", gradient: "from-indigo-500 to-purple-600" },
