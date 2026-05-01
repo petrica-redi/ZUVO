@@ -60,17 +60,10 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
   useEffect(() => {
     const history = getCheckinHistory();
     const today = history[getTodayKey()];
-    if (today) {
-      setMood(today.mood);
-      setWater(today.water);
-      setActivity(today.activity);
-      setTodayDone(true);
-    }
 
     // Calculate streak
     let s = 0;
     const d = new Date();
-    // eslint-disable-next-line no-constant-condition
     while (true) {
       const key = d.toISOString().slice(0, 10);
       if (history[key]) {
@@ -78,7 +71,16 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
         d.setDate(d.getDate() - 1);
       } else break;
     }
-    setStreak(s);
+
+    queueMicrotask(() => {
+      if (today) {
+        setMood(today.mood);
+        setWater(today.water);
+        setActivity(today.activity);
+        setTodayDone(true);
+      }
+      setStreak(s);
+    });
   }, []);
 
   const handleSave = () => {

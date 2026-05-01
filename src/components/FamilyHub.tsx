@@ -75,6 +75,7 @@ export function FamilyHub() {
   const [showAddForm, setShowAddForm] = useState(false);
   const [healthLogs, setHealthLogs] = useState<HealthEntry[]>([]);
   const [showLogForm, setShowLogForm] = useState(false);
+  const [now] = useState(() => Date.now());
 
   // Form state
   const [formName, setFormName] = useState("");
@@ -89,8 +90,11 @@ export function FamilyHub() {
   const [logNote, setLogNote] = useState("");
 
   useEffect(() => {
-    setMembers(getMembers());
-    setHealthLogs(getHealthLogs());
+    const timeoutId = window.setTimeout(() => {
+      setMembers(getMembers());
+      setHealthLogs(getHealthLogs());
+    }, 0);
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   const addMember = () => {
@@ -157,7 +161,7 @@ export function FamilyHub() {
   if (selectedMember) {
     const logs = getMemberLogs(selectedMember.id);
     const pregnancyWeeks = selectedMember.isPregnant && selectedMember.dueDate
-      ? Math.max(0, 40 - Math.ceil((new Date(selectedMember.dueDate).getTime() - Date.now()) / (7 * 24 * 60 * 60 * 1000)))
+      ? Math.max(0, 40 - Math.ceil((new Date(selectedMember.dueDate).getTime() - now) / (7 * 24 * 60 * 60 * 1000)))
       : null;
 
     return (
