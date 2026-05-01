@@ -15,7 +15,6 @@ export function ProfileView({ labels }: { labels: Labels }) {
   const [clearConfirm, setClearConfirm] = useState(false);
 
   useEffect(() => {
-    /* eslint-disable react-hooks/set-state-in-effect -- Hydrates client-only localStorage summary after mount. */
     // Count progress
     try {
       const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) ?? "{}");
@@ -25,8 +24,10 @@ export function ProfileView({ labels }: { labels: Labels }) {
           .filter((k) => progress[k] === "completed")
           .map((k) => k.split(":")[0])
       );
-      setModulesCompleted(completed);
-      setPillarsStarted(pillars.size);
+      queueMicrotask(() => {
+        setModulesCompleted(completed);
+        setPillarsStarted(pillars.size);
+      });
     } catch {
       /* empty */
     }
@@ -42,11 +43,10 @@ export function ProfileView({ labels }: { labels: Labels }) {
           d.setDate(d.getDate() - 1);
         } else break;
       }
-      setStreak(s);
+      queueMicrotask(() => setStreak(s));
     } catch {
       /* empty */
     }
-    /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
   const handleClear = () => {

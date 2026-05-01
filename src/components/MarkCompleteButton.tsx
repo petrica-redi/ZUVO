@@ -39,12 +39,13 @@ export function MarkCompleteButton({
   const [animating, setAnimating] = useState(false);
 
   useEffect(() => {
-    const p = getProgress();
-    if (p[`${pillarId}:${moduleId}`] === "completed") {
-      // LocalStorage is client-only, so hydrate the initial completion state after mount.
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setCompleted(true);
-    }
+    const id = window.setTimeout(() => {
+      const p = getProgress();
+      if (p[`${pillarId}:${moduleId}`] === "completed") {
+        setCompleted(true);
+      }
+    }, 0);
+    return () => window.clearTimeout(id);
   }, [pillarId, moduleId]);
 
   const handleComplete = async () => {

@@ -90,8 +90,11 @@ export function FamilyHub() {
   const [logNote, setLogNote] = useState("");
 
   useEffect(() => {
-    setMembers(getMembers());
-    setHealthLogs(getHealthLogs());
+    const timeoutId = window.setTimeout(() => {
+      setMembers(getMembers());
+      setHealthLogs(getHealthLogs());
+    }, 0);
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   const addMember = () => {
