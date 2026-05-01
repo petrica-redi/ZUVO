@@ -66,10 +66,59 @@ export function getCompletedModuleIdsFromLegacyProgress(): string[] {
   }
 }
 
-export function allStageModulesCompleted(stage: StageId): boolean {
-  const done = new Set(getCompletedModuleIdsFromLegacyProgress());
+export function getCompletedModuleIdSet(): Set<string> {
+  return new Set(getCompletedModuleIdsFromLegacyProgress());
+}
+
+export function getStageCompletion(stage: StageId): {
+  completed: number;
+  total: number;
+  percent: number;
+} {
+  const done = getCompletedModuleIdSet();
   const mods = getModulesByStage(stage);
-  return mods.length > 0 && mods.every((m) => done.has(m.id));
+  const completed = mods.filter((m) => done.has(m.id)).length;
+  const total = mods.length;
+  return {
+    completed,
+    total,
+    percent: total === 0 ? 0 : Math.round((completed / total) * 100),
+  };
+}
+
+export function getOverallCompletion(): {
+  completed: number;
+  total: number;
+  percent: number;
+} {
+  const stages = STAGE_ORDER.map(getStageCompletion);
+  const completed = stages.reduce((sum, stage) => sum + stage.completed, 0);
+  const total = stages.reduce((sum, stage) => sum + stage.total, 0);
+  return {
+    completed,
+    total,
+    percent: total === 0 ? 0 : Math.round((completed / total) * 100),
+  };
+}
+
+export function getAcademyLevel(xp: number): {
+  level: number;
+  nextLevelXp: number;
+  progressPercent: number;
+} {
+  const safeXp = Math.max(0, xp);
+  const level = Math.min(10, Math.floor(safeXp / 100) + 1);
+  const nextLevelXp = level >= 10 ? safeXp : level * 100;
+  const levelStartXp = (level - 1) * 100;
+  const progressPercent =
+    level >= 10 ? 100 : Math.round(((safeXp - levelStartXp) / 100) * 100);
+
+  return { level, nextLevelXp, progressPercent };
+}
+
+export function allStageModulesCompleted(stage: StageId): boolean {
+  const completion = getStageCompletion(stage);
+  return completion.total > 0 && completion.completed === completion.total;
 }
 
 export function isStageQuizPassed(stage: StageId): boolean {

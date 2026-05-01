@@ -401,12 +401,20 @@
     "hub": {
       "title": "Student Health Academy",
       "subtitle": "Learn in three stages — local, regional, and national. Earn XP, badges, and unlock the next level.",
-      "disclaimer": "This section is for education only. It is not medical advice and not a substitute for a doctor, nurse, or school nurse. For emergencies, call your local emergency number (e.g. 112 in many European countries).",
+      "disclaimer": "This section is for education only. It is not medical advice and not a substitute for a doctor, nurse, school nurse, or trusted sexual-health clinic. For emergencies, call your local emergency number (e.g. 112 in many European countries).",
       "countryLabel": "Your country (for tips)",
       "countryPlaceholder": "Select country (optional)",
       "countryHint": "Used only on this device to show relevant context. You can change it anytime.",
       "countryContext": "Context for tips: {country}",
       "xpLabel": "XP",
+      "levelLabel": "Level {level}",
+      "commandCenterTitle": "Mission dashboard",
+      "commandCenterSubtitle": "{completed}/{total} lessons complete — keep building real-life health skills.",
+      "overallProgress": "Academy progress",
+      "levelProgress": "Level progress",
+      "maxLevel": "Max level reached",
+      "nextLevelXp": "Next level at {xp} XP",
+      "stageProgress": "Stage progress",
       "badgesTitle": "Your badges",
       "stageMapTitle": "Your path",
       "modulesInStage": "modules",
@@ -451,6 +459,14 @@
       "retry": "Try again",
       "continueHub": "Back to academy"
     },
+    "lesson": {
+      "scenarioTitle": "Real-life scenario",
+      "challengeTitle": "Student challenge",
+      "supportTitle": "Private help is available",
+      "supportText": "If this topic connects to something happening in your life, you deserve confidential, respectful support. A trusted adult, school nurse, doctor, sexual-health clinic, or helpline can help you understand your options.",
+      "findCare": "Find care",
+      "knowRights": "Know your rights"
+    },
     "modules": {
       "local": {
         "emergency101": {
@@ -461,7 +477,9 @@
           "tip3": "Do not hang up until the operator says you can. They may need more details to send the right help.",
           "tip4": "If you are not sure it is an emergency, it is still OK to call — describe the situation and follow their advice.",
           "fact": "Quick access to emergency services saves lives in bleeding, choking, severe allergic reactions, and many other situations.",
-          "action": "With a family member, practice saying your home address and school name out loud as if you were on a call."
+          "action": "With a family member, practice saying your home address and school name out loud as if you were on a call.",
+          "scenario": "A classmate collapses during sports practice. People are shouting, but no one has called for help yet. What are the first three facts you would tell the dispatcher?",
+          "challenge": "Write your home address, school address, and one nearby landmark in your notes app so you can find them fast in an emergency."
         },
         "bleedingBasics": {
           "title": "Bleeding: first steps",
@@ -471,7 +489,9 @@
           "tip3": "Raise the injured limb above heart level if possible, unless you suspect a broken bone.",
           "tip4": "If blood soaks through, add another layer on top — do not remove the first cloth.",
           "fact": "Most life-threatening bleeding can be slowed by strong, continuous pressure until medics arrive.",
-          "action": "Find where the first-aid kit is at school or home. Know who to tell if someone is hurt."
+          "action": "Find where the first-aid kit is at school or home. Know who to tell if someone is hurt.",
+          "scenario": "Someone cuts their arm on broken glass after school. The wound is bleeding through a sleeve and they are scared to look at it.",
+          "challenge": "Practice explaining the pressure rule in one sentence: press firmly, add layers, keep pressing until help arrives."
         },
         "burnsBasics": {
           "title": "Burns: cool and cover",
@@ -481,7 +501,9 @@
           "tip3": "Do not put butter, oil, toothpaste, or egg on a burn — they trap heat and increase infection risk.",
           "tip4": "Large burns, burns on face/hands/genitals, or burns from chemicals or electricity need emergency services.",
           "fact": "Proper cooling within minutes can reduce how deep a burn goes — that affects healing and scarring.",
-          "action": "Tell one friend: if someone gets burned, cool water for 10 minutes, then cover loosely with clean cloth — no butter."
+          "action": "Tell one friend: if someone gets burned, cool water for 10 minutes, then cover loosely with clean cloth — no butter.",
+          "scenario": "A younger sibling touches a hot pan and starts crying. An adult suggests toothpaste because that is what the family used before.",
+          "challenge": "Teach one person the burn rule today: cool running water first, no butter, oil, toothpaste, or egg."
         },
         "stiBasics": {
           "title": "STIs: facts, not fear",
@@ -491,7 +513,9 @@
           "tip3": "Talking honestly with partners about testing and protection is part of mutual respect — no one should pressure you.",
           "tip4": "Youth clinics and doctors offer confidential care in many places; ask what confidentiality means where you live.",
           "fact": "Untreated STIs like chlamydia can cause long-term health problems, but testing and treatment are effective when people get care.",
-          "action": "Save the name of a trusted clinic or helpline for sexual health in your area — even if you do not need it yet."
+          "action": "Save the name of a trusted clinic or helpline for sexual health in your area — even if you do not need it yet.",
+          "scenario": "A friend heard that you can always tell if someone has an STI by looking at them. They are embarrassed to ask a clinic.",
+          "challenge": "Find one confidential sexual-health service, clinic, school nurse, or helpline you could recommend without judging them."
         },
         "consentBasics": {
           "title": "Consent and boundaries",
@@ -501,7 +525,9 @@
           "tip3": "You can change your mind at any moment. A yes earlier does not mean yes forever.",
           "tip4": "If someone crosses your boundaries, you deserve support from a trusted adult, counselor, or helpline.",
           "fact": "Schools and youth organizations increasingly teach consent because it prevents harm and builds healthier communities.",
-          "action": "Think of one person you could talk to if you felt pressured or unsafe — a teacher, relative, or hotline."
+          "action": "Think of one person you could talk to if you felt pressured or unsafe — a teacher, relative, or hotline.",
+          "scenario": "Someone keeps asking for photos after being told no, then says it is proof of love. The pressure is becoming uncomfortable.",
+          "challenge": "Create a boundary script you could use: “I said no. Stop asking. I am leaving this chat now.” Save it for when emotions run high."
         }
       },
       "regional": {
@@ -513,7 +539,9 @@
           "tip3": "Learn choking relief from a certified instructor — doing it wrong can injure someone.",
           "tip4": "After any choking episode where breathing was blocked, medical evaluation is wise even if they seem fine.",
           "fact": "Bystander action plus EMS response dramatically improves outcomes in complete airway obstruction.",
-          "action": "Ask your school if a first aid or CPR course is available and sign up if you can."
+          "action": "Ask your school if a first aid or CPR course is available and sign up if you can.",
+          "scenario": "At lunch, a student suddenly cannot talk and is clutching their throat. Some people think they are joking.",
+          "challenge": "Ask a teacher or school nurse where students can learn certified choking first aid or CPR locally."
         },
         "stiTesting": {
           "title": "Testing and treatment",
@@ -523,7 +551,9 @@
           "tip3": "Partners may need testing or treatment too — clinics can advise how to have that conversation safely.",
           "tip4": "Finish all antibiotics if prescribed — stopping early can lead to resistant bacteria.",
           "fact": "Early treatment prevents complications like pelvic inflammatory disease and reduces spread to partners.",
-          "action": "Look up one official public health website from your country about STI testing and bookmark it."
+          "action": "Look up one official public health website from your country about STI testing and bookmark it.",
+          "scenario": "A friend is worried about a possible STI exposure but is afraid the whole community will find out.",
+          "challenge": "List two privacy questions to ask a clinic: “Who can see my results?” and “Can I be tested confidentially at my age?”"
         },
         "vaccineLiteracy": {
           "title": "How vaccines work",
@@ -533,7 +563,9 @@
           "tip3": "Serious allergic reactions are rare and happen soon after the shot — clinics know how to treat them.",
           "tip4": "If you missed a dose, you can often catch up — ask a health professional rather than guessing.",
           "fact": "High vaccination coverage protects whole communities, including people who cannot be vaccinated for medical reasons.",
-          "action": "Check whether your HPV or hepatitis B vaccines are up to date with a parent or nurse — and catch up if needed."
+          "action": "Check whether your HPV or hepatitis B vaccines are up to date with a parent or nurse — and catch up if needed.",
+          "scenario": "A viral post claims a vaccine “changes your DNA” and dozens of students are sharing it in a group chat.",
+          "challenge": "Compare that claim with your national health ministry or WHO page and write down one trustworthy sentence you could share back."
         },
         "vpdExamples": {
           "title": "Vaccine-preventable diseases",
@@ -543,7 +575,9 @@
           "tip3": "Hepatitis B can become chronic and damage the liver — infant and adolescent doses are part of many schedules.",
           "tip4": "Rumors on social media are not evidence — compare claims with national health ministry or WHO pages.",
           "fact": "Before the measles vaccine, millions of children died each year; vaccines remain one of public health's biggest wins.",
-          "action": "Read one short article from your ministry of health about a vaccine on your schedule and note one fact you learned."
+          "action": "Read one short article from your ministry of health about a vaccine on your schedule and note one fact you learned.",
+          "scenario": "A school trip is coming up and students are discussing measles, HPV, and hepatitis B, but everyone remembers different facts.",
+          "challenge": "Pick one vaccine-preventable disease and make a three-bullet fact card: how it spreads, why it matters, how prevention works."
         }
       },
       "national": {
@@ -555,7 +589,9 @@
           "tip3": "Burns: cool water first; seek care for large, deep, chemical, electrical, or airway burns.",
           "tip4": "Stay with the person until help arrives if it is safe — reassurance matters.",
           "fact": "Communities where many people know basic first aid respond faster and save more lives before professionals arrive.",
-          "action": "Draw a simple flowchart on paper: Emergency? → Call help → Safe to approach? → Basic steps you remember."
+          "action": "Draw a simple flowchart on paper: Emergency? → Call help → Safe to approach? → Basic steps you remember.",
+          "scenario": "You are the first calm person at a scene: one student is burned, another is bleeding, and a teacher is calling emergency services.",
+          "challenge": "Design a 60-second emergency plan for your classroom: who calls, who gets an adult, who clears space, who stays with the injured person."
         },
         "stiMyths": {
           "title": "STI myths vs reality",
@@ -565,7 +601,9 @@
           "tip3": "Myth: Two condoms are safer than one. Reality: Double condoms cause friction and breakage — use one correctly.",
           "tip4": "Myth: Antibiotics someone gives you are enough. Reality: Only take medicine prescribed for you after proper diagnosis.",
           "fact": "Stigma is a barrier to testing; factual education and confidential care improve outcomes for everyone.",
-          "action": "If you hear a myth at school, practice responding with: \"I think that's a myth — we should check a health site.\""
+          "action": "If you hear a myth at school, practice responding with: \"I think that's a myth — we should check a health site.\"",
+          "scenario": "A rumor spreads that only “certain people” get STIs, and a student who might need testing is being mocked.",
+          "challenge": "Write one stigma-free reply that protects privacy and points people toward testing instead of gossip."
         },
         "sourceLiteracy": {
           "title": "Trustworthy health information",
@@ -575,7 +613,9 @@
           "tip3": "Use this app's misinformation scanner or similar tools to check viral health claims.",
           "tip4": "Your school librarian or biology teacher can often help you evaluate online health pages.",
           "fact": "Health literacy — finding and understanding reliable information — is linked to better decisions and outcomes.",
-          "action": "Compare one TikTok or social claim about health with the same topic on your national health website — note differences."
+          "action": "Compare one TikTok or social claim about health with the same topic on your national health website — note differences.",
+          "scenario": "A video promises a miracle cure and says doctors hide the truth. It has thousands of likes and dramatic music.",
+          "challenge": "Use the source check: Who made it? What evidence is shown? What do health authorities say? Decide whether you would share it."
         },
         "capstoneMix": {
           "title": "Health literacy capstone",
@@ -585,7 +625,9 @@
           "tip3": "Prevention stacks: vaccines + safer behaviors + regular checkups when available.",
           "tip4": "Peer support matters — encourage friends to seek real help instead of self-diagnosing online.",
           "fact": "Students who combine knowledge with trusted adults and services navigate health decisions more safely.",
-          "action": "Teach one thing you learned in this academy to a sibling or friend in five minutes — teaching deepens memory."
+          "action": "Teach one thing you learned in this academy to a sibling or friend in five minutes — teaching deepens memory.",
+          "scenario": "You are helping plan a school health week. Students want topics that feel real, not lectures.",
+          "challenge": "Create a mini health-week agenda with one first-aid demo, one myth-busting activity, one vaccine literacy task, and one trusted-help resource."
         }
       }
     },

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-import { ChevronRight, Lock, MapPin, Sparkles, Trophy } from "lucide-react";
+import { CheckCircle2, ChevronRight, Lock, MapPin, Sparkles, Trophy } from "lucide-react";
 import {
   getModulesByStage,
   STUDENT_HUB_THEME,
@@ -13,6 +13,10 @@ import {
 import { getRegion, REGIONS, type RegionSlug } from "@/data/regions";
 import {
   allStageModulesCompleted,
+  getAcademyLevel,
+  getCompletedModuleIdSet,
+  getOverallCompletion,
+  getStageCompletion,
   isStageQuizPassed,
   isStageUnlockedForPlay,
   readAcademyState,
@@ -37,6 +41,8 @@ export function StudentAcademyHub() {
   }, []);
 
   const countryValue = state.countryId ?? "";
+  const overall = getOverallCompletion();
+  const academyLevel = getAcademyLevel(state.xp);
 
   return (
     <div className="space-y-6">
@@ -81,14 +87,57 @@ export function StudentAcademyHub() {
         )}
       </div>
 
-      <div className="flex flex-wrap items-center gap-4 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
-        <div className="flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-amber-500" />
-          <span className="text-sm font-bold text-gray-700">
-            {t("hub.xpLabel")}: <span className="text-indigo-600">{state.xp}</span>
-          </span>
+      <div className="rounded-3xl border border-gray-100 bg-white p-5 shadow-sm">
+        <div className="mb-4 flex items-start justify-between gap-4">
+          <div>
+            <span className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-3 py-1 text-xs font-bold text-indigo-700">
+              <Sparkles className="h-3.5 w-3.5" />
+              {t("hub.levelLabel", { level: academyLevel.level })}
+            </span>
+            <h2 className="mt-3 text-xl font-black text-gray-900">{t("hub.commandCenterTitle")}</h2>
+            <p className="mt-1 text-sm text-gray-500">
+              {t("hub.commandCenterSubtitle", {
+                completed: overall.completed,
+                total: overall.total,
+              })}
+            </p>
+          </div>
+          <div className="rounded-2xl bg-amber-50 px-4 py-3 text-right">
+            <span className="block text-xs font-bold uppercase tracking-wider text-amber-700">
+              {t("hub.xpLabel")}
+            </span>
+            <span className="text-2xl font-black text-amber-600">{state.xp}</span>
+          </div>
         </div>
-        <div className="flex flex-1 flex-wrap gap-2">
+
+        <div className="mb-4">
+          <div className="mb-1 flex items-center justify-between text-xs font-bold text-gray-500">
+            <span>{t("hub.overallProgress")}</span>
+            <span>{overall.percent}%</span>
+          </div>
+          <div className="h-3 overflow-hidden rounded-full bg-gray-100">
+            <div
+              className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 transition-all"
+              style={{ width: `${overall.percent}%` }}
+            />
+          </div>
+          <div className="mt-2 flex items-center justify-between text-xs text-gray-400">
+            <span>{t("hub.levelProgress")}</span>
+            <span>
+              {academyLevel.level >= 10
+                ? t("hub.maxLevel")
+                : t("hub.nextLevelXp", { xp: academyLevel.nextLevelXp })}
+            </span>
+          </div>
+          <div className="mt-1 h-2 overflow-hidden rounded-full bg-gray-100">
+            <div
+              className="h-full rounded-full bg-amber-400 transition-all"
+              style={{ width: `${academyLevel.progressPercent}%` }}
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-2">
           <span className="w-full text-xs font-bold uppercase tracking-wider text-gray-400">
             {t("hub.badgesTitle")}
           </span>
@@ -135,6 +184,8 @@ function capitalize(s: string) {
 function StageBlock({ stage }: { stage: StageId }) {
   const t = useTranslations("studentHealth");
   const modules = getModulesByStage(stage);
+  const done = getCompletedModuleIdSet();
+  const completion = getStageCompletion(stage);
   const unlocked = isStageUnlockedForPlay(stage);
   const allDone = allStageModulesCompleted(stage);
   const quizDone = isStageQuizPassed(stage);
@@ -154,6 +205,22 @@ function StageBlock({ stage }: { stage: StageId }) {
           </h3>
           <p className="text-sm text-gray-500">{t(`stages.${stage}Desc`)}</p>
         </div>
+        <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-black text-gray-600">
+          {completion.completed}/{completion.total}
+        </span>
+      </div>
+
+      <div className="mb-4">
+        <div className="mb-1 flex items-center justify-between text-xs font-bold text-gray-400">
+          <span>{t("hub.stageProgress")}</span>
+          <span>{completion.percent}%</span>
+        </div>
+        <div className="h-2 overflow-hidden rounded-full bg-gray-100">
+          <div
+            className="h-full rounded-full bg-indigo-500 transition-all"
+            style={{ width: `${completion.percent}%` }}
+          />
+        </div>
       </div>
 
       {locked && (
@@ -161,7 +228,9 @@ function StageBlock({ stage }: { stage: StageId }) {
       )}
 
       <div className="flex flex-col gap-2">
-        {modules.map((mod) => (
+        {modules.map((mod) => {
+          const completed = done.has(mod.id);
+          return (
           <Link
             key={mod.id}
             href={locked ? "#" : `/students/${stage}/${mod.id}`}
@@ -179,9 +248,11 @@ function StageBlock({ stage }: { stage: StageId }) {
             <span className="flex-1 font-semibold text-gray-800">
               {t(`modules.${stage}.${mod.id}.title`)}
             </span>
-            {!locked && <ChevronRight className="h-5 w-5 text-gray-300" />}
+            {completed && <CheckCircle2 className="h-5 w-5 text-green-600" />}
+            {!locked && !completed && <ChevronRight className="h-5 w-5 text-gray-300" />}
           </Link>
-        ))}
+          );
+        })}
       </div>
 
       <div className="mt-4 border-t border-gray-100 pt-4">

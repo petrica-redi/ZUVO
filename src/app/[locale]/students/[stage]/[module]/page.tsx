@@ -2,7 +2,16 @@ import type { Metadata } from "next";
 import { Link } from "@/navigation";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { ChevronLeft, Clock, CheckCircle2, Lightbulb, ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  ChevronLeft,
+  Clock,
+  Lightbulb,
+  MessageSquare,
+  ShieldCheck,
+  Target,
+} from "lucide-react";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { StudentAcademyLessonFooter } from "@/components/StudentAcademyLessonFooter";
@@ -37,6 +46,7 @@ export function generateStaticParams() {
 }
 
 const STI_MODULES = new Set(["stiBasics", "stiTesting", "stiMyths"]);
+const SEXUAL_HEALTH_MODULES = new Set(["stiBasics", "stiTesting", "stiMyths", "consentBasics"]);
 
 export default async function StudentModulePage({ params }: Props) {
   const { locale, stage, module: moduleId } = await params;
@@ -51,6 +61,7 @@ export default async function StudentModulePage({ params }: Props) {
   const nextMod = getNextModuleInStage(stage, moduleId);
 
   const showStiNote = STI_MODULES.has(moduleId);
+  const showSexualHealthSupport = SEXUAL_HEALTH_MODULES.has(moduleId);
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
@@ -68,6 +79,32 @@ export default async function StudentModulePage({ params }: Props) {
           {showStiNote && (
             <div className="mb-4 rounded-xl border border-indigo-100 bg-indigo-50/80 p-3 text-sm text-indigo-900">
               {t("hub.disclaimer")}
+            </div>
+          )}
+
+          {showSexualHealthSupport && (
+            <div className="mb-4 rounded-xl border border-rose-100 bg-white p-4 shadow-sm">
+              <h2 className="mb-2 flex items-center gap-2 text-sm font-bold text-rose-800">
+                <ShieldCheck className="h-4 w-4" />
+                {t("sexualHealthSupport.title")}
+              </h2>
+              <p className="text-sm leading-relaxed text-gray-700">
+                {t("sexualHealthSupport.body")}
+              </p>
+              <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+                <Link
+                  href="/navigate"
+                  className="inline-flex flex-1 items-center justify-center rounded-xl bg-rose-50 px-3 py-2 text-sm font-bold text-rose-700"
+                >
+                  {t("sexualHealthSupport.findCare")}
+                </Link>
+                <Link
+                  href="/rights"
+                  className="inline-flex flex-1 items-center justify-center rounded-xl bg-indigo-50 px-3 py-2 text-sm font-bold text-indigo-700"
+                >
+                  {t("sexualHealthSupport.rights")}
+                </Link>
+              </div>
             </div>
           )}
 
@@ -123,8 +160,16 @@ export default async function StudentModulePage({ params }: Props) {
             <p className="text-sm leading-relaxed text-amber-900">{tk(mod.factKey)}</p>
           </div>
 
+          <div className="mb-4 rounded-xl border border-indigo-100 bg-white p-4 shadow-sm">
+            <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-indigo-800">
+              <MessageSquare className="h-4 w-4" />
+              {t("lesson.scenarioTitle")}
+            </h3>
+            <p className="text-sm leading-relaxed text-gray-700">{tk(mod.scenarioKey)}</p>
+          </div>
+
           <div
-            className="mb-8 rounded-xl bg-white p-4 shadow-sm border-2"
+            className="mb-4 rounded-xl bg-white p-4 shadow-sm border-2"
             style={{ borderColor: STUDENT_HUB_THEME.color }}
           >
             <h3
@@ -135,6 +180,14 @@ export default async function StudentModulePage({ params }: Props) {
               {tCommon("actionStep")}
             </h3>
             <p className="text-sm leading-relaxed text-gray-700">{tk(mod.actionKey)}</p>
+          </div>
+
+          <div className="mb-8 rounded-xl border border-green-100 bg-green-50 p-4">
+            <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-green-800">
+              <Target className="h-4 w-4" />
+              {t("lesson.challengeTitle")}
+            </h3>
+            <p className="text-sm leading-relaxed text-green-900">{tk(mod.challengeKey)}</p>
           </div>
 
           <StudentAcademyLessonFooter
