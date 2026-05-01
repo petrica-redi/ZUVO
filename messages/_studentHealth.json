@@ -35,7 +35,13 @@
     "badgeRegionalDesc": "Finished the regional stage quiz.",
     "badgeNationalDesc": "Finished the national stage quiz.",
     "allStagesComplete": "You completed the full academy path. Keep revisiting lessons to stay sharp.",
-    "kicker": "Field guide for real life"
+    "kicker": "Field guide for real life",
+    "streakLabel": "Streak",
+    "streakUnitOne": "day",
+    "streakUnitMany": "days",
+    "streakHint": "Keep one lesson a day going",
+    "dayActive": "Active day",
+    "dayInactive": "No activity"
   },
   "stages": {
     "local": "Local",
@@ -66,7 +72,9 @@
     "continueHub": "Back to academy",
     "stageBriefTitle": "{stage} field checkpoint",
     "stageBriefBody": "This checkpoint tests judgment, not memorization. Score {pct}% or more to unlock the next expedition stage.",
-    "continueNextStage": "Enter {stage} expedition"
+    "continueNextStage": "Enter {stage} expedition",
+    "explainCorrect": "Why this is correct",
+    "explainWrong": "Field guide explainer"
   },
   "lesson": {
     "scenarioTitle": "Field scenario",
@@ -76,7 +84,9 @@
     "findCare": "Find care",
     "knowRights": "Know your rights",
     "stepLabel": "Lesson {current} of {total}",
-    "completedNote": "Field note logged. You earned XP, saved progress, and unlocked the next best step."
+    "completedNote": "Field note logged. You earned XP, saved progress, and unlocked the next best step.",
+    "sourcesTitle": "Verified sources",
+    "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab."
   },
   "modules": {
     "local": {
@@ -353,12 +363,17 @@
   "fieldLab": {
     "title": "Field Lab",
     "subtitle": "Turn the lesson into a one-minute plan. Your note stays only on this device.",
-    "observeLabel": "1. Observe",
-    "decideLabel": "2. Decide",
-    "actLabel": "3. Act",
+    "observeLabel": "Observe",
+    "decideLabel": "Decide",
+    "actLabel": "Act",
     "placeholder": "Example: I would first check safety, then call for help, then tell an adult exactly what I saw...",
     "saveLabel": "Save field note",
-    "savedLabel": "Field note saved"
+    "savedLabel": "Saved on this device",
+    "observeHint": "What do you actually see, hear, or know in this scenario? Stick to the facts.",
+    "decideHint": "What is the smartest first move? Pick something a calm bystander can really do.",
+    "actHint": "Write the exact words or steps you would use in the next 60 seconds.",
+    "syncedLabel": "Saved",
+    "draftLabel": "Saving draft"
   },
   "visuals": {
     "academy": "Students learning health skills through maps, phones, clinics, and community action",
@@ -368,5 +383,20 @@
     "vaccines": "Immune system shield, vaccine card, and public health network",
     "literacy": "Fact-checking desk with phone, sources, magnifier, and evidence notes",
     "capstone": "Capstone expedition map connecting first aid, vaccines, relationships, and evidence"
+  },
+  "hero": {
+    "chipFirstAid": "First aid that works",
+    "chipLiteracy": "Health literacy",
+    "chipMissions": "Mission-based learning"
+  },
+  "toast": {
+    "lessonLoggedTitle": "Lesson logged",
+    "lessonLoggedBody": "+10 XP earned. Streak updated and your next mission is ready."
+  },
+  "sexualHealthSupport": {
+    "title": "Confidential support matters",
+    "body": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
+    "findCare": "Find care",
+    "rights": "Know your rights"
   }
 }

@@ -5,6 +5,8 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { getAppConfig } from "@/lib/env";
+import { ToastProvider } from "@/components/ui/Toast";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 type Props = {
   children: ReactNode;
@@ -56,7 +58,9 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      {children}
+      <ToastProvider>
+        <ErrorBoundary>{children}</ErrorBoundary>
+      </ToastProvider>
     </NextIntlClientProvider>
   );
 }

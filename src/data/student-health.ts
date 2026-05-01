@@ -78,6 +78,15 @@ export const STAGE_VISUALS: Record<StageId, VisualTheme> = {
   },
 };
 
+export type ModuleSource = {
+  /** Short label for source pill, e.g. "WHO". */
+  label: string;
+  /** Friendly title of the page being cited. */
+  title: string;
+  /** Full URL students can verify. */
+  url: string;
+};
+
 export type StudentModule = {
   id: string;
   stageId: StageId;
@@ -91,6 +100,8 @@ export type StudentModule = {
   scenarioKey: string;
   challengeKey: string;
   durationMin: number;
+  /** Concrete sources students can verify (high school health literacy). */
+  sources: ModuleSource[];
 };
 
 /** Translation keys use namespace `studentHealth`; paths are relative to that (e.g. modules.emergency101.title). */
@@ -119,6 +130,67 @@ function moduleKeys(stage: StageId, modId: string) {
   };
 }
 
+const SOURCE_WHO_FIRST_AID: ModuleSource = {
+  label: "WHO",
+  title: "World Health Organization — first aid guidance",
+  url: "https://www.who.int/health-topics/emergencies",
+};
+const SOURCE_RED_CROSS: ModuleSource = {
+  label: "IFRC",
+  title: "International Federation of Red Cross — first aid guidelines",
+  url: "https://www.ifrc.org/our-work/disasters-climate-and-crises/first-aid",
+};
+const SOURCE_EUROPA_112: ModuleSource = {
+  label: "EU 112",
+  title: "European Emergency Number Association — 112 facts",
+  url: "https://eena.org/knowledge-hub/the-emergency-number-112",
+};
+const SOURCE_WHO_BURNS: ModuleSource = {
+  label: "WHO",
+  title: "World Health Organization — burns fact sheet",
+  url: "https://www.who.int/news-room/fact-sheets/detail/burns",
+};
+const SOURCE_WHO_STI: ModuleSource = {
+  label: "WHO",
+  title: "World Health Organization — sexually transmitted infections (STIs)",
+  url: "https://www.who.int/news-room/fact-sheets/detail/sexually-transmitted-infections-(stis)",
+};
+const SOURCE_CDC_STI: ModuleSource = {
+  label: "CDC",
+  title: "US CDC — STI prevention",
+  url: "https://www.cdc.gov/sti/prevention/index.html",
+};
+const SOURCE_UNESCO_CSE: ModuleSource = {
+  label: "UNESCO",
+  title: "UNESCO — comprehensive sexuality education",
+  url: "https://www.unesco.org/en/health-education/cse",
+};
+const SOURCE_WHO_VACCINES: ModuleSource = {
+  label: "WHO",
+  title: "World Health Organization — vaccines and immunization",
+  url: "https://www.who.int/health-topics/vaccines-and-immunization",
+};
+const SOURCE_WHO_MEASLES: ModuleSource = {
+  label: "WHO",
+  title: "World Health Organization — measles fact sheet",
+  url: "https://www.who.int/news-room/fact-sheets/detail/measles",
+};
+const SOURCE_WHO_HPV: ModuleSource = {
+  label: "WHO",
+  title: "World Health Organization — HPV and cervical cancer",
+  url: "https://www.who.int/news-room/fact-sheets/detail/cervical-cancer",
+};
+const SOURCE_HEALTH_LITERACY: ModuleSource = {
+  label: "WHO",
+  title: "World Health Organization — health literacy",
+  url: "https://www.who.int/teams/health-promotion/enhanced-wellbeing/ninth-global-conference/health-literacy",
+};
+const SOURCE_NIH_MEDIA: ModuleSource = {
+  label: "NIH",
+  title: "US NIH — evaluating online health information",
+  url: "https://www.nih.gov/health-information/your-healthiest-self-wellness-toolkits",
+};
+
 export const STUDENT_MODULES: StudentModule[] = [
   // ── Local ─────────────────────────────────────────────────────────────
   {
@@ -129,6 +201,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("local", "emergency101"),
     tips: tips("local", "emergency101", 4, ["📞", "🗣️", "📍", "⏱️"]),
     durationMin: 6,
+    sources: [SOURCE_EUROPA_112, SOURCE_RED_CROSS],
   },
   {
     id: "bleedingBasics",
@@ -138,6 +211,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("local", "bleedingBasics"),
     tips: tips("local", "bleedingBasics", 4, ["🧼", "✋", "⬆️", "🚫"]),
     durationMin: 7,
+    sources: [SOURCE_RED_CROSS, SOURCE_WHO_FIRST_AID],
   },
   {
     id: "burnsBasics",
@@ -147,6 +221,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("local", "burnsBasics"),
     tips: tips("local", "burnsBasics", 4, ["💧", "⏱️", "🚫", "🏥"]),
     durationMin: 6,
+    sources: [SOURCE_WHO_BURNS, SOURCE_RED_CROSS],
   },
   {
     id: "stiBasics",
@@ -156,6 +231,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("local", "stiBasics"),
     tips: tips("local", "stiBasics", 4, ["🔬", "🤐", "💬", "🏥"]),
     durationMin: 8,
+    sources: [SOURCE_WHO_STI, SOURCE_CDC_STI],
   },
   {
     id: "consentBasics",
@@ -165,6 +241,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("local", "consentBasics"),
     tips: tips("local", "consentBasics", 4, ["✋", "🔄", "📵", "💙"]),
     durationMin: 7,
+    sources: [SOURCE_UNESCO_CSE],
   },
   // ── Regional ──────────────────────────────────────────────────────────
   {
@@ -175,6 +252,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("regional", "chokingBasics"),
     tips: tips("regional", "chokingBasics", 4, ["📞", "👐", "🚫", "📚"]),
     durationMin: 7,
+    sources: [SOURCE_RED_CROSS, SOURCE_WHO_FIRST_AID],
   },
   {
     id: "stiTesting",
@@ -184,6 +262,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("regional", "stiTesting"),
     tips: tips("regional", "stiTesting", 4, ["🏥", "🔒", "💊", "👥"]),
     durationMin: 8,
+    sources: [SOURCE_WHO_STI, SOURCE_CDC_STI],
   },
   {
     id: "vaccineLiteracy",
@@ -193,6 +272,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("regional", "vaccineLiteracy"),
     tips: tips("regional", "vaccineLiteracy", 4, ["📅", "🧬", "✅", "🏛️"]),
     durationMin: 8,
+    sources: [SOURCE_WHO_VACCINES],
   },
   {
     id: "vpdExamples",
@@ -202,6 +282,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("regional", "vpdExamples"),
     tips: tips("regional", "vpdExamples", 4, ["🦠", "💉", "👫", "📖"]),
     durationMin: 7,
+    sources: [SOURCE_WHO_MEASLES, SOURCE_WHO_HPV],
   },
   // ── National ────────────────────────────────────────────────────────
   {
@@ -212,6 +293,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("national", "firstAidReview"),
     tips: tips("national", "firstAidReview", 4, ["📞", "🩸", "🔥", "🧠"]),
     durationMin: 8,
+    sources: [SOURCE_RED_CROSS, SOURCE_WHO_FIRST_AID],
   },
   {
     id: "stiMyths",
@@ -221,6 +303,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("national", "stiMyths"),
     tips: tips("national", "stiMyths", 4, ["🚫", "✅", "🏥", "🧪"]),
     durationMin: 8,
+    sources: [SOURCE_WHO_STI, SOURCE_CDC_STI],
   },
   {
     id: "sourceLiteracy",
@@ -230,6 +313,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("national", "sourceLiteracy"),
     tips: tips("national", "sourceLiteracy", 4, ["🏛️", "🔍", "📱", "❓"]),
     durationMin: 8,
+    sources: [SOURCE_HEALTH_LITERACY, SOURCE_NIH_MEDIA],
   },
   {
     id: "capstoneMix",
@@ -239,6 +323,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("national", "capstoneMix"),
     tips: tips("national", "capstoneMix", 4, ["🎯", "🤝", "💉", "📚"]),
     durationMin: 10,
+    sources: [SOURCE_HEALTH_LITERACY, SOURCE_WHO_VACCINES, SOURCE_WHO_STI],
   },
 ];
 
