@@ -11,10 +11,78 @@ export type StageId = "local" | "regional" | "national";
 
 export const STAGE_ORDER: StageId[] = ["local", "regional", "national"];
 
+export type VisualTheme = {
+  accent: string;
+  bg: string;
+  fg: string;
+  subject:
+    | "emergency"
+    | "care"
+    | "water"
+    | "shield"
+    | "consent"
+    | "airway"
+    | "lab"
+    | "vaccine"
+    | "world"
+    | "aid"
+    | "myth"
+    | "source"
+    | "capstone";
+};
+
+function makeVisual(subject: VisualTheme["subject"], accent: string, bg: string, fg: string): VisualTheme {
+  return { subject, accent, bg, fg };
+}
+
+export const ACADEMY_VISUAL = makeVisual("capstone", "#F59E0B", "#111827", "#FFFBEB");
+
+function visual(subject: VisualTheme["subject"]): VisualTheme {
+  const palette: Record<VisualTheme["subject"], Omit<VisualTheme, "subject">> = {
+    emergency: { accent: "#EF4444", bg: "#FEF2F2", fg: "#7F1D1D" },
+    care: { accent: "#DC2626", bg: "#FFF1F2", fg: "#881337" },
+    water: { accent: "#0EA5E9", bg: "#ECFEFF", fg: "#164E63" },
+    shield: { accent: "#4F46E5", bg: "#EEF2FF", fg: "#312E81" },
+    consent: { accent: "#DB2777", bg: "#FDF2F8", fg: "#831843" },
+    airway: { accent: "#F97316", bg: "#FFF7ED", fg: "#7C2D12" },
+    lab: { accent: "#0891B2", bg: "#ECFEFF", fg: "#164E63" },
+    vaccine: { accent: "#059669", bg: "#ECFDF5", fg: "#064E3B" },
+    world: { accent: "#2563EB", bg: "#EFF6FF", fg: "#1E3A8A" },
+    aid: { accent: "#B91C1C", bg: "#FEF2F2", fg: "#7F1D1D" },
+    myth: { accent: "#7C3AED", bg: "#F5F3FF", fg: "#3B0764" },
+    source: { accent: "#0F766E", bg: "#F0FDFA", fg: "#134E4A" },
+    capstone: { accent: "#F59E0B", bg: "#FFFBEB", fg: "#78350F" },
+  };
+
+  return makeVisual(subject, palette[subject].accent, palette[subject].bg, palette[subject].fg);
+}
+
+export const STAGE_VISUALS: Record<StageId, VisualTheme> = {
+  local: {
+    accent: "#F59E0B",
+    bg: "#FFF7ED",
+    fg: "#7C2D12",
+    subject: "shield",
+  },
+  regional: {
+    accent: "#0EA5E9",
+    bg: "#ECFEFF",
+    fg: "#164E63",
+    subject: "world",
+  },
+  national: {
+    accent: "#7C3AED",
+    bg: "#F5F3FF",
+    fg: "#3B0764",
+    subject: "capstone",
+  },
+};
+
 export type StudentModule = {
   id: string;
   stageId: StageId;
   emoji: string;
+  visual: VisualTheme;
   titleKey: string;
   descriptionKey: string;
   tips: Tip[];
@@ -55,6 +123,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   // ── Local ─────────────────────────────────────────────────────────────
   {
     id: "emergency101",
+    visual: visual("emergency"),
     stageId: "local",
     emoji: "📞",
     ...moduleKeys("local", "emergency101"),
@@ -63,6 +132,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   },
   {
     id: "bleedingBasics",
+    visual: visual("care"),
     stageId: "local",
     emoji: "🩹",
     ...moduleKeys("local", "bleedingBasics"),
@@ -71,6 +141,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   },
   {
     id: "burnsBasics",
+    visual: visual("water"),
     stageId: "local",
     emoji: "💧",
     ...moduleKeys("local", "burnsBasics"),
@@ -79,6 +150,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   },
   {
     id: "stiBasics",
+    visual: visual("shield"),
     stageId: "local",
     emoji: "🛡️",
     ...moduleKeys("local", "stiBasics"),
@@ -87,6 +159,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   },
   {
     id: "consentBasics",
+    visual: visual("consent"),
     stageId: "local",
     emoji: "🤝",
     ...moduleKeys("local", "consentBasics"),
@@ -96,6 +169,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   // ── Regional ──────────────────────────────────────────────────────────
   {
     id: "chokingBasics",
+    visual: visual("airway"),
     stageId: "regional",
     emoji: "😮",
     ...moduleKeys("regional", "chokingBasics"),
@@ -104,6 +178,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   },
   {
     id: "stiTesting",
+    visual: visual("lab"),
     stageId: "regional",
     emoji: "🔬",
     ...moduleKeys("regional", "stiTesting"),
@@ -112,6 +187,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   },
   {
     id: "vaccineLiteracy",
+    visual: visual("vaccine"),
     stageId: "regional",
     emoji: "💉",
     ...moduleKeys("regional", "vaccineLiteracy"),
@@ -120,6 +196,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   },
   {
     id: "vpdExamples",
+    visual: visual("world"),
     stageId: "regional",
     emoji: "🌍",
     ...moduleKeys("regional", "vpdExamples"),
@@ -129,6 +206,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   // ── National ────────────────────────────────────────────────────────
   {
     id: "firstAidReview",
+    visual: visual("aid"),
     stageId: "national",
     emoji: "⛑️",
     ...moduleKeys("national", "firstAidReview"),
@@ -137,6 +215,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   },
   {
     id: "stiMyths",
+    visual: visual("myth"),
     stageId: "national",
     emoji: "💬",
     ...moduleKeys("national", "stiMyths"),
@@ -145,6 +224,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   },
   {
     id: "sourceLiteracy",
+    visual: visual("source"),
     stageId: "national",
     emoji: "📰",
     ...moduleKeys("national", "sourceLiteracy"),
@@ -153,6 +233,7 @@ export const STUDENT_MODULES: StudentModule[] = [
   },
   {
     id: "capstoneMix",
+    visual: visual("capstone"),
     stageId: "national",
     emoji: "🏆",
     ...moduleKeys("national", "capstoneMix"),

@@ -15,10 +15,12 @@ import {
 } from "lucide-react";
 import {
   getModulesByStage,
+  STAGE_VISUALS,
   STUDENT_HUB_THEME,
   STAGE_ORDER,
   type StageId,
 } from "@/data/student-health";
+import { StudentAcademyIllustration } from "@/components/StudentAcademyIllustration";
 import { getRegion, REGIONS, type RegionSlug } from "@/data/regions";
 import {
   allStageModulesCompleted,
@@ -248,6 +250,13 @@ function StageBlock({ stage }: { stage: StageId }) {
         locked ? "border-gray-200 bg-gray-50 opacity-80" : "border-gray-100 bg-white"
       }`}
     >
+      <div className="mb-4 overflow-hidden rounded-2xl">
+        <StudentAcademyIllustration
+          visual={STAGE_VISUALS[stage]}
+          title={t(`stages.${stage}`)}
+          compact
+        />
+      </div>
       <div className="mb-3 flex items-start justify-between gap-2">
         <div>
           <h3 className="flex items-center gap-2 text-lg font-bold text-gray-900">
@@ -298,7 +307,12 @@ function StageBlock({ stage }: { stage: StageId }) {
             }`}
             aria-disabled={locked}
           >
-            <span className="text-2xl">{mod.emoji}</span>
+            <StudentAcademyIllustration
+              visual={mod.visual}
+              title={t(`modules.${stage}.${mod.id}.title`)}
+              compact
+              className="h-12 w-12 flex-shrink-0"
+            />
             <span className="flex-1 font-semibold text-gray-800">
               {t(`modules.${stage}.${mod.id}.title`)}
             </span>

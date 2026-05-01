@@ -16,6 +16,8 @@ import {
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { StudentAcademyLessonFooter } from "@/components/StudentAcademyLessonFooter";
+import { StudentAcademyIllustration } from "@/components/StudentAcademyIllustration";
+import { StudentFieldLab } from "@/components/StudentFieldLab";
 import {
   getNextModuleInStage,
   getModuleIndexInStage,
@@ -129,27 +131,34 @@ export default async function StudentModulePage({ params }: Props) {
             </div>
           )}
 
-          <div
-            className="mb-6 rounded-2xl p-6"
-            style={{
-              backgroundColor: STUDENT_HUB_THEME.bg,
-              borderColor: STUDENT_HUB_THEME.borderColor,
-              borderWidth: 1,
-            }}
-          >
-            <div className="mb-3 flex items-center gap-3">
-              <span className="text-3xl">{mod.emoji}</span>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">{tk(mod.titleKey)}</h1>
-                <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Clock className="h-3.5 w-3.5" />
-                  <span>
-                    {mod.durationMin} {tCommon("minutes")}
-                  </span>
+          <div className="mb-6 overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-gray-100">
+            <StudentAcademyIllustration
+              visual={mod.visual}
+              title={tk(mod.titleKey)}
+              variant="lesson"
+            />
+            <div
+              className="p-6"
+              style={{
+                backgroundColor: STUDENT_HUB_THEME.bg,
+                borderColor: STUDENT_HUB_THEME.borderColor,
+                borderTopWidth: 1,
+              }}
+            >
+              <div className="mb-3 flex items-center gap-3">
+                <span className="text-3xl">{mod.emoji}</span>
+                <div>
+                  <h1 className="text-xl font-bold text-gray-900">{tk(mod.titleKey)}</h1>
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <Clock className="h-3.5 w-3.5" />
+                    <span>
+                      {mod.durationMin} {tCommon("minutes")}
+                    </span>
+                  </div>
                 </div>
               </div>
+              <p className="text-sm leading-relaxed text-gray-700">{tk(mod.descriptionKey)}</p>
             </div>
-            <p className="text-sm leading-relaxed text-gray-700">{tk(mod.descriptionKey)}</p>
           </div>
 
           <h2 className="mb-3 flex items-center gap-2 text-base font-bold text-gray-900">
@@ -210,6 +219,17 @@ export default async function StudentModulePage({ params }: Props) {
             </h3>
             <p className="text-sm leading-relaxed text-green-900">{tk(mod.challengeKey)}</p>
           </div>
+
+          <StudentFieldLab
+            moduleId={moduleId}
+            subtitle={t("fieldLab.subtitle")}
+            observeLabel={t("fieldLab.observeLabel")}
+            decideLabel={t("fieldLab.decideLabel")}
+            actLabel={t("fieldLab.actLabel")}
+            reflectionLabel={t("fieldLab.title")}
+            reflectionPlaceholder={t("fieldLab.placeholder")}
+            savedLabel={t("fieldLab.savedLabel")}
+          />
 
           <StudentAcademyLessonFooter
             pillarId="student_health"
