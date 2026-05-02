@@ -28,17 +28,17 @@ type ToastContextValue = {
 const ToastContext = createContext<ToastContextValue | null>(null);
 
 const ICONS: Record<ToastVariant, ReactNode> = {
-  info: <Info className="h-5 w-5 text-sky-500" />,
-  success: <CheckCircle2 className="h-5 w-5 text-emerald-500" />,
-  warning: <AlertTriangle className="h-5 w-5 text-amber-500" />,
-  danger: <XCircle className="h-5 w-5 text-rose-500" />,
+  info: <Info className="lucide h-5 w-5 text-[var(--color-info-accent)]" strokeWidth={1.75} />,
+  success: <CheckCircle2 className="lucide h-5 w-5 text-[var(--color-success-accent)]" strokeWidth={1.75} />,
+  warning: <AlertTriangle className="lucide h-5 w-5 text-[var(--color-warning-accent)]" strokeWidth={1.75} />,
+  danger: <XCircle className="lucide h-5 w-5 text-[var(--color-danger-accent)]" strokeWidth={1.75} />,
 };
 
 const VARIANT_RING: Record<ToastVariant, string> = {
-  info: "ring-sky-200",
-  success: "ring-emerald-200",
-  warning: "ring-amber-200",
-  danger: "ring-rose-200",
+  info: "ring-[var(--color-info-border)]",
+  success: "ring-[var(--color-success-border)]",
+  warning: "ring-[var(--color-warning-border)]",
+  danger: "ring-[var(--color-danger-border)]",
 };
 
 export function ToastProvider({ children }: { children: ReactNode }) {
@@ -110,25 +110,30 @@ export function ToastProvider({ children }: { children: ReactNode }) {
             key={toast.id}
             role="status"
             className={cn(
-              "pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-2xl bg-white/95 p-3 shadow-lg shadow-gray-900/10 ring-1 backdrop-blur",
+              "pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-2xl glass-surface p-3 ring-1 animate-fade-in-up",
               VARIANT_RING[toast.variant],
-              "animate-fade-in-up",
             )}
           >
             <span aria-hidden className="mt-0.5">{ICONS[toast.variant]}</span>
             <div className="flex-1 text-sm">
-              {toast.title && <div className="font-black text-gray-900">{toast.title}</div>}
+              {toast.title && (
+                <div className="font-extrabold text-[var(--color-text-primary)]">
+                  {toast.title}
+                </div>
+              )}
               {toast.description && (
-                <div className="leading-relaxed text-gray-600">{toast.description}</div>
+                <div className="leading-relaxed text-[var(--color-text-secondary)]">
+                  {toast.description}
+                </div>
               )}
             </div>
             <button
               type="button"
               onClick={() => dismiss(toast.id)}
-              className="rounded-full p-1 text-gray-400 transition hover:bg-gray-100 hover:text-gray-600"
+              className="rounded-full p-1 text-[var(--color-text-muted)] transition hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-text-primary)]"
               aria-label="Dismiss"
             >
-              <X className="h-3.5 w-3.5" />
+              <X className="h-3.5 w-3.5" strokeWidth={1.75} />
             </button>
           </div>
         ))}

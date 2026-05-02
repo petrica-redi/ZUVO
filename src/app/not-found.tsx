@@ -12,7 +12,7 @@ export default function RootNotFound() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#F5F5F7",
+          background: "#F4F6FB",
           fontFamily:
             "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif",
           color: "#0F172A",

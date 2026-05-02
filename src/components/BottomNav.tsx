@@ -17,7 +17,7 @@ export function BottomNav() {
 
   return (
     <nav className="sticky bottom-0 z-40" role="navigation" aria-label="Main navigation">
-      <div className="bg-white/95 pb-safe-bottom backdrop-blur-2xl" style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}>
+      <div className="glass-bar pb-safe-bottom" style={{ borderTop: "1px solid var(--color-border-subtle)", borderBottom: "none" }}>
         <div className="flex items-end justify-around px-1 pt-1.5 pb-2">
           {TABS.map(({ key, href, Icon, label, ...rest }) => {
             const isPrimary = "isPrimary" in rest && rest.isPrimary;
@@ -32,12 +32,15 @@ export function BottomNav() {
                   className="flex flex-col items-center -mt-5"
                 >
                   <div
-                    className="flex h-[56px] w-[56px] items-center justify-center rounded-full shadow-lg transition-transform active:scale-90 animate-pulse-glow"
-                    style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 50%, #F39C12 100%)" }}
+                    className="flex h-[56px] w-[56px] items-center justify-center rounded-full transition-transform active:scale-90 animate-pulse-glow gradient-brand grain-overlay"
+                    style={{ boxShadow: "var(--shadow-brand)" }}
                   >
-                    <Icon className="h-[26px] w-[26px] text-white" strokeWidth={2.5} />
+                    <Icon
+                      className="lucide h-[26px] w-[26px] text-white"
+                      strokeWidth={2.2}
+                    />
                   </div>
-                  <span className="mt-0.5 text-[11px] font-bold text-[#C0392B]">{label}</span>
+                  <span className="mt-0.5 text-[11px] font-bold text-[var(--color-accent)]">{label}</span>
                 </Link>
               );
             }
@@ -47,13 +50,20 @@ export function BottomNav() {
                 key={key}
                 href={href}
                 aria-label={label}
-                className="flex flex-col items-center gap-0.5 py-1 touch-target"
+                aria-current={isActive ? "page" : undefined}
+                className="flex flex-col items-center gap-0.5 py-1 touch-target transition-colors"
               >
                 <Icon
-                  className={`h-[24px] w-[24px] transition-all ${isActive ? "text-[#C0392B]" : "text-gray-400"}`}
-                  strokeWidth={isActive ? 2.2 : 1.6}
+                  className={`lucide h-[24px] w-[24px] transition-all ${
+                    isActive ? "text-[var(--color-accent)]" : "text-[var(--color-text-muted)]"
+                  }`}
+                  strokeWidth={isActive ? 2 : 1.6}
                 />
-                <span className={`text-[11px] font-semibold ${isActive ? "text-[#C0392B]" : "text-gray-400"}`}>
+                <span
+                  className={`text-[11px] font-semibold transition-colors ${
+                    isActive ? "text-[var(--color-accent)]" : "text-[var(--color-text-muted)]"
+                  }`}
+                >
                   {label}
                 </span>
               </Link>

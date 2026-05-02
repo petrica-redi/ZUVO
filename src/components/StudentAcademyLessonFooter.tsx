@@ -117,7 +117,7 @@ export function StudentAcademyLessonFooter(props: Props) {
       {nextStep && (
         <Card
           variant="elevated"
-          className="relative overflow-hidden border-0 bg-gradient-to-br from-emerald-500 to-green-600 text-white shadow-lg shadow-emerald-500/20"
+          className="relative overflow-hidden border-0 bg-gradient-to-br from-emerald-500 to-green-600 grain-overlay text-white shadow-3"
         >
           <div
             aria-hidden
@@ -126,20 +126,23 @@ export function StudentAcademyLessonFooter(props: Props) {
           />
           <div className="relative p-5">
             <div className="flex items-center gap-2">
-              <Badge variant="default" className="bg-white/20 text-white ring-white/20">
-                <CheckCircle2 className="h-3.5 w-3.5" />
+              <Badge
+                variant="default"
+                className="border-white/20 bg-white/20 text-white ring-white/20"
+              >
+                <CheckCircle2 className="lucide h-3.5 w-3.5" strokeWidth={1.85} />
                 +10 XP
               </Badge>
-              <span className="text-[10px] font-black uppercase tracking-widest text-white/80">
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-white/85">
                 {completedTitle}
               </span>
             </div>
             <p className="mt-2 text-sm leading-relaxed text-white/90">{completedBody}</p>
             <Link
               href={nextStep.href}
-              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-black text-emerald-700 shadow-md shadow-black/10 transition active:scale-[0.97]"
+              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-extrabold text-emerald-700 shadow-3 transition-all hover:shadow-4 active:scale-[0.97]"
             >
-              <Icon className="h-4 w-4" />
+              <Icon className="lucide h-4 w-4" strokeWidth={1.85} />
               {label}
             </Link>
           </div>

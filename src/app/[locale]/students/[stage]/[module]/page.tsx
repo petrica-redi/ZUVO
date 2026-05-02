@@ -90,20 +90,20 @@ export default async function StudentModulePage({ params }: Props) {
   const showSexualHealthSupport = SEXUAL_HEALTH_MODULES.has(moduleId);
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-gradient-to-b from-[#F5F5F7] via-white to-[#F5F5F7]">
+    <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
       <Header />
       {/* Sticky stepper rail */}
-      <div className="sticky top-0 z-30 border-b border-gray-100 bg-white/85 backdrop-blur">
+      <div className="glass-bar sticky top-14 z-30">
         <div className="mx-auto max-w-3xl px-4 py-2.5">
           <div className="flex items-center justify-between gap-3">
             <Link
               href="/students"
-              className="inline-flex items-center gap-1 text-[11px] font-bold text-gray-500 transition hover:text-gray-900"
+              className="inline-flex items-center gap-1 text-[11px] font-bold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
             >
-              <ChevronLeft className="h-3.5 w-3.5" />
+              <ChevronLeft className="lucide h-3.5 w-3.5" strokeWidth={1.75} />
               {t("quiz.back")}
             </Link>
-            <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+            <div className="flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
               <span>{t(`stages.${stage}`)}</span>
               <span aria-hidden>·</span>
               <span>
@@ -111,10 +111,13 @@ export default async function StudentModulePage({ params }: Props) {
               </span>
             </div>
           </div>
-          <div className="mt-1.5 h-1 overflow-hidden rounded-full bg-gray-100">
+          <div className="mt-1.5 h-1 overflow-hidden rounded-full bg-[var(--color-surface-subtle)]">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 transition-all"
-              style={{ width: `${lessonProgressPct}%` }}
+              className="h-full rounded-full bg-gradient-to-r from-[var(--color-brand-500)] to-[var(--color-brand-700)] transition-all duration-700"
+              style={{
+                width: `${lessonProgressPct}%`,
+                transitionTimingFunction: "var(--ease-emphasized)",
+              }}
             />
           </div>
         </div>
@@ -124,8 +127,8 @@ export default async function StudentModulePage({ params }: Props) {
         <ErrorBoundary>
           <div className="mx-auto max-w-3xl px-4 py-6 md:px-6 md:py-8">
             {showStiNote && (
-              <div className="mb-4 flex items-start gap-3 rounded-2xl border border-indigo-100 bg-indigo-50/60 p-4 text-sm leading-relaxed text-indigo-900">
-                <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-indigo-500" />
+              <div className="mb-4 flex items-start gap-3 rounded-2xl border border-[var(--color-brand-200)] bg-[var(--color-accent-soft)] p-4 text-sm leading-relaxed text-[var(--color-accent-text)]">
+                <ShieldCheck className="lucide mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--color-accent)]" strokeWidth={1.75} />
                 <span>{t("hub.disclaimer")}</span>
               </div>
             )}
@@ -134,10 +137,10 @@ export default async function StudentModulePage({ params }: Props) {
               <Card variant="elevated" className="mb-5 overflow-hidden border-0 bg-gradient-to-br from-rose-50 to-pink-50 ring-1 ring-rose-100">
                 <div className="p-5">
                   <div className="mb-2 flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 to-pink-600 shadow-md shadow-rose-500/30">
-                      <ShieldCheck className="h-4 w-4 text-white" />
+                    <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 to-pink-600 shadow-2">
+                      <ShieldCheck className="lucide h-4 w-4 text-white" strokeWidth={1.85} />
                     </div>
-                    <h2 className="text-sm font-black uppercase tracking-wider text-rose-800">
+                    <h2 className="text-sm font-extrabold uppercase tracking-wider text-rose-800">
                       {t("sexualHealthSupport.title")}
                     </h2>
                   </div>
@@ -147,13 +150,13 @@ export default async function StudentModulePage({ params }: Props) {
                   <div className="mt-3 flex flex-col gap-2 sm:flex-row">
                     <Link
                       href="/navigate"
-                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-rose-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition active:scale-[0.97]"
+                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-rose-600 px-4 py-2.5 text-sm font-extrabold text-white shadow-1 transition-all hover:bg-rose-700 active:scale-[0.97]"
                     >
                       {t("sexualHealthSupport.findCare")}
                     </Link>
                     <Link
                       href="/rights"
-                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-rose-700 ring-1 ring-rose-200 transition hover:bg-rose-50 active:scale-[0.97]"
+                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-extrabold text-rose-700 ring-1 ring-rose-200 transition-all hover:bg-rose-50 active:scale-[0.97]"
                     >
                       {t("sexualHealthSupport.rights")}
                     </Link>
@@ -173,24 +176,27 @@ export default async function StudentModulePage({ params }: Props) {
               />
               <div className="p-6">
                 <div className="mb-3 flex flex-wrap items-center gap-2">
-                  <Badge variant="info">{t(`stages.${stage}`)}</Badge>
+                  <Badge variant="brand">{t(`stages.${stage}`)}</Badge>
                   <Badge variant="muted">
-                    <Clock className="h-3 w-3" />
+                    <Clock className="lucide h-3 w-3" strokeWidth={1.85} />
                     {mod.durationMin} {tCommon("minutes")}
                   </Badge>
                   <Badge variant="muted">
-                    <BookOpen className="h-3 w-3" />
+                    <BookOpen className="lucide h-3 w-3" strokeWidth={1.85} />
                     {t("lesson.stepLabel", {
                       current: lessonNumber,
                       total: lessonsTotal,
                     })}
                   </Badge>
                 </div>
-                <h1 className="flex items-start gap-3 text-2xl font-black leading-tight tracking-tight text-gray-900 md:text-3xl">
+                <h1
+                  className="flex items-start gap-3 font-display text-2xl font-extrabold leading-tight tracking-tight text-[var(--color-text-primary)] md:text-3xl"
+                  style={{ letterSpacing: "-0.025em" }}
+                >
                   <span aria-hidden className="text-3xl leading-none">{mod.emoji}</span>
                   <span>{tk(mod.titleKey)}</span>
                 </h1>
-                <p className="mt-3 text-sm leading-relaxed text-gray-600 md:text-base">
+                <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-base">
                   {tk(mod.descriptionKey)}
                 </p>
               </div>
@@ -198,17 +204,19 @@ export default async function StudentModulePage({ params }: Props) {
 
             {/* Key takeaways */}
             <section className="mb-6">
-              <SectionTitle icon={<Lightbulb className="h-4 w-4 text-amber-500" />}>
+              <SectionTitle icon={<Lightbulb className="lucide h-4 w-4 text-[var(--color-ember-500)]" strokeWidth={1.75} />}>
                 {tCommon("keyTips")}
               </SectionTitle>
               <div className="grid gap-2 sm:grid-cols-2">
                 {mod.tips.map((tip, i) => (
-                  <Card key={i} variant="default" className="transition hover:-translate-y-0.5 hover:shadow-md">
+                  <Card key={i} variant="interactive">
                     <div className="flex items-start gap-3 p-4">
-                      <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 text-lg ring-1 ring-amber-100">
+                      <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-ember-50)] to-[var(--color-ember-100)] text-lg ring-1 ring-[var(--color-ember-200)]">
                         {tip.icon}
                       </span>
-                      <p className="flex-1 text-sm leading-relaxed text-gray-700">{tk(tip.textKey)}</p>
+                      <p className="flex-1 text-sm leading-relaxed text-[var(--color-text-primary)]">
+                        {tk(tip.textKey)}
+                      </p>
                     </div>
                   </Card>
                 ))}
@@ -216,16 +224,18 @@ export default async function StudentModulePage({ params }: Props) {
             </section>
 
             {/* Did you know */}
-            <Card variant="elevated" className="mb-6 overflow-hidden border-0 bg-gradient-to-br from-amber-50 to-orange-50 ring-1 ring-amber-100">
+            <Card variant="elevated" className="mb-6 overflow-hidden border-0 bg-gradient-to-br from-[var(--color-ember-50)] to-[var(--color-ember-100)] ring-1 ring-[var(--color-ember-200)]">
               <div className="flex items-start gap-3 p-5">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 shadow-md shadow-amber-500/30">
-                  <Lightbulb className="h-5 w-5 text-white" />
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl gradient-ember grain-overlay shadow-ember">
+                  <Lightbulb className="lucide h-5 w-5 text-white" strokeWidth={1.85} />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="text-[10px] font-black uppercase tracking-widest text-amber-700">
+                  <div className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-ember-700)]">
                     {tCommon("didYouKnow")}
                   </div>
-                  <p className="mt-1 text-sm leading-relaxed text-amber-900">{tk(mod.factKey)}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-[var(--color-ember-900)]">
+                    {tk(mod.factKey)}
+                  </p>
                 </div>
               </div>
             </Card>
@@ -234,27 +244,31 @@ export default async function StudentModulePage({ params }: Props) {
             <Card variant="elevated" className="mb-4 overflow-hidden">
               <div className="p-5">
                 <div className="mb-3 flex items-center gap-2">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 shadow-md shadow-indigo-500/20">
-                    <MessageSquare className="h-4 w-4 text-white" />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-xl gradient-brand grain-overlay shadow-brand">
+                    <MessageSquare className="lucide h-4 w-4 text-white" strokeWidth={1.85} />
                   </div>
-                  <span className="text-sm font-black uppercase tracking-wider text-indigo-800">
+                  <span className="text-sm font-extrabold uppercase tracking-wider text-[var(--color-accent-text)]">
                     {t("lesson.scenarioTitle")}
                   </span>
                 </div>
-                <p className="text-sm leading-relaxed text-gray-700">{tk(mod.scenarioKey)}</p>
+                <p className="text-sm leading-relaxed text-[var(--color-text-primary)]">
+                  {tk(mod.scenarioKey)}
+                </p>
               </div>
             </Card>
 
             {/* Action step */}
-            <Card variant="elevated" className="mb-4 overflow-hidden border-0 bg-gradient-to-br from-indigo-50 to-violet-50 ring-1 ring-indigo-100">
+            <Card variant="elevated" className="mb-4 overflow-hidden border-0 bg-gradient-to-br from-[var(--color-brand-50)] to-[var(--color-brand-100)] ring-1 ring-[var(--color-brand-200)]">
               <div className="p-5">
                 <div className="mb-2 flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-indigo-600" />
-                  <span className="text-sm font-black uppercase tracking-wider text-indigo-800">
+                  <CheckCircle2 className="lucide h-4 w-4 text-[var(--color-brand-700)]" strokeWidth={1.85} />
+                  <span className="text-sm font-extrabold uppercase tracking-wider text-[var(--color-brand-800)]">
                     {tCommon("actionStep")}
                   </span>
                 </div>
-                <p className="text-sm leading-relaxed text-gray-800">{tk(mod.actionKey)}</p>
+                <p className="text-sm leading-relaxed text-[var(--color-brand-900)]">
+                  {tk(mod.actionKey)}
+                </p>
               </div>
             </Card>
 
@@ -262,10 +276,10 @@ export default async function StudentModulePage({ params }: Props) {
             <Card variant="elevated" className="mb-6 overflow-hidden border-0 bg-gradient-to-br from-emerald-50 to-green-50 ring-1 ring-emerald-100">
               <div className="p-5">
                 <div className="mb-2 flex items-center gap-2">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 shadow-md shadow-emerald-500/30">
-                    <Target className="h-4 w-4 text-white" />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 shadow-2">
+                    <Target className="lucide h-4 w-4 text-white" strokeWidth={1.85} />
                   </div>
-                  <span className="text-sm font-black uppercase tracking-wider text-emerald-800">
+                  <span className="text-sm font-extrabold uppercase tracking-wider text-emerald-800">
                     {t("lesson.challengeTitle")}
                   </span>
                 </div>
@@ -275,7 +289,7 @@ export default async function StudentModulePage({ params }: Props) {
 
             {/* Field Lab interaction */}
             <section className="mb-6">
-              <SectionTitle icon={<Sparkles className="h-4 w-4 text-amber-500" />}>
+              <SectionTitle icon={<Sparkles className="lucide h-4 w-4 text-[var(--color-ember-500)]" strokeWidth={1.75} />}>
                 {t("fieldLab.title")}
               </SectionTitle>
               <StudentFieldLab
@@ -299,34 +313,36 @@ export default async function StudentModulePage({ params }: Props) {
             {/* Sources / citations */}
             {mod.sources.length > 0 && (
               <section className="mb-6">
-                <SectionTitle icon={<BookOpen className="h-4 w-4 text-gray-500" />}>
+                <SectionTitle icon={<BookOpen className="lucide h-4 w-4 text-[var(--color-text-muted)]" strokeWidth={1.75} />}>
                   {t("lesson.sourcesTitle")}
                 </SectionTitle>
                 <Card variant="default">
-                  <div className="divide-y divide-gray-100">
+                  <div className="divide-y divide-[var(--color-border-subtle)]">
                     {mod.sources.map((src) => (
                       <a
                         key={src.url}
                         href={src.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex items-center gap-3 p-4 transition hover:bg-gray-50"
+                        className="group flex items-center gap-3 p-4 transition-colors hover:bg-[var(--color-surface-hover)]"
                       >
                         <Badge variant="default" className="flex-shrink-0">
                           {src.label}
                         </Badge>
                         <div className="min-w-0 flex-1">
-                          <div className="truncate text-sm font-bold text-gray-900">
+                          <div className="truncate text-sm font-bold text-[var(--color-text-primary)]">
                             {src.title}
                           </div>
-                          <div className="truncate text-[11px] text-gray-400">{src.url}</div>
+                          <div className="truncate text-[11px] text-[var(--color-text-muted)]">
+                            {src.url}
+                          </div>
                         </div>
-                        <ExternalLink className="h-4 w-4 flex-shrink-0 text-gray-400 transition group-hover:text-indigo-600" />
+                        <ExternalLink className="lucide h-4 w-4 flex-shrink-0 text-[var(--color-text-muted)] transition-colors group-hover:text-[var(--color-accent)]" strokeWidth={1.75} />
                       </a>
                     ))}
                   </div>
                 </Card>
-                <p className="mt-2 px-1 text-[11px] leading-relaxed text-gray-400">
+                <p className="mt-2 px-1 text-[11px] leading-relaxed text-[var(--color-text-muted)]">
                   {t("lesson.sourcesNote")}
                 </p>
               </section>
@@ -359,14 +375,14 @@ export default async function StudentModulePage({ params }: Props) {
               {previousMod ? (
                 <Link
                   href={`/students/${stage}/${previousMod.id}`}
-                  className="group flex items-center gap-3 rounded-2xl border border-gray-200 bg-white p-3.5 text-sm font-medium text-gray-700 shadow-sm transition hover:-translate-y-0.5 hover:border-indigo-200 hover:shadow-md active:scale-[0.99]"
+                  className="card-interactive group flex items-center gap-3 rounded-2xl bg-[var(--color-surface)] p-3.5 text-sm font-medium text-[var(--color-text-primary)]"
                 >
-                  <ChevronLeft className="h-4 w-4 flex-shrink-0 text-gray-400 transition group-hover:-translate-x-0.5 group-hover:text-indigo-500" />
+                  <ChevronLeft className="lucide h-4 w-4 flex-shrink-0 text-[var(--color-text-muted)] transition-all group-hover:-translate-x-0.5 group-hover:text-[var(--color-accent)]" strokeWidth={1.75} />
                   <div className="min-w-0 flex-1">
-                    <div className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+                    <div className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
                       {tCommon("previous")}
                     </div>
-                    <div className="truncate text-sm font-bold text-gray-900">
+                    <div className="truncate text-sm font-bold">
                       {previousMod.emoji} {tk(previousMod.titleKey)}
                     </div>
                   </div>
@@ -376,13 +392,13 @@ export default async function StudentModulePage({ params }: Props) {
               )}
               <Link
                 href={nextHref}
-                className="group flex items-center gap-3 rounded-2xl border border-indigo-200 bg-gradient-to-br from-indigo-50 to-violet-50 p-3.5 text-sm font-medium text-indigo-900 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]"
+                className="card-interactive group flex items-center gap-3 rounded-2xl bg-gradient-to-br from-[var(--color-brand-50)] to-[var(--color-brand-100)] p-3.5 text-sm font-medium text-[var(--color-brand-900)] ring-1 ring-[var(--color-brand-200)]"
               >
                 <div className="min-w-0 flex-1 text-right">
-                  <div className="text-[10px] font-black uppercase tracking-widest text-indigo-600">
+                  <div className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-brand-700)]">
                     {nextMod ? tCommon("next") : t("workflow.takeStageQuiz")}
                   </div>
-                  <div className="truncate text-sm font-bold text-indigo-900">
+                  <div className="truncate text-sm font-bold">
                     {nextMod ? (
                       <>
                         {nextMod.emoji} {tk(nextMod.titleKey)}
@@ -393,9 +409,9 @@ export default async function StudentModulePage({ params }: Props) {
                   </div>
                 </div>
                 {nextMod ? (
-                  <ArrowRight className="h-4 w-4 flex-shrink-0 text-indigo-600 transition group-hover:translate-x-0.5" />
+                  <ArrowRight className="lucide h-4 w-4 flex-shrink-0 text-[var(--color-brand-700)] transition-all group-hover:translate-x-0.5" strokeWidth={1.85} />
                 ) : (
-                  <Flag className="h-4 w-4 flex-shrink-0 text-indigo-600" />
+                  <Flag className="lucide h-4 w-4 flex-shrink-0 text-[var(--color-brand-700)]" strokeWidth={1.85} />
                 )}
               </Link>
             </div>
@@ -423,15 +439,15 @@ function ReviewStamp({
     <div
       className={`mb-5 flex items-start gap-3 rounded-2xl border p-3 text-xs leading-relaxed ${
         overdue
-          ? "border-amber-200 bg-amber-50 text-amber-900"
-          : "border-gray-100 bg-gray-50 text-gray-600"
+          ? "border-[var(--color-warning-border)] bg-[var(--color-warning-bg)] text-[var(--color-warning-text)]"
+          : "border-[var(--color-border-subtle)] bg-[var(--color-surface-subtle)] text-[var(--color-text-secondary)]"
       }`}
     >
       <span aria-hidden className="mt-0.5">
         {overdue ? "⚠️" : "✅"}
       </span>
       <div className="flex-1">
-        <div className="font-black uppercase tracking-widest">
+        <div className="font-extrabold uppercase tracking-widest">
           {t(overdue ? "lesson.reviewOverdue" : "lesson.reviewUpToDate")}
         </div>
         <div className="mt-0.5">
@@ -452,7 +468,9 @@ function SectionTitle({
   return (
     <div className="mb-3 flex items-center gap-2">
       {icon}
-      <h2 className="text-[10px] font-black uppercase tracking-widest text-gray-500">{children}</h2>
+      <h2 className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
+        {children}
+      </h2>
     </div>
   );
 }

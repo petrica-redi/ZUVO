@@ -58,7 +58,7 @@ export default async function ModulePage({ params }: Props) {
   };
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
+    <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
       <Header />
       <main id="main-content" className="flex-1 pb-2">
         <div className="px-5 py-6">

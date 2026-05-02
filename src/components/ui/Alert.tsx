@@ -9,18 +9,27 @@ type Props = HTMLAttributes<HTMLDivElement> & {
 };
 
 const VARIANT: Record<Variant, string> = {
-  info: "border-sky-200 bg-sky-50/80 text-sky-900",
-  success: "border-emerald-200 bg-emerald-50/80 text-emerald-900",
-  warning: "border-amber-200 bg-amber-50/80 text-amber-900",
-  danger: "border-rose-200 bg-rose-50/80 text-rose-900",
-  neutral: "border-gray-200 bg-gray-50/80 text-gray-900",
+  info:
+    "border-[var(--color-info-border)] bg-[var(--color-info-bg)] text-[var(--color-info-text)]",
+  success:
+    "border-[var(--color-success-border)] bg-[var(--color-success-bg)] text-[var(--color-success-text)]",
+  warning:
+    "border-[var(--color-warning-border)] bg-[var(--color-warning-bg)] text-[var(--color-warning-text)]",
+  danger:
+    "border-[var(--color-danger-border)] bg-[var(--color-danger-bg)] text-[var(--color-danger-text)]",
+  neutral:
+    "border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] text-[var(--color-text-primary)]",
 };
 
 export function Alert({ variant = "info", icon, className, children, ...rest }: Props) {
   return (
     <div
       role="status"
-      className={cn("flex items-start gap-3 rounded-2xl border p-4 text-sm", VARIANT[variant], className)}
+      className={cn(
+        "flex items-start gap-3 rounded-2xl border p-4 text-sm",
+        VARIANT[variant],
+        className,
+      )}
       {...rest}
     >
       {icon && <span aria-hidden className="mt-0.5 flex-shrink-0">{icon}</span>}
@@ -30,7 +39,7 @@ export function Alert({ variant = "info", icon, className, children, ...rest }: 
 }
 
 export function AlertTitle({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("mb-0.5 font-black", className)} {...rest} />;
+  return <div className={cn("mb-0.5 font-extrabold", className)} {...rest} />;
 }
 
 export function AlertDescription({ className, ...rest }: HTMLAttributes<HTMLParagraphElement>) {

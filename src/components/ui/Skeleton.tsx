@@ -17,11 +17,7 @@ export function Skeleton({ className, rounded = "md" }: Props) {
   return (
     <div
       aria-hidden
-      className={cn(
-        "animate-pulse bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100",
-        ROUND[rounded],
-        className,
-      )}
+      className={cn("animate-shimmer", ROUND[rounded], className)}
     />
   );
 }

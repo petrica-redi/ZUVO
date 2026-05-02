@@ -33,13 +33,13 @@ export function StudentAcademyIllustration({
   return (
     <div
       className={cn(
-        "relative isolate overflow-hidden border border-white/40 shadow-sm",
+        "relative isolate overflow-hidden border border-white/40 shadow-1 grain-overlay",
         compact ? "rounded-2xl" : "rounded-[28px]",
         className,
       )}
       style={{
         minHeight,
-        background: `radial-gradient(120% 80% at 110% -10%, ${accentMid} 0%, transparent 60%), linear-gradient(180deg, ${visual.bg} 0%, #FFFFFF 100%)`,
+        background: `radial-gradient(130% 90% at 110% -10%, ${accentMid} 0%, transparent 60%), linear-gradient(180deg, ${visual.bg} 0%, #FFFFFF 100%)`,
       }}
       aria-label={title}
       role="img"
@@ -104,7 +104,7 @@ export function StudentAcademyIllustration({
       {showLabel && !compact && (
         <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-4">
           <div
-            className="inline-flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-gray-900 shadow-sm backdrop-blur"
+            className="inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] shadow-1 backdrop-blur"
             style={{ color: visual.fg }}
           >
             <span aria-hidden style={{ color: visual.accent }}>●</span>

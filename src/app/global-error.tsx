@@ -4,11 +4,11 @@ import { useEffect } from "react";
 import * as Sentry from "@sentry/nextjs";
 
 /**
- * Root-level error boundary. Catches errors that escape the locale layout's
- * ErrorBoundary, including errors that happen before next-intl is ready.
+ * Root-level error boundary. Renders before the locale layout's ErrorBoundary
+ * and even when next-intl is not yet mounted, so all copy is plain English.
  *
- * IMPORTANT: must include <html> and <body>.
- * Cannot rely on translations because next-intl provider may not be mounted.
+ * Must include <html> and <body>. All styles inline so the page works even
+ * when the app stylesheet is unavailable.
  */
 export default function GlobalError({
   error,
@@ -30,11 +30,13 @@ export default function GlobalError({
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(180deg, #0F172A 0%, #1E1B4B 100%)",
+          background:
+            "radial-gradient(ellipse at top, rgba(99,102,241,0.18) 0%, transparent 60%), radial-gradient(ellipse at bottom, rgba(220,38,38,0.12) 0%, transparent 60%), linear-gradient(180deg, #0F172A 0%, #1E1B4B 100%)",
           fontFamily:
-            "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
-          color: "white",
+            "Geist, Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          color: "#F8FAFC",
           padding: "20px",
+          WebkitFontSmoothing: "antialiased",
         }}
       >
         <div
@@ -45,7 +47,9 @@ export default function GlobalError({
             border: "1px solid rgba(255,255,255,0.12)",
             borderRadius: "28px",
             padding: "28px",
-            backdropFilter: "blur(12px)",
+            backdropFilter: "blur(24px) saturate(180%)",
+            WebkitBackdropFilter: "blur(24px) saturate(180%)",
+            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.08), 0 12px 32px rgba(0,0,0,0.5)",
           }}
         >
           <div
@@ -58,7 +62,8 @@ export default function GlobalError({
               alignItems: "center",
               justifyContent: "center",
               marginBottom: "20px",
-              boxShadow: "0 10px 30px rgba(220,38,38,0.4)",
+              boxShadow:
+                "0 1px 2px rgba(220,38,38,0.10), 0 8px 24px rgba(220,38,38,0.30)",
             }}
             aria-hidden
           >
@@ -66,7 +71,7 @@ export default function GlobalError({
               <path
                 d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"
                 stroke="white"
-                strokeWidth="2"
+                strokeWidth="1.85"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -76,8 +81,8 @@ export default function GlobalError({
             style={{
               margin: "0 0 8px",
               fontSize: "22px",
-              fontWeight: 900,
-              letterSpacing: "-0.01em",
+              fontWeight: 800,
+              letterSpacing: "-0.02em",
             }}
           >
             Something went wrong
@@ -87,7 +92,7 @@ export default function GlobalError({
               margin: "0 0 20px",
               fontSize: "14px",
               lineHeight: 1.6,
-              color: "rgba(255,255,255,0.75)",
+              color: "rgba(255,255,255,0.78)",
             }}
           >
             We hit an unexpected error. Your saved progress is safe on this
@@ -99,11 +104,12 @@ export default function GlobalError({
                 display: "block",
                 background: "rgba(0,0,0,0.3)",
                 padding: "8px 12px",
-                borderRadius: "8px",
+                borderRadius: "10px",
                 fontSize: "11px",
-                color: "rgba(255,255,255,0.5)",
+                color: "rgba(255,255,255,0.55)",
                 marginBottom: "20px",
                 wordBreak: "break-all",
+                fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
               }}
             >
               ref: {error.digest}
@@ -122,9 +128,11 @@ export default function GlobalError({
                 fontWeight: 800,
                 cursor: "pointer",
                 background:
-                  "linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)",
+                  "linear-gradient(135deg, #4F46E5 0%, #6D28D9 100%)",
                 color: "white",
-                boxShadow: "0 8px 24px rgba(99,102,241,0.4)",
+                boxShadow:
+                  "0 1px 2px rgba(79,70,229,0.10), 0 8px 24px rgba(79,70,229,0.30)",
+                transition: "transform 200ms cubic-bezier(0.2, 0, 0, 1)",
               }}
             >
               Try again

@@ -11,25 +11,42 @@ type Props = {
 };
 
 const TONE: Record<NonNullable<Props["tone"]>, string> = {
-  neutral: "bg-white ring-gray-100",
-  amber: "bg-gradient-to-br from-amber-50 to-orange-50 ring-amber-100",
-  indigo: "bg-gradient-to-br from-indigo-50 to-violet-50 ring-indigo-100",
-  emerald: "bg-gradient-to-br from-emerald-50 to-green-50 ring-emerald-100",
-  rose: "bg-gradient-to-br from-rose-50 to-pink-50 ring-rose-100",
+  neutral:
+    "bg-[var(--color-surface)] ring-[var(--color-border-subtle)]",
+  amber:
+    "bg-gradient-to-br from-[var(--color-ember-50)] to-[var(--color-ember-100)] ring-[var(--color-ember-200)]",
+  indigo:
+    "bg-gradient-to-br from-[var(--color-brand-50)] to-[var(--color-brand-100)] ring-[var(--color-brand-200)]",
+  emerald:
+    "bg-gradient-to-br from-emerald-50 to-emerald-100 ring-emerald-200",
+  rose:
+    "bg-gradient-to-br from-rose-50 to-pink-50 ring-rose-200",
 };
 
 export function Stat({ label, value, hint, icon, tone = "neutral", className }: Props) {
   return (
-    <div className={cn("flex items-center gap-3 rounded-2xl p-3 shadow-sm ring-1", TONE[tone], className)}>
+    <div
+      className={cn(
+        "flex items-center gap-3 rounded-2xl p-3 shadow-1 ring-1",
+        TONE[tone],
+        className,
+      )}
+    >
       {icon && (
         <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white/80 ring-1 ring-black/5">
           {icon}
         </div>
       )}
       <div className="min-w-0 flex-1">
-        <div className="text-[10px] font-black uppercase tracking-widest text-gray-400">{label}</div>
-        <div className="text-lg font-black leading-tight text-gray-900">{value}</div>
-        {hint && <div className="text-[11px] font-medium text-gray-400">{hint}</div>}
+        <div className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
+          {label}
+        </div>
+        <div className="font-display text-lg font-extrabold leading-tight text-[var(--color-text-primary)]">
+          {value}
+        </div>
+        {hint && (
+          <div className="text-[11px] font-medium text-[var(--color-text-muted)]">{hint}</div>
+        )}
       </div>
     </div>
   );

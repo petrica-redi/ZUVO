@@ -83,34 +83,26 @@ export function StudentAcademyHub() {
   return (
     <div className="space-y-6">
       {/* Safety disclaimer */}
-      <div className="rounded-3xl border border-indigo-100 bg-gradient-to-br from-indigo-50/70 to-violet-50/70 p-4 text-sm leading-relaxed text-indigo-900 shadow-sm">
+      <div className="rounded-3xl border border-[var(--color-brand-200)] bg-[var(--color-accent-soft)] p-4 text-sm leading-relaxed text-[var(--color-accent-text)] shadow-1">
         {t("hub.disclaimer")}
       </div>
 
       {/* Mission dashboard hero */}
-      <Card variant="elevated" className="relative overflow-hidden">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -right-20 -top-24 h-56 w-56 rounded-full opacity-50 blur-3xl"
-          style={{ background: "radial-gradient(circle, #C7D2FE 0%, transparent 70%)" }}
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -bottom-20 -left-24 h-56 w-56 rounded-full opacity-40 blur-3xl"
-          style={{ background: "radial-gradient(circle, #FED7AA 0%, transparent 70%)" }}
-        />
-
+      <Card variant="elevated" className="relative overflow-hidden gradient-aurora grain-overlay">
         <div className="relative p-6">
           <div className="flex items-start justify-between gap-4">
             <div className="min-w-0 flex-1">
               <Badge variant="premium" className="mb-3">
-                <Sparkles className="h-3.5 w-3.5" />
+                <Sparkles className="lucide h-3.5 w-3.5" strokeWidth={1.75} />
                 {t("hub.levelLabel", { level: academyLevel.level })}
               </Badge>
-              <h2 className="text-xl font-black tracking-tight text-gray-900 md:text-2xl">
+              <h2
+                className="font-display text-xl font-extrabold tracking-tight text-[var(--color-text-primary)] md:text-2xl"
+                style={{ letterSpacing: "-0.02em" }}
+              >
                 {t("hub.commandCenterTitle")}
               </h2>
-              <p className="mt-1 text-sm leading-relaxed text-gray-500">
+              <p className="mt-1 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                 {t("hub.commandCenterSubtitle", {
                   completed: overall.completed,
                   total: overall.total,
@@ -118,11 +110,13 @@ export function StudentAcademyHub() {
               </p>
             </div>
             <div className="flex flex-col items-end gap-2">
-              <div className="rounded-2xl bg-amber-50 px-4 py-2 text-right ring-1 ring-amber-100">
-                <div className="text-[10px] font-black uppercase tracking-widest text-amber-700">
+              <div className="rounded-2xl bg-gradient-to-br from-[var(--color-ember-50)] to-[var(--color-ember-100)] px-4 py-2 text-right ring-1 ring-[var(--color-ember-200)] shadow-1">
+                <div className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-ember-700)]">
                   {t("hub.xpLabel")}
                 </div>
-                <div className="text-2xl font-black leading-tight text-amber-600">{state.xp}</div>
+                <div className="font-display text-2xl font-extrabold leading-tight text-[var(--color-ember-600)]">
+                  {state.xp}
+                </div>
               </div>
             </div>
           </div>
@@ -156,23 +150,30 @@ export function StudentAcademyHub() {
               value={mounted ? `${streak} ${streak === 1 ? t("hub.streakUnitOne") : t("hub.streakUnitMany")}` : "—"}
               hint={t("hub.streakHint")}
               tone="amber"
-              icon={<Flame className="h-5 w-5 text-amber-500" />}
+              icon={<Flame className="lucide h-5 w-5 text-[var(--color-ember-500)]" strokeWidth={1.75} />}
             />
-            <div className="flex items-center gap-1 rounded-2xl bg-white px-3 py-2 ring-1 ring-gray-100">
+            <div className="flex items-center gap-1 rounded-2xl bg-[var(--color-surface)] px-3 py-2 hairline">
               {weekly.map((d, i) => (
                 <div key={d.date} className="flex flex-col items-center gap-1">
                   <span
                     className={cn(
-                      "h-7 w-7 rounded-lg text-[10px] font-black flex items-center justify-center transition",
+                      "h-7 w-7 rounded-lg text-[10px] font-extrabold flex items-center justify-center transition-all",
                       d.active
-                        ? "bg-gradient-to-br from-emerald-500 to-green-600 text-white shadow-sm"
-                        : "bg-gray-50 text-gray-300 ring-1 ring-gray-100",
+                        ? "bg-gradient-to-br from-emerald-500 to-green-600 text-white shadow-1"
+                        : "bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)] hairline",
                     )}
                     aria-label={d.active ? t("hub.dayActive") : t("hub.dayInactive")}
                   >
                     {d.active ? "✓" : ""}
                   </span>
-                  <span className={cn("text-[9px] font-black", i === weekly.length - 1 ? "text-indigo-600" : "text-gray-400")}>
+                  <span
+                    className={cn(
+                      "text-[9px] font-extrabold",
+                      i === weekly.length - 1
+                        ? "text-[var(--color-accent)]"
+                        : "text-[var(--color-text-muted)]",
+                    )}
+                  >
                     {d.day}
                   </span>
                 </div>
@@ -182,14 +183,14 @@ export function StudentAcademyHub() {
 
           {/* Badges */}
           <div className="mt-5 flex flex-wrap items-center gap-2">
-            <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+            <span className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
               {t("hub.badgesTitle")}
             </span>
             {STAGE_ORDER.map((sid) => {
               const has = state.badges.includes(sid);
               return (
                 <Badge key={sid} variant={has ? "premium" : "muted"}>
-                  <Trophy className="h-3 w-3" />
+                  <Trophy className="lucide h-3 w-3" strokeWidth={1.75} />
                   {has ? t(`hub.badge${capitalize(sid)}`) : t(`stages.${sid}`)}
                 </Badge>
               );
@@ -201,26 +202,30 @@ export function StudentAcademyHub() {
       {/* Next mission CTA */}
       <Card
         variant="elevated"
-        className="relative overflow-hidden border-0 bg-gradient-to-br from-indigo-600 via-indigo-600 to-violet-600 text-white shadow-xl shadow-indigo-500/25"
+        className="relative overflow-hidden border-0 gradient-brand grain-overlay text-white shadow-brand"
       >
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -right-20 -top-24 h-56 w-56 rounded-full opacity-40 blur-3xl"
-          style={{ background: "radial-gradient(circle, #FBBF24 0%, transparent 70%)" }}
-        />
         <div className="relative p-6">
           <div className="flex items-center gap-2">
-            <Badge variant="default" className="bg-white/15 text-white ring-white/20">
-              <Compass className="h-3.5 w-3.5" />
+            <Badge
+              variant="default"
+              className="border-white/15 bg-white/15 text-white ring-white/20"
+            >
+              <Compass className="lucide h-3.5 w-3.5" strokeWidth={1.75} />
               {t("workflow.nextMission")}
             </Badge>
             {nextStep.type === "lesson" && (
-              <Badge variant="default" className="bg-white/10 text-white ring-white/15">
+              <Badge
+                variant="default"
+                className="border-white/10 bg-white/10 text-white ring-white/15"
+              >
                 {t(`stages.${nextStep.stage}`)}
               </Badge>
             )}
           </div>
-          <h2 className="mt-3 text-2xl font-black leading-tight">
+          <h2
+            className="mt-3 font-display text-2xl font-extrabold leading-tight"
+            style={{ letterSpacing: "-0.025em" }}
+          >
             {nextStep.type === "lesson"
               ? t("workflow.continueLesson", {
                   stage: t(`stages.${nextStep.stage}`),
@@ -230,22 +235,22 @@ export function StudentAcademyHub() {
                 ? t("workflow.takeQuiz", { stage: t(`stages.${nextStep.stage}`) })
                 : t("workflow.finishedTitle")}
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-indigo-100">
+          <p className="mt-2 text-sm leading-relaxed text-white/85">
             {nextStep.type === "complete"
               ? t("workflow.finishedBody")
               : t("workflow.nextMissionBody")}
           </p>
           <Link
             href={nextStep.href}
-            className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3.5 text-sm font-black text-indigo-700 shadow-lg shadow-black/10 transition active:scale-[0.97] sm:w-auto"
+            className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3.5 text-sm font-extrabold text-[var(--color-brand-700)] shadow-3 transition-all hover:shadow-4 active:scale-[0.97] sm:w-auto"
           >
-            <PlayCircle className="h-5 w-5" />
+            <PlayCircle className="lucide h-5 w-5" strokeWidth={2} />
             {nextStep.type === "lesson"
               ? t("workflow.startMission")
               : nextStep.type === "quiz"
                 ? t("workflow.startQuiz")
                 : t("workflow.reviewPath")}
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="lucide h-4 w-4" strokeWidth={2} />
           </Link>
         </div>
       </Card>
@@ -253,13 +258,15 @@ export function StudentAcademyHub() {
       {/* Country picker */}
       <Card>
         <div className="p-5">
-          <label className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
-            <MapPin className="h-4 w-4" />
+          <label className="flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
+            <MapPin className="lucide h-4 w-4" strokeWidth={1.75} />
             {t("hub.countryLabel")}
           </label>
-          <p className="mb-3 mt-1 text-xs leading-relaxed text-gray-500">{t("hub.countryHint")}</p>
+          <p className="mb-3 mt-1 text-xs leading-relaxed text-[var(--color-text-secondary)]">
+            {t("hub.countryHint")}
+          </p>
           <select
-            className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-medium text-gray-800 transition focus:border-indigo-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+            className="w-full rounded-2xl border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-4 py-3 text-sm font-medium text-[var(--color-text-primary)] transition focus:border-[var(--color-accent)] focus:bg-[var(--color-surface)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
             value={countryValue}
             onChange={(e) => {
               const v = e.target.value || null;
@@ -275,7 +282,7 @@ export function StudentAcademyHub() {
             ))}
           </select>
           {state.countryId && getRegion(state.countryId) && (
-            <p className="mt-3 text-xs text-gray-600">
+            <p className="mt-3 text-xs text-[var(--color-text-secondary)]">
               {t("hub.countryContext", {
                 country: tRegions(state.countryId as RegionSlug),
               })}
@@ -287,8 +294,8 @@ export function StudentAcademyHub() {
       {/* Stage map */}
       <div>
         <div className="mb-3 flex items-center gap-2">
-          <Target className="h-4 w-4 text-indigo-500" />
-          <h2 className="text-[10px] font-black uppercase tracking-widest text-gray-500">
+          <Target className="lucide h-4 w-4 text-[var(--color-accent)]" strokeWidth={1.75} />
+          <h2 className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
             {t("hub.stageMapTitle")}
           </h2>
         </div>
@@ -300,11 +307,13 @@ export function StudentAcademyHub() {
       </div>
 
       {allCleared && (
-        <div className="rounded-3xl border-2 border-emerald-200 bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-6 text-center shadow-md">
-          <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 shadow-lg shadow-emerald-500/30">
-            <Trophy className="h-8 w-8 text-white" />
+        <div className="rounded-3xl border-2 border-emerald-200 bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-6 text-center shadow-3">
+          <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 shadow-3">
+            <Trophy className="lucide h-8 w-8 text-white" strokeWidth={2} />
           </div>
-          <p className="text-sm font-black text-emerald-900">{t("hub.allStagesComplete")}</p>
+          <p className="font-display text-sm font-extrabold text-emerald-900">
+            {t("hub.allStagesComplete")}
+          </p>
         </div>
       )}
     </div>
@@ -343,8 +352,8 @@ function StageBlock({ stage, index }: { stage: StageId; index: number }) {
     <Card
       variant={locked ? "outline" : "elevated"}
       className={cn(
-        "relative overflow-hidden transition",
-        locked && "bg-gray-50/80 opacity-90",
+        "relative overflow-hidden transition-all duration-300",
+        locked && "bg-[var(--color-surface-subtle)]/80 opacity-90",
       )}
     >
       <div className="grid gap-0 sm:grid-cols-[160px_1fr]">
@@ -356,7 +365,10 @@ function StageBlock({ stage, index }: { stage: StageId; index: number }) {
             className="h-full min-h-[140px] rounded-none rounded-l-3xl sm:min-h-full"
           />
           <div className="absolute left-3 top-3">
-            <Badge variant="default" className="bg-white/90 text-gray-900 shadow-sm">
+            <Badge
+              variant="default"
+              className="bg-white/95 text-[var(--color-text-primary)] shadow-1 backdrop-blur"
+            >
               Stage {String(index + 1).padStart(2, "0")}
             </Badge>
           </div>
@@ -364,11 +376,16 @@ function StageBlock({ stage, index }: { stage: StageId; index: number }) {
         <div className="p-5">
           <div className="mb-4 flex items-start justify-between gap-3">
             <div className="min-w-0">
-              <h3 className="flex items-center gap-2 text-lg font-black tracking-tight text-gray-900">
-                {locked && <Lock className="h-4 w-4 text-gray-400" />}
+              <h3
+                className="flex items-center gap-2 font-display text-lg font-extrabold tracking-tight text-[var(--color-text-primary)]"
+                style={{ letterSpacing: "-0.02em" }}
+              >
+                {locked && (
+                  <Lock className="lucide h-4 w-4 text-[var(--color-text-muted)]" strokeWidth={1.75} />
+                )}
                 {t(`stages.${stage}`)}
               </h3>
-              <p className="mt-0.5 text-sm leading-relaxed text-gray-500">
+              <p className="mt-0.5 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                 {t(`stages.${stage}Desc`)}
               </p>
             </div>
@@ -376,7 +393,7 @@ function StageBlock({ stage, index }: { stage: StageId; index: number }) {
               <Badge variant={statusVariant === "muted" ? "muted" : statusVariant === "success" ? "success" : statusVariant === "warning" ? "warning" : "info"}>
                 {statusText}
               </Badge>
-              <span className="text-[11px] font-bold text-gray-500">
+              <span className="text-[11px] font-bold text-[var(--color-text-secondary)]">
                 {completion.completed}/{completion.total} {t("hub.modulesInStage")}
               </span>
             </div>
@@ -390,7 +407,7 @@ function StageBlock({ stage, index }: { stage: StageId; index: number }) {
           />
 
           {locked && (
-            <div className="mb-4 rounded-2xl border border-amber-100 bg-amber-50 p-3 text-xs text-amber-800">
+            <div className="mb-4 rounded-2xl border border-[var(--color-warning-border)] bg-[var(--color-warning-bg)] p-3 text-xs text-[var(--color-warning-text)]">
               {t("progress.stageLocked")}
             </div>
           )}
@@ -406,11 +423,12 @@ function StageBlock({ stage, index }: { stage: StageId; index: number }) {
                     if (locked) e.preventDefault();
                   }}
                   className={cn(
-                    "group flex items-center gap-3 rounded-2xl border p-3 transition-all",
+                    "group flex items-center gap-3 rounded-2xl p-3 transition-all duration-200",
                     locked
-                      ? "pointer-events-none cursor-not-allowed border-gray-100 bg-gray-50 text-gray-400"
-                      : "border-gray-100 bg-white hover:-translate-y-0.5 hover:border-indigo-200 hover:shadow-md hover:shadow-indigo-500/10 active:scale-[0.99]",
+                      ? "pointer-events-none cursor-not-allowed bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)] hairline"
+                      : "card-interactive bg-[var(--color-surface)] hover:border-[var(--color-brand-200)]",
                   )}
+                  style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
                   aria-disabled={locked}
                 >
                   <StudentAcademyIllustration
@@ -420,45 +438,55 @@ function StageBlock({ stage, index }: { stage: StageId; index: number }) {
                     className="h-12 w-12 flex-shrink-0 rounded-xl"
                   />
                   <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                    <div className="flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
                       <span>L{String(i + 1).padStart(2, "0")}</span>
                       <span aria-hidden>·</span>
                       <span>{mod.durationMin}m</span>
                     </div>
-                    <div className="truncate text-sm font-bold text-gray-900">
+                    <div className="truncate text-sm font-bold text-[var(--color-text-primary)]">
                       {t(`modules.${stage}.${mod.id}.title`)}
                     </div>
                   </div>
                   {completed ? (
-                    <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-emerald-500" />
+                    <CheckCircle2
+                      className="lucide h-5 w-5 flex-shrink-0 text-[var(--color-success-accent)]"
+                      strokeWidth={1.75}
+                    />
                   ) : !locked ? (
-                    <ChevronRight className="h-5 w-5 flex-shrink-0 text-gray-300 transition group-hover:translate-x-0.5 group-hover:text-indigo-500" />
+                    <ChevronRight
+                      className="lucide h-5 w-5 flex-shrink-0 text-[var(--color-text-muted)] transition-all group-hover:translate-x-0.5 group-hover:text-[var(--color-accent)]"
+                      strokeWidth={1.75}
+                    />
                   ) : null}
                 </Link>
               );
             })}
           </div>
 
-          <div className="mt-4 border-t border-gray-100 pt-4">
+          <div className="mt-4 border-t border-[var(--color-border-subtle)] pt-4">
             {!allDone && (
-              <p className="text-xs leading-relaxed text-gray-500">{t("hub.quizLocked")}</p>
+              <p className="text-xs leading-relaxed text-[var(--color-text-secondary)]">
+                {t("hub.quizLocked")}
+              </p>
             )}
             {allDone && !quizDone && unlocked && (
               <Link
                 href={`/students/quiz/${stage}`}
-                className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600 py-3 text-sm font-black text-white shadow-md shadow-indigo-500/20 transition active:scale-[0.97]"
+                className="flex w-full items-center justify-center gap-2 rounded-2xl gradient-brand grain-overlay py-3 text-sm font-extrabold text-white shadow-brand transition-all active:scale-[0.97]"
               >
-                <Target className="h-4 w-4" />
+                <Target className="lucide h-4 w-4" strokeWidth={2} />
                 {t("hub.takeStageQuiz")}
-                <ChevronRight className="h-4 w-4" />
+                <ChevronRight className="lucide h-4 w-4" strokeWidth={2} />
               </Link>
             )}
             {allDone && !quizDone && !unlocked && (
-              <p className="text-xs text-gray-500">{t("progress.stageLocked")}</p>
+              <p className="text-xs text-[var(--color-text-secondary)]">
+                {t("progress.stageLocked")}
+              </p>
             )}
             {quizDone && (
-              <div className="flex items-center gap-2 rounded-2xl border border-emerald-100 bg-emerald-50 px-3 py-2 text-sm font-bold text-emerald-800">
-                <Sparkles className="h-4 w-4" />
+              <div className="flex items-center gap-2 rounded-2xl border border-[var(--color-success-border)] bg-[var(--color-success-bg)] px-3 py-2 text-sm font-bold text-[var(--color-success-text)]">
+                <Sparkles className="lucide h-4 w-4" strokeWidth={1.75} />
                 {t("hub.stageComplete")}
               </div>
             )}

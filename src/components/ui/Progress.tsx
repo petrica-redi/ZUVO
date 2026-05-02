@@ -11,10 +11,14 @@ type Props = {
 };
 
 const FILL: Record<Required<Props>["variant"], string> = {
-  default: "bg-gradient-to-r from-indigo-500 to-violet-500",
-  success: "bg-gradient-to-r from-emerald-500 to-green-500",
-  amber: "bg-gradient-to-r from-amber-400 to-orange-500",
-  rainbow: "bg-gradient-to-r from-rose-500 via-violet-500 to-sky-500",
+  default:
+    "bg-gradient-to-r from-[var(--color-brand-500)] via-[var(--color-brand-600)] to-[var(--color-brand-700)]",
+  success:
+    "bg-gradient-to-r from-[var(--color-success-accent)] to-emerald-600",
+  amber:
+    "bg-gradient-to-r from-[var(--color-ember-400)] to-[var(--color-ember-600)]",
+  rainbow:
+    "bg-gradient-to-r from-rose-500 via-[var(--color-accent)] to-sky-500",
 };
 
 const SIZE: Record<Required<Props>["size"], string> = {
@@ -36,13 +40,16 @@ export function Progress({
   return (
     <div className={cn("w-full", className)}>
       {(label || hint) && (
-        <div className="mb-1.5 flex items-center justify-between text-xs font-bold text-gray-500">
+        <div className="mb-1.5 flex items-center justify-between text-xs font-bold text-[var(--color-text-secondary)]">
           {label && <span>{label}</span>}
-          {hint && <span className="text-gray-400">{hint}</span>}
+          {hint && <span className="text-[var(--color-text-muted)]">{hint}</span>}
         </div>
       )}
       <div
-        className={cn("relative w-full overflow-hidden rounded-full bg-gray-100", SIZE[size])}
+        className={cn(
+          "relative w-full overflow-hidden rounded-full bg-[var(--color-surface-subtle)] hairline",
+          SIZE[size],
+        )}
         role="progressbar"
         aria-valuenow={value}
         aria-valuemin={0}
@@ -50,8 +57,11 @@ export function Progress({
         aria-label={label}
       >
         <div
-          className={cn("h-full rounded-full transition-all duration-500 ease-out", FILL[variant])}
-          style={{ width: `${pct}%` }}
+          className={cn("h-full rounded-full transition-all duration-700", FILL[variant])}
+          style={{
+            width: `${pct}%`,
+            transitionTimingFunction: "var(--ease-emphasized)",
+          }}
         />
       </div>
     </div>

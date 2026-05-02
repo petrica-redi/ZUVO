@@ -36,25 +36,25 @@ const TRENDING = [
 ];
 
 const PILLARS = [
-  { id: "prevention", emoji: "🛡️", gradient: "from-green-400 to-emerald-600", href: "/learn/prevention" },
-  { id: "nutrition",  emoji: "🥗", gradient: "from-blue-400 to-blue-600", href: "/learn/nutrition"  },
-  { id: "maternal",   emoji: "🤱", gradient: "from-purple-400 to-violet-600", href: "/learn/maternal"   },
-  { id: "children",   emoji: "👶", gradient: "from-orange-400 to-orange-600", href: "/learn/children"   },
-  { id: "chronic",    emoji: "💊", gradient: "from-red-400 to-red-600", href: "/learn/chronic"    },
-  { id: "mental",     emoji: "🧠", gradient: "from-cyan-400 to-cyan-600", href: "/learn/mental"     },
+  { id: "prevention", emoji: "🛡️", token: "prevention", href: "/learn/prevention" },
+  { id: "nutrition",  emoji: "🥗", token: "nutrition",  href: "/learn/nutrition"  },
+  { id: "maternal",   emoji: "🤱", token: "maternal",   href: "/learn/maternal"   },
+  { id: "children",   emoji: "👶", token: "children",   href: "/learn/children"   },
+  { id: "chronic",    emoji: "💊", token: "chronic",    href: "/learn/chronic"    },
+  { id: "mental",     emoji: "🧠", token: "mental",     href: "/learn/mental"     },
 ] as const;
 
 const VERDICT_STYLE = {
-  false: { bg: "bg-red-50", border: "border-red-200", badge: "bg-red-500", icon: XCircle },
-  misleading: { bg: "bg-amber-50", border: "border-amber-200", badge: "bg-amber-500", icon: AlertTriangle },
+  false: { ring: "border-[var(--color-danger-border)]", bg: "bg-[var(--color-danger-bg)]", badge: "bg-[var(--color-danger-accent)]", icon: XCircle },
+  misleading: { ring: "border-[var(--color-warning-border)]", bg: "bg-[var(--color-warning-bg)]", badge: "bg-[var(--color-warning-accent)]", icon: AlertTriangle },
 };
 
 const LEARN_ITEMS = [
-  { href: "/students", icon: Trophy, key: "academy", gradient: "from-indigo-500 to-violet-600", shadow: "shadow-indigo-500/20" },
-  { href: "/quiz", icon: GraduationCap, key: "quiz", gradient: "from-amber-500 to-orange-600", shadow: "shadow-amber-500/20" },
-  { href: "/glossary", icon: BookOpen, key: "glossary", gradient: "from-teal-500 to-cyan-600", shadow: "shadow-teal-500/20" },
-  { href: "/rights", icon: Scale, key: "rights", gradient: "from-indigo-500 to-purple-600", shadow: "shadow-indigo-500/20" },
-  { href: "/stories", icon: Heart, key: "stories", gradient: "from-rose-500 to-pink-600", shadow: "shadow-rose-500/20" },
+  { href: "/students", icon: Trophy, key: "academy", gradient: "from-indigo-500 to-violet-600" },
+  { href: "/quiz", icon: GraduationCap, key: "quiz", gradient: "from-amber-500 to-orange-600" },
+  { href: "/glossary", icon: BookOpen, key: "glossary", gradient: "from-teal-500 to-cyan-600" },
+  { href: "/rights", icon: Scale, key: "rights", gradient: "from-indigo-500 to-purple-600" },
+  { href: "/stories", icon: Heart, key: "stories", gradient: "from-rose-500 to-pink-600" },
 ] as const;
 
 export default async function HomePage({ params }: Props) {
@@ -63,61 +63,82 @@ export default async function HomePage({ params }: Props) {
   const tPillars = await getTranslations({ locale, namespace: "pillars" });
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
+    <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
       <Header />
       <SosButton />
 
       <main id="main-content" className="flex-1">
         {/* ── Hero ──────────────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-white px-5 pb-5 pt-6">
-          <div aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full opacity-[0.08] blur-3xl" style={{ background: "radial-gradient(circle, #C0392B 0%, #F39C12 60%, transparent 80%)" }} />
+        <section className="relative overflow-hidden bg-[var(--color-surface)] px-5 pb-6 pt-7">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-50 blur-3xl"
+            style={{ background: "radial-gradient(circle, rgba(99,102,241,0.18) 0%, transparent 70%)" }}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -left-20 -bottom-20 h-56 w-56 rounded-full opacity-40 blur-3xl"
+            style={{ background: "radial-gradient(circle, rgba(251,191,36,0.16) 0%, transparent 70%)" }}
+          />
 
-          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-3 py-1 animate-fade-in-up">
-            <Sparkles className="h-3 w-3 text-[#C0392B]" />
-            <span className="text-[11px] font-bold text-[#C0392B]">{t("kicker")}</span>
+          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-[var(--color-brand-200)] bg-[var(--color-accent-soft)] px-3 py-1 animate-fade-in-up">
+            <Sparkles className="lucide h-3 w-3 text-[var(--color-accent)]" strokeWidth={1.75} />
+            <span className="text-[11px] font-extrabold uppercase tracking-wider text-[var(--color-accent-text)]">
+              {t("kicker")}
+            </span>
           </div>
 
-          <h1 className="mb-2 text-[28px] font-black leading-[1.08] tracking-tight animate-fade-in-up delay-100" style={{ letterSpacing: "-0.03em" }}>
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #C0392B 0%, #E74C3C 40%, #F39C12 100%)" }}>
+          <h1
+            className="mb-2 font-display text-[var(--text-3xl)] font-extrabold leading-[1.05] tracking-tight animate-fade-in-up delay-100"
+            style={{ letterSpacing: "-0.03em" }}
+          >
+            <span
+              className="bg-clip-text text-transparent"
+              style={{ backgroundImage: "linear-gradient(135deg, #4F46E5 0%, #6D28D9 50%, #312E81 100%)" }}
+            >
               {t("titleAccent")}
             </span>
             <br />
-            <span className="text-gray-900">{t("titleEnd")}</span>
+            <span className="text-[var(--color-text-primary)]">{t("titleEnd")}</span>
           </h1>
 
-          <p className="mb-5 text-[14px] leading-relaxed text-gray-500 animate-fade-in-up delay-200">
+          <p className="mb-5 text-[var(--text-sm)] leading-relaxed text-[var(--color-text-secondary)] animate-fade-in-up delay-200">
             {t("subtitle")}
           </p>
 
           <div className="flex gap-3 animate-fade-in-up delay-300">
             <Link
               href="/chat"
-              className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-2xl text-[15px] font-bold text-white shadow-lg shadow-red-500/20 active:scale-[0.97]"
-              style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" }}
+              className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-2xl text-[15px] font-extrabold text-white gradient-brand grain-overlay shadow-brand transition-all active:scale-[0.97]"
+              style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
             >
-              <MessageCircle className="h-5 w-5" /> {t("ctaAsk")}
+              <MessageCircle className="lucide h-5 w-5" strokeWidth={2} /> {t("ctaAsk")}
             </Link>
             <Link
               href="/consult"
-              className="flex h-[52px] items-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-5 text-[15px] font-bold text-gray-700 active:scale-[0.97]"
+              className="flex h-[52px] items-center gap-2 rounded-2xl border-2 border-[var(--color-border-default)] bg-[var(--color-surface)] px-5 text-[15px] font-extrabold text-[var(--color-text-primary)] transition-all hover:border-[var(--color-border-strong)] active:scale-[0.97]"
             >
-              <Stethoscope className="h-5 w-5 text-emerald-500" /> {t("ctaCheckup")}
+              <Stethoscope className="lucide h-5 w-5 text-[var(--color-success-accent)]" strokeWidth={1.75} /> {t("ctaCheckup")}
             </Link>
           </div>
         </section>
 
         {/* ── Stats ─────────────────────────────────────────────────────── */}
         <section className="px-4 py-3 animate-fade-in-up delay-400">
-          <div className="grid grid-cols-3 divide-x divide-gray-100 rounded-2xl bg-white shadow-sm" style={{ border: "1px solid rgba(0,0,0,0.04)" }}>
+          <div className="grid grid-cols-3 divide-x divide-[var(--color-border-subtle)] rounded-2xl bg-[var(--color-surface)] hairline shadow-1">
             {[
-              { id: "romaInEurope", icon: Globe, value: "10M+", color: "#C0392B" },
-              { id: "languages", icon: Heart, value: "15", color: "#F39C12" },
-              { id: "healthZones", icon: Shield, value: "6", color: "#3B82F6" },
+              { id: "romaInEurope", icon: Globe, value: "10M+", color: "var(--color-accent)" },
+              { id: "languages", icon: Heart, value: "15", color: "var(--color-ember-500)" },
+              { id: "healthZones", icon: Shield, value: "6", color: "var(--color-info-accent)" },
             ].map((stat) => (
               <div key={stat.id} className="flex flex-col items-center py-3.5">
-                <stat.icon className="mb-0.5 h-4 w-4" style={{ color: stat.color }} />
-                <span className="text-[18px] font-black text-gray-900">{stat.value}</span>
-                <span className="text-[10px] font-semibold text-gray-400">{t(`stats.${stat.id}`)}</span>
+                <stat.icon className="lucide mb-0.5 h-4 w-4" style={{ color: stat.color }} strokeWidth={1.75} />
+                <span className="font-display text-[18px] font-extrabold text-[var(--color-text-primary)]">
+                  {stat.value}
+                </span>
+                <span className="text-[10px] font-semibold text-[var(--color-text-muted)]">
+                  {t(`stats.${stat.id}`)}
+                </span>
               </div>
             ))}
           </div>
@@ -125,19 +146,23 @@ export default async function HomePage({ params }: Props) {
 
         {/* ── Quick Actions ─────────────────────────────────────────────── */}
         <section className="px-4 pt-4 pb-2">
-          <h2 className="mb-3 text-[16px] font-black text-gray-900">{t("quickActionsTitle")}</h2>
+          <h2 className="mb-3 font-display text-[16px] font-extrabold tracking-tight text-[var(--color-text-primary)]">
+            {t("quickActionsTitle")}
+          </h2>
           <div className="grid grid-cols-3 gap-2.5">
             {QUICK_ACTIONS.map((action, i) => (
               <Link
                 key={action.id}
                 href={action.href}
-                className={`card-hover flex flex-col items-center gap-2.5 rounded-2xl bg-white p-3.5 shadow-sm animate-fade-in-up`}
-                style={{ animationDelay: `${(i + 4) * 80}ms`, border: "1px solid rgba(0,0,0,0.04)" }}
+                className="card-interactive flex flex-col items-center gap-2.5 rounded-2xl bg-[var(--color-surface)] p-3.5 animate-fade-in-up"
+                style={{ animationDelay: `${(i + 4) * 80}ms` }}
               >
-                <div className={`flex h-[52px] w-[52px] items-center justify-center rounded-[18px] bg-gradient-to-br ${action.gradient} shadow-md ${action.shadow}`}>
-                  <action.icon className="h-[26px] w-[26px] text-white" />
+                <div
+                  className={`flex h-[52px] w-[52px] items-center justify-center rounded-[18px] bg-gradient-to-br ${action.gradient} shadow-2 ${action.shadow}`}
+                >
+                  <action.icon className="lucide h-[26px] w-[26px] text-white" strokeWidth={1.85} />
                 </div>
-                <span className="text-center text-[11px] font-bold leading-[1.2] text-gray-700 whitespace-pre-line">
+                <span className="text-center text-[11px] font-bold leading-[1.2] text-[var(--color-text-primary)] whitespace-pre-line">
                   {t(`actions.${action.id}`)}
                 </span>
               </Link>
@@ -148,11 +173,14 @@ export default async function HomePage({ params }: Props) {
         {/* ── Trending Lies ─────────────────────────────────────────────── */}
         <section className="px-4 pt-6 pb-2">
           <div className="mb-3 flex items-center justify-between">
-            <h2 className="flex items-center gap-1.5 text-[16px] font-black text-gray-900">
-              <AlertTriangle className="h-[18px] w-[18px] text-amber-500" /> {t("trendingTitle")}
+            <h2 className="flex items-center gap-1.5 font-display text-[16px] font-extrabold tracking-tight text-[var(--color-text-primary)]">
+              <AlertTriangle className="lucide h-[18px] w-[18px] text-[var(--color-ember-500)]" strokeWidth={1.75} /> {t("trendingTitle")}
             </h2>
-            <Link href="/scan" className="flex items-center text-[12px] font-bold text-[#C0392B]">
-              {t("factCheckCta")} <ChevronRight className="h-4 w-4" />
+            <Link
+              href="/scan"
+              className="flex items-center gap-0.5 text-[12px] font-bold text-[var(--color-accent)] transition-colors hover:text-[var(--color-accent-hover)]"
+            >
+              {t("factCheckCta")} <ChevronRight className="lucide h-4 w-4" strokeWidth={1.75} />
             </Link>
           </div>
           <div className="scrollbar-none -mx-4 flex gap-2.5 overflow-x-auto px-4 pb-1">
@@ -162,14 +190,20 @@ export default async function HomePage({ params }: Props) {
               return (
                 <div
                   key={i}
-                  className={`flex w-[240px] flex-shrink-0 flex-col rounded-2xl border ${style.border} ${style.bg} p-4`}
+                  className={`flex w-[240px] flex-shrink-0 flex-col rounded-2xl border ${style.ring} ${style.bg} p-4 shadow-1`}
                 >
-                  <span className={`mb-2 inline-flex w-fit items-center gap-1 rounded-full ${style.badge} px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-white`}>
-                    <VerdictIcon className="h-3 w-3" />
+                  <span
+                    className={`mb-2 inline-flex w-fit items-center gap-1 rounded-full ${style.badge} px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-white`}
+                  >
+                    <VerdictIcon className="lucide h-3 w-3" strokeWidth={2} />
                     {t(`verdicts.${item.verdict}`)}
                   </span>
-                  <p className="mb-2 text-[13px] font-bold text-gray-800">&ldquo;{t(`trending.${item.claimKey}`)}&rdquo;</p>
-                  <p className="text-[12px] leading-relaxed text-gray-600">{t(`trending.${item.truthKey}`)}</p>
+                  <p className="mb-2 text-[13px] font-bold text-[var(--color-text-primary)]">
+                    &ldquo;{t(`trending.${item.claimKey}`)}&rdquo;
+                  </p>
+                  <p className="text-[12px] leading-relaxed text-[var(--color-text-secondary)]">
+                    {t(`trending.${item.truthKey}`)}
+                  </p>
                 </div>
               );
             })}
@@ -180,25 +214,33 @@ export default async function HomePage({ params }: Props) {
         <section className="px-4 pt-4">
           <a
             href="tel:112"
-            className="flex items-center gap-3.5 rounded-2xl p-4 shadow-lg active:scale-[0.98]"
-            style={{ background: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)" }}
+            className="flex items-center gap-3.5 rounded-2xl gradient-emergency grain-overlay p-4 shadow-danger transition-all active:scale-[0.98]"
+            style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
           >
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20">
-              <Phone className="h-5 w-5 text-white" />
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+              <Phone className="lucide h-5 w-5 text-white" strokeWidth={2} />
             </div>
-            <div>
-              <span className="text-[15px] font-black text-white">{t("emergencyCta")}</span>
-              <p className="text-[12px] text-red-200">{t("emergencySub")}</p>
+            <div className="flex-1">
+              <span className="font-display text-[15px] font-extrabold text-white">
+                {t("emergencyCta")}
+              </span>
+              <p className="text-[12px] text-white/80">{t("emergencySub")}</p>
             </div>
+            <ChevronRight className="lucide h-5 w-5 text-white/70" strokeWidth={2} />
           </a>
         </section>
 
         {/* ── Health Topics ─────────────────────────────────────────────── */}
         <section className="px-4 pt-6 pb-2">
           <div className="mb-3 flex items-center justify-between">
-            <h2 className="text-[16px] font-black text-gray-900">{tPillars("title")}</h2>
-            <Link href="/learn" className="flex items-center text-[12px] font-bold text-[#C0392B]">
-              {t("seeAll")} <ChevronRight className="h-4 w-4" />
+            <h2 className="font-display text-[16px] font-extrabold tracking-tight text-[var(--color-text-primary)]">
+              {tPillars("title")}
+            </h2>
+            <Link
+              href="/learn"
+              className="flex items-center gap-0.5 text-[12px] font-bold text-[var(--color-accent)] transition-colors hover:text-[var(--color-accent-hover)]"
+            >
+              {t("seeAll")} <ChevronRight className="lucide h-4 w-4" strokeWidth={1.75} />
             </Link>
           </div>
           <div className="grid grid-cols-3 gap-2.5">
@@ -206,13 +248,20 @@ export default async function HomePage({ params }: Props) {
               <Link
                 key={pillar.id}
                 href={pillar.href}
-                className="card-hover flex flex-col items-center gap-2 rounded-2xl bg-white p-3.5 shadow-sm"
-                style={{ border: "1px solid rgba(0,0,0,0.04)" }}
+                className="card-interactive flex flex-col items-center gap-2 rounded-2xl bg-[var(--color-surface)] p-3.5"
               >
-                <div className={`flex h-11 w-11 items-center justify-center rounded-[14px] bg-gradient-to-br ${pillar.gradient} text-xl shadow-sm`}>
+                <div
+                  className="flex h-11 w-11 items-center justify-center rounded-[14px] text-xl shadow-1"
+                  style={{
+                    background: `var(--color-pillar-${pillar.token}-bg)`,
+                    border: `1px solid var(--color-pillar-${pillar.token}-border)`,
+                  }}
+                >
                   {pillar.emoji}
                 </div>
-                <span className="text-[11px] font-bold text-gray-700">{tPillars(pillar.id)}</span>
+                <span className="text-[11px] font-bold text-[var(--color-text-primary)]">
+                  {tPillars(pillar.id)}
+                </span>
               </Link>
             ))}
           </div>
@@ -220,23 +269,30 @@ export default async function HomePage({ params }: Props) {
 
         {/* ── Digital Literacy ────────────────────────────────────────── */}
         <section className="px-4 pt-6 pb-2">
-          <h2 className="mb-3 text-[16px] font-black text-gray-900">{t("learnGrowTitle")}</h2>
+          <h2 className="mb-3 font-display text-[16px] font-extrabold tracking-tight text-[var(--color-text-primary)]">
+            {t("learnGrowTitle")}
+          </h2>
           <div className="space-y-2.5">
             {LEARN_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="card-hover flex items-center gap-3.5 rounded-2xl bg-white p-3.5 shadow-sm"
-                style={{ border: "1px solid rgba(0,0,0,0.04)" }}
+                className="card-interactive flex items-center gap-3.5 rounded-2xl bg-[var(--color-surface)] p-3.5"
               >
-                <div className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br ${item.gradient} shadow-md ${item.shadow}`}>
-                  <item.icon className="h-[22px] w-[22px] text-white" />
+                <div
+                  className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br ${item.gradient} shadow-2`}
+                >
+                  <item.icon className="lucide h-[22px] w-[22px] text-white" strokeWidth={1.85} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-[14px] font-bold text-gray-900">{t(`learn.${item.key}Label`)}</span>
-                  <p className="text-[12px] text-gray-500">{t(`learn.${item.key}Desc`)}</p>
+                  <span className="text-[14px] font-bold text-[var(--color-text-primary)]">
+                    {t(`learn.${item.key}Label`)}
+                  </span>
+                  <p className="text-[12px] text-[var(--color-text-secondary)]">
+                    {t(`learn.${item.key}Desc`)}
+                  </p>
                 </div>
-                <ChevronRight className="h-4 w-4 flex-shrink-0 text-gray-300" />
+                <ChevronRight className="lucide h-4 w-4 flex-shrink-0 text-[var(--color-text-muted)]" strokeWidth={1.75} />
               </Link>
             ))}
           </div>
@@ -244,23 +300,29 @@ export default async function HomePage({ params }: Props) {
 
         {/* ── Mediator banner ───────────────────────────────────────────── */}
         <section className="px-4 pt-6 pb-6">
-          <div className="relative overflow-hidden rounded-2xl p-5" style={{ background: "linear-gradient(135deg, #1E293B 0%, #0F172A 100%)" }}>
-            <div aria-hidden className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-[#C0392B]/15" />
+          <div className="relative overflow-hidden rounded-2xl gradient-brand grain-overlay p-5 shadow-3">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full opacity-40 blur-2xl"
+              style={{ background: "radial-gradient(circle, #FBBF24 0%, transparent 70%)" }}
+            />
 
             <div className="relative flex items-center gap-3.5">
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#C0392B] to-[#E74C3C] shadow-md">
-                <Users className="h-6 w-6 text-white" />
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white/15 backdrop-blur-sm">
+                <Users className="lucide h-6 w-6 text-white" strokeWidth={1.85} />
               </div>
               <div className="flex-1">
-                <h3 className="text-[15px] font-black text-white">{t("mediator.title")}</h3>
-                <p className="text-[12px] text-gray-400">{t("mediator.subtitle")}</p>
+                <h3 className="font-display text-[15px] font-extrabold text-white">
+                  {t("mediator.title")}
+                </h3>
+                <p className="text-[12px] text-white/75">{t("mediator.subtitle")}</p>
               </div>
             </div>
             <Link
               href="/mediator"
-              className="relative mt-3.5 inline-flex h-10 items-center gap-1.5 rounded-xl bg-white px-4 text-[13px] font-bold text-gray-900 shadow-md active:scale-[0.97]"
+              className="relative mt-3.5 inline-flex h-10 items-center gap-1.5 rounded-xl bg-white px-4 text-[13px] font-extrabold text-[var(--color-brand-700)] shadow-3 transition-all active:scale-[0.97]"
             >
-              {t("mediator.openDashboard")} <ArrowRight className="h-3.5 w-3.5" />
+              {t("mediator.openDashboard")} <ArrowRight className="lucide h-3.5 w-3.5" strokeWidth={2} />
             </Link>
           </div>
         </section>

@@ -83,9 +83,9 @@ export function MarkCompleteButton({
     return (
       <button
         disabled
-        className="flex w-full items-center justify-center gap-2 rounded-2xl bg-green-50 p-4 text-base font-semibold text-green-700 ring-2 ring-green-200"
+        className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--color-success-bg)] p-4 text-base font-extrabold text-[var(--color-success-text)] ring-2 ring-[var(--color-success-border)]"
       >
-        <CheckCircle2 className="h-5 w-5" />
+        <CheckCircle2 className="lucide h-5 w-5" strokeWidth={1.85} />
         {completedLabel}
       </button>
     );
@@ -94,12 +94,13 @@ export function MarkCompleteButton({
   return (
     <button
       onClick={handleComplete}
-      className={`flex w-full items-center justify-center gap-2 rounded-2xl p-4 text-base font-semibold text-white shadow-lg transition-all active:scale-[0.97] ${
-        animating ? "scale-95 opacity-80" : ""
+      className={`flex w-full items-center justify-center gap-2 rounded-2xl gradient-brand grain-overlay p-4 text-base font-extrabold text-white shadow-brand transition-all active:scale-[0.97] ${
+        animating ? "scale-95 opacity-90" : ""
       }`}
-      style={{ backgroundColor: pillarColor }}
+      style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
+      data-pillar-color={pillarColor}
     >
-      <CheckCircle2 className="h-5 w-5" />
+      <CheckCircle2 className="lucide h-5 w-5" strokeWidth={1.85} />
       {completeLabel}
     </button>
   );

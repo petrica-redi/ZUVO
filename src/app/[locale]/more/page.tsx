@@ -61,37 +61,46 @@ export default async function MorePage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "more" });
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
+    <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
       <Header />
       <SosButton />
       <main id="main-content" className="flex-1 pb-2">
         <div className="px-5 py-6">
-          <h1 className="mb-6 text-2xl font-black text-gray-900 animate-fade-in-up">{t("title")}</h1>
+          <h1
+            className="mb-6 font-display text-2xl font-extrabold tracking-tight text-[var(--color-text-primary)] animate-fade-in-up"
+            style={{ letterSpacing: "-0.025em" }}
+          >
+            {t("title")}
+          </h1>
 
           {SECTIONS.map((section, si) => (
             <div key={section.id} className={`mb-6 animate-fade-in-up delay-${(si + 1) * 100}`}>
-              <h2 className="mb-3 text-xs font-black uppercase tracking-widest text-gray-400">
+              <h2 className="mb-3 text-xs font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
                 {t(`sections.${section.id}`)}
               </h2>
-              <div className="overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm">
+              <div className="overflow-hidden rounded-3xl bg-[var(--color-surface)] hairline shadow-1">
                 {section.items.map((item, i) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`flex items-center gap-4 px-5 py-4 transition-all active:bg-gray-50 ${
-                      i > 0 ? "border-t border-gray-50" : ""
+                    className={`flex items-center gap-4 px-5 py-4 transition-colors hover:bg-[var(--color-surface-hover)] active:bg-[var(--color-surface-subtle)] ${
+                      i > 0 ? "border-t border-[var(--color-border-subtle)]" : ""
                     }`}
                   >
                     <div
-                      className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${item.gradient} shadow-md`}
+                      className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${item.gradient} shadow-2`}
                     >
-                      <item.icon className="h-5 w-5 text-white" />
+                      <item.icon className="lucide h-5 w-5 text-white" strokeWidth={1.85} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <span className="text-sm font-bold text-gray-800">{t(`items.${item.key}Label`)}</span>
-                      <p className="text-xs text-gray-400">{t(`items.${item.key}Desc`)}</p>
+                      <span className="text-sm font-bold text-[var(--color-text-primary)]">
+                        {t(`items.${item.key}Label`)}
+                      </span>
+                      <p className="text-xs text-[var(--color-text-secondary)]">
+                        {t(`items.${item.key}Desc`)}
+                      </p>
                     </div>
-                    <ChevronRight className="h-5 w-5 flex-shrink-0 text-gray-300" />
+                    <ChevronRight className="lucide h-5 w-5 flex-shrink-0 text-[var(--color-text-muted)]" strokeWidth={1.75} />
                   </Link>
                 ))}
               </div>

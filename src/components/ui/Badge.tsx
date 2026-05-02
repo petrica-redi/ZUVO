@@ -1,7 +1,15 @@
 import type { HTMLAttributes } from "react";
 import { cn } from "./cn";
 
-export type BadgeVariant = "default" | "success" | "warning" | "danger" | "info" | "premium" | "muted";
+export type BadgeVariant =
+  | "default"
+  | "success"
+  | "warning"
+  | "danger"
+  | "info"
+  | "premium"
+  | "muted"
+  | "brand";
 
 export type BadgeProps = HTMLAttributes<HTMLSpanElement> & {
   variant?: BadgeVariant;
@@ -9,14 +17,22 @@ export type BadgeProps = HTMLAttributes<HTMLSpanElement> & {
 };
 
 const VARIANT: Record<BadgeVariant, string> = {
-  default: "bg-gray-100 text-gray-700 ring-gray-200",
-  success: "bg-emerald-50 text-emerald-700 ring-emerald-200",
-  warning: "bg-amber-50 text-amber-700 ring-amber-200",
-  danger: "bg-rose-50 text-rose-700 ring-rose-200",
-  info: "bg-sky-50 text-sky-700 ring-sky-200",
+  default:
+    "bg-[var(--color-surface-subtle)] text-[var(--color-text-secondary)] ring-[var(--color-border-default)]",
+  success:
+    "bg-[var(--color-success-bg)] text-[var(--color-success-text)] ring-[var(--color-success-border)]",
+  warning:
+    "bg-[var(--color-warning-bg)] text-[var(--color-warning-text)] ring-[var(--color-warning-border)]",
+  danger:
+    "bg-[var(--color-danger-bg)] text-[var(--color-danger-text)] ring-[var(--color-danger-border)]",
+  info:
+    "bg-[var(--color-info-bg)] text-[var(--color-info-text)] ring-[var(--color-info-border)]",
+  brand:
+    "bg-[var(--color-accent-soft)] text-[var(--color-accent-text)] ring-[var(--color-brand-200)]",
   premium:
-    "bg-gradient-to-r from-amber-100 via-yellow-100 to-orange-100 text-amber-800 ring-amber-200",
-  muted: "bg-gray-50 text-gray-400 ring-gray-100",
+    "bg-gradient-to-r from-[var(--color-ember-100)] via-[var(--color-ember-50)] to-[var(--color-ember-100)] text-[var(--color-ember-800)] ring-[var(--color-ember-200)]",
+  muted:
+    "bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)] ring-[var(--color-border-subtle)]",
 };
 
 export function Badge({ variant = "default", size = "md", className, ...rest }: BadgeProps) {

@@ -56,7 +56,7 @@ export default async function RegionPage({ params }: Props) {
   const regionName = data.id.charAt(0).toUpperCase() + data.id.slice(1);
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
+    <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
       <Header />
       <SosButton />
       <main id="main-content" className="flex-1 pb-2">

@@ -3,7 +3,13 @@
 import { forwardRef, type ButtonHTMLAttributes } from "react";
 import { cn } from "./cn";
 
-export type ButtonVariant = "primary" | "secondary" | "ghost" | "outline" | "danger";
+export type ButtonVariant =
+  | "primary"
+  | "secondary"
+  | "ghost"
+  | "outline"
+  | "danger"
+  | "ember";
 export type ButtonSize = "sm" | "md" | "lg" | "xl";
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -15,15 +21,17 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const VARIANT: Record<ButtonVariant, string> = {
   primary:
-    "bg-gradient-to-br from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/20 hover:shadow-lg hover:shadow-indigo-500/30 active:scale-[0.97]",
+    "gradient-brand grain-overlay text-white shadow-brand hover:brightness-105 active:scale-[0.97] active:brightness-95",
   secondary:
-    "bg-white text-gray-900 ring-1 ring-gray-200 shadow-sm hover:shadow-md active:scale-[0.97]",
+    "bg-[var(--color-surface)] text-[var(--color-text-primary)] hairline shadow-1 hover:shadow-2 hover:bg-[var(--color-surface-hover)] active:scale-[0.97]",
   ghost:
-    "bg-transparent text-gray-700 hover:bg-gray-100 active:scale-[0.97]",
+    "bg-transparent text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-text-primary)] active:scale-[0.97]",
   outline:
-    "border-2 border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50 active:scale-[0.97]",
+    "border-2 border-[var(--color-border-default)] bg-[var(--color-surface)] text-[var(--color-text-primary)] hover:border-[var(--color-border-strong)] hover:bg-[var(--color-surface-hover)] active:scale-[0.97]",
   danger:
-    "bg-gradient-to-br from-rose-600 to-red-600 text-white shadow-md shadow-rose-500/20 hover:shadow-lg active:scale-[0.97]",
+    "gradient-emergency grain-overlay text-white shadow-danger hover:brightness-105 active:scale-[0.97]",
+  ember:
+    "gradient-ember grain-overlay text-white shadow-ember hover:brightness-105 active:scale-[0.97]",
 };
 
 const SIZE: Record<ButtonSize, string> = {
@@ -42,14 +50,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       ref={ref}
       disabled={disabled || loading}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-2xl font-bold transition-all",
+        "inline-flex items-center justify-center gap-2 rounded-2xl font-bold transition-all duration-200",
         "disabled:cursor-not-allowed disabled:opacity-50",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg-canvas)]",
         VARIANT[variant],
         SIZE[size],
         fullWidth ? "w-full" : "",
         className,
       )}
+      style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
       {...rest}
     >
       {loading ? (
