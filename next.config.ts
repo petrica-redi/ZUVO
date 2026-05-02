@@ -31,16 +31,26 @@ function buildCsp(): string {
     }
   })();
 
+  // Capacitor / Cordova WebViews load the app from custom schemes; allowing them
+  // here means the same CSP works on web and inside the native shells without
+  // weakening browser-only deployments.
+  const capacitorOrigins = [
+    "capacitor://localhost",
+    "ionic://localhost",
+    "https://localhost",
+  ];
+
   const directives: Record<string, string[]> = {
-    "default-src": ["'self'"],
+    "default-src": ["'self'", ...capacitorOrigins],
     "script-src": [
       "'self'",
       // Next.js inlines a small bootstrap script and uses unsafe-eval in dev.
       "'unsafe-inline'",
       ...(process.env.NODE_ENV === "production" ? [] : ["'unsafe-eval'"]),
       sentryHost,
+      ...capacitorOrigins,
     ],
-    "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+    "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", ...capacitorOrigins],
     "img-src": ["'self'", "data:", "blob:", "https:"],
     "font-src": ["'self'", "https://fonts.gstatic.com", "data:"],
     "connect-src": [
@@ -51,6 +61,7 @@ function buildCsp(): string {
       "https://*.langfuse.com",
       posthogHost,
       sentryHost,
+      ...capacitorOrigins,
       ...(supabaseOrigin ? [supabaseOrigin, supabaseOrigin.replace("https://", "wss://")] : []),
     ],
     "frame-src": ["'self'"],

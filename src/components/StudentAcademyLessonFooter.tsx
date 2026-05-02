@@ -109,6 +109,9 @@ export function StudentAcademyLessonFooter(props: Props) {
           if (afterStreak > beforeStreak) {
             void track("streak_extended", { streak: afterStreak });
           }
+          void import("@/lib/native/bridge").then(({ hapticTap, hapticSuccess }) =>
+            afterLevel > beforeLevel ? hapticSuccess() : hapticTap(),
+          );
 
           onCompleted?.();
           setTimeout(() => setAnimating(false), 1200);

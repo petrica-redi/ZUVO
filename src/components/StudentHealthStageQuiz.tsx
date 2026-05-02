@@ -90,9 +90,11 @@ export function StudentHealthStageQuiz({ stage }: Props) {
         recordQuizPass(stage, pct);
         postProgressQuizComplete(stage);
         void track("quiz_passed", { stage, score: pct, correct, total });
+        void import("@/lib/native/bridge").then(({ hapticSuccess }) => hapticSuccess());
       } else {
         recordQuizScore(stage, pct);
         void track("quiz_failed", { stage, score: pct, correct, total });
+        void import("@/lib/native/bridge").then(({ hapticTap }) => hapticTap());
       }
       void track("quiz_attempted", { stage, score: pct, passed });
       setResultSnapshot({ correct, total, passed, pct });

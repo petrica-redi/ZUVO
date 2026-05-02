@@ -33,7 +33,12 @@ export function SosButton() {
   if (!open) {
     return (
       <button
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setOpen(true);
+          void import("@/lib/native/bridge").then(({ hapticWarning }) =>
+            hapticWarning(),
+          );
+        }}
         className="absolute right-3 top-16 z-50 flex h-12 w-12 items-center justify-center rounded-full gradient-emergency grain-overlay shadow-danger animate-pulse-glow-emergency transition-transform active:scale-95"
         aria-label={t("buttonAria")}
       >
