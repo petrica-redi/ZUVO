@@ -110,6 +110,9 @@ export function StudentFieldLab({
       try {
         writeNote(moduleId, { ...note, updatedAt: new Date().toISOString() });
         setStatus("saved");
+        void import("@/lib/analytics").then(({ track }) =>
+          track("field_lab_saved", { moduleId }),
+        );
       } catch {
         setStatus("error");
       }

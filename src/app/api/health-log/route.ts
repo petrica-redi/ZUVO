@@ -1,18 +1,18 @@
 /**
  * POST /api/health-log  — Create a health log entry (mood, water, activity, BP, etc.)
- * GET  /api/health-log   — Get health log history for a user
+ * GET  /api/health-log   — Get health log history for the current user
+ *
+ * User resolution prefers an authenticated Supabase session and falls back
+ * to a validated anonymous-id header.
  */
 import { NextRequest, NextResponse } from "next/server";
 import { getDb } from "@/db/client";
 import { healthLogs } from "@/db/schema";
 import { eq, and, desc, gte } from "drizzle-orm";
 import { z } from "zod";
-import { getAnonymousId, parseJsonBody } from "@/lib/api/validation";
-import { rateLimit } from "@/lib/api/rate-limit";
-
-function userId(req: NextRequest): string | null {
-  return getAnonymousId(req);
-}
+import { parseJsonBody } from "@/lib/api/validation";
+import { applyRateLimitAsync } from "@/lib/api/rate-limit";
+import { resolveUser } from "@/lib/auth/server-user";
 
 const healthLogBodySchema = z.object({
   type: z.string().trim().min(1).max(60),
@@ -23,22 +23,35 @@ const healthLogBodySchema = z.object({
   metadata: z.record(z.string(), z.unknown()).optional(),
 });
 
+const querySchema = z.object({
+  type: z.string().trim().min(1).max(60).optional(),
+  days: z.coerce.number().int().min(1).max(365).default(30),
+});
+
 export async function GET(req: NextRequest) {
   const db = getDb();
-  const uid = userId(req);
-  if (!db || !uid) {
+  const user = await resolveUser(req);
+  if (!db || !user) {
     return NextResponse.json({ success: true, data: [] });
   }
 
   const url = new URL(req.url);
-  const type = url.searchParams.get("type");
-  const parsedDays = parseInt(url.searchParams.get("days") ?? "30", 10);
-  const days = Number.isFinite(parsedDays) ? Math.min(Math.max(parsedDays, 1), 365) : 30;
+  const parsedQuery = querySchema.safeParse({
+    type: url.searchParams.get("type") ?? undefined,
+    days: url.searchParams.get("days") ?? undefined,
+  });
+  if (!parsedQuery.success) {
+    return NextResponse.json(
+      { success: false, error: "Invalid query parameters" },
+      { status: 400 },
+    );
+  }
 
+  const { type, days } = parsedQuery.data;
   const since = new Date();
   since.setDate(since.getDate() - days);
 
-  const conditions = [eq(healthLogs.userId, uid), gte(healthLogs.loggedAt, since)];
+  const conditions = [eq(healthLogs.userId, user.id), gte(healthLogs.loggedAt, since)];
   if (type) conditions.push(eq(healthLogs.type, type));
 
   const rows = await db
@@ -52,14 +65,28 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  const limited = rateLimit(req, { key: "health-log:post", limit: 60, windowMs: 60_000 });
-  if (!limited.ok) return limited.response;
+  const user = await resolveUser(req);
+  if (!user) {
+    return NextResponse.json(
+      { success: false, error: "Authentication required" },
+      { status: 401 },
+    );
+  }
 
   const db = getDb();
-  const uid = userId(req);
-  if (!db || !uid) {
-    return NextResponse.json({ success: false, error: "No database or user" }, { status: 400 });
+  if (!db) {
+    return NextResponse.json(
+      { success: false, error: "Database unavailable" },
+      { status: 503 },
+    );
   }
+
+  const rate = await applyRateLimitAsync(req, {
+    namespace: "health-log",
+    limit: 60,
+    windowMs: 60_000,
+  });
+  if (!rate.allowed) return rate.response;
 
   const parsed = await parseJsonBody(req, healthLogBodySchema);
   if (!parsed.success) return parsed.response;
@@ -69,7 +96,7 @@ export async function POST(req: NextRequest) {
   const [row] = await db
     .insert(healthLogs)
     .values({
-      userId: uid,
+      userId: user.id,
       type,
       value,
       unit: unit ?? null,

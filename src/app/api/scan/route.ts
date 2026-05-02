@@ -5,9 +5,11 @@
  */
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { getClientIp, parseJsonBody, validationErrorResponse } from "@/lib/api/validation";
+import { parseJsonBody, validationErrorResponse } from "@/lib/api/validation";
 import { parseAiJson } from "@/lib/ai/json";
-import { checkRateLimit, rateLimitResponse } from "@/lib/api/rate-limit";
+import { applyRateLimitAsync, getClientIp } from "@/lib/api/rate-limit";
+import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
+import { traceAsync } from "@/lib/langfuse";
 
 const scanRequestSchema = z.object({
   claim: z.string().trim().min(3).max(1200),
@@ -49,63 +51,93 @@ Rules:
 - Respond in the same language as the claim`;
 
 export async function POST(req: NextRequest) {
-  const rate = checkRateLimit({
-    key: `scan:${getClientIp(req)}`,
+  const rate = await applyRateLimitAsync(req, {
+    namespace: "scan",
     limit: 20,
     windowMs: 60_000,
   });
-  if (!rate.allowed) return rateLimitResponse(rate);
+  if (!rate.allowed) return rate.response;
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
+    return NextResponse.json(
+      { success: false, error: "AI service not configured" },
+      { status: 503 },
+    );
   }
 
   const parsed = await parseJsonBody(req, scanRequestSchema);
   if (!parsed.success) return validationErrorResponse(parsed.error);
   const { claim, locale } = parsed.data;
 
-  const localeNote = locale ? `\nThe user's language is "${locale}". Respond in that language.` : "";
+  const budget = await checkAiBudget(req);
+  if (!budget.allowed) return aiBudgetExceededResponse(budget);
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
+  const cleanClaim = sanitizeAiInput(claim);
+  const localeNote = locale
+    ? `\nThe user's language is "${locale}". Respond in that language.`
+    : "";
+
+  return traceAsync(
+    {
+      name: "ai.scan",
+      tags: ["api", "scan", locale ?? "unknown"],
+      metadata: { clientId: getClientIp(req), claimLength: cleanClaim.length },
     },
-    body: JSON.stringify({
-      model: "gpt-4o",
-      max_tokens: 600,
-      temperature: 0.3, // Lower temp for factual accuracy
-      messages: [
-        { role: "system", content: SCAN_PROMPT + localeNote },
-        { role: "user", content: `Check this claim: "${claim}"` },
-      ],
-    }),
-  });
+    async () => {
+      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: "gpt-4o",
+          max_tokens: 600,
+          temperature: 0.3,
+          messages: [
+            { role: "system", content: SCAN_PROMPT + localeNote },
+            { role: "user", content: `Check this claim: "${cleanClaim}"` },
+          ],
+        }),
+        signal: AbortSignal.timeout(30_000),
+      });
 
-  if (!response.ok) {
-    return NextResponse.json({ error: "AI service error" }, { status: 502 });
-  }
+      if (!response.ok) {
+        return NextResponse.json(
+          { success: false, error: "AI service error" },
+          { status: 502 },
+        );
+      }
 
-  const data = await response.json();
-  const content = data.choices?.[0]?.message?.content ?? "";
+      const data = await response.json();
+      const content = data.choices?.[0]?.message?.content ?? "";
 
-  const parsedAi = parseAiJson(content, scanResponseSchema);
-  if (!parsedAi.success) {
-    const safeExplanation = content.slice(0, 1400) || "The AI service did not return a structured fact-check.";
-    return NextResponse.json({
-      success: true,
-      data: {
-        verdict: "misleading",
-        emoji: "⚠️",
-        headline: "Could not fully analyze this claim",
-        explanation: safeExplanation,
-        shareText: "Always verify health claims with a trusted health worker.",
-        source: "Zuvo Health Advisor",
-      },
-    });
-  }
+      const parsedAi = parseAiJson(content, scanResponseSchema);
+      if (!parsedAi.success) {
+        return NextResponse.json({
+          success: true,
+          data: {
+            verdict: "misleading",
+            emoji: "⚠️",
+            headline: "Could not fully analyze this claim",
+            explanation:
+              "The AI service did not return a structured fact-check. Please verify the claim with a trusted health source.",
+            shareText: "Always verify health claims with a trusted health worker.",
+            source: "Sastipe Health Advisor",
+          },
+          fallback: true,
+        });
+      }
 
-  return NextResponse.json({ success: true, data: parsedAi.data });
+      return NextResponse.json(
+        { success: true, data: parsedAi.data },
+        {
+          headers: {
+            "X-Sastipe-Budget-Remaining": String(budget.remainingUserCalls),
+          },
+        },
+      );
+    },
+  );
 }

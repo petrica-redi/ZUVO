@@ -3,7 +3,9 @@ import { z } from "zod";
 import { parseJsonBody, validationError } from "@/lib/api/validation";
 import { parseAiJson } from "@/lib/ai/json";
 import { buildEmergencyConsultSummary, detectEmergencyRedFlag } from "@/lib/health/red-flags";
-import { checkRateLimit, getClientIp, rateLimitResponse } from "@/lib/api/rate-limit";
+import { applyRateLimitAsync, getClientIp } from "@/lib/api/rate-limit";
+import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
+import { traceAsync } from "@/lib/langfuse";
 
 const chatMessageSchema = z.object({
   role: z.enum(["user", "assistant"]),
@@ -74,22 +76,28 @@ Rules:
 - Respond in the same language the user writes in`;
 
 export async function POST(req: NextRequest) {
-  const rate = checkRateLimit({
-    key: `consult:${getClientIp(req)}`,
+  // Layer 1: rate limit (durable when Upstash is configured)
+  const rate = await applyRateLimitAsync(req, {
+    namespace: "consult",
     limit: 12,
     windowMs: 60_000,
   });
-  if (!rate.allowed) return rateLimitResponse(rate);
+  if (!rate.allowed) return rate.response;
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
+    return NextResponse.json(
+      { success: false, error: "AI service not configured" },
+      { status: 503 },
+    );
   }
 
   const parsed = await parseJsonBody(req, consultRequestSchema);
   if (!parsed.success) return validationError(parsed.error);
 
   const { messages, locale } = parsed.data;
+
+  // Layer 2: deterministic emergency red-flag override (free, never gated)
   const redFlag = detectEmergencyRedFlag(messages.map((m) => m.content).join("\n"));
   if (redFlag) {
     return NextResponse.json({
@@ -99,46 +107,78 @@ export async function POST(req: NextRequest) {
     });
   }
 
+  // Layer 3: AI cost & per-user cap
+  const budget = await checkAiBudget(req);
+  if (!budget.allowed) return aiBudgetExceededResponse(budget);
+
+  // Layer 4: PII scrub + prompt-injection guard before sending to provider
+  const sanitizedMessages = messages.slice(-8).map((m) => ({
+    role: m.role,
+    content: sanitizeAiInput(m.content),
+  }));
+
   const localeNote = locale
     ? `\nThe user's preferred language is "${locale}". Respond in that language.`
     : "";
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
+  return traceAsync(
+    {
+      name: "ai.consult",
+      tags: ["api", "consult", locale ?? "unknown"],
+      metadata: { clientId: getClientIp(req), messageCount: sanitizedMessages.length },
     },
-    body: JSON.stringify({
-      model: "gpt-4o",
-      max_tokens: 1000,
-      temperature: 0.4,
-      messages: [
-        { role: "system", content: CONSULT_PROMPT + localeNote },
-        ...messages.slice(-8),
-      ],
-    }),
-  });
+    async () => {
+      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: "gpt-4o",
+          max_tokens: 1000,
+          temperature: 0.4,
+          messages: [
+            { role: "system", content: CONSULT_PROMPT + localeNote },
+            ...sanitizedMessages,
+          ],
+        }),
+        signal: AbortSignal.timeout(30_000),
+      });
 
-  if (!response.ok) {
-    return NextResponse.json({ error: "AI service error" }, { status: 502 });
-  }
+      if (!response.ok) {
+        return NextResponse.json(
+          { success: false, error: "AI service error" },
+          { status: 502 },
+        );
+      }
 
-  const data = await response.json();
-  const content = data.choices?.[0]?.message?.content ?? "";
+      const data = await response.json();
+      const content = data.choices?.[0]?.message?.content ?? "";
 
-  const result = parseAiJson(content, consultResponseSchema);
-  if (!result.success) {
-    return NextResponse.json({
-      success: true,
-      data: {
-        stage: "gathering",
-        message: "I need one more detail to answer safely. What is the main symptom, how long has it been happening, and is there any trouble breathing, chest pain, heavy bleeding, fainting, or suicidal thoughts?",
-        questionsAsked: 1,
-      },
-      fallback: true,
-    });
-  }
+      const result = parseAiJson(content, consultResponseSchema);
+      if (!result.success) {
+        return NextResponse.json({
+          success: true,
+          data: {
+            stage: "gathering",
+            message:
+              "I need one more detail to answer safely. What is the main symptom, how long has it been happening, and is there any trouble breathing, chest pain, heavy bleeding, fainting, or suicidal thoughts?",
+            questionsAsked: 1,
+          },
+          fallback: true,
+        });
+      }
 
-  return NextResponse.json({ success: true, data: result.data });
+      return NextResponse.json(
+        { success: true, data: result.data },
+        {
+          headers: {
+            "X-Sastipe-Budget-Remaining": String(budget.remainingUserCalls),
+            "X-Sastipe-Budget-Backend": budget.capacityKnown ? "upstash" : "memory",
+          },
+        },
+      );
+    },
+  );
 }

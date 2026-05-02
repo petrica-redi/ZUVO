@@ -1,8 +1,9 @@
-const CACHE_NAME = "zuvo-v1";
-const OFFLINE_URL = "/offline";
+const CACHE_NAME = "zuvo-v2";
+const OFFLINE_URL = "/offline.html";
 
 const PRECACHE_URLS = [
   "/",
+  "/offline.html",
   "/manifest.json",
   "/icon-192.svg",
   "/icon-512.svg",
@@ -43,11 +44,15 @@ self.addEventListener("fetch", (event) => {
           }
           return response;
         })
-        .catch(() => {
+        .catch(async () => {
           if (event.request.mode === "navigate") {
-            return caches.match("/") || new Response(
-              "<html><body style='font-family:system-ui;text-align:center;padding:40px'><h1>You are offline</h1><p>Zuvo needs an internet connection for AI features. Some cached content may be available.</p></body></html>",
-              { headers: { "Content-Type": "text/html" } }
+            const offlinePage = await caches.match(OFFLINE_URL);
+            if (offlinePage) return offlinePage;
+            const homePage = await caches.match("/");
+            if (homePage) return homePage;
+            return new Response(
+              "Offline. Please check your connection and try again.",
+              { status: 503, headers: { "Content-Type": "text/plain" } },
             );
           }
           return cached;

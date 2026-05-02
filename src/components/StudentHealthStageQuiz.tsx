@@ -27,6 +27,7 @@ import {
 } from "@/lib/student-health-progress";
 import { Badge, Button, Card, Progress } from "@/components/ui";
 import { cn } from "@/components/ui/cn";
+import { track } from "@/lib/analytics";
 
 type Props = {
   stage: StageId;
@@ -63,6 +64,14 @@ export function StudentHealthStageQuiz({ stage }: Props) {
     }
   }, [showResult, resultSnapshot]);
 
+  // Fire quiz_started event once per stage mount.
+  const trackedStartRef = useRef(false);
+  useEffect(() => {
+    if (trackedStartRef.current) return;
+    trackedStartRef.current = true;
+    void track("quiz_started", { stage });
+  }, [stage]);
+
   const handlePick = (i: number) => {
     if (answered) return;
     setSelected(i);
@@ -80,9 +89,12 @@ export function StudentHealthStageQuiz({ stage }: Props) {
       if (passed) {
         recordQuizPass(stage, pct);
         postProgressQuizComplete(stage);
+        void track("quiz_passed", { stage, score: pct, correct, total });
       } else {
         recordQuizScore(stage, pct);
+        void track("quiz_failed", { stage, score: pct, correct, total });
       }
+      void track("quiz_attempted", { stage, score: pct, passed });
       setResultSnapshot({ correct, total, passed, pct });
       setShowResult(true);
     } else {

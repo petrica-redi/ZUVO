@@ -3,7 +3,9 @@ import { z } from "zod";
 import { parseJsonBody } from "@/lib/api/validation";
 import { parseAiJson } from "@/lib/ai/json";
 import { detectRedFlag, redFlagSymptomResult } from "@/lib/health/red-flags";
-import { checkRateLimit, getClientIp, rateLimitExceeded } from "@/lib/api/rate-limit";
+import { applyRateLimitAsync, getClientIp } from "@/lib/api/rate-limit";
+import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
+import { traceAsync } from "@/lib/langfuse";
 
 const SYMPTOM_PROMPT = `You are a Roma health mediator with 15 years of field experience conducting a symptom triage. You are NOT a doctor. You NEVER diagnose. You help people understand how serious their symptoms might be and what to do next.
 
@@ -34,16 +36,19 @@ Rules:
 - Respond in the user's language`;
 
 export async function POST(req: NextRequest) {
-  const rate = checkRateLimit({
-    key: `symptom:${getClientIp(req)}`,
+  const rate = await applyRateLimitAsync(req, {
+    namespace: "symptom",
     limit: 15,
     windowMs: 60_000,
   });
-  if (!rate.allowed) return rateLimitExceeded(rate);
+  if (!rate.allowed) return rate.response;
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
+    return NextResponse.json(
+      { success: false, error: "AI service not configured" },
+      { status: 503 },
+    );
   }
 
   const parsed = await parseJsonBody(req, symptomRequestSchema);
@@ -52,56 +57,95 @@ export async function POST(req: NextRequest) {
 
   const redFlag = detectRedFlag([bodyArea, symptoms, age, gender].filter(Boolean).join(" "));
   if (redFlag) {
-    return NextResponse.json({ success: true, data: redFlagSymptomResult(redFlag) });
+    return NextResponse.json({
+      success: true,
+      data: redFlagSymptomResult(redFlag),
+      safetyOverride: true,
+    });
   }
+
+  const budget = await checkAiBudget(req);
+  if (!budget.allowed) return aiBudgetExceededResponse(budget);
+
+  const cleanBodyArea = sanitizeAiInput(bodyArea);
+  const cleanSymptoms = sanitizeAiInput(symptoms);
+  const cleanAge = age ? sanitizeAiInput(age) : undefined;
+  const cleanGender = gender ? sanitizeAiInput(gender) : undefined;
 
   const localeNote = locale ? `\nRespond in the user's language: "${locale}".` : "";
-  const demographics = [age && `Age: ${age}`, gender && `Gender: ${gender}`].filter(Boolean).join(", ");
+  const demographics = [cleanAge && `Age: ${cleanAge}`, cleanGender && `Gender: ${cleanGender}`]
+    .filter(Boolean)
+    .join(", ");
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
+  return traceAsync(
+    {
+      name: "ai.symptom-check",
+      tags: ["api", "symptom-check", locale ?? "unknown"],
+      metadata: { clientId: getClientIp(req), bodyArea: cleanBodyArea },
     },
-    body: JSON.stringify({
-      model: "gpt-4o",
-      max_tokens: 800,
-      temperature: 0.3,
-      messages: [
-        { role: "system", content: SYMPTOM_PROMPT + localeNote },
-        {
-          role: "user",
-          content: `Body area: ${bodyArea}\nSymptoms: ${symptoms}${demographics ? `\n${demographics}` : ""}`,
+    async () => {
+      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
         },
-      ],
-    }),
-  });
+        body: JSON.stringify({
+          model: "gpt-4o",
+          max_tokens: 800,
+          temperature: 0.3,
+          messages: [
+            { role: "system", content: SYMPTOM_PROMPT + localeNote },
+            {
+              role: "user",
+              content: `Body area: ${cleanBodyArea}\nSymptoms: ${cleanSymptoms}${demographics ? `\n${demographics}` : ""}`,
+            },
+          ],
+        }),
+        signal: AbortSignal.timeout(30_000),
+      });
 
-  if (!response.ok) {
-    return NextResponse.json({ error: "AI service error" }, { status: 502 });
-  }
+      if (!response.ok) {
+        return NextResponse.json(
+          { success: false, error: "AI service error" },
+          { status: 502 },
+        );
+      }
 
-  const data = await response.json();
-  const content = data.choices?.[0]?.message?.content ?? "";
-  const result = parseAiJson(content, symptomResultSchema);
-  if (result.success) {
-    return NextResponse.json({ success: true, data: result.data });
-  }
+      const data = await response.json();
+      const content = data.choices?.[0]?.message?.content ?? "";
+      const result = parseAiJson(content, symptomResultSchema);
+      if (result.success) {
+        return NextResponse.json(
+          { success: true, data: result.data },
+          {
+            headers: {
+              "X-Sastipe-Budget-Remaining": String(budget.remainingUserCalls),
+            },
+          },
+        );
+      }
 
-  return NextResponse.json({
-    success: true,
-    data: {
-      severity: "amber",
-      title: "Could not fully assess",
-      assessment: content || "Please describe your symptoms in more detail.",
-      immediateAction: "If you feel very unwell, call 112.",
-      homeCare: [],
-      warningSignsToEscalate: ["Difficulty breathing", "Severe pain", "Loss of consciousness"],
-      commonCauses: [],
-      preventionTips: [],
+      return NextResponse.json({
+        success: true,
+        data: {
+          severity: "amber",
+          title: "Could not fully assess",
+          assessment: "Please describe your symptoms in more detail and try again.",
+          immediateAction: "If you feel very unwell, call 112.",
+          homeCare: [],
+          warningSignsToEscalate: [
+            "Difficulty breathing",
+            "Severe pain",
+            "Loss of consciousness",
+          ],
+          commonCauses: [],
+          preventionTips: [],
+        },
+        fallback: true,
+      });
     },
-  });
+  );
 }
 
 const symptomRequestSchema = z.object({

@@ -10,10 +10,14 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  NEXT_TELEMETRY_DISABLED: "1"
+
 jobs:
   quality:
-    name: Typecheck → Lint → Test → Build → E2E
+    name: Typecheck → Lint → Unit → Build → E2E
     runs-on: ubuntu-latest
+    timeout-minutes: 25
 
     steps:
       - uses: actions/checkout@v4
@@ -32,24 +36,36 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Validate environment contract
+        run: npm run check:env
+        env:
+          SASTIPE_FORCE_ENV: ci
+          NEXT_PUBLIC_APP_URL: https://sastipe.org
+          DATABASE_URL: postgres://ci:ci@localhost/ci
+
       - name: Unit tests
         run: npm run test
 
       - name: Build
         run: npm run build
         env:
+          # Mirror Vercel's "preview" env so the prebuild env check is satisfied.
+          SASTIPE_FORCE_ENV: preview
           NEXT_PUBLIC_APP_NAME: Sastipe
           NEXT_PUBLIC_DEFAULT_LOCALE: sq
           NEXT_PUBLIC_SUPPORTED_LOCALES: sq,rom,en
           NEXT_PUBLIC_APP_URL: https://sastipe.org
-          # Drizzle client throws if DATABASE_URL is missing; use a placeholder for build
           DATABASE_URL: postgres://ci:ci@localhost/ci
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: E2E tests
+      - name: E2E tests against production build
         run: npm run test:e2e
+        env:
+          SASTIPE_FORCE_ENV: preview
+          NEXT_PUBLIC_APP_URL: https://sastipe.org
+          DATABASE_URL: postgres://ci:ci@localhost/ci
 
       - name: Upload Playwright report
         if: failure()
@@ -58,3 +74,36 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 7
+
+  lighthouse:
+    name: Lighthouse CI
+    runs-on: ubuntu-latest
+    needs: quality
+    if: github.event_name == 'pull_request'
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+        env:
+          SASTIPE_FORCE_ENV: preview
+          NEXT_PUBLIC_APP_NAME: Sastipe
+          NEXT_PUBLIC_DEFAULT_LOCALE: sq
+          NEXT_PUBLIC_SUPPORTED_LOCALES: sq,rom,en
+          NEXT_PUBLIC_APP_URL: http://localhost:3000
+          DATABASE_URL: postgres://ci:ci@localhost/ci
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.14.x
+          npm run start &
+          sleep 5
+          lhci autorun --config=.lighthouserc.json || echo "::warning::Lighthouse budget exceeded"
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

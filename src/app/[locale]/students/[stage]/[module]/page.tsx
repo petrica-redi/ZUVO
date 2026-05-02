@@ -332,6 +332,9 @@ export default async function StudentModulePage({ params }: Props) {
               </section>
             )}
 
+            {/* Clinical review stamp */}
+            <ReviewStamp module={mod} t={t} />
+
             {/* Mark complete + smart next step */}
             <ErrorBoundary>
               <StudentAcademyLessonFooter
@@ -400,6 +403,41 @@ export default async function StudentModulePage({ params }: Props) {
         </ErrorBoundary>
       </main>
       <BottomNav />
+    </div>
+  );
+}
+
+function ReviewStamp({
+  module: mod,
+  t,
+}: {
+  module: { review: { reviewedAt: string; reviewerRole: string; nextReviewDue: string } };
+  t: (key: string, values?: Record<string, string | number | Date>) => string;
+}) {
+  const due = new Date(mod.review.nextReviewDue);
+  const now = new Date();
+  const overdue = due.getTime() < now.getTime();
+  const reviewed = new Date(mod.review.reviewedAt).toISOString().slice(0, 10);
+
+  return (
+    <div
+      className={`mb-5 flex items-start gap-3 rounded-2xl border p-3 text-xs leading-relaxed ${
+        overdue
+          ? "border-amber-200 bg-amber-50 text-amber-900"
+          : "border-gray-100 bg-gray-50 text-gray-600"
+      }`}
+    >
+      <span aria-hidden className="mt-0.5">
+        {overdue ? "⚠️" : "✅"}
+      </span>
+      <div className="flex-1">
+        <div className="font-black uppercase tracking-widest">
+          {t(overdue ? "lesson.reviewOverdue" : "lesson.reviewUpToDate")}
+        </div>
+        <div className="mt-0.5">
+          {t("lesson.reviewMeta", { reviewer: mod.review.reviewerRole, date: reviewed })}
+        </div>
+      </div>
     </div>
   );
 }

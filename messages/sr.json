@@ -145,7 +145,10 @@
       "stepLabel": "Lesson {current} of {total}",
       "completedNote": "Field note logged. You earned XP, saved progress, and unlocked the next best step.",
       "sourcesTitle": "Verified sources",
-      "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab."
+      "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab.",
+      "reviewUpToDate": "Reviewed for clinical accuracy",
+      "reviewOverdue": "Review overdue — verify with a clinician",
+      "reviewMeta": "Reviewed {date} by {reviewer}"
     },
     "modules": {
       "local": {
@@ -457,6 +460,70 @@
       "body": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
       "findCare": "Find care",
       "rights": "Know your rights"
+    }
+  },
+  "errors": {
+    "genericTitle": "Something went wrong",
+    "genericBody": "We hit an unexpected error. Your saved progress is safe on this device. Try reloading or come back in a moment.",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you were looking for has moved or never existed. Try the home page or jump back into the academy.",
+    "tryAgain": "Try again",
+    "goHome": "Go home",
+    "exploreAcademy": "Explore the academy",
+    "reference": "Reference"
+  },
+  "privacy": {
+    "metaTitle": "Privacy & data",
+    "metaDescription": "How Sastipe handles your data and how to exercise your rights",
+    "title": "Privacy & data",
+    "lastUpdated": "Last updated: {date}",
+    "actionsTitle": "Your data, your choice",
+    "actionsSubtitle": "Download a copy of everything we have, or request permanent deletion. Both are processed immediately and audit-logged.",
+    "exportLabel": "Download my data",
+    "exportHint": "Returns a JSON bundle of every record tied to your account. Field Lab notes stay on your device.",
+    "deleteLabel": "Delete my account",
+    "deleteHint": "Scrubs your identifying fields immediately. Hard delete after 30 days.",
+    "deleteConfirmTitle": "Delete your account?",
+    "deleteConfirmBody": "This scrubs your identifying fields right now. Your account is unrecoverable after this. Hard delete completes within 30 days. Local progress on this device will also be cleared.",
+    "deleteConfirmCta": "Yes, delete my account",
+    "deleteCancel": "Cancel",
+    "authRequired": "Please sign in to continue",
+    "unavailable": "Service unavailable. Please try again later.",
+    "successDeleted": "Your data has been scrubbed. Goodbye for now.",
+    "disclaimer": "Sastipe is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "sections": {
+      "collect": {
+        "title": "What we collect",
+        "body": "Account, preferences, lesson progress, mood and water check-ins you log, and audit records of high-value actions. We do not collect raw AI prompts or Field Lab notes — those stay on your device."
+      },
+      "use": {
+        "title": "How we use it",
+        "body": "We personalise the academy, prevent abuse, and improve content. We never sell your data. We use anonymous, aggregated analytics when enabled (PostHog) and respect Do-Not-Track."
+      },
+      "storage": {
+        "title": "Where it lives",
+        "body": "Your account and progress are stored in EU-region Supabase Postgres. Server logs and error reports use EU-region Sentry. Field Lab notes, streaks, and XP are device-local."
+      },
+      "processors": {
+        "title": "Third-party processors",
+        "body": "OpenAI processes AI prompts in real time (we scrub PII first). Sentry handles error tracking. Resend handles email. PostHog handles optional analytics. Upstash handles rate-limit counters. Each is contractually bound by a data-processing agreement."
+      },
+      "rights": {
+        "title": "Your GDPR rights",
+        "body": "You can access, port, correct, or delete your data at any time. Use the buttons above. We respond to requests within 30 days. You can also lodge a complaint with your local data-protection authority."
+      },
+      "transfers": {
+        "title": "International transfers",
+        "body": "Some processors operate globally (e.g. OpenAI). Where data leaves the EEA we rely on Standard Contractual Clauses. You can use the academy without enabling AI features."
+      },
+      "deletion": {
+        "title": "How deletion works",
+        "body": "When you click Delete, we immediately scrub identifying fields (email, name, phone). After 30 days, all rows tied to your account are permanently removed. Pseudonymised statistics may persist for population health research."
+      },
+      "contact": {
+        "title": "Data Protection Officer",
+        "body": "Email dpo@sastipe.org with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
+      }
     }
   }
 }

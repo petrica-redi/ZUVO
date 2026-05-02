@@ -86,7 +86,10 @@
     "stepLabel": "Lesson {current} of {total}",
     "completedNote": "Field note logged. You earned XP, saved progress, and unlocked the next best step.",
     "sourcesTitle": "Verified sources",
-    "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab."
+    "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab.",
+    "reviewUpToDate": "Reviewed for clinical accuracy",
+    "reviewOverdue": "Review overdue — verify with a clinician",
+    "reviewMeta": "Reviewed {date} by {reviewer}"
   },
   "modules": {
     "local": {

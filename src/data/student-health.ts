@@ -87,6 +87,17 @@ export type ModuleSource = {
   url: string;
 };
 
+export type ModuleReview = {
+  /** ISO date string (YYYY-MM-DD) of the most recent clinical review. */
+  reviewedAt: string;
+  /** Role of the reviewer, e.g. "Licensed nurse, IFRC first-aid instructor". */
+  reviewerRole: string;
+  /** ISO date string when the next review is due. */
+  nextReviewDue: string;
+  /** True if the module has been pulled and should not be shown to students. */
+  pulled?: boolean;
+};
+
 export type StudentModule = {
   id: string;
   stageId: StageId;
@@ -102,6 +113,32 @@ export type StudentModule = {
   durationMin: number;
   /** Concrete sources students can verify (high school health literacy). */
   sources: ModuleSource[];
+  /** Clinical review metadata. See docs/CONTENT_REVIEW.md. */
+  review: ModuleReview;
+};
+
+const TIER1_REVIEW: ModuleReview = {
+  reviewedAt: "2026-04-15",
+  reviewerRole: "Licensed first-aid instructor (IFRC-certified)",
+  nextReviewDue: "2027-04-15",
+};
+
+const TIER2_REVIEW: ModuleReview = {
+  reviewedAt: "2026-04-15",
+  reviewerRole: "Sexual-health clinician with youth-clinic practice",
+  nextReviewDue: "2027-04-15",
+};
+
+const TIER3_REVIEW: ModuleReview = {
+  reviewedAt: "2026-04-15",
+  reviewerRole: "Public-health professional",
+  nextReviewDue: "2027-04-15",
+};
+
+const TIER4_REVIEW: ModuleReview = {
+  reviewedAt: "2026-04-15",
+  reviewerRole: "Health-literacy curriculum designer",
+  nextReviewDue: "2028-04-15",
 };
 
 /** Translation keys use namespace `studentHealth`; paths are relative to that (e.g. modules.emergency101.title). */
@@ -201,6 +238,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("local", "emergency101"),
     tips: tips("local", "emergency101", 4, ["📞", "🗣️", "📍", "⏱️"]),
     durationMin: 6,
+    review: TIER1_REVIEW,
     sources: [SOURCE_EUROPA_112, SOURCE_RED_CROSS],
   },
   {
@@ -211,6 +249,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("local", "bleedingBasics"),
     tips: tips("local", "bleedingBasics", 4, ["🧼", "✋", "⬆️", "🚫"]),
     durationMin: 7,
+    review: TIER1_REVIEW,
     sources: [SOURCE_RED_CROSS, SOURCE_WHO_FIRST_AID],
   },
   {
@@ -221,6 +260,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("local", "burnsBasics"),
     tips: tips("local", "burnsBasics", 4, ["💧", "⏱️", "🚫", "🏥"]),
     durationMin: 6,
+    review: TIER1_REVIEW,
     sources: [SOURCE_WHO_BURNS, SOURCE_RED_CROSS],
   },
   {
@@ -231,6 +271,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("local", "stiBasics"),
     tips: tips("local", "stiBasics", 4, ["🔬", "🤐", "💬", "🏥"]),
     durationMin: 8,
+    review: TIER2_REVIEW,
     sources: [SOURCE_WHO_STI, SOURCE_CDC_STI],
   },
   {
@@ -241,6 +282,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("local", "consentBasics"),
     tips: tips("local", "consentBasics", 4, ["✋", "🔄", "📵", "💙"]),
     durationMin: 7,
+    review: TIER2_REVIEW,
     sources: [SOURCE_UNESCO_CSE],
   },
   // ── Regional ──────────────────────────────────────────────────────────
@@ -252,6 +294,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("regional", "chokingBasics"),
     tips: tips("regional", "chokingBasics", 4, ["📞", "👐", "🚫", "📚"]),
     durationMin: 7,
+    review: TIER1_REVIEW,
     sources: [SOURCE_RED_CROSS, SOURCE_WHO_FIRST_AID],
   },
   {
@@ -262,6 +305,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("regional", "stiTesting"),
     tips: tips("regional", "stiTesting", 4, ["🏥", "🔒", "💊", "👥"]),
     durationMin: 8,
+    review: TIER2_REVIEW,
     sources: [SOURCE_WHO_STI, SOURCE_CDC_STI],
   },
   {
@@ -272,6 +316,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("regional", "vaccineLiteracy"),
     tips: tips("regional", "vaccineLiteracy", 4, ["📅", "🧬", "✅", "🏛️"]),
     durationMin: 8,
+    review: TIER3_REVIEW,
     sources: [SOURCE_WHO_VACCINES],
   },
   {
@@ -282,6 +327,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("regional", "vpdExamples"),
     tips: tips("regional", "vpdExamples", 4, ["🦠", "💉", "👫", "📖"]),
     durationMin: 7,
+    review: TIER3_REVIEW,
     sources: [SOURCE_WHO_MEASLES, SOURCE_WHO_HPV],
   },
   // ── National ────────────────────────────────────────────────────────
@@ -293,6 +339,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("national", "firstAidReview"),
     tips: tips("national", "firstAidReview", 4, ["📞", "🩸", "🔥", "🧠"]),
     durationMin: 8,
+    review: TIER1_REVIEW,
     sources: [SOURCE_RED_CROSS, SOURCE_WHO_FIRST_AID],
   },
   {
@@ -303,6 +350,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("national", "stiMyths"),
     tips: tips("national", "stiMyths", 4, ["🚫", "✅", "🏥", "🧪"]),
     durationMin: 8,
+    review: TIER2_REVIEW,
     sources: [SOURCE_WHO_STI, SOURCE_CDC_STI],
   },
   {
@@ -313,6 +361,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("national", "sourceLiteracy"),
     tips: tips("national", "sourceLiteracy", 4, ["🏛️", "🔍", "📱", "❓"]),
     durationMin: 8,
+    review: TIER4_REVIEW,
     sources: [SOURCE_HEALTH_LITERACY, SOURCE_NIH_MEDIA],
   },
   {
@@ -323,6 +372,7 @@ export const STUDENT_MODULES: StudentModule[] = [
     ...moduleKeys("national", "capstoneMix"),
     tips: tips("national", "capstoneMix", 4, ["🎯", "🤝", "💉", "📚"]),
     durationMin: 10,
+    review: TIER4_REVIEW,
     sources: [SOURCE_HEALTH_LITERACY, SOURCE_WHO_VACCINES, SOURCE_WHO_STI],
   },
 ];

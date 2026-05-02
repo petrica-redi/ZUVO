@@ -1,26 +1,56 @@
 {
-  "name": "Zuvo — Health Literacy for Roma Communities",
-  "short_name": "Zuvo",
+  "name": "Sastipe — Health Literacy for Roma Communities",
+  "short_name": "Sastipe",
   "description": "AI-powered health companion. Trusted guidance for Roma communities across Europe.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
   "background_color": "#F5F5F7",
-  "theme_color": "#C0392B",
+  "theme_color": "#0F172A",
   "orientation": "portrait",
   "categories": ["health", "education", "medical"],
   "lang": "en",
+  "dir": "ltr",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/icon-192.svg",
       "sizes": "192x192",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "/icon-512.svg",
       "sizes": "512x512",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Student Health Academy",
+      "short_name": "Academy",
+      "url": "/students",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Emergency",
+      "short_name": "SOS",
+      "url": "/?sos=1",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
     }
   ]
 }

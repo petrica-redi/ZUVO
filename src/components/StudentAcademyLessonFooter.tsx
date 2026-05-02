@@ -6,13 +6,17 @@ import { ArrowRight, CheckCircle2, Sparkles, Target } from "lucide-react";
 import { MarkCompleteButton } from "@/components/MarkCompleteButton";
 import {
   addAcademyXp,
+  getAcademyLevel,
+  getCurrentStreak,
   getLessonNextStep,
+  readAcademyState,
   recordActivityToday,
   type AcademyNextStep,
 } from "@/lib/student-health-progress";
 import type { StageId } from "@/data/student-health";
 import { Card, Badge } from "@/components/ui";
 import { useToast } from "@/components/ui/Toast";
+import { track } from "@/lib/analytics";
 
 type Props = {
   pillarId: string;
@@ -75,14 +79,37 @@ export function StudentAcademyLessonFooter(props: Props) {
       <MarkCompleteButton
         {...buttonProps}
         onCompleted={() => {
+          const before = readAcademyState();
+          const beforeLevel = getAcademyLevel(before.xp).level;
+          const beforeStreak = getCurrentStreak();
           addAcademyXp(10);
           recordActivityToday();
+          const after = readAcademyState();
+          const afterLevel = getAcademyLevel(after.xp).level;
+          const afterStreak = getCurrentStreak();
+
           setAnimating(true);
           setNextStep(getLessonNextStep(stage, buttonProps.moduleId));
           toast.success(
             xpToastBody ?? "+10 XP added. Streak updated.",
             xpToastTitle ?? "Lesson logged",
           );
+
+          void track("lesson_completed", {
+            stage,
+            moduleId: buttonProps.moduleId,
+            xpEarned: 10,
+            totalXp: after.xp,
+            level: afterLevel,
+            streak: afterStreak,
+          });
+          if (afterLevel > beforeLevel) {
+            void track("level_up", { from: beforeLevel, to: afterLevel });
+          }
+          if (afterStreak > beforeStreak) {
+            void track("streak_extended", { streak: afterStreak });
+          }
+
           onCompleted?.();
           setTimeout(() => setAnimating(false), 1200);
         }}
