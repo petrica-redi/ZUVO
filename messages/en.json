@@ -861,5 +861,132 @@
         "body": "Email dpo@sastipe.org with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
       }
     }
+  },
+  "home": {
+    "kicker": "AI-Powered Health Companion",
+    "titleAccent": "Your health,",
+    "titleEnd": "explained simply.",
+    "subtitle": "Trusted guidance for Roma communities. Ask anything. No judgment.",
+    "ctaAsk": "Ask a question",
+    "ctaCheckup": "Check-up",
+    "stats": {
+      "romaInEurope": "Roma in Europe",
+      "languages": "Languages",
+      "healthZones": "Health zones"
+    },
+    "quickActionsTitle": "What do you need?",
+    "actions": {
+      "explain": "Explain\nPrescription",
+      "scan": "Fact-Check\nClaim",
+      "symptoms": "Check\nSymptoms",
+      "vaccines": "Vaccine\nGuide",
+      "consult": "Health\nConsult",
+      "navigate": "Find\nDoctor"
+    },
+    "trendingTitle": "Trending lies",
+    "factCheckCta": "Fact-check",
+    "verdicts": {
+      "false": "False",
+      "misleading": "Misleading"
+    },
+    "trending": {
+      "claim1": "Vaccines change your DNA",
+      "truth1": "Vaccines do NOT change your DNA. They teach your immune system to fight disease.",
+      "claim2": "Diabetes medicine is poison",
+      "truth2": "Diabetes medication saves lives. Cinnamon cannot replace it.",
+      "claim3": "Honey and lemon cure the flu",
+      "truth3": "They soothe a sore throat, but do NOT cure the flu."
+    },
+    "emergencyCta": "Emergency? Call 112",
+    "emergencySub": "Available 24/7 across Europe",
+    "seeAll": "See all",
+    "learnGrowTitle": "Learn & Grow",
+    "learn": {
+      "academyLabel": "Student Health Academy",
+      "academyDesc": "Staged lessons: first aid, STIs, vaccines",
+      "quizLabel": "Health Quiz",
+      "quizDesc": "Test your knowledge",
+      "glossaryLabel": "Health Glossary",
+      "glossaryDesc": "Medical terms, simply explained",
+      "rightsLabel": "Know Your Rights",
+      "rightsDesc": "Patient rights & legal help",
+      "storiesLabel": "Community Stories",
+      "storiesDesc": "Real experiences from Roma communities"
+    },
+    "mediator": {
+      "title": "Health Mediators",
+      "subtitle": "Professional tools for your community",
+      "openDashboard": "Open dashboard"
+    }
+  },
+  "more": {
+    "metaTitle": "All features",
+    "metaDescription": "Every Sastipe tool in one place",
+    "title": "All Features",
+    "sections": {
+      "tools": "Health Tools",
+      "learn": "Learn & Grow",
+      "professional": "Professional",
+      "account": "Account"
+    },
+    "items": {
+      "scanLabel": "Misinformation Scanner",
+      "scanDesc": "Fact-check health claims",
+      "symptomsLabel": "Symptom Checker",
+      "symptomsDesc": "Tap where it hurts",
+      "consultLabel": "Health Consultation",
+      "consultDesc": "AI-guided check-up",
+      "vaccinesLabel": "Vaccine Guide",
+      "vaccinesDesc": "Every vaccine explained",
+      "navigateLabel": "Healthcare Navigator",
+      "navigateDesc": "Find a doctor, know your rights",
+      "topicsLabel": "Health Topics",
+      "topicsDesc": "Six health zones with lessons",
+      "studentsLabel": "Student Health Academy",
+      "studentsDesc": "First aid, STIs, vaccines — staged learning",
+      "quizLabel": "Health Quiz",
+      "quizDesc": "Test your knowledge",
+      "glossaryLabel": "Health Glossary",
+      "glossaryDesc": "Medical terms explained simply",
+      "rightsLabel": "Know Your Rights",
+      "rightsDesc": "Patient rights & legal help",
+      "storiesLabel": "Community Stories",
+      "storiesDesc": "Real experiences from Roma families",
+      "regionsLabel": "Roma Communities",
+      "regionsDesc": "Health info by country",
+      "mediatorLabel": "Mediator Dashboard",
+      "mediatorDesc": "Tools for health mediators",
+      "profileLabel": "Profile",
+      "profileDesc": "Language, progress, data",
+      "aboutLabel": "About Sastipe",
+      "aboutDesc": "Version, privacy, contact"
+    }
+  },
+  "sos": {
+    "buttonAria": "Emergency SOS — open emergency numbers and first aid",
+    "title": "Emergency",
+    "closeAria": "Close emergency panel",
+    "callPrimary": "Call 112",
+    "ambulance": "Ambulance",
+    "police": "Police",
+    "domestic": "Domestic violence",
+    "poison": "Poison center",
+    "findHospital": "Find nearest hospital",
+    "findHospitalSub": "Opens map with directions",
+    "firstAidTitle": "First Aid",
+    "aid": {
+      "bleedingLabel": "Bleeding",
+      "bleedingSteps": "Press firmly with a clean cloth. Do not lift it. Add more cloth on top if needed. Call 112.",
+      "chokingLabel": "Choking",
+      "chokingSteps": "Five back blows between the shoulder blades. Five abdominal thrusts. Repeat. Call 112.",
+      "burnsLabel": "Burns",
+      "burnsSteps": "Cool with running water for 10+ minutes. No butter, oil, or toothpaste. Cover loosely. Call 112 for large burns.",
+      "cprLabel": "Not breathing",
+      "cprSteps": "Call 112 first. Push hard and fast in the centre of the chest, about 100 per minute. Continue until help arrives.",
+      "seizureLabel": "Seizure",
+      "seizureSteps": "Clear the area. Do not hold them down. Do not put anything in their mouth. Time it. Call 112 if it lasts more than 5 minutes.",
+      "poisonLabel": "Poisoning",
+      "poisonSteps": "Call the poison centre. Do not make them vomit. Save the container or label. Call 112."
+    }
   }
 }

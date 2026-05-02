@@ -525,5 +525,132 @@
         "body": "Email dpo@sastipe.org with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
       }
     }
+  },
+  "home": {
+    "kicker": "Sastemasqo Vakaribe AI-ça",
+    "titleAccent": "Tiro sastipen,",
+    "titleEnd": "lokho ververdo.",
+    "subtitle": "Pakivako vakaripe rromane khethanipasqe. Phuche so kames. Bi krisako.",
+    "ctaAsk": "Phuch jekh phuchipen",
+    "ctaCheckup": "Sastimasqo dikhipen",
+    "stats": {
+      "romaInEurope": "Rroma ande Evropa",
+      "languages": "Chibă",
+      "healthZones": "Sastimasqe than"
+    },
+    "quickActionsTitle": "So kerelpestar?",
+    "actions": {
+      "explain": "Ververde\ndromipen",
+      "scan": "Dikh\nvakaripen",
+      "symptoms": "Dikh\nsymptomi",
+      "vaccines": "Vaccinurea\nvakaripe",
+      "consult": "Konsulta\nsastimasqi",
+      "navigate": "Arakh\ndoktoros"
+    },
+    "trendingTitle": "Khoxhibmata kana phiraven",
+    "factCheckCta": "Dikh",
+    "verdicts": {
+      "false": "Khoxhibe",
+      "misleading": "Xoxavno"
+    },
+    "trending": {
+      "claim1": "Vaccinurea paruvénas ćiri DNA",
+      "truth1": "Vaccinurea Naj paruvénas e DNA. Won siklarénas e imuno-sistema te marenpe e nasvalipnasa.",
+      "claim2": "Drabavipe vash diabeti si dżandźar",
+      "truth2": "Drabavipe vash diabeti del jiipe. Cinnamon naj dasti te ulavena.",
+      "claim3": "Avdin thaj limono sastiarenas e gripos",
+      "truth3": "Won lokharen e galaba, ama Naj sastiarénas e gripos."
+    },
+    "emergencyCta": "Sigunipen? Akhar 112",
+    "emergencySub": "Dasti 24/7 ande sa Evropa",
+    "seeAll": "Dikh sa",
+    "learnGrowTitle": "Sikljov & Bar",
+    "learn": {
+      "academyLabel": "Akademia Sastimasqi vash Studentă",
+      "academyDesc": "Lekciji etappi: anglal-zoralipen, IST, vaccinuri",
+      "quizLabel": "Kuiz Sastimasqo",
+      "quizDesc": "Probisar ćiri džanipe",
+      "glossaryLabel": "Glosar Sastimasqo",
+      "glossaryDesc": "Drabavipasqe lava, ververde lokho",
+      "rightsLabel": "Pinżhar ćire chachimata",
+      "rightsDesc": "Pacientosqe chachimata & legalo zoralipen",
+      "storiesLabel": "Khethanipasqi Paramicha",
+      "storiesDesc": "Chachimasqe avere kethare khethanipa rromane"
+    },
+    "mediator": {
+      "title": "Sastimasqe Mediatorea",
+      "subtitle": "Profesionalo butja vash ćiro khethanipen",
+      "openDashboard": "Putar i panela"
+    }
+  },
+  "more": {
+    "metaTitle": "Sa funkciji",
+    "metaDescription": "Sa Sastipe butja k'ek than",
+    "title": "Sa funkciji",
+    "sections": {
+      "tools": "Sastimasqe Butja",
+      "learn": "Sikljov & Bar",
+      "professional": "Profesionalo",
+      "account": "Konto"
+    },
+    "items": {
+      "scanLabel": "Skaneri Khoxhibasqo",
+      "scanDesc": "Dikh sastimasqe vakaripa",
+      "symptomsLabel": "Dikhipasqe Symptomi",
+      "symptomsDesc": "Asav kaj dukhal",
+      "consultLabel": "Sastimasqi Konsulta",
+      "consultDesc": "AI-ça kerdo dikhipen",
+      "vaccinesLabel": "Vakaripe Vaccinurea",
+      "vaccinesDesc": "Sako vaccino ververdo",
+      "navigateLabel": "Sastimasqo Navigatoro",
+      "navigateDesc": "Arakh doktoros, pinżhar chachimata",
+      "topicsLabel": "Sastimasqe Tema",
+      "topicsDesc": "Šov sastimasqe than lekciencar",
+      "studentsLabel": "Akademia Sastimasqi vash Studentă",
+      "studentsDesc": "Anglal-zoralipen, IST, vaccinuri",
+      "quizLabel": "Kuiz Sastimasqo",
+      "quizDesc": "Probisar ćiri džanipe",
+      "glossaryLabel": "Glosar Sastimasqo",
+      "glossaryDesc": "Drabavipasqe lava ververde",
+      "rightsLabel": "Pinżhar ćire chachimata",
+      "rightsDesc": "Pacientosqe chachimata & legalo zoralipen",
+      "storiesLabel": "Khethanipasqi Paramicha",
+      "storiesDesc": "Chachimasqe avere kethare familij rromane",
+      "regionsLabel": "Khethanipa rromane",
+      "regionsDesc": "Sastimasqo informacia po them",
+      "mediatorLabel": "Mediatorosqi Panela",
+      "mediatorDesc": "Butja vash sastimasqe mediatorea",
+      "profileLabel": "Profilo",
+      "profileDesc": "Chib, anglesutnipen, datajencar",
+      "aboutLabel": "Pa Sastipe",
+      "aboutDesc": "Versia, privatipen, kontakto"
+    }
+  },
+  "sos": {
+    "buttonAria": "SOS Sigunipen — putar e numerea sigunipasqe thaj anglal-zoralipen",
+    "title": "Sigunipen",
+    "closeAria": "Phand i panela sigunipasqi",
+    "callPrimary": "Akhar 112",
+    "ambulance": "Ambulansa",
+    "police": "Politia",
+    "domestic": "Familijaqi nasilstva",
+    "poison": "Centro pe traipe",
+    "findHospital": "Arakh o pașo bolnicakaro",
+    "findHospitalSub": "Putar i karta direkcijencar",
+    "firstAidTitle": "Anglal-zoralipen",
+    "aid": {
+      "bleedingLabel": "Mardo rat",
+      "bleedingSteps": "Dža zorane jek uzhe gada. Na vazde la. Šuti maj but uzhe gada opra te trubul. Akhar 112.",
+      "chokingLabel": "Tasalo",
+      "chokingSteps": "Pandž kompon ke phigě maškar phigerě. Pandž khurripe ke kham. Phir. Akhar 112.",
+      "burnsLabel": "Phabarde",
+      "burnsSteps": "Šudro paj 10+ minuturi. Na khil, vulin, na pasta dandengi. Učhar lokho. Akhar 112 baroze phabarde.",
+      "cprLabel": "Na phurdel",
+      "cprSteps": "Mai-anglal akhar 112. Pres zorane thaj sigo k-o maškar e koltura, kana 100 pe minuto. Phir dži kana avlol o ažutipen.",
+      "seizureLabel": "Konvulsia",
+      "seizureSteps": "Mukav o than. Na inkər. Na šuti khanč ande mui. Numerin o vakto. Akhar 112 te traisarel po-baro 5 minuturi.",
+      "poisonLabel": "Otravipen",
+      "poisonSteps": "Akhar centro pe traipe. Na ker te šadel. Garav o bokso vai etiketa. Akhar 112."
+    }
   }
 }

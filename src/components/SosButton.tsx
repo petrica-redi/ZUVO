@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, X, Heart, Shield, Flame, Pill, MapPin, AlertTriangle } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Phone, X, Heart, Shield, Pill, MapPin, AlertTriangle } from "lucide-react";
 
 const EMERGENCY_NUMBERS: Record<string, { ambulance: string; police: string; fire: string; domestic: string; poison: string }> = {
   albania:   { ambulance: "127", police: "129", fire: "128", domestic: "116 117", poison: "127" },
@@ -14,15 +15,16 @@ const EMERGENCY_NUMBERS: Record<string, { ambulance: string; police: string; fir
 };
 
 const FIRST_AID = [
-  { id: "bleeding", emoji: "🩸", label: "Bleeding", steps: "Press HARD with clean cloth. Do NOT lift. Add more cloth on top. Call 112." },
-  { id: "choking", emoji: "😮", label: "Choking", steps: "5 back blows between shoulder blades. 5 abdominal thrusts. Repeat. Call 112." },
-  { id: "burns", emoji: "🔥", label: "Burns", steps: "Cool water 10+ min. No butter/oil/toothpaste. Cover loosely. Call 112 if large." },
-  { id: "cpr", emoji: "💓", label: "Not breathing", steps: "Call 112. Push hard & fast center of chest. 100/min. Don't stop until help arrives." },
-  { id: "seizure", emoji: "⚡", label: "Seizure", steps: "Clear area. Do NOT hold them down. Do NOT put anything in mouth. Time it. Call 112 if >5min." },
-  { id: "poison", emoji: "☠️", label: "Poisoning", steps: "Call poison center. Do NOT make them vomit. Save the container/label. Call 112." },
-];
+  { id: "bleeding", emoji: "🩸" },
+  { id: "choking", emoji: "😮" },
+  { id: "burns", emoji: "🔥" },
+  { id: "cpr", emoji: "💓" },
+  { id: "seizure", emoji: "⚡" },
+  { id: "poison", emoji: "☠️" },
+] as const;
 
 export function SosButton() {
+  const t = useTranslations("sos");
   const [open, setOpen] = useState(false);
   const [showFirstAid, setShowFirstAid] = useState<string | null>(null);
 
@@ -34,7 +36,7 @@ export function SosButton() {
         onClick={() => setOpen(true)}
         className="absolute right-3 top-14 z-50 flex h-12 w-12 items-center justify-center rounded-full shadow-lg animate-pulse-glow"
         style={{ background: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)" }}
-        aria-label="Emergency SOS — tap for emergency numbers and first aid"
+        aria-label={t("buttonAria")}
       >
         <div className="flex flex-col items-center">
           <Phone className="h-4 w-4 text-white" />
@@ -45,16 +47,16 @@ export function SosButton() {
   }
 
   return (
-    <div className="fixed inset-0 z-[100] flex flex-col bg-black/95 text-white animate-fade-in" role="dialog" aria-label="Emergency information">
+    <div className="fixed inset-0 z-[100] flex flex-col bg-black/95 text-white animate-fade-in" role="dialog" aria-label={t("title")}>
       <div className="flex items-center justify-between p-5">
         <div className="flex items-center gap-3">
           <AlertTriangle className="h-7 w-7 text-red-400" />
-          <span className="text-xl font-black tracking-tight">Emergency</span>
+          <span className="text-xl font-black tracking-tight">{t("title")}</span>
         </div>
         <button
           onClick={() => { setOpen(false); setShowFirstAid(null); }}
           className="rounded-full bg-white/10 p-3 transition-colors hover:bg-white/20"
-          aria-label="Close emergency panel"
+          aria-label={t("closeAria")}
         >
           <X className="h-5 w-5" />
         </button>
@@ -67,24 +69,24 @@ export function SosButton() {
           style={{ background: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)" }}
         >
           <Phone className="h-8 w-8" />
-          Call 112
+          {t("callPrimary")}
         </a>
 
         <div className="mb-6 grid grid-cols-2 gap-3">
           {[
-            { icon: Heart, label: "Ambulance", number: numbers.ambulance, color: "text-red-400" },
-            { icon: Shield, label: "Police", number: numbers.police, color: "text-blue-400" },
-            { icon: Phone, label: "Domestic violence", number: numbers.domestic, color: "text-purple-400" },
-            { icon: Pill, label: "Poison center", number: numbers.poison, color: "text-green-400" },
+            { id: "ambulance", icon: Heart, number: numbers.ambulance, color: "text-red-400" },
+            { id: "police", icon: Shield, number: numbers.police, color: "text-blue-400" },
+            { id: "domestic", icon: Phone, number: numbers.domestic, color: "text-purple-400" },
+            { id: "poison", icon: Pill, number: numbers.poison, color: "text-green-400" },
           ].map((item) => (
             <a
-              key={item.label}
+              key={item.id}
               href={`tel:${item.number.replace(/\s/g, "")}`}
               className="flex items-center gap-3 rounded-2xl bg-white/10 p-4 transition-colors active:bg-white/20"
             >
               <item.icon className={`h-6 w-6 ${item.color}`} />
               <div>
-                <div className="text-xs text-gray-400">{item.label}</div>
+                <div className="text-xs text-gray-400">{t(item.id)}</div>
                 <div className="text-lg font-bold">{item.number}</div>
               </div>
             </a>
@@ -99,12 +101,12 @@ export function SosButton() {
         >
           <MapPin className="h-6 w-6 text-amber-400" />
           <div>
-            <div className="text-base font-bold">Find nearest hospital</div>
-            <div className="text-sm text-gray-400">Opens map with directions</div>
+            <div className="text-base font-bold">{t("findHospital")}</div>
+            <div className="text-sm text-gray-400">{t("findHospitalSub")}</div>
           </div>
         </a>
 
-        <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-gray-400">First Aid</h3>
+        <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-gray-400">{t("firstAidTitle")}</h3>
         <div className="grid grid-cols-3 gap-3">
           {FIRST_AID.map((fa) => (
             <button
@@ -114,8 +116,8 @@ export function SosButton() {
                 showFirstAid === fa.id ? "bg-red-900/50 ring-2 ring-red-500 scale-105" : "bg-white/10"
               }`}
             >
-              <span className="text-3xl">{fa.emoji}</span>
-              <span className="text-xs font-semibold">{fa.label}</span>
+              <span className="text-3xl" aria-hidden>{fa.emoji}</span>
+              <span className="text-xs font-semibold">{t(`aid.${fa.id}Label`)}</span>
             </button>
           ))}
         </div>
@@ -123,7 +125,7 @@ export function SosButton() {
         {showFirstAid && (
           <div className="mt-4 rounded-2xl bg-red-900/40 p-5 ring-1 ring-red-700 animate-scale-in">
             <p className="text-base font-bold leading-relaxed">
-              {FIRST_AID.find((f) => f.id === showFirstAid)?.steps}
+              {t(`aid.${showFirstAid}Steps`)}
             </p>
           </div>
         )}

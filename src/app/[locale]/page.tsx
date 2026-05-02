@@ -21,30 +21,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const QUICK_ACTIONS = [
-  { id: "explain", href: "/explain", icon: FileText, label: "Explain\nPrescription", gradient: "from-blue-500 to-indigo-600", shadow: "shadow-blue-500/20" },
-  { id: "scan", href: "/scan", icon: Search, label: "Fact-Check\nClaim", gradient: "from-amber-400 to-orange-500", shadow: "shadow-amber-500/20" },
-  { id: "symptoms", href: "/symptoms", icon: Activity, label: "Check\nSymptoms", gradient: "from-red-500 to-rose-600", shadow: "shadow-red-500/20" },
-  { id: "vaccines", href: "/vaccines", icon: Syringe, label: "Vaccine\nGuide", gradient: "from-emerald-500 to-green-600", shadow: "shadow-emerald-500/20" },
-  { id: "consult", href: "/consult", icon: Stethoscope, label: "Health\nConsult", gradient: "from-violet-500 to-purple-600", shadow: "shadow-violet-500/20" },
-  { id: "navigate", href: "/navigate", icon: Navigation, label: "Find\nDoctor", gradient: "from-cyan-500 to-blue-600", shadow: "shadow-cyan-500/20" },
+  { id: "explain", href: "/explain", icon: FileText, gradient: "from-blue-500 to-indigo-600", shadow: "shadow-blue-500/20" },
+  { id: "scan", href: "/scan", icon: Search, gradient: "from-amber-400 to-orange-500", shadow: "shadow-amber-500/20" },
+  { id: "symptoms", href: "/symptoms", icon: Activity, gradient: "from-red-500 to-rose-600", shadow: "shadow-red-500/20" },
+  { id: "vaccines", href: "/vaccines", icon: Syringe, gradient: "from-emerald-500 to-green-600", shadow: "shadow-emerald-500/20" },
+  { id: "consult", href: "/consult", icon: Stethoscope, gradient: "from-violet-500 to-purple-600", shadow: "shadow-violet-500/20" },
+  { id: "navigate", href: "/navigate", icon: Navigation, gradient: "from-cyan-500 to-blue-600", shadow: "shadow-cyan-500/20" },
 ] as const;
 
-const TRENDING_MISINFO = [
-  {
-    claim: "\"Vaccines change your DNA\"",
-    verdict: "false" as const,
-    truth: "Vaccines do NOT change your DNA. They teach your immune system to fight disease.",
-  },
-  {
-    claim: "\"Diabetes medicine is poison\"",
-    verdict: "false" as const,
-    truth: "Diabetes medication saves lives. Cinnamon cannot replace it.",
-  },
-  {
-    claim: "\"Honey and lemon cure the flu\"",
-    verdict: "misleading" as const,
-    truth: "They soothe a sore throat, but do NOT cure the flu.",
-  },
+const TRENDING = [
+  { claimKey: "claim1", truthKey: "truth1", verdict: "false" as const },
+  { claimKey: "claim2", truthKey: "truth2", verdict: "false" as const },
+  { claimKey: "claim3", truthKey: "truth3", verdict: "misleading" as const },
 ];
 
 const PILLARS = [
@@ -57,13 +45,21 @@ const PILLARS = [
 ] as const;
 
 const VERDICT_STYLE = {
-  false: { bg: "bg-red-50", border: "border-red-200", badge: "bg-red-500", icon: XCircle, label: "False" },
-  misleading: { bg: "bg-amber-50", border: "border-amber-200", badge: "bg-amber-500", icon: AlertTriangle, label: "Misleading" },
+  false: { bg: "bg-red-50", border: "border-red-200", badge: "bg-red-500", icon: XCircle },
+  misleading: { bg: "bg-amber-50", border: "border-amber-200", badge: "bg-amber-500", icon: AlertTriangle },
 };
+
+const LEARN_ITEMS = [
+  { href: "/students", icon: Trophy, key: "academy", gradient: "from-indigo-500 to-violet-600", shadow: "shadow-indigo-500/20" },
+  { href: "/quiz", icon: GraduationCap, key: "quiz", gradient: "from-amber-500 to-orange-600", shadow: "shadow-amber-500/20" },
+  { href: "/glossary", icon: BookOpen, key: "glossary", gradient: "from-teal-500 to-cyan-600", shadow: "shadow-teal-500/20" },
+  { href: "/rights", icon: Scale, key: "rights", gradient: "from-indigo-500 to-purple-600", shadow: "shadow-indigo-500/20" },
+  { href: "/stories", icon: Heart, key: "stories", gradient: "from-rose-500 to-pink-600", shadow: "shadow-rose-500/20" },
+] as const;
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "hero" });
+  const t = await getTranslations({ locale, namespace: "home" });
   const tPillars = await getTranslations({ locale, namespace: "pillars" });
 
   return (
@@ -78,19 +74,19 @@ export default async function HomePage({ params }: Props) {
 
           <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-3 py-1 animate-fade-in-up">
             <Sparkles className="h-3 w-3 text-[#C0392B]" />
-            <span className="text-[11px] font-bold text-[#C0392B]">AI-Powered Health Companion</span>
+            <span className="text-[11px] font-bold text-[#C0392B]">{t("kicker")}</span>
           </div>
 
           <h1 className="mb-2 text-[28px] font-black leading-[1.08] tracking-tight animate-fade-in-up delay-100" style={{ letterSpacing: "-0.03em" }}>
             <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #C0392B 0%, #E74C3C 40%, #F39C12 100%)" }}>
-              Your health,
+              {t("titleAccent")}
             </span>
             <br />
-            <span className="text-gray-900">explained simply.</span>
+            <span className="text-gray-900">{t("titleEnd")}</span>
           </h1>
 
           <p className="mb-5 text-[14px] leading-relaxed text-gray-500 animate-fade-in-up delay-200">
-            Trusted guidance for Roma communities.<br />Ask anything. No judgment.
+            {t("subtitle")}
           </p>
 
           <div className="flex gap-3 animate-fade-in-up delay-300">
@@ -99,13 +95,13 @@ export default async function HomePage({ params }: Props) {
               className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-2xl text-[15px] font-bold text-white shadow-lg shadow-red-500/20 active:scale-[0.97]"
               style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" }}
             >
-              <MessageCircle className="h-5 w-5" /> Ask a question
+              <MessageCircle className="h-5 w-5" /> {t("ctaAsk")}
             </Link>
             <Link
               href="/consult"
               className="flex h-[52px] items-center gap-2 rounded-2xl border-2 border-gray-200 bg-white px-5 text-[15px] font-bold text-gray-700 active:scale-[0.97]"
             >
-              <Stethoscope className="h-5 w-5 text-emerald-500" /> Check-up
+              <Stethoscope className="h-5 w-5 text-emerald-500" /> {t("ctaCheckup")}
             </Link>
           </div>
         </section>
@@ -114,14 +110,14 @@ export default async function HomePage({ params }: Props) {
         <section className="px-4 py-3 animate-fade-in-up delay-400">
           <div className="grid grid-cols-3 divide-x divide-gray-100 rounded-2xl bg-white shadow-sm" style={{ border: "1px solid rgba(0,0,0,0.04)" }}>
             {[
-              { icon: Globe, value: "10M+", label: "Roma in Europe", color: "#C0392B" },
-              { icon: Heart, value: "15", label: "Languages", color: "#F39C12" },
-              { icon: Shield, value: "6", label: "Health zones", color: "#3B82F6" },
+              { id: "romaInEurope", icon: Globe, value: "10M+", color: "#C0392B" },
+              { id: "languages", icon: Heart, value: "15", color: "#F39C12" },
+              { id: "healthZones", icon: Shield, value: "6", color: "#3B82F6" },
             ].map((stat) => (
-              <div key={stat.label} className="flex flex-col items-center py-3.5">
+              <div key={stat.id} className="flex flex-col items-center py-3.5">
                 <stat.icon className="mb-0.5 h-4 w-4" style={{ color: stat.color }} />
                 <span className="text-[18px] font-black text-gray-900">{stat.value}</span>
-                <span className="text-[10px] font-semibold text-gray-400">{stat.label}</span>
+                <span className="text-[10px] font-semibold text-gray-400">{t(`stats.${stat.id}`)}</span>
               </div>
             ))}
           </div>
@@ -129,7 +125,7 @@ export default async function HomePage({ params }: Props) {
 
         {/* ── Quick Actions ─────────────────────────────────────────────── */}
         <section className="px-4 pt-4 pb-2">
-          <h2 className="mb-3 text-[16px] font-black text-gray-900">What do you need?</h2>
+          <h2 className="mb-3 text-[16px] font-black text-gray-900">{t("quickActionsTitle")}</h2>
           <div className="grid grid-cols-3 gap-2.5">
             {QUICK_ACTIONS.map((action, i) => (
               <Link
@@ -142,7 +138,7 @@ export default async function HomePage({ params }: Props) {
                   <action.icon className="h-[26px] w-[26px] text-white" />
                 </div>
                 <span className="text-center text-[11px] font-bold leading-[1.2] text-gray-700 whitespace-pre-line">
-                  {action.label}
+                  {t(`actions.${action.id}`)}
                 </span>
               </Link>
             ))}
@@ -153,14 +149,14 @@ export default async function HomePage({ params }: Props) {
         <section className="px-4 pt-6 pb-2">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="flex items-center gap-1.5 text-[16px] font-black text-gray-900">
-              <AlertTriangle className="h-[18px] w-[18px] text-amber-500" /> Trending lies
+              <AlertTriangle className="h-[18px] w-[18px] text-amber-500" /> {t("trendingTitle")}
             </h2>
             <Link href="/scan" className="flex items-center text-[12px] font-bold text-[#C0392B]">
-              Fact-check <ChevronRight className="h-4 w-4" />
+              {t("factCheckCta")} <ChevronRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="scrollbar-none -mx-4 flex gap-2.5 overflow-x-auto px-4 pb-1">
-            {TRENDING_MISINFO.map((item, i) => {
+            {TRENDING.map((item, i) => {
               const style = VERDICT_STYLE[item.verdict];
               const VerdictIcon = style.icon;
               return (
@@ -170,10 +166,10 @@ export default async function HomePage({ params }: Props) {
                 >
                   <span className={`mb-2 inline-flex w-fit items-center gap-1 rounded-full ${style.badge} px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-white`}>
                     <VerdictIcon className="h-3 w-3" />
-                    {style.label}
+                    {t(`verdicts.${item.verdict}`)}
                   </span>
-                  <p className="mb-2 text-[13px] font-bold text-gray-800">{item.claim}</p>
-                  <p className="text-[12px] leading-relaxed text-gray-600">{item.truth}</p>
+                  <p className="mb-2 text-[13px] font-bold text-gray-800">&ldquo;{t(`trending.${item.claimKey}`)}&rdquo;</p>
+                  <p className="text-[12px] leading-relaxed text-gray-600">{t(`trending.${item.truthKey}`)}</p>
                 </div>
               );
             })}
@@ -191,8 +187,8 @@ export default async function HomePage({ params }: Props) {
               <Phone className="h-5 w-5 text-white" />
             </div>
             <div>
-              <span className="text-[15px] font-black text-white">Emergency? Call 112</span>
-              <p className="text-[12px] text-red-200">Available 24/7 across Europe</p>
+              <span className="text-[15px] font-black text-white">{t("emergencyCta")}</span>
+              <p className="text-[12px] text-red-200">{t("emergencySub")}</p>
             </div>
           </a>
         </section>
@@ -202,7 +198,7 @@ export default async function HomePage({ params }: Props) {
           <div className="mb-3 flex items-center justify-between">
             <h2 className="text-[16px] font-black text-gray-900">{tPillars("title")}</h2>
             <Link href="/learn" className="flex items-center text-[12px] font-bold text-[#C0392B]">
-              See all <ChevronRight className="h-4 w-4" />
+              {t("seeAll")} <ChevronRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="grid grid-cols-3 gap-2.5">
@@ -224,15 +220,9 @@ export default async function HomePage({ params }: Props) {
 
         {/* ── Digital Literacy ────────────────────────────────────────── */}
         <section className="px-4 pt-6 pb-2">
-          <h2 className="mb-3 text-[16px] font-black text-gray-900">Learn & Grow</h2>
+          <h2 className="mb-3 text-[16px] font-black text-gray-900">{t("learnGrowTitle")}</h2>
           <div className="space-y-2.5">
-            {[
-              { href: "/students", icon: Trophy, label: "Student Health Academy", desc: "Staged lessons: first aid, STIs, vaccines", gradient: "from-indigo-500 to-violet-600", shadow: "shadow-indigo-500/20" },
-              { href: "/quiz", icon: GraduationCap, label: "Health Quiz", desc: "Test your knowledge", gradient: "from-amber-500 to-orange-600", shadow: "shadow-amber-500/20" },
-              { href: "/glossary", icon: BookOpen, label: "Health Glossary", desc: "Medical terms, simply explained", gradient: "from-teal-500 to-cyan-600", shadow: "shadow-teal-500/20" },
-              { href: "/rights", icon: Scale, label: "Know Your Rights", desc: "Patient rights & legal help", gradient: "from-indigo-500 to-purple-600", shadow: "shadow-indigo-500/20" },
-              { href: "/stories", icon: Heart, label: "Community Stories", desc: "Real experiences from Roma communities", gradient: "from-rose-500 to-pink-600", shadow: "shadow-rose-500/20" },
-            ].map((item) => (
+            {LEARN_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -243,8 +233,8 @@ export default async function HomePage({ params }: Props) {
                   <item.icon className="h-[22px] w-[22px] text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-[14px] font-bold text-gray-900">{item.label}</span>
-                  <p className="text-[12px] text-gray-500">{item.desc}</p>
+                  <span className="text-[14px] font-bold text-gray-900">{t(`learn.${item.key}Label`)}</span>
+                  <p className="text-[12px] text-gray-500">{t(`learn.${item.key}Desc`)}</p>
                 </div>
                 <ChevronRight className="h-4 w-4 flex-shrink-0 text-gray-300" />
               </Link>
@@ -262,15 +252,15 @@ export default async function HomePage({ params }: Props) {
                 <Users className="h-6 w-6 text-white" />
               </div>
               <div className="flex-1">
-                <h3 className="text-[15px] font-black text-white">Health Mediators</h3>
-                <p className="text-[12px] text-gray-400">Professional tools for your community</p>
+                <h3 className="text-[15px] font-black text-white">{t("mediator.title")}</h3>
+                <p className="text-[12px] text-gray-400">{t("mediator.subtitle")}</p>
               </div>
             </div>
             <Link
               href="/mediator"
               className="relative mt-3.5 inline-flex h-10 items-center gap-1.5 rounded-xl bg-white px-4 text-[13px] font-bold text-gray-900 shadow-md active:scale-[0.97]"
             >
-              Open dashboard <ArrowRight className="h-3.5 w-3.5" />
+              {t("mediator.openDashboard")} <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </section>

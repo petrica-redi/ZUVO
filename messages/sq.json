@@ -525,5 +525,132 @@
         "body": "Email dpo@sastipe.org with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
       }
     }
+  },
+  "home": {
+    "kicker": "Shoqërues Shëndetësor i Mbështetur nga AI",
+    "titleAccent": "Shëndeti yt,",
+    "titleEnd": "shpjeguar thjesht.",
+    "subtitle": "Udhëzime të besueshme për komunitetet rome. Pyetni çdo gjë. Pa gjykim.",
+    "ctaAsk": "Bëj një pyetje",
+    "ctaCheckup": "Kontroll",
+    "stats": {
+      "romaInEurope": "Romë në Evropë",
+      "languages": "Gjuhë",
+      "healthZones": "Zona shëndetësore"
+    },
+    "quickActionsTitle": "Çfarë ju duhet?",
+    "actions": {
+      "explain": "Shpjego\nrecetën",
+      "scan": "Verifiko\npretendimin",
+      "symptoms": "Kontrollo\nsimptomat",
+      "vaccines": "Udhëzues\nvaksinash",
+      "consult": "Konsulta\nshëndetësore",
+      "navigate": "Gjej\nmjek"
+    },
+    "trendingTitle": "Gënjeshtrat në modë",
+    "factCheckCta": "Verifiko",
+    "verdicts": {
+      "false": "Gënjeshtër",
+      "misleading": "Çorientues"
+    },
+    "trending": {
+      "claim1": "Vaksinat ndryshojnë ADN-në tuaj",
+      "truth1": "Vaksinat NUK ndryshojnë ADN-në. Ato i mësojnë sistemit imunitar të luftojë sëmundjen.",
+      "claim2": "Ilaçet e diabetit janë helm",
+      "truth2": "Ilaçet për diabetin shpëtojnë jetë. Kanella nuk mund t'i zëvendësojë.",
+      "claim3": "Mjalti dhe limoni shërojnë gripin",
+      "truth3": "Ato qetësojnë fytin, por NUK e shërojnë gripin."
+    },
+    "emergencyCta": "Emergjencë? Telefono 112",
+    "emergencySub": "I disponueshëm 24/7 në të gjithë Evropën",
+    "seeAll": "Shih të gjitha",
+    "learnGrowTitle": "Mëso & Rritu",
+    "learn": {
+      "academyLabel": "Akademia e Shëndetit për Studentë",
+      "academyDesc": "Mësime me faza: ndihmë e parë, IST, vaksina",
+      "quizLabel": "Kuiz Shëndetësor",
+      "quizDesc": "Testo njohuritë e tua",
+      "glossaryLabel": "Fjalor Shëndetësor",
+      "glossaryDesc": "Termat mjekësorë, të shpjeguar thjesht",
+      "rightsLabel": "Njih të drejtat e tua",
+      "rightsDesc": "Të drejtat e pacientit & ndihmë ligjore",
+      "storiesLabel": "Historitë e Komunitetit",
+      "storiesDesc": "Përvoja reale nga komunitetet rome"
+    },
+    "mediator": {
+      "title": "Ndërmjetës Shëndetësorë",
+      "subtitle": "Mjete profesionale për komunitetin tuaj",
+      "openDashboard": "Hap panelin"
+    }
+  },
+  "more": {
+    "metaTitle": "Të gjitha veçoritë",
+    "metaDescription": "Të gjitha mjetet e Sastipe në një vend",
+    "title": "Të gjitha veçoritë",
+    "sections": {
+      "tools": "Mjete shëndetësore",
+      "learn": "Mëso & Rritu",
+      "professional": "Profesional",
+      "account": "Llogaria"
+    },
+    "items": {
+      "scanLabel": "Skaner i Dezinformatës",
+      "scanDesc": "Verifiko pretendimet shëndetësore",
+      "symptomsLabel": "Kontrollues simptomash",
+      "symptomsDesc": "Prek aty ku të dhemb",
+      "consultLabel": "Konsultë shëndetësore",
+      "consultDesc": "Kontroll i udhëhequr nga AI",
+      "vaccinesLabel": "Udhëzues vaksinash",
+      "vaccinesDesc": "Çdo vaksinë e shpjeguar",
+      "navigateLabel": "Navigues shëndetësor",
+      "navigateDesc": "Gjej mjek, njih të drejtat",
+      "topicsLabel": "Tema shëndetësore",
+      "topicsDesc": "Gjashtë zona shëndetësore me mësime",
+      "studentsLabel": "Akademia e Shëndetit për Studentë",
+      "studentsDesc": "Ndihmë e parë, IST, vaksina — mësim me faza",
+      "quizLabel": "Kuiz shëndetësor",
+      "quizDesc": "Testo njohuritë",
+      "glossaryLabel": "Fjalor shëndetësor",
+      "glossaryDesc": "Termat mjekësorë të thjeshtuar",
+      "rightsLabel": "Njih të drejtat e tua",
+      "rightsDesc": "Të drejtat e pacientit & ndihmë ligjore",
+      "storiesLabel": "Historitë e komunitetit",
+      "storiesDesc": "Përvoja reale nga familjet rome",
+      "regionsLabel": "Komunitetet rome",
+      "regionsDesc": "Informacion shëndetësor sipas vendit",
+      "mediatorLabel": "Paneli i ndërmjetësit",
+      "mediatorDesc": "Mjete për ndërmjetësit shëndetësorë",
+      "profileLabel": "Profili",
+      "profileDesc": "Gjuha, përparimi, të dhënat",
+      "aboutLabel": "Rreth Sastipe",
+      "aboutDesc": "Versioni, privatësia, kontakti"
+    }
+  },
+  "sos": {
+    "buttonAria": "SOS Emergjenca — hap numrat e emergjencës dhe ndihmën e parë",
+    "title": "Emergjencë",
+    "closeAria": "Mbyll panelin e emergjencës",
+    "callPrimary": "Telefono 112",
+    "ambulance": "Ambulancë",
+    "police": "Polici",
+    "domestic": "Dhuna në familje",
+    "poison": "Qendra e helmimit",
+    "findHospital": "Gjej spitalin më të afërt",
+    "findHospitalSub": "Hap hartën me drejtimet",
+    "firstAidTitle": "Ndihma e parë",
+    "aid": {
+      "bleedingLabel": "Gjakderdhje",
+      "bleedingSteps": "Shtyp fort me një leckë të pastër. Mos e ngri. Shto më shumë leckë sipër nëse duhet. Telefono 112.",
+      "chokingLabel": "Mbytje nga ushqimi",
+      "chokingSteps": "Pesë goditje në shpinë mes shpatullave. Pesë shtytje në bark. Përsërit. Telefono 112.",
+      "burnsLabel": "Djegie",
+      "burnsSteps": "Ftoh me ujë të rrjedhshëm 10+ minuta. Pa gjalpë, vaj ose pastë dhëmbësh. Mbulo lirshëm. Telefono 112 për djegie të mëdha.",
+      "cprLabel": "Nuk frymon",
+      "cprSteps": "Telefono 112 fillimisht. Shtyp fort dhe shpejt në mes të kraharorit, rreth 100 herë në minutë. Vazhdo derisa të arrijë ndihma.",
+      "seizureLabel": "Konvulsion",
+      "seizureSteps": "Liro hapësirën. Mos e mbaj. Mos i fut asgjë në gojë. Numëro kohën. Telefono 112 nëse zgjat më shumë se 5 minuta.",
+      "poisonLabel": "Helmim",
+      "poisonSteps": "Telefono qendrën e helmimit. Mos e bëj të vjellë. Ruaje enën ose etiketën. Telefono 112."
+    }
   }
 }

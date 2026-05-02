@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Link } from "@/navigation";
+import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { SosButton } from "@/components/SosButton";
@@ -11,50 +12,53 @@ import {
 
 type Props = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata(): Promise<Metadata> {
-  return { title: "More — Zuvo", description: "All Zuvo features" };
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "more" });
+  return { title: t("metaTitle"), description: t("metaDescription") };
 }
 
 const SECTIONS = [
   {
-    title: "Health Tools",
+    id: "tools" as const,
     items: [
-      { href: "/scan", icon: Search, label: "Misinformation Scanner", desc: "Fact-check health claims", color: "#F59E0B", gradient: "from-amber-400 to-orange-500" },
-      { href: "/symptoms", icon: Activity, label: "Symptom Checker", desc: "Tap where it hurts", color: "#EF4444", gradient: "from-red-500 to-rose-600" },
-      { href: "/consult", icon: Stethoscope, label: "Health Consultation", desc: "AI-guided check-up", color: "#8B5CF6", gradient: "from-violet-500 to-purple-600" },
-      { href: "/vaccines", icon: Syringe, label: "Vaccine Guide", desc: "Every vaccine explained", color: "#10B981", gradient: "from-emerald-500 to-green-600" },
-      { href: "/navigate", icon: Navigation, label: "Healthcare Navigator", desc: "Find a doctor, know your rights", color: "#06B6D4", gradient: "from-cyan-500 to-blue-600" },
+      { href: "/scan", icon: Search, key: "scan", gradient: "from-amber-400 to-orange-500" },
+      { href: "/symptoms", icon: Activity, key: "symptoms", gradient: "from-red-500 to-rose-600" },
+      { href: "/consult", icon: Stethoscope, key: "consult", gradient: "from-violet-500 to-purple-600" },
+      { href: "/vaccines", icon: Syringe, key: "vaccines", gradient: "from-emerald-500 to-green-600" },
+      { href: "/navigate", icon: Navigation, key: "navigate", gradient: "from-cyan-500 to-blue-600" },
     ],
   },
   {
-    title: "Learn & Grow",
+    id: "learn" as const,
     items: [
-      { href: "/learn", icon: BookOpen, label: "Health Topics", desc: "6 health zones with lessons", color: "#3B82F6", gradient: "from-blue-500 to-indigo-600" },
-      { href: "/students", icon: GraduationCap, label: "Student Health Academy", desc: "First aid, STIs, vaccines — staged learning", color: "#4F46E5", gradient: "from-indigo-500 to-violet-600" },
-      { href: "/quiz", icon: GraduationCap, label: "Health Quiz", desc: "Test your knowledge", color: "#F59E0B", gradient: "from-amber-500 to-orange-600" },
-      { href: "/glossary", icon: BookOpen, label: "Health Glossary", desc: "Medical terms explained simply", color: "#0D9488", gradient: "from-teal-500 to-cyan-600" },
-      { href: "/rights", icon: Scale, label: "Know Your Rights", desc: "Patient rights & legal help", color: "#8B5CF6", gradient: "from-indigo-500 to-purple-600" },
-      { href: "/stories", icon: Heart, label: "Community Stories", desc: "Real experiences from Roma families", color: "#EC4899", gradient: "from-rose-500 to-pink-600" },
-      { href: "/regions/romania", icon: MapPin, label: "Roma Communities", desc: "Health info by country", color: "#C0392B", gradient: "from-red-500 to-red-700" },
+      { href: "/learn", icon: BookOpen, key: "topics", gradient: "from-blue-500 to-indigo-600" },
+      { href: "/students", icon: GraduationCap, key: "students", gradient: "from-indigo-500 to-violet-600" },
+      { href: "/quiz", icon: GraduationCap, key: "quiz", gradient: "from-amber-500 to-orange-600" },
+      { href: "/glossary", icon: BookOpen, key: "glossary", gradient: "from-teal-500 to-cyan-600" },
+      { href: "/rights", icon: Scale, key: "rights", gradient: "from-indigo-500 to-purple-600" },
+      { href: "/stories", icon: Heart, key: "stories", gradient: "from-rose-500 to-pink-600" },
+      { href: "/regions/romania", icon: MapPin, key: "regions", gradient: "from-red-500 to-red-700" },
     ],
   },
   {
-    title: "Professional",
+    id: "professional" as const,
     items: [
-      { href: "/mediator", icon: Shield, label: "Mediator Dashboard", desc: "Tools for health mediators", color: "#7C3AED", gradient: "from-purple-500 to-indigo-600" },
+      { href: "/mediator", icon: Shield, key: "mediator", gradient: "from-purple-500 to-indigo-600" },
     ],
   },
   {
-    title: "Account",
+    id: "account" as const,
     items: [
-      { href: "/profile", icon: User, label: "Profile", desc: "Language, progress, data", color: "#64748B", gradient: "from-gray-500 to-gray-600" },
-      { href: "/about", icon: Settings, label: "About Zuvo", desc: "Version, privacy, contact", color: "#94A3B8", gradient: "from-gray-400 to-gray-500" },
+      { href: "/profile", icon: User, key: "profile", gradient: "from-gray-500 to-gray-600" },
+      { href: "/about", icon: Settings, key: "about", gradient: "from-gray-400 to-gray-500" },
     ],
   },
 ];
 
 export default async function MorePage({ params }: Props) {
-  await params;
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "more" });
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
@@ -62,12 +66,12 @@ export default async function MorePage({ params }: Props) {
       <SosButton />
       <main id="main-content" className="flex-1 pb-2">
         <div className="px-5 py-6">
-          <h1 className="mb-6 text-2xl font-black text-gray-900 animate-fade-in-up">All Features</h1>
+          <h1 className="mb-6 text-2xl font-black text-gray-900 animate-fade-in-up">{t("title")}</h1>
 
           {SECTIONS.map((section, si) => (
-            <div key={section.title} className={`mb-6 animate-fade-in-up delay-${(si + 1) * 100}`}>
+            <div key={section.id} className={`mb-6 animate-fade-in-up delay-${(si + 1) * 100}`}>
               <h2 className="mb-3 text-xs font-black uppercase tracking-widest text-gray-400">
-                {section.title}
+                {t(`sections.${section.id}`)}
               </h2>
               <div className="overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm">
                 {section.items.map((item, i) => (
@@ -84,8 +88,8 @@ export default async function MorePage({ params }: Props) {
                       <item.icon className="h-5 w-5 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <span className="text-sm font-bold text-gray-800">{item.label}</span>
-                      <p className="text-xs text-gray-400">{item.desc}</p>
+                      <span className="text-sm font-bold text-gray-800">{t(`items.${item.key}Label`)}</span>
+                      <p className="text-xs text-gray-400">{t(`items.${item.key}Desc`)}</p>
                     </div>
                     <ChevronRight className="h-5 w-5 flex-shrink-0 text-gray-300" />
                   </Link>

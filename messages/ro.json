@@ -525,5 +525,132 @@
         "body": "Email dpo@sastipe.org with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
       }
     }
+  },
+  "home": {
+    "kicker": "Companion de Sănătate Bazat pe AI",
+    "titleAccent": "Sănătatea ta,",
+    "titleEnd": "explicată simplu.",
+    "subtitle": "Îndrumare de încredere pentru comunitățile rome. Întreabă orice. Fără judecată.",
+    "ctaAsk": "Pune o întrebare",
+    "ctaCheckup": "Consult",
+    "stats": {
+      "romaInEurope": "Romi în Europa",
+      "languages": "Limbi",
+      "healthZones": "Domenii de sănătate"
+    },
+    "quickActionsTitle": "De ce aveți nevoie?",
+    "actions": {
+      "explain": "Explică\nrețeta",
+      "scan": "Verifică\nafirmația",
+      "symptoms": "Verifică\nsimptomele",
+      "vaccines": "Ghid\nvaccinuri",
+      "consult": "Consult\nsănătate",
+      "navigate": "Găsește\nmedic"
+    },
+    "trendingTitle": "Minciuni la modă",
+    "factCheckCta": "Verifică",
+    "verdicts": {
+      "false": "Fals",
+      "misleading": "Înșelător"
+    },
+    "trending": {
+      "claim1": "Vaccinurile îți schimbă ADN-ul",
+      "truth1": "Vaccinurile NU îți schimbă ADN-ul. Învață sistemul imunitar să lupte cu boala.",
+      "claim2": "Medicamentele pentru diabet sunt otravă",
+      "truth2": "Medicamentele pentru diabet salvează vieți. Scorțișoara nu le poate înlocui.",
+      "claim3": "Mierea și lămâia vindecă gripa",
+      "truth3": "Calmează durerea în gât, dar NU vindecă gripa."
+    },
+    "emergencyCta": "Urgență? Sună la 112",
+    "emergencySub": "Disponibil 24/7 în toată Europa",
+    "seeAll": "Vezi toate",
+    "learnGrowTitle": "Învață & Crește",
+    "learn": {
+      "academyLabel": "Academia de Sănătate pentru Elevi",
+      "academyDesc": "Lecții pe etape: prim ajutor, ITS, vaccinuri",
+      "quizLabel": "Test de sănătate",
+      "quizDesc": "Testează-ți cunoștințele",
+      "glossaryLabel": "Glosar medical",
+      "glossaryDesc": "Termeni medicali, explicați simplu",
+      "rightsLabel": "Cunoaște-ți drepturile",
+      "rightsDesc": "Drepturile pacientului & ajutor legal",
+      "storiesLabel": "Povești ale comunității",
+      "storiesDesc": "Experiențe reale din comunitățile rome"
+    },
+    "mediator": {
+      "title": "Mediatori sanitari",
+      "subtitle": "Instrumente profesionale pentru comunitatea ta",
+      "openDashboard": "Deschide panoul"
+    }
+  },
+  "more": {
+    "metaTitle": "Toate funcționalitățile",
+    "metaDescription": "Toate instrumentele Sastipe într-un singur loc",
+    "title": "Toate funcționalitățile",
+    "sections": {
+      "tools": "Instrumente de sănătate",
+      "learn": "Învață & Crește",
+      "professional": "Profesional",
+      "account": "Cont"
+    },
+    "items": {
+      "scanLabel": "Scaner de dezinformare",
+      "scanDesc": "Verifică afirmațiile despre sănătate",
+      "symptomsLabel": "Verificator de simptome",
+      "symptomsDesc": "Apasă unde te doare",
+      "consultLabel": "Consultație medicală",
+      "consultDesc": "Verificare ghidată de AI",
+      "vaccinesLabel": "Ghid vaccinuri",
+      "vaccinesDesc": "Fiecare vaccin explicat",
+      "navigateLabel": "Navigator de sănătate",
+      "navigateDesc": "Găsește un medic, cunoaște-ți drepturile",
+      "topicsLabel": "Subiecte de sănătate",
+      "topicsDesc": "Șase domenii cu lecții",
+      "studentsLabel": "Academia de Sănătate pentru Elevi",
+      "studentsDesc": "Prim ajutor, ITS, vaccinuri — lecții pe etape",
+      "quizLabel": "Test de sănătate",
+      "quizDesc": "Testează-ți cunoștințele",
+      "glossaryLabel": "Glosar medical",
+      "glossaryDesc": "Termeni medicali simplificați",
+      "rightsLabel": "Cunoaște-ți drepturile",
+      "rightsDesc": "Drepturile pacientului & ajutor legal",
+      "storiesLabel": "Povești ale comunității",
+      "storiesDesc": "Experiențe reale din familiile rome",
+      "regionsLabel": "Comunități rome",
+      "regionsDesc": "Informații de sănătate pe țară",
+      "mediatorLabel": "Panou mediator",
+      "mediatorDesc": "Instrumente pentru mediatori sanitari",
+      "profileLabel": "Profil",
+      "profileDesc": "Limbă, progres, date",
+      "aboutLabel": "Despre Sastipe",
+      "aboutDesc": "Versiune, confidențialitate, contact"
+    }
+  },
+  "sos": {
+    "buttonAria": "SOS Urgență — deschide numerele de urgență și prim ajutorul",
+    "title": "Urgență",
+    "closeAria": "Închide panoul de urgență",
+    "callPrimary": "Sună la 112",
+    "ambulance": "Ambulanță",
+    "police": "Poliție",
+    "domestic": "Violență domestică",
+    "poison": "Centru antitoxic",
+    "findHospital": "Găsește cel mai apropiat spital",
+    "findHospitalSub": "Deschide harta cu indicații",
+    "firstAidTitle": "Prim ajutor",
+    "aid": {
+      "bleedingLabel": "Sângerare",
+      "bleedingSteps": "Apasă ferm cu o cârpă curată. Nu o ridica. Adaugă mai multe cârpe deasupra dacă e nevoie. Sună la 112.",
+      "chokingLabel": "Sufocare",
+      "chokingSteps": "Cinci lovituri în spate, între omoplați. Cinci compresii abdominale. Repetă. Sună la 112.",
+      "burnsLabel": "Arsuri",
+      "burnsSteps": "Răcește cu apă curgătoare 10+ minute. Fără unt, ulei sau pastă de dinți. Acoperă lejer. Sună la 112 pentru arsuri mari.",
+      "cprLabel": "Nu respiră",
+      "cprSteps": "Sună mai întâi la 112. Apasă tare și rapid în mijlocul pieptului, aproximativ 100 pe minut. Continuă până sosește ajutorul.",
+      "seizureLabel": "Convulsii",
+      "seizureSteps": "Eliberează zona. Nu îl ține de mâini. Nu îi pune nimic în gură. Cronometrează. Sună la 112 dacă durează peste 5 minute.",
+      "poisonLabel": "Otrăvire",
+      "poisonSteps": "Sună la centrul antitoxic. Nu provoca voma. Păstrează recipientul sau eticheta. Sună la 112."
+    }
   }
 }
