@@ -1,15 +1,17 @@
 {
-  "name": "Sastipe — Health Literacy for Roma Communities",
+  "name": "Sastipe — Health Literacy",
   "short_name": "Sastipe",
-  "description": "AI-powered health companion. Trusted guidance for Roma communities across Europe.",
-  "start_url": "/",
+  "description": "Multilingual health companion for Roma communities. AI-powered, gamified, and trusted.",
+  "id": "/",
+  "start_url": "/?utm_source=pwa",
   "scope": "/",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
+  "display_override": ["standalone", "minimal-ui", "browser"],
   "background_color": "#F4F6FB",
   "theme_color": "#4F46E5",
   "orientation": "portrait",
-  "categories": ["health", "education", "medical"],
+  "categories": ["health", "education", "medical", "lifestyle"],
+  "iarc_rating_id": "",
   "lang": "en",
   "dir": "ltr",
   "prefer_related_applications": false,
@@ -37,14 +39,57 @@
     {
       "name": "Student Health Academy",
       "short_name": "Academy",
-      "url": "/students",
+      "description": "Open the gamified health literacy academy",
+      "url": "/students?utm_source=pwa_shortcut",
       "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
     },
     {
-      "name": "Emergency",
+      "name": "Ask Sastipe",
+      "short_name": "Ask",
+      "description": "AI health assistant chat",
+      "url": "/chat?utm_source=pwa_shortcut",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Symptom check",
+      "short_name": "Symptoms",
+      "description": "Triage common symptoms",
+      "url": "/symptoms?utm_source=pwa_shortcut",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Emergency (SOS)",
       "short_name": "SOS",
-      "url": "/?sos=1",
+      "description": "Emergency numbers and first-aid guide",
+      "url": "/?sos=1&utm_source=pwa_shortcut",
       "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
     }
-  ]
+  ],
+  "share_target": {
+    "action": "/scan",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+sastipe",
+      "url": "/?route=%s"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "Home screen"
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 480
+  }
 }
