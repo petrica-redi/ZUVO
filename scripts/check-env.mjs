@@ -44,15 +44,23 @@ const PROFILES = {
     ],
   },
   preview: {
-    required: [
+    // Preview deployments (Vercel feature branches, Netlify previews, etc.) must
+    // be able to build with no backing services configured. Runtime code is
+    // defensive — every service wrapper returns null when its env vars are
+    // missing, so the UI renders and unconfigured features simply 503 / no-op.
+    required: [],
+    recommended: [
       "NEXT_PUBLIC_APP_URL",
       "DATABASE_URL",
+      "NEXT_PUBLIC_SUPABASE_URL",
+      "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "OPENAI_API_KEY",
+      "NEXT_PUBLIC_SENTRY_DSN",
     ],
-    recommended: ["OPENAI_API_KEY", "NEXT_PUBLIC_SENTRY_DSN"],
   },
   ci: {
-    required: ["NEXT_PUBLIC_APP_URL", "DATABASE_URL"],
-    recommended: [],
+    required: [],
+    recommended: ["NEXT_PUBLIC_APP_URL", "DATABASE_URL"],
   },
   development: {
     required: [],
