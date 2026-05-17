@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ComponentType } from "react";
+import Image from "next/image";
 import { Link } from "@/navigation";
 import { getTranslations } from "next-intl/server";
 import {
@@ -27,6 +28,7 @@ import {
 import { LandingHeader } from "@/components/landing/LandingHeader";
 import { LandingFooter } from "@/components/landing/LandingFooter";
 import { ProfileShellOptOut } from "@/components/landing/ProfileShellOptOut";
+import { LandingVisualMosaic } from "@/components/landing/LandingVisualMosaic";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -158,8 +160,24 @@ export default async function HomePage({ params }: Props) {
                 </nav>
               </div>
 
-              {/* Hero composition — refined illustration card */}
-              <HeroComposition t={t} />
+              {/* Hero composition — faux app card over AI artwork */}
+              <div className="relative isolate min-h-[300px] md:min-h-0">
+                <div className="absolute inset-0 -z-10 overflow-hidden rounded-[32px] md:rounded-[40px]" aria-hidden>
+                  <Image
+                    src="/images/ai/ai-hero-wellbeing.png"
+                    alt={t("heroBackdropAlt")}
+                    fill
+                    priority
+                    className="object-cover object-[center_28%]"
+                    sizes="(max-width: 768px) 100vw, 44vw"
+                  />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-canvas)] via-[var(--color-bg-canvas)]/60 to-transparent md:bg-gradient-to-l md:from-transparent md:via-[var(--color-bg-canvas)]/35 md:to-[var(--color-bg-canvas)]/92"
+                    aria-hidden
+                  />
+                </div>
+                <HeroComposition t={t} />
+              </div>
             </div>
           </div>
         </section>
@@ -262,6 +280,38 @@ export default async function HomePage({ params }: Props) {
           </div>
         </section>
 
+        <LandingVisualMosaic
+          eyebrow={t("visualEyebrow")}
+          title={t("visualTitle")}
+          lead={t("visualLead")}
+          tiles={[
+            {
+              href: "/students",
+              src: "/images/ai/ai-spot-academy.png",
+              label: t("navAcademy"),
+              alt: t("imageMosaicAcademyAlt"),
+            },
+            {
+              href: "/explain",
+              src: "/images/ai/ai-spot-prescription.png",
+              label: t("navExplain"),
+              alt: t("imageMosaicPrescriptionAlt"),
+            },
+            {
+              href: "/scan",
+              src: "/images/ai/ai-spot-facts.png",
+              label: t("navScan"),
+              alt: t("imageMosaicFactsAlt"),
+            },
+            {
+              href: "/mediator",
+              src: "/images/ai/ai-spot-mediator.png",
+              label: t("navMediator"),
+              alt: t("imageMosaicMediatorAlt"),
+            },
+          ]}
+        />
+
         {/* ===== TRUST STRIP ====================================== */}
         <section className="border-y border-[var(--color-border-subtle)] bg-[var(--color-cream-50)] py-7 md:py-10">
           <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -299,6 +349,8 @@ export default async function HomePage({ params }: Props) {
                 cta={t("studentCta")}
                 href="/students"
                 kicker={t("audienceKickerStudents")}
+                artSrc="/images/ai/ai-audience-students.png"
+                artAlt={t("imageAudienceStudentsAlt")}
               />
               <AudienceCard
                 accent="sage"
@@ -308,6 +360,8 @@ export default async function HomePage({ params }: Props) {
                 cta={t("communityCta")}
                 href="/providers"
                 kicker={t("audienceKickerCommunity")}
+                artSrc="/images/ai/ai-audience-community.png"
+                artAlt={t("imageAudienceCommunityAlt")}
               />
               <AudienceCard
                 accent="ember"
@@ -317,6 +371,8 @@ export default async function HomePage({ params }: Props) {
                 cta={t("ministerCta")}
                 href="/impact"
                 kicker={t("audienceKickerPartners")}
+                artSrc="/images/ai/ai-audience-partners.png"
+                artAlt={t("imageAudiencePartnersAlt")}
               />
             </div>
           </div>
@@ -516,52 +572,70 @@ function AudienceCard({
   cta,
   href,
   kicker,
+  artSrc,
+  artAlt,
 }: {
   accent: keyof typeof AUDIENCE_THEMES;
-  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
+  icon: ComponentType<{ className?: string; strokeWidth?: number }>;
   title: string;
   lead: string;
   cta: string;
   href: string;
   kicker: string;
+  artSrc?: string;
+  artAlt?: string;
 }) {
   const theme = AUDIENCE_THEMES[accent];
   return (
     <Link
       href={href}
-      className={`group relative flex flex-col rounded-3xl border ${theme.border} ${theme.bg} p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-3 md:p-8`}
+      className={`group relative flex flex-col overflow-hidden rounded-3xl border ${theme.border} ${theme.bg} transition-all duration-300 hover:-translate-y-1 hover:shadow-3`}
       style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
     >
-      <div className="flex items-start justify-between">
-        <div
-          className={`flex h-12 w-12 items-center justify-center rounded-2xl ${theme.icon} shadow-1`}
-        >
-          <Icon className="lucide h-5 w-5" strokeWidth={1.85} />
+      {artSrc && artAlt ? (
+        <div className="relative aspect-[21/10] w-full overflow-hidden bg-[var(--color-surface-subtle)]">
+          <Image
+            src={artSrc}
+            alt={artAlt}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            sizes="(max-width: 768px) 100vw, 34vw"
+          />
         </div>
-        <span
-          className={`inline-flex items-center rounded-full ${theme.chip} px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-widest`}
+      ) : null}
+
+      <div className="flex flex-1 flex-col p-7 md:p-8">
+        <div className="flex items-start justify-between">
+          <div
+            className={`flex h-12 w-12 items-center justify-center rounded-2xl ${theme.icon} shadow-1`}
+          >
+            <Icon className="lucide h-5 w-5" strokeWidth={1.85} />
+          </div>
+          <span
+            className={`inline-flex items-center rounded-full ${theme.chip} px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-widest`}
+          >
+            {kicker}
+          </span>
+        </div>
+
+        <h3
+          className="font-editorial mt-7 font-medium leading-tight text-[var(--color-text-primary)]"
+          style={{ fontSize: "clamp(1.25rem, 1rem + 0.8vw, 1.625rem)" }}
         >
-          {kicker}
+          {title}
+        </h3>
+        <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+          {lead}
+        </p>
+
+        <span className="mt-8 inline-flex items-center gap-1.5 text-sm font-extrabold text-[var(--color-text-primary)]">
+          {cta}
+          <ArrowRight
+            className="lucide h-4 w-4 transition-transform group-hover:translate-x-0.5"
+            strokeWidth={2.2}
+          />
         </span>
       </div>
-
-      <h3
-        className="font-editorial mt-7 font-medium leading-tight text-[var(--color-text-primary)]"
-        style={{ fontSize: "clamp(1.25rem, 1rem + 0.8vw, 1.625rem)" }}
-      >
-        {title}
-      </h3>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-        {lead}
-      </p>
-
-      <span className="mt-8 inline-flex items-center gap-1.5 text-sm font-extrabold text-[var(--color-text-primary)]">
-        {cta}
-        <ArrowRight
-          className="lucide h-4 w-4 transition-transform group-hover:translate-x-0.5"
-          strokeWidth={2.2}
-        />
-      </span>
     </Link>
   );
 }

@@ -7,6 +7,7 @@ import {
   Camera, Upload, X, ImageIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import NextImage from "next/image";
 
 const MAX_DIMENSION = 2048;
 const MAX_OUTPUT_BYTES = 5_000_000; // 5 MB binary post-base64
@@ -205,12 +206,24 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
   return (
     <div>
       {/* Header */}
-      <div className="mb-6 text-center animate-fade-in-up">
-        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl shadow-blue-500/25">
-          <FileText className="h-10 w-10 text-white" />
+      <div className="mb-6 animate-fade-in-up">
+        <div className="relative mb-5 aspect-[21/11] w-full overflow-hidden rounded-3xl shadow-xl">
+          <NextImage
+            src="/images/ai/ai-spot-prescription.png"
+            alt={t("heroArtAlt")}
+            fill
+            className="object-cover object-[center_42%]"
+            sizes="(max-width:768px) 100vw, 42rem"
+            priority
+          />
         </div>
-        <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
-        <p className="mt-2 text-sm text-gray-500">{t("heroSubtitle")}</p>
+        <div className="flex flex-col items-center text-center">
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl shadow-blue-500/25">
+            <FileText className="h-9 w-9 text-white" />
+          </div>
+          <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
+          <p className="mt-2 max-w-md text-sm text-gray-500">{t("heroSubtitle")}</p>
+        </div>
       </div>
 
       {/* Camera + Upload row */}

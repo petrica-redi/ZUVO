@@ -499,6 +499,7 @@
       "heroTitle2": "traducătorul de sănătate",
       "heroTitle3": "al comunității tale.",
       "heroLead": "O curriculum verificată clinic și gamificată cu trei etape — locală, regională și națională. Construită cu mediatori sanitari romi din toată Europa.",
+      "heroStatPanelImageAlt": "Ilustrație care evidențiază elevii împreună pe traseele de alfabetizare în sănătate.",
       "heroPrimaryCta": "Începe misiunea de azi",
       "heroSecondaryCta": "Vezi programa",
       "statLevel": "Nivel",
@@ -788,7 +789,8 @@
     "meta": {
       "title": "Verificare — Sastipe"
     },
-    "eyebrow": "Verificare"
+    "eyebrow": "Verificare",
+    "heroArtAlt": "Ilustrație despre combaterea miturilor și verificarea afirmațiilor de sănătate."
   },
   "install": {
     "installApp": "Install Sastipe",
@@ -803,6 +805,7 @@
   },
   "chat": {
     "askMeAnything": "Întreabă-mă orice",
+    "heroArtAlt": "Ilustrație a unui însoțitor de conversație de încredere pentru sănătate preventivă.",
     "placeholder": "Întreabă-mă orice despre sănătate…",
     "thinking": "Mă gândesc…",
     "errorMessage": "Nu m-am putut conecta. Verifică internetul și încearcă din nou.",
@@ -940,7 +943,18 @@
     "branchAcademy": "Academia pentru elevi",
     "branchPrescription": "Rețete",
     "branchFacts": "Verifică mituri",
-    "branchMediator": "Panou mediator"
+    "branchMediator": "Panou mediator",
+    "visualEyebrow": "Vezi în imagini",
+    "visualTitle": "Imaginează-ți călătoriile — arte AI inspirată de teren",
+    "visualLead": "Aceste imagini sunt sintetice (generate de AI): niciuna nu arată pacienți reali. Atinge o scenă ca să mergi în acea zonă.",
+    "heroBackdropAlt": "Imagine artistică cu oameni folosind în liniște o aplicație de sănătate multilingvă împreună.",
+    "imageMosaicAcademyAlt": "Ilustrație: elevi discutând despre educație pentru sănătate la școală.",
+    "imageMosaicPrescriptionAlt": "Ilustrație: mâini grijulii ghidând pe cineva prin doze și rețetă.",
+    "imageMosaicFactsAlt": "Ilustrație: verificarea unui zvon pe telefon față de fapte de sănătate verificate.",
+    "imageMosaicMediatorAlt": "Ilustrație: mediator în comunitate care împărtășește sănătate preventivă cu vecini.",
+    "imageAudienceStudentsAlt": "Ilustrație: tineri colaborând la obiceiuri de zi cu zi pentru sănătate.",
+    "imageAudienceCommunityAlt": "Ilustrație: cerc comunitar cald orientat către grijă preventivă.",
+    "imageAudiencePartnersAlt": "Ilustrație: decidenți ce analizează perspective anonimate de sănătate publică."
   },
   "footer": {
     "tagline": "Educație multilingvă pentru sănătate în comunitățile rome din Europa.",
@@ -986,6 +1000,7 @@
   "symptoms": {
     "heroTitle": "Unde te doare?",
     "heroSubtitle": "Atinge zona de pe corp care te deranjează",
+    "heroArtAlt": "Ilustrație: oamenii primesc ghidaj blând și multilingv despre simptome cotidiene.",
     "backToMap": "Înapoi la harta corpului",
     "checkAnother": "Verifică altă zonă",
     "selectSymptoms": "Selectează toate simptomele care se potrivesc",
@@ -1132,6 +1147,7 @@
   "explain": {
     "heroTitle": "Înțelege rețeta",
     "heroSubtitle": "Scrie diagnosticul sau numele medicamentului. Îți explicăm pe înțelesul tău.",
+    "heroArtAlt": "Ilustrație cu sprijin de tip farmacist pentru înțelegerea rețetei.",
     "placeholder": "Scrie diagnosticul, numele medicamentului sau lipește rețeta…\n\nExemplu: „Hipertensiune” sau „Metformin 500mg”",
     "inputAria": "Introdu diagnosticul sau numele medicamentului",
     "cta": "Explică-mi",

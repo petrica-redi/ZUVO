@@ -2,6 +2,7 @@
 
 import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
+import Image from "next/image";
 
 type Accent = "brand" | "ember" | "sage" | "danger";
 
@@ -43,8 +44,8 @@ const ACCENTS: Record<
 /**
  * Editorial hero for individual tool pages — gives /symptoms, /scan,
  * /chat, /explain etc. the same premium register as the landing and
- * Academy. Composable: pass an `aside` to render a beat next to the
- * headline (a stat card, a chip, etc.).
+ * Academy. Optional `heroImage` sets a soft AI-generated artwork panel;
+ * `aside` renders a custom beat (chip, stat card, etc.).
  */
 export function ToolHero({
   icon: Icon,
@@ -53,6 +54,7 @@ export function ToolHero({
   subtitle,
   accent = "brand",
   aside,
+  heroImage,
   children,
 }: {
   icon: LucideIcon;
@@ -61,6 +63,8 @@ export function ToolHero({
   subtitle?: string;
   accent?: Accent;
   aside?: ReactNode;
+  /** Illustration shown on wide screens beside the headline. */
+  heroImage?: { src: string; alt: string };
   children?: ReactNode;
 }) {
   const a = ACCENTS[accent];
@@ -73,7 +77,7 @@ export function ToolHero({
         aria-hidden
         className="pointer-events-none absolute inset-0 grain-overlay opacity-50"
       />
-      <div className="relative grid items-start gap-4 p-5 md:grid-cols-[1fr_auto] md:gap-6 md:p-7">
+      <div className="relative grid items-start gap-4 p-5 md:grid-cols-[minmax(0,1fr)_auto] md:gap-6 md:p-7">
         <div className="min-w-0">
           <div className="flex items-center gap-3">
             <div
@@ -109,7 +113,22 @@ export function ToolHero({
           {children && <div className="mt-4">{children}</div>}
         </div>
 
-        {aside && <div className="flex shrink-0 items-start md:self-start">{aside}</div>}
+        {(heroImage || aside) && (
+          <div className="flex w-full shrink-0 flex-col items-center gap-3 md:w-auto md:items-end">
+            {heroImage && (
+              <div className="relative aspect-square w-full max-w-[260px] overflow-hidden rounded-[22px] border border-[var(--color-border-subtle)] shadow-2 md:max-w-[200px]">
+                <Image
+                  src={heroImage.src}
+                  alt={heroImage.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 90vw, 200px"
+                />
+              </div>
+            )}
+            {aside && <div className="flex w-full justify-center md:w-auto md:justify-end">{aside}</div>}
+          </div>
+        )}
       </div>
     </section>
   );

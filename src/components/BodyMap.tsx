@@ -146,6 +146,10 @@ export function BodyMap({ locale }: { locale: string }) {
           eyebrow={tEmergency("emergencyLabel")}
           title={t("heroTitle")}
           subtitle={t("heroSubtitle")}
+          heroImage={{
+            src: "/images/ai/ai-hero-wellbeing.png",
+            alt: t("heroArtAlt"),
+          }}
         />
 
         {/* Body SVG */}

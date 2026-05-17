@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Send, AlertTriangle, MessageCircle, Mic, Volume2, Sparkles } from "lucide-react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
 
@@ -192,6 +193,15 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
                 aria-hidden
                 className="pointer-events-none absolute inset-0 grain-overlay opacity-50"
               />
+              <div className="relative mb-6 aspect-[16/11] w-full overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] shadow-2">
+                <Image
+                  src="/images/ai/ai-hero-wellbeing.png"
+                  alt={tChat("heroArtAlt")}
+                  fill
+                  className="object-cover object-[center_30%]"
+                  sizes="(max-width:768px) 100vw, 480px"
+                />
+              </div>
               <div className="relative flex flex-col items-center text-center">
                 <div
                   className="mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-brand-700)] shadow-2 grain-overlay"
