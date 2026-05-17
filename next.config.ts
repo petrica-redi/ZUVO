@@ -57,6 +57,7 @@ function buildCsp(): string {
       "'self'",
       "https://api.openai.com",
       "https://api.anthropic.com",
+      "https://api.deepgram.com",
       "https://*.upstash.io",
       "https://*.langfuse.com",
       posthogHost,
@@ -101,7 +102,7 @@ const nextConfig: NextConfig = {
           {
             key: "Permissions-Policy",
             value:
-              "camera=(), microphone=(), geolocation=(self), interest-cohort=(), payment=(), usb=()",
+              "camera=(self), microphone=(self), geolocation=(self), interest-cohort=(), payment=(), usb=()",
           },
           { key: "X-Frame-Options", value: "DENY" },
           {

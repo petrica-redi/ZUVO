@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Send, AlertTriangle, MessageCircle, Mic, Volume2, Sparkles } from "lucide-react";
+import { Send, AlertTriangle, MessageCircle, Mic, MicOff, Loader2, Volume2, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
+import { useDeepgramRecorder } from "@/lib/voice-recorder";
 
 type Message = {
   id: string;
@@ -34,9 +35,43 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  const { isListening, supported: voiceSupported, toggleListening } = useSpeechRecognition({
-    onResult: useCallback((text) => setInput((prev) => prev + " " + text), [])
+  // Deepgram is our primary STT engine — covers ~30 languages including the
+  // ones the browser's WebSpeech engine handles poorly (Romani, Albanian,
+  // Macedonian, etc.). When Deepgram isn't configured server-side or the
+  // browser lacks MediaRecorder, we fall back to WebSpeech automatically.
+  const [voiceError, setVoiceError] = useState<string | null>(null);
+  const [detectedLang, setDetectedLang] = useState<string | null>(null);
+  const handleVoiceResult = useCallback(
+    ({ transcript, detectedLanguage }: { transcript: string; detectedLanguage: string | null }) => {
+      if (!transcript.trim()) return;
+      setDetectedLang(detectedLanguage);
+      setVoiceError(null);
+      void sendMessageRef.current(transcript);
+    },
+    [],
+  );
+  const handleVoiceError = useCallback(
+    (err: Error) => setVoiceError(err.message || tVoice("micError")),
+    [tVoice],
+  );
+  const {
+    supported: deepgramSupported,
+    isRecording,
+    isTranscribing,
+    toggleRecording,
+  } = useDeepgramRecorder({
+    language: locale,
+    onResult: handleVoiceResult,
+    onError: handleVoiceError,
   });
+
+  const { isListening, supported: webSpeechSupported, toggleListening } = useSpeechRecognition({
+    onResult: useCallback((text: string) => setInput((prev) => prev + " " + text), []),
+  });
+
+  const voiceSupported = deepgramSupported || webSpeechSupported;
+  const toggleVoice = deepgramSupported ? toggleRecording : toggleListening;
+  const voiceActive = deepgramSupported ? isRecording : isListening;
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -52,6 +87,9 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
   const cancelledRef = useRef(false);
   const abortRef = useRef<AbortController | null>(null);
   const readerRef = useRef<ReadableStreamDefaultReader<Uint8Array> | null>(null);
+  // Keep a stable ref to sendMessage so voice callbacks can fire it without
+  // re-binding the recorder on every render.
+  const sendMessageRef = useRef<(text?: string) => Promise<void>>(async () => {});
 
   const sendMessage = async (text?: string) => {
     const content = text ?? input.trim();
@@ -164,6 +202,10 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       abortRef.current?.abort();
     };
   }, []);
+
+  useEffect(() => {
+    sendMessageRef.current = sendMessage;
+  });
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {
@@ -313,20 +355,44 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
         )}
       </div>
 
+      {/* Voice status banners */}
+      {voiceError && (
+        <div className="mb-2 rounded-2xl border border-red-100 bg-red-50 px-4 py-2 text-xs font-semibold text-red-700">
+          {voiceError}
+        </div>
+      )}
+      {detectedLang && (
+        <div className="mb-2 rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-2 text-[11px] font-semibold uppercase tracking-wide text-emerald-700">
+          {tVoice("detected", { lang: detectedLang.toUpperCase() })}
+        </div>
+      )}
+
       {/* Input area */}
       <div className="border-t border-[var(--color-border-subtle)] bg-[var(--color-surface)]/90 backdrop-blur-xl p-3">
         <div className="flex items-end gap-2">
           {voiceSupported && (
             <button
-              onClick={toggleListening}
+              type="button"
+              onClick={toggleVoice}
+              disabled={isTranscribing}
               className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full transition-all ${
-                isListening 
-                  ? "bg-red-100 text-red-600 animate-pulse" 
-                  : "bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-hover)]"
+                voiceActive
+                  ? "bg-red-100 text-red-600 animate-pulse"
+                  : isTranscribing
+                    ? "bg-[var(--color-brand-50)] text-[var(--color-brand-700)]"
+                    : "bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-hover)]"
               }`}
-              aria-label={isListening ? tVoice("stop") : tVoice("start")}
+              aria-label={voiceActive ? tVoice("stop") : tVoice("start")}
+              aria-pressed={voiceActive}
+              title={deepgramSupported ? tVoice("micDeepgram") : tVoice("start")}
             >
-              <Mic className="h-5 w-5" />
+              {isTranscribing ? (
+                <Loader2 className="h-5 w-5 animate-spin" />
+              ) : voiceActive ? (
+                <MicOff className="h-5 w-5" />
+              ) : (
+                <Mic className="h-5 w-5" />
+              )}
             </button>
           )}
           <textarea

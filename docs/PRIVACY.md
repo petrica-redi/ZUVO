@@ -1,6 +1,6 @@
 # Privacy & data handling
 
-This document covers what Sastipe collects, why, and how to honour data-subject rights under GDPR and equivalent regulations.
+This document covers what Redi Health collects, why, and how to honour data-subject rights under GDPR and equivalent regulations.
 
 ## Data we store
 

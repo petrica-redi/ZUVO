@@ -989,7 +989,10 @@
     "stop": "Ndalo dëgjimin",
     "readAloud": "Lexo me zë",
     "readMessageAloud": "Lexo mesazhin me zë",
-    "readExplanationAloud": "Lexo shpjegimin me zë"
+    "readExplanationAloud": "Lexo shpjegimin me zë",
+    "micDeepgram": "Trokit për të folur — zë shumëgjuhësh (Deepgram)",
+    "micError": "Nuk u mor dot mikrofoni juaj.",
+    "detected": "Gjuha e zbuluar: {lang}"
   },
   "severity": {
     "green": "Trajto në shtëpi",

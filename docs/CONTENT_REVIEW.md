@@ -4,7 +4,7 @@ Health education content must be accurate, current, and reviewed by qualified hu
 
 ## Why this exists
 
-Sastipe lessons cover first aid, STIs, vaccines, and emergency response. Wrong information can cause real harm. This workflow ensures every shipped lesson has been:
+Redi Health lessons cover first aid, STIs, vaccines, and emergency response. Wrong information can cause real harm. This workflow ensures every shipped lesson has been:
 
 1. Drafted with cited sources.
 2. Reviewed by a clinician or public-health expert.

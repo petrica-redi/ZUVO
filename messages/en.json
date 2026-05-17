@@ -1298,7 +1298,10 @@
     "stop": "Stop listening",
     "readAloud": "Read aloud",
     "readMessageAloud": "Read message aloud",
-    "readExplanationAloud": "Read explanation aloud"
+    "readExplanationAloud": "Read explanation aloud",
+    "micDeepgram": "Tap to speak — multilingual voice (Deepgram)",
+    "micError": "Could not access your microphone.",
+    "detected": "Detected language: {lang}"
   },
   "severity": {
     "green": "Manage at home",
