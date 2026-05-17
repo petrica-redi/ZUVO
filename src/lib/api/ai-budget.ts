@@ -233,16 +233,18 @@ export function scrubPii(input: string): string {
   return input
     // Email addresses
     .replace(/\b[\w.+-]+@[\w-]+\.[\w.-]+\b/g, "[email]")
-    // International phone numbers
-    .replace(/\+?\d{1,3}[\s.-]?\(?\d{1,4}\)?[\s.-]?\d{1,4}[\s.-]?\d{1,9}/g, (m) =>
-      m.replace(/\d/g, "•"),
-    )
+    // IBAN-like strings. Run before phone/card matching so embedded digits
+    // don't get partially masked and leave account prefixes visible.
+    .replace(/\b[A-Z]{2}\d{2}[A-Z0-9]{10,30}\b/gi, "[iban]")
     // National-ID-like long numbers (12+ digits)
     .replace(/\b\d{12,}\b/g, "[id]")
-    // Credit-card-ish (16-19 digits with optional spaces/dashes)
+    // Credit-card-ish (13-19 digits with optional spaces/dashes)
     .replace(/\b(?:\d[\s-]?){13,19}\b/g, "[card]")
-    // IBAN-like
-    .replace(/\b[A-Z]{2}\d{2}[A-Z0-9]{10,30}\b/g, "[iban]");
+    // International phone numbers. Keep this last because it is intentionally
+    // broad and would otherwise steal long IDs / IBAN digit runs.
+    .replace(/(?:\+?\d{1,3}[\s.-]?)?\(?\d{2,4}\)?[\s.-]?\d{3,4}[\s.-]?\d{3,4}/g, (m) =>
+      m.replace(/\d/g, "•"),
+    );
 }
 
 /**

@@ -84,14 +84,6 @@ export async function POST(req: NextRequest) {
   });
   if (!rate.allowed) return rate.response;
 
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json(
-      { success: false, error: "AI service not configured" },
-      { status: 503 },
-    );
-  }
-
   const parsed = await parseJsonBody(req, consultRequestSchema);
   if (!parsed.success) return validationError(parsed.error);
 
@@ -105,6 +97,14 @@ export async function POST(req: NextRequest) {
       data: buildEmergencyConsultSummary(redFlag),
       safetyOverride: true,
     });
+  }
+
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    return NextResponse.json(
+      { success: false, error: "AI service not configured" },
+      { status: 503 },
+    );
   }
 
   // Layer 3: AI cost & per-user cap

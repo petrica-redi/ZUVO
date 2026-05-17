@@ -58,6 +58,9 @@ export async function POST(req: NextRequest) {
   });
   if (!rate.allowed) return rate.response;
 
+  const parsed = await parseJsonBody(req, scanRequestSchema);
+  if (!parsed.success) return validationErrorResponse(parsed.error);
+
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     return NextResponse.json(
@@ -65,9 +68,6 @@ export async function POST(req: NextRequest) {
       { status: 503 },
     );
   }
-
-  const parsed = await parseJsonBody(req, scanRequestSchema);
-  if (!parsed.success) return validationErrorResponse(parsed.error);
   const { claim, locale } = parsed.data;
 
   const budget = await checkAiBudget(req);

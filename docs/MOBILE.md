@@ -16,7 +16,7 @@ You don't need separate codebases. The same React UI renders in all three modes;
 |---|---|---|
 | Web preview | `npm run dev` | Day-to-day development |
 | PWA-ready production build | `npm run build && npm start` | Lighthouse / PWA audit |
-| Static export for bundled native shell | `npm run mobile:export` | Offline-first store builds |
+| Capacitor fallback shell | `npm run mobile:export` | Generate `/out` for hybrid native builds |
 | Add iOS native project | `npm run mobile:init:ios` | First time only |
 | Add Android native project | `npm run mobile:init:android` | First time only |
 | Push web changes into native | `npm run mobile:sync` | After every web update |
@@ -71,16 +71,18 @@ npm run mobile:sync
 npm run mobile:assets         # generate iOS/Android icons + splash from /public/icon-512.svg
 ```
 
-### Mode B — Bundled (offline-capable, store-screenshot-friendly)
+### Mode B — Bundled static export (not enabled)
 
-The Next.js app is statically exported and packaged inside the binary. Backend calls (AI, Supabase, etc.) still happen at runtime over HTTPS, but the UI shell loads instantly even with no connectivity.
+The current app uses Next.js Route Handlers (`/api/*`) for AI, progress, health checks, exports, and deletion. That means a full `output: "export"` static bundle is not a faithful build of the product and is not supported in this branch.
+
+`npm run mobile:export` instead generates Capacitor's required `/out` directory with a branded fallback shell. The native app still loads the production URL configured in `CAP_SERVER_URL` / `capacitor.config.ts`.
 
 ```bash
-npm run mobile:export         # next build && next export -> /out
-CAP_BUNDLE=1 npm run mobile:sync
+npm run mobile:export         # writes /out/index.html fallback shell
+npm run mobile:sync
 ```
 
-> **Note:** static export drops API routes. If you ship Mode B, the API must already be hosted elsewhere and your fetch URLs must be absolute (`process.env.NEXT_PUBLIC_APP_URL`). Mode A is recommended unless you have a hard offline-first requirement.
+If you later want a real offline-first binary, split the backend into a separate hosted API and convert all app routes to static-compatible pages.
 
 ---
 
@@ -160,7 +162,7 @@ Requires Android Studio Hedgehog+ and a Google Play Console account ($25 one-tim
 
 ```bash
 # After every code change:
-npm run build && npm run mobile:sync
+npm run build && npm run mobile:export && npm run mobile:sync
 
 # After changing icons / brand mark:
 npm run mobile:assets && npm run mobile:sync

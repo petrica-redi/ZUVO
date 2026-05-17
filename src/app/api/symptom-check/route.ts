@@ -43,14 +43,6 @@ export async function POST(req: NextRequest) {
   });
   if (!rate.allowed) return rate.response;
 
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json(
-      { success: false, error: "AI service not configured" },
-      { status: 503 },
-    );
-  }
-
   const parsed = await parseJsonBody(req, symptomRequestSchema);
   if (!parsed.success) return parsed.response;
   const { bodyArea, symptoms, age, gender, locale } = parsed.data;
@@ -62,6 +54,14 @@ export async function POST(req: NextRequest) {
       data: redFlagSymptomResult(redFlag),
       safetyOverride: true,
     });
+  }
+
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    return NextResponse.json(
+      { success: false, error: "AI service not configured" },
+      { status: 503 },
+    );
   }
 
   const budget = await checkAiBudget(req);

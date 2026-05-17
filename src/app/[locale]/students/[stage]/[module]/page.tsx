@@ -181,12 +181,15 @@ export default async function StudentModulePage({ params }: Props) {
                     <Clock className="lucide h-3 w-3" strokeWidth={1.85} />
                     {mod.durationMin} {tCommon("minutes")}
                   </Badge>
-                  <Badge variant="muted">
-                    <BookOpen className="lucide h-3 w-3" strokeWidth={1.85} />
-                    {t("lesson.stepLabel", {
+                  <Badge
+                    variant="muted"
+                    title={t("lesson.stepLabel", {
                       current: lessonNumber,
                       total: lessonsTotal,
                     })}
+                  >
+                    <BookOpen className="lucide h-3 w-3" strokeWidth={1.85} />
+                    L{lessonNumber}/{lessonsTotal}
                   </Badge>
                 </div>
                 <h1

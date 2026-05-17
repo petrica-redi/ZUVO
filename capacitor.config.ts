@@ -15,11 +15,11 @@ import type { CapacitorConfig } from "@capacitor/cli";
  *    Required env to override at build time:
  *      CAP_SERVER_URL=https://app.sastipe.org
  *
- * 2. **Bundled (offline-capable, for App Store screenshots / dev):**
- *    Set `CAP_BUNDLE=1` and run `npm run mobile:export`. That produces a
- *    static `out/` directory which Capacitor packages directly. Best for
- *    teams that want an "appears installed" feel without depending on the
- *    server. AI / DB endpoints are still hit at runtime over HTTPS.
+ * 2. **Native fallback shell:**
+ *    `npm run mobile:export` creates a lightweight `out/` fallback page for
+ *    Capacitor's required `webDir`. The actual app loads from `server.url`.
+ *    A fully bundled static export is not compatible with this app while it
+ *    contains Next.js Route Handlers (`/api/*`).
  *
  * Allowed navigation domains include staging, preview, and the Vercel
  * project domain so QA links open inside the app shell.
@@ -28,32 +28,25 @@ const SERVER_URL =
   process.env.CAP_SERVER_URL?.trim() ||
   "https://app.sastipe.org";
 
-const BUNDLE_MODE = process.env.CAP_BUNDLE === "1";
-
 const config: CapacitorConfig = {
   appId: "org.sastipe.app",
   appName: "Sastipe",
   webDir: "out",
 
-  server: BUNDLE_MODE
-    ? {
-        androidScheme: "https",
-        cleartext: false,
-      }
-    : {
-        url: SERVER_URL,
-        androidScheme: "https",
-        cleartext: false,
-        allowNavigation: [
-          "*.sastipe.org",
-          "*.vercel.app",
-          "*.supabase.co",
-          "*.openai.com",
-          "*.sentry.io",
-          "*.posthog.com",
-          "*.upstash.io",
-        ],
-      },
+  server: {
+    url: SERVER_URL,
+    androidScheme: "https",
+    cleartext: false,
+    allowNavigation: [
+      "*.sastipe.org",
+      "*.vercel.app",
+      "*.supabase.co",
+      "*.openai.com",
+      "*.sentry.io",
+      "*.posthog.com",
+      "*.upstash.io",
+    ],
+  },
 
   ios: {
     contentInset: "always",

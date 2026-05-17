@@ -222,7 +222,7 @@ export function StudentAcademyHub() {
               </Badge>
             )}
           </div>
-          <h2
+          <p
             className="mt-3 font-display text-2xl font-extrabold leading-tight"
             style={{ letterSpacing: "-0.025em" }}
           >
@@ -234,7 +234,7 @@ export function StudentAcademyHub() {
               : nextStep.type === "quiz"
                 ? t("workflow.takeQuiz", { stage: t(`stages.${nextStep.stage}`) })
                 : t("workflow.finishedTitle")}
-          </h2>
+          </p>
           <p className="mt-2 text-sm leading-relaxed text-white/85">
             {nextStep.type === "complete"
               ? t("workflow.finishedBody")
@@ -384,6 +384,7 @@ function StageBlock({ stage, index }: { stage: StageId; index: number }) {
                   <Lock className="lucide h-4 w-4 text-[var(--color-text-muted)]" strokeWidth={1.75} />
                 )}
                 {t(`stages.${stage}`)}
+                {locked && <span className="sr-only"> locked</span>}
               </h3>
               <p className="mt-0.5 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                 {t(`stages.${stage}Desc`)}

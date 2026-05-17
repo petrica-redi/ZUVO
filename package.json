@@ -29,7 +29,7 @@
     "mobile:run:ios": "cap run ios",
     "mobile:run:android": "cap run android",
     "mobile:assets": "capacitor-assets generate --iconBackgroundColor '#4F46E5' --iconBackgroundColorDark '#0A0F1F' --splashBackgroundColor '#F4F6FB' --splashBackgroundColorDark '#0A0F1F'",
-    "mobile:export": "CAP_BUNDLE=1 next build && next export -o out"
+    "mobile:export": "node scripts/mobile-export.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.3.1",
@@ -56,6 +56,7 @@
     "next": "16.2.0",
     "next-intl": "^4.8.3",
     "postgres": "^3.4.8",
+    "posthog-js": "^1.373.5",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-hook-form": "^7.71.2",
@@ -74,6 +75,7 @@
     "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.2.0",
+    "jsdom": "^29.1.1",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.1.0"
