@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { celebrate } from "@/lib/confetti";
 
 type Props = {
   pillarId: string;
@@ -40,6 +41,7 @@ export function MarkCompleteButton({
 }: Props) {
   const [completed, setCompleted] = useState(false);
   const [animating, setAnimating] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const id = window.setTimeout(() => {
@@ -55,6 +57,19 @@ export function MarkCompleteButton({
     if (completed) return;
     setAnimating(true);
     setProgress(pillarId, moduleId);
+
+    // Fire a celebratory confetti burst anchored to the button position.
+    const rect = buttonRef.current?.getBoundingClientRect();
+    if (rect) {
+      celebrate({
+        origin: {
+          x: (rect.left + rect.width / 2) / window.innerWidth,
+          y: (rect.top + rect.height / 2) / window.innerHeight,
+        },
+      });
+    } else {
+      celebrate();
+    }
 
     // Fire-and-forget API call
     const anonId =
@@ -82,6 +97,7 @@ export function MarkCompleteButton({
   if (completed) {
     return (
       <button
+        type="button"
         disabled
         className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--color-success-bg)] p-4 text-base font-extrabold text-[var(--color-success-text)] ring-2 ring-[var(--color-success-border)]"
       >
@@ -93,6 +109,8 @@ export function MarkCompleteButton({
 
   return (
     <button
+      ref={buttonRef}
+      type="button"
       onClick={handleComplete}
       className={`flex w-full items-center justify-center gap-2 rounded-2xl gradient-brand grain-overlay p-4 text-base font-extrabold text-white shadow-brand transition-all active:scale-[0.97] ${
         animating ? "scale-95 opacity-90" : ""

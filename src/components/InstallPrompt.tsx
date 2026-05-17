@@ -137,6 +137,9 @@ export function InstallPrompt() {
       if (choice.outcome === "dismissed") dismiss();
     } finally {
       setDeferredPrompt(null);
+      // Allow another attempt if the browser fires a fresh `beforeinstallprompt`
+      // (e.g. user dismissed without choosing — Chrome may re-emit later).
+      fired.current = false;
     }
   };
 
@@ -150,7 +153,7 @@ export function InstallPrompt() {
         <button
           type="button"
           onClick={dismiss}
-          aria-label="Dismiss"
+          aria-label={t("dismissAria")}
           className="absolute right-2 top-2 rounded-full p-1.5 text-[var(--color-text-muted)] transition-colors hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-text-primary)]"
         >
           <X className="lucide h-4 w-4" strokeWidth={1.85} />

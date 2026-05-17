@@ -19,7 +19,7 @@ export function BottomNav() {
   const cleanPath = pathname.replace(/^\/[a-z]{2,3}(?=\/|$)/, "") || "/";
 
   return (
-    <nav className="sticky bottom-0 z-40" role="navigation" aria-label="Main navigation">
+    <nav className="sticky bottom-0 z-40" role="navigation" aria-label={t("ariaMain")}>
       <div className="glass-bar pb-safe-bottom" style={{ borderTop: "1px solid var(--color-border-subtle)", borderBottom: "none" }}>
         <div className="flex items-end justify-around px-1 pt-1.5 pb-2">
           {TABS.map(({ key, href, Icon, ...rest }) => {

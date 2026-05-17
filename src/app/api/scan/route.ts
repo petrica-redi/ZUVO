@@ -10,6 +10,12 @@ import { parseAiJson } from "@/lib/ai/json";
 import { applyRateLimitAsync, getClientIp } from "@/lib/api/rate-limit";
 import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
 import { traceAsync } from "@/lib/langfuse";
+import {
+  completeText,
+  getActiveProvider,
+  ProviderHttpError,
+  ProviderUnavailableError,
+} from "@/lib/ai/provider";
 
 const scanRequestSchema = z.object({
   claim: z.string().trim().min(3).max(1200),
@@ -61,8 +67,7 @@ export async function POST(req: NextRequest) {
   const parsed = await parseJsonBody(req, scanRequestSchema);
   if (!parsed.success) return validationErrorResponse(parsed.error);
 
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
+  if (!getActiveProvider()) {
     return NextResponse.json(
       { success: false, error: "AI service not configured" },
       { status: 503 },
@@ -85,33 +90,29 @@ export async function POST(req: NextRequest) {
       metadata: { clientId: getClientIp(req), claimLength: cleanClaim.length },
     },
     async () => {
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          model: "gpt-4o",
-          max_tokens: 600,
+      let content: string;
+      try {
+        content = await completeText({
+          system: SCAN_PROMPT + localeNote,
+          messages: [{ role: "user", content: `Check this claim: "${cleanClaim}"` }],
+          maxTokens: 600,
           temperature: 0.3,
-          messages: [
-            { role: "system", content: SCAN_PROMPT + localeNote },
-            { role: "user", content: `Check this claim: "${cleanClaim}"` },
-          ],
-        }),
-        signal: AbortSignal.timeout(30_000),
-      });
-
-      if (!response.ok) {
-        return NextResponse.json(
-          { success: false, error: "AI service error" },
-          { status: 502 },
-        );
+        });
+      } catch (err) {
+        if (err instanceof ProviderUnavailableError) {
+          return NextResponse.json(
+            { success: false, error: "AI service not configured" },
+            { status: 503 },
+          );
+        }
+        if (err instanceof ProviderHttpError) {
+          return NextResponse.json(
+            { success: false, error: "AI service error" },
+            { status: 502 },
+          );
+        }
+        throw err;
       }
-
-      const data = await response.json();
-      const content = data.choices?.[0]?.message?.content ?? "";
 
       const parsedAi = parseAiJson(content, scanResponseSchema);
       if (!parsedAi.success) {
@@ -135,6 +136,7 @@ export async function POST(req: NextRequest) {
         {
           headers: {
             "X-Sastipe-Budget-Remaining": String(budget.remainingUserCalls),
+            "X-Sastipe-Provider": getActiveProvider() ?? "none",
           },
         },
       );

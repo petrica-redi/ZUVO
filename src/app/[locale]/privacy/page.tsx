@@ -26,8 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const SECTION_ICONS = [Lock, Eye, Database, ServerCog, Shield, Globe, Trash2, Mail] as const;
 
 export default async function PrivacyPage({ params }: Props) {
-  await params;
-  const t = await getTranslations("privacy");
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacy" });
 
   const sections = [
     { key: "collect" as const, Icon: SECTION_ICONS[0] },

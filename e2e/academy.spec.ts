@@ -8,12 +8,14 @@ import { test, expect } from "@playwright/test";
 test.describe("Student Health Academy", () => {
   test("hub renders mission dashboard and stage cards", async ({ page }) => {
     await page.goto("/students");
+    // Editorial L8 hero: eyebrow + multi-line headline ending on "translator".
+    await expect(page.getByText(/Sastipe Health Academy/i).first()).toBeVisible();
     await expect(
-      page.getByRole("heading", { name: /Student Health Academy/i }),
+      page.getByRole("heading", { name: /health translator/i }),
     ).toBeVisible();
-    // Mission dashboard
-    await expect(page.getByText(/expedition dashboard/i)).toBeVisible();
-    // All three stages should appear
+    // Mission deck is the primary call-to-action surface.
+    await expect(page.getByText(/Mission deck/i).first()).toBeVisible();
+    // All three stages should appear as headings on the cards.
     await expect(page.getByRole("heading", { name: "Local" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Regional" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "National" })).toBeVisible();

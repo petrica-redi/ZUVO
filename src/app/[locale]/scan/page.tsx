@@ -10,7 +10,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "scan" });
-  return { title: `Fact Check — Sastipe`, description: t("subtitle") };
+  return { title: t("meta.title"), description: t("subtitle") };
 }
 
 export default async function ScanPage({ params }: Props) {

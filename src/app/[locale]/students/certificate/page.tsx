@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { Award, Download, Share2, Sparkles, GraduationCap } from "lucide-react";
 
 type Props = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "studentHealth" });
+export async function generateMetadata(): Promise<Metadata> {
   return { title: `Certificate — Sastipe`, description: "National Health Literacy Certificate" };
 }
 
 export default async function CertificatePage({ params }: Props) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { locale } = await params;
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const t = await getTranslations({ locale, namespace: "studentHealth" });
+  await params;
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">

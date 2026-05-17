@@ -2,6 +2,7 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { CheckCircle2, Info, AlertTriangle, XCircle, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "./cn";
 
 export type ToastVariant = "info" | "success" | "warning" | "danger";
@@ -42,6 +43,7 @@ const VARIANT_RING: Record<ToastVariant, string> = {
 };
 
 export function ToastProvider({ children }: { children: ReactNode }) {
+  const tCommon = useTranslations("common");
   const [toasts, setToasts] = useState<Toast[]>([]);
   const timers = useRef<Map<string, ReturnType<typeof setTimeout>>>(new Map());
 
@@ -131,7 +133,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
               type="button"
               onClick={() => dismiss(toast.id)}
               className="rounded-full p-1 text-[var(--color-text-muted)] transition hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-text-primary)]"
-              aria-label="Dismiss"
+              aria-label={tCommon("dismiss")}
             >
               <X className="h-3.5 w-3.5" strokeWidth={1.75} />
             </button>

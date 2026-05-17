@@ -5,6 +5,12 @@ import { parseAiJson } from "@/lib/ai/json";
 import { applyRateLimitAsync } from "@/lib/api/rate-limit";
 import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
 import { buildEmergencyConsultSummary, detectEmergencyRedFlag } from "@/lib/health/red-flags";
+import {
+  completeText,
+  getActiveProvider,
+  ProviderHttpError,
+  ProviderUnavailableError,
+} from "@/lib/ai/provider";
 
 const EXPLAIN_PROMPT = `You are a medical translator for Roma communities in Europe. Your job is to take medical terms, diagnoses, and prescription medications and explain them in the simplest possible language — as if explaining to someone who never finished school but is intelligent and deserves to understand their own health.
 
@@ -47,10 +53,30 @@ Rules:
 - Include 2-4 medications if they're mentioned, or provide common medications for the diagnosis
 - Always include at least 3 questions for the doctor and 3 daily tips`;
 
-const explainRequestSchema = z.object({
-  input: z.string().trim().min(1).max(1600),
-  locale: z.string().trim().min(2).max(16).optional(),
-});
+// Roughly ~5MB binary after base64 decode — Anthropic's per-image cap.
+const MAX_IMAGE_BASE64_BYTES = 7_000_000;
+const ALLOWED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"] as const;
+
+const explainRequestSchema = z
+  .object({
+    // Input becomes optional when an image is supplied — the photo *is* the input.
+    input: z.string().trim().max(1600).optional(),
+    locale: z.string().trim().min(2).max(16).optional(),
+    image: z
+      .object({
+        mediaType: z.enum(ALLOWED_IMAGE_TYPES),
+        base64: z
+          .string()
+          .min(64) // any meaningful image is at least this big
+          .max(MAX_IMAGE_BASE64_BYTES)
+          .regex(/^[A-Za-z0-9+/=]+$/, "Image data must be plain base64 (no data: prefix)"),
+      })
+      .optional(),
+  })
+  .refine((d) => Boolean((d.input && d.input.length > 0) || d.image), {
+    message: "Provide either text input or an image",
+    path: ["input"],
+  });
 
 const explainResponseSchema = z.object({
   diagnosis: z.object({
@@ -81,9 +107,12 @@ export async function POST(req: NextRequest) {
 
   const parsed = await parseJsonBody(req, explainRequestSchema);
   if (!parsed.success) return parsed.response;
-  const { input, locale } = parsed.data;
+  const { input, locale, image } = parsed.data;
+  // Red-flag detection runs on text only — image content is opaque to it,
+  // but the model is instructed to flag anything emergency-shaped.
+  const inputForRedFlag = input ?? "";
 
-  const redFlag = detectEmergencyRedFlag(input);
+  const redFlag = detectEmergencyRedFlag(inputForRedFlag);
   if (redFlag) {
     const summary = buildEmergencyConsultSummary(redFlag);
     return NextResponse.json({
@@ -104,43 +133,64 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
+  if (!getActiveProvider()) {
     return NextResponse.json({ success: false, error: "AI service not configured" }, { status: 503 });
   }
 
   const budget = await checkAiBudget(req);
   if (!budget.allowed) return aiBudgetExceededResponse(budget);
 
-  const cleanInput = sanitizeAiInput(input);
+  const cleanInput = input ? sanitizeAiInput(input) : "";
   const localeNote = locale
     ? `\nThe user's language is "${locale}". Respond in that language. If the medical terms are in another language, keep the medical terms but explain everything else in the user's language.`
     : "";
+  const imageNote = image
+    ? `\nIMPORTANT: A photo of a prescription, medication label, or doctor's note is attached. Read it carefully. If text is in a different language than the user's, keep the medical names exact but explain everything else in the user's language. If the image is blurry or unreadable, say so plainly and ask the user to retake the photo.`
+    : "";
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o",
-      max_tokens: 1500,
+  // Build a multimodal message when an image is attached, else fall back
+  // to a plain text prompt.
+  const userMessage = image
+    ? {
+        role: "user" as const,
+        content: [
+          {
+            type: "text" as const,
+            text: cleanInput
+              ? `Please analyse this prescription image. Additional context from the user: "${cleanInput}"`
+              : "Please analyse this prescription image and explain it in simple words.",
+          },
+          {
+            type: "image" as const,
+            mediaType: image.mediaType,
+            base64: image.base64,
+          },
+        ],
+      }
+    : {
+        role: "user" as const,
+        content: `Explain this prescription or diagnosis: "${cleanInput}"`,
+      };
+
+  let content: string;
+  try {
+    content = await completeText({
+      system: EXPLAIN_PROMPT + localeNote + imageNote,
+      messages: [userMessage],
+      // Vision responses can run longer because the model is reading text
+      // off a photo and re-explaining it.
+      maxTokens: image ? 2000 : 1500,
       temperature: 0.3,
-      messages: [
-        { role: "system", content: EXPLAIN_PROMPT + localeNote },
-        { role: "user", content: `Explain this prescription or diagnosis: "${cleanInput}"` },
-      ],
-    }),
-    signal: AbortSignal.timeout(30_000),
-  });
-
-  if (!response.ok) {
-    return NextResponse.json({ error: "AI service error" }, { status: 502 });
+    });
+  } catch (err) {
+    if (err instanceof ProviderUnavailableError) {
+      return NextResponse.json({ success: false, error: "AI service not configured" }, { status: 503 });
+    }
+    if (err instanceof ProviderHttpError) {
+      return NextResponse.json({ success: false, error: "AI service error" }, { status: 502 });
+    }
+    throw err;
   }
-
-  const data = await response.json();
-  const content = data.choices?.[0]?.message?.content ?? "";
 
   const ai = parseAiJson(content, explainResponseSchema);
   if (ai.success) return NextResponse.json({ success: true, data: ai.data });
@@ -149,7 +199,7 @@ export async function POST(req: NextRequest) {
     success: true,
     data: {
       diagnosis: {
-        name: input,
+        name: input ?? "Prescription image",
         simpleExplanation: content || "I could not safely explain this item right now.",
         whyItMatters: "Please ask your doctor or health mediator to explain further.",
         whatHappensIfIgnored: "It is important to follow your doctor's advice.",

@@ -1,11 +1,12 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/navigation";
 import { Compass, Home, Search } from "lucide-react";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 
 export default async function NotFound() {
-  const t = await getTranslations("errors");
+  const locale = await getLocale();
+  const t = await getTranslations({ locale, namespace: "errors" });
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">

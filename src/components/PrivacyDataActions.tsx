@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Download, ShieldOff, Loader2, AlertTriangle } from "lucide-react";
 import { Button, Card, Badge } from "@/components/ui";
 import { useToast } from "@/components/ui/Toast";
+import { clearAllLocalAppData } from "@/lib/local-data-keys";
 
 type Props = {
   title: string;
@@ -41,18 +42,19 @@ export function PrivacyDataActions({
   const [deleting, setDeleting] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
 
-  const headers: Record<string, string> = (() => {
+  // Compute headers per-request so we always pick up the freshest anon-id.
+  function buildHeaders(): Record<string, string> {
     if (typeof window === "undefined") return {};
     const id = localStorage.getItem("sastipe_anon_id");
     const out: Record<string, string> = {};
     if (id) out["x-anonymous-id"] = id;
     return out;
-  })();
+  }
 
   async function handleExport() {
     setExporting(true);
     try {
-      const res = await fetch("/api/me/export", { headers });
+      const res = await fetch("/api/me/export", { headers: buildHeaders() });
       if (res.status === 401) {
         toast.warning(authRequired);
         return;
@@ -82,7 +84,7 @@ export function PrivacyDataActions({
     try {
       const res = await fetch("/api/me/delete", {
         method: "POST",
-        headers: { ...headers, "Content-Type": "application/json" },
+        headers: { ...buildHeaders(), "Content-Type": "application/json" },
         body: JSON.stringify({ confirmation: "DELETE" }),
       });
       if (res.status === 401) {
@@ -93,15 +95,8 @@ export function PrivacyDataActions({
         toast.danger(unavailable);
         return;
       }
-      // Clear local state too
-      try {
-        localStorage.removeItem("sastipe_progress");
-        localStorage.removeItem("sastipe_checkin");
-        localStorage.removeItem("sastipe_student_health");
-        localStorage.removeItem("sastipe_anon_id");
-      } catch {
-        /* private mode */
-      }
+      // Wipe every app-owned localStorage key so nothing lingers locally.
+      clearAllLocalAppData();
       toast.success(successDeleted);
       setConfirmOpen(false);
     } catch {

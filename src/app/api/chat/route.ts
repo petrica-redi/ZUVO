@@ -1,8 +1,11 @@
 /**
- * POST /api/chat — Zuvo health advisor conversation
+ * POST /api/chat — Sastipe health advisor conversation.
  *
  * Accepts: { messages: [{ role, content }], locale: string }
- * Returns: streaming text response from OpenAI
+ * Returns: SSE stream — `data: {"text":"…"}` chunks, terminated by `data: [DONE]`.
+ *
+ * Provider is picked at runtime in `@/lib/ai/provider` — Anthropic
+ * (Claude) when `ANTHROPIC_API_KEY` is set, otherwise OpenAI.
  */
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
@@ -11,6 +14,12 @@ import { parseJsonBody } from "@/lib/api/validation";
 import { applyRateLimitAsync } from "@/lib/api/rate-limit";
 import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
 import { buildEmergencyConsultSummary, detectEmergencyRedFlag } from "@/lib/health/red-flags";
+import {
+  getActiveProvider,
+  ProviderHttpError,
+  ProviderUnavailableError,
+  streamText,
+} from "@/lib/ai/provider";
 
 const chatMessageSchema = z.object({
   role: z.enum(["user", "assistant"]),
@@ -53,9 +62,11 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json({ success: false, error: "AI service not configured" }, { status: 503 });
+  if (!getActiveProvider()) {
+    return NextResponse.json(
+      { success: false, error: "AI service not configured" },
+      { status: 503 },
+    );
   }
 
   const budget = await checkAiBudget(req);
@@ -69,89 +80,38 @@ export async function POST(req: NextRequest) {
     content: sanitizeAiInput(m.content),
   }));
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: CHAT_CONFIG.model,
-      max_tokens: CHAT_CONFIG.maxTokens,
+  try {
+    const readable = await streamText({
+      system: SYSTEM_PROMPT + localeInstruction,
+      messages: sanitizedMessages,
+      maxTokens: CHAT_CONFIG.maxTokens,
       temperature: CHAT_CONFIG.temperature,
-      stream: true,
-      messages: [
-        { role: "system", content: SYSTEM_PROMPT + localeInstruction },
-        ...sanitizedMessages,
-      ],
-    }),
-    signal: AbortSignal.timeout(30_000),
-  });
+    });
 
-  if (!response.ok) {
+    return new Response(readable, {
+      headers: {
+        "Content-Type": "text/event-stream",
+        "Cache-Control": "no-cache",
+        Connection: "keep-alive",
+        "X-Sastipe-Provider": getActiveProvider() ?? "none",
+      },
+    });
+  } catch (err) {
+    if (err instanceof ProviderUnavailableError) {
+      return NextResponse.json(
+        { success: false, error: "AI service not configured" },
+        { status: 503 },
+      );
+    }
+    if (err instanceof ProviderHttpError) {
+      return new Response(
+        JSON.stringify({ success: false, error: "AI service temporarily unavailable" }),
+        { status: 502, headers: { "Content-Type": "application/json" } },
+      );
+    }
     return new Response(
       JSON.stringify({ success: false, error: "AI service temporarily unavailable" }),
-      { status: 502, headers: { "Content-Type": "application/json" } }
+      { status: 502, headers: { "Content-Type": "application/json" } },
     );
   }
-
-  // Stream the response back to the client
-  const encoder = new TextEncoder();
-  const readable = new ReadableStream({
-    async start(controller) {
-      const reader = response.body?.getReader();
-      if (!reader) {
-        controller.close();
-        return;
-      }
-
-      const decoder = new TextDecoder();
-      let buffer = "";
-
-      try {
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-
-          buffer += decoder.decode(value, { stream: true });
-          const lines = buffer.split("\n");
-          buffer = lines.pop() ?? "";
-
-          for (const line of lines) {
-            if (line.startsWith("data: ")) {
-              const data = line.slice(6).trim();
-              if (data === "[DONE]") {
-                controller.enqueue(encoder.encode("data: [DONE]\n\n"));
-                continue;
-              }
-
-              try {
-                const parsed = JSON.parse(data);
-                const text = parsed.choices?.[0]?.delta?.content;
-                if (text) {
-                  controller.enqueue(
-                    encoder.encode(`data: ${JSON.stringify({ text })}\n\n`)
-                  );
-                }
-              } catch {
-                // Skip non-JSON lines
-              }
-            }
-          }
-        }
-      } catch {
-        controller.enqueue(encoder.encode(sseChunk({ text: "\n\nThe AI stream was interrupted. Please try again." })));
-      } finally {
-        controller.close();
-      }
-    },
-  });
-
-  return new Response(readable, {
-    headers: {
-      "Content-Type": "text/event-stream",
-      "Cache-Control": "no-cache",
-      Connection: "keep-alive",
-    },
-  });
 }

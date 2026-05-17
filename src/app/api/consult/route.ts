@@ -6,6 +6,12 @@ import { buildEmergencyConsultSummary, detectEmergencyRedFlag } from "@/lib/heal
 import { applyRateLimitAsync, getClientIp } from "@/lib/api/rate-limit";
 import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
 import { traceAsync } from "@/lib/langfuse";
+import {
+  completeText,
+  getActiveProvider,
+  ProviderHttpError,
+  ProviderUnavailableError,
+} from "@/lib/ai/provider";
 
 const chatMessageSchema = z.object({
   role: z.enum(["user", "assistant"]),
@@ -99,8 +105,7 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
+  if (!getActiveProvider()) {
     return NextResponse.json(
       { success: false, error: "AI service not configured" },
       { status: 503 },
@@ -128,33 +133,29 @@ export async function POST(req: NextRequest) {
       metadata: { clientId: getClientIp(req), messageCount: sanitizedMessages.length },
     },
     async () => {
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          model: "gpt-4o",
-          max_tokens: 1000,
+      let content: string;
+      try {
+        content = await completeText({
+          system: CONSULT_PROMPT + localeNote,
+          messages: sanitizedMessages,
+          maxTokens: 1000,
           temperature: 0.4,
-          messages: [
-            { role: "system", content: CONSULT_PROMPT + localeNote },
-            ...sanitizedMessages,
-          ],
-        }),
-        signal: AbortSignal.timeout(30_000),
-      });
-
-      if (!response.ok) {
-        return NextResponse.json(
-          { success: false, error: "AI service error" },
-          { status: 502 },
-        );
+        });
+      } catch (err) {
+        if (err instanceof ProviderUnavailableError) {
+          return NextResponse.json(
+            { success: false, error: "AI service not configured" },
+            { status: 503 },
+          );
+        }
+        if (err instanceof ProviderHttpError) {
+          return NextResponse.json(
+            { success: false, error: "AI service error" },
+            { status: 502 },
+          );
+        }
+        throw err;
       }
-
-      const data = await response.json();
-      const content = data.choices?.[0]?.message?.content ?? "";
 
       const result = parseAiJson(content, consultResponseSchema);
       if (!result.success) {
@@ -176,6 +177,7 @@ export async function POST(req: NextRequest) {
           headers: {
             "X-Sastipe-Budget-Remaining": String(budget.remainingUserCalls),
             "X-Sastipe-Budget-Backend": budget.capacityKnown ? "upstash" : "memory",
+            "X-Sastipe-Provider": getActiveProvider() ?? "none",
           },
         },
       );

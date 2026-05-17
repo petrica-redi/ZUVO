@@ -5,6 +5,12 @@ import { parseAiJson } from "@/lib/ai/json";
 import { applyRateLimitAsync } from "@/lib/api/rate-limit";
 import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
 import { buildEmergencyConsultSummary, detectEmergencyRedFlag } from "@/lib/health/red-flags";
+import {
+  completeText,
+  getActiveProvider,
+  ProviderHttpError,
+  ProviderUnavailableError,
+} from "@/lib/ai/provider";
 
 const VISIT_CARD_PROMPT = `You are a Roma health mediator helping someone prepare for a doctor visit. Generate a clear, professional patient summary card that the person can show to their doctor.
 
@@ -72,8 +78,7 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
+  if (!getActiveProvider()) {
     return NextResponse.json({ success: false, error: "AI service not configured" }, { status: 503 });
   }
 
@@ -87,30 +92,23 @@ export async function POST(req: NextRequest) {
     locale && `Patient's language: ${locale}`,
   ].filter(Boolean).join("\n");
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o",
-      max_tokens: 800,
+  let content: string;
+  try {
+    content = await completeText({
+      system: VISIT_CARD_PROMPT,
+      messages: [{ role: "user", content: context }],
+      maxTokens: 800,
       temperature: 0.3,
-      messages: [
-        { role: "system", content: VISIT_CARD_PROMPT },
-        { role: "user", content: context },
-      ],
-    }),
-    signal: AbortSignal.timeout(30_000),
-  });
-
-  if (!response.ok) {
-    return NextResponse.json({ error: "AI service error" }, { status: 502 });
+    });
+  } catch (err) {
+    if (err instanceof ProviderUnavailableError) {
+      return NextResponse.json({ success: false, error: "AI service not configured" }, { status: 503 });
+    }
+    if (err instanceof ProviderHttpError) {
+      return NextResponse.json({ success: false, error: "AI service error" }, { status: 502 });
+    }
+    throw err;
   }
-
-  const data = await response.json();
-  const content = data.choices?.[0]?.message?.content ?? "";
 
   const ai = parseAiJson(content, visitCardResponseSchema);
   if (ai.success) return NextResponse.json({ success: true, data: ai.data });

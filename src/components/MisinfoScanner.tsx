@@ -3,7 +3,9 @@
 import { useEffect, useState, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import { Search, Mic, Share2, AlertTriangle, CheckCircle2, XCircle, Loader2, Volume2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
+import { ToolHero } from "@/components/ui";
 
 type Verdict = {
   verdict: "verified" | "misleading" | "false";
@@ -27,6 +29,19 @@ type Labels = {
   verdictMisleading: string;
   verdictFalse: string;
 };
+
+function isVerdict(v: unknown): v is Verdict {
+  if (!v || typeof v !== "object") return false;
+  const x = v as Record<string, unknown>;
+  return (
+    (x.verdict === "verified" || x.verdict === "misleading" || x.verdict === "false") &&
+    typeof x.emoji === "string" &&
+    typeof x.headline === "string" &&
+    typeof x.explanation === "string" &&
+    typeof x.shareText === "string" &&
+    typeof x.source === "string"
+  );
+}
 
 const VERDICT_STYLES = {
   verified: {
@@ -56,6 +71,8 @@ const VERDICT_STYLES = {
 };
 
 export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: string }) {
+  const tScan = useTranslations("scan");
+  const tVoice = useTranslations("voice");
   const searchParams = useSearchParams();
   const [claim, setClaim] = useState("");
   const [loading, setLoading] = useState(false);
@@ -92,14 +109,16 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
       });
 
       const data = await res.json();
-      if (res.ok && data.success && data.data) {
+      if (res.ok && data?.success === true && isVerdict(data?.data)) {
         setResult(data.data);
-        setHistory((prev) => [{ claim: claim.trim(), verdict: data.data }, ...prev].slice(0, 10));
+        setHistory((prev) => [{ claim: claim.trim(), verdict: data.data as Verdict }, ...prev].slice(0, 10));
       } else {
-        setError(data.error || "Failed to analyze claim");
+        setError(
+          typeof data?.error === "string" ? data.error : tScan("errors.analyze"),
+        );
       }
     } catch {
-      setError("Network error. Please check your connection.");
+      setError(tScan("errors.network"));
     } finally {
       setLoading(false);
     }
@@ -107,10 +126,10 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
 
   const handleShare = () => {
     if (!result) return;
-    const text = `${result.emoji} ${result.headline}\n\n${result.shareText}\n\n— Checked by Zuvo Health Advisor`;
+    const text = `${result.emoji} ${result.headline}\n\n${result.shareText}\n\n— ${tScan("shareTagline")}`;
 
     if (navigator.share) {
-      navigator.share({ title: "Health Fact Check", text }).catch(() => {});
+      navigator.share({ title: tScan("shareTitle"), text }).catch(() => {});
     } else {
       navigator.clipboard.writeText(text).catch(() => {});
     }
@@ -125,14 +144,13 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
 
   return (
     <div>
-      {/* Header */}
-      <div className="mb-6 text-center animate-fade-in-up">
-        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-amber-400 to-red-500 shadow-xl shadow-amber-500/25">
-          <Search className="h-10 w-10 text-white" />
-        </div>
-        <h1 className="text-2xl font-black text-gray-900">{labels.title}</h1>
-        <p className="mt-2 text-sm text-gray-500">{labels.subtitle}</p>
-      </div>
+      <ToolHero
+        icon={Search}
+        accent="ember"
+        eyebrow={tScan("eyebrow")}
+        title={labels.title}
+        subtitle={labels.subtitle}
+      />
 
       {/* Input area */}
       <div className="mb-4 rounded-2xl border-2 border-gray-200 bg-white p-1 shadow-sm focus-within:border-[#C0392B] focus-within:ring-4 focus-within:ring-[#C0392B]/10 transition-all">
@@ -140,7 +158,7 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
           value={claim}
           onChange={(e) => { setClaim(e.target.value); setResult(null); }}
           onKeyDown={handleKeyDown}
-          aria-label="Paste health claim to fact-check" placeholder={labels.placeholder}
+          aria-label={tScan("inputAria")} placeholder={labels.placeholder}
           rows={3}
           className="w-full resize-none rounded-xl border-none bg-transparent px-4 py-3 text-sm focus:outline-none"
         />
@@ -153,7 +171,7 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
                   ? "bg-red-100 text-red-600 animate-pulse" 
                   : "bg-gray-100 text-gray-400 hover:bg-gray-200"
               }`}
-              aria-label={isListening ? "Stop listening" : "Start speaking"}
+              aria-label={isListening ? tVoice("stop") : tVoice("start")}
             >
               <Mic className="h-4 w-4" />
             </button>
@@ -211,7 +229,7 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
               <button 
                 onClick={() => speakText(result.explanation, locale)}
                 className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-600"
-                aria-label="Read explanation aloud"
+                aria-label={tVoice("readExplanationAloud")}
               >
                 <Volume2 className="h-5 w-5" />
               </button>
@@ -220,7 +238,7 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
               {result.explanation}
             </p>
             <p className="mb-3 text-xs text-gray-400">
-              Source: {result.source}
+              {tScan("sourceLabel")}: {result.source}
             </p>
 
             {/* Share button */}

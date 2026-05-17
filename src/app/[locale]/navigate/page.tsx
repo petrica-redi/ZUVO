@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { SosButton } from "@/components/SosButton";
@@ -6,11 +7,10 @@ import { HealthcareNavigator } from "@/components/HealthcareNavigator";
 
 type Props = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Healthcare Navigator — Zuvo",
-    description: "Get help accessing healthcare. Know your rights.",
-  };
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "navigate.meta" });
+  return { title: t("title"), description: t("description") };
 }
 
 export default async function NavigatePage({ params }: Props) {

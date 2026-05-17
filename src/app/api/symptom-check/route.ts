@@ -6,6 +6,12 @@ import { detectRedFlag, redFlagSymptomResult } from "@/lib/health/red-flags";
 import { applyRateLimitAsync, getClientIp } from "@/lib/api/rate-limit";
 import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
 import { traceAsync } from "@/lib/langfuse";
+import {
+  completeText,
+  getActiveProvider,
+  ProviderHttpError,
+  ProviderUnavailableError,
+} from "@/lib/ai/provider";
 
 const SYMPTOM_PROMPT = `You are a Roma health mediator with 15 years of field experience conducting a symptom triage. You are NOT a doctor. You NEVER diagnose. You help people understand how serious their symptoms might be and what to do next.
 
@@ -56,8 +62,7 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
+  if (!getActiveProvider()) {
     return NextResponse.json(
       { success: false, error: "AI service not configured" },
       { status: 503 },
@@ -84,36 +89,34 @@ export async function POST(req: NextRequest) {
       metadata: { clientId: getClientIp(req), bodyArea: cleanBodyArea },
     },
     async () => {
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          model: "gpt-4o",
-          max_tokens: 800,
-          temperature: 0.3,
+      let content: string;
+      try {
+        content = await completeText({
+          system: SYMPTOM_PROMPT + localeNote,
           messages: [
-            { role: "system", content: SYMPTOM_PROMPT + localeNote },
             {
               role: "user",
               content: `Body area: ${cleanBodyArea}\nSymptoms: ${cleanSymptoms}${demographics ? `\n${demographics}` : ""}`,
             },
           ],
-        }),
-        signal: AbortSignal.timeout(30_000),
-      });
-
-      if (!response.ok) {
-        return NextResponse.json(
-          { success: false, error: "AI service error" },
-          { status: 502 },
-        );
+          maxTokens: 800,
+          temperature: 0.3,
+        });
+      } catch (err) {
+        if (err instanceof ProviderUnavailableError) {
+          return NextResponse.json(
+            { success: false, error: "AI service not configured" },
+            { status: 503 },
+          );
+        }
+        if (err instanceof ProviderHttpError) {
+          return NextResponse.json(
+            { success: false, error: "AI service error" },
+            { status: 502 },
+          );
+        }
+        throw err;
       }
-
-      const data = await response.json();
-      const content = data.choices?.[0]?.message?.content ?? "";
       const result = parseAiJson(content, symptomResultSchema);
       if (result.success) {
         return NextResponse.json(
@@ -121,6 +124,7 @@ export async function POST(req: NextRequest) {
           {
             headers: {
               "X-Sastipe-Budget-Remaining": String(budget.remainingUserCalls),
+              "X-Sastipe-Provider": getActiveProvider() ?? "none",
             },
           },
         );

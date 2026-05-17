@@ -6,6 +6,7 @@ import {
   MapPin, Shield, Phone, CheckCircle2, CreditCard, HelpCircle,
   Stethoscope, Baby, Brain, Heart, Thermometer, Eye,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type VisitCard = {
   patientSummary: string;
@@ -17,35 +18,50 @@ type VisitCard = {
   patientRights: string[];
 };
 
-const ISSUE_TYPES = [
-  { id: "fever", icon: Thermometer, label: "Fever / Infection", color: "#EF4444" },
-  { id: "pain", icon: Heart, label: "Pain / Injury", color: "#F97316" },
-  { id: "pregnancy", icon: Baby, label: "Pregnancy", color: "#EC4899" },
-  { id: "chronic", icon: Stethoscope, label: "Chronic condition", color: "#8B5CF6" },
-  { id: "mental", icon: Brain, label: "Mental health", color: "#06B6D4" },
-  { id: "skin", icon: Eye, label: "Skin / Eyes / Ears", color: "#10B981" },
-  { id: "child", icon: Baby, label: "Sick child", color: "#F59E0B" },
-  { id: "other", icon: HelpCircle, label: "Something else", color: "#64748B" },
+type IssueId =
+  | "fever"
+  | "pain"
+  | "pregnancy"
+  | "chronic"
+  | "mental"
+  | "skin"
+  | "child"
+  | "other";
+
+const ISSUE_TYPES: Array<{ id: IssueId; icon: typeof Thermometer; color: string }> = [
+  { id: "fever", icon: Thermometer, color: "#EF4444" },
+  { id: "pain", icon: Heart, color: "#F97316" },
+  { id: "pregnancy", icon: Baby, color: "#EC4899" },
+  { id: "chronic", icon: Stethoscope, color: "#8B5CF6" },
+  { id: "mental", icon: Brain, color: "#06B6D4" },
+  { id: "skin", icon: Eye, color: "#10B981" },
+  { id: "child", icon: Baby, color: "#F59E0B" },
+  { id: "other", icon: HelpCircle, color: "#64748B" },
 ];
 
+// Country list (codes only — English names rendered as fallback if no localized
+// name is defined; can be extended to a per-locale dictionary later).
 const COUNTRIES = [
-  { code: "al", name: "Albania", lang: "Albanian" },
-  { code: "ro", name: "Romania", lang: "Romanian" },
-  { code: "bg", name: "Bulgaria", lang: "Bulgarian" },
-  { code: "hu", name: "Hungary", lang: "Hungarian" },
-  { code: "sk", name: "Slovakia", lang: "Slovak" },
-  { code: "rs", name: "Serbia", lang: "Serbian" },
-  { code: "mk", name: "North Macedonia", lang: "Macedonian" },
-  { code: "cz", name: "Czech Republic", lang: "Czech" },
-  { code: "hr", name: "Croatia", lang: "Croatian" },
-  { code: "ba", name: "Bosnia", lang: "Bosnian" },
-  { code: "xk", name: "Kosovo", lang: "Albanian" },
-  { code: "si", name: "Slovenia", lang: "Slovenian" },
-  { code: "gr", name: "Greece", lang: "Greek" },
-  { code: "tr", name: "Turkey", lang: "Turkish" },
+  { code: "al", name: "Albania" },
+  { code: "ro", name: "Romania" },
+  { code: "bg", name: "Bulgaria" },
+  { code: "hu", name: "Hungary" },
+  { code: "sk", name: "Slovakia" },
+  { code: "rs", name: "Serbia" },
+  { code: "mk", name: "North Macedonia" },
+  { code: "cz", name: "Czech Republic" },
+  { code: "hr", name: "Croatia" },
+  { code: "ba", name: "Bosnia" },
+  { code: "xk", name: "Kosovo" },
+  { code: "si", name: "Slovenia" },
+  { code: "gr", name: "Greece" },
+  { code: "tr", name: "Turkey" },
 ];
 
 export function HealthcareNavigator({ locale }: { locale: string }) {
+  const t = useTranslations("navigate");
+  const tCommon = useTranslations("common");
+  const tEmergency = useTranslations("emergency");
   const [step, setStep] = useState(1);
   const [issueType, setIssueType] = useState("");
   const [issueDetail, setIssueDetail] = useState("");
@@ -86,28 +102,31 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
           <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-xl shadow-cyan-500/25">
             <Navigation className="h-10 w-10 text-white" />
           </div>
-          <h1 className="text-2xl font-black text-gray-900">I need to see a doctor</h1>
-          <p className="mt-2 text-sm text-gray-500">
-            We&apos;ll help you prepare — what to bring, what to say, your rights.
-          </p>
+          <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
+          <p className="mt-2 text-sm text-gray-500">{t("heroSubtitle")}</p>
         </div>
 
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
-          What&apos;s the issue?
+          {t("issuePrompt")}
         </p>
         <div className="grid grid-cols-2 gap-3">
-          {ISSUE_TYPES.map((issue, i) => (
-            <button
-              key={issue.id}
-              onClick={() => { setIssueType(issue.label); setStep(2); }}
-              className={`card-hover flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm animate-fade-in-up delay-${(i + 1) * 100}`}
-            >
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl shadow-sm" style={{ backgroundColor: issue.color + "15" }}>
-                <issue.icon className="h-6 w-6" style={{ color: issue.color }} />
-              </div>
-              <span className="text-sm font-bold text-gray-700">{issue.label}</span>
-            </button>
-          ))}
+          {ISSUE_TYPES.map((issue, i) => {
+            const label = t(`issues.${issue.id}`);
+            return (
+              <button
+                type="button"
+                key={issue.id}
+                onClick={() => { setIssueType(label); setStep(2); }}
+                className="card-hover flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm animate-fade-in-up"
+                style={{ animationDelay: `${(i + 1) * 100}ms` }}
+              >
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl shadow-sm" style={{ backgroundColor: issue.color + "15" }}>
+                  <issue.icon className="h-6 w-6" style={{ color: issue.color }} />
+                </div>
+                <span className="text-sm font-bold text-gray-700">{label}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
     );
@@ -118,19 +137,19 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
     return (
       <div>
         <button onClick={() => setStep(1)} className="mb-4 flex items-center gap-1 text-sm text-gray-500">
-          <ArrowLeft className="h-4 w-4" /> Back
+          <ArrowLeft className="h-4 w-4" /> {tCommon("back")}
         </button>
 
         <div className="mb-4 rounded-xl bg-cyan-50 p-3 text-center">
           <span className="text-sm font-semibold text-cyan-800">{issueType}</span>
         </div>
 
-        <p className="mb-2 text-sm font-semibold text-gray-900">Tell us more</p>
+        <p className="mb-2 text-sm font-semibold text-gray-900">{t("tellMore")}</p>
         <textarea
           value={issueDetail}
           onChange={(e) => setIssueDetail(e.target.value)}
-          placeholder="Describe what's happening... How long has it been? How bad is it?"
-          aria-label="Describe your health issue"
+          placeholder={t("detailPlaceholder")}
+          aria-label={t("detailAria")}
           rows={4}
           className="mb-4 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20"
         />
@@ -140,7 +159,7 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
           disabled={!issueDetail.trim()}
           className="flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-500 py-3 text-sm font-semibold text-white shadow-md active:scale-[0.98] disabled:opacity-50"
         >
-          Continue <ArrowRight className="h-4 w-4" />
+          {tCommon("continue")} <ArrowRight className="h-4 w-4" />
         </button>
       </div>
     );
@@ -151,20 +170,20 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
     return (
       <div>
         <button onClick={() => setStep(2)} className="mb-4 flex items-center gap-1 text-sm text-gray-500">
-          <ArrowLeft className="h-4 w-4" /> Back
+          <ArrowLeft className="h-4 w-4" /> {tCommon("back")}
         </button>
 
         <div className="mb-6 text-center">
           <CreditCard className="mx-auto mb-2 h-8 w-8 text-cyan-500" />
-          <h2 className="text-base font-bold text-gray-900">Do you have health insurance?</h2>
-          <p className="mt-1 text-xs text-gray-500">This helps us tell you what to bring</p>
+          <h2 className="text-base font-bold text-gray-900">{t("insuranceTitle")}</h2>
+          <p className="mt-1 text-xs text-gray-500">{t("insuranceSubtitle")}</p>
         </div>
 
         <div className="space-y-2">
           {([
-            { value: "yes" as const, label: "Yes, I have a health card", emoji: "✅" },
-            { value: "no" as const, label: "No, I don't have insurance", emoji: "❌" },
-            { value: "unknown" as const, label: "I'm not sure", emoji: "🤷" },
+            { value: "yes" as const, label: t("insuranceYes"), emoji: "✅" },
+            { value: "no" as const, label: t("insuranceNo"), emoji: "❌" },
+            { value: "unknown" as const, label: t("insuranceUnknown"), emoji: "🤷" },
           ]).map((opt) => (
             <button
               key={opt.value}
@@ -187,12 +206,12 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
     return (
       <div>
         <button onClick={() => setStep(3)} className="mb-4 flex items-center gap-1 text-sm text-gray-500">
-          <ArrowLeft className="h-4 w-4" /> Back
+          <ArrowLeft className="h-4 w-4" /> {tCommon("back")}
         </button>
 
         <div className="mb-4 text-center">
           <MapPin className="mx-auto mb-2 h-8 w-8 text-cyan-500" />
-          <h2 className="text-base font-bold text-gray-900">Which country are you in?</h2>
+          <h2 className="text-base font-bold text-gray-900">{t("countryTitle")}</h2>
         </div>
 
         <div className="mb-4 grid grid-cols-2 gap-2">
@@ -215,9 +234,9 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
           className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 py-3.5 text-sm font-semibold text-white shadow-lg active:scale-[0.98] disabled:opacity-50"
         >
           {loading ? (
-            <><Loader2 className="h-4 w-4 animate-spin" /> Preparing your visit card...</>
+            <><Loader2 className="h-4 w-4 animate-spin" /> {t("generating")}</>
           ) : (
-            <><FileText className="h-4 w-4" /> Generate Doctor Visit Card</>
+            <><FileText className="h-4 w-4" /> {t("generateCard")}</>
           )}
         </button>
       </div>
@@ -229,14 +248,14 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
     return (
       <div className="space-y-4">
         <button onClick={() => { setStep(1); setVisitCard(null); setIssueDetail(""); }} className="flex items-center gap-1 text-sm text-gray-500">
-          <ArrowLeft className="h-4 w-4" /> Start over
+          <ArrowLeft className="h-4 w-4" /> {t("startOver")}
         </button>
 
         {/* Doctor summary card */}
         <div className="rounded-2xl border-2 border-cyan-200 bg-white p-5 shadow-sm">
           <div className="mb-3 flex items-center gap-2 border-b border-gray-100 pb-3">
             <Stethoscope className="h-5 w-5 text-cyan-500" />
-            <span className="text-sm font-bold text-gray-900">Show this to your doctor</span>
+            <span className="text-sm font-bold text-gray-900">{t("showDoctor")}</span>
           </div>
           <p className="text-sm leading-relaxed text-gray-700">{visitCard.patientSummary}</p>
           {visitCard.keySymptoms.length > 0 && (
@@ -246,14 +265,14 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
               ))}
             </div>
           )}
-          <p className="mt-2 text-[10px] text-gray-400">Generated by Zuvo Health Advisor</p>
+          <p className="mt-2 text-[10px] text-gray-400">{t("generatedBy")}</p>
         </div>
 
         {/* What to bring */}
         {visitCard.whatToBring.length > 0 && (
           <div className="rounded-2xl border border-amber-100 bg-amber-50 p-4">
             <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-amber-800">
-              <CheckCircle2 className="h-4 w-4" /> What to bring
+              <CheckCircle2 className="h-4 w-4" /> {t("whatToBring")}
             </h3>
             <ul className="space-y-1">
               {visitCard.whatToBring.map((item, i) => (
@@ -270,7 +289,7 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
         {visitCard.questionsToAsk.length > 0 && (
           <div className="rounded-2xl border border-purple-100 bg-purple-50 p-4">
             <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-purple-800">
-              <HelpCircle className="h-4 w-4" /> Ask your doctor
+              <HelpCircle className="h-4 w-4" /> {t("askYourDoctor")}
             </h3>
             <ul className="space-y-1.5">
               {visitCard.questionsToAsk.map((q, i) => (
@@ -289,7 +308,7 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
         {visitCard.patientRights.length > 0 && (
           <div className="rounded-2xl border border-red-100 bg-red-50 p-4">
             <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-red-800">
-              <Shield className="h-4 w-4" /> Your rights as a patient
+              <Shield className="h-4 w-4" /> {t("patientRights")}
             </h3>
             <ul className="space-y-1.5">
               {visitCard.patientRights.map((r, i) => (
@@ -311,8 +330,8 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
         >
           <MapPin className="h-5 w-5 text-cyan-500" />
           <div>
-            <span className="text-sm font-semibold text-gray-800">Find nearest hospital</span>
-            <p className="text-xs text-gray-400">Opens map with directions</p>
+            <span className="text-sm font-semibold text-gray-800">{t("findHospital")}</span>
+            <p className="text-xs text-gray-400">{t("mapHint")}</p>
           </div>
         </a>
 
@@ -321,7 +340,7 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
           href="tel:112"
           className="flex items-center justify-center gap-2 rounded-xl bg-red-600 py-3 text-sm font-bold text-white shadow-lg"
         >
-          <Phone className="h-4 w-4" /> Emergency? Call 112
+          <Phone className="h-4 w-4" /> {tEmergency("banner")}
         </a>
       </div>
     );

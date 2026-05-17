@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { SosButton } from "@/components/SosButton";
@@ -6,11 +7,10 @@ import { VaccineEducator } from "@/components/VaccineEducator";
 
 type Props = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Vaccine Guide — Zuvo",
-    description: "Every vaccine explained simply. Protect your family with knowledge.",
-  };
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "vaccines.meta" });
+  return { title: t("title"), description: t("description") };
 }
 
 export default async function VaccinesPage({ params }: Props) {

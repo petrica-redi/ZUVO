@@ -1,6 +1,7 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
+import { inferShellModeFromUserAgent } from "./lib/device-shell";
 import { updateSession } from "./lib/supabase/middleware";
 
 const intlMiddleware = createMiddleware(routing);
@@ -17,12 +18,19 @@ function applySecurityHeaders(res: NextResponse) {
 }
 
 export default async function middleware(req: NextRequest) {
+  const shellMode = inferShellModeFromUserAgent(req.headers.get("user-agent"));
+  const requestHeaders = new Headers(req.headers);
+  requestHeaders.set("x-sastipe-shell-mode", shellMode);
+
   let res: NextResponse;
 
   if (req.nextUrl.pathname.startsWith("/api/") || req.nextUrl.pathname === "/offline.html") {
-    res = NextResponse.next();
+    res = NextResponse.next({ request: { headers: requestHeaders } });
   } else {
-    res = intlMiddleware(req);
+    const localizedReq = new NextRequest(req.nextUrl, {
+      headers: requestHeaders,
+    });
+    res = intlMiddleware(localizedReq);
   }
 
   res = await updateSession(req, res);

@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { LOCALES } from "@/i18n/routing";
 import {
   getAppConfig,
   getSentryConfig,
@@ -15,8 +16,9 @@ describe("getAppConfig", () => {
   it("returns safe defaults when env vars are absent", () => {
     const cfg = getAppConfig();
     expect(cfg.appName).toBe("Sastipe");
-    expect(cfg.defaultLocale).toBe("sq");
-    expect(cfg.supportedLocales).toEqual(["sq", "rom", "en"]);
+    // Source of truth lives in src/i18n/routing.ts → defaultLocale: "en".
+    expect(cfg.defaultLocale).toBe("en");
+    expect(cfg.supportedLocales).toEqual([...LOCALES]);
     expect(cfg.appUrl).toBeNull();
   });
 });

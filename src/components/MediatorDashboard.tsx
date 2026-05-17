@@ -16,9 +16,10 @@ import {
 
 type Labels = Record<string, string>;
 
-// Simple access gate — mediators enter a 4-digit code to access the dashboard.
-// In production this would be Supabase auth with role check.
-const ACCESS_CODE = "2026";
+// UI-only convenience gate. The *real* mediator authorisation happens on
+// every protected server endpoint via the Supabase user-role check. We
+// verify the PIN through `/api/mediator/pin-check` so the value never
+// ships in the client bundle.
 const ACCESS_KEY = "sastipe_mediator_access";
 
 export function MediatorDashboard({ labels }: { labels: Labels }) {
@@ -28,6 +29,7 @@ export function MediatorDashboard({ labels }: { labels: Labels }) {
   });
   const [code, setCode] = useState("");
   const [error, setError] = useState(false);
+  const [verifying, setVerifying] = useState(false);
   const [showVisitForm, setShowVisitForm] = useState(false);
   const [visitName, setVisitName] = useState("");
   const [visitNotes, setVisitNotes] = useState("");
@@ -45,13 +47,26 @@ export function MediatorDashboard({ labels }: { labels: Labels }) {
     }
   }, [hasAccess]);
 
-  const handleAccess = () => {
-    if (code === ACCESS_CODE) {
-      localStorage.setItem(ACCESS_KEY, "true");
-      setHasAccess(true);
-      setError(false);
-    } else {
+  const handleAccess = async () => {
+    if (verifying) return;
+    setVerifying(true);
+    setError(false);
+    try {
+      const res = await fetch("/api/mediator/pin-check", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ code }),
+      });
+      if (res.ok) {
+        localStorage.setItem(ACCESS_KEY, "true");
+        setHasAccess(true);
+      } else {
+        setError(true);
+      }
+    } catch {
       setError(true);
+    } finally {
+      setVerifying(false);
     }
   };
 

@@ -5,6 +5,7 @@ import {
   Plus, Heart, Trash2, ChevronRight,
   Syringe, Activity, Calendar, X,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type FamilyMember = {
   id: string;
@@ -29,18 +30,44 @@ type HealthEntry = {
 const STORAGE_KEY = "zuvo_family";
 const HEALTH_KEY = "zuvo_health_logs";
 
-const RELATIONSHIP_LABELS: Record<string, string> = {
-  self: "Me",
-  child: "Child",
-  spouse: "Spouse",
-  parent: "Parent",
-  other: "Other",
-};
+const ALLOWED_RELATIONSHIPS = new Set<FamilyMember["relationship"]>([
+  "self",
+  "child",
+  "spouse",
+  "parent",
+  "other",
+]);
+const ALLOWED_GENDERS = new Set<FamilyMember["gender"]>(["male", "female", "other"]);
+
+function isFamilyMember(v: unknown): v is FamilyMember {
+  if (!v || typeof v !== "object") return false;
+  const m = v as Record<string, unknown>;
+  return (
+    typeof m.id === "string" &&
+    typeof m.name === "string" &&
+    typeof m.age === "number" &&
+    ALLOWED_RELATIONSHIPS.has(m.relationship as FamilyMember["relationship"]) &&
+    ALLOWED_GENDERS.has(m.gender as FamilyMember["gender"])
+  );
+}
+
+function isHealthEntry(v: unknown): v is HealthEntry {
+  if (!v || typeof v !== "object") return false;
+  const e = v as Record<string, unknown>;
+  return (
+    typeof e.id === "string" &&
+    typeof e.memberId === "string" &&
+    typeof e.type === "string" &&
+    typeof e.value === "number" &&
+    typeof e.date === "string"
+  );
+}
 
 function getMembers(): FamilyMember[] {
   if (typeof window === "undefined") return [];
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    const raw = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    return Array.isArray(raw) ? raw.filter(isFamilyMember) : [];
   } catch { return []; }
 }
 
@@ -51,7 +78,8 @@ function saveMembers(members: FamilyMember[]) {
 function getHealthLogs(): HealthEntry[] {
   if (typeof window === "undefined") return [];
   try {
-    return JSON.parse(localStorage.getItem(HEALTH_KEY) || "[]");
+    const raw = JSON.parse(localStorage.getItem(HEALTH_KEY) || "[]");
+    return Array.isArray(raw) ? raw.filter(isHealthEntry) : [];
   } catch { return []; }
 }
 
@@ -60,6 +88,8 @@ function saveHealthLogs(logs: HealthEntry[]) {
 }
 
 export function FamilyHub() {
+  const tRelation = useTranslations("family.relation");
+  const relationLabel = (id: FamilyMember["relationship"]) => tRelation(id);
   const [members, setMembers] = useState<FamilyMember[]>([]);
   const [selectedMember, setSelectedMember] = useState<FamilyMember | null>(null);
   const [showAddForm, setShowAddForm] = useState(false);
@@ -165,7 +195,7 @@ export function FamilyHub() {
           <div>
             <h2 className="text-lg font-bold text-gray-900">{selectedMember.name}</h2>
             <p className="text-sm text-gray-500">
-              {RELATIONSHIP_LABELS[selectedMember.relationship]} · {selectedMember.age} years old
+              {relationLabel(selectedMember.relationship)} · {selectedMember.age} years old
             </p>
           </div>
         </div>
@@ -305,7 +335,7 @@ export function FamilyHub() {
                 <div className="text-left">
                   <span className="text-sm font-semibold text-gray-800">{m.name}</span>
                   <p className="text-xs text-gray-400">
-                    {RELATIONSHIP_LABELS[m.relationship]} · {m.age}y
+                    {relationLabel(m.relationship)} · {m.age}y
                     {m.isPregnant && " · 🤰 Expecting"}
                   </p>
                 </div>

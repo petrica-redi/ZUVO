@@ -10,3 +10,5 @@ export { Alert, AlertTitle, AlertDescription } from "./Alert";
 export { Skeleton } from "./Skeleton";
 export { ToastProvider, useToast, type ToastVariant } from "./Toast";
 export { Stat } from "./Stat";
+export { CountUp } from "./CountUp";
+export { ToolHero } from "./ToolHero";

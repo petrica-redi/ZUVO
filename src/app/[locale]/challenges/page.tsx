@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Target, Trophy, ArrowRight, Zap, Users } from "lucide-react";
+import { Target, Trophy, Zap, Users } from "lucide-react";
 import { Card, Badge, Progress } from "@/components/ui";
 
 type Props = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "common" }); // fallback
+export async function generateMetadata(): Promise<Metadata> {
   return { title: `Challenges — Sastipe`, description: "Community Challenges" };
 }
 
@@ -37,12 +33,8 @@ const CHALLENGES = [
   }
 ];
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default async function ChallengesPage({ params }: Props) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { locale } = await params;
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const t = await getTranslations({ locale, namespace: "common" });
+  await params;
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">

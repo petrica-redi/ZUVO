@@ -6,6 +6,7 @@ import {
   Clock, Siren, FileText, ArrowLeft, Thermometer, Baby,
   Brain, Wind, Eye, Bone, HeartPulse,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type Message = { role: "user" | "assistant"; content: string };
 
@@ -19,45 +20,43 @@ type Summary = {
   doctorVisitSummary: string;
 };
 
-const QUICK_CONCERNS = [
-  { id: "fever", icon: Thermometer, label: "Fever / High temperature", color: "#EF4444" },
-  { id: "pain", icon: Bone, label: "Pain somewhere", color: "#F97316" },
-  { id: "breathing", icon: Wind, label: "Breathing problems", color: "#3B82F6" },
-  { id: "skin", icon: Eye, label: "Skin problem / Rash", color: "#8B5CF6" },
-  { id: "pregnancy", icon: Baby, label: "Pregnancy concern", color: "#EC4899" },
-  { id: "child", icon: Baby, label: "My child is sick", color: "#F59E0B" },
-  { id: "mental", icon: Brain, label: "Stress / Anxiety / Sadness", color: "#06B6D4" },
-  { id: "heart", icon: HeartPulse, label: "Heart / Chest problem", color: "#DC2626" },
+type ConcernId =
+  | "fever"
+  | "pain"
+  | "breathing"
+  | "skin"
+  | "pregnancy"
+  | "child"
+  | "mental"
+  | "heart";
+
+const QUICK_CONCERNS: Array<{
+  id: ConcernId;
+  icon: typeof Thermometer;
+  color: string;
+}> = [
+  { id: "fever", icon: Thermometer, color: "#EF4444" },
+  { id: "pain", icon: Bone, color: "#F97316" },
+  { id: "breathing", icon: Wind, color: "#3B82F6" },
+  { id: "skin", icon: Eye, color: "#8B5CF6" },
+  { id: "pregnancy", icon: Baby, color: "#EC4899" },
+  { id: "child", icon: Baby, color: "#F59E0B" },
+  { id: "mental", icon: Brain, color: "#06B6D4" },
+  { id: "heart", icon: HeartPulse, color: "#DC2626" },
 ];
 
-const SEVERITY_CONFIG = {
-  green: {
-    bg: "bg-green-50",
-    border: "border-green-200",
-    gradient: "from-green-500 to-emerald-600",
-    text: "text-green-800",
-    icon: CheckCircle2,
-    label: "Manage at home",
-  },
-  amber: {
-    bg: "bg-amber-50",
-    border: "border-amber-200",
-    gradient: "from-amber-500 to-orange-600",
-    text: "text-amber-800",
-    icon: Clock,
-    label: "See a doctor soon",
-  },
-  red: {
-    bg: "bg-red-50",
-    border: "border-red-200",
-    gradient: "from-red-600 to-red-800",
-    text: "text-red-800",
-    icon: Siren,
-    label: "Go to hospital NOW",
-  },
-};
+const SEVERITY_STYLE = {
+  green: { bg: "bg-green-50", border: "border-green-200", gradient: "from-green-500 to-emerald-600", text: "text-green-800", icon: CheckCircle2 },
+  amber: { bg: "bg-amber-50", border: "border-amber-200", gradient: "from-amber-500 to-orange-600", text: "text-amber-800", icon: Clock },
+  red:   { bg: "bg-red-50",   border: "border-red-200",   gradient: "from-red-600 to-red-800",      text: "text-red-800",   icon: Siren },
+} as const;
 
 export function ConsultationFlow({ locale }: { locale: string }) {
+  const t = useTranslations("consult");
+  const tSeverity = useTranslations("severity");
+  const tEmergency = useTranslations("emergency");
+  const tCommon = useTranslations("common");
+  const tErrors = useTranslations("errors");
   const [stage, setStage] = useState<"select" | "chat" | "summary">("select");
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -95,7 +94,7 @@ export function ConsultationFlow({ locale }: { locale: string }) {
     } catch {
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "I'm having trouble connecting. Please try again." },
+        { role: "assistant", content: tErrors("connection") },
       ]);
     } finally {
       setLoading(false);
@@ -127,43 +126,46 @@ export function ConsultationFlow({ locale }: { locale: string }) {
           <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-600 shadow-xl shadow-emerald-500/25">
             <Stethoscope className="h-10 w-10 text-white" />
           </div>
-          <h1 className="text-2xl font-black text-gray-900">Health Consultation</h1>
-          <p className="mt-2 text-sm text-gray-500">
-            Tell me what&apos;s bothering you. I&apos;ll ask a few questions and help you decide what to do.
-          </p>
+          <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
+          <p className="mt-2 text-sm text-gray-500">{t("heroSubtitle")}</p>
         </div>
 
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
-          What brings you here today?
+          {t("prompt")}
         </p>
 
         <div className="grid grid-cols-2 gap-3">
-          {QUICK_CONCERNS.map((c, i) => (
-            <button
-              key={c.id}
-              onClick={() => startConsultation(c.label)}
-              className={`card-hover flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm animate-fade-in-up delay-${(i + 1) * 100}`}
-            >
-              <div
-                className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl shadow-sm"
-                style={{ backgroundColor: c.color + "15" }}
+          {QUICK_CONCERNS.map((c, i) => {
+            const label = t(`concerns.${c.id}`);
+            return (
+              <button
+                type="button"
+                key={c.id}
+                onClick={() => startConsultation(label)}
+                className="card-hover flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm animate-fade-in-up"
+                style={{ animationDelay: `${(i + 1) * 100}ms` }}
               >
-                <c.icon className="h-6 w-6" style={{ color: c.color }} />
-              </div>
-              <span className="text-sm font-bold text-gray-700">{c.label}</span>
-            </button>
-          ))}
+                <div
+                  className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl shadow-sm"
+                  style={{ backgroundColor: c.color + "15" }}
+                >
+                  <c.icon className="h-6 w-6" style={{ color: c.color }} />
+                </div>
+                <span className="text-sm font-bold text-gray-700">{label}</span>
+              </button>
+            );
+          })}
         </div>
 
         <div className="mt-4">
-          <p className="mb-2 text-center text-xs text-gray-400">or describe in your own words</p>
+          <p className="mb-2 text-center text-xs text-gray-400">{t("orFreeform")}</p>
           <div className="flex gap-2">
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); startConsultation(input.trim()); } }}
-              placeholder="I have a headache since yesterday..."
-              aria-label="Describe your health concern"
+              placeholder={t("freeformPlaceholder")}
+              aria-label={t("freeformAria")}
               className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
             />
             <button
@@ -184,12 +186,12 @@ export function ConsultationFlow({ locale }: { locale: string }) {
     return (
       <div className="flex h-[calc(100vh-10rem)] flex-col">
         <div className="mb-3 flex items-center gap-3">
-          <button onClick={reset} className="rounded-full bg-gray-100 p-2">
+          <button onClick={reset} className="rounded-full bg-gray-100 p-2" aria-label={tCommon("back")}>
             <ArrowLeft className="h-4 w-4 text-gray-600" />
           </button>
           <div>
-            <h2 className="text-sm font-bold text-gray-900">Health Consultation</h2>
-            <p className="text-xs text-gray-400">Answering a few questions helps me help you better</p>
+            <h2 className="text-sm font-bold text-gray-900">{t("chatHeader")}</h2>
+            <p className="text-xs text-gray-400">{t("chatSubtitle")}</p>
           </div>
         </div>
 
@@ -212,7 +214,7 @@ export function ConsultationFlow({ locale }: { locale: string }) {
               <div className="rounded-2xl rounded-bl-md border border-gray-100 bg-white px-4 py-3 shadow-sm">
                 <div className="flex items-center gap-2 text-gray-400">
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  <span className="text-xs">Thinking...</span>
+                  <span className="text-xs">{tCommon("thinking")}</span>
                 </div>
               </div>
             </div>
@@ -225,7 +227,8 @@ export function ConsultationFlow({ locale }: { locale: string }) {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); sendMessage(); } }}
-              aria-label="Your answer" placeholder="Type your answer..."
+              aria-label={t("answerAria")}
+              placeholder={t("answerPlaceholder")}
               className="flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
               disabled={loading}
             />
@@ -244,13 +247,17 @@ export function ConsultationFlow({ locale }: { locale: string }) {
 
   // Stage 3: Summary
   if (stage === "summary" && summary) {
-    const config = SEVERITY_CONFIG[summary.severity];
+    const config = SEVERITY_STYLE[summary.severity];
     const SeverityIcon = config.icon;
+    const severityLabel =
+      summary.severity === "green" ? tSeverity("green") :
+      summary.severity === "amber" ? tSeverity("amber") :
+      tSeverity("redHospital");
 
     return (
       <div className="space-y-4">
         <button onClick={reset} className="flex items-center gap-2 text-sm text-gray-500">
-          <ArrowLeft className="h-4 w-4" /> New consultation
+          <ArrowLeft className="h-4 w-4" /> {t("newSession")}
         </button>
 
         {/* Severity banner */}
@@ -259,7 +266,7 @@ export function ConsultationFlow({ locale }: { locale: string }) {
             <SeverityIcon className="h-6 w-6 text-white" />
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-white/80">
-                {config.label}
+                {severityLabel}
               </span>
               <h2 className="text-base font-bold text-white">{summary.title}</h2>
             </div>
@@ -271,30 +278,30 @@ export function ConsultationFlow({ locale }: { locale: string }) {
                 href="tel:112"
                 className="flex items-center justify-center gap-2 rounded-xl bg-red-600 py-4 text-lg font-bold text-white shadow-lg"
               >
-                <Siren className="h-6 w-6" /> Call 112 NOW
+                <Siren className="h-6 w-6" /> {tEmergency("call112")}
               </a>
             )}
 
             <div>
-              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-500">Assessment</p>
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-500">{t("assessment")}</p>
               <p className="text-sm leading-relaxed text-gray-700">{summary.assessment}</p>
             </div>
 
             <div className="rounded-xl bg-white p-3 shadow-sm">
-              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-emerald-600">What to do</p>
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-emerald-600">{t("whatToDo")}</p>
               <p className="text-sm leading-relaxed text-gray-700">{summary.whatToDo}</p>
             </div>
 
             {summary.homeRemedies && (
               <div className="rounded-xl bg-white p-3 shadow-sm">
-                <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-blue-600">Home care</p>
+                <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-blue-600">{t("homeCare")}</p>
                 <p className="text-sm leading-relaxed text-gray-700">{summary.homeRemedies}</p>
               </div>
             )}
 
             <div className="rounded-xl bg-amber-50 p-3">
               <p className="mb-1 flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-amber-700">
-                <AlertTriangle className="h-3 w-3" /> Watch for these signs
+                <AlertTriangle className="h-3 w-3" /> {t("watchFor")}
               </p>
               <p className="text-sm leading-relaxed text-amber-700">{summary.watchFor}</p>
             </div>
@@ -307,20 +314,20 @@ export function ConsultationFlow({ locale }: { locale: string }) {
           className="flex w-full items-center justify-center gap-2 rounded-xl border border-indigo-200 bg-indigo-50 py-3 text-sm font-semibold text-indigo-700 shadow-sm transition-all active:scale-[0.98]"
         >
           <FileText className="h-4 w-4" />
-          {showVisitCard ? "Hide" : "Show"} Doctor Visit Card
+          {showVisitCard ? t("hideVisitCard") : t("showVisitCard")}
         </button>
 
         {showVisitCard && (
           <div className="rounded-2xl border-2 border-dashed border-indigo-200 bg-white p-5">
             <div className="mb-3 flex items-center gap-2 border-b border-gray-100 pb-3">
               <Stethoscope className="h-5 w-5 text-indigo-500" />
-              <span className="text-sm font-bold text-gray-900">Patient Summary — For Doctor</span>
+              <span className="text-sm font-bold text-gray-900">{t("visitCardTitle")}</span>
             </div>
             <p className="text-sm leading-relaxed text-gray-700">
               {summary.doctorVisitSummary}
             </p>
             <p className="mt-3 text-[10px] text-gray-400">
-              Generated by Zuvo Health Advisor. This is not a medical diagnosis.
+              {t("visitCardDisclaimer")}
             </p>
           </div>
         )}

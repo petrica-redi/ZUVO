@@ -3,16 +3,15 @@
 import { useEffect } from "react";
 
 /**
- * Opts the global `.mobile-shell` out of the centered phone-frame on this
- * page, so the landing can present as a full-width premium experience on
- * desktop. Mobile (<768px) is unaffected — the shell is already full-bleed.
+ * Lets the Student Health Academy break out of the centered mobile-shell
+ * box on desktop so it can present as a full-width premium experience.
+ * Mobile (<768px) is unaffected.
  *
- * If the shell is not yet mounted on first paint we watch the body via
- * `MutationObserver` and retry as soon as it appears, then clean up on
- * unmount. This prevents the layout from silently failing on slow renders
- * or when this component mounts before the layout's shell mounts.
+ * Watches the body via `MutationObserver` and retries as soon as the
+ * shell appears, so the layout doesn't silently fail when this component
+ * mounts before the shell.
  */
-export function ProfileShellOptOut() {
+export function AcademyShellOptOut() {
   useEffect(() => {
     if (typeof document === "undefined") return;
 

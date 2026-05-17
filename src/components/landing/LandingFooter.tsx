@@ -102,7 +102,7 @@ export async function LandingFooter({ locale }: { locale: string }) {
           <span>{t("rights")}</span>
           <span className="flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-            All systems operational
+            {t("systemsOperational")}
           </span>
         </div>
       </div>
