@@ -4,11 +4,15 @@
     "description": "Mjete arsimimi shëndetësor për komunitetet rome. Mëso, ndiq dhe qëndro mirë."
   },
   "nav": {
-    "home": "Kreu",
+    "home": "Home",
     "learn": "Mëso",
     "track": "Ndjek",
     "mediator": "Ndërmjetës",
-    "profile": "Profili"
+    "profile": "Profili",
+    "explain": "Explain",
+    "chat": "Ask",
+    "family": "Family",
+    "more": "More"
   },
   "hero": {
     "tagline": "Shëndeti juaj, gjuha juaj",
@@ -652,5 +656,31 @@
       "poisonLabel": "Helmim",
       "poisonSteps": "Telefono qendrën e helmimit. Mos e bëj të vjellë. Ruaje enën ose etiketën. Telefono 112."
     }
+  },
+  "scan": {
+    "title": "Check a health claim",
+    "subtitle": "Paste something you saw on Facebook, TikTok, or WhatsApp. We'll tell you the truth.",
+    "placeholder": "Paste the claim here...\n\nExample: \"Vaccines change your DNA\"",
+    "checkButton": "Check this",
+    "checking": "Checking...",
+    "shareButton": "Share the truth",
+    "recentChecks": "Recent checks",
+    "orDescribe": "or describe what you heard",
+    "verdictVerified": "Verified",
+    "verdictMisleading": "Misleading",
+    "verdictFalse": "False"
+  },
+  "install": {
+    "installApp": "Install Sastipe",
+    "offlineAccess": "Add it to your home screen for offline access and faster opens.",
+    "installButton": "Install",
+    "addToHome": "Add to Home Screen",
+    "tap": "Tap",
+    "then": "then",
+    "add": "Add",
+    "toInstall": "to install on iOS."
+  },
+  "chat": {
+    "askMeAnything": "Ask me anything"
   }
 }

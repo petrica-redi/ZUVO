@@ -20,9 +20,12 @@ export function CapacitorBootstrap() {
     let backHandler: { remove: () => void } | null = null;
     let urlOpenHandler: { remove: () => void } | null = null;
 
+    let cancelled = false;
+
     void (async () => {
       try {
         const { StatusBar, Style } = await import("@capacitor/status-bar");
+        if (cancelled) return;
         await StatusBar.setStyle({ style: Style.Dark });
         await StatusBar.setBackgroundColor({ color: "#4F46E5" });
         await StatusBar.setOverlaysWebView({ overlay: false });
@@ -32,9 +35,9 @@ export function CapacitorBootstrap() {
 
       try {
         const { SplashScreen } = await import("@capacitor/splash-screen");
-        // Give first paint a beat, then dismiss.
+        if (cancelled) return;
         window.setTimeout(() => {
-          void SplashScreen.hide({ fadeOutDuration: 250 });
+          if (!cancelled) void SplashScreen.hide({ fadeOutDuration: 250 });
         }, 250);
       } catch {
         /* ignore */
@@ -42,6 +45,7 @@ export function CapacitorBootstrap() {
 
       try {
         const { App } = await import("@capacitor/app");
+        if (cancelled) return;
         backHandler = await App.addListener("backButton", ({ canGoBack }) => {
           if (canGoBack) {
             window.history.back();
@@ -67,6 +71,7 @@ export function CapacitorBootstrap() {
     })();
 
     return () => {
+      cancelled = true;
       backHandler?.remove?.();
       urlOpenHandler?.remove?.();
     };

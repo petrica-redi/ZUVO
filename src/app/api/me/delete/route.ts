@@ -68,55 +68,58 @@ export async function POST(req: NextRequest) {
   const pseudoEmail = `deleted-${user.id.slice(0, 8)}@deleted.local`;
 
   try {
-    // 1. Audit the request first — if anything fails after this, we have a record.
-    await db.insert(auditLog).values({
-      userId: user.id,
-      action: "user.deleted",
-      resourceType: "user",
-      resourceId: user.id,
-      metadata: {
-        reason: parsed.data.reason ?? null,
-        scheduledHardDeleteAfter: new Date(
-          now.getTime() + 30 * 24 * 60 * 60 * 1000,
-        ).toISOString(),
-      },
-      createdAt: now,
+    // We use db.transaction if possible, but Neon HTTP limits cross-query transactions.
+    // For Drizzle + Neon HTTP, we do best-effort or use db.batch().
+    // We'll do it sequentially here; a partial failure will leave the user scrubbed but
+    // some related logs might retain text. The cron job will clean them up.
+    await db.transaction(async (tx) => {
+      // 1. Audit the request first — if anything fails after this, we have a record.
+      await tx.insert(auditLog).values({
+        userId: user.id,
+        action: "user.deleted",
+        resourceType: "user",
+        resourceId: user.id,
+        metadata: {
+          reason: parsed.data.reason ?? null,
+          scheduledHardDeleteAfter: new Date(
+            now.getTime() + 30 * 24 * 60 * 60 * 1000,
+          ).toISOString(),
+        },
+        createdAt: now,
+      });
+
+      // 2. Scrub identifying fields on the user row but keep the row for FK
+      //    integrity and statistical use until the hard-delete cron runs.
+      const [updatedUser] = await tx
+        .update(users)
+        .set({
+          email: pseudoEmail,
+          displayName: null,
+          phone: null,
+          avatarUrl: null,
+          anonymousId: null,
+          authId: null,
+          isAnonymous: true,
+          updatedAt: now,
+        })
+        .where(eq(users.id, user.id))
+        .returning({ id: users.id });
+
+      if (!updatedUser) {
+        throw new Error("User profile not found");
+      }
+
+      // 3. Best-effort scrub of free-text fields on health logs and notifications.
+      await tx
+        .update(healthLogs)
+        .set({ note: null, metadata: null })
+        .where(eq(healthLogs.userId, user.id));
+
+      await tx
+        .update(notifications)
+        .set({ title: "[deleted]", body: "[deleted]", data: null })
+        .where(eq(notifications.userId, user.id));
     });
-
-    // 2. Scrub identifying fields on the user row but keep the row for FK
-    //    integrity and statistical use until the hard-delete cron runs.
-    const [updatedUser] = await db
-      .update(users)
-      .set({
-        email: pseudoEmail,
-        displayName: null,
-        phone: null,
-        avatarUrl: null,
-        anonymousId: null,
-        authId: null,
-        isAnonymous: true,
-        updatedAt: now,
-      })
-      .where(eq(users.id, user.id))
-      .returning({ id: users.id });
-
-    if (!updatedUser) {
-      return NextResponse.json(
-        { success: false, error: "User profile not found" },
-        { status: 404 },
-      );
-    }
-
-    // 3. Best-effort scrub of free-text fields on health logs and notifications.
-    await db
-      .update(healthLogs)
-      .set({ note: null, metadata: null })
-      .where(eq(healthLogs.userId, user.id));
-
-    await db
-      .update(notifications)
-      .set({ title: "[deleted]", body: "[deleted]", data: null })
-      .where(eq(notifications.userId, user.id));
 
     // 4. Sign the user out of any active Supabase session.
     if (user.kind === "authenticated") {
@@ -133,7 +136,7 @@ export async function POST(req: NextRequest) {
     //    (Best effort; counters expire daily anyway.)
     void progress; // keep import lint-clean
 
-    return NextResponse.json({
+    const res = NextResponse.json({
       success: true,
       message:
         "Your data has been scrubbed. A permanent deletion is scheduled within 30 days.",
@@ -141,6 +144,15 @@ export async function POST(req: NextRequest) {
         now.getTime() + 30 * 24 * 60 * 60 * 1000,
       ).toISOString(),
     });
+
+    // Make sure cookies are cleared even if signOut throws
+    req.cookies.getAll().forEach((cookie) => {
+      if (cookie.name.includes("-auth-token")) {
+        res.cookies.delete(cookie.name);
+      }
+    });
+
+    return res;
   } catch {
     return NextResponse.json(
       {

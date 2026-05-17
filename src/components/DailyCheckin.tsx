@@ -183,6 +183,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
             <button
               key={g}
               onClick={() => setWater(g)}
+              aria-label={`${labels.waterGoal} ${g}`}
               className={`flex h-10 w-10 items-center justify-center rounded-xl transition-all ${
                 g <= water
                   ? "bg-blue-500 text-white shadow-md"

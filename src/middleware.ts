@@ -1,6 +1,7 @@
 import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
+import { updateSession } from "./lib/supabase/middleware";
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -15,12 +16,16 @@ function applySecurityHeaders(res: NextResponse) {
   return res;
 }
 
-export default function middleware(req: NextRequest) {
+export default async function middleware(req: NextRequest) {
+  let res: NextResponse;
+
   if (req.nextUrl.pathname.startsWith("/api/") || req.nextUrl.pathname === "/offline.html") {
-    return applySecurityHeaders(NextResponse.next());
+    res = NextResponse.next();
+  } else {
+    res = intlMiddleware(req);
   }
 
-  const res = intlMiddleware(req);
+  res = await updateSession(req, res);
   return applySecurityHeaders(res);
 }
 

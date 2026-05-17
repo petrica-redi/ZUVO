@@ -4,11 +4,15 @@
     "description": "Sodobna orodja zdravstvene pismenosti za romske skupnosti. Učite se, sledite in ostanite zdravi."
   },
   "nav": {
-    "home": "Domov",
+    "home": "Home",
     "learn": "Učenje",
     "track": "Sledenje",
     "mediator": "Mediator",
-    "profile": "Profil"
+    "profile": "Profil",
+    "explain": "Explain",
+    "chat": "Ask",
+    "family": "Family",
+    "more": "More"
   },
   "hero": {
     "tagline": "Vaše zdravje, vaš jezik",
@@ -652,5 +656,31 @@
       "poisonLabel": "Poisoning",
       "poisonSteps": "Call the poison centre. Do not make them vomit. Save the container or label. Call 112."
     }
+  },
+  "scan": {
+    "title": "Check a health claim",
+    "subtitle": "Paste something you saw on Facebook, TikTok, or WhatsApp. We'll tell you the truth.",
+    "placeholder": "Paste the claim here...\n\nExample: \"Vaccines change your DNA\"",
+    "checkButton": "Check this",
+    "checking": "Checking...",
+    "shareButton": "Share the truth",
+    "recentChecks": "Recent checks",
+    "orDescribe": "or describe what you heard",
+    "verdictVerified": "Verified",
+    "verdictMisleading": "Misleading",
+    "verdictFalse": "False"
+  },
+  "install": {
+    "installApp": "Install Sastipe",
+    "offlineAccess": "Add it to your home screen for offline access and faster opens.",
+    "installButton": "Install",
+    "addToHome": "Add to Home Screen",
+    "tap": "Tap",
+    "then": "then",
+    "add": "Add",
+    "toInstall": "to install on iOS."
+  },
+  "chat": {
+    "askMeAnything": "Ask me anything"
   }
 }

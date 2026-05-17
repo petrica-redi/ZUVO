@@ -18,6 +18,7 @@ type Labels = {
   emergencyCall: string;
   suggestedQuestions: string;
   suggestions: string[];
+  askMeAnything: string;
 };
 
 export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string }) {
@@ -70,8 +71,9 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
 
       if (!response.ok) throw new Error("Failed");
 
+      const assistantMsgId = crypto.randomUUID();
       const assistantMsg: Message = {
-        id: crypto.randomUUID(),
+        id: assistantMsgId,
         role: "assistant",
         content: "",
         timestamp: new Date(),
@@ -100,7 +102,10 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
                   assistantMsg.content += t;
                   setMessages((prev) => {
                     const updated = [...prev];
-                    updated[updated.length - 1] = { ...assistantMsg };
+                    const idx = updated.findIndex((m) => m.id === assistantMsgId);
+                    if (idx !== -1) {
+                      updated[idx] = { ...assistantMsg };
+                    }
                     return updated;
                   });
                 }
@@ -113,7 +118,6 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       }
     } catch {
       setError(labels.errorMessage);
-      setMessages((prev) => prev.filter((m) => m.id !== "loading"));
     } finally {
       setIsLoading(false);
     }
@@ -146,7 +150,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
             >
               <MessageCircle className="h-10 w-10 text-white" />
             </div>
-            <h2 className="mb-2 text-xl font-black text-gray-900">Ask me anything</h2>
+            <h2 className="mb-2 text-xl font-black text-gray-900">{labels.askMeAnything}</h2>
             <p className="mb-6 max-w-xs text-sm text-gray-500">{labels.disclaimer}</p>
 
             <p className="mb-3 text-xs font-black uppercase tracking-widest text-gray-400">

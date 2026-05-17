@@ -43,6 +43,7 @@ export async function resolveUser(req: NextRequest): Promise<ResolvedUser> {
     try {
       const { createClient } = await import("@/lib/supabase/server");
       const supabase = await createClient();
+      const hasAuthCookie = req.cookies.getAll().some((c) => c.name.includes("-auth-token"));
       const { data, error } = await supabase.auth.getUser();
       if (!error && data?.user) {
         const headerAnon = getAnonymousId(req);
@@ -53,9 +54,17 @@ export async function resolveUser(req: NextRequest): Promise<ResolvedUser> {
           email: data.user.email ?? null,
           isAnonymous: data.user.is_anonymous ?? false,
         };
+      } else if (hasAuthCookie) {
+        // Cookie is present but invalid/expired/unreachable. 
+        // Do not silently downgrade to anonymous identity.
+        return null;
       }
     } catch {
-      // Supabase unreachable or misconfigured — fall through to anon mode.
+      // Supabase unreachable or misconfigured.
+      // If there's an auth cookie, we should not fallback to anonymous.
+      if (req.cookies.getAll().some((c) => c.name.includes("-auth-token"))) {
+        return null;
+      }
     }
   }
 

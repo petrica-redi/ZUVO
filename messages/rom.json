@@ -4,11 +4,15 @@
     "description": "Sastipen sikhavipe sar Romenge manušenge. Sikh, čhiv thaj ačh sastó."
   },
   "nav": {
-    "home": "Kher",
+    "home": "Home",
     "learn": "Sikh",
     "track": "Čhiv",
     "mediator": "Posrednici",
-    "profile": "Portret"
+    "profile": "Portret",
+    "explain": "Explain",
+    "chat": "Ask",
+    "family": "Family",
+    "more": "More"
   },
   "hero": {
     "tagline": "Tiro sastipen, tiri čhib",
@@ -652,5 +656,31 @@
       "poisonLabel": "Otravipen",
       "poisonSteps": "Akhar centro pe traipe. Na ker te šadel. Garav o bokso vai etiketa. Akhar 112."
     }
+  },
+  "scan": {
+    "title": "Check a health claim",
+    "subtitle": "Paste something you saw on Facebook, TikTok, or WhatsApp. We'll tell you the truth.",
+    "placeholder": "Paste the claim here...\n\nExample: \"Vaccines change your DNA\"",
+    "checkButton": "Check this",
+    "checking": "Checking...",
+    "shareButton": "Share the truth",
+    "recentChecks": "Recent checks",
+    "orDescribe": "or describe what you heard",
+    "verdictVerified": "Verified",
+    "verdictMisleading": "Misleading",
+    "verdictFalse": "False"
+  },
+  "install": {
+    "installApp": "Install Sastipe",
+    "offlineAccess": "Add it to your home screen for offline access and faster opens.",
+    "installButton": "Install",
+    "addToHome": "Add to Home Screen",
+    "tap": "Tap",
+    "then": "then",
+    "add": "Add",
+    "toInstall": "to install on iOS."
+  },
+  "chat": {
+    "askMeAnything": "Ask me anything"
   }
 }

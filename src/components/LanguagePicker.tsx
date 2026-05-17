@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState, useTransition, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "@/navigation";
 import { Globe, X, Check } from "lucide-react";
@@ -48,6 +48,15 @@ export function LanguagePicker() {
     });
   }
 
+  useEffect(() => {
+    if (!open) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [open]);
+
   return (
     <>
       {/* Trigger button */}
@@ -64,7 +73,7 @@ export function LanguagePicker() {
 
       {/* Full-screen sheet */}
       {open && (
-        <div className="fixed inset-0 z-50 flex flex-col" onClick={() => setOpen(false)}>
+        <div className="fixed inset-0 z-50 flex flex-col" role="dialog" aria-modal="true" aria-labelledby="lang-picker-title" onClick={() => setOpen(false)}>
           {/* Backdrop */}
           <div className="flex-1 bg-black/40 backdrop-blur-sm" />
 
@@ -80,7 +89,7 @@ export function LanguagePicker() {
 
             {/* Header */}
             <div className="flex items-center justify-between px-5 pb-3 pt-2">
-              <h2 className="text-base font-semibold text-gray-900">{t("select")}</h2>
+              <h2 id="lang-picker-title" className="text-base font-semibold text-gray-900">{t("select")}</h2>
               <button
                 onClick={() => setOpen(false)}
                 className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200"

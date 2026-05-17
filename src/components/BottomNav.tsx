@@ -3,25 +3,29 @@
 import { Link, usePathname } from "@/navigation";
 import { Home, FileText, MessageCircle, Users, LayoutGrid } from "lucide-react";
 
+import { useTranslations } from "next-intl";
+
 const TABS = [
-  { key: "home", href: "/", Icon: Home, label: "Home" },
-  { key: "explain", href: "/explain", Icon: FileText, label: "Explain" },
-  { key: "chat", href: "/chat", Icon: MessageCircle, label: "Ask", isPrimary: true },
-  { key: "family", href: "/family", Icon: Users, label: "Family" },
-  { key: "more", href: "/more", Icon: LayoutGrid, label: "More" },
+  { key: "home", href: "/", Icon: Home },
+  { key: "explain", href: "/explain", Icon: FileText },
+  { key: "chat", href: "/chat", Icon: MessageCircle, isPrimary: true },
+  { key: "family", href: "/family", Icon: Users },
+  { key: "more", href: "/more", Icon: LayoutGrid },
 ] as const;
 
 export function BottomNav() {
   const pathname = usePathname();
+  const t = useTranslations("nav");
   const cleanPath = pathname.replace(/^\/[a-z]{2,3}(?=\/|$)/, "") || "/";
 
   return (
     <nav className="sticky bottom-0 z-40" role="navigation" aria-label="Main navigation">
       <div className="glass-bar pb-safe-bottom" style={{ borderTop: "1px solid var(--color-border-subtle)", borderBottom: "none" }}>
         <div className="flex items-end justify-around px-1 pt-1.5 pb-2">
-          {TABS.map(({ key, href, Icon, label, ...rest }) => {
+          {TABS.map(({ key, href, Icon, ...rest }) => {
             const isPrimary = "isPrimary" in rest && rest.isPrimary;
             const isActive = cleanPath === href || (href !== "/" && cleanPath.startsWith(href));
+            const label = t(key);
 
             if (isPrimary) {
               return (

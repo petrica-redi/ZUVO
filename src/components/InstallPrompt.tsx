@@ -17,6 +17,8 @@ import { Download, Share, Plus, X } from "lucide-react";
  * any time from /more.
  */
 
+import { useTranslations } from "next-intl";
+
 type BeforeInstallPromptEvent = Event & {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
@@ -71,6 +73,7 @@ function readDismissed(): boolean {
 }
 
 export function InstallPrompt() {
+  const t = useTranslations("install");
   const [deferredPrompt, setDeferredPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
   const [showIosHint, setShowIosHint] = useState(false);
@@ -141,13 +144,13 @@ export function InstallPrompt() {
     <div
       className="fixed inset-x-0 bottom-[88px] z-[60] mx-auto w-full max-w-md px-4 animate-fade-in-up"
       role="region"
-      aria-label="Install Sastipe"
+      aria-label={t("installApp")}
     >
       <div className="glass-surface relative rounded-3xl p-4 shadow-3">
         <button
           type="button"
           onClick={dismiss}
-          aria-label="Dismiss install prompt"
+          aria-label="Dismiss"
           className="absolute right-2 top-2 rounded-full p-1.5 text-[var(--color-text-muted)] transition-colors hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-text-primary)]"
         >
           <X className="lucide h-4 w-4" strokeWidth={1.85} />
@@ -161,10 +164,10 @@ export function InstallPrompt() {
             {deferredPrompt ? (
               <>
                 <div className="font-display font-extrabold text-[var(--color-text-primary)]">
-                  Install Sastipe
+                  {t("installApp")}
                 </div>
                 <p className="mt-0.5 text-[var(--color-text-secondary)]">
-                  Add it to your home screen for offline access and faster opens.
+                  {t("offlineAccess")}
                 </p>
                 <button
                   type="button"
@@ -172,31 +175,31 @@ export function InstallPrompt() {
                   className="mt-3 inline-flex h-9 items-center gap-2 rounded-xl gradient-brand grain-overlay px-4 text-xs font-extrabold text-white shadow-brand active:scale-[0.97]"
                 >
                   <Download className="lucide h-3.5 w-3.5" strokeWidth={2} />
-                  Install
+                  {t("installButton")}
                 </button>
               </>
             ) : (
               <>
                 <div className="font-display font-extrabold text-[var(--color-text-primary)]">
-                  Add to Home Screen
+                  {t("addToHome")}
                 </div>
                 <p className="mt-0.5 text-[var(--color-text-secondary)]">
-                  Tap{" "}
+                  {t("tap")}{" "}
                   <span
                     className="inline-flex h-5 w-5 -translate-y-px items-center justify-center rounded-md bg-[var(--color-surface-subtle)] align-middle"
                     aria-hidden
                   >
                     <Share className="lucide h-3 w-3" strokeWidth={1.85} />
                   </span>{" "}
-                  then{" "}
+                  {t("then")}{" "}
                   <span
                     className="inline-flex h-5 items-center gap-0.5 rounded-md bg-[var(--color-surface-subtle)] px-1.5 align-middle"
                     aria-hidden
                   >
                     <Plus className="lucide h-3 w-3" strokeWidth={1.85} />
-                    Add
+                    {t("add")}
                   </span>{" "}
-                  to install on iOS.
+                  {t("toInstall")}
                 </p>
               </>
             )}

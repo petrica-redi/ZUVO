@@ -24,6 +24,7 @@ export default async function ChatPage({ params }: Props) {
     emergencyCall: t("emergencyCall"),
     suggestedQuestions: t("suggestedQuestions"),
     suggestions: [t("q1"), t("q2"), t("q3"), t("q4"), t("q5"), t("q6")],
+    askMeAnything: t("askMeAnything"),
   };
 
   return (

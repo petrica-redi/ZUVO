@@ -45,10 +45,10 @@ export async function GET(req: NextRequest) {
   // Authenticated path: pull all user-owned tables.
   const [userRow] = await db.select().from(users).where(eq(users.id, user.id)).limit(1);
   const [healthRows, progressRows, auditRows, notificationRows] = await Promise.all([
-    db.select().from(healthLogs).where(eq(healthLogs.userId, user.id)).limit(5000),
-    db.select().from(progress).where(eq(progress.userId, user.id)).limit(2000),
-    db.select().from(auditLog).where(eq(auditLog.userId, user.id)).limit(2000),
-    db.select().from(notifications).where(eq(notifications.userId, user.id)).limit(500),
+    db.select().from(healthLogs).where(eq(healthLogs.userId, user.id)).limit(5001),
+    db.select().from(progress).where(eq(progress.userId, user.id)).limit(2001),
+    db.select().from(auditLog).where(eq(auditLog.userId, user.id)).limit(2001),
+    db.select().from(notifications).where(eq(notifications.userId, user.id)).limit(501),
   ]);
 
   const bundle = {
@@ -62,12 +62,19 @@ export async function GET(req: NextRequest) {
     },
     note:
       "Includes all server-side records tied to your account. Field Lab notes, XP, badges, and streaks remain on your device only.",
+    warnings: {
+      truncated:
+        healthRows.length > 5000 ||
+        progressRows.length > 2000 ||
+        auditRows.length > 2000 ||
+        notificationRows.length > 500,
+    },
     records: {
       profile: userRow ?? null,
-      healthLogs: healthRows,
-      progress: progressRows,
-      auditLog: auditRows,
-      notifications: notificationRows,
+      healthLogs: healthRows.slice(0, 5000),
+      progress: progressRows.slice(0, 2000),
+      auditLog: auditRows.slice(0, 2000),
+      notifications: notificationRows.slice(0, 500),
     },
   };
 

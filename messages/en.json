@@ -8,7 +8,11 @@
     "learn": "Learn",
     "track": "Track",
     "mediator": "Mediator",
-    "profile": "Profile"
+    "profile": "Profile",
+    "explain": "Explain",
+    "chat": "Ask",
+    "family": "Family",
+    "more": "More"
   },
   "hero": {
     "tagline": "Your health, your language",
@@ -29,7 +33,8 @@
     "q3": "Someone on Facebook says diabetes medicine is poison and you should use herbs instead",
     "q4": "I am pregnant and afraid to go to the hospital. What are my rights?",
     "q5": "I feel sad all the time and I cannot sleep. Is this normal?",
-    "q6": "How do I register with a doctor if I do not have documents?"
+    "q6": "How do I register with a doctor if I do not have documents?",
+    "askMeAnything": "Ask me anything"
   },
   "pillars": {
     "title": "Health zones",
@@ -988,5 +993,28 @@
       "poisonLabel": "Poisoning",
       "poisonSteps": "Call the poison centre. Do not make them vomit. Save the container or label. Call 112."
     }
+  },
+  "scan": {
+    "title": "Check a health claim",
+    "subtitle": "Paste something you saw on Facebook, TikTok, or WhatsApp. We'll tell you the truth.",
+    "placeholder": "Paste the claim here...\n\nExample: \"Vaccines change your DNA\"",
+    "checkButton": "Check this",
+    "checking": "Checking...",
+    "shareButton": "Share the truth",
+    "recentChecks": "Recent checks",
+    "orDescribe": "or describe what you heard",
+    "verdictVerified": "Verified",
+    "verdictMisleading": "Misleading",
+    "verdictFalse": "False"
+  },
+  "install": {
+    "installApp": "Install Sastipe",
+    "offlineAccess": "Add it to your home screen for offline access and faster opens.",
+    "installButton": "Install",
+    "addToHome": "Add to Home Screen",
+    "tap": "Tap",
+    "then": "then",
+    "add": "Add",
+    "toInstall": "to install on iOS."
   }
 }

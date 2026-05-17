@@ -94,6 +94,7 @@ export function StudentFieldLab({
 
   // Hydrate stored note client-side (deferred to avoid render cascade)
   useEffect(() => {
+    initial.current = true;
     const t = setTimeout(() => {
       setNote(readNote(moduleId));
       initial.current = false;

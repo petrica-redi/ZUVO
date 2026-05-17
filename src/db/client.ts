@@ -16,8 +16,7 @@ export function getDb(): DbClient | null {
 
   const url = process.env.DATABASE_URL?.trim();
   if (!url) {
-    singleton = null;
-    return null;
+    return null; // Don't cache null, in case the env is injected later
   }
 
   const sql = neon(url);

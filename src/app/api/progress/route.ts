@@ -69,35 +69,45 @@ export async function POST(req: NextRequest) {
   if (!parsed.success) return parsed.response;
   const { pillarId, moduleId, status } = parsed.data;
 
-  const existing = await db
-    .select()
-    .from(progress)
-    .where(and(eq(progress.userId, user.id), eq(progress.moduleId, moduleId)))
-    .limit(1);
+  try {
+    const existing = await db
+      .select()
+      .from(progress)
+      .where(
+        and(
+          eq(progress.userId, user.id),
+          eq(progress.pillarId, pillarId),
+          eq(progress.moduleId, moduleId)
+        )
+      )
+      .limit(1);
 
-  if (existing.length > 0) {
-    const updates: Record<string, unknown> = {
-      status,
-      lastAccessedAt: new Date(),
-    };
-    if (status === "completed") updates.completedAt = new Date();
-    if (status === "in_progress" && !existing[0].startedAt) updates.startedAt = new Date();
+    if (existing.length > 0) {
+      const updates: Record<string, unknown> = {
+        status,
+        lastAccessedAt: new Date(),
+      };
+      if (status === "completed") updates.completedAt = new Date();
+      if (status === "in_progress" && !existing[0].startedAt) updates.startedAt = new Date();
 
-    await db.update(progress).set(updates).where(eq(progress.id, existing[0].id));
-    return NextResponse.json({ success: true, data: { ...existing[0], ...updates } });
+      await db.update(progress).set(updates).where(eq(progress.id, existing[0].id));
+      return NextResponse.json({ success: true, data: { ...existing[0], ...updates } });
+    }
+
+    const [row] = await db
+      .insert(progress)
+      .values({
+        userId: user.id,
+        pillarId,
+        moduleId,
+        status,
+        startedAt: new Date(),
+        completedAt: status === "completed" ? new Date() : null,
+      })
+      .returning();
+
+    return NextResponse.json({ success: true, data: row }, { status: 201 });
+  } catch {
+    return NextResponse.json({ success: false, error: "Database operation failed" }, { status: 500 });
   }
-
-  const [row] = await db
-    .insert(progress)
-    .values({
-      userId: user.id,
-      pillarId,
-      moduleId,
-      status,
-      startedAt: new Date(),
-      completedAt: status === "completed" ? new Date() : null,
-    })
-    .returning();
-
-  return NextResponse.json({ success: true, data: row }, { status: 201 });
 }
