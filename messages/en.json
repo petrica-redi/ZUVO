@@ -1016,5 +1016,36 @@
     "then": "then",
     "add": "Add",
     "toInstall": "to install on iOS."
+  },
+  "impact": {
+    "title": "Public Health Impact",
+    "subtitle": "Real-time telemetry from Sastipe's deployment across Roma communities.",
+    "statMyths": "Myths Debunked",
+    "statEmergencies": "Emergencies Escalated",
+    "statMediators": "Active Mediators",
+    "statVisits": "Field Visits Logged",
+    "deployTitle": "Deploy in Your Region",
+    "deployDesc": "Sastipe is white-label ready for municipalities and health ministries.",
+    "contactBtn": "Contact Partnerships"
+  },
+  "methodology": {
+    "title": "Clinical Governance & Safety",
+    "subtitle": "How we ensure Sastipe provides safe, accurate, and culturally competent health information.",
+    "section1": "Deterministic Red Flags",
+    "desc1": "Before any AI model is called, user input is scanned against a deterministic regex engine for critical emergencies (e.g., chest pain, suicidal ideation). If triggered, the AI is bypassed entirely and the user is directed to call 112.",
+    "section2": "PII Scrubbing",
+    "desc2": "All messages are sanitized locally. Phone numbers, emails, IBANs, and National IDs are masked before leaving the device infrastructure.",
+    "section3": "Clinical Review",
+    "desc3": "Every lesson in the Student Health Academy undergoes clinical review by practicing Roma Health Mediators and physicians."
+  },
+  "providers": {
+    "title": "Roma-Friendly Clinics",
+    "subtitle": "Find trusted healthcare providers near you who understand our community.",
+    "searchPlaceholder": "Search by city or clinic name...",
+    "allRegions": "All Regions",
+    "verified": "Verified Roma-Friendly",
+    "freeClinic": "Free Services Available",
+    "interpreter": "Romani Interpreter",
+    "getDirections": "Get Directions"
   }
 }

@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
-import { Search, Mic, Share2, AlertTriangle, CheckCircle2, XCircle, Loader2 } from "lucide-react";
+import { Search, Mic, Share2, AlertTriangle, CheckCircle2, XCircle, Loader2, Volume2 } from "lucide-react";
+import { useSpeechRecognition, speakText } from "@/lib/voice";
 
 type Verdict = {
   verdict: "verified" | "misleading" | "false";
@@ -61,6 +62,10 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
   const [result, setResult] = useState<Verdict | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [history, setHistory] = useState<{ claim: string; verdict: Verdict }[]>([]);
+
+  const { isListening, supported: voiceSupported, toggleListening } = useSpeechRecognition({
+    onResult: useCallback((text) => setClaim((prev) => prev + " " + text), [])
+  });
 
   useEffect(() => {
     const shared = [
@@ -140,9 +145,21 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
           className="w-full resize-none rounded-xl border-none bg-transparent px-4 py-3 text-sm focus:outline-none"
         />
         <div className="flex items-center justify-between px-3 pb-2">
-          <button className="rounded-full bg-gray-100 p-2 text-gray-400 transition-all hover:bg-gray-200">
-            <Mic className="h-4 w-4" />
-          </button>
+          {voiceSupported ? (
+            <button
+              onClick={toggleListening}
+              className={`rounded-full p-2 transition-all ${
+                isListening 
+                  ? "bg-red-100 text-red-600 animate-pulse" 
+                  : "bg-gray-100 text-gray-400 hover:bg-gray-200"
+              }`}
+              aria-label={isListening ? "Stop listening" : "Start speaking"}
+            >
+              <Mic className="h-4 w-4" />
+            </button>
+          ) : (
+            <div className="w-8" />
+          )}
           <button
             onClick={handleScan}
             disabled={!claim.trim() || loading}
@@ -187,9 +204,18 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
 
           {/* Content */}
           <div className="p-4">
-            <h3 className={`mb-2 text-base font-bold ${VERDICT_STYLES[result.verdict].text}`}>
-              {result.emoji} {result.headline}
-            </h3>
+            <div className="flex items-start justify-between">
+              <h3 className={`mb-2 text-base font-bold ${VERDICT_STYLES[result.verdict].text}`}>
+                {result.emoji} {result.headline}
+              </h3>
+              <button 
+                onClick={() => speakText(result.explanation, locale)}
+                className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-600"
+                aria-label="Read explanation aloud"
+              >
+                <Volume2 className="h-5 w-5" />
+              </button>
+            </div>
             <p className="mb-3 text-sm leading-relaxed text-gray-700">
               {result.explanation}
             </p>

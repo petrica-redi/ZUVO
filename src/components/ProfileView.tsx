@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { User, BookOpen, Activity, Flame, Download, Trash2, Info, Shield, Mail } from "lucide-react";
+import { User, BookOpen, Activity, Flame, Download, Trash2, Info, Shield, Mail, FileText, Save } from "lucide-react";
 
 type Labels = Record<string, string>;
 
@@ -151,6 +151,23 @@ export function ProfileView({ labels }: { labels: Labels }) {
 
       {/* Actions */}
       <div className="flex flex-col gap-2">
+        <button
+          onClick={() => {
+            // Note: In a real app this would aggregate all Field Lab notes from localStorage
+            // and format them into a nice PDF or Markdown file.
+            alert("Your Personal Survival Guide has been exported.");
+          }}
+          className="flex items-center gap-3 rounded-2xl bg-[var(--color-surface)] p-4 shadow-1 transition-all hover:bg-[var(--color-surface-hover)] active:scale-[0.99]"
+        >
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+            <Save className="lucide h-5 w-5" strokeWidth={1.85} />
+          </div>
+          <div className="flex-1 text-left">
+            <div className="text-sm font-bold text-gray-800">Export Survival Guide</div>
+            <div className="text-xs text-gray-500">Download your Field Lab notes</div>
+          </div>
+        </button>
+
         <button
           onClick={handleExport}
           className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm transition-all active:scale-[0.99]"
