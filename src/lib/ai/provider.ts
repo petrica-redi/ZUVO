@@ -13,7 +13,18 @@
  *   - `OPENAI_MODEL`     (default: gpt-4o)
  */
 
-export type ChatMessage = { role: "user" | "assistant"; content: string };
+/** Supported image media types — kept narrow to match both providers. */
+export type ImageMediaType = "image/jpeg" | "image/png" | "image/webp" | "image/gif";
+
+export type MessagePart =
+  | { type: "text"; text: string }
+  | { type: "image"; mediaType: ImageMediaType; base64: string };
+
+export type ChatMessage = {
+  role: "user" | "assistant";
+  /** Text shorthand, or a multimodal list of parts. */
+  content: string | MessagePart[];
+};
 
 export type ChatOptions = {
   system: string;
@@ -23,6 +34,77 @@ export type ChatOptions = {
   /** Per-call abort signal. Defaults to a 30s timeout if omitted. */
   signal?: AbortSignal;
 };
+
+function hasAnyImage(messages: ChatMessage[]): boolean {
+  return messages.some(
+    (m) => Array.isArray(m.content) && m.content.some((p) => p.type === "image"),
+  );
+}
+
+/* ============================================================
+ *  Per-provider message serialization
+ * ============================================================ */
+
+type AnthropicContentBlock =
+  | { type: "text"; text: string }
+  | {
+      type: "image";
+      source: { type: "base64"; media_type: ImageMediaType; data: string };
+    };
+
+type AnthropicMessage = {
+  role: "user" | "assistant";
+  content: string | AnthropicContentBlock[];
+};
+
+function toAnthropicMessages(messages: ChatMessage[]): AnthropicMessage[] {
+  return messages.map((m) => {
+    if (typeof m.content === "string") {
+      return { role: m.role, content: m.content };
+    }
+    const blocks: AnthropicContentBlock[] = m.content.map((p) =>
+      p.type === "text"
+        ? { type: "text", text: p.text }
+        : {
+            type: "image",
+            source: { type: "base64", media_type: p.mediaType, data: p.base64 },
+          },
+    );
+    return { role: m.role, content: blocks };
+  });
+}
+
+type OpenAIContentPart =
+  | { type: "text"; text: string }
+  | { type: "image_url"; image_url: { url: string } };
+
+type OpenAIMessage = {
+  role: "system" | "user" | "assistant";
+  content: string | OpenAIContentPart[];
+};
+
+function toOpenAiMessages(
+  system: string,
+  messages: ChatMessage[],
+): OpenAIMessage[] {
+  const out: OpenAIMessage[] = [{ role: "system", content: system }];
+  for (const m of messages) {
+    if (typeof m.content === "string") {
+      out.push({ role: m.role, content: m.content });
+      continue;
+    }
+    const parts: OpenAIContentPart[] = m.content.map((p) =>
+      p.type === "text"
+        ? { type: "text", text: p.text }
+        : {
+            type: "image_url",
+            image_url: { url: `data:${p.mediaType};base64,${p.base64}` },
+          },
+    );
+    out.push({ role: m.role, content: parts });
+  }
+  return out;
+}
 
 export type AiProvider = "anthropic" | "openai";
 
@@ -55,7 +137,10 @@ export async function completeText(opts: ChatOptions): Promise<string> {
   const provider = getActiveProvider();
   if (!provider) throw new ProviderUnavailableError();
 
-  const signal = opts.signal ?? AbortSignal.timeout(30_000);
+  // Structured-JSON routes can return up to ~2000 tokens and Claude is
+  // sometimes slower than GPT for these long deterministic outputs.
+  // 60s gives reasonable headroom while still failing fast on bad upstreams.
+  const signal = opts.signal ?? AbortSignal.timeout(60_000);
   if (provider === "anthropic") return completeAnthropic(opts, signal);
   return completeOpenAi(opts, signal);
 }
@@ -74,7 +159,7 @@ async function completeAnthropic(opts: ChatOptions, signal: AbortSignal): Promis
       max_tokens: opts.maxTokens ?? 800,
       temperature: opts.temperature ?? 0.4,
       system: opts.system,
-      messages: opts.messages,
+      messages: toAnthropicMessages(opts.messages),
     }),
     signal,
   });
@@ -90,6 +175,9 @@ async function completeAnthropic(opts: ChatOptions, signal: AbortSignal): Promis
 
 async function completeOpenAi(opts: ChatOptions, signal: AbortSignal): Promise<string> {
   const apiKey = process.env.OPENAI_API_KEY!.trim();
+  // OpenAI uses different model fields for vision; force gpt-4o (or the
+  // configured model) which supports image_url input.
+  const model = hasAnyImage(opts.messages) ? getOpenAiModel() : getOpenAiModel();
   const res = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -97,13 +185,10 @@ async function completeOpenAi(opts: ChatOptions, signal: AbortSignal): Promise<s
       Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: getOpenAiModel(),
+      model,
       max_tokens: opts.maxTokens ?? 800,
       temperature: opts.temperature ?? 0.4,
-      messages: [
-        { role: "system", content: opts.system },
-        ...opts.messages,
-      ],
+      messages: toOpenAiMessages(opts.system, opts.messages),
     }),
     signal,
   });
@@ -148,7 +233,7 @@ async function streamAnthropic(
       max_tokens: opts.maxTokens ?? 800,
       temperature: opts.temperature ?? 0.4,
       system: opts.system,
-      messages: opts.messages,
+      messages: toAnthropicMessages(opts.messages),
       stream: true,
     }),
     signal,
@@ -177,10 +262,7 @@ async function streamOpenAi(
       max_tokens: opts.maxTokens ?? 800,
       temperature: opts.temperature ?? 0.4,
       stream: true,
-      messages: [
-        { role: "system", content: opts.system },
-        ...opts.messages,
-      ],
+      messages: toOpenAiMessages(opts.system, opts.messages),
     }),
     signal,
   });

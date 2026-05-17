@@ -1146,7 +1146,16 @@
     "meta": {
       "title": "Haljar receto — Sastipe",
       "description": "Diagnoza thaj dipa ververdo lokhe lavenca."
-    }
+    },
+    "takePhoto": "Ker jekh slika",
+    "uploadImage": "Lekha slika",
+    "placeholderWithImage": "(Opciono) Thov maj but konteksto pa o receto — tirno breš, sar les, so dukhal tu…",
+    "imagePreviewAlt": "Receto slikako sikhibe",
+    "imageReady": "Slika gata",
+    "imageReadyBody": "Dikhasa o dipo, doza thaj instrukcie thaj ververdas sa lokhe lavenca.",
+    "imageRemove": "Khosav slika",
+    "preparingImage": "Pripravim e slika…",
+    "imageFailed": "Našti ginduisaras akaja slika. Phirav aver."
   },
   "navigate": {
     "heroTitle": "Trebal mange te dikhav jekh dasthi",

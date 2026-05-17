@@ -1146,7 +1146,16 @@
     "meta": {
       "title": "Înțelege rețeta — Sastipe",
       "description": "Diagnosticul și medicamentele explicate în cuvinte simple."
-    }
+    },
+    "takePhoto": "Fă o poză",
+    "uploadImage": "Încarcă imagine",
+    "placeholderWithImage": "(Opțional) Adaugă context despre rețetă — vârsta ta, cum o iei, ce te îngrijorează…",
+    "imagePreviewAlt": "Previzualizare poză rețetă",
+    "imageReady": "Poza e gata",
+    "imageReadyBody": "Citim medicamentul, doza și instrucțiunile și îți explicăm totul în cuvinte simple.",
+    "imageRemove": "Șterge poza",
+    "preparingImage": "Se pregătește poza…",
+    "imageFailed": "Nu am putut citi poza. Încearcă alta."
   },
   "navigate": {
     "heroTitle": "Am nevoie să văd un medic",

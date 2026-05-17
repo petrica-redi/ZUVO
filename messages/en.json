@@ -1455,7 +1455,16 @@
     "meta": {
       "title": "Understand Your Prescription — Sastipe",
       "description": "Get your diagnosis and medications explained in simple words"
-    }
+    },
+    "takePhoto": "Take a photo",
+    "uploadImage": "Upload image",
+    "placeholderWithImage": "(Optional) Add any extra context about the prescription — your age, how you take it, what you're worried about…",
+    "imagePreviewAlt": "Prescription photo preview",
+    "imageReady": "Photo ready",
+    "imageReadyBody": "We'll read the medication, dose, and instructions and explain everything in plain words.",
+    "imageRemove": "Remove photo",
+    "preparingImage": "Preparing photo…",
+    "imageFailed": "Could not read this photo. Try another one."
   },
   "navigate": {
     "heroTitle": "I need to see a doctor",

@@ -1146,7 +1146,16 @@
     "meta": {
       "title": "Kuptoje recetën — Sastipe",
       "description": "Diagnoza dhe ilaçet shpjeguar me fjalë të thjeshta."
-    }
+    },
+    "takePhoto": "Bëj një foto",
+    "uploadImage": "Ngarko imazh",
+    "placeholderWithImage": "(Opsionale) Shto kontekst për recetën — mosha jote, si e merr, çfarë të shqetëson…",
+    "imagePreviewAlt": "Pamje paraprake e fotos së recetës",
+    "imageReady": "Fotoja gati",
+    "imageReadyBody": "Lexojmë ilaçin, dozën dhe udhëzimet dhe i shpjegojmë me fjalë të thjeshta.",
+    "imageRemove": "Hiq foton",
+    "preparingImage": "Po përgatis foton…",
+    "imageFailed": "Nuk arrita ta lexoj këtë foto. Provo një tjetër."
   },
   "navigate": {
     "heroTitle": "Më duhet të shoh një mjek",
