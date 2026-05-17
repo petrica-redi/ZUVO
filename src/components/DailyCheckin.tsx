@@ -36,8 +36,15 @@ const MOODS = [
 
 const STORAGE_KEY = "sastipe_checkin";
 
+function getLocalDayString(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
 function getTodayKey() {
-  return new Date().toISOString().slice(0, 10);
+  return getLocalDayString(new Date());
 }
 
 function getCheckinHistory(): Record<string, { mood: number; water: number; activity: string }> {
@@ -58,7 +65,7 @@ function calculateStreak(history: Record<string, unknown>): number {
 
   let streak = 0;
   while (true) {
-    const key = d.toISOString().slice(0, 10);
+    const key = getLocalDayString(d);
     if (!history[key]) break;
     streak++;
     d.setDate(d.getDate() - 1);

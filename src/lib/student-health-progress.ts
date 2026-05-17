@@ -15,7 +15,7 @@ const ACADEMY_VERSION = 2;
 export type StudentAcademyBadge = "local" | "regional" | "national";
 
 export type StudentAcademyState = {
-  /** Schema version, allows safe forward-migration. */
+  // Schema version, allows safe forward-migration.
   version: number;
   xp: number;
   badges: StudentAcademyBadge[];
@@ -40,8 +40,15 @@ export const defaultAcademyState = (): StudentAcademyState => ({
   lastActivityAt: null,
 });
 
+function localDayString(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
 function todayKey(date = new Date()): string {
-  return date.toISOString().slice(0, 10);
+  return localDayString(date);
 }
 
 export function readAcademyState(): StudentAcademyState {

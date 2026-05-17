@@ -47,8 +47,23 @@ export function ProfileView({ labels }: { labels: Labels }) {
       const history = safeJson(CHECKIN_KEY, {}) as Record<string, unknown>;
       let s = 0;
       const d = new Date();
+      
+      const yToday = d.getFullYear();
+      const mToday = String(d.getMonth() + 1).padStart(2, "0");
+      const dayToday = String(d.getDate()).padStart(2, "0");
+      const todayKey = `${yToday}-${mToday}-${dayToday}`;
+      
+      if (!history[todayKey]) {
+        d.setDate(d.getDate() - 1);
+      }
+
       while (true) {
-        if (history[d.toISOString().slice(0, 10)]) {
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, "0");
+        const day = String(d.getDate()).padStart(2, "0");
+        const key = `${y}-${m}-${day}`;
+        
+        if (history[key]) {
           s++;
           d.setDate(d.getDate() - 1);
         } else break;
