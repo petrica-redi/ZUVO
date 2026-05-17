@@ -1207,5 +1207,14 @@
       "title": "Rreth nesh — Sastipe",
       "description": "Rreth platformës së edukimit shëndetësor Sastipe"
     }
+  },
+  "family": {
+    "relation": {
+      "self": "Unë",
+      "child": "Fëmijë",
+      "spouse": "Bashkëshort/e",
+      "parent": "Prind",
+      "other": "Tjetër"
+    }
   }
 }

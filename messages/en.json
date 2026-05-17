@@ -1516,5 +1516,14 @@
       "title": "About — Sastipe",
       "description": "About Sastipe Health Literacy Platform"
     }
+  },
+  "family": {
+    "relation": {
+      "self": "Me",
+      "child": "Child",
+      "spouse": "Spouse",
+      "parent": "Parent",
+      "other": "Other"
+    }
   }
 }

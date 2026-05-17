@@ -50,7 +50,20 @@ function getTodayKey() {
 function getCheckinHistory(): Record<string, { mood: number; water: number; activity: string }> {
   if (typeof window === "undefined") return {};
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "{}");
+    const raw = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "{}") as Record<string, unknown>;
+    if (!raw || typeof raw !== "object") return {};
+    const out: Record<string, { mood: number; water: number; activity: string }> = {};
+    for (const [k, v] of Object.entries(raw)) {
+      if (v && typeof v === "object") {
+        const e = v as Record<string, unknown>;
+        out[k] = {
+          mood: typeof e.mood === "number" ? e.mood : 3,
+          water: typeof e.water === "number" ? e.water : 0,
+          activity: typeof e.activity === "string" ? e.activity : "rest",
+        };
+      }
+    }
+    return out;
   } catch {
     return {};
   }

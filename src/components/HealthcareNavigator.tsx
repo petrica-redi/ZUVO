@@ -114,9 +114,11 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
             const label = t(`issues.${issue.id}`);
             return (
               <button
+                type="button"
                 key={issue.id}
                 onClick={() => { setIssueType(label); setStep(2); }}
-                className={`card-hover flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm animate-fade-in-up delay-${(i + 1) * 100}`}
+                className="card-hover flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm animate-fade-in-up"
+                style={{ animationDelay: `${(i + 1) * 100}ms` }}
               >
                 <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl shadow-sm" style={{ backgroundColor: issue.color + "15" }}>
                   <issue.icon className="h-6 w-6" style={{ color: issue.color }} />

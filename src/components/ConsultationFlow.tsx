@@ -139,9 +139,11 @@ export function ConsultationFlow({ locale }: { locale: string }) {
             const label = t(`concerns.${c.id}`);
             return (
               <button
+                type="button"
                 key={c.id}
                 onClick={() => startConsultation(label)}
-                className={`card-hover flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm animate-fade-in-up delay-${(i + 1) * 100}`}
+                className="card-hover flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm animate-fade-in-up"
+                style={{ animationDelay: `${(i + 1) * 100}ms` }}
               >
                 <div
                   className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl shadow-sm"

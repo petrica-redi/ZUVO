@@ -29,6 +29,19 @@ type Labels = {
   verdictFalse: string;
 };
 
+function isVerdict(v: unknown): v is Verdict {
+  if (!v || typeof v !== "object") return false;
+  const x = v as Record<string, unknown>;
+  return (
+    (x.verdict === "verified" || x.verdict === "misleading" || x.verdict === "false") &&
+    typeof x.emoji === "string" &&
+    typeof x.headline === "string" &&
+    typeof x.explanation === "string" &&
+    typeof x.shareText === "string" &&
+    typeof x.source === "string"
+  );
+}
+
 const VERDICT_STYLES = {
   verified: {
     bg: "bg-green-50",
@@ -95,11 +108,13 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
       });
 
       const data = await res.json();
-      if (res.ok && data.success && data.data) {
+      if (res.ok && data?.success === true && isVerdict(data?.data)) {
         setResult(data.data);
-        setHistory((prev) => [{ claim: claim.trim(), verdict: data.data }, ...prev].slice(0, 10));
+        setHistory((prev) => [{ claim: claim.trim(), verdict: data.data as Verdict }, ...prev].slice(0, 10));
       } else {
-        setError(data.error || tScan("errors.analyze"));
+        setError(
+          typeof data?.error === "string" ? data.error : tScan("errors.analyze"),
+        );
       }
     } catch {
       setError(tScan("errors.network"));

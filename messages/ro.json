@@ -1207,5 +1207,14 @@
       "title": "Despre — Sastipe",
       "description": "Despre platforma de educație medicală Sastipe"
     }
+  },
+  "family": {
+    "relation": {
+      "self": "Eu",
+      "child": "Copil",
+      "spouse": "Soț/Soție",
+      "parent": "Părinte",
+      "other": "Altul"
+    }
   }
 }

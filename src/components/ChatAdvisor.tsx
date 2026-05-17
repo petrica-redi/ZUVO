@@ -49,6 +49,8 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
   }, [input]);
 
   const cancelledRef = useRef(false);
+  const abortRef = useRef<AbortController | null>(null);
+  const readerRef = useRef<ReadableStreamDefaultReader<Uint8Array> | null>(null);
 
   const sendMessage = async (text?: string) => {
     const content = text ?? input.trim();
@@ -64,21 +66,30 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       timestamp: new Date(),
     };
 
-    setMessages((prev) => [...prev, userMsg]);
+    // Build the request history atomically from the latest state to avoid
+    // stale-closure drift between what we send and what the UI shows.
+    let apiMessages: { role: "user" | "assistant"; content: string }[] = [];
+    setMessages((prev) => {
+      const next = [...prev, userMsg];
+      apiMessages = next.map((m) => ({ role: m.role, content: m.content }));
+      return next;
+    });
     setIsLoading(true);
 
-    const apiMessages = [...messages, userMsg].map((m) => ({
-      role: m.role,
-      content: m.content,
-    }));
-
     let assistantMsgId = "";
+
+    // Wire an AbortController so we can cancel the stream on unmount or
+    // when the user starts another send.
+    abortRef.current?.abort();
+    const controller = new AbortController();
+    abortRef.current = controller;
 
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: apiMessages, locale }),
+        signal: controller.signal,
       });
 
       if (!response.ok) throw new Error("Failed");
@@ -94,6 +105,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       setMessages((prev) => [...prev, assistantMsg]);
 
       const reader = response.body?.getReader();
+      readerRef.current = reader ?? null;
       const decoder = new TextDecoder();
 
       if (reader) {
@@ -128,10 +140,14 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
           }
         }
       }
-    } catch {
+    } catch (e) {
+      // Aborted by user/unmount is not an error worth surfacing.
+      if ((e as DOMException | undefined)?.name === "AbortError") return;
       setError(labels.errorMessage);
       setMessages((prev) => prev.filter((m) => m.id !== assistantMsgId));
     } finally {
+      readerRef.current = null;
+      if (abortRef.current === controller) abortRef.current = null;
       setIsLoading(false);
     }
   };
@@ -139,6 +155,12 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
   useEffect(() => {
     return () => {
       cancelledRef.current = true;
+      try {
+        readerRef.current?.cancel();
+      } catch {
+        /* already closed */
+      }
+      abortRef.current?.abort();
     };
   }, []);
 
@@ -178,9 +200,11 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
             <div className="flex flex-col gap-2.5 w-full">
               {labels.suggestions.map((q, i) => (
                 <button
+                  type="button"
                   key={i}
                   onClick={() => sendMessage(q)}
-                  className={`card-hover rounded-2xl border-2 border-gray-100 bg-white px-5 py-4 text-left text-sm font-medium text-gray-700 shadow-sm animate-fade-in-up delay-${(i + 1) * 100}`}
+                  className="card-hover rounded-2xl border-2 border-gray-100 bg-white px-5 py-4 text-left text-sm font-medium text-gray-700 shadow-sm animate-fade-in-up"
+                  style={{ animationDelay: `${(i + 1) * 100}ms` }}
                 >
                   {q}
                 </button>

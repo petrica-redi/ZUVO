@@ -1,47 +1,78 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
+
+// Minimal subset of the WebSpeech API surface we use.
+type SpeechRecognitionLike = {
+  continuous: boolean;
+  interimResults: boolean;
+  onresult: ((e: { results: ArrayLike<ArrayLike<{ transcript: string }>> }) => void) | null;
+  onerror: (() => void) | null;
+  onend: (() => void) | null;
+  start: () => void;
+  stop: () => void;
+  abort?: () => void;
+};
 
 export function useSpeechRecognition({ onResult }: { onResult: (text: string) => void }) {
   const [isListening, setIsListening] = useState(false);
   const [supported, setSupported] = useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [recognition, setRecognition] = useState<any>(null);
+  const [recognition, setRecognition] = useState<SpeechRecognitionLike | null>(null);
+  // Keep the latest onResult in a ref so we don't need to recreate the
+  // recognition object whenever the callback identity changes.
+  const onResultRef = useRef(onResult);
+  useEffect(() => {
+    onResultRef.current = onResult;
+  }, [onResult]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (SpeechRecognition) {
-      queueMicrotask(() => setSupported(true));
-      const recog = new SpeechRecognition();
-      recog.continuous = false;
-      recog.interimResults = false;
-      // We could use locale here, but auto-detect is often better or we can pass it down.
-      
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      recog.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        onResult(transcript);
-        setIsListening(false);
-      };
-      
-      recog.onerror = () => {
-        setIsListening(false);
-      };
-      
-      recog.onend = () => {
-        setIsListening(false);
-      };
-      
-      queueMicrotask(() => setRecognition(recog));
-    }
-  }, [onResult]);
+    const Ctor =
+      (window as unknown as { SpeechRecognition?: new () => SpeechRecognitionLike })
+        .SpeechRecognition ??
+      (window as unknown as { webkitSpeechRecognition?: new () => SpeechRecognitionLike })
+        .webkitSpeechRecognition;
+    if (!Ctor) return;
+
+    const recog = new Ctor();
+    recog.continuous = false;
+    recog.interimResults = false;
+
+    recog.onresult = (event) => {
+      const transcript = event.results[0]?.[0]?.transcript ?? "";
+      if (transcript) onResultRef.current(transcript);
+      setIsListening(false);
+    };
+    recog.onerror = () => setIsListening(false);
+    recog.onend = () => setIsListening(false);
+
+    queueMicrotask(() => {
+      setSupported(true);
+      setRecognition(recog);
+    });
+
+    return () => {
+      try {
+        recog.onresult = null;
+        recog.onerror = null;
+        recog.onend = null;
+        // `abort()` is sync and discards results; `stop()` would emit a final result.
+        if (typeof recog.abort === "function") recog.abort();
+        else recog.stop();
+      } catch {
+        /* already stopped */
+      }
+    };
+  }, []);
 
   const toggleListening = useCallback(() => {
     if (!recognition) return;
     if (isListening) {
-      recognition.stop();
+      try {
+        recognition.stop();
+      } catch {
+        /* ignore */
+      }
       setIsListening(false);
     } else {
       try {

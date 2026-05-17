@@ -1207,5 +1207,14 @@
       "title": "Pa amende — Sastipe",
       "description": "Pa Sastipe sastimasqi sikljovipasqi platforma"
     }
+  },
+  "family": {
+    "relation": {
+      "self": "Me",
+      "child": "Čhavo",
+      "spouse": "Romnji/Rom",
+      "parent": "Dad/Dej",
+      "other": "Aver"
+    }
   }
 }

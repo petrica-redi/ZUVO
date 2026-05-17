@@ -82,6 +82,7 @@ export function MarkCompleteButton({
   if (completed) {
     return (
       <button
+        type="button"
         disabled
         className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--color-success-bg)] p-4 text-base font-extrabold text-[var(--color-success-text)] ring-2 ring-[var(--color-success-border)]"
       >
@@ -93,6 +94,7 @@ export function MarkCompleteButton({
 
   return (
     <button
+      type="button"
       onClick={handleComplete}
       className={`flex w-full items-center justify-center gap-2 rounded-2xl gradient-brand grain-overlay p-4 text-base font-extrabold text-white shadow-brand transition-all active:scale-[0.97] ${
         animating ? "scale-95 opacity-90" : ""

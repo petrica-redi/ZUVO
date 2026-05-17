@@ -50,7 +50,8 @@ export default async function AboutPage({ params }: Props) {
             {values.map((item, i) => (
               <div
                 key={item.key}
-                className={`flex flex-col items-center gap-2 rounded-3xl border border-gray-100 bg-white p-4 shadow-sm animate-fade-in-up delay-${(i + 2) * 100}`}
+                className="flex flex-col items-center gap-2 rounded-3xl border border-gray-100 bg-white p-4 shadow-sm animate-fade-in-up"
+                style={{ animationDelay: `${(i + 2) * 100}ms` }}
               >
                 <div className={`flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${item.color} shadow-md`}>
                   <item.icon className="h-6 w-6 text-white" />

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import {
   ArrowRight,
   CheckCircle2,
@@ -55,6 +55,7 @@ export function StudentAcademyHub() {
   const t = useTranslations("studentHealth");
   const tL8 = useTranslations("studentHealth.l8");
   const tRegions = useTranslations("regions");
+  const locale = useLocale();
   const [state, setState] = useState<StudentAcademyState>(() => defaultAcademyState());
   const [mounted, setMounted] = useState(false);
 
@@ -81,9 +82,9 @@ export function StudentAcademyHub() {
   const academyLevel = getAcademyLevel(state.xp);
   const streak = mounted ? getCurrentStreak() : 0;
   const weekly = useMemo(
-    () => (mounted ? getWeeklyActivity() : []),
+    () => (mounted ? getWeeklyActivity(new Date(), locale) : []),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [mounted, state],
+    [mounted, state, locale],
   );
   const nextStep = getAcademyNextStep();
 
@@ -116,7 +117,7 @@ export function StudentAcademyHub() {
 
   const achievementItems = STAGE_ORDER.map((stage) => ({
     stage,
-    earned: state.badges.includes(stage as never),
+    earned: state.badges.includes(stage),
     percent: getStageCompletion(stage).percent,
   }));
   const earnedBadges = achievementItems.filter((i) => i.earned).length;
@@ -230,7 +231,10 @@ export function StudentAcademyHub() {
         {/* ===== COUNTRY + STUCK CTA =============================== */}
         <section className="grid gap-5 md:grid-cols-[1fr_0.9fr] md:gap-6">
           <div className="rounded-3xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-5 shadow-1 md:p-6">
-            <label className="flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
+            <label
+              htmlFor="academy-country-select"
+              className="flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]"
+            >
               <MapPin className="lucide h-4 w-4" strokeWidth={1.75} />
               {tL8("countryTitle")}
             </label>
@@ -238,6 +242,7 @@ export function StudentAcademyHub() {
               {tL8("countryHint")}
             </p>
             <select
+              id="academy-country-select"
               className="w-full rounded-2xl border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-4 py-3 text-sm font-medium text-[var(--color-text-primary)] transition focus:border-[var(--color-accent)] focus:bg-[var(--color-surface)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
               value={countryValue}
               onChange={(e) => {

@@ -250,13 +250,15 @@ export function BodyMap({ locale }: { locale: string }) {
         <div className="mb-4 space-y-2">
           {symptoms.map((s, i) => (
             <button
+              type="button"
               key={s}
               onClick={() => toggleSymptom(s)}
-              className={`flex w-full items-center gap-3 rounded-2xl border-2 p-4 text-left transition-all active:scale-[0.98] animate-fade-in-up delay-${(i + 1) * 100} ${
+              className={`flex w-full items-center gap-3 rounded-2xl border-2 p-4 text-left transition-all active:scale-[0.98] animate-fade-in-up ${
                 selectedSymptoms.includes(s)
                   ? "border-[#C0392B] bg-red-50 shadow-md"
                   : "border-gray-100 bg-white shadow-sm"
               }`}
+              style={{ animationDelay: `${(i + 1) * 100}ms` }}
             >
               <div className={`flex h-7 w-7 items-center justify-center rounded-full border-2 transition-all ${
                 selectedSymptoms.includes(s) ? "border-[#C0392B] bg-[#C0392B]" : "border-gray-300"

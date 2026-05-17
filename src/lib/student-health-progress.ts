@@ -14,6 +14,16 @@ const ACADEMY_VERSION = 2;
 
 export type StudentAcademyBadge = "local" | "regional" | "national";
 
+const ALLOWED_BADGES: ReadonlyArray<StudentAcademyBadge> = [
+  "local",
+  "regional",
+  "national",
+];
+
+function isBadge(v: unknown): v is StudentAcademyBadge {
+  return typeof v === "string" && (ALLOWED_BADGES as readonly string[]).includes(v);
+}
+
 export type StudentAcademyState = {
   // Schema version, allows safe forward-migration.
   version: number;
@@ -60,7 +70,7 @@ export function readAcademyState(): StudentAcademyState {
     return {
       version: typeof parsed.version === "number" ? parsed.version : ACADEMY_VERSION,
       xp: typeof parsed.xp === "number" ? parsed.xp : 0,
-      badges: Array.isArray(parsed.badges) ? (parsed.badges as StudentAcademyBadge[]) : [],
+      badges: Array.isArray(parsed.badges) ? parsed.badges.filter(isBadge) : [],
       quizPassed:
         parsed.quizPassed && typeof parsed.quizPassed === "object" ? parsed.quizPassed : {},
       countryId: typeof parsed.countryId === "string" ? parsed.countryId : null,
@@ -313,17 +323,31 @@ export function getCurrentStreak(now = new Date()): number {
   return streak;
 }
 
-export function getWeeklyActivity(now = new Date()): { day: string; active: boolean; date: string }[] {
+export function getWeeklyActivity(
+  now = new Date(),
+  locale?: string,
+): { day: string; active: boolean; date: string }[] {
   const s = readAcademyState();
   const set = new Set(s.activityDates);
-  const days = ["S", "M", "T", "W", "T", "F", "S"];
+  // Locale-aware narrow weekday labels (M, T, etc.) — falls back to a
+  // safe English-narrow set if `Intl` throws (older Android WebViews).
+  const formatter = (() => {
+    try {
+      return new Intl.DateTimeFormat(locale, { weekday: "narrow" });
+    } catch {
+      return null;
+    }
+  })();
+  const fallbackDays = ["S", "M", "T", "W", "T", "F", "S"];
   const out: { day: string; active: boolean; date: string }[] = [];
-  // Build last 7 days ending today (oldest first)
   for (let offset = 6; offset >= 0; offset -= 1) {
     const d = new Date(now);
     d.setDate(d.getDate() - offset);
     const key = todayKey(d);
-    out.push({ day: days[d.getDay()] ?? "", active: set.has(key), date: key });
+    const label = formatter
+      ? formatter.format(d)
+      : (fallbackDays[d.getDay()] ?? "");
+    out.push({ day: label, active: set.has(key), date: key });
   }
   return out;
 }

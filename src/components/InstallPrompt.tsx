@@ -137,6 +137,9 @@ export function InstallPrompt() {
       if (choice.outcome === "dismissed") dismiss();
     } finally {
       setDeferredPrompt(null);
+      // Allow another attempt if the browser fires a fresh `beforeinstallprompt`
+      // (e.g. user dismissed without choosing — Chrome may re-emit later).
+      fired.current = false;
     }
   };
 

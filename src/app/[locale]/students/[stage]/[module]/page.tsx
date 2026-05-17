@@ -68,13 +68,13 @@ const SEXUAL_HEALTH_MODULES = new Set([
 ]);
 
 export default async function StudentModulePage({ params }: Props) {
-  const { stage, module: moduleId } = await params;
+  const { locale, stage, module: moduleId } = await params;
   if (!isStage(stage)) notFound();
   const mod = getStudentModule(stage, moduleId);
   if (!mod) notFound();
 
-  const t = await getTranslations("studentHealth");
-  const tCommon = await getTranslations("common");
+  const t = await getTranslations({ locale, namespace: "studentHealth" });
+  const tCommon = await getTranslations({ locale, namespace: "common" });
 
   const tk = (fullKey: string) => t(studentHealthMessageKey(fullKey));
   const nextMod = getNextModuleInStage(stage, moduleId);

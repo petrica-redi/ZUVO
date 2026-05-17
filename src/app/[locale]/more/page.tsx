@@ -74,7 +74,11 @@ export default async function MorePage({ params }: Props) {
           </h1>
 
           {SECTIONS.map((section, si) => (
-            <div key={section.id} className={`mb-6 animate-fade-in-up delay-${(si + 1) * 100}`}>
+            <div
+              key={section.id}
+              className="mb-6 animate-fade-in-up"
+              style={{ animationDelay: `${(si + 1) * 100}ms` }}
+            >
               <h2 className="mb-3 text-xs font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
                 {t(`sections.${section.id}`)}
               </h2>

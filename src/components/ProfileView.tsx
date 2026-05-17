@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { User, BookOpen, Activity, Flame, Download, Trash2, Info, Shield, Mail, FileText, Save } from "lucide-react";
+import { User, BookOpen, Activity, Flame, Download, Trash2, Info, Shield, Mail, Save } from "lucide-react";
+import { clearAllLocalAppData } from "@/lib/local-data-keys";
 
 type Labels = Record<string, string>;
 
@@ -79,10 +80,7 @@ export function ProfileView({ labels }: { labels: Labels }) {
       setClearConfirm(true);
       return;
     }
-    localStorage.removeItem(PROGRESS_KEY);
-    localStorage.removeItem(CHECKIN_KEY);
-    localStorage.removeItem(ACADEMY_KEY);
-    localStorage.removeItem("sastipe_anon_id");
+    clearAllLocalAppData();
     setModulesCompleted(0);
     setPillarsStarted(0);
     setStreak(0);

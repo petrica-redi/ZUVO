@@ -1,15 +1,17 @@
 import { z } from "zod";
+import { LOCALES } from "@/i18n/routing";
 
 /**
  * NOTE:
  * - This module must never crash the app when env vars are missing.
  * - Service wrappers are responsible for returning `null` when their config is unavailable.
+ * - Locale list is the single source of truth from `@/i18n/routing`.
  */
 
-export const supportedLocaleSchema = z.enum(["sq", "rom", "en"]);
+export const supportedLocaleSchema = z.enum(LOCALES);
 export type SupportedLocale = z.infer<typeof supportedLocaleSchema>;
 
-const supportedLocalesFallback: SupportedLocale[] = ["sq", "rom", "en"];
+const supportedLocalesFallback: SupportedLocale[] = [...LOCALES];
 
 function parseSupportedLocales(raw: string | undefined): SupportedLocale[] {
   if (!raw) return supportedLocalesFallback;
@@ -36,7 +38,7 @@ export type AppConfig = {
 export function getAppConfig(): AppConfig {
   const appName = process.env.NEXT_PUBLIC_APP_NAME?.trim() || "Sastipe";
   const defaultLocaleRaw = process.env.NEXT_PUBLIC_DEFAULT_LOCALE?.trim();
-  const defaultLocale = defaultLocaleRaw && supportedLocaleSchema.safeParse(defaultLocaleRaw).success ? (defaultLocaleRaw as SupportedLocale) : "sq";
+  const defaultLocale = defaultLocaleRaw && supportedLocaleSchema.safeParse(defaultLocaleRaw).success ? (defaultLocaleRaw as SupportedLocale) : "en";
   const supportedLocales = parseSupportedLocales(process.env.NEXT_PUBLIC_SUPPORTED_LOCALES);
   const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim() || null;
 
