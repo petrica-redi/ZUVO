@@ -1117,7 +1117,8 @@
     },
     "meta": {
       "title": "Fact Check — Sastipe"
-    }
+    },
+    "eyebrow": "Fact check"
   },
   "install": {
     "installApp": "Install Sastipe",

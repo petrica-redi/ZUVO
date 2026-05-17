@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Send, AlertTriangle, MessageCircle, Mic, Volume2 } from "lucide-react";
+import { Send, AlertTriangle, MessageCircle, Mic, Volume2, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
 
@@ -185,28 +185,60 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       {/* Messages area */}
       <div ref={scrollRef} className="flex-1 overflow-y-auto px-1 py-4">
         {messages.length === 0 && (
-          <div className="flex flex-col items-center px-4 py-6 text-center animate-fade-in-up">
-            <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-3xl shadow-xl shadow-red-500/20"
-              style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 50%, #F39C12 100%)" }}
-            >
-              <MessageCircle className="h-10 w-10 text-white" />
+          <div className="relative flex flex-col items-center px-4 py-6 animate-fade-in-up">
+            {/* Atmospheric backdrop card */}
+            <div className="relative w-full overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] bg-gradient-to-br from-[var(--color-brand-50)] via-white to-[var(--color-ember-50)] p-6 shadow-1 md:p-8">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 grain-overlay opacity-50"
+              />
+              <div className="relative flex flex-col items-center text-center">
+                <div
+                  className="mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-brand-700)] shadow-2 grain-overlay"
+                  style={{ background: "linear-gradient(135deg, var(--color-brand-500) 0%, var(--color-brand-700) 50%, var(--color-ember-500) 100%)" }}
+                >
+                  <MessageCircle className="h-8 w-8 text-white" strokeWidth={1.85} />
+                </div>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/85 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-brand-700)] shadow-1 backdrop-blur">
+                  <Sparkles className="lucide h-3 w-3" strokeWidth={2} />
+                  AI + Mediators
+                </span>
+                <h2
+                  className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+                  style={{ fontSize: "clamp(1.5rem, 1.15rem + 1.3vw, 2rem)" }}
+                >
+                  {labels.askMeAnything}
+                </h2>
+                <p className="mt-3 max-w-xs text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                  {labels.disclaimer}
+                </p>
+              </div>
             </div>
-            <h2 className="mb-2 text-xl font-black text-gray-900">{labels.askMeAnything}</h2>
-            <p className="mb-6 max-w-xs text-sm text-gray-500">{labels.disclaimer}</p>
 
-            <p className="mb-3 text-xs font-black uppercase tracking-widest text-gray-400">
+            {/* Suggested questions */}
+            <p className="mb-3 mt-6 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
               {labels.suggestedQuestions}
             </p>
-            <div className="flex flex-col gap-2.5 w-full">
+            <div className="flex flex-col gap-2 w-full">
               {labels.suggestions.map((q, i) => (
                 <button
                   type="button"
                   key={i}
                   onClick={() => sendMessage(q)}
-                  className="card-hover rounded-2xl border-2 border-gray-100 bg-white px-5 py-4 text-left text-sm font-medium text-gray-700 shadow-sm animate-fade-in-up"
-                  style={{ animationDelay: `${(i + 1) * 100}ms` }}
+                  className="group flex items-center gap-3 rounded-2xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-4 text-left text-sm font-medium leading-relaxed text-[var(--color-text-primary)] shadow-1 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--color-brand-300)] hover:shadow-2 animate-fade-in-up"
+                  style={{
+                    animationDelay: `${(i + 1) * 100}ms`,
+                    transitionTimingFunction: "var(--ease-emphasized)",
+                  }}
                 >
-                  {q}
+                  <span className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-50)] text-xs font-extrabold text-[var(--color-brand-700)]">
+                    {i + 1}
+                  </span>
+                  <span className="flex-1">{q}</span>
+                  <Send
+                    className="lucide h-3.5 w-3.5 flex-shrink-0 text-[var(--color-text-muted)] transition-all group-hover:translate-x-0.5 group-hover:text-[var(--color-brand-700)]"
+                    strokeWidth={2}
+                  />
                 </button>
               ))}
             </div>
@@ -227,13 +259,24 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
               style={msg.role === "user" ? { background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" } : undefined}
             >
               {msg.role === "assistant" && msg.content === "" && isLoading ? (
-                <div className="flex items-center gap-2 text-gray-400">
-                  <div className="flex gap-1">
-                    <span className="inline-block h-2 w-2 animate-bounce rounded-full bg-gray-300" style={{ animationDelay: "0ms" }} />
-                    <span className="inline-block h-2 w-2 animate-bounce rounded-full bg-gray-300" style={{ animationDelay: "150ms" }} />
-                    <span className="inline-block h-2 w-2 animate-bounce rounded-full bg-gray-300" style={{ animationDelay: "300ms" }} />
+                <div className="flex items-center gap-2.5 text-[var(--color-text-muted)]">
+                  <div className="flex h-5 items-center gap-1">
+                    <span
+                      className="inline-block h-1.5 w-1.5 animate-bounce rounded-full bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-brand-700)]"
+                      style={{ animationDelay: "0ms" }}
+                    />
+                    <span
+                      className="inline-block h-1.5 w-1.5 animate-bounce rounded-full bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-ember-500)]"
+                      style={{ animationDelay: "150ms" }}
+                    />
+                    <span
+                      className="inline-block h-1.5 w-1.5 animate-bounce rounded-full bg-gradient-to-br from-[var(--color-ember-500)] to-[var(--color-ember-700)]"
+                      style={{ animationDelay: "300ms" }}
+                    />
                   </div>
-                  <span className="text-xs font-semibold">{labels.thinking}</span>
+                  <span className="text-[11px] font-extrabold uppercase tracking-widest text-[var(--color-text-secondary)]">
+                    {labels.thinking}
+                  </span>
                 </div>
               ) : (
                 <div className="whitespace-pre-wrap">

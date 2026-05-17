@@ -6,6 +6,7 @@ import {
   AlertTriangle, Shield, Lightbulb, Send, Activity,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { ToolHero } from "@/components/ui";
 
 type RegionId =
   | "head"
@@ -139,13 +140,13 @@ export function BodyMap({ locale }: { locale: string }) {
   if (stage === "map") {
     return (
       <div>
-        <div className="mb-6 text-center animate-fade-in-up">
-          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-red-500 to-rose-600 shadow-xl shadow-red-500/25">
-            <Activity className="h-10 w-10 text-white" />
-          </div>
-          <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
-          <p className="mt-2 text-sm text-gray-500">{t("heroSubtitle")}</p>
-        </div>
+        <ToolHero
+          icon={Activity}
+          accent="danger"
+          eyebrow={tEmergency("emergencyLabel")}
+          title={t("heroTitle")}
+          subtitle={t("heroSubtitle")}
+        />
 
         {/* Body SVG */}
         <div className="relative mx-auto animate-fade-in-up delay-200" style={{ width: 320, height: 420 }}>

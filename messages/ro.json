@@ -787,7 +787,8 @@
     },
     "meta": {
       "title": "Verificare — Sastipe"
-    }
+    },
+    "eyebrow": "Verificare"
   },
   "install": {
     "installApp": "Install Sastipe",

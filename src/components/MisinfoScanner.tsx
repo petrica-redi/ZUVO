@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Search, Mic, Share2, AlertTriangle, CheckCircle2, XCircle, Loader2, Volume2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
+import { ToolHero } from "@/components/ui";
 
 type Verdict = {
   verdict: "verified" | "misleading" | "false";
@@ -143,14 +144,13 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
 
   return (
     <div>
-      {/* Header */}
-      <div className="mb-6 text-center animate-fade-in-up">
-        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-amber-400 to-red-500 shadow-xl shadow-amber-500/25">
-          <Search className="h-10 w-10 text-white" />
-        </div>
-        <h1 className="text-2xl font-black text-gray-900">{labels.title}</h1>
-        <p className="mt-2 text-sm text-gray-500">{labels.subtitle}</p>
-      </div>
+      <ToolHero
+        icon={Search}
+        accent="ember"
+        eyebrow={tScan("eyebrow")}
+        title={labels.title}
+        subtitle={labels.subtitle}
+      />
 
       {/* Input area */}
       <div className="mb-4 rounded-2xl border-2 border-gray-200 bg-white p-1 shadow-sm focus-within:border-[#C0392B] focus-within:ring-4 focus-within:ring-[#C0392B]/10 transition-all">

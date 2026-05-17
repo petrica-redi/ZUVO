@@ -44,6 +44,7 @@ import {
   type StudentAcademyState,
 } from "@/lib/student-health-progress";
 import { cn } from "@/components/ui/cn";
+import { CountUp } from "@/components/ui";
 import { AcademyShellOptOut } from "@/components/academy/AcademyShellOptOut";
 import { JourneyMap } from "@/components/academy/JourneyMap";
 import { MissionDeck } from "@/components/academy/MissionDeck";
@@ -404,7 +405,7 @@ function Hero({
                 className="font-editorial mt-0.5 leading-none text-[var(--color-text-primary)]"
                 style={{ fontSize: "clamp(2.5rem, 1.8rem + 2.5vw, 3.5rem)" }}
               >
-                {mounted ? level : "—"}
+                {mounted ? <CountUp to={level} duration={700} /> : "—"}
               </div>
             </div>
             <div className="text-right">
@@ -412,7 +413,7 @@ function Hero({
                 {tL8("statXp")}
               </div>
               <div className="font-display text-2xl font-extrabold leading-none text-[var(--color-brand-700)]">
-                {mounted ? xp : "—"}
+                {mounted ? <CountUp to={xp} duration={900} /> : "—"}
               </div>
             </div>
           </div>
@@ -439,19 +440,35 @@ function Hero({
           <div className="mt-6 grid grid-cols-3 gap-3">
             <StatPill
               label={tL8("statStreak")}
-              value={mounted ? streak : "—"}
+              value={mounted ? <CountUp to={streak} duration={800} /> : "—"}
               icon={Flame}
               tone="ember"
             />
             <StatPill
               label={tL8("statBadges")}
-              value={mounted ? `${badges}/${totalBadges}` : "—"}
+              value={
+                mounted ? (
+                  <>
+                    <CountUp to={badges} duration={700} />/{totalBadges}
+                  </>
+                ) : (
+                  "—"
+                )
+              }
               icon={Sparkles}
               tone="brand"
             />
             <StatPill
               label={tL8("statLessons")}
-              value={mounted ? `${lessonsDone}/${totalLessons}` : "—"}
+              value={
+                mounted ? (
+                  <>
+                    <CountUp to={lessonsDone} duration={900} />/{totalLessons}
+                  </>
+                ) : (
+                  "—"
+                )
+              }
               icon={CheckCircle2}
               tone="sage"
             />
@@ -499,7 +516,7 @@ function StatPill({
   tone,
 }: {
   label: string;
-  value: string | number;
+  value: React.ReactNode;
   icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
   tone: "ember" | "brand" | "sage";
 }) {
