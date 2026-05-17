@@ -36,6 +36,7 @@
     "q5": "I feel sad all the time and I cannot sleep. Is this normal?",
     "q6": "How do I register with a doctor if I do not have documents?",
     "askMeAnything": "Ask me anything",
+    "heroArtAlt": "Illustration of a trusted conversational companion for preventive health.",
     "inputAria": "Type your health question",
     "sendAria": "Send message",
     "meta": {
@@ -829,6 +830,7 @@
       "heroTitle2": "health translator",
       "heroTitle3": "for your community.",
       "heroLead": "A clinically reviewed, gamified curriculum spanning local, regional, and national stages. Built with Roma health mediators across Europe.",
+      "heroStatPanelImageAlt": "Illustration highlighting students practising health-literacy milestones together.",
       "heroPrimaryCta": "Start today's mission",
       "heroSecondaryCta": "See the curriculum",
       "statLevel": "Level",
@@ -1118,7 +1120,8 @@
     "meta": {
       "title": "Fact Check — Redi Health"
     },
-    "eyebrow": "Fact check"
+    "eyebrow": "Fact check",
+    "heroArtAlt": "Illustration representing myth-busting and verified health claims."
   },
   "install": {
     "installApp": "Install Redi Health",
@@ -1249,7 +1252,18 @@
     "branchAcademy": "Student Academy",
     "branchPrescription": "Prescriptions",
     "branchFacts": "Fact-check myths",
-    "branchMediator": "Mediator dashboard"
+    "branchMediator": "Mediator dashboard",
+    "visualEyebrow": "See it in scenes",
+    "visualTitle": "Picture the journeys — AI-inspired artwork",
+    "visualLead": "These images are synthetic (AI-generated): no real patient photos. Tap any scene to open that area of Sastipe.",
+    "heroBackdropAlt": "Artistic scene of diverse people using a calm multilingual health app together.",
+    "imageMosaicAcademyAlt": "Illustration of students exploring health literacy as a school workshop.",
+    "imageMosaicPrescriptionAlt": "Illustration of caring hands guiding someone through prescriptions and dosing.",
+    "imageMosaicFactsAlt": "Illustration of checking a rumor on the phone against trusted health facts.",
+    "imageMosaicMediatorAlt": "Illustration of a community mediator sharing health outreach with neighbours.",
+    "imageAudienceStudentsAlt": "Illustration of young people collaborating on everyday health habits.",
+    "imageAudienceCommunityAlt": "Illustration of a welcoming community circle centred on preventive care.",
+    "imageAudiencePartnersAlt": "Illustration of policymakers reviewing anonymised public-health insights."
   },
   "footer": {
     "tagline": "Multilingual literacy for underserved, rural and Roma communities stretching across fifteen European languages.",
@@ -1295,6 +1309,7 @@
   "symptoms": {
     "heroTitle": "Where does it hurt?",
     "heroSubtitle": "Tap the area on the body that is bothering you",
+    "heroArtAlt": "Illustration of people getting gentle multilingual guidance about everyday symptoms.",
     "backToMap": "Back to body map",
     "checkAnother": "Check another area",
     "selectSymptoms": "Select all symptoms that apply",
@@ -1441,6 +1456,7 @@
   "explain": {
     "heroTitle": "Understand your prescription",
     "heroSubtitle": "Type your diagnosis or medication name. We explain it in simple words.",
+    "heroArtAlt": "Illustration of pharmacist-style support helping decode a prescription.",
     "placeholder": "Type your diagnosis, medication name, or paste your prescription…\n\nExample: \"Hypertension\" or \"Metformin 500mg\"",
     "inputAria": "Enter your diagnosis or medication name",
     "cta": "Explain this",

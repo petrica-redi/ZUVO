@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import { Link } from "@/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import {
@@ -395,6 +396,15 @@ function Hero({
 
         {/* Right: live stat panel */}
         <div className="relative border-t border-[var(--color-border-subtle)] bg-gradient-to-br from-[var(--color-cream-50)] via-white to-[var(--color-brand-50)] p-6 md:border-t-0 md:border-l md:p-8">
+          <div className="relative mb-6 aspect-[21/11] w-full overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] shadow-2 md:aspect-[16/10]">
+            <Image
+              src="/images/ai/ai-spot-academy.png"
+              alt={tL8("heroStatPanelImageAlt")}
+              fill
+              className="object-cover object-[center_35%]"
+              sizes="(max-width: 768px) 100vw, 400px"
+            />
+          </div>
           {/* Level + XP */}
           <div className="flex items-center justify-between">
             <div>

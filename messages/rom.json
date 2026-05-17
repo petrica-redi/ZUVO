@@ -499,6 +499,7 @@
       "heroTitle2": "sastimasqo prevodilako",
       "heroTitle3": "vash tiro khethanipe.",
       "heroLead": "Klinikalno-verifikuime thaj gamifikuime kurikuluma trin staďongo — lokalno, regionalno thaj nacionalno. Kerdo le rromane sastimasqe mediatorenca pa sa Evropa.",
+      "heroStatPanelImageAlt": "Ilustracia pa savorre šikljove kai buterđine e sastimasqo sikljaripa.",
       "heroPrimaryCta": "Šuru adjesutni misia",
       "heroSecondaryCta": "Dikh i kurikuluma",
       "statLevel": "Nivelo",
@@ -788,7 +789,8 @@
     "meta": {
       "title": "Dikhipe — Redi Health"
     },
-    "eyebrow": "Dikhipe"
+    "eyebrow": "Dikhipe",
+    "heroArtAlt": "Ilustracia pa xoxavinipe thaj pakivoko verifikácia aver vakirinđe."
   },
   "install": {
     "installApp": "Install Redi Health",
@@ -803,6 +805,7 @@
   },
   "chat": {
     "askMeAnything": "Phuch man so kames",
+    "heroArtAlt": "Ilustracia pa lokho dor kana buterdena sar jek pakivavo sastimosqe vakaripas.",
     "placeholder": "Phuch man so kames pa sastipe…",
     "thinking": "Goďakerav…",
     "errorMessage": "Našti ka phandav. Dikh o internet thaj phir akhar drom.",
@@ -940,7 +943,18 @@
     "branchAcademy": "Akademia le sikljarne̱nqe",
     "branchPrescription": "Receptura",
     "branchFacts": "Verifikacija mitengo",
-    "branchMediator": "Mediatorsko panelo"
+    "branchMediator": "Mediatorsko panelo",
+    "visualEyebrow": "Dikh le vizualeste",
+    "visualTitle": "So keres anda sa drom — AI-imagine pal but phande",
+    "visualLead": "Le imaginea sintetikone (AI-kerdiye che) — thaj nastik realne paciente. Muk dures jek scene te phurde o kotor.",
+    "heroBackdropAlt": "Artistikno barvalipen ande savorre dźene kai but-čhibengro sastipnasko foro dikhel khetanes.",
+    "imageMosaicAcademyAlt": "Ilustracia pa školo ande savorre sikljarne kai vakerena sasto sikljaribe.",
+    "imageMosaicPrescriptionAlt": "Ilustracia pa ustime vasta kai bichaven doritoro thaj dorumea.",
+    "imageMosaicFactsAlt": "Ilustracia pa mobiloro telefoni le kontra vorba thaj dokumenturyača sastipa.",
+    "imageMosaicMediatorAlt": "Ilustracia pa mediatorko kai bućarel le khezanes thaj savorre dženenca.",
+    "imageAudienceStudentsAlt": "Ilustracia kai terne buterdena kai bašelpe sasto dživnipen.",
+    "imageAudienceCommunityAlt": "Ilustracia pa gilavori khezanesqe koro pal preventia.",
+    "imageAudiencePartnersAlt": "Ilustracia paul ministere kai dikhlena anonimizo statistiku."
   },
   "footer": {
     "tagline": "But-čhibengo sastimasqo sikljovipe vash gavendar thema, barikate khethanipa thaj i Romen žuži ande Evropa.",
@@ -986,6 +1000,7 @@
   "symptoms": {
     "heroTitle": "Kaj dukhal tu?",
     "heroSubtitle": "Astar e kotor pe trupo so dukhal tu",
+    "heroArtAlt": "Ilustracia pa savorre phure dźene kai mukel jek šukar but-čhibengo vakaripasko dor.",
     "backToMap": "Pale ke trupasqi mapa",
     "checkAnother": "Dikh aver kotor",
     "selectSymptoms": "Alos sa e sintomea so si tute",
@@ -1132,6 +1147,7 @@
   "explain": {
     "heroTitle": "Haljar tiro receto",
     "heroSubtitle": "Lekha diagnoza vai dipnasqo anav. Ververdas amen lokhes.",
+    "heroArtAlt": "Ilustracia pa lokho pomognipe kai haljarelas o dipnasqo lil.",
     "placeholder": "Lekha diagnoza, dipnasqo anav vai thov receto…\n\nPrimero: „Hipertensia” vai „Metformin 500mg”",
     "inputAria": "Thov diagnoza vai dipnasqo anav",
     "cta": "Ververde",

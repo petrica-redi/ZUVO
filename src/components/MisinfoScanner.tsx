@@ -150,6 +150,10 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
         eyebrow={tScan("eyebrow")}
         title={labels.title}
         subtitle={labels.subtitle}
+        heroImage={{
+          src: "/images/ai/ai-spot-facts.png",
+          alt: tScan("heroArtAlt"),
+        }}
       />
 
       {/* Input area */}

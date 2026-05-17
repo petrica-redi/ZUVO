@@ -499,6 +499,7 @@
       "heroTitle2": "përkthyesi i shëndetit",
       "heroTitle3": "për komunitetin tënd.",
       "heroLead": "Një kurrikulë e rishikuar klinikisht dhe e gamifikuar me tri etapa — lokale, rajonale dhe kombëtare. Ndërtuar bashkë me ndërmjetës shëndetësorë romë në mbarë Evropën.",
+      "heroStatPanelImageAlt": "Ilustrim që thekson nxënësit bashkë në rrugët e aftësimit shëndetësor.",
       "heroPrimaryCta": "Fillo misionin e sotëm",
       "heroSecondaryCta": "Shih kurrikulën",
       "statLevel": "Niveli",
@@ -788,7 +789,8 @@
     "meta": {
       "title": "Verifikim — Redi Health"
     },
-    "eyebrow": "Verifikim"
+    "eyebrow": "Verifikim",
+    "heroArtAlt": "Ilustrim që tregon dekonstruktimin e miteve dhe verifikimin e pretendimeve shëndetësore."
   },
   "install": {
     "installApp": "Install Redi Health",
@@ -803,6 +805,7 @@
   },
   "chat": {
     "askMeAnything": "Më pyet çdo gjë",
+    "heroArtAlt": "Ilustrim i një shoku bisedor të besuar për informacion parandalues shëndetësor.",
     "placeholder": "Më pyet çdo gjë për shëndetin…",
     "thinking": "Po mendoj…",
     "errorMessage": "Nuk u lidha. Kontrollo internetin dhe provo përsëri.",
@@ -940,7 +943,18 @@
     "branchAcademy": "Akademia për studentët",
     "branchPrescription": "Recetat",
     "branchFacts": "Verifikimi i miteve",
-    "branchMediator": "Paneli i ndërmjetësit"
+    "branchMediator": "Paneli i ndërmjetësit",
+    "visualEyebrow": "Shihe në pamje",
+    "visualTitle": "Figuro udhëtimet — art AI e frymëzuar nga puna në terren",
+    "visualLead": "Imazhet janë sintetike (të gjeneruara nga AI): asnjë pacient real. Trokit një skenë që të hapësh atë zonë në Sastipe.",
+    "heroBackdropAlt": "Skicë artistike të njerëzve që përdorin me qetësi një aplikacion shëndetësor shumëgjuhësh.",
+    "imageMosaicAcademyAlt": "Ilustrim: studentë që diskutojnë për edukimin shëndetësor në shkollë.",
+    "imageMosaicPrescriptionAlt": "Ilustrim: duar të përkujdesura që drejtojnë dikë te dozimi dhe receta.",
+    "imageMosaicFactsAlt": "Ilustrim: verifikimin e një fjalë të përhapur në telefon kundër fakteve të besueshme.",
+    "imageMosaicMediatorAlt": "Ilustrim: ndërmjetës që ndërvepron me fqinjët për një shëndet parandalues.",
+    "imageAudienceStudentsAlt": "Ilustrim: të rinj që bashkëpunojnë për zakone të përditshme shëndetësore.",
+    "imageAudienceCommunityAlt": "Ilustrim: rreth komuniteti i përshëndetshëm drejtuar kujdesit parandalues.",
+    "imageAudiencePartnersAlt": "Ilustrim: politikëbërës që shqyrtojnë të dhëna të anonimizuara për shëndetin publik."
   },
   "footer": {
     "tagline": "Komunikime shëndetësore shumëgjuhëshe për zonat rurale, përjashtimet dhe familjet rome në Evropë.",
@@ -986,6 +1000,7 @@
   "symptoms": {
     "heroTitle": "Ku të dhemb?",
     "heroSubtitle": "Prek zonën në trup që të shqetëson",
+    "heroArtAlt": "Ilustrim: njerëz marrin udhëzim të përzemërt shumëgjuhësh për simptomat e përditshme.",
     "backToMap": "Kthehu te harta e trupit",
     "checkAnother": "Kontrollo zonë tjetër",
     "selectSymptoms": "Zgjidh të gjitha simptomat që ke",
@@ -1132,6 +1147,7 @@
   "explain": {
     "heroTitle": "Kuptoje recetën",
     "heroSubtitle": "Shkruaj diagnozën ose emrin e ilaçit. Po e shpjegojmë thjesht.",
+    "heroArtAlt": "Ilustrim me përkrahje në stilin e farmacistit për dekodimin e recetës.",
     "placeholder": "Shkruaj diagnozën, emrin e ilaçit ose ngjit recetën…\n\nShembull: „Hipertension” ose „Metformin 500mg”",
     "inputAria": "Shkruaj diagnozën ose emrin e ilaçit",
     "cta": "Shpjegoje",
