@@ -217,7 +217,7 @@ export function aiBudgetExceededResponse(reason: BudgetCheck): NextResponse {
     {
       status: 503,
       headers: {
-        "X-Sastipe-Budget":
+        "X-Redi-Budget":
           reason.reason === "user-cap" ? "user-cap" : "org-budget",
         "Retry-After": "3600",
       },

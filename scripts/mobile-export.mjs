@@ -24,7 +24,7 @@ const html = `<!doctype html>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <meta name="theme-color" content="#4F46E5" />
-    <title>Sastipe</title>
+    <title>Redi Health</title>
     <style>
       :root { color-scheme: light dark; }
       * { box-sizing: border-box; }
@@ -93,9 +93,9 @@ const html = `<!doctype html>
           <path d="M20 14V11.5" stroke="#FBBF24" stroke-width="2.2" stroke-linecap="round"/>
         </svg>
       </div>
-      <h1>Sastipe</h1>
-      <p>The native app loads the live Sastipe platform. If it does not open automatically, use the button below.</p>
-      <a href="${serverUrl}">Open Sastipe</a>
+      <h1>Redi Health</h1>
+      <p>The native app loads the live Redi Health platform. If it does not open automatically, use the button below.</p>
+      <a href="${serverUrl}">Open Redi Health</a>
     </main>
     <script>
       setTimeout(function () {

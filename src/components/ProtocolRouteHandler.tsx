@@ -5,7 +5,7 @@ import { useEffect } from "react";
 function sanitizeRoute(raw: string): string | null {
   try {
     const decoded = decodeURIComponent(raw)
-      .replace(/^web\+sastipe:\/\//, "")
+      .replace(/^web\+(sastipe|redihealth):\/\//i, "")
       .trim();
     const path = decoded.startsWith("/") ? decoded : `/${decoded}`;
     if (!/^\/[A-Za-z0-9/_?=&.-]*$/.test(path)) return null;

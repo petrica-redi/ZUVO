@@ -1,5 +1,5 @@
 /**
- * Sastipe Health Education Content
+ * Redi Health education content scaffolding.
  *
  * Static content data for all 6 health pillars and their modules.
  * Text is keyed by translation namespace paths in messages/*.json.

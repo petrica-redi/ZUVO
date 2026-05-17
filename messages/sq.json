@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sastipe — Shëndeti për Komunitetet Rome",
-    "description": "Mjete arsimimi shëndetësor për komunitetet rome. Mëso, ndiq dhe qëndro mirë."
+    "title": "Redi Health — Kujdes për komunitetet rurale dhe përjashtuese",
+    "description": "Edukim shëndetësor shumëgjuhësor për njerëzit që arrijnë më vonë tek sistemet — zonat rurale, periferitë dhe komunitetet rome në Evropë."
   },
   "nav": {
     "home": "Home",
@@ -494,7 +494,7 @@
     "a11yLocked": "i kyçur",
     "metaSuffix": "Akademia e Shëndetit për Studentë",
     "l8": {
-      "eyebrow": "Akademia e Shëndetit Sastipe",
+      "eyebrow": "Akademia e Shëndetit Redi Health",
       "heroTitle1": "Bëhu",
       "heroTitle2": "përkthyesi i shëndetit",
       "heroTitle3": "për komunitetin tënd.",
@@ -553,7 +553,7 @@
       "diplomaProgress": "{completed} nga {total} kërkesa janë plotësuar",
       "diplomaPreviewName": "Ndërmjetës i ardhshëm",
       "diplomaPreviewDate": "Dhënë më {date}",
-      "diplomaSignature": "Bordi Klinik Sastipe",
+      "diplomaSignature": "Bordi Klinik Redi Health",
       "diplomaPreview": "Pamje paraprake",
       "diplomaUnlocked": "Diploma gati",
       "diplomaCta": "Hap diplomën",
@@ -586,7 +586,7 @@
   },
   "privacy": {
     "metaTitle": "Privacy & data",
-    "metaDescription": "How Sastipe handles your data and how to exercise your rights",
+    "metaDescription": "How Redi Health handles your data and how to exercise your rights",
     "title": "Privacy & data",
     "lastUpdated": "Last updated: {date}",
     "actionsTitle": "Your data, your choice",
@@ -602,7 +602,7 @@
     "authRequired": "Please sign in to continue",
     "unavailable": "Service unavailable. Please try again later.",
     "successDeleted": "Your data has been scrubbed. Goodbye for now.",
-    "disclaimer": "Sastipe is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "disclaimer": "Redi Health is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
     "sections": {
       "collect": {
         "title": "What we collect",
@@ -697,7 +697,7 @@
   },
   "more": {
     "metaTitle": "Të gjitha veçoritë",
-    "metaDescription": "Të gjitha mjetet e Sastipe në një vend",
+    "metaDescription": "Të gjitha mjetet e Redi Health në një vend",
     "title": "Të gjitha veçoritë",
     "sections": {
       "tools": "Mjete shëndetësore",
@@ -734,7 +734,7 @@
       "mediatorDesc": "Mjete për ndërmjetësit shëndetësorë",
       "profileLabel": "Profili",
       "profileDesc": "Gjuha, përparimi, të dhënat",
-      "aboutLabel": "Rreth Sastipe",
+      "aboutLabel": "Rreth Redi Health",
       "aboutDesc": "Versioni, privatësia, kontakti"
     }
   },
@@ -779,19 +779,19 @@
     "verdictFalse": "Gënjeshtër",
     "inputAria": "Ngjit pretendimin shëndetësor për ta verifikuar",
     "sourceLabel": "Burimi",
-    "shareTagline": "Verifikuar nga Sastipe Health Advisor",
+    "shareTagline": "Verifikuar nga Redi Health Advisor",
     "shareTitle": "Verifikim informacioni shëndetësor",
     "errors": {
       "analyze": "Nuk arrita ta analizoj pretendimin",
       "network": "Gabim rrjeti. Të lutem kontrollo lidhjen."
     },
     "meta": {
-      "title": "Verifikim — Sastipe"
+      "title": "Verifikim — Redi Health"
     },
     "eyebrow": "Verifikim"
   },
   "install": {
-    "installApp": "Install Sastipe",
+    "installApp": "Install Redi Health",
     "offlineAccess": "Add it to your home screen for offline access and faster opens.",
     "installButton": "Install",
     "addToHome": "Add to Home Screen",
@@ -818,24 +818,24 @@
     "inputAria": "Shkruaj pyetjen tënde shëndetësore",
     "sendAria": "Dërgo mesazhin",
     "meta": {
-      "title": "Chat — Sastipe",
+      "title": "Chat — Redi Health",
       "description": "Bëj çdo pyetje shëndetësore. Merr përgjigje të qarta dhe të besueshme."
     }
   },
   "impact": {
     "title": "Impakti për shëndetin publik",
-    "subtitle": "Telemetri në kohë reale nga implementimi i Sastipe në komunitetet rome.",
+    "subtitle": "Telemetri në kohë reale nga implementimi i Redi Health në komunitetet rome.",
     "statMyths": "Mite të zhveshura",
     "statEmergencies": "Emergjenca të dërguara",
     "statMediators": "Ndërmjetës aktivë",
     "statVisits": "Vizita në terren të regjistruara",
     "deployTitle": "Implemento në rajonin tënd",
-    "deployDesc": "Sastipe është gati si white-label për bashki dhe ministri të shëndetësisë.",
+    "deployDesc": "Redi Health është gati si white-label për bashki dhe ministri të shëndetësisë.",
     "contactBtn": "Kontakto partneritetet"
   },
   "methodology": {
     "title": "Qeverisje klinike & siguri",
-    "subtitle": "Si garantojmë që Sastipe jep informacion shëndetësor të sigurt, të saktë dhe me kulturë komunitare.",
+    "subtitle": "Si garantojmë që Redi Health jep informacion shëndetësor të sigurt, të saktë dhe me kulturë komunitare.",
     "section1": "Zbulim determinist i emergjencave",
     "desc1": "Përpara çdo thirrjeje AI, hyrja e përdoruesit skanohet me një motor determinist regex për emergjenca kritike (p.sh. dhimbje gjoksi, mendime vetëvrasëse). Nëse aktivizohet, AI-ja anashkalohet plotësisht dhe përdoruesi udhëzohet të thërrasë 112.",
     "section2": "Mbulim i PII",
@@ -854,20 +854,20 @@
     "getDirections": "Shih rrugën"
   },
   "landing": {
-    "eyebrow": "Edukim shëndetësor për komunitetet rome",
-    "heroLine1": "Shëndet i besueshëm,",
-    "heroLine2": "në gjuhën tuaj.",
-    "heroLead": "Një shoqërues me AI, ndërtuar bashkë me ndërmjetës romë, mjekë dhe të rinj në mbarë Evropën. Gjuhë e thjeshtë, shumëgjuhësh, e disponueshme edhe offline.",
-    "ctaPrimary": "Hap Sastipe",
+    "eyebrow": "Njohuri për shëndetin kur shërbimet mbërrijnë së fundmi",
+    "heroLine1": "Udhëzim i besueshëm,",
+    "heroLine2": "edhe jashtë qendrave.",
+    "heroLead": "Redi Health është një shoqërues me AI, ndërtuar me ndërmjetës dhe mjekë fushor për fshatra, zona të margjinalizuara dhe lagje rome — ku rrugët drejt spitaleve janë të gjata dhe informimi zyrtar shpesh nuk vjen në gjuhën që flisni në shtëpi. Folje të thjeshta, shumë gjuhë dhe punë në rrjet të dobët.",
+    "ctaPrimary": "Hap Redi Health",
     "ctaSecondary": "Shfleto metodologjinë",
     "trustEyebrow": "I besuar nga ndërmjetës, mjekë dhe ministri",
-    "audienceEyebrow": "Për kë është ndërtuar Sastipe",
+    "audienceEyebrow": "Për kë është ndërtuar Redi Health",
     "audienceTitle": "Një platformë.\nTri audienca.",
     "studentTitle": "Për studentët",
     "studentLead": "Një Akademi e gamifikuar me tri etapa — lokale, rajonale dhe kombëtare — për edukim shëndetësor.",
     "studentCta": "Hap Akademinë",
-    "communityTitle": "Për anëtarët e komunitetit rom",
-    "communityLead": "Këshilla shëndetësore me zë AI, klinika miqësore me romët dhe udhëzime për emergjenca.",
+    "communityTitle": "Për lagje rurale dhe përjashtuese",
+    "communityLead": "Më së pari përmes zërit kur klinikat janë pak, farmacet larg dhe gjuhët e spitaleve nuk përputhen — plus harta klinikash miqësore ku i kemi hartësuar.",
     "communityCta": "Gjej kujdes pranë jush",
     "ministerTitle": "Për ministri & partnerë",
     "ministerLead": "Telemetri impakti në kohë reale, qeverisje klinike dhe platformë white-label gati për përdorim.",
@@ -890,9 +890,9 @@
     "methodologyBody": "Tri shtresa deterministe sigurie përpara çdo thirrjeje AI: zbulimi i emergjencave, mbulimi i PII dhe mbrojtja kundër injektimit të prompteve. Çdo mësim verifikohet klinikisht.",
     "methodologyCta": "Lexo metodologjinë",
     "finalEyebrow": "Fillo tani",
-    "finalTitle": "Ndërtuar bashkë me romët,\npër të gjithë.",
-    "finalBody": "Hap aplikacionin për të bërë një pyetje, mësuar një temë ose verifikuar një pretendim.",
-    "finalCta": "Hap Sastipe",
+    "finalTitle": "Bashkëkrijuar me ndërmjetës në terren,\npër ata që sistemi i lë në pritje.",
+    "finalBody": "Hape shoqëruesin për të pyetur, verifikuar një thashethem, dekodifikuar një recetë apo hap një mësim përshtatës për adolescentë dhe gjyshër.",
+    "finalCta": "Hap Redi Health",
     "navTitle": "Shko te një mjet",
     "navSubtitle": "Tetë rrugë të udhëzuara — akademi, receta, mite, punë në terren dhe më shumë.",
     "navAsk": "Pyet AI-në",
@@ -924,7 +924,7 @@
     "safetyRedFlags": "Emergjenca",
     "safetyPII": "Mbulim PII",
     "safetyClinical": "Rishikim klinik",
-    "heroCardLabel": "pyet sastipe",
+    "heroCardLabel": "pyet Redi-n",
     "heroCardQuestion": "Tezja ime thotë që vaksinat shkaktojnë autizëm. A është e vërtetë?",
     "heroCardVerdict": "I verifikuar",
     "heroCardAnswer": "Jo. Dekada studimesh të mëdha — mbi një milion fëmijë — nuk tregojnë asnjë lidhje mes vaksinave dhe autizmit.",
@@ -943,7 +943,7 @@
     "branchMediator": "Paneli i ndërmjetësit"
   },
   "footer": {
-    "tagline": "Edukim shumëgjuhësh shëndetësor për komunitetet rome në Evropë.",
+    "tagline": "Komunikime shëndetësore shumëgjuhëshe për zonat rurale, përjashtimet dhe familjet rome në Evropë.",
     "product": "Produkti",
     "forStudents": "Për studentët",
     "forCommunity": "Për komunitetin",
@@ -953,7 +953,7 @@
     "impact": "Impakti",
     "privacy": "Privatësia",
     "contact": "Kontakt",
-    "rights": "© 2026 Sastipe. Të gjitha të drejtat të rezervuara.",
+    "rights": "© 2026 Redi Health. Të gjitha të drejtat të rezervuara.",
     "builtWith": "Ndërtuar me ndërmjetës shëndetësorë romë në 15 vende.",
     "systemsOperational": "Të gjitha sistemet po funksionojnë"
   },
@@ -1049,7 +1049,7 @@
       "Mpirje"
     ],
     "meta": {
-      "title": "Kontrollo simptomat — Sastipe",
+      "title": "Kontrollo simptomat — Redi Health",
       "description": "Prek ku të dhemb. Merr udhëzime se çfarë të bësh."
     }
   },
@@ -1072,7 +1072,7 @@
     "showVisitCard": "Shfaq Kartën e Vizitës te Mjeku",
     "hideVisitCard": "Fshih Kartën e Vizitës",
     "visitCardTitle": "Përmbledhje për mjekun",
-    "visitCardDisclaimer": "Krijuar nga Sastipe Health Advisor. Ky nuk është diagnozë mjekësore.",
+    "visitCardDisclaimer": "Krijuar nga Redi Health Advisor. Ky nuk është diagnozë mjekësore.",
     "concerns": {
       "fever": "Ethe / Temperaturë",
       "pain": "Dhimbje diku",
@@ -1125,7 +1125,7 @@
       "Fëmija im është i sëmurë — mund të vaksinohet?"
     ],
     "meta": {
-      "title": "Udhëzues vaksinash — Sastipe",
+      "title": "Udhëzues vaksinash — Redi Health",
       "description": "Çdo vaksinë shpjeguar me fjalë të thjeshta."
     }
   },
@@ -1154,7 +1154,7 @@
     "disclaimerBold": "Nuk është këshillë mjekësore.",
     "disclaimerBody": "Ky mjet shpjegon terma mjekësorë me gjuhë të thjeshtë. Ndiq gjithmonë udhëzimet e mjekut tënd.",
     "meta": {
-      "title": "Kuptoje recetën — Sastipe",
+      "title": "Kuptoje recetën — Redi Health",
       "description": "Diagnoza dhe ilaçet shpjeguar me fjalë të thjeshta."
     },
     "takePhoto": "Bëj një foto",
@@ -1194,22 +1194,22 @@
     "generateCard": "Krijo Kartën e Vizitës te Mjeku",
     "startOver": "Fillo nga e para",
     "showDoctor": "Trego këtë te mjeku",
-    "generatedBy": "Krijuar nga Sastipe Health Advisor",
+    "generatedBy": "Krijuar nga Redi Health Advisor",
     "whatToBring": "Çfarë të marrësh",
     "askYourDoctor": "Pyete mjekun",
     "patientRights": "Të drejtat e tua si pacient",
     "findHospital": "Gjej spitalin më të afërt",
     "mapHint": "Hap hartën me drejtime",
     "meta": {
-      "title": "Navigatori shëndetësor — Sastipe",
+      "title": "Navigatori shëndetësor — Redi Health",
       "description": "Përgatitu për vizitën te mjeku — karta e vizitës, çfarë të marrësh, të drejtat e tua."
     }
   },
   "about": {
-    "brand": "Sastipe",
-    "tagline": "Edukim shëndetësor për komunitetet rome",
+    "brand": "Redi Health",
+    "tagline": "Njohuri për shëndetin në zonat rurale dhe komunitete të përjashtuara",
     "version": "Versioni 1.0.0",
-    "missionBody": "Sastipe është një shoqërues shëndetësor me AI, krijuar veçanërisht për komunitetet rome në Evropë. Misioni ynë është të zvogëlojmë hendekun e edukimit shëndetësor duke ofruar informacion shëndetësor të besueshëm dhe me ndjeshmëri kulturore me gjuhë të thjeshtë.",
+    "missionBody": "Redi Health është një ndihmës me AI që ndërtohet së bashku me ndërmjetës fushë në vendet që sistemet kryesore trajtojnë vonë — nga fshatrat deri tek vendbanimet informale — me fokus të thellë për komunitetet rome. E ngushtojmë mundësinë e informuar kur largësia, gjuha ose shmangia nuk lejnë kujdesin duhur.",
     "values": {
       "careLabel": "Krijuar me kujdes",
       "careDesc": "Nga ndërmjetës shëndetësorë",
@@ -1222,10 +1222,10 @@
     },
     "privacyLink": "Politika e privatësisë",
     "termsLink": "Kushtet e shërbimit",
-    "disclaimer": "Sastipe nuk është pajisje mjekësore. I gjithë informacioni është për qëllime edukative. Konsulto gjithmonë një profesionist shëndetësor të kualifikuar për vendime mjekësore.",
+    "disclaimer": "Redi Health nuk është pajisje mjekësore. I gjithë informacioni është për qëllime edukative. Konsulto gjithmonë një profesionist shëndetësor të kualifikuar për vendime mjekësore.",
     "meta": {
-      "title": "Rreth nesh — Sastipe",
-      "description": "Rreth platformës së edukimit shëndetësor Sastipe"
+      "title": "Rreth nesh — Redi Health",
+      "description": "Rreth platformës së edukimit shëndetësor Redi Health"
     }
   },
   "family": {

@@ -123,8 +123,8 @@ export async function POST(req: NextRequest) {
           { success: true, data: result.data },
           {
             headers: {
-              "X-Sastipe-Budget-Remaining": String(budget.remainingUserCalls),
-              "X-Sastipe-Provider": getActiveProvider() ?? "none",
+              "X-Redi-Budget-Remaining": String(budget.remainingUserCalls),
+              "X-Redi-Provider": getActiveProvider() ?? "none",
             },
           },
         );

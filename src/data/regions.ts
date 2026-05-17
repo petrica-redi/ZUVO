@@ -1,5 +1,5 @@
 /**
- * Sastipe Region Data
+ * Redi Health region data (directory).
  *
  * Real-world data about Roma communities in each country:
  * - Population estimates (Council of Europe / ERRC data)

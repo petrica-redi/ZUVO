@@ -78,7 +78,7 @@ Three controls run on every AI call:
 2. Per-user daily cap from `AI_USER_DAILY_CAP` (default 40).
 3. Org-wide daily budget from `AI_DAILY_BUDGET_EUR` (default 50).
 
-When either daily counter is exceeded, the API returns `503 service_paused` with a friendly message and an `X-Sastipe-Budget` header. This is intentional — it caps cost in the worst case (an LLM-cost DoS).
+When either daily counter is exceeded, the API returns `503 service_paused` with a friendly message and an `X-Redi-Budget` header. This is intentional — it caps cost in the worst case (an LLM-cost DoS).
 
 ## 6. Observability
 

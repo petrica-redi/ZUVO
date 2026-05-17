@@ -3,6 +3,8 @@
 import { useState, useTransition, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "@/navigation";
+import type { Locale } from "@/i18n/routing";
+
 import { Globe, X, Check } from "lucide-react";
 
 type LanguageOption = {
@@ -30,7 +32,7 @@ const LANGUAGES: LanguageOption[] = [
   { code: "tr",  nativeName: "Türkçe",       englishName: "Turkish",        flag: "🇹🇷" },
 ];
 
-export function LanguagePicker() {
+export function LanguagePicker({ variant = "default" }: { variant?: "default" | "landing" }) {
   const [open, setOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
@@ -43,7 +45,7 @@ export function LanguagePicker() {
   function selectLanguage(code: string) {
     setOpen(false);
     startTransition(() => {
-      router.replace(pathname, { locale: code as "en" | "sq" | "rom" | "ro" | "hu" | "sk" | "cs" | "bg" | "sr" | "hr" | "bs" | "mk" | "sl" | "el" | "tr" });
+      router.replace(pathname, { locale: code as Locale });
       router.refresh();
     });
   }
@@ -57,16 +59,25 @@ export function LanguagePicker() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [open]);
 
+  const triggerClass =
+    variant === "landing"
+      ? "flex items-center gap-1.5 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)]/90 px-3 py-1.5 text-[13px] font-semibold text-[var(--color-text-primary)] shadow-sm backdrop-blur-sm transition-all hover:border-[var(--color-text-primary)] hover:bg-[var(--color-surface)] active:scale-95 disabled:opacity-60"
+      : "flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:border-gray-300 hover:shadow active:scale-95 disabled:opacity-60";
+
+  const globeClass =
+    variant === "landing" ? "lucide h-3.5 w-3.5 text-[var(--color-text-secondary)]" : "lucide h-3.5 w-3.5 text-gray-500";
+
   return (
     <>
       {/* Trigger button */}
       <button
+        type="button"
         onClick={() => setOpen(true)}
-        className="flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:border-gray-300 hover:shadow active:scale-95"
+        className={triggerClass}
         aria-label={t("select")}
         disabled={isPending}
       >
-        <Globe className="h-3.5 w-3.5 text-gray-500" />
+        <Globe className={globeClass} />
         <span>{current.flag}</span>
         <span className="uppercase text-xs tracking-wide">{current.code}</span>
       </button>

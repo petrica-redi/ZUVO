@@ -74,7 +74,7 @@ export function DiplomaPreview({
           <div className="relative rounded-2xl border-2 border-dashed border-[var(--color-border-strong)] bg-white p-5 shadow-1">
             <div className="flex items-center justify-between border-b border-[var(--color-border-subtle)] pb-3">
               <div className="text-[9px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
-                Sastipe
+                Redi Health
               </div>
               <div className="text-[9px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
                 {t("diplomaTitle")}

@@ -1,7 +1,7 @@
 {
-  "name": "Sastipe — Health Literacy",
-  "short_name": "Sastipe",
-  "description": "Multilingual health companion for Roma communities. AI-powered, gamified, and trusted.",
+  "name": "Redi Health — Health literacy",
+  "short_name": "Redi Health",
+  "description": "Multilingual health literacy for rural, underserved and Roma communities across Europe. AI-powered, gamified, offline-friendly where possible.",
   "id": "/",
   "start_url": "/?utm_source=pwa",
   "scope": "/",
@@ -44,7 +44,7 @@
       "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
     },
     {
-      "name": "Ask Sastipe",
+      "name": "Ask Redi Health",
       "short_name": "Ask",
       "description": "AI health assistant chat",
       "url": "/chat?utm_source=pwa_shortcut",
@@ -75,6 +75,10 @@
     }
   },
   "protocol_handlers": [
+    {
+      "protocol": "web+redihealth",
+      "url": "/?route=%s"
+    },
     {
       "protocol": "web+sastipe",
       "url": "/?route=%s"

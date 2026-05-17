@@ -175,9 +175,9 @@ export async function POST(req: NextRequest) {
         { success: true, data: result.data },
         {
           headers: {
-            "X-Sastipe-Budget-Remaining": String(budget.remainingUserCalls),
-            "X-Sastipe-Budget-Backend": budget.capacityKnown ? "upstash" : "memory",
-            "X-Sastipe-Provider": getActiveProvider() ?? "none",
+            "X-Redi-Budget-Remaining": String(budget.remainingUserCalls),
+            "X-Redi-Budget-Backend": budget.capacityKnown ? "upstash" : "memory",
+            "X-Redi-Provider": getActiveProvider() ?? "none",
           },
         },
       );

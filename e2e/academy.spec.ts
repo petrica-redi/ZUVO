@@ -9,7 +9,7 @@ test.describe("Student Health Academy", () => {
   test("hub renders mission dashboard and stage cards", async ({ page }) => {
     await page.goto("/students");
     // Editorial L8 hero: eyebrow + multi-line headline ending on "translator".
-    await expect(page.getByText(/Sastipe Health Academy/i).first()).toBeVisible();
+    await expect(page.getByText(/Redi Health Academy/i).first()).toBeVisible();
     await expect(
       page.getByRole("heading", { name: /health translator/i }),
     ).toBeVisible();

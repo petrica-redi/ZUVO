@@ -3,10 +3,13 @@ import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { Award, Download, Share2, Sparkles, GraduationCap } from "lucide-react";
 
+import { getAppConfig } from "@/lib/env";
+
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata(): Promise<Metadata> {
-  return { title: `Certificate — Sastipe`, description: "National Health Literacy Certificate" };
+  const { appName } = getAppConfig();
+  return { title: `Certificate — ${appName}`, description: "National Health Literacy Certificate" };
 }
 
 export default async function CertificatePage({ params }: Props) {
@@ -47,7 +50,7 @@ export default async function CertificatePage({ params }: Props) {
               </div>
 
               <div className="text-sm text-gray-600 max-w-[250px] mb-8">
-                Awarded for completing the Sastipe Student Health Academy curriculum.
+                Awarded for completing the Redi Health Student Academy curriculum.
               </div>
 
               <div className="w-full flex justify-between items-end border-t border-gray-100 pt-4 px-4">
@@ -57,7 +60,7 @@ export default async function CertificatePage({ params }: Props) {
                 </div>
                 <div className="text-right flex flex-col items-end">
                   <Sparkles className="lucide h-6 w-6 text-amber-400 mb-1" strokeWidth={1.5} />
-                  <div className="text-[9px] font-bold uppercase text-gray-400">Sastipe Org</div>
+                  <div className="text-[9px] font-bold uppercase text-gray-400">Redi Health</div>
                 </div>
               </div>
             </div>

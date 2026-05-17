@@ -17,14 +17,14 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
-  const { appUrl } = getAppConfig();
+  const { appUrl, appName } = getAppConfig();
   const baseUrl = appUrl ? new URL(appUrl) : new URL("http://localhost:3000");
 
   return {
     metadataBase: baseUrl,
     title: {
       default: t("title"),
-      template: `%s | Sastipe`,
+      template: `%s | ${appName}`,
     },
     description: t("description"),
     openGraph: {

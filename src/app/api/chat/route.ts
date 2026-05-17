@@ -1,5 +1,5 @@
 /**
- * POST /api/chat — Sastipe health advisor conversation.
+ * POST /api/chat — Redi Health advisor conversation.
  *
  * Accepts: { messages: [{ role, content }], locale: string }
  * Returns: SSE stream — `data: {"text":"…"}` chunks, terminated by `data: [DONE]`.
@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "text/event-stream",
         "Cache-Control": "no-cache",
         Connection: "keep-alive",
-        "X-Sastipe-Safety-Override": "true",
+        "X-Redi-Safety-Override": "true",
       },
     });
   }
@@ -93,7 +93,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "text/event-stream",
         "Cache-Control": "no-cache",
         Connection: "keep-alive",
-        "X-Sastipe-Provider": getActiveProvider() ?? "none",
+        "X-Redi-Provider": getActiveProvider() ?? "none",
       },
     });
   } catch (err) {

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sastipe — Sastipen sar Romenge",
-    "description": "Sastipen sikhavipe sar Romenge manušenge. Sikh, čhiv thaj ačh sastó."
+    "title": "Redi Health — Sastipen sar Romenge",
+    "description": "Sastimasqo sikljovipe but čhibenqe vash manuš so e oficialne sisteme naj džinel pe vaxt — rurale thema, segreguime quartera, rromane žuže Europate."
   },
   "nav": {
     "home": "Home",
@@ -494,7 +494,7 @@
     "a11yLocked": "phandado",
     "metaSuffix": "Akademia Sastimasqi vash Studentă",
     "l8": {
-      "eyebrow": "Sastipe Sastimasqi Akademia",
+      "eyebrow": "Redi Health Sastimasqi Akademia",
       "heroTitle1": "Av",
       "heroTitle2": "sastimasqo prevodilako",
       "heroTitle3": "vash tiro khethanipe.",
@@ -553,7 +553,7 @@
       "diplomaProgress": "{completed} katar {total} barajimata pherde",
       "diplomaPreviewName": "Avgno Sastimasqo Mediatoro",
       "diplomaPreviewDate": "Dindo {date}",
-      "diplomaSignature": "Sastipe Klinikalno Sovetimo",
+      "diplomaSignature": "Redi Health Klinikalno Sovetimo",
       "diplomaPreview": "Sikhibe",
       "diplomaUnlocked": "Diploma gata",
       "diplomaCta": "Phurde i diploma",
@@ -586,7 +586,7 @@
   },
   "privacy": {
     "metaTitle": "Privacy & data",
-    "metaDescription": "How Sastipe handles your data and how to exercise your rights",
+    "metaDescription": "How Redi Health handles your data and how to exercise your rights",
     "title": "Privacy & data",
     "lastUpdated": "Last updated: {date}",
     "actionsTitle": "Your data, your choice",
@@ -602,7 +602,7 @@
     "authRequired": "Please sign in to continue",
     "unavailable": "Service unavailable. Please try again later.",
     "successDeleted": "Your data has been scrubbed. Goodbye for now.",
-    "disclaimer": "Sastipe is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "disclaimer": "Redi Health is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
     "sections": {
       "collect": {
         "title": "What we collect",
@@ -697,7 +697,7 @@
   },
   "more": {
     "metaTitle": "Sa funkciji",
-    "metaDescription": "Sa Sastipe butja k'ek than",
+    "metaDescription": "Sa Redi Health butja k'ek than",
     "title": "Sa funkciji",
     "sections": {
       "tools": "Sastimasqe Butja",
@@ -734,7 +734,7 @@
       "mediatorDesc": "Butja vash sastimasqe mediatorea",
       "profileLabel": "Profilo",
       "profileDesc": "Chib, anglesutnipen, datajencar",
-      "aboutLabel": "Pa Sastipe",
+      "aboutLabel": "Pa Redi Health",
       "aboutDesc": "Versia, privatipen, kontakto"
     }
   },
@@ -779,19 +779,19 @@
     "verdictFalse": "Khoxhibe",
     "inputAria": "Thov o sastimasqo vakaripe te verifikuilpes",
     "sourceLabel": "Izvori",
-    "shareTagline": "Verifikuime katar Sastipe Health Advisor",
+    "shareTagline": "Verifikuime katar Redi Health Advisor",
     "shareTitle": "Sastimasqo vakaripasqo dikhipe",
     "errors": {
       "analyze": "Našti analizirisardam o vakaripe",
       "network": "Mrežaki dośta. Dikh tiri konekcia."
     },
     "meta": {
-      "title": "Dikhipe — Sastipe"
+      "title": "Dikhipe — Redi Health"
     },
     "eyebrow": "Dikhipe"
   },
   "install": {
-    "installApp": "Install Sastipe",
+    "installApp": "Install Redi Health",
     "offlineAccess": "Add it to your home screen for offline access and faster opens.",
     "installButton": "Install",
     "addToHome": "Add to Home Screen",
@@ -818,24 +818,24 @@
     "inputAria": "Lekha tiro sastimasqo phučipe",
     "sendAria": "Bičhal o mesažo",
     "meta": {
-      "title": "Chat — Sastipe",
+      "title": "Chat — Redi Health",
       "description": "Phuch vareso sastimasqo phučipe. Le ververde, pakivake vakariba."
     }
   },
   "impact": {
     "title": "Sastimasqo publikalno impakto",
-    "subtitle": "Telemetria̱ kana del katar Sastipe-aki implementacia ande rromane khethanipa.",
+    "subtitle": "Telemetria̱ kana del katar Redi Health-aki implementacia ande rromane khethanipa.",
     "statMyths": "Khoxavipa dikhle",
     "statEmergencies": "Sigundimata bičhalde",
     "statMediators": "Mediatorea aktive",
     "statVisits": "Khethanipasqe vizite reģistrime",
     "deployTitle": "Implementir ande tiri regio",
-    "deployDesc": "Sastipe si white-label gata vash municipalitejua thaj sastimasqe ministerie.",
+    "deployDesc": "Redi Health si white-label gata vash municipalitejua thaj sastimasqe ministerie.",
     "contactBtn": "Kontakto le amalenca"
   },
   "methodology": {
     "title": "Klinikalno upravipe & pakipe",
-    "subtitle": "Sar kerdas Sastipe te del pakivako, čačutno thaj kulturalno sastimasqo vakaripe.",
+    "subtitle": "Sar kerdas Redi Health te del pakivako, čačutno thaj kulturalno sastimasqo vakaripe.",
     "section1": "Determinističko sintomenqo dikhipe",
     "desc1": "Angle sa AI-aki kola, e gindo dikhel pes katar jekh determinističko regex-motor vash kritikalne sigundimata (sar duk̄ ko gradu, mariben-godi). Te aktivirilpes, AI-ja oborilpes thaj o korisniko traduzaril ko 112.",
     "section2": "PII chistipe",
@@ -854,20 +854,20 @@
     "getDirections": "Dikh o drom"
   },
   "landing": {
-    "eyebrow": "Sastimasqo sikljovipe rromane khethanipasqe",
+    "eyebrow": "Sastimasqo sikljovipe ande thana so sistemo pale ne dža ko vaxt",
     "heroLine1": "Pakivako sastipe,",
-    "heroLine2": "ande tiri čhib.",
-    "heroLead": "Jekh pomognipe AI-sa, kerdo le rromane mediatorenca, sasthipnasqe dasthencar thaj le ternenca pa sa Evropa. Lokhi čhib, but-čhibengi, dasti i bi-internet.",
-    "ctaPrimary": "Phurde Sastipe",
+    "heroLine2": "ave gavendar thaj quartera.",
+    "heroLead": "Redi Health si jekh AI-pomognipe, kerdo le rromane mediatorenca thaj sasthipnasqe dasthencar vaš gavendarija, barikate khethanipa thaj Romenge mahala — kaj o drom katar klinika si lung, thaj o oficiale vakripe na avel tiri čhib. Lokhi čhib, but čhibă thaj dosti kana thaj e wireles si but slaba.",
+    "ctaPrimary": "Phurde Redi Health",
     "ctaSecondary": "Dikh i metodologia",
     "trustEyebrow": "Pakivako mediatorengo, sasthipnasqo thaj ministerienqo",
-    "audienceEyebrow": "Kasqe si Sastipe",
+    "audienceEyebrow": "Kasqe si Redi Health",
     "audienceTitle": "Jekh platforma.\nTrin auditoria.",
     "studentTitle": "Le sikljarne̱nqe",
     "studentLead": "Jekh Akademia gamifikuime trin staďongo — lokalno, regionalno thaj nacionalno — vash sastimasqo sikljovipe.",
     "studentCta": "Phurde i Akademia",
-    "communityTitle": "Le rromane khethanipasqe džene̱nqe",
-    "communityLead": "Sastimasqo dipe ushtenca, klinike rromenge pasle thaj sigundimasqo vakaripe.",
+    "communityTitle": "Pale gavendar thema thaj khethanipa so paruvne",
+    "communityLead": "Pirel e jekh vakaribasko kana e klinika si but buter, e farmacia but dure, thaj o vakripe na avel tiri čhib — sar e harta le rromenge-pasle klinikenge kana arakhas le.",
     "communityCta": "Arakh sastipnasko kotor",
     "ministerTitle": "Le ministeriena̱nqe thaj amalenqe",
     "ministerLead": "Telemetria̱ impaktosqi kana del, klinikalno upravipe thaj white-label platforma.",
@@ -890,9 +890,9 @@
     "methodologyBody": "Trin staďongo determinističko pakipe perel angle ke̱r AI: sintomenqi alarma, PII chistipe, thaj prompt-protekcia. Sa sikljaribena si klinikalno verifikuime.",
     "methodologyCta": "Đino i metodologia",
     "finalEyebrow": "Šuru akana",
-    "finalTitle": "Kerdo le rromenca,\nvash sa.",
-    "finalBody": "Phurde i aplikacia te phuches, te sikljoves jekh sikljaribe, vai te dikhes jekh khoxavipe.",
-    "finalCta": "Phurde Sastipe",
+    "finalTitle": "Kerdo pasha le mediatorenca e khethanipa,\n vaš le so but vare jekh sistema.",
+    "finalBody": "Phurde Redi Health te phuches vari jekh khoxavipe, te arakhes e receptia, vai te sikljoves jekh tema vash khori thaj le phureder.",
+    "finalCta": "Phurde Redi Health",
     "navTitle": "Dža ka jekh alat",
     "navSubtitle": "Šov tar duštaja imparte — akademia, receptura, khoxavipa, mediatura thaj but aver.",
     "navAsk": "Phuch e AI",
@@ -924,7 +924,7 @@
     "safetyRedFlags": "Sigundipa",
     "safetyPII": "PII chistipe",
     "safetyClinical": "Klinikalno revizia",
-    "heroCardLabel": "phuch sastipe",
+    "heroCardLabel": "phuch Redi",
     "heroCardQuestion": "Mungi bibi phenel ke vaccinurea anel autizmo. Si čačo?",
     "heroCardVerdict": "Verifikuime",
     "heroCardAnswer": "Na. Dekade studije bare — pe maj but katar jekh milion čhave — na sikaven khanci ulavipe maškar vaccinurea thaj autizmo.",
@@ -943,7 +943,7 @@
     "branchMediator": "Mediatorsko panelo"
   },
   "footer": {
-    "tagline": "But-čhibengo sastimasqo sikljovipe rromane khethanipasqe ande Evropa.",
+    "tagline": "But-čhibengo sastimasqo sikljovipe vash gavendar thema, barikate khethanipa thaj i Romen žuži ande Evropa.",
     "product": "Produkto",
     "forStudents": "Le sikljarne̱nqe",
     "forCommunity": "Le khethanipasqe",
@@ -953,7 +953,7 @@
     "impact": "Impakto",
     "privacy": "Privatnost",
     "contact": "Kontakto",
-    "rights": "© 2026 Sastipe. Sa hakaja arakhute.",
+    "rights": "© 2026 Redi Health. Sa hakaja arakhute.",
     "builtWith": "Kerdo le rromane sastimasqe mediatorenca andar 15 thema.",
     "systemsOperational": "Sa sistemurea phiraven"
   },
@@ -1049,7 +1049,7 @@
       "Suchipe"
     ],
     "meta": {
-      "title": "Sintomenqo dikhipe — Sastipe",
+      "title": "Sintomenqo dikhipe — Redi Health",
       "description": "Astar kaj dukhal. Le vakaribe so te keres."
     }
   },
@@ -1072,7 +1072,7 @@
     "showVisitCard": "Sikav o Vizitaqo Karto",
     "hideVisitCard": "Garav o Vizitaqo Karto",
     "visitCardTitle": "Pacientako sumadi — vash dasthi",
-    "visitCardDisclaimer": "Kerdo katar Sastipe Health Advisor. Akava na si medikalno diagnozaqo.",
+    "visitCardDisclaimer": "Kerdo katar Redi Health Advisor. Akava na si medikalno diagnozaqo.",
     "concerns": {
       "fever": "Tatipe / Bari temperatura",
       "pain": "Duk̄ varekaj",
@@ -1125,7 +1125,7 @@
       "Murro čhavo si nasvalo — šaj vaccinilpes?"
     ],
     "meta": {
-      "title": "Vaccinurenqo sikljaripe — Sastipe",
+      "title": "Vaccinurenqo sikljaripe — Redi Health",
       "description": "Sa vaccina ververdo lokhe lavenca."
     }
   },
@@ -1154,7 +1154,7 @@
     "disclaimerBold": "Naj medikalno sovet.",
     "disclaimerBody": "Akava instrumento ververdal medikalne lavenca lokhes. Phir mereavar tirne dasthesqe instrukcie.",
     "meta": {
-      "title": "Haljar receto — Sastipe",
+      "title": "Haljar receto — Redi Health",
       "description": "Diagnoza thaj dipa ververdo lokhe lavenca."
     },
     "takePhoto": "Ker jekh slika",
@@ -1194,22 +1194,22 @@
     "generateCard": "Ker o Vizitaqo Karto ke Dasthi",
     "startOver": "Šuru katar agor",
     "showDoctor": "Sikav akava le dasthesqe",
-    "generatedBy": "Kerdo katar Sastipe Health Advisor",
+    "generatedBy": "Kerdo katar Redi Health Advisor",
     "whatToBring": "So te les tute",
     "askYourDoctor": "Phuch tirne dasthes",
     "patientRights": "Tirne hakaja sar paciento",
     "findHospital": "Arakh maj pasle špitalo",
     "mapHint": "Phurdal i mapa drumosqi",
     "meta": {
-      "title": "Sastimasqo navigatoro — Sastipe",
+      "title": "Sastimasqo navigatoro — Redi Health",
       "description": "Pripravisar tu vash vizita ke dasthi — vizitaqo karto, so te les, tirne hakaja."
     }
   },
   "about": {
-    "brand": "Sastipe",
-    "tagline": "Sastimasqo sikljovipe rromane khethanipasqe",
+    "brand": "Redi Health",
+    "tagline": "Sikljovipe vash sastipe unde gaveder thema le paruvne mahala naj džonel le sisteme aver",
     "version": "Versia 1.0.0",
-    "missionBody": "Sastipe si jekh sastimasqo pomognipe AI-sa, kerdo posebno vash rromane khethanipa ande Evropa. Amaro misionno si te phandas o sastimasqo sikljovipasqo hendeko, dindoj pakivake, kulturalno-haljarde sastimasqe informacie lokhe lavenca.",
+    "missionBody": "Redi Health si AI-pomognipe kerdo kaj le mediatorea thaj dastorea e kothenda so e barikaja sisteme dakhel but poso — anda gavar thaj nekane settlementa — sar e rromani khethanipa. Amaro misia si te chivas pakivake sikljovipe kana o drom katar klinika si lung, e čhib na phuvel thaj o stigma ikerel o gilja.",
     "values": {
       "careLabel": "Kerdo bilaće sasa",
       "careDesc": "Katar sastimasqe mediatorea",
@@ -1222,10 +1222,10 @@
     },
     "privacyLink": "Privatnostake norme",
     "termsLink": "Servisake kushte",
-    "disclaimer": "Sastipe naj medikalno aparato. Sa informacie si vash sikljovipasqe vasea. Mereavar konsultisar kvalifikuime sastimasqo profesionalo vash medikalne aloseripa.",
+    "disclaimer": "Redi Health naj medikalno aparato. Sa informacie si vash sikljovipasqe vasea. Mereavar konsultisar kvalifikuime sastimasqo profesionalo vash medikalne aloseripa.",
     "meta": {
-      "title": "Pa amende — Sastipe",
-      "description": "Pa Sastipe sastimasqi sikljovipasqi platforma"
+      "title": "Pa amende — Redi Health",
+      "description": "Pa Redi Health sastimasqi sikljovipasqi platforma"
     }
   },
   "family": {

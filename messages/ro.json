@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sastipe — Sănătate pentru Comunități Rome",
-    "description": "Instrumente moderne de educație sanitară pentru comunitățile rome. Învață, monitorizează și rămâi sănătos."
+    "title": "Redi Health — Îngrijire pentru comunități rurale și excluse",
+    "description": "Educație pentru sănătate în mai multe limbi pentru oamenii cărora sistemele le ajung mai greu — sate, periferii, cartiere segregate și comunități rome."
   },
   "nav": {
     "home": "Home",
@@ -494,7 +494,7 @@
     "a11yLocked": "blocată",
     "metaSuffix": "Academia de Sănătate pentru Elevi",
     "l8": {
-      "eyebrow": "Academia de Sănătate Sastipe",
+      "eyebrow": "Academia de Sănătate Redi Health",
       "heroTitle1": "Devino",
       "heroTitle2": "traducătorul de sănătate",
       "heroTitle3": "al comunității tale.",
@@ -553,7 +553,7 @@
       "diplomaProgress": "{completed} din {total} cerințe îndeplinite",
       "diplomaPreviewName": "Viitor Mediator de Teren",
       "diplomaPreviewDate": "Acordată {date}",
-      "diplomaSignature": "Consiliul Clinic Sastipe",
+      "diplomaSignature": "Consiliul Clinic Redi Health",
       "diplomaPreview": "Previzualizare",
       "diplomaUnlocked": "Diplomă disponibilă",
       "diplomaCta": "Deschide diploma",
@@ -586,7 +586,7 @@
   },
   "privacy": {
     "metaTitle": "Privacy & data",
-    "metaDescription": "How Sastipe handles your data and how to exercise your rights",
+    "metaDescription": "How Redi Health handles your data and how to exercise your rights",
     "title": "Privacy & data",
     "lastUpdated": "Last updated: {date}",
     "actionsTitle": "Your data, your choice",
@@ -602,7 +602,7 @@
     "authRequired": "Please sign in to continue",
     "unavailable": "Service unavailable. Please try again later.",
     "successDeleted": "Your data has been scrubbed. Goodbye for now.",
-    "disclaimer": "Sastipe is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "disclaimer": "Redi Health is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
     "sections": {
       "collect": {
         "title": "What we collect",
@@ -697,7 +697,7 @@
   },
   "more": {
     "metaTitle": "Toate funcționalitățile",
-    "metaDescription": "Toate instrumentele Sastipe într-un singur loc",
+    "metaDescription": "Toate instrumentele Redi Health într-un singur loc",
     "title": "Toate funcționalitățile",
     "sections": {
       "tools": "Instrumente de sănătate",
@@ -734,7 +734,7 @@
       "mediatorDesc": "Instrumente pentru mediatori sanitari",
       "profileLabel": "Profil",
       "profileDesc": "Limbă, progres, date",
-      "aboutLabel": "Despre Sastipe",
+      "aboutLabel": "Despre Redi Health",
       "aboutDesc": "Versiune, confidențialitate, contact"
     }
   },
@@ -779,19 +779,19 @@
     "verdictFalse": "Fals",
     "inputAria": "Lipește afirmația medicală de verificat",
     "sourceLabel": "Sursă",
-    "shareTagline": "Verificat de Sastipe Health Advisor",
+    "shareTagline": "Verificat de Redi Health Advisor",
     "shareTitle": "Verificare informație medicală",
     "errors": {
       "analyze": "Nu am putut analiza afirmația",
       "network": "Eroare de rețea. Te rog verifică conexiunea."
     },
     "meta": {
-      "title": "Verificare — Sastipe"
+      "title": "Verificare — Redi Health"
     },
     "eyebrow": "Verificare"
   },
   "install": {
-    "installApp": "Install Sastipe",
+    "installApp": "Install Redi Health",
     "offlineAccess": "Add it to your home screen for offline access and faster opens.",
     "installButton": "Install",
     "addToHome": "Add to Home Screen",
@@ -818,24 +818,24 @@
     "inputAria": "Scrie întrebarea ta de sănătate",
     "sendAria": "Trimite mesajul",
     "meta": {
-      "title": "Chat — Sastipe",
+      "title": "Chat — Redi Health",
       "description": "Pune orice întrebare de sănătate. Primește răspunsuri clare și de încredere."
     }
   },
   "impact": {
     "title": "Impact asupra sănătății publice",
-    "subtitle": "Telemetrie în timp real din implementarea Sastipe în comunitățile rome.",
+    "subtitle": "Telemetrie în timp real din implementarea Redi Health în comunitățile rome.",
     "statMyths": "Mituri demontate",
     "statEmergencies": "Urgențe redirecționate",
     "statMediators": "Mediatori activi",
     "statVisits": "Vizite pe teren înregistrate",
     "deployTitle": "Implementează în regiunea ta",
-    "deployDesc": "Sastipe este pregătit ca platformă white-label pentru municipalități și ministere ale sănătății.",
+    "deployDesc": "Redi Health este pregătit ca platformă white-label pentru municipalități și ministere ale sănătății.",
     "contactBtn": "Contactează echipa parteneriate"
   },
   "methodology": {
     "title": "Guvernanță clinică & siguranță",
-    "subtitle": "Cum ne asigurăm că Sastipe oferă informații medicale sigure, exacte și adecvate cultural.",
+    "subtitle": "Cum ne asigurăm că Redi Health oferă informații medicale sigure, exacte și adecvate cultural.",
     "section1": "Detectare deterministă a urgențelor",
     "desc1": "Înainte de orice apel către modelul AI, mesajul utilizatorului este scanat printr-un motor determinist regex pentru urgențe critice (de exemplu durere în piept sau gânduri suicidare). Dacă este declanșat, AI-ul este ocolit complet, iar utilizatorul este îndrumat să sune la 112.",
     "section2": "Mascarea datelor personale (PII)",
@@ -854,20 +854,20 @@
     "getDirections": "Vezi traseul"
   },
   "landing": {
-    "eyebrow": "Educație pentru sănătate în comunitățile rome",
-    "heroLine1": "Sănătate de încredere,",
-    "heroLine2": "în limba ta.",
-    "heroLead": "Un însoțitor cu AI, construit împreună cu mediatori romi, medici și tineri din toată Europa. Limbaj simplu, multilingv, disponibil offline.",
-    "ctaPrimary": "Deschide Sastipe",
+    "eyebrow": "Alfabetizare pentru sănătate unde ajutorul întârzie",
+    "heroLine1": "Informație de încredere,",
+    "heroLine2": "în sate și cartiere.",
+    "heroLead": "Redi Health este un însoțitor cu AI, realizat împreună cu mediatori și medici, pentru orașele mici, comunitățile defavorizate — inclusiv cele rome — unde drumul până la spital este lung, iar comunicarea oficială rareori vine în dialectul tău. Limbaj simplu, mai multe limbi, rezistent atunci când rețeaua nu e stabilă.",
+    "ctaPrimary": "Deschide Redi Health",
     "ctaSecondary": "Vezi metodologia",
     "trustEyebrow": "De încredere pentru mediatori, medici și ministere",
-    "audienceEyebrow": "Pentru cine este construit Sastipe",
+    "audienceEyebrow": "Pentru cine este construit Redi Health",
     "audienceTitle": "O platformă.\nTrei audiențe.",
     "studentTitle": "Pentru elevi",
     "studentLead": "O Academie gamificată cu trei etape — locală, regională și națională — pentru educație medicală.",
     "studentCta": "Deschide Academia",
-    "communityTitle": "Pentru membrii comunității rome",
-    "communityLead": "Sfaturi de sănătate AI cu voce, clinici prietenoase cu romii și ghidare pentru urgențe.",
+    "communityTitle": "Pentru zone rurale și comunități marginalizate",
+    "communityLead": "Sfaturi cu voce când cabinetele sunt puține, drumul spre farmacie e lung, iar limba spitalelor nu e limba familiei tale — plus hărți cu clinici prietenoase acolo unde le-am cartografiat.",
     "communityCta": "Găsește îngrijire aproape",
     "ministerTitle": "Pentru ministere & parteneri",
     "ministerLead": "Telemetrie de impact în timp real, guvernanță clinică și platformă white-label.",
@@ -890,9 +890,9 @@
     "methodologyBody": "Trei straturi deterministe de siguranță rulează înainte de orice apel AI: detectarea urgențelor, mascarea PII și protecția împotriva injecției de prompt. Fiecare lecție este verificată clinic.",
     "methodologyCta": "Citește metodologia",
     "finalEyebrow": "Începe acum",
-    "finalTitle": "Construit cu romii,\npentru toți.",
-    "finalBody": "Deschide aplicația pentru a pune o întrebare, învăța o lecție sau verifica o afirmație.",
-    "finalCta": "Lansează Sastipe",
+    "finalTitle": "Co-creat cu mediatori din teren,\npentru aceia care mai așteaptă după sistem.",
+    "finalBody": "Deschide însoțitorul pentru a întreba, a verifica un zvon sau a înțelege o rețetă ori o lecție de sănătate adaptată liceenilor și bunicilor.",
+    "finalCta": "Lansează Redi Health",
     "navTitle": "Mergi la un instrument",
     "navSubtitle": "Opt căi ghidate — academie, rețete, mituri, teren și multe altele.",
     "navAsk": "Întreabă AI-ul",
@@ -924,7 +924,7 @@
     "safetyRedFlags": "Urgențe",
     "safetyPII": "Mascare PII",
     "safetyClinical": "Revizie clinică",
-    "heroCardLabel": "întreabă sastipe",
+    "heroCardLabel": "întreabă Redi",
     "heroCardQuestion": "Mătușa mea spune că vaccinurile dau autism. E adevărat?",
     "heroCardVerdict": "Verificat",
     "heroCardAnswer": "Nu. Decenii de studii ample — pe peste un milion de copii — nu arată nicio legătură între vaccinuri și autism.",
@@ -943,7 +943,7 @@
     "branchMediator": "Panou mediator"
   },
   "footer": {
-    "tagline": "Educație multilingvă pentru sănătate în comunitățile rome din Europa.",
+    "tagline": "În multe limbi pentru comunități rurale, zone excluse și romi în întreaga Europă.",
     "product": "Produs",
     "forStudents": "Pentru elevi",
     "forCommunity": "Pentru comunitate",
@@ -953,7 +953,7 @@
     "impact": "Impact",
     "privacy": "Confidențialitate",
     "contact": "Contact",
-    "rights": "© 2026 Sastipe. Toate drepturile rezervate.",
+    "rights": "© 2026 Redi Health. Toate drepturile rezervate.",
     "builtWith": "Construit cu mediatori sanitari romi din 15 țări.",
     "systemsOperational": "Toate sistemele funcționează"
   },
@@ -1049,7 +1049,7 @@
       "Amorțeală"
     ],
     "meta": {
-      "title": "Verificator de simptome — Sastipe",
+      "title": "Verificator de simptome — Redi Health",
       "description": "Atinge unde te doare. Primește îndrumare despre ce să faci."
     }
   },
@@ -1072,7 +1072,7 @@
     "showVisitCard": "Arată Cartea de Vizită la Medic",
     "hideVisitCard": "Ascunde Cartea de Vizită",
     "visitCardTitle": "Rezumat pentru medic",
-    "visitCardDisclaimer": "Generat de Sastipe Health Advisor. Acesta nu este un diagnostic medical.",
+    "visitCardDisclaimer": "Generat de Redi Health Advisor. Acesta nu este un diagnostic medical.",
     "concerns": {
       "fever": "Febră / Temperatură",
       "pain": "Durere undeva",
@@ -1125,7 +1125,7 @@
       "Copilul meu e bolnav — mai poate fi vaccinat?"
     ],
     "meta": {
-      "title": "Ghid vaccinuri — Sastipe",
+      "title": "Ghid vaccinuri — Redi Health",
       "description": "Fiecare vaccin explicat în cuvinte simple."
     }
   },
@@ -1154,7 +1154,7 @@
     "disclaimerBold": "Nu este sfat medical.",
     "disclaimerBody": "Acest instrument explică termenii medicali în limbaj simplu. Urmează mereu instrucțiunile medicului tău.",
     "meta": {
-      "title": "Înțelege rețeta — Sastipe",
+      "title": "Înțelege rețeta — Redi Health",
       "description": "Diagnosticul și medicamentele explicate în cuvinte simple."
     },
     "takePhoto": "Fă o poză",
@@ -1194,22 +1194,22 @@
     "generateCard": "Generează Carte de Vizită la Medic",
     "startOver": "Ia de la capăt",
     "showDoctor": "Arată-i asta medicului",
-    "generatedBy": "Generat de Sastipe Health Advisor",
+    "generatedBy": "Generat de Redi Health Advisor",
     "whatToBring": "Ce să iei cu tine",
     "askYourDoctor": "Întreabă-ți medicul",
     "patientRights": "Drepturile tale ca pacient",
     "findHospital": "Găsește cel mai apropiat spital",
     "mapHint": "Deschide harta cu indicații",
     "meta": {
-      "title": "Navigator medical — Sastipe",
+      "title": "Navigator medical — Redi Health",
       "description": "Pregătește-te pentru vizita la medic — cartea de vizită, ce să iei, drepturile tale."
     }
   },
   "about": {
-    "brand": "Sastipe",
-    "tagline": "Educație pentru sănătate pentru comunitățile rome",
+    "brand": "Redi Health",
+    "tagline": "Educație pentru sănătate în zone rurale și comunități excluse",
     "version": "Versiunea 1.0.0",
-    "missionBody": "Sastipe este un însoțitor de sănătate cu AI, proiectat special pentru comunitățile rome din Europa. Misiunea noastră este să închidem decalajul de educație medicală oferind informații medicale de încredere, sensibile cultural, în limbaj simplu.",
+    "missionBody": "Redi Health este un ghid bazat pe AI, co-proiectat cu mediatorii de teren pentru localitățile pe care spitalele le deservesc cu întârziere — de la sate și comunități locale la cartiere informale — cu atenție deosebită pentru familiile rome. Reducem decalajul de informație unde distanța, discriminarea și bariera lingvistică întârzie accesul la îngrijire.",
     "values": {
       "careLabel": "Făcut cu grijă",
       "careDesc": "De mediatori sanitari",
@@ -1222,10 +1222,10 @@
     },
     "privacyLink": "Politica de confidențialitate",
     "termsLink": "Termeni și condiții",
-    "disclaimer": "Sastipe nu este un dispozitiv medical. Toate informațiile sunt în scop educativ. Consultă mereu un profesionist medical calificat pentru decizii medicale.",
+    "disclaimer": "Redi Health nu este un dispozitiv medical. Toate informațiile sunt în scop educativ. Consultă mereu un profesionist medical calificat pentru decizii medicale.",
     "meta": {
-      "title": "Despre — Sastipe",
-      "description": "Despre platforma de educație medicală Sastipe"
+      "title": "Despre — Redi Health",
+      "description": "Despre platforma de educație medicală Redi Health"
     }
   },
   "family": {
