@@ -17,6 +17,7 @@ import { ArrowRight } from "lucide-react";
 export function LandingHeader() {
   const [scrolled, setScrolled] = useState(false);
   const t = useTranslations("landing");
+  const tFooter = useTranslations("footer");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -45,25 +46,25 @@ export function LandingHeader() {
             href="/students"
             className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
           >
-            Academy
+            {t("navAcademy")}
           </Link>
           <Link
             href="/providers"
             className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
           >
-            Find care
+            {t("navProviders")}
           </Link>
           <Link
             href="/methodology"
             className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
           >
-            Methodology
+            {tFooter("methodology")}
           </Link>
           <Link
             href="/impact"
             className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
           >
-            Impact
+            {tFooter("impact")}
           </Link>
         </nav>
 
