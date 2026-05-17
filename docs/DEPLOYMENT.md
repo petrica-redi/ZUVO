@@ -1,6 +1,6 @@
 # Deployment guide
 
-Sastipe is a Next.js 16 application with a Postgres database, Supabase auth, and several optional integrations. This guide covers a clean Vercel deployment, but the same env contract works for any Node 22 host (Railway, Fly.io, Render, self-hosted Docker).
+Redi Health is a Next.js 16 application with a Postgres database, Supabase auth, and several optional integrations. This guide covers a clean Vercel deployment to **`https://redi.healthcare`**, but the same env contract works for any Node 22 host (Railway, Fly.io, Render, self-hosted Docker).
 
 ## TL;DR launch checklist
 
@@ -78,7 +78,7 @@ Three controls run on every AI call:
 2. Per-user daily cap from `AI_USER_DAILY_CAP` (default 40).
 3. Org-wide daily budget from `AI_DAILY_BUDGET_EUR` (default 50).
 
-When either daily counter is exceeded, the API returns `503 service_paused` with a friendly message and an `X-Sastipe-Budget` header. This is intentional — it caps cost in the worst case (an LLM-cost DoS).
+When either daily counter is exceeded, the API returns `503 service_paused` with a friendly message and an `X-Redi-Budget` header. This is intentional — it caps cost in the worst case (an LLM-cost DoS).
 
 ## 6. Observability
 
@@ -100,11 +100,35 @@ typecheck → lint → unit tests → build → E2E (Playwright)
 
 Vercel auto-deploys preview environments per PR and promotes `main` to production. Each preview gets a unique URL with the same env contract.
 
-## 8. Domain & DNS
+## 8. Domain & DNS — `redi.healthcare`
 
-- Add the production domain in Vercel.
-- Set `NEXT_PUBLIC_APP_URL` to the canonical URL (no trailing slash).
-- TLS, HSTS, and CSP headers are configured in `next.config.ts` and the middleware.
+Canonical production URL is **`https://redi.healthcare`** (apex). The marketing footer, sitemap, mailto links, Capacitor `server.url`, robots.txt and CI all reference this host.
+
+### Vercel side
+
+1. In **Vercel → Project → Settings → Domains** add both:
+   - `redi.healthcare`  (production, primary)
+   - `www.redi.healthcare` (will 308 to apex automatically)
+2. Set `NEXT_PUBLIC_APP_URL=https://redi.healthcare` in **Production** env (and any staging URL in **Preview**). No trailing slash.
+3. Set `CAP_SERVER_URL=https://redi.healthcare` if you build mobile shells from CI.
+
+### DNS records at the registrar
+
+| Host                  | Type  | Value                  |
+|-----------------------|-------|------------------------|
+| `redi.healthcare`     | A     | `76.76.21.21`          |
+| `www.redi.healthcare` | CNAME | `cname.vercel-dns.com` |
+
+(If the Vercel UI prints different values for your project, use those. Vercel auto-issues TLS once DNS resolves.)
+
+### Verify
+```bash
+dig +short redi.healthcare
+curl -sI https://redi.healthcare | head -1     # expect HTTP/2 200
+curl -sI https://www.redi.healthcare | head -1 # expect HTTP/2 308 to apex
+```
+
+TLS, HSTS, and CSP headers are configured in `next.config.ts` and the middleware.
 
 ## 9. Emergencies
 

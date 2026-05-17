@@ -157,7 +157,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        error: "Failed to process deletion. Please contact dpo@sastipe.org.",
+        error: "Failed to process deletion. Please contact dpo@redi.healthcare.",
       },
       { status: 500 },
     );

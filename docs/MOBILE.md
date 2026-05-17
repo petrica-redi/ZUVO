@@ -59,11 +59,11 @@ Capacitor wraps the existing site in a `WKWebView` (iOS) / `WebView` (Android) a
 
 ### Mode A — Hybrid (production default)
 
-The native shell points at your production URL (e.g. `https://app.sastipe.org`). Updates ship over the air via standard web deploys; the store binary only needs re-submission for native API changes (a few times a year).
+The native shell points at your production URL (e.g. `https://redi.healthcare`). Updates ship over the air via standard web deploys; the store binary only needs re-submission for native API changes (a few times a year).
 
 ```bash
 # Optionally override the live URL the shell loads
-export CAP_SERVER_URL="https://app.sastipe.org"
+export CAP_SERVER_URL="https://redi.healthcare"
 
 npm run mobile:init:ios       # one-time
 npm run mobile:init:android   # one-time
@@ -94,7 +94,7 @@ Requires macOS + Xcode 15+ and an Apple Developer Program membership ($99/yr).
 2. `npm run mobile:assets` — generates AppIcon set + Launch Storyboard images.
 3. `npm run mobile:open:ios` — opens `ios/App/App.xcworkspace` in Xcode.
 4. **Signing & Capabilities** → set Team to your Apple Dev account, Bundle Identifier to `org.sastipe.app` (matches `capacitor.config.ts`).
-5. **Capabilities** to enable: Background Modes (Audio playback if needed), Associated Domains (for universal links → `applinks:app.sastipe.org`), Push Notifications (later).
+5. **Capabilities** to enable: Background Modes (Audio playback if needed), Associated Domains (for universal links → `applinks:redi.healthcare`), Push Notifications (later).
 6. Bump `CFBundleVersion` and `CFBundleShortVersionString` in `Info.plist`.
 7. Product → Archive → Distribute App → App Store Connect → Upload.
 8. In **App Store Connect**:

@@ -7,13 +7,13 @@ import type { CapacitorConfig } from "@capacitor/cli";
  * -----
  * 1. **Hybrid (server-mode, default for production):**
  *    `server.url` points to your deployed Next.js domain
- *    (e.g. `https://app.sastipe.org`). The shipped binary is a thin shell
+ *    (e.g. `https://redi.healthcare`). The shipped binary is a thin shell
  *    that loads the live site, so backend, auth, AI, i18n, and analytics
  *    all work as in the web build. Releases are over-the-air — no store
  *    review needed for content updates.
  *
  *    Required env to override at build time:
- *      CAP_SERVER_URL=https://app.sastipe.org
+ *      CAP_SERVER_URL=https://redi.healthcare
  *
  * 2. **Native fallback shell:**
  *    `npm run mobile:export` creates a lightweight `out/` fallback page for
@@ -26,13 +26,13 @@ import type { CapacitorConfig } from "@capacitor/cli";
  */
 const SERVER_URL =
   process.env.CAP_SERVER_URL?.trim() ||
-  "https://app.sastipe.org";
+  "https://redi.healthcare";
 
 const serverHost = (() => {
   try {
     return new URL(SERVER_URL).hostname;
   } catch {
-    return "app.sastipe.org";
+    return "redi.healthcare";
   }
 })();
 
@@ -42,8 +42,11 @@ const extraNavigation = (process.env.CAP_ALLOW_NAVIGATION ?? "")
   .filter(Boolean);
 
 const config: CapacitorConfig = {
+  // App ID kept stable to avoid breaking existing installs migrating from
+  // the Sastipe namespace. Display name + production server URL move to
+  // Redi Health / redi.healthcare. Change appId only with a forced reinstall.
   appId: "org.sastipe.app",
-  appName: "Sastipe",
+  appName: "Redi Health",
   webDir: "out",
 
   server: {
@@ -90,9 +93,9 @@ const config: CapacitorConfig = {
       resizeOnFullScreen: true,
     },
     App: {
-      // Deep links: web+sastipe://lesson/local/intro -> in-app route.
-      // Universal links + App Links should be configured in
-      // Apple App Site Association / Android assetlinks.json after deploy.
+      // Deep links: web+redihealth://lesson/local/intro (legacy web+sastipe is also accepted).
+      // Universal links + App Links should be configured in Apple App Site
+      // Association / Android assetlinks.json after the domain (`redi.healthcare`) is live.
     },
   },
 };

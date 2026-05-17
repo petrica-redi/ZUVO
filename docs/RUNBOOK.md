@@ -158,7 +158,7 @@ redis-cli -u $UPSTASH_REDIS_REST_URL keys 'sastipe:rl:*' | head
 psql "$DATABASE_URL" -c "SELECT COUNT(*) FROM users WHERE created_at > now() - interval '7 days';"
 
 # Test the offline shell
-curl -i https://sastipe.org/offline.html
+curl -i https://redi.healthcare/offline.html
 ```
 
 ---
@@ -166,6 +166,6 @@ curl -i https://sastipe.org/offline.html
 ## Escalation
 
 - **Engineering on-call**: Slack `#incidents`, then phone tree
-- **Data Protection Officer**: dpo@sastipe.org (24h SLA for SEV-1)
+- **Data Protection Officer**: dpo@redi.healthcare (24h SLA for SEV-1)
 - **Clinical reviewer** (medical content concerns): on-call rotation
-- **Legal**: legal@sastipe.org for data breaches and GDPR
+- **Legal**: legal@redi.healthcare for data breaches and GDPR

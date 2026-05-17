@@ -40,7 +40,7 @@ jobs:
         run: npm run check:env
         env:
           SASTIPE_FORCE_ENV: ci
-          NEXT_PUBLIC_APP_URL: https://sastipe.org
+          NEXT_PUBLIC_APP_URL: https://redi.healthcare
           DATABASE_URL: postgres://ci:ci@localhost/ci
 
       - name: Unit tests
@@ -51,10 +51,10 @@ jobs:
         env:
           # Mirror Vercel's "preview" env so the prebuild env check is satisfied.
           SASTIPE_FORCE_ENV: preview
-          NEXT_PUBLIC_APP_NAME: Sastipe
-          NEXT_PUBLIC_DEFAULT_LOCALE: sq
-          NEXT_PUBLIC_SUPPORTED_LOCALES: sq,rom,en
-          NEXT_PUBLIC_APP_URL: https://sastipe.org
+          NEXT_PUBLIC_APP_NAME: Redi Health
+          NEXT_PUBLIC_DEFAULT_LOCALE: en
+          NEXT_PUBLIC_SUPPORTED_LOCALES: en,sq,rom,ro,hu,sk,cs,bg,sr,hr,bs,mk,sl,el,tr
+          NEXT_PUBLIC_APP_URL: https://redi.healthcare
           DATABASE_URL: postgres://ci:ci@localhost/ci
 
       - name: Install Playwright browsers
@@ -64,7 +64,7 @@ jobs:
         run: npm run test:e2e
         env:
           SASTIPE_FORCE_ENV: preview
-          NEXT_PUBLIC_APP_URL: https://sastipe.org
+          NEXT_PUBLIC_APP_URL: https://redi.healthcare
           DATABASE_URL: postgres://ci:ci@localhost/ci
 
       - name: Upload Playwright report
@@ -94,9 +94,9 @@ jobs:
         run: npm run build
         env:
           SASTIPE_FORCE_ENV: preview
-          NEXT_PUBLIC_APP_NAME: Sastipe
-          NEXT_PUBLIC_DEFAULT_LOCALE: sq
-          NEXT_PUBLIC_SUPPORTED_LOCALES: sq,rom,en
+          NEXT_PUBLIC_APP_NAME: Redi Health
+          NEXT_PUBLIC_DEFAULT_LOCALE: en
+          NEXT_PUBLIC_SUPPORTED_LOCALES: en,sq,rom,ro,hu,sk,cs,bg,sr,hr,bs,mk,sl,el,tr
           NEXT_PUBLIC_APP_URL: http://localhost:3000
           DATABASE_URL: postgres://ci:ci@localhost/ci
       - name: Run Lighthouse CI

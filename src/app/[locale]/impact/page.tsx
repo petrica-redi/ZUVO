@@ -66,7 +66,7 @@ export default async function ImpactPage({ params }: Props) {
                 {t("deployDesc")}
               </p>
               <a 
-                href="mailto:partnerships@sastipe.org"
+                href="mailto:partnerships@redi.healthcare"
                 className="inline-flex items-center gap-2 rounded-2xl bg-white px-6 py-3.5 text-sm font-extrabold text-[var(--color-brand-700)] shadow-2 transition-all hover:shadow-3 active:scale-[0.97]"
               >
                 <Mail className="lucide h-4 w-4" strokeWidth={2} />
