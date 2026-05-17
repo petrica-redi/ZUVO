@@ -86,7 +86,7 @@ export async function LandingFooter({ locale }: { locale: string }) {
               </li>
               <li>
                 <a
-                  href="mailto:hello@sastipe.org"
+                  href="mailto:hello@redi.healthcare"
                   className="text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
                 >
                   {t("contact")}

@@ -13,7 +13,7 @@ import { resolve } from "node:path";
 
 const serverUrl =
   process.env.CAP_SERVER_URL?.trim() ||
-  "https://app.sastipe.org";
+  "https://redi.healthcare";
 
 const outDir = resolve(process.cwd(), "out");
 await mkdir(outDir, { recursive: true });

@@ -58,7 +58,7 @@ The Student Health Academy is positioned for high-school audiences (typically 14
 
 ## Data Protection Officer
 
-- Email: dpo@sastipe.org
+- Email: dpo@redi.healthcare
 - Mail address: in the operator-specific deployment notice
 - 30-day SLA for data-subject requests
 
