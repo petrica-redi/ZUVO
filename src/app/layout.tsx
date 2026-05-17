@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import type { Viewport } from "next";
 import { getLocale } from "next-intl/server";
-import { Inter, Geist } from "next/font/google";
+import { Inter, Geist, Fraunces } from "next/font/google";
 import "./globals.css";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
 import { CapacitorBootstrap } from "@/components/CapacitorBootstrap";
@@ -16,6 +16,15 @@ const inter = Inter({
 const geist = Geist({
   subsets: ["latin", "latin-ext"],
   variable: "--font-display",
+  display: "swap",
+});
+
+// Fraunces — editorial serif used by premium wellness platforms (Function
+// Health, Sunday). Conveys clinical credibility + warm humanity at large sizes.
+const fraunces = Fraunces({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-editorial",
+  axes: ["opsz", "SOFT", "WONK"],
   display: "swap",
 });
 
@@ -36,7 +45,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   return (
     <html
       lang={locale}
-      className={`${inter.variable} ${geist.variable}`}
+      className={`${inter.variable} ${geist.variable} ${fraunces.variable}`}
       suppressHydrationWarning
     >
       <head>

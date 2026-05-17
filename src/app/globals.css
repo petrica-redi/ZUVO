@@ -15,6 +15,7 @@
   /* Type stack */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: var(--font-display, var(--font-inter)), ui-sans-serif, system-ui, sans-serif;
+  --font-editorial: var(--font-editorial, "Fraunces"), Georgia, "Times New Roman", serif;
 
   /* ---- 11-step neutral scale (slate-anchored, slightly warm) ---- */
   --color-neutral-0:    #FFFFFF;
@@ -300,6 +301,76 @@ button {
     box-shadow: var(--shadow-4);
     background: var(--color-surface);
   }
+  /* Opt-out: routes can break out of the phone-frame and present as a
+     real full-width landing experience. Apply by adding `data-shell="landing"`
+     to the body or by nesting under `.landing-shell`. */
+  .mobile-shell.landing-shell {
+    max-width: 100%;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    background: transparent;
+  }
+}
+
+/* Editorial typography utilities — for the marketing surface only.
+   Use sparingly: hero, section opens, pull quotes. Body stays sans. */
+.font-editorial {
+  font-family: var(--font-editorial);
+  font-feature-settings: "ss01" on, "ss02" on, "ss03" on;
+  letter-spacing: -0.02em;
+}
+
+/* Sage wellness palette — layered on top of the indigo brand. Use for
+   secondary surfaces, soft outlines, and "calm" trust strips. */
+:root {
+  --color-sage-50:  #F6F9F4;
+  --color-sage-100: #ECF2E8;
+  --color-sage-200: #D6E2CD;
+  --color-sage-300: #B8CCAB;
+  --color-sage-400: #8FAB7E;
+  --color-sage-500: #6E8C5E;
+  --color-sage-600: #557047;
+  --color-sage-700: #3F5635;
+  --color-sage-800: #2D3E25;
+  --color-sage-900: #1C2918;
+
+  --color-cream-50:  #FBF8F3;
+  --color-cream-100: #F4EFE6;
+  --color-cream-200: #E8DECC;
+  --color-cream-300: #D9C9AC;
+
+  --color-ink-700: #1F2A3D;
+  --color-ink-800: #131C2E;
+  --color-ink-900: #0A1220;
+}
+
+/* Marketing section utility — generous vertical rhythm, subtle separator. */
+.section-marketing {
+  padding-block: clamp(3rem, 6vw, 6rem);
+}
+.section-marketing--tight {
+  padding-block: clamp(2rem, 4vw, 4rem);
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.divider-soft {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-border-default),
+    transparent
+  );
 }
 
 .pb-safe-bottom {

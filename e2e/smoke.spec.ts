@@ -3,7 +3,8 @@ import { test, expect } from "@playwright/test";
 test("home page loads with Sastipe branding", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveTitle(/Sastipe/);
-  await expect(page.getByRole("heading", { name: /Your health,\s*explained simply\./ })).toBeVisible();
+  // Landing hero — editorial headline split across two lines.
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(/Trusted health/i);
 });
 
 test("robots.txt is accessible", async ({ page }) => {

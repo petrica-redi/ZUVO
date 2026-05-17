@@ -115,7 +115,9 @@ test.describe("Rate limiting", () => {
 test.describe("Localised emergency content", () => {
   test("home page shows 112 emergency CTA in default locale", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByText(/112/)).toBeVisible();
+    // Multiple 112 references on the landing (tel: anchor + footer copy);
+    // assert at least one visible occurrence.
+    await expect(page.getByText(/112/).first()).toBeVisible();
   });
 
   test("Romanian locale renders translated home", async ({ page }) => {
