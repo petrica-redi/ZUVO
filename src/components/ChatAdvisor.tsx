@@ -105,14 +105,11 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       timestamp: new Date(),
     };
 
-    // Build the request history atomically from the latest state to avoid
-    // stale-closure drift between what we send and what the UI shows.
-    let apiMessages: { role: "user" | "assistant"; content: string }[] = [];
-    setMessages((prev) => {
-      const next = [...prev, userMsg];
-      apiMessages = next.map((m) => ({ role: m.role, content: m.content }));
-      return next;
-    });
+    // Build the request history explicitly so it is synchronously available for fetch
+    const nextMessages = [...messages, userMsg];
+    const apiMessages = nextMessages.map((m) => ({ role: m.role, content: m.content }));
+    
+    setMessages((prev) => [...prev, userMsg]);
     setIsLoading(true);
 
     let assistantMsgId = "";
