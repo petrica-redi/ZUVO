@@ -4,7 +4,6 @@ import { getLocale } from "next-intl/server";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
-import { InstallPrompt } from "@/components/InstallPrompt";
 import { CapacitorBootstrap } from "@/components/CapacitorBootstrap";
 import { ProtocolRouteHandler } from "@/components/ProtocolRouteHandler";
 
@@ -78,7 +77,6 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <div className="mobile-shell" role="application" aria-label="Sastipe Health App">
           {children}
         </div>
-        <InstallPrompt />
       </body>
     </html>
   );

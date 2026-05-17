@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { getAppConfig } from "@/lib/env";
 import { ToastProvider } from "@/components/ui/Toast";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { InstallPrompt } from "@/components/InstallPrompt";
 
 type Props = {
   children: ReactNode;
@@ -60,6 +61,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <NextIntlClientProvider locale={locale} messages={messages}>
       <ToastProvider>
         <ErrorBoundary>{children}</ErrorBoundary>
+        <InstallPrompt />
       </ToastProvider>
     </NextIntlClientProvider>
   );
