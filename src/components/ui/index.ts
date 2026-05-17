@@ -1,5 +1,5 @@
 /**
- * v0-style UI kit for Sastipe / Student Health Academy.
+ * v0-style UI kit for Redi Health / Student Health Academy.
  * Composable, theme-aware primitives used across the platform.
  */
 export { Button, type ButtonProps } from "./Button";

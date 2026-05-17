@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@/navigation";
 import { LogoWordmark } from "@/components/Logo";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { LanguagePicker } from "@/components/LanguagePicker";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 
@@ -69,6 +70,7 @@ export function LandingHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <LanguagePicker variant="landing" />
           <div className="hidden md:block">
             <ThemeToggle />
           </div>

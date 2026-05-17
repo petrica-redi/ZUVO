@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
 
-test("home page loads with Sastipe branding", async ({ page }) => {
+test("home page loads with Redi Health branding", async ({ page }) => {
   await page.goto("/");
-  await expect(page).toHaveTitle(/Sastipe/);
+  await expect(page).toHaveTitle(/Redi Health/);
   // Landing hero — editorial headline split across two lines.
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(/Trusted health/i);
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(/Trusted guidance/i);
 });
 
 test("robots.txt is accessible", async ({ page }) => {
@@ -21,7 +21,7 @@ test("sitemap.xml is accessible", async ({ page }) => {
 
 test("Student Health Academy hub loads", async ({ page }) => {
   await page.goto("/students");
-  await expect(page.getByText(/Sastipe Health Academy/i).first()).toBeVisible();
+  await expect(page.getByText(/Redi Health Academy/i).first()).toBeVisible();
   await expect(
     page.getByRole("heading", { name: /health translator/i }),
   ).toBeVisible();

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sastipe — Health for Roma Communities",
-    "description": "Modern health literacy tools for Roma communities. Learn, track, and stay well."
+    "title": "Redi Health — Care for underserved and rural communities",
+    "description": "Multilingual health literacy for people left out of mainstream care — rural areas, marginalized neighbourhoods, Roma communities across Europe."
   },
   "nav": {
     "home": "Home",
@@ -39,7 +39,7 @@
     "inputAria": "Type your health question",
     "sendAria": "Send message",
     "meta": {
-      "title": "Chat — Sastipe",
+      "title": "Chat — Redi Health",
       "description": "Ask any health question. Get clear, trusted answers."
     }
   },
@@ -407,8 +407,8 @@
     "exportDescription": "Download all your health tracking data as a CSV file.",
     "clearData": "Clear all data",
     "clearDataConfirm": "Are you sure? This cannot be undone.",
-    "aboutTitle": "About Sastipe",
-    "aboutText": "Sastipe is a free health literacy platform for Roma communities. Funded by EU health inclusion initiatives. Version 1.0.",
+    "aboutTitle": "About Redi Health",
+    "aboutText": "Redi Health is a free multilingual health-literacy companion for underserved areas — villages, peri-urban wards, settlements, Roma neighbourhoods, rural regions in Europe — where clinicians are scarce, journeys to care are long, and official messaging often misses people's language.",
     "privacyPolicy": "Privacy policy",
     "contactUs": "Contact us",
     "progressNone": "You haven't started learning yet.",
@@ -824,7 +824,7 @@
     "a11yLocked": "locked",
     "metaSuffix": "Student Health Academy",
     "l8": {
-      "eyebrow": "Sastipe Health Academy",
+      "eyebrow": "Redi Health Academy",
       "heroTitle1": "Become the",
       "heroTitle2": "health translator",
       "heroTitle3": "for your community.",
@@ -883,7 +883,7 @@
       "diplomaProgress": "{completed} of {total} requirements met",
       "diplomaPreviewName": "Future Field Mediator",
       "diplomaPreviewDate": "Awarded {date}",
-      "diplomaSignature": "Sastipe Clinical Board",
+      "diplomaSignature": "Redi Clinical Board",
       "diplomaPreview": "Preview",
       "diplomaUnlocked": "Diploma ready",
       "diplomaCta": "Open diploma",
@@ -916,7 +916,7 @@
   },
   "privacy": {
     "metaTitle": "Privacy & data",
-    "metaDescription": "How Sastipe handles your data and how to exercise your rights",
+    "metaDescription": "How Redi Health handles your data and how to exercise your rights",
     "title": "Privacy & data",
     "lastUpdated": "Last updated: {date}",
     "actionsTitle": "Your data, your choice",
@@ -932,7 +932,7 @@
     "authRequired": "Please sign in to continue",
     "unavailable": "Service unavailable. Please try again later.",
     "successDeleted": "Your data has been scrubbed. Goodbye for now.",
-    "disclaimer": "Sastipe is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "disclaimer": "Redi Health is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
     "sections": {
       "collect": {
         "title": "What we collect",
@@ -1027,7 +1027,7 @@
   },
   "more": {
     "metaTitle": "All features",
-    "metaDescription": "Every Sastipe tool in one place",
+    "metaDescription": "Every Redi Health tool in one place",
     "title": "All Features",
     "sections": {
       "tools": "Health Tools",
@@ -1064,7 +1064,7 @@
       "mediatorDesc": "Tools for health mediators",
       "profileLabel": "Profile",
       "profileDesc": "Language, progress, data",
-      "aboutLabel": "About Sastipe",
+      "aboutLabel": "About Redi Health",
       "aboutDesc": "Version, privacy, contact"
     }
   },
@@ -1109,19 +1109,19 @@
     "verdictFalse": "False",
     "inputAria": "Paste health claim to fact-check",
     "sourceLabel": "Source",
-    "shareTagline": "Checked by Sastipe Health Advisor",
+    "shareTagline": "Checked by Redi Health Advisor",
     "shareTitle": "Health Fact Check",
     "errors": {
       "analyze": "Failed to analyze claim",
       "network": "Network error. Please check your connection."
     },
     "meta": {
-      "title": "Fact Check — Sastipe"
+      "title": "Fact Check — Redi Health"
     },
     "eyebrow": "Fact check"
   },
   "install": {
-    "installApp": "Install Sastipe",
+    "installApp": "Install Redi Health",
     "offlineAccess": "Add it to your home screen for offline access and faster opens.",
     "installButton": "Install",
     "addToHome": "Add to Home Screen",
@@ -1133,18 +1133,18 @@
   },
   "impact": {
     "title": "Public Health Impact",
-    "subtitle": "Real-time telemetry from Sastipe's deployment across Roma communities.",
+    "subtitle": "Real-time telemetry from Redi Health's deployment across Roma communities.",
     "statMyths": "Myths debunked",
     "statEmergencies": "Emergencies escalated",
     "statMediators": "Active mediators",
     "statVisits": "Field visits logged",
     "deployTitle": "Deploy in your region",
-    "deployDesc": "Sastipe is white-label ready for municipalities and health ministries.",
+    "deployDesc": "Redi Health is white-label ready for municipalities and health ministries.",
     "contactBtn": "Contact Partnerships"
   },
   "methodology": {
     "title": "Clinical Governance & Safety",
-    "subtitle": "How we ensure Sastipe provides safe, accurate, and culturally competent health information.",
+    "subtitle": "How we ensure Redi Health provides safe, accurate, and culturally competent health information.",
     "section1": "Deterministic red flags",
     "desc1": "Before any AI model is called, user input is scanned against a deterministic regex engine for critical emergencies (e.g. chest pain, suicidal ideation). If triggered, the AI is bypassed entirely and the user is directed to call 112.",
     "section2": "PII scrubbing",
@@ -1163,20 +1163,20 @@
     "getDirections": "Get directions"
   },
   "landing": {
-    "eyebrow": "Health literacy for Roma communities",
-    "heroLine1": "Trusted health,",
-    "heroLine2": "in your language.",
-    "heroLead": "An AI-powered companion built with Roma mediators, clinicians, and youth across Europe. Plain language, multilingual, available offline.",
-    "ctaPrimary": "Open Sastipe",
+    "eyebrow": "Health literacy where systems reach last",
+    "heroLine1": "Trusted guidance,",
+    "heroLine2": "beyond city clinics.",
+    "heroLead": "Redi Health is an AI-powered companion built with mediators and clinicians so rural towns, underserved neighbourhoods — including Roma communities — can get clearer answers in plain language, many dialects and languages, and formats that travel when broadband does not.",
+    "ctaPrimary": "Open Redi Health",
     "ctaSecondary": "Explore the methodology",
     "trustEyebrow": "Trusted by mediators, clinicians, and ministries",
-    "audienceEyebrow": "Who Sastipe is built for",
+    "audienceEyebrow": "Who Redi Health is built for",
     "audienceTitle": "One platform.\nThree audiences.",
     "studentTitle": "For students",
     "studentLead": "A gamified Academy spanning local, regional, and national stages of health literacy.",
     "studentCta": "Open the Academy",
-    "communityTitle": "For Roma community members",
-    "communityLead": "Voice-first AI health advice, Roma-friendly clinics, and emergency-ready guidance.",
+    "communityTitle": "For rural & excluded neighbourhoods",
+    "communityLead": "Voice-first health guidance when pharmacies or nurses are distant, stigma runs high, and official advice still isn't in your language — with Roma-inclusive clinic discovery where we map it.",
     "communityCta": "Find care nearby",
     "ministerTitle": "For ministries & partners",
     "ministerLead": "Live impact telemetry, clinical governance, and a deploy-ready white-label.",
@@ -1199,9 +1199,9 @@
     "methodologyBody": "Three deterministic safety layers run before any AI model is invoked: emergency red-flag detection, PII scrubbing, and prompt-injection guards. Every lesson is clinically reviewed.",
     "methodologyCta": "Read the methodology",
     "finalEyebrow": "Get started",
-    "finalTitle": "Built with Roma,\nfor everyone.",
-    "finalBody": "Open the app to ask a question, learn a lesson, or check a claim.",
-    "finalCta": "Launch Sastipe",
+    "finalTitle": "Co-created with mediators,\nfor places left waiting.",
+    "finalBody": "Open the companion to ask a question, scan a rumor, decode a prescription, or start a literacy lesson tuned to teenagers and elders alike.",
+    "finalCta": "Launch Redi Health",
     "navTitle": "Jump to a tool",
     "navSubtitle": "Eight guided paths — academy, prescriptions, myths, outreach, and more.",
     "navAsk": "Ask the AI",
@@ -1233,7 +1233,7 @@
     "safetyRedFlags": "Red flags",
     "safetyPII": "PII scrub",
     "safetyClinical": "Clinical review",
-    "heroCardLabel": "ask sastipe",
+    "heroCardLabel": "ask Redi",
     "heroCardQuestion": "My aunt says vaccines cause autism. Is that true?",
     "heroCardVerdict": "Verified",
     "heroCardAnswer": "No. Decades of large studies — including over a million children — show no link between vaccines and autism.",
@@ -1252,7 +1252,7 @@
     "branchMediator": "Mediator dashboard"
   },
   "footer": {
-    "tagline": "Multilingual health literacy for Roma communities across Europe.",
+    "tagline": "Multilingual literacy for underserved, rural and Roma communities stretching across fifteen European languages.",
     "product": "Product",
     "forStudents": "For students",
     "forCommunity": "For community",
@@ -1262,7 +1262,7 @@
     "impact": "Impact",
     "privacy": "Privacy",
     "contact": "Contact",
-    "rights": "© 2026 Sastipe. All rights reserved.",
+    "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries.",
     "systemsOperational": "All systems operational"
   },
@@ -1358,7 +1358,7 @@
       "Numbness"
     ],
     "meta": {
-      "title": "Symptom Checker — Sastipe",
+      "title": "Symptom Checker — Redi Health",
       "description": "Tap where it hurts. Get guidance on what to do."
     }
   },
@@ -1381,7 +1381,7 @@
     "showVisitCard": "Show Doctor Visit Card",
     "hideVisitCard": "Hide Doctor Visit Card",
     "visitCardTitle": "Patient Summary — For Doctor",
-    "visitCardDisclaimer": "Generated by Sastipe Health Advisor. This is not a medical diagnosis.",
+    "visitCardDisclaimer": "Generated by Redi Health Advisor. This is not a medical diagnosis.",
     "concerns": {
       "fever": "Fever / High temperature",
       "pain": "Pain somewhere",
@@ -1434,7 +1434,7 @@
       "My child is sick — can they still get vaccinated?"
     ],
     "meta": {
-      "title": "Vaccine Guide — Sastipe",
+      "title": "Vaccine Guide — Redi Health",
       "description": "Every vaccine explained in simple words."
     }
   },
@@ -1463,7 +1463,7 @@
     "disclaimerBold": "Not medical advice.",
     "disclaimerBody": "This tool explains medical terms in simple language. Always follow your doctor's instructions.",
     "meta": {
-      "title": "Understand Your Prescription — Sastipe",
+      "title": "Understand Your Prescription — Redi Health",
       "description": "Get your diagnosis and medications explained in simple words"
     },
     "takePhoto": "Take a photo",
@@ -1503,22 +1503,22 @@
     "generateCard": "Generate Doctor Visit Card",
     "startOver": "Start over",
     "showDoctor": "Show this to your doctor",
-    "generatedBy": "Generated by Sastipe Health Advisor",
+    "generatedBy": "Generated by Redi Health Advisor",
     "whatToBring": "What to bring",
     "askYourDoctor": "Ask your doctor",
     "patientRights": "Your rights as a patient",
     "findHospital": "Find nearest hospital",
     "mapHint": "Opens map with directions",
     "meta": {
-      "title": "Healthcare Navigator — Sastipe",
+      "title": "Healthcare Navigator — Redi Health",
       "description": "Prepare for your doctor visit — visit card, what to bring, your rights."
     }
   },
   "about": {
-    "brand": "Sastipe",
-    "tagline": "Health literacy for Roma communities",
+    "brand": "Redi Health",
+    "tagline": "Health literacy for rural and excluded communities",
     "version": "Version 1.0.0",
-    "missionBody": "Sastipe is an AI-powered health companion designed specifically for Roma communities across Europe. Our mission is to bridge the health literacy gap by providing trusted, culturally sensitive health information in simple language.",
+    "missionBody": "Redi Health is an AI companion co-designed with field mediators and clinicians for neighbourhoods that official health systems routinely underserve — from rural municipalities to informal settlements — with deep attention to Roma communities. We close the literacy gap where distance, language mismatch, digital exclusion, or bias block access.",
     "values": {
       "careLabel": "Built with care",
       "careDesc": "By health mediators",
@@ -1531,10 +1531,10 @@
     },
     "privacyLink": "Privacy Policy",
     "termsLink": "Terms of Service",
-    "disclaimer": "Sastipe is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "disclaimer": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
     "meta": {
-      "title": "About — Sastipe",
-      "description": "About Sastipe Health Literacy Platform"
+      "title": "About — Redi Health",
+      "description": "About Redi Health literacy platform"
     }
   },
   "family": {

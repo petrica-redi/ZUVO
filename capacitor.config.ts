@@ -43,7 +43,7 @@ const extraNavigation = (process.env.CAP_ALLOW_NAVIGATION ?? "")
 
 const config: CapacitorConfig = {
   appId: "org.sastipe.app",
-  appName: "Sastipe",
+  appName: "Redi Health",
   webDir: "out",
 
   server: {

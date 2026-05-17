@@ -144,7 +144,7 @@ describe("getAiBudgetStatus", () => {
 });
 
 describe("aiBudgetExceededResponse", () => {
-  it("returns 503 with X-Sastipe-Budget=user-cap for user cap exceeded", () => {
+  it("returns 503 with X-Redi-Budget=user-cap for user cap exceeded", () => {
     const res = aiBudgetExceededResponse({
       allowed: false,
       reason: "user-cap",
@@ -154,11 +154,11 @@ describe("aiBudgetExceededResponse", () => {
       capacityKnown: true,
     });
     expect(res.status).toBe(503);
-    expect(res.headers.get("X-Sastipe-Budget")).toBe("user-cap");
+    expect(res.headers.get("X-Redi-Budget")).toBe("user-cap");
     expect(res.headers.get("Retry-After")).toBe("3600");
   });
 
-  it("returns 503 with X-Sastipe-Budget=org-budget for org cap exceeded", () => {
+  it("returns 503 with X-Redi-Budget=org-budget for org cap exceeded", () => {
     const res = aiBudgetExceededResponse({
       allowed: false,
       reason: "org-budget",
@@ -168,6 +168,6 @@ describe("aiBudgetExceededResponse", () => {
       capacityKnown: true,
     });
     expect(res.status).toBe(503);
-    expect(res.headers.get("X-Sastipe-Budget")).toBe("org-budget");
+    expect(res.headers.get("X-Redi-Budget")).toBe("org-budget");
   });
 });

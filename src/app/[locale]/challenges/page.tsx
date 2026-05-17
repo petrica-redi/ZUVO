@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getAppConfig } from "@/lib/env";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { Target, Trophy, Zap, Users } from "lucide-react";
@@ -7,7 +8,8 @@ import { Card, Badge, Progress } from "@/components/ui";
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata(): Promise<Metadata> {
-  return { title: `Challenges — Sastipe`, description: "Community Challenges" };
+  const { appName } = getAppConfig();
+  return { title: `Challenges — ${appName}`, description: "Community Challenges" };
 }
 
 const CHALLENGES = [

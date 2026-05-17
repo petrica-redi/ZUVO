@@ -125,7 +125,7 @@ export async function POST(req: NextRequest) {
             explanation:
               "The AI service did not return a structured fact-check. Please verify the claim with a trusted health source.",
             shareText: "Always verify health claims with a trusted health worker.",
-            source: "Sastipe Health Advisor",
+            source: "Redi Health Advisor",
           },
           fallback: true,
         });
@@ -135,8 +135,8 @@ export async function POST(req: NextRequest) {
         { success: true, data: parsedAi.data },
         {
           headers: {
-            "X-Sastipe-Budget-Remaining": String(budget.remainingUserCalls),
-            "X-Sastipe-Provider": getActiveProvider() ?? "none",
+            "X-Redi-Budget-Remaining": String(budget.remainingUserCalls),
+            "X-Redi-Provider": getActiveProvider() ?? "none",
           },
         },
       );

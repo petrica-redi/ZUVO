@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { getAppConfig } from "@/lib/env";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { MapPin, CheckCircle2, ShieldCheck, HeartPulse, Building2, Map } from "lucide-react";
@@ -10,7 +11,8 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "providers" });
-  return { title: `${t("title")} — Sastipe`, description: t("subtitle") };
+  const { appName } = getAppConfig();
+  return { title: `${t("title")} — ${appName}`, description: t("subtitle") };
 }
 
 // Dummy data for the provider directory. In a real app this would be fetched from the DB.

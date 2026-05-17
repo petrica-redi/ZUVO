@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import type { Viewport } from "next";
 import { headers } from "next/headers";
 import { getLocale } from "next-intl/server";
+import { getAppConfig } from "@/lib/env";
 import { Inter, Geist, Fraunces } from "next/font/google";
 import "./globals.css";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
@@ -43,6 +44,7 @@ export const viewport: Viewport = {
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   const locale = await getLocale();
+  const cfg = getAppConfig();
   const hdrs = await headers();
   const shellMode =
     hdrs.get("x-sastipe-shell-mode") === "mobile" ? "mobile" : "desktop";
@@ -57,13 +59,13 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       <head>
         {/* PWA manifest + Android Chrome */}
         <link rel="manifest" href="/manifest.json" />
-        <meta name="application-name" content="Sastipe" />
+        <meta name="application-name" content={cfg.appName} />
         <meta name="mobile-web-app-capable" content="yes" />
 
         {/* iOS / iPadOS PWA — apple-mobile-web-app-* drive home-screen install */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Sastipe" />
+        <meta name="apple-mobile-web-app-title" content={cfg.appName} />
         <meta name="format-detection" content="telephone=no" />
 
         {/* Apple touch icons — multiple sizes ensure crisp rendering across devices.
@@ -89,7 +91,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <ServiceWorkerRegistrar />
         <CapacitorBootstrap />
         <ProtocolRouteHandler />
-        <div className="mobile-shell" role="application" aria-label="Sastipe Health App">
+        <div className="mobile-shell" role="application" aria-label={`${cfg.appName} app`}>
           {children}
         </div>
       </body>

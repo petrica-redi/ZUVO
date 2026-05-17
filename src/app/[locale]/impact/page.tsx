@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { getAppConfig } from "@/lib/env";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { ShieldCheck, Activity, Users, FileText, Mail, BarChart3 } from "lucide-react";
@@ -10,7 +11,8 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "impact" });
-  return { title: `${t("title")} — Sastipe`, description: t("subtitle") };
+  const { appName } = getAppConfig();
+  return { title: `${t("title")} — ${appName}`, description: t("subtitle") };
 }
 
 export default async function ImpactPage({ params }: Props) {
