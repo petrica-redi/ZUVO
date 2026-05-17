@@ -51,7 +51,7 @@ export function SosButton() {
   }
 
   return (
-    <div
+      <div
       className="fixed inset-0 z-[100] flex flex-col text-white animate-fade-in"
       style={{
         background:
@@ -59,6 +59,7 @@ export function SosButton() {
         backdropFilter: "blur(8px)",
       }}
       role="dialog"
+      aria-modal="true"
       aria-label={t("title")}
     >
       <div className="flex items-center justify-between p-5">
@@ -128,6 +129,7 @@ export function SosButton() {
             <button
               key={fa.id}
               onClick={() => setShowFirstAid(showFirstAid === fa.id ? null : fa.id)}
+              aria-pressed={showFirstAid === fa.id}
               className={`flex flex-col items-center gap-2 rounded-2xl p-4 transition-all duration-200 ${
                 showFirstAid === fa.id
                   ? "bg-rose-900/60 ring-2 ring-rose-500 scale-105"

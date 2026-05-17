@@ -40,6 +40,8 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
     }
   }, [input]);
 
+  const cancelledRef = useRef(false);
+
   const sendMessage = async (text?: string) => {
     const content = text ?? input.trim();
     if (!content || isLoading) return;
@@ -62,6 +64,8 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       content: m.content,
     }));
 
+    let assistantMsgId = "";
+
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
@@ -71,7 +75,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
 
       if (!response.ok) throw new Error("Failed");
 
-      const assistantMsgId = crypto.randomUUID();
+      assistantMsgId = crypto.randomUUID();
       const assistantMsg: Message = {
         id: assistantMsgId,
         role: "assistant",
@@ -86,7 +90,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
 
       if (reader) {
         let buffer = "";
-        while (true) {
+        while (!cancelledRef.current) {
           const { done, value } = await reader.read();
           if (done) break;
 
@@ -118,10 +122,17 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       }
     } catch {
       setError(labels.errorMessage);
+      setMessages((prev) => prev.filter((m) => m.id !== assistantMsgId));
     } finally {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    return () => {
+      cancelledRef.current = true;
+    };
+  }, []);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {

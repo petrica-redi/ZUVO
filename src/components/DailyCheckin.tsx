@@ -160,6 +160,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
             <button
               key={m.value}
               onClick={() => setMood(m.value)}
+              aria-pressed={mood === m.value}
               className={`flex flex-1 flex-col items-center gap-1 rounded-2xl border-2 p-3 transition-all ${
                 mood === m.value
                   ? "scale-105 shadow-md"
@@ -184,6 +185,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
               key={g}
               onClick={() => setWater(g)}
               aria-label={`${labels.waterGoal} ${g}`}
+              aria-pressed={g <= water}
               className={`flex h-10 w-10 items-center justify-center rounded-xl transition-all ${
                 g <= water
                   ? "bg-blue-500 text-white shadow-md"
@@ -208,6 +210,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
             <button
               key={a.id}
               onClick={() => setActivity(a.id)}
+              aria-pressed={activity === a.id}
               className={`flex flex-1 flex-col items-center gap-1 rounded-2xl border-2 p-3 transition-all ${
                 activity === a.id
                   ? "scale-105 shadow-md"

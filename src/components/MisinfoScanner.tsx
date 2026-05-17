@@ -59,6 +59,7 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
   const [claim, setClaim] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Verdict | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [history, setHistory] = useState<{ claim: string; verdict: Verdict }[]>([]);
 
   useEffect(() => {
@@ -86,12 +87,14 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
       });
 
       const data = await res.json();
-      if (data.success && data.data) {
+      if (res.ok && data.success && data.data) {
         setResult(data.data);
         setHistory((prev) => [{ claim: claim.trim(), verdict: data.data }, ...prev].slice(0, 10));
+      } else {
+        setError(data.error || "Failed to analyze claim");
       }
     } catch {
-      // offline fallback
+      setError("Network error. Please check your connection.");
     } finally {
       setLoading(false);
     }
@@ -159,6 +162,12 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
           </button>
         </div>
       </div>
+
+      {error && (
+        <div className="mb-4 rounded-2xl bg-red-50 p-4 text-sm font-medium text-red-600 animate-scale-in">
+          {error}
+        </div>
+      )}
 
       {/* Result card */}
       {result && (

@@ -3,11 +3,13 @@
  *
  * Two-phase deletion:
  *   1. Immediate scrub: identifying fields on `users` are nulled / pseudonymised.
- *      Health, progress, audit, notification rows are anonymised by clearing
+ *      Health, notifications, and audit rows are anonymised by clearing
  *      personal references but kept for population-level statistics.
  *   2. Hard delete is queued via an audit_log marker. A separate cron job
- *      (Trigger.dev / Supabase Edge Function) runs every 24h and permanently
- *      removes records older than 30 days.
+ *      runs every 24h and permanently removes records older than 30 days.
+ *
+ * Note: Module progress (`progress`) is minimal-PII and forms the core of
+ * aggregated learning analytics. It is not scrubbed here.
  *
  * Body schema:
  *   { confirmation: "DELETE" }
@@ -25,7 +27,6 @@ import {
   auditLog,
   healthLogs,
   notifications,
-  progress,
   users,
 } from "@/db/schema";
 import { parseJsonBody } from "@/lib/api/validation";
@@ -132,11 +133,10 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // 5. Clear server-side rate-limit and budget counters tied to this user.
-    //    (Best effort; counters expire daily anyway.)
-    void progress; // keep import lint-clean
+  // 5. Clear server-side rate-limit and budget counters tied to this user.
+  //    (Best effort; counters expire daily anyway.)
 
-    const res = NextResponse.json({
+  const res = NextResponse.json({
       success: true,
       message:
         "Your data has been scrubbed. A permanent deletion is scheduled within 30 days.",

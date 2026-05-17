@@ -98,15 +98,11 @@ export async function GET(req?: NextRequest) {
   const secret = process.env.HEALTH_CHECK_SECRET?.trim();
   const provided =
     req?.headers.get("x-health-check-secret")?.trim() ||
-    req?.nextUrl.searchParams.get("secret")?.trim();
+    (req?.url ? new URL(req.url).searchParams.get("secret")?.trim() : undefined);
   if (process.env.NODE_ENV === "production" && secret && provided !== secret) {
     return NextResponse.json(
-      {
-        status: "ok",
-        uptime: typeof process.uptime === "function" ? process.uptime() : 0,
-        timestamp: new Date().toISOString(),
-      },
-      { headers: { "Cache-Control": "public, max-age=5" } },
+      { error: "Unauthorized" },
+      { status: 401 }
     );
   }
 
