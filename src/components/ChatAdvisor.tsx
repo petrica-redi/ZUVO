@@ -131,7 +131,22 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
         signal: controller.signal,
       });
 
-      if (!response.ok) throw new Error("Failed");
+      if (!response.ok) {
+        // Surface actionable diagnostics rather than the generic "Could not
+        // connect" message: distinguish 429 (rate limit), 503 (provider not
+        // configured / cost cap), and other upstream failures.
+        let detail = `HTTP ${response.status}`;
+        try {
+          const body = await response.clone().json();
+          if (body?.message) detail = String(body.message);
+          else if (body?.error) detail = String(body.error);
+        } catch {
+          /* not json */
+        }
+        const err = new Error(detail) as Error & { status?: number };
+        err.status = response.status;
+        throw err;
+      }
 
       assistantMsgId = crypto.randomUUID();
       const assistantMsg: Message = {
@@ -182,7 +197,16 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
     } catch (e) {
       // Aborted by user/unmount is not an error worth surfacing.
       if ((e as DOMException | undefined)?.name === "AbortError") return;
-      setError(labels.errorMessage);
+      const err = e as Error & { status?: number };
+      let friendly = labels.errorMessage;
+      if (err.status === 429) friendly = tChat("errorRateLimit");
+      else if (err.status === 503) friendly = tChat("errorServiceUnavailable");
+      else if (err.status === 502) friendly = tChat("errorUpstream");
+      else if (err.status && err.status >= 500) friendly = tChat("errorUpstream");
+      // Append the upstream detail in a small, faded hint so we have something
+      // diagnosable from a screenshot.
+      const detail = err.message && err.message !== "Failed" ? ` (${err.message})` : "";
+      setError(`${friendly}${detail}`);
       setMessages((prev) => prev.filter((m) => m.id !== assistantMsgId));
     } finally {
       readerRef.current = null;
