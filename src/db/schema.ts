@@ -271,6 +271,18 @@ export const mediatorVisits = pgTable(
   (t) => [index("idx_visit_mediator").on(t.mediatorId, t.visitDate)]
 );
 
+// ── Platform Config (Admin Panel) ──────────────────────────────────────────
+export const platformConfig = pgTable("platform_config", {
+  id: text("id").primaryKey(), // usually 'default'
+  logoUrl: text("logo_url"),
+  heroTitle: text("hero_title"),
+  heroSubtitle: text("hero_subtitle"),
+  heroImage: text("hero_image"),
+  heroLayout: text("hero_layout").default("split"), // 'split' | 'center'
+  customCss: text("custom_css"),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
+});
+
 // ── Notifications ──────────────────────────────────────────────────────────
 export const notifications = pgTable(
   "notifications",

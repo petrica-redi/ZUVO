@@ -25,6 +25,7 @@ import {
   MapPin,
   Handshake,
 } from "lucide-react";
+import { getPlatformConfig } from "@/lib/admin/actions";
 import { LandingHeader } from "@/components/landing/LandingHeader";
 import { LandingFooter } from "@/components/landing/LandingFooter";
 import { ProfileShellOptOut } from "@/components/landing/ProfileShellOptOut";
@@ -42,6 +43,12 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "landing" });
   const tHome = await getTranslations({ locale, namespace: "home" });
+  
+  const platformConfig = await getPlatformConfig();
+  const heroTitle = platformConfig?.heroTitle || undefined;
+  const heroSubtitle = platformConfig?.heroSubtitle || undefined;
+  const heroImage = platformConfig?.heroImage || "/images/ai/ai-hero-wellbeing.png";
+  const heroLayout = platformConfig?.heroLayout || "split";
 
   return (
     <>
@@ -49,11 +56,11 @@ export default async function HomePage({ params }: Props) {
           renders as a true full-width premium landing on desktop. */}
       <ProfileShellOptOut />
 
-      <LandingHeader />
+      <LandingHeader logoUrl={platformConfig?.logoUrl || undefined} />
 
       <main id="main-content" className="relative">
         {/* ===== HERO ============================================== */}
-        <section className="relative overflow-hidden">
+        <section className={`relative overflow-hidden ${heroLayout === "center" ? "text-center" : ""}`}>
           {/* Atmospheric backdrop */}
           <div
             aria-hidden
@@ -70,7 +77,7 @@ export default async function HomePage({ params }: Props) {
 
           <div className="mx-auto max-w-6xl px-5 pb-16 pt-12 md:px-8 md:pb-28 md:pt-24">
             <div className="grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
-              <div>
+              <div className={heroLayout === "center" ? "mx-auto flex flex-col items-center" : ""}>
                 <span className="eyebrow animate-fade-in-up">
                   <span
                     className="inline-block h-1.5 w-1.5 rounded-full"
@@ -85,18 +92,24 @@ export default async function HomePage({ params }: Props) {
                     fontSize: "clamp(2.75rem, 1.6rem + 5vw, 5.5rem)",
                   }}
                 >
-                  <span>{t("heroLine1")}</span>
-                  <br />
-                  <span className="italic" style={{ fontFeatureSettings: '"ss01" on' }}>
-                    {t("heroLine2")}
-                  </span>
+                  {heroTitle ? (
+                    <span>{heroTitle}</span>
+                  ) : (
+                    <>
+                      <span>{t("heroLine1")}</span>
+                      <br />
+                      <span className="italic" style={{ fontFeatureSettings: '"ss01" on' }}>
+                        {t("heroLine2")}
+                      </span>
+                    </>
+                  )}
                 </h1>
 
                 <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-[var(--color-text-secondary)] md:text-lg animate-fade-in-up delay-200">
-                  {t("heroLead")}
+                  {heroSubtitle || t("heroLead")}
                 </p>
 
-                <div className="mt-9 flex flex-wrap items-center gap-3 animate-fade-in-up delay-300">
+                <div className={`mt-9 flex flex-wrap items-center gap-3 animate-fade-in-up delay-300 ${heroLayout === "center" ? "justify-center" : ""}`}>
                   <Link
                     href="/chat"
                     className="group inline-flex h-13 items-center gap-2 rounded-full px-7 py-4 text-sm font-extrabold text-white gradient-brand grain-overlay shadow-brand transition-all hover:shadow-4 active:scale-[0.97]"
@@ -116,7 +129,7 @@ export default async function HomePage({ params }: Props) {
                   </Link>
                 </div>
 
-                <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[var(--color-text-muted)] animate-fade-in-up delay-400">
+                <div className={`mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[var(--color-text-muted)] animate-fade-in-up delay-400 ${heroLayout === "center" ? "justify-center" : ""}`}>
                   <span className="flex items-center gap-1.5">
                     <ShieldCheck className="lucide h-3.5 w-3.5 text-[var(--color-success-accent)]" strokeWidth={2} />
                     {t("trustBadge1")}
@@ -164,7 +177,7 @@ export default async function HomePage({ params }: Props) {
               <div className="relative isolate min-h-[300px] md:min-h-0">
                 <div className="absolute inset-0 -z-10 overflow-hidden rounded-[32px] md:rounded-[40px]" aria-hidden>
                   <Image
-                    src="/images/ai/ai-hero-wellbeing.png"
+                    src={heroImage}
                     alt={t("heroBackdropAlt")}
                     fill
                     priority

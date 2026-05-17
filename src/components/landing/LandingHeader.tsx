@@ -15,7 +15,7 @@ import { ArrowRight } from "lucide-react";
  * - Inline nav (impact, methodology, providers) on md+.
  * - Falls back to the wordmark + primary CTA on mobile.
  */
-export function LandingHeader() {
+export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
   const [scrolled, setScrolled] = useState(false);
   const t = useTranslations("landing");
   const tFooter = useTranslations("footer");
@@ -39,7 +39,7 @@ export function LandingHeader() {
           href="/"
           className="rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
         >
-          <LogoWordmark iconSize={28} />
+          <LogoWordmark iconSize={28} logoUrl={logoUrl} />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">

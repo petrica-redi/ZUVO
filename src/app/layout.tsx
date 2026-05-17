@@ -3,6 +3,7 @@ import type { Viewport } from "next";
 import { headers } from "next/headers";
 import { getLocale } from "next-intl/server";
 import { getAppConfig } from "@/lib/env";
+import { getPlatformConfig } from "@/lib/admin/actions";
 import { Inter, Geist, Fraunces } from "next/font/google";
 import "./globals.css";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
@@ -50,6 +51,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     hdrs.get("x-redi-shell-mode") ?? hdrs.get("x-sastipe-shell-mode");
   const shellMode = shellModeHeader === "mobile" ? "mobile" : "desktop";
 
+  const platformConfig = await getPlatformConfig();
+  const customCss = platformConfig?.customCss || "";
+
   return (
     <html
       lang={locale}
@@ -79,6 +83,8 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         {/* Microsoft tile (for installs from Edge / Windows) */}
         <meta name="msapplication-TileColor" content="#4F46E5" />
         <meta name="msapplication-TileImage" content="/icon-192.svg" />
+
+        {customCss && <style dangerouslySetInnerHTML={{ __html: customCss }} />}
 
         {/* Inline theme bootstrapper to avoid flash of unstyled content. */}
         <script

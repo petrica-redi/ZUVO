@@ -87,13 +87,20 @@ export function Logo({ size = 36, className, inverted = false }: Props) {
 export function LogoWordmark({
   iconSize = 32,
   className,
+  logoUrl,
 }: {
   iconSize?: number;
   className?: string;
+  logoUrl?: string;
 }) {
   return (
     <span className={`flex items-center gap-2.5 ${className ?? ""}`}>
-      <Logo size={iconSize} />
+      {logoUrl ? (
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img src={logoUrl} alt="Logo" style={{ height: iconSize, width: "auto" }} />
+      ) : (
+        <Logo size={iconSize} />
+      )}
       <span
         className="font-display text-[1.125rem] font-extrabold leading-none text-[var(--color-text-primary)]"
         style={{ letterSpacing: "-0.025em" }}
