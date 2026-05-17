@@ -5,6 +5,12 @@ import { parseAiJson } from "@/lib/ai/json";
 import { applyRateLimitAsync } from "@/lib/api/rate-limit";
 import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
 import { buildEmergencyConsultSummary, detectEmergencyRedFlag } from "@/lib/health/red-flags";
+import {
+  completeText,
+  getActiveProvider,
+  ProviderHttpError,
+  ProviderUnavailableError,
+} from "@/lib/ai/provider";
 
 const EXPLAIN_PROMPT = `You are a medical translator for Roma communities in Europe. Your job is to take medical terms, diagnoses, and prescription medications and explain them in the simplest possible language — as if explaining to someone who never finished school but is intelligent and deserves to understand their own health.
 
@@ -104,8 +110,7 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
+  if (!getActiveProvider()) {
     return NextResponse.json({ success: false, error: "AI service not configured" }, { status: 503 });
   }
 
@@ -117,30 +122,25 @@ export async function POST(req: NextRequest) {
     ? `\nThe user's language is "${locale}". Respond in that language. If the medical terms are in another language, keep the medical terms but explain everything else in the user's language.`
     : "";
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o",
-      max_tokens: 1500,
-      temperature: 0.3,
+  let content: string;
+  try {
+    content = await completeText({
+      system: EXPLAIN_PROMPT + localeNote,
       messages: [
-        { role: "system", content: EXPLAIN_PROMPT + localeNote },
         { role: "user", content: `Explain this prescription or diagnosis: "${cleanInput}"` },
       ],
-    }),
-    signal: AbortSignal.timeout(30_000),
-  });
-
-  if (!response.ok) {
-    return NextResponse.json({ error: "AI service error" }, { status: 502 });
+      maxTokens: 1500,
+      temperature: 0.3,
+    });
+  } catch (err) {
+    if (err instanceof ProviderUnavailableError) {
+      return NextResponse.json({ success: false, error: "AI service not configured" }, { status: 503 });
+    }
+    if (err instanceof ProviderHttpError) {
+      return NextResponse.json({ success: false, error: "AI service error" }, { status: 502 });
+    }
+    throw err;
   }
-
-  const data = await response.json();
-  const content = data.choices?.[0]?.message?.content ?? "";
 
   const ai = parseAiJson(content, explainResponseSchema);
   if (ai.success) return NextResponse.json({ success: true, data: ai.data });
