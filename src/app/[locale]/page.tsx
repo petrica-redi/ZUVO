@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ComponentType } from "react";
 import { Link } from "@/navigation";
 import { getTranslations } from "next-intl/server";
 import {
@@ -16,10 +17,12 @@ import {
   Globe,
   Lock,
   CheckCircle2,
+  FileText,
   Brain,
   MessageCircle,
   Syringe,
   MapPin,
+  Handshake,
 } from "lucide-react";
 import { LandingHeader } from "@/components/landing/LandingHeader";
 import { LandingFooter } from "@/components/landing/LandingFooter";
@@ -125,6 +128,34 @@ export default async function HomePage({ params }: Props) {
                     {t("trustBadge3")}
                   </span>
                 </div>
+
+                <nav
+                  aria-label={t("branchNavAria")}
+                  className="mt-10 animate-fade-in-up"
+                  style={{ animationDelay: "420ms", animationFillMode: "both" }}
+                >
+                  <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
+                    {t("branchEyebrow")}
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <HeroBranchChip
+                      href="/students"
+                      icon={GraduationCap}
+                      label={t("branchAcademy")}
+                    />
+                    <HeroBranchChip
+                      href="/explain"
+                      icon={FileText}
+                      label={t("branchPrescription")}
+                    />
+                    <HeroBranchChip href="/scan" icon={Search} label={t("branchFacts")} />
+                    <HeroBranchChip
+                      href="/mediator"
+                      icon={Handshake}
+                      label={t("branchMediator")}
+                    />
+                  </div>
+                </nav>
               </div>
 
               {/* Hero composition — refined illustration card */}
@@ -134,7 +165,7 @@ export default async function HomePage({ params }: Props) {
         </section>
 
         {/* ===== PLATFORM NAV DECK ================================ */}
-        {/* Six-tile wayfinding band — the front door to every tool. */}
+        {/* Eight-tile wayfinding band — academy, prescriptions, myths, mediator, and more. */}
         <section
           aria-labelledby="platform-nav-title"
           className="relative border-t border-[var(--color-border-subtle)] bg-[var(--color-surface)]"
@@ -166,13 +197,21 @@ export default async function HomePage({ params }: Props) {
               </a>
             </header>
 
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
               <PlatformTile
-                href="/chat"
-                icon={MessageCircle}
+                href="/students"
+                icon={GraduationCap}
+                accent="ember"
+                title={t("navAcademy")}
+                desc={t("navAcademyDesc")}
+                primary
+              />
+              <PlatformTile
+                href="/explain"
+                icon={FileText}
                 accent="brand"
-                title={t("navAsk")}
-                desc={t("navAskDesc")}
+                title={t("navExplain")}
+                desc={t("navExplainDesc")}
                 primary
               />
               <PlatformTile
@@ -182,6 +221,21 @@ export default async function HomePage({ params }: Props) {
                 title={t("navScan")}
                 desc={t("navScanDesc")}
                 primary
+              />
+              <PlatformTile
+                href="/mediator"
+                icon={Handshake}
+                accent="sage"
+                title={t("navMediator")}
+                desc={t("navMediatorDesc")}
+                primary
+              />
+              <PlatformTile
+                href="/chat"
+                icon={MessageCircle}
+                accent="brand"
+                title={t("navAsk")}
+                desc={t("navAskDesc")}
               />
               <PlatformTile
                 href="/symptoms"
@@ -196,13 +250,6 @@ export default async function HomePage({ params }: Props) {
                 accent="brand"
                 title={t("navVaccines")}
                 desc={t("navVaccinesDesc")}
-              />
-              <PlatformTile
-                href="/students"
-                icon={GraduationCap}
-                accent="ember"
-                title={t("navAcademy")}
-                desc={t("navAcademyDesc")}
               />
               <PlatformTile
                 href="/providers"
@@ -403,6 +450,26 @@ export default async function HomePage({ params }: Props) {
 }
 
 // ── Sub-components ─────────────────────────────────────────────────────
+
+function HeroBranchChip({
+  href,
+  icon: Icon,
+  label,
+}: {
+  href: string;
+  icon: ComponentType<{ className?: string; strokeWidth?: number }>;
+  label: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] px-3.5 py-2 text-[11px] font-extrabold tracking-tight text-[var(--color-text-primary)] shadow-1 transition-all hover:border-[var(--color-accent)] hover:bg-[var(--color-accent-soft)] md:min-h-0 md:px-4 md:text-xs"
+    >
+      <Icon className="lucide h-3.5 w-3.5 shrink-0 text-[var(--color-accent-text)]" strokeWidth={2.2} />
+      <span>{label}</span>
+    </Link>
+  );
+}
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (

@@ -294,17 +294,27 @@ button {
       radial-gradient(ellipse at bottom, rgba(245, 158, 11, 0.03) 0%, transparent 50%),
       var(--color-bg-canvas);
   }
-  .mobile-shell {
+
+  /* Desktop-class devices (UA-driven via middleware): full-width shell — no faux phone bezel. */
+  html[data-shell-mode="desktop"] .mobile-shell {
+    max-width: 100%;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  /* Phones / tablets: optional centered phone-frame on wide viewports (for continuity when mirrored / resized). */
+  html[data-shell-mode="mobile"] .mobile-shell {
     max-width: 480px;
     border-left: 1px solid var(--color-border-subtle);
     border-right: 1px solid var(--color-border-subtle);
     box-shadow: var(--shadow-4);
     background: var(--color-surface);
   }
-  /* Opt-out: routes can break out of the phone-frame and present as a
-     real full-width landing experience. Apply by adding `data-shell="landing"`
-     to the body or by nesting under `.landing-shell`. */
-  .mobile-shell.landing-shell {
+
+  /* Opt-out: routes break out of the phone-frame for marketing / academy dashboards. */
+  html[data-shell-mode="mobile"] .mobile-shell.landing-shell {
     max-width: 100%;
     border-left: none;
     border-right: none;

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import type { Viewport } from "next";
+import { headers } from "next/headers";
 import { getLocale } from "next-intl/server";
 import { Inter, Geist, Fraunces } from "next/font/google";
 import "./globals.css";
@@ -42,9 +43,14 @@ export const viewport: Viewport = {
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   const locale = await getLocale();
+  const hdrs = await headers();
+  const shellMode =
+    hdrs.get("x-sastipe-shell-mode") === "mobile" ? "mobile" : "desktop";
+
   return (
     <html
       lang={locale}
+      data-shell-mode={shellMode}
       className={`${inter.variable} ${geist.variable} ${fraunces.variable}`}
       suppressHydrationWarning
     >
