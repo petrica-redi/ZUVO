@@ -989,7 +989,10 @@
     "stop": "Atśadi te ašunes",
     "readAloud": "Đino bareste",
     "readMessageAloud": "Đino o mesažo bareste",
-    "readExplanationAloud": "Đino o ververdipe bareste"
+    "readExplanationAloud": "Đino o ververdipe bareste",
+    "micDeepgram": "Tikon te phenes — but-čhibengo vakaribe (Deepgram)",
+    "micError": "Naštik pomislisar e mikrofoni.",
+    "detected": "Arakhli čhib: {lang}"
   },
   "severity": {
     "green": "Kerav kher",

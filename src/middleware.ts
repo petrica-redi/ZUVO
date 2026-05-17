@@ -10,9 +10,10 @@ function applySecurityHeaders(res: NextResponse) {
   res.headers.set("X-Content-Type-Options", "nosniff");
   res.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   res.headers.set("X-Frame-Options", "DENY");
+  // Voice features (mic, camera for prescription scan) require self origin.
   res.headers.set(
     "Permissions-Policy",
-    "camera=(), microphone=(), geolocation=(self)"
+    "camera=(self), microphone=(self), geolocation=(self)"
   );
   return res;
 }
@@ -20,6 +21,9 @@ function applySecurityHeaders(res: NextResponse) {
 export default async function middleware(req: NextRequest) {
   const shellMode = inferShellModeFromUserAgent(req.headers.get("user-agent"));
   const requestHeaders = new Headers(req.headers);
+  // New canonical header; keep the legacy `x-sastipe-shell-mode` alias for one
+  // release so any cached server bundles still resolve the shell mode correctly.
+  requestHeaders.set("x-redi-shell-mode", shellMode);
   requestHeaders.set("x-sastipe-shell-mode", shellMode);
 
   let res: NextResponse;

@@ -989,7 +989,10 @@
     "stop": "Oprește ascultarea",
     "readAloud": "Ascultă",
     "readMessageAloud": "Ascultă mesajul",
-    "readExplanationAloud": "Ascultă explicația"
+    "readExplanationAloud": "Ascultă explicația",
+    "micDeepgram": "Apasă pentru a vorbi — voce multilingvă (Deepgram)",
+    "micError": "Nu am putut accesa microfonul.",
+    "detected": "Limbă detectată: {lang}"
   },
   "severity": {
     "green": "Gestionare acasă",

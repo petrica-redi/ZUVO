@@ -80,17 +80,22 @@ Three controls run on every AI call:
 
 When either daily counter is exceeded, the API returns `503 service_paused` with a friendly message and an `X-Redi-Budget` header. This is intentional — it caps cost in the worst case (an LLM-cost DoS).
 
-## 6. Observability
+## 6. Voice (Deepgram)
+
+Multilingual STT for the chat mic comes from Deepgram. Set `DEEPGRAM_API_KEY` to enable; when missing, the mic transparently falls back to the browser's WebSpeech engine. See [`VOICE.md`](./VOICE.md) for setup, rate limits, and cost notes.
+
+## 7. Observability
 
 | Tool | Purpose | Variables |
 |------|---------|-----------|
 | Sentry | Error tracking + source maps | `NEXT_PUBLIC_SENTRY_DSN`, `SENTRY_ORG`, `SENTRY_PROJECT`, `SENTRY_AUTH_TOKEN` |
 | Langfuse | AI request tracing | `LANGFUSE_PUBLIC_KEY`, `LANGFUSE_SECRET_KEY`, `LANGFUSE_BASE_URL` |
 | PostHog | Product analytics | `NEXT_PUBLIC_POSTHOG_KEY`, `NEXT_PUBLIC_POSTHOG_HOST` |
+| Deepgram | Speech-to-text (multilingual mic) | `DEEPGRAM_API_KEY` |
 
 Health endpoint at `GET /api/health` returns DB, Redis, and AI-config status. Wire to your uptime monitor.
 
-## 7. CI/CD
+## 8. CI/CD
 
 GitHub Actions in [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) runs on every PR and push to `main`:
 
@@ -100,7 +105,7 @@ typecheck → lint → unit tests → build → E2E (Playwright)
 
 Vercel auto-deploys preview environments per PR and promotes `main` to production. Each preview gets a unique URL with the same env contract.
 
-## 8. Domain & DNS — `redi.healthcare`
+## 9. Domain & DNS — `redi.healthcare`
 
 Canonical production URL is **`https://redi.healthcare`** (apex). The marketing footer, sitemap, mailto links, Capacitor `server.url`, robots.txt and CI all reference this host.
 
@@ -130,6 +135,6 @@ curl -sI https://www.redi.healthcare | head -1 # expect HTTP/2 308 to apex
 
 TLS, HSTS, and CSP headers are configured in `next.config.ts` and the middleware.
 
-## 9. Emergencies
+## 10. Emergencies
 
 See [`RUNBOOK.md`](./RUNBOOK.md) for incident procedures: AI outage, rate-limit storm, PII exposure, database failure.

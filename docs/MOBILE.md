@@ -1,6 +1,6 @@
 # Mobile (Android + iOS)
 
-Sastipe ships as a single Next.js codebase that runs three ways:
+Redi Health ships as a single Next.js codebase that runs three ways:
 
 1. **Mobile-optimized web** — works on any phone browser, no install.
 2. **Installable PWA** — Add to Home Screen on Android Chrome and iOS Safari, with offline fallback, app shortcuts, and a share target.
@@ -49,7 +49,7 @@ This already works against the deployed Vercel build. No further code changes re
 2. Tap the Share button (square with arrow).
 3. Scroll down → "Add to Home Screen" → "Add".
 
-After install, the app launches fullscreen with the Sastipe icon, supports the four shortcuts (long-press the icon), and works offline against cached pages.
+After install, the app launches fullscreen with the Redi Health icon, supports the four shortcuts (long-press the icon), and works offline against cached pages.
 
 ---
 

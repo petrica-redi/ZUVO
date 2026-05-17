@@ -46,8 +46,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   const locale = await getLocale();
   const cfg = getAppConfig();
   const hdrs = await headers();
-  const shellMode =
-    hdrs.get("x-sastipe-shell-mode") === "mobile" ? "mobile" : "desktop";
+  const shellModeHeader =
+    hdrs.get("x-redi-shell-mode") ?? hdrs.get("x-sastipe-shell-mode");
+  const shellMode = shellModeHeader === "mobile" ? "mobile" : "desktop";
 
   return (
     <html
