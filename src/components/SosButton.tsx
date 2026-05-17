@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, X, Heart, Shield, Flame, Pill, MapPin, AlertTriangle } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Phone, X, Heart, Shield, Pill, MapPin, AlertTriangle } from "lucide-react";
 
 const EMERGENCY_NUMBERS: Record<string, { ambulance: string; police: string; fire: string; domestic: string; poison: string }> = {
   albania:   { ambulance: "127", police: "129", fire: "128", domestic: "116 117", poison: "127" },
@@ -14,15 +15,16 @@ const EMERGENCY_NUMBERS: Record<string, { ambulance: string; police: string; fir
 };
 
 const FIRST_AID = [
-  { id: "bleeding", emoji: "🩸", label: "Bleeding", steps: "Press HARD with clean cloth. Do NOT lift. Add more cloth on top. Call 112." },
-  { id: "choking", emoji: "😮", label: "Choking", steps: "5 back blows between shoulder blades. 5 abdominal thrusts. Repeat. Call 112." },
-  { id: "burns", emoji: "🔥", label: "Burns", steps: "Cool water 10+ min. No butter/oil/toothpaste. Cover loosely. Call 112 if large." },
-  { id: "cpr", emoji: "💓", label: "Not breathing", steps: "Call 112. Push hard & fast center of chest. 100/min. Don't stop until help arrives." },
-  { id: "seizure", emoji: "⚡", label: "Seizure", steps: "Clear area. Do NOT hold them down. Do NOT put anything in mouth. Time it. Call 112 if >5min." },
-  { id: "poison", emoji: "☠️", label: "Poisoning", steps: "Call poison center. Do NOT make them vomit. Save the container/label. Call 112." },
-];
+  { id: "bleeding", emoji: "🩸" },
+  { id: "choking", emoji: "😮" },
+  { id: "burns", emoji: "🔥" },
+  { id: "cpr", emoji: "💓" },
+  { id: "seizure", emoji: "⚡" },
+  { id: "poison", emoji: "☠️" },
+] as const;
 
 export function SosButton() {
+  const t = useTranslations("sos");
   const [open, setOpen] = useState(false);
   const [showFirstAid, setShowFirstAid] = useState<string | null>(null);
 
@@ -31,60 +33,74 @@ export function SosButton() {
   if (!open) {
     return (
       <button
-        onClick={() => setOpen(true)}
-        className="absolute right-3 top-14 z-50 flex h-12 w-12 items-center justify-center rounded-full shadow-lg animate-pulse-glow"
-        style={{ background: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)" }}
-        aria-label="Emergency SOS — tap for emergency numbers and first aid"
+        onClick={() => {
+          setOpen(true);
+          void import("@/lib/native/bridge").then(({ hapticWarning }) =>
+            hapticWarning(),
+          );
+        }}
+        className="absolute right-3 top-16 z-50 flex h-12 w-12 items-center justify-center rounded-full gradient-emergency grain-overlay shadow-danger animate-pulse-glow-emergency transition-transform active:scale-95"
+        aria-label={t("buttonAria")}
       >
         <div className="flex flex-col items-center">
-          <Phone className="h-4 w-4 text-white" />
-          <span className="text-[7px] font-black text-white tracking-wider">SOS</span>
+          <Phone className="lucide h-4 w-4 text-white" strokeWidth={2.2} />
+          <span className="text-[7px] font-extrabold tracking-widest text-white">SOS</span>
         </div>
       </button>
     );
   }
 
   return (
-    <div className="fixed inset-0 z-[100] flex flex-col bg-black/95 text-white animate-fade-in" role="dialog" aria-label="Emergency information">
+      <div
+      className="fixed inset-0 z-[100] flex flex-col text-white animate-fade-in"
+      style={{
+        background:
+          "radial-gradient(ellipse at top, rgba(220,38,38,0.25) 0%, transparent 60%), radial-gradient(ellipse at bottom, rgba(15,23,42,0.4) 0%, transparent 60%), rgba(2,6,23,0.96)",
+        backdropFilter: "blur(8px)",
+      }}
+      role="dialog"
+      aria-modal="true"
+      aria-label={t("title")}
+    >
       <div className="flex items-center justify-between p-5">
         <div className="flex items-center gap-3">
-          <AlertTriangle className="h-7 w-7 text-red-400" />
-          <span className="text-xl font-black tracking-tight">Emergency</span>
+          <AlertTriangle className="lucide h-7 w-7 text-rose-400" strokeWidth={1.85} />
+          <span className="font-display text-xl font-extrabold tracking-tight">{t("title")}</span>
         </div>
         <button
           onClick={() => { setOpen(false); setShowFirstAid(null); }}
           className="rounded-full bg-white/10 p-3 transition-colors hover:bg-white/20"
-          aria-label="Close emergency panel"
+          aria-label={t("closeAria")}
         >
-          <X className="h-5 w-5" />
+          <X className="lucide h-5 w-5" strokeWidth={2} />
         </button>
       </div>
 
       <div className="flex-1 overflow-y-auto px-5 pb-10">
         <a
           href="tel:112"
-          className="mb-6 flex items-center justify-center gap-4 rounded-3xl p-7 text-2xl font-black shadow-2xl transition-transform active:scale-95"
-          style={{ background: "linear-gradient(135deg, #DC2626 0%, #991B1B 100%)" }}
+          className="mb-6 flex items-center justify-center gap-4 rounded-3xl gradient-emergency grain-overlay p-7 font-display text-2xl font-extrabold shadow-danger transition-transform active:scale-95"
         >
-          <Phone className="h-8 w-8" />
-          Call 112
+          <Phone className="lucide h-8 w-8" strokeWidth={2} />
+          {t("callPrimary")}
         </a>
 
         <div className="mb-6 grid grid-cols-2 gap-3">
           {[
-            { icon: Heart, label: "Ambulance", number: numbers.ambulance, color: "text-red-400" },
-            { icon: Shield, label: "Police", number: numbers.police, color: "text-blue-400" },
-            { icon: Phone, label: "Domestic violence", number: numbers.domestic, color: "text-purple-400" },
-            { icon: Pill, label: "Poison center", number: numbers.poison, color: "text-green-400" },
+            { id: "ambulance", icon: Heart, number: numbers.ambulance, color: "text-rose-400" },
+            { id: "police", icon: Shield, number: numbers.police, color: "text-sky-400" },
+            { id: "domestic", icon: Phone, number: numbers.domestic, color: "text-violet-400" },
+            { id: "poison", icon: Pill, number: numbers.poison, color: "text-emerald-400" },
           ].map((item) => (
             <a
-              key={item.label}
+              key={item.id}
               href={`tel:${item.number.replace(/\s/g, "")}`}
-              className="flex items-center gap-3 rounded-2xl bg-white/10 p-4 transition-colors active:bg-white/20"
+              className="flex items-center gap-3 rounded-2xl bg-white/10 p-4 transition-colors hover:bg-white/15 active:bg-white/20"
+              style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.08)" }}
             >
-              <item.icon className={`h-6 w-6 ${item.color}`} />
+              <item.icon className={`lucide h-6 w-6 ${item.color}`} strokeWidth={1.85} />
               <div>
-                <div className="text-xs text-gray-400">{item.label}</div>
+                <div className="text-xs text-white/60">{t(item.id)}</div>
                 <div className="text-lg font-bold">{item.number}</div>
               </div>
             </a>
@@ -95,35 +111,51 @@ export function SosButton() {
           href="https://www.google.com/maps/search/hospital+near+me"
           target="_blank"
           rel="noopener"
-          className="mb-8 flex items-center gap-4 rounded-2xl bg-white/10 p-5 transition-colors active:bg-white/20"
+          className="mb-8 flex items-center gap-4 rounded-2xl bg-white/10 p-5 transition-colors hover:bg-white/15 active:bg-white/20"
+          style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.08)" }}
         >
-          <MapPin className="h-6 w-6 text-amber-400" />
+          <MapPin className="lucide h-6 w-6 text-[var(--color-ember-400)]" strokeWidth={1.85} />
           <div>
-            <div className="text-base font-bold">Find nearest hospital</div>
-            <div className="text-sm text-gray-400">Opens map with directions</div>
+            <div className="text-base font-bold">{t("findHospital")}</div>
+            <div className="text-sm text-white/60">{t("findHospitalSub")}</div>
           </div>
         </a>
 
-        <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-gray-400">First Aid</h3>
+        <h3 className="mb-4 text-sm font-extrabold uppercase tracking-widest text-white/55">
+          {t("firstAidTitle")}
+        </h3>
         <div className="grid grid-cols-3 gap-3">
           {FIRST_AID.map((fa) => (
             <button
               key={fa.id}
               onClick={() => setShowFirstAid(showFirstAid === fa.id ? null : fa.id)}
-              className={`flex flex-col items-center gap-2 rounded-2xl p-4 transition-all ${
-                showFirstAid === fa.id ? "bg-red-900/50 ring-2 ring-red-500 scale-105" : "bg-white/10"
+              aria-pressed={showFirstAid === fa.id}
+              className={`flex flex-col items-center gap-2 rounded-2xl p-4 transition-all duration-200 ${
+                showFirstAid === fa.id
+                  ? "bg-rose-900/60 ring-2 ring-rose-500 scale-105"
+                  : "bg-white/10 hover:bg-white/15"
               }`}
+              style={{
+                boxShadow:
+                  showFirstAid === fa.id
+                    ? "0 8px 24px rgba(220,38,38,0.25)"
+                    : "inset 0 1px 0 rgba(255,255,255,0.08)",
+                transitionTimingFunction: "var(--ease-emphasized)",
+              }}
             >
-              <span className="text-3xl">{fa.emoji}</span>
-              <span className="text-xs font-semibold">{fa.label}</span>
+              <span className="text-3xl" aria-hidden>{fa.emoji}</span>
+              <span className="text-xs font-semibold">{t(`aid.${fa.id}Label`)}</span>
             </button>
           ))}
         </div>
 
         {showFirstAid && (
-          <div className="mt-4 rounded-2xl bg-red-900/40 p-5 ring-1 ring-red-700 animate-scale-in">
-            <p className="text-base font-bold leading-relaxed">
-              {FIRST_AID.find((f) => f.id === showFirstAid)?.steps}
+          <div
+            className="mt-4 rounded-2xl bg-rose-900/45 p-5 ring-1 ring-rose-700 animate-scale-in"
+            style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.4)" }}
+          >
+            <p className="text-base font-bold leading-relaxed text-white/95">
+              {t(`aid.${showFirstAid}Steps`)}
             </p>
           </div>
         )}

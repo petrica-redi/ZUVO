@@ -36,8 +36,15 @@ const MOODS = [
 
 const STORAGE_KEY = "sastipe_checkin";
 
+function getLocalDayString(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
 function getTodayKey() {
-  return new Date().toISOString().slice(0, 10);
+  return getLocalDayString(new Date());
 }
 
 function getCheckinHistory(): Record<string, { mood: number; water: number; activity: string }> {
@@ -47,6 +54,23 @@ function getCheckinHistory(): Record<string, { mood: number; water: number; acti
   } catch {
     return {};
   }
+}
+
+function calculateStreak(history: Record<string, unknown>): number {
+  const today = getTodayKey();
+  const d = new Date();
+  if (!history[today]) {
+    d.setDate(d.getDate() - 1);
+  }
+
+  let streak = 0;
+  while (true) {
+    const key = getLocalDayString(d);
+    if (!history[key]) break;
+    streak++;
+    d.setDate(d.getDate() - 1);
+  }
+  return streak;
 }
 
 export function DailyCheckin({ labels }: { labels: Labels }) {
@@ -61,16 +85,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
     const history = getCheckinHistory();
     const today = history[getTodayKey()];
 
-    // Calculate streak
-    let s = 0;
-    const d = new Date();
-    while (true) {
-      const key = d.toISOString().slice(0, 10);
-      if (history[key]) {
-        s++;
-        d.setDate(d.getDate() - 1);
-      } else break;
-    }
+    const s = calculateStreak(history);
 
     queueMicrotask(() => {
       if (today) {
@@ -118,7 +133,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
 
     setSaved(true);
     setTodayDone(true);
-    setStreak((s) => s + (s === 0 || !getCheckinHistory()[getTodayKey()] ? 1 : 0));
+    setStreak(calculateStreak(history));
     setTimeout(() => setSaved(false), 2000);
   };
 
@@ -152,6 +167,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
             <button
               key={m.value}
               onClick={() => setMood(m.value)}
+              aria-pressed={mood === m.value}
               className={`flex flex-1 flex-col items-center gap-1 rounded-2xl border-2 p-3 transition-all ${
                 mood === m.value
                   ? "scale-105 shadow-md"
@@ -175,6 +191,8 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
             <button
               key={g}
               onClick={() => setWater(g)}
+              aria-label={`${labels.waterGoal} ${g}`}
+              aria-pressed={g <= water}
               className={`flex h-10 w-10 items-center justify-center rounded-xl transition-all ${
                 g <= water
                   ? "bg-blue-500 text-white shadow-md"
@@ -199,6 +217,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
             <button
               key={a.id}
               onClick={() => setActivity(a.id)}
+              aria-pressed={activity === a.id}
               className={`flex flex-1 flex-col items-center gap-1 rounded-2xl border-2 p-3 transition-all ${
                 activity === a.id
                   ? "scale-105 shadow-md"

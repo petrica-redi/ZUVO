@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Search, BookOpen } from "lucide-react";
-import { GLOSSARY, CATEGORY_CONFIG, type GlossaryEntry } from "@/data/glossary";
+import { GLOSSARY, CATEGORY_CONFIG } from "@/data/glossary";
 
 type CategoryKey = keyof typeof CATEGORY_CONFIG;
 

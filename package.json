@@ -2,8 +2,12 @@
   "name": "sastipe",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-env.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -12,24 +16,46 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
+    "check:env": "node scripts/check-env.mjs",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "mobile:init:ios": "cap add ios",
+    "mobile:init:android": "cap add android",
+    "mobile:sync": "cap sync",
+    "mobile:open:ios": "cap open ios",
+    "mobile:open:android": "cap open android",
+    "mobile:run:ios": "cap run ios",
+    "mobile:run:android": "cap run android",
+    "mobile:assets": "capacitor-assets generate --iconBackgroundColor '#4F46E5' --iconBackgroundColorDark '#0A0F1F' --splashBackgroundColor '#F4F6FB' --splashBackgroundColorDark '#0A0F1F'",
+    "mobile:export": "node scripts/mobile-export.mjs"
   },
   "dependencies": {
+    "@capacitor/android": "^8.3.1",
+    "@capacitor/app": "^8.1.0",
+    "@capacitor/browser": "^8.0.3",
+    "@capacitor/core": "^8.3.1",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/ios": "^8.3.1",
+    "@capacitor/keyboard": "^8.0.3",
+    "@capacitor/network": "^8.0.1",
+    "@capacitor/preferences": "^8.0.1",
+    "@capacitor/share": "^8.0.1",
+    "@capacitor/splash-screen": "^8.0.1",
+    "@capacitor/status-bar": "^8.0.2",
     "@neondatabase/serverless": "^1.0.2",
     "@sentry/nextjs": "^10.44.0",
     "@supabase/ssr": "^0.9.0",
     "@supabase/supabase-js": "^2.99.2",
     "@tanstack/react-query": "^5.91.0",
-    "@trigger.dev/sdk": "^4.4.3",
     "drizzle-orm": "^0.45.1",
     "langfuse": "^3.38.6",
     "lucide-react": "^0.577.0",
-    "next": "16.2.0",
+    "next": "^16.2.6",
     "next-intl": "^4.8.3",
     "postgres": "^3.4.8",
+    "posthog-js": "^1.373.5",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-hook-form": "^7.71.2",
@@ -38,6 +64,8 @@
     "zustand": "^5.0.12"
   },
   "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^8.3.1",
     "@playwright/test": "^1.58.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
@@ -45,9 +73,13 @@
     "@types/react-dom": "^19",
     "drizzle-kit": "^0.31.10",
     "eslint": "^9",
-    "eslint-config-next": "16.2.0",
+    "eslint-config-next": "^16.2.6",
+    "jsdom": "^29.1.1",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.1.0"
+  },
+  "overrides": {
+    "postcss": "^8.5.10"
   }
 }

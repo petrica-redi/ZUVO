@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { Send, AlertTriangle, MessageCircle } from "lucide-react";
+import { useState, useRef, useEffect, useCallback } from "react";
+import { Send, AlertTriangle, MessageCircle, Mic, Volume2 } from "lucide-react";
+import { useSpeechRecognition, speakText } from "@/lib/voice";
 
 type Message = {
   id: string;
@@ -18,6 +19,7 @@ type Labels = {
   emergencyCall: string;
   suggestedQuestions: string;
   suggestions: string[];
+  askMeAnything: string;
 };
 
 export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string }) {
@@ -27,6 +29,10 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
   const [error, setError] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  const { isListening, supported: voiceSupported, toggleListening } = useSpeechRecognition({
+    onResult: useCallback((text) => setInput((prev) => prev + " " + text), [])
+  });
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -38,6 +44,8 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       inputRef.current.style.height = Math.min(inputRef.current.scrollHeight, 120) + "px";
     }
   }, [input]);
+
+  const cancelledRef = useRef(false);
 
   const sendMessage = async (text?: string) => {
     const content = text ?? input.trim();
@@ -61,6 +69,8 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       content: m.content,
     }));
 
+    let assistantMsgId = "";
+
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
@@ -70,8 +80,9 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
 
       if (!response.ok) throw new Error("Failed");
 
+      assistantMsgId = crypto.randomUUID();
       const assistantMsg: Message = {
-        id: crypto.randomUUID(),
+        id: assistantMsgId,
         role: "assistant",
         content: "",
         timestamp: new Date(),
@@ -84,7 +95,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
 
       if (reader) {
         let buffer = "";
-        while (true) {
+        while (!cancelledRef.current) {
           const { done, value } = await reader.read();
           if (done) break;
 
@@ -100,7 +111,10 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
                   assistantMsg.content += t;
                   setMessages((prev) => {
                     const updated = [...prev];
-                    updated[updated.length - 1] = { ...assistantMsg };
+                    const idx = updated.findIndex((m) => m.id === assistantMsgId);
+                    if (idx !== -1) {
+                      updated[idx] = { ...assistantMsg };
+                    }
                     return updated;
                   });
                 }
@@ -113,11 +127,17 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       }
     } catch {
       setError(labels.errorMessage);
-      setMessages((prev) => prev.filter((m) => m.id !== "loading"));
+      setMessages((prev) => prev.filter((m) => m.id !== assistantMsgId));
     } finally {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    return () => {
+      cancelledRef.current = true;
+    };
+  }, []);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {
@@ -146,7 +166,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
             >
               <MessageCircle className="h-10 w-10 text-white" />
             </div>
-            <h2 className="mb-2 text-xl font-black text-gray-900">Ask me anything</h2>
+            <h2 className="mb-2 text-xl font-black text-gray-900">{labels.askMeAnything}</h2>
             <p className="mb-6 max-w-xs text-sm text-gray-500">{labels.disclaimer}</p>
 
             <p className="mb-3 text-xs font-black uppercase tracking-widest text-gray-400">
@@ -189,7 +209,18 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
                   <span className="text-xs font-semibold">{labels.thinking}</span>
                 </div>
               ) : (
-                <div className="whitespace-pre-wrap">{msg.content}</div>
+                <div className="whitespace-pre-wrap">
+                  {msg.content}
+                  {msg.role === "assistant" && (
+                    <button 
+                      onClick={() => speakText(msg.content, locale)}
+                      className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-600 align-middle"
+                      aria-label="Read message aloud"
+                    >
+                      <Volume2 className="h-4 w-4 inline-block" />
+                    </button>
+                  )}
+                </div>
               )}
             </div>
           </div>
@@ -203,8 +234,21 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       </div>
 
       {/* Input area */}
-      <div className="border-t border-gray-100 bg-white/90 backdrop-blur-xl p-3">
+      <div className="border-t border-[var(--color-border-subtle)] bg-[var(--color-surface)]/90 backdrop-blur-xl p-3">
         <div className="flex items-end gap-2">
+          {voiceSupported && (
+            <button
+              onClick={toggleListening}
+              className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full transition-all ${
+                isListening 
+                  ? "bg-red-100 text-red-600 animate-pulse" 
+                  : "bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-hover)]"
+              }`}
+              aria-label={isListening ? "Stop listening" : "Start speaking"}
+            >
+              <Mic className="h-5 w-5" />
+            </button>
+          )}
           <textarea
             ref={inputRef}
             value={input}
@@ -212,15 +256,15 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
             onKeyDown={handleKeyDown}
             placeholder={labels.placeholder}
             rows={1}
-            className="flex-1 resize-none rounded-2xl border-2 border-gray-100 bg-gray-50 px-5 py-3.5 text-sm focus:border-[#C0392B] focus:outline-none focus:ring-2 focus:ring-[#C0392B]/20"
+            className="flex-1 resize-none rounded-2xl border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-5 py-3.5 text-sm text-[var(--color-text-primary)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
             disabled={isLoading}
             aria-label="Type your health question"
           />
           <button
             onClick={() => sendMessage()}
             disabled={!input.trim() || isLoading}
-            className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full text-white shadow-lg transition-all active:scale-90 disabled:bg-gray-300"
-            style={{ background: !input.trim() || isLoading ? undefined : "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" }}
+            className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full text-white shadow-3 transition-all active:scale-90 disabled:bg-[var(--color-surface-subtle)] disabled:text-[var(--color-text-muted)]"
+            style={{ background: !input.trim() || isLoading ? undefined : "linear-gradient(135deg, #4F46E5 0%, #6D28D9 100%)" }}
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />

@@ -1,4 +1,40 @@
 import { NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
+import { parseJsonBody, validationError } from "@/lib/api/validation";
+import { parseAiJson } from "@/lib/ai/json";
+import { buildEmergencyConsultSummary, detectEmergencyRedFlag } from "@/lib/health/red-flags";
+import { applyRateLimitAsync, getClientIp } from "@/lib/api/rate-limit";
+import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
+import { traceAsync } from "@/lib/langfuse";
+
+const chatMessageSchema = z.object({
+  role: z.enum(["user", "assistant"]),
+  content: z.string().trim().min(1).max(2000),
+});
+
+const consultRequestSchema = z.object({
+  messages: z.array(chatMessageSchema).min(1).max(12),
+  locale: z.string().trim().min(2).max(16).optional(),
+});
+
+const consultGatheringSchema = z.object({
+  stage: z.literal("gathering"),
+  message: z.string().min(1).max(1600),
+  questionsAsked: z.number().int().min(0).max(5).default(1),
+});
+
+const consultSummarySchema = z.object({
+  stage: z.literal("summary"),
+  severity: z.enum(["green", "amber", "red"]),
+  title: z.string().min(1).max(120),
+  assessment: z.string().min(1).max(1200),
+  whatToDo: z.string().min(1).max(1200),
+  watchFor: z.string().min(1).max(1000),
+  homeRemedies: z.string().max(1000).optional(),
+  doctorVisitSummary: z.string().min(1).max(1200),
+});
+
+const consultResponseSchema = z.union([consultGatheringSchema, consultSummarySchema]);
 
 const CONSULT_PROMPT = `You are a Roma health mediator conducting a guided health consultation. You have 15 years of field experience in Roma communities across Europe. You are NOT a doctor. You NEVER diagnose. You help people understand their symptoms and decide what to do next.
 
@@ -40,56 +76,109 @@ Rules:
 - Respond in the same language the user writes in`;
 
 export async function POST(req: NextRequest) {
+  // Layer 1: rate limit (durable when Upstash is configured)
+  const rate = await applyRateLimitAsync(req, {
+    namespace: "consult",
+    limit: 12,
+    windowMs: 60_000,
+  });
+  if (!rate.allowed) return rate.response;
+
+  const parsed = await parseJsonBody(req, consultRequestSchema);
+  if (!parsed.success) return validationError(parsed.error);
+
+  const { messages, locale } = parsed.data;
+
+  // Layer 2: deterministic emergency red-flag override (free, never gated)
+  const redFlag = detectEmergencyRedFlag(messages.map((m) => m.content).join("\n"));
+  if (redFlag) {
+    return NextResponse.json({
+      success: true,
+      data: buildEmergencyConsultSummary(redFlag),
+      safetyOverride: true,
+    });
+  }
+
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
+    return NextResponse.json(
+      { success: false, error: "AI service not configured" },
+      { status: 503 },
+    );
   }
 
-  const { messages, locale } = (await req.json()) as {
-    messages: { role: "user" | "assistant"; content: string }[];
-    locale?: string;
-  };
+  // Layer 3: AI cost & per-user cap
+  const budget = await checkAiBudget(req);
+  if (!budget.allowed) return aiBudgetExceededResponse(budget);
 
-  if (!messages?.length) {
-    return NextResponse.json({ error: "No messages provided" }, { status: 400 });
-  }
+  // Layer 4: PII scrub + prompt-injection guard before sending to provider
+  const sanitizedMessages = messages.slice(-8).map((m) => ({
+    role: m.role,
+    content: sanitizeAiInput(m.content),
+  }));
 
   const localeNote = locale
     ? `\nThe user's preferred language is "${locale}". Respond in that language.`
     : "";
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
+  return traceAsync(
+    {
+      name: "ai.consult",
+      tags: ["api", "consult", locale ?? "unknown"],
+      metadata: { clientId: getClientIp(req), messageCount: sanitizedMessages.length },
     },
-    body: JSON.stringify({
-      model: "gpt-4o",
-      max_tokens: 1000,
-      temperature: 0.4,
-      messages: [
-        { role: "system", content: CONSULT_PROMPT + localeNote },
-        ...messages.slice(-8),
-      ],
-    }),
-  });
+    async () => {
+      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: "gpt-4o",
+          max_tokens: 1000,
+          temperature: 0.4,
+          messages: [
+            { role: "system", content: CONSULT_PROMPT + localeNote },
+            ...sanitizedMessages,
+          ],
+        }),
+        signal: AbortSignal.timeout(30_000),
+      });
 
-  if (!response.ok) {
-    return NextResponse.json({ error: "AI service error" }, { status: 502 });
-  }
+      if (!response.ok) {
+        return NextResponse.json(
+          { success: false, error: "AI service error" },
+          { status: 502 },
+        );
+      }
 
-  const data = await response.json();
-  const content = data.choices?.[0]?.message?.content ?? "";
+      const data = await response.json();
+      const content = data.choices?.[0]?.message?.content ?? "";
 
-  try {
-    const jsonMatch = content.match(/\{[\s\S]*\}/);
-    const result = JSON.parse(jsonMatch ? jsonMatch[0] : content);
-    return NextResponse.json({ success: true, data: result });
-  } catch {
-    return NextResponse.json({
-      success: true,
-      data: { stage: "gathering", message: content, questionsAsked: 1 },
-    });
-  }
+      const result = parseAiJson(content, consultResponseSchema);
+      if (!result.success) {
+        return NextResponse.json({
+          success: true,
+          data: {
+            stage: "gathering",
+            message:
+              "I need one more detail to answer safely. What is the main symptom, how long has it been happening, and is there any trouble breathing, chest pain, heavy bleeding, fainting, or suicidal thoughts?",
+            questionsAsked: 1,
+          },
+          fallback: true,
+        });
+      }
+
+      return NextResponse.json(
+        { success: true, data: result.data },
+        {
+          headers: {
+            "X-Sastipe-Budget-Remaining": String(budget.remainingUserCalls),
+            "X-Sastipe-Budget-Backend": budget.capacityKnown ? "upstash" : "memory",
+          },
+        },
+      );
+    },
+  );
 }

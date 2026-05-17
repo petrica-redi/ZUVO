@@ -4,34 +4,70 @@
  * Accepts: { messages: [{ role, content }], locale: string }
  * Returns: streaming text response from OpenAI
  */
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
 import { SYSTEM_PROMPT, CHAT_CONFIG } from "@/lib/ai/system-prompt";
+import { parseJsonBody } from "@/lib/api/validation";
+import { applyRateLimitAsync } from "@/lib/api/rate-limit";
+import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
+import { buildEmergencyConsultSummary, detectEmergencyRedFlag } from "@/lib/health/red-flags";
+
+const chatMessageSchema = z.object({
+  role: z.enum(["user", "assistant"]),
+  content: z.string().trim().min(1).max(2000),
+});
+
+const chatRequestSchema = z.object({
+  messages: z.array(chatMessageSchema).min(1).max(12),
+  locale: z.string().trim().min(2).max(16).optional(),
+});
+
+function sseChunk(payload: unknown): string {
+  return `data: ${JSON.stringify(payload)}\n\n`;
+}
 
 export async function POST(req: NextRequest) {
+  const rate = await applyRateLimitAsync(req, {
+    namespace: "chat",
+    limit: 12,
+    windowMs: 60_000,
+  });
+  if (!rate.allowed) return rate.response;
+
+  const parsedBody = await parseJsonBody(req, chatRequestSchema);
+  if (!parsedBody.success) return parsedBody.response;
+
+  const { messages, locale } = parsedBody.data;
+  const latestText = messages.map((m) => m.content).join("\n");
+  const redFlag = detectEmergencyRedFlag(latestText);
+  if (redFlag) {
+    const summary = buildEmergencyConsultSummary(redFlag);
+    const text = `${summary.title}\n\n${summary.whatToDo}\n\n${summary.assessment}`;
+    return new Response(`${sseChunk({ text })}data: [DONE]\n\n`, {
+      headers: {
+        "Content-Type": "text/event-stream",
+        "Cache-Control": "no-cache",
+        Connection: "keep-alive",
+        "X-Sastipe-Safety-Override": "true",
+      },
+    });
+  }
+
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    return new Response(
-      JSON.stringify({ error: "AI service not configured" }),
-      { status: 503, headers: { "Content-Type": "application/json" } }
-    );
+    return NextResponse.json({ success: false, error: "AI service not configured" }, { status: 503 });
   }
 
-  const body = await req.json();
-  const { messages, locale } = body as {
-    messages: { role: "user" | "assistant"; content: string }[];
-    locale?: string;
-  };
-
-  if (!messages || messages.length === 0) {
-    return new Response(
-      JSON.stringify({ error: "No messages provided" }),
-      { status: 400, headers: { "Content-Type": "application/json" } }
-    );
-  }
+  const budget = await checkAiBudget(req);
+  if (!budget.allowed) return aiBudgetExceededResponse(budget);
 
   const localeInstruction = locale
     ? `\n\nIMPORTANT: The user's preferred language is "${locale}". Respond in this language. If they write in a different language, respond in the language they wrote in.`
     : "";
+  const sanitizedMessages = messages.slice(-10).map((m) => ({
+    role: m.role,
+    content: sanitizeAiInput(m.content),
+  }));
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
@@ -46,16 +82,15 @@ export async function POST(req: NextRequest) {
       stream: true,
       messages: [
         { role: "system", content: SYSTEM_PROMPT + localeInstruction },
-        ...messages.slice(-10),
+        ...sanitizedMessages,
       ],
     }),
+    signal: AbortSignal.timeout(30_000),
   });
 
   if (!response.ok) {
-    const err = await response.text();
-    console.error("OpenAI API error:", err);
     return new Response(
-      JSON.stringify({ error: "AI service temporarily unavailable" }),
+      JSON.stringify({ success: false, error: "AI service temporarily unavailable" }),
       { status: 502, headers: { "Content-Type": "application/json" } }
     );
   }
@@ -104,8 +139,8 @@ export async function POST(req: NextRequest) {
             }
           }
         }
-      } catch (err) {
-        console.error("Stream error:", err);
+      } catch {
+        controller.enqueue(encoder.encode(sseChunk({ text: "\n\nThe AI stream was interrupted. Please try again." })));
       } finally {
         controller.close();
       }

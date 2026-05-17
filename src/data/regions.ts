@@ -493,6 +493,8 @@ export const REGIONS: RegionData[] = [
   },
 ];
 
+export type RegionSlug = (typeof REGIONS)[number]["id"];
+
 export function getRegion(id: string): RegionData | undefined {
   return REGIONS.find((r) => r.id === id);
 }

@@ -17,3 +17,8 @@ test("sitemap.xml is accessible", async ({ page }) => {
   const res = await page.goto("/sitemap.xml");
   expect(res?.status()).toBe(200);
 });
+
+test("Student Health Academy hub loads", async ({ page }) => {
+  await page.goto("/students");
+  await expect(page.getByRole("heading", { name: /Student Health Academy/i })).toBeVisible();
+});

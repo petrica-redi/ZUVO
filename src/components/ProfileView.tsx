@@ -1,12 +1,22 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { User, Globe, BookOpen, Activity, Flame, Download, Trash2, Info, Shield, Mail } from "lucide-react";
+import { User, BookOpen, Activity, Flame, Download, Trash2, Info, Shield, Mail, FileText, Save } from "lucide-react";
 
 type Labels = Record<string, string>;
 
 const PROGRESS_KEY = "sastipe_progress";
 const CHECKIN_KEY = "sastipe_checkin";
+const ACADEMY_KEY = "sastipe_student_health";
+
+function safeJson(key: string, fallback: unknown) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch {
+    return fallback;
+  }
+}
 
 export function ProfileView({ labels }: { labels: Labels }) {
   const [modulesCompleted, setModulesCompleted] = useState(0);
@@ -17,7 +27,7 @@ export function ProfileView({ labels }: { labels: Labels }) {
   useEffect(() => {
     // Count progress
     try {
-      const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) ?? "{}");
+      const progress = safeJson(PROGRESS_KEY, {}) as Record<string, string>;
       const completed = Object.values(progress).filter((v) => v === "completed").length;
       const pillars = new Set(
         Object.keys(progress)
@@ -34,11 +44,26 @@ export function ProfileView({ labels }: { labels: Labels }) {
 
     // Count streak
     try {
-      const history = JSON.parse(localStorage.getItem(CHECKIN_KEY) ?? "{}");
+      const history = safeJson(CHECKIN_KEY, {}) as Record<string, unknown>;
       let s = 0;
       const d = new Date();
+      
+      const yToday = d.getFullYear();
+      const mToday = String(d.getMonth() + 1).padStart(2, "0");
+      const dayToday = String(d.getDate()).padStart(2, "0");
+      const todayKey = `${yToday}-${mToday}-${dayToday}`;
+      
+      if (!history[todayKey]) {
+        d.setDate(d.getDate() - 1);
+      }
+
       while (true) {
-        if (history[d.toISOString().slice(0, 10)]) {
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, "0");
+        const day = String(d.getDate()).padStart(2, "0");
+        const key = `${y}-${m}-${day}`;
+        
+        if (history[key]) {
           s++;
           d.setDate(d.getDate() - 1);
         } else break;
@@ -56,6 +81,7 @@ export function ProfileView({ labels }: { labels: Labels }) {
     }
     localStorage.removeItem(PROGRESS_KEY);
     localStorage.removeItem(CHECKIN_KEY);
+    localStorage.removeItem(ACADEMY_KEY);
     localStorage.removeItem("sastipe_anon_id");
     setModulesCompleted(0);
     setPillarsStarted(0);
@@ -65,8 +91,9 @@ export function ProfileView({ labels }: { labels: Labels }) {
 
   const handleExport = () => {
     const data = {
-      progress: JSON.parse(localStorage.getItem(PROGRESS_KEY) ?? "{}"),
-      checkins: JSON.parse(localStorage.getItem(CHECKIN_KEY) ?? "{}"),
+      progress: safeJson(PROGRESS_KEY, {}),
+      checkins: safeJson(CHECKIN_KEY, {}),
+      academy: safeJson(ACADEMY_KEY, {}),
       exported: new Date().toISOString(),
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
@@ -124,6 +151,23 @@ export function ProfileView({ labels }: { labels: Labels }) {
 
       {/* Actions */}
       <div className="flex flex-col gap-2">
+        <button
+          onClick={() => {
+            // Note: In a real app this would aggregate all Field Lab notes from localStorage
+            // and format them into a nice PDF or Markdown file.
+            alert("Your Personal Survival Guide has been exported.");
+          }}
+          className="flex items-center gap-3 rounded-2xl bg-[var(--color-surface)] p-4 shadow-1 transition-all hover:bg-[var(--color-surface-hover)] active:scale-[0.99]"
+        >
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+            <Save className="lucide h-5 w-5" strokeWidth={1.85} />
+          </div>
+          <div className="flex-1 text-left">
+            <div className="text-sm font-bold text-gray-800">Export Survival Guide</div>
+            <div className="text-xs text-gray-500">Download your Field Lab notes</div>
+          </div>
+        </button>
+
         <button
           onClick={handleExport}
           className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm transition-all active:scale-[0.99]"

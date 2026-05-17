@@ -1,4 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
+import { parseJsonBody } from "@/lib/api/validation";
+import { parseAiJson } from "@/lib/ai/json";
+import { applyRateLimitAsync } from "@/lib/api/rate-limit";
+import { aiBudgetExceededResponse, checkAiBudget, sanitizeAiInput } from "@/lib/api/ai-budget";
+import { buildEmergencyConsultSummary, detectEmergencyRedFlag } from "@/lib/health/red-flags";
 
 const EXPLAIN_PROMPT = `You are a medical translator for Roma communities in Europe. Your job is to take medical terms, diagnoses, and prescription medications and explain them in the simplest possible language — as if explaining to someone who never finished school but is intelligent and deserves to understand their own health.
 
@@ -41,17 +47,72 @@ Rules:
 - Include 2-4 medications if they're mentioned, or provide common medications for the diagnosis
 - Always include at least 3 questions for the doctor and 3 daily tips`;
 
+const explainRequestSchema = z.object({
+  input: z.string().trim().min(1).max(1600),
+  locale: z.string().trim().min(2).max(16).optional(),
+});
+
+const explainResponseSchema = z.object({
+  diagnosis: z.object({
+    name: z.string().min(1).max(180),
+    simpleExplanation: z.string().min(1).max(1400),
+    whyItMatters: z.string().min(1).max(1000),
+    whatHappensIfIgnored: z.string().min(1).max(1000),
+  }),
+  medications: z.array(z.object({
+    name: z.string().min(1).max(120),
+    whatItDoes: z.string().min(1).max(700),
+    howToTake: z.string().min(1).max(700),
+    sideEffects: z.string().min(1).max(700),
+    neverDo: z.string().min(1).max(700),
+  })).max(6).default([]),
+  questionsForDoctor: z.array(z.string().min(1).max(300)).max(8),
+  dailyTips: z.array(z.string().min(1).max(300)).max(8),
+  emergencySigns: z.array(z.string().min(1).max(300)).max(8),
+});
+
 export async function POST(req: NextRequest) {
+  const rate = await applyRateLimitAsync(req, {
+    namespace: "explain",
+    limit: 20,
+    windowMs: 60_000,
+  });
+  if (!rate.allowed) return rate.response;
+
+  const parsed = await parseJsonBody(req, explainRequestSchema);
+  if (!parsed.success) return parsed.response;
+  const { input, locale } = parsed.data;
+
+  const redFlag = detectEmergencyRedFlag(input);
+  if (redFlag) {
+    const summary = buildEmergencyConsultSummary(redFlag);
+    return NextResponse.json({
+      success: true,
+      data: {
+        diagnosis: {
+          name: summary.title,
+          simpleExplanation: summary.assessment,
+          whyItMatters: "This can be life-threatening and needs emergency help.",
+          whatHappensIfIgnored: summary.watchFor,
+        },
+        medications: [],
+        questionsForDoctor: ["What should I do immediately while help is coming?"],
+        dailyTips: [summary.whatToDo],
+        emergencySigns: ["This is already an emergency red flag."],
+      },
+      safetyOverride: true,
+    });
+  }
+
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ error: "AI service not configured" }, { status: 503 });
+    return NextResponse.json({ success: false, error: "AI service not configured" }, { status: 503 });
   }
 
-  const { input, locale } = (await req.json()) as { input: string; locale?: string };
-  if (!input?.trim()) {
-    return NextResponse.json({ error: "No input provided" }, { status: 400 });
-  }
+  const budget = await checkAiBudget(req);
+  if (!budget.allowed) return aiBudgetExceededResponse(budget);
 
+  const cleanInput = sanitizeAiInput(input);
   const localeNote = locale
     ? `\nThe user's language is "${locale}". Respond in that language. If the medical terms are in another language, keep the medical terms but explain everything else in the user's language.`
     : "";
@@ -68,9 +129,10 @@ export async function POST(req: NextRequest) {
       temperature: 0.3,
       messages: [
         { role: "system", content: EXPLAIN_PROMPT + localeNote },
-        { role: "user", content: `Explain this prescription or diagnosis: "${input}"` },
+        { role: "user", content: `Explain this prescription or diagnosis: "${cleanInput}"` },
       ],
     }),
+    signal: AbortSignal.timeout(30_000),
   });
 
   if (!response.ok) {
@@ -80,25 +142,23 @@ export async function POST(req: NextRequest) {
   const data = await response.json();
   const content = data.choices?.[0]?.message?.content ?? "";
 
-  try {
-    const jsonMatch = content.match(/\{[\s\S]*\}/);
-    const result = JSON.parse(jsonMatch ? jsonMatch[0] : content);
-    return NextResponse.json({ success: true, data: result });
-  } catch {
-    return NextResponse.json({
-      success: true,
-      data: {
-        diagnosis: {
-          name: input,
-          simpleExplanation: content,
-          whyItMatters: "Please ask your doctor or health mediator to explain further.",
-          whatHappensIfIgnored: "It is important to follow your doctor's advice.",
-        },
-        medications: [],
-        questionsForDoctor: ["Can you explain my diagnosis in simple words?"],
-        dailyTips: ["Take your medication as prescribed every day."],
-        emergencySigns: ["If you feel very unwell, call 112."],
+  const ai = parseAiJson(content, explainResponseSchema);
+  if (ai.success) return NextResponse.json({ success: true, data: ai.data });
+
+  return NextResponse.json({
+    success: true,
+    data: {
+      diagnosis: {
+        name: input,
+        simpleExplanation: content || "I could not safely explain this item right now.",
+        whyItMatters: "Please ask your doctor or health mediator to explain further.",
+        whatHappensIfIgnored: "It is important to follow your doctor's advice.",
       },
-    });
-  }
+      medications: [],
+      questionsForDoctor: ["Can you explain my diagnosis in simple words?"],
+      dailyTips: ["Take your medication as prescribed every day."],
+      emergencySigns: ["If you feel very unwell, call 112."],
+    },
+    fallback: true,
+  });
 }

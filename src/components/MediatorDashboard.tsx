@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Users,
   ClipboardList,
@@ -32,6 +32,18 @@ export function MediatorDashboard({ labels }: { labels: Labels }) {
   const [visitName, setVisitName] = useState("");
   const [visitNotes, setVisitNotes] = useState("");
   const [visitSaved, setVisitSaved] = useState(false);
+  const [visits, setVisits] = useState<Array<{id: string, memberName: string, notes: string, visitDate: string}>>([]);
+
+  useEffect(() => {
+    if (hasAccess) {
+      try {
+        const stored = JSON.parse(localStorage.getItem("sastipe_mediator_visits") || "[]");
+        queueMicrotask(() => setVisits(stored));
+      } catch {
+        queueMicrotask(() => setVisits([]));
+      }
+    }
+  }, [hasAccess]);
 
   const handleAccess = () => {
     if (code === ACCESS_CODE) {
@@ -46,6 +58,17 @@ export function MediatorDashboard({ labels }: { labels: Labels }) {
   const handleSaveVisit = async () => {
     const anonId = localStorage.getItem("sastipe_anon_id") ?? crypto.randomUUID();
     localStorage.setItem("sastipe_anon_id", anonId);
+
+    const newVisit = {
+      id: crypto.randomUUID(),
+      memberName: visitName,
+      notes: visitNotes,
+      visitDate: new Date().toISOString()
+    };
+    
+    const updatedVisits = [newVisit, ...visits];
+    setVisits(updatedVisits);
+    localStorage.setItem("sastipe_mediator_visits", JSON.stringify(updatedVisits));
 
     await fetch("/api/mediator/visits", {
       method: "POST",
@@ -106,20 +129,24 @@ export function MediatorDashboard({ labels }: { labels: Labels }) {
 
       {/* Stats grid */}
       <div className="mb-6 grid grid-cols-3 gap-2">
-        <div className="flex flex-col items-center rounded-2xl bg-white p-4 shadow-sm">
-          <Users className="mb-1 h-5 w-5 text-blue-500" />
-          <span className="text-xl font-bold text-gray-900">—</span>
-          <span className="text-[10px] text-gray-500">{labels.communityMembers}</span>
+        <div className="flex flex-col items-center rounded-2xl bg-[var(--color-surface)] p-4 shadow-1">
+          <Users className="lucide mb-1 h-5 w-5 text-[var(--color-info-accent)]" strokeWidth={1.85} />
+          <span className="font-display text-xl font-extrabold text-[var(--color-text-primary)]">
+            {new Set(visits.map((v) => v.memberName)).size}
+          </span>
+          <span className="text-[10px] text-[var(--color-text-muted)]">{labels.communityMembers}</span>
         </div>
-        <div className="flex flex-col items-center rounded-2xl bg-white p-4 shadow-sm">
-          <ClipboardList className="mb-1 h-5 w-5 text-green-500" />
-          <span className="text-xl font-bold text-gray-900">—</span>
-          <span className="text-[10px] text-gray-500">{labels.logsThisMonth}</span>
+        <div className="flex flex-col items-center rounded-2xl bg-[var(--color-surface)] p-4 shadow-1">
+          <ClipboardList className="lucide mb-1 h-5 w-5 text-[var(--color-success-accent)]" strokeWidth={1.85} />
+          <span className="font-display text-xl font-extrabold text-[var(--color-text-primary)]">
+            {visits.filter((v) => new Date(v.visitDate).getMonth() === new Date().getMonth()).length}
+          </span>
+          <span className="text-[10px] text-[var(--color-text-muted)]">{labels.logsThisMonth}</span>
         </div>
-        <div className="flex flex-col items-center rounded-2xl bg-white p-4 shadow-sm">
-          <AlertTriangle className="mb-1 h-5 w-5 text-amber-500" />
-          <span className="text-xl font-bold text-gray-900">0</span>
-          <span className="text-[10px] text-gray-500">{labels.alertsActive}</span>
+        <div className="flex flex-col items-center rounded-2xl bg-[var(--color-surface)] p-4 shadow-1">
+          <AlertTriangle className="lucide mb-1 h-5 w-5 text-[var(--color-warning-accent)]" strokeWidth={1.85} />
+          <span className="font-display text-xl font-extrabold text-[var(--color-text-primary)]">0</span>
+          <span className="text-[10px] text-[var(--color-text-muted)]">{labels.alertsActive}</span>
         </div>
       </div>
 
@@ -183,6 +210,30 @@ export function MediatorDashboard({ labels }: { labels: Labels }) {
           </button>
         </div>
       )}
+
+      {/* Recent Activity */}
+      <h2 className="mb-3 text-sm font-extrabold uppercase tracking-wider text-[var(--color-text-muted)]">
+        {labels.recentActivity}
+      </h2>
+      <div className="mb-6 flex flex-col gap-2">
+        {visits.length === 0 ? (
+          <div className="rounded-2xl bg-[var(--color-surface)] p-6 text-center text-sm text-[var(--color-text-muted)] shadow-1">
+            {labels.noActivity}
+          </div>
+        ) : (
+          visits.map((visit) => (
+            <div key={visit.id} className="rounded-2xl bg-[var(--color-surface)] p-4 shadow-1">
+              <div className="mb-1 flex items-center justify-between">
+                <span className="font-bold text-[var(--color-text-primary)]">{visit.memberName}</span>
+                <span className="text-xs text-[var(--color-text-muted)]">
+                  {new Date(visit.visitDate).toLocaleDateString()}
+                </span>
+              </div>
+              {visit.notes && <p className="text-sm text-[var(--color-text-secondary)]">{visit.notes}</p>}
+            </div>
+          ))
+        )}
+      </div>
 
       {/* Resources */}
       <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400">

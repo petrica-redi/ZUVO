@@ -1,72 +1,105 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
-import { Shield, Lock, Eye, Trash2, Mail } from "lucide-react";
+import { PrivacyDataActions } from "@/components/PrivacyDataActions";
+import {
+  Shield,
+  Lock,
+  Eye,
+  Trash2,
+  Mail,
+  Database,
+  ServerCog,
+  Globe,
+} from "lucide-react";
+import { Card } from "@/components/ui";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy — Zuvo",
-  description: "How Zuvo handles your data",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-const SECTIONS = [
-  {
-    icon: Lock,
-    title: "What data we collect",
-    content: "Zuvo collects minimal data. Chat conversations are processed in real-time and not stored on our servers. Family health data is stored locally on your device only — we never see it.",
-  },
-  {
-    icon: Eye,
-    title: "How we use your data",
-    content: "We use anonymous analytics (PostHog) to understand which features are most helpful. No personal health information is tracked. AI conversations are sent to OpenAI for processing — see their privacy policy for details.",
-  },
-  {
-    icon: Shield,
-    title: "Your rights",
-    content: "Under GDPR, you have the right to access, correct, and delete your data. Since we store minimal data, most information exists only on your device. You can clear all local data at any time through your browser settings.",
-  },
-  {
-    icon: Trash2,
-    title: "Data deletion",
-    content: "To delete all locally stored data (family profiles, health logs), clear your browser's local storage for this site. No server-side data deletion is needed as we don't store personal data on our servers.",
-  },
-  {
-    icon: Mail,
-    title: "Contact",
-    content: "For privacy questions or data requests, contact us at privacy@zuvo.health. We respond within 30 days as required by GDPR.",
-  },
-];
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacy" });
+  return { title: t("metaTitle"), description: t("metaDescription") };
+}
 
-export default function PrivacyPage() {
+const SECTION_ICONS = [Lock, Eye, Database, ServerCog, Shield, Globe, Trash2, Mail] as const;
+
+export default async function PrivacyPage({ params }: Props) {
+  await params;
+  const t = await getTranslations("privacy");
+
+  const sections = [
+    { key: "collect" as const, Icon: SECTION_ICONS[0] },
+    { key: "use" as const, Icon: SECTION_ICONS[1] },
+    { key: "storage" as const, Icon: SECTION_ICONS[2] },
+    { key: "processors" as const, Icon: SECTION_ICONS[3] },
+    { key: "rights" as const, Icon: SECTION_ICONS[4] },
+    { key: "transfers" as const, Icon: SECTION_ICONS[5] },
+    { key: "deletion" as const, Icon: SECTION_ICONS[6] },
+    { key: "contact" as const, Icon: SECTION_ICONS[7] },
+  ];
+
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[#F5F5F7]">
+    <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
       <Header />
-      <main id="main-content" className="flex-1 pb-2">
-        <div className="px-5 py-6">
-          <div className="mb-6 text-center animate-fade-in-up">
-            <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-gray-700 to-gray-900 shadow-xl">
-              <Shield className="h-10 w-10 text-white" />
+      <main id="main-content" className="flex-1 pb-8">
+        <div className="mx-auto max-w-3xl px-4 py-6 md:px-6 md:py-8">
+          {/* Hero */}
+          <div className="mb-8 text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-slate-700 to-slate-900 shadow-xl shadow-slate-900/20">
+              <Shield className="h-8 w-8 text-white" />
             </div>
-            <h1 className="text-2xl font-black text-gray-900">Privacy Policy</h1>
-            <p className="mt-2 text-sm text-gray-500">Last updated: March 2026</p>
+            <h1 className="text-3xl font-black tracking-tight text-gray-900 md:text-4xl">
+              {t("title")}
+            </h1>
+            <p className="mt-2 text-sm text-gray-500">
+              {t("lastUpdated", { date: "May 2026" })}
+            </p>
           </div>
 
-          <div className="space-y-4">
-            {SECTIONS.map((section, i) => (
-              <div key={section.title} className={`rounded-3xl border border-gray-100 bg-white p-5 shadow-sm animate-fade-in-up delay-${(i + 1) * 100}`}>
-                <div className="mb-3 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gray-100">
-                    <section.icon className="h-5 w-5 text-gray-600" />
+          {/* Data-subject actions */}
+          <PrivacyDataActions
+            title={t("actionsTitle")}
+            subtitle={t("actionsSubtitle")}
+            exportLabel={t("exportLabel")}
+            exportHint={t("exportHint")}
+            deleteLabel={t("deleteLabel")}
+            deleteHint={t("deleteHint")}
+            deleteConfirmTitle={t("deleteConfirmTitle")}
+            deleteConfirmBody={t("deleteConfirmBody")}
+            deleteConfirmCta={t("deleteConfirmCta")}
+            deleteCancel={t("deleteCancel")}
+            authRequired={t("authRequired")}
+            unavailable={t("unavailable")}
+            successDeleted={t("successDeleted")}
+          />
+
+          {/* Sections */}
+          <div className="mt-6 space-y-3">
+            {sections.map(({ key, Icon }) => (
+              <Card key={key} variant="default">
+                <div className="p-5">
+                  <div className="mb-3 flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gray-100">
+                      <Icon className="h-5 w-5 text-gray-600" />
+                    </div>
+                    <h2 className="text-base font-black tracking-tight text-gray-900">
+                      {t(`sections.${key}.title`)}
+                    </h2>
                   </div>
-                  <h2 className="text-base font-black text-gray-900">{section.title}</h2>
+                  <p className="text-sm leading-relaxed text-gray-600">
+                    {t(`sections.${key}.body`)}
+                  </p>
                 </div>
-                <p className="text-sm leading-relaxed text-gray-600">{section.content}</p>
-              </div>
+              </Card>
             ))}
           </div>
 
-          <div className="mt-6 rounded-3xl border-2 border-amber-200 bg-amber-50 p-5 animate-fade-in-up delay-600">
-            <p className="text-xs font-bold text-amber-800">
-              Zuvo is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.
+          {/* Footer disclaimer */}
+          <div className="mt-6 rounded-3xl border-2 border-amber-200 bg-amber-50 p-5">
+            <p className="text-xs font-bold leading-relaxed text-amber-800">
+              {t("disclaimer")}
             </p>
           </div>
         </div>

@@ -1,7 +1,33 @@
 import createMiddleware from "next-intl/middleware";
+import { NextRequest, NextResponse } from "next/server";
 import { routing } from "./i18n/routing";
+import { updateSession } from "./lib/supabase/middleware";
 
-export default createMiddleware(routing);
+const intlMiddleware = createMiddleware(routing);
+
+function applySecurityHeaders(res: NextResponse) {
+  res.headers.set("X-Content-Type-Options", "nosniff");
+  res.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.headers.set("X-Frame-Options", "DENY");
+  res.headers.set(
+    "Permissions-Policy",
+    "camera=(), microphone=(), geolocation=(self)"
+  );
+  return res;
+}
+
+export default async function middleware(req: NextRequest) {
+  let res: NextResponse;
+
+  if (req.nextUrl.pathname.startsWith("/api/") || req.nextUrl.pathname === "/offline.html") {
+    res = NextResponse.next();
+  } else {
+    res = intlMiddleware(req);
+  }
+
+  res = await updateSession(req, res);
+  return applySecurityHeaders(res);
+}
 
 export const config = {
   matcher: ["/((?!_next|_vercel|monitoring|.*\\.(?:svg|png|jpg|ico|css|js|txt|xml|woff2?|ttf)).*)"],

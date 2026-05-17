@@ -4,11 +4,15 @@
     "description": "Roman toplulukları için modern sağlık okuryazarlığı araçları. Öğren, takip et ve sağlıklı kal."
   },
   "nav": {
-    "home": "Ana Sayfa",
+    "home": "Home",
     "learn": "Öğren",
     "track": "Takip Et",
     "mediator": "Arabulucu",
-    "profile": "Profil"
+    "profile": "Profil",
+    "explain": "Explain",
+    "chat": "Ask",
+    "family": "Family",
+    "more": "More"
   },
   "hero": {
     "tagline": "Sağlığın, dilin",
@@ -56,5 +60,658 @@
     "comingSoon": "Yakında",
     "close": "Kapat",
     "back": "Geri"
+  },
+  "studentHealth": {
+    "meta": {
+      "title": "Student Health Academy",
+      "description": "A cinematic, mission-based health literacy academy for high school students: first aid, STIs, vaccines, and critical thinking."
+    },
+    "hub": {
+      "title": "Student Health Academy",
+      "subtitle": "A mission-based health field guide for high school students. Learn what to do before help arrives, how to protect your body and relationships, and how to separate evidence from rumor.",
+      "disclaimer": "Educational field guide only: this is not medical care, diagnosis, or emergency instruction from a clinician. If someone may be in immediate danger, call emergency services. For sexual health, consent, or privacy concerns, seek a trusted adult, school nurse, doctor, clinic, or local helpline.",
+      "countryLabel": "Your country (for tips)",
+      "countryPlaceholder": "Select country (optional)",
+      "countryHint": "Used only on this device to show relevant context. You can change it anytime.",
+      "countryContext": "Context for tips: {country}",
+      "xpLabel": "XP",
+      "levelLabel": "Level {level}",
+      "commandCenterTitle": "Expedition dashboard",
+      "commandCenterSubtitle": "{completed}/{total} field lessons complete — build practical skills you can use in school, at home, and online.",
+      "overallProgress": "Academy progress",
+      "levelProgress": "Level progress",
+      "maxLevel": "Max level reached",
+      "nextLevelXp": "Next level at {xp} XP",
+      "stageProgress": "Stage progress",
+      "badgesTitle": "Your badges",
+      "stageMapTitle": "Expedition route",
+      "modulesInStage": "modules",
+      "takeStageQuiz": "Stage quiz",
+      "quizLocked": "Complete all modules in this stage to unlock the stage quiz.",
+      "quizIntro": "Answer at least 70% correctly to unlock the next stage.",
+      "stageComplete": "Stage complete!",
+      "nextStageUnlocked": "You unlocked the next stage.",
+      "badgeLocal": "Local champion",
+      "badgeRegional": "Regional explorer",
+      "badgeNational": "National scholar",
+      "badgeLocalDesc": "Finished the local stage quiz.",
+      "badgeRegionalDesc": "Finished the regional stage quiz.",
+      "badgeNationalDesc": "Finished the national stage quiz.",
+      "allStagesComplete": "You completed the full academy path. Keep revisiting lessons to stay sharp.",
+      "kicker": "Field guide for real life",
+      "streakLabel": "Streak",
+      "streakUnitOne": "day",
+      "streakUnitMany": "days",
+      "streakHint": "Keep one lesson a day going",
+      "dayActive": "Active day",
+      "dayInactive": "No activity"
+    },
+    "stages": {
+      "local": "Local",
+      "localDesc": "Immediate skills for school, home, and friends",
+      "regional": "Regional",
+      "regionalDesc": "Clinic, community, and public-health know-how",
+      "national": "National",
+      "nationalDesc": "Evidence, leadership, and capstone decisions"
+    },
+    "progress": {
+      "xp": "Experience points",
+      "stageLocked": "Locked — complete the previous stage quiz.",
+      "quizRequired": "Quiz required",
+      "allModulesDone": "All modules done — take the quiz!"
+    },
+    "quiz": {
+      "title": "Stage checkpoint",
+      "back": "Back to academy",
+      "progress": "Question",
+      "of": "of",
+      "submit": "Next",
+      "seeResults": "See results",
+      "pass": "Checkpoint cleared",
+      "fail": "Checkpoint not cleared yet",
+      "scoreLine": "You got {correct} out of {total} correct ({pct}%).",
+      "needPct": "You need at least 70% to unlock the next stage.",
+      "retry": "Try again",
+      "continueHub": "Back to academy",
+      "stageBriefTitle": "{stage} field checkpoint",
+      "stageBriefBody": "This checkpoint tests judgment, not memorization. Score {pct}% or more to unlock the next expedition stage.",
+      "continueNextStage": "Enter {stage} expedition",
+      "explainCorrect": "Why this is correct",
+      "explainWrong": "Field guide explainer"
+    },
+    "lesson": {
+      "scenarioTitle": "Field scenario",
+      "challengeTitle": "Expedition challenge",
+      "supportTitle": "Confidential support matters",
+      "supportText": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
+      "findCare": "Find care",
+      "knowRights": "Know your rights",
+      "stepLabel": "Lesson {current} of {total}",
+      "completedNote": "Field note logged. You earned XP, saved progress, and unlocked the next best step.",
+      "sourcesTitle": "Verified sources",
+      "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab.",
+      "reviewUpToDate": "Reviewed for clinical accuracy",
+      "reviewOverdue": "Review overdue — verify with a clinician",
+      "reviewMeta": "Reviewed {date} by {reviewer}"
+    },
+    "modules": {
+      "local": {
+        "emergency101": {
+          "title": "Emergency signals: calling for help",
+          "description": "In an emergency, the first minute is a bridge between chaos and help. Your job is not to become a doctor. Your job is to stay safe, call the right number, and give clear information that helps trained responders find the scene fast.",
+          "tip1": "Lead with location: school name, street, building entrance, landmark, or GPS pin. A perfect medical description is useless if help cannot find you.",
+          "tip2": "Say what happened in one sentence: “A student collapsed and is not responding,” or “There is heavy bleeding from the arm.” Short, concrete details help dispatchers act.",
+          "tip3": "Put the phone on speaker if you can. The dispatcher may coach you while someone else gets an adult, opens a gate, or clears space.",
+          "tip4": "Never film an emergency for attention. Protect privacy, create space, and stay with the person if it is safe until help arrives.",
+          "fact": "Emergency systems are designed around fast, accurate information. Clear location plus a brief description can shorten the time between the call and professional care.",
+          "action": "Create a phone note called “Emergency info” with your home address, school address, and one nearby landmark for each.",
+          "scenario": "During sports practice, a classmate suddenly drops to the ground. The gym gets loud. One person is recording. No adult is beside the student yet.",
+          "challenge": "Write a 15-second emergency script: who you are, where you are, what happened, and what you need."
+        },
+        "bleedingBasics": {
+          "title": "Bleeding: pressure buys time",
+          "description": "Blood can make people panic, but the first response is simple: protect yourself, press firmly, and get help. Pressure is not dramatic, but it is one of the most powerful first-aid actions a bystander can take.",
+          "tip1": "Protect yourself if possible: gloves are best, but a plastic bag or folded cloth is better than bare hands if blood is visible.",
+          "tip2": "Press directly on the wound with the cleanest cloth available. Strong, steady pressure matters more than constantly checking how it looks.",
+          "tip3": "If blood soaks through, add more cloth on top. Removing the first layer can pull away early clots and restart bleeding.",
+          "tip4": "Call emergency services for heavy bleeding, spurting blood, deep wounds, or bleeding that does not slow with firm pressure.",
+          "fact": "Many severe external bleeds can be slowed before professionals arrive. The difference is often whether someone starts firm pressure immediately.",
+          "action": "Find the first-aid kit at home or school and identify what could be used for clean pressure in an emergency.",
+          "scenario": "After school, someone cuts their forearm on broken glass. Their sleeve is wet with blood, and friends are afraid to touch anything.",
+          "challenge": "Practice saying the rule out loud: “Press. Add layers. Keep pressing. Call for help.”"
+        },
+        "burnsBasics": {
+          "title": "Burns: cool the heat, protect the skin",
+          "description": "A burn keeps damaging tissue after the heat source is gone. The goal is to cool the skin safely, avoid folk remedies that trap heat, and know when a burn needs urgent medical care.",
+          "tip1": "Cool running water is the first move for many minor burns. Keep it gentle and cool, not icy.",
+          "tip2": "Skip butter, oil, toothpaste, flour, or egg. They can trap heat, hide the injury, and raise infection risk.",
+          "tip3": "Remove tight rings, bracelets, or clothing near the burn if they are not stuck, because swelling can happen quickly.",
+          "tip4": "Get urgent care for burns on the face, hands, genitals, large areas, deep burns, chemical burns, electrical burns, or trouble breathing.",
+          "fact": "Early cooling can reduce pain and depth of injury. The best burn care often begins before anyone reaches a clinic.",
+          "action": "Teach one person the burn rule: cool water first, cover loosely, no kitchen remedies.",
+          "scenario": "A younger sibling touches a hot pan. An older relative reaches for toothpaste because “that always helped before.”",
+          "challenge": "Make a two-line poster: “Cool the burn. Do not cover it with food or paste.”"
+        },
+        "stiBasics": {
+          "title": "STIs: facts without shame",
+          "description": "Sexually transmitted infections are health conditions, not character judgments. Some are curable, some are manageable, and many have no symptoms at first. Accurate information protects people from stigma and from delayed care.",
+          "tip1": "Symptoms are not a reliable test. Many STIs can be silent while still affecting health or spreading to partners.",
+          "tip2": "Condoms and dental dams reduce risk when used correctly, but no tool works if someone is pressured or unable to use it safely.",
+          "tip3": "Testing is responsible. It is something people do to care for themselves and others, not something to gossip about.",
+          "tip4": "Ask clinics directly about confidentiality: who can see results, what age rules apply, and whether services are youth-friendly.",
+          "fact": "Untreated infections such as chlamydia and gonorrhea can lead to serious complications, but testing and treatment are effective when people get care early.",
+          "action": "Identify one trustworthy sexual-health source in your country: a health ministry page, youth clinic, school nurse, or helpline.",
+          "scenario": "A friend says, “I would know if someone had an STI just by looking.” Another student quietly stops talking.",
+          "challenge": "Prepare a stigma-free reply: “You cannot always tell. Testing is normal, private, and responsible.”"
+        },
+        "consentBasics": {
+          "title": "Consent: the clearest yes",
+          "description": "Consent is not a technicality. It is the foundation of safety, respect, and trust. A healthy relationship gives every person the freedom to say yes, no, wait, or stop without fear of punishment.",
+          "tip1": "Consent must be freely chosen. Pressure, threats, guilt, alcohol, drugs, or power differences can make “yes” unsafe or invalid.",
+          "tip2": "Silence is not consent. Freezing, going quiet, or not fighting back is not the same as wanting something.",
+          "tip3": "Consent is ongoing. Someone can change their mind even if they agreed earlier, even in a relationship.",
+          "tip4": "Digital boundaries count. Repeatedly asking for photos, sharing private images, or threatening exposure is not respect.",
+          "fact": "Consent education reduces harm because it gives students practical language for boundaries before pressure becomes danger.",
+          "action": "Choose a trusted person or service you could contact if you or a friend felt pressured, unsafe, or threatened.",
+          "scenario": "Someone keeps asking for private photos after being told no, then says, “If you loved me, you would.”",
+          "challenge": "Write a boundary script you could send quickly: “No. Stop asking. I am leaving this conversation.”"
+        }
+      },
+      "regional": {
+        "chokingBasics": {
+          "title": "Choking: recognize the silent emergency",
+          "description": "Choking can turn a normal lunch table into a life-threatening emergency in seconds. The safest response begins with recognizing whether the person can cough or breathe, calling for help, and using trained techniques when needed.",
+          "tip1": "If the person is coughing hard, encourage coughing and stay close. A strong cough is the body’s best tool.",
+          "tip2": "If they cannot speak, cough, cry, or breathe, treat it as an emergency and call for help immediately.",
+          "tip3": "Back blows and abdominal thrusts should be learned from a certified first-aid instructor. Good technique matters.",
+          "tip4": "After a serious choking episode, medical evaluation is wise even if the person seems better.",
+          "fact": "Choking is often quiet, not dramatic. Bystanders who recognize the signs quickly can make the difference before professionals arrive.",
+          "action": "Ask your school who is trained in first aid and where students can learn CPR or choking response.",
+          "scenario": "In the cafeteria, a student suddenly stands up, grabs their throat, and cannot answer when friends ask what is wrong.",
+          "challenge": "Find out where your school keeps emergency contacts and who is first-aid trained."
+        },
+        "stiTesting": {
+          "title": "Testing and treatment: privacy, proof, care",
+          "description": "Testing replaces fear with facts. It can feel intimidating, but clinics do this every day. The strongest move is to ask clear questions about privacy, testing options, treatment, and partner safety.",
+          "tip1": "Tests may use urine, blood, or swabs. A clinician can explain what is needed based on exposure and symptoms.",
+          "tip2": "Be honest with clinicians. They are not there to judge; accurate information helps them choose the right tests.",
+          "tip3": "If treatment is prescribed, take it exactly as directed and ask when it is safe to have sex again.",
+          "tip4": "Partners may need testing or treatment. Clinics can help with safe, private ways to communicate this.",
+          "fact": "Early testing and treatment can prevent long-term complications and reduce transmission in a community.",
+          "action": "Write down three clinic questions: “Is this confidential?”, “Which tests do I need?”, “When should I retest?”",
+          "scenario": "A friend is worried after possible exposure but says, “If I go to a clinic, everyone will know.”",
+          "challenge": "Build a privacy checklist a student could use before making an appointment."
+        },
+        "vaccineLiteracy": {
+          "title": "Vaccines: training the immune system",
+          "description": "Vaccines are not magic shields; they are training sessions for the immune system. They help the body recognize danger before a real infection has the chance to cause serious harm.",
+          "tip1": "A vaccine schedule is a map. It shows which protections are recommended at different ages and when catch-up doses may be needed.",
+          "tip2": "A sore arm or mild fever can happen because the immune system is responding. Clinics can tell you what is normal and what is not.",
+          "tip3": "Vaccines are monitored for safety before and after approval. Serious allergic reactions are rare, and clinics are prepared for them.",
+          "tip4": "If you missed a dose, do not guess. Ask a clinician or official schedule about catch-up options.",
+          "fact": "High vaccine coverage protects individuals and also helps protect people who cannot be vaccinated for medical reasons.",
+          "action": "Check your vaccine record with a parent, guardian, doctor, or school nurse and list one question to ask.",
+          "scenario": "A group chat claims a vaccine “rewrites your DNA.” The post has dramatic music and no source.",
+          "challenge": "Find the same vaccine on a public health website and write one evidence-based reply."
+        },
+        "vpdExamples": {
+          "title": "Diseases vaccines can prevent",
+          "description": "A vaccine card is not just paperwork. It is a record of protection against diseases that once injured or killed far more young people: measles, hepatitis B, HPV-related cancers, and more.",
+          "tip1": "Measles spreads through the air and can cause pneumonia, brain swelling, and death. It is not just a rash.",
+          "tip2": "HPV vaccination can prevent several cancers later in life. It works best before exposure to the virus.",
+          "tip3": "Hepatitis B can become a chronic liver infection. Vaccination is a major tool for prevention.",
+          "tip4": "Disease stories travel fast online. Evidence from health agencies travels slower but is far more reliable.",
+          "fact": "Before widespread vaccination, measles killed millions globally. Vaccines changed what childhood risk looked like.",
+          "action": "Choose one vaccine-preventable disease and make a three-bullet “why it matters” card.",
+          "scenario": "Students are preparing for a school trip, but nobody agrees which vaccines matter for teens.",
+          "challenge": "Make a pocket guide: disease, how it spreads, vaccine that helps prevent it."
+        }
+      },
+      "national": {
+        "firstAidReview": {
+          "title": "First aid command: putting it together",
+          "description": "At the national stage, first aid becomes decision-making under pressure: protect yourself, get help, choose the right basic action, and keep the scene calm enough for professionals to take over.",
+          "tip1": "Scene safety comes first. You cannot help if you become the second injured person.",
+          "tip2": "Call early when the situation may be serious. Dispatchers would rather guide a cautious caller than arrive too late.",
+          "tip3": "Match action to problem: pressure for bleeding, cool water for burns, trained response for choking, space and reassurance for shock.",
+          "tip4": "Leadership can be simple: point to one person and say, “You call emergency services. You get a teacher. You clear space.”",
+          "fact": "In emergencies, calm role assignment reduces confusion and speeds up response, especially in crowded places like schools.",
+          "action": "Write a 60-second classroom emergency plan: caller, adult, space, supplies, comfort.",
+          "scenario": "One student is burned, another is bleeding, and the room is filling with noise. You are the first person thinking clearly.",
+          "challenge": "Draft a four-role emergency plan your class could practice safely with a teacher."
+        },
+        "stiMyths": {
+          "title": "STI myths: replacing gossip with evidence",
+          "description": "Myths thrive where shame is loud and facts are quiet. Health literacy means refusing gossip, protecting privacy, and pointing people toward testing and care instead of blame.",
+          "tip1": "Myth: You can always tell who has an STI. Reality: many infections have no visible signs.",
+          "tip2": "Myth: Only “certain people” get STIs. Reality: exposure is about biology and behavior, not someone’s worth.",
+          "tip3": "Myth: Two condoms are safer than one. Reality: friction can make condoms tear; one used correctly is safer.",
+          "tip4": "Myth: Borrowed antibiotics are enough. Reality: wrong treatment can fail and contribute to resistance.",
+          "fact": "Stigma delays testing. When communities talk about STIs as health issues, people seek care earlier.",
+          "action": "Practice one sentence that shuts down gossip while protecting privacy.",
+          "scenario": "A rumor spreads about a student who might need testing. People are laughing and guessing names.",
+          "challenge": "Write a response that says: stop gossiping, respect privacy, use real health information."
+        },
+        "sourceLiteracy": {
+          "title": "Health information: evidence in a noisy world",
+          "description": "Your feed is a health battlefield: miracle cures, fear posts, influencer advice, and real science all compete for attention. The skill is not knowing everything. The skill is knowing what deserves trust.",
+          "tip1": "Ask who made the claim, what evidence they show, and whether recognized health organizations agree.",
+          "tip2": "Beware of phrases like “doctors hate this,” “secret cure,” or “share before it is deleted.” They are designed to bypass critical thinking.",
+          "tip3": "Look for dates. Health guidance can change as evidence improves.",
+          "tip4": "Before sharing, pause. A false health post can spread fear faster than a virus.",
+          "fact": "Health literacy is linked to better decisions because people can find, understand, and use reliable information under pressure.",
+          "action": "Compare one viral health claim with an official health source and write the difference in plain language.",
+          "scenario": "A video promises a miracle cure, uses dramatic music, and says hospitals are hiding the truth.",
+          "challenge": "Run the three-question source test: Who says it? What proof? What do health agencies say?"
+        },
+        "capstoneMix": {
+          "title": "Capstone: lead a health mission",
+          "description": "The final mission asks you to combine everything: first response, sexual health, vaccines, consent, and evidence. The goal is not to be the expert in every room. The goal is to become the person who knows how to find help, reduce harm, and keep facts alive.",
+          "tip1": "Start with safety: emergency risks, pressure, consent, privacy, and reliable adults or services.",
+          "tip2": "Use prevention as a stack: vaccines, safer choices, testing, hygiene, trusted information, and timely care.",
+          "tip3": "Respect privacy. A helpful student does not expose someone’s health story to prove a point.",
+          "tip4": "Teach in plain language. If your younger sibling can understand it, your message is stronger.",
+          "fact": "Peer-led health education works best when it is practical, respectful, and connected to real services.",
+          "action": "Design a one-page school health mission plan with four stations: first aid, consent, vaccines, and fact-checking.",
+          "scenario": "You are asked to help plan a school health week. Students say they do not want another boring lecture.",
+          "challenge": "Create a four-station health week agenda with one activity, one trusted resource, and one takeaway per station."
+        }
+      }
+    },
+    "stageQuiz": {
+      "local": {
+        "q0": {
+          "question": "What should you tell an emergency dispatcher first if possible?",
+          "a0": "Your full medical history",
+          "a1": "Where you are and what happened",
+          "a2": "Your social media handle",
+          "explanation": "Location and a brief description of the emergency help them send the right resources quickly."
+        },
+        "q1": {
+          "question": "For heavy bleeding that soaks through a cloth, you should:",
+          "a0": "Remove the cloth to look at the wound",
+          "a1": "Add another layer on top and keep pressing",
+          "a2": "Wait an hour to see if it stops",
+          "explanation": "Removing the cloth can disturb clots. Add pressure on top until help arrives."
+        },
+        "q2": {
+          "question": "For a small fresh burn, the best first step is usually:",
+          "a0": "Put butter on it",
+          "a1": "Cool with running cool water for several minutes",
+          "a2": "Wrap tightly with plastic",
+          "explanation": "Cool running water reduces heat in the tissue. Butter traps heat and increases infection risk."
+        },
+        "q3": {
+          "question": "Why might someone get an STI test even without symptoms?",
+          "a0": "Tests are only for people with symptoms",
+          "a1": "Many STIs can be silent but still harmful or spreadable",
+          "a2": "Testing cures all STIs instantly",
+          "explanation": "Many infections have no early symptoms; testing finds them so you can get care and protect partners."
+        }
+      },
+      "regional": {
+        "q0": {
+          "question": "If an adult suddenly cannot speak or breathe and holds their throat, you should:",
+          "a0": "Ignore them until they cough",
+          "a1": "Call emergency services immediately",
+          "a2": "Give them a glass of water",
+          "explanation": "Complete airway blockage is an emergency — trained help and EMS are needed urgently."
+        },
+        "q1": {
+          "question": "If prescribed antibiotics for an STI, you should:",
+          "a0": "Stop when you feel better",
+          "a1": "Finish all pills as directed",
+          "a2": "Share extras with a partner",
+          "explanation": "Stopping early can fail to kill the bacteria and contribute to resistance. Never share antibiotics."
+        },
+        "q2": {
+          "question": "Vaccines mainly work by:",
+          "a0": "Replacing your blood",
+          "a1": "Training the immune system to recognize a germ",
+          "a2": "Curing active disease instantly",
+          "explanation": "Vaccines prepare your immune system so a future encounter with the real germ is much safer."
+        },
+        "q3": {
+          "question": "Measles is:",
+          "a0": "Harmless in all children",
+          "a1": "A serious disease that vaccines have greatly reduced",
+          "a2": "Only spread by animals",
+          "explanation": "Measles can cause severe complications; vaccination is a key reason cases dropped worldwide."
+        }
+      },
+      "national": {
+        "q0": {
+          "question": "In a medical emergency at school, the best first step is usually:",
+          "a0": "Only post on social media",
+          "a1": "Get adult help and emergency services if needed",
+          "a2": "Wait until the end of class",
+          "explanation": "Trained adults and EMS are equipped to respond; time matters in emergencies."
+        },
+        "q1": {
+          "question": "A reliable place to check vaccine facts is often:",
+          "a0": "Anonymous forum threads only",
+          "a1": "Your country's ministry of health or WHO",
+          "a2": "Memes with many likes",
+          "explanation": "Official health agencies review evidence and update guidance — use them to verify claims."
+        },
+        "q2": {
+          "question": "Two condoms at once are:",
+          "a0": "Safer than one",
+          "a1": "Not recommended — friction can cause breakage",
+          "a2": "Required by law",
+          "explanation": "Using one condom correctly is safer than double-layering, which increases tear risk."
+        },
+        "q3": {
+          "question": "Health literacy means:",
+          "a0": "Memorizing every disease name",
+          "a1": "Finding, understanding, and using reliable health information",
+          "a2": "Never seeing a doctor",
+          "explanation": "It is about skills to navigate real information and services, not encyclopedic memorization."
+        }
+      }
+    },
+    "workflow": {
+      "nextMission": "Next mission",
+      "nextMissionBody": "Follow this recommended step to keep the Academy moving without guessing what to do next.",
+      "continueLesson": "{stage}: {title}",
+      "takeQuiz": "{stage} stage checkpoint",
+      "finishedTitle": "Academy complete",
+      "finishedBody": "You finished the current Academy path. Review any lesson or retake a quiz to stay sharp.",
+      "startMission": "Start mission",
+      "startQuiz": "Take checkpoint",
+      "reviewPath": "Review path",
+      "takeStageQuiz": "Take stage checkpoint",
+      "lockedStatus": "Locked",
+      "completeStatus": "Complete",
+      "quizReadyStatus": "Checkpoint ready",
+      "inProgressStatus": "In progress"
+    },
+    "fieldLab": {
+      "title": "Field Lab",
+      "subtitle": "Turn the lesson into a one-minute plan. Your note stays only on this device.",
+      "observeLabel": "Observe",
+      "decideLabel": "Decide",
+      "actLabel": "Act",
+      "placeholder": "Example: I would first check safety, then call for help, then tell an adult exactly what I saw...",
+      "saveLabel": "Save field note",
+      "savedLabel": "Saved on this device",
+      "observeHint": "What do you actually see, hear, or know in this scenario? Stick to the facts.",
+      "decideHint": "What is the smartest first move? Pick something a calm bystander can really do.",
+      "actHint": "Write the exact words or steps you would use in the next 60 seconds.",
+      "syncedLabel": "Saved",
+      "draftLabel": "Saving draft"
+    },
+    "visuals": {
+      "academy": "Students learning health skills through maps, phones, clinics, and community action",
+      "emergency": "Emergency call map with location pins and first response signal lines",
+      "firstAid": "First aid field kit with bandage, clean cloth, and safety steps",
+      "sexualHealth": "Private conversation bubble, shield, and clinic doorway for confidential sexual health support",
+      "vaccines": "Immune system shield, vaccine card, and public health network",
+      "literacy": "Fact-checking desk with phone, sources, magnifier, and evidence notes",
+      "capstone": "Capstone expedition map connecting first aid, vaccines, relationships, and evidence"
+    },
+    "hero": {
+      "chipFirstAid": "First aid that works",
+      "chipLiteracy": "Health literacy",
+      "chipMissions": "Mission-based learning"
+    },
+    "toast": {
+      "lessonLoggedTitle": "Lesson logged",
+      "lessonLoggedBody": "+10 XP earned. Streak updated and your next mission is ready."
+    },
+    "sexualHealthSupport": {
+      "title": "Confidential support matters",
+      "body": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
+      "findCare": "Find care",
+      "rights": "Know your rights"
+    }
+  },
+  "errors": {
+    "genericTitle": "Something went wrong",
+    "genericBody": "We hit an unexpected error. Your saved progress is safe on this device. Try reloading or come back in a moment.",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you were looking for has moved or never existed. Try the home page or jump back into the academy.",
+    "tryAgain": "Try again",
+    "goHome": "Go home",
+    "exploreAcademy": "Explore the academy",
+    "reference": "Reference"
+  },
+  "privacy": {
+    "metaTitle": "Privacy & data",
+    "metaDescription": "How Sastipe handles your data and how to exercise your rights",
+    "title": "Privacy & data",
+    "lastUpdated": "Last updated: {date}",
+    "actionsTitle": "Your data, your choice",
+    "actionsSubtitle": "Download a copy of everything we have, or request permanent deletion. Both are processed immediately and audit-logged.",
+    "exportLabel": "Download my data",
+    "exportHint": "Returns a JSON bundle of every record tied to your account. Field Lab notes stay on your device.",
+    "deleteLabel": "Delete my account",
+    "deleteHint": "Scrubs your identifying fields immediately. Hard delete after 30 days.",
+    "deleteConfirmTitle": "Delete your account?",
+    "deleteConfirmBody": "This scrubs your identifying fields right now. Your account is unrecoverable after this. Hard delete completes within 30 days. Local progress on this device will also be cleared.",
+    "deleteConfirmCta": "Yes, delete my account",
+    "deleteCancel": "Cancel",
+    "authRequired": "Please sign in to continue",
+    "unavailable": "Service unavailable. Please try again later.",
+    "successDeleted": "Your data has been scrubbed. Goodbye for now.",
+    "disclaimer": "Sastipe is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "sections": {
+      "collect": {
+        "title": "What we collect",
+        "body": "Account, preferences, lesson progress, mood and water check-ins you log, and audit records of high-value actions. We do not collect raw AI prompts or Field Lab notes — those stay on your device."
+      },
+      "use": {
+        "title": "How we use it",
+        "body": "We personalise the academy, prevent abuse, and improve content. We never sell your data. We use anonymous, aggregated analytics when enabled (PostHog) and respect Do-Not-Track."
+      },
+      "storage": {
+        "title": "Where it lives",
+        "body": "Your account and progress are stored in EU-region Supabase Postgres. Server logs and error reports use EU-region Sentry. Field Lab notes, streaks, and XP are device-local."
+      },
+      "processors": {
+        "title": "Third-party processors",
+        "body": "OpenAI processes AI prompts in real time (we scrub PII first). Sentry handles error tracking. Resend handles email. PostHog handles optional analytics. Upstash handles rate-limit counters. Each is contractually bound by a data-processing agreement."
+      },
+      "rights": {
+        "title": "Your GDPR rights",
+        "body": "You can access, port, correct, or delete your data at any time. Use the buttons above. We respond to requests within 30 days. You can also lodge a complaint with your local data-protection authority."
+      },
+      "transfers": {
+        "title": "International transfers",
+        "body": "Some processors operate globally (e.g. OpenAI). Where data leaves the EEA we rely on Standard Contractual Clauses. You can use the academy without enabling AI features."
+      },
+      "deletion": {
+        "title": "How deletion works",
+        "body": "When you click Delete, we immediately scrub identifying fields (email, name, phone). After 30 days, all rows tied to your account are permanently removed. Pseudonymised statistics may persist for population health research."
+      },
+      "contact": {
+        "title": "Data Protection Officer",
+        "body": "Email dpo@sastipe.org with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
+      }
+    }
+  },
+  "home": {
+    "kicker": "AI-Powered Health Companion",
+    "titleAccent": "Your health,",
+    "titleEnd": "explained simply.",
+    "subtitle": "Trusted guidance for Roma communities. Ask anything. No judgment.",
+    "ctaAsk": "Ask a question",
+    "ctaCheckup": "Check-up",
+    "stats": {
+      "romaInEurope": "Roma in Europe",
+      "languages": "Languages",
+      "healthZones": "Health zones"
+    },
+    "quickActionsTitle": "What do you need?",
+    "actions": {
+      "explain": "Explain\nPrescription",
+      "scan": "Fact-Check\nClaim",
+      "symptoms": "Check\nSymptoms",
+      "vaccines": "Vaccine\nGuide",
+      "consult": "Health\nConsult",
+      "navigate": "Find\nDoctor"
+    },
+    "trendingTitle": "Trending lies",
+    "factCheckCta": "Fact-check",
+    "verdicts": {
+      "false": "False",
+      "misleading": "Misleading"
+    },
+    "trending": {
+      "claim1": "Vaccines change your DNA",
+      "truth1": "Vaccines do NOT change your DNA. They teach your immune system to fight disease.",
+      "claim2": "Diabetes medicine is poison",
+      "truth2": "Diabetes medication saves lives. Cinnamon cannot replace it.",
+      "claim3": "Honey and lemon cure the flu",
+      "truth3": "They soothe a sore throat, but do NOT cure the flu."
+    },
+    "emergencyCta": "Emergency? Call 112",
+    "emergencySub": "Available 24/7 across Europe",
+    "seeAll": "See all",
+    "learnGrowTitle": "Learn & Grow",
+    "learn": {
+      "academyLabel": "Student Health Academy",
+      "academyDesc": "Staged lessons: first aid, STIs, vaccines",
+      "quizLabel": "Health Quiz",
+      "quizDesc": "Test your knowledge",
+      "glossaryLabel": "Health Glossary",
+      "glossaryDesc": "Medical terms, simply explained",
+      "rightsLabel": "Know Your Rights",
+      "rightsDesc": "Patient rights & legal help",
+      "storiesLabel": "Community Stories",
+      "storiesDesc": "Real experiences from Roma communities"
+    },
+    "mediator": {
+      "title": "Health Mediators",
+      "subtitle": "Professional tools for your community",
+      "openDashboard": "Open dashboard"
+    }
+  },
+  "more": {
+    "metaTitle": "All features",
+    "metaDescription": "Every Sastipe tool in one place",
+    "title": "All Features",
+    "sections": {
+      "tools": "Health Tools",
+      "learn": "Learn & Grow",
+      "professional": "Professional",
+      "account": "Account"
+    },
+    "items": {
+      "scanLabel": "Misinformation Scanner",
+      "scanDesc": "Fact-check health claims",
+      "symptomsLabel": "Symptom Checker",
+      "symptomsDesc": "Tap where it hurts",
+      "consultLabel": "Health Consultation",
+      "consultDesc": "AI-guided check-up",
+      "vaccinesLabel": "Vaccine Guide",
+      "vaccinesDesc": "Every vaccine explained",
+      "navigateLabel": "Healthcare Navigator",
+      "navigateDesc": "Find a doctor, know your rights",
+      "topicsLabel": "Health Topics",
+      "topicsDesc": "Six health zones with lessons",
+      "studentsLabel": "Student Health Academy",
+      "studentsDesc": "First aid, STIs, vaccines — staged learning",
+      "quizLabel": "Health Quiz",
+      "quizDesc": "Test your knowledge",
+      "glossaryLabel": "Health Glossary",
+      "glossaryDesc": "Medical terms explained simply",
+      "rightsLabel": "Know Your Rights",
+      "rightsDesc": "Patient rights & legal help",
+      "storiesLabel": "Community Stories",
+      "storiesDesc": "Real experiences from Roma families",
+      "regionsLabel": "Roma Communities",
+      "regionsDesc": "Health info by country",
+      "mediatorLabel": "Mediator Dashboard",
+      "mediatorDesc": "Tools for health mediators",
+      "profileLabel": "Profile",
+      "profileDesc": "Language, progress, data",
+      "aboutLabel": "About Sastipe",
+      "aboutDesc": "Version, privacy, contact"
+    }
+  },
+  "sos": {
+    "buttonAria": "Emergency SOS — open emergency numbers and first aid",
+    "title": "Emergency",
+    "closeAria": "Close emergency panel",
+    "callPrimary": "Call 112",
+    "ambulance": "Ambulance",
+    "police": "Police",
+    "domestic": "Domestic violence",
+    "poison": "Poison center",
+    "findHospital": "Find nearest hospital",
+    "findHospitalSub": "Opens map with directions",
+    "firstAidTitle": "First Aid",
+    "aid": {
+      "bleedingLabel": "Bleeding",
+      "bleedingSteps": "Press firmly with a clean cloth. Do not lift it. Add more cloth on top if needed. Call 112.",
+      "chokingLabel": "Choking",
+      "chokingSteps": "Five back blows between the shoulder blades. Five abdominal thrusts. Repeat. Call 112.",
+      "burnsLabel": "Burns",
+      "burnsSteps": "Cool with running water for 10+ minutes. No butter, oil, or toothpaste. Cover loosely. Call 112 for large burns.",
+      "cprLabel": "Not breathing",
+      "cprSteps": "Call 112 first. Push hard and fast in the centre of the chest, about 100 per minute. Continue until help arrives.",
+      "seizureLabel": "Seizure",
+      "seizureSteps": "Clear the area. Do not hold them down. Do not put anything in their mouth. Time it. Call 112 if it lasts more than 5 minutes.",
+      "poisonLabel": "Poisoning",
+      "poisonSteps": "Call the poison centre. Do not make them vomit. Save the container or label. Call 112."
+    }
+  },
+  "scan": {
+    "title": "Check a health claim",
+    "subtitle": "Paste something you saw on Facebook, TikTok, or WhatsApp. We'll tell you the truth.",
+    "placeholder": "Paste the claim here...\n\nExample: \"Vaccines change your DNA\"",
+    "checkButton": "Check this",
+    "checking": "Checking...",
+    "shareButton": "Share the truth",
+    "recentChecks": "Recent checks",
+    "orDescribe": "or describe what you heard",
+    "verdictVerified": "Verified",
+    "verdictMisleading": "Misleading",
+    "verdictFalse": "False"
+  },
+  "install": {
+    "installApp": "Install Sastipe",
+    "offlineAccess": "Add it to your home screen for offline access and faster opens.",
+    "installButton": "Install",
+    "addToHome": "Add to Home Screen",
+    "tap": "Tap",
+    "then": "then",
+    "add": "Add",
+    "toInstall": "to install on iOS."
+  },
+  "chat": {
+    "askMeAnything": "Ask me anything"
+  },
+  "impact": {
+    "title": "Public Health Impact",
+    "subtitle": "Real-time telemetry from Sastipe's deployment across Roma communities.",
+    "statMyths": "Myths Debunked",
+    "statEmergencies": "Emergencies Escalated",
+    "statMediators": "Active Mediators",
+    "statVisits": "Field Visits Logged",
+    "deployTitle": "Deploy in Your Region",
+    "deployDesc": "Sastipe is white-label ready for municipalities and health ministries.",
+    "contactBtn": "Contact Partnerships"
+  },
+  "methodology": {
+    "title": "Clinical Governance & Safety",
+    "subtitle": "How we ensure Sastipe provides safe, accurate, and culturally competent health information.",
+    "section1": "Deterministic Red Flags",
+    "desc1": "Before any AI model is called, user input is scanned against a deterministic regex engine for critical emergencies (e.g., chest pain, suicidal ideation). If triggered, the AI is bypassed entirely and the user is directed to call 112.",
+    "section2": "PII Scrubbing",
+    "desc2": "All messages are sanitized locally. Phone numbers, emails, IBANs, and National IDs are masked before leaving the device infrastructure.",
+    "section3": "Clinical Review",
+    "desc3": "Every lesson in the Student Health Academy undergoes clinical review by practicing Roma Health Mediators and physicians."
+  },
+  "providers": {
+    "title": "Roma-Friendly Clinics",
+    "subtitle": "Find trusted healthcare providers near you who understand our community.",
+    "searchPlaceholder": "Search by city or clinic name...",
+    "allRegions": "All Regions",
+    "verified": "Verified Roma-Friendly",
+    "freeClinic": "Free Services Available",
+    "interpreter": "Romani Interpreter",
+    "getDirections": "Get Directions"
   }
 }
