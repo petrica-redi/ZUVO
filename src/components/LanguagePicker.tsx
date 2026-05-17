@@ -44,6 +44,7 @@ export function LanguagePicker({ variant = "default" }: { variant?: "default" | 
 
   function selectLanguage(code: string) {
     setOpen(false);
+    document.cookie = `NEXT_LOCALE=${code}; path=/; max-age=31536000; SameSite=Lax`;
     startTransition(() => {
       router.replace(pathname, { locale: code as Locale });
       router.refresh();
