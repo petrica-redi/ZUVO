@@ -19,6 +19,7 @@ import {
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { StudentAcademyLessonFooter } from "@/components/StudentAcademyLessonFooter";
+import { StudentAcademyRouteGate } from "@/components/StudentAcademyRouteGate";
 import { StudentAcademyIllustration } from "@/components/StudentAcademyIllustration";
 import { StudentFieldLab } from "@/components/StudentFieldLab";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
@@ -124,6 +125,7 @@ export default async function StudentModulePage({ params }: Props) {
       </div>
 
       <main id="main-content" className="flex-1 pb-8">
+        <StudentAcademyRouteGate stage={stage}>
         <ErrorBoundary>
           <div className="mx-auto max-w-3xl px-4 py-6 md:px-6 md:py-8">
             {showStiNote && (
@@ -420,6 +422,7 @@ export default async function StudentModulePage({ params }: Props) {
             </div>
           </div>
         </ErrorBoundary>
+        </StudentAcademyRouteGate>
       </main>
       <BottomNav />
     </div>

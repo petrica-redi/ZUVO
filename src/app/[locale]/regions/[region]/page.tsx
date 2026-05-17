@@ -8,7 +8,7 @@ import {
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { SosButton } from "@/components/SosButton";
-import { REGIONS, type RegionData } from "@/data/regions";
+import { REGIONS } from "@/data/regions";
 
 type Props = {
   params: Promise<{ locale: string; region: string }>;

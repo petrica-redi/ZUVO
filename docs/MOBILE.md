@@ -108,7 +108,7 @@ Requires macOS + Xcode 15+ and an Apple Developer Program membership ($99/yr).
 
 ### Apple-specific gotchas
 
-- iOS will reject if the manifest lists no `health`/`medical` disclaimer. Our app has the disclaimer banner on hub + every lesson, plus an emergency CTA — keep that visible at first launch.
+- App Review will look for clear medical disclaimers in the UI and App Store metadata. Our app has the disclaimer banner on hub + every lesson, plus an emergency CTA — keep that visible at first launch.
 - Don't claim diagnosis. The copy already uses "guidance" / "education" language; keep it that way in App Store description too.
 - Provide working test credentials (or note "no login required, anonymous").
 
@@ -156,7 +156,7 @@ Requires Android Studio Hedgehog+ and a Google Play Console account ($25 one-tim
 
 - Auth / Supabase — the web flow already works inside the WebView.
 - AI calls — pure HTTPS, no native SDK needed.
-- Service worker — Capacitor ships its own offline strategy, so we skip SW registration on native (`ServiceWorkerRegistrar` detects this).
+- Service worker — native WebViews cannot rely on the web service-worker lifecycle the same way as browsers, so we skip SW registration inside Capacitor and package a small fallback shell instead.
 
 ## Common commands cheat sheet
 

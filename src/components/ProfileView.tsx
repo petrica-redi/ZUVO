@@ -1,12 +1,22 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { User, Globe, BookOpen, Activity, Flame, Download, Trash2, Info, Shield, Mail } from "lucide-react";
+import { User, BookOpen, Activity, Flame, Download, Trash2, Info, Shield, Mail } from "lucide-react";
 
 type Labels = Record<string, string>;
 
 const PROGRESS_KEY = "sastipe_progress";
 const CHECKIN_KEY = "sastipe_checkin";
+const ACADEMY_KEY = "sastipe_student_health";
+
+function safeJson(key: string, fallback: unknown) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch {
+    return fallback;
+  }
+}
 
 export function ProfileView({ labels }: { labels: Labels }) {
   const [modulesCompleted, setModulesCompleted] = useState(0);
@@ -17,7 +27,7 @@ export function ProfileView({ labels }: { labels: Labels }) {
   useEffect(() => {
     // Count progress
     try {
-      const progress = JSON.parse(localStorage.getItem(PROGRESS_KEY) ?? "{}");
+      const progress = safeJson(PROGRESS_KEY, {}) as Record<string, string>;
       const completed = Object.values(progress).filter((v) => v === "completed").length;
       const pillars = new Set(
         Object.keys(progress)
@@ -34,7 +44,7 @@ export function ProfileView({ labels }: { labels: Labels }) {
 
     // Count streak
     try {
-      const history = JSON.parse(localStorage.getItem(CHECKIN_KEY) ?? "{}");
+      const history = safeJson(CHECKIN_KEY, {}) as Record<string, unknown>;
       let s = 0;
       const d = new Date();
       while (true) {
@@ -56,6 +66,7 @@ export function ProfileView({ labels }: { labels: Labels }) {
     }
     localStorage.removeItem(PROGRESS_KEY);
     localStorage.removeItem(CHECKIN_KEY);
+    localStorage.removeItem(ACADEMY_KEY);
     localStorage.removeItem("sastipe_anon_id");
     setModulesCompleted(0);
     setPillarsStarted(0);
@@ -65,8 +76,9 @@ export function ProfileView({ labels }: { labels: Labels }) {
 
   const handleExport = () => {
     const data = {
-      progress: JSON.parse(localStorage.getItem(PROGRESS_KEY) ?? "{}"),
-      checkins: JSON.parse(localStorage.getItem(CHECKIN_KEY) ?? "{}"),
+      progress: safeJson(PROGRESS_KEY, {}),
+      checkins: safeJson(CHECKIN_KEY, {}),
+      academy: safeJson(ACADEMY_KEY, {}),
       exported: new Date().toISOString(),
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });

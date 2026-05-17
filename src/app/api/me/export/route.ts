@@ -20,7 +20,7 @@ import { resolveUser } from "@/lib/auth/server-user";
 
 export async function GET(req: NextRequest) {
   const user = await resolveUser(req);
-  if (!user) {
+  if (!user || user.kind !== "authenticated") {
     return NextResponse.json(
       { success: false, error: "Authentication required" },
       { status: 401 },
@@ -36,20 +36,10 @@ export async function GET(req: NextRequest) {
 
   const db = getDb();
   if (!db) {
-    // Anonymous-only mode without DB: return a minimal bundle.
-    return NextResponse.json({
-      exportedAt: new Date().toISOString(),
-      schemaVersion: 1,
-      identity: {
-        kind: user.kind,
-        id: user.id,
-        anonId: user.anonId,
-        email: user.email,
-      },
-      note:
-        "No server-side records exist for this identity. Local progress, Field Lab notes, streaks, and XP are stored on your device only.",
-      records: {},
-    });
+    return NextResponse.json(
+      { success: false, error: "Database unavailable" },
+      { status: 503 },
+    );
   }
 
   // Authenticated path: pull all user-owned tables.

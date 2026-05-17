@@ -18,6 +18,20 @@ import { Card, Badge } from "@/components/ui";
 import { useToast } from "@/components/ui/Toast";
 import { track } from "@/lib/analytics";
 
+const LEGACY_PROGRESS_KEY = "sastipe_progress";
+
+function isLessonComplete(pillarId: string, moduleId: string) {
+  if (typeof window === "undefined") return false;
+  try {
+    const raw = localStorage.getItem(LEGACY_PROGRESS_KEY);
+    if (!raw) return false;
+    const progress = JSON.parse(raw) as Record<string, string>;
+    return progress[`${pillarId}:${moduleId}`] === "completed";
+  } catch {
+    return false;
+  }
+}
+
 type Props = {
   pillarId: string;
   moduleId: string;
@@ -52,9 +66,17 @@ export function StudentAcademyLessonFooter(props: Props) {
   const [animating, setAnimating] = useState(false);
   const toast = useToast();
 
+  useEffect(() => {
+    const id = window.setTimeout(() => {
+      if (isLessonComplete(buttonProps.pillarId, buttonProps.moduleId)) {
+        setNextStep(getLessonNextStep(stage, buttonProps.moduleId));
+      }
+    }, 0);
+    return () => window.clearTimeout(id);
+  }, [stage, buttonProps.pillarId, buttonProps.moduleId]);
+
   // Recompute next step if academy state changes (e.g. quiz pass elsewhere).
   useEffect(() => {
-    if (!nextStep) return;
     const sync = () => setNextStep(getLessonNextStep(stage, buttonProps.moduleId));
     window.addEventListener("student-academy-update", sync);
     return () => window.removeEventListener("student-academy-update", sync);

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { SosButton } from "@/components/SosButton";
@@ -8,7 +7,7 @@ import { MisinfoScanner } from "@/components/MisinfoScanner";
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata(): Promise<Metadata> {
-  return { title: "Fact Check — Zuvo", description: "Check health claims against evidence" };
+  return { title: "Fact Check — Sastipe", description: "Check health claims against evidence" };
 }
 
 export default async function ScanPage({ params }: Props) {

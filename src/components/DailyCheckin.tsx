@@ -49,6 +49,23 @@ function getCheckinHistory(): Record<string, { mood: number; water: number; acti
   }
 }
 
+function calculateStreak(history: Record<string, unknown>): number {
+  const today = getTodayKey();
+  const d = new Date();
+  if (!history[today]) {
+    d.setDate(d.getDate() - 1);
+  }
+
+  let streak = 0;
+  while (true) {
+    const key = d.toISOString().slice(0, 10);
+    if (!history[key]) break;
+    streak++;
+    d.setDate(d.getDate() - 1);
+  }
+  return streak;
+}
+
 export function DailyCheckin({ labels }: { labels: Labels }) {
   const [mood, setMood] = useState<number | null>(null);
   const [water, setWater] = useState(0);
@@ -61,16 +78,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
     const history = getCheckinHistory();
     const today = history[getTodayKey()];
 
-    // Calculate streak
-    let s = 0;
-    const d = new Date();
-    while (true) {
-      const key = d.toISOString().slice(0, 10);
-      if (history[key]) {
-        s++;
-        d.setDate(d.getDate() - 1);
-      } else break;
-    }
+    const s = calculateStreak(history);
 
     queueMicrotask(() => {
       if (today) {
@@ -118,7 +126,7 @@ export function DailyCheckin({ labels }: { labels: Labels }) {
 
     setSaved(true);
     setTodayDone(true);
-    setStreak((s) => s + (s === 0 || !getCheckinHistory()[getTodayKey()] ? 1 : 0));
+    setStreak(calculateStreak(history));
     setTimeout(() => setSaved(false), 2000);
   };
 

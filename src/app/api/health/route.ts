@@ -11,7 +11,7 @@
  *
  * Never throws. Caches result for 5s to avoid hammering downstream services.
  */
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { getDb } from "@/db/client";
 import { sql } from "drizzle-orm";
 
@@ -94,7 +94,22 @@ async function buildReport(): Promise<HealthReport> {
   };
 }
 
-export async function GET() {
+export async function GET(req?: NextRequest) {
+  const secret = process.env.HEALTH_CHECK_SECRET?.trim();
+  const provided =
+    req?.headers.get("x-health-check-secret")?.trim() ||
+    req?.nextUrl.searchParams.get("secret")?.trim();
+  if (process.env.NODE_ENV === "production" && secret && provided !== secret) {
+    return NextResponse.json(
+      {
+        status: "ok",
+        uptime: typeof process.uptime === "function" ? process.uptime() : 0,
+        timestamp: new Date().toISOString(),
+      },
+      { headers: { "Cache-Control": "public, max-age=5" } },
+    );
+  }
+
   const now = Date.now();
   if (cache && now - cache.at < CACHE_MS) {
     return NextResponse.json(cache.report, {

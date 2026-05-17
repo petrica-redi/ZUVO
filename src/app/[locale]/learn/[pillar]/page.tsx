@@ -5,7 +5,7 @@ import { getTranslations } from "next-intl/server";
 import { ChevronLeft, ChevronRight, Clock } from "lucide-react";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
-import { getPillar, PILLARS } from "@/data/content";
+import { getPillar } from "@/data/content";
 
 const VALID = ["prevention", "nutrition", "maternal", "children", "chronic", "mental"] as const;
 
@@ -73,7 +73,7 @@ export default async function PillarPage({ params }: Props) {
             {tLearn("allModules")} ({pillar.modules.length})
           </h2>
           <div className="flex flex-col gap-2">
-            {pillar.modules.map((mod, i) => (
+            {pillar.modules.map((mod) => (
               <Link
                 key={mod.id}
                 href={`/learn/${pillarId}/${mod.id}`}

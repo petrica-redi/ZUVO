@@ -39,7 +39,7 @@ const deleteSchema = z.object({
 
 export async function POST(req: NextRequest) {
   const user = await resolveUser(req);
-  if (!user) {
+  if (!user || user.kind !== "authenticated") {
     return NextResponse.json(
       { success: false, error: "Authentication required" },
       { status: 401 },
@@ -85,7 +85,7 @@ export async function POST(req: NextRequest) {
 
     // 2. Scrub identifying fields on the user row but keep the row for FK
     //    integrity and statistical use until the hard-delete cron runs.
-    await db
+    const [updatedUser] = await db
       .update(users)
       .set({
         email: pseudoEmail,
@@ -97,7 +97,15 @@ export async function POST(req: NextRequest) {
         isAnonymous: true,
         updatedAt: now,
       })
-      .where(eq(users.id, user.id));
+      .where(eq(users.id, user.id))
+      .returning({ id: users.id });
+
+    if (!updatedUser) {
+      return NextResponse.json(
+        { success: false, error: "User profile not found" },
+        { status: 404 },
+      );
+    }
 
     // 3. Best-effort scrub of free-text fields on health logs and notifications.
     await db
@@ -133,12 +141,11 @@ export async function POST(req: NextRequest) {
         now.getTime() + 30 * 24 * 60 * 60 * 1000,
       ).toISOString(),
     });
-  } catch (err) {
+  } catch {
     return NextResponse.json(
       {
         success: false,
         error: "Failed to process deletion. Please contact dpo@sastipe.org.",
-        ref: err instanceof Error ? err.message.slice(0, 200) : undefined,
       },
       { status: 500 },
     );

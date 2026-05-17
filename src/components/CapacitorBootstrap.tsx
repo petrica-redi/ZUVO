@@ -18,6 +18,7 @@ export function CapacitorBootstrap() {
     if (!isNative()) return;
 
     let backHandler: { remove: () => void } | null = null;
+    let urlOpenHandler: { remove: () => void } | null = null;
 
     void (async () => {
       try {
@@ -48,6 +49,18 @@ export function CapacitorBootstrap() {
             void App.exitApp();
           }
         });
+        urlOpenHandler = await App.addListener("appUrlOpen", ({ url }) => {
+          try {
+            const parsed = new URL(url);
+            const path = parsed.pathname || "/";
+            const search = parsed.search || "";
+            if (path.startsWith("/api/")) return;
+            window.history.pushState(null, "", `${path}${search}`);
+            window.dispatchEvent(new PopStateEvent("popstate"));
+          } catch {
+            /* ignore malformed deep links */
+          }
+        });
       } catch {
         /* ignore */
       }
@@ -55,6 +68,7 @@ export function CapacitorBootstrap() {
 
     return () => {
       backHandler?.remove?.();
+      urlOpenHandler?.remove?.();
     };
   }, []);
 

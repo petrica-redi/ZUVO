@@ -6,6 +6,7 @@ import "./globals.css";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
 import { InstallPrompt } from "@/components/InstallPrompt";
 import { CapacitorBootstrap } from "@/components/CapacitorBootstrap";
+import { ProtocolRouteHandler } from "@/components/ProtocolRouteHandler";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext", "greek"],
@@ -73,6 +74,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <ServiceWorkerRegistrar />
         <CapacitorBootstrap />
+        <ProtocolRouteHandler />
         <div className="mobile-shell" role="application" aria-label="Sastipe Health App">
           {children}
         </div>

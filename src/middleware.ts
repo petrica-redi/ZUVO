@@ -4,12 +4,7 @@ import { routing } from "./i18n/routing";
 
 const intlMiddleware = createMiddleware(routing);
 
-export default function middleware(req: NextRequest) {
-  if (req.nextUrl.pathname.startsWith("/api/") || req.nextUrl.pathname === "/offline.html") {
-    return NextResponse.next();
-  }
-
-  const res = intlMiddleware(req);
+function applySecurityHeaders(res: NextResponse) {
   res.headers.set("X-Content-Type-Options", "nosniff");
   res.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   res.headers.set("X-Frame-Options", "DENY");
@@ -18,6 +13,15 @@ export default function middleware(req: NextRequest) {
     "camera=(), microphone=(), geolocation=(self)"
   );
   return res;
+}
+
+export default function middleware(req: NextRequest) {
+  if (req.nextUrl.pathname.startsWith("/api/") || req.nextUrl.pathname === "/offline.html") {
+    return applySecurityHeaders(NextResponse.next());
+  }
+
+  const res = intlMiddleware(req);
+  return applySecurityHeaders(res);
 }
 
 export const config = {

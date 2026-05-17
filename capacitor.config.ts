@@ -28,6 +28,19 @@ const SERVER_URL =
   process.env.CAP_SERVER_URL?.trim() ||
   "https://app.sastipe.org";
 
+const serverHost = (() => {
+  try {
+    return new URL(SERVER_URL).hostname;
+  } catch {
+    return "app.sastipe.org";
+  }
+})();
+
+const extraNavigation = (process.env.CAP_ALLOW_NAVIGATION ?? "")
+  .split(",")
+  .map((host) => host.trim())
+  .filter(Boolean);
+
 const config: CapacitorConfig = {
   appId: "org.sastipe.app",
   appName: "Sastipe",
@@ -37,15 +50,7 @@ const config: CapacitorConfig = {
     url: SERVER_URL,
     androidScheme: "https",
     cleartext: false,
-    allowNavigation: [
-      "*.sastipe.org",
-      "*.vercel.app",
-      "*.supabase.co",
-      "*.openai.com",
-      "*.sentry.io",
-      "*.posthog.com",
-      "*.upstash.io",
-    ],
+    allowNavigation: Array.from(new Set([serverHost, ...extraNavigation])),
   },
 
   ios: {

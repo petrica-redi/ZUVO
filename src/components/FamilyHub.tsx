@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import {
-  Plus, User, Baby, Heart, Trash2, ChevronRight,
+  Plus, Heart, Trash2, ChevronRight,
   Syringe, Activity, Calendar, X,
 } from "lucide-react";
 
@@ -29,14 +29,6 @@ type HealthEntry = {
 const STORAGE_KEY = "zuvo_family";
 const HEALTH_KEY = "zuvo_health_logs";
 
-const RELATIONSHIP_ICONS: Record<string, typeof User> = {
-  self: User,
-  child: Baby,
-  spouse: Heart,
-  parent: User,
-  other: User,
-};
-
 const RELATIONSHIP_LABELS: Record<string, string> = {
   self: "Me",
   child: "Child",
@@ -44,8 +36,6 @@ const RELATIONSHIP_LABELS: Record<string, string> = {
   parent: "Parent",
   other: "Other",
 };
-
-const AVATARS = ["👤", "👩", "👨", "👧", "👦", "👶", "👵", "👴", "🤰"];
 
 function getMembers(): FamilyMember[] {
   if (typeof window === "undefined") return [];

@@ -31,8 +31,17 @@ const querySchema = z.object({
 export async function GET(req: NextRequest) {
   const db = getDb();
   const user = await resolveUser(req);
-  if (!db || !user) {
-    return NextResponse.json({ success: true, data: [] });
+  if (!user) {
+    return NextResponse.json(
+      { success: false, error: "Authentication required" },
+      { status: 401 },
+    );
+  }
+  if (!db) {
+    return NextResponse.json(
+      { success: false, error: "Database unavailable" },
+      { status: 503 },
+    );
   }
 
   const url = new URL(req.url);

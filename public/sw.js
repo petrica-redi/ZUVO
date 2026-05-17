@@ -24,7 +24,14 @@ const PRECACHE_URLS = [
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_VERSION).then((cache) => cache.addAll(PRECACHE_URLS)),
+    caches.open(CACHE_VERSION).then((cache) =>
+      Promise.allSettled(
+        PRECACHE_URLS.map(async (url) => {
+          const response = await fetch(url, { cache: "reload" });
+          if (response.ok) await cache.put(url, response);
+        }),
+      ),
+    ),
   );
   self.skipWaiting();
 });

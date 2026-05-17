@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Search, Mic, Share2, AlertTriangle, CheckCircle2, XCircle, Loader2 } from "lucide-react";
 
 type Verdict = {
@@ -54,10 +55,23 @@ const VERDICT_STYLES = {
 };
 
 export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: string }) {
+  const searchParams = useSearchParams();
   const [claim, setClaim] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Verdict | null>(null);
   const [history, setHistory] = useState<{ claim: string; verdict: Verdict }[]>([]);
+
+  useEffect(() => {
+    const shared = [
+      searchParams.get("text"),
+      searchParams.get("url"),
+      searchParams.get("title"),
+    ]
+      .filter(Boolean)
+      .join("\n")
+      .trim();
+    if (shared) setClaim((current) => current || shared.slice(0, 1200));
+  }, [searchParams]);
 
   const handleScan = async () => {
     if (!claim.trim() || loading) return;

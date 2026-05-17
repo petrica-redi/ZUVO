@@ -25,6 +25,7 @@ import { StudentAcademyIllustration } from "@/components/StudentAcademyIllustrat
 import { getRegion, REGIONS, type RegionSlug } from "@/data/regions";
 import {
   allStageModulesCompleted,
+  defaultAcademyState,
   getAcademyLevel,
   getAcademyNextStep,
   getCompletedModuleIdSet,
@@ -44,7 +45,7 @@ import { cn } from "@/components/ui/cn";
 export function StudentAcademyHub() {
   const t = useTranslations("studentHealth");
   const tRegions = useTranslations("regions");
-  const [state, setState] = useState<StudentAcademyState>(() => readAcademyState());
+  const [state, setState] = useState<StudentAcademyState>(() => defaultAcademyState());
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

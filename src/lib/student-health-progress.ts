@@ -29,7 +29,7 @@ export type StudentAcademyState = {
   lastActivityAt: string | null;
 };
 
-const defaultState = (): StudentAcademyState => ({
+export const defaultAcademyState = (): StudentAcademyState => ({
   version: ACADEMY_VERSION,
   xp: 0,
   badges: [],
@@ -45,10 +45,10 @@ function todayKey(date = new Date()): string {
 }
 
 export function readAcademyState(): StudentAcademyState {
-  if (typeof window === "undefined") return defaultState();
+  if (typeof window === "undefined") return defaultAcademyState();
   try {
     const raw = localStorage.getItem(ACADEMY_KEY);
-    if (!raw) return defaultState();
+    if (!raw) return defaultAcademyState();
     const parsed = JSON.parse(raw) as Partial<StudentAcademyState>;
     return {
       version: typeof parsed.version === "number" ? parsed.version : ACADEMY_VERSION,
@@ -65,7 +65,7 @@ export function readAcademyState(): StudentAcademyState {
       lastActivityAt: typeof parsed.lastActivityAt === "string" ? parsed.lastActivityAt : null,
     };
   } catch {
-    return defaultState();
+    return defaultAcademyState();
   }
 }
 

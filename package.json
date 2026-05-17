@@ -49,11 +49,10 @@
     "@supabase/ssr": "^0.9.0",
     "@supabase/supabase-js": "^2.99.2",
     "@tanstack/react-query": "^5.91.0",
-    "@trigger.dev/sdk": "^4.4.3",
     "drizzle-orm": "^0.45.1",
     "langfuse": "^3.38.6",
     "lucide-react": "^0.577.0",
-    "next": "16.2.0",
+    "next": "^16.2.6",
     "next-intl": "^4.8.3",
     "postgres": "^3.4.8",
     "posthog-js": "^1.373.5",
@@ -74,10 +73,13 @@
     "@types/react-dom": "^19",
     "drizzle-kit": "^0.31.10",
     "eslint": "^9",
-    "eslint-config-next": "16.2.0",
+    "eslint-config-next": "^16.2.6",
     "jsdom": "^29.1.1",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.1.0"
+  },
+  "overrides": {
+    "postcss": "^8.5.10"
   }
 }
