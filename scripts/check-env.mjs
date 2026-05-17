@@ -23,7 +23,13 @@ function detectEnv() {
 
 const PROFILES = {
   production: {
-    required: [
+    // Production deploys can build without secrets configured — every runtime
+    // service wrapper is defensive (returns null / 503 when its env vars are
+    // missing). This lets the marketing surface, Academy, and PWA shell go
+    // live immediately while the operator wires up DB / AI / Sentry asynchronously.
+    // Set SASTIPE_STRICT_ENV=1 in a CI environment if you want to enforce that
+    // every production deploy has the full secret set.
+    required: env.SASTIPE_STRICT_ENV === "1" ? [
       "NEXT_PUBLIC_APP_URL",
       "NEXT_PUBLIC_APP_NAME",
       "NEXT_PUBLIC_DEFAULT_LOCALE",
@@ -33,8 +39,15 @@ const PROFILES = {
       "NEXT_PUBLIC_SUPABASE_ANON_KEY",
       "OPENAI_API_KEY",
       "NEXT_PUBLIC_SENTRY_DSN",
-    ],
+    ] : [],
     recommended: [
+      "NEXT_PUBLIC_APP_URL",
+      "NEXT_PUBLIC_APP_NAME",
+      "DATABASE_URL",
+      "NEXT_PUBLIC_SUPABASE_URL",
+      "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "OPENAI_API_KEY",
+      "NEXT_PUBLIC_SENTRY_DSN",
       "UPSTASH_REDIS_REST_URL",
       "UPSTASH_REDIS_REST_TOKEN",
       "RESEND_API_KEY",
