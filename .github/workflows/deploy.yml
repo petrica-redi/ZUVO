@@ -1,0 +1,93 @@
+name: Deploy to Vercel
+
+# Runs on every push to `main` once VERCEL_TOKEN is set in repo Secrets.
+# Skips itself if the token is missing so an unconfigured repo doesn't fail CI.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Deploy environment"
+        required: true
+        default: production
+        type: choice
+        options: [production, preview]
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Vercel ${{ github.event.inputs.environment || 'production' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+    steps:
+      - name: Skip when Vercel is not configured
+        if: env.VERCEL_TOKEN == ''
+        run: |
+          echo "::warning::VERCEL_TOKEN secret not set — skipping deploy."
+          echo "Add VERCEL_TOKEN (and optionally VERCEL_ORG_ID / VERCEL_PROJECT_ID) under"
+          echo "Settings → Secrets and variables → Actions to enable auto-deploy."
+          exit 0
+
+      - uses: actions/checkout@v4
+        if: env.VERCEL_TOKEN != ''
+
+      - uses: actions/setup-node@v4
+        if: env.VERCEL_TOKEN != ''
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install Vercel CLI
+        if: env.VERCEL_TOKEN != ''
+        run: npm install -g vercel@latest
+
+      # `vercel pull` requires VERCEL_ORG_ID + VERCEL_PROJECT_ID to be set so it
+      # can locate the project without an interactive prompt. Generate both with
+      # `vercel link` locally once and copy them out of .vercel/project.json.
+      - name: Resolve target environment
+        if: env.VERCEL_TOKEN != ''
+        id: target
+        run: |
+          env_name="${{ github.event.inputs.environment || 'production' }}"
+          echo "name=$env_name" >> "$GITHUB_OUTPUT"
+          if [ "$env_name" = "production" ]; then
+            echo "prod_flag=--prod" >> "$GITHUB_OUTPUT"
+          else
+            echo "prod_flag=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Pull Vercel env
+        if: env.VERCEL_TOKEN != ''
+        run: vercel pull --yes --environment=${{ steps.target.outputs.name }} --token=$VERCEL_TOKEN
+
+      - name: Build
+        if: env.VERCEL_TOKEN != ''
+        run: vercel build ${{ steps.target.outputs.prod_flag }} --token=$VERCEL_TOKEN
+
+      - name: Deploy
+        if: env.VERCEL_TOKEN != ''
+        id: deploy
+        run: |
+          url=$(vercel deploy --prebuilt ${{ steps.target.outputs.prod_flag }} --token=$VERCEL_TOKEN)
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "::notice title=Deploy URL::$url"
+
+      - name: Summary
+        if: env.VERCEL_TOKEN != ''
+        run: |
+          {
+            echo "### Vercel deploy"
+            echo ""
+            echo "- Environment: \`${{ steps.target.outputs.name }}\`"
+            echo "- URL: ${{ steps.deploy.outputs.url }}"
+            echo "- Commit: \`${{ github.sha }}\`"
+          } >> "$GITHUB_STEP_SUMMARY"

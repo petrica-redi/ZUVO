@@ -103,7 +103,31 @@ GitHub Actions in [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) runs
 typecheck → lint → unit tests → build → E2E (Playwright)
 ```
 
-Vercel auto-deploys preview environments per PR and promotes `main` to production. Each preview gets a unique URL with the same env contract.
+### Deploys
+
+Two equally good paths — pick one.
+
+**A. Vercel git integration (no setup if it already works).**
+Vercel auto-deploys preview environments per PR and promotes `main` to production. Make sure **Project → Settings → Git → Production Branch** is `main`. If a previously-merged feature branch was set as production, deploys will silently stop when that branch is deleted.
+
+**B. GitHub Actions deploy** ([`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml)).
+Runs on every push to `main` once these repo Secrets are present:
+
+| Secret | Where to get it |
+|---|---|
+| `VERCEL_TOKEN` | <https://vercel.com/account/tokens> |
+| `VERCEL_ORG_ID` | Run `vercel link` locally → `.vercel/project.json` → `orgId` |
+| `VERCEL_PROJECT_ID` | Same file → `projectId` |
+
+Without `VERCEL_TOKEN` the workflow skips itself (no failing CI). It can also be triggered manually with environment=`preview` from the Actions tab.
+
+**Manual one-shot redeploy from a workstation.**
+```bash
+export VERCEL_TOKEN=...                       # from the dashboard
+./scripts/deploy-prod.sh                      # deploy current commit
+SET_DEEPGRAM_KEY=1 ./scripts/deploy-prod.sh   # also set DEEPGRAM_API_KEY (prompted)
+```
+The script handles `vercel link`, env pull, build, and `vercel deploy --prebuilt --prod`. Idempotent.
 
 ## 9. Domain & DNS — `redi.healthcare`
 
