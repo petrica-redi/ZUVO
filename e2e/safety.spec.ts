@@ -122,12 +122,13 @@ test.describe("Localised emergency content", () => {
 
   test("Romanian locale renders translated home", async ({ page }) => {
     await page.goto("/ro");
-    // Romanian for "Emergency? Call 112"
-    await expect(page.getByText(/Urgență\?/i)).toBeVisible();
+    // Romanian for "Emergency? Call 112" — multiple touchpoints (header CTA +
+    // emergency strip), so assert at least one visible occurrence.
+    await expect(page.getByText(/Urgență\?/i).first()).toBeVisible();
   });
 
   test("Albanian locale renders translated home", async ({ page }) => {
     await page.goto("/sq");
-    await expect(page.getByText(/Emergjencë\?/i)).toBeVisible();
+    await expect(page.getByText(/Emergjencë\?/i).first()).toBeVisible();
   });
 });
