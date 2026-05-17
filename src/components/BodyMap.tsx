@@ -1,31 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   ArrowLeft, Loader2, CheckCircle2, Clock, Siren,
   AlertTriangle, Shield, Lightbulb, Send, Activity,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
+
+type RegionId =
+  | "head"
+  | "chest"
+  | "abdomen"
+  | "leftArm"
+  | "rightArm"
+  | "pelvis"
+  | "leftLeg"
+  | "rightLeg";
 
 type BodyRegion = {
-  id: string;
-  label: string;
+  id: RegionId;
   emoji: string;
   x: number;
   y: number;
   width: number;
   height: number;
-  commonSymptoms: string[];
+  symptomsKey:
+    | "headSymptoms"
+    | "chestSymptoms"
+    | "abdomenSymptoms"
+    | "armSymptoms"
+    | "pelvisSymptoms"
+    | "legSymptoms";
 };
 
 const BODY_REGIONS: BodyRegion[] = [
-  { id: "head", label: "Head", emoji: "🧠", x: 135, y: 10, width: 50, height: 55, commonSymptoms: ["Headache", "Dizziness", "Blurry vision", "Ear pain", "Sore throat"] },
-  { id: "chest", label: "Chest", emoji: "🫁", x: 115, y: 90, width: 90, height: 70, commonSymptoms: ["Chest pain", "Difficulty breathing", "Cough", "Heart racing", "Tightness"] },
-  { id: "abdomen", label: "Stomach", emoji: "🤢", x: 120, y: 165, width: 80, height: 60, commonSymptoms: ["Stomach pain", "Nausea/vomiting", "Diarrhea", "Bloating", "No appetite"] },
-  { id: "left-arm", label: "Left Arm", emoji: "💪", x: 70, y: 100, width: 40, height: 100, commonSymptoms: ["Pain", "Numbness", "Swelling", "Can't move it", "Tingling"] },
-  { id: "right-arm", label: "Right Arm", emoji: "💪", x: 210, y: 100, width: 40, height: 100, commonSymptoms: ["Pain", "Numbness", "Swelling", "Can't move it", "Tingling"] },
-  { id: "pelvis", label: "Lower body", emoji: "🩻", x: 120, y: 225, width: 80, height: 40, commonSymptoms: ["Pain when urinating", "Lower back pain", "Menstrual problems", "Groin pain"] },
-  { id: "left-leg", label: "Left Leg", emoji: "🦵", x: 115, y: 270, width: 45, height: 120, commonSymptoms: ["Leg pain", "Swelling", "Can't walk", "Knee pain", "Numbness"] },
-  { id: "right-leg", label: "Right Leg", emoji: "🦵", x: 160, y: 270, width: 45, height: 120, commonSymptoms: ["Leg pain", "Swelling", "Can't walk", "Knee pain", "Numbness"] },
+  { id: "head", emoji: "🧠", x: 135, y: 10, width: 50, height: 55, symptomsKey: "headSymptoms" },
+  { id: "chest", emoji: "🫁", x: 115, y: 90, width: 90, height: 70, symptomsKey: "chestSymptoms" },
+  { id: "abdomen", emoji: "🤢", x: 120, y: 165, width: 80, height: 60, symptomsKey: "abdomenSymptoms" },
+  { id: "leftArm", emoji: "💪", x: 70, y: 100, width: 40, height: 100, symptomsKey: "armSymptoms" },
+  { id: "rightArm", emoji: "💪", x: 210, y: 100, width: 40, height: 100, symptomsKey: "armSymptoms" },
+  { id: "pelvis", emoji: "🩻", x: 120, y: 225, width: 80, height: 40, symptomsKey: "pelvisSymptoms" },
+  { id: "leftLeg", emoji: "🦵", x: 115, y: 270, width: 45, height: 120, symptomsKey: "legSymptoms" },
+  { id: "rightLeg", emoji: "🦵", x: 160, y: 270, width: 45, height: 120, symptomsKey: "legSymptoms" },
 ];
 
 type TriageResult = {
@@ -39,13 +55,17 @@ type TriageResult = {
   preventionTips: string[];
 };
 
-const SEVERITY_CONFIG = {
-  green: { icon: CheckCircle2, label: "Manage at home", gradient: "from-green-500 to-emerald-600", bg: "bg-green-50", border: "border-green-200", text: "text-green-800" },
-  amber: { icon: Clock, label: "See a doctor soon", gradient: "from-amber-500 to-orange-600", bg: "bg-amber-50", border: "border-amber-200", text: "text-amber-800" },
-  red: { icon: Siren, label: "Emergency — Go NOW", gradient: "from-red-600 to-red-800", bg: "bg-red-50", border: "border-red-200", text: "text-red-800" },
-};
+const SEVERITY_ICON = { green: CheckCircle2, amber: Clock, red: Siren } as const;
+const SEVERITY_STYLE = {
+  green: { gradient: "from-green-500 to-emerald-600", bg: "bg-green-50", border: "border-green-200", text: "text-green-800" },
+  amber: { gradient: "from-amber-500 to-orange-600", bg: "bg-amber-50", border: "border-amber-200", text: "text-amber-800" },
+  red:   { gradient: "from-red-600 to-red-800", bg: "bg-red-50", border: "border-red-200", text: "text-red-800" },
+} as const;
 
 export function BodyMap({ locale }: { locale: string }) {
+  const t = useTranslations("symptoms");
+  const tSeverity = useTranslations("severity");
+  const tEmergency = useTranslations("emergency");
   const [stage, setStage] = useState<"map" | "symptoms" | "result">("map");
   const [selectedRegion, setSelectedRegion] = useState<BodyRegion | null>(null);
   const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
@@ -53,6 +73,22 @@ export function BodyMap({ locale }: { locale: string }) {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<TriageResult | null>(null);
   const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
+
+  // Localized symptom lists, materialized once per locale change.
+  const symptomsByRegion = useMemo(() => {
+    const map: Record<string, string[]> = {};
+    for (const r of BODY_REGIONS) {
+      try {
+        const raw = t.raw(r.symptomsKey);
+        map[r.id] = Array.isArray(raw) ? (raw as string[]) : [];
+      } catch {
+        map[r.id] = [];
+      }
+    }
+    return map;
+  }, [t]);
+
+  const regionLabel = (id: RegionId) => t(`regions.${id}`);
 
   const selectRegion = (region: BodyRegion) => {
     setSelectedRegion(region);
@@ -75,7 +111,7 @@ export function BodyMap({ locale }: { locale: string }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          bodyArea: selectedRegion.label,
+          bodyArea: regionLabel(selectedRegion.id),
           symptoms: [...selectedSymptoms, extraInfo].filter(Boolean).join(", "),
           locale,
         }),
@@ -107,8 +143,8 @@ export function BodyMap({ locale }: { locale: string }) {
           <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-red-500 to-rose-600 shadow-xl shadow-red-500/25">
             <Activity className="h-10 w-10 text-white" />
           </div>
-          <h1 className="text-2xl font-black text-gray-900">Where does it hurt?</h1>
-          <p className="mt-2 text-sm text-gray-500">Tap the area on the body that is bothering you</p>
+          <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
+          <p className="mt-2 text-sm text-gray-500">{t("heroSubtitle")}</p>
         </div>
 
         {/* Body SVG */}
@@ -172,7 +208,7 @@ export function BodyMap({ locale }: { locale: string }) {
                     fontSize="10"
                     fontWeight={isHovered ? "700" : "600"}
                   >
-                    {region.label}
+                    {regionLabel(region.id)}
                   </text>
                 </g>
               );
@@ -189,7 +225,7 @@ export function BodyMap({ locale }: { locale: string }) {
               className="card-hover flex flex-col items-center gap-1 rounded-2xl border border-gray-100 bg-white p-3 shadow-sm"
             >
               <span className="text-xl">{region.emoji}</span>
-              <span className="text-[10px] font-bold text-gray-600">{region.label}</span>
+              <span className="text-[10px] font-bold text-gray-600">{regionLabel(region.id)}</span>
             </button>
           ))}
         </div>
@@ -198,20 +234,21 @@ export function BodyMap({ locale }: { locale: string }) {
   }
 
   if (stage === "symptoms" && selectedRegion) {
+    const symptoms = symptomsByRegion[selectedRegion.id] ?? [];
     return (
       <div className="animate-fade-in">
         <button onClick={reset} className="mb-4 flex items-center gap-1 text-sm font-semibold text-gray-500">
-          <ArrowLeft className="h-4 w-4" /> Back to body map
+          <ArrowLeft className="h-4 w-4" /> {t("backToMap")}
         </button>
 
         <div className="mb-5 rounded-3xl border-2 border-[#C0392B]/20 bg-gradient-to-br from-red-50 to-white p-5 text-center shadow-sm">
           <span className="mb-2 block text-3xl">{selectedRegion.emoji}</span>
-          <h2 className="text-lg font-black text-gray-900">{selectedRegion.label}</h2>
-          <p className="text-sm text-gray-500">Select all symptoms that apply</p>
+          <h2 className="text-lg font-black text-gray-900">{regionLabel(selectedRegion.id)}</h2>
+          <p className="text-sm text-gray-500">{t("selectSymptoms")}</p>
         </div>
 
         <div className="mb-4 space-y-2">
-          {selectedRegion.commonSymptoms.map((s, i) => (
+          {symptoms.map((s, i) => (
             <button
               key={s}
               onClick={() => toggleSymptom(s)}
@@ -238,8 +275,8 @@ export function BodyMap({ locale }: { locale: string }) {
         <div className="mb-4">
           <input
             onChange={(e) => setExtraInfo(e.target.value)}
-            placeholder="Anything else? (how long, how bad...)"
-            aria-label="Additional symptom details"
+            placeholder={t("extraPlaceholder")}
+            aria-label={t("extraAria")}
             className="w-full rounded-2xl border-2 border-gray-100 bg-white px-5 py-4 text-sm shadow-sm focus:border-[#C0392B] focus:outline-none focus:ring-2 focus:ring-[#C0392B]/20"
           />
         </div>
@@ -251,9 +288,9 @@ export function BodyMap({ locale }: { locale: string }) {
           style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 50%, #F39C12 100%)" }}
         >
           {loading ? (
-            <><Loader2 className="h-5 w-5 animate-spin" /> Analyzing symptoms...</>
+            <><Loader2 className="h-5 w-5 animate-spin" /> {t("analyzing")}</>
           ) : (
-            <><Send className="h-5 w-5" /> Check symptoms</>
+            <><Send className="h-5 w-5" /> {t("checkCta")}</>
           )}
         </button>
       </div>
@@ -261,37 +298,41 @@ export function BodyMap({ locale }: { locale: string }) {
   }
 
   if (stage === "result" && result) {
-    const config = SEVERITY_CONFIG[result.severity];
-    const SeverityIcon = config.icon;
+    const SeverityIcon = SEVERITY_ICON[result.severity];
+    const styles = SEVERITY_STYLE[result.severity];
+    const severityLabel =
+      result.severity === "green" ? tSeverity("green") :
+      result.severity === "amber" ? tSeverity("amber") :
+      tSeverity("red");
 
     return (
       <div className="space-y-4 animate-fade-in-up">
         <button onClick={reset} className="flex items-center gap-1 text-sm font-semibold text-gray-500">
-          <ArrowLeft className="h-4 w-4" /> Check another area
+          <ArrowLeft className="h-4 w-4" /> {t("checkAnother")}
         </button>
 
-        <div className={`overflow-hidden rounded-3xl border-2 ${config.border} shadow-lg`}>
-          <div className={`flex items-center gap-4 bg-gradient-to-r ${config.gradient} px-5 py-5`}>
+        <div className={`overflow-hidden rounded-3xl border-2 ${styles.border} shadow-lg`}>
+          <div className={`flex items-center gap-4 bg-gradient-to-r ${styles.gradient} px-5 py-5`}>
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20">
               <SeverityIcon className="h-6 w-6 text-white" />
             </div>
             <div>
-              <span className="text-xs font-black uppercase tracking-wider text-white/80">{config.label}</span>
+              <span className="text-xs font-black uppercase tracking-wider text-white/80">{severityLabel}</span>
               <h2 className="text-lg font-black text-white">{result.title}</h2>
             </div>
           </div>
 
-          <div className={`space-y-4 p-5 ${config.bg}`}>
+          <div className={`space-y-4 p-5 ${styles.bg}`}>
             {result.severity === "red" && (
               <a href="tel:112" className="flex items-center justify-center gap-3 rounded-2xl bg-red-600 py-5 text-xl font-black text-white shadow-xl animate-pulse-glow">
-                <Siren className="h-7 w-7" /> Call 112 NOW
+                <Siren className="h-7 w-7" /> {tEmergency("call112")}
               </a>
             )}
 
             <p className="text-sm leading-relaxed text-gray-700">{result.assessment}</p>
 
             <div className="rounded-2xl bg-white p-4 shadow-sm">
-              <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-600">What to do now</p>
+              <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-600">{t("whatToDoNow")}</p>
               <p className="text-sm leading-relaxed text-gray-700">{result.immediateAction}</p>
             </div>
           </div>
@@ -300,7 +341,7 @@ export function BodyMap({ locale }: { locale: string }) {
         {result.homeCare.length > 0 && (
           <div className="rounded-3xl border-2 border-green-100 bg-green-50 p-5">
             <h3 className="mb-3 flex items-center gap-2 text-sm font-black text-green-800">
-              <Lightbulb className="h-5 w-5" /> Home care
+              <Lightbulb className="h-5 w-5" /> {t("homeCare")}
             </h3>
             <ul className="space-y-2">
               {result.homeCare.map((tip, i) => (
@@ -316,7 +357,7 @@ export function BodyMap({ locale }: { locale: string }) {
         {result.warningSignsToEscalate.length > 0 && (
           <div className="rounded-3xl border-2 border-red-100 bg-red-50 p-5">
             <h3 className="mb-3 flex items-center gap-2 text-sm font-black text-red-800">
-              <AlertTriangle className="h-5 w-5" /> Go to hospital if
+              <AlertTriangle className="h-5 w-5" /> {t("escalateTitle")}
             </h3>
             <ul className="space-y-2">
               {result.warningSignsToEscalate.map((sign, i) => (
@@ -332,7 +373,7 @@ export function BodyMap({ locale }: { locale: string }) {
         {result.commonCauses.length > 0 && (
           <div className="rounded-3xl border-2 border-gray-100 bg-white p-5 shadow-sm">
             <h3 className="mb-3 flex items-center gap-2 text-sm font-black text-gray-800">
-              <Shield className="h-5 w-5 text-blue-500" /> Common causes
+              <Shield className="h-5 w-5 text-blue-500" /> {t("commonCauses")}
             </h3>
             <ul className="space-y-1.5">
               {result.commonCauses.map((cause, i) => (

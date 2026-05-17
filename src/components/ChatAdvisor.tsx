@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Send, AlertTriangle, MessageCircle, Mic, Volume2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
 
 type Message = {
@@ -23,6 +24,8 @@ type Labels = {
 };
 
 export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string }) {
+  const tChat = useTranslations("chat");
+  const tVoice = useTranslations("voice");
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -215,7 +218,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
                     <button 
                       onClick={() => speakText(msg.content, locale)}
                       className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-600 align-middle"
-                      aria-label="Read message aloud"
+                      aria-label={tVoice("readMessageAloud")}
                     >
                       <Volume2 className="h-4 w-4 inline-block" />
                     </button>
@@ -244,7 +247,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
                   ? "bg-red-100 text-red-600 animate-pulse" 
                   : "bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-hover)]"
               }`}
-              aria-label={isListening ? "Stop listening" : "Start speaking"}
+              aria-label={isListening ? tVoice("stop") : tVoice("start")}
             >
               <Mic className="h-5 w-5" />
             </button>
@@ -258,14 +261,14 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
             rows={1}
             className="flex-1 resize-none rounded-2xl border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-5 py-3.5 text-sm text-[var(--color-text-primary)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
             disabled={isLoading}
-            aria-label="Type your health question"
+            aria-label={tChat("inputAria")}
           />
           <button
             onClick={() => sendMessage()}
             disabled={!input.trim() || isLoading}
             className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full text-white shadow-3 transition-all active:scale-90 disabled:bg-[var(--color-surface-subtle)] disabled:text-[var(--color-text-muted)]"
             style={{ background: !input.trim() || isLoading ? undefined : "linear-gradient(135deg, #4F46E5 0%, #6D28D9 100%)" }}
-            aria-label="Send message"
+            aria-label={tChat("sendAria")}
           >
             <Send className="h-5 w-5" />
           </button>

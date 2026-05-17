@@ -12,7 +12,8 @@
     "explain": "Explain",
     "chat": "Ask",
     "family": "Family",
-    "more": "More"
+    "more": "More",
+    "ariaMain": "Navigimi kryesor"
   },
   "hero": {
     "tagline": "Shëndeti juaj, gjuha juaj",
@@ -72,7 +73,17 @@
     "viewAll": "Shih të gjitha",
     "noData": "Ende pa të dhëna",
     "today": "Sot",
-    "week": "Këtë javë"
+    "week": "Këtë javë",
+    "continue": "Vazhdo",
+    "thinking": "Po mendoj…",
+    "dismiss": "Mbyll",
+    "clear": "Pastro",
+    "all": "Të gjitha",
+    "yes": "Po",
+    "no": "Jo",
+    "notSure": "Nuk jam i/e sigurt(ë)",
+    "tryAgain": "Provo përsëri",
+    "analyzing": "Po analizoj…"
   },
   "studentHealth": {
     "meta": {
@@ -477,7 +488,11 @@
       "body": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
       "findCare": "Find care",
       "rights": "Know your rights"
-    }
+    },
+    "stageBadgeFormat": "Etapa {n}",
+    "lessonIndexFormat": "L{n}/{total}",
+    "a11yLocked": "i kyçur",
+    "metaSuffix": "Akademia e Shëndetit për Studentë"
   },
   "errors": {
     "genericTitle": "Something went wrong",
@@ -487,7 +502,13 @@
     "tryAgain": "Try again",
     "goHome": "Go home",
     "exploreAcademy": "Explore the academy",
-    "reference": "Reference"
+    "reference": "Reference",
+    "boundaryTitle": "Diçka shkoi keq",
+    "boundaryBody": "Nuk arritëm të shfaqim këtë seksion. Progresi yt i ruajtur është i sigurt — provo të rifreskosh.",
+    "connection": "Nuk po lidhem dot. Të lutem provo përsëri.",
+    "networkError": "Gabim rrjeti. Të lutem kontrollo lidhjen.",
+    "analyzeFailed": "Nuk arrita të analizoj. Të lutem provo përsëri.",
+    "connectionError": "Gabim lidhjeje. Të lutem kontrollo internetin."
   },
   "privacy": {
     "metaTitle": "Privacy & data",
@@ -681,7 +702,18 @@
     "orDescribe": "ose përshkruaj çfarë dëgjove",
     "verdictVerified": "I verifikuar",
     "verdictMisleading": "Mashtrues",
-    "verdictFalse": "Gënjeshtër"
+    "verdictFalse": "Gënjeshtër",
+    "inputAria": "Ngjit pretendimin shëndetësor për ta verifikuar",
+    "sourceLabel": "Burimi",
+    "shareTagline": "Verifikuar nga Sastipe Health Advisor",
+    "shareTitle": "Verifikim informacioni shëndetësor",
+    "errors": {
+      "analyze": "Nuk arrita ta analizoj pretendimin",
+      "network": "Gabim rrjeti. Të lutem kontrollo lidhjen."
+    },
+    "meta": {
+      "title": "Verifikim — Sastipe"
+    }
   },
   "install": {
     "installApp": "Install Sastipe",
@@ -691,7 +723,8 @@
     "tap": "Tap",
     "then": "then",
     "add": "Add",
-    "toInstall": "to install on iOS."
+    "toInstall": "to install on iOS.",
+    "dismissAria": "Mbyll ftesën për instalim"
   },
   "chat": {
     "askMeAnything": "Më pyet çdo gjë",
@@ -706,7 +739,13 @@
     "q3": "Dikush në Facebook thotë që ilaçet për diabetin janë helm dhe duhet të përdor barishte",
     "q4": "Jam shtatzënë dhe kam frikë të shkoj në spital. Cilat janë të drejtat e mia?",
     "q5": "Ndihem i trishtuar gjithë kohën dhe nuk mund të fle. A është normale?",
-    "q6": "Si mund të regjistrohem te një mjek nëse nuk kam dokumente?"
+    "q6": "Si mund të regjistrohem te një mjek nëse nuk kam dokumente?",
+    "inputAria": "Shkruaj pyetjen tënde shëndetësore",
+    "sendAria": "Dërgo mesazhin",
+    "meta": {
+      "title": "Chat — Sastipe",
+      "description": "Bëj çdo pyetje shëndetësore. Merr përgjigje të qarta dhe të besueshme."
+    }
   },
   "impact": {
     "title": "Impakti për shëndetin publik",
@@ -832,5 +871,267 @@
     "rights": "© 2026 Sastipe. Të gjitha të drejtat të rezervuara.",
     "builtWith": "Ndërtuar me ndërmjetës shëndetësorë romë në 15 vende.",
     "systemsOperational": "Të gjitha sistemet po funksionojnë"
+  },
+  "theme": {
+    "ariaLabel": "Tema",
+    "light": "Tema e ndritshme",
+    "dark": "Tema e errët",
+    "system": "Tema e sistemit",
+    "switchTo": "Ndrysho temën — aktualisht {label}"
+  },
+  "emergency": {
+    "call112": "Telefono 112 TANI",
+    "banner": "Emergjencë? Telefono 112",
+    "emergencyLabel": "Emergjenca",
+    "ambulanceLabel": "Ambulanca"
+  },
+  "voice": {
+    "start": "Fillo të flasësh",
+    "stop": "Ndalo dëgjimin",
+    "readAloud": "Lexo me zë",
+    "readMessageAloud": "Lexo mesazhin me zë",
+    "readExplanationAloud": "Lexo shpjegimin me zë"
+  },
+  "severity": {
+    "green": "Trajto në shtëpi",
+    "amber": "Shiko mjekun së shpejti",
+    "red": "Emergjencë — Shko TANI",
+    "redHospital": "Shko në spital TANI"
+  },
+  "symptoms": {
+    "heroTitle": "Ku të dhemb?",
+    "heroSubtitle": "Prek zonën në trup që të shqetëson",
+    "backToMap": "Kthehu te harta e trupit",
+    "checkAnother": "Kontrollo zonë tjetër",
+    "selectSymptoms": "Zgjidh të gjitha simptomat që ke",
+    "extraPlaceholder": "Diçka tjetër? (sa kohë, sa keq…)",
+    "extraAria": "Detaje shtesë mbi simptomat",
+    "analyzing": "Po analizoj simptomat…",
+    "checkCta": "Kontrollo simptomat",
+    "whatToDoNow": "Çfarë të bësh tani",
+    "homeCare": "Kujdesi në shtëpi",
+    "escalateTitle": "Shko në spital nëse",
+    "commonCauses": "Shkaqe të zakonshme",
+    "regions": {
+      "head": "Koka",
+      "chest": "Gjoksi",
+      "abdomen": "Barku",
+      "leftArm": "Krahu majtas",
+      "rightArm": "Krahu djathtas",
+      "pelvis": "Pjesa e poshtme",
+      "leftLeg": "Këmba majtas",
+      "rightLeg": "Këmba djathtas"
+    },
+    "headSymptoms": [
+      "Dhimbje koke",
+      "Marramendje",
+      "Shikim i turbullt",
+      "Dhimbje veshi",
+      "Dhimbje fyti"
+    ],
+    "chestSymptoms": [
+      "Dhimbje gjoksi",
+      "Vështirësi në frymëmarrje",
+      "Kollë",
+      "Zemër që rreh shpejt",
+      "Shtrëngim"
+    ],
+    "abdomenSymptoms": [
+      "Dhimbje barku",
+      "Të përziera / të vjella",
+      "Diarre",
+      "Fryrje",
+      "Pa uri"
+    ],
+    "armSymptoms": [
+      "Dhimbje",
+      "Mpirje",
+      "Ënjtje",
+      "Nuk e lëviz dot",
+      "Therje"
+    ],
+    "pelvisSymptoms": [
+      "Dhimbje në urinim",
+      "Dhimbje shpine",
+      "Probleme menstruale",
+      "Dhimbje ijësh"
+    ],
+    "legSymptoms": [
+      "Dhimbje këmbe",
+      "Ënjtje",
+      "Nuk eci dot",
+      "Dhimbje gjuri",
+      "Mpirje"
+    ],
+    "meta": {
+      "title": "Kontrollo simptomat — Sastipe",
+      "description": "Prek ku të dhemb. Merr udhëzime se çfarë të bësh."
+    }
+  },
+  "consult": {
+    "heroTitle": "Konsulta shëndetësore",
+    "heroSubtitle": "Më thuaj çfarë të shqetëson. Do të bëj pak pyetje dhe do të ndihmoj të vendosësh çfarë të bësh.",
+    "prompt": "Çfarë të solli këtu sot?",
+    "orFreeform": "ose përshkruaje me fjalët e tua",
+    "freeformPlaceholder": "Kam dhimbje koke që dje…",
+    "freeformAria": "Përshkruaj shqetësimin shëndetësor",
+    "chatHeader": "Konsulta shëndetësore",
+    "chatSubtitle": "Disa pyetje më ndihmojnë të të ndihmoj më mirë",
+    "answerAria": "Përgjigjja jote",
+    "answerPlaceholder": "Shkruaj përgjigjen…",
+    "newSession": "Konsulta e re",
+    "assessment": "Vlerësimi",
+    "whatToDo": "Çfarë të bësh",
+    "homeCare": "Kujdesi në shtëpi",
+    "watchFor": "Vëre re këto shenja",
+    "showVisitCard": "Shfaq Kartën e Vizitës te Mjeku",
+    "hideVisitCard": "Fshih Kartën e Vizitës",
+    "visitCardTitle": "Përmbledhje për mjekun",
+    "visitCardDisclaimer": "Krijuar nga Sastipe Health Advisor. Ky nuk është diagnozë mjekësore.",
+    "concerns": {
+      "fever": "Ethe / Temperaturë",
+      "pain": "Dhimbje diku",
+      "breathing": "Probleme frymëmarrjeje",
+      "skin": "Probleme me lëkurën / skuqje",
+      "pregnancy": "Shqetësim shtatzënie",
+      "child": "Fëmija im është i sëmurë",
+      "mental": "Stres / Ankth / Trishtim",
+      "heart": "Zemra / Gjoksi"
+    }
+  },
+  "vaccines": {
+    "heroTitle": "Udhëzues vaksinash",
+    "heroSubtitle": "Çdo vaksinë shpjeguar thjesht. Prek një vaksinë për të mësuar më shumë.",
+    "askCta": "Bëj një pyetje për vaksinat",
+    "backToSchedule": "Kthehu te kalendari",
+    "preventsLabel": "Parandalon",
+    "dosesNeeded": "{count, plural, one {# dozë e nevojshme} other {# doza të nevojshme}}",
+    "howItWorks": "Si funksionon",
+    "sideEffects": "Efekte anësore (normale)",
+    "mythTitle": "Miti vs. e Vërteta",
+    "qaTitle": "Pyet për vaksinat",
+    "qaSubtitle": "Çdo pyetje. Përgjigje të sinqerta nga përvoja në terren.",
+    "qaPlaceholder": "Shkruaj pyetjen për vaksinën…",
+    "qaAria": "Pyet për vaksinat",
+    "qaCommon": "Pyetje të zakonshme",
+    "childAgePrompt": "Sa vjeç është fëmija juaj?",
+    "childAgeAria": "Zgjidh moshën e fëmijës",
+    "ageOptionDefault": "Zgjidh moshën…",
+    "ageNewborn": "I sapolindur (0 muaj)",
+    "age2m": "2 muaj",
+    "age4m": "4 muaj",
+    "age6m": "6 muaj",
+    "age12m": "12 muaj (1 vit)",
+    "age18m": "18 muaj",
+    "age48m": "4–6 vjeç",
+    "age108m": "9–12 vjeç",
+    "neededByAge": "Vaksinat e nevojshme në këtë moshë:",
+    "vaccinesCount": "{count, plural, one {# vaksinë} other {# vaksina}}",
+    "importance": {
+      "critical": "Thelbësore",
+      "important": "E rëndësishme",
+      "recommended": "E rekomanduar"
+    },
+    "fears": [
+      "A janë të sigurta vaksinat për bebin tim?",
+      "A do ta dhembë fëmijën?",
+      "Po nëse ka ethe pas vaksinës?",
+      "A mund t'i shtyj vaksinat?",
+      "Fëmija im është i sëmurë — mund të vaksinohet?"
+    ],
+    "meta": {
+      "title": "Udhëzues vaksinash — Sastipe",
+      "description": "Çdo vaksinë shpjeguar me fjalë të thjeshta."
+    }
+  },
+  "explain": {
+    "heroTitle": "Kuptoje recetën",
+    "heroSubtitle": "Shkruaj diagnozën ose emrin e ilaçit. Po e shpjegojmë thjesht.",
+    "placeholder": "Shkruaj diagnozën, emrin e ilaçit ose ngjit recetën…\n\nShembull: „Hipertension” ose „Metformin 500mg”",
+    "inputAria": "Shkruaj diagnozën ose emrin e ilaçit",
+    "cta": "Shpjegoje",
+    "ctaAnalyzing": "Po analizoj…",
+    "examplesHeading": "Shembuj të zakonshëm",
+    "loading": "Po lexoj recetën…",
+    "sections": {
+      "whatThisMeans": "Çfarë do të thotë",
+      "whyItMatters": "Pse ka rëndësi",
+      "ifIgnored": "Nëse e injoron",
+      "medicationsTitle": "Ilaçet e tua",
+      "howToTake": "Si të merren",
+      "sideEffects": "Efekte anësore",
+      "neverDo": "Mos e bëj kurrë",
+      "questionsTitle": "Pyete mjekun herën tjetër",
+      "tipsTitle": "Çfarë mund të bësh sot",
+      "emergencyTitle": "Shko në spital nëse"
+    },
+    "anotherCta": "Shpjego një recetë tjetër",
+    "disclaimerBold": "Nuk është këshillë mjekësore.",
+    "disclaimerBody": "Ky mjet shpjegon terma mjekësorë me gjuhë të thjeshtë. Ndiq gjithmonë udhëzimet e mjekut tënd.",
+    "meta": {
+      "title": "Kuptoje recetën — Sastipe",
+      "description": "Diagnoza dhe ilaçet shpjeguar me fjalë të thjeshta."
+    }
+  },
+  "navigate": {
+    "heroTitle": "Më duhet të shoh një mjek",
+    "heroSubtitle": "Të ndihmojmë të përgatitesh — çfarë të marrësh, çfarë të thuash, të drejtat e tua.",
+    "issuePrompt": "Cila është problema?",
+    "issues": {
+      "fever": "Ethe / Infeksion",
+      "pain": "Dhimbje / Lëndim",
+      "pregnancy": "Shtatzëni",
+      "chronic": "Sëmundje kronike",
+      "mental": "Shëndet mendor",
+      "skin": "Lëkurë / Sy / Vesh",
+      "child": "Fëmijë i sëmurë",
+      "other": "Diçka tjetër"
+    },
+    "tellMore": "Na thuaj më shumë",
+    "detailPlaceholder": "Përshkruaj çfarë po ndodh… Sa kohë ka? Sa keq është?",
+    "detailAria": "Përshkruaj problemin shëndetësor",
+    "insuranceTitle": "A ke sigurim shëndetësor?",
+    "insuranceSubtitle": "Kjo na ndihmon të të themi çfarë të marrësh",
+    "insuranceYes": "Po, kam kartë shëndeti",
+    "insuranceNo": "Jo, nuk kam sigurim",
+    "insuranceUnknown": "Nuk jam i/e sigurt(ë)",
+    "countryTitle": "Në cilin shtet je?",
+    "generating": "Po përgatis kartën e vizitës…",
+    "generateCard": "Krijo Kartën e Vizitës te Mjeku",
+    "startOver": "Fillo nga e para",
+    "showDoctor": "Trego këtë te mjeku",
+    "generatedBy": "Krijuar nga Sastipe Health Advisor",
+    "whatToBring": "Çfarë të marrësh",
+    "askYourDoctor": "Pyete mjekun",
+    "patientRights": "Të drejtat e tua si pacient",
+    "findHospital": "Gjej spitalin më të afërt",
+    "mapHint": "Hap hartën me drejtime",
+    "meta": {
+      "title": "Navigatori shëndetësor — Sastipe",
+      "description": "Përgatitu për vizitën te mjeku — karta e vizitës, çfarë të marrësh, të drejtat e tua."
+    }
+  },
+  "about": {
+    "brand": "Sastipe",
+    "tagline": "Edukim shëndetësor për komunitetet rome",
+    "version": "Versioni 1.0.0",
+    "missionBody": "Sastipe është një shoqërues shëndetësor me AI, krijuar veçanërisht për komunitetet rome në Evropë. Misioni ynë është të zvogëlojmë hendekun e edukimit shëndetësor duke ofruar informacion shëndetësor të besueshëm dhe me ndjeshmëri kulturore me gjuhë të thjeshtë.",
+    "values": {
+      "careLabel": "Krijuar me kujdes",
+      "careDesc": "Nga ndërmjetës shëndetësorë",
+      "languagesLabel": "15 gjuhë",
+      "languagesDesc": "Në mbarë Evropën",
+      "evidenceLabel": "Mbështetur në fakte",
+      "evidenceDesc": "Udhëzime të OBSH-së",
+      "communityLabel": "Komuniteti i pari",
+      "communityDesc": "Pa gjykim"
+    },
+    "privacyLink": "Politika e privatësisë",
+    "termsLink": "Kushtet e shërbimit",
+    "disclaimer": "Sastipe nuk është pajisje mjekësore. I gjithë informacioni është për qëllime edukative. Konsulto gjithmonë një profesionist shëndetësor të kualifikuar për vendime mjekësore.",
+    "meta": {
+      "title": "Rreth nesh — Sastipe",
+      "description": "Rreth platformës së edukimit shëndetësor Sastipe"
+    }
   }
 }

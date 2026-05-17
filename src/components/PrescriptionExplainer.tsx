@@ -5,6 +5,7 @@ import {
   FileText, Search, Loader2, Heart, AlertTriangle, Pill,
   HelpCircle, Lightbulb, Siren, ChevronDown, ChevronUp,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type Medication = {
   name: string;
@@ -37,6 +38,8 @@ const EXAMPLES = [
 ];
 
 export function PrescriptionExplainer({ locale }: { locale: string }) {
+  const t = useTranslations("explain");
+  const tErrors = useTranslations("errors");
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<ExplainResult | null>(null);
@@ -62,10 +65,10 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
       if (data.success && data.data) {
         setResult(data.data);
       } else {
-        setError("Could not analyze. Please try again.");
+        setError(tErrors("analyzeFailed"));
       }
     } catch {
-      setError("Connection error. Please check your internet.");
+      setError(tErrors("connectionError"));
     } finally {
       setLoading(false);
     }
@@ -78,12 +81,8 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
         <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl shadow-blue-500/25">
           <FileText className="h-10 w-10 text-white" />
         </div>
-        <h1 className="text-2xl font-black text-gray-900">
-          Understand Your Prescription
-        </h1>
-        <p className="mt-2 text-sm text-gray-500">
-          Type your diagnosis or medication name. We explain it in simple words.
-        </p>
+        <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
+        <p className="mt-2 text-sm text-gray-500">{t("heroSubtitle")}</p>
       </div>
 
       {/* Input */}
@@ -92,8 +91,8 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           value={input}
           onChange={(e) => { setInput(e.target.value); setResult(null); }}
           onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); handleExplain(); } }}
-          placeholder={"Type your diagnosis, medication name, or paste your prescription...\n\nExample: \"Hipertensiune\" or \"Metformin 500mg\""}
-          aria-label="Enter your diagnosis or medication name"
+          placeholder={t("placeholder")}
+          aria-label={t("inputAria")}
           rows={3}
           className="w-full resize-none rounded-xl border-none bg-transparent px-4 py-3 text-sm focus:outline-none"
         />
@@ -104,9 +103,9 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all active:scale-95 disabled:opacity-50"
           >
             {loading ? (
-              <><Loader2 className="h-4 w-4 animate-spin" /> Analyzing...</>
+              <><Loader2 className="h-4 w-4 animate-spin" /> {t("ctaAnalyzing")}</>
             ) : (
-              <><Search className="h-4 w-4" /> Explain this</>
+              <><Search className="h-4 w-4" /> {t("cta")}</>
             )}
           </button>
         </div>
@@ -116,7 +115,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
       {!result && !loading && (
         <div className="mb-6">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
-            Common examples
+            {t("examplesHeading")}
           </p>
           <div className="flex flex-wrap gap-2">
             {EXAMPLES.map((ex) => (
@@ -136,7 +135,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
       {loading && (
         <div className="flex flex-col items-center gap-4 py-16 animate-fade-in">
           <div className="h-16 w-16 animate-spin rounded-full border-4 border-blue-100 border-t-blue-500" />
-          <p className="text-sm font-semibold text-gray-500">Reading your prescription...</p>
+          <p className="text-sm font-semibold text-gray-500">{t("loading")}</p>
           <div className="mx-auto h-2 w-48 overflow-hidden rounded-full bg-gray-100">
             <div className="h-full w-full animate-shimmer rounded-full" />
           </div>
@@ -164,7 +163,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
             <div className="space-y-3 p-4">
               <div>
                 <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-blue-600">
-                  What this means
+                  {t("sections.whatThisMeans")}
                 </p>
                 <p className="text-sm leading-relaxed text-gray-700">
                   {result.diagnosis.simpleExplanation}
@@ -172,7 +171,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
               </div>
               <div>
                 <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-amber-600">
-                  Why it matters
+                  {t("sections.whyItMatters")}
                 </p>
                 <p className="text-sm leading-relaxed text-gray-700">
                   {result.diagnosis.whyItMatters}
@@ -180,7 +179,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
               </div>
               <div className="rounded-xl bg-red-50 p-3">
                 <p className="mb-1 flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-red-600">
-                  <AlertTriangle className="h-3 w-3" /> If you ignore it
+                  <AlertTriangle className="h-3 w-3" /> {t("sections.ifIgnored")}
                 </p>
                 <p className="text-sm leading-relaxed text-red-700">
                   {result.diagnosis.whatHappensIfIgnored}
@@ -193,7 +192,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           {result.medications.length > 0 && (
             <div>
               <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-gray-900">
-                <Pill className="h-4 w-4 text-indigo-500" /> Your Medications
+                <Pill className="h-4 w-4 text-indigo-500" /> {t("sections.medicationsTitle")}
               </h3>
               <div className="space-y-2">
                 {result.medications.map((med, i) => (
@@ -215,15 +214,15 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
                     {expandedMed === i && (
                       <div className="space-y-2 border-t border-gray-50 px-4 pb-4 pt-2">
                         <div className="rounded-lg bg-green-50 p-2">
-                          <p className="text-xs font-semibold text-green-700">How to take</p>
+                          <p className="text-xs font-semibold text-green-700">{t("sections.howToTake")}</p>
                           <p className="text-xs text-green-600">{med.howToTake}</p>
                         </div>
                         <div className="rounded-lg bg-amber-50 p-2">
-                          <p className="text-xs font-semibold text-amber-700">Side effects</p>
+                          <p className="text-xs font-semibold text-amber-700">{t("sections.sideEffects")}</p>
                           <p className="text-xs text-amber-600">{med.sideEffects}</p>
                         </div>
                         <div className="rounded-lg bg-red-50 p-2">
-                          <p className="text-xs font-semibold text-red-700">Never do this</p>
+                          <p className="text-xs font-semibold text-red-700">{t("sections.neverDo")}</p>
                           <p className="text-xs text-red-600">{med.neverDo}</p>
                         </div>
                       </div>
@@ -238,7 +237,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           {result.questionsForDoctor.length > 0 && (
             <div className="rounded-2xl border border-purple-100 bg-purple-50 p-4">
               <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-purple-800">
-                <HelpCircle className="h-4 w-4" /> Ask your doctor next time
+                <HelpCircle className="h-4 w-4" /> {t("sections.questionsTitle")}
               </h3>
               <ul className="space-y-1.5">
                 {result.questionsForDoctor.map((q, i) => (
@@ -257,7 +256,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           {result.dailyTips.length > 0 && (
             <div className="rounded-2xl border border-green-100 bg-green-50 p-4">
               <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-green-800">
-                <Lightbulb className="h-4 w-4" /> What you can do today
+                <Lightbulb className="h-4 w-4" /> {t("sections.tipsTitle")}
               </h3>
               <ul className="space-y-1.5">
                 {result.dailyTips.map((tip, i) => (
@@ -274,7 +273,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           {result.emergencySigns.length > 0 && (
             <div className="rounded-2xl border border-red-200 bg-red-50 p-4">
               <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-red-800">
-                <Siren className="h-4 w-4" /> Go to hospital if
+                <Siren className="h-4 w-4" /> {t("sections.emergencyTitle")}
               </h3>
               <ul className="space-y-1.5">
                 {result.emergencySigns.map((sign, i) => (
@@ -292,7 +291,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
             onClick={() => { setResult(null); setInput(""); }}
             className="w-full rounded-xl border border-gray-200 bg-white py-3 text-sm font-semibold text-gray-600 shadow-sm transition-all active:scale-[0.98]"
           >
-            Explain another prescription
+            {t("anotherCta")}
           </button>
         </div>
       )}

@@ -385,7 +385,7 @@ function StageBlock({ stage, index }: { stage: StageId; index: number }) {
                   <Lock className="lucide h-4 w-4 text-[var(--color-text-muted)]" strokeWidth={1.75} />
                 )}
                 {t(`stages.${stage}`)}
-                {locked && <span className="sr-only"> locked</span>}
+                {locked && <span className="sr-only"> {t("a11yLocked")}</span>}
               </h3>
               <p className="mt-0.5 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                 {t(`stages.${stage}Desc`)}

@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const titleKey = studentHealthMessageKey(mod.titleKey);
   const descKey = studentHealthMessageKey(mod.descriptionKey);
   return {
-    title: `${t(titleKey)} · Student Health Academy`,
+    title: `${t(titleKey)} · ${t("metaSuffix")}`,
     description: t(descKey),
   };
 }

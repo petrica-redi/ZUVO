@@ -5,23 +5,18 @@ import {
   Syringe, ChevronDown, ChevronUp, Shield, AlertTriangle,
   CheckCircle2, MessageCircle, Send, Loader2, Baby, User, Heart,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { VACCINES, AGE_GROUPS, type Vaccine } from "@/data/vaccines";
 
 const IMPORTANCE_BADGE = {
-  critical: { label: "Essential", bg: "bg-red-100", text: "text-red-700" },
-  important: { label: "Important", bg: "bg-amber-100", text: "text-amber-700" },
-  recommended: { label: "Recommended", bg: "bg-blue-100", text: "text-blue-700" },
-};
-
-const COMMON_FEARS = [
-  "Are vaccines safe for my baby?",
-  "Will it hurt my child?",
-  "What if my child gets a fever after?",
-  "Can I delay vaccines?",
-  "My child is sick, can they still get vaccinated?",
-];
+  critical: { bg: "bg-red-100", text: "text-red-700" },
+  important: { bg: "bg-amber-100", text: "text-amber-700" },
+  recommended: { bg: "bg-blue-100", text: "text-blue-700" },
+} as const;
 
 export function VaccineEducator({ locale }: { locale: string }) {
+  const t = useTranslations("vaccines");
+  const tErrors = useTranslations("errors");
   const [view, setView] = useState<"schedule" | "detail" | "qa">("schedule");
   const [selectedVaccine, setSelectedVaccine] = useState<Vaccine | null>(null);
   const [expandedGroup, setExpandedGroup] = useState<string | null>("birth");
@@ -29,6 +24,18 @@ export function VaccineEducator({ locale }: { locale: string }) {
   const [qaQuestion, setQaQuestion] = useState("");
   const [qaAnswer, setQaAnswer] = useState("");
   const [qaLoading, setQaLoading] = useState(false);
+
+  // Localized common-fears list
+  let commonFears: string[] = [];
+  try {
+    const raw = t.raw("fears");
+    if (Array.isArray(raw)) commonFears = raw as string[];
+  } catch {
+    commonFears = [];
+  }
+
+  const importanceLabel = (level: keyof typeof IMPORTANCE_BADGE) =>
+    t(`importance.${level}`);
 
   const openDetail = (v: Vaccine) => {
     setSelectedVaccine(v);
@@ -85,7 +92,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
         }
       }
     } catch {
-      setQaAnswer("I'm having trouble connecting. Please try again.");
+      setQaAnswer(tErrors("connection"));
     } finally {
       setQaLoading(false);
     }
@@ -97,7 +104,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
     return (
       <div className="space-y-4">
         <button onClick={() => setView("schedule")} className="text-sm text-gray-500 flex items-center gap-1">
-          <ChevronDown className="h-4 w-4 rotate-90" /> Back to schedule
+          <ChevronDown className="h-4 w-4 rotate-90" /> {t("backToSchedule")}
         </button>
 
         <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
@@ -108,7 +115,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
             <div>
               <h2 className="text-base font-bold text-gray-900">{selectedVaccine.name}</h2>
               <span className={`inline-flex rounded-full px-2 py-0.5 text-[10px] font-bold ${badge.bg} ${badge.text}`}>
-                {badge.label}
+                {importanceLabel(selectedVaccine.importanceLevel)}
               </span>
             </div>
           </div>
@@ -116,32 +123,32 @@ export function VaccineEducator({ locale }: { locale: string }) {
           <div className="mb-3 flex flex-wrap gap-1">
             {selectedVaccine.preventsDiseases.map((d) => (
               <span key={d} className="rounded-full bg-green-50 px-2.5 py-1 text-xs font-medium text-green-700">
-                Prevents: {d}
+                {t("preventsLabel")}: {d}
               </span>
             ))}
           </div>
 
           <p className="text-xs text-gray-400">
-            {selectedVaccine.doses} dose{selectedVaccine.doses > 1 ? "s" : ""} needed
+            {t("dosesNeeded", { count: selectedVaccine.doses })}
           </p>
         </div>
 
         <div className="rounded-2xl border border-green-100 bg-green-50 p-4">
           <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-green-800">
-            <Shield className="h-4 w-4" /> How it works
+            <Shield className="h-4 w-4" /> {t("howItWorks")}
           </h3>
           <p className="text-sm leading-relaxed text-green-700">{selectedVaccine.howItWorks}</p>
         </div>
 
         <div className="rounded-2xl border border-amber-100 bg-amber-50 p-4">
           <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-amber-800">
-            <AlertTriangle className="h-4 w-4" /> Side effects (normal)
+            <AlertTriangle className="h-4 w-4" /> {t("sideEffects")}
           </h3>
           <p className="text-sm leading-relaxed text-amber-700">{selectedVaccine.sideEffects}</p>
         </div>
 
         <div className="rounded-2xl border border-red-100 bg-red-50 p-4">
-          <h3 className="mb-1 text-sm font-bold text-red-800">Myth vs. Truth</h3>
+          <h3 className="mb-1 text-sm font-bold text-red-800">{t("mythTitle")}</h3>
           <p className="text-sm leading-relaxed text-red-700">{selectedVaccine.mythDebunked}</p>
         </div>
       </div>
@@ -153,15 +160,15 @@ export function VaccineEducator({ locale }: { locale: string }) {
     return (
       <div className="space-y-4">
         <button onClick={() => { setView("schedule"); setQaAnswer(""); }} className="text-sm text-gray-500 flex items-center gap-1">
-          <ChevronDown className="h-4 w-4 rotate-90" /> Back to schedule
+          <ChevronDown className="h-4 w-4 rotate-90" /> {t("backToSchedule")}
         </button>
 
         <div className="text-center">
           <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 shadow-lg">
             <MessageCircle className="h-6 w-6 text-white" />
           </div>
-          <h2 className="text-lg font-bold text-gray-900">Ask about vaccines</h2>
-          <p className="mt-1 text-sm text-gray-500">Any question. Honest answers from field experience.</p>
+          <h2 className="text-lg font-bold text-gray-900">{t("qaTitle")}</h2>
+          <p className="mt-1 text-sm text-gray-500">{t("qaSubtitle")}</p>
         </div>
 
         <div className="flex gap-2">
@@ -169,7 +176,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
             value={qaQuestion}
             onChange={(e) => setQaQuestion(e.target.value)}
             onKeyDown={(e) => { if (e.key === "Enter") askQuestion(); }}
-            aria-label="Ask a vaccine question" placeholder="Type your vaccine question..."
+            aria-label={t("qaAria")} placeholder={t("qaPlaceholder")}
             className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20"
           />
           <button
@@ -183,9 +190,9 @@ export function VaccineEducator({ locale }: { locale: string }) {
 
         {!qaAnswer && (
           <div>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">Common questions</p>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">{t("qaCommon")}</p>
             <div className="space-y-2">
-              {COMMON_FEARS.map((q) => (
+              {commonFears.map((q) => (
                 <button
                   key={q}
                   onClick={() => askQuestion(q)}
@@ -214,39 +221,35 @@ export function VaccineEducator({ locale }: { locale: string }) {
         <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-green-500 to-emerald-600 shadow-xl shadow-emerald-500/25">
           <Syringe className="h-10 w-10 text-white" />
         </div>
-        <h1 className="text-2xl font-black text-gray-900">Vaccine Guide</h1>
-        <p className="mt-2 text-sm text-gray-500">
-          Every vaccine explained simply. Tap any vaccine to learn more.
-        </p>
+        <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
+        <p className="mt-2 text-sm text-gray-500">{t("heroSubtitle")}</p>
       </div>
 
       {/* Child age checker */}
       <div className="mb-4 rounded-2xl border border-blue-100 bg-blue-50 p-4">
         <p className="mb-2 text-sm font-semibold text-blue-800">
-          <Baby className="mr-1 inline h-4 w-4" /> How old is your child?
+          <Baby className="mr-1 inline h-4 w-4" /> {t("childAgePrompt")}
         </p>
         <div className="flex gap-2">
           <select
-            aria-label="Select child age" value={childAge}
+            aria-label={t("childAgeAria")} value={childAge}
             onChange={(e) => setChildAge(e.target.value)}
             className="flex-1 rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm focus:outline-none"
           >
-            <option value="">Select age...</option>
-            <option value="0">Newborn (0 months)</option>
-            <option value="2">2 months</option>
-            <option value="4">4 months</option>
-            <option value="6">6 months</option>
-            <option value="12">12 months (1 year)</option>
-            <option value="18">18 months</option>
-            <option value="48">4-6 years</option>
-            <option value="108">9-12 years</option>
+            <option value="">{t("ageOptionDefault")}</option>
+            <option value="0">{t("ageNewborn")}</option>
+            <option value="2">{t("age2m")}</option>
+            <option value="4">{t("age4m")}</option>
+            <option value="6">{t("age6m")}</option>
+            <option value="12">{t("age12m")}</option>
+            <option value="18">{t("age18m")}</option>
+            <option value="48">{t("age48m")}</option>
+            <option value="108">{t("age108m")}</option>
           </select>
         </div>
         {childAge && (
           <div className="mt-2">
-            <p className="text-xs font-semibold text-blue-700">
-              Vaccines needed by this age:
-            </p>
+            <p className="text-xs font-semibold text-blue-700">{t("neededByAge")}</p>
             <div className="mt-1 flex flex-wrap gap-1">
               {VACCINES.filter((v) => v.ageMonths.some((a) => a <= Number(childAge))).map((v) => (
                 <button
@@ -267,7 +270,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
         onClick={() => setView("qa")}
         className="mb-4 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 py-3 text-sm font-semibold text-white shadow-md transition-all active:scale-[0.98]"
       >
-        <MessageCircle className="h-4 w-4" /> Ask a question about vaccines
+        <MessageCircle className="h-4 w-4" /> {t("askCta")}
       </button>
 
       {/* Schedule by age */}
@@ -290,7 +293,9 @@ export function VaccineEducator({ locale }: { locale: string }) {
                 </div>
                 <div className="text-left">
                   <span className="text-sm font-semibold text-gray-900">{group.label}</span>
-                  <p className="text-xs text-gray-400">{group.vaccines.length} vaccine{group.vaccines.length > 1 ? "s" : ""}</p>
+                  <p className="text-xs text-gray-400">
+                    {t("vaccinesCount", { count: group.vaccines.length })}
+                  </p>
                 </div>
               </div>
               {expandedGroup === group.id ? (
@@ -316,11 +321,11 @@ export function VaccineEducator({ locale }: { locale: string }) {
                       <div className="flex-1 min-w-0">
                         <span className="text-sm font-medium text-gray-800">{v.name}</span>
                         <p className="truncate text-xs text-gray-400">
-                          Prevents: {v.preventsDiseases.join(", ")}
+                          {t("preventsLabel")}: {v.preventsDiseases.join(", ")}
                         </p>
                       </div>
                       <span className={`rounded-full px-2 py-0.5 text-[9px] font-bold ${badge.bg} ${badge.text}`}>
-                        {badge.label}
+                        {importanceLabel(v.importanceLevel)}
                       </span>
                     </button>
                   );
