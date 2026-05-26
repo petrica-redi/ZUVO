@@ -12,6 +12,7 @@ import type {
   MediatorSession,
   MediatorVisit,
   MediatorWorkspacePayload,
+  TrainingProgress,
 } from "./types";
 import {
   EMPTY_WORKSPACE,
@@ -39,6 +40,22 @@ function mergeBy<T extends { id: string }>(
   return [...map.values()].sort((a, b) => getTime(b) - getTime(a));
 }
 
+function mergeTraining(
+  local: TrainingProgress[] | undefined,
+  remote: TrainingProgress[] | undefined,
+): TrainingProgress[] {
+  const map = new Map<string, TrainingProgress>();
+  for (const row of [...(local ?? []), ...(remote ?? [])]) {
+    const existing = map.get(row.moduleId);
+    if (!existing || safeTime(row.completedAt) > safeTime(existing.completedAt)) {
+      map.set(row.moduleId, row);
+    }
+  }
+  return [...map.values()].sort(
+    (a, b) => safeTime(b.completedAt) - safeTime(a.completedAt),
+  );
+}
+
 /**
  * Parses an arbitrary value into a `MediatorWorkspacePayload`. Invalid fields
  * are dropped (not thrown) so a single corrupted row never blocks a sync.
@@ -53,12 +70,16 @@ export function parseWorkspacePayload(raw: unknown): MediatorWorkspacePayload {
   const cases = Array.isArray(o.cases) ? (o.cases as MediatorCase[]) : [];
   const visits = Array.isArray(o.visits) ? (o.visits as MediatorVisit[]) : [];
   const sessions = Array.isArray(o.sessions) ? (o.sessions as MediatorSession[]) : [];
+  const training = Array.isArray(o.training) ? (o.training as TrainingProgress[]) : [];
 
   return {
     version: 1,
     cases: cases.filter((c) => c && typeof c.id === "string"),
     visits: visits.filter((v) => v && typeof v.id === "string"),
     sessions: sessions.filter((s) => s && typeof s.id === "string"),
+    training: training.filter(
+      (t) => t && typeof t.moduleId === "string" && typeof t.completedAt === "string",
+    ),
   };
 }
 
@@ -75,6 +96,7 @@ export function mergeWorkspace(
       remote.sessions,
       (s) => safeTime(s.sessionDate),
     ),
+    training: mergeTraining(local.training, remote.training),
   };
 }
 
@@ -82,6 +104,7 @@ export function isEmptyWorkspace(payload: MediatorWorkspacePayload): boolean {
   return (
     payload.cases.length === 0 &&
     payload.visits.length === 0 &&
-    payload.sessions.length === 0
+    payload.sessions.length === 0 &&
+    (payload.training?.length ?? 0) === 0
   );
 }

@@ -6,6 +6,7 @@ const LABELS: MediatorReportLabels = {
   title: "Raport mediator",
   generatedAt: "Generat la",
   county: "Județ",
+  kpiSection: "Indicatori cheie",
   casesSection: "Cazuri",
   visitsSection: "Vizite",
   sessionsSection: "Sesiuni",
@@ -20,19 +21,35 @@ const LABELS: MediatorReportLabels = {
   topic: "Temă",
   location: "Loc",
   attendees: "Participanți",
+  kpiUniquePeople: "Beneficiari unici",
+  kpiHouseholds: "Persoane în gospodării",
+  kpiOpenCases: "Cazuri active",
+  kpiClosedCases: "Cazuri închise",
+  kpiVisitsMonth: "Vizite (luna)",
+  kpiVisitsYear: "Vizite (anul)",
+  kpiSessionsMonth: "Sesiuni (luna)",
+  kpiSessionsYear: "Sesiuni (anul)",
+  kpiAttendees: "Participanți (anul)",
 };
 
 function emptyPayload(): MediatorWorkspacePayload {
-  return { version: 1, cases: [], visits: [], sessions: [] };
+  return { version: 1, cases: [], visits: [], sessions: [], training: [] };
 }
 
 describe("buildMediatorReportHtml", () => {
   it("renders empty-state messages when there is no data", () => {
-    const html = buildMediatorReportHtml(emptyPayload(), LABELS, "Bistrița-Năsăud", "ro");
+    const html = buildMediatorReportHtml(
+      emptyPayload(),
+      LABELS,
+      "Bistrița-Năsăud",
+      "ro",
+    );
     expect(html).toContain("Niciun caz");
     expect(html).toContain("Nicio vizită");
     expect(html).toContain("Nicio sesiune");
     expect(html).toContain("Bistrița-Năsăud");
+    expect(html).toContain("Indicatori cheie");
+    expect(html).toContain("Beneficiari unici");
   });
 
   it("escapes HTML in user data", () => {
@@ -52,6 +69,7 @@ describe("buildMediatorReportHtml", () => {
       ],
       visits: [],
       sessions: [],
+      training: [],
     };
     const html = buildMediatorReportHtml(payload, LABELS, "Cluj", "ro");
     expect(html).not.toContain("<script>alert");
@@ -88,6 +106,7 @@ describe("buildMediatorReportHtml", () => {
           sessionDate: "2026-05-26T00:00:00.000Z",
         },
       ],
+      training: [],
     };
     const html = buildMediatorReportHtml(payload, LABELS, "Bistrița-Năsăud", "ro");
     expect(html).toContain("Familia X");

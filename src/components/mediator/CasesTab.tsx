@@ -5,9 +5,13 @@ import { Calendar } from "lucide-react";
 import {
   CASE_CATEGORIES,
   CASE_STATUSES,
+  HEALTH_FACILITATIONS,
+  VULNERABILITY_TAGS,
   type CaseCategory,
   type CaseStatus,
+  type HealthFacilitation,
   type MediatorCase,
+  type VulnerabilityTag,
 } from "@/lib/mediator/types";
 import {
   CATEGORY_LABEL_KEYS,
@@ -15,6 +19,10 @@ import {
   type MediatorLabels,
 } from "./labels";
 import { EmptyState, FormCard, SaveButton } from "./parts";
+
+function toggle<T>(set: T[], value: T): T[] {
+  return set.includes(value) ? set.filter((x) => x !== value) : [...set, value];
+}
 
 export function CasesTab({
   labels,
@@ -31,7 +39,21 @@ export function CasesTab({
   const [status, setStatus] = useState<CaseStatus>("identified");
   const [notes, setNotes] = useState("");
   const [nextVisit, setNextVisit] = useState("");
+  const [householdSize, setHouseholdSize] = useState("");
+  const [vulnerabilities, setVulnerabilities] = useState<VulnerabilityTag[]>([]);
+  const [facilitations, setFacilitations] = useState<HealthFacilitation[]>([]);
   const [saved, setSaved] = useState(false);
+
+  const reset = () => {
+    setName("");
+    setNotes("");
+    setNextVisit("");
+    setCategory("health");
+    setStatus("identified");
+    setHouseholdSize("");
+    setVulnerabilities([]);
+    setFacilitations([]);
+  };
 
   const submit = () => {
     if (!name.trim()) return;
@@ -45,16 +67,15 @@ export function CasesTab({
       nextVisit,
       createdAt: now,
       updatedAt: now,
+      householdSize: Number.parseInt(householdSize, 10) || undefined,
+      vulnerabilities: vulnerabilities.length ? vulnerabilities : undefined,
+      healthFacilitations: facilitations.length ? facilitations : undefined,
     });
     setSaved(true);
-    setName("");
-    setNotes("");
-    setNextVisit("");
-    setCategory("health");
-    setStatus("identified");
     setTimeout(() => {
       setSaved(false);
       setOpen(false);
+      reset();
     }, 1500);
   };
 
@@ -109,13 +130,77 @@ export function CasesTab({
               ))}
             </select>
           </div>
-          <input
-            type="date"
-            value={nextVisit}
-            onChange={(e) => setNextVisit(e.target.value)}
-            aria-label={labels.nextVisit}
-            className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
-          />
+          <div className="mb-3 grid grid-cols-2 gap-2">
+            <input
+              type="date"
+              value={nextVisit}
+              onChange={(e) => setNextVisit(e.target.value)}
+              aria-label={labels.nextVisit}
+              className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            />
+            <input
+              type="number"
+              inputMode="numeric"
+              min={0}
+              max={50}
+              placeholder={labels.householdSize}
+              value={householdSize}
+              onChange={(e) => setHouseholdSize(e.target.value)}
+              aria-label={labels.householdSize}
+              className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            />
+          </div>
+
+          <fieldset className="mb-3 rounded-xl border border-[var(--color-border-subtle)] p-3">
+            <legend className="px-1 text-[11px] font-extrabold uppercase tracking-wider text-[var(--color-text-muted)]">
+              {labels.vulnerabilityLabel}
+            </legend>
+            <div className="flex flex-wrap gap-1.5">
+              {VULNERABILITY_TAGS.map((v) => {
+                const active = vulnerabilities.includes(v);
+                return (
+                  <button
+                    key={v}
+                    type="button"
+                    onClick={() => setVulnerabilities((s) => toggle(s, v))}
+                    className={`rounded-full border px-2.5 py-1 text-[11px] font-bold transition-colors ${
+                      active
+                        ? "border-[var(--color-sage-600)] bg-[var(--color-sage-100)] text-[var(--color-sage-800)]"
+                        : "border-[var(--color-border-default)] text-[var(--color-text-secondary)]"
+                    }`}
+                  >
+                    {labels[`vuln_${v}` as keyof MediatorLabels]}
+                  </button>
+                );
+              })}
+            </div>
+          </fieldset>
+
+          <fieldset className="mb-3 rounded-xl border border-[var(--color-border-subtle)] p-3">
+            <legend className="px-1 text-[11px] font-extrabold uppercase tracking-wider text-[var(--color-text-muted)]">
+              {labels.healthFacilitationLabel}
+            </legend>
+            <div className="flex flex-wrap gap-1.5">
+              {HEALTH_FACILITATIONS.map((f) => {
+                const active = facilitations.includes(f);
+                return (
+                  <button
+                    key={f}
+                    type="button"
+                    onClick={() => setFacilitations((s) => toggle(s, f))}
+                    className={`rounded-full border px-2.5 py-1 text-[11px] font-bold transition-colors ${
+                      active
+                        ? "border-[var(--color-success-accent)] bg-[var(--color-success-bg)] text-[var(--color-success-text)]"
+                        : "border-[var(--color-border-default)] text-[var(--color-text-secondary)]"
+                    }`}
+                  >
+                    {labels[`facilitation_${f}` as keyof MediatorLabels]}
+                  </button>
+                );
+              })}
+            </div>
+          </fieldset>
+
           <textarea
             placeholder={labels.caseNotes}
             value={notes}
@@ -151,12 +236,39 @@ export function CasesTab({
               </div>
               <p className="text-xs text-[var(--color-text-muted)]">
                 {labels[CATEGORY_LABEL_KEYS[c.category]] ?? c.category}
+                {typeof c.householdSize === "number" && c.householdSize > 0 && (
+                  <span> · {labels.householdSize}: {c.householdSize}</span>
+                )}
               </p>
               {c.nextVisit && (
                 <p className="mt-1 flex items-center gap-1 text-xs text-[var(--color-text-secondary)]">
                   <Calendar className="h-3 w-3" />
                   {labels.nextVisit}: {c.nextVisit}
                 </p>
+              )}
+              {(c.vulnerabilities?.length ?? 0) > 0 && (
+                <div className="mt-2 flex flex-wrap gap-1">
+                  {c.vulnerabilities!.map((v) => (
+                    <span
+                      key={v}
+                      className="rounded-full bg-[var(--color-warning-bg)] px-2 py-0.5 text-[10px] font-bold text-[var(--color-warning-text)]"
+                    >
+                      {labels[`vuln_${v}` as keyof MediatorLabels]}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {(c.healthFacilitations?.length ?? 0) > 0 && (
+                <div className="mt-1 flex flex-wrap gap-1">
+                  {c.healthFacilitations!.map((f) => (
+                    <span
+                      key={f}
+                      className="rounded-full bg-[var(--color-success-bg)] px-2 py-0.5 text-[10px] font-bold text-[var(--color-success-text)]"
+                    >
+                      {labels[`facilitation_${f}` as keyof MediatorLabels]}
+                    </span>
+                  ))}
+                </div>
               )}
               {c.notes && (
                 <p className="mt-2 text-sm text-[var(--color-text-secondary)]">{c.notes}</p>

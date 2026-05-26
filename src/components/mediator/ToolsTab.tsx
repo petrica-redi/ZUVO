@@ -49,6 +49,7 @@ export function ToolsTab({
     title: labels.reportTitle,
     generatedAt: labels.reportGenerated,
     county: labels.countyLabel,
+    kpiSection: labels.reportKpiSection,
     casesSection: labels.casesTitle,
     visitsSection: labels.recentActivity,
     sessionsSection: labels.sessionsTitle,
@@ -63,6 +64,15 @@ export function ToolsTab({
     topic: labels.sessionTopic,
     location: labels.sessionLocation,
     attendees: labels.sessionAttendees,
+    kpiUniquePeople: labels.indicatorsUniquePeople,
+    kpiHouseholds: labels.indicatorsHouseholds,
+    kpiOpenCases: labels.openCases,
+    kpiClosedCases: labels.indicatorsClosedCases,
+    kpiVisitsMonth: labels.logsThisMonth,
+    kpiVisitsYear: labels.indicatorsVisitsThisYear,
+    kpiSessionsMonth: labels.sessionsThisMonth,
+    kpiSessionsYear: labels.sessionsThisMonth,
+    kpiAttendees: labels.indicatorsAttendeesThisYear,
   };
 
   const buildReport = () => {
@@ -73,7 +83,7 @@ export function ToolsTab({
     })) as unknown as typeof cases;
 
     return buildMediatorReportHtml(
-      { version: 1, cases: localisedCases, visits, sessions },
+      { version: 1, cases: localisedCases, visits, sessions, training: [] },
       reportLabels,
       county?.name ?? labels.countyPlaceholder,
       locale,

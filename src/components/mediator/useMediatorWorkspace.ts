@@ -5,6 +5,7 @@ import type {
   MediatorCase,
   MediatorSession,
   MediatorVisit,
+  TrainingProgress,
 } from "@/lib/mediator/types";
 import { EMPTY_WORKSPACE } from "@/lib/mediator/types";
 import {
@@ -18,6 +19,7 @@ type Snapshot = {
   visits: MediatorVisit[];
   cases: MediatorCase[];
   sessions: MediatorSession[];
+  training: TrainingProgress[];
   countyCode: string;
 };
 
@@ -28,9 +30,20 @@ export type MediatorWorkspaceState = Snapshot & {
     visits?: MediatorVisit[];
     cases?: MediatorCase[];
     sessions?: MediatorSession[];
+    training?: TrainingProgress[];
     countyCode?: string;
   }) => void;
 };
+
+function emptySnapshot(): Snapshot {
+  return {
+    visits: [...EMPTY_WORKSPACE.visits],
+    cases: [...EMPTY_WORKSPACE.cases],
+    sessions: [...EMPTY_WORKSPACE.sessions],
+    training: [],
+    countyCode: "",
+  };
+}
 
 function initialSnapshot(): Snapshot {
   // SSR-safe: `readLocalWorkspace` returns empty defaults when `window` is
@@ -40,6 +53,7 @@ function initialSnapshot(): Snapshot {
     visits: local.payload.visits,
     cases: local.payload.cases,
     sessions: local.payload.sessions,
+    training: local.payload.training ?? [],
     countyCode: local.countyCode,
   };
 }
@@ -53,7 +67,7 @@ function initialSnapshot(): Snapshot {
  */
 export function useMediatorWorkspace(enabled: boolean): MediatorWorkspaceState {
   const [snapshot, setSnapshot] = useState<Snapshot>(
-    enabled ? initialSnapshot : () => initialEmptySnapshot(),
+    enabled ? initialSnapshot : emptySnapshot,
   );
   const [syncStatus, setSyncStatus] = useState<SyncStatus>("idle");
 
@@ -67,6 +81,7 @@ export function useMediatorWorkspace(enabled: boolean): MediatorWorkspaceState {
         visits: result.payload.visits,
         cases: result.payload.cases,
         sessions: result.payload.sessions,
+        training: result.payload.training ?? [],
         countyCode: result.countyCode,
       });
       setSyncStatus(result.status);
@@ -82,6 +97,7 @@ export function useMediatorWorkspace(enabled: boolean): MediatorWorkspaceState {
       visits?: MediatorVisit[];
       cases?: MediatorCase[];
       sessions?: MediatorSession[];
+      training?: TrainingProgress[];
       countyCode?: string;
     }) => {
       setSyncStatus("syncing");
@@ -90,6 +106,7 @@ export function useMediatorWorkspace(enabled: boolean): MediatorWorkspaceState {
           visits: patch.visits ?? prev.visits,
           cases: patch.cases ?? prev.cases,
           sessions: patch.sessions ?? prev.sessions,
+          training: patch.training ?? prev.training,
           countyCode:
             typeof patch.countyCode === "string"
               ? patch.countyCode
@@ -101,6 +118,7 @@ export function useMediatorWorkspace(enabled: boolean): MediatorWorkspaceState {
             visits: next.visits,
             cases: next.cases,
             sessions: next.sessions,
+            training: next.training,
           },
           next.countyCode,
           (status) => setSyncStatus(status),
@@ -115,14 +133,5 @@ export function useMediatorWorkspace(enabled: boolean): MediatorWorkspaceState {
     ...snapshot,
     syncStatus,
     update,
-  };
-}
-
-function initialEmptySnapshot(): Snapshot {
-  return {
-    visits: [...EMPTY_WORKSPACE.visits],
-    cases: [...EMPTY_WORKSPACE.cases],
-    sessions: [...EMPTY_WORKSPACE.sessions],
-    countyCode: "",
   };
 }

@@ -379,6 +379,8 @@
     "tabDashboard": "Overview",
     "tabCases": "Cases",
     "tabSessions": "Sessions",
+    "tabIndicators": "Indicators",
+    "tabTraining": "Training",
     "tabTools": "Field tools",
     "communityMembers": "People followed",
     "logsThisMonth": "Visits this month",
@@ -413,13 +415,17 @@
     "statusPlan": "Intervention plan",
     "statusMonitoring": "Monitoring",
     "statusClosed": "Closed",
+    "householdSize": "Household size",
+    "vulnerabilityLabel": "Vulnerabilities (POIDS target group)",
+    "healthFacilitationLabel": "Health facilitation flags",
     "sessionsTitle": "Information sessions",
     "noSessions": "No sessions logged yet.",
     "sessionTitle": "Session title",
-    "sessionTopic": "Theme",
+    "sessionTopic": "Free-text topic",
     "sessionLocation": "Location (village, school, community centre)",
     "sessionAttendees": "Participants (approx.)",
     "sessionNotes": "Notes & follow-up",
+    "sessionThemeLabel": "Public-health theme",
     "saveSession": "Save session",
     "sessionSaved": "Session saved",
     "toolsTitle": "Use on site with families",
@@ -441,7 +447,61 @@
     "exportPrint": "Print report (save as PDF)",
     "exportDownload": "Download HTML report",
     "reportTitle": "Health mediator activity report",
-    "reportGenerated": "Generated at"
+    "reportGenerated": "Generated at",
+    "reportKpiSection": "Key indicators",
+    "indicatorsTitle": "POIDS / SCI 2000 indicators",
+    "indicatorsHint": "Auto-computed from your cases, visits, and sessions. Use for monthly UJSS / DSP reporting.",
+    "indicatorsCoverage": "Community coverage",
+    "indicatorsActivity": "Field activity",
+    "indicatorsHealthFacilitation": "Health facilitation (per case)",
+    "indicatorsSessionsByTheme": "Sessions by theme (this year)",
+    "indicatorsVulnerability": "Beneficiaries by vulnerable group",
+    "indicatorsUniquePeople": "Unique beneficiaries",
+    "indicatorsHouseholds": "People in households",
+    "indicatorsClosedCases": "Closed cases",
+    "indicatorsVisitsThisYear": "Visits (year-to-date)",
+    "indicatorsAttendeesThisYear": "Session attendees (year)",
+    "trainingTitle": "ECI training",
+    "trainingSubtitle": "Onboarding path for community health workers, mediators, and the integrated team.",
+    "trainingProgress": "Complete",
+    "trainingMinutes": "min",
+    "trainingCompleted": "completed",
+    "trainingMarkComplete": "Mark as complete",
+    "trainingMarkIncomplete": "Mark as incomplete",
+    "trainingTierFoundations": "ECI foundations",
+    "trainingTierHealth": "Public health",
+    "trainingTierSocial": "Social & rights",
+    "trainingTierFieldwork": "Field work",
+    "vuln_child": "Children (0–18)",
+    "vuln_schoolDropoutRisk": "School-dropout risk",
+    "vuln_pregnant": "Pregnant women",
+    "vuln_singleParent": "Single parents",
+    "vuln_minVeniturGarantat": "Guaranteed-minimum-income",
+    "vuln_elderly": "Elderly",
+    "vuln_disability": "People with disabilities",
+    "vuln_romaCommunity": "Roma community",
+    "vuln_noInsurance": "No health insurance",
+    "vuln_noDocuments": "No ID documents",
+    "vuln_domesticViolence": "Domestic-violence survivors",
+    "facilitation_vaccinationFacilitated": "Vaccination facilitated",
+    "facilitation_prenatalFacilitated": "Prenatal care facilitated",
+    "facilitation_screeningReferral": "Screening referral",
+    "facilitation_chronicMonitoring": "Chronic-disease monitoring",
+    "facilitation_tbCommunicableScreening": "TB / communicable screening",
+    "facilitation_gpEnrollment": "GP enrolment",
+    "facilitation_insuranceEnrollment": "Health-insurance enrolment",
+    "sessionTheme_vaccination": "Vaccination",
+    "sessionTheme_maternalChild": "Maternal & child health",
+    "sessionTheme_nutrition": "Nutrition & breastfeeding",
+    "sessionTheme_hygiene": "Hygiene & sanitation",
+    "sessionTheme_tbCommunicable": "TB & communicable diseases",
+    "sessionTheme_chronicDisease": "Chronic disease (HTN, diabetes)",
+    "sessionTheme_screening": "Screening (cancer, NCDs)",
+    "sessionTheme_mentalHealth": "Mental health",
+    "sessionTheme_addiction": "Addictions (alcohol, drugs, smoking)",
+    "sessionTheme_rights": "Rights & access to care",
+    "sessionTheme_prevention": "General prevention",
+    "sessionTheme_other": "Other"
   },
   "profile": {
     "title": "Profile",
@@ -1613,6 +1673,115 @@
       "spouse": "Spouse",
       "parent": "Parent",
       "other": "Other"
+    }
+  },
+  "training": {
+    "modules": {
+      "eciIntro": {
+        "title": "ECI introduction and team roles",
+        "summary": "Who is in the integrated community team, what each role does, and how you collaborate.",
+        "k1": "ECI: community nurse, social worker, school counsellor and (where applicable) Roma health mediator.",
+        "k2": "All members work on the same beneficiary — one shared intervention plan.",
+        "k3": "Your reporting line is the UAT coordinator and the county UJSS.",
+        "k4": "Priority beneficiaries: pregnant women, children, elderly, people with disabilities, guaranteed-minimum-income families."
+      },
+      "legal": {
+        "title": "Legal framework: POIDS and OUG 18/2017",
+        "summary": "Foundations of community medical assistance and the POIDS programme.",
+        "k1": "OUG 18/2017 defines community medical assistance and integrated community centres.",
+        "k2": "POIDS 2021–2027 funds 2,000 rural communes (SMIS 339395).",
+        "k3": "Data confidentiality: GDPR + beneficiary consent for any intervention."
+      },
+      "fir": {
+        "title": "FIR — Risk Identification Sheet",
+        "summary": "How to assess needs, complete the FIR and design a service plan.",
+        "k1": "FIR covers household, hygiene, employment, CNAS insurance, chronic conditions, vaccinations, screenings.",
+        "k2": "Families with 10+ unaddressed risks/needs get quarterly home-visit monitoring.",
+        "k3": "Tag the case in the workspace with the matching vulnerability tag.",
+        "k4": "Re-assess annually or on major events (birth, death, hospital admission)."
+      },
+      "caseMgmt": {
+        "title": "Case management in 5 steps",
+        "summary": "From identification to closure — how to manage a case with the integrated team.",
+        "k1": "Identification — in the field, via referral, or with SPAS/family doctor.",
+        "k2": "Assessment — use FIR and your own needs-assessment tools.",
+        "k3": "Intervention plan — measurable goals, deadlines, responsibles.",
+        "k4": "Monitoring — scheduled home visits, plan adjustments.",
+        "k5": "Closure — when goals are met or the case relocates."
+      },
+      "vaccination": {
+        "title": "Community vaccination: mobilisation and counselling",
+        "summary": "How to mobilise families, handle vaccine hesitancy, and work with the family doctor.",
+        "k1": "Know the national schedule — verify each child in your caseload is up to date.",
+        "k2": "Address myths (autism, content) with evidence — use the fact-check tool.",
+        "k3": "Schedule visits with the family doctor / DSP and accompany families when needed.",
+        "k4": "Document refusals with reasons and plan a follow-up within 30 days."
+      },
+      "maternal": {
+        "title": "Maternal and child health",
+        "summary": "Preventing teenage pregnancies, prenatal monitoring, breastfeeding, postnatal checks.",
+        "k1": "Identify pregnant women at first contact — help register with family doctor / midwife.",
+        "k2": "Folic acid in the first trimester — discuss as soon as pregnancy is confirmed.",
+        "k3": "Support exclusive breastfeeding for 6 months — counter formula myths.",
+        "k4": "Postnatal visits at 7 days and 6 weeks — screen for postnatal depression."
+      },
+      "chronic": {
+        "title": "Community management of chronic disease",
+        "summary": "Hypertension, diabetes, and other chronic conditions — your role in secondary prevention and adherence.",
+        "k1": "Log blood pressure / glucose at monthly visits, flag critical values.",
+        "k2": "Check treatment adherence and detect adverse effects.",
+        "k3": "Facilitate access to specialist follow-up every 3 months."
+      },
+      "tb": {
+        "title": "TB and communicable diseases",
+        "summary": "Spot suspected TB and initiate screening referrals.",
+        "k1": "Cough > 3 weeks, weight loss, night fever — red flags.",
+        "k2": "Refer to TB dispensary or DSP for screening (Mantoux / X-ray).",
+        "k3": "Ensure adherence to DOT (Directly Observed Therapy)."
+      },
+      "screening": {
+        "title": "Screening for cancer and NCDs",
+        "summary": "Cervical, breast, colorectal — how to mobilise the target population.",
+        "k1": "Women 25–64 — Pap smear every 3 years.",
+        "k2": "Women 50–69 — mammography every 2 years.",
+        "k3": "Adults 50–74 — FIT test for colorectal cancer."
+      },
+      "mentalHealth": {
+        "title": "Community mental health",
+        "summary": "Recognise depression, anxiety, and suicidal intent; connect to support.",
+        "k1": "PHQ-2 as a short screen; refer to a doctor if positive.",
+        "k2": "Emergencies: 112 for acute suicidal intent. Helpline: 0800.801.200.",
+        "k3": "Support the family, do not isolate the person; involve the family doctor."
+      },
+      "rights": {
+        "title": "Rights, CNAS insurance, ID documents",
+        "summary": "How to help beneficiaries access their rights, insurance, and ID.",
+        "k1": "CNAS insurance for low-income groups: free through SPAS.",
+        "k2": "ID documents: work with the town hall and the records office.",
+        "k3": "Free access to basic services — even without insurance.",
+        "k4": "Know patient rights — Law 46/2003 and Order 1410/2016."
+      },
+      "school": {
+        "title": "Preventing school dropout",
+        "summary": "Collaborate with the school counsellor to keep children in school.",
+        "k1": "Identify early — repeated absences, behavioural changes.",
+        "k2": "POIDS food packages — direct support for families with children.",
+        "k3": "Talk to parents and the school — build a shared plan."
+      },
+      "communication": {
+        "title": "Communicating with rural beneficiaries",
+        "summary": "Plain language, cultural respect, working with Roma families.",
+        "k1": "Use plain language, no medical jargon.",
+        "k2": "Respect the community's cultural codes — check with the Roma health mediator.",
+        "k3": "Document the family's informed consent for interventions."
+      },
+      "reporting": {
+        "title": "Monthly reporting to DSP / UJSS",
+        "summary": "How to generate the monthly report from the workspace and send it to your coordinator.",
+        "k1": "Indicators are computed automatically in the Indicators tab.",
+        "k2": "Use 'Print report' to save as PDF.",
+        "k3": "Submit to UJSS / county DSP by the 5th of the month."
+      }
     }
   }
 }

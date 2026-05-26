@@ -1,15 +1,33 @@
 "use client";
 
 import type { ComponentType } from "react";
-import { ClipboardList, FolderOpen, Presentation, Wrench } from "lucide-react";
+import {
+  BookOpen,
+  ClipboardList,
+  FolderOpen,
+  LineChart,
+  Presentation,
+  Wrench,
+} from "lucide-react";
 import type { MediatorLabels } from "./labels";
 
-export type TabId = "overview" | "cases" | "sessions" | "tools";
+export type TabId =
+  | "overview"
+  | "cases"
+  | "sessions"
+  | "indicators"
+  | "training"
+  | "tools";
 
-const ICONS: Record<TabId, ComponentType<{ className?: string; strokeWidth?: number }>> = {
+const ICONS: Record<
+  TabId,
+  ComponentType<{ className?: string; strokeWidth?: number }>
+> = {
   overview: ClipboardList,
   cases: FolderOpen,
   sessions: Presentation,
+  indicators: LineChart,
+  training: BookOpen,
   tools: Wrench,
 };
 
@@ -17,10 +35,19 @@ const LABEL_KEY: Record<TabId, keyof MediatorLabels> = {
   overview: "tabDashboard",
   cases: "tabCases",
   sessions: "tabSessions",
+  indicators: "tabIndicators",
+  training: "tabTraining",
   tools: "tabTools",
 };
 
-const TABS: TabId[] = ["overview", "cases", "sessions", "tools"];
+const TABS: TabId[] = [
+  "overview",
+  "cases",
+  "sessions",
+  "indicators",
+  "training",
+  "tools",
+];
 
 export function WorkspaceTabs({
   labels,
@@ -47,7 +74,7 @@ export function WorkspaceTabs({
             role="tab"
             aria-selected={active}
             onClick={() => onChange(id)}
-            className={`flex min-h-[44px] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-xl px-2 py-2.5 text-[11px] font-extrabold transition-colors ${
+            className={`flex min-h-[44px] min-w-[88px] flex-none items-center justify-center gap-1.5 whitespace-nowrap rounded-xl px-3 py-2.5 text-[11px] font-extrabold transition-colors ${
               active
                 ? "bg-[var(--color-surface)] text-[var(--color-text-primary)] shadow-1"
                 : "text-[var(--color-text-muted)]"

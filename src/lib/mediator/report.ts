@@ -5,12 +5,14 @@
  * a heavyweight PDF library bundled into the app.
  */
 
+import { computeIndicators } from "./indicators";
 import type { MediatorWorkspacePayload } from "./types";
 
 export type MediatorReportLabels = {
   title: string;
   generatedAt: string;
   county: string;
+  kpiSection: string;
   casesSection: string;
   visitsSection: string;
   sessionsSection: string;
@@ -25,6 +27,16 @@ export type MediatorReportLabels = {
   topic: string;
   location: string;
   attendees: string;
+  /** "People followed" / "Beneficiari unici" */
+  kpiUniquePeople: string;
+  kpiHouseholds: string;
+  kpiOpenCases: string;
+  kpiClosedCases: string;
+  kpiVisitsMonth: string;
+  kpiVisitsYear: string;
+  kpiSessionsMonth: string;
+  kpiSessionsYear: string;
+  kpiAttendees: string;
 };
 
 function escapeHtml(value: string): string {
@@ -52,6 +64,29 @@ function formatDate(value: string, locale: string): string {
   const parsed = new Date(value);
   if (Number.isNaN(parsed.getTime())) return value;
   return parsed.toLocaleDateString(locale);
+}
+
+function kpiBlock(labels: MediatorReportLabels, payload: MediatorWorkspacePayload): string {
+  const ind = computeIndicators(payload);
+  const items: Array<[string, number]> = [
+    [labels.kpiUniquePeople, ind.uniquePeople],
+    [labels.kpiHouseholds, ind.households],
+    [labels.kpiOpenCases, ind.cases.open],
+    [labels.kpiClosedCases, ind.cases.closed],
+    [labels.kpiVisitsMonth, ind.visitsThisMonth],
+    [labels.kpiVisitsYear, ind.visitsThisYear],
+    [labels.kpiSessionsMonth, ind.sessionsThisMonth],
+    [labels.kpiSessionsYear, ind.sessionsThisYear],
+    [labels.kpiAttendees, ind.sessionAttendeesThisYear],
+  ];
+  return `<div class="kpi-grid">${items
+    .map(
+      ([label, value]) =>
+        `<div class="kpi"><div class="kpi-value">${value}</div><div class="kpi-label">${escapeHtml(
+          label,
+        )}</div></div>`,
+    )
+    .join("")}</div>`;
 }
 
 export function buildMediatorReportHtml(
@@ -121,10 +156,25 @@ export function buildMediatorReportHtml(
     }
     th { background: #f4f4f4; font-weight: 600; }
     td.empty { color: #888; font-style: italic; text-align: center; }
+    .kpi-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .kpi {
+      border: 1px solid #ddd; border-radius: 0.5rem; padding: 0.5rem 0.6rem;
+      background: #fafafa;
+    }
+    .kpi-value {
+      font-size: 1.25rem; font-weight: 700; line-height: 1.1;
+    }
+    .kpi-label {
+      font-size: 0.75rem; color: #555; margin-top: 0.15rem;
+    }
     @media print {
       body { margin: 1rem; }
       h2 { page-break-after: avoid; }
       table { page-break-inside: avoid; }
+      .kpi-grid { page-break-inside: avoid; }
     }
   </style>
 </head>
@@ -134,6 +184,9 @@ export function buildMediatorReportHtml(
     ${escapeHtml(labels.generatedAt)}: ${escapeHtml(generated)}<br />
     ${escapeHtml(labels.county)}: ${escapeHtml(countyName)}
   </p>
+
+  <h2>${escapeHtml(labels.kpiSection)}</h2>
+  ${kpiBlock(labels, payload)}
 
   <h2>${escapeHtml(labels.casesSection)}</h2>
   <table>
@@ -186,8 +239,6 @@ export function printMediatorReport(html: string): void {
   win.document.write(html);
   win.document.close();
   win.focus();
-  // Defer print until layout has settled (some browsers ignore an immediate
-  // print() call from a freshly-opened document).
   win.onload = () => {
     setTimeout(() => win.print(), 50);
   };

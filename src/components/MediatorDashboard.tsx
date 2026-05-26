@@ -4,10 +4,12 @@ import { useState } from "react";
 import { useLocale } from "next-intl";
 import { AccessGate } from "@/components/mediator/AccessGate";
 import { CasesTab } from "@/components/mediator/CasesTab";
+import { IndicatorsTab } from "@/components/mediator/IndicatorsTab";
 import type { MediatorLabels } from "@/components/mediator/labels";
 import { OverviewTab } from "@/components/mediator/OverviewTab";
 import { SessionsTab } from "@/components/mediator/SessionsTab";
 import { ToolsTab } from "@/components/mediator/ToolsTab";
+import { TrainingTab } from "@/components/mediator/TrainingTab";
 import { useMediatorWorkspace } from "@/components/mediator/useMediatorWorkspace";
 import { WorkspaceHeader } from "@/components/mediator/WorkspaceHeader";
 import { WorkspaceTabs, type TabId } from "@/components/mediator/WorkspaceTabs";
@@ -27,7 +29,7 @@ function readInitialAccess(): boolean {
  * Top-level orchestrator for `/mediator`. Coordinates:
  *   - PIN gate via `<AccessGate />` (UI gate; real auth is on the server).
  *   - County + sync badge via `<WorkspaceHeader />`.
- *   - Per-tab forms and lists.
+ *   - Per-tab forms, lists, KPI indicators, and training.
  *
  * Persistence flows through `useMediatorWorkspace` so the local copy stays
  * the source of truth and remote sync is best-effort.
@@ -92,6 +94,32 @@ export function MediatorDashboard({ labels }: { labels: MediatorLabels }) {
           onSave={(record) =>
             workspace.update({ sessions: [record, ...workspace.sessions] })
           }
+        />
+      )}
+
+      {tab === "indicators" && (
+        <IndicatorsTab
+          labels={labels}
+          cases={workspace.cases}
+          visits={workspace.visits}
+          sessions={workspace.sessions}
+        />
+      )}
+
+      {tab === "training" && (
+        <TrainingTab
+          labels={labels}
+          training={workspace.training}
+          onToggleModule={(moduleId, completed) => {
+            const without = workspace.training.filter(
+              (p) => p.moduleId !== moduleId,
+            );
+            workspace.update({
+              training: completed
+                ? [{ moduleId, completedAt: new Date().toISOString() }, ...without]
+                : without,
+            });
+          }}
         />
       )}
 

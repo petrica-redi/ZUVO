@@ -1,9 +1,18 @@
 /**
  * Domain types for the mediator field workspace.
  *
- * The shape is intentionally permissive at the storage layer so we can evolve
- * the payload (add fields, optional metadata) without forcing migrations on
- * offline devices. UI code should narrow to these types when reading.
+ * Aligned with POIDS / SCI 2000 (Servicii Comunitare Integrate) reporting
+ * requirements as set out by Ministerul Sănătății, ANPIS and UJSS:
+ *
+ *   - Case categories cover health, social, education, and rights so the
+ *     same record can be reported by AMC, AS, or consilier școlar.
+ *   - Health facilitation flags map directly to POIDS indicators
+ *     (vaccination, prenatal care, screenings, chronic disease management).
+ *   - Vulnerability tags map to POIDS target groups.
+ *   - Session themes map to POIDS health-promotion priorities.
+ *
+ * Schema evolves additively: every new field is optional, so older devices
+ * continue to sync without a server-side migration.
  */
 
 import { z } from "zod";
@@ -19,6 +28,55 @@ export const CASE_STATUSES = [
 
 export type CaseCategory = (typeof CASE_CATEGORIES)[number];
 export type CaseStatus = (typeof CASE_STATUSES)[number];
+
+/** POIDS target-group tags that may apply to a beneficiary. */
+export const VULNERABILITY_TAGS = [
+  "child",
+  "schoolDropoutRisk",
+  "pregnant",
+  "singleParent",
+  "minVeniturGarantat",
+  "elderly",
+  "disability",
+  "romaCommunity",
+  "noInsurance",
+  "noDocuments",
+  "domesticViolence",
+] as const;
+export type VulnerabilityTag = (typeof VULNERABILITY_TAGS)[number];
+
+/**
+ * Health facilitation flags — counted as POIDS health indicators when the
+ * mediator records that they helped a beneficiary access or comply with the
+ * relevant service.
+ */
+export const HEALTH_FACILITATIONS = [
+  "vaccinationFacilitated",
+  "prenatalFacilitated",
+  "screeningReferral",
+  "chronicMonitoring",
+  "tbCommunicableScreening",
+  "gpEnrollment",
+  "insuranceEnrollment",
+] as const;
+export type HealthFacilitation = (typeof HEALTH_FACILITATIONS)[number];
+
+/** Themes used by information sessions, aligned with Min. Sănătății priorities. */
+export const SESSION_THEMES = [
+  "vaccination",
+  "maternalChild",
+  "nutrition",
+  "hygiene",
+  "tbCommunicable",
+  "chronicDisease",
+  "screening",
+  "mentalHealth",
+  "addiction",
+  "rights",
+  "prevention",
+  "other",
+] as const;
+export type SessionTheme = (typeof SESSION_THEMES)[number];
 
 export type MediatorVisit = {
   id: string;
@@ -36,6 +94,12 @@ export type MediatorCase = {
   nextVisit: string;
   createdAt: string;
   updatedAt: string;
+  /** Optional household size (POIDS reporting). */
+  householdSize?: number;
+  /** Vulnerability tags applicable to the case. */
+  vulnerabilities?: VulnerabilityTag[];
+  /** Health facilitation flags recorded for this case. */
+  healthFacilitations?: HealthFacilitation[];
 };
 
 export type MediatorSession = {
@@ -46,6 +110,14 @@ export type MediatorSession = {
   attendees: string;
   notes: string;
   sessionDate: string;
+  /** Theme tag for POIDS reporting. Falls back to `"other"` when absent. */
+  theme?: SessionTheme;
+};
+
+/** Marks a training module as completed by the mediator. */
+export type TrainingProgress = {
+  moduleId: string;
+  completedAt: string;
 };
 
 export type MediatorWorkspacePayload = {
@@ -53,6 +125,7 @@ export type MediatorWorkspacePayload = {
   cases: MediatorCase[];
   visits: MediatorVisit[];
   sessions: MediatorSession[];
+  training?: TrainingProgress[];
 };
 
 export const EMPTY_WORKSPACE: MediatorWorkspacePayload = {
@@ -60,6 +133,7 @@ export const EMPTY_WORKSPACE: MediatorWorkspacePayload = {
   cases: [],
   visits: [],
   sessions: [],
+  training: [],
 };
 
 // ── Zod schemas (used by the workspace API) ────────────────────────────────
@@ -68,6 +142,9 @@ const isoDate = z.string().min(1);
 
 const caseCategorySchema = z.enum(CASE_CATEGORIES);
 const caseStatusSchema = z.enum(CASE_STATUSES);
+const vulnerabilitySchema = z.enum(VULNERABILITY_TAGS);
+const healthFacilitationSchema = z.enum(HEALTH_FACILITATIONS);
+const sessionThemeSchema = z.enum(SESSION_THEMES);
 
 export const mediatorVisitSchema: z.ZodType<MediatorVisit> = z.object({
   id: z.string().min(1).max(64),
@@ -85,6 +162,9 @@ export const mediatorCaseSchema: z.ZodType<MediatorCase> = z.object({
   nextVisit: z.string().max(40).default(""),
   createdAt: isoDate,
   updatedAt: isoDate,
+  householdSize: z.number().int().min(0).max(50).optional(),
+  vulnerabilities: z.array(vulnerabilitySchema).optional(),
+  healthFacilitations: z.array(healthFacilitationSchema).optional(),
 });
 
 export const mediatorSessionSchema: z.ZodType<MediatorSession> = z.object({
@@ -95,6 +175,12 @@ export const mediatorSessionSchema: z.ZodType<MediatorSession> = z.object({
   attendees: z.string().max(40).default(""),
   notes: z.string().max(4000).default(""),
   sessionDate: isoDate,
+  theme: sessionThemeSchema.optional(),
+});
+
+export const trainingProgressSchema: z.ZodType<TrainingProgress> = z.object({
+  moduleId: z.string().min(1).max(80),
+  completedAt: isoDate,
 });
 
 export const mediatorWorkspacePayloadSchema: z.ZodType<MediatorWorkspacePayload> =
@@ -103,4 +189,5 @@ export const mediatorWorkspacePayloadSchema: z.ZodType<MediatorWorkspacePayload>
     cases: z.array(mediatorCaseSchema).default([]),
     visits: z.array(mediatorVisitSchema).default([]),
     sessions: z.array(mediatorSessionSchema).default([]),
+    training: z.array(trainingProgressSchema).optional(),
   });

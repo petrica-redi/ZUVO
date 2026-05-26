@@ -1,7 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { MediatorSession } from "@/lib/mediator/types";
+import {
+  SESSION_THEMES,
+  type MediatorSession,
+  type SessionTheme,
+} from "@/lib/mediator/types";
 import type { MediatorLabels } from "./labels";
 import { EmptyState, FormCard, SaveButton } from "./parts";
 
@@ -22,6 +26,7 @@ export function SessionsTab({
 }) {
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState("");
+  const [theme, setTheme] = useState<SessionTheme>("vaccination");
   const [topic, setTopic] = useState("");
   const [location, setLocation] = useState("");
   const [attendees, setAttendees] = useState("");
@@ -43,6 +48,7 @@ export function SessionsTab({
       attendees: attendees.trim(),
       notes: notes.trim(),
       sessionDate: new Date().toISOString(),
+      theme,
     });
     setSaved(true);
     setTitle("");
@@ -50,6 +56,7 @@ export function SessionsTab({
     setLocation("");
     setAttendees("");
     setNotes("");
+    setTheme("vaccination");
     setTimeout(() => {
       setSaved(false);
       setOpen(false);
@@ -85,6 +92,21 @@ export function SessionsTab({
             aria-label={labels.sessionTitle}
             className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
           />
+          <label className="mb-3 flex flex-col gap-1 text-[11px] font-semibold text-[var(--color-text-muted)]">
+            {labels.sessionThemeLabel}
+            <select
+              value={theme}
+              onChange={(e) => setTheme(e.target.value as SessionTheme)}
+              aria-label={labels.sessionThemeLabel}
+              className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm text-[var(--color-text-primary)]"
+            >
+              {SESSION_THEMES.map((t) => (
+                <option key={t} value={t}>
+                  {labels[`sessionTheme_${t}` as keyof MediatorLabels]}
+                </option>
+              ))}
+            </select>
+          </label>
           <input
             type="text"
             placeholder={labels.sessionTopic}
@@ -143,6 +165,9 @@ export function SessionsTab({
                   {new Date(s.sessionDate).toLocaleDateString()}
                 </span>
               </div>
+              <p className="text-xs font-semibold text-[var(--color-sage-700)]">
+                {labels[`sessionTheme_${s.theme ?? "other"}` as keyof MediatorLabels]}
+              </p>
               {s.topic && <p className="text-sm text-[var(--color-text-secondary)]">{s.topic}</p>}
               {s.location && (
                 <p className="mt-1 text-xs text-[var(--color-text-muted)]">{s.location}</p>

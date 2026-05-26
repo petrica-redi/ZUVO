@@ -3,7 +3,13 @@
  * workspace UI. Keep this list in sync with `messages/*.json` `mediator.*`.
  */
 
-export const MEDIATOR_LABEL_KEYS = [
+import {
+  HEALTH_FACILITATIONS,
+  SESSION_THEMES,
+  VULNERABILITY_TAGS,
+} from "@/lib/mediator/types";
+
+const STATIC_KEYS = [
   "title",
   "subtitle",
   "ecHint",
@@ -14,6 +20,8 @@ export const MEDIATOR_LABEL_KEYS = [
   "tabDashboard",
   "tabCases",
   "tabSessions",
+  "tabIndicators",
+  "tabTraining",
   "tabTools",
   "communityMembers",
   "logsThisMonth",
@@ -48,6 +56,9 @@ export const MEDIATOR_LABEL_KEYS = [
   "statusPlan",
   "statusMonitoring",
   "statusClosed",
+  "householdSize",
+  "vulnerabilityLabel",
+  "healthFacilitationLabel",
   "sessionsTitle",
   "noSessions",
   "sessionTitle",
@@ -55,6 +66,7 @@ export const MEDIATOR_LABEL_KEYS = [
   "sessionLocation",
   "sessionAttendees",
   "sessionNotes",
+  "sessionThemeLabel",
   "saveSession",
   "sessionSaved",
   "toolsTitle",
@@ -77,9 +89,50 @@ export const MEDIATOR_LABEL_KEYS = [
   "exportDownload",
   "reportTitle",
   "reportGenerated",
+  "indicatorsTitle",
+  "indicatorsHint",
+  "indicatorsCoverage",
+  "indicatorsActivity",
+  "indicatorsHealthFacilitation",
+  "indicatorsSessionsByTheme",
+  "indicatorsVulnerability",
+  "indicatorsUniquePeople",
+  "indicatorsHouseholds",
+  "indicatorsClosedCases",
+  "indicatorsVisitsThisYear",
+  "indicatorsAttendeesThisYear",
+  "trainingTitle",
+  "trainingSubtitle",
+  "trainingProgress",
+  "trainingMinutes",
+  "trainingCompleted",
+  "trainingMarkComplete",
+  "trainingMarkIncomplete",
+  "trainingTierFoundations",
+  "trainingTierHealth",
+  "trainingTierSocial",
+  "trainingTierFieldwork",
+  "reportKpiSection",
 ] as const;
 
-export type MediatorLabelKey = (typeof MEDIATOR_LABEL_KEYS)[number];
+type StaticKey = (typeof STATIC_KEYS)[number];
+type VulnerabilityKey = `vuln_${(typeof VULNERABILITY_TAGS)[number]}`;
+type FacilitationKey = `facilitation_${(typeof HEALTH_FACILITATIONS)[number]}`;
+type SessionThemeKey = `sessionTheme_${(typeof SESSION_THEMES)[number]}`;
+
+export type MediatorLabelKey =
+  | StaticKey
+  | VulnerabilityKey
+  | FacilitationKey
+  | SessionThemeKey;
+
+export const MEDIATOR_LABEL_KEYS: readonly MediatorLabelKey[] = [
+  ...STATIC_KEYS,
+  ...VULNERABILITY_TAGS.map((v) => `vuln_${v}` as VulnerabilityKey),
+  ...HEALTH_FACILITATIONS.map((f) => `facilitation_${f}` as FacilitationKey),
+  ...SESSION_THEMES.map((t) => `sessionTheme_${t}` as SessionThemeKey),
+];
+
 export type MediatorLabels = Record<MediatorLabelKey, string>;
 
 export type CaseCategoryKey =
