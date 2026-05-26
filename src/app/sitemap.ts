@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAppConfig } from "@/lib/env";
-import { LOCALES } from "@/i18n/routing";
+import { LOCALES, routing } from "@/i18n/routing";
 import { STUDENT_MODULES, STAGE_ORDER } from "@/data/student-health";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

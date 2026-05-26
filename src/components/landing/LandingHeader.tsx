@@ -44,6 +44,12 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
 
         <nav className="hidden items-center gap-7 md:flex">
           <Link
+            href="/mediator"
+            className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
+          >
+            {t("navMediator")}
+          </Link>
+          <Link
             href="/students"
             className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
           >

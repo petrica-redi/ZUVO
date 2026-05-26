@@ -230,19 +230,11 @@ export default async function HomePage({ params }: Props) {
 
             <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
               <PlatformTile
-                href="/students"
-                icon={GraduationCap}
-                accent="ember"
-                title={t("navAcademy")}
-                desc={t("navAcademyDesc")}
-                primary
-              />
-              <PlatformTile
-                href="/explain"
-                icon={FileText}
-                accent="brand"
-                title={t("navExplain")}
-                desc={t("navExplainDesc")}
+                href="/mediator"
+                icon={Handshake}
+                accent="sage"
+                title={t("navMediator")}
+                desc={t("navMediatorDesc")}
                 primary
               />
               <PlatformTile
@@ -254,11 +246,19 @@ export default async function HomePage({ params }: Props) {
                 primary
               />
               <PlatformTile
-                href="/mediator"
-                icon={Handshake}
-                accent="sage"
-                title={t("navMediator")}
-                desc={t("navMediatorDesc")}
+                href="/explain"
+                icon={FileText}
+                accent="brand"
+                title={t("navExplain")}
+                desc={t("navExplainDesc")}
+                primary
+              />
+              <PlatformTile
+                href="/students"
+                icon={GraduationCap}
+                accent="ember"
+                title={t("navAcademy")}
+                desc={t("navAcademyDesc")}
                 primary
               />
               <PlatformTile
