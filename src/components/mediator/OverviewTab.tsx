@@ -11,7 +11,15 @@ import {
 } from "lucide-react";
 import type { MediatorCase, MediatorVisit } from "@/lib/mediator/types";
 import type { MediatorLabels } from "./labels";
-import { ActionRow, EmptyState, FormCard, SaveButton, StatCard } from "./parts";
+import {
+  ActionRow,
+  EmptyState,
+  FormCard,
+  SaveButton,
+  SectionTitle,
+  StatCard,
+  fieldClass,
+} from "./parts";
 
 function isThisMonth(iso: string): boolean {
   const d = new Date(iso);
@@ -94,10 +102,8 @@ export function OverviewTab({
         />
       </div>
 
-      <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
-        {labels.quickActions}
-      </h2>
-      <div className="mb-6 flex flex-col gap-2">
+      <SectionTitle>{labels.quickActions}</SectionTitle>
+      <div className="mb-6 grid gap-2 md:grid-cols-3">
         <ActionRow
           icon={Footprints}
           label={labels.logVisit}
@@ -126,7 +132,7 @@ export function OverviewTab({
             value={name}
             onChange={(e) => setName(e.target.value)}
             aria-label={labels.memberName}
-            className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            className={`mb-3 ${fieldClass}`}
           />
           <textarea
             placeholder={labels.notes}
@@ -134,7 +140,7 @@ export function OverviewTab({
             onChange={(e) => setNotes(e.target.value)}
             aria-label={labels.notes}
             rows={3}
-            className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            className={`mb-3 ${fieldClass}`}
           />
           <SaveButton
             saved={saved}
@@ -146,18 +152,20 @@ export function OverviewTab({
         </FormCard>
       )}
 
-      <h2 className="mb-3 flex items-center gap-2 text-sm font-extrabold uppercase tracking-wider text-[var(--color-text-muted)]">
-        <ClipboardList className="h-4 w-4" />
-        {labels.recentActivity}
-      </h2>
+      <SectionTitle>
+        <span className="inline-flex items-center gap-2">
+          <ClipboardList className="h-4 w-4" />
+          {labels.recentActivity}
+        </span>
+      </SectionTitle>
       {visits.length === 0 ? (
         <EmptyState message={labels.noActivity} />
       ) : (
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-3">
           {visits.slice(0, 10).map((v) => (
             <li
               key={v.id}
-              className="rounded-2xl bg-[var(--color-surface)] p-4 shadow-1"
+              className="rounded-3xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-4 shadow-[0_10px_35px_-24px_rgba(15,23,42,0.28)]"
             >
               <div className="mb-1 flex items-center justify-between">
                 <span className="font-bold text-[var(--color-text-primary)]">
