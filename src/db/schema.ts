@@ -271,6 +271,29 @@ export const mediatorVisits = pgTable(
   (t) => [index("idx_visit_mediator").on(t.mediatorId, t.visitDate)]
 );
 
+/**
+ * Mediator field workspace blob (cases, visits, sessions).
+ *
+ * Keyed by a durable client-generated workspace UUID so a mediator can keep
+ * working across browser sessions / anonymous-id rotations. When a Supabase
+ * session is available, `userId` is also recorded for cross-device discovery.
+ */
+export const mediatorWorkspaces = pgTable(
+  "mediator_workspaces",
+  {
+    workspaceId: text("workspace_id").primaryKey(),
+    userId: uuid("user_id"),
+    countyCode: text("county_code"),
+    payload: jsonb("payload").notNull().default({}),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow().notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [
+    index("idx_mediator_workspaces_user").on(t.userId),
+    index("idx_mediator_workspaces_updated").on(t.updatedAt),
+  ]
+);
+
 // ── Platform Config (Admin Panel) ──────────────────────────────────────────
 export const platformConfig = pgTable("platform_config", {
   id: text("id").primaryKey(), // usually 'default'
