@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { Header } from "@/components/Header";
 import { MediatorDashboard } from "@/components/MediatorDashboard";
 import {
   MEDIATOR_LABEL_KEYS,
@@ -24,8 +23,7 @@ export default async function MediatorPage({ params }: Props) {
   ) as MediatorLabels;
 
   return (
-    <div className="min-h-[100dvh] bg-[var(--color-bg-canvas)]">
-      <Header />
+    <div className="min-h-[100dvh] bg-[#F4F1EA]">
       <main id="main-content">
         <MediatorDashboard labels={labels} />
       </main>

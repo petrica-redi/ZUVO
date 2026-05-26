@@ -40,15 +40,15 @@ export function WorkspaceHeader({
         : CloudOff;
 
   return (
-    <div className="flex flex-col gap-3 rounded-3xl border border-white/20 bg-white/12 p-3 shadow-[0_18px_50px_-30px_rgba(2,6,23,0.45)] backdrop-blur-xl sm:flex-row sm:items-end">
+    <div className="flex flex-col gap-3">
       <label className="flex min-w-[220px] flex-1 flex-col gap-1.5 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white/70">
         {labels.countyLabel}
-        <span className="flex items-center gap-2 rounded-2xl border border-white/25 bg-white/90 px-3 py-2.5 shadow-inner">
-          <MapPin className="h-4 w-4 shrink-0 text-[var(--color-sage-700)]" />
+        <span className="flex items-center gap-2 rounded-[1.35rem] border border-white/14 bg-white/10 px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+          <MapPin className="h-4 w-4 shrink-0 text-white/70" />
           <select
             value={countyCode}
             onChange={(e) => onChangeCounty(e.target.value)}
-            className="w-full bg-transparent text-sm font-bold text-[var(--color-text-primary)] outline-none"
+            className="w-full bg-transparent text-sm font-bold text-white outline-none [&>option]:text-[var(--color-text-primary)]"
           >
             <option value="">{labels.countyPlaceholder}</option>
             {ROMANIA_ECI_COUNTIES.map((c) => (
