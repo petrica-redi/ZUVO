@@ -14,7 +14,6 @@ export const LOCAL_KEYS = [
   "sastipe_student_health",
   "sastipe_anon_id",
   "sastipe_install_dismissed",
-  "sastipe_mediator_access",
   "sastipe_mediator_visits",
   "sastipe_mediator_cases",
   "sastipe_mediator_sessions",

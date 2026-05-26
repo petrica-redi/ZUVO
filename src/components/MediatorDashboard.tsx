@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useLocale } from "next-intl";
-import { AccessGate } from "@/components/mediator/AccessGate";
 import { CasesTab } from "@/components/mediator/CasesTab";
 import { IndicatorsTab } from "@/components/mediator/IndicatorsTab";
 import type { MediatorLabels } from "@/components/mediator/labels";
@@ -14,36 +13,14 @@ import { useMediatorWorkspace } from "@/components/mediator/useMediatorWorkspace
 import { WorkspaceHeader } from "@/components/mediator/WorkspaceHeader";
 import { WorkspaceTabs, type TabId } from "@/components/mediator/WorkspaceTabs";
 
-const ACCESS_KEY = "sastipe_mediator_access";
-
-function readInitialAccess(): boolean {
-  if (typeof window === "undefined") return false;
-  try {
-    return localStorage.getItem(ACCESS_KEY) === "true";
-  } catch {
-    return false;
-  }
-}
-
 /**
- * Top-level orchestrator for `/mediator`. Coordinates:
- *   - PIN gate via `<AccessGate />` (UI gate; real auth is on the server).
- *   - County + sync badge via `<WorkspaceHeader />`.
- *   - Per-tab forms, lists, KPI indicators, and training.
- *
- * Persistence flows through `useMediatorWorkspace` so the local copy stays
- * the source of truth and remote sync is best-effort.
+ * Top-level orchestrator for `/mediator`. County selector, tabbed workspace,
+ * KPI indicators, training, and tools. Opens directly — no PIN gate.
  */
 export function MediatorDashboard({ labels }: { labels: MediatorLabels }) {
   const locale = useLocale();
-  const [hasAccess, setHasAccess] = useState<boolean>(readInitialAccess);
   const [tab, setTab] = useState<TabId>("overview");
-
-  const workspace = useMediatorWorkspace(hasAccess);
-
-  if (!hasAccess) {
-    return <AccessGate labels={labels} onUnlocked={() => setHasAccess(true)} />;
-  }
+  const workspace = useMediatorWorkspace(true);
 
   return (
     <div>

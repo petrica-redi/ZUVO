@@ -81,10 +81,10 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
             <ThemeToggle />
           </div>
           <Link
-            href="/chat"
+            href="/mediator"
             className="inline-flex h-9 items-center gap-1.5 rounded-full bg-[var(--color-text-primary)] px-4 text-[13px] font-extrabold text-[var(--color-bg-canvas)] shadow-2 transition-transform active:scale-95"
           >
-            {t("ctaPrimary")}
+            {t("navMediator")}
             <ArrowRight className="lucide h-3.5 w-3.5" strokeWidth={2.2} />
           </Link>
         </div>
