@@ -60,7 +60,7 @@ export function WorkspaceTabs({
 }) {
   return (
     <div
-      className="mb-6 flex gap-1 overflow-x-auto rounded-2xl bg-[var(--color-surface-subtle)] p-1"
+      className="sticky top-[64px] z-20 mb-6 flex gap-2 overflow-x-auto rounded-3xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)]/92 p-2 shadow-[0_14px_45px_-28px_rgba(15,23,42,0.35)] backdrop-blur-xl"
       role="tablist"
       aria-label={labels.title}
     >
@@ -74,14 +74,14 @@ export function WorkspaceTabs({
             role="tab"
             aria-selected={active}
             onClick={() => onChange(id)}
-            className={`flex min-h-[44px] min-w-[88px] flex-none items-center justify-center gap-1.5 whitespace-nowrap rounded-xl px-3 py-2.5 text-[11px] font-extrabold transition-colors ${
+            className={`flex min-h-[52px] min-w-[105px] flex-none flex-col items-center justify-center gap-1 whitespace-nowrap rounded-2xl px-3 py-2 text-[11px] font-extrabold transition-all ${
               active
-                ? "bg-[var(--color-surface)] text-[var(--color-text-primary)] shadow-1"
-                : "text-[var(--color-text-muted)]"
+                ? "bg-gradient-to-br from-[var(--color-sage-700)] to-[var(--color-sage-600)] text-white shadow-[0_10px_24px_-12px_rgba(21,128,61,0.65)]"
+                : "text-[var(--color-text-muted)] hover:bg-[var(--color-surface-subtle)] hover:text-[var(--color-text-primary)]"
             }`}
           >
-            <Icon className="h-4 w-4 shrink-0" strokeWidth={2} />
-            {labels[LABEL_KEY[id]]}
+            <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.9} />
+            <span>{labels[LABEL_KEY[id]]}</span>
           </button>
         );
       })}
