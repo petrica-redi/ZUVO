@@ -8,7 +8,7 @@
  * - API (`/api/*`), POST/PUT/DELETE: never cached, never intercepted.
  * - Cross-origin & opaque responses: passthrough.
  */
-const CACHE_VERSION = "sastipe-v3";
+const CACHE_VERSION = "sastipe-v4";
 const RUNTIME_CACHE = "sastipe-runtime-v1";
 const OFFLINE_URL = "/offline.html";
 const MAX_RUNTIME_ENTRIES = 60;
