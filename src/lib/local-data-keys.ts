@@ -33,6 +33,73 @@ export const LOCAL_KEY_PREFIXES = [
   "sastipe_student_field_lab:",
 ] as const;
 
+/** Current schema version of the device-local export bundle. */
+export const LOCAL_EXPORT_SCHEMA_VERSION = 1;
+
+/** Structured bundle of every app-owned localStorage entry. */
+export type LocalDataExport = {
+  exportedAt: string;
+  schemaVersion: number;
+  source: "device";
+  note: string;
+  data: Record<string, unknown>;
+};
+
+/**
+ * Reads a single localStorage value, parsing JSON when possible and falling
+ * back to the raw string otherwise. Returns `undefined` when the key is absent
+ * or unreadable (e.g. private mode).
+ */
+function readLocalValue(key: string): unknown {
+  try {
+    const raw = localStorage.getItem(key);
+    if (raw === null) return undefined;
+    try {
+      return JSON.parse(raw);
+    } catch {
+      return raw;
+    }
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Builds a complete, structured snapshot of every app-owned localStorage entry
+ * — exact-match keys in `LOCAL_KEYS` plus anything matching `LOCAL_KEY_PREFIXES`
+ * (e.g. Field Lab notes). This is the device-local counterpart to the
+ * server-side `GET /api/me/export` and is used for GDPR Article 15/20 exports
+ * for anonymous/guest sessions. Safe to call in private mode.
+ */
+export function exportLocalAppData(): LocalDataExport {
+  const data: Record<string, unknown> = {};
+
+  if (typeof window !== "undefined") {
+    for (const key of LOCAL_KEYS) {
+      const value = readLocalValue(key);
+      if (value !== undefined) data[key] = value;
+    }
+    try {
+      for (const key of Object.keys(localStorage)) {
+        if (LOCAL_KEY_PREFIXES.some((p) => key.startsWith(p))) {
+          const value = readLocalValue(key);
+          if (value !== undefined) data[key] = value;
+        }
+      }
+    } catch {
+      /* iteration may fail in private mode — skip */
+    }
+  }
+
+  return {
+    exportedAt: new Date().toISOString(),
+    schemaVersion: LOCAL_EXPORT_SCHEMA_VERSION,
+    source: "device",
+    note: "All data Redi Health stores on this device, including learning progress, check-ins, family profiles, health logs, and Field Lab notes.",
+    data,
+  };
+}
+
 /**
  * Wipes every app-owned localStorage entry. Safe to call in private mode.
  * Returns the number of keys removed.

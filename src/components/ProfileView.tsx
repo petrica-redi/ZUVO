@@ -2,13 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { User, BookOpen, Activity, Flame, Download, Trash2, Info, Shield, Mail, Save } from "lucide-react";
-import { clearAllLocalAppData } from "@/lib/local-data-keys";
+import { clearAllLocalAppData, exportLocalAppData } from "@/lib/local-data-keys";
 
 type Labels = Record<string, string>;
 
 const PROGRESS_KEY = "sastipe_progress";
 const CHECKIN_KEY = "sastipe_checkin";
-const ACADEMY_KEY = "sastipe_student_health";
 
 function safeJson(key: string, fallback: unknown) {
   try {
@@ -88,12 +87,7 @@ export function ProfileView({ labels }: { labels: Labels }) {
   };
 
   const handleExport = () => {
-    const data = {
-      progress: safeJson(PROGRESS_KEY, {}),
-      checkins: safeJson(CHECKIN_KEY, {}),
-      academy: safeJson(ACADEMY_KEY, {}),
-      exported: new Date().toISOString(),
-    };
+    const data = exportLocalAppData();
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");

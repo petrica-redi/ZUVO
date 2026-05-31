@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Download, ShieldOff, Loader2, AlertTriangle } from "lucide-react";
 import { Button, Card, Badge } from "@/components/ui";
 import { useToast } from "@/components/ui/Toast";
-import { clearAllLocalAppData } from "@/lib/local-data-keys";
+import { clearAllLocalAppData, exportLocalAppData } from "@/lib/local-data-keys";
 
 type Props = {
   title: string;
@@ -51,27 +51,39 @@ export function PrivacyDataActions({
     return out;
   }
 
+  function downloadBlob(blob: Blob) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `sastipe-data-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  // Anonymous/guest sessions have no server-side records, so fall back to a
+  // device-local export of everything stored in localStorage. See docs/PRIVACY.md.
+  function exportLocalFallback() {
+    const bundle = exportLocalAppData();
+    downloadBlob(
+      new Blob([JSON.stringify(bundle, null, 2)], { type: "application/json" }),
+    );
+  }
+
   async function handleExport() {
     setExporting(true);
     try {
       const res = await fetch("/api/me/export", { headers: buildHeaders() });
       if (res.status === 401) {
-        toast.warning(authRequired);
+        exportLocalFallback();
         return;
       }
       if (!res.ok) {
         toast.danger(unavailable);
         return;
       }
-      const blob = await res.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `sastipe-data-${new Date().toISOString().slice(0, 10)}.json`;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
+      downloadBlob(await res.blob());
     } catch {
       toast.danger(unavailable);
     } finally {
