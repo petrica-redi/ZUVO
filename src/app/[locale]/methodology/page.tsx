@@ -3,8 +3,9 @@ import { getTranslations } from "next-intl/server";
 import { getAppConfig } from "@/lib/env";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
-import { Shield, Lock, FileCheck, BookOpen, Globe, Users, AlertTriangle } from "lucide-react";
+import { Shield, Lock, FileCheck, BookOpen, Globe, Users, AlertTriangle, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui";
+import { Link } from "@/navigation";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -78,6 +79,16 @@ export default async function MethodologyPage({ params }: Props) {
                 </div>
               </div>
             </Card>
+
+            {/* Link to full policy documents */}
+            <Link
+              href="/policies"
+              className="flex items-center justify-center gap-2 rounded-2xl border border-[var(--color-border-default)] bg-[var(--color-surface)] px-5 py-4 text-sm font-bold text-[var(--color-text-primary)] hover:bg-[var(--color-surface-hover)] transition-colors animate-fade-in-up delay-450"
+            >
+              <Shield className="lucide h-4 w-4 text-[var(--color-success-accent)]" strokeWidth={1.85} />
+              {t("viewPolicies")}
+              <ExternalLink className="lucide h-4 w-4 text-[var(--color-text-muted)]" strokeWidth={1.75} />
+            </Link>
 
             {/* Not-a-medical-device disclaimer */}
             <p className="text-center text-xs text-[var(--color-text-muted)] leading-relaxed px-4 pt-2 animate-fade-in-up delay-500">

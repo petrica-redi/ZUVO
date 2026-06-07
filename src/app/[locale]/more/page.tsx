@@ -60,6 +60,7 @@ const SECTIONS = [
     id: "trust" as const,
     items: [
       { href: "/methodology", icon: FileText, key: "methodology", gradient: "from-emerald-500 to-teal-600" },
+      { href: "/policies", icon: Shield, key: "policies", gradient: "from-violet-500 to-purple-600" },
       { href: "/impact", icon: TrendingUp, key: "impact", gradient: "from-blue-500 to-indigo-600" },
     ],
   },
