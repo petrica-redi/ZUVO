@@ -326,6 +326,7 @@
       "communityLabel": "Prima la comunità",
       "communityDesc": "Senza giudizi"
     },
+    "policiesLink": "Politiche della piattaforma",
     "privacyLink": "Informativa sulla privacy",
     "termsLink": "Termini di servizio",
     "disclaimer": "Redi Health non è un dispositivo medico. Tutte le informazioni sono solo a scopo educativo. Consulta sempre un professionista sanitario qualificato per le decisioni mediche.",
@@ -851,6 +852,7 @@
     "forMinisters": "Per i partner",
     "company": "Azienda",
     "methodology": "Metodologia",
+    "policies": "Politiche",
     "impact": "Impatto",
     "privacy": "Privacy",
     "contact": "Contatti",

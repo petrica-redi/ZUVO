@@ -1463,6 +1463,7 @@
     "forMinisters": "For partners",
     "company": "Company",
     "methodology": "Methodology",
+    "policies": "Policies",
     "impact": "Impact",
     "privacy": "Privacy",
     "contact": "Contact",
@@ -1738,6 +1739,7 @@
       "communityLabel": "Community-first",
       "communityDesc": "No judgment"
     },
+    "policiesLink": "Platform Policies",
     "privacyLink": "Privacy Policy",
     "termsLink": "Terms of Service",
     "disclaimer": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
