@@ -38,6 +38,7 @@ export function OverviewTab({
   const [name, setName] = useState("");
   const [notes, setNotes] = useState("");
   const [saved, setSaved] = useState(false);
+  const [consentAttested, setConsentAttested] = useState(false);
 
   const openCases = useMemo(
     () => cases.filter((c) => c.status !== "closed").length,
@@ -55,7 +56,7 @@ export function OverviewTab({
   }, [visits, cases]);
 
   const submit = () => {
-    if (!name.trim()) return;
+    if (!name.trim() || !consentAttested) return;
     onSaveVisit({
       id: crypto.randomUUID(),
       memberName: name.trim(),
@@ -65,6 +66,7 @@ export function OverviewTab({
     setSaved(true);
     setName("");
     setNotes("");
+    setConsentAttested(false);
     setTimeout(() => {
       setSaved(false);
       setOpen(false);
@@ -117,9 +119,13 @@ export function OverviewTab({
 
       {open && (
         <FormCard>
-          <h3 className="mb-3 text-base font-bold text-[var(--color-text-primary)]">
+          <h3 className="mb-2 text-base font-bold text-[var(--color-text-primary)]">
             {labels.logVisit}
           </h3>
+          {/* Data minimisation reminder — Mediator Operating Policy s.4 */}
+          <p className="mb-3 text-xs text-[var(--color-text-muted)] leading-relaxed">
+            {labels.dataMinimisationNote}
+          </p>
           <input
             type="text"
             placeholder={labels.memberName}
@@ -136,11 +142,23 @@ export function OverviewTab({
             rows={3}
             className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
           />
+          {/* Consent attestation — Mediator Operating Policy s.3.3 */}
+          <label className="mb-3 flex items-start gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={consentAttested}
+              onChange={(e) => setConsentAttested(e.target.checked)}
+              className="mt-0.5 h-4 w-4 flex-shrink-0 rounded border-[var(--color-border-default)]"
+            />
+            <span className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+              {labels.consentAttestation}
+            </span>
+          </label>
           <SaveButton
             saved={saved}
             savedLabel={labels.visitSaved}
             saveLabel={labels.saveVisit}
-            disabled={!name.trim()}
+            disabled={!name.trim() || !consentAttested}
             onClick={submit}
           />
         </FormCard>
