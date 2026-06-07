@@ -329,7 +329,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
               className={`max-w-[85%] rounded-3xl px-5 py-3.5 text-sm leading-relaxed ${
                 msg.role === "user"
                   ? "rounded-br-lg text-white shadow-lg shadow-red-500/20"
-                  : "bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-lg"
+                  : "bg-[var(--color-surface)] text-[var(--color-text-primary)] shadow-1 border border-[var(--color-border-subtle)] rounded-bl-lg"
               }`}
               style={msg.role === "user" ? { background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" } : undefined}
             >
@@ -357,9 +357,9 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
                 <div className="whitespace-pre-wrap">
                   {msg.content}
                   {msg.role === "assistant" && (
-                    <button 
+                    <button
                       onClick={() => speakText(msg.content, locale)}
-                      className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-600 align-middle"
+                      className="ml-2 flex-shrink-0 text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)] align-middle"
                       aria-label={tVoice("readMessageAloud")}
                     >
                       <Volume2 className="h-4 w-4 inline-block" />
@@ -372,7 +372,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
         ))}
 
         {error && (
-          <div className="mx-4 mb-3 rounded-2xl bg-red-50 p-4 text-center text-sm font-semibold text-red-600 border border-red-100 animate-scale-in">
+          <div className="mx-4 mb-3 rounded-2xl bg-[var(--color-danger-bg)] p-4 text-center text-sm font-semibold text-[var(--color-danger-accent)] border border-[var(--color-danger-bg)] animate-scale-in">
             {error}
           </div>
         )}
