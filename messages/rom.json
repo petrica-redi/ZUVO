@@ -637,7 +637,10 @@
         "title": "Data Protection Officer",
         "body": "Email dpo@redi.healthcare with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
       }
-    }
+    },
+    "localExportLabel": "Download local data",
+    "localExportHint": "Exports everything saved on this device — progress, check-ins, family logs, mediator visits. No account needed.",
+    "guestNote": "Using as a guest? Your local data (progress, check-ins, family logs) is only on this device. Download it below. Server export and delete require an account."
   },
   "home": {
     "kicker": "Sastemasqo Vakaribe AI-ça",
@@ -704,7 +707,9 @@
       "tools": "Sastimasqe Butja",
       "learn": "Sikljov & Bar",
       "professional": "Profesionalo",
-      "account": "Konto"
+      "account": "Konto",
+      "track": "Track & Family",
+      "trust": "Trust & Safety"
     },
     "items": {
       "scanLabel": "Skaneri Khoxhibasqo",
@@ -736,7 +741,21 @@
       "profileLabel": "Profilo",
       "profileDesc": "Chib, anglesutnipen, datajencar",
       "aboutLabel": "Pa Redi Health",
-      "aboutDesc": "Versia, privatipen, kontakto"
+      "aboutDesc": "Versia, privatipen, kontakto",
+      "providersLabel": "Find Healthcare",
+      "providersDesc": "Clinics and services near you",
+      "trackLabel": "Daily Wellness",
+      "trackDesc": "Track mood, water, and activity",
+      "familyLabel": "Family Health",
+      "familyDesc": "Health logs for your whole family",
+      "challengesLabel": "Health Challenges",
+      "challengesDesc": "Community goals and habit streaks",
+      "methodologyLabel": "How it works",
+      "methodologyDesc": "Our safety and clinical governance",
+      "policiesLabel": "Platform Policies",
+      "policiesDesc": "Clinical safety, data rights, Roma equity",
+      "impactLabel": "Public Health Impact",
+      "impactDesc": "Evidence and programme results"
     }
   },
   "sos": {
@@ -790,7 +809,9 @@
       "title": "Dikhipe — Redi Health"
     },
     "eyebrow": "Dikhipe",
-    "heroArtAlt": "Ilustracia pa xoxavinipe thaj pakivoko verifikácia aver vakirinđe."
+    "heroArtAlt": "Ilustracia pa xoxavinipe thaj pakivoko verifikácia aver vakirinđe.",
+    "learnVaccines": "Read vaccine guide",
+    "openGlossary": "Look up in glossary"
   },
   "install": {
     "installApp": "Install Redi Health",
@@ -826,7 +847,10 @@
     "meta": {
       "title": "Chat — Redi Health",
       "description": "Phuch vareso sastimasqo phučipe. Le ververde, pakivake vakariba."
-    }
+    },
+    "handoffVisitCard": "Prepare visit card",
+    "handoffSymptoms": "Check symptoms",
+    "handoffExplain": "Explain a prescription"
   },
   "impact": {
     "title": "Sastimasqo publikalno impakto",
@@ -847,7 +871,17 @@
     "section2": "PII chistipe",
     "desc2": "Sa mesažurea chistinpe lokalno. Telefonurea, mail-ea, IBAN-ea thaj LK-ea maskinpe angle te djan andar e aparato.",
     "section3": "Klinikalno revizia",
-    "desc3": "Sa sikljaribena ko Sikljarno-sastimasqo Akademia revisarinpe katar rromane sastimasqe mediatorea thaj dasthei."
+    "desc3": "Sa sikljaribena ko Sikljarno-sastimasqo Akademia revisarinpe katar rromane sastimasqe mediatorea thaj dasthei.",
+    "section4": "Approved public health sources",
+    "desc4": "All factual health claims cite WHO, ECDC, IFRC, national ministries, or peer-reviewed guidance. Social media claims, single-study findings, and commercial sources are never used as primary references.",
+    "section5": "Privacy by design",
+    "desc5": "Personal identifiers are scrubbed from all AI inputs. No raw prompts are retained beyond the request. Health logs are stored with explicit consent, in EU regions, under full GDPR data-subject rights including export and deletion.",
+    "section6": "Roma equity safeguards",
+    "desc6": "Content is reviewed for strengths-based framing, absence of stigmatising language, and avoidance of deficit narratives. Ethnicity data is never collected. Provider and mediator tools are designed to prevent surveillance or profiling.",
+    "goNoGoTitle": "Feature release policy",
+    "goNoGoBody": "Features that may influence clinical decisions — AI triage, symptom severity, prescription explanation, vaccine recommendations, mediator visit logging, youth sexual health, and legal guidance — require completed policy controls before release. Navigation, glossary, progress, and content organisation improvements may ship at any time.",
+    "notMedicalDevice": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "viewPolicies": "Read the full platform policies"
   },
   "providers": {
     "title": "Rromenge pasle klinike",
@@ -857,7 +891,11 @@
     "verified": "Verifikuime sar rromenge pasle",
     "freeClinic": "Servisure bipocinasqe",
     "interpreter": "Rromaqo prekhladnipasqo",
-    "getDirections": "Dikh o drom"
+    "getDirections": "Dikh o drom",
+    "unverifiedWarningTitle": "This directory is under development",
+    "unverifiedWarningBody": "The listings shown are examples only and have not been verified. Do not rely on this information to make healthcare decisions. Contact your local health centre, NGO, or health mediator to find care near you.",
+    "unverifiedBadge": "Not yet verified",
+    "unverifiedListingNote": "Listing not yet verified — please contact the provider directly to confirm services."
   },
   "landing": {
     "eyebrow": "Sastimasqo sikljovipe ande thana so sistemo pale ne dža ko vaxt",
@@ -972,7 +1010,8 @@
     "contact": "Kontakto",
     "rights": "© 2026 Redi Health. Sa hakaja arakhute.",
     "builtWith": "Kerdo le rromane sastimasqe mediatorenca andar 15 thema.",
-    "systemsOperational": "Sa sistemurea phiraven"
+    "systemsOperational": "Sa sistemurea phiraven",
+    "policies": "Policies"
   },
   "theme": {
     "ariaLabel": "Tema",
@@ -1187,7 +1226,10 @@
     "imageReadyBody": "Dikhasa o dipo, doza thaj instrukcie thaj ververdas sa lokhe lavenca.",
     "imageRemove": "Khosav slika",
     "preparingImage": "Pripravim e slika…",
-    "imageFailed": "Našti ginduisaras akaja slika. Phirav aver."
+    "imageFailed": "Našti ginduisaras akaja slika. Phirav aver.",
+    "followUpChat": "Ask Zuvo a question",
+    "followUpNavigate": "Prepare doctor visit card",
+    "followUpGlossary": "Look up a medical term"
   },
   "navigate": {
     "heroTitle": "Trebal mange te dikhav jekh dasthi",
@@ -1225,7 +1267,8 @@
     "meta": {
       "title": "Sastimasqo navigatoro — Redi Health",
       "description": "Pripravisar tu vash vizita ke dasthi — vizitaqo karto, so te les, tirne hakaja."
-    }
+    },
+    "findHospitalHint": "Browse the healthcare directory"
   },
   "about": {
     "brand": "Redi Health",
@@ -1248,7 +1291,8 @@
     "meta": {
       "title": "Pa amende — Redi Health",
       "description": "Pa Redi Health sastimasqi sikljovipasqi platforma"
-    }
+    },
+    "policiesLink": "Platform Policies"
   },
   "family": {
     "relation": {
@@ -1258,5 +1302,123 @@
       "parent": "Dad/Dej",
       "other": "Aver"
     }
+  },
+  "policies": {
+    "title": "Platform Policies",
+    "subtitle": "The governance framework that defines what Redi Health can and cannot do — and the commitments we make to every user.",
+    "goNoGoTitle": "Feature release policy",
+    "goNoGoBody": "Features that may influence clinical decisions require completed policy controls before release: AI triage, symptom severity, prescription outputs, vaccine recommendations, Roma-friendly provider labels, mediator visit logging, youth sexual health, and legal guidance.",
+    "disclaimer": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "clinical-safetyTitle": "Clinical Safety & Escalation",
+    "clinical-safetyDesc": "Defines what the AI may and may not say, how emergencies are escalated before any AI call, and the governance model for all health-related changes.",
+    "clinicalSafety1": "The AI never diagnoses, never prescribes doses, and never advises stopping a prescribed medication.",
+    "clinicalSafety2": "11 emergency patterns bypass the AI entirely and immediately instruct the user to call 112 or a specialist helpline.",
+    "clinicalSafety3": "Every triage output is assigned one of five severity categories — Emergency, Urgent, Routine, Self-care, or Information only.",
+    "clinicalSafety4": "Changes to red-flag patterns, system prompts, or triage logic require sign-off from the clinical governance lead before deployment.",
+    "source-policyTitle": "Public Health Source Policy",
+    "source-policyDesc": "Defines which sources may be used for health claims, how they must be cited, and how they are kept up to date.",
+    "sourcePolicy1": "All health facts cite WHO, ECDC, IFRC, national ministries, or peer-reviewed clinical guidance — never social media, single studies, or commercial sources.",
+    "sourcePolicy2": "Every content module carries a 'last reviewed' date and reviewer role. Overdue modules are hidden automatically.",
+    "sourcePolicy3": "Country-specific overrides (vaccine schedules, emergency numbers, patient rights) follow a 5-step clinical review process before going live.",
+    "safeguardingTitle": "Safeguarding Policy",
+    "safeguardingDesc": "Protections for children, pregnant people, survivors of abuse and coercion, people in mental health crisis, and people seeking sexual health information.",
+    "safeguarding1": "Self-harm and suicidal ideation are intercepted before any AI response — the user receives a crisis line and an instruction to stay with someone they trust.",
+    "safeguarding2": "Descriptions of active domestic violence trigger a safety-first response with the local domestic violence helpline, not general advice.",
+    "safeguarding3": "Sexual health content in the Student Academy requires country-specific legal review and Tier 2 clinical sign-off before release.",
+    "safeguarding4": "Every AI page and triage result includes a visible 'I need help now' button linking to emergency and crisis numbers.",
+    "roma-equityTitle": "Roma Equity & Anti-Stigmatization",
+    "roma-equityDesc": "Standards for how Roma communities are described, how content is reviewed, and how surveillance and profiling are prevented.",
+    "romaEquity1": "All content about Roma communities must follow strengths-based framing — naming structural causes for health disparities, never cultural ones.",
+    "romaEquity2": "Content about Roma health is reviewed by a Roma health mediator or Roma-led NGO before publication.",
+    "romaEquity3": "Ethnicity data is never collected. Analytics are never segmented by ethnic identity. Location data is never stored.",
+    "romaEquity4": "A Roma Health Advisory Board reviews this policy annually and can flag content concerns at any time via equity@redi.healthcare.",
+    "provider-verificationTitle": "Provider Verification",
+    "provider-verificationDesc": "How clinic listings are verified, what 'Roma-friendly' means and requires, and how users can report harm.",
+    "providerVerification1": "The 'Roma-friendly' label requires: no documentation barriers beyond what all patients face, anti-discrimination training, no substantiated complaints in 3 years, and a Roma mediator assessment within 18 months.",
+    "providerVerification2": "Unverified listings carry a mandatory warning banner and an 'Unverified' badge — no Roma-friendly label is shown until criteria are met.",
+    "providerVerification3": "Users can report discrimination or incorrect information directly from every listing. Discrimination reports are reviewed within 3 business days.",
+    "mediator-policyTitle": "Mediator Operating Policy",
+    "mediator-policyDesc": "Role boundaries, consent requirements, data minimisation rules, and safety escalation protocols for field health mediators.",
+    "mediatorPolicy1": "Mediators provide education, navigation, and referral support — not clinical assessment or prescriptions.",
+    "mediatorPolicy2": "A consent attestation is required before every visit log is saved. Logs must not record ethnicity, immigration status, or clinical diagnoses.",
+    "mediatorPolicy3": "Mediators follow a defined referral escalation pathway — immediate 112 call for emergencies, helpline for safeguarding concerns, programme supervisor within 24 hours for non-immediate concerns.",
+    "mediatorPolicy4": "Mediator PINs expire after 12 months and are revoked immediately when a mediator leaves the programme.",
+    "data-governanceTitle": "Data Governance",
+    "data-governanceDesc": "How all data — local and server-stored — is classified, retained, and controlled, and how every user can export or delete their data.",
+    "dataGovernance1": "Local device data (family logs, progress, mediator visits) is treated with the same privacy rights as server data — exportable and deletable from Profile > Data.",
+    "dataGovernance2": "Health logs are retained for 5 years or until you delete them. Your account data is hard-deleted within 30 days of a deletion request.",
+    "dataGovernance3": "Guest and anonymous users are first-class subjects: the app explains what local data exists and how to clear it — no auth errors returned.",
+    "dataGovernance4": "Every admin configuration change, provider update, mediator PIN action, and GDPR request is logged in an audit trail accessible only to the Data Protection Officer."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of terms",
+        "body": "By accessing or using Redi Health, you agree to these Terms of Service. If you do not agree, do not use the service. These terms apply to all users including guests, registered users, health mediators, and programme administrators."
+      },
+      "service": {
+        "title": "2. What Redi Health provides",
+        "body": "Redi Health is a health literacy and navigation platform. It provides AI-assisted health information, educational content, misinformation fact-checking, symptom guidance, and tools for health mediators. The platform is intended for educational and informational purposes."
+      },
+      "notMedical": {
+        "title": "3. Not a medical device",
+        "body": "Redi Health is not a medical device and does not provide medical diagnosis, treatment, or prescriptions. All content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions. In an emergency, call 112 or your local emergency number immediately."
+      },
+      "aiLimits": {
+        "title": "4. AI limitations",
+        "body": "AI-generated responses are based on general health knowledge and may not reflect the latest clinical guidance, local health system rules, or your individual circumstances. They must not be treated as personalised medical advice. The AI does not diagnose and does not prescribe."
+      },
+      "userConduct": {
+        "title": "5. User conduct",
+        "body": "You must not use Redi Health to obtain specific medical prescriptions or diagnoses, to collect information about others without their consent, for commercial data harvesting, or to circumvent the platform's clinical safety boundaries. Mediators must comply with the Mediator Operating Policy."
+      },
+      "data": {
+        "title": "6. Data and privacy",
+        "body": "Your data is governed by our Privacy Policy and Data Governance Policy, which describe what is collected, how it is used, and how you can export or delete it. Local data (progress, family logs, check-ins) is stored on your device. Server data requires an account. Both are subject to your full data rights."
+      },
+      "liability": {
+        "title": "7. Limitation of liability",
+        "body": "Redi Health is provided 'as is' without warranties of accuracy or fitness for a particular purpose. To the maximum extent permitted by law, Redi Health is not liable for any harm arising from reliance on the platform's content, including AI-generated responses. You use the platform at your own risk."
+      },
+      "changes": {
+        "title": "8. Changes to these terms",
+        "body": "We may update these terms to reflect changes in the platform or applicable law. Material changes will be notified via the app. Continued use of the platform after notification constitutes acceptance of the updated terms."
+      },
+      "contact": {
+        "title": "9. Contact",
+        "body": "For questions about these terms, contact us at legal@redi.healthcare. For data and privacy matters, contact our Data Protection Officer at dpo@redi.healthcare."
+      }
+    }
+  },
+  "track": {
+    "title": "Daily Health Check-in",
+    "subtitle": "How are you feeling today?",
+    "moodTitle": "Mood",
+    "moodGreat": "Great",
+    "moodGood": "Good",
+    "moodOkay": "Okay",
+    "moodLow": "Low",
+    "moodBad": "Very low",
+    "waterTitle": "Water intake",
+    "waterSubtitle": "Tap each glass when you drink it",
+    "waterGoal": "Goal: 8 glasses",
+    "activityTitle": "Activity today",
+    "activityWalk": "Walked",
+    "activityExercise": "Exercised",
+    "activityRest": "Rested",
+    "saveCheckin": "Save today's check-in",
+    "savedSuccess": "Check-in saved!",
+    "weeklyTitle": "This week",
+    "streakDays": "day streak",
+    "loggedToday": "Logged today",
+    "noLogsYet": "Start your first check-in below",
+    "historyTitle": "Recent history"
+  },
+  "mediator": {
+    "roleBoundaryNotice": "Mediators provide health education, navigation, and referral support — not clinical assessment or prescriptions. Record only the minimum information necessary for each visit.",
+    "dataMinimisationNote": "Record only what is needed for health continuity. Do not record ethnicity, immigration status, or clinical diagnoses. Use a name or reference code — full personal details are not required.",
+    "consentAttestation": "I confirm that the beneficiary (or a caregiver on their behalf) has agreed to this visit being recorded."
   }
 }
