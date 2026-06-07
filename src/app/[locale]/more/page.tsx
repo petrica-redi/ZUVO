@@ -39,7 +39,7 @@ const SECTIONS = [
       { href: "/glossary", icon: BookOpen, key: "glossary", gradient: "from-teal-500 to-cyan-600" },
       { href: "/rights", icon: Scale, key: "rights", gradient: "from-indigo-500 to-purple-600" },
       { href: "/stories", icon: Heart, key: "stories", gradient: "from-rose-500 to-pink-600" },
-      { href: "/regions/romania", icon: Globe, key: "regions", gradient: "from-red-500 to-red-700" },
+      { href: "/regions", icon: Globe, key: "regions", gradient: "from-red-500 to-red-700" },
     ],
   },
   {

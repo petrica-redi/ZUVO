@@ -39,6 +39,9 @@
     "q5": "I feel sad all the time and I cannot sleep. Is this normal?",
     "q6": "How do I register with a doctor if I do not have documents?",
     "askMeAnything": "Ask me anything",
+    "handoffVisitCard": "Prepare visit card",
+    "handoffSymptoms": "Check symptoms",
+    "handoffExplain": "Explain a prescription",
     "heroArtAlt": "Illustration of a trusted conversational companion for preventive health.",
     "inputAria": "Type your health question",
     "sendAria": "Send message",
@@ -1044,9 +1047,12 @@
     "deleteConfirmBody": "This scrubs your identifying fields right now. Your account is unrecoverable after this. Hard delete completes within 30 days. Local progress on this device will also be cleared.",
     "deleteConfirmCta": "Yes, delete my account",
     "deleteCancel": "Cancel",
-    "authRequired": "Please sign in to continue",
+    "authRequired": "Server export requires an account. Your local data can still be downloaded using the button above.",
     "unavailable": "Service unavailable. Please try again later.",
     "successDeleted": "Your data has been scrubbed. Goodbye for now.",
+    "localExportLabel": "Download local data",
+    "localExportHint": "Exports everything saved on this device — progress, check-ins, family logs, mediator visits. No account needed.",
+    "guestNote": "Using as a guest? Your local data (progress, check-ins, family logs) is only on this device. Download it below. Server export and delete require an account.",
     "disclaimer": "Redi Health is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
     "sections": {
       "collect": {
@@ -1250,7 +1256,9 @@
       "title": "Fact Check — Redi Health"
     },
     "eyebrow": "Fact check",
-    "heroArtAlt": "Illustration representing myth-busting and verified health claims."
+    "heroArtAlt": "Illustration representing myth-busting and verified health claims.",
+    "learnVaccines": "Read vaccine guide",
+    "openGlossary": "Look up in glossary"
   },
   "install": {
     "installApp": "Install Redi Health",
@@ -1273,6 +1281,48 @@
     "deployTitle": "Deploy in your region",
     "deployDesc": "Redi Health is white-label ready for municipalities and health ministries.",
     "contactBtn": "Contact Partnerships"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of terms",
+        "body": "By accessing or using Redi Health, you agree to these Terms of Service. If you do not agree, do not use the service. These terms apply to all users including guests, registered users, health mediators, and programme administrators."
+      },
+      "service": {
+        "title": "2. What Redi Health provides",
+        "body": "Redi Health is a health literacy and navigation platform. It provides AI-assisted health information, educational content, misinformation fact-checking, symptom guidance, and tools for health mediators. The platform is intended for educational and informational purposes."
+      },
+      "notMedical": {
+        "title": "3. Not a medical device",
+        "body": "Redi Health is not a medical device and does not provide medical diagnosis, treatment, or prescriptions. All content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions. In an emergency, call 112 or your local emergency number immediately."
+      },
+      "aiLimits": {
+        "title": "4. AI limitations",
+        "body": "AI-generated responses are based on general health knowledge and may not reflect the latest clinical guidance, local health system rules, or your individual circumstances. They must not be treated as personalised medical advice. The AI does not diagnose and does not prescribe."
+      },
+      "userConduct": {
+        "title": "5. User conduct",
+        "body": "You must not use Redi Health to obtain specific medical prescriptions or diagnoses, to collect information about others without their consent, for commercial data harvesting, or to circumvent the platform's clinical safety boundaries. Mediators must comply with the Mediator Operating Policy."
+      },
+      "data": {
+        "title": "6. Data and privacy",
+        "body": "Your data is governed by our Privacy Policy and Data Governance Policy, which describe what is collected, how it is used, and how you can export or delete it. Local data (progress, family logs, check-ins) is stored on your device. Server data requires an account. Both are subject to your full data rights."
+      },
+      "liability": {
+        "title": "7. Limitation of liability",
+        "body": "Redi Health is provided 'as is' without warranties of accuracy or fitness for a particular purpose. To the maximum extent permitted by law, Redi Health is not liable for any harm arising from reliance on the platform's content, including AI-generated responses. You use the platform at your own risk."
+      },
+      "changes": {
+        "title": "8. Changes to these terms",
+        "body": "We may update these terms to reflect changes in the platform or applicable law. Material changes will be notified via the app. Continued use of the platform after notification constitutes acceptance of the updated terms."
+      },
+      "contact": {
+        "title": "9. Contact",
+        "body": "For questions about these terms, contact us at legal@redi.healthcare. For data and privacy matters, contact our Data Protection Officer at dpo@redi.healthcare."
+      }
+    }
   },
   "policies": {
     "title": "Platform Policies",
@@ -1670,6 +1720,9 @@
       "emergencyTitle": "Go to hospital if"
     },
     "anotherCta": "Explain another prescription",
+    "followUpChat": "Ask Zuvo a question",
+    "followUpNavigate": "Prepare doctor visit card",
+    "followUpGlossary": "Look up a medical term",
     "disclaimerBold": "Not medical advice.",
     "disclaimerBody": "This tool explains medical terms in simple language. Always follow your doctor's instructions.",
     "meta": {
@@ -1717,8 +1770,9 @@
     "whatToBring": "What to bring",
     "askYourDoctor": "Ask your doctor",
     "patientRights": "Your rights as a patient",
-    "findHospital": "Find nearest hospital",
+    "findHospital": "Find care nearby",
     "mapHint": "Opens map with directions",
+    "findHospitalHint": "Browse the healthcare directory",
     "meta": {
       "title": "Healthcare Navigator — Redi Health",
       "description": "Prepare for your doctor visit — visit card, what to bring, your rights."

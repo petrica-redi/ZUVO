@@ -1,14 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowLeft, Heart, Quote } from "lucide-react";
+import { ArrowLeft, Heart, Quote, BookOpen, Stethoscope, Scale, MessageCircle, Syringe } from "lucide-react";
 import { STORIES, CATEGORY_CONFIG, type Story } from "@/data/stories";
+import { useRouter } from "@/navigation";
+
+const CATEGORY_NEXT_STEPS: Record<string, Array<{ label: string; icon: typeof BookOpen; href: string }>> = {
+  vaccines:       [{ label: "Vaccine guide", icon: Syringe, href: "/vaccines" }, { label: "Ask Zuvo", icon: MessageCircle, href: "/chat" }],
+  chronic:        [{ label: "Explain prescription", icon: BookOpen, href: "/explain" }, { label: "Ask Zuvo", icon: MessageCircle, href: "/chat" }],
+  maternal:       [{ label: "Navigate to care", icon: Stethoscope, href: "/navigate" }, { label: "Ask Zuvo", icon: MessageCircle, href: "/chat" }],
+  discrimination: [{ label: "Know your rights", icon: Scale, href: "/rights" }, { label: "Navigate to care", icon: Stethoscope, href: "/navigate" }],
+  prevention:     [{ label: "Learn prevention", icon: BookOpen, href: "/learn/prevention" }, { label: "Check symptoms", icon: Stethoscope, href: "/symptoms" }],
+  mental:         [{ label: "Ask Zuvo", icon: MessageCircle, href: "/chat" }, { label: "Learn about mental health", icon: BookOpen, href: "/learn/mental" }],
+};
 
 type CategoryKey = keyof typeof CATEGORY_CONFIG;
 
 export function CommunityStories() {
   const [activeStory, setActiveStory] = useState<Story | null>(null);
   const [activeCategory, setActiveCategory] = useState<CategoryKey | "all">("all");
+  const router = useRouter();
 
   const filtered = activeCategory === "all" ? STORIES : STORIES.filter((s) => s.category === activeCategory);
 
@@ -42,6 +53,25 @@ export function CommunityStories() {
             </p>
             <p className="text-[13px] font-bold leading-relaxed text-gray-800">{activeStory.lesson}</p>
           </div>
+
+          {/* Related next steps */}
+          {CATEGORY_NEXT_STEPS[activeStory.category] && (
+            <div className="mt-4">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2">What to do next</p>
+              <div className="flex flex-wrap gap-2">
+                {CATEGORY_NEXT_STEPS[activeStory.category].map((step) => (
+                  <button
+                    key={step.href}
+                    onClick={() => router.push(step.href)}
+                    className="flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-2 text-xs font-bold text-gray-700 transition-colors hover:bg-gray-50"
+                  >
+                    <step.icon className="h-3.5 w-3.5" strokeWidth={2} />
+                    {step.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );

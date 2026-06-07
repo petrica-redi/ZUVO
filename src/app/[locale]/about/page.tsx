@@ -79,7 +79,7 @@ export default async function AboutPage({ params }: Props) {
               <ChevronRight className="h-5 w-5 text-gray-300" />
             </Link>
             <div className="border-t border-gray-50" />
-            <Link href="/privacy" className="flex items-center gap-3 px-5 py-4 transition-all active:bg-gray-50">
+            <Link href="/terms" className="flex items-center gap-3 px-5 py-4 transition-all active:bg-gray-50">
               <FileText className="h-5 w-5 text-gray-400" />
               <span className="flex-1 text-sm font-bold text-gray-800">{t("termsLink")}</span>
               <ChevronRight className="h-5 w-5 text-gray-300" />

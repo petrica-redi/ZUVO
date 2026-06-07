@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Send, AlertTriangle, MessageCircle, Mic, MicOff, Loader2, Volume2, Sparkles } from "lucide-react";
+import { Send, AlertTriangle, MessageCircle, Mic, MicOff, Loader2, Volume2, Sparkles, Navigation, Activity, FileText } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useRouter } from "@/navigation";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
 import { useDeepgramRecorder } from "@/lib/voice-recorder";
 
@@ -28,6 +29,7 @@ type Labels = {
 export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string }) {
   const tChat = useTranslations("chat");
   const tVoice = useTranslations("voice");
+  const router = useRouter();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -375,6 +377,33 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
           </div>
         )}
       </div>
+
+      {/* Handoff CTAs — shown after the first assistant reply and when not loading */}
+      {messages.some((m) => m.role === "assistant" && m.content) && !isLoading && (
+        <div className="px-3 pb-2 flex gap-2 overflow-x-auto scrollbar-none">
+          <button
+            onClick={() => router.push("/navigate")}
+            className="flex-shrink-0 flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-[var(--color-surface)] px-3 py-2 text-xs font-bold text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)] transition-colors"
+          >
+            <Navigation className="h-3.5 w-3.5 text-cyan-500" strokeWidth={2} />
+            {tChat("handoffVisitCard")}
+          </button>
+          <button
+            onClick={() => router.push("/symptoms")}
+            className="flex-shrink-0 flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-[var(--color-surface)] px-3 py-2 text-xs font-bold text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)] transition-colors"
+          >
+            <Activity className="h-3.5 w-3.5 text-red-500" strokeWidth={2} />
+            {tChat("handoffSymptoms")}
+          </button>
+          <button
+            onClick={() => router.push("/explain")}
+            className="flex-shrink-0 flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-[var(--color-surface)] px-3 py-2 text-xs font-bold text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)] transition-colors"
+          >
+            <FileText className="h-3.5 w-3.5 text-violet-500" strokeWidth={2} />
+            {tChat("handoffExplain")}
+          </button>
+        </div>
+      )}
 
       {/* Voice status banners */}
       {voiceError && (

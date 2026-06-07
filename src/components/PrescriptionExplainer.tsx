@@ -4,10 +4,11 @@ import { useRef, useState } from "react";
 import {
   FileText, Search, Loader2, Heart, AlertTriangle, Pill,
   HelpCircle, Lightbulb, Siren, ChevronDown, ChevronUp,
-  Camera, Upload, X, ImageIcon,
+  Camera, Upload, X, ImageIcon, MessageCircle, Navigation, BookOpen,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import NextImage from "next/image";
+import { useRouter } from "@/navigation";
 
 const MAX_DIMENSION = 2048;
 const MAX_OUTPUT_BYTES = 5_000_000; // 5 MB binary post-base64
@@ -130,6 +131,7 @@ const EXAMPLES = [
 export function PrescriptionExplainer({ locale }: { locale: string }) {
   const t = useTranslations("explain");
   const tErrors = useTranslations("errors");
+  const router = useRouter();
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<ExplainResult | null>(null);
@@ -509,6 +511,34 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
               </ul>
             </div>
           )}
+
+          {/* Follow-up actions */}
+          <div className="rounded-2xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-4">
+            <p className="text-xs font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-3">What to do next</p>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => router.push("/chat")}
+                className="flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-3 py-2 text-xs font-bold text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)] transition-colors"
+              >
+                <MessageCircle className="h-3.5 w-3.5 text-violet-500" strokeWidth={2} />
+                {t("followUpChat")}
+              </button>
+              <button
+                onClick={() => router.push("/navigate")}
+                className="flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-3 py-2 text-xs font-bold text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)] transition-colors"
+              >
+                <Navigation className="h-3.5 w-3.5 text-cyan-500" strokeWidth={2} />
+                {t("followUpNavigate")}
+              </button>
+              <button
+                onClick={() => router.push("/glossary")}
+                className="flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-3 py-2 text-xs font-bold text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-hover)] transition-colors"
+              >
+                <BookOpen className="h-3.5 w-3.5 text-blue-500" strokeWidth={2} />
+                {t("followUpGlossary")}
+              </button>
+            </div>
+          </div>
 
           {/* Try another */}
           <button

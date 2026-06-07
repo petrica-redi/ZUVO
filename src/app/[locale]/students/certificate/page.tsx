@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { Award, Download, Share2, Sparkles, GraduationCap } from "lucide-react";
-
 import { getAppConfig } from "@/lib/env";
+import { CertificateGate } from "@/components/CertificateGate";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -19,6 +19,7 @@ export default async function CertificatePage({ params }: Props) {
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
       <Header />
       <main id="main-content" className="flex-1 pb-8">
+        <CertificateGate>
         <div className="mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
           
           <div className="mb-8 text-center animate-fade-in-up">
@@ -78,6 +79,7 @@ export default async function CertificatePage({ params }: Props) {
           </div>
 
         </div>
+        </CertificateGate>
       </main>
       <BottomNav />
     </div>
