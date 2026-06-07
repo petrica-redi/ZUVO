@@ -1,6 +1,7 @@
 "use client";
 
 import { Cloud, CloudOff, RefreshCw } from "lucide-react";
+import { useLocale } from "next-intl";
 import { ROMANIA_ECI_COUNTIES } from "@/data/romania-eci-contacts";
 import type { SyncStatus } from "@/lib/mediator/workspace-client";
 import type { MediatorLabels } from "./labels";
@@ -24,6 +25,8 @@ export function WorkspaceHeader({
   onChangeCounty: (code: string) => void;
   syncStatus: SyncStatus;
 }) {
+  const locale = useLocale();
+  const showCountySelector = locale === "ro";
   const labelKey = SYNC_LABEL[syncStatus];
   const tone =
     syncStatus === "synced"
@@ -41,21 +44,23 @@ export function WorkspaceHeader({
 
   return (
     <div className="mb-5 flex flex-wrap items-end gap-3">
-      <label className="flex min-w-[200px] flex-1 flex-col gap-1 text-xs font-semibold text-[var(--color-text-muted)]">
-        {labels.countyLabel}
-        <select
-          value={countyCode}
-          onChange={(e) => onChangeCounty(e.target.value)}
-          className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] p-2.5 text-sm text-[var(--color-text-primary)]"
-        >
-          <option value="">{labels.countyPlaceholder}</option>
-          {ROMANIA_ECI_COUNTIES.map((c) => (
-            <option key={c.code} value={c.code}>
-              {c.name}
-            </option>
-          ))}
-        </select>
-      </label>
+      {showCountySelector && (
+        <label className="flex min-w-[200px] flex-1 flex-col gap-1 text-xs font-semibold text-[var(--color-text-muted)]">
+          {labels.countyLabel}
+          <select
+            value={countyCode}
+            onChange={(e) => onChangeCounty(e.target.value)}
+            className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] p-2.5 text-sm text-[var(--color-text-primary)]"
+          >
+            <option value="">{labels.countyPlaceholder}</option>
+            {ROMANIA_ECI_COUNTIES.map((c) => (
+              <option key={c.code} value={c.code}>
+                {c.name}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
 
       <span
         className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-wide ${tone}`}
