@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { getAppConfig } from "@/lib/env";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
-import { Shield, Lock, FileCheck } from "lucide-react";
+import { Shield, Lock, FileCheck, BookOpen, Globe, Users, AlertTriangle } from "lucide-react";
 import { Card } from "@/components/ui";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -36,54 +36,53 @@ export default async function MethodologyPage({ params }: Props) {
             </p>
           </div>
 
-          <div className="space-y-6">
-            <Card variant="elevated" className="p-6 animate-fade-in-up delay-100">
+          <div className="space-y-5">
+            {[
+              { key: "1", Icon: Shield, colorBg: "bg-[var(--color-danger-bg)]", colorFg: "text-[var(--color-danger-accent)]", delay: "delay-100" },
+              { key: "2", Icon: Lock, colorBg: "bg-[var(--color-warning-bg)]", colorFg: "text-[var(--color-warning-accent)]", delay: "delay-150" },
+              { key: "3", Icon: FileCheck, colorBg: "bg-[var(--color-info-bg)]", colorFg: "text-[var(--color-info-accent)]", delay: "delay-200" },
+              { key: "4", Icon: BookOpen, colorBg: "bg-[var(--color-success-bg)]", colorFg: "text-[var(--color-success-accent)]", delay: "delay-250" },
+              { key: "5", Icon: Globe, colorBg: "bg-[var(--color-surface-subtle)]", colorFg: "text-[var(--color-text-secondary)]", delay: "delay-300" },
+              { key: "6", Icon: Users, colorBg: "bg-[var(--color-brand-bg,var(--color-surface-subtle))]", colorFg: "text-[var(--color-brand-accent,var(--color-accent))]", delay: "delay-350" },
+            ].map(({ key, Icon, colorBg, colorFg, delay }) => (
+              <Card key={key} variant="elevated" className={`p-6 animate-fade-in-up ${delay}`}>
+                <div className="flex items-start gap-4">
+                  <div className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl ${colorBg} ${colorFg}`}>
+                    <Icon className="lucide h-6 w-6" strokeWidth={1.85} />
+                  </div>
+                  <div>
+                    <h2 className="font-display text-lg font-extrabold text-[var(--color-text-primary)] mb-2">
+                      {t(`section${key}`)}
+                    </h2>
+                    <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                      {t(`desc${key}`)}
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+
+            {/* Feature release policy — go / no-go */}
+            <Card variant="elevated" className="p-6 animate-fade-in-up delay-400 border border-amber-200 bg-amber-50">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-[var(--color-danger-bg)] text-[var(--color-danger-accent)]">
-                  <Shield className="lucide h-6 w-6" strokeWidth={1.85} />
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-amber-700">
+                  <AlertTriangle className="lucide h-6 w-6" strokeWidth={1.85} />
                 </div>
                 <div>
-                  <h2 className="font-display text-xl font-extrabold text-[var(--color-text-primary)] mb-2">
-                    {t("section1")}
+                  <h2 className="font-display text-lg font-extrabold text-amber-900 mb-2">
+                    {t("goNoGoTitle")}
                   </h2>
-                  <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                    {t("desc1")}
+                  <p className="text-sm leading-relaxed text-amber-800">
+                    {t("goNoGoBody")}
                   </p>
                 </div>
               </div>
             </Card>
 
-            <Card variant="elevated" className="p-6 animate-fade-in-up delay-200">
-              <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-[var(--color-warning-bg)] text-[var(--color-warning-accent)]">
-                  <Lock className="lucide h-6 w-6" strokeWidth={1.85} />
-                </div>
-                <div>
-                  <h2 className="font-display text-xl font-extrabold text-[var(--color-text-primary)] mb-2">
-                    {t("section2")}
-                  </h2>
-                  <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                    {t("desc2")}
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            <Card variant="elevated" className="p-6 animate-fade-in-up delay-300">
-              <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-[var(--color-info-bg)] text-[var(--color-info-accent)]">
-                  <FileCheck className="lucide h-6 w-6" strokeWidth={1.85} />
-                </div>
-                <div>
-                  <h2 className="font-display text-xl font-extrabold text-[var(--color-text-primary)] mb-2">
-                    {t("section3")}
-                  </h2>
-                  <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                    {t("desc3")}
-                  </p>
-                </div>
-              </div>
-            </Card>
+            {/* Not-a-medical-device disclaimer */}
+            <p className="text-center text-xs text-[var(--color-text-muted)] leading-relaxed px-4 pt-2 animate-fade-in-up delay-500">
+              {t("notMedicalDevice")}
+            </p>
           </div>
         </div>
       </main>
