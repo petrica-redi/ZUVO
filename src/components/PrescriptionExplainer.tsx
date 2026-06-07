@@ -223,8 +223,8 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl shadow-blue-500/25">
             <FileText className="h-9 w-9 text-white" />
           </div>
-          <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
-          <p className="mt-2 max-w-md text-sm text-gray-500">{t("heroSubtitle")}</p>
+          <h1 className="text-2xl font-black text-[var(--color-text-primary)]">{t("heroTitle")}</h1>
+          <p className="mt-2 max-w-md text-sm text-[var(--color-text-secondary)]">{t("heroSubtitle")}</p>
         </div>
       </div>
 
@@ -303,7 +303,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
             onClick={removeImage}
             disabled={loading}
             aria-label={t("imageRemove")}
-            className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-white text-[var(--color-text-muted)] shadow-1 transition-colors hover:bg-[var(--color-danger-bg)] hover:text-[var(--color-danger-text)] disabled:opacity-50"
+            className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[var(--color-surface)] text-[var(--color-text-muted)] shadow-1 transition-colors hover:bg-[var(--color-danger-bg)] hover:text-[var(--color-danger-text)] disabled:opacity-50"
           >
             <X className="lucide h-3.5 w-3.5" strokeWidth={2.2} />
           </button>
@@ -311,7 +311,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
       )}
 
       {/* Input */}
-      <div className="mb-4 rounded-2xl border-2 border-gray-200 bg-white p-1 shadow-sm transition-all focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/10">
+      <div className="mb-4 rounded-2xl border-2 border-[var(--color-border-default)] bg-[var(--color-surface)] p-1 shadow-1 transition-all focus-within:border-[var(--color-accent)] focus-within:ring-4 focus-within:ring-[var(--color-accent)]/10">
         <textarea
           value={input}
           onChange={(e) => { setInput(e.target.value); setResult(null); }}
@@ -319,7 +319,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           placeholder={image ? t("placeholderWithImage") : t("placeholder")}
           aria-label={t("inputAria")}
           rows={3}
-          className="w-full resize-none rounded-xl border-none bg-transparent px-4 py-3 text-sm focus:outline-none"
+          className="w-full resize-none rounded-xl border-none bg-transparent px-4 py-3 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:outline-none"
         />
         <div className="flex items-center justify-end px-3 pb-2">
           <button
@@ -340,7 +340,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
       {/* Quick examples */}
       {!result && !loading && (
         <div className="mb-6">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
             {t("examplesHeading")}
           </p>
           <div className="flex flex-wrap gap-2">
@@ -348,7 +348,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
               <button
                 key={ex}
                 onClick={() => handleExplain(ex)}
-                className="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-medium text-gray-600 shadow-sm transition-all hover:border-blue-300 hover:text-blue-600 active:scale-95"
+                className="rounded-full border border-[var(--color-border-default)] bg-[var(--color-surface)] px-3 py-1.5 text-xs font-medium text-[var(--color-text-secondary)] shadow-1 transition-all hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] active:scale-95"
               >
                 {ex}
               </button>
@@ -360,9 +360,9 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
       {/* Loading state */}
       {loading && (
         <div className="flex flex-col items-center gap-4 py-16 animate-fade-in">
-          <div className="h-16 w-16 animate-spin rounded-full border-4 border-blue-100 border-t-blue-500" />
-          <p className="text-sm font-semibold text-gray-500">{t("loading")}</p>
-          <div className="mx-auto h-2 w-48 overflow-hidden rounded-full bg-gray-100">
+          <div className="h-16 w-16 animate-spin rounded-full border-4 border-[var(--color-border-subtle)] border-t-[var(--color-accent)]" />
+          <p className="text-sm font-semibold text-[var(--color-text-secondary)]">{t("loading")}</p>
+          <div className="mx-auto h-2 w-48 overflow-hidden rounded-full bg-[var(--color-border-subtle)]">
             <div className="h-full w-full animate-shimmer rounded-full" />
           </div>
         </div>
@@ -391,7 +391,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
                 <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-blue-600">
                   {t("sections.whatThisMeans")}
                 </p>
-                <p className="text-sm leading-relaxed text-gray-700">
+                <p className="text-sm leading-relaxed text-[var(--color-text-primary)]">
                   {result.diagnosis.simpleExplanation}
                 </p>
               </div>
@@ -399,7 +399,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
                 <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-amber-600">
                   {t("sections.whyItMatters")}
                 </p>
-                <p className="text-sm leading-relaxed text-gray-700">
+                <p className="text-sm leading-relaxed text-[var(--color-text-primary)]">
                   {result.diagnosis.whyItMatters}
                 </p>
               </div>
@@ -417,28 +417,28 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           {/* Medications */}
           {result.medications.length > 0 && (
             <div>
-              <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-gray-900">
+              <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-[var(--color-text-primary)]">
                 <Pill className="h-4 w-4 text-indigo-500" /> {t("sections.medicationsTitle")}
               </h3>
               <div className="space-y-2">
                 {result.medications.map((med, i) => (
-                  <div key={i} className="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm">
+                  <div key={i} className="overflow-hidden rounded-xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] shadow-1">
                     <button
                       onClick={() => setExpandedMed(expandedMed === i ? null : i)}
                       className="flex w-full items-center justify-between p-4 text-left"
                     >
                       <div>
-                        <span className="text-sm font-semibold text-gray-900">{med.name}</span>
-                        <p className="mt-0.5 text-xs text-gray-500">{med.whatItDoes}</p>
+                        <span className="text-sm font-semibold text-[var(--color-text-primary)]">{med.name}</span>
+                        <p className="mt-0.5 text-xs text-[var(--color-text-secondary)]">{med.whatItDoes}</p>
                       </div>
                       {expandedMed === i ? (
-                        <ChevronUp className="h-4 w-4 text-gray-400" />
+                        <ChevronUp className="h-4 w-4 text-[var(--color-text-muted)]" />
                       ) : (
-                        <ChevronDown className="h-4 w-4 text-gray-400" />
+                        <ChevronDown className="h-4 w-4 text-[var(--color-text-muted)]" />
                       )}
                     </button>
                     {expandedMed === i && (
-                      <div className="space-y-2 border-t border-gray-50 px-4 pb-4 pt-2">
+                      <div className="space-y-2 border-t border-[var(--color-border-subtle)] px-4 pb-4 pt-2">
                         <div className="rounded-lg bg-green-50 p-2">
                           <p className="text-xs font-semibold text-green-700">{t("sections.howToTake")}</p>
                           <p className="text-xs text-green-600">{med.howToTake}</p>
@@ -544,7 +544,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           <button
             type="button"
             onClick={() => { setResult(null); setInput(""); setImage(null); }}
-            className="w-full rounded-xl border border-gray-200 bg-white py-3 text-sm font-semibold text-gray-600 shadow-sm transition-all active:scale-[0.98]"
+            className="w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] py-3 text-sm font-semibold text-[var(--color-text-secondary)] shadow-1 transition-all active:scale-[0.98]"
           >
             {t("anotherCta")}
           </button>
