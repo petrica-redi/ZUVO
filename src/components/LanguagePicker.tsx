@@ -16,6 +16,7 @@ type LanguageOption = {
 
 const LANGUAGES: LanguageOption[] = [
   { code: "en",  nativeName: "English",      englishName: "English",        flag: "🇬🇧" },
+  { code: "it",  nativeName: "Italiano",     englishName: "Italian",        flag: "🇮🇹" },
   { code: "sq",  nativeName: "Shqip",        englishName: "Albanian",       flag: "🇦🇱" },
   { code: "rom", nativeName: "Romani",       englishName: "Romani",         flag: "🎡" },
   { code: "ro",  nativeName: "Română",       englishName: "Romanian",       flag: "🇷🇴" },

@@ -2,6 +2,7 @@ import { defineRouting } from "next-intl/routing";
 
 export const LOCALES = [
   "en",  // English
+  "it",  // Italian
   "sq",  // Albanian
   "rom", // Romani
   "ro",  // Romanian
