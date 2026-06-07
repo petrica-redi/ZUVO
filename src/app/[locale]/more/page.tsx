@@ -7,7 +7,7 @@ import { SosButton } from "@/components/SosButton";
 import {
   Search, Stethoscope, Syringe, Navigation, BookOpen,
   MapPin, Shield, User, Settings, ChevronRight, Heart, Activity,
-  Scale, GraduationCap,
+  Scale, GraduationCap, Globe, TrendingUp, Trophy, FileText,
 } from "lucide-react";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -27,6 +27,7 @@ const SECTIONS = [
       { href: "/consult", icon: Stethoscope, key: "consult", gradient: "from-violet-500 to-purple-600" },
       { href: "/vaccines", icon: Syringe, key: "vaccines", gradient: "from-emerald-500 to-green-600" },
       { href: "/navigate", icon: Navigation, key: "navigate", gradient: "from-cyan-500 to-blue-600" },
+      { href: "/providers", icon: MapPin, key: "providers", gradient: "from-orange-500 to-red-500" },
     ],
   },
   {
@@ -38,13 +39,28 @@ const SECTIONS = [
       { href: "/glossary", icon: BookOpen, key: "glossary", gradient: "from-teal-500 to-cyan-600" },
       { href: "/rights", icon: Scale, key: "rights", gradient: "from-indigo-500 to-purple-600" },
       { href: "/stories", icon: Heart, key: "stories", gradient: "from-rose-500 to-pink-600" },
-      { href: "/regions/romania", icon: MapPin, key: "regions", gradient: "from-red-500 to-red-700" },
+      { href: "/regions/romania", icon: Globe, key: "regions", gradient: "from-red-500 to-red-700" },
+    ],
+  },
+  {
+    id: "track" as const,
+    items: [
+      { href: "/track", icon: Activity, key: "track", gradient: "from-sky-500 to-cyan-600" },
+      { href: "/family", icon: Heart, key: "family", gradient: "from-pink-500 to-rose-600" },
+      { href: "/challenges", icon: Trophy, key: "challenges", gradient: "from-yellow-500 to-amber-600" },
     ],
   },
   {
     id: "professional" as const,
     items: [
       { href: "/mediator", icon: Shield, key: "mediator", gradient: "from-purple-500 to-indigo-600" },
+    ],
+  },
+  {
+    id: "trust" as const,
+    items: [
+      { href: "/methodology", icon: FileText, key: "methodology", gradient: "from-emerald-500 to-teal-600" },
+      { href: "/impact", icon: TrendingUp, key: "impact", gradient: "from-blue-500 to-indigo-600" },
     ],
   },
   {
