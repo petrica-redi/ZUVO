@@ -7,6 +7,7 @@ import {
   Stethoscope, Baby, Brain, Heart, Thermometer, Eye,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useRouter } from "@/navigation";
 
 type VisitCard = {
   patientSummary: string;
@@ -63,6 +64,7 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
   const t = useTranslations("navigate");
   const tCommon = useTranslations("common");
   const tEmergency = useTranslations("emergency");
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [issueType, setIssueType] = useState("");
   const [issueDetail, setIssueDetail] = useState("");
@@ -385,19 +387,17 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
           </div>
         )}
 
-        {/* Find nearest hospital */}
-        <a
-          href="https://www.google.com/maps/search/hospital+near+me"
-          target="_blank"
-          rel="noopener"
-          className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all active:bg-gray-50"
+        {/* Find care nearby — links to providers directory */}
+        <button
+          onClick={() => router.push("/providers")}
+          className="flex w-full items-center gap-3 rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] p-4 shadow-1 transition-all hover:bg-[var(--color-surface-hover)] active:bg-[var(--color-surface-subtle)]"
         >
-          <MapPin className="h-5 w-5 text-cyan-500" />
-          <div>
-            <span className="text-sm font-semibold text-gray-800">{t("findHospital")}</span>
-            <p className="text-xs text-gray-400">{t("mapHint")}</p>
+          <MapPin className="h-5 w-5 text-cyan-500 flex-shrink-0" />
+          <div className="text-left">
+            <span className="text-sm font-semibold text-[var(--color-text-primary)]">{t("findHospital")}</span>
+            <p className="text-xs text-[var(--color-text-muted)]">{t("findHospitalHint")}</p>
           </div>
-        </a>
+        </button>
 
         {/* Emergency */}
         <a

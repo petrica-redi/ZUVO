@@ -23,6 +23,12 @@ export type Locale = (typeof LOCALES)[number];
 
 export const routing = defineRouting({
   locales: LOCALES,
-  defaultLocale: "en",
+  defaultLocale: "ro",
   localePrefix: "as-needed",
+  // Disable automatic locale detection from Accept-Language headers.
+  // Without this, navigating to an un-prefixed path (e.g. /chat) on a
+  // browser set to English causes the middleware to redirect to /en/chat,
+  // losing the user's selected Romanian locale.
+  // Locale is controlled exclusively by the URL prefix or the language picker.
+  localeDetection: false,
 });

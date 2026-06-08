@@ -11,7 +11,7 @@
     "profile": "Profil",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Család",
     "more": "More"
   },
   "hero": {
@@ -46,7 +46,283 @@
     "croatia": "Horvátország",
     "bosnia": "Bosznia",
     "kosovo": "Koszovó",
-    "slovenia": "Szlovénia"
+    "slovenia": "Szlovénia",
+    "romaPop": "Roma nép. {population}",
+    "detail": {
+      "back": "Vissza",
+      "romaPopulation": "Roma népesség",
+      "ofTotal": "{total} összesből ({percent})",
+      "healthAccess": "Egészségügyi hozzáférés",
+      "healthChallenges": "Egészségügyi kihívások",
+      "organizationsHelp": "Segíteni tudó szervezetek",
+      "emergency": "Vészhelyzet: {number}",
+      "ambulance": "Mentő: {number}",
+      "askAboutHealth": "Kérdezz az egészségről itt: {region}"
+    },
+    "healthIndex": {
+      "veryPoor": "Nagyon rossz",
+      "poor": "Rossz",
+      "fair": "Közepes",
+      "good": "Jó",
+      "excellent": "Kiváló"
+    },
+    "countries": {
+      "romania": {
+        "healthChallenges": {
+          "0": "Korlátozott hozzáférés az egészségbiztosításhoz",
+          "1": "Magas csecsemő- és anyai halálozás a roma közösségekben",
+          "2": "Tuberkulózis aránya az országos átlag felett",
+          "3": "Alacsony oltási lefedettség a vidéki telepeken",
+          "4": "Akadályok a háziorvoshoz való bejelentkezésben"
+        },
+        "keyFact": "Romániában él Európa legnagyobb roma népessége, és országos egészségügyi mediátorprogram működik.",
+        "organizations": {
+          "0": {
+            "focus": "Roma jogok, egészségügyi közvetítés"
+          },
+          "1": {
+            "focus": "Roma befogadási politikák"
+          },
+          "2": {
+            "focus": "Mobil egészségügyi klinikák elszigetelt közösségekben"
+          }
+        }
+      },
+      "bulgaria": {
+        "healthChallenges": {
+          "0": "Elkülönített negyedek korlátozzák az egészségügyi hozzáférést",
+          "1": "Magas munkanélküliség csökkenti a biztosítási lefedettséget",
+          "2": "A szív- és érrendszeri betegségek vezető halálok",
+          "3": "Alacsonyabb várható élettartam az országos átlagnál",
+          "4": "Korlátozott hozzáférés szakellátáshoz"
+        },
+        "keyFact": "Bulgária roma közösségi egészségügyi mediátorprogramja az egyik első volt a Balkánon.",
+        "organizations": {
+          "0": {
+            "focus": "Roma egészségfejlesztés és közvetítés"
+          },
+          "1": {
+            "focus": "Egészségügyi hozzáférés a kirekesztett romák számára"
+          }
+        }
+      },
+      "hungary": {
+        "healthChallenges": {
+          "0": "10–15 évvel rövidebb várható élettartam az országos átlagnál",
+          "1": "Magas szív- és légzőszervi megbetegedési arány",
+          "2": "Szegénységhez kötődő alultápláltság",
+          "3": "Alacsony mentális egészségügyi ellátás igénybevétele",
+          "4": "Földrajzi elszigeteltség Északkelet-Magyarországon"
+        },
+        "keyFact": "Magyarországon jelentős roma népesség él a Borsod, Szabolcs és Baranya megyékben.",
+        "organizations": {
+          "0": {
+            "focus": "Roma oktatás, beleértve az egészségügyi műveltséget"
+          },
+          "1": {
+            "focus": "Roma jólét és egészségügyi érdekvédelem"
+          }
+        }
+      },
+      "northMacedonia": {
+        "healthChallenges": {
+          "0": "A Šuto Orizari (Sutka) községnek speciális egészségügyi szükségletei vannak",
+          "1": "Hepatitis B előfordulása",
+          "2": "Korlátozott nőgyógyászati és anya-gyermek ellátás",
+          "3": "Magas vérszegénység arány gyermekeknél és nőknél",
+          "4": "COVID-19 oltás bizonytalansága"
+        },
+        "keyFact": "A skopjei Šuto Orizari a világ legnagyobb roma önkormányzata.",
+        "organizations": {
+          "0": {
+            "focus": "Roma jogok és egészségügyi hozzáférés"
+          },
+          "1": {
+            "focus": "Közegészségügy és kárcsökkentés"
+          }
+        }
+      },
+      "slovakia": {
+        "healthChallenges": {
+          "0": "Elszigetelt telepek (osady) Kelet-Szlovákiában infrastruktúra nélkül",
+          "1": "Tuberkulózis arány az EU legmagasabbai között",
+          "2": "Gyermek alultápláltság és növekedési visszamaradás",
+          "3": "Korlátozott hozzáférés tiszta vízhez és higiéniához",
+          "4": "Egészségügyi intézményekben tapasztalt diszkrimináció"
+        },
+        "keyFact": "Szlovákiában az EU legmagasabb arányban élnek romák elszigetelt telepeken.",
+        "organizations": {
+          "0": {
+            "focus": "Diszkrimináció elleni védelem az egészségügyben"
+          },
+          "1": {
+            "focus": "Közegészségügyi programok, beleértve a roma egészségügyet"
+          }
+        }
+      },
+      "serbia": {
+        "healthChallenges": {
+          "0": "Informális telepek (mahale) egészségügyi infrastruktúra nélkül",
+          "1": "Magas hepatitis és bélféreg előfordulás",
+          "2": "Korlátozott születési anyakönyvezés",
+          "3": "Szerhasználati problémák városi roma fiataloknál",
+          "4": "Mentális egészség stigmatizációja a közösségekben"
+        },
+        "keyFact": "Szerbia egészségügyi mediátorprogramja roma nőket képez ki közösségi egészségügyi kapcsolattartóként.",
+        "organizations": {
+          "0": {
+            "focus": "Roma jogok és egészségügyi politika"
+          },
+          "1": {
+            "focus": "Nők és gyermekek egészsége"
+          }
+        }
+      },
+      "turkey": {
+        "healthChallenges": {
+          "0": "A roma (Dom és Lom) közösségek gazdasági kirekesztéssel küzdenek",
+          "1": "Korlátozott dokumentáció befolyásolja az egészségügyi hozzáférést",
+          "2": "Magasabb foglalkozási egészségügyi kockázat (hulladékgyűjtők)",
+          "3": "Korlátozott anyaegészségügy informális városi területeken",
+          "4": "Társadalmi elszigeteltség és mentális egészségügyi kihívások"
+        },
+        "keyFact": "Törökországi roma közösségek főként Isztambulban, Edirnében és Izmirben élnek.",
+        "organizations": {
+          "0": {
+            "focus": "Roma jogok és társadalmi befogadás Törökországban"
+          },
+          "1": {
+            "focus": "Roma oktatás és egészségügyi műveltség"
+          }
+        }
+      },
+      "greece": {
+        "healthChallenges": {
+          "0": "A vidéki táborokban élő romák nem férnek hozzá önkormányzati egészségügyi szolgáltatásokhoz",
+          "1": "Gazdasági válság hatása a sebezhető csoportok egészségügyi hozzáférésére",
+          "2": "Hepatitis C egyes közösségekben",
+          "3": "Korlátozott fogászati ellátás",
+          "4": "COVID-19 által súlyosbított gazdasági bizonytalanság"
+        },
+        "keyFact": "Görögországban vannak letelepedett és nomád táborokban élő roma közösségek Közép-Macedóniában és Thesszáliában.",
+        "organizations": {
+          "0": {
+            "focus": "Roma befogadás egészségügy, oktatás, lakhatás terén"
+          },
+          "1": {
+            "focus": "Szociális és egészségügyi támogatás kirekesztett csoportoknak"
+          }
+        }
+      },
+      "albania": {
+        "healthChallenges": {
+          "0": "Magas gyermekszegénység és alultápláltság",
+          "1": "Korlátozott egészségbiztosítási lefedettség",
+          "2": "Magasabb anyai halálozás roma közösségekben",
+          "3": "Korlátozott hozzáférés biztonságos lakhatáshoz",
+          "4": "Szezonmunka egészségügyi instabilitást okoz"
+        },
+        "keyFact": "Albániában az ashkali (egyiptomi) kisebbség is történelmileg a roma közösségekhez sorolt.",
+        "organizations": {
+          "0": {
+            "focus": "Roma jogok és közösségfejlesztés"
+          },
+          "1": {
+            "focus": "Oktatás és egészségügyi hozzáférés romák számára"
+          }
+        }
+      },
+      "czech": {
+        "healthChallenges": {
+          "0": "Tartós lakhatási szegregáció egészségügyi hatással",
+          "1": "Magas megelőzhető szív- és érrendszeri megbetegedési arány",
+          "2": "Alacsonyabb oltási arány roma közösségekben",
+          "3": "Akadályok az egészségügyi kommunikációban és műveltségben",
+          "4": "Nehézségek a szakellátáshoz való hozzáférésben"
+        },
+        "keyFact": "Csehországban jelentős roma népesség él Moráviában és Észak-Csehországban.",
+        "organizations": {
+          "0": {
+            "focus": "Integrált roma befogadási megközelítés"
+          },
+          "1": {
+            "focus": "Európai roma civil szervezetek érdekvédelme"
+          }
+        }
+      },
+      "croatia": {
+        "healthChallenges": {
+          "0": "A međimurjei romák egészségügyi hozzáférési akadályokkal küzdenek",
+          "1": "Nyelvi akadályok korlátozzák az egészségügyi kommunikációt",
+          "2": "Magasabb cukorbetegség arány idősebb romáknál",
+          "3": "Korlátozott óvodai oltottság",
+          "4": "A szegénység befolyásolja a táplálkozást és az egészséget"
+        },
+        "keyFact": "Horvátország legnagyobb roma közössége a magyar határ közelében, Međimurje megyében van.",
+        "organizations": {
+          "0": {
+            "focus": "Roma nők egészsége és jogai"
+          },
+          "1": {
+            "focus": "Roma politika és befogadás"
+          }
+        }
+      },
+      "bosnia": {
+        "healthChallenges": {
+          "0": "Háború utáni infrastruktúra befolyásolja az egészségügyet",
+          "1": "Személyi okmányok hiánya korlátozza az egészségügyi hozzáférést",
+          "2": "Magas munkanélküliség egészségbiztosítás hiányához vezet",
+          "3": "Gyermek alultápláltság szegényebb roma családokban",
+          "4": "Korlátozott mentális egészségügyi ellátás közösségi traumára"
+        },
+        "keyFact": "Bosznia-Hercegovinában roma közösségek élnek mind a Föderációban, mind a Republika Srpskában.",
+        "organizations": {
+          "0": {
+            "focus": "Roma jogok, egészségügyi hozzáférés és dokumentáció"
+          },
+          "1": {
+            "focus": "Kisebbségi jogok, beleértve a roma egészségügyi hozzáférést"
+          }
+        }
+      },
+      "kosovo": {
+        "healthChallenges": {
+          "0": "A mitrovicai romákat ólommentesítetlen táborokba telepítették",
+          "1": "Súlyos szegénység korlátozza az egészségügyi hozzáférést",
+          "2": "Kevés roma egészségügyi mediátor",
+          "3": "Háború utáni trauma és mentális egészségügyi szükségletek",
+          "4": "Magas csecsemőhalálozás az országos átlaghoz képest"
+        },
+        "keyFact": "Észak-Mitrovicában a romákat súlyos ólmérgezés érte az ENSZ táboraiban az 1999-es konfliktus után.",
+        "organizations": {
+          "0": {
+            "focus": "RAE közösségi jogok és egészség"
+          },
+          "1": {
+            "focus": "Egészségügyi hozzáférés elűzőtt romák számára"
+          }
+        }
+      },
+      "slovenia": {
+        "healthChallenges": {
+          "0": "A dolenjskai és prekmurjei romák kirekesztéssel küzdenek",
+          "1": "Alacsonyabb iskolai végzettség befolyásolja az egészségügyi műveltséget",
+          "2": "Társadalmi kirekesztés hat a mentális egészségre",
+          "3": "Korlátozott oltottság egyes telepeken",
+          "4": "Szegénységhez kötődő táplálkozási hiányosságok"
+        },
+        "keyFact": "Szlovénia két jogilag elismert roma közösséget ismer: az őshonos (nyugati) és nem őshonos (keleti) romákat.",
+        "organizations": {
+          "0": {
+            "focus": "Roma szociális és kulturális jogok"
+          },
+          "1": {
+            "focus": "Roma jólét és egészségügyi hozzáférés"
+          }
+        }
+      }
+    }
   },
   "language": {
     "title": "Nyelv",
@@ -63,407 +339,486 @@
   },
   "studentHealth": {
     "meta": {
-      "title": "Student Health Academy",
-      "description": "A cinematic, mission-based health literacy academy for high school students: first aid, STIs, vaccines, and critical thinking."
+      "title": "Hallgatói Egészségügyi Akadémia",
+      "description": "Filmszerű, küldetésen alapuló egészségműveltségi akadémia középiskolásoknak: elsősegélynyújtás, nemi úton terjedő betegségek, oltások és kritikus gondolkodás."
     },
     "hub": {
-      "title": "Student Health Academy",
-      "subtitle": "A mission-based health field guide for high school students. Learn what to do before help arrives, how to protect your body and relationships, and how to separate evidence from rumor.",
-      "disclaimer": "Educational field guide only: this is not medical care, diagnosis, or emergency instruction from a clinician. If someone may be in immediate danger, call emergency services. For sexual health, consent, or privacy concerns, seek a trusted adult, school nurse, doctor, clinic, or local helpline.",
-      "countryLabel": "Your country (for tips)",
-      "countryPlaceholder": "Select country (optional)",
-      "countryHint": "Used only on this device to show relevant context. You can change it anytime.",
-      "countryContext": "Context for tips: {country}",
+      "title": "Hallgatói Egészségügyi Akadémia",
+      "subtitle": "Küldetésalapú egészségügyi terep útmutató középiskolásoknak. Tanulja meg, mit kell tennie a segítség megérkezése előtt, hogyan védheti meg testét és kapcsolatait, és hogyan választhatja el a bizonyítékokat a pletykáktól.",
+      "disclaimer": "Csak oktatási útmutató: ez nem orvosi ellátás, diagnózis vagy sürgősségi utasítás egy klinikustól. Ha valaki közvetlen veszélyben lehet, hívja a mentőket. Szexuális egészséggel, beleegyezéssel vagy magánélettel kapcsolatos aggályai miatt keressen fel egy megbízható felnőttet, ápolónőt, orvost, klinikát vagy helyi segélyvonalat.",
+      "countryLabel": "Az Ön országa (tippekért)",
+      "countryPlaceholder": "Ország kiválasztása (nem kötelező)",
+      "countryHint": "Csak ezen az eszközön használják a releváns kontextus megjelenítésére. Bármikor megváltoztathatod.",
+      "countryContext": "A tippek háttere: {country}",
       "xpLabel": "XP",
-      "levelLabel": "Level {level}",
-      "commandCenterTitle": "Expedition dashboard",
-      "commandCenterSubtitle": "{completed}/{total} field lessons complete — build practical skills you can use in school, at home, and online.",
-      "overallProgress": "Academy progress",
-      "levelProgress": "Level progress",
-      "maxLevel": "Max level reached",
-      "nextLevelXp": "Next level at {xp} XP",
-      "stageProgress": "Stage progress",
-      "badgesTitle": "Your badges",
-      "stageMapTitle": "Expedition route",
-      "modulesInStage": "modules",
-      "takeStageQuiz": "Stage quiz",
-      "quizLocked": "Complete all modules in this stage to unlock the stage quiz.",
-      "quizIntro": "Answer at least 70% correctly to unlock the next stage.",
-      "stageComplete": "Stage complete!",
-      "nextStageUnlocked": "You unlocked the next stage.",
-      "badgeLocal": "Local champion",
-      "badgeRegional": "Regional explorer",
-      "badgeNational": "National scholar",
-      "badgeLocalDesc": "Finished the local stage quiz.",
-      "badgeRegionalDesc": "Finished the regional stage quiz.",
-      "badgeNationalDesc": "Finished the national stage quiz.",
-      "allStagesComplete": "You completed the full academy path. Keep revisiting lessons to stay sharp.",
-      "kicker": "Field guide for real life",
-      "streakLabel": "Streak",
-      "streakUnitOne": "day",
-      "streakUnitMany": "days",
-      "streakHint": "Keep one lesson a day going",
-      "dayActive": "Active day",
-      "dayInactive": "No activity"
+      "levelLabel": "{level}. szint",
+      "commandCenterTitle": "Expedíció irányítópultja",
+      "commandCenterSubtitle": "{completed}/{total} tereplecke befejeződött – olyan gyakorlati készségeket építhet, amelyeket az iskolában, otthon és online is használhat.",
+      "overallProgress": "Az akadémia fejlődése",
+      "levelProgress": "Szintfejlődés",
+      "maxLevel": "Maximális szint elérve",
+      "nextLevelXp": "Következő szint: {xp} XP",
+      "stageProgress": "Színpadi haladás",
+      "badgesTitle": "A jelvényeid",
+      "stageMapTitle": "Expedíció útvonala",
+      "modulesInStage": "modulok",
+      "takeStageQuiz": "Színpadi vetélkedő",
+      "quizLocked": "Töltse ki az összes modult ebben a szakaszban a színpadi kvíz feloldásához.",
+      "quizIntro": "Válaszoljon legalább 70%-ban helyesen a következő szakasz feloldásához.",
+      "stageComplete": "A színpad kész!",
+      "nextStageUnlocked": "Feloldottad a következő szakaszt.",
+      "badgeLocal": "Helyi bajnok",
+      "badgeRegional": "Regionális felfedező",
+      "badgeNational": "Országos tudós",
+      "badgeLocalDesc": "Befejezte a helyi színpadi vetélkedőt.",
+      "badgeRegionalDesc": "Befejezte a regionális színpadi vetélkedőt.",
+      "badgeNationalDesc": "Befejezte az országos színpadi vetélkedőt.",
+      "allStagesComplete": "Elvégezted a teljes akadémiai utat. Ismételje meg a leckéket, hogy éles maradjon.",
+      "kicker": "Terepi útmutató a való élethez",
+      "streakLabel": "Csík",
+      "streakUnitOne": "nap",
+      "streakUnitMany": "napokon",
+      "streakHint": "Tarts napi egy órát",
+      "dayActive": "Aktív nap",
+      "dayInactive": "Nincs tevékenység"
     },
     "stages": {
-      "local": "Local",
-      "localDesc": "Immediate skills for school, home, and friends",
-      "regional": "Regional",
-      "regionalDesc": "Clinic, community, and public-health know-how",
-      "national": "National",
-      "nationalDesc": "Evidence, leadership, and capstone decisions"
+      "local": "Helyi",
+      "localDesc": "Azonnali készségek iskolába, otthonra és barátokra",
+      "regional": "Regionális",
+      "regionalDesc": "Klinika, közösség és közegészségügyi know-how",
+      "national": "Nemzeti",
+      "nationalDesc": "Bizonyítékok, vezetés és tetőponti döntések"
     },
     "progress": {
-      "xp": "Experience points",
-      "stageLocked": "Locked — complete the previous stage quiz.",
-      "quizRequired": "Quiz required",
-      "allModulesDone": "All modules done — take the quiz!"
+      "xp": "Tapasztalati pontok",
+      "stageLocked": "Lezárva – töltse ki az előző szakaszban szereplő kvízt.",
+      "quizRequired": "Kvíz szükséges",
+      "allModulesDone": "Minden modul kész – töltse ki a kvízt!"
     },
     "quiz": {
-      "title": "Stage checkpoint",
-      "back": "Back to academy",
-      "progress": "Question",
-      "of": "of",
-      "submit": "Next",
-      "seeResults": "See results",
-      "pass": "Checkpoint cleared",
-      "fail": "Checkpoint not cleared yet",
-      "scoreLine": "You got {correct} out of {total} correct ({pct}%).",
-      "needPct": "You need at least 70% to unlock the next stage.",
-      "retry": "Try again",
-      "continueHub": "Back to academy",
-      "stageBriefTitle": "{stage} field checkpoint",
-      "stageBriefBody": "This checkpoint tests judgment, not memorization. Score {pct}% or more to unlock the next expedition stage.",
-      "continueNextStage": "Enter {stage} expedition",
-      "explainCorrect": "Why this is correct",
-      "explainWrong": "Field guide explainer"
+      "title": "Színpad ellenőrző pont",
+      "back": "Vissza az akadémiára",
+      "progress": "Kérdés",
+      "of": "-ból",
+      "submit": "Következő",
+      "seeResults": "Lásd az eredményeket",
+      "pass": "Ellenőrzőpont törölve",
+      "fail": "Az ellenőrzőpont még nincs törölve",
+      "scoreLine": "{correct} a(z) {total} helyesből ({pct}%).",
+      "needPct": "Legalább 70%-ra van szüksége a következő szakasz feloldásához.",
+      "retry": "Próbáld újra",
+      "continueHub": "Vissza az akadémiára",
+      "stageBriefTitle": "{stage} mező ellenőrzőpont",
+      "stageBriefBody": "Ez az ellenőrző pont az ítélőképességet teszteli, nem a memorizálást. Szerezzen legalább {pct}%-ot az expedíció következő szakaszának feloldásához.",
+      "continueNextStage": "Lépjen be a {stage} expedícióba",
+      "explainCorrect": "Miért helyes ez",
+      "explainWrong": "Terepi útmutató magyarázó"
     },
     "lesson": {
-      "scenarioTitle": "Field scenario",
-      "challengeTitle": "Expedition challenge",
-      "supportTitle": "Confidential support matters",
-      "supportText": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
-      "findCare": "Find care",
-      "knowRights": "Know your rights",
-      "stepLabel": "Lesson {current} of {total}",
-      "completedNote": "Field note logged. You earned XP, saved progress, and unlocked the next best step.",
-      "sourcesTitle": "Verified sources",
-      "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab.",
-      "reviewUpToDate": "Reviewed for clinical accuracy",
-      "reviewOverdue": "Review overdue — verify with a clinician",
-      "reviewMeta": "Reviewed {date} by {reviewer}"
+      "scenarioTitle": "Terepi forgatókönyv",
+      "challengeTitle": "Expedíciós kihívás",
+      "supportTitle": "A bizalmas támogatás számít",
+      "supportText": "Ha ez a téma valami igazit érint az életedben, nem kell egyedül megoldanod. Kérdezzen meg egy megbízható felnőttet, ápolónőt, orvost, ifjúsági klinikát vagy segélyvonalat, hogy milyen bizalmas támogatást jelent az Ön lakóhelye.",
+      "findCare": "Keressen gondoskodást",
+      "knowRights": "Ismerje meg a jogait",
+      "stepLabel": "{total}/{current}. lecke",
+      "completedNote": "Mezőjegyzet naplózva. XP-t szerzett, előrehaladást mentett, és feloldotta a következő legjobb lépést.",
+      "sourcesTitle": "Ellenőrzött források",
+      "sourcesNote": "Független források ellenőrizheti magát. Érintsen meg egy sort az eredeti útmutatás új lapon való megnyitásához.",
+      "reviewUpToDate": "Klinikai pontosság szempontjából felülvizsgálták",
+      "reviewOverdue": "A felülvizsgálat lejárt – ellenőrizze egy klinikussal",
+      "reviewMeta": "{date} értékelte: {reviewer}"
     },
     "modules": {
       "local": {
         "emergency101": {
-          "title": "Emergency signals: calling for help",
-          "description": "In an emergency, the first minute is a bridge between chaos and help. Your job is not to become a doctor. Your job is to stay safe, call the right number, and give clear information that helps trained responders find the scene fast.",
-          "tip1": "Lead with location: school name, street, building entrance, landmark, or GPS pin. A perfect medical description is useless if help cannot find you.",
-          "tip2": "Say what happened in one sentence: “A student collapsed and is not responding,” or “There is heavy bleeding from the arm.” Short, concrete details help dispatchers act.",
-          "tip3": "Put the phone on speaker if you can. The dispatcher may coach you while someone else gets an adult, opens a gate, or clears space.",
-          "tip4": "Never film an emergency for attention. Protect privacy, create space, and stay with the person if it is safe until help arrives.",
-          "fact": "Emergency systems are designed around fast, accurate information. Clear location plus a brief description can shorten the time between the call and professional care.",
-          "action": "Create a phone note called “Emergency info” with your home address, school address, and one nearby landmark for each.",
-          "scenario": "During sports practice, a classmate suddenly drops to the ground. The gym gets loud. One person is recording. No adult is beside the student yet.",
-          "challenge": "Write a 15-second emergency script: who you are, where you are, what happened, and what you need."
+          "title": "Vészjelzések: segélyhívás",
+          "description": "Vészhelyzetben az első perc híd a káosz és a segítség között. A te dolgod nem az, hogy orvos legyél. Az Ön feladata, hogy biztonságban tudjon maradni, hívja a megfelelő számot, és olyan egyértelmű tájékoztatást adjon, amely segít a képzett reagálóknak gyorsan megtalálni a helyszínt.",
+          "tip1": "Ólom a hellyel: iskola neve, utca, épület bejárata, tereptárgy vagy GPS PIN-kód. A tökéletes orvosi leírás hiábavaló, ha a segítség nem találja meg.",
+          "tip2": "Mondja el, mi történt egy mondatban: „Egy diák összeesett, és nem reagál” vagy „Erős vérzés van a karjából”. A rövid, konkrét részletek segítik a diszpécsereket a cselekvésben.",
+          "tip3": "Tedd a telefont a hangszóróra, ha tudod. A diszpécser felkészítheti Önt, miközben valaki más felnőttet kap, kaput nyit, vagy helyet szabadít fel.",
+          "tip4": "Soha ne filmezzen vészhelyzetet, hogy figyelemre méltó legyen. Védje a magánéletet, teremtsen teret, és maradjon a személlyel, ha biztonságban van, amíg a segítség meg nem érkezik.",
+          "fact": "A segélyhívó rendszereket a gyors, pontos információk köré tervezték. Az egyértelmű hely és a rövid leírás lerövidítheti a hívás és a szakszerű ellátás közötti időt.",
+          "action": "Hozzon létre egy telefonjegyzetet „Sürgősségi információ” néven, amely tartalmazza otthoni címét, iskolai címét és egy-egy közeli tereptárgyat.",
+          "scenario": "Sportedzés közben egy osztálytársa hirtelen a földre esik. Az edzőterem hangos lesz. Egy személy felvételt készít. A diák mellett még nincs felnőtt.",
+          "challenge": "Írj egy 15 másodperces vészhelyzeti forgatókönyvet: ki vagy, hol vagy, mi történt, és mire van szükséged."
         },
         "bleedingBasics": {
-          "title": "Bleeding: pressure buys time",
-          "description": "Blood can make people panic, but the first response is simple: protect yourself, press firmly, and get help. Pressure is not dramatic, but it is one of the most powerful first-aid actions a bystander can take.",
-          "tip1": "Protect yourself if possible: gloves are best, but a plastic bag or folded cloth is better than bare hands if blood is visible.",
-          "tip2": "Press directly on the wound with the cleanest cloth available. Strong, steady pressure matters more than constantly checking how it looks.",
-          "tip3": "If blood soaks through, add more cloth on top. Removing the first layer can pull away early clots and restart bleeding.",
-          "tip4": "Call emergency services for heavy bleeding, spurting blood, deep wounds, or bleeding that does not slow with firm pressure.",
-          "fact": "Many severe external bleeds can be slowed before professionals arrive. The difference is often whether someone starts firm pressure immediately.",
-          "action": "Find the first-aid kit at home or school and identify what could be used for clean pressure in an emergency.",
-          "scenario": "After school, someone cuts their forearm on broken glass. Their sleeve is wet with blood, and friends are afraid to touch anything.",
-          "challenge": "Practice saying the rule out loud: “Press. Add layers. Keep pressing. Call for help.”"
+          "title": "Vérzés: a nyomás időt nyer",
+          "description": "A vér pánikba ejtheti az embereket, de az első válasz egyszerű: védje meg magát, nyomja meg határozottan, és kérjen segítséget. A nyomás nem drámai, de ez az egyik legerősebb elsősegélynyújtási művelet, amelyet egy szemlélő megtehet.",
+          "tip1": "Lehetőleg védekezzen: a kesztyű a legjobb, de ha vér látható, jobb a műanyag zacskó vagy az összehajtott ruha, mint a puszta kéz.",
+          "tip2": "Nyomja közvetlenül a sebre a rendelkezésre álló legtisztább ruhával. Az erős, egyenletes nyomás többet jelent, mint a kinézet folyamatos ellenőrzése.",
+          "tip3": "Ha a vér átszivárog, adjon hozzá további ruhát a tetejére. Az első réteg eltávolítása eltávolíthatja a korai vérrögöket, és újraindulhat a vérzés.",
+          "tip4": "Hívja a segélyszolgálatot erős vérzés, kifröccsenő vér, mély sebek vagy erős nyomás hatására nem lassuló vérzés esetén.",
+          "fact": "Sok súlyos külső vérzés lelassítható, mielőtt a szakemberek megérkeznének. A különbség gyakran az, hogy valaki azonnal elkezd-e határozott nyomást gyakorolni.",
+          "action": "Keresse meg az elsősegély-készletet otthon vagy az iskolában, és határozza meg, hogy vészhelyzetben mi használható tiszta nyomásra.",
+          "scenario": "Iskola után valaki megvágja az alkarját egy törött üvegen. Ujjuk vértől nedves, és a barátok félnek bármihez is hozzányúlni.",
+          "challenge": "Gyakorold a szabály hangos kimondását: \"Nyomja meg. Adjon hozzá rétegeket. Nyomjon tovább. Hívjon segítséget.\""
         },
         "burnsBasics": {
-          "title": "Burns: cool the heat, protect the skin",
-          "description": "A burn keeps damaging tissue after the heat source is gone. The goal is to cool the skin safely, avoid folk remedies that trap heat, and know when a burn needs urgent medical care.",
-          "tip1": "Cool running water is the first move for many minor burns. Keep it gentle and cool, not icy.",
-          "tip2": "Skip butter, oil, toothpaste, flour, or egg. They can trap heat, hide the injury, and raise infection risk.",
-          "tip3": "Remove tight rings, bracelets, or clothing near the burn if they are not stuck, because swelling can happen quickly.",
-          "tip4": "Get urgent care for burns on the face, hands, genitals, large areas, deep burns, chemical burns, electrical burns, or trouble breathing.",
-          "fact": "Early cooling can reduce pain and depth of injury. The best burn care often begins before anyone reaches a clinic.",
-          "action": "Teach one person the burn rule: cool water first, cover loosely, no kitchen remedies.",
-          "scenario": "A younger sibling touches a hot pan. An older relative reaches for toothpaste because “that always helped before.”",
-          "challenge": "Make a two-line poster: “Cool the burn. Do not cover it with food or paste.”"
+          "title": "Égési sérülések: hűti a hőt, védi a bőrt",
+          "description": "Az égés folyamatosan károsítja a szöveteket, miután a hőforrás eltűnt. A cél a bőr biztonságos hűtése, a hőt felfogó népi gyógymódok elkerülése, valamint az égési sérülések sürgős orvosi ellátásának szükségessége.",
+          "tip1": "A hideg folyóvíz az első lépés sok kisebb égési sérülés esetén. Tartsa gyengéden és hűvösen, ne jegesen.",
+          "tip2": "Hagyja ki a vajat, olajat, fogkrémet, lisztet vagy tojást. Megfoghatják a hőt, elrejthetik a sérülést, és növelhetik a fertőzés kockázatát.",
+          "tip3": "Távolítsa el a szűk gyűrűket, karkötőket vagy ruházatot az égési hely közelében, ha nem ragadt be, mert a duzzanat gyorsan előfordulhat.",
+          "tip4": "Sürgős ellátást kell kérni az arc, a kéz, a nemi szervek, a nagy területek égési sérülései, a mély égési sérülések, a vegyi égési sérülések, az elektromos égési sérülések vagy a légzési nehézségek esetén.",
+          "fact": "A korai hűtés csökkentheti a fájdalmat és a sérülés mélységét. A legjobb égési sérülések kezelése gyakran már azelőtt elkezdődik, hogy bárki is eljutna a klinikára.",
+          "action": "Tanítsd meg valakinek az égési szabályt: először hűtsd le a vizet, fedd le lazán, ne használj konyhai szereket.",
+          "scenario": "Egy fiatalabb testvér megérint egy forró serpenyőt. Egy idősebb rokon fogkrémért nyúl, mert „az korábban mindig segített”.",
+          "challenge": "Készítsen kétsoros plakátot: \"Hűtse le az égett helyet. Ne takarja be étellel vagy pasztával.\""
         },
         "stiBasics": {
-          "title": "STIs: facts without shame",
-          "description": "Sexually transmitted infections are health conditions, not character judgments. Some are curable, some are manageable, and many have no symptoms at first. Accurate information protects people from stigma and from delayed care.",
-          "tip1": "Symptoms are not a reliable test. Many STIs can be silent while still affecting health or spreading to partners.",
-          "tip2": "Condoms and dental dams reduce risk when used correctly, but no tool works if someone is pressured or unable to use it safely.",
-          "tip3": "Testing is responsible. It is something people do to care for themselves and others, not something to gossip about.",
-          "tip4": "Ask clinics directly about confidentiality: who can see results, what age rules apply, and whether services are youth-friendly.",
-          "fact": "Untreated infections such as chlamydia and gonorrhea can lead to serious complications, but testing and treatment are effective when people get care early.",
-          "action": "Identify one trustworthy sexual-health source in your country: a health ministry page, youth clinic, school nurse, or helpline.",
-          "scenario": "A friend says, “I would know if someone had an STI just by looking.” Another student quietly stops talking.",
-          "challenge": "Prepare a stigma-free reply: “You cannot always tell. Testing is normal, private, and responsible.”"
+          "title": "STI: tények szégyen nélkül",
+          "description": "A szexuális úton terjedő fertőzések egészségügyi állapotok, nem pedig jellembeli ítéletek. Van, amelyik gyógyítható, van, amelyik kezelhető, és sokuknak elsőre nincsenek tünetei. A pontos információ megvédi az embereket a megbélyegzéstől és a késedelmes ellátástól.",
+          "tip1": "A tünetek nem megbízható tesztek. Sok nemi úton terjedő betegség elhallgathat, miközben továbbra is hatással van az egészségre, vagy átterjed a partnerekre.",
+          "tip2": "Az óvszer és a fogászati ​​védőgát helyes használat esetén csökkenti a kockázatot, de egyetlen eszköz sem működik, ha valaki nyomás alatt van, vagy nem tudja biztonságosan használni.",
+          "tip3": "A tesztelés a felelős. Ez olyasvalami, amit az emberek azért tesznek, hogy törődjenek magukkal és másokkal, nem pedig pletykálkodni.",
+          "tip4": "Kérdezze meg közvetlenül a klinikákat a titoktartásról: ki láthatja az eredményeket, milyen életkorra vonatkozó szabályok vonatkoznak rájuk, és hogy a szolgáltatások fiatalokbarátak-e.",
+          "fact": "A kezeletlen fertőzések, mint például a chlamydia és a gonorrhoea, súlyos szövődményekhez vezethetnek, de a tesztelés és a kezelés hatékony, ha az embereket korán ellátják.",
+          "action": "Határozzon meg egy megbízható szexuális egészségügyi forrást az Ön országában: egy egészségügyi minisztériumi oldalt, egy ifjúsági klinikát, egy iskolai nővért vagy egy segélyvonalat.",
+          "scenario": "Egy barátom azt mondja: „Ha valakinek STI-je lenne, csak ránézésre tudnám meg.” Egy másik diák csendben abbahagyja a beszédet.",
+          "challenge": "Készítsen stigmamentes választ: „Nem mindig lehet tudni. A tesztelés normális, privát és felelősségteljes.”"
         },
         "consentBasics": {
-          "title": "Consent: the clearest yes",
-          "description": "Consent is not a technicality. It is the foundation of safety, respect, and trust. A healthy relationship gives every person the freedom to say yes, no, wait, or stop without fear of punishment.",
-          "tip1": "Consent must be freely chosen. Pressure, threats, guilt, alcohol, drugs, or power differences can make “yes” unsafe or invalid.",
-          "tip2": "Silence is not consent. Freezing, going quiet, or not fighting back is not the same as wanting something.",
-          "tip3": "Consent is ongoing. Someone can change their mind even if they agreed earlier, even in a relationship.",
-          "tip4": "Digital boundaries count. Repeatedly asking for photos, sharing private images, or threatening exposure is not respect.",
-          "fact": "Consent education reduces harm because it gives students practical language for boundaries before pressure becomes danger.",
-          "action": "Choose a trusted person or service you could contact if you or a friend felt pressured, unsafe, or threatened.",
-          "scenario": "Someone keeps asking for private photos after being told no, then says, “If you loved me, you would.”",
-          "challenge": "Write a boundary script you could send quickly: “No. Stop asking. I am leaving this conversation.”"
+          "title": "Hozzájárulás: a legegyértelműbb igen",
+          "description": "A beleegyezés nem technikai kérdés. Ez a biztonság, a tisztelet és a bizalom alapja. Az egészséges kapcsolat mindenkinek megadja a szabadságot, hogy igent, nemet, várjon vagy megálljon anélkül, hogy félne a büntetéstől.",
+          "tip1": "A hozzájárulást szabadon kell megválasztani. A nyomás, a fenyegetések, a bűntudat, az alkohol, a drogok vagy a hatalmi különbségek az „igen”-t nem biztonságossá vagy érvénytelenné tehetik.",
+          "tip2": "A csend nem beleegyezés. Megfagyni, elcsendesedni vagy nem harcolni nem ugyanaz, mint akarni valamit.",
+          "tip3": "A beleegyezés folyamatban van. Valaki meggondolhatja magát akkor is, ha korábban megegyezett, akár egy kapcsolatban is.",
+          "tip4": "A digitális határok számítanak. A fényképek többszöri kérése, a privát képek megosztása vagy az expozícióval való fenyegetés nem tiszteletben tartás.",
+          "fact": "A beleegyezés oktatása csökkenti a károkat, mert gyakorlatias nyelvezetet ad a tanulóknak a határok meghatározásához, mielőtt a nyomás veszélybe kerül.",
+          "action": "Válasszon egy megbízható személyt vagy szolgálatot, akivel kapcsolatba léphet, ha Ön vagy egy barátja nyomás alatt, nem biztonságos vagy fenyegetve érzi magát.",
+          "scenario": "Valaki folyton privát fotókat kér, miután nemet mondanak neki, majd azt mondja: „Ha szeretsz, megtennéd.”",
+          "challenge": "Írjon egy határszkriptet, amelyet gyorsan el tud küldeni: „Nem. Ne kérdezzen többé. Kilépek ebből a beszélgetésből.”"
         }
       },
       "regional": {
         "chokingBasics": {
-          "title": "Choking: recognize the silent emergency",
-          "description": "Choking can turn a normal lunch table into a life-threatening emergency in seconds. The safest response begins with recognizing whether the person can cough or breathe, calling for help, and using trained techniques when needed.",
-          "tip1": "If the person is coughing hard, encourage coughing and stay close. A strong cough is the body’s best tool.",
-          "tip2": "If they cannot speak, cough, cry, or breathe, treat it as an emergency and call for help immediately.",
-          "tip3": "Back blows and abdominal thrusts should be learned from a certified first-aid instructor. Good technique matters.",
-          "tip4": "After a serious choking episode, medical evaluation is wise even if the person seems better.",
-          "fact": "Choking is often quiet, not dramatic. Bystanders who recognize the signs quickly can make the difference before professionals arrive.",
-          "action": "Ask your school who is trained in first aid and where students can learn CPR or choking response.",
-          "scenario": "In the cafeteria, a student suddenly stands up, grabs their throat, and cannot answer when friends ask what is wrong.",
-          "challenge": "Find out where your school keeps emergency contacts and who is first-aid trained."
+          "title": "Fulladás: ismerje fel a néma vészhelyzetet",
+          "description": "A fulladás pillanatok alatt életveszélyes vészhelyzetté változtathat egy normál ebédlőasztalt. A legbiztonságosabb válasz azzal kezdődik, hogy felismerjük, tud-e köhögni vagy lélegezni, segítséget hívunk, és szükség esetén betanított technikákat alkalmazunk.",
+          "tip1": "Ha a személy erősen köhög, ösztönözze a köhögést, és maradjon közel. Az erős köhögés a szervezet legjobb eszköze.",
+          "tip2": "Ha nem tudnak beszélni, köhögni, sírni vagy lélegezni, kezelje vészhelyzetként, és azonnal hívjon segítséget.",
+          "tip3": "A hátba ütéseket és a hasi lökéseket okleveles elsősegélynyújtó oktatótól kell megtanulni. A jó technika számít.",
+          "tip4": "Súlyos fulladásos epizód után az orvosi értékelés bölcs dolog, még akkor is, ha az illető jobban látszik.",
+          "fact": "A fulladás gyakran csendes, nem drámai. Azok a bámészkodók, akik gyorsan felismerik a jeleket, már a szakemberek megérkezése előtt megváltoztathatják.",
+          "action": "Kérdezze meg iskoláját, hogy ki képzett az elsősegélynyújtásban, és hol tanulhatják meg a diákok az újraélesztést vagy a fulladásra való reagálást.",
+          "scenario": "A büfében egy diák hirtelen feláll, megfogja a torkát, és nem tud válaszolni, ha a barátok megkérdezik, mi a baj.",
+          "challenge": "Tudja meg, hol tart fenn az iskolája a sürgősségi kapcsolatokat, és ki kapott elsősegélynyújtási képzést."
         },
         "stiTesting": {
-          "title": "Testing and treatment: privacy, proof, care",
-          "description": "Testing replaces fear with facts. It can feel intimidating, but clinics do this every day. The strongest move is to ask clear questions about privacy, testing options, treatment, and partner safety.",
-          "tip1": "Tests may use urine, blood, or swabs. A clinician can explain what is needed based on exposure and symptoms.",
-          "tip2": "Be honest with clinicians. They are not there to judge; accurate information helps them choose the right tests.",
-          "tip3": "If treatment is prescribed, take it exactly as directed and ask when it is safe to have sex again.",
-          "tip4": "Partners may need testing or treatment. Clinics can help with safe, private ways to communicate this.",
-          "fact": "Early testing and treatment can prevent long-term complications and reduce transmission in a community.",
-          "action": "Write down three clinic questions: “Is this confidential?”, “Which tests do I need?”, “When should I retest?”",
-          "scenario": "A friend is worried after possible exposure but says, “If I go to a clinic, everyone will know.”",
-          "challenge": "Build a privacy checklist a student could use before making an appointment."
+          "title": "Tesztelés és kezelés: magánélet, bizonyítás, gondozás",
+          "description": "A tesztelés a félelmet tényekkel helyettesíti. Megfélemlítő érzés lehet, de a klinikák minden nap ezt teszik. A legerősebb lépés az, ha egyértelmű kérdéseket teszünk fel az adatvédelemről, a tesztelési lehetőségekről, a kezelésről és a partner biztonságáról.",
+          "tip1": "A vizsgálatok vizeletet, vért vagy tamponokat használhatnak. A klinikus az expozíció és a tünetek alapján el tudja magyarázni, hogy mire van szükség.",
+          "tip2": "Légy őszinte a klinikusokkal. Nem azért vannak, hogy ítéljenek; pontos információk segítik őket a megfelelő tesztek kiválasztásában.",
+          "tip3": "Ha kezelést írnak fel, vegye be pontosan az utasításoknak megfelelően, és kérdezze meg, mikor biztonságos újra szexelni.",
+          "tip4": "A partnereknek vizsgálatra vagy kezelésre lehet szükségük. A klinikák segíthetnek biztonságos, privát módon kommunikálni.",
+          "fact": "A korai tesztelés és kezelés megakadályozhatja a hosszú távú szövődményeket, és csökkentheti a közösségen belüli átvitelt.",
+          "action": "Írjon fel három klinikai kérdést: „Bizalmas ez?”, „Melyik vizsgálatra van szükségem?”, „Mikor kell újra tesztelnem?”",
+          "scenario": "Egy barátom aggódik az esetleges expozíció után, de azt mondja: „Ha elmegyek egy klinikára, mindenki tudni fogja.”",
+          "challenge": "Készítsen adatvédelmi ellenőrzőlistát, amelyet a tanuló használhat, mielőtt időpontot foglalna."
         },
         "vaccineLiteracy": {
-          "title": "Vaccines: training the immune system",
-          "description": "Vaccines are not magic shields; they are training sessions for the immune system. They help the body recognize danger before a real infection has the chance to cause serious harm.",
-          "tip1": "A vaccine schedule is a map. It shows which protections are recommended at different ages and when catch-up doses may be needed.",
-          "tip2": "A sore arm or mild fever can happen because the immune system is responding. Clinics can tell you what is normal and what is not.",
-          "tip3": "Vaccines are monitored for safety before and after approval. Serious allergic reactions are rare, and clinics are prepared for them.",
-          "tip4": "If you missed a dose, do not guess. Ask a clinician or official schedule about catch-up options.",
-          "fact": "High vaccine coverage protects individuals and also helps protect people who cannot be vaccinated for medical reasons.",
-          "action": "Check your vaccine record with a parent, guardian, doctor, or school nurse and list one question to ask.",
-          "scenario": "A group chat claims a vaccine “rewrites your DNA.” The post has dramatic music and no source.",
-          "challenge": "Find the same vaccine on a public health website and write one evidence-based reply."
+          "title": "Vakcinák: az immunrendszer képzése",
+          "description": "A vakcinák nem varázspajzsok; ezek az immunrendszer edzései. Segítenek a szervezetnek felismerni a veszélyt, mielőtt egy valódi fertőzés komoly károkat okozna.",
+          "tip1": "Az oltási ütemterv egy térkép. Megmutatja, hogy a különböző életkorokban mely védelem javasolt, és mikor lehet szükség felzárkóztató dózisokra.",
+          "tip2": "Fájó kar vagy enyhe láz fordulhat elő, mert az immunrendszer reagál. A klinikák meg tudják mondani, mi normális és mi nem.",
+          "tip3": "A vakcinák biztonságát a jóváhagyás előtt és után ellenőrzik. A súlyos allergiás reakciók ritkák, és a klinikák felkészültek rájuk.",
+          "tip4": "Ha kihagyott egy adagot, ne találgasson. Kérdezzen meg egy orvost vagy egy hivatalos menetrendet a felzárkóztatási lehetőségekről.",
+          "fact": "A magas vakcina-lefedettség védi az egyéneket, és segít megvédeni azokat az embereket is, akiket egészségügyi okokból nem lehet beoltani.",
+          "action": "Nézze meg oltási nyilvántartását egy szülővel, gyámmal, orvossal vagy ápolónővel, és soroljon fel egy kérdést, amelyet fel kell tennie.",
+          "scenario": "Egy csoportos csevegés azt állítja, hogy az oltás „átírja a DNS-edet”. A bejegyzés drámai zenét tartalmaz, és nincs forrás.",
+          "challenge": "Keresse meg ugyanazt a vakcinát egy közegészségügyi webhelyen, és írjon egy bizonyítékon alapuló választ."
         },
         "vpdExamples": {
-          "title": "Diseases vaccines can prevent",
-          "description": "A vaccine card is not just paperwork. It is a record of protection against diseases that once injured or killed far more young people: measles, hepatitis B, HPV-related cancers, and more.",
-          "tip1": "Measles spreads through the air and can cause pneumonia, brain swelling, and death. It is not just a rash.",
-          "tip2": "HPV vaccination can prevent several cancers later in life. It works best before exposure to the virus.",
-          "tip3": "Hepatitis B can become a chronic liver infection. Vaccination is a major tool for prevention.",
-          "tip4": "Disease stories travel fast online. Evidence from health agencies travels slower but is far more reliable.",
-          "fact": "Before widespread vaccination, measles killed millions globally. Vaccines changed what childhood risk looked like.",
-          "action": "Choose one vaccine-preventable disease and make a three-bullet “why it matters” card.",
-          "scenario": "Students are preparing for a school trip, but nobody agrees which vaccines matter for teens.",
-          "challenge": "Make a pocket guide: disease, how it spreads, vaccine that helps prevent it."
+          "title": "A védőoltással megelőzhető betegségek",
+          "description": "Az oltókártya nem csak papírmunka. Ez az olyan betegségek elleni védelem rekordja, amelyek egykor sokkal több fiatalt megsebesítettek vagy meghaltak: kanyaró, hepatitis B, HPV-vel összefüggő rák stb.",
+          "tip1": "A kanyaró a levegőben terjed, és tüdőgyulladást, agyduzzanatot és halált okozhat. Ez nem csak kiütés.",
+          "tip2": "A HPV-oltással számos rák megelőzhető az élet későbbi szakaszában. A vírussal való érintkezés előtt működik a legjobban.",
+          "tip3": "A hepatitis B krónikus májfertőzéssé válhat. A védőoltás a megelőzés fő eszköze.",
+          "tip4": "A betegségtörténetek gyorsan terjednek az interneten. Az egészségügyi ügynökségektől származó bizonyítékok lassabban terjednek, de sokkal megbízhatóbbak.",
+          "fact": "A széles körben elterjedt védőoltás előtt a kanyaró milliókat ölt meg világszerte. A vakcinák megváltoztatták a gyermekkori kockázat megjelenését.",
+          "action": "Válassz egy oltással megelőzhető betegséget, és készíts egy hárompontos „miért számít” kártyát.",
+          "scenario": "A diákok iskolai kirándulásra készülnek, de senki sem ért egyet, mely oltások számítanak a tiniknek.",
+          "challenge": "Készítsen zsebkönyvet: betegség, terjedés módja, oltás, amely segít megelőzni."
         }
       },
       "national": {
         "firstAidReview": {
-          "title": "First aid command: putting it together",
-          "description": "At the national stage, first aid becomes decision-making under pressure: protect yourself, get help, choose the right basic action, and keep the scene calm enough for professionals to take over.",
-          "tip1": "Scene safety comes first. You cannot help if you become the second injured person.",
-          "tip2": "Call early when the situation may be serious. Dispatchers would rather guide a cautious caller than arrive too late.",
-          "tip3": "Match action to problem: pressure for bleeding, cool water for burns, trained response for choking, space and reassurance for shock.",
-          "tip4": "Leadership can be simple: point to one person and say, “You call emergency services. You get a teacher. You clear space.”",
-          "fact": "In emergencies, calm role assignment reduces confusion and speeds up response, especially in crowded places like schools.",
-          "action": "Write a 60-second classroom emergency plan: caller, adult, space, supplies, comfort.",
-          "scenario": "One student is burned, another is bleeding, and the room is filling with noise. You are the first person thinking clearly.",
-          "challenge": "Draft a four-role emergency plan your class could practice safely with a teacher."
+          "title": "Elsősegélynyújtó parancs: összerakni",
+          "description": "Országos szinten az elsősegélynyújtás nyomás alatti döntéshozóvá válik: védekezzen, kérjen segítséget, válassza ki a megfelelő alapintézkedést, és tartsa kellő nyugalommal a helyszínt ahhoz, hogy a szakemberek átvehessék az irányítást.",
+          "tip1": "A helyszíni biztonság az első. Nem tudsz segíteni, ha te leszel a második sérült.",
+          "tip2": "Hívjon mielőbb, ha a helyzet súlyos lehet. A diszpécserek inkább irányítják az óvatos hívót, mintsem hogy túl későn érkezzenek.",
+          "tip3": "Párosítsa a cselekvést a problémával: nyomás a vérzéshez, hideg víz égési sérülésekhez, képzett válasz fulladás esetén, hely és megnyugvás sokk esetén.",
+          "tip4": "A vezetés egyszerű is lehet: mutasson egy személyre, és mondja: „Hívja a segélyszolgálatot. Kap egy tanárt. Felszabadítja a helyet.”",
+          "fact": "Vészhelyzetekben a nyugodt szereposztás csökkenti a zavarodottságot és felgyorsítja a reagálást, különösen zsúfolt helyeken, például iskolákban.",
+          "action": "Írjon egy 60 másodperces osztálytermi vészhelyzeti tervet: hívó, felnőtt, hely, kellékek, kényelem.",
+          "scenario": "Egy diák megégett, egy másik vérzik, és a terem megtelt zajjal. Te vagy az első, aki tisztán gondolkodik.",
+          "challenge": "Készítsen egy négyszereplős vészhelyzeti tervet, amelyet az osztály biztonságosan gyakorolhat egy tanárral."
         },
         "stiMyths": {
-          "title": "STI myths: replacing gossip with evidence",
-          "description": "Myths thrive where shame is loud and facts are quiet. Health literacy means refusing gossip, protecting privacy, and pointing people toward testing and care instead of blame.",
-          "tip1": "Myth: You can always tell who has an STI. Reality: many infections have no visible signs.",
-          "tip2": "Myth: Only “certain people” get STIs. Reality: exposure is about biology and behavior, not someone’s worth.",
-          "tip3": "Myth: Two condoms are safer than one. Reality: friction can make condoms tear; one used correctly is safer.",
-          "tip4": "Myth: Borrowed antibiotics are enough. Reality: wrong treatment can fail and contribute to resistance.",
-          "fact": "Stigma delays testing. When communities talk about STIs as health issues, people seek care earlier.",
-          "action": "Practice one sentence that shuts down gossip while protecting privacy.",
-          "scenario": "A rumor spreads about a student who might need testing. People are laughing and guessing names.",
-          "challenge": "Write a response that says: stop gossiping, respect privacy, use real health information."
+          "title": "STI-mítoszok: a pletyka felváltása bizonyítékokkal",
+          "description": "A mítoszok ott virágoznak, ahol a szégyen hangos, a tények pedig csendesek. Az egészségügyi ismeretek azt jelentik, hogy visszautasítjuk a pletykákat, megvédjük a magánéletet, és az embereket a hibáztatás helyett a tesztelésre és a gondozásra irányítjuk.",
+          "tip1": "Tévhit: Mindig megtudhatja, kinek van STI-je. Valóság: sok fertőzésnek nincsenek látható jelei.",
+          "tip2": "Tévhit: Csak „bizonyos emberek” kapnak STI-t. Valóság: az expozíció a biológiáról és a viselkedésről szól, nem valaki értékéről.",
+          "tip3": "Tévhit: Két óvszer biztonságosabb, mint egy. Valóság: a súrlódás miatt az óvszer elszakad; a helyesen használt biztonságosabb.",
+          "tip4": "Tévhit: A kölcsönzött antibiotikumok elegendőek. Valóság: a helytelen kezelés sikertelen lehet, és hozzájárulhat az ellenálláshoz.",
+          "fact": "A megbélyegzés késlelteti a tesztelést. Amikor a közösségek az STI-kről, mint egészségügyi problémákról beszélnek, az emberek korábban keresnek ellátást.",
+          "action": "Gyakoroljon egy olyan mondatot, amely leállítja a pletykát, miközben védi a magánéletét.",
+          "scenario": "Egy pletyka terjed egy diákról, akinek esetleg tesztelésre lesz szüksége. Az emberek nevetnek és neveket találgatnak.",
+          "challenge": "Írjon egy választ, amely így szól: hagyja abba a pletykálkodást, tartsa tiszteletben a magánéletet, használjon valódi egészségügyi információkat."
         },
         "sourceLiteracy": {
-          "title": "Health information: evidence in a noisy world",
-          "description": "Your feed is a health battlefield: miracle cures, fear posts, influencer advice, and real science all compete for attention. The skill is not knowing everything. The skill is knowing what deserves trust.",
-          "tip1": "Ask who made the claim, what evidence they show, and whether recognized health organizations agree.",
-          "tip2": "Beware of phrases like “doctors hate this,” “secret cure,” or “share before it is deleted.” They are designed to bypass critical thinking.",
-          "tip3": "Look for dates. Health guidance can change as evidence improves.",
-          "tip4": "Before sharing, pause. A false health post can spread fear faster than a virus.",
-          "fact": "Health literacy is linked to better decisions because people can find, understand, and use reliable information under pressure.",
-          "action": "Compare one viral health claim with an official health source and write the difference in plain language.",
-          "scenario": "A video promises a miracle cure, uses dramatic music, and says hospitals are hiding the truth.",
-          "challenge": "Run the three-question source test: Who says it? What proof? What do health agencies say?"
+          "title": "Egészségügyi információk: bizonyítékok egy zajos világban",
+          "description": "Az Ön hírfolyama egy egészségügyi csatatér: a csodaszerek, a félelembejegyzések, az influencer-tanácsok és a valódi tudomány versenyez a figyelemért. A készség nem tud mindent. A készség abban rejlik, hogy tudjuk, mi érdemel bizalmat.",
+          "tip1": "Kérdezze meg, hogy ki állította, milyen bizonyítékokat mutat be, és hogy egyetértenek-e az elismert egészségügyi szervezetek.",
+          "tip2": "Óvakodjon az olyan kifejezésektől, mint „az orvosok utálják ezt”, „titkos gyógymód” vagy „ossza meg, mielőtt törli”. Úgy tervezték, hogy megkerüljék a kritikus gondolkodást.",
+          "tip3": "Keress dátumokat. Az egészségügyi útmutatás a bizonyítékok javulásával változhat.",
+          "tip4": "Megosztás előtt szünetel. Egy hamis egészségügyi bejegyzés gyorsabban terjesztheti a félelmet, mint egy vírus.",
+          "fact": "Az egészségügyi ismeretek jobb döntésekhez kötődnek, mivel az emberek nyomás alatt megbízható információkat találhatnak, megérthetnek és felhasználhatnak.",
+          "action": "Hasonlítson össze egy vírus-egészségügyi állítást egy hivatalos egészségügyi forrással, és írja le a különbséget közérthető nyelven.",
+          "scenario": "Egy videó csodaszert ígér, drámai zenét használ, és azt mondja, a kórházak eltitkolják az igazságot.",
+          "challenge": "Futtassa le a három kérdésből álló forrástesztet: Ki mondja? Milyen bizonyíték? Mit mondanak az egészségügyi hatóságok?"
         },
         "capstoneMix": {
-          "title": "Capstone: lead a health mission",
-          "description": "The final mission asks you to combine everything: first response, sexual health, vaccines, consent, and evidence. The goal is not to be the expert in every room. The goal is to become the person who knows how to find help, reduce harm, and keep facts alive.",
-          "tip1": "Start with safety: emergency risks, pressure, consent, privacy, and reliable adults or services.",
-          "tip2": "Use prevention as a stack: vaccines, safer choices, testing, hygiene, trusted information, and timely care.",
-          "tip3": "Respect privacy. A helpful student does not expose someone’s health story to prove a point.",
-          "tip4": "Teach in plain language. If your younger sibling can understand it, your message is stronger.",
-          "fact": "Peer-led health education works best when it is practical, respectful, and connected to real services.",
-          "action": "Design a one-page school health mission plan with four stations: first aid, consent, vaccines, and fact-checking.",
-          "scenario": "You are asked to help plan a school health week. Students say they do not want another boring lecture.",
-          "challenge": "Create a four-station health week agenda with one activity, one trusted resource, and one takeaway per station."
+          "title": "Capstone: vezessen egészségügyi küldetést",
+          "description": "Az utolsó küldetés arra kér, hogy kombinálj mindent: az első választ, a szexuális egészséget, az oltásokat, a beleegyezést és a bizonyítékokat. Nem az a cél, hogy minden szobában legyünk a szakértők. A cél az, hogy azzá váljon, aki tudja, hogyan találhat segítséget, hogyan csökkentheti a károkat, és hogyan tarthatja életben a tényeket.",
+          "tip1": "Kezdje a biztonsággal: vészhelyzeti kockázatok, nyomásgyakorlás, beleegyezés, adatvédelem és megbízható felnőttek vagy szolgáltatások.",
+          "tip2": "Használja halomban a megelőzést: oltások, biztonságosabb választás, tesztelés, higiénia, megbízható információk és időben történő ellátás.",
+          "tip3": "Tartsa tiszteletben a magánéletet. Egy segítőkész tanuló nem fedi fel valakinek az egészségi állapotát, hogy bebizonyítsa a tényt.",
+          "tip4": "Taníts közérthető nyelven. Ha a fiatalabb testvére meg tudja érteni, az üzenete erősebb.",
+          "fact": "A társak által vezetett egészségnevelés akkor működik a legjobban, ha gyakorlatias, tiszteletteljes és valódi szolgáltatásokhoz kapcsolódik.",
+          "action": "Készítsen egy oldalas iskolai egészségügyi küldetési tervet négy állomással: elsősegélynyújtás, beleegyezés, oltások és tények ellenőrzése.",
+          "scenario": "Segítséget kérnek egy iskolai egészségügyi hét megtervezéséhez. A hallgatók azt mondják, nem akarnak még egy unalmas előadást.",
+          "challenge": "Hozzon létre egy négy állomásból álló egészségügyi hét napirendjét egy tevékenységgel, egy megbízható erőforrással és állomásonként egy elvitellel."
         }
       }
     },
     "stageQuiz": {
       "local": {
         "q0": {
-          "question": "What should you tell an emergency dispatcher first if possible?",
-          "a0": "Your full medical history",
-          "a1": "Where you are and what happened",
-          "a2": "Your social media handle",
-          "explanation": "Location and a brief description of the emergency help them send the right resources quickly."
+          "question": "Mit kell először elmondani a sürgősségi diszpécsernek, ha lehetséges?",
+          "a0": "Az Ön teljes kórtörténete",
+          "a1": "Hol vagy és mi történt",
+          "a2": "A közösségi média fogantyúd",
+          "explanation": "A helyszín és a vészhelyzet rövid leírása segít nekik gyorsan elküldeni a megfelelő forrásokat."
         },
         "q1": {
-          "question": "For heavy bleeding that soaks through a cloth, you should:",
-          "a0": "Remove the cloth to look at the wound",
-          "a1": "Add another layer on top and keep pressing",
-          "a2": "Wait an hour to see if it stops",
-          "explanation": "Removing the cloth can disturb clots. Add pressure on top until help arrives."
+          "question": "Erős vérzés esetén, amely egy ruhán keresztül ázik át, tegye a következőket:",
+          "a0": "Távolítsa el a ruhát, hogy megnézze a sebet",
+          "a1": "Tegyen még egy réteget a tetejére, és tartsa nyomva",
+          "a2": "Várjon egy órát, hátha leáll",
+          "explanation": "A kendő eltávolítása megzavarhatja a vérrögképződést. Addig nyomjon a tetejére, amíg a segítség meg nem érkezik."
         },
         "q2": {
-          "question": "For a small fresh burn, the best first step is usually:",
-          "a0": "Put butter on it",
-          "a1": "Cool with running cool water for several minutes",
-          "a2": "Wrap tightly with plastic",
-          "explanation": "Cool running water reduces heat in the tissue. Butter traps heat and increases infection risk."
+          "question": "Kis friss égés esetén a legjobb első lépés általában a következő:",
+          "a0": "Tegyünk rá vajat",
+          "a1": "Hűtsük folyó hideg vízzel néhány percig",
+          "a2": "Csomagolja be szorosan műanyaggal",
+          "explanation": "A hideg folyóvíz csökkenti a hőt a szövetben. A vaj felfogja a hőt és növeli a fertőzés kockázatát."
         },
         "q3": {
-          "question": "Why might someone get an STI test even without symptoms?",
-          "a0": "Tests are only for people with symptoms",
-          "a1": "Many STIs can be silent but still harmful or spreadable",
-          "a2": "Testing cures all STIs instantly",
-          "explanation": "Many infections have no early symptoms; testing finds them so you can get care and protect partners."
+          "question": "Miért kaphat valaki STI-tesztet tünet nélkül is?",
+          "a0": "A tesztek csak a tünetekkel küzdők számára készültek",
+          "a1": "Sok STI lehet csendes, de mégis káros vagy terjedhet",
+          "a2": "A tesztelés minden STI-t azonnal meggyógyít",
+          "explanation": "Sok fertőzésnek nincsenek korai tünetei; a tesztelés megtalálja őket, így Ön gondoskodást kaphat és megvédheti partnereit."
         }
       },
       "regional": {
         "q0": {
-          "question": "If an adult suddenly cannot speak or breathe and holds their throat, you should:",
-          "a0": "Ignore them until they cough",
-          "a1": "Call emergency services immediately",
-          "a2": "Give them a glass of water",
-          "explanation": "Complete airway blockage is an emergency — trained help and EMS are needed urgently."
+          "question": "Ha egy felnőtt hirtelen nem tud beszélni vagy lélegezni, és befogja a torkát, tegye a következőket:",
+          "a0": "Figyelmen kívül hagyja őket, amíg nem köhögnek",
+          "a1": "Azonnal hívja a segélyszolgálatot",
+          "a2": "Adj nekik egy pohár vizet",
+          "explanation": "A légutak teljes elzáródása vészhelyzet – képzett segítségre és sürgősségi segélyszolgálatra van szükség."
         },
         "q1": {
-          "question": "If prescribed antibiotics for an STI, you should:",
-          "a0": "Stop when you feel better",
-          "a1": "Finish all pills as directed",
-          "a2": "Share extras with a partner",
-          "explanation": "Stopping early can fail to kill the bacteria and contribute to resistance. Never share antibiotics."
+          "question": "Ha STI-re antibiotikumot írnak fel, a következőket kell tennie:",
+          "a0": "Hagyja abba, ha jobban érzi magát",
+          "a1": "Fejezze be az összes tablettát az utasításoknak megfelelően",
+          "a2": "Oszd meg az extrákat egy partnerrel",
+          "explanation": "A korai abbahagyás nem képes elpusztítani a baktériumokat, és hozzájárul a rezisztenciához. Soha ne osszon antibiotikumot."
         },
         "q2": {
-          "question": "Vaccines mainly work by:",
-          "a0": "Replacing your blood",
-          "a1": "Training the immune system to recognize a germ",
-          "a2": "Curing active disease instantly",
-          "explanation": "Vaccines prepare your immune system so a future encounter with the real germ is much safer."
+          "question": "A vakcinák főként a következők szerint fejtik ki hatásukat:",
+          "a0": "A vér cseréje",
+          "a1": "Az immunrendszer képzése a kórokozó felismerésére",
+          "a2": "Aktív betegség azonnali gyógyítása",
+          "explanation": "A vakcinák felkészítik az immunrendszert, így a valódi csírával való jövőbeli találkozás sokkal biztonságosabb."
         },
         "q3": {
-          "question": "Measles is:",
-          "a0": "Harmless in all children",
-          "a1": "A serious disease that vaccines have greatly reduced",
-          "a2": "Only spread by animals",
-          "explanation": "Measles can cause severe complications; vaccination is a key reason cases dropped worldwide."
+          "question": "A kanyaró:",
+          "a0": "Minden gyermeknél ártalmatlan",
+          "a1": "Súlyos betegség, amelyet a védőoltások jelentősen csökkentettek",
+          "a2": "Csak állatok terjesztik",
+          "explanation": "A kanyaró súlyos szövődményeket okozhat; a védőoltás az egyik legfontosabb oka annak, hogy világszerte csökkennek az esetek."
         }
       },
       "national": {
         "q0": {
-          "question": "In a medical emergency at school, the best first step is usually:",
-          "a0": "Only post on social media",
-          "a1": "Get adult help and emergency services if needed",
-          "a2": "Wait until the end of class",
-          "explanation": "Trained adults and EMS are equipped to respond; time matters in emergencies."
+          "question": "Az iskolai egészségügyi vészhelyzetben a legjobb első lépés általában a következő:",
+          "a0": "Csak a közösségi oldalakon tegye közzé",
+          "a1": "Szükség esetén kérjen felnőtt segítséget és segélyszolgálatot",
+          "a2": "Várd meg az óra végét",
+          "explanation": "A képzett felnőttek és az EMS fel vannak szerelve a reagálásra; vészhelyzetben az idő számít."
         },
         "q1": {
-          "question": "A reliable place to check vaccine facts is often:",
-          "a0": "Anonymous forum threads only",
-          "a1": "Your country's ministry of health or WHO",
-          "a2": "Memes with many likes",
-          "explanation": "Official health agencies review evidence and update guidance — use them to verify claims."
+          "question": "Az oltással kapcsolatos tények ellenőrzésének megbízható helye gyakran a következő:",
+          "a0": "Csak névtelen fórumszálak",
+          "a1": "Az Ön országa Egészségügyi Minisztériuma vagy a WHO",
+          "a2": "Mémek sok lájkkal",
+          "explanation": "A hivatalos egészségügyi ügynökségek áttekintik a bizonyítékokat és frissítik az útmutatást – használja őket az állítások ellenőrzésére."
         },
         "q2": {
-          "question": "Two condoms at once are:",
-          "a0": "Safer than one",
-          "a1": "Not recommended — friction can cause breakage",
-          "a2": "Required by law",
-          "explanation": "Using one condom correctly is safer than double-layering, which increases tear risk."
+          "question": "Két óvszer egyszerre:",
+          "a0": "Egynél biztonságosabb",
+          "a1": "Nem ajánlott – a súrlódás törést okozhat",
+          "a2": "Törvény előírja",
+          "explanation": "Egy óvszer helyes használata biztonságosabb, mint a kétrétegű, ami növeli a szakadás kockázatát."
         },
         "q3": {
-          "question": "Health literacy means:",
-          "a0": "Memorizing every disease name",
-          "a1": "Finding, understanding, and using reliable health information",
-          "a2": "Never seeing a doctor",
-          "explanation": "It is about skills to navigate real information and services, not encyclopedic memorization."
+          "question": "Az egészségműveltség a következőket jelenti:",
+          "a0": "Minden betegség nevének memorizálása",
+          "a1": "Megbízható egészségügyi információk keresése, megértése és felhasználása",
+          "a2": "Soha nem látni orvost",
+          "explanation": "A valódi információk és szolgáltatások eligazításának készségeiről van szó, nem pedig az enciklopédikus memorizálásról."
         }
       }
     },
     "workflow": {
-      "nextMission": "Next mission",
-      "nextMissionBody": "Follow this recommended step to keep the Academy moving without guessing what to do next.",
+      "nextMission": "Következő küldetés",
+      "nextMissionBody": "Kövesse ezt az ajánlott lépést, hogy az Akadémia mozgásban maradjon anélkül, hogy kitalálná, mit tegyen.",
       "continueLesson": "{stage}: {title}",
-      "takeQuiz": "{stage} stage checkpoint",
-      "finishedTitle": "Academy complete",
-      "finishedBody": "You finished the current Academy path. Review any lesson or retake a quiz to stay sharp.",
-      "startMission": "Start mission",
-      "startQuiz": "Take checkpoint",
-      "reviewPath": "Review path",
-      "takeStageQuiz": "Take stage checkpoint",
-      "lockedStatus": "Locked",
-      "completeStatus": "Complete",
-      "quizReadyStatus": "Checkpoint ready",
-      "inProgressStatus": "In progress"
+      "takeQuiz": "{stage} szakasz ellenőrzőpont",
+      "finishedTitle": "Kész az Akadémia",
+      "finishedBody": "Befejezted az Akadémia jelenlegi útját. Tekintse át bármelyik leckét, vagy töltse ki újra a kvízt, hogy éles maradjon.",
+      "startMission": "Indítsa el a küldetést",
+      "startQuiz": "Vegye át az ellenőrző pontot",
+      "reviewPath": "Áttekintési útvonal",
+      "takeStageQuiz": "Vegye ki a színpadi ellenőrzőpontot",
+      "lockedStatus": "Bezárt",
+      "completeStatus": "Teljes",
+      "quizReadyStatus": "Ellenőrzőpont készen áll",
+      "inProgressStatus": "Folyamatban van"
     },
     "fieldLab": {
       "title": "Field Lab",
-      "subtitle": "Turn the lesson into a one-minute plan. Your note stays only on this device.",
-      "observeLabel": "Observe",
-      "decideLabel": "Decide",
-      "actLabel": "Act",
-      "placeholder": "Example: I would first check safety, then call for help, then tell an adult exactly what I saw...",
-      "saveLabel": "Save field note",
-      "savedLabel": "Saved on this device",
-      "observeHint": "What do you actually see, hear, or know in this scenario? Stick to the facts.",
-      "decideHint": "What is the smartest first move? Pick something a calm bystander can really do.",
-      "actHint": "Write the exact words or steps you would use in the next 60 seconds.",
-      "syncedLabel": "Saved",
-      "draftLabel": "Saving draft"
+      "subtitle": "Változtasd a leckét egyperces tervvé. Jegyzete csak ezen az eszközön marad.",
+      "observeLabel": "Figyeld meg",
+      "decideLabel": "Dönt",
+      "actLabel": "törvény",
+      "placeholder": "Példa: Először ellenőrizném a biztonságot, majd segítséget hívnék, majd elmondanám egy felnőttnek, hogy pontosan mit láttam...",
+      "saveLabel": "Mezőjegyzet mentése",
+      "savedLabel": "Mentve erre az eszközre",
+      "observeHint": "Mit látsz, hallasz vagy tudsz valójában ebben a forgatókönyvben? Ragaszkodj a tényekhez.",
+      "decideHint": "Mi a legokosabb első lépés? Válassz valamit, amit egy nyugodt szemlélő igazán meg tud csinálni.",
+      "actHint": "Írja le pontosan azokat a szavakat vagy lépéseket, amelyeket a következő 60 másodpercben használni fog.",
+      "syncedLabel": "Mentve",
+      "draftLabel": "Piszkozat mentése"
     },
     "visuals": {
-      "academy": "Students learning health skills through maps, phones, clinics, and community action",
-      "emergency": "Emergency call map with location pins and first response signal lines",
-      "firstAid": "First aid field kit with bandage, clean cloth, and safety steps",
-      "sexualHealth": "Private conversation bubble, shield, and clinic doorway for confidential sexual health support",
-      "vaccines": "Immune system shield, vaccine card, and public health network",
-      "literacy": "Fact-checking desk with phone, sources, magnifier, and evidence notes",
-      "capstone": "Capstone expedition map connecting first aid, vaccines, relationships, and evidence"
+      "academy": "A diákok térképeken, telefonokon, klinikákon és közösségi akciókon keresztül sajátítják el az egészségügyi ismereteket",
+      "emergency": "Segélyhívási térkép helyérintkezőkkel és első reagálási jelvonalakkal",
+      "firstAid": "Elsősegélynyújtó készlet kötéssel, tiszta ruhával és biztonsági lépésekkel",
+      "sexualHealth": "Magánbeszélgetési buborék, pajzs és klinikaajtó a bizalmas szexuális egészség támogatásához",
+      "vaccines": "Immunrendszer pajzs, vakcinakártya és közegészségügyi hálózat",
+      "literacy": "Tényellenőrző asztal telefonnal, forrásokkal, nagyítóval és bizonyítékokkal",
+      "capstone": "Capstone expedíciós térkép, amely összeköti az elsősegélynyújtást, az oltásokat, a kapcsolatokat és a bizonyítékokat"
     },
     "hero": {
-      "chipFirstAid": "First aid that works",
-      "chipLiteracy": "Health literacy",
-      "chipMissions": "Mission-based learning"
+      "chipFirstAid": "Elsősegély, ami működik",
+      "chipLiteracy": "Egészségügyi műveltség",
+      "chipMissions": "Küldetés alapú tanulás"
     },
     "toast": {
-      "lessonLoggedTitle": "Lesson logged",
-      "lessonLoggedBody": "+10 XP earned. Streak updated and your next mission is ready."
+      "lessonLoggedTitle": "Lecke naplózva",
+      "lessonLoggedBody": "+10 XP szerzett. Frissítve a sorozatot, és készen áll a következő küldetésed."
     },
     "sexualHealthSupport": {
-      "title": "Confidential support matters",
-      "body": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
-      "findCare": "Find care",
-      "rights": "Know your rights"
+      "title": "A bizalmas támogatás számít",
+      "body": "Ha ez a téma valami igazit érint az életedben, nem kell egyedül megoldanod. Kérdezzen meg egy megbízható felnőttet, ápolónőt, orvost, ifjúsági klinikát vagy segélyvonalat, hogy milyen bizalmas támogatást jelent az Ön lakóhelye.",
+      "findCare": "Keressen gondoskodást",
+      "rights": "Ismerje meg a jogait"
+    },
+    "stageBadgeFormat": "{n}. szakasz",
+    "lessonIndexFormat": "L{n}/{összesen}",
+    "a11yLocked": "bezárt",
+    "metaSuffix": "Hallgatói Egészségügyi Akadémia",
+    "l8": {
+      "eyebrow": "Redi Egészségügyi Akadémia",
+      "heroTitle1": "Legyen a",
+      "heroTitle2": "egészségügyi fordító",
+      "heroTitle3": "a közösséged számára.",
+      "heroLead": "Klinikailag felülvizsgált, gamified tanterv, amely helyi, regionális és országos szakaszokat ölel fel. Európa-szerte roma egészségügyi közvetítőkkel építették.",
+      "heroStatPanelImageAlt": "Illusztráció, amely kiemeli a diákokat, akik együtt gyakorolják az egészségügyi ismeretek mérföldköveit.",
+      "heroPrimaryCta": "Kezdje el a mai küldetést",
+      "heroSecondaryCta": "Lásd a tananyagot",
+      "statLevel": "Szint",
+      "statXp": "XP",
+      "statStreak": "Napi sorozat",
+      "statBadges": "Jelvények",
+      "statLessons": "Leckék elvégezve",
+      "statDaysActive": "Aktív napok",
+      "missionDeckTitle": "Küldetés fedélzet",
+      "missionDeckSubtitle": "Három darab ezt az összetettet minden héten.",
+      "missionTodayLabel": "Ma",
+      "missionTodayBody": "Folytassa onnan, ahol abbahagyta – körülbelül {min} perc.",
+      "missionTodayCta": "Folytassa a küldetést",
+      "missionTodayQuiz": "Vegyen részt a színpadi kvízben",
+      "missionTodayDone": "Minden szakasz törölve",
+      "missionTodayDoneBody": "Tekintse át a modult, vagy ossza meg a tanultakat.",
+      "missionStreakLabel": "Csík",
+      "missionStreakBody": "Tartsd életben a tüzet. Jelenj meg holnap.",
+      "missionStreakDay": "{count, többes szám, egy {# nap} másik {# nap}}",
+      "missionStreakCta": "Gyors tény naplózása",
+      "missionBadgeLabel": "Következő jelvény",
+      "missionBadgeBody": "Végezzen el még {remaining} {remaining, plural, még egy {lecke} másik {lecke}} a {stage} szakaszban.",
+      "missionBadgeAllDone": "Minden jelvény megszerzett – ossza meg diplomáját alább.",
+      "journeyTitle": "Az utazásod",
+      "journeySubtitle": "Három szakasz. Tizenkét küldetés. Egy okleveles terepi közvetítő.",
+      "journeyCurrent": "itt vagy",
+      "journeyUnlocked": "Feloldva",
+      "journeyLocked": "Bezárt",
+      "journeyComplete": "Teljes",
+      "journeyMilestoneLocal": "Helyi",
+      "journeyMilestoneRegional": "Regionális",
+      "journeyMilestoneNational": "Nemzeti",
+      "moduleListTitle": "Modulok ebben a szakaszban",
+      "moduleStatusLocked": "Bezárt",
+      "moduleStatusDone": "Kész",
+      "moduleStatusOpen": "Nyitott",
+      "moduleStatusNew": "Új",
+      "achievementWallTitle": "Eredményfal",
+      "achievementWallSubtitle": "Itt minden jelvény egy történet, amelyet megoszthatsz.",
+      "achievementProgress": "{percent}% a feloldáshoz",
+      "achievementEarned": "Megszerzett",
+      "achievementLockedHint": "A feloldáshoz teljesítse a {stage} szakaszos kvízt.",
+      "leaderboardTitle": "Legjobb tanulók",
+      "leaderboardSubtitle": "Anonimizált kohorsz, hetente frissítve.",
+      "leaderboardYou": "Te",
+      "leaderboardRank": "Rang",
+      "leaderboardCountryFallback": "Európa",
+      "leaderboardEmpty": "Még nincs elég adat – folytassa a tanulást, és a jövő héten itt fog megjelenni.",
+      "diplomaTitle": "Terepközvetítői diploma",
+      "diplomaSubtitle": "Amiért dolgozol.",
+      "diplomaBody": "Tegye át mind a három szakaszt, és szerezzen digitális diplomát, amelyet megoszthat a munkaadókkal és a civil szervezetekkel.",
+      "diplomaProgress": "{total}/{completed} követelmény teljesült",
+      "diplomaPreviewName": "Future Field Mediator",
+      "diplomaPreviewDate": "Díjazás: {date}",
+      "diplomaSignature": "Redi Clinical Board",
+      "diplomaPreview": "Előnézet",
+      "diplomaUnlocked": "Diploma kész",
+      "diplomaCta": "Nyílt diploma",
+      "countryTitle": "A te országod",
+      "countryHint": "Példák, statisztikák és segélyhívószámok lokalizálása.",
+      "ctaBanner": "Megragadt? A helyszínen tesztelt közvetítők egyetlen érintéssel elérhetők.",
+      "ctaBannerLink": "Tegyen fel egy kérdést",
+      "whatsInsideTitle": "Mi van benne",
+      "whatsInsideFirstAid": "Vészhelyzeti reagálás és elsősegélynyújtás",
+      "whatsInsideSTI": "Szexuális egészség és beleegyezés",
+      "whatsInsideVaccines": "Vakcinák és immunizálás",
+      "whatsInsideMyths": "Félretájékoztatás és források"
     }
   },
   "errors": {
@@ -768,5 +1123,1471 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Családi egészség",
+    "subtitle": "Kövesd az egész családod egészségét. Minden adat a telefonodon marad.",
+    "back": "Vissza a családhoz",
+    "yearsOld": "{age} éves",
+    "expecting": "· Várandós",
+    "pregnancyTitle": "Terhesség",
+    "pregnancyWeeks": "{weeks}. hét a 40-ből",
+    "pregnancyExpecting": "Várandós",
+    "logMood": "Hangulat rögzítése",
+    "logWater": "Víz",
+    "logActivity": "Aktivitás",
+    "logFormTitle": "{type} rögzítése",
+    "logNote": "Megjegyzés hozzáadása (opcionális)",
+    "save": "Mentés",
+    "recentLogs": "Legutóbbi bejegyzések",
+    "noLogs": "Még nincs bejegyzés. Kezdd el a követést!",
+    "addMemberTitle": "Családtag hozzáadása",
+    "addMemberButton": "Családtag hozzáadása",
+    "addToFamily": "Hozzáadás a családhoz",
+    "namePlaceholder": "Név",
+    "agePlaceholder": "Életkor",
+    "pregnantLabel": "Jelenleg várandós",
+    "emptyTitle": "Családi egészségközpontod",
+    "emptyDesc": "Adj hozzá családtagokat az egészségük, oltásaik és gyógyszereik követéséhez. Minden a telefonodon marad — fiók nem szükséges.",
+    "vaccineTrackingTitle": "Oltáskövetés",
+    "vaccineTrackingDesc": "Hamarosan minden tag számára",
+    "medicationRemindersTitle": "Gyógyszeremlékeztetők",
+    "medicationRemindersDesc": "Hamarosan",
+    "logTypes": {
+      "mood": "Hangulat",
+      "water": "Víz (pohár)",
+      "activity": "Aktivitás (perc)",
+      "weight": "Súly (kg)",
+      "note": "Jegyzet"
+    },
+    "genders": {
+      "female": "Nő",
+      "male": "Férfi",
+      "other": "Egyéb"
+    },
+    "relation": {
+      "self": "Én",
+      "child": "Gyermekem",
+      "spouse": "Házastárs / Partner",
+      "parent": "Szülő",
+      "other": "Egyéb"
+    }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Egészségügyi szótár — Redi Health",
+      "description": "Orvosi kifejezések egyszerűen elmagyarázva"
+    },
+    "title": "Egészségügyi szótár",
+    "subtitle": "Orvosi kifejezések egyszerűen elmagyarázva.",
+    "searchPlaceholder": "Keresés a fogalmak között...",
+    "searchAria": "Orvosi kifejezések keresése",
+    "noResults": "Nincs találat. Próbáljon másik keresést.",
+    "allCount": "Összes ({count})",
+    "categories": {
+      "condition": "Betegségek",
+      "medication": "Gyógyszerek",
+      "procedure": "Beavatkozások",
+      "body": "Test és egészség",
+      "test": "Vizsgálatok"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Magas vérnyomás",
+        "simple": "A vér túl erősen nyomja az erek falát. Kezelés nélkül szívrohamot vagy stroke-ot okozhat. A gyógyszert minden nap be kell venni."
+      },
+      "diabetes-type-2": {
+        "term": "Cukorbetegség (2-es típus)",
+        "simple": "A tested nem tudja jól használni a cukrot. A cukor felgyűlik a vérben és károsítja a szerveket. Gyógyszer, egészséges étel és mozgás kell. Nem csak a sok cukorevéstől alakul ki."
+      },
+      "anemia": {
+        "term": "Vérszegénység",
+        "simple": "Nincs elég egészséges vörösvértest a szervezetben. Fáradtnak, gyengének vagy szédülősnek érezheted magad. Gyakran vashiány okozza. Terhes nőknél nagyon gyakori."
+      },
+      "asthma": {
+        "term": "Asztma",
+        "simple": "A légutak beszűkülnek és megduzzadnak, ezért nehéz levegőt venni. Sípoló légzés vagy köhögés jelentkezhet. Ilyenkor használd az inhalátort. Kerüld a füstöt és a port."
+      },
+      "tuberculosis-tb": {
+        "term": "Tuberkulózis (TBC)",
+        "simple": "Súlyos tüdőfertőzés. Hetekig köhögsz, fogysz és éjszaka izzadsz. Levegővel terjed. Hat hónap gyógyszerrel gyógyítható, de az összes tablettát végig kell szedni."
+      },
+      "depression": {
+        "term": "Depresszió",
+        "simple": "Olyan betegség, amikor hetekig szomorúnak, reménytelennek vagy üresnek érzed magad. Nem gyengeség, és nem a te hibád. Gyógyszer és beszélgetés is segíthet. Kérj segítséget."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatitis B/C",
+        "simple": "A májat támadó vírus. Évekig lehet tünet nélkül, mégis lassan károsítja a májat. Vérrel és tűvel terjed. Hepatitis B ellen van oltás."
+      },
+      "pneumonia": {
+        "term": "Tüdőgyulladás",
+        "simple": "Súlyos fertőzés a tüdőben. Láz, váladékos köhögés és nehézlégzés jelentkezik. Orvostól kapott antibiotikum kell. Csecsemőknél és időseknél veszélyes lehet."
+      },
+      "gastritis": {
+        "term": "Gyomorhurut",
+        "simple": "A gyomor nyálkahártyája irritált vagy gyulladt. Égő fájdalmat, hányingert vagy puffadást okozhat. Kerüld a csípős ételt, az alkoholt és a dohányzást. A gyógyszer segíthet."
+      },
+      "eczema": {
+        "term": "Ekcéma",
+        "simple": "Viszkető, piros, száraz foltok a bőrön. Nem fertőző. Gyakran használj hidratáló krémet. Kerüld az erős szappanokat. Az orvos segítő krémet írhat fel."
+      },
+      "antibiotic": {
+        "term": "Antibiotikum",
+        "simple": "A baktériumokat pusztító gyógyszer. Vírusok, például influenza vagy nátha ellen nem hat. A teljes kúrát végig kell szedni akkor is, ha jobban vagy, különben a baktériumok visszatérnek."
+      },
+      "ibuprofen": {
+        "term": "Ibuprofen",
+        "simple": "Fájdalomcsillapító, ami a gyulladást és a lázat is csökkenti. Étellel vedd be, hogy kíméld a gyomrot. Ne vegyél be többet a dobozon jelzettnél. Terhesség alatt nem biztonságos."
+      },
+      "paracetamol": {
+        "term": "Paracetamol",
+        "simple": "Gyakori fájdalom- és lázcsillapító. A legtöbb embernek biztonságos, terhes nőknek is. Napi 4 grammnál többet ne szedj, mert károsítja a májat."
+      },
+      "insulin": {
+        "term": "Inzulin",
+        "simple": "Hormon, amely segíti a szervezetet a cukor használatában. A cukorbetegeknek néha inzulininjekció kell. Ez nem azt jelenti, hogy rosszabb lett a betegség, csak más kezelés szükséges."
+      },
+      "metformin": {
+        "term": "Metformin",
+        "simple": "A leggyakoribb cukorbetegség elleni gyógyszer. Segít, hogy a tested jobban használja a cukrot. Étellel kell bevenni. Kezdetben gyomorpanaszt okozhat, de ez többnyire elmúlik."
+      },
+      "blood-test": {
+        "term": "Vérvizsgálat",
+        "simple": "Egy kis tű kevés vért vesz a karodból. Az orvos így ellenőriz fertőzést, vérszegénységet, cukorbetegséget és sok más dolgot. Csak egy pillanatig fáj."
+      },
+      "x-ray": {
+        "term": "Röntgen",
+        "simple": "Kép a csontokról és a tüdőről speciális sugárral. Néhány másodpercig mozdulatlanul kell állni. Nem fáj. A legtöbb embernek biztonságos, de terhességet jelezni kell az orvosnak."
+      },
+      "ultrasound": {
+        "term": "Ultrahang",
+        "simple": "Kép a test belsejéről hanghullámokkal. Az orvos gélt tesz a bőrre, majd egy eszközt mozgat rajta. Nem fáj. Terhességben gyakran a baba ellenőrzésére használják."
+      },
+      "ecg-ekg": {
+        "term": "EKG",
+        "simple": "A szív ritmusát vizsgáló teszt. Kis tappancsokat tesznek a mellkasra. Nem fáj. Körülbelül 5 percig tart. Megmutatja, hogy rendesen ver-e a szív."
+      },
+      "vaccination": {
+        "term": "Védőoltás",
+        "simple": "Kis injekció, amely megtanítja a szervezetet harcolni egy betegség ellen még azelőtt, hogy megbetegednél. Az enyhe mellékhatások, például a fájó kar vagy kis láz normálisak."
+      },
+      "blood-pressure": {
+        "term": "Vérnyomás",
+        "simple": "Az a nyomás, amellyel a vér az erek falát nyomja. A normális érték körülbelül 120/80. A 140/90 feletti magas vérnyomás veszélyes, mert nem mindig érezhető, mégis károsítja a szívet és az agyat."
+      },
+      "blood-sugar": {
+        "term": "Vércukor",
+        "simple": "A vérben lévő cukor mennyisége. Éhgyomorra a normál érték 70-100 mg/dL. A túl magas érték cukorbetegségre utal. A túl alacsony szédülést és remegést okoz."
+      },
+      "bmi": {
+        "term": "BMI",
+        "simple": "A testtömegindex megmutatja, hogy a súlyod megfelelő-e a magasságodhoz. 18,5 alatt soványság, 18,5-25 között normál, 25 fölött túlsúly, 30 fölött elhízás."
+      },
+      "immune-system": {
+        "term": "Immunrendszer",
+        "simple": "Ez a tested védelme a kórokozók ellen. A fehérvérsejtek a fertőzésekkel harcolnak. Az oltások edzik az immunrendszert. A jó étel, az alvás és a mozgás erősíti."
+      }
+    }
+  },
+  "vaccines": {
+    "heroTitle": "Oltási útmutató",
+    "heroSubtitle": "Minden oltás egyszerűen elmagyarázva. Koppints bármelyik oltásra, hogy többet tudj meg.",
+    "askCta": "Kérdezz az oltásokról",
+    "backToSchedule": "Vissza az oltási naptárhoz",
+    "preventsLabel": "Megelőzi",
+    "dosesNeeded": "{count, plural, one {# adag szükséges} other {# adag szükséges}}",
+    "howItWorks": "Hogyan működik",
+    "sideEffects": "Mellékhatások (normálisak)",
+    "mythTitle": "Tévhit vs. igazság",
+    "qaTitle": "Kérdezz az oltásokról",
+    "qaSubtitle": "Bármilyen kérdés. Őszinte válaszok tereptapasztalatból.",
+    "qaPlaceholder": "Írd be az oltással kapcsolatos kérdésed...",
+    "qaAria": "Tegyél fel kérdést az oltásokról",
+    "qaCommon": "Gyakori kérdések",
+    "childAgePrompt": "Hány éves a gyermeked?",
+    "childAgeAria": "Gyermek életkorának kiválasztása",
+    "ageOptionDefault": "Válassz életkort...",
+    "ageNewborn": "Újszülött (0 hónap)",
+    "age2m": "2 hónap",
+    "age4m": "4 hónap",
+    "age6m": "6 hónap",
+    "age12m": "12 hónap (1 év)",
+    "age18m": "18 hónap",
+    "age48m": "4-6 év",
+    "age108m": "9-12 év",
+    "neededByAge": "Ebben a korban szükséges oltások:",
+    "vaccinesCount": "{count, plural, one {# oltás} other {# oltás}}",
+    "importance": {
+      "critical": "Létfontosságú",
+      "important": "Fontos",
+      "recommended": "Ajánlott"
+    },
+    "fears": [
+      "Biztonságosak az oltások a babámnak?",
+      "Fájni fog a gyermekemnek?",
+      "Mi van, ha utána lázas lesz?",
+      "Elhalaszthatom az oltásokat?",
+      "A gyermekem beteg - így is kaphat oltást?"
+    ],
+    "meta": {
+      "title": "Oltási útmutató - Redi Health",
+      "description": "Minden oltás egyszerű szavakkal elmagyarázva."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (tuberkulózis)",
+        "preventsDiseases": [
+          "Tuberkulózis (TBC)"
+        ],
+        "howItWorks": "Ez az oltás megtanítja a baba szervezetét a tuberkulózis elleni védekezésre - ez egy súlyos, levegőben terjedő tüdőbetegség. Egy kis karba adott injekció évekre védelmet ad.",
+        "sideEffects": "Az oltás helyén kis csomó vagy heg lehet a karon. Ez normális, és azt jelzi, hogy az oltás működik.",
+        "mythDebunked": "TÉVHIT: 'A TBC már nem létezik.' IGAZSÁG: A TBC ma is sok embert megöl minden évben. Zsúfolt körülmények között gyorsan terjed."
+      },
+      "hepb": {
+        "name": "Hepatitis B",
+        "preventsDiseases": [
+          "Hepatitis B (májbetegség)"
+        ],
+        "howItWorks": "Megvédi a májat egy olyan vírustól, amely élethosszig tartó károsodást és rákot okozhat. Születéskor adják, mert a csecsemők a legvédtelenebbek.",
+        "sideEffects": "Enyhe fájdalom az injekció helyén. Néhány baba egy napig nyűgösebb lehet. Nem súlyos.",
+        "mythDebunked": "TÉVHIT: 'A babám túl kicsi az újszülöttkori oltáshoz.' IGAZSÁG: Az újszülöttek a legsebezhetőbbek. Minél korábban védjük meg őket, annál biztonságosabb."
+      },
+      "dtap": {
+        "name": "DTaP (diftéria, tetanusz, szamárköhögés)",
+        "preventsDiseases": [
+          "Diftéria",
+          "Tetanusz",
+          "Szamárköhögés"
+        ],
+        "howItWorks": "Ez az oltás egyszerre három betegség ellen véd. A diftéria elzárhatja a torkot, a tetanusz görcsbe húzza az izmokat, a szamárköhögés pedig fulladást okozhat a babáknál.",
+        "sideEffects": "Az injekció helye piros és fájdalmas lehet. A gyermek 1-2 napig enyhén lázas lehet.",
+        "mythDebunked": "TÉVHIT: 'Ezek a betegségek már nincsenek, minek oltani?' IGAZSÁG: Azért ritkák, mert oltunk. Ha a közösségek abbahagyják az oltást, a betegségek visszatérnek."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (bénulás)"
+        ],
+        "howItWorks": "A polio egy vírus, amely órák alatt végleges bénulást okozhat a gyermek lábában. Ez az oltás szinte eltüntette a betegséget a világ nagy részéről.",
+        "sideEffects": "Nagyon enyhe. Legfeljebb egy kis bőrpír az injekció helyén.",
+        "mythDebunked": "TÉVHIT: 'A polio eltűnt, erre már nincs szükség.' IGAZSÁG: Európában azért tűnt el, mert oltunk. Egy oltatlan utazó visszahozhatja."
+      },
+      "mmr": {
+        "name": "MMR (kanyaró, mumpsz, rubeola)",
+        "preventsDiseases": [
+          "Kanyaró",
+          "Mumpsz",
+          "Rubeola"
+        ],
+        "howItWorks": "A kanyaró rendkívül fertőző, és agykárosodást vagy halált is okozhat. Ez az oltás egyetlen injekcióval mindhárom betegség ellen véd.",
+        "sideEffects": "Körülbelül 10 gyerekből 1-nél enyhe láz és kiütés jelentkezhet 7-10 nappal később. Ez azt jelzi, hogy a szervezet tanul védekezni.",
+        "mythDebunked": "TÉVHIT: 'Az MMR autizmust okoz.' IGAZSÁG: Nagy vizsgálatok nem találtak kapcsolatot az autizmussal. A kanyaró viszont ölhet."
+      },
+      "pneumo": {
+        "name": "Pneumococcus (PCV13)",
+        "preventsDiseases": [
+          "Tüdőgyulladás",
+          "Agyhártyagyulladás",
+          "Véráramfertőzések"
+        ],
+        "howItWorks": "Megvéd azoktól a baktériumoktól, amelyek tüdőgyulladást, agyhártyagyulladást és súlyos vérfertőzést okoznak. Ezek a kisgyermekek legnagyobb veszélyei közé tartoznak.",
+        "sideEffects": "Enyhe láz, nyűgösség és fájdalom az oltás helyén 1-2 napig.",
+        "mythDebunked": "TÉVHIT: 'A gyerekek a túl sok oltástól lesznek betegek.' IGAZSÁG: A gyermek immunrendszere naponta több ezer kórokozóval találkozik. Néhány oltás nem túl sok számára."
+      },
+      "rota": {
+        "name": "Rotavírus",
+        "preventsDiseases": [
+          "Súlyos hasmenés és hányás csecsemőknél"
+        ],
+        "howItWorks": "Szájon át adott cseppek formájában kapják, nem injekcióként. Megvéd a súlyos hasmenést és kiszáradást okozó vírustól.",
+        "sideEffects": "Nagyon enyhe. Néha egy kis nyűgösség vagy enyhe hasmenés jelentkezhet.",
+        "mythDebunked": "TÉVHIT: 'A hasmenés normális a babáknál, nem kell oltás.' IGAZSÁG: A rotavírusos hasmenés gyors kiszáradást okozhat, és veszélyes lehet."
+      },
+      "varicella": {
+        "name": "Varicella (bárányhimlő)",
+        "preventsDiseases": [
+          "Bárányhimlő"
+        ],
+        "howItWorks": "A bárányhimlő enyhének tűnhet, mégis súlyos bőrfertőzést, tüdőgyulladást vagy agyi szövődményt okozhat. Az oltás a legtöbb esetet megelőzi.",
+        "sideEffects": "Enyhe fájdalom. Ritkán néhány bárányhimlőszerű pötty jelenhet meg az oltás helye közelében.",
+        "mythDebunked": "TÉVHIT: 'Jobb természetesen átesni a bárányhimlőn.' IGAZSÁG: A természetes fertőzés súlyos szövődményeket okozhat, és később övsömörhöz vezethet."
+      },
+      "hpv": {
+        "name": "HPV (humán papillomavírus)",
+        "preventsDiseases": [
+          "Méhnyakrák",
+          "Más daganatok"
+        ],
+        "howItWorks": "Ez az oltás rákot előz meg. Általában még azelőtt adják, hogy a tinédzser kapcsolatba kerülne a vírussal.",
+        "sideEffects": "Fájó kar, néha enyhe fejfájás vagy szédülés. Nagyon biztonságos.",
+        "mythDebunked": "TÉVHIT: 'Ez az oltás szexuális aktivitásra bátorít.' IGAZSÁG: Ez az oltás a RÁKOT előzi meg. Semmi köze a viselkedéshez."
+      },
+      "flu": {
+        "name": "Influenza (szezonális influenza)",
+        "preventsDiseases": [
+          "Szezonális influenza"
+        ],
+        "howItWorks": "Az influenza nem egyszerű megfázás. A kisgyermekekre, idősekre és várandós nőkre különösen veszélyes lehet. Az oltást évente frissítik.",
+        "sideEffects": "Enyhe karfájdalom és néha alacsony láz egy napig. Az influenzaoltástól NEM lehet influenzát kapni.",
+        "mythDebunked": "TÉVHIT: 'Az influenzaoltás influenzát okoz.' IGAZSÁG: Ez lehetetlen. Az oltás nem tartalmaz élő vírust."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Születéskor"
+      },
+      "2months": {
+        "label": "2 hónaposan"
+      },
+      "4months": {
+        "label": "4 hónaposan"
+      },
+      "6months": {
+        "label": "6 hónaposan"
+      },
+      "12months": {
+        "label": "12 hónaposan"
+      },
+      "18months": {
+        "label": "18 hónaposan"
+      },
+      "4years": {
+        "label": "4-6 évesen"
+      },
+      "9years": {
+        "label": "9-12 évesen"
+      },
+      "adult": {
+        "label": "Felnőttek"
+      },
+      "pregnant": {
+        "label": "Terhes nők"
+      }
+    }
+  },
+  "explain": {
+    "heroTitle": "Értsd meg a receptet",
+    "heroSubtitle": "Írd be a diagnózist vagy a gyógyszer nevét. Egyszerű szavakkal elmagyarázzuk.",
+    "heroArtAlt": "Illusztráció: gyógyszertári segítség a recept megértéséhez.",
+    "placeholder": "Írd be a diagnózist, gyógyszer nevét vagy illeszd be a receptet…\n\nPélda: „Hipertónia” vagy „Metformin 500 mg”",
+    "inputAria": "Add meg a diagnózist vagy a gyógyszer nevét",
+    "cta": "Magyarázd el",
+    "ctaAnalyzing": "Elemzés…",
+    "examplesHeading": "Gyakori példák",
+    "loading": "Recepted olvasása…",
+    "sections": {
+      "whatThisMeans": "Mit jelent ez",
+      "whyItMatters": "Miért fontos",
+      "ifIgnored": "Ha figyelmen kívül hagyod",
+      "medicationsTitle": "Gyógyszereid",
+      "howToTake": "Hogyan szedjed",
+      "sideEffects": "Mellékhatások",
+      "neverDo": "Soha ne tedd ezt",
+      "questionsTitle": "Kérdezd meg legközelebb az orvosod",
+      "tipsTitle": "Mit tehetsz ma",
+      "emergencyTitle": "Menj kórházba, ha"
+    },
+    "anotherCta": "Másik recept magyarázata",
+    "disclaimerBold": "Nem orvosi tanács.",
+    "disclaimerBody": "Ez az eszköz orvosi kifejezéseket magyaráz el egyszerű nyelven. Mindig kövesd az orvosod utasításait.",
+    "meta": {
+      "title": "Értsd meg a receptet — Redi Health",
+      "description": "Diagnózis és gyógyszerek egyszerű szavakkal"
+    },
+    "takePhoto": "Fénykép készítése",
+    "uploadImage": "Kép feltöltése",
+    "placeholderWithImage": "(Opcionális) Adj meg extra kontextust a receptről — életkorod, hogyan szeded, mi aggaszt…",
+    "imagePreviewAlt": "Receptfotó előnézete",
+    "imageReady": "A fénykép kész",
+    "imageReadyBody": "Elolvassuk a gyógyszert, adagot és utasításokat, és mindent egyszerűen elmagyarázunk.",
+    "imageRemove": "Fénykép eltávolítása",
+    "preparingImage": "Fénykép előkészítése…",
+    "imageFailed": "Nem sikerült olvasni ezt a fényképet. Próbálj másikat."
+  },
+  "symptoms": {
+    "heroTitle": "Hol fáj?",
+    "heroSubtitle": "Érintsd meg a test azon részét, ami zavar",
+    "heroArtAlt": "Illusztráció: emberek egyszerű, többnyelvű útmutatást kapnak a mindennapi tünetekről.",
+    "backToMap": "Vissza a testtérképhez",
+    "checkAnother": "Másik terület ellenőrzése",
+    "selectSymptoms": "Jelöld be az összes illő tünetet",
+    "extraPlaceholder": "Más is? (mióta, milyen rossz…)",
+    "extraAria": "További tünetrészletek",
+    "analyzing": "Tünetek elemzése…",
+    "checkCta": "Tünetek ellenőrzése",
+    "whatToDoNow": "Mit tegyél most",
+    "homeCare": "Otthoni ápolás",
+    "escalateTitle": "Menj kórházba, ha",
+    "commonCauses": "Gyakori okok",
+    "regions": {
+      "head": "Fej",
+      "chest": "Mellkas",
+      "abdomen": "Has",
+      "leftArm": "Bal kar",
+      "rightArm": "Jobb kar",
+      "pelvis": "Altest",
+      "leftLeg": "Bal láb",
+      "rightLeg": "Jobb láb"
+    },
+    "headSymptoms": [
+      "Fejfájás",
+      "Szédülés",
+      "Homályos látás",
+      "Fülfájás",
+      "Torokfájás"
+    ],
+    "chestSymptoms": [
+      "Mellkasi fájdalom",
+      "Légszomj",
+      "Köhögés",
+      "Gyors szívverés",
+      "Szorító érzés"
+    ],
+    "abdomenSymptoms": [
+      "Hasfájás",
+      "Hányinger / hányás",
+      "Hasmenés",
+      "Felfúvódás",
+      "Étvágytalanság"
+    ],
+    "armSymptoms": [
+      "Fájdalom",
+      "Zsibbadás",
+      "Duzzanat",
+      "Nem tudom mozgatni",
+      "Csípés"
+    ],
+    "pelvisSymptoms": [
+      "Fájdalom vizeléskor",
+      "Derékfájás",
+      "Menstruációs problémák",
+      "Lágyéki fájdalom"
+    ],
+    "legSymptoms": [
+      "Lábfájás",
+      "Duzzanat",
+      "Nem tudok járni",
+      "Térd fájdalom",
+      "Zsibbadás"
+    ],
+    "meta": {
+      "title": "Tünetellenőrző — Redi Health",
+      "description": "Érintsd meg, hol fáj. Útmutatást kapsz, mit tegyél."
+    }
+  },
+  "consult": {
+    "heroTitle": "Egészségügyi konzultáció",
+    "heroSubtitle": "Mondd el, mi zavar. Felteszek pár kérdést, és segítek eldönteni, mit tegyél.",
+    "prompt": "Mi hozott ma ide?",
+    "orFreeform": "vagy írd le saját szavaiddal",
+    "freeformPlaceholder": "Tegnap óta fáj a fejem…",
+    "freeformAria": "Írd le az egészségügyi panaszod",
+    "chatHeader": "Egészségügyi konzultáció",
+    "chatSubtitle": "Néhány kérdés segít jobban segíteni",
+    "answerAria": "A válaszod",
+    "answerPlaceholder": "Írd be a válaszod…",
+    "newSession": "Új konzultáció",
+    "assessment": "Értékelés",
+    "whatToDo": "Mit tegyél",
+    "homeCare": "Otthoni ápolás",
+    "watchFor": "Figyeld ezeket a jeleket",
+    "showVisitCard": "Orvosi látogatási kártya mutatása",
+    "hideVisitCard": "Orvosi látogatási kártya elrejtése",
+    "visitCardTitle": "Betegösszefoglaló — orvosnak",
+    "visitCardDisclaimer": "A Redi Health Advisor készítette. Ez nem orvosi diagnózis.",
+    "concerns": {
+      "fever": "Láz / magas hőmérséklet",
+      "pain": "Fájdalom valahol",
+      "breathing": "Légzési problémák",
+      "skin": "Bőrprobléma / kiütés",
+      "pregnancy": "Terhességi aggodalom",
+      "child": "A gyermekem beteg",
+      "mental": "Stressz / szorongás / szomorúság",
+      "heart": "Szív / mellkas"
+    }
+  },
+  "navigate": {
+    "heroTitle": "Orvoshoz kell mennem",
+    "heroSubtitle": "Segítünk felkészülni — mit vigyél, mit mondj, milyen jogaid vannak.",
+    "issuePrompt": "Mi a probléma?",
+    "issues": {
+      "fever": "Láz / fertőzés",
+      "pain": "Fájdalom / sérülés",
+      "pregnancy": "Terhesség",
+      "chronic": "Krónikus betegség",
+      "mental": "Mentális egészség",
+      "skin": "Bőr / szem / fül",
+      "child": "Beteg gyermek",
+      "other": "Valami más"
+    },
+    "tellMore": "Mondj többet",
+    "detailPlaceholder": "Írd le, mi történik… Mióta? Mennyire rossz?",
+    "detailAria": "Írd le az egészségügyi problémádat",
+    "insuranceTitle": "Van egészségbiztosításod?",
+    "insuranceSubtitle": "Ez segít elmondani, mit vigyél magaddal",
+    "insuranceYes": "Igen, van egészségkártyám",
+    "insuranceNo": "Nem, nincs biztosításom",
+    "insuranceUnknown": "Nem vagyok biztos benne",
+    "countryTitle": "Melyik országban vagy?",
+    "generating": "Orvosi látogatási kártya előkészítése…",
+    "generateCard": "Orvosi látogatási kártya készítése",
+    "startOver": "Kezdjük elölről",
+    "showDoctor": "Mutasd meg ezt az orvosnak",
+    "generatedBy": "A Redi Health Advisor készítette",
+    "whatToBring": "Mit vigyél magaddal",
+    "askYourDoctor": "Kérdezd meg az orvosod",
+    "patientRights": "Jogaid betegként",
+    "findHospital": "Legközelebbi kórház keresése",
+    "mapHint": "Térkép megnyitása útvonallal",
+    "meta": {
+      "title": "Egészségügyi navigátor — Redi Health",
+      "description": "Készülj fel az orvosi látogatásra — látogatási kártya, mit vigyél, jogaid."
+    }
+  },
+  "about": {
+    "brand": "Redi Health",
+    "tagline": "Egészségügyi műveltség vidéki és kirekesztett közösségeknek",
+    "version": "1.0.0 verzió",
+    "missionBody": "A Redi Health egy AI-társ, amelyet terepi mediátorokkal és klinikusokkal közösen terveztek olyan közösségeknek, amelyeket a hivatalos egészségügyi rendszer gyakran alul szolgál ki — vidéki településektől az informális telepekig — különös figyelemmel a roma közösségekre. Csökkentjük a tudásbeli szakadékot, ahol a távolság, a nyelvi akadály vagy az előítélet akadályozza a hozzáférést.",
+    "values": {
+      "careLabel": "Gondosan készült",
+      "careDesc": "Egészségügyi mediátorokkal",
+      "languagesLabel": "15 nyelv",
+      "languagesDesc": "Egész Európában",
+      "evidenceLabel": "Bizonyítékokon alapul",
+      "evidenceDesc": "WHO irányelvek",
+      "communityLabel": "Közösség az első",
+      "communityDesc": "Ítélet nélkül"
+    },
+    "privacyLink": "Adatvédelmi irányelvek",
+    "termsLink": "Szolgáltatási feltételek",
+    "disclaimer": "A Redi Health nem orvostechnikai eszköz. Minden információ oktatási célú. Orvosi döntésekhez mindig kérj szakképzett egészségügyi szakember véleményét.",
+    "meta": {
+      "title": "Rólunk — Redi Health",
+      "description": "A Redi Health egészségügyi műveltségi platformjáról"
+    }
+  },
+  "theme": {
+    "ariaLabel": "Téma",
+    "light": "Világos téma",
+    "dark": "Sötét téma",
+    "system": "Rendszer téma",
+    "switchTo": "Téma váltása — jelenleg {label}"
+  },
+  "emergency": {
+    "call112": "Hívd a 112-t AZONNAL",
+    "banner": "Vészhelyzet? Hívd a 112-t",
+    "emergencyLabel": "Vészhelyzet",
+    "ambulanceLabel": "Mentő"
+  },
+  "voice": {
+    "start": "Beszéd indítása",
+    "stop": "Hallgatás leállítása",
+    "readAloud": "Felolvasás",
+    "readMessageAloud": "Üzenet felolvasása",
+    "readExplanationAloud": "Magyarázat felolvasása",
+    "micDeepgram": "Koppints a beszédhez — többnyelvű hang (Deepgram)",
+    "micError": "Nem sikerült hozzáférni a mikrofonhoz.",
+    "detected": "Észlelt nyelv: {lang}"
+  },
+  "severity": {
+    "green": "Kezelés otthon",
+    "amber": "Hamarosan fordulj orvoshoz",
+    "red": "Vészhelyzet — Menj AZONNAL",
+    "redHospital": "Menj AZONNAL a kórházba"
+  },
+  "learn": {
+    "progressLabel": "abgeschlossene Module",
+    "startHere": "Kezdd itt",
+    "continueLabel": "Folytatás",
+    "allModules": "Összes modul",
+    "prevention": {
+      "description": "15 év roma telepeken végzett munkám során olyan családokat láttam, akiket egyszerű szokások megelőzhetett volna betegségekben. Ez a tudás nem luxus — túlélés.",
+      "handwashing": {
+        "title": "Kézmosás",
+        "description": "Településeken láttam, hogy egész családok betegedtek meg ugyanattól a gyomorfertőzéstől, kézről kézre adva. A megfelelő kézmosás az egyetlen legolcsóbb, legerősebb gyógyszer, amelyhez már hozzáférhet – nem kerül semmibe, és megelőzi azokat a betegségeket, amelyeket a közösségeinkben leggyakrabban tapasztalok.",
+        "tip1": "Mielőtt hozzáérne az ételhez, mielőtt etetne egy gyermeket, és minden WC-látogatás után mosakodjon meg. Láttam, hogy egy mosatlan kéz egy hétig tartó hasmenést okozott egy egész háztartásban",
+        "tip2": "Lassan számolj 20-ig, vagy dúdolj egy dalt. A legtöbben 5 másodpercig mosnak – ez szinte semmit sem távolít el. A kezei közötti súrlódás az, ami elpusztítja a baktériumokat",
+        "tip3": "Nincs szappan? Dolgoztam olyan településeken, ahol nincs vezetékes víz. Ash működik. A homok működik. A víz önmagában súrolással jobban működik, mint a semmi. Ne hagyd, hogy a tökéletes megakadályozza a jót",
+        "tip4": "Levegőn szárítsa meg a kezét, vagy használjon tiszta ruhát, amelyet naponta cserél. A mindenki által megosztott piszkos törölköző újra beszennyezi a tiszta kezet – ezt minden otthonlátogatás alkalmával elmagyarázom",
+        "fact": "Azokban a közösségekben, amelyekkel együtt dolgoztam, a kézmosási kampányok három hónapon belül közel felére csökkentették a gyermekek hasmenéses eseteit. A WHO megerősíti: a kézmosás 40%-kal csökkenti a hasmenést és akár 21%-kal a légúti fertőzéseket.",
+        "action": "Ma este álljatok gyermekeitekkel a vízforráshoz, és mossatok kezet együtt. Tedd családi szokássá minden étkezés előtt. A gyerekek, akik úgy tanulnak, hogy a szüleiket figyelik, ezt egy életen át viselik."
+      },
+      "vaccination": {
+        "title": "Oltás",
+        "description": "Elkísértem roma anyákat egészségügyi központokba, ahol visszautasították őket, mert nem voltak okmányaik, nem beszélték a nyelvet, vagy egyszerűen csak azt mondták nekik, hogy jöjjenek vissza később. A védőoltások gyermekei törvényes joga – ingyenes, biztonságos és a leghatékonyabb védelem, amelyet egy szülő adhat. Ezt senki sem tagadhatja meg tőled.",
+        "tip1": "Európa minden országa születéstől kezdve ingyenes oltási ütemtervet biztosít. Ez nem jótékonyság – ez a gyermeked törvényes jogosultsága. Ha egy egészségügyi dolgozó megtagadja, kérje ki a felettesét, és ezt egyértelműen jelezze",
+        "tip2": "Az oltási kártya a legfontosabb dokumentum, amellyel gyermeke születési anyakönyvi kivonatát követően rendelkezik. Tartsa biztonságban, vigye magával minden orvosi látogatásra. Ha elveszett, bármelyik egészségügyi központnak ki kell adnia a pótlást – ne fogadja el az elutasítást",
+        "tip3": "Enyhe láz, fájó folt a karon, egy napig tartó nyűg – ez normális, és azt jelenti, hogy az oltóanyag működik. Több száz aggódó anyát nyugtattam meg ezzel kapcsolatban. 24-48 óra alatt elmúlik",
+        "tip4": "A legtöbb közegészségügyi központban nem kell időpontot kérnie az oltásokhoz. Lépjen be. Ha roma egészségügyi közvetítő dolgozik az Ön területén, kérje meg, hogy kísérje el Önt – erre vagyunk kiképezve",
+        "fact": "Egy településen, ahol dolgoztam, beütött a kanyaró, mert az átoltottság 60%-ra csökkent. Három gyermek került kórházba. Egy közösségi oltási kampány után elértük a 94%-ot – és a járványok megszűntek. Európa-szerte a vakcinák évente 2-3 millió ember halálát akadályozzák meg.",
+        "action": "Azonnal vegye ki gyermeke oltási kártyáját. Ellenőrizze az egészségügyi központ falán található ütemterv alapján. Ha valamelyik vakcina hiányzik, vagy nincs kártyája, ezen a héten keresse fel az egészségügyi központot. Hozd ezt az alkalmazást az ütemterv megjelenítéséhez, ha segít."
+      },
+      "cleanWater": {
+        "title": "Tiszta Víz",
+        "description": "Dolgoztam olyan településeken, ahol a családoknak közös vízpontja van, amely napi két órát üzemel, és olyan környékeken, ahol a csapvíz tisztának tűnik, de olyan baktériumokat hordoz, amelyek krónikus gyomorpanaszokat okoznak a gyermekeknél. A víz minősége nem mindig látható – a roma közösségekben pedig ritkán figyelik a hatóságok. Biztosan te vagy a családod vízügyi felügyelője.",
+        "tip1": "Fedezzen le minden edényt, ahol vizet tárol. Láttam, hogy legyek, por, sőt állati eredetű hulladékok órákon belül beszennyezik a fedetlen vödröket, főleg meleg időben. Egy egyszerű lap a tetején megakadályozza a legtöbb szennyeződést",
+        "tip2": "Ha nem biztos a vízben, forralja fel egy teljes percig gördülő forrásban. Ez elpusztítja a baktériumok, vírusok és paraziták 99,9%-át. Szinte semmibe nem kerül, és működik – több tucat településen tanítottam ezt, ahol kérdéses volt a vízforrás",
+        "tip3": "Mossa ki a víztartályokat szappannal és tiszta vízzel legalább hetente egyszer. A piszkos tartály a tiszta vizet piszkossá teszi. Ez az egyik leginkább figyelmen kívül hagyott oka az ismétlődő hasmenésnek, amelyet gyermekeknél láttam",
+        "tip4": "A patakok, tavak és állótócsák soha nem ihatóak – még akkor sem, ha a víz tisztanak tűnik. A szem számára láthatatlan paraziták krónikus károsodást okoznak a gyermekek bélrendszerében és fejlődésében",
+        "fact": "Közép- és Kelet-Európa számos roma településén a családok nem jutnak biztonságos vezetékes vízhez. Az Európai Roma Jogok Központja dokumentálta, hogy a roma negyedekben rendszeresen alul van ellátva a vízi infrastruktúra. A forrásban lévő víz nem ideális – ez egy túlélési stratégia, amíg a tiszta vízhez való joga nem teljesül.",
+        "action": "Ma ellenőrizzen minden tartályt, ahol családja ivóvizet tárol. Fedje le azokat, amelyek nyitva vannak. Ha nem tudja ellenőrizni, hogy a vízforrás biztonságos-e, kezdje el forralni az összes ivó- és főzővizet ma estétől kezdődően."
+      },
+      "firstAid": {
+        "title": "Alapvető elsősegélynyújtás",
+        "description": "A távoli településeken és városi negyedekben, ahol hosszabb ideig tart a mentők megérkezése – vagy néha egyáltalán nem jönnek –, az élet és a halál közötti különbség az, hogy a vészhelyzet első perceiben tudják, mit kell tenni. Több száz roma közösség tagját képeztem ki az alapvető elsősegélynyújtásra, és láttam, hogy ez a tudás életeket mentett meg, mielőtt bármelyik orvos megérkezett volna.",
+        "tip1": "A 112 bármely európai telefonról működik – hitel nélkül, SIM-kártya nélkül is, még zárolt telefonról is. Tanítsd meg családod minden tagját, beleértve a 7 év feletti gyerekeket is, hogy tárcsázzák a 112-t, és mondják meg, hol vannak. Gyakorold ezt. Vészhelyzetben a pánik feledteti az embereket",
+        "tip2": "Erős vérzés esetén: nyomja meg erősen a lehető legtisztább ruhával – ing, fejkendő, bármi –, és ne emelje fel, hogy ellenőrizze. Tartsa nyomva, amíg a segítség meg nem érkezik. Láttam embereket veszélyesen vérezni, mert folyamatosan levették a ruhát, hogy megnézzék. Ha a vér átitatja, adjon hozzá további ruhát a tetejére",
+        "tip3": "Égési sérülések: azonnal helyezze az égési sérülést hideg folyóvíz alá legalább 10 percre. Soha ne kenj fel vajat, olajat, fogkrémet vagy tojásfehérjét – olyan hagyományos gyógymódokkal, amelyekkel sok családban találkoztam, amelyek ténylegesen felfogják a hőt, és súlyosabb károkat és fertőzéseket okoznak.",
+        "tip4": "Ha valaki összeesik és nem lélegzik: hívja a 112-t, majd nyomja erősen és gyorsan a mellkasa közepét – percenként 100-szor (a „Stayin' Alive” dal tempója). Ne álljon meg, amíg a segítség meg nem érkezik. A tökéletlen CPR végtelenül jobb, mint a nem CPR",
+        "fact": "Tanulmányok azt mutatják, hogy azokban a közösségekben, ahol széles körben elterjedt az alapvető elsősegélynyújtási képzés, a szívmegállás utáni túlélés megduplázódik. Sok roma közösségben a mentőautók válaszideje lényegesen hosszabb, mint a nem roma területeken, ami még kritikusabbá teszi a kívülállók elsősegélynyújtását.",
+        "action": "Most azonnal kérdezze meg minden családtagot: tudja, hogyan kell hívni a 112-t? Tudja elég jól a lakcímünket ahhoz, hogy elmondja a diszpécsernek? Írja fel a teljes címét egy papírra, és tegye a telefon közelébe. Tanítsa meg gyermekeit ma."
+      }
+    },
+    "nutrition": {
+      "description": "Az évek során roma családokkal azt tanultam, hogy az étel nem csak táplálkozás — hanem az, amit megengedhetsz magadnak, ami elérhető a környékeden és amit a családod tud. Nem azt mondom, vedd meg a quinoát. Azt mondom, hogyan tápláld jól a családodat abból, amid van.",
+      "balancedDiet": {
+        "title": "Jól étkezni bármilyen költségvetés mellett",
+        "description": "A legnagyobb táplálkozási problémát a roma közösségekben nem az élelmiszerhiányban látom – ez túl sok az olcsó kenyér, a feldolgozott hús és a cukros italok, és túl kevés a zöldség, a tojás és a hüvelyesek. Ez nem akaraterőről szól. Arról szól, ami elérhető és megfizethető. A kis elmozdulások azonban óriási változásokat okoznak az Ön egészsége és gyermekei fejlődése szempontjából.",
+        "tip1": "A bab, a lencse és a csicseriborsó a legolcsóbb fehérje bármely piacon – olcsóbb, mint a hús, tartósabb, és megelőzi a cukorbetegséget és a szívbetegségeket. Egy fazék babpörkölt kevesebbel táplálja a családot, mint egy csomag feldolgozott kolbász, és sokkal táplálóbb",
+        "tip2": "A tojás a létező legteljesebb olcsó élelmiszer. Gyermekenként napi két tojás szinte mindent biztosít, amire a növekvő agynak szüksége van. Minden településen, ahol dolgozom, a tojást ajánlom a gyerekeknek elsőrendű élelmiszerként",
+        "tip3": "A helyi piacról vagy kertjéből származó szezonális zöldségek a szupermarket árának töredékébe kerülnek. Káposzta, hagyma, sárgarépa, burgonya, paprika – ez az egészséges táplálkozás alapja, és minden roma konyha hagyományában benne van",
+        "tip4": "A cukros italok (kóla, gyümölcslé, energiaitalok) az egyetlen legkárosabb elem, amit a roma családok étrendjében látok. Egy üveg kólában 10 teáskanál cukor van. Cserélje ki vízzel vagy gyenge teával, és eltávolítja az elhízás és a fogszuvasodás legnagyobb hajtóerejét, amit a gyerekeknél látok",
+        "fact": "Azokban a roma közösségekben, amelyekkel együtt dolgoztam Románia és Bulgária szerte, azt tapasztaltam, hogy a cukorbetegség aránya mérhetően csökken, amikor a családok a mindennapi fehér kenyeret és a feldolgozott húst babra, tojásra és zöldségekre cserélik – még akkor is, ha nem változtatnak az étkezési mennyiségükön. A szervezet a minőségre reagál, nem csak a mennyiségre.",
+        "action": "Ezen a héten cserélje le egy étkezés kenyérből és feldolgozott húsból egy fazék bab- vagy lencsepörköltet hagymával és paprikával. Főzzük elég két napig. Olcsóbb, hosszabb ideig tölt fel, és elkezdi megváltoztatni a család egészségügyi pályáját."
+      },
+      "childNutrition": {
+        "title": "Gyermekek táplálása az erős kezdéshez",
+        "description": "Az első 1000 nap – terhességtől 2 éves korig – alakítja a gyermek teljes jövőjét: agyát, immunrendszerét, tanulási képességét. Láttam, ahogy az alultáplált gyerekek a településeken nem a genetika miatt maradnak le társaiktól, hanem attól, amit a kritikus korai hónapokban ettek. Amit most etetsz a gyermekednek, az a legerőteljesebb befektetés, amit az életébe tehetsz.",
+        "tip1": "Az anyatej önmagában 6 hónapig az aranystandard – ingyenes, mindig elérhető, tökéletesen tápláló, és minden gyógyszernél jobban véd a fertőzések ellen. Dolgoztam olyan anyákkal, akik úgy gondolták, hogy a tápszer „modern” és jobb. Nem az. Az anyatej a technológiai evolúció tökéletesítése",
+        "tip2": "6 hónapos korban kezdje el a lágy ételek fogyasztását a szoptatás mellett: burgonyapüré, sárgarépa, banán, főtt tojássárgája. 3 naponta vezessen be egy új ételt, hogy figyelje a reakciókat. Sok anyával dolgozom túl későn (8-9 hónap) – ez késlelteti a fejlődést",
+        "tip3": "2 éven aluli gyermekek soha nem ihatnak cukrot, mézet, sót, kólát, chipset vagy édességet. Tudom, hogy a nagyszülők néha cukorral teát adnak, hogy megnyugtassák a babát – kérem, hagyja abba. A cukor ebben a korban élethosszig tartó sóvárgást programoz, és még azelőtt károsítja a fogakat, hogy azok teljesen kibújnának",
+        "tip4": "Napi egy tojás egy 6 hónaposnál idősebb gyermek számára a létező legegyszerűbb táplálkozási frissítés. Egy ecuadori tanulmány kimutatta, hogy a tojás 47%-kal csökkentette a növekedési ütemet. Ezt minden közösségi előadásban idézem, mert szinte minden család számára elérhető",
+        "fact": "Azokban a közösségekben, ahol táplálkozási programokat vezettem, azok a gyerekek, akik 6 hónapon keresztül naponta kaptak egy tojást és egy adag zöldséget, mérhető javulást mutattak a növekedésben és a kognitív fejlődésben azokhoz képest, akik nem. Az alultápláltság nem pusztán a szegénységről szól – hanem arról, hogy tudjuk, mit kell előnyben részesíteni a rendelkezésünkre álló erőforrásokkal.",
+        "action": "Holnaptól adjon 6 hónaposnál idősebb gyermekének napi egy tojást (pépesített vagy rántottát). Ha gyermeke még 6 hónaposnál fiatalabb, és szoptat, fogyasszon egy további tojást – a tápanyagok átjutnak a tején."
+      },
+      "foodSafety": {
+        "title": "Az élelmiszerek biztonságban tartása",
+        "description": "Az ételmérgezés az egyik leggyakoribb oka annak, hogy a roma családok felkeresik a sürgősségi osztályokat – hányás, hasmenés, kiszáradás, különösen gyermekeknél. Azokon a településeken, ahol a hűtés nem megbízható, és a konyhák közösek vagy a szabadban vannak, az élelmiszerbiztonság nem tankönyvtéma, hanem napi túlélési készség.",
+        "tip1": "Meleg időben a 2 óránál tovább hagyott főtt étel veszélyessé válik. Ha nem tudja lehűteni, főzzön kisebb adagokat, amelyeket egy étkezésben fejez be. Láttam, hogy egész családok kerültek kórházba az újramelegített pörkölt miatt nyáron egyik napról a másikra",
+        "tip2": "A nyers csirke és hús soha nem érhet kenyeret, zöldséget vagy bármit, amit nyersen fogyasztanak el. Használjon külön vágófelületeket – még egy tiszta műanyag zacskó is működik. Ez a keresztszennyeződés az ételmérgezés első számú oka, amellyel találkozom",
+        "tip3": "Ha az étel rossz szagú, rosszul néz ki vagy nyálkásnak érzi magát, dobja ki. Ne kóstolja meg, hogy ellenőrizze. Tudom, hogy az étel kidobása fájdalmas, ha szűkös a pénz, de egy ételmérgezés többe kerül a gyógyszerben és az elvesztett munkában, mint amennyit az étel ért.",
+        "tip4": "Mossa meg az összes gyümölcsöt és zöldséget folyó víz alatt evés előtt, még akkor is, ha a héját tervezi. Vágáskor a külső felületen lévő szennyeződés átkerül a belsejébe. Ez különösen fontos a piaci termékek esetében, amelyeket esetleg sokan kezeltek",
+        "fact": "A WHO becslései szerint évente 600 millió ember betegszik meg szennyezett élelmiszertől, és a teher 40%-át 5 év alatti gyermekek viselik. Azokban a közösségekben, ahol élelmiszerbiztonságot tanítottam, az első nyáron jelentősen csökkent a gyomor-bélhurut miatti kórházi látogatások száma.",
+        "action": "Nézze meg most a konyháját: van-e nyers hús fent, vagy hozzáér a fogyasztásra kész ételhez? Van olyan főtt étel, amely több mint 2 órája ült ki? Javítsa meg ezt a két dolgot még ma – ezek a leggyakoribb veszélyek, amelyeket otthonlátogatások során látok."
+      }
+    },
+    "maternal": {
+      "description": "Roma nőket kísértem kórházakba, ahol külön szobába tették, tiszteletlenül bántak velük vagy megtagadták az epidurált, amit más nők kaptak. Láttam nőket is, akik olyan szövődményekben haltak meg, amit egyetlen szűréses vizit elkapott volna. A tested, a gyermeked, a jogaid. Ismerd mindhármat.",
+      "prenatalCare": {
+        "title": "Terhesgondozás",
+        "description": "A 15 éves közvetítői munka során többször is azt tapasztalom, hogy a roma nők már 6-7 hónapos terhesként mennek először orvoshoz – gyakran azért, mert jól érzik magukat, mert félnek a kórháztól, vagy mert senki sem magyarázta el, hogy a terhesgondozás ingyenes és joguk van. Ekkorra már hónapokig csendben kialakulhatnak olyan veszélyes állapotok, mint a pre-eclampsia vagy a terhességi cukorbetegség.",
+        "tip1": "Keresse fel háziorvosát vagy szülésznőjét abban a pillanatban, amikor kimarad a menstruációja, és terhességre gyanakszik. Az első trimeszterben a folsav megakadályozza a baba agy- és gerinchibáit. A várakozás a legkritikusabb ablakba kerül. Ha nincs háziorvosa, egészségügyi közvetítője segíthet a regisztrációban – ez tevékenységünk alapvető része",
+        "tip2": "A napi 400 mikrogramm folsav szedését akkor kell elkezdeni, amikor teherbe akar esni, vagy amint megtudja, hogy teherbe esik. Ingyenes vagy nagyon olcsó bármelyik gyógyszertárban. Csomagokat viszek magammal otthoni látogatásra, mert ez az egyszerű tabletta megelőzi a pusztító születési rendellenességeket",
+        "tip3": "A vasban gazdag élelmiszerek megakadályozzák a vérszegénységet, amelyet a terhes roma nők közel felénél tapasztalok: bab, lencse, sötét levelű zöldek, máj, vörös hús. A vérszegénység kimerít, veszélyesebbé teszi a szülést, és befolyásolja a baba agyfejlődését",
+        "tip4": "Joga van ahhoz, hogy az Ön nyelvén várandós ellátásban részesüljön, méltó bánásmódban részesüljön, és hogy valaki elkísérje Önt a találkozókra. Ha egy orvos elutasító vagy tiszteletlen, panaszt tehet, és másik szolgáltatót kérhet. Dokumentálja a nevet, dátumot és az elhangzottakat. Ebben rendszeresen segítek a családoknak",
+        "fact": "Európában a roma nők 3-5-ször nagyobb valószínűséggel tapasztalnak terhességi szövődményeket, mint az átlagpopulációban, főként azért, mert később vagy egyáltalán nem jutnak terhesgondozáshoz. Azokban a közösségekben, ahol az első trimeszterben a terhes nők ellátásához való kapcsolódásán dolgoztam, a szövődmények aránya drámaian csökkent.",
+        "action": "Ha Ön terhes, vagy ismer olyan terhes nőt a közösségében, aki még nem járt orvosnál, kérjen időpontot még ma. Ha fél, vagy nem tudja, hogyan, menjen vele, vagy csatlakoztassa a helyi egészségügyi közvetítőhöz. Egy látogatás mindent megváltoztathat."
+      },
+      "safeDelivery": {
+        "title": "Biztonságos szállítás",
+        "description": "Megfogtam a mentőautókban szülő nők kezét, mert túl későn hagyták el, és ültem a kórházi folyosókon, ahol a roma nők a sorban utolsóként kerültek, míg a nem roma nők mentek előre. Mindkét helyzet megelőzhető. A szállítás megtervezése és a jogainak ismerete ezt a tapasztalatot válságból olyanná változtatja, amit Ön irányít.",
+        "tip1": "A 34. hétre készítsd el a szüléstervet: melyik kórházba, ki megy veled, hogyan érsz oda (főleg éjszaka), ki vigyáz a többi gyerekedre. Túl sok családot láttam az utolsó pillanatban tülekedni – és a stressz kihat a szülésre",
+        "tip2": "Szinte minden európai országban joga van ahhoz, hogy kísérője (férj, anya, nővér, közvetítő) legyen veled a szülés és a szülés során. Ha a kórház nemet mond, hivatkozzon országa betegjogi törvényére. Ezeket a referenciákat hordozzuk és biztosítani tudjuk",
+        "tip3": "Ismerje meg az 5 veszélyjelet, ami azt jelenti, MENJ KÓRHÁZBA MOST, függetlenül attól, hogy hány óra van: (1) erős vérzés, (2) erős fejfájás duzzadt kezekkel/arccal, (3) a baba nem mozog, (4) vízszünet 37 hét előtt, (5) 38 °C feletti láz. Ne várjon reggelig. Ne próbálja ezeket otthon kezelni",
+        "tip4": "Szülés után legalább 24 órát maradjon kórházban megfigyelés céljából – még akkor is, ha jól érzi magát. Számos életveszélyes szövődmény (vérzés, fertőzés) jelentkezik az első 24 órában. Tudom, hogy a kórházi környezet ellenséges lehet, de az órákig tartó megfigyelés életeket menthet meg",
+        "fact": "Egy olyan régióban, ahol 5 évig dolgoztam, 60%-kal csökkentettük a roma anyák sürgősségi számát azzal, hogy minden várandós nőnek biztosítottuk a szülési tervet, a szállítási megállapodást és a kórházi táskát a 36. hétig. Nincs új technológia – csak az előkészítés és a kíséret.",
+        "action": "Ha Ön vagy valaki, akit ismer, elmúlt 30 hetes terhes: írja fel papírra a kórház nevét, telefonszámát és útvonalát. Tedd a falra. Csomagolj be egy táskát személyi igazolvánnyal, oltási kártyával, babaruhákkal és telefontöltővel. Ez 20 percet vesz igénybe, és életet menthet."
+      },
+      "breastfeeding": {
+        "title": "Szoptatás",
+        "description": "A roma kultúrában nagyra értékelik a szoptatást, mégis találkozom fiatal anyákkal, akiknek azt mondták a jó szándékú rokonok, hogy az első napokban adjanak vizet, teát vagy tápszert, mert „még nem jött meg a tej”. A kolosztrum – az a sűrű, sárgás első tej – nem annak a jele, hogy valami nincs rendben. Folyékony arany, tele antitestekkel, amelyek megvédik az újszülöttet azoktól a fertőzésektől, amelyek élete első heteiben a legveszélyesebbek.",
+        "tip1": "A születést követő 1 órán belül helyezze a babát bőrrel a mellkasára, és hagyja, hogy megtalálja a mellét. Ez az első kolosztrum etetés a legfontosabb „vakcina”, amelyet a baba kap – ez védi a bélrendszert a fertőzésekkel szemben. Ne engedje, hogy bárki elvigye gyermekét, mielőtt ez megtörténik, kivéve, ha orvosi vészhelyzet áll fenn",
+        "tip2": "Igény szerint táplálkozzon – amikor a babán éhség jelei vannak (fejfordítás, kezek szopása, nyüzsgés). Az első hetekben ez 24 órán belül 10-14 alkalom lehet. Ez normális, és meghatározza az ellátást. Az óra nem tudja megmondani, hogy mikor éhes a babája – a baba elmondja",
+        "tip3": "Semmi vizet, teát, tápszert 6 hónapig, hacsak az orvos kifejezetten nem írja fel orvosi okból. Az anyatej összetétele a nap folyamán változik, hogy megfeleljen a baba pontos szükségleteinek – ezt egyetlen gyár sem tudja megismételni. Láttam, hogy jó szándékú nagymamák cukros vizet adtak, ami rigót és hasmenést okozott",
+        "tip4": "Ha a szoptatás fáj, akkor a retesz rossz – nem a tested. Kérjen meg egy szülésznőt vagy egészségügyi dolgozót, hogy figyeljen egy táplálékot, és segítsen beállítani a pozíciót. A fájdalom a segítség jelzése, nem pedig a feladás jele. Anyák százainak segítettem megoldani azokat a reteszelési problémákat, amelyek egy munkamenet során megoldódtak",
+        "fact": "Azokban a roma közösségekben, ahol léteznek szoptatást támogató programok, a 6 hónapig tartó kizárólagos szoptatás több mint 60%-kal csökkenti a csecsemők kórházi kezelését. Az anyatej szó szerint alkalmazkodik a környezetében keringő fertőzések elleni küzdelemhez – ez egy személyre szabott gyógyszer, amelyet szervezete ingyen állít elő.",
+        "action": "Ha Ön újdonsült anya vagy várandós: mondja el családjának most, hogy 6 hónapig kizárólag szoptatást tervez, és a támogatásukra van szüksége, nem pedig tanácsra más élelmiszerek hozzáadásával kapcsolatban. Ha a szoptatás fájdalmas, lépjen kapcsolatba szülésznőjével vagy egészségügyi közvetítőjével, mielőtt abbahagyja – a megoldás általában egyszerű."
+      },
+      "postpartum": {
+        "title": "Szülés utáni gondozás",
+        "description": "A roma kultúrában a születés utáni hetek olyan időszakok, amikor a család az anya köré gyűlik, és ez gyönyörű. De láttam egy árnyoldalt is: az anyákat, akik minden nap sírnak, és azt mondják nekik, ez normális. Anyák, akik erősen véreznek, és túl sokáig várnak, hogy segítséget kérjenek. Anyák, akiknek fájdalmát elengedik, mert „a nők ezen mennek keresztül”. Az Ön felépülése ugyanolyan fontos, mint a baba egészsége – mert a babának szüksége van rád élve és egészségesen.",
+        "tip1": "A szervezetnek legalább 6 hétre van szüksége a gyógyuláshoz. A születés utáni vérzés (lochia) 2-4 hétig normális, de ha hirtelen megnövekszik, nagy vérrögöket tartalmaz, vagy rossz szagú, azonnal menjen kórházba. Láttam, hogy anyák veszítenek veszélyes mennyiségű vért, mert azt mondták nekik, hogy az erős vérzés normális. Nem az",
+        "tip2": "Ha tartósan szomorúnak, üresnek érzi magát, nem tud kapcsolatot teremteni a babájával, vagy arra gondol, hogy önmagának vagy babájának kárt okoz – nem vagy gyenge, nem vagy rossz anya, olyan egészségügyi állapotod van, amely reagál a kezelésre. Ezt minden otthonlátogatás alkalmával mondom, mert a közösségeinkben a szülés utáni depresszió körüli megbélyegzés életekbe kerül",
+        "tip3": "A 6 hetes szülés utáni szűrés nem kötelező – ellenőrzi a fertőzést, a gyógyulást, a vérnyomást és a mentális egészséget. Tapasztalataim szerint a roma nők kevesebb mint 30%-a vesz részt ezen a látogatáson. Kérem, legyen ebben a 30%-ban. Vigyél magaddal valakit, ha ez segít",
+        "tip4": "Fogadja el a család minden segítségét a főzéssel, takarítással és gyermekgondozással kapcsolatban. Aludj, amikor a baba alszik. Az egyetlen feladatod a baba táplálása és a gyógyulás. Minden más várhat. Az általam ismert legerősebb anyák azok, akik elfogadták a segítséget",
+        "fact": "A szülés utáni depresszió minden ötödik nőt érint világszerte, de a becslések szerint a roma közösségekben még gyakoribb a szegénység, a diszkrimináció és az elszigeteltség miatt. Minden közösségben, ahol kortárssegítő csoportokat hoztam létre újdonsült anyák számára, csökkent a depresszió és nőtt a szoptatás aránya – mert a kapcsolat gyógyít.",
+        "action": "Ha az elmúlt 6 hétben szült, és nem volt szülés utáni szűrésen, hívja fel egészségügyi központját még ma. Ha tartósan szomorúnak vagy levertnek érzi magát, szóljon egy megbízható személynek – édesanyjának, egészségügyi közvetítőjének, bárkinek. Ez az első beszélgetés a legnehezebb lépés és a legfontosabb."
+      }
+    },
+    "children": {
+      "description": "A roma gyerekek közösségeink jövője, és minden előnyt megérdemelnek. Munkám során láttam lemaradó gyerekeket — nem képességhiány miatt, hanem mert megelőzhető betegségek, elmulasztott oltások vagy észrevétlen késések elvették az esélyeiket. Ez a tudás visszaadja ezeket az esélyeket.",
+      "growthMilestones": {
+        "title": "Növekedés és Fejlődés",
+        "description": "Minden gyerek a saját tempójában fejlődik, és soha nem akarom, hogy a szülők pánikba eszenek a normális változás miatt. De láttam olyan gyerekeket is, akiknek a késleltetett fejlődését a családok úgy utasították el, hogy „utolérik”, amikor a korai beavatkozás változást hozhatott volna. Az, hogy tudjuk, mire kell figyelni, nem szorongás, hanem figyelem.",
+        "tip1": "A havi mérés az első évben a legegyszerűbb megfigyelési eszköz. Egészségügyi központjában vannak növekedési diagramok, amelyek megmutatják, hogy gyermeke jó úton halad-e. Azonnal ki kell vizsgálni azt a gyermeket, aki abbahagyja a súlygyarapodást vagy hirtelen leesik a táblázatról – ez lehet olyan egyszerű, mint az etetés módosítása, vagy olyan fontos, mint egy alapbetegség elkapása.",
+        "tip2": "6 hónapos korára a legtöbb baba tárgyak után nyúl, és válaszol a nevére. 12 hónapra a legtöbben kimondanak néhány szót, és felállnak. 24 hónapos korára a legtöbben jól járnak, és rövid frázisokban beszélnek. Ha gyermeke jelentősen le van maradva ezektől a mérföldkövektől, kérjen fejlődési értékelést – a korai segítség jelenti a legnagyobb különbséget",
+        "tip3": "Állandóan beszéljen gyermekével – mesélje el, mit csinál, nevezzen el tárgyakat, énekeljen dalokat. A roma családoknak erős szájhagyományuk van – használja ki. Azok a gyerekek, akik több szót hallanak, nagyobb szókinccsel és erősebb kognitív készségekkel rendelkeznek. Ez ingyenes és hatékonyabb minden játéknál",
+        "tip4": "Fogak: a baba ínyét születésétől kezdve nedves ruhával tisztítsa meg, és az első fogtól kezdve használjon egy pici kenetet a gyermek fogkrémből. Súlyos fogszuvasodást tapasztalok roma gyerekeknél 3 éves korukig, gyakran az éjszakai üveg édes teától – ez fájdalmat, fertőzést és étkezési problémákat okoz, amelyek befolyásolják a növekedést.",
+        "fact": "A kutatások azt mutatják, hogy azok a gyerekek, akiknek a fejlődési késleltetését 3 éves koruk előtt azonosítják és kezelik, ötször nagyobb valószínűséggel járnak iskolába az elvárt szinten. Azokon a településeken, ahol havi mérést és fejlődési szűrést állítottam be, háromszorosára nőtt a korai beavatkozásra utalók aránya – vagyis olyan segítséget kaptak a gyerekek, akikről egyébként hiányoztak volna.",
+        "action": "Ha gyermeke 2 éven aluli, vigye el testsúly-ellenőrzésre és fejlődési szűrésre az egészségügyi központjában ebben a hónapban. Ha gyermeke elmúlt 2 éves, és aggályai vannak a beszéddel, járással vagy viselkedéssel kapcsolatban, kérjen beutalót szakemberhez. Aggodalma jogos – cselekedjen vele."
+      },
+      "commonIllnesses": {
+        "title": "Amikor gyermeke beteg",
+        "description": "A túlzsúfolt lakásokkal, korlátozott higiéniával és hideg telekkel rendelkező településeken a gyerekek gyakran megbetegednek. A legtöbb ilyen betegség – hasmenés, köhögés, láz – otthon is kezelhető, ha tudja, mit kell tennie, és mikor kell fokoznia. De azt is láttam, hogy a szülők túl sokáig várnak, vagy rohannak a sürgősségi osztályokra olyan állapotok miatt, amelyeket egy egyszerű otthoni kezelés megoldott volna. Ez a modul megtanítja Önnek a különbséget.",
+        "tip1": "38,5°C alatti láz: gyermeke szervezete küzd a fertőzésekkel – ez jó. Tartsa őket kényelmesen, enyhén ruházza fel, és adjon sok folyadékot. 38,5°C feletti láz: gyermekeknek adjon paracetamolt a testsúlyuknak megfelelő adagban (NEM felnőtt paracetamolt). Ha a láz több mint 3 napig tart, vagy a gyermek szokatlanul álmos, forduljon orvoshoz",
+        "tip2": "A hasmenés a kiszáradás révén öl meg, nem maga a fertőzés. Abban a pillanatban, amikor a gyermeknek laza a széklete, kezdje el az orális folyadékpótlást: 1 liter tiszta forralt víz + 6 evőkanál cukor + fél teáskanál só. Néhány percenként igyon kis kortyokat. Ez a recept több gyermek életét mentette meg világszerte, mint bármely antibiotikum",
+        "tip3": "AZONNAL VIGYE GYERMEKÉT KÓRHÁZBA, ha azt tapasztalja, hogy: gyors vagy nehéz légzés, mellkasi behúzás minden lélegzetvételnél, nem tud inni vagy szoptatni, ismételt hányás, szokatlan álmosság vagy nem ébred, görcsök vagy véres hasmenés. Ne várj. Ezek vészhelyzetek",
+        "tip4": "Ne adjon antibiotikumot orvos felírása nélkül. Ne adjon ki más gyermek által felírt receptet. Ne használjon maradék antibiotikumot. Ezt folyamatosan látom a közösségeinkben, és ez olyan gyógyszerrezisztens baktériumokat hoz létre, amelyeket sokkal nehezebb kezelni. Az antibiotikumok nem segítenek a megfázás, az influenza vagy a legtöbb köhögés esetén",
+        "fact": "Azokban a közösségekben, ahol dolgoztam, a szülők képzése az orális rehidratáló oldat elkészítésére és használatára több mint 40%-kal csökkentette a gyermekek hasmenéses kórházi kezelését egyetlen év alatt. A tudás ilyen erős – és az összetevők kevesebbe kerülnek, mint egy buszjegy a kórházba.",
+        "action": "Most jegyezze meg ezt a receptet: 1 liter tiszta víz + 6 teáskanál cukor + fél teáskanál só. Gyakorold egyszer az elkészítést. Ha akarja, kóstolja meg – olyan ízűnek kell lennie, mint a könny. Ennek készenléte azt jelenti, hogy ha gyermeke hajnali 2-kor hasmenést kap, azonnal intézkedhet a pánik helyett."
+      },
+      "immunization": {
+        "title": "Oltási ütemterv",
+        "description": "Közvetlen leszek: Európa-szerte a roma közösségekben az átoltottság alacsonyabb az országos átlagnál, és ez nem azért van, mert a roma szülők nem törődnek gyermekeikkel, hanem azért, mert az egészségügyi rendszer nem érte el őket tisztelettel, hozzáféréssel és információval. A félretájékoztatás a közösségi médián keresztül is terjed. Kanyarós gyerekeket tartottam kórházban, akiknek soha nem lett volna szabad ott lenniük. Minden be nem oltott gyerek olyan gyerek, amelyet a rendszer megbukott.",
+        "tip1": "Születéstől 6 hétig: BCG (tuberkulózis) és hepatitis B. Ezeket a kórházban adják be a hazabocsátás előtt. Ha gyermeke otthon született, élete első hetében vigye el az egészségügyi központba ezeknek az oltóanyagoknak a beadásáért. Ne várj",
+        "tip2": "2, 3, 4 hónapos: a „nagy három” kör – DTP (diftéria, tetanusz, szamárköhögés), gyermekbénulás, hib és hepatitis B. Ezek a csecsemőkori legkritikusabb vakcinák. Minden kör erősíti az immunitást. Az egyik hiánya az egész láncot gyengíti",
+        "tip3": "12-15 hónapos: MMR (kanyaró, mumpsz, rubeola). Nem tudom ezt eléggé hangsúlyozni. A kanyaró nem ártalmatlan gyermekkori betegség – öl, agykárosodást okoz, és elvakít. 2019-ben kanyarójárványt láttam egy romatelepen, mert a lefedettség 80% alá esett. Megelőzhető volt",
+        "tip4": "A védőoltások minden európai országban ingyenesek a kormányzati egészségügyi központokban. Nem kell biztosítás, nem kell tartózkodási engedély, nem kell időpont a legtöbb központban. Ha megtagadják a szolgáltatást, ez illegális – forduljon egészségügyi közvetítőjéhez vagy a betegjogi hivatalhoz",
+        "fact": "A romák és a nem romák oltási aránya közötti különbség egyes európai országokban meghaladja a 15 százalékpontot. Ezt a szakadékot nem a romák oltásokkal kapcsolatos hiedelmei okozzák – a felmérések folyamatosan azt mutatják, hogy a roma szülők azt szeretnék, ha gyermekeiket beoltatnák. A szakadékot a hozzáférési akadályok, az egészségügyben tapasztalható diszkrimináció és a tájékoztatás hiánya okozzák. Ennek a hiánynak a megszüntetése az Európai Szociális Charta 11. cikke értelmében állami kötelezettség.",
+        "action": "Keresse meg gyermeke oltási kártyáját. Ha valamelyik védőoltás hiányzik, vagy ha nincs kártyája, keresse fel a legközelebbi egészségügyi központot ezen a héten. Ha akadályokba ütközik – nyelv, dokumentumok, elutasítás –, forduljon a helyi egészségügyi közvetítőhöz. Pontosan ezért vagyunk itt."
+      }
+    },
+    "chronic": {
+      "description": "A romák átlagosan 10 évvel korábban halnak meg, mint az európai átlag. A különbség nagy része krónikus betegségekből — cukorbetegség, szívbetegség, légzőszervi betegség — jön, amelyek évekig csendben fejlődnek. Amikor megjelennek a tünetek, a kár már megtörtént. De a legtöbb megelőzhető és kezelhető, ha időben észreveszik.",
+      "diabetes": {
+        "title": "Cukorbetegség: A néma fenyegetés",
+        "description": "A 2-es típusú cukorbetegség az a krónikus betegség, amellyel leggyakrabban találkozom a roma közösségekben. Családokban fut, virágzik az olcsó, magas cukortartalmú étrenden, amelyre a szegénység rákényszeríti az embereket, és évekig károsítja a szemet, a vesét, a lábat és a szívet, mielőtt bármi rosszat érezne. Láttam, hogy a 40-es éveiben járó férfiak elveszítik lábujjaikat, nők pedig megvakulnak a cukorbetegség miatt, amelyet soha nem diagnosztizáltak, mert soha nem végeztek vérvizsgálatot. Ez megelőzhető.",
+        "tip1": "Ha a családjában valaki cukorbeteg, annak kockázata 2-3-szor nagyobb. Ez nem a sors – ez egy jelzés, hogy most cselekedjünk. Csökkentse a fehér kenyér, a cukor és a cukros italok fogyasztását. Cserélje babbal, lencsével, zöldségekkel és vízzel. Láttam, hogy a családok ezeken a változásokon keresztül teljesen visszafordították a cukorbetegség előtti állapotot",
+        "tip2": "Naponta 30 perc séta 58%-kal csökkenti a cukorbetegség kockázatát. Nem fut. Nem edzőterem. Séta. A közösségekben, akikkel együtt dolgozom, minden 35 év feletti embernek azt mondom: a séta a gyógyszer. Ingyenes, és jobban működik, mint a legtöbb tabletta a megelőzés érdekében",
+        "tip3": "Évente legalább egyszer kérjen éhgyomri vércukorszint-vizsgálatot egészségügyi központjában, ha Ön 35 év feletti, túlsúlyos, vagy ha van családja. Ez egy egyszerű ujjszúrási teszt, a legtöbb országban ingyenes, és 5 percet vesz igénybe. Ez az egy teszt évekkel a tünetek megjelenése előtt képes elkapni a cukorbetegséget",
+        "tip4": "Ismerje meg azokat a figyelmeztető jeleket, amelyek arra utalnak, hogy a cukorbetegség már jelen van: állandó szomjúságérzet, nagyon gyakori vizelés (főleg éjszaka), homályos látás, lassan gyógyuló sebek, megmagyarázhatatlan fáradtság. Ha ezek közül kettő vagy több van, végezzen vizsgálatot ezen a héten – ne a következő hónapban",
+        "fact": "A szlovákiai és romániai roma közösségekben végzett vizsgálatok az országos átlag 2-3-szorosát mutatták ki, és az esetek többségét nem diagnosztizálták. Az egyik programban, amelyben részt vettem, a közösségi alapú szűrés a 40 év feletti, soha nem tesztelt felnőttek 18%-ánál mutatta ki a cukorbetegséget. Szinte mindegyiknek nem volt tünete.",
+        "action": "Ha elmúlt 35 éves, keresse fel egészségügyi központját és kérjen vércukorszint-vizsgálatot. 5 percet vesz igénybe. Ha az eredmény 5,6 mmol/L (100 mg/dL) felett van, azonnal el kell kezdenie a változtatásokat. Hozz magaddal egy családtagot – ha nagy a kockázatod, valószínűleg az övékét is."
+      },
+      "heartHealth": {
+        "title": "A szíved",
+        "description": "A szív- és érrendszeri betegségek az első számú gyilkosok a roma közösségekben – nem a genetika miatt, hanem a körülmények miatt, amelyekben élünk: a szegénységből és a diszkriminációból eredő krónikus stressz, a magas dohányzási ráta, a szegénység által megengedhető étrend és a megelőző szűrések szinte hiánya. Részt vettem olyan 50-es éveikben járó férfiak temetésén, akik teljesen megelőzhető szívrohamban haltak meg. Ez a modul azért létezik, mert nem vagyok hajlandó többet részt venni.",
+        "tip1": "A dohányzás a legpusztítóbb dolog, amit a szívével tehet. Tudom, hogy ez mélyen beágyazódott közösségi kultúránkba, és nem azért vagyok itt, hogy ítélkezzek – de őszinteséggel tartozom. Minden cigaretta károsítja az ereket. Ha nem tudja abbahagyni, csökkentse. Ha képes leszokni, szíve 24 órán belül elkezdi helyreállítani magát",
+        "tip2": "A magas vérnyomást csendes gyilkosnak nevezik, mert addig nem érzel semmit, amíg el nem támad egy stroke vagy szívroham. Mérje meg vérnyomását bármelyik gyógyszertárban – ingyenes. A normál érték 120/80 alatt van. 140/90 felett veszélyes és kezelésre szorul. Veszélyesen magas vérnyomást tapasztaltam olyan embereknél, akik teljesen egészségesnek érezték magukat",
+        "tip3": "Csökkentse a sófogyasztást: A roma konyha ízletes és gyönyörű, de sok hagyományos étel nagyon sós. Só hozzáadása helyett használjon paprikát, fokhagymát, hagymát, fűszernövényeket és borsot. Ízlelőbimbói 2 héten belül alkalmazkodnak – az ételek íze jobb lesz, nem pedig rosszabb. Csak ettől a változástól 10 ponttal csökkent a vérnyomásom",
+        "tip4": "A diszkriminációból, a szegénységből, a kilakoltatási fenyegetésekből és a családi konfliktusokból eredő krónikus stressz a szívbetegségek közvetlen oka. Ez nem vélemény, hanem dokumentált gyógyszer. A stresszhormonok éveken keresztül károsítják az ereket. Bármilyen módszer megtalálása a stressz oldására – séta, zene, ima, beszélgetés, közösség – szívgyógyszer",
+        "fact": "A roma férfiak átlagosan 10-15 évvel korábban halnak meg szív- és érrendszeri betegségekben, mint az általános népesség. Az Európai Bizottság saját adatai ezt mutatják. De a korai szívrohamok 80%-a megelőzhető életmódváltással, valamint a magas vérnyomás és a koleszterin korai kezelésével. A megelőzés működik – ha van hozzáférése.",
+        "action": "Ezen a héten két dolgot tegyél: (1) Menj el egy gyógyszertárba, és ellenőrizd a vérnyomásodat – írd le a számokat. (2) Számolja meg, hány cigarettát szív el naponta, és próbálja meg napi 3-mal csökkenteni. Ez a két intézkedés a leghatékonyabb szívmegelőző lépés, amelyet bármely egyén megtehet."
+      },
+      "respiratory": {
+        "title": "Tüdő és légzés",
+        "description": "Dolgoztam olyan településeken, ahol a családok fát, szenet, vagy akár műanyagot, gumit égetnek fűtésre télen. Ahol 8 ember alszik két szellőzés nélküli szobában. Ahol a nedvesség lefolyik a falakon, és minden sarokban fekete penész nő. A légúti megbetegedések ilyen körülmények között nem meglepőek – ez annak a lakásnak a megjósolható eredménye, amelyben senkinek sem kellene laknia. Miközben a jobb lakhatásért küzdünk, meg kell védenünk a tüdőnket is.",
+        "tip1": "A beltéri füst a legközvetlenebb légúti veszély, amit látok. Ha szilárd tüzelőanyaggal fűt, gondoskodjon a szellőzésről – még az ablak megrepedése is segít. Soha ne égessen el műanyagot, gumit vagy festett fát – a gőzök olyan vegyi anyagokat tartalmaznak, amelyek maradandó tüdőkárosodást okoznak, különösen olyan gyermekeknél, akiknek a tüdeje még fejlődik.",
+        "tip2": "A nedvesség és a penész asztmát, krónikus hörghurutot okoz, és minden légúti fertőzést súlyosbít. Törölje le a látható penészt víz és ecet vagy fehérítő keverékével. Nyissa ki az ablakokat naponta legalább 15 percre még télen is. Ha lehetséges, akaszd ki a nedves ruhaneműt a szabadba – a benti ruhák szárítása hatalmas mennyiségű nedvességet ad a levegőbe",
+        "tip3": "A 3 hétnél tovább tartó köhögést, különösen fogyással, éjszakai izzadásokkal vagy vérrel a köpetben, ki kell vizsgálni tuberkulózisra. A tbc ingyenes kezeléssel gyógyítható, de nagyon fertőző is. A roma közösségekben a tuberkulózis aránya több európai ország országos átlagának 3-5-szöröse. A korai tesztelés megvédi az egész családot",
+        "tip4": "A füstös vagy penészes környezetben felnövő gyermekek tüdőkapacitása tartósan csökkent – ​​egész életükben kevésbé egészséges tüdőt fognak hordozni. Még ha nem is tud azonnal változtatni lakáshelyzetén, a füstexpozíció csökkentése és a lehető legnagyobb szellőztetés védi a fejlődő tüdejét",
+        "fact": "A WHO a háztartások légszennyezettségét a negyedik legnagyobb globális egészségügyi kockázatként azonosítja. Azokon a roma telepeken, ahol dolgoztam, a gyerekek több mint 60%-ának volt visszatérő légúti fertőzése – ez az arány jelentősen csökkent, amikor a családok javították a szellőzést és csökkentették a hulladékok beltéri elégetését. A lakhatási körülmények nem a családok hibái, de az alkalmazkodási stratégiák életeket mentenek, miközben a rendszerszintű változásért küzdenek.",
+        "action": "Ma: ellenőrizze, nincs-e látható penész az otthonában, és tisztítsa meg hígított fehérítővel vagy ecettel. Nyisson ki legalább egy ablakot 15 percre. Ha valaki a háztartásában 3 hétnél tovább köhög, menjen el az egészségügyi központba tbc-szűrésre – az ingyenes és 15 percet vesz igénybe."
+      }
+    },
+    "mental": {
+      "description": "15 év roma közösségekben megtanultam, hogy a legnehezebb teher nem a testi betegség — hanem a diszkrimináció, a szegénység, a kilakoltatástól való félelem, a gyerekek jövője miatti aggodalom és az érzés, hogy a rendszerben senki sem törődik veled. Stressznek hívjuk. Ha évekig tart, mássá válik. Megérdemli, hogy elnevezzük, megértsük és kezeljük — szégyen nélkül.",
+      "stressManagement": {
+        "title": "Stresszel élni",
+        "description": "Nem fogok úgy tenni, mintha egy légzőgyakorlat megoldaná a problémáit. Ha attól tart, hogy családját kilakoltatják, egyetlen meditációs alkalmazás sem fogja megoldani. De több száz emberrel dolgoztam együtt közösségeinkben, akik óriási stresszt hordoznak magukban, és láttam, mi történik, ha ez a stressz évekig nem kezelhető: szívrohamok a 40-es éveikben járó férfiaknál, nők, akik nem tudnak enni vagy aludni, gyerekek, akik feszültségtől felvillanyozó háztartásban nőnek fel. Nem tudjuk mindig megváltoztatni a körülményeinket, de megváltoztathatjuk, hogyan viseljük azokat.",
+        "tip1": "A 4-4-8 légzési módszer azonnal hat az idegrendszerére. Lélegezz be az orrán keresztül 4-ig, tartsd 4-ig, és lassan lélegezz ki a szádon keresztül 8-ig. Ezt 5-ször végezd. Leesik a pulzusod, ellazulnak az izmaid. Ezt tanítom a családoknak kórházi látogatások előtt, bírósági tárgyalások előtt, minden stresszes találkozás előtt. Ez egy olyan eszköz, amely mindig nálad van",
+        "tip2": "A gyaloglás a leginkább alábecsült gyógyszer a stresszre. 20 perc gyaloglás – nem gyors, csak gyaloglás – akár 30%-kal csökkenti a kortizol stresszhormon szintjét. Ha nem tudja elhagyni a házat, járjon körbe. Maga a mozgás az, ami működik, nem a díszlet",
+        "tip3": "Beszélj valakivel. Nem a probléma megoldása érdekében, csak azért, hogy megosszuk a súlyt. Láttam, hogy a férfiak a közösségeinkben mindent egyedül hordoznak, mert a segítségkérés gyengeségnek tűnik. A munka 15 éve alatt a legerősebb emberek, akikkel találkoztam, azok, akik megtanulták azt mondani, hogy „küzdök”",
+        "tip4": "Légy tudatos azzal kapcsolatban, hogy mi jut eszedbe. A közösségi média, a hírek, a családi viták, amelyek újra visszajátszanak a fejedben – ezek olyan stresszforrások, amelyeket kontrollálhatsz. Nem azt mondom, hogy hagyd figyelmen kívül a valóságot. Azt mondom, válassza ki, mikor foglalkozik vele, és hozzon létre olyan tereket a napjában, ahol szándékosan megnyugszik",
+        "fact": "A roma közösségek megtapasztalják az úgynevezett „kisebbségi stresszt” – a diszkrimináció, a kirekesztés és a szegénység krónikus élettani következményeit. A kutatások azt mutatják, hogy ez tartósan megemeli a kortizolszintet, felgyorsítva a szívbetegségek, a cukorbetegség és a mentális betegségek kialakulását. Ez nem gyengeség. A biológia az igazságtalanságra reagál.",
+        "action": "Ma este lefekvés előtt helyezze a telefont egy másik szobába, és gyakoroljon 4-4-8 légzést 5 percig. Ha van egy partner vagy családtag, aki hajlandó, tegyétek ezt együtt csendben. Ez az apró cselekedet határt szab a napi stressz és az alvás között – az alvás pedig az, amikor a szervezet helyreállítja a stressz által okozott károkat."
+      },
+      "sleep": {
+        "title": "Aludj orvosként",
+        "description": "Túlzsúfolt otthonokban, ahol a tévé mindig be van kapcsolva, ahol a gyerekek a szülőkkel osztoznak ágyon, ahol a szomszédok vagy az utca zaja soha nem szűnik meg – az alvás nem adott. Ez olyasvalami, amiért meg kell küzdeni. És mégis, az alvás az, amikor a tested helyreállítja magát, amikor az agyad feldolgozza a napi stresszt, és amikor az immunrendszered újjáépül. A krónikus alváshiány ugyanolyan veszélyes, mint a dohányzás – és közösségeinkben szinte általános jelenség.",
+        "tip1": "Próbáljon meg minden nap nagyjából ugyanabban az időben aludni és ébredni, beleértve a hétvégéket is. Tudom, hogy ez nehéz műszakos munka, kisgyerekek vagy zajos környezet esetén – de még egy állandó 6 órás időtartam is helyreállítóbb, mint a véletlenszerű 8 órás blokkok. A tested ritmusra vágyik",
+        "tip2": "Az alvás előtti telefonok és képernyők az egyik legrosszabb modern alvásromboló. A kék fény jelzi az agyának, hogy nappal van. Ha használnia kell a telefont, állítsa éjszakai üzemmódba este 21 óra után. Még jobb, ha egy másik szobában töltse fel – azt tapasztaltam, hogy az alvás minősége drámaian javult ettől az egyetlen változtatástól",
+        "tip3": "A koffein 8 órán keresztül marad a szervezetben. Aznap délután 16 órakor a török ​​kávé vagy tea éjfélkor még aktív a véráramban. Ebéd után váltson gyógyteára (kamilla, hársfa). Ez az egyik legegyszerűbb fejlesztés, amit javaslok, és az emberek mindig meglepődnek, mennyit segít",
+        "tip4": "Ha gyerekekkel vagy családtagokkal osztozik egy szobán, az apró változtatások segítenek: a folyamatos „világítási idő”, a zaj fokozatos csökkentése, függöny használata az alvás vizuális határának kialakítására. Tanítsd meg a gyerekeknek, hogy az alvás ideje a családi idő – amikor a háztartás együtt csendben van, mindenki jobban alszik",
+        "fact": "A marginalizált közösségekben végzett alvással kapcsolatos kutatások azt mutatják, hogy a túlzsúfoltság, a zaj és a stressz okozta krónikus alváshiány jelentősen hozzájárul az egészségügyi szakadékhoz. Azok az emberek, akik folyamatosan 6 óránál kevesebbet alszanak, négyszer nagyobb kockázatot kapnak a fertőzések elkapására, és kétszer nagyobb a szívbetegségek kockázata. Az alvás nem luxus, hanem a túlélés alapja.",
+        "action": "Ma este: állítson be lefekvés előtti ébresztőt a telefonján 30 percre, mielőtt lefekszik. Amikor megszólal, kapcsold ki a TV-t, tedd el a telefont, és feküdj a sötétben 4-4-8 légzéssel, amíg el nem alszol. Csináld ezt 7 éjszakán keresztül, és vedd észre a különbséget."
+      },
+      "communitySupport": {
+        "title": "A kapcsolat ereje",
+        "description": "A roma kultúra már megért valamit, amit a nyugati orvoslás csak most mér: hogy az összetartozás, a család és a közösség olyan erősen védi az egészséget, mint bármely gyógyszer. Láttam, hogy emberek túlélték a legnehezebb körülményeket – kilakoltatást, betegséget, veszteséget –, mert a közösségük tartotta őket. És láttam, hogy az emberek sokkal kevesebb alatt esnek össze, amikor elszigeteltek voltak. A tudomány most megerősíti azt, amit őseink tudtak: a magány megöl, a kapcsolat gyógyít.",
+        "tip1": "Ha ismer valakit a közösségében, aki a közelmúltban veszített el egy családtagját, betegséget diagnosztizáltak nála, elvesztette a munkáját vagy válságon megy keresztül – ne várja meg, hogy segítséget kérjen. Látogassa meg őket. Hozz ételt. Ülj le velük. A roma kultúrában ez az ösztön. Az egészségtudományban ezt „szociális receptnek” nevezik – és jobban működik, mint a legtöbb tabletta",
+        "tip2": "A szégyen az egészség ellensége. Találkoztam olyan emberekkel, akik évekig titkolták a cukorbetegséget, a depressziót, a HIV-vírust és a családon belüli erőszakot, mert féltek, mit mond majd a közösség. Valahányszor közösségünkben valaki nyíltan beszél a küzdelméről, az engedélyt ad másoknak. Nem kell mindent megosztanod – de valami megosztása megtöri a csendet, amitől az emberek betegek",
+        "tip3": "Összejövetelek, ünnepségek, zene, ima, mesemondás – ezek nem vonják el a figyelmet az egészségről. Egészségesek. A tanulmányok azt mutatják, hogy a közösségi kulturális tevékenységekben való rendszeres részvétel csökkenti a depressziót és a szív- és érrendszeri kockázatot. Az általuk teremtett öröm és összetartozás mérhető gyógyszer",
+        "tip4": "Nézze meg a közösségében élő időseket és elszigetelt embereket. Az egyedül élő ember, a nagymama, akinek a gyerekei elköltöztek, a férfi, aki nem járt összejövetelekre. Egy 10 perces látogatás vagy telefonhívás lehet az egyetlen emberi kapcsolatuk aznap – és ez lehet az, ami életben tartja őket",
+        "fact": "A Harvard 85 éves, a felnőttek egészségével foglalkozó tanulmánya arra a következtetésre jutott, hogy az egészség és a hosszú élettartam legerősebb előrejelzője a kapcsolatok minősége – nem az étrend, a testmozgás vagy a genetika. A magány 26%-kal növeli a halálozási kockázatot, ami napi 15 cigaretta elszívásának felel meg. A roma közösségek kulturális gazdagsággal rendelkeznek a társadalmi kapcsolatokban, amely valódi egészségügyi érték – védje meg.",
+        "action": "Ezen a héten lépj kapcsolatba egy olyan személlyel a közösségedben, akivel mostanában nem beszéltél. Nem szövegesen – hanggal vagy személyesen. Kérdezd meg, hogy vannak, és hallgasd meg. Ez a kapcsolati aktus az egészségfejlesztés a legtisztább formájában."
+      },
+      "seekHelp": {
+        "title": "Amikor túl sok",
+        "description": "Van egy pont, ahol a stressz, a szomorúság és az aggodalom átlép egy határvonalat, és valami szakszerű segítségre szorul – és a roma közösségekben ezt a határvonalat szinte soha nem ismerik fel, mert megtanítják elviselni, erősnek lenni, kezelni a családon belül. Láttam ennek a hallgatásnak az árát: férfiak, akik isznak, hogy megbirkózzanak, amíg a májuk elromlik, a nők, akik abbahagyják az evést, a tizenévesek, akik ártanak maguknak. A segítségkérés nem árulja el a kultúráját. Megvédi az életedet, hogy ott lehess azoknak, akiknek szükségük van rád.",
+        "tip1": "Ha Ön vagy valaki, akit ismer, több mint 2 hétig nem tud normálisan működni – nem tud aludni, nem tud enni, nem tud gondoskodni a gyerekekről, folyton sír, vagy nincs energiája semmire – ez meghaladja a normál stresszt. Ez a depresszió, és olyan valóságos egészségügyi állapot, mint a cukorbetegség. Ez nem gyengeség, és reagál a kezelésre",
+        "tip2": "Az első lépés a háziorvosa. Mondja: \"Több mint 2 hete nagyon rosszul érzem magam, és segítségre van szükségem.\" Nem kell mindent megmagyaráznod. A háziorvos felmérheti Önt, és pszichológushoz vagy pszichiáterhez irányíthatja. Ez a szolgáltatás a legtöbb európai országban ingyenes vagy alacsony költségű. Ha a háziorvos elbocsát, keressen fel egy másikat",
+        "tip3": "Ha valaki a családjában megemlíti, hogy meg akar halni, el akar tűnni, vagy úgy érzi, hogy mindenkinek jobban járna nélküle – ezt azonnal vegye komolyan. Maradj velük. Távolítsa el a gyógyszerekhez és éles tárgyakhoz való hozzáférést. Hívja az országos krízisvonalat vagy a 112-t. Nem reagálja túl. Ezek a szavak segélykiáltások, amelyekre válaszolni kell",
+        "tip4": "A mentális egészségügyi gyógyszerek nem szégyenletesek, nem okoznak függőséget, és nem „őrültek számára”. Világszerte emberek millióinak írnak fel antidepresszánsokat, amelyek életeket menthetnek meg. Nem változtatják meg azt, aki vagy – feloldják a kémiai ködöt, amely megakadályoz abban, hogy az legyél, aki vagy. Láttam embereket, akik átalakultak a kezelés hatására, és évekig ellenálltak a megbélyegzés miatt",
+        "fact": "A roma közösségekben a legmagasabb a depresszió és a szorongás aránya Európában, olyan strukturális tényezők miatt, mint a diszkrimináció, a szegénység és a szolgáltatásokhoz való hozzáférés hiánya. Ennek ellenére a roma közösségekben a mentálhigiénés szolgáltatások igénybevétele a legalacsonyabbak közé tartozik. Azokban a programokban, ahol segítettem az embereket a kulturálisan érzékeny mentális egészségügyi ellátáshoz kapcsolódni, az életminőség jelentős javulása volt – nemcsak az egyén, hanem az egész családja számára.",
+        "action": "Mentse el ezt a számot most azonnal a telefonjába: hazája mentális egészségügyi segélyvonala. Ha válságban vagy, hívd fel. Ha valaki, akit ismer, válságban van, hívja fel vele. Ha pedig több mint 2 hete küszködik, kérjen időpontot háziorvosához ezen a héten. Megérdemled, hogy jobban érezd magad, és van segítség."
+      }
+    }
+  },
+  "track": {
+    "title": "Napi egészség-ellenőrzés",
+    "subtitle": "Hogy érzed magad ma?",
+    "moodTitle": "Hangulat",
+    "moodGreat": "Remek",
+    "moodGood": "Jó",
+    "moodOkay": "Megfelelő",
+    "moodLow": "Rosszabb",
+    "moodBad": "Nagyon rossz",
+    "waterTitle": "Vízfogyasztás",
+    "waterSubtitle": "Érintsd meg minden poharat, amikor iszol",
+    "waterGoal": "Cél: 8 pohár",
+    "activityTitle": "Mai aktivitás",
+    "activityWalk": "Sétáltam",
+    "activityExercise": "Edzettem",
+    "activityRest": "Pihentem",
+    "saveCheckin": "Mai bejegyzés mentése",
+    "savedSuccess": "Bejegyzés mentve!",
+    "weeklyTitle": "Ez a hét",
+    "streakDays": "napos sorozat",
+    "loggedToday": "Ma rögzítve",
+    "noLogsYet": "Kezdd az első bejegyzést lent",
+    "historyTitle": "Legutóbbi előzmények"
+  },
+  "profile": {
+    "title": "Profil",
+    "guestUser": "Vendég",
+    "guestSubtitle": "Névtelenül tanulsz",
+    "languagePreference": "Nyelvi beállítás",
+    "changeLanguage": "Nyelv módosítása",
+    "learningProgress": "Tanulási előrehaladás",
+    "pillarsStarted": "Elkezdett pillérek",
+    "modulesCompleted": "Befejezett modulok",
+    "trackingStreak": "Követési sorozat",
+    "days": "nap",
+    "exportData": "Adataim exportálása (GDPR)",
+    "exportDescription": "Töltsd le az összes egészségkövetési adatodat CSV-fájlként.",
+    "clearData": "Összes adat törlése",
+    "clearDataConfirm": "Biztos vagy benne? Ez nem vonható vissza.",
+    "aboutTitle": "A Redi Health-ről",
+    "aboutText": "A Redi Health ingyenes, többnyelvű egészségügyi tájékozódási társ a hátrányos helyzetű területeken — falvak, külvárosok, telepek, roma negyedek, vidéki régiók Európában — ahol kevés az orvos, hosszú az út az ellátáshoz, és a hivatalos üzenetek gyakran nem az emberek nyelvén érkeznek.",
+    "privacyPolicy": "Adatvédelmi irányelvek",
+    "contactUs": "Kapcsolat",
+    "progressNone": "Még nem kezdtél el tanulni.",
+    "progressStart": "Menj a Tanulás oldalra a kezdéshez.",
+    "version": "Verzió"
+  },
+  "mediator": {
+    "title": "Mediátor irányítópult",
+    "subtitle": "A közösséged egészségének támogatása",
+    "accessCode": "Add meg a hozzáférési kódot",
+    "accessCodePlaceholder": "4 számjegyű kód",
+    "accessCodeHint": "Kérd el a koordinátortól a hozzáférési kódot",
+    "accessCodeError": "Helytelen kód. Próbáld újra.",
+    "accessCodeSubmit": "Belépés az irányítópultra",
+    "communityMembers": "Közösségi tagok",
+    "logsThisMonth": "Egészségügyi bejegyzések ebben a hónapban",
+    "alertsActive": "Aktív riasztások",
+    "quickActions": "Gyors műveletek",
+    "logVisit": "Látogatás rögzítése",
+    "recordHealth": "Egészségügyi adatok rögzítése",
+    "viewReports": "Jelentések megtekintése",
+    "recentActivity": "Legutóbbi tevékenység",
+    "noActivity": "Nincs legutóbbi tevékenység",
+    "memberName": "Tag neve",
+    "visitDate": "Látogatás dátuma",
+    "notes": "Jegyzetek",
+    "saveVisit": "Látogatás mentése",
+    "visitSaved": "Látogatás sikeresen mentve",
+    "healthSummary": "Közösségi egészségügyi összefoglaló",
+    "pillarProgress": "Tanulási előrehaladás pillérek szerint",
+    "contactSupport": "Regionális koordinátor elérése",
+    "resources": "Mediátor források",
+    "downloadGuide": "Terepi útmutató letöltése (PDF)"
+  },
+  "healthQuiz": {
+    "meta": {
+      "title": "Egészségügyi kvíz – Redi Health",
+      "description": "Tesztelje egészségügyi ismereteit interaktív vetélkedőkkel"
+    },
+    "title": "Egészségügyi kvíz",
+    "subtitle": "Tesztelje tudását. Tanulj valami újat.",
+    "backToQuizzes": "Vissza a kvízekhez",
+    "seeResults": "Lásd az eredményeket",
+    "nextQuestion": "Következő kérdés",
+    "questionsCount": "{count} kérdés",
+    "results": {
+      "perfect": "Tökéletes pontszám!",
+      "great": "Remek munka!",
+      "good": "Jó erőfeszítést!",
+      "keepLearning": "Tanulj tovább!",
+      "score": "{score}/{total} helyes eredmény",
+      "tryAgain": "Próbáld újra",
+      "moreQuizzes": "Még több kvíz"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotikumok",
+        "description": "Tudja, mikor kell antibiotikumot alkalmazni?",
+        "questions": [
+          {
+            "question": "Az antibiotikumok gyógyíthatják az influenzát?",
+            "options": [
+              "Igen",
+              "Nem",
+              "Néha"
+            ],
+            "explanation": "Az influenzát vírus okozza. Az antibiotikumok csak a baktériumokat pusztítják el. Az influenza elleni antibiotikumok szedése semmit sem okoz, és megnehezítheti a jövőbeni fertőzések kezelését."
+          },
+          {
+            "question": "3 napos antibiotikum kezelés után jobban érzi magát. Meg kellene állnod?",
+            "options": [
+              "Igen, meggyógyultál",
+              "Nem, fejezze be a teljes tanfolyamot",
+              "Vegye be a maradék tabletták felét"
+            ],
+            "explanation": "MINDIG fejezze be a teljes tanfolyamot. Ha korán abbahagyja, néhány baktérium túléli és rezisztenssé válik. Legközelebb ugyanaz az antibiotikum nem fog hatni."
+          },
+          {
+            "question": "Megoszthat antibiotikumot egy családtaggal, akinek hasonló tünetei vannak?",
+            "options": [
+              "Igen, pénzt takarít meg",
+              "Nem, soha",
+              "Csak ha ugyanaz a betegség"
+            ],
+            "explanation": "Soha ne osszon antibiotikumot. A különböző fertőzésekhez különböző gyógyszerekre van szükség. A nem megfelelő antibiotikum veszélyes lehet, és nem segít."
+          },
+          {
+            "question": "Mi történik, ha túl gyakran szed antibiotikumot?",
+            "options": [
+              "Semmi rossz",
+              "A szervezet immunissá válik a betegségekkel szemben",
+              "A baktériumok ellenállóvá válnak, és nehezebb elpusztulni"
+            ],
+            "explanation": "Az antibiotikum-rezisztencia globális válság. Amikor a baktériumok ellenállóvá válnak, az egyszerű fertőzések halálossá válhatnak. Csak akkor vegyen be antibiotikumot, ha az orvos felírja."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "Védőoltások",
+        "description": "Különítsd el a tényeket a mítoszoktól",
+        "questions": [
+          {
+            "question": "Okoznak a védőoltások autizmust?",
+            "options": [
+              "Igen",
+              "Nem",
+              "Nem tudjuk"
+            ],
+            "explanation": "NEM. Ez a mítosz egy csaló tanulmányból indult ki, amelyet visszavontak. Az orvos, aki közzétette, elvesztette orvosi engedélyét. Több millió gyermekkel végzett tanulmányok tucatjai bizonyítják, hogy a vakcinák NEM okoznak autizmust."
+          },
+          {
+            "question": "Biztonságos-e egyszerre több oltást beadni a babának?",
+            "options": [
+              "Nem, túl sok",
+              "Igen, biztonságos és tesztelt",
+              "Egyszerre csak egyet"
+            ],
+            "explanation": "A csecsemők immunrendszere naponta több ezer baktériumot kezel. A kombinált vakcinák alaposan teszteltek és biztonságosak. A védőoltások késleltetése védtelenné teszi gyermekét."
+          },
+          {
+            "question": "Gyermekem enyhe nátha. Kaphatnak még oltást?",
+            "options": [
+              "Nem, várja meg, amíg teljesen egészséges lesz",
+              "Igen, az enyhe megfázás is jó",
+              "Csak orvosi engedéllyel"
+            ],
+            "explanation": "Enyhe megfázás, alacsony láz vagy orrfolyás NEM ok az oltás elhalasztására. Csak súlyos betegség esetén van szükség halasztásra. Ha bizonytalan, kérdezze meg orvosát."
+          },
+          {
+            "question": "Tartalmaznak veszélyes vegyi anyagokat a vakcinák?",
+            "options": [
+              "Igen, tele vannak méreganyagokkal",
+              "Nem, minden összetevő biztonságos kis mennyiségben is",
+              "Van aki igen, van aki nem"
+            ],
+            "explanation": "A vakcina összetevői kis, biztonságos mennyiségben vannak jelen. Az anyatejből több alumíniumot kapsz, mint egy vakcinából. Minden összetevőt teszteltek a biztonság érdekében."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Cukorbetegség",
+        "description": "A cukorbetegség kezelésének megértése",
+        "questions": [
+          {
+            "question": "A cukorbetegség oka a túl sok cukorfogyasztás?",
+            "options": [
+              "Igen",
+              "Nem, ez bonyolultabb",
+              "Csak a 2. típus"
+            ],
+            "explanation": "A cukorbetegség oka a genetika, az életmód és az, hogy a szervezet hogyan dolgozza fel az inzulint. A cukorfogyasztás közvetlenül nem okozza, de az egészségtelen táplálkozás és az elhízás növeli a kockázatot."
+          },
+          {
+            "question": "A cukorbetegség gyógyítható természetes gyógymódokkal, például a fahéjjal?",
+            "options": [
+              "Igen, a fahéj gyógyít",
+              "Nem, nincs gyógymód, de kezelhető",
+              "Igen, elegendő fokhagymával és fűszernövényekkel"
+            ],
+            "explanation": "A cukorbetegségre NINCS gyógymód. Gyógyszerekkel, egészséges ételekkel és testmozgással KEZELHETŐ. A fahéjnak apró előnyei lehetnek, de NEM helyettesítheti a gyógyszert. Azok, akik abbahagyják a gyógyszer szedését, kórházba kerülnek."
+          },
+          {
+            "question": "A cukorbetegek szédülnek és izzadnak. Mit kell tenned?",
+            "options": [
+              "Adj nekik inzulint",
+              "Azonnal adj nekik valami édeset",
+              "Mondd meg nekik, hogy pihenjenek"
+            ],
+            "explanation": "Ezek az ALACSONY vércukorszint (hipoglikémia) jelei. Azonnal adjon nekik gyümölcslevet, cukorkát vagy cukros vizet. Ez életveszélyes lehet. Miután jobban érzik magukat, megfelelő ételt kell enniük."
+          },
+          {
+            "question": "Milyen gyakran kell egy cukorbetegnek ellenőriznie a lábát?",
+            "options": [
+              "Soha, a lábak jól vannak",
+              "Minden nap",
+              "Évente egyszer"
+            ],
+            "explanation": "A cukorbetegség károsíthatja a láb idegeit. Előfordulhat, hogy nem érez vágásokat vagy sebeket. MINDEN NAP ellenőrizze lábát vágások, hólyagok vagy színváltozások szempontjából. A kis sebek súlyos fertőzésekké válhatnak."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Higiénia és megelőzés",
+        "description": "Alapvető egészségügyi szokások, amelyek életeket menthetnek",
+        "questions": [
+          {
+            "question": "Meddig kell kezet mosni szappannal?",
+            "options": [
+              "5 másodperc",
+              "Legalább 20 másodpercig",
+              "1 perc"
+            ],
+            "explanation": "Moss legalább 20 másodpercig – körülbelül annyi idő, mint a „Happy Birthday” kétszeri eléneklése. Ez eltávolítja a legtöbb baktériumot. A gyors öblítés nem működik."
+          },
+          {
+            "question": "Biztonságos-e folyóból vagy patakból vizet inni?",
+            "options": [
+              "Igen, a természetes víz tiszta",
+              "Nem, mindig először forraljuk fel vagy szűrjük le",
+              "Csak ha tisztán látszik"
+            ],
+            "explanation": "Még a tiszta víz is tartalmazhat veszélyes baktériumokat és parazitákat. Mindig forraljon vizet legalább 1 percig, vagy használjon szűrőt. A piszkos víz hasmenést, kolerát és tífuszt okoz."
+          },
+          {
+            "question": "Gyermekének hasmenése van. Mi a legfontosabb?",
+            "options": [
+              "Állítson le minden ételt",
+              "Adjon sok folyadékot (víz, ORS)",
+              "Adj antibiotikumot"
+            ],
+            "explanation": "A hasmenés okozta kiszáradás több gyermeket öl meg, mint maga a hasmenés. Adjon orális rehidratáló oldatot (ORS) vagy tiszta vizet egy csipet sóval és cukorral. Továbbra is szoptassa a babákat."
+          },
+          {
+            "question": "Mikor kell kezet mosni?",
+            "options": [
+              "Csak evés előtt",
+              "Étkezés előtt, WC után, állatok érintése után, köhögés után",
+              "Csak akkor, ha piszkosnak tűnnek"
+            ],
+            "explanation": "A baktériumok láthatatlanok. Mossunk kezet: evés/főzés előtt, vécéhasználat után, pelenkázás után, állatok érintése után, köhögés/tüsszentés, beteg emberek érintése után."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Ismerje meg jogait – Redi Health",
+      "description": "Betegjogok, diszkriminációs segítség, jogi kapcsolattartás a roma közösségek számára"
+    },
+    "title": "Ismerje meg jogait",
+    "subtitle": "Betegként jogai vannak. Tanuld meg őket. Használd őket.",
+    "back": "Vissza",
+    "menu": {
+      "patientRights": {
+        "title": "Betegjogok",
+        "desc": "8 joga van minden betegnek"
+      },
+      "discrimination": {
+        "title": "Szembesülni a diszkriminációval?",
+        "desc": "Mit kell mondani és tenni – lépésről lépésre"
+      },
+      "contacts": {
+        "title": "Jogi segítség országonként",
+        "desc": "Ombudsman, antidiszkrimináció, roma orgs"
+      }
+    },
+    "views": {
+      "patientRights": "Az Ön betegjogai",
+      "discrimination": "Ha diszkriminációval szembesül",
+      "discriminationDesc": "Valós helyzetek és pontosan mit kell mondani és tenni.",
+      "contacts": "Jogi segítség országonként"
+    },
+    "labels": {
+      "sayThis": "Mondd ezt:",
+      "thenDo": "Ezután tegye ezt:",
+      "patientOmbudsman": "Betegombudsman",
+      "antiDiscrimination": "Diszkrimináció elleni védelem",
+      "romaRightsOrg": "Roma jogvédő szervezet"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Sürgősségi ellátáshoz való jog",
+        "description": "Minden kórháznak KELL ellátnia Önt vészhelyzetben, még biztosítás vagy dokumentumok nélkül is. Ez minden EU-tagállam törvénye. Ha megtagadják, kérdezze meg az orvos nevét és jelentse."
+      },
+      "information": {
+        "title": "Joga, hogy megértse a diagnózisát",
+        "description": "Orvosának olyan szavakkal kell elmagyaráznia állapotát, amelyeket megért. Ha nem érted, mondd: \"El tudnád ezt magyarázni egyszerűbben?\" Kérhet írásos összefoglalót is."
+      },
+      "consent": {
+        "title": "Joga nemet mondani",
+        "description": "Senki sem kényszerítheti rád a kezelést. Minden eljárás előtt az orvosnak el kell magyaráznia, mit fog tenni, és Önnek meg kell állapodnia. Mindig mondhatod, hogy \"gondolkodási időre van szükségem\"."
+      },
+      "privacy": {
+        "title": "A magánélethez való jog",
+        "description": "Orvosi adatai privátak. Az orvosok nem oszthatják meg munkáltatójával, családjával vagy bárki mással az Ön engedélye nélkül. Ez magában foglalja az Ön HIV-státuszát, terhességét vagy mentális egészségét."
+      },
+      "interpreter": {
+        "title": "Tolmácshoz való jog",
+        "description": "Ha nem beszéli jól a helyi nyelvet, kérhet tolmácsot. Sok kórház rendelkezik ezzel a szolgáltatással. Ha nem, hozhat valakit, akiben megbízik, hogy fordítson le."
+      },
+      "second-opinion": {
+        "title": "Második vélemény joga",
+        "description": "Ha nem ért egyet a diagnózissal, egy másik orvoshoz fordulhat. Ez a jogod. Nem kell magyarázni, miért."
+      },
+      "records": {
+        "title": "Az orvosi feljegyzéseihez való jog",
+        "description": "Bármikor kérhet másolatot az összes orvosi feljegyzéséről. A kórháznak biztosítania kell őket. Ez akkor hasznos, ha orvost vált, vagy másik városba költözik."
+      },
+      "complaint": {
+        "title": "Panasz joga",
+        "description": "Ha úgy érzi, hogy rosszul bánnak vele, vagy diszkriminálják, panaszt tehet. Minden kórházban van panaszkezelési eljárás. Felveheti a kapcsolatot országa betegombudsmanjával is."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "A kórház nem hajlandó kezelni",
+        "whatToSay": "\"Az uniós jog értelmében jogom van sürgősségi ellátáshoz. Kérjük, írja le a nevét és az elutasítás okát.\"",
+        "whatToDo": [
+          "Maradj nyugodt, de határozott",
+          "Kérd meg az orvos teljes nevét",
+          "Kérje írásban az elutasítást",
+          "Hívja a beteg ombudsmant",
+          "Vegye fel a kapcsolatot egy romajogi szervezettel"
+        ]
+      },
+      "rude-staff": {
+        "situation": "A kórházi személyzet durva vagy elutasító az Ön etnikai hovatartozása miatt",
+        "whatToSay": "\"Orvosi segítségért vagyok itt. Elvárom, hogy ugyanolyan tisztelettel bánjanak velem, mint minden más beteggel.\"",
+        "whatToDo": [
+          "Kérje meg, hogy beszéljen a főnővérrel vagy az osztályvezetővel",
+          "Jegyezze fel a dátumot, az időt és a neveket",
+          "Írjon panaszt a kórházban",
+          "Jelentés a nemzeti diszkriminációellenes testületnek"
+        ]
+      },
+      "no-insurance": {
+        "situation": "Nincs egészségbiztosításod",
+        "whatToSay": "\"Orvosi segítségre van szükségem. Milyen lehetőségeim vannak a nem biztosított betegek számára?\"",
+        "whatToDo": [
+          "A sürgősségi ellátás mindig ingyenes – ragaszkodjon hozzá",
+          "Érdeklődjön a szociális segélyprogramokról",
+          "Vegye fel a kapcsolatot egy egészségügyi közvetítővel a környéken",
+          "Sok civil szervezet ingyenes klinikát biztosít – érdeklődjön a kórházban"
+        ]
+      },
+      "language-barrier": {
+        "situation": "Nem tudsz kommunikálni az orvossal",
+        "whatToSay": "\"Segítségre van szükségem a megértéshez. Tudsz tolmácsot biztosítani, vagy lassabban beszélsz?\"",
+        "whatToDo": [
+          "Használja ezt az alkalmazást kulcskifejezések lefordításához",
+          "Hozz magaddal egy megbízható személyt, aki beszéli a nyelvet",
+          "Kérjen írásos utasításokat, amelyeket később lefordíthat",
+          "Használja telefonja kameráját dokumentumok fordításához"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Közösségi történetek – Redi Health",
+      "description": "Valódi egészségügyi tapasztalatok a roma közösségekből Európa-szerte"
+    },
+    "title": "Közösségi történetek",
+    "subtitle": "Valódi élmények roma közösségekből. Tanulj másoktól.",
+    "backToStories": "Vissza a történetekhez",
+    "lessonLearned": "A tanulság",
+    "whatToDoNext": "Mi a teendő ezután",
+    "categories": {
+      "vaccines": "Védőoltások",
+      "chronic": "Krónikus Betegség",
+      "maternal": "Terhesség",
+      "discrimination": "jogok",
+      "prevention": "Megelőzés",
+      "mental": "Mentális egészség"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Vakcina útmutató",
+      "askZuvo": "Kérdezd meg Zuvo-t",
+      "explainPrescription": "Magyarázza el a receptet",
+      "navigateToCare": "Navigáljon a gondoskodáshoz",
+      "knowYourRights": "Ismerje meg a jogait",
+      "learnPrevention": "Ismerje meg a megelőzést",
+      "checkSymptoms": "Ellenőrizze a tüneteket",
+      "learnMentalHealth": "Ismerje meg a mentális egészséget"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "Románia",
+        "title": "Szinte nem oltattam be a lányomat",
+        "story": "Az anyósom azt mondta, hogy az oltások mérgek. A településen mindenki ugyanezt mondta. Amikor a lányom megszületett, féltem. De az egészségügyi közvetítő eljött az otthonunkba, és mindent elmagyarázott – hogyan működnek a védőoltások, mik a tényleges mellékhatások. Mutatta nekem a kanyarós gyerekek fényképeit. Jobban féltem a betegségtől, mint az oltástól. A lányom megkapta az összes oltását. Egészséges és erős.",
+        "lesson": "Beszéljen egy egészségügyi közvetítővel vagy orvossal, mielőtt döntéseket hozna mások véleménye alapján. A vakcinák életeket mentenek."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bulgária",
+        "title": "Abbahagytam a cukorbetegség gyógyszereimet, és majdnem meghaltam",
+        "story": "45 évesen 2-es típusú cukorbetegséget diagnosztizáltak nálam. A gyógyszertől megfájdult a gyomrom, ezért abbahagytam a szedését. A szomszédom azt mondta, hogy a fahéjas tea meggyógyít. 2 évig inkább fahéjas teát ittam. Aztán egy nap összeestem. A vércukorszintem 500 felett volt. Az orvosok azt mondták, hogy sérült a vesém. Most minden nap beveszem a gyógyszerem. Bárcsak soha nem álltam volna meg.",
+        "lesson": "Soha ne hagyja abba a gyógyszer szedését anélkül, hogy beszélt volna orvosával. A természetes gyógymódok nem helyettesíthetik a cukorbetegség elleni gyógyszereket."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Szerbia",
+        "title": "Első terhességem – nem tudtam, hogy ingyen járhatok orvoshoz",
+        "story": "Amikor 19 évesen teherbe estem, 6 hónapig nem jártam orvoshoz. Nem volt biztosításom, és azt hittem, túl sokba fog kerülni. Egy egészségügyi közvetítő elmondta, hogy Szerbiában minden terhes nő számára ingyenes a terhesgondozás. Segített regisztrálni. Az orvos megállapította, hogy vérszegénységem és magas vérnyomásom van. Ha nem mentem volna el, veszélyben lehetett volna a babám.",
+        "lesson": "A terhesgondozás a legtöbb európai országban ingyenes. Kérjen egészségügyi közvetítőt, hogy segítsen a regisztrációban."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Magyarország",
+        "title": "A kórház megpróbált elküldeni",
+        "story": "Mellkasi fájdalommal mentem az ügyeletre. A nővér rám nézett, és azt mondta: \"Telek vagyunk, menjen egy másik kórházba.\" Tudtam, hogy ez nem helyes. Azt mondtam: „Fáj a mellkasom. Meg kell vizsgálnod. Kérem, adja meg a nevét. A hozzáállása azonnal megváltozott. Megvizsgáltak és megállapították, hogy szívproblémám van, ami kezelést igényel. Ha elmentem volna, szívrohamot kaphattam volna.",
+        "lesson": "Joga van sürgősségi ellátáshoz. Ha valaki megpróbálja visszautasítani, kérdezze meg a nevét, és mondja el, hogy ismeri a jogait."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Szlovákia",
+        "title": "A tuberkulózis nem halálos ítélet – de be kell fejeznie a gyógyszert",
+        "story": "Hónapokig köhögtem. Azt hittem, csak megfázás. Amikor végre elmentem az orvoshoz, azt mondták, hogy tuberkulózisom van. Megrémültem – azt hittem, meghalok. De az orvos elmagyarázta, hogy a tbc 6 hónapos gyógyszerrel gyógyítható. A legnehezebb az volt, hogy 6 hónapon keresztül minden nap tablettát szedjek, még akkor is, ha 2 hónap után jobban éreztem magam. De befejeztem. meggyógyultam.",
+        "lesson": "Ha 2 hétnél tovább köhög, forduljon orvoshoz. A tbc gyógyítható, de az összes gyógyszert be KELL végeznie."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Észak-Macedónia",
+        "title": "A depresszió nem gyengeség, hanem betegség",
+        "story": "Miután a férjem meghalt, hónapokig nem tudtam felkelni az ágyból. A családom azt mondta, lusta vagyok. Azt mondták, csak légy erős. De nem tudtam. Egy egészségügyi közvetítő észrevette, hogy valami nincs rendben, és orvoshoz vitt. Az orvos azt mondta, hogy depresszióm van – valódi egészségügyi állapot. Elkezdtem a gyógyszert, és beszéltem egy tanácsadóval. Lassan jobban lettem. nem vagyok gyenge. beteg voltam.",
+        "lesson": "A depresszió egészségügyi állapot, nem jellemhiba. Az orvostudomány és a tanácsadás segíthet. Kérjen segítséget."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Kihívások – Redi Health",
+      "description": "Közösségi kihívások"
+    },
+    "title": "Aktív kihívások",
+    "subtitle": "Csatlakozz a közösségi célokhoz és a személyes kihívásokhoz, és szerezz bónusz XP-t és jelvényeket.",
+    "types": {
+      "community": "közösség",
+      "personal": "személyes"
+    },
+    "daysLeft": "{count} nap van hátra",
+    "viewLeaderboard": "Ranglista megtekintése",
+    "items": {
+      "c1": {
+        "title": "Vakcina tudás bajnoka",
+        "description": "Kérjen meg 50 diákot a helyi körzetében, hogy adja át a vakcina modult ezen a héten."
+      },
+      "c2": {
+        "title": "7 napos egészségügyi sorozat",
+        "description": "Jegyezze fel hangulatát és vízfogyasztását 7 egymást követő napon."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Tanúsítvány – Redi Health",
+      "description": "Országos egészségügyi műveltségi bizonyítvány"
+    },
+    "title": "Az Ön bizonyítványa",
+    "subtitle": "Elvégezted az Egészségügyi Diákakadémia Országos Színpadját.",
+    "ofCompletion": "Teljesítési igazolás",
+    "diplomaTitle": "Nemzeti Egészségügyi Műveltség",
+    "awardedFor": "A Redi Egészségügyi Diákakadémia tananyagának elvégzéséért díjazták.",
+    "date": "Dátum",
+    "downloadPdf": "PDF letöltése",
+    "share": "Részesedés",
+    "gate": {
+      "title": "Először fejezze be az Akadémiát",
+      "description": "Az Egészségügyi Művelődési Tanúsítvány megszerzéséhez teljesítenie kell az összes leckét, és teljesítenie kell a kvízt az Egészségügyi Diákakadémia Országos szakaszában.",
+      "cta": "Menj az Akadémiára"
+    }
+  },
+  "policies": {
+    "title": "Platform Policies",
+    "subtitle": "The governance framework that defines what Redi Health can and cannot do — and the commitments we make to every user.",
+    "goNoGoTitle": "Feature release policy",
+    "goNoGoBody": "Features that may influence clinical decisions require completed policy controls before release: AI triage, symptom severity, prescription outputs, vaccine recommendations, Roma-friendly provider labels, mediator visit logging, youth sexual health, and legal guidance.",
+    "disclaimer": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "clinical-safetyTitle": "Clinical Safety & Escalation",
+    "clinical-safetyDesc": "Defines what the AI may and may not say, how emergencies are escalated before any AI call, and the governance model for all health-related changes.",
+    "clinicalSafety1": "The AI never diagnoses, never prescribes doses, and never advises stopping a prescribed medication.",
+    "clinicalSafety2": "11 emergency patterns bypass the AI entirely and immediately instruct the user to call 112 or a specialist helpline.",
+    "clinicalSafety3": "Every triage output is assigned one of five severity categories — Emergency, Urgent, Routine, Self-care, or Information only.",
+    "clinicalSafety4": "Changes to red-flag patterns, system prompts, or triage logic require sign-off from the clinical governance lead before deployment.",
+    "source-policyTitle": "Public Health Source Policy",
+    "source-policyDesc": "Defines which sources may be used for health claims, how they must be cited, and how they are kept up to date.",
+    "sourcePolicy1": "All health facts cite WHO, ECDC, IFRC, national ministries, or peer-reviewed clinical guidance — never social media, single studies, or commercial sources.",
+    "sourcePolicy2": "Every content module carries a 'last reviewed' date and reviewer role. Overdue modules are hidden automatically.",
+    "sourcePolicy3": "Country-specific overrides (vaccine schedules, emergency numbers, patient rights) follow a 5-step clinical review process before going live.",
+    "safeguardingTitle": "Safeguarding Policy",
+    "safeguardingDesc": "Protections for children, pregnant people, survivors of abuse and coercion, people in mental health crisis, and people seeking sexual health information.",
+    "safeguarding1": "Self-harm and suicidal ideation are intercepted before any AI response — the user receives a crisis line and an instruction to stay with someone they trust.",
+    "safeguarding2": "Descriptions of active domestic violence trigger a safety-first response with the local domestic violence helpline, not general advice.",
+    "safeguarding3": "Sexual health content in the Student Academy requires country-specific legal review and Tier 2 clinical sign-off before release.",
+    "safeguarding4": "Every AI page and triage result includes a visible 'I need help now' button linking to emergency and crisis numbers.",
+    "roma-equityTitle": "Roma Equity & Anti-Stigmatization",
+    "roma-equityDesc": "Standards for how Roma communities are described, how content is reviewed, and how surveillance and profiling are prevented.",
+    "romaEquity1": "All content about Roma communities must follow strengths-based framing — naming structural causes for health disparities, never cultural ones.",
+    "romaEquity2": "Content about Roma health is reviewed by a Roma health mediator or Roma-led NGO before publication.",
+    "romaEquity3": "Ethnicity data is never collected. Analytics are never segmented by ethnic identity. Location data is never stored.",
+    "romaEquity4": "A Roma Health Advisory Board reviews this policy annually and can flag content concerns at any time via equity@redi.healthcare.",
+    "provider-verificationTitle": "Provider Verification",
+    "provider-verificationDesc": "How clinic listings are verified, what 'Roma-friendly' means and requires, and how users can report harm.",
+    "providerVerification1": "The 'Roma-friendly' label requires: no documentation barriers beyond what all patients face, anti-discrimination training, no substantiated complaints in 3 years, and a Roma mediator assessment within 18 months.",
+    "providerVerification2": "Unverified listings carry a mandatory warning banner and an 'Unverified' badge — no Roma-friendly label is shown until criteria are met.",
+    "providerVerification3": "Users can report discrimination or incorrect information directly from every listing. Discrimination reports are reviewed within 3 business days.",
+    "mediator-policyTitle": "Mediator Operating Policy",
+    "mediator-policyDesc": "Role boundaries, consent requirements, data minimisation rules, and safety escalation protocols for field health mediators.",
+    "mediatorPolicy1": "Mediators provide education, navigation, and referral support — not clinical assessment or prescriptions.",
+    "mediatorPolicy2": "A consent attestation is required before every visit log is saved. Logs must not record ethnicity, immigration status, or clinical diagnoses.",
+    "mediatorPolicy3": "Mediators follow a defined referral escalation pathway — immediate 112 call for emergencies, helpline for safeguarding concerns, programme supervisor within 24 hours for non-immediate concerns.",
+    "mediatorPolicy4": "Mediator PINs expire after 12 months and are revoked immediately when a mediator leaves the programme.",
+    "data-governanceTitle": "Data Governance",
+    "data-governanceDesc": "How all data — local and server-stored — is classified, retained, and controlled, and how every user can export or delete their data.",
+    "dataGovernance1": "Local device data (family logs, progress, mediator visits) is treated with the same privacy rights as server data — exportable and deletable from Profile > Data.",
+    "dataGovernance2": "Health logs are retained for 5 years or until you delete them. Your account data is hard-deleted within 30 days of a deletion request.",
+    "dataGovernance3": "Guest and anonymous users are first-class subjects: the app explains what local data exists and how to clear it — no auth errors returned.",
+    "dataGovernance4": "Every admin configuration change, provider update, mediator PIN action, and GDPR request is logged in an audit trail accessible only to the Data Protection Officer."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of terms",
+        "body": "By accessing or using Redi Health, you agree to these Terms of Service. If you do not agree, do not use the service. These terms apply to all users including guests, registered users, health mediators, and programme administrators."
+      },
+      "service": {
+        "title": "2. What Redi Health provides",
+        "body": "Redi Health is a health literacy and navigation platform. It provides AI-assisted health information, educational content, misinformation fact-checking, symptom guidance, and tools for health mediators. The platform is intended for educational and informational purposes."
+      },
+      "notMedical": {
+        "title": "3. Not a medical device",
+        "body": "Redi Health is not a medical device and does not provide medical diagnosis, treatment, or prescriptions. All content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions. In an emergency, call 112 or your local emergency number immediately."
+      },
+      "aiLimits": {
+        "title": "4. AI limitations",
+        "body": "AI-generated responses are based on general health knowledge and may not reflect the latest clinical guidance, local health system rules, or your individual circumstances. They must not be treated as personalised medical advice. The AI does not diagnose and does not prescribe."
+      },
+      "userConduct": {
+        "title": "5. User conduct",
+        "body": "You must not use Redi Health to obtain specific medical prescriptions or diagnoses, to collect information about others without their consent, for commercial data harvesting, or to circumvent the platform's clinical safety boundaries. Mediators must comply with the Mediator Operating Policy."
+      },
+      "data": {
+        "title": "6. Data and privacy",
+        "body": "Your data is governed by our Privacy Policy and Data Governance Policy, which describe what is collected, how it is used, and how you can export or delete it. Local data (progress, family logs, check-ins) is stored on your device. Server data requires an account. Both are subject to your full data rights."
+      },
+      "liability": {
+        "title": "7. Limitation of liability",
+        "body": "Redi Health is provided 'as is' without warranties of accuracy or fitness for a particular purpose. To the maximum extent permitted by law, Redi Health is not liable for any harm arising from reliance on the platform's content, including AI-generated responses. You use the platform at your own risk."
+      },
+      "changes": {
+        "title": "8. Changes to these terms",
+        "body": "We may update these terms to reflect changes in the platform or applicable law. Material changes will be notified via the app. Continued use of the platform after notification constitutes acceptance of the updated terms."
+      },
+      "contact": {
+        "title": "9. Contact",
+        "body": "For questions about these terms, contact us at legal@redi.healthcare. For data and privacy matters, contact our Data Protection Officer at dpo@redi.healthcare."
+      }
+    }
   }
 }

@@ -67,13 +67,19 @@ export default async function AboutPage({ params }: Props) {
           </div>
 
           <div className="overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm animate-fade-in-up delay-600">
+            <Link href="/policies" className="flex items-center gap-3 px-5 py-4 transition-all active:bg-gray-50">
+              <Shield className="h-5 w-5 text-gray-400" />
+              <span className="flex-1 text-sm font-bold text-gray-800">{t("policiesLink")}</span>
+              <ChevronRight className="h-5 w-5 text-gray-300" />
+            </Link>
+            <div className="border-t border-gray-50" />
             <Link href="/privacy" className="flex items-center gap-3 px-5 py-4 transition-all active:bg-gray-50">
               <Lock className="h-5 w-5 text-gray-400" />
               <span className="flex-1 text-sm font-bold text-gray-800">{t("privacyLink")}</span>
               <ChevronRight className="h-5 w-5 text-gray-300" />
             </Link>
             <div className="border-t border-gray-50" />
-            <Link href="/privacy" className="flex items-center gap-3 px-5 py-4 transition-all active:bg-gray-50">
+            <Link href="/terms" className="flex items-center gap-3 px-5 py-4 transition-all active:bg-gray-50">
               <FileText className="h-5 w-5 text-gray-400" />
               <span className="flex-1 text-sm font-bold text-gray-800">{t("termsLink")}</span>
               <ChevronRight className="h-5 w-5 text-gray-300" />

@@ -11,7 +11,7 @@
     "profile": "Profil",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Rodina",
     "more": "More"
   },
   "hero": {
@@ -46,7 +46,283 @@
     "croatia": "Chorvátsko",
     "bosnia": "Bosna",
     "kosovo": "Kosovo",
-    "slovenia": "Slovinsko"
+    "slovenia": "Slovinsko",
+    "romaPop": "Rómske obyv. {population}",
+    "detail": {
+      "back": "Späť",
+      "romaPopulation": "Rómske obyvateľstvo",
+      "ofTotal": "z {total} celkom ({percent})",
+      "healthAccess": "Prístup k zdravotnej starostlivosti",
+      "healthChallenges": "Zdravotné výzvy",
+      "organizationsHelp": "Organizácie, ktoré môžu pomôcť",
+      "emergency": "Pohotovosť: {number}",
+      "ambulance": "Záchranka: {number}",
+      "askAboutHealth": "Opýtajte sa na zdravie v regióne {region}"
+    },
+    "healthIndex": {
+      "veryPoor": "Veľmi zlý",
+      "poor": "Zlý",
+      "fair": "Priemerný",
+      "good": "Dobrý",
+      "excellent": "Výborný"
+    },
+    "countries": {
+      "romania": {
+        "healthChallenges": {
+          "0": "Obmedzený prístup k zdravotnému poisteniu",
+          "1": "Vysoká detská a materská úmrtnosť v rómskych komunitách",
+          "2": "Tuberkulóza nad národným priemerom",
+          "3": "Nízka očkovacia pokrytie na vidieckych osadách",
+          "4": "Bariéry pri registrácii u všeobecného lekára"
+        },
+        "keyFact": "Rumunsko má najväčšiu rómsku populáciu v Európe a národný program zdravotných mediátorov.",
+        "organizations": {
+          "0": {
+            "focus": "Rómske práva, zdravotná mediácia"
+          },
+          "1": {
+            "focus": "Politiky rómskej inklúzie"
+          },
+          "2": {
+            "focus": "Mobilné zdravotné kliniky v marginalizovaných komunitách"
+          }
+        }
+      },
+      "bulgaria": {
+        "healthChallenges": {
+          "0": "Segregované štvrte obmedzujú prístup k zdravotnej starostlivosti",
+          "1": "Vysoká nezamestnanosť znižuje poistné pokrytie",
+          "2": "Kardiovaskulárne ochorenia ako hlavná príčina úmrtí",
+          "3": "Nižšia dĺžka života oproti národnému priemeru",
+          "4": "Obmedzený prístup k špecializovanej starostlivosti"
+        },
+        "keyFact": "Bulharský program zdravotných mediátorov pre rómsku komunitu bol jedným z prvých na Balkáne.",
+        "organizations": {
+          "0": {
+            "focus": "Rómska zdravotná propagácia a mediácia"
+          },
+          "1": {
+            "focus": "Prístup k zdravotnej starostlivosti pre marginalizovaných Rómov"
+          }
+        }
+      },
+      "hungary": {
+        "healthChallenges": {
+          "0": "Dĺžka života o 10–15 rokov nižšia ako národný priemer",
+          "1": "Vysoké miery kardiovaskulárnych a respiračných ochorení",
+          "2": "Podvýživa súvisiaca s chudobou",
+          "3": "Nízke využívanie psychiatrických služieb",
+          "4": "Geografická izolácia v severovýchodnom Maďarsku"
+        },
+        "keyFact": "Maďarsko má významné rómske populácie v regiónoch Borsod, Szabolcs a Baranya.",
+        "organizations": {
+          "0": {
+            "focus": "Rómske vzdelávanie vrátane zdravotnej gramotnosti"
+          },
+          "1": {
+            "focus": "Rómska prosperita a zdravotné advokácie"
+          }
+        }
+      },
+      "northMacedonia": {
+        "healthChallenges": {
+          "0": "Obec Šuto Orizari (Sutka) má špecifické zdravotné potreby",
+          "1": "Výskyt hepatitídy B",
+          "2": "Obmedzený prístup k gynekologickým a materským službám",
+          "3": "Vysoká anémia najmä u detí a žien",
+          "4": "Váhanie pri očkovaní proti COVID-19"
+        },
+        "keyFact": "Šuto Orizari pri Skopje je najväčšia rómska obec na svete.",
+        "organizations": {
+          "0": {
+            "focus": "Rómske práva a prístup k zdravotnej starostlivosti"
+          },
+          "1": {
+            "focus": "Verejné zdravie a harm reduction"
+          }
+        }
+      },
+      "slovakia": {
+        "healthChallenges": {
+          "0": "Segregované osady na východe Slovenska bez infraštruktúry",
+          "1": "Tuberkulóza medzi najvyššími v EÚ",
+          "2": "Detská podvýživa a zaostávanie v raste",
+          "3": "Obmedzený prístup k čistej vode a sanitácii",
+          "4": "Diskriminácia v zdravotníctve"
+        },
+        "keyFact": "Slovensko má najvyšší podiel Rómov žijúcich v segregovaných osadách v EÚ.",
+        "organizations": {
+          "0": {
+            "focus": "Antidiskriminácia v zdravotníctve"
+          },
+          "1": {
+            "focus": "Verejné zdravotné programy vrátane zdravia Rómov"
+          }
+        }
+      },
+      "serbia": {
+        "healthChallenges": {
+          "0": "Neformálne osady (mahale) bez zdravotnej infraštruktúry",
+          "1": "Vysoký výskyt hepatitídy a črevných parazitov",
+          "2": "Obmedzená registrácia narodenia ovplyvňuje prístup",
+          "3": "Problémy s užívaním návykových látok u mestských rómskych mládežníkov",
+          "4": "Stigma duševného zdravia v komunitách"
+        },
+        "keyFact": "Srbský program zdravotných mediátorov školí rómske ženy ako komunitné zdravotné spojky.",
+        "organizations": {
+          "0": {
+            "focus": "Rómske práva a zdravotná politika"
+          },
+          "1": {
+            "focus": "Zdravie žien a detí"
+          }
+        }
+      },
+      "turkey": {
+        "healthChallenges": {
+          "0": "Rómske (Dom a Lom) komunity čelia ekonomickej marginalizácii",
+          "1": "Obmedzená dokumentácia ovplyvňuje prístup k zdravotnej starostlivosti",
+          "2": "Vyššie pracovné zdravotné riziká (zberači odpadu)",
+          "3": "Obmedzená materská starostlivosť v neformálnych mestských oblastiach",
+          "4": "Sociálna izolácia a duševné zdravie"
+        },
+        "keyFact": "Rómske komunity v Turecku sú sústredené najmä v Istanbule, Edirne a Izmir.",
+        "organizations": {
+          "0": {
+            "focus": "Rómske práva a sociálna inklúzia v Turecku"
+          },
+          "1": {
+            "focus": "Rómske vzdelávanie a zdravotná gramotnosť"
+          }
+        }
+      },
+      "greece": {
+        "healthChallenges": {
+          "0": "Rómovia vo vidieckych táboroch nemajú prístup k obecným zdravotným službám",
+          "1": "Dopad ekonomickej krízy na prístup zraniteľných skupín",
+          "2": "Hepatitída C v niektorých komunitách",
+          "3": "Obmedzená zubná starostlivosť",
+          "4": "Ekonomická neistota zhoršená COVID-19"
+        },
+        "keyFact": "Grécko má rómske komunity v usadených aj kočovných táboroch v Strednej Macedónii a Tesálii.",
+        "organizations": {
+          "0": {
+            "focus": "Rómska inklúzia v zdraví, vzdelávaní a bývaní"
+          },
+          "1": {
+            "focus": "Sociálna a zdravotná podpora marginalizovaných skupín"
+          }
+        }
+      },
+      "albania": {
+        "healthChallenges": {
+          "0": "Vysoká detská chudoba a podvýživa",
+          "1": "Obmedzené zdravotné poistenie",
+          "2": "Vyššia materská úmrtnosť v rómskych komunitách",
+          "3": "Obmedzený prístup k bezpečnému bývaniu",
+          "4": "Sezónna práca vedie k zdravotnej nestabilite"
+        },
+        "keyFact": "Albánsko má aj ashkalskú (egyptskú) menšinu historicky zoskupenú s rómskymi komunitami.",
+        "organizations": {
+          "0": {
+            "focus": "Rómske práva a rozvoj komunity"
+          },
+          "1": {
+            "focus": "Vzdelávanie a prístup k zdravotnej starostlivosti pre Rómov"
+          }
+        }
+      },
+      "czech": {
+        "healthChallenges": {
+          "0": "Pretrvávajúca segregácia v bývaní s dopadom na zdravie",
+          "1": "Vysoké miery predchádzateľných kardiovaskulárnych ochorení",
+          "2": "Nižšia miera očkovania v rómskych komunitách",
+          "3": "Bariéry v komunikácii a zdravotnej gramotnosti",
+          "4": "Problémy s prístupom k špecializovanej starostlivosti"
+        },
+        "keyFact": "Česká republika má významnú rómsku populáciu v Morave a severnom Čechách.",
+        "organizations": {
+          "0": {
+            "focus": "Integrovaný prístup k rómskej inklúzii"
+          },
+          "1": {
+            "focus": "Advokácia európskych rómskych organizácií"
+          }
+        }
+      },
+      "croatia": {
+        "healthChallenges": {
+          "0": "Rómovia v župe Međimurje čelia bariéram v prístupe k zdravotnej starostlivosti",
+          "1": "Jazykové bariéry obmedzujú komunikáciu",
+          "2": "Vyšší výskyt cukrovky u starších Rómov",
+          "3": "Nízka predškolská očkovacia miera",
+          "4": "Chudoba ovplyvňuje výživu a zdravie"
+        },
+        "keyFact": "Najväčšia rómska komunita v Chorvátsku je v župe Međimurje pri maďarskej hranici.",
+        "organizations": {
+          "0": {
+            "focus": "Zdravie a práva rómskych žien"
+          },
+          "1": {
+            "focus": "Rómska politika a inklúzia"
+          }
+        }
+      },
+      "bosnia": {
+        "healthChallenges": {
+          "0": "Povojnová infraštruktúra ovplyvňuje zdravotníctvo",
+          "1": "Chýbajúce osobné doklady obmedzujú prístup",
+          "2": "Vysoká nezamestnanosť vedie k chýbajúcemu poisteniu",
+          "3": "Detská podvýživa v chudobnejších rómskych rodinách",
+          "4": "Obmedzené psychiatrické služby pre komunitnú traumu"
+        },
+        "keyFact": "Bosna a Hercegovina má rómske komunity vo Federácii aj v Republike Srpskej.",
+        "organizations": {
+          "0": {
+            "focus": "Rómske práva, prístup k zdravotnej starostlivosti a dokumentácia"
+          },
+          "1": {
+            "focus": "Práva menšín vrátane zdravotného prístupu Rómov"
+          }
+        }
+      },
+      "kosovo": {
+        "healthChallenges": {
+          "0": "Rómovia v Mitrovici boli presídlení do táborov kontaminovaných olovom",
+          "1": "Silná chudoba obmedzuje prístup k zdravotnej starostlivosti",
+          "2": "Málo rómskych zdravotných mediátorov",
+          "3": "Povojnová trauma a potreby duševného zdravia",
+          "4": "Vysoká detská úmrtnosť oproti národnému priemeru"
+        },
+        "keyFact": "Rómovia v severnej Mitrovici boli vystavení ťažkej olovovej intoxikácii v táboroch OSN po konflikte 1999.",
+        "organizations": {
+          "0": {
+            "focus": "Práva a zdravie rómskej RAE komunity"
+          },
+          "1": {
+            "focus": "Prístup k zdravotnej starostlivosti pre vysídlených Rómov"
+          }
+        }
+      },
+      "slovenia": {
+        "healthChallenges": {
+          "0": "Rómovia v Dolenjsku a Prekmurju čelia marginalizácii",
+          "1": "Nižšie vzdelanie ovplyvňuje zdravotnú gramotnosť",
+          "2": "Sociálne vylúčenie ovplyvňuje duševné zdravie",
+          "3": "Obmedzená očkovacia miera v niektorých osadách",
+          "4": "Výživové nedostatky súvisiace s chudobou"
+        },
+        "keyFact": "Slovinsko uznáva dve právne rómske komunity: autochtónnu (západnú) a neautochtónnu (východnú).",
+        "organizations": {
+          "0": {
+            "focus": "Rómske sociálne a kultúrne práva"
+          },
+          "1": {
+            "focus": "Rómska prosperita a prístup k zdravotnej starostlivosti"
+          }
+        }
+      }
+    }
   },
   "language": {
     "title": "Jazyk",
@@ -63,407 +339,486 @@
   },
   "studentHealth": {
     "meta": {
-      "title": "Student Health Academy",
-      "description": "A cinematic, mission-based health literacy academy for high school students: first aid, STIs, vaccines, and critical thinking."
+      "title": "Študentská akadémia zdravia",
+      "description": "Filmová akadémia zdravotnej gramotnosti založená na poslaní pre študentov stredných škôl: prvá pomoc, STIs, vakcíny a kritické myslenie."
     },
     "hub": {
-      "title": "Student Health Academy",
-      "subtitle": "A mission-based health field guide for high school students. Learn what to do before help arrives, how to protect your body and relationships, and how to separate evidence from rumor.",
-      "disclaimer": "Educational field guide only: this is not medical care, diagnosis, or emergency instruction from a clinician. If someone may be in immediate danger, call emergency services. For sexual health, consent, or privacy concerns, seek a trusted adult, school nurse, doctor, clinic, or local helpline.",
-      "countryLabel": "Your country (for tips)",
-      "countryPlaceholder": "Select country (optional)",
-      "countryHint": "Used only on this device to show relevant context. You can change it anytime.",
-      "countryContext": "Context for tips: {country}",
+      "title": "Študentská akadémia zdravia",
+      "subtitle": "Zdravotná terénna príručka pre študentov stredných škôl založená na misiách. Zistite, čo robiť pred príchodom pomoci, ako chrániť svoje telo a vzťahy a ako oddeliť dôkazy od fám.",
+      "disclaimer": "Iba vzdelávacia terénna príručka: nejde o lekársku starostlivosť, diagnostiku alebo núdzové pokyny od lekára. Ak môže byť niekto v bezprostrednom nebezpečenstve, zavolajte záchrannú službu. V prípade sexuálneho zdravia, súhlasu alebo ochrany súkromia vyhľadajte dôveryhodného dospelého, školskú sestru, lekára, kliniku alebo miestnu linku pomoci.",
+      "countryLabel": "Vaša krajina (pre tipy)",
+      "countryPlaceholder": "Vyberte krajinu (voliteľné)",
+      "countryHint": "Používa sa iba na tomto zariadení na zobrazenie relevantného kontextu. Môžete to kedykoľvek zmeniť.",
+      "countryContext": "Kontext pre tipy: {country}",
       "xpLabel": "XP",
-      "levelLabel": "Level {level}",
-      "commandCenterTitle": "Expedition dashboard",
-      "commandCenterSubtitle": "{completed}/{total} field lessons complete — build practical skills you can use in school, at home, and online.",
-      "overallProgress": "Academy progress",
-      "levelProgress": "Level progress",
-      "maxLevel": "Max level reached",
-      "nextLevelXp": "Next level at {xp} XP",
-      "stageProgress": "Stage progress",
-      "badgesTitle": "Your badges",
-      "stageMapTitle": "Expedition route",
-      "modulesInStage": "modules",
-      "takeStageQuiz": "Stage quiz",
-      "quizLocked": "Complete all modules in this stage to unlock the stage quiz.",
-      "quizIntro": "Answer at least 70% correctly to unlock the next stage.",
-      "stageComplete": "Stage complete!",
-      "nextStageUnlocked": "You unlocked the next stage.",
-      "badgeLocal": "Local champion",
-      "badgeRegional": "Regional explorer",
-      "badgeNational": "National scholar",
-      "badgeLocalDesc": "Finished the local stage quiz.",
-      "badgeRegionalDesc": "Finished the regional stage quiz.",
-      "badgeNationalDesc": "Finished the national stage quiz.",
-      "allStagesComplete": "You completed the full academy path. Keep revisiting lessons to stay sharp.",
-      "kicker": "Field guide for real life",
-      "streakLabel": "Streak",
-      "streakUnitOne": "day",
-      "streakUnitMany": "days",
-      "streakHint": "Keep one lesson a day going",
-      "dayActive": "Active day",
-      "dayInactive": "No activity"
+      "levelLabel": "Úroveň {level}",
+      "commandCenterTitle": "Palubná doska expedície",
+      "commandCenterSubtitle": "{completed}/{total} dokončené lekcie v teréne – získajte praktické zručnosti, ktoré môžete použiť v škole, doma a online.",
+      "overallProgress": "Postup akadémie",
+      "levelProgress": "Pokrok na úrovni",
+      "maxLevel": "Maximálna úroveň dosiahnutá",
+      "nextLevelXp": "Ďalšia úroveň na {xp} XP",
+      "stageProgress": "Etapový postup",
+      "badgesTitle": "Vaše odznaky",
+      "stageMapTitle": "Trasa expedície",
+      "modulesInStage": "modulov",
+      "takeStageQuiz": "Javiskový kvíz",
+      "quizLocked": "Vyplňte všetky moduly v tejto fáze, aby ste odomkli etapový kvíz.",
+      "quizIntro": "Odpovedzte správne aspoň na 70%, aby ste odomkli ďalšiu fázu.",
+      "stageComplete": "Etapa dokončená!",
+      "nextStageUnlocked": "Odomkli ste ďalšiu fázu.",
+      "badgeLocal": "Miestny šampión",
+      "badgeRegional": "Regionálny prieskumník",
+      "badgeNational": "Národný učenec",
+      "badgeLocalDesc": "Dokončili ste miestny etapový kvíz.",
+      "badgeRegionalDesc": "Dokončili ste regionálny kvíz.",
+      "badgeNationalDesc": "Dokončili ste celoštátny kvíz.",
+      "allStagesComplete": "Dokončili ste celú cestu akadémie. Neustále opakujte lekcie, aby ste zostali ostrí.",
+      "kicker": "Poľný sprievodca pre skutočný život",
+      "streakLabel": "Pruhovať",
+      "streakUnitOne": "deň",
+      "streakUnitMany": "dní",
+      "streakHint": "Dodržujte jednu lekciu denne",
+      "dayActive": "Aktívny deň",
+      "dayInactive": "Žiadna aktivita"
     },
     "stages": {
-      "local": "Local",
-      "localDesc": "Immediate skills for school, home, and friends",
-      "regional": "Regional",
-      "regionalDesc": "Clinic, community, and public-health know-how",
-      "national": "National",
-      "nationalDesc": "Evidence, leadership, and capstone decisions"
+      "local": "Miestne",
+      "localDesc": "Okamžité zručnosti pre školu, domov a priateľov",
+      "regional": "Regionálne",
+      "regionalDesc": "Know-how kliniky, komunity a verejného zdravia",
+      "national": "Národný",
+      "nationalDesc": "Dôkazy, vodcovské a vrcholné rozhodnutia"
     },
     "progress": {
-      "xp": "Experience points",
-      "stageLocked": "Locked — complete the previous stage quiz.",
-      "quizRequired": "Quiz required",
-      "allModulesDone": "All modules done — take the quiz!"
+      "xp": "Skúsenostné body",
+      "stageLocked": "Zamknuté – dokončite kvíz predchádzajúcej fázy.",
+      "quizRequired": "Vyžaduje sa kvíz",
+      "allModulesDone": "Všetky moduly sú hotové – urobte si kvíz!"
     },
     "quiz": {
-      "title": "Stage checkpoint",
-      "back": "Back to academy",
-      "progress": "Question",
-      "of": "of",
-      "submit": "Next",
-      "seeResults": "See results",
-      "pass": "Checkpoint cleared",
-      "fail": "Checkpoint not cleared yet",
-      "scoreLine": "You got {correct} out of {total} correct ({pct}%).",
-      "needPct": "You need at least 70% to unlock the next stage.",
-      "retry": "Try again",
-      "continueHub": "Back to academy",
-      "stageBriefTitle": "{stage} field checkpoint",
-      "stageBriefBody": "This checkpoint tests judgment, not memorization. Score {pct}% or more to unlock the next expedition stage.",
-      "continueNextStage": "Enter {stage} expedition",
-      "explainCorrect": "Why this is correct",
-      "explainWrong": "Field guide explainer"
+      "title": "Kontrolný bod etapy",
+      "back": "Späť na akadémiu",
+      "progress": "Otázka",
+      "of": "z",
+      "submit": "Ďalej",
+      "seeResults": "Pozrite si výsledky",
+      "pass": "Kontrolný bod vyčistený",
+      "fail": "Kontrolný bod ešte nie je vyčistený",
+      "scoreLine": "Dosiahli ste {correct} z {total} správnych ({pct}%).",
+      "needPct": "Na odomknutie ďalšej fázy potrebujete aspoň 70%.",
+      "retry": "Skúste to znova",
+      "continueHub": "Späť na akadémiu",
+      "stageBriefTitle": "{stage} kontrolný bod poľa",
+      "stageBriefBody": "Tento kontrolný bod testuje úsudok, nie zapamätanie. Skóre {pct}% alebo viac, aby ste odomkli ďalšiu etapu expedície.",
+      "continueNextStage": "Vstúpiť do {stage} expedície",
+      "explainCorrect": "Prečo je to správne",
+      "explainWrong": "Vysvetľovač terénneho sprievodcu"
     },
     "lesson": {
-      "scenarioTitle": "Field scenario",
-      "challengeTitle": "Expedition challenge",
-      "supportTitle": "Confidential support matters",
-      "supportText": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
-      "findCare": "Find care",
-      "knowRights": "Know your rights",
-      "stepLabel": "Lesson {current} of {total}",
-      "completedNote": "Field note logged. You earned XP, saved progress, and unlocked the next best step.",
-      "sourcesTitle": "Verified sources",
-      "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab.",
-      "reviewUpToDate": "Reviewed for clinical accuracy",
-      "reviewOverdue": "Review overdue — verify with a clinician",
-      "reviewMeta": "Reviewed {date} by {reviewer}"
+      "scenarioTitle": "Scenár v teréne",
+      "challengeTitle": "Výzva na expedíciu",
+      "supportTitle": "Dôverná podpora je dôležitá",
+      "supportText": "Ak sa táto téma dotýka niečoho reálneho vo vašom živote, nemusíte to riešiť sami. Spýtajte sa dôveryhodného dospelého, školskej sestry, lekára, kliniky pre mládež alebo linky pomoci, aká podpora je dôverná tam, kde žijete.",
+      "findCare": "Nájdite starostlivosť",
+      "knowRights": "Poznajte svoje práva",
+      "stepLabel": "Lekcia {current} z {total}",
+      "completedNote": "Zaprotokolovaná poznámka k poli. Získali ste XP, uložili ste postup a odomkli ste ďalší najlepší krok.",
+      "sourcesTitle": "Overené zdroje",
+      "sourcesNote": "Nezávislé zdroje si môžete overiť sami. Klepnutím na riadok otvoríte pôvodné navádzanie na novej karte.",
+      "reviewUpToDate": "Posúdené z hľadiska klinickej presnosti",
+      "reviewOverdue": "Kontrola po splatnosti — overte ju u lekára",
+      "reviewMeta": "Recenzované {date} používateľom {reviewer}"
     },
     "modules": {
       "local": {
         "emergency101": {
-          "title": "Emergency signals: calling for help",
-          "description": "In an emergency, the first minute is a bridge between chaos and help. Your job is not to become a doctor. Your job is to stay safe, call the right number, and give clear information that helps trained responders find the scene fast.",
-          "tip1": "Lead with location: school name, street, building entrance, landmark, or GPS pin. A perfect medical description is useless if help cannot find you.",
-          "tip2": "Say what happened in one sentence: “A student collapsed and is not responding,” or “There is heavy bleeding from the arm.” Short, concrete details help dispatchers act.",
-          "tip3": "Put the phone on speaker if you can. The dispatcher may coach you while someone else gets an adult, opens a gate, or clears space.",
-          "tip4": "Never film an emergency for attention. Protect privacy, create space, and stay with the person if it is safe until help arrives.",
-          "fact": "Emergency systems are designed around fast, accurate information. Clear location plus a brief description can shorten the time between the call and professional care.",
-          "action": "Create a phone note called “Emergency info” with your home address, school address, and one nearby landmark for each.",
-          "scenario": "During sports practice, a classmate suddenly drops to the ground. The gym gets loud. One person is recording. No adult is beside the student yet.",
-          "challenge": "Write a 15-second emergency script: who you are, where you are, what happened, and what you need."
+          "title": "Núdzové signály: volanie o pomoc",
+          "description": "V prípade núdze je prvá minúta mostom medzi chaosom a pomocou. Vašou úlohou nie je stať sa lekárom. Vašou úlohou je zostať v bezpečí, zavolať na správne číslo a poskytnúť jasné informácie, ktoré pomôžu vyškoleným respondentom rýchlo nájsť miesto činu.",
+          "tip1": "Vedenie s polohou: názov školy, ulica, vchod do budovy, orientačný bod alebo pin GPS. Dokonalý lekársky popis je zbytočný, ak vás nemôže nájsť pomoc.",
+          "tip2": "Povedzte, čo sa stalo, jednou vetou: „Študent skolaboval a nereaguje“ alebo „Z ruky silne krváca. Krátke, konkrétne detaily pomáhajú dispečerom konať.",
+          "tip3": "Ak môžete, dajte telefón na reproduktor. Dispečer vás môže trénovať, zatiaľ čo niekto iný dostane dospelého, otvorí bránu alebo uvoľní priestor.",
+          "tip4": "Nikdy nenatáčajte núdzovú situáciu, aby ste upútali pozornosť. Chráňte súkromie, vytvorte priestor a zostaňte s osobou, ak je to bezpečné, kým nepríde pomoc.",
+          "fact": "Núdzové systémy sú navrhnuté na základe rýchlych a presných informácií. Jasná poloha a stručný popis môžu skrátiť čas medzi hovorom a odbornou starostlivosťou.",
+          "action": "Vytvorte si telefónnu poznámku s názvom „Núdzové informácie“ s adresou domova, školou a jedným orientačným bodom v okolí.",
+          "scenario": "Počas športového tréningu zrazu spolužiak klesne na zem. Telocvičňa je hlučná. Jedna osoba nahráva. Vedľa študenta zatiaľ nie je žiadny dospelý.",
+          "challenge": "Napíšte 15-sekundový núdzový skript: kto ste, kde ste, čo sa stalo a čo potrebujete."
         },
         "bleedingBasics": {
-          "title": "Bleeding: pressure buys time",
-          "description": "Blood can make people panic, but the first response is simple: protect yourself, press firmly, and get help. Pressure is not dramatic, but it is one of the most powerful first-aid actions a bystander can take.",
-          "tip1": "Protect yourself if possible: gloves are best, but a plastic bag or folded cloth is better than bare hands if blood is visible.",
-          "tip2": "Press directly on the wound with the cleanest cloth available. Strong, steady pressure matters more than constantly checking how it looks.",
-          "tip3": "If blood soaks through, add more cloth on top. Removing the first layer can pull away early clots and restart bleeding.",
-          "tip4": "Call emergency services for heavy bleeding, spurting blood, deep wounds, or bleeding that does not slow with firm pressure.",
-          "fact": "Many severe external bleeds can be slowed before professionals arrive. The difference is often whether someone starts firm pressure immediately.",
-          "action": "Find the first-aid kit at home or school and identify what could be used for clean pressure in an emergency.",
-          "scenario": "After school, someone cuts their forearm on broken glass. Their sleeve is wet with blood, and friends are afraid to touch anything.",
-          "challenge": "Practice saying the rule out loud: “Press. Add layers. Keep pressing. Call for help.”"
+          "title": "Krvácanie: tlak získava čas",
+          "description": "Krv môže v ľuďoch vyvolať paniku, ale prvá odpoveď je jednoduchá: chráňte sa, pevne stlačte a získajte pomoc. Tlak nie je dramatický, ale je to jedna z najsilnejších akcií prvej pomoci, ktorú môže okoloidúci vykonať.",
+          "tip1": "Chráňte sa, ak je to možné: rukavice sú najlepšie, ale igelitové vrecko alebo zložená handrička je lepšia ako holé ruky, ak je viditeľná krv.",
+          "tip2": "Zatlačte priamo na ranu najčistejšou dostupnou handričkou. Silný, stabilný tlak je dôležitejší ako neustále kontrolovať, ako to vyzerá.",
+          "tip3": "Ak krv presiakne, pridajte navrch ďalšiu látku. Odstránenie prvej vrstvy môže odstrániť skoré zrazeniny a obnoviť krvácanie.",
+          "tip4": "Pri silnom krvácaní, vystrekovaní krvi, hlbokých ranách alebo krvácaní, ktoré sa pevným tlakom nespomalí, zavolajte záchrannú službu.",
+          "fact": "Mnohé závažné externé krvácania možno spomaliť skôr, ako prídu profesionáli. Často je rozdiel v tom, či niekto okamžite začne s pevným tlakom.",
+          "action": "Nájdite doma alebo v škole lekárničku a zistite, čo by sa dalo použiť na čistý tlak v prípade núdze.",
+          "scenario": "Po škole si niekto poreže predlaktie o rozbité sklo. Ich rukáv je mokrý od krvi a priatelia sa boja čohokoľvek dotknúť.",
+          "challenge": "Precvičte si vyslovenie pravidla nahlas: „Stlačte. Pridajte vrstvy. Pokračujte v stláčaní. Zavolajte pomoc.“"
         },
         "burnsBasics": {
-          "title": "Burns: cool the heat, protect the skin",
-          "description": "A burn keeps damaging tissue after the heat source is gone. The goal is to cool the skin safely, avoid folk remedies that trap heat, and know when a burn needs urgent medical care.",
-          "tip1": "Cool running water is the first move for many minor burns. Keep it gentle and cool, not icy.",
-          "tip2": "Skip butter, oil, toothpaste, flour, or egg. They can trap heat, hide the injury, and raise infection risk.",
-          "tip3": "Remove tight rings, bracelets, or clothing near the burn if they are not stuck, because swelling can happen quickly.",
-          "tip4": "Get urgent care for burns on the face, hands, genitals, large areas, deep burns, chemical burns, electrical burns, or trouble breathing.",
-          "fact": "Early cooling can reduce pain and depth of injury. The best burn care often begins before anyone reaches a clinic.",
-          "action": "Teach one person the burn rule: cool water first, cover loosely, no kitchen remedies.",
-          "scenario": "A younger sibling touches a hot pan. An older relative reaches for toothpaste because “that always helped before.”",
-          "challenge": "Make a two-line poster: “Cool the burn. Do not cover it with food or paste.”"
+          "title": "Popáleniny: ochladzujte teplo, chráňte pokožku",
+          "description": "Popálenina poškodzuje tkanivo aj po tom, čo je zdroj tepla preč. Cieľom je bezpečne ochladiť pokožku, vyhnúť sa ľudovým prostriedkom, ktoré zachytávajú teplo, a vedieť, kedy popálenina potrebuje naliehavú lekársku starostlivosť.",
+          "tip1": "Studená tečúca voda je prvým krokom pri mnohých menších popáleninách. Udržujte to jemné a chladné, nie ľadové.",
+          "tip2": "Vynechajte maslo, olej, zubnú pastu, múku alebo vajíčko. Môžu zachytiť teplo, skryť zranenie a zvýšiť riziko infekcie.",
+          "tip3": "Odstráňte tesné prstene, náramky alebo oblečenie v blízkosti popáleniny, ak nie sú prilepené, pretože opuch môže rýchlo nastať.",
+          "tip4": "Získajte okamžitú starostlivosť o popáleniny na tvári, rukách, genitáliách, veľkých plochách, hlboké popáleniny, chemické popáleniny, elektrické popáleniny alebo problémy s dýchaním.",
+          "fact": "Včasné ochladenie môže znížiť bolesť a hĺbku poranenia. Najlepšia starostlivosť o popáleniny často začína skôr, ako sa niekto dostane na kliniku.",
+          "action": "Naučte jednu osobu pravidlo popálenia: najprv ochlaďte vodu, voľne prikryte, žiadne kuchynské prostriedky.",
+          "scenario": "Mladší súrodenec sa dotkne horúcej panvice. Starší príbuzný siaha po zubnej paste, pretože „to predtým vždy pomáhalo“.",
+          "challenge": "Vytvorte dvojriadkový plagát: „Ochlaďte popáleninu. Nezakrývajte ju jedlom ani pastou.“"
         },
         "stiBasics": {
-          "title": "STIs: facts without shame",
-          "description": "Sexually transmitted infections are health conditions, not character judgments. Some are curable, some are manageable, and many have no symptoms at first. Accurate information protects people from stigma and from delayed care.",
-          "tip1": "Symptoms are not a reliable test. Many STIs can be silent while still affecting health or spreading to partners.",
-          "tip2": "Condoms and dental dams reduce risk when used correctly, but no tool works if someone is pressured or unable to use it safely.",
-          "tip3": "Testing is responsible. It is something people do to care for themselves and others, not something to gossip about.",
-          "tip4": "Ask clinics directly about confidentiality: who can see results, what age rules apply, and whether services are youth-friendly.",
-          "fact": "Untreated infections such as chlamydia and gonorrhea can lead to serious complications, but testing and treatment are effective when people get care early.",
-          "action": "Identify one trustworthy sexual-health source in your country: a health ministry page, youth clinic, school nurse, or helpline.",
-          "scenario": "A friend says, “I would know if someone had an STI just by looking.” Another student quietly stops talking.",
-          "challenge": "Prepare a stigma-free reply: “You cannot always tell. Testing is normal, private, and responsible.”"
+          "title": "STIs: fakty bez hanby",
+          "description": "Sexuálne prenosné infekcie sú zdravotné stavy, nie úsudky o charaktere. Niektoré sú liečiteľné, niektoré zvládnuteľné a mnohé nemajú spočiatku žiadne príznaky. Presné informácie chránia ľudí pred stigmatizáciou a oneskorenou starostlivosťou.",
+          "tip1": "Symptómy nie sú spoľahlivým testom. Mnohé STIs môžu mlčať, pričom stále ovplyvňujú zdravie alebo sa šíria medzi partnerov.",
+          "tip2": "Kondómy a zubné priehradky znižujú riziko, ak sa používajú správne, ale žiadny nástroj nefunguje, ak je na niekoho vyvíjaný tlak alebo ho nie je možné bezpečne použiť.",
+          "tip3": "Zodpovedné je testovanie. Je to niečo, čo ľudia robia, aby sa starali o seba a iných, nie niečo, o čom by sa mali ohovárať.",
+          "tip4": "Opýtajte sa priamo kliník na dôvernosť: kto môže vidieť výsledky, aké vekové pravidlá platia a či sú služby vhodné pre mladých ľudí.",
+          "fact": "Neliečené infekcie, ako sú chlamýdie a kvapavka, môžu viesť k závažným komplikáciám, ale testovanie a liečba sú účinné, keď sa ľuďom dostane včasnej starostlivosti.",
+          "action": "Identifikujte jeden dôveryhodný zdroj sexuálneho zdravia vo vašej krajine: stránku ministerstva zdravotníctva, kliniku pre mládež, školskú zdravotnú sestru alebo linku pomoci.",
+          "scenario": "Priateľ hovorí: „Keby mal niekto STI, vedel by som to tak, že by som sa pozrel.“ Ďalší študent ticho prestane rozprávať.",
+          "challenge": "Pripravte si odpoveď bez stigmy: \"Nemôžete to vždy povedať. Testovanie je normálne, súkromné a zodpovedné.\""
         },
         "consentBasics": {
-          "title": "Consent: the clearest yes",
-          "description": "Consent is not a technicality. It is the foundation of safety, respect, and trust. A healthy relationship gives every person the freedom to say yes, no, wait, or stop without fear of punishment.",
-          "tip1": "Consent must be freely chosen. Pressure, threats, guilt, alcohol, drugs, or power differences can make “yes” unsafe or invalid.",
-          "tip2": "Silence is not consent. Freezing, going quiet, or not fighting back is not the same as wanting something.",
-          "tip3": "Consent is ongoing. Someone can change their mind even if they agreed earlier, even in a relationship.",
-          "tip4": "Digital boundaries count. Repeatedly asking for photos, sharing private images, or threatening exposure is not respect.",
-          "fact": "Consent education reduces harm because it gives students practical language for boundaries before pressure becomes danger.",
-          "action": "Choose a trusted person or service you could contact if you or a friend felt pressured, unsafe, or threatened.",
-          "scenario": "Someone keeps asking for private photos after being told no, then says, “If you loved me, you would.”",
-          "challenge": "Write a boundary script you could send quickly: “No. Stop asking. I am leaving this conversation.”"
+          "title": "Súhlas: najjasnejšie áno",
+          "description": "Súhlas nie je technická záležitosť. Je to základ bezpečia, rešpektu a dôvery. Zdravý vzťah dáva každému človeku slobodu povedať áno, nie, počkať alebo prestať bez strachu z trestu.",
+          "tip1": "Súhlas musí byť slobodne zvolený. Nátlak, vyhrážky, vina, alkohol, drogy alebo rozdiely v moci môžu spôsobiť, že „áno“ bude nebezpečné alebo neplatné.",
+          "tip2": "Mlčanie nie je súhlas. Zamrznúť, byť ticho alebo sa nebrániť nie je to isté, ako niečo chcieť.",
+          "tip3": "Súhlas trvá. Niekto môže zmeniť názor, aj keď sa dohodli skôr, aj vo vzťahu.",
+          "tip4": "Digitálne hranice sa počítajú. Opakované žiadanie o fotografie, zdieľanie súkromných obrázkov alebo vyhrážanie sa odhalením nie je rešpektom.",
+          "fact": "Vzdelávanie so súhlasom znižuje škody, pretože poskytuje študentom praktický jazyk pre hranice skôr, ako sa tlak stane nebezpečenstvom.",
+          "action": "Vyberte si dôveryhodnú osobu alebo službu, na ktorú by ste sa mohli obrátiť, ak by ste sa vy alebo váš priateľ cítili pod tlakom, v nebezpečenstve alebo v ohrození.",
+          "scenario": "Niekto stále žiada o súkromné ​​fotografie, keď mu povedali nie, a potom povie: „Keby si ma miloval, tak by si ma miloval.",
+          "challenge": "Napíšte hraničný skript, ktorý môžete rýchlo poslať: \"Nie. Prestaňte sa pýtať. Opúšťam túto konverzáciu.\""
         }
       },
       "regional": {
         "chokingBasics": {
-          "title": "Choking: recognize the silent emergency",
-          "description": "Choking can turn a normal lunch table into a life-threatening emergency in seconds. The safest response begins with recognizing whether the person can cough or breathe, calling for help, and using trained techniques when needed.",
-          "tip1": "If the person is coughing hard, encourage coughing and stay close. A strong cough is the body’s best tool.",
-          "tip2": "If they cannot speak, cough, cry, or breathe, treat it as an emergency and call for help immediately.",
-          "tip3": "Back blows and abdominal thrusts should be learned from a certified first-aid instructor. Good technique matters.",
-          "tip4": "After a serious choking episode, medical evaluation is wise even if the person seems better.",
-          "fact": "Choking is often quiet, not dramatic. Bystanders who recognize the signs quickly can make the difference before professionals arrive.",
-          "action": "Ask your school who is trained in first aid and where students can learn CPR or choking response.",
-          "scenario": "In the cafeteria, a student suddenly stands up, grabs their throat, and cannot answer when friends ask what is wrong.",
-          "challenge": "Find out where your school keeps emergency contacts and who is first-aid trained."
+          "title": "Dusenie: rozpoznajte tichú núdzovú situáciu",
+          "description": "Dusenie môže zmeniť bežný obedový stôl na život ohrozujúcu núdzovú situáciu v priebehu niekoľkých sekúnd. Najbezpečnejšia reakcia začína rozpoznaním, či daná osoba môže kašľať alebo dýchať, volaním o pomoc a použitím trénovaných techník, keď je to potrebné.",
+          "tip1": "Ak osoba ťažko kašle, podporte kašeľ a zostaňte blízko. Silný kašeľ je najlepším nástrojom tela.",
+          "tip2": "Ak nemôžu hovoriť, kašľať, plakať alebo dýchať, berte to ako núdzovú situáciu a okamžite zavolajte pomoc.",
+          "tip3": "Údery chrbtom a ťahy na brucho by ste sa mali naučiť od certifikovaného inštruktora prvej pomoci. Rozhoduje dobrá technika.",
+          "tip4": "Po závažnej epizóde dusenia je lekárske vyšetrenie múdre, aj keď sa osoba zdá byť lepšia.",
+          "fact": "Dusenie je často tiché, nie dramatické. Okoloidúci, ktorí rýchlo rozpoznajú znamenia, môžu urobiť rozdiel skôr, ako prídu profesionáli.",
+          "action": "Opýtajte sa svojej školy, kto je vyškolený v prvej pomoci a kde sa môžu študenti naučiť CPR alebo reakciu dusenia.",
+          "scenario": "V jedálni sa zrazu študent postaví, chytí sa za hrdlo a nevie odpovedať, keď sa priatelia pýtajú, čo sa deje.",
+          "challenge": "Zistite, kde vaša škola udržiava núdzové kontakty a kto je vyškolený v prvej pomoci."
         },
         "stiTesting": {
-          "title": "Testing and treatment: privacy, proof, care",
-          "description": "Testing replaces fear with facts. It can feel intimidating, but clinics do this every day. The strongest move is to ask clear questions about privacy, testing options, treatment, and partner safety.",
-          "tip1": "Tests may use urine, blood, or swabs. A clinician can explain what is needed based on exposure and symptoms.",
-          "tip2": "Be honest with clinicians. They are not there to judge; accurate information helps them choose the right tests.",
-          "tip3": "If treatment is prescribed, take it exactly as directed and ask when it is safe to have sex again.",
-          "tip4": "Partners may need testing or treatment. Clinics can help with safe, private ways to communicate this.",
-          "fact": "Early testing and treatment can prevent long-term complications and reduce transmission in a community.",
-          "action": "Write down three clinic questions: “Is this confidential?”, “Which tests do I need?”, “When should I retest?”",
-          "scenario": "A friend is worried after possible exposure but says, “If I go to a clinic, everyone will know.”",
-          "challenge": "Build a privacy checklist a student could use before making an appointment."
+          "title": "Testovanie a ošetrenie: súkromie, dôkaz, starostlivosť",
+          "description": "Testovanie nahrádza strach faktami. Môže to byť zastrašujúce, ale kliniky to robia každý deň. Najsilnejším krokom je položiť jasné otázky týkajúce sa súkromia, možností testovania, liečby a bezpečnosti partnera.",
+          "tip1": "Testy môžu používať moč, krv alebo tampóny. Lekár môže vysvetliť, čo je potrebné na základe expozície a symptómov.",
+          "tip2": "Buďte k lekárom úprimní. Nie sú tam na to, aby súdili; presné informácie im pomáhajú pri výbere správnych testov.",
+          "tip3": "Ak je predpísaná liečba, vezmite si ju presne podľa pokynov a opýtajte sa, kedy je bezpečné opäť mať sex.",
+          "tip4": "Partneri môžu potrebovať testovanie alebo liečbu. Kliniky môžu pomôcť bezpečným a súkromným spôsobom, ako to oznámiť.",
+          "fact": "Včasné testovanie a liečba môžu zabrániť dlhodobým komplikáciám a znížiť prenos v komunite.",
+          "action": "Napíšte si tri klinické otázky: „Je to dôverné?“, „Ktoré testy potrebujem?“, „Kedy by som mal test zopakovať?“",
+          "scenario": "Priateľ sa obáva možného kontaktu, ale hovorí: \"Ak pôjdem na kliniku, každý to bude vedieť.\"",
+          "challenge": "Pred dohodnutím stretnutia vytvorte kontrolný zoznam ochrany osobných údajov, ktorý môže študent použiť."
         },
         "vaccineLiteracy": {
-          "title": "Vaccines: training the immune system",
-          "description": "Vaccines are not magic shields; they are training sessions for the immune system. They help the body recognize danger before a real infection has the chance to cause serious harm.",
-          "tip1": "A vaccine schedule is a map. It shows which protections are recommended at different ages and when catch-up doses may be needed.",
-          "tip2": "A sore arm or mild fever can happen because the immune system is responding. Clinics can tell you what is normal and what is not.",
-          "tip3": "Vaccines are monitored for safety before and after approval. Serious allergic reactions are rare, and clinics are prepared for them.",
-          "tip4": "If you missed a dose, do not guess. Ask a clinician or official schedule about catch-up options.",
-          "fact": "High vaccine coverage protects individuals and also helps protect people who cannot be vaccinated for medical reasons.",
-          "action": "Check your vaccine record with a parent, guardian, doctor, or school nurse and list one question to ask.",
-          "scenario": "A group chat claims a vaccine “rewrites your DNA.” The post has dramatic music and no source.",
-          "challenge": "Find the same vaccine on a public health website and write one evidence-based reply."
+          "title": "Vakcíny: tréning imunitného systému",
+          "description": "Vakcíny nie sú magické štíty; sú to tréningy pre imunitný systém. Pomáhajú telu rozpoznať nebezpečenstvo skôr, ako má skutočná infekcia šancu spôsobiť vážne poškodenie.",
+          "tip1": "Vakcinačný plán je mapa. Ukazuje, ktoré ochrany sa odporúčajú v rôznom veku a kedy môžu byť potrebné vyrovnávacie dávky.",
+          "tip2": "Môže sa vyskytnúť boľavá ruka alebo mierna horúčka, pretože imunitný systém reaguje. Kliniky vám môžu povedať, čo je normálne a čo nie.",
+          "tip3": "Bezpečnosť vakcín sa pred a po schválení monitoruje. Závažné alergické reakcie sú zriedkavé, ambulancie sú na ne pripravené.",
+          "tip4": "Ak ste vynechali dávku, nehádajte. Opýtajte sa lekára alebo oficiálneho harmonogramu na možnosti dohnania.",
+          "fact": "Vysoká zaočkovanosť chráni jednotlivcov a tiež pomáha chrániť ľudí, ktorí nemôžu byť očkovaní zo zdravotných dôvodov.",
+          "action": "Skontrolujte si záznam o očkovaní u rodiča, opatrovníka, lekára alebo školskej sestry a uveďte jednu otázku, ktorú by ste mali položiť.",
+          "scenario": "Skupinový čet tvrdí, že vakcína „prepíše vaše DNA“. Príspevok obsahuje dramatickú hudbu a žiadny zdroj.",
+          "challenge": "Nájdite rovnakú vakcínu na webovej stránke verejného zdravia a napíšte odpoveď založenú na dôkazoch."
         },
         "vpdExamples": {
-          "title": "Diseases vaccines can prevent",
-          "description": "A vaccine card is not just paperwork. It is a record of protection against diseases that once injured or killed far more young people: measles, hepatitis B, HPV-related cancers, and more.",
-          "tip1": "Measles spreads through the air and can cause pneumonia, brain swelling, and death. It is not just a rash.",
-          "tip2": "HPV vaccination can prevent several cancers later in life. It works best before exposure to the virus.",
-          "tip3": "Hepatitis B can become a chronic liver infection. Vaccination is a major tool for prevention.",
-          "tip4": "Disease stories travel fast online. Evidence from health agencies travels slower but is far more reliable.",
-          "fact": "Before widespread vaccination, measles killed millions globally. Vaccines changed what childhood risk looked like.",
-          "action": "Choose one vaccine-preventable disease and make a three-bullet “why it matters” card.",
-          "scenario": "Students are preparing for a school trip, but nobody agrees which vaccines matter for teens.",
-          "challenge": "Make a pocket guide: disease, how it spreads, vaccine that helps prevent it."
+          "title": "Ochoreniam môžu vakcíny zabrániť",
+          "description": "Očkovací preukaz nie je len papierovanie. Je to záznam o ochrane pred chorobami, ktoré kedysi zranili alebo zabili oveľa viac mladých ľudí: osýpky, hepatitída B, rakovina súvisiaca s HPV a ďalšie.",
+          "tip1": "Osýpky sa šíria vzduchom a môžu spôsobiť zápal pľúc, opuch mozgu a smrť. Nie je to len vyrážka.",
+          "tip2": "HPV očkovanie môže zabrániť niekoľkým rakovinám neskôr v živote. Najlepšie to funguje pred vystavením vírusu.",
+          "tip3": "Hepatitída B sa môže stať chronickou infekciou pečene. Očkovanie je hlavným nástrojom prevencie.",
+          "tip4": "Príbehy o chorobách sa šíria rýchlo online. Dôkazy od zdravotníckych agentúr sa šíria pomalšie, ale sú oveľa spoľahlivejšie.",
+          "fact": "Pred rozsiahlym očkovaním zabíjali osýpky na celom svete milióny ľudí. Vakcíny zmenili vzhľad detského rizika.",
+          "action": "Vyberte si jednu chorobu, ktorej sa dá predchádzať očkovaním, a vytvorte kartu „prečo na tom záleží“ s tromi odrážkami.",
+          "scenario": "Študenti sa pripravujú na školský výlet, ale nikto nesúhlasí s tým, ktoré vakcíny sú pre tínedžerov dôležité.",
+          "challenge": "Urobte si vreckového sprievodcu: choroba, ako sa šíri, vakcína, ktorá jej pomáha predchádzať."
         }
       },
       "national": {
         "firstAidReview": {
-          "title": "First aid command: putting it together",
-          "description": "At the national stage, first aid becomes decision-making under pressure: protect yourself, get help, choose the right basic action, and keep the scene calm enough for professionals to take over.",
-          "tip1": "Scene safety comes first. You cannot help if you become the second injured person.",
-          "tip2": "Call early when the situation may be serious. Dispatchers would rather guide a cautious caller than arrive too late.",
-          "tip3": "Match action to problem: pressure for bleeding, cool water for burns, trained response for choking, space and reassurance for shock.",
-          "tip4": "Leadership can be simple: point to one person and say, “You call emergency services. You get a teacher. You clear space.”",
-          "fact": "In emergencies, calm role assignment reduces confusion and speeds up response, especially in crowded places like schools.",
-          "action": "Write a 60-second classroom emergency plan: caller, adult, space, supplies, comfort.",
-          "scenario": "One student is burned, another is bleeding, and the room is filling with noise. You are the first person thinking clearly.",
-          "challenge": "Draft a four-role emergency plan your class could practice safely with a teacher."
+          "title": "Príkaz prvej pomoci: skladanie",
+          "description": "Na národnej úrovni sa prvá pomoc stáva rozhodovaním pod tlakom: chráňte sa, získajte pomoc, zvoľte správnu základnú akciu a udržujte scénu dostatočne pokojnú, aby ju mohli prevziať profesionáli.",
+          "tip1": "Bezpečnosť scény je na prvom mieste. Nemôžete si pomôcť, ak sa stanete druhým zraneným.",
+          "tip2": "Zavolajte včas, keď môže byť situácia vážna. Dispečeri radšej usmernia opatrného volajúceho, ako by mali prísť príliš neskoro.",
+          "tip3": "Priraďte akciu k problému: tlak na krvácanie, studená voda na popáleniny, trénovaná odozva na dusenie, priestor a zaistenie na šok.",
+          "tip4": "Vedenie môže byť jednoduché: ukážte na jednu osobu a povedzte: „Zavoláte záchrannú službu. Získate učiteľa. Uvoľníte priestor.“",
+          "fact": "V núdzových situáciách pokojné pridelenie úloh znižuje zmätok a urýchľuje reakciu, najmä na preplnených miestach, ako sú školy.",
+          "action": "Napíšte 60-druhý núdzový plán v triede: volajúci, dospelý, priestor, zásoby, pohodlie.",
+          "scenario": "Jeden študent je popálený, ďalší krváca a miestnosť je plná hluku. Ste prvý, kto myslí jasne.",
+          "challenge": "Navrhnite štvorrolový núdzový plán, ktorý by vaša trieda mohla bezpečne precvičiť s učiteľom."
         },
         "stiMyths": {
-          "title": "STI myths: replacing gossip with evidence",
-          "description": "Myths thrive where shame is loud and facts are quiet. Health literacy means refusing gossip, protecting privacy, and pointing people toward testing and care instead of blame.",
-          "tip1": "Myth: You can always tell who has an STI. Reality: many infections have no visible signs.",
-          "tip2": "Myth: Only “certain people” get STIs. Reality: exposure is about biology and behavior, not someone’s worth.",
-          "tip3": "Myth: Two condoms are safer than one. Reality: friction can make condoms tear; one used correctly is safer.",
-          "tip4": "Myth: Borrowed antibiotics are enough. Reality: wrong treatment can fail and contribute to resistance.",
-          "fact": "Stigma delays testing. When communities talk about STIs as health issues, people seek care earlier.",
-          "action": "Practice one sentence that shuts down gossip while protecting privacy.",
-          "scenario": "A rumor spreads about a student who might need testing. People are laughing and guessing names.",
-          "challenge": "Write a response that says: stop gossiping, respect privacy, use real health information."
+          "title": "STI mýty: nahradenie klebiet dôkazmi",
+          "description": "Mýtom sa darí tam, kde je hanba hlasná a fakty sú tiché. Zdravotná gramotnosť znamená odmietanie klebiet, ochranu súkromia a nasmerovanie ľudí na testovanie a starostlivosť namiesto obviňovania.",
+          "tip1": "Mýtus: Vždy môžete zistiť, kto má STI. Realita: mnohé infekcie nemajú žiadne viditeľné znaky.",
+          "tip2": "Mýtus: Iba „určití ľudia“ dostanú STIs. Realita: expozícia je o biológii a správaní, nie o niečí hodnote.",
+          "tip3": "Mýtus: Dva kondómy sú bezpečnejšie ako jeden. Realita: trenie môže spôsobiť roztrhnutie kondómov; ten, ktorý sa používa správne, je bezpečnejší.",
+          "tip4": "Mýtus: Stačia požičané antibiotiká. Realita: nesprávna liečba môže zlyhať a prispieť k rezistencii.",
+          "fact": "Stigma testovanie oneskoruje. Keď komunity hovoria o STIs ako o zdravotných problémoch, ľudia vyhľadajú starostlivosť skôr.",
+          "action": "Precvičte si jednu vetu, ktorá vypne klebety a zároveň ochráni súkromie.",
+          "scenario": "Povesť sa šíri o študentovi, ktorý by mohol potrebovať testovanie. Ľudia sa smejú a hádajú mená.",
+          "challenge": "Napíšte odpoveď, ktorá hovorí: prestaňte ohovárať, rešpektujte súkromie, používajte skutočné zdravotné informácie."
         },
         "sourceLiteracy": {
-          "title": "Health information: evidence in a noisy world",
-          "description": "Your feed is a health battlefield: miracle cures, fear posts, influencer advice, and real science all compete for attention. The skill is not knowing everything. The skill is knowing what deserves trust.",
-          "tip1": "Ask who made the claim, what evidence they show, and whether recognized health organizations agree.",
-          "tip2": "Beware of phrases like “doctors hate this,” “secret cure,” or “share before it is deleted.” They are designed to bypass critical thinking.",
-          "tip3": "Look for dates. Health guidance can change as evidence improves.",
-          "tip4": "Before sharing, pause. A false health post can spread fear faster than a virus.",
-          "fact": "Health literacy is linked to better decisions because people can find, understand, and use reliable information under pressure.",
-          "action": "Compare one viral health claim with an official health source and write the difference in plain language.",
-          "scenario": "A video promises a miracle cure, uses dramatic music, and says hospitals are hiding the truth.",
-          "challenge": "Run the three-question source test: Who says it? What proof? What do health agencies say?"
+          "title": "Zdravotné informácie: dôkazy v hlučnom svete",
+          "description": "Váš informačný kanál je bojovým poľom zdravia: o pozornosť súperia zázračné lieky, príspevky týkajúce sa strachu, rady ovplyvňovateľov a skutočná veda. Zručnosť nie je vedieť všetko. Zručnosť je vedieť, čo si zaslúži dôveru.",
+          "tip1": "Opýtajte sa, kto toto tvrdenie predložil, aké dôkazy uvádza a či uznávané zdravotnícke organizácie súhlasia.",
+          "tip2": "Dajte si pozor na frázy ako „lekári to nenávidia“, „tajná liečba“ alebo „zdieľajte, kým bude vymazaná“. Sú navrhnuté tak, aby obchádzali kritické myslenie.",
+          "tip3": "Hľadaj dátumy. Zdravotné poradenstvo sa môže meniť, keď sa dôkazy zlepšujú.",
+          "tip4": "Pred zdieľaním pozastavte. Falošný zdravotný príspevok môže šíriť strach rýchlejšie ako vírus.",
+          "fact": "Zdravotná gramotnosť je spojená s lepšími rozhodnutiami, pretože ľudia môžu nájsť, pochopiť a použiť spoľahlivé informácie pod tlakom.",
+          "action": "Porovnajte jedno vírusové zdravotné tvrdenie s oficiálnym zdravotným zdrojom a napíšte rozdiel v jednoduchom jazyku.",
+          "scenario": "Video sľubuje zázračný liek, používa dramatickú hudbu a hovorí, že nemocnice skrývajú pravdu.",
+          "challenge": "Spustite test zdroja s tromi otázkami: Kto to hovorí? Aký dôkaz? Čo hovoria zdravotnícke agentúry?"
         },
         "capstoneMix": {
-          "title": "Capstone: lead a health mission",
-          "description": "The final mission asks you to combine everything: first response, sexual health, vaccines, consent, and evidence. The goal is not to be the expert in every room. The goal is to become the person who knows how to find help, reduce harm, and keep facts alive.",
-          "tip1": "Start with safety: emergency risks, pressure, consent, privacy, and reliable adults or services.",
-          "tip2": "Use prevention as a stack: vaccines, safer choices, testing, hygiene, trusted information, and timely care.",
-          "tip3": "Respect privacy. A helpful student does not expose someone’s health story to prove a point.",
-          "tip4": "Teach in plain language. If your younger sibling can understand it, your message is stronger.",
-          "fact": "Peer-led health education works best when it is practical, respectful, and connected to real services.",
-          "action": "Design a one-page school health mission plan with four stations: first aid, consent, vaccines, and fact-checking.",
-          "scenario": "You are asked to help plan a school health week. Students say they do not want another boring lecture.",
-          "challenge": "Create a four-station health week agenda with one activity, one trusted resource, and one takeaway per station."
+          "title": "Capstone: viesť zdravotnú misiu",
+          "description": "Posledná misia vás požiada, aby ste skombinovali všetko: prvú reakciu, sexuálne zdravie, vakcíny, súhlas a dôkazy. Cieľom nie je byť odborníkom v každej miestnosti. Cieľom je stať sa osobou, ktorá vie, ako nájsť pomoc, znížiť škody a udržať fakty živé.",
+          "tip1": "Začnite s bezpečnosťou: núdzové riziká, tlak, súhlas, súkromie a spoľahliví dospelí alebo služby.",
+          "tip2": "Použite prevenciu ako balík: vakcíny, bezpečnejšie voľby, testovanie, hygiena, dôveryhodné informácie a včasná starostlivosť.",
+          "tip3": "Rešpektujte súkromie. Užitočný študent neodhaľuje niečí zdravotný príbeh, aby dokázal niečo.",
+          "tip4": "Vyučujte v jednoduchom jazyku. Ak to váš mladší súrodenec pochopí, vaše posolstvo je silnejšie.",
+          "fact": "Zdravotná výchova vedená rovesníkmi funguje najlepšie, keď je praktická, rešpektujúca a spojená so skutočnými službami.",
+          "action": "Navrhnite jednostránkový plán školskej zdravotnej misie so štyrmi stanicami: prvá pomoc, súhlas, vakcíny a overovanie faktov.",
+          "scenario": "Žiadame vás, aby ste pomohli naplánovať školský týždeň zdravia. Študenti tvrdia, že už nechcú ďalšiu nudnú prednášku.",
+          "challenge": "Vytvorte agendu týždňa zdravia na štyroch staniciach s jednou aktivitou, jedným dôveryhodným zdrojom a jedným jedlom so sebou na stanicu."
         }
       }
     },
     "stageQuiz": {
       "local": {
         "q0": {
-          "question": "What should you tell an emergency dispatcher first if possible?",
-          "a0": "Your full medical history",
-          "a1": "Where you are and what happened",
-          "a2": "Your social media handle",
-          "explanation": "Location and a brief description of the emergency help them send the right resources quickly."
+          "question": "Čo by ste mali povedať pohotovostnému dispečerovi ako prvému, ak je to možné?",
+          "a0": "Vaša úplná anamnéza",
+          "a1": "Kde ste a čo sa stalo",
+          "a2": "Vaša správa sociálnych médií",
+          "explanation": "Miesto a krátky popis núdzovej situácie im pomáha rýchlo poslať správne zdroje."
         },
         "q1": {
-          "question": "For heavy bleeding that soaks through a cloth, you should:",
-          "a0": "Remove the cloth to look at the wound",
-          "a1": "Add another layer on top and keep pressing",
-          "a2": "Wait an hour to see if it stops",
-          "explanation": "Removing the cloth can disturb clots. Add pressure on top until help arrives."
+          "question": "Pri silnom krvácaní, ktoré presiakne cez látku, by ste mali:",
+          "a0": "Odstráňte handričku, aby ste sa pozreli na ranu",
+          "a1": "Navrch pridajte ďalšiu vrstvu a stále pritláčajte",
+          "a2": "Počkajte hodinu, či prestane",
+          "explanation": "Odstránenie látky môže narušiť zrazeniny. Pridajte tlak na vrch, kým nepríde pomoc."
         },
         "q2": {
-          "question": "For a small fresh burn, the best first step is usually:",
-          "a0": "Put butter on it",
-          "a1": "Cool with running cool water for several minutes",
-          "a2": "Wrap tightly with plastic",
-          "explanation": "Cool running water reduces heat in the tissue. Butter traps heat and increases infection risk."
+          "question": "Pre malé čerstvé popáleniny je zvyčajne najlepší prvý krok:",
+          "a0": "Položte naň maslo",
+          "a1": "Ochlaďte niekoľko minút tečúcou studenou vodou",
+          "a2": "Pevne zabaľte do plastu",
+          "explanation": "Studená tečúca voda znižuje teplo v tkanive. Maslo zachytáva teplo a zvyšuje riziko infekcie."
         },
         "q3": {
-          "question": "Why might someone get an STI test even without symptoms?",
-          "a0": "Tests are only for people with symptoms",
-          "a1": "Many STIs can be silent but still harmful or spreadable",
-          "a2": "Testing cures all STIs instantly",
-          "explanation": "Many infections have no early symptoms; testing finds them so you can get care and protect partners."
+          "question": "Prečo môže niekto dostať test STI aj bez príznakov?",
+          "a0": "Testy sú len pre ľudí s príznakmi",
+          "a1": "Mnohé STIs môžu byť tiché, ale stále škodlivé alebo šíriteľné",
+          "a2": "Testovanie vylieči všetky STIs okamžite",
+          "explanation": "Mnohé infekcie nemajú žiadne skoré príznaky; testovanie ich nájde, aby ste sa mohli starať a chrániť partnerov."
         }
       },
       "regional": {
         "q0": {
-          "question": "If an adult suddenly cannot speak or breathe and holds their throat, you should:",
-          "a0": "Ignore them until they cough",
-          "a1": "Call emergency services immediately",
-          "a2": "Give them a glass of water",
-          "explanation": "Complete airway blockage is an emergency — trained help and EMS are needed urgently."
+          "question": "Ak dospelý zrazu nemôže hovoriť alebo dýchať a drží si hrdlo, mali by ste:",
+          "a0": "Ignorujte ich, kým nezakašlú",
+          "a1": "Okamžite volajte záchrannú službu",
+          "a2": "Dajte im pohár vody",
+          "explanation": "Úplná blokáda dýchacích ciest je núdzová situácia – súrne je potrebná vyškolená pomoc a EMS."
         },
         "q1": {
-          "question": "If prescribed antibiotics for an STI, you should:",
-          "a0": "Stop when you feel better",
-          "a1": "Finish all pills as directed",
-          "a2": "Share extras with a partner",
-          "explanation": "Stopping early can fail to kill the bacteria and contribute to resistance. Never share antibiotics."
+          "question": "Ak vám predpíše antibiotiká na STI, mali by ste:",
+          "a0": "Zastavte sa, keď sa budete cítiť lepšie",
+          "a1": "Dokončite všetky pilulky podľa pokynov",
+          "a2": "Zdieľajte doplnky s partnerom",
+          "explanation": "Včasné zastavenie môže zlyhať pri zabíjaní baktérií a prispieť k rezistencii. Nikdy nezdieľajte antibiotiká."
         },
         "q2": {
-          "question": "Vaccines mainly work by:",
-          "a0": "Replacing your blood",
-          "a1": "Training the immune system to recognize a germ",
-          "a2": "Curing active disease instantly",
-          "explanation": "Vaccines prepare your immune system so a future encounter with the real germ is much safer."
+          "question": "Vakcíny účinkujú najmä:",
+          "a0": "Výmena krvi",
+          "a1": "Tréning imunitného systému, aby rozpoznal zárodok",
+          "a2": "Okamžité vyliečenie aktívnej choroby",
+          "explanation": "Vakcíny pripravujú váš imunitný systém, takže budúce stretnutie so skutočným zárodkom je oveľa bezpečnejšie."
         },
         "q3": {
-          "question": "Measles is:",
-          "a0": "Harmless in all children",
-          "a1": "A serious disease that vaccines have greatly reduced",
-          "a2": "Only spread by animals",
-          "explanation": "Measles can cause severe complications; vaccination is a key reason cases dropped worldwide."
+          "question": "Osýpky sú:",
+          "a0": "Neškodné u všetkých detí",
+          "a1": "Závažné ochorenie, ktoré vakcíny výrazne znížili",
+          "a2": "Šíri sa iba zvieratami",
+          "explanation": "Measles can cause severe complications; očkovanie je hlavným dôvodom celosvetového poklesu prípadov."
         }
       },
       "national": {
         "q0": {
-          "question": "In a medical emergency at school, the best first step is usually:",
+          "question": "V prípade lekárskej pohotovosti v škole je najlepším prvým krokom zvyčajne:",
           "a0": "Only post on social media",
           "a1": "Get adult help and emergency services if needed",
           "a2": "Wait until the end of class",
-          "explanation": "Trained adults and EMS are equipped to respond; time matters in emergencies."
+          "explanation": "Vyškolení dospelí a EMS sú pripravení reagovať; time matters in emergencies."
         },
         "q1": {
-          "question": "A reliable place to check vaccine facts is often:",
-          "a0": "Anonymous forum threads only",
-          "a1": "Your country's ministry of health or WHO",
+          "question": "Spoľahlivým miestom na kontrolu faktov o očkovaní je často:",
+          "a0": "Iba anonymné vlákna fóra",
+          "a1": "Ministerstvo zdravotníctva vašej krajiny alebo WHO",
           "a2": "Memes with many likes",
-          "explanation": "Official health agencies review evidence and update guidance — use them to verify claims."
+          "explanation": "Oficiálne zdravotnícke agentúry kontrolujú dôkazy a aktualizujú usmernenia – použite ich na overenie tvrdení."
         },
         "q2": {
           "question": "Two condoms at once are:",
           "a0": "Safer than one",
-          "a1": "Not recommended — friction can cause breakage",
+          "a1": "Neodporúča sa – trenie môže spôsobiť zlomenie",
           "a2": "Required by law",
-          "explanation": "Using one condom correctly is safer than double-layering, which increases tear risk."
+          "explanation": "Správne používanie jedného kondómu je bezpečnejšie ako dvojvrstvové, čo zvyšuje riziko roztrhnutia."
         },
         "q3": {
-          "question": "Health literacy means:",
-          "a0": "Memorizing every disease name",
-          "a1": "Finding, understanding, and using reliable health information",
-          "a2": "Never seeing a doctor",
-          "explanation": "It is about skills to navigate real information and services, not encyclopedic memorization."
+          "question": "Zdravotná gramotnosť znamená:",
+          "a0": "Zapamätanie každého názvu choroby",
+          "a1": "Hľadanie, pochopenie a používanie spoľahlivých informácií o zdraví",
+          "a2": "Nikdy nenavštíviť lekára",
+          "explanation": "Ide o schopnosti orientovať sa v skutočných informáciách a službách, nie o encyklopedickom memorovaní."
         }
       }
     },
     "workflow": {
-      "nextMission": "Next mission",
-      "nextMissionBody": "Follow this recommended step to keep the Academy moving without guessing what to do next.",
+      "nextMission": "Ďalšia misia",
+      "nextMissionBody": "Postupujte podľa tohto odporúčaného kroku, aby sa akadémia pohybovala bez toho, aby ste hádali, čo robiť ďalej.",
       "continueLesson": "{stage}: {title}",
-      "takeQuiz": "{stage} stage checkpoint",
-      "finishedTitle": "Academy complete",
-      "finishedBody": "You finished the current Academy path. Review any lesson or retake a quiz to stay sharp.",
-      "startMission": "Start mission",
-      "startQuiz": "Take checkpoint",
-      "reviewPath": "Review path",
-      "takeStageQuiz": "Take stage checkpoint",
-      "lockedStatus": "Locked",
-      "completeStatus": "Complete",
-      "quizReadyStatus": "Checkpoint ready",
-      "inProgressStatus": "In progress"
+      "takeQuiz": "{stage} kontrolný bod etapy",
+      "finishedTitle": "Akadémia dokončená",
+      "finishedBody": "Dokončili ste súčasnú cestu akadémie. Prezrite si akúkoľvek lekciu alebo si zopakujte kvíz, aby ste zostali ostrí.",
+      "startMission": "Začať misiu",
+      "startQuiz": "Vezmite kontrolný bod",
+      "reviewPath": "Cestu recenzie",
+      "takeStageQuiz": "Choďte na kontrolný bod etapy",
+      "lockedStatus": "Zamknuté",
+      "completeStatus": "Dokončiť",
+      "quizReadyStatus": "Kontrolný bod pripravený",
+      "inProgressStatus": "Prebieha"
     },
     "fieldLab": {
       "title": "Field Lab",
-      "subtitle": "Turn the lesson into a one-minute plan. Your note stays only on this device.",
-      "observeLabel": "Observe",
-      "decideLabel": "Decide",
-      "actLabel": "Act",
-      "placeholder": "Example: I would first check safety, then call for help, then tell an adult exactly what I saw...",
-      "saveLabel": "Save field note",
-      "savedLabel": "Saved on this device",
-      "observeHint": "What do you actually see, hear, or know in this scenario? Stick to the facts.",
-      "decideHint": "What is the smartest first move? Pick something a calm bystander can really do.",
-      "actHint": "Write the exact words or steps you would use in the next 60 seconds.",
-      "syncedLabel": "Saved",
-      "draftLabel": "Saving draft"
+      "subtitle": "Premeňte lekciu na minútový plán. Vaša poznámka zostane iba v tomto zariadení.",
+      "observeLabel": "Pozorovať",
+      "decideLabel": "Rozhodnite sa",
+      "actLabel": "zák",
+      "placeholder": "Príklad: Najprv by som skontroloval bezpečnosť, potom zavolal pomoc a potom povedal dospelému presne to, čo som videl...",
+      "saveLabel": "Uložiť poznámku poľa",
+      "savedLabel": "Uložené v tomto zariadení",
+      "observeHint": "Čo v tomto scenári vlastne vidíte, počujete alebo viete? Držte sa faktov.",
+      "decideHint": "Aký je najmúdrejší prvý krok? Vyberte si niečo, čo pokojný okoloidúci naozaj dokáže.",
+      "actHint": "Napíšte presné slová alebo kroky, ktoré by ste použili v nasledujúcich 60 sekundách.",
+      "syncedLabel": "Uložené",
+      "draftLabel": "Ukladá sa koncept"
     },
     "visuals": {
-      "academy": "Students learning health skills through maps, phones, clinics, and community action",
-      "emergency": "Emergency call map with location pins and first response signal lines",
-      "firstAid": "First aid field kit with bandage, clean cloth, and safety steps",
-      "sexualHealth": "Private conversation bubble, shield, and clinic doorway for confidential sexual health support",
-      "vaccines": "Immune system shield, vaccine card, and public health network",
-      "literacy": "Fact-checking desk with phone, sources, magnifier, and evidence notes",
-      "capstone": "Capstone expedition map connecting first aid, vaccines, relationships, and evidence"
+      "academy": "Študenti sa učia zručnostiam v oblasti zdravia prostredníctvom máp, telefónov, kliník a akcií komunity",
+      "emergency": "Mapa tiesňového volania s kolíkmi polohy a signálnymi linkami prvej odozvy",
+      "firstAid": "Súprava prvej pomoci v teréne s obväzom, čistou handričkou a bezpečnostnými krokmi",
+      "sexualHealth": "Súkromná konverzačná bublina, štít a dvere kliniky pre dôvernú podporu sexuálneho zdravia",
+      "vaccines": "Štít imunitného systému, očkovacia karta a sieť verejného zdravia",
+      "literacy": "Stôl na kontrolu faktov s telefónom, zdrojmi, lupou a dôkazovými poznámkami",
+      "capstone": "Expedičná mapa Capstone spájajúca prvú pomoc, vakcíny, vzťahy a dôkazy"
     },
     "hero": {
-      "chipFirstAid": "First aid that works",
-      "chipLiteracy": "Health literacy",
-      "chipMissions": "Mission-based learning"
+      "chipFirstAid": "Prvá pomoc, ktorá funguje",
+      "chipLiteracy": "Zdravotná gramotnosť",
+      "chipMissions": "Učenie založené na poslaní"
     },
     "toast": {
-      "lessonLoggedTitle": "Lesson logged",
-      "lessonLoggedBody": "+10 XP earned. Streak updated and your next mission is ready."
+      "lessonLoggedTitle": "Lekcia prihlásená",
+      "lessonLoggedBody": "+10 XP zarobené. Streak bol aktualizovaný a vaša ďalšia misia je pripravená."
     },
     "sexualHealthSupport": {
-      "title": "Confidential support matters",
-      "body": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
-      "findCare": "Find care",
-      "rights": "Know your rights"
+      "title": "Dôverná podpora je dôležitá",
+      "body": "Ak sa táto téma dotýka niečoho reálneho vo vašom živote, nemusíte to riešiť sami. Spýtajte sa dôveryhodného dospelého, školskej sestry, lekára, kliniky pre mládež alebo linky pomoci, aká podpora je dôverná tam, kde žijete.",
+      "findCare": "Nájdite starostlivosť",
+      "rights": "Poznajte svoje práva"
+    },
+    "stageBadgeFormat": "Fáza {n}",
+    "lessonIndexFormat": "L{n}/{total}",
+    "a11yLocked": "zamknuté",
+    "metaSuffix": "Študentská akadémia zdravia",
+    "l8": {
+      "eyebrow": "Redi Health Academy",
+      "heroTitle1": "Staňte sa",
+      "heroTitle2": "prekladateľ zdravia",
+      "heroTitle3": "pre vašu komunitu.",
+      "heroLead": "Klinicky preskúmané, gamifikované kurikulum zahŕňajúce miestne, regionálne a národné fázy. Vybudované s rómskymi zdravotnými mediátormi v celej Európe.",
+      "heroStatPanelImageAlt": "Ilustrácia zvýrazňujúca študentov, ktorí si spoločne precvičujú medzníky zdravotnej gramotnosti.",
+      "heroPrimaryCta": "Začnite dnešnú misiu",
+      "heroSecondaryCta": "Pozrite si učebné osnovy",
+      "statLevel": "úroveň",
+      "statXp": "XP",
+      "statStreak": "Denná séria",
+      "statBadges": "Odznaky",
+      "statLessons": "Lekcie hotové",
+      "statDaysActive": "Aktívne dni",
+      "missionDeckTitle": "Misijná paluba",
+      "missionDeckSubtitle": "Tri hry, ktoré sa spájajú každý týždeň.",
+      "missionTodayLabel": "Dnes",
+      "missionTodayBody": "Pokračujte tam, kde ste prestali – približne {min} minút.",
+      "missionTodayCta": "Pokračujte v misii",
+      "missionTodayQuiz": "Urobte si etapový kvíz",
+      "missionTodayDone": "Všetky etapy vyčistené",
+      "missionTodayDoneBody": "Skontrolujte modul alebo zdieľajte, čo ste sa naučili.",
+      "missionStreakLabel": "Pruhovať",
+      "missionStreakBody": "Udržujte svoj oheň nažive. Ukáž sa zajtra.",
+      "missionStreakDay": "{count, plural, one {# day} iné {# days}}",
+      "missionStreakCta": "Zapíšte rýchly fakt",
+      "missionBadgeLabel": "Ďalší odznak",
+      "missionBadgeBody": "Dokončite {remaining} ďalších {remaining, plural, one {lesson} iných {lessons}} v {stage}.",
+      "missionBadgeAllDone": "Všetky získané odznaky – zdieľajte svoj diplom nižšie.",
+      "journeyTitle": "Vaša cesta",
+      "journeySubtitle": "Tri etapy. Dvanásť misií. Jeden certifikovaný terénny mediátor.",
+      "journeyCurrent": "si tu",
+      "journeyUnlocked": "Odomknuté",
+      "journeyLocked": "Zamknuté",
+      "journeyComplete": "Dokončiť",
+      "journeyMilestoneLocal": "Miestne",
+      "journeyMilestoneRegional": "Regionálne",
+      "journeyMilestoneNational": "Národný",
+      "moduleListTitle": "Moduly v tejto fáze",
+      "moduleStatusLocked": "Zamknuté",
+      "moduleStatusDone": "Hotovo",
+      "moduleStatusOpen": "Otvorte",
+      "moduleStatusNew": "Nové",
+      "achievementWallTitle": "Stena úspechu",
+      "achievementWallSubtitle": "Každý odznak je príbeh, ktorý môžete zdieľať.",
+      "achievementProgress": "{percent}% na odomknutie",
+      "achievementEarned": "Zarobené",
+      "achievementLockedHint": "Odomknite ho absolvovaním etapového kvízu {stage}.",
+      "leaderboardTitle": "Najlepší študenti",
+      "leaderboardSubtitle": "Anonymizovaná kohorta, aktualizovaná týždenne.",
+      "leaderboardYou": "vy",
+      "leaderboardRank": "Poradie",
+      "leaderboardCountryFallback": "Európe",
+      "leaderboardEmpty": "Zatiaľ nie je dostatok údajov – pokračujte v učení a budúci týždeň sa tu objavíte.",
+      "diplomaTitle": "Diplom terénneho mediátora",
+      "diplomaSubtitle": "Na čom pracujete.",
+      "diplomaBody": "Absolvujte všetky tri fázy a získajte digitálny diplom, ktorý môžete zdieľať so zamestnávateľmi a mimovládnymi organizáciami.",
+      "diplomaProgress": "Splnené požiadavky: {completed} z {total}",
+      "diplomaPreviewName": "Sprostredkovateľ budúceho poľa",
+      "diplomaPreviewDate": "Ocenené {date}",
+      "diplomaSignature": "Redi Klinická rada",
+      "diplomaPreview": "Ukážka",
+      "diplomaUnlocked": "Diplom pripravený",
+      "diplomaCta": "Otvorený diplom",
+      "countryTitle": "Vaša krajina",
+      "countryHint": "Lokalizácia príkladov, štatistík a tiesňových čísel.",
+      "ctaBanner": "Zaseknutý? Otestované mediátory sú vzdialené len jedno klepnutie.",
+      "ctaBannerLink": "položiť otázku",
+      "whatsInsideTitle": "Čo je vo vnútri",
+      "whatsInsideFirstAid": "Núdzová reakcia a prvá pomoc",
+      "whatsInsideSTI": "Sexuálne zdravie a súhlas",
+      "whatsInsideVaccines": "Vakcíny a imunizácia",
+      "whatsInsideMyths": "Dezinformácie a zdroje"
     }
   },
   "errors": {
@@ -768,5 +1123,1471 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Zdravie rodiny",
+    "subtitle": "Sledujte zdravie celej rodiny. Všetky údaje zostávajú vo vašom telefóne.",
+    "back": "Späť k rodine",
+    "yearsOld": "{age} rokov",
+    "expecting": "· Tehotná",
+    "pregnancyTitle": "Tehotenstvo",
+    "pregnancyWeeks": "Týždeň {weeks} z 40",
+    "pregnancyExpecting": "Tehotná",
+    "logMood": "Zaznamenať náladu",
+    "logWater": "Voda",
+    "logActivity": "Aktivita",
+    "logFormTitle": "Zaznamenať {type}",
+    "logNote": "Pridať poznámku (voliteľné)",
+    "save": "Uložiť",
+    "recentLogs": "Nedávne záznamy",
+    "noLogs": "Zatiaľ žiadne záznamy. Začnite sledovať!",
+    "addMemberTitle": "Pridať člena rodiny",
+    "addMemberButton": "Pridať člena rodiny",
+    "addToFamily": "Pridať do rodiny",
+    "namePlaceholder": "Meno",
+    "agePlaceholder": "Vek",
+    "pregnantLabel": "Momentálne tehotná",
+    "emptyTitle": "Vaše rodinné zdravotné centrum",
+    "emptyDesc": "Pridajte členov rodiny na sledovanie ich zdravia, očkovaní a liekov. Všetko zostáva vo vašom telefóne — účet nie je potrebný.",
+    "vaccineTrackingTitle": "Sledovanie očkovaní",
+    "vaccineTrackingDesc": "Čoskoro pre každého člena",
+    "medicationRemindersTitle": "Pripomienky liekov",
+    "medicationRemindersDesc": "Čoskoro",
+    "logTypes": {
+      "mood": "Nálada",
+      "water": "Voda (poháre)",
+      "activity": "Aktivita (min)",
+      "weight": "Hmotnosť (kg)",
+      "note": "Poznámka"
+    },
+    "genders": {
+      "female": "Žena",
+      "male": "Muž",
+      "other": "Iné"
+    },
+    "relation": {
+      "self": "Ja",
+      "child": "Moje dieťa",
+      "spouse": "Manžel/ka / Partner",
+      "parent": "Rodič",
+      "other": "Iné"
+    }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Zdravotný slovník — Redi Health",
+      "description": "Zdravotné pojmy vysvetlené jednoduchými slovami"
+    },
+    "title": "Zdravotný slovník",
+    "subtitle": "Zdravotné pojmy vysvetlené jednoduchými slovami.",
+    "searchPlaceholder": "Hľadať pojmy...",
+    "searchAria": "Hľadať zdravotné pojmy",
+    "noResults": "Nenašli sa žiadne pojmy. Skúste iné hľadanie.",
+    "allCount": "Všetko ({count})",
+    "categories": {
+      "condition": "Ochorenia",
+      "medication": "Lieky",
+      "procedure": "Postupy",
+      "body": "Telo a zdravie",
+      "test": "Vyšetrenia"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Vysoký krvný tlak",
+        "simple": "Krv tlačí príliš silno na steny ciev. Ak sa nelieči, môže spôsobiť infarkt alebo mozgovú príhodu. Lieky treba užívať každý deň."
+      },
+      "diabetes-type-2": {
+        "term": "Cukrovka (2. typ)",
+        "simple": "Telo nevie správne používať cukor. Cukor sa hromadí v krvi a poškodzuje orgány. Potrebujete lieky, zdravé jedlo a pohyb. Nevzniká iba z toho, že jete veľa cukru."
+      },
+      "anemia": {
+        "term": "Anémia",
+        "simple": "V tele nie je dosť zdravých červených krviniek. Cítite únavu, slabosť alebo závrat. Často ju spôsobuje nedostatok železa. Je veľmi častá u tehotných žien."
+      },
+      "asthma": {
+        "term": "Astma",
+        "simple": "Dýchacie cesty sa zúžia a opuchnú, preto sa ťažko dýcha. Môžete sipieť alebo kašľať. Keď sa to stane, použite inhalátor. Vyhýbajte sa dymu a prachu."
+      },
+      "tuberculosis-tb": {
+        "term": "Tuberkulóza (TB)",
+        "simple": "Vážna infekcia pľúc. Kašlete celé týždne, chudnete a v noci sa potíte. Šíri sa vzduchom. Dá sa vyliečiť za 6 mesiacov liekov, ale musíte doužívať všetky tablety."
+      },
+      "depression": {
+        "term": "Depresia",
+        "simple": "Zdravotný stav, pri ktorom sa celé týždne cítite smutní, bez nádeje alebo prázdni. Nie je to slabosť ani vaša vina. Pomôcť môžu lieky a rozhovor s niekým. Požiadajte o pomoc."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatitída B/C",
+        "simple": "Vírus, ktorý napáda pečeň. Roky nemusíte nič cítiť, ale pečeň sa pomaly poškodzuje. Šíri sa krvou a ihlami. Proti hepatitíde B existuje očkovanie."
+      },
+      "pneumonia": {
+        "term": "Zápal pľúc",
+        "simple": "Vážna infekcia pľúc. Máte horúčku, kašeľ s hlienom a ťažko sa vám dýcha. Potrebujete antibiotiká od lekára. Pre bábätká a starších ľudí môže byť nebezpečný."
+      },
+      "gastritis": {
+        "term": "Gastritída",
+        "simple": "Sliznica žalúdka je podráždená alebo zapálená. Cítite pálenie, nevoľnosť alebo nafukovanie. Vyhýbajte sa pikantnému jedlu, alkoholu a fajčeniu. Lieky môžu pomôcť."
+      },
+      "eczema": {
+        "term": "Ekzém",
+        "simple": "Svrbiace, červené a suché miesta na koži. Nie je nákazlivý. Často používajte hydratačný krém. Vyhýbajte sa silným mydlám. Lekár môže dať liečivý krém."
+      },
+      "antibiotic": {
+        "term": "Antibiotikum",
+        "simple": "Liek, ktorý zabíja baktérie. Nepôsobí na vírusy, ako je chrípka alebo nádcha. Musíte dobrat celú kúru aj keď sa cítite lepšie, inak sa baktérie vrátia silnejšie."
+      },
+      "ibuprofen": {
+        "term": "Ibuprofen",
+        "simple": "Liek proti bolesti, ktorý znižuje aj zápal a horúčku. Užívajte ho s jedlom, aby chránil žalúdok. Neberte viac, než je uvedené na balení. V tehotenstve nie je bezpečný."
+      },
+      "paracetamol": {
+        "term": "Paracetamol",
+        "simple": "Bežný liek na bolesť hlavy a horúčku. Je bezpečný pre väčšinu ľudí, aj pre tehotné ženy. Neužívajte viac ako 4 gramy denne, lebo poškodzuje pečeň."
+      },
+      "insulin": {
+        "term": "Inzulín",
+        "simple": "Hormón, ktorý telo potrebuje na používanie cukru. Ľudia s cukrovkou môžu potrebovať inzulínové injekcie. Neznamená to, že je cukrovka horšia, iba že treba iný typ liečby."
+      },
+      "metformin": {
+        "term": "Metformín",
+        "simple": "Najčastejší liek na cukrovku. Pomáha telu lepšie používať cukor. Berie sa s jedlom. Na začiatku môže podráždiť žalúdok, ale zvyčajne to prejde."
+      },
+      "blood-test": {
+        "term": "Krvný test",
+        "simple": "Malá ihla odoberie trochu krvi z ruky. Lekár tak kontroluje infekcie, anémiu, cukrovku a veľa iných vecí. Bolí to iba chvíľu."
+      },
+      "x-ray": {
+        "term": "Röntgen",
+        "simple": "Obrázok kostí a pľúc pomocou špeciálneho žiarenia. Na pár sekúnd stojíte bez pohybu. Nebolí to. Je bezpečný pre väčšinu ľudí, ale tehotenstvo treba povedať lekárovi."
+      },
+      "ultrasound": {
+        "term": "Ultrazvuk",
+        "simple": "Obrázok z vnútra tela pomocou zvukových vĺn. Lekár dá na kožu gél a pohybuje prístrojom. Nebolí to. Často sa používa na kontrolu dieťaťa v tehotenstve."
+      },
+      "ecg-ekg": {
+        "term": "EKG",
+        "simple": "Vyšetrenie srdcového rytmu. Na hrudník sa nalepia malé elektródy. Nebolí to. Trvá asi 5 minút. Ukáže, či srdce bije normálne."
+      },
+      "vaccination": {
+        "term": "Očkovanie",
+        "simple": "Malá injekcia, ktorá naučí telo bojovať proti chorobe ešte skôr, ako ochoriete. Mierne vedľajšie účinky, napríklad boľavá ruka alebo slabá horúčka, sú normálne."
+      },
+      "blood-pressure": {
+        "term": "Krvný tlak",
+        "simple": "Sila, ktorou krv tlačí na steny ciev. Normálna hodnota je asi 120/80. Vysoký tlak nad 140/90 je nebezpečný, lebo ho necítite, ale poškodzuje srdce a mozog."
+      },
+      "blood-sugar": {
+        "term": "Cukor v krvi",
+        "simple": "Množstvo glukózy v krvi. Normálna hodnota nalačno je 70-100 mg/dL. Príliš vysoká znamená cukrovku. Príliš nízka spôsobí závrat a tras."
+      },
+      "bmi": {
+        "term": "BMI",
+        "simple": "Index telesnej hmotnosti ukazuje, či je vaša hmotnosť zdravá vzhľadom na výšku. Pod 18,5 je podváha, 18,5-25 je normálne, nad 25 nadváha a nad 30 obezita."
+      },
+      "immune-system": {
+        "term": "Imunitný systém",
+        "simple": "Je to obrana tela proti mikróbom. Biele krvinky bojujú s infekciami. Vakcíny imunitný systém trénujú. Dobré jedlo, spánok a pohyb ho posilňujú."
+      }
+    }
+  },
+  "vaccines": {
+    "heroTitle": "Sprievodca očkovaním",
+    "heroSubtitle": "Každá vakcína vysvetlená jednoducho. Ťuknite na ktorúkoľvek vakcínu a zistite viac.",
+    "askCta": "Opýtajte sa na vakcíny",
+    "backToSchedule": "Späť k očkovaciemu kalendáru",
+    "preventsLabel": "Chráni pred",
+    "dosesNeeded": "{count, plural, one {# potrebná dávka} other {# potrebné dávky}}",
+    "howItWorks": "Ako to funguje",
+    "sideEffects": "Vedľajšie účinky (bežné)",
+    "mythTitle": "Mýtus vs. pravda",
+    "qaTitle": "Opýtajte sa na vakcíny",
+    "qaSubtitle": "Akákoľvek otázka. Úprimné odpovede z praxe v teréne.",
+    "qaPlaceholder": "Napíšte svoju otázku o vakcínach...",
+    "qaAria": "Položiť otázku o vakcínach",
+    "qaCommon": "Časté otázky",
+    "childAgePrompt": "Koľko rokov má vaše dieťa?",
+    "childAgeAria": "Vyberte vek dieťaťa",
+    "ageOptionDefault": "Vyberte vek...",
+    "ageNewborn": "Novorodenec (0 mesiacov)",
+    "age2m": "2 mesiace",
+    "age4m": "4 mesiace",
+    "age6m": "6 mesiacov",
+    "age12m": "12 mesiacov (1 rok)",
+    "age18m": "18 mesiacov",
+    "age48m": "4-6 rokov",
+    "age108m": "9-12 rokov",
+    "neededByAge": "Vakcíny potrebné v tomto veku:",
+    "vaccinesCount": "{count, plural, one {# vakcína} other {# vakcíny}}",
+    "importance": {
+      "critical": "Nevyhnutná",
+      "important": "Dôležitá",
+      "recommended": "Odporúčaná"
+    },
+    "fears": [
+      "Sú vakcíny bezpečné pre moje bábätko?",
+      "Bude to moje dieťa bolieť?",
+      "Čo ak dostane potom horúčku?",
+      "Môžem očkovanie odložiť?",
+      "Moje dieťa je choré - môže aj tak dostať vakcínu?"
+    ],
+    "meta": {
+      "title": "Sprievodca očkovaním - Redi Health",
+      "description": "Každá vakcína vysvetlená jednoduchými slovami."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (tuberkulóza)",
+        "preventsDiseases": [
+          "Tuberkulóza (TB)"
+        ],
+        "howItWorks": "Táto vakcína učí telo bábätka bojovať proti tuberkulóze - vážnej pľúcnej chorobe, ktorá sa šíri vzduchom. Jedna malá injekcia do ruky chráni na roky.",
+        "sideEffects": "Na ramene sa môže objaviť malá hrčka alebo jazva. Je to normálne a znamená to, že vakcína funguje.",
+        "mythDebunked": "MÝTUS: 'Tuberkulóza už neexistuje.' PRAVDA: Tuberkulóza stále každý rok zabíja veľa ľudí. V preplnených podmienkach sa šíri rýchlo."
+      },
+      "hepb": {
+        "name": "Hepatitída B",
+        "preventsDiseases": [
+          "Hepatitída B (ochorenie pečene)"
+        ],
+        "howItWorks": "Chráni pečeň pred vírusom, ktorý môže spôsobiť celoživotné poškodenie a rakovinu. Dáva sa pri narodení, lebo bábätká sú najzraniteľnejšie.",
+        "sideEffects": "Mierna bolesť v mieste vpichu. Niektoré bábätká sú deň trochu nepokojné. Nič vážne.",
+        "mythDebunked": "MÝTUS: 'Moje bábätko je na vakcínu pri narodení príliš malé.' PRAVDA: Novorodenci sú najzraniteľnejší. Čím skôr ich chránime, tým bezpečnejšie sú."
+      },
+      "dtap": {
+        "name": "DTaP (záškrt, tetanus, čierny kašeľ)",
+        "preventsDiseases": [
+          "Záškrt",
+          "Tetanus",
+          "Čierny kašeľ"
+        ],
+        "howItWorks": "Táto vakcína chráni proti trom chorobám naraz. Záškrt môže upchať hrdlo, tetanus bolestivo stiahne svaly a čierny kašeľ môže bábätku zastaviť dych.",
+        "sideEffects": "Miesto vpichu môže byť červené a citlivé. Dieťa môže mať 1-2 dni miernu horúčku.",
+        "mythDebunked": "MÝTUS: 'Tieto choroby už nie sú, načo očkovať?' PRAVDA: Sú zriedkavé práve preto, že očkujeme. Keď sa prestane očkovať, vrátia sa."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (obrna)"
+        ],
+        "howItWorks": "Polio je vírus, ktorý môže dieťaťu za pár hodín natrvalo ochromiť nohy. Táto vakcína chorobu takmer odstránila z veľkej časti sveta.",
+        "sideEffects": "Veľmi mierne. Niekedy len malé začervenanie v mieste vpichu.",
+        "mythDebunked": "MÝTUS: 'Polio zmizlo, túto vakcínu netreba.' PRAVDA: V Európe zmizlo práve vďaka očkovaniu. Nezaočkovaný cestujúci ho môže priniesť späť."
+      },
+      "mmr": {
+        "name": "MMR (osýpky, mumps, ružienka)",
+        "preventsDiseases": [
+          "Osýpky",
+          "Mumps",
+          "Ružienka"
+        ],
+        "howItWorks": "Osýpky sú mimoriadne nákazlivé a môžu poškodiť mozog alebo zabiť. Táto vakcína chráni proti všetkým trom chorobám naraz.",
+        "sideEffects": "Asi 1 z 10 detí môže mať 7-10 dní po očkovaní miernu horúčku a vyrážku. Znamená to, že telo sa učí brániť.",
+        "mythDebunked": "MÝTUS: 'MMR spôsobuje autizmus.' PRAVDA: Veľké štúdie nepreukázali žiadnu súvislosť s autizmom. Osýpky však zabíjajú."
+      },
+      "pneumo": {
+        "name": "Pneumokoková vakcína (PCV13)",
+        "preventsDiseases": [
+          "Zápal pľúc",
+          "Meningitída",
+          "Infekcie krvi"
+        ],
+        "howItWorks": "Chráni pred baktériami, ktoré spôsobujú zápal pľúc, meningitídu a ťažké infekcie krvi. Pre malé deti sú to jedny z najnebezpečnejších chorôb.",
+        "sideEffects": "Mierna horúčka, nepokoj a bolesť v mieste vpichu 1-2 dni.",
+        "mythDebunked": "MÝTUS: 'Deti ochorejú z príliš veľa vakcín.' PRAVDA: Detská imunita sa denne stretáva s tisícmi mikróbov. Niekoľko vakcín pre ňu nie je priveľa."
+      },
+      "rota": {
+        "name": "Rotavírus",
+        "preventsDiseases": [
+          "Ťažká hnačka a vracanie u bábätiek"
+        ],
+        "howItWorks": "Podáva sa ako kvapky do úst, nie ako injekcia. Chráni pred vírusom, ktorý spôsobuje ťažkú hnačku a odvodnenie.",
+        "sideEffects": "Veľmi mierne. Niekedy trochu nepokoja alebo mierna hnačka.",
+        "mythDebunked": "MÝTUS: 'Hnačka je u bábätiek normálna, vakcínu netreba.' PRAVDA: Rotavírusová hnačka môže rýchlo spôsobiť nebezpečné odvodnenie."
+      },
+      "varicella": {
+        "name": "Varicella (ovčie kiahne)",
+        "preventsDiseases": [
+          "Ovčie kiahne"
+        ],
+        "howItWorks": "Ovčie kiahne sa môžu zdať mierne, ale môžu spôsobiť vážnu infekciu kože, zápal pľúc alebo komplikácie v mozgu. Vakcína zabráni väčšine prípadov.",
+        "sideEffects": "Mierna bolesť. Zriedka sa objaví pár bodiek podobných kiahňam pri mieste vpichu.",
+        "mythDebunked": "MÝTUS: 'Je lepšie dostať ovčie kiahne prirodzene.' PRAVDA: Prirodzená infekcia môže mať vážne komplikácie a neskôr spôsobiť pásový opar."
+      },
+      "hpv": {
+        "name": "HPV (ľudský papilomavírus)",
+        "preventsDiseases": [
+          "Rakovina krčka maternice",
+          "Iné druhy rakoviny"
+        ],
+        "howItWorks": "Táto vakcína predchádza rakovine. Podáva sa ešte predtým, ako sa dospievajúci stretnú s vírusom.",
+        "sideEffects": "Boľavá ruka, niekedy krátka bolesť hlavy alebo závrat. Je veľmi bezpečná.",
+        "mythDebunked": "MÝTUS: 'Táto vakcína podporuje sexuálnu aktivitu.' PRAVDA: Táto vakcína predchádza RAKOVINE. Nesúvisí so správaním."
+      },
+      "flu": {
+        "name": "Chrípka",
+        "preventsDiseases": [
+          "Sezónna chrípka"
+        ],
+        "howItWorks": "Chrípka nie je len nádcha. Môže byť nebezpečná pre malé deti, starších ľudí a tehotné ženy. Vakcína sa každý rok aktualizuje.",
+        "sideEffects": "Mierna bolesť ruky a niekedy nízka horúčka na jeden deň. Z vakcíny NEMÔŽETE dostať chrípku.",
+        "mythDebunked": "MÝTUS: 'Vakcína proti chrípke spôsobí chrípku.' PRAVDA: To nie je možné. Vakcína neobsahuje živý vírus."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Pri narodení"
+      },
+      "2months": {
+        "label": "2 mesiace"
+      },
+      "4months": {
+        "label": "4 mesiace"
+      },
+      "6months": {
+        "label": "6 mesiacov"
+      },
+      "12months": {
+        "label": "12 mesiacov"
+      },
+      "18months": {
+        "label": "18 mesiacov"
+      },
+      "4years": {
+        "label": "4-6 rokov"
+      },
+      "9years": {
+        "label": "9-12 rokov"
+      },
+      "adult": {
+        "label": "Dospelí"
+      },
+      "pregnant": {
+        "label": "Tehotné ženy"
+      }
+    }
+  },
+  "explain": {
+    "heroTitle": "Pochopte svoj recept",
+    "heroSubtitle": "Napíšte diagnózu alebo názov lieku. Vysvetlíme to jednoduchými slovami.",
+    "heroArtAlt": "Ilustrácia: pomoc v štýle lekárne pri dekódovaní receptu.",
+    "placeholder": "Napíšte diagnózu, názov lieku alebo vložte recept…\n\nPríklad: „Hypertenzia” alebo „Metformín 500 mg”",
+    "inputAria": "Zadajte diagnózu alebo názov lieku",
+    "cta": "Vysvetli to",
+    "ctaAnalyzing": "Analyzujem…",
+    "examplesHeading": "Bežné príklady",
+    "loading": "Čítam váš recept…",
+    "sections": {
+      "whatThisMeans": "Čo to znamená",
+      "whyItMatters": "Prečo je to dôležité",
+      "ifIgnored": "Ak to ignorujete",
+      "medicationsTitle": "Vaše lieky",
+      "howToTake": "Ako užívať",
+      "sideEffects": "Vedľajšie účinky",
+      "neverDo": "Nikdy nerobte toto",
+      "questionsTitle": "Opýtajte sa lekára nabudúce",
+      "tipsTitle": "Čo môžete urobiť dnes",
+      "emergencyTitle": "Choďte do nemocnice, ak"
+    },
+    "anotherCta": "Vysvetliť ďalší recept",
+    "disclaimerBold": "Nie je to lekárska rada.",
+    "disclaimerBody": "Tento nástroj vysvetľuje lekárske termíny jednoduchým jazykom. Vždy dodržiavajte pokyny lekára.",
+    "meta": {
+      "title": "Pochopte svoj recept — Redi Health",
+      "description": "Diagnóza a lieky vysvetlené jednoduchými slovami"
+    },
+    "takePhoto": "Odfotiť",
+    "uploadImage": "Nahrať obrázok",
+    "placeholderWithImage": "(Voliteľné) Pridajte kontext k receptu — vek, ako užívate, čo vás znepokojuje…",
+    "imagePreviewAlt": "Náhľad fotky receptu",
+    "imageReady": "Fotka je pripravená",
+    "imageReadyBody": "Prečítame liek, dávku a pokyny a všetko vysvetlíme jednoduchými slovami.",
+    "imageRemove": "Odstrániť fotku",
+    "preparingImage": "Pripravujem fotku…",
+    "imageFailed": "Nepodarilo sa prečítať túto fotku. Skúste inú."
+  },
+  "symptoms": {
+    "heroTitle": "Kde vás bolí?",
+    "heroSubtitle": "Ťuknite na časť tela, ktorá vás trápi",
+    "heroArtAlt": "Ilustrácia: ľudia dostávajú jemné viacjazyčné poradenstvo o bežných príznakoch.",
+    "backToMap": "Späť na mapu tela",
+    "checkAnother": "Skontrolovať inú oblasť",
+    "selectSymptoms": "Vyberte všetky príznaky, ktoré platia",
+    "extraPlaceholder": "Niečo ďalšie? (ako dlho, ako zle…)",
+    "extraAria": "Ďalšie podrobnosti o príznakoch",
+    "analyzing": "Analyzujem príznaky…",
+    "checkCta": "Skontrolovať príznaky",
+    "whatToDoNow": "Čo robiť teraz",
+    "homeCare": "Domáca starostlivosť",
+    "escalateTitle": "Choďte do nemocnice, ak",
+    "commonCauses": "Bežné príčiny",
+    "regions": {
+      "head": "Hlava",
+      "chest": "Hruď",
+      "abdomen": "Brucho",
+      "leftArm": "Ľavá ruka",
+      "rightArm": "Pravá ruka",
+      "pelvis": "Panva",
+      "leftLeg": "Ľavá noha",
+      "rightLeg": "Pravá noha"
+    },
+    "headSymptoms": [
+      "Bolesť hlavy",
+      "Závraty",
+      "Rozmazané videnie",
+      "Bolesť ucha",
+      "Bolesť v krku"
+    ],
+    "chestSymptoms": [
+      "Bolesť na hrudi",
+      "Ťažkosti s dýchaním",
+      "Kašeľ",
+      "Rýchle srdce",
+      "Tlak"
+    ],
+    "abdomenSymptoms": [
+      "Bolesť brucha",
+      "Nevoľnosť / vracanie",
+      "Hnačka",
+      "Nadúvanie",
+      "Bez chuti do jedla"
+    ],
+    "armSymptoms": [
+      "Bolesť",
+      "Mravenčenie",
+      "Opuch",
+      "Nemôžem ho pohnúť",
+      "Brnenie"
+    ],
+    "pelvisSymptoms": [
+      "Bolesť pri močení",
+      "Bolesť chrbta",
+      "Menštruačné problémy",
+      "Bolesť v slabine"
+    ],
+    "legSymptoms": [
+      "Bolesť nohy",
+      "Opuch",
+      "Nemôžem chodiť",
+      "Bolesť kolena",
+      "Mravenčenie"
+    ],
+    "meta": {
+      "title": "Kontrola príznakov — Redi Health",
+      "description": "Ťuknite, kde vás bolí. Získate pokyny, čo robiť."
+    }
+  },
+  "consult": {
+    "heroTitle": "Zdravotná konzultácia",
+    "heroSubtitle": "Povedzte mi, čo vás trápi. Položím pár otázok a pomôžem vám rozhodnúť, čo robiť.",
+    "prompt": "Čo vás sem dnes priviedlo?",
+    "orFreeform": "alebo opíšte vlastnými slovami",
+    "freeformPlaceholder": "Od včera ma bolí hlava…",
+    "freeformAria": "Opíšte svoj zdravotný problém",
+    "chatHeader": "Zdravotná konzultácia",
+    "chatSubtitle": "Pár otázok mi pomôže lepšie vám pomôcť",
+    "answerAria": "Vaša odpoveď",
+    "answerPlaceholder": "Napíšte odpoveď…",
+    "newSession": "Nová konzultácia",
+    "assessment": "Hodnotenie",
+    "whatToDo": "Čo robiť",
+    "homeCare": "Domáca starostlivosť",
+    "watchFor": "Dávajte pozor na tieto príznaky",
+    "showVisitCard": "Zobraziť kartu návštevy lekára",
+    "hideVisitCard": "Skryť kartu návštevy lekára",
+    "visitCardTitle": "Súhrn pre lekára",
+    "visitCardDisclaimer": "Vygenerované Redi Health Advisor. Toto nie je lekárska diagnóza.",
+    "concerns": {
+      "fever": "Horúčka / vysoká teplota",
+      "pain": "Bolesť niekde",
+      "breathing": "Problémy s dýchaním",
+      "skin": "Kožný problém / vyrážka",
+      "pregnancy": "Obavy o tehotenstvo",
+      "child": "Moje dieťa je choré",
+      "mental": "Stres / úzkosť / smútok",
+      "heart": "Srdce / hrudník"
+    }
+  },
+  "navigate": {
+    "heroTitle": "Potrebujem ísť k lekárovi",
+    "heroSubtitle": "Pomôžeme vám pripraviť sa — čo vziať, čo povedať, vaše práva.",
+    "issuePrompt": "Aký je problém?",
+    "issues": {
+      "fever": "Horúčka / infekcia",
+      "pain": "Bolesť / zranenie",
+      "pregnancy": "Tehotenstvo",
+      "chronic": "Chronické ochorenie",
+      "mental": "Duševné zdravie",
+      "skin": "Koža / oči / uši",
+      "child": "Choré dieťa",
+      "other": "Niečo iné"
+    },
+    "tellMore": "Povedzte nám viac",
+    "detailPlaceholder": "Opíšte, čo sa deje… Ako dlho? Ako zle?",
+    "detailAria": "Opíšte svoj zdravotný problém",
+    "insuranceTitle": "Máte zdravotné poistenie?",
+    "insuranceSubtitle": "Pomôže nám povedať, čo si vziať",
+    "insuranceYes": "Áno, mám zdravotnú kartu",
+    "insuranceNo": "Nie, nemám poistenie",
+    "insuranceUnknown": "Nie som si istý/á",
+    "countryTitle": "V ktorej krajine ste?",
+    "generating": "Pripravujem kartu návštevy…",
+    "generateCard": "Vytvoriť kartu návštevy lekára",
+    "startOver": "Začať odznova",
+    "showDoctor": "Ukážte toto lekárovi",
+    "generatedBy": "Vygenerované Redi Health Advisor",
+    "whatToBring": "Čo si vziať",
+    "askYourDoctor": "Opýtajte sa lekára",
+    "patientRights": "Vaše práva ako pacienta",
+    "findHospital": "Nájsť najbližšiu nemocnicu",
+    "mapHint": "Otvorí mapu s trasou",
+    "meta": {
+      "title": "Navigátor zdravotnej starostlivosti — Redi Health",
+      "description": "Pripravte sa na návštevu lekára — karta, čo vziať, vaše práva."
+    }
+  },
+  "about": {
+    "brand": "Redi Health",
+    "tagline": "Zdravotná gramotnosť pre vidiecke a vylúčené komunity",
+    "version": "Verzia 1.0.0",
+    "missionBody": "Redi Health je AI sprievodca navrhnutý spolu s terénnymi mediátormi a klinickými pracovníkmi pre komunity, ktoré oficiálne zdravotné systémy často nedostatočne obsluhujú — od vidieckych obcí po neformálne osady — s osobitnou pozornosťou na rómske komunity. Zmenšujeme medzeru v gramotnosti tam, kde vzdialenosť, jazyková bariéra alebo vylúčenie bránia prístupu.",
+    "values": {
+      "careLabel": "Vytvorené s starostlivosťou",
+      "careDesc": "Zdravotnými mediátormi",
+      "languagesLabel": "15 jazykov",
+      "languagesDesc": "Po celej Európe",
+      "evidenceLabel": "Založené na dôkazoch",
+      "evidenceDesc": "Smernice WHO",
+      "communityLabel": "Komunita na prvom mieste",
+      "communityDesc": "Bez odsudzovania"
+    },
+    "privacyLink": "Zásady ochrany súkromia",
+    "termsLink": "Podmienky služby",
+    "disclaimer": "Redi Health nie je zdravotnícka pomôcka. Všetky informácie sú len na vzdelávacie účely. Pri lekárskych rozhodnutiach sa vždy poraďte s kvalifikovaným zdravotníkom.",
+    "meta": {
+      "title": "O nás — Redi Health",
+      "description": "O platforme zdravotnej gramotnosti Redi Health"
+    }
+  },
+  "theme": {
+    "ariaLabel": "Téma",
+    "light": "Svetlá téma",
+    "dark": "Tmavá téma",
+    "system": "Systémová téma",
+    "switchTo": "Prepnúť tému — aktuálne {label}"
+  },
+  "emergency": {
+    "call112": "Zavolajte 112 TERAZ",
+    "banner": "Núdzová situácia? Zavolajte 112",
+    "emergencyLabel": "Núdzová situácia",
+    "ambulanceLabel": "Ambulancia"
+  },
+  "voice": {
+    "start": "Začať hovoriť",
+    "stop": "Zastaviť počúvanie",
+    "readAloud": "Prečítať nahlas",
+    "readMessageAloud": "Prečítať správu nahlas",
+    "readExplanationAloud": "Prečítať vysvetlenie nahlas",
+    "micDeepgram": "Ťuknite pre reč — viacjazyčný hlas (Deepgram)",
+    "micError": "Nepodarilo sa získať prístup k mikrofónu.",
+    "detected": "Zistený jazyk: {lang}"
+  },
+  "severity": {
+    "green": "Liečba doma",
+    "amber": "Čoskoro navštívte lekára",
+    "red": "Núdzová situácia — Choďte TERAZ",
+    "redHospital": "Choďte TERAZ do nemocnice"
+  },
+  "learn": {
+    "progressLabel": "dokončených modulov",
+    "startHere": "Začnite tu",
+    "continueLabel": "Pokračovať",
+    "allModules": "Všetky moduly",
+    "prevention": {
+      "description": "Za 15 rokov práce v rómskych osadách som videl rodiny zničené chorobami, ktorým by jednoduché návyky zabránili. Tieto vedomosti nie sú luxus — sú prežitie.",
+      "handwashing": {
+        "title": "Umývanie rúk",
+        "description": "Videl som, ako celé rodiny v osadách ochoreli na tú istú žalúdočnú infekciu, ktorá sa podávala z ruky do ruky. Správne umývanie rúk je jediný najlacnejší a najsilnejší liek, ku ktorému už máte prístup – nič nestojí a predchádza chorobám, s ktorými sa v našich komunitách stretávam najčastejšie.",
+        "tip1": "Predtým, ako sa dotknete jedla, pred kŕmením dieťaťa a po každej návšteve toalety – umyte sa. Videl som, že jedna neumytá ruka spôsobila týždeň hnačky celej domácnosti",
+        "tip2": "Pomaly počítajte do 20 alebo si bzučte verš piesne. Väčšina ľudí sa perie 5 sekúnd – to neodstráni takmer nič. Trenie medzi vašimi rukami je to, čo zabíja baktérie",
+        "tip3": "Žiadne mydlo? Pracoval som v osadách bez tečúcej vody. Popol funguje. Pieskové práce. Samotná voda s drhnutím funguje lepšie ako nič. Nedovoľte, aby dokonalé bránilo dobru",
+        "tip4": "Osušte si ruky na vzduchu alebo použite čistú handričku, ktorú denne vymieňate. Špinavý uterák, o ktorý sa všetci delia, znovu kontaminuje čisté ruky – niečo, čo vysvetľujem pri každej domácej návšteve",
+        "fact": "V komunitách, s ktorými som pracoval, kampane na umývanie rúk znížili prípady hnačky u detí v priebehu troch mesiacov takmer o polovicu. WHO potvrdzuje: umývanie rúk znižuje hnačku o 40% a infekcie dýchacích ciest až o 21%.",
+        "action": "Dnes večer sa postavte so svojimi deťmi pri zdroji vody a umyte si ruky. Urobte si z toho rodinný zvyk pred každým jedlom. Deti, ktoré sa učia pozorovaním svojich rodičov, si to ponesú po celý život."
+      },
+      "vaccination": {
+        "title": "Očkovanie",
+        "description": "Sprevádzal som rómske matky do zdravotných stredísk, kde ich odmietli, pretože im chýbali doklady, neovládali jazyk alebo im jednoducho povedali, aby sa vrátili neskôr. Vakcíny sú zákonným právom vašich detí – bezplatné, bezpečné a najsilnejšia ochrana, akú môže rodič poskytnúť. Toto ti nikto nemôže odoprieť.",
+        "tip1": "Každá krajina v Európe poskytuje bezplatný očkovací kalendár od narodenia. Toto nie je charita – je to zákonný nárok vášho dieťaťa. Ak zdravotnícky pracovník odmietne, požiadajte jeho nadriadeného a jasne to uveďte",
+        "tip2": "Očkovací preukaz je najdôležitejším dokladom, ktorý má vaše dieťa po rodnom liste. Uschovajte si ho, noste ho pri každej návšteve lekára. Ak dôjde k strate, ktorékoľvek zdravotné stredisko musí vydať náhradu – neakceptujte odmietnutie",
+        "tip3": "Mierna horúčka, boľavé miesto na ruke, nepokoj na jeden deň – to je normálne a znamená to, že vakcína funguje. Ubezpečil som o tom stovky znepokojených matiek. Prejde za 24–48 hodín",
+        "tip4": "Na očkovanie nepotrebujete stretnutie vo väčšine verejných zdravotných stredísk. Vstúpte. Ak vo vašej oblasti pracuje rómsky zdravotnícky mediátor, požiadajte ho, aby vás sprevádzal – na to sme vyškolení",
+        "fact": "V jednej osade, v ktorej som pracoval, zasiahli osýpky, pretože zaočkovanosť klesla na 60%. Tri deti boli hospitalizované. Po komunitnej očkovacej kampani sme dosiahli 94% — a epidémie sa zastavili. V celej Európe zabránia vakcíny každoročne 2–3 miliónom úmrtí.",
+        "action": "Vytiahnite očkovací preukaz svojho dieťaťa hneď teraz. Porovnajte to s rozvrhom na stene vášho zdravotného strediska. Ak niektorá vakcína chýba alebo nemáte preukaz, navštívte tento týždeň zdravotné stredisko. Prineste si túto aplikáciu a zobrazte plán, ak vám to pomôže."
+      },
+      "cleanWater": {
+        "title": "Čistá voda",
+        "description": "Pracoval som v osadách, kde rodiny zdieľajú jeden vodovodný bod, ktorý beží dve hodiny denne, a v štvrtiach, kde voda z vodovodu vyzerá čisto, ale obsahuje baktérie, ktoré u detí spôsobujú chronické žalúdočné problémy. Kvalita vody nie je vždy viditeľná – av rómskych komunitách ju úrady len zriedka monitorujú. Musíte byť vodným inšpektorom svojej rodiny.",
+        "tip1": "Zakryte každú nádobu, kde skladujete vodu. Videl som muchy, prach a dokonca aj živočíšny odpad kontaminovať nezakryté vedrá v priebehu niekoľkých hodín, najmä v teplom počasí. Jednoduchá doska na vrchu zabraňuje väčšine kontaminácie",
+        "tip2": "Ak si nie ste istí vašou vodou, varte ju za stáleho varu jednu celú minútu. To zabije 99.9% baktérií, vírusov a parazitov. Nestojí to takmer nič a funguje to — učil som to v desiatkach osád, kde bol zdroj vody otázny",
+        "tip3": "Nádoby na vodu umyte mydlom a čistou vodou aspoň raz týždenne. Znečistená nádoba zašpiní čistú vodu. Toto je jedna z najviac prehliadaných príčin opakujúcej sa hnačky, ktorú som videl u detí",
+        "tip4": "Potoky, rybníky a stojaté kaluže nie sú nikdy bezpečné na pitie – aj keď voda vyzerá čisto. Okom neviditeľné parazity spôsobujú chronické poškodenie čriev a vývoja detí",
+        "fact": "V mnohých rómskych osadách v strednej a východnej Európe nemajú rodiny prístup k bezpečnej vodovodnej vode. Európske centrum pre práva Rómov zdokumentovalo, že rómske štvrte sú systematicky nedostatočne zásobované vodnou infraštruktúrou. Vriaca voda nie je ideálna – je to stratégia prežitia, kým nesplníte svoje právo na čistú vodu.",
+        "action": "Dnes skontrolujte každú nádobu, kde vaša rodina skladuje pitnú vodu. Zakryte všetky, ktoré sú otvorené. Ak nemôžete overiť, či je zdroj vody bezpečný, začnite dnes večer prevárať všetku vodu na pitie a varenie."
+      },
+      "firstAid": {
+        "title": "Základná prvá pomoc",
+        "description": "V odľahlých osadách a mestských štvrtiach, kde príchod sanitiek trvá dlhšie – alebo niekedy neprídu vôbec – vedieť, čo robiť v prvých minútach núdze, je rozdiel medzi životom a smrťou. Vyškolil som stovky členov rómskej komunity v základnej prvej pomoci a videl som, že tieto poznatky zachraňujú životy ešte predtým, ako prišiel nejaký lekár.",
+        "tip1": "112 funguje z akéhokoľvek telefónu v Európe – dokonca aj bez kreditu, dokonca aj bez karty SIM, dokonca aj z uzamknutého telefónu. Naučte každého člena vašej rodiny vrátane detí starších ako 7 vytočiť číslo 112 a povedať, kde sa nachádzajú. Toto si nacvičte. V núdzi spôsobí panika ľudí zabudnúť",
+        "tip2": "Pri silnom krvácaní: pevne zatlačte najčistejšou handričkou, akú máte – košeľu, šatku, čokoľvek – a nedvíhajte ju, aby ste to skontrolovali. Pokračujte stlačením, kým nepríde pomoc. Videl som ľudí, ktorí nebezpečne krvácali, pretože neustále odstraňovali látku, aby sa pozreli. Ak krv presiakne, pridajte navrch viac látky",
+        "tip3": "Popáleniny: popáleninu ihneď umiestnite pod tečúcu studenú vodu aspoň na 10 minút. Nikdy neaplikujte maslo, olej, zubnú pastu alebo vaječný bielok – tradičné prostriedky, s ktorými som sa stretol v mnohých rodinách a ktoré skutočne zachytávajú teplo a spôsobujú horšie škody a infekciu",
+        "tip4": "Ak niekto skolabuje a nedýcha: zavolajte 112, potom silno a rýchlo zatlačte do stredu hrudníka – 100-krát za minútu (tempo skladby 'Stayin' Alive'). Neprestávajte, kým nepríde pomoc. Nedokonalá KPR je nekonečne lepšia ako žiadna",
+        "fact": "Štúdie ukazujú, že v komunitách, kde je rozšírený základný výcvik prvej pomoci, sa prežitie po zástave srdca zdvojnásobuje. V mnohých rómskych komunitách je doba odozvy sanitiek výrazne dlhšia ako v nerómskych oblastiach, vďaka čomu je prvá pomoc okoloidúcim ešte kritickejšia.",
+        "action": "Práve teraz sa opýtajte každého člena rodiny: viete, ako zavolať 112? Poznáte našu domácu adresu natoľko, aby ste to mohli povedať dispečerovi? Napíšte svoju úplnú adresu na kúsok papiera a priložte ju k telefónu. Naučte svoje deti ešte dnes."
+      }
+    },
+    "nutrition": {
+      "description": "Po rokoch s rómskymi rodinami som sa naučil, že jedlo nie je len výživa — je to, čo si môžete dovoliť, čo je v okolí a čo vaša rodina pozná. Nepoviem vám, aby ste kupovali quinou. Poviem vám, ako dobre nakŕmiť rodinu z toho, čo máte.",
+      "balancedDiet": {
+        "title": "Dobre sa stravujte za každý rozpočet",
+        "description": "Najväčší problém s výživou, ktorý vidím v rómskych komunitách, nie je nedostatok jedla – je to priveľa lacného chleba, spracovaného mäsa a sladených nápojov, málo zeleniny, vajec a strukovín. Toto nie je o sile vôle. Ide o to, čo je dostupné a cenovo dostupné. Ale malé zmeny spôsobujú obrovské rozdiely vo vašom zdraví a vývoji vašich detí.",
+        "tip1": "Fazuľa, šošovica a cícer sú najlacnejším proteínom na akomkoľvek trhu – lacnejšie ako mäso, dlhšie trvajúce a zabraňujú cukrovke a srdcovým chorobám. Hrniec fazuľového guláša nasýti rodinu za menej ako balenie spracovaných klobás a je oveľa výživnejší",
+        "tip2": "Vajcia sú najkompletnejšie lacné jedlo, aké existuje. Dve vajíčka denne na dieťa poskytujú takmer všetko, čo rastúci mozog potrebuje. V každej osade, v ktorej pracujem, odporúčam pre deti vajíčka ako prvé jedlo",
+        "tip3": "Sezónna zelenina z miestneho trhu alebo vašej záhrady stojí zlomok cien v supermarketoch. Kapusta, cibuľa, mrkva, zemiaky, paprika — to je základ zdravej výživy a patrí k tradíciám každej rómskej kuchyne",
+        "tip4": "Sladené nápoje (kola, džús, energetické nápoje) sú jedinou najškodlivejšou položkou, ktorú vidím v strave rómskych rodín. Jedna fľaša coly má 10 lyžičiek cukru. Nahraďte vodou alebo slabým čajom a odstránite najväčšieho strojcu obezity a zubného kazu, ktorého u detí vidím",
+        "fact": "V rómskych komunitách, s ktorými som pracoval v Rumunsku a Bulharsku, som videl, že miera cukrovky merateľne klesá, keď rodiny nahrádzajú každodenný biely chlieb a spracované mäso fazuľou, vajcami a zeleninou – dokonca bez toho, aby sa zmenilo množstvo, ktoré zjedia. Telo reaguje na kvalitu, nielen kvantitu.",
+        "action": "Tento týždeň nahraďte jedno jedlo chleba a spracovaného mäsa hrncom fazuľového alebo šošovicového prívarku s cibuľou a paprikou. Varte dostatočne dva dni. Je to lacnejšie, dlhšie vás zasýti a začne posúvať trajektóriu zdravia vašej rodiny."
+      },
+      "childNutrition": {
+        "title": "Kŕmenie detí pre silný štart",
+        "description": "Prvých 1,000 dní – od tehotenstva po vek 2 – formuje celú budúcnosť dieťaťa: jeho mozog, imunitný systém, jeho schopnosť učiť sa. Videl som, že podvyživené deti v osadách zaostávajú za svojimi rovesníkmi nie kvôli genetike, ale kvôli tomu, čo jedli v tých kritických prvých mesiacoch. To, čo teraz kŕmite svoje dieťa, je tá najsilnejšia investícia, akú môžete v jeho živote urobiť.",
+        "tip1": "Samotné materské mlieko na 6 mesiacov je zlatým štandardom – je bezplatné, vždy dostupné, dokonale výživné a chráni pred infekciami lepšie ako akýkoľvek liek. Pracovala som s matkami, ktoré si mysleli, že umelé mlieko je „moderné“ a lepšie. nie je. Materské mlieko je technologická evolúcia dotiahnutá k dokonalosti",
+        "tip2": "V 6 mesiacoch začnite popri dojčení mäkké jedlá: zemiaková kaša, mrkva, banán, varený vaječný žĺtok. Každých 3 dní zaveďte jedno nové jedlo, aby ste sledovali reakcie. Mnoho matiek, s ktorými pracujem, začína s prísunom príliš neskoro (8–9 mesiacov) – to oneskoruje vývoj",
+        "tip3": "Deti mladšie ako 2 by nikdy nemali jesť cukor, med, soľ, kolu, hranolky ani sladkosti. Viem, že starí rodičia niekedy dávajú čaj s cukrom na upokojenie dieťaťa - prosím, prestaňte. Cukor v tomto veku naprogramuje celoživotnú túžbu a poškodí zuby ešte predtým, než sa úplne objavia",
+        "tip4": "Vajíčko denne pre dieťa staršie ako 6 mesiacov je najjednoduchším vylepšením výživy, aké existuje. Štúdia v Ekvádore ukázala, že vajcia znížili zakrpatenie o 47%. Citujem to v každej komunitnej diskusii, pretože je to dosiahnuteľné takmer pre každú rodinu",
+        "fact": "V komunitách, kde som viedol výživové programy, deti, ktoré dostávali vajce a porciu zeleniny denne počas 6 mesiacov, vykazovali merateľné zlepšenia v raste a kognitívnom vývoji v porovnaní s deťmi, ktoré tak neurobili. Podvýživa nie je len o chudobe – ide o to, vedieť, čo uprednostniť so zdrojmi, ktoré máte.",
+        "action": "Od zajtra dávajte svojmu dieťaťu staršiemu ako 6 mesiacov jedno vajce denne (roztlačené alebo miešané). Ak má vaše dieťa menej ako 6 mesiacov a vy dojčíte, zjedzte vy sami jedno vajce navyše – živiny prechádzajú cez vaše mlieko."
+      },
+      "foodSafety": {
+        "title": "Udržiavanie potravín v bezpečí",
+        "description": "Otrava jedlom je jednou z najčastejších príčin návštevy rómskych rodín na pohotovosti — vracanie, hnačka, dehydratácia, najmä u detí. V osadách, kde je chladenie nespoľahlivé a kuchyne sú spoločné alebo vonku, bezpečnosť potravín nie je učebnicovou témou – je to každodenná zručnosť prežitia.",
+        "tip1": "V teplom počasí sa varené jedlo vynechané dlhšie ako 2 hodín stáva nebezpečným. Ak nemôžete chladiť, varte menšie porcie, ktoré dojete v jednom jedle. Videl som celé rodiny hospitalizované z prihriateho guláša, ktorý bol cez noc v lete vynechaný",
+        "tip2": "Surové kuracie mäso a mäso sa nikdy nesmú dotýkať chleba, zeleniny alebo čohokoľvek, čo sa bude jesť tepelne neupravené. Používajte oddelené rezné plochy – funguje dokonca aj čisté plastové vrecko položené naplocho. Táto krížová kontaminácia je hlavnou príčinou otravy jedlom, s ktorou sa stretávam",
+        "tip3": "Ak jedlo nesprávne zapácha, vyzerá alebo je slizké – vyhoďte ho. Neochutnajte, aby ste skontrolovali. Viem, že vyhadzovanie jedla je bolestivé, keď je peňazí málo, ale jeden záchvat otravy jedlom stojí viac liekov a stratenej práce, ako stálo jedlo",
+        "tip4": "Všetko ovocie a zeleninu pred konzumáciou umyte pod tečúcou vodou, aj keď ich plánujete ošúpať. Nečistoty na vonkajšej strane sa pri rezaní prenesú dovnútra. Toto je obzvlášť dôležité pre trhové produkty, s ktorými by mohlo manipulovať veľa ľudí",
+        "fact": "WHO odhaduje, že každý rok ochorie 600 miliónov ľudí z kontaminovaných potravín, pričom deti mladšie ako 5 nesú 40% záťaže. V komunitách, kde som učil o bezpečnosti potravín, návštevy nemocníc kvôli gastroenteritíde počas prvého leta výrazne klesli.",
+        "action": "Skontrolujte svoju kuchyňu hneď teraz: je nejaké surové mäso uložené vyššie alebo sa dotýka hotového jedla? Existuje varené jedlo, ktoré bolo vonku dlhšie ako 2 hodín? Opravte tieto dve veci dnes - sú to najčastejšie nebezpečenstvá, ktoré vidím pri domácich návštevách."
+      }
+    },
+    "maternal": {
+      "description": "Sprevádzal som rómske ženy do nemocníc, kde ich dávali oddelene, neuctivo sa k nim správali alebo im odmietli epidurál, ktorý iné ženy dostali. Videl som aj ženy, ktoré zomreli na komplikácie, ktoré by jedna tehotenská kontrola včas zachytila. Vaše telo, vaše dieťa, vaše práva. Poznajte všetky tri.",
+      "prenatalCare": {
+        "title": "Prenatálna starostlivosť",
+        "description": "Za 15 rokov mediátorskej práce opakovane vidím vzorec, keď rómske ženy prvýkrát navštívia lekára, keď sú už v 6 alebo 7 mesiaci tehotenstva – často preto, že sa cítia dobre, pretože sa boja nemocnice alebo pretože nikto nevysvetlil, že prenatálna starostlivosť je bezplatná a má právo. V tom čase sa nebezpečné stavy, ako je preeklampsia alebo gestačný diabetes, mohli ticho rozvíjať už niekoľko mesiacov.",
+        "tip1": "Navštívte svojho praktického lekára alebo pôrodnú asistentku v momente, keď vám vynechá menštruácia a máte podozrenie na tehotenstvo. Prvý trimester je, keď kyselina listová zabraňuje defektom mozgu a chrbtice vášho dieťaťa. Čakanie vás stojí najkritickejšie okno. Ak nemáte praktického lekára, váš zdravotný mediátor vám môže pomôcť zaregistrovať sa – toto je základná časť toho, čo robíme",
+        "tip2": "Kyselina listová 400mcg denne by mala začať, keď sa pokúšate otehotnieť, alebo hneď, ako sa dozviete, že ste. Je zadarmo alebo veľmi lacno v každej lekárni. Na domáce návštevy nosím so sebou balíčky, pretože táto jednoduchá tabletka zabraňuje ničivým vrodeným chybám",
+        "tip3": "Potraviny bohaté na železo zabraňujú anémii, ktorú vidím u takmer polovice tehotných rómskych žien, s ktorými pracujem: fazuľa, šošovica, tmavá listová zelenina, pečeň, červené mäso. Anémia vás vyčerpáva, pôrod je nebezpečnejší a ovplyvňuje vývoj mozgu vášho dieťaťa",
+        "tip4": "Máte právo na prenatálnu starostlivosť vo svojom jazyku, na dôstojné zaobchádzanie a na to, aby vás niekto sprevádzal na stretnutia. Ak je lekár odmietavý alebo neúctivý, môžete podať sťažnosť a požiadať iného poskytovateľa. Zdokumentujte meno, dátum a to, čo bolo povedané. Pomáham rodinám robiť to pravidelne",
+        "fact": "Rómske ženy v Európe majú 3 až 5 krát vyššiu pravdepodobnosť komplikácií tehotenstva ako všeobecná populácia, najmä preto, že k prenatálnej starostlivosti sa dostanú neskôr alebo vôbec. V komunitách, kde som pracovala na pripojení tehotných žien k starostlivosti v prvom trimestri, miera komplikácií dramaticky klesla.",
+        "action": "Ak ste tehotná alebo poznáte vo svojom okolí tehotnú ženu, ktorá ešte nenavštívila lekára, dohodnite si stretnutie ešte dnes. Ak sa bojí alebo si nie je istá ako, choďte s ňou alebo ju spojte s miestnym zdravotným mediátorom. Tá jedna návšteva môže všetko zmeniť."
+      },
+      "safeDelivery": {
+        "title": "Bezpečné doručenie",
+        "description": "Držal som za ruky ženy rodiace v sanitkách, pretože odišli neskoro, a sedel som na chodbách nemocníc, kde boli Rómky v poradí posledné, kým nerómky šli dopredu. Obom týmto situáciám sa dá predísť. Plánovanie dodávky a poznanie svojich práv premení túto skúsenosť z krízy na niečo, čo máte pod kontrolou.",
+        "tip1": "Do týždňa 34 si pripravte pôrodný plán: do ktorej nemocnice, kto s vami pôjde, ako sa tam dostanete (hlavne v noci), kto bude strážiť vaše ďalšie deti. Videl som príliš veľa rodín, ktoré sa motali na poslednú chvíľu – a stres ovplyvňuje pôrod",
+        "tip2": "Prakticky vo všetkých európskych krajinách máte zákonné právo na to, aby bol so sebou počas pôrodu a pri pôrode spoločník (manžel, matka, sestra, sprostredkovateľ). Ak nemocnica povie nie, citujte zákon o právach pacientov vašej krajiny. Tieto referencie nosíme a vieme ich poskytnúť",
+        "tip3": "Naučte sa 5 nebezpečné príznaky, ktoré znamenajú CHOĎTE DO NEMOCNICE HNEĎ, bez ohľadu na to, koľko je hodín: (1) silné krvácanie, (2) silná bolesť hlavy s opuchnutými rukami/tvárou, (3) dieťa sa prestane hýbať, (4) voda sa zastaví pred __PH5_PH6__°C, (horúčka pred __PH5_PH6__°C, (__PH5_PH6__°C) Nečakajte do rána. Nepokúšajte sa ich zvládnuť doma",
+        "tip4": "Po pôrode zostaňte v nemocnici aspoň 24 hodín na monitorovanie – aj keď sa cítite dobre. Mnohé život ohrozujúce komplikácie (krvácanie, infekcia) sa objavujú v prvých 24 hodinách. Viem, že nemocničné prostredie môže byť nepriateľské, ale tie hodiny sledovania zachraňujú životy",
+        "fact": "V regióne, kde som pracovala 5 rokov, sme znížili núdzové stavy rómskych matiek o 60% jednoducho tým, že sme zabezpečili, aby každá tehotná žena mala pôrodný plán, dopravu a nemocničnú tašku zbalenú do týždňa 36. Žiadna nová technológia – len príprava a sprevádzanie.",
+        "action": "Ak ste vy alebo niekto, koho poznáte, po 30 týždňoch tehotenstva: zapíšte si názov nemocnice, telefónne číslo a trasu na papier. Dajte to na stenu. Zbaľte si tašku s občianskym preukazom, očkovacím preukazom, dojčenským oblečením a nabíjačkou na telefón. Trvá to 20 minút a môže to zachrániť život."
+      },
+      "breastfeeding": {
+        "title": "Dojčenie",
+        "description": "Dojčenie je v rómskej kultúre vysoko cenené, no stretávam sa s mladými matkami, ktorým príbuzní v dobrom úmysle povedali, aby v prvých dňoch podávali vodu, čaj alebo umelú výživu, pretože „mlieko ešte neprišlo“. Kolostrum – to husté, žltkasté prvé mlieko – nie je znakom toho, že niečo nie je v poriadku. Je to tekuté zlato, nabité protilátkami, ktoré chránia vášho novorodenca práve pred infekciami, ktoré sú najnebezpečnejšie v prvých týždňoch života.",
+        "tip1": "Do 1 hodiny od narodenia si priložte svoje dieťa koža na kožu na hruď a nechajte ho, aby si prsník našiel. Toto prvé kŕmenie mledzivom je najdôležitejšou „vakcínou“, ktorú vaše dieťa dostane – obalí jeho črevá ochranou pred infekciou. Nedovoľte, aby niekto vzal vaše dieťa preč, kým sa to nestane, pokiaľ nenastane lekárska pohotovosť",
+        "tip2": "Kŕmte na požiadanie — vždy, keď dieťa prejaví známky hladu (otáčanie hlavičky, satie ručičiek, šklbanie). V prvých týždňoch to môže byť 10–14-krát za 24 hodín. Je to normálne a vytvára to vašu zásobu. Hodiny vám nedokážu povedať, kedy je vaše dieťa hladné – vaše dieťa vám to povie",
+        "tip3": "Žiadna voda, žiadny čaj, žiadna výživa počas 6 mesiacov, pokiaľ to lekár výslovne nepredpíše zo zdravotných dôvodov. Vaše materské mlieko mení zloženie počas dňa, aby vyhovovalo presným potrebám vášho dieťaťa – žiadna továreň to nedokáže napodobniť. Videl som, že babičky, ktoré to mysleli dobre, dávali cukrovú vodu, ktorá spôsobila drozd a hnačku",
+        "tip4": "Ak dojčenie bolí, prisatie je nesprávne – nie vaše telo. Požiadajte pôrodnú asistentku alebo zdravotníckeho pracovníka, aby sledoval kŕmenie a pomohol vám upraviť polohu. Bolesť je signálom na získanie pomoci, nie znamením vzdať sa. Pomohol som stovkám matiek vyriešiť problémy s prisatím, ktoré sa vyriešili počas jedného sedenia",
+        "fact": "V rómskych komunitách, kde existujú programy na podporu dojčenia, výlučné dojčenie na 6 mesiacov znižuje počet hospitalizácií dojčiat o viac ako 60%. Materské mlieko sa doslova prispôsobuje na boj so špecifickými infekciami, ktoré cirkulujú vo vašom prostredí – je to personalizovaný liek, ktorý vaše telo vyrába zadarmo.",
+        "action": "Ak ste čerstvá matka alebo tehotná: povedzte už teraz svojej rodine, že plánujete dojčiť výlučne 6 mesiacov a že potrebujete ich podporu, nie radu, aby ste pridali ďalšie potraviny. Ak je dojčenie bolestivé, kontaktujte svoju pôrodnú asistentku alebo zdravotného mediátora skôr, ako prestanete – riešenie je zvyčajne jednoduché."
+      },
+      "postpartum": {
+        "title": "Popôrodná starostlivosť",
+        "description": "V rómskej kultúre sú týždne po narodení časom, keď sa rodina zhromažďuje okolo matky, a to je krásne. Ale videl som aj tieňovú stránku: matky, ktoré každý deň plačú a hovoria im, že je to normálne. Matky, ktoré silno krvácajú a príliš dlho čakajú, kým vyhľadajú pomoc. Matky, ktorých bolesť je odmietnutá, pretože „toto ženy prežívajú“. Na vašom zotavení záleží rovnako ako na zdraví vášho dieťaťa – pretože vaše dieťa vás potrebuje živého a zdravého.",
+        "tip1": "Vaše telo potrebuje na uzdravenie minimálne 6 týždňov. Krvácanie (lochia) po pôrode je normálne počas 2–4 týždňov, ale ak sa náhle zvýši, obsahuje veľké zrazeniny alebo zapácha – okamžite choďte do nemocnice. Videl som matky strácať nebezpečné množstvo krvi, pretože im bolo povedané, že silné krvácanie je normálne. nie je",
+        "tip2": "Ak sa cítite neustále smutná, prázdna, nedokážete sa spojiť so svojím dieťaťom alebo máte myšlienky na to, že by ste sebe alebo svojmu dieťaťu ublížili – nie ste slabá, nie ste zlá matka, máte zdravotný stav, ktorý reaguje na liečbu. Hovorím to pri každej domácej návšteve, pretože stigma v našich komunitách okolo popôrodnej depresie stojí životy",
+        "tip3": "Vaša 6-týždňová postnatálna prehliadka nie je voliteľná – kontroluje infekciu, hojenie, krvný tlak a duševné zdravie. Podľa mojich skúseností sa tejto návštevy zúčastňuje menej ako 30% rómskych žien. Buďte v tejto 30%. Priveďte niekoho so sebou, ak to pomôže",
+        "tip4": "Prijmite každú ponuku pomoci od rodiny pri varení, upratovaní a starostlivosti o deti. Spite, keď dieťa spí. Vašou jedinou úlohou je kŕmiť dieťa a zotavovať sa. Všetko ostatné môže počkať. Najsilnejšie matky, ktoré poznám, sú tie, ktoré prijali pomoc",
+        "fact": "Popôrodná depresia postihuje 1 u 5 žien na celom svete, ale odhaduje sa, že je ešte vyššia v rómskych komunitách v dôsledku stresu z chudoby, diskriminácie a izolácie. V každej komunite, kde som založila rovesnícke podporné skupiny pre čerstvé matky, miera depresie klesla a miera dojčenia vzrástla – pretože spojenie lieči.",
+        "action": "Ak ste porodili v posledných 6 týždňoch a neabsolvovali ste popôrodnú prehliadku, zavolajte ešte dnes do svojho zdravotného strediska. Ak sa cítite neustále smutní alebo ohromení, povedzte to jednej dôveryhodnej osobe – svojej matke, sprostredkovateľovi zdravia, komukoľvek. Prvý rozhovor je najťažší a najdôležitejší krok."
+      }
+    },
+    "children": {
+      "description": "Rómske deti sú budúcnosť našich komunít a zaslúžia si každú výhodu. Vo svojej práci som videl deti, ktoré zaostávajú — nie pre nedostatok schopností, ale pretože im predchádzateľné choroby, zmeškané očkovania alebo neodhalené oneskorenia vzali šance. Tieto vedomosti im tieto šance vracajú.",
+      "growthMilestones": {
+        "title": "Rast a rozvoj",
+        "description": "Každé dieťa sa vyvíja vlastným tempom a ja nikdy nechcem, aby rodičia prepadli panike z bežných variácií. Videl som však aj deti, ktorých oneskorený vývoj rodiny odmietli, pretože „dobehnú zameškané“, keď včasná intervencia mohla priniesť transformačný rozdiel. Vedieť, na čo si dávať pozor, nie je úzkosť – je to pozornosť.",
+        "tip1": "Mesačné váženie v prvom roku je najjednoduchším monitorovacím nástrojom. Vaše zdravotné stredisko má rastové grafy, ktoré ukazujú, či je vaše dieťa na dobrej ceste. Dieťa, ktoré prestane priberať na váhe alebo náhle klesne na tabuľke, potrebuje okamžité vyšetrenie – môže to byť také jednoduché ako úprava kŕmenia alebo také dôležité ako zachytenie základného ochorenia",
+        "tip2": "Do 6 mesiacov väčšina detí siaha po predmetoch a reaguje na svoje meno. Do 12 mesiacov väčšina povie pár slov a postaví sa. Do 24 mesiacov väčšina chodí dobre a hovorí v krátkych frázach. Ak vaše dieťa výrazne zaostáva za týmito míľnikmi, požiadajte o posúdenie vývoja – včasná pomoc robí najväčší rozdiel",
+        "tip3": "Neustále sa s dieťaťom rozprávajte – rozprávajte mu, čo robíte, pomenujte predmety, spievajte piesne. Rómske rodiny majú silnú ústnu tradíciu – použite ju. Deti, ktoré počujú viac slov, rozvíjajú väčšiu slovnú zásobu a silnejšie kognitívne schopnosti. Je to zadarmo a efektívnejšie ako akákoľvek hračka",
+        "tip4": "Zuby: od narodenia čistite ďasná bábätka navlhčenou handričkou a od prvého zúbka použite drobnú škvrnu od detskej zubnej pasty. Vidím silný zubný kaz u rómskych detí vo veku 3, často z fliaš sladkého čaju v noci – to spôsobuje bolesť, infekciu a problémy s jedením, ktoré ovplyvňujú rast",
+        "fact": "Výskum ukazuje, že deti, ktorých vývojové oneskorenia sú identifikované a riešené pred dosiahnutím veku 3, majú 5-krát vyššiu pravdepodobnosť, že budú chodiť do školy na očakávanej úrovni. V osadách, kde som zaviedol mesačné váženie a vývojový skríning, sa počet odporúčaní na včasnú intervenciu strojnásobil – čo znamená, že deti dostali pomoc, ktorú by inak zmeškali.",
+        "action": "Ak je vaše dieťa mladšie ako 2, vezmite ho tento mesiac na kontrolu hmotnosti a vývojový skríning vo vašom zdravotnom stredisku. Ak má vaše dieťa viac ako 2 a máte obavy z reči, chôdze alebo správania, požiadajte o odporúčanie k špecialistovi. Vaša obava je opodstatnená – konajte podľa nej."
+      },
+      "commonIllnesses": {
+        "title": "Keď je vaše dieťa choré",
+        "description": "V osadách s preplnenými bytmi, obmedzenou hygienou a chladnými zimami deti často ochorejú. Väčšina týchto ochorení – hnačka, kašeľ, horúčka – sa dá zvládnuť doma, ak viete, čo máte robiť a kedy sa máte stupňovať. Ale tiež som videl, ako rodičia príliš dlho čakali alebo sa ponáhľali na pohotovosť pre stavy, ktoré by vyriešila jednoduchá liečba doma. Tento modul vás naučí rozdiel.",
+        "tip1": "Horúčka pod 38.5°C: telo vášho dieťaťa bojuje s infekciou – to je dobré. Udržujte ich pohodlne, ľahko oblečené a doprajte im dostatok tekutín. Horúčka nad 38.5°C: podávajte deťom paracetamol v dávke správnej pre ich hmotnosť (NIE paracetamol pre dospelých). Ak horúčka trvá viac ako 3 dní alebo je dieťa nezvyčajne ospalé, vyhľadajte lekársku pomoc",
+        "tip2": "Hnačka zabíja dehydratáciou, nie samotnou infekciou. Vo chvíli, keď má vaše dieťa riedku stolicu, začnite perorálnu rehydratáciu: 1 liter čistej prevarenej vody + 6 zarovnané lyžičky cukru + pol lyžičky soli. Podávajte malé dúšky každých pár minút. Tento recept zachránil viac detských životov na celom svete ako akékoľvek antibiotikum",
+        "tip3": "OKAMŽITE vezmite DIEŤA DO NEMOCNICE, ak spozorujete: rýchle alebo ťažké dýchanie, sťahovanie hrudníka pri každom nádychu, nemožnosť piť alebo dojčiť, opakované vracanie všetkého možného, ​​nezvyčajnú ospalosť alebo nebudenie, kŕče alebo krvavú hnačku. Nečakajte. Toto sú núdzové situácie",
+        "tip4": "Nepodávajte antibiotiká bez lekárskeho predpisu. Nezdieľajte recept iného dieťaťa. Neužívajte zvyšky antibiotík. Neustále to vidím v našich komunitách a vytvára to baktérie odolné voči liekom, ktoré sa liečia oveľa ťažšie. Antibiotiká nerobia nič pri prechladnutí, chrípke alebo väčšine kašľa",
+        "fact": "V komunitách, v ktorých som pracoval, školenie rodičov na prípravu a používanie perorálneho rehydratačného roztoku znížilo počet hospitalizácií detí pre hnačku o viac ako 40% za jediný rok. Poznanie je také silné – a ingrediencie stoja menej ako lístok na autobus do nemocnice.",
+        "action": "Práve teraz si zapamätajte tento recept: 1 liter čistej vody + 6 lyžičky cukru + pol lyžičky soli. Trénujte si to raz. Ak chcete, ochutnajte — malo by chutiť ako slzy. To znamená, že keď vaše dieťa dostane hnačku o 2am, môžete okamžite konať namiesto paniky."
+      },
+      "immunization": {
+        "title": "Harmonogram očkovania",
+        "description": "Budem priamy: v rómskych komunitách v celej Európe je miera zaočkovanosti nižšia ako národný priemer, a to nie preto, že by sa rómski rodičia nestarali o svoje deti – je to preto, že zdravotnícky systém ich nedokázal osloviť s rešpektom, prístupom a informáciami. Dezinformácie sa šíria aj cez sociálne siete. Držal som v nemocnici deti s osýpkami, ktoré tam nikdy nemali byť. Každé neočkované dieťa je dieťa, v ktorom systém zlyhal.",
+        "tip1": "Od narodenia do 6 týždňov: BCG (tuberkulóza) a hepatitída B. Tieto sa podávajú v nemocnici pred prepustením. Ak sa vaše dieťa narodilo doma, vezmite ho do zdravotného strediska počas prvého týždňa života na tieto vakcíny. Nečakajte",
+        "tip2": "2, 3, 4 mesiacov: kolá „veľkej trojky“ — DTP (záškrt, tetanus, čierny kašeľ), detská obrna, Hib a hepatitída B. Toto sú najdôležitejšie vakcíny v detstve. Každé kolo posilňuje imunitu. Chýbajúca jedna oslabuje celý reťazec",
+        "tip3": "12–15 mesiacov: MMR (osýpky, mumps, ružienka). Nemôžem to dostatočne zdôrazniť. Osýpky nie sú neškodné detské ochorenie – zabíja, spôsobuje poškodenie mozgu a oslepuje. V 2019 som videl vypuknutie osýpok v rómskej osade, pretože pokrytie kleslo pod 80%. Dalo sa tomu predísť",
+        "tip4": "Vakcíny sú zadarmo vo vládnych zdravotných strediskách v každej európskej krajine. Nepotrebujete poistenie, nepotrebujete povolenie na pobyt, nepotrebujete termín vo väčšine centier. Ak vám odmietnu službu, je to nezákonné – obráťte sa na svojho zdravotného sprostredkovateľa alebo kanceláriu pre práva pacientov",
+        "fact": "Rozdiel medzi zaočkovanosťou Rómov a Nerómov v niektorých európskych krajinách presahuje 15 percentuálnych bodov. Táto priepasť nie je spôsobená presvedčením Rómov o vakcínach – prieskumy neustále ukazujú, že rómski rodičia chcú svoje deti zaočkovať. Rozdiel je spôsobený prekážkami prístupu, diskrimináciou v zdravotníctve a nedostatočným dosahom. Odstránenie tejto medzery je povinnosťou štátu podľa článku 11 Európskej sociálnej charty.",
+        "action": "Nájdite očkovací preukaz svojho dieťaťa. Ak nejaké vakcíny chýbajú alebo nemáte preukaz, navštívte tento týždeň najbližšie zdravotné stredisko. Ak čelíte prekážkam – jazyk, dokumenty, odmietnutie – kontaktujte svojho miestneho zdravotného mediátora. Presne na to sme tu."
+      }
+    },
+    "chronic": {
+      "description": "Rómovia zomierajú v priemere o 10 rokov skôr ako európsky priemer. Väčšina tohto rozdielu pochádza z chronických chorôb — cukrovka, srdcové a dýchacie choroby — ktoré sa roky potichu vyvíjajú. Keď sa objavia príznaky, škoda je už hotová. Väčšina sa však dá predísť a všetko sa dá zvládnuť, ak sa to zachytí včas.",
+      "diabetes": {
+        "title": "Diabetes: Tichá hrozba",
+        "description": "Diabetes typu 2 je chronické ochorenie, s ktorým sa v rómskych komunitách stretávam najčastejšie. Vyskytuje sa v rodinách, darí sa jej lacnej strave s vysokým obsahom cukru, ku ktorej ľudí núti chudoba, a poškodzuje vaše oči, obličky, nohy a srdce roky predtým, než pocítite niečo zlé. Videl som mužov vo veku 40, ako strácajú prsty na nohách a ženy oslepnú kvôli cukrovke, ktorá nebola nikdy diagnostikovaná, pretože im nikdy nerobili krvný test. Tomu sa dá predísť.",
+        "tip1": "Ak má niekto vo vašej rodine cukrovku, vaše riziko je 2–3-krát vyššie. Toto nie je osud – je to signál konať hneď. Obmedzte biely chlieb, cukor a sladené nápoje. Nahraďte fazuľou, šošovicou, zeleninou a vodou. Videl som rodiny úplne zvrátiť prediabetes prostredníctvom týchto zmien",
+        "tip2": "30 minút chôdze každý jeden deň znižuje riziko cukrovky o 58%. Nebehám. Nie telocvičňa. Chôdza. Každému človeku nad 35 v komunitách, s ktorými pracujem, hovorím: prechádzka je liek. Je zadarmo a na prevenciu funguje lepšie ako väčšina tabletiek",
+        "tip3": "Ak máte viac ako 35, nadváhu alebo rodinnú anamnézu, požiadajte o test glukózy v krvi nalačno vo svojom zdravotnom stredisku aspoň raz za rok. Ide o jednoduchý test pichnutím prstom, vo väčšine krajín je bezplatný a trvá 5 minút. Tento jeden test môže zachytiť cukrovku roky predtým, ako sa objavia príznaky",
+        "tip4": "Poznajte varovné signály, ktoré naznačujú, že cukrovka už môže byť prítomná: neustály smäd, veľmi časté močenie (najmä v noci), rozmazané videnie, pomaly sa hojajúce rany, nevysvetliteľná únava. Ak ich máte dve alebo viac, otestujte sa tento týždeň – nie budúci mesiac",
+        "fact": "Štúdie v rómskych komunitách na Slovensku a v Rumunsku zistili prevalenciu cukrovky 2–3-krát vyššiu ako je národný priemer, pričom väčšina prípadov nebola diagnostikovaná. V jednom programe, ktorého som sa zúčastnil, komunitný skríning odhalil cukrovku u 18% dospelých nad 40, ktorí nikdy neboli testovaní. Takmer všetci nemali žiadne príznaky.",
+        "action": "Ak máte viac ako 35, choďte do svojho zdravotného strediska a požiadajte o vyšetrenie hladiny cukru v krvi. Trvá to 5 minút. Ak je výsledok vyšší ako 5.6 mmol/L (100 mg/dL), musíte začať so zmenami hneď. Priveďte člena rodiny – ak je vaše riziko vysoké, pravdepodobne je aj ich riziko."
+      },
+      "heartHealth": {
+        "title": "Tvoje srdce",
+        "description": "Kardiovaskulárne ochorenia sú zabijakom číslo jeden v rómskych komunitách – nie kvôli genetike, ale kvôli podmienkam, v ktorých žijeme: chronický stres z chudoby a diskriminácie, vysoká miera fajčenia, diéty formované tým, čo chudoba umožňuje, a takmer žiadny prístup k preventívnym vyšetreniam. Zúčastnil som sa pohrebov mužov v ich 50, ktorí zomreli na infarkty, ktorým sa dalo úplne predísť. Tento modul existuje, pretože odmietam navštevovať viac.",
+        "tip1": "Fajčenie je tá najničivejšia vec, ktorú môžete svojmu srdcu urobiť. Viem, že je to hlboko zakorenené v kultúre našej komunity a nie som tu, aby som súdil – ale dlhujem vám úprimnosť. Každá cigareta poškodzuje cievy. Ak nemôžete prestať, znížte. Ak môžete prestať, vaše srdce sa začne opravovať do 24 hodín",
+        "tip2": "Vysoký krvný tlak sa nazýva tichý zabijak, pretože necítite nič, kým nezasiahne mŕtvica alebo infarkt. Nechajte si skontrolovať krvný tlak v ktorejkoľvek lekárni – je to zadarmo. Normálna hodnota je pod 120/80. Nad 140/90 je nebezpečné a vyžaduje liečbu. Zistil som nebezpečne vysoký krvný tlak u ľudí, ktorí sa cítili úplne zdraví",
+        "tip3": "Obmedzte soľ: Rómska kuchyňa je chutná a krásna, ale mnohé tradičné jedlá sú veľmi slané. Namiesto pridania ďalšej soli použite papriku, cesnak, cibuľu, bylinky a korenie. Vaše chuťové poháriky sa prispôsobia do 2 týždňov – jedlo bude chutiť lepšie, nie horšie. Len vďaka tejto zmene som videl pokles krvného tlaku o 10 bodov",
+        "tip4": "Chronický stres z diskriminácie, chudoby, hrozieb vysťahovania a rodinných konfliktov je priamou príčinou srdcových chorôb. Toto nie je názor – je to zdokumentovaná medicína. Stresové hormóny poškodzujú vaše cievy v priebehu rokov. Nájsť akýkoľvek spôsob, ako sa zbaviť stresu – chôdza, hudba, modlitba, rozprávanie, komunita – je liekom na srdce",
+        "fact": "Rómski muži zomierajú na kardiovaskulárne ochorenia v priemere o 10–15 rokov skôr ako bežná populácia. Ukazujú to vlastné údaje Európskej komisie. Ale 80% predčasných infarktov sa dá predísť zmenou životného štýlu a včasnou liečbou vysokého krvného tlaku a cholesterolu. Prevencia funguje – ak k nej máte prístup.",
+        "action": "Tento týždeň urobte dve veci: (1) Choďte do lekárne a skontrolujte si krvný tlak – zapíšte si čísla. (2) Spočítajte, koľko cigariet denne vyfajčíte, a pokúste sa ich znížiť o 3 denne. Tieto dve akcie sú najsilnejšími preventívnymi opatreniami, ktoré môže každý jednotlivec urobiť."
+      },
+      "respiratory": {
+        "title": "Pľúca a dýchanie",
+        "description": "Pracoval som v osadách, kde rodiny v zime kúria drevom, uhlím alebo aj plastom a gumou. Kde 8 ľudí spí v dvoch izbách bez vetrania. Kde po stenách steká vlhkosť a v každom rohu rastie čierna pleseň. Ochorenie dýchacích ciest v týchto podmienkach nie je prekvapujúce – je to predvídateľný výsledok bývania, v ktorom by nikto nemal bývať. Kým bojujeme za lepšie bývanie, musíme chrániť aj pľúca, ktoré máme.",
+        "tip1": "Dym v interiéri predstavuje najbezprostrednejšie respiračné nebezpečenstvo, aké vidím. Ak kúrite pevným palivom, zabezpečte vetranie — pomáha aj prasknutie okna. Nikdy nespaľujte plast, gumu alebo natreté drevo – výpary obsahujú chemikálie, ktoré spôsobujú trvalé poškodenie pľúc, najmä u detí, ktorých pľúca sa ešte len vyvíjajú.",
+        "tip2": "Vlhko a plesne spôsobujú astmu, chronickú bronchitídu a zhoršujú každú infekciu dýchacích ciest. Viditeľnú pleseň utrite zmesou vody a octu alebo bielidla. Otvorte okná aspoň na 15 minút denne aj v zime. Ak je to možné, vešajte mokrú bielizeň vonku – sušenie bielizne vo vnútri dodáva vzduchu obrovské množstvo vlhkosti",
+        "tip3": "Kašeľ trvajúci viac ako 3 týždňov, najmä s úbytkom hmotnosti, nočným potením alebo krvou v slinách, sa musí vyšetriť na tuberkulózu. TB je liečiteľná bezplatnou liečbou, ale je tiež vysoko nákazlivá. V rómskych komunitách sú miery TB 3–5-násobok národného priemeru v niekoľkých európskych krajinách. Včasné testovanie chráni celú vašu rodinu",
+        "tip4": "Deti, ktoré vyrastajú v zadymenom alebo plesnivom prostredí, majú trvalo zníženú kapacitu pľúc – celý život budú nosiť menej zdravé pľúca. Aj keď nemôžete okamžite zmeniť svoje bývanie, zníženie vystavenia dymu a maximálne vetranie chráni ich vyvíjajúce sa pľúca",
+        "fact": "WHO identifikuje znečistenie ovzdušia v domácnostiach ako štvrté najväčšie globálne zdravotné riziko. V rómskych osadách, v ktorých som pracoval, malo viac ako 60% detí opakujúce sa infekcie dýchacích ciest – miera, ktorá výrazne klesla, keď rodiny zlepšili vetranie a obmedzili spaľovanie odpadových materiálov v interiéri. Podmienky bývania nie sú chybou rodín, ale adaptačné stratégie zachraňujú životy, kým sa bojuje o systémové zmeny.",
+        "action": "Dnes: skontrolujte viditeľnú pleseň vo vašej domácnosti a vyčistite ju zriedeným bielidlom alebo octom. Otvorte aspoň jedno okno na 15 minút. Ak má niekto vo vašej domácnosti kašeľ dlhšie ako 3 týždňov, choďte do zdravotného strediska na vyšetrenie TB – je bezplatné a trvá 15 minút."
+      }
+    },
+    "mental": {
+      "description": "Za 15 rokov v rómskych komunitách som sa naučil, že najťažšie bremeno nie je fyzická choroba — je to váha diskriminácie, chudoby, strachu z vysťahovania, starostí o budúcnosť detí a pocit, že systém sa o vás nestará. Hovoríme tomu stres. Keď trvá roky, stáva sa niečím iným. Zaslúži si byť pomenovaný, pochopený a liečený — bez hanby.",
+      "stressManagement": {
+        "title": "Život so stresom",
+        "description": "Nebudem predstierať, že dýchacie cvičenie vyrieši vaše problémy. Ak máte obavy z vysťahovania vašej rodiny, žiadna meditačná aplikácia to nevyrieši. Ale pracoval som so stovkami ľudí v našich komunitách, ktorí nesú obrovský stres, a videl som, čo sa stane, keď sa tento stres celé roky nezvládne: infarkty u mužov v ich 40, ženy, ktoré nemôžu jesť ani spať, deti, ktoré vyrastajú v domácnostiach nabitých napätím. Nemôžeme vždy zmeniť svoje okolnosti, ale môžeme zmeniť spôsob, akým ich nesieme.",
+        "tip1": "Metóda dýchania 4-4-8 okamžite pôsobí na váš nervový systém. Nadýchnite sa nosom na 4, zadržte na 4, pomaly vydýchnite ústami na 8. Urobte to 5-krát. Srdcová frekvencia klesá, svaly sa uvoľňujú. Učím to rodiny pred návštevou nemocnice, pred súdnym pojednávaním, pred akýmkoľvek stresujúcim stretnutím. Je to nástroj, ktorý máte vždy so sebou",
+        "tip2": "Chôdza je najviac podceňovaný liek na stres. 20 minút chôdze – nie rýchlej, len chôdze – znižuje stresový hormón kortizol až o 30%. Ak nemôžete opustiť dom, choďte v kruhoch. Funguje samotný pohyb, nie scenéria",
+        "tip3": "Porozprávaj sa s niekým. Nie na vyriešenie problému - len na zdieľanie hmotnosti. Videl som mužov v našich komunitách, ktorí nosia všetko sami, pretože požiadať o pomoc je ako slabosť. Za 15 rokov tejto práce som stretol najsilnejších ľudí, ktorí sa naučili povedať „Bojujem“",
+        "tip4": "Zamerajte sa na to, čo vám príde na myseľ. Sociálne médiá, správy, rodinné hádky, ktoré sa vám prehrávajú v hlave – to sú zdroje stresu, ktoré môžete ovládať. Nehovorím ignorovať realitu. Hovorím, vyberte si, kedy sa do toho zapojíte, a vytvorte si počas dňa priestory, v ktorých budete zámerne v pokoji",
+        "fact": "Rómske komunity zažívajú to, čo verejné zdravie nazýva „menšinový stres“ – chronickú fyziologickú daň diskriminácie, vylúčenia a chudoby. Výskum ukazuje, že to natrvalo zvyšuje hladiny kortizolu, čo urýchľuje srdcové choroby, cukrovku a duševné choroby. Toto nie je slabosť. Je to biológia reagujúca na nespravodlivosť.",
+        "action": "Dnes večer pred spaním položte telefón do inej miestnosti a cvičte 4-4-8 dýchanie 5 minút. Ak máte ochotu partnera alebo člena rodiny, urobte to spolu v tichosti. Tento malý čin vytvára hranicu medzi denným stresom a vaším spánkom – a spánok je vtedy, keď vaše telo opravuje škody, ktoré stres spôsobil."
+      },
+      "sleep": {
+        "title": "Spánok ako liek",
+        "description": "V preplnených domoch, kde je neustále zapnutá televízia, kde deti zdieľajú postele s rodičmi, kde hluk od susedov alebo z ulice nikdy neutícha, spánok nie je samozrejmosťou. Je to niečo, za čo musíte bojovať. A predsa je spánok, keď sa vaše telo opravuje, keď váš mozog spracováva denný stres a keď sa obnovuje váš imunitný systém. Chronický nedostatok spánku je rovnako nebezpečný ako fajčenie – a v našich komunitách je takmer univerzálny.",
+        "tip1": "Snažte sa spať a prebúdzať sa každý deň, vrátane víkendov, približne v rovnakom čase. Viem, že je to ťažké pri práci na smeny, malých deťoch alebo hlučnom prostredí – ale aj konzistentné okno 6 hodín je viac regeneračné ako náhodné 8-hodinové bloky. Vaše telo túži po rytme",
+        "tip2": "Telefóny a obrazovky pred spaním sú jedným z najhorších novodobých ničiteľov spánku. Modré svetlo hovorí vášmu mozgu, že je deň. Ak musíte použiť telefón, nastavte ho do nočného režimu po 9pm. Ešte lepšie, nabite ho v inej miestnosti – videl som, že kvalita spánku sa po tejto jedinej zmene dramaticky zlepšila",
+        "tip3": "Kofeín zostáva vo vašom systéme 8 hodín. Popoludňajšia turecká káva alebo čaj o 4pm je stále aktívna vo vašom krvnom obehu o polnoci. Po obede prejdite na bylinkový čaj (harmančekový, lipový). Toto je jedno z najjednoduchších vylepšení, ktoré odporúčam, a ľudia sú vždy prekvapení, ako veľmi to pomáha",
+        "tip4": "Ak zdieľate izbu s deťmi alebo členmi rodiny, malé zmeny pomáhajú: konzistentný čas „vypínania svetiel“, postupné znižovanie hluku, používanie závesu na vytvorenie vizuálnej hranice spánku. Naučte deti, že čas spánku je čas strávený s rodinou – keď sa domácnosť spoločne upokojí, všetci zaspia lepšie",
+        "fact": "Výskum spánku v marginalizovaných komunitách ukazuje, že chronická spánková deprivácia spôsobená preľudnením, hlukom a stresom výrazne prispieva k rozdielom v zdraví. Ľudia, ktorí neustále spia menej ako 6 hodín, majú 4x vyššie riziko chytenia infekcií a 2x vyššie riziko srdcových chorôb. Spánok nie je luxus – je to základ prežitia.",
+        "action": "Dnes večer: nastavte si na telefóne budík pred spaním na 30 minút predtým, ako budete chcieť spať. Keď zazvoní, vypnite televízor, odložte telefón a ľahnite si do tmy a 4-4-8 dýchajte, kým nezaspíte. Urobte to 7 nocí a všimnite si rozdiel."
+      },
+      "communitySupport": {
+        "title": "Sila spojenia",
+        "description": "Rómska kultúra už chápe niečo, čo západná medicína meria až teraz: že spolupatričnosť, rodina a komunita chránia vaše zdravie rovnako silne ako akýkoľvek liek. Videl som ľudí, ktorí prežili najťažšie okolnosti – vysťahovanie, choroby, straty – pretože ich držala ich komunita. A videl som, ako sa ľudia zrútili pod oveľa menej, keď boli izolovaní. Veda teraz potvrdzuje to, čo vedeli naši predkovia: samota zabíja, spojenie lieči.",
+        "tip1": "Ak poznáte niekoho vo svojej komunite, kto nedávno stratil člena rodiny, bola mu diagnostikovaná choroba, stratil prácu alebo prechádza krízou – nečakajte, kým vás požiada o pomoc. Navštívte ich. Prineste jedlo. Sadnite si s nimi. V rómskej kultúre je to inštinkt. V zdravovede sa to nazýva „sociálny predpis“ – a funguje to lepšie ako väčšina tabletiek",
+        "tip2": "Hanba je nepriateľom zdravia. Stretol som ľudí, ktorí roky skrývali cukrovku, depresiu, HIV a domáce násilie, pretože sa báli, čo na to povie komunita. Zakaždým, keď niekto v našej komunite otvorene hovorí o svojom boji, dáva tým povolenie ostatným. Nemusíte zdieľať všetko – ale zdieľanie niečoho preruší ticho, z ktorého je ľuďom zle",
+        "tip3": "Zhromaždenia, oslavy, hudba, modlitba, rozprávanie – to nie sú odvádzanie pozornosti od zdravia. Sú zdraví. Štúdie ukazujú, že pravidelná účasť na komunitných kultúrnych aktivitách znižuje depresiu a kardiovaskulárne riziko. Radosť a spolupatričnosť, ktorú vytvárajú, sú merateľným liekom",
+        "tip4": "Skontrolujte starších a izolovaných ľudí vo vašej komunite. Osoba, ktorá žije sama, babička, ktorej deti sa odsťahovali, muž, ktorý prestal chodiť na zhromaždenia. 10-minútová návšteva alebo telefonát môžu byť jediným ľudským spojením, ktoré majú v ten deň – a môže to byť to, čo ich udrží pri živote",
+        "fact": "Harvardská 85ročná štúdia o zdraví dospelých dospela k záveru, že jediným najsilnejším prediktorom zdravia a dlhovekosti je kvalita vašich vzťahov – nie strava, cvičenie alebo genetika. Osamelosť zvyšuje riziko úmrtnosti o 26%, čo zodpovedá fajčeniu 15 cigariet denne. Rómske komunity majú kultúrne bohatstvo v sociálnom prepojení, ktoré je skutočným prínosom pre zdravie – chráňte ho.",
+        "action": "Tento týždeň oslovte jednu osobu vo vašej komunite, s ktorou ste nedávno nehovorili. Nie textom – hlasom alebo osobne. Opýtajte sa, ako sa majú, a počúvajte. Tento akt spojenia je podpora zdravia v jeho najčistejšej forme."
+      },
+      "seekHelp": {
+        "title": "Keď je toho priveľa",
+        "description": "Existuje bod, v ktorom stres, smútok a obavy prekračujú hranicu v niečo, čo potrebuje odbornú pomoc – a v rómskych komunitách sa táto hranica takmer nikdy nepozná, pretože sme naučení vydržať, byť silní, zvládnuť to v rámci rodiny. Videl som cenu tohto ticha: mužov, ktorí pijú, aby to zvládli, kým im zlyhala pečeň, ženy, ktoré prestali jesť, tínedžerov, ktorí si škodia. Požiadať o pomoc neznamená zradiť svoju kultúru. Chráni váš život, aby ste tu mohli byť pre ľudí, ktorí vás potrebujú.",
+        "tip1": "Ak vy alebo niekto, koho poznáte, nie ste schopní normálne fungovať dlhšie ako 2 týždňov – nemôžete spať, nemôžete jesť, nedokážete sa postarať o deti, neustále plačete alebo nemáte na nič energiu – je to mimo bežného stresu. Toto je depresia a je to rovnako skutočný zdravotný stav ako cukrovka. Nie je to slabosť a reaguje na liečbu",
+        "tip2": "Vaším prvým krokom je váš rodinný lekár (GP). Povedz: 'Cítim sa veľmi zle už viac ako 2 týždňov a potrebujem pomoc.' Nemusíte všetko vysvetľovať. Všeobecný lekár vás môže posúdiť a poslať vás k psychológovi alebo psychiatrovi. Táto služba je vo väčšine európskych krajín bezplatná alebo lacná. Ak vás praktický lekár prepustí, navštívte iného",
+        "tip3": "Ak sa niekto vo vašej rodine zmieni o tom, že chce zomrieť, že chce zmiznúť alebo že má pocit, že bez nich by bolo každému lepšie, okamžite to berte vážne. Zostaňte s nimi. Odstráňte prístup k liekom a ostrým predmetom. Zavolajte na národnú krízovú linku alebo 112. Nereagujete prehnane. Tieto slová sú volanie o pomoc, na ktorú treba odpovedať",
+        "tip4": "Lieky na duševné zdravie nie sú hanebné, návykové ani „pre šialených ľudí“. Antidepresíva sa predpisujú miliónom ľudí na celom svete a zachraňujú životy. Nemenia to, kým ste – zdvíhajú chemickú hmlu, ktorá vám bráni byť tým, kým ste. Videl som ľudí premenených zaobchádzaním, ktorému roky odolávali kvôli stigme",
+        "fact": "Rómske komunity zažívajú najvyššiu mieru depresie a úzkosti v Európe, čo je spôsobené štrukturálnymi faktormi, ako je diskriminácia, chudoba a nedostatočný prístup k službám. Využívanie služieb duševného zdravia v rómskych komunitách však patrí medzi najnižšie. V programoch, kde som pomáhal spájať ľudí s kultúrne citlivou starostlivosťou o duševné zdravie, bolo zlepšenie kvality života hlboké – nielen pre jednotlivca, ale pre celú ich rodinu.",
+        "action": "Uložte si toto číslo do telefónu hneď teraz: linka pomoci pre krízu duševného zdravia vo vašej krajine. Ak ste v kríze, zavolajte. Ak je niekto, koho poznáte, v kríze, zavolajte mu. A ak máte problémy dlhšie ako 2 týždňov, objednajte si tento týždeň schôdzku u svojho praktického lekára. Zaslúžite si cítiť sa lepšie a pomoc existuje."
+      }
+    }
+  },
+  "track": {
+    "title": "Denná zdravotná kontrola",
+    "subtitle": "Ako sa dnes cítite?",
+    "moodTitle": "Nálada",
+    "moodGreat": "Výborne",
+    "moodGood": "Dobre",
+    "moodOkay": "Ujde to",
+    "moodLow": "Zle",
+    "moodBad": "Veľmi zle",
+    "waterTitle": "Príjem vody",
+    "waterSubtitle": "Klepnite na každú pohár, keď pijete",
+    "waterGoal": "Cieľ: 8 pohárov",
+    "activityTitle": "Aktivita dnes",
+    "activityWalk": "Prešiel/-a som sa",
+    "activityExercise": "Cvičil/-a som",
+    "activityRest": "Oddychoval/-a som",
+    "saveCheckin": "Uložiť dnešný záznam",
+    "savedSuccess": "Záznam uložený!",
+    "weeklyTitle": "Tento týždeň",
+    "streakDays": "denná séria",
+    "loggedToday": "Zaznamenané dnes",
+    "noLogsYet": "Začnite prvý záznam nižšie",
+    "historyTitle": "Nedávna história"
+  },
+  "profile": {
+    "title": "Profil",
+    "guestUser": "Hosť",
+    "guestSubtitle": "Učíte sa anonymne",
+    "languagePreference": "Jazyková preferencia",
+    "changeLanguage": "Zmeniť jazyk",
+    "learningProgress": "Pokrok v učení",
+    "pillarsStarted": "Začaté piliere",
+    "modulesCompleted": "Dokončené moduly",
+    "trackingStreak": "Séria sledovania",
+    "days": "dni",
+    "exportData": "Exportovať moje údaje (GDPR)",
+    "exportDescription": "Stiahnite si všetky údaje o sledovaní zdravia ako súbor CSV.",
+    "clearData": "Vymazať všetky údaje",
+    "clearDataConfirm": "Ste si istí? Toto nemožno vrátiť späť.",
+    "aboutTitle": "O Redi Health",
+    "aboutText": "Redi Health je bezplatný viacjazyčný sprievodca zdravotnou gramotnosťou pre znevýhodnené oblasti — dediny, periférie, osady, rómske štvrte, vidiecke regióny v Európe — kde je málo klinikov, cesta k starostlivosti je dlhá a oficiálne správy často neprichádzajú v jazyku ľudí.",
+    "privacyPolicy": "Zásady ochrany súkromia",
+    "contactUs": "Kontaktujte nás",
+    "progressNone": "Ešte ste nezačali učiť sa.",
+    "progressStart": "Prejdite na Učenie a začnite.",
+    "version": "Verzia"
+  },
+  "mediator": {
+    "title": "Panel mediátora",
+    "subtitle": "Podpora zdravia vašej komunity",
+    "accessCode": "Zadajte prístupový kód",
+    "accessCodePlaceholder": "4-miestny kód",
+    "accessCodeHint": "Požiadajte koordinátora o prístupový kód",
+    "accessCodeError": "Nesprávny kód. Skúste znova.",
+    "accessCodeSubmit": "Vstúpiť do panela",
+    "communityMembers": "Členovia komunity",
+    "logsThisMonth": "Zdravotné záznamy tento mesiac",
+    "alertsActive": "Aktívne upozornenia",
+    "quickActions": "Rýchle akcie",
+    "logVisit": "Zaznamenať návštevu",
+    "recordHealth": "Zaznamenať zdravotné údaje",
+    "viewReports": "Zobraziť správy",
+    "recentActivity": "Nedávna aktivita",
+    "noActivity": "Žiadna nedávna aktivita",
+    "memberName": "Meno člena",
+    "visitDate": "Dátum návštevy",
+    "notes": "Poznámky",
+    "saveVisit": "Uložiť návštevu",
+    "visitSaved": "Návšteva úspešne uložená",
+    "healthSummary": "Zdravotné zhrnutie komunity",
+    "pillarProgress": "Pokrok v učení podľa pilierov",
+    "contactSupport": "Kontaktovať regionálneho koordinátora",
+    "resources": "Zdroje pre mediátora",
+    "downloadGuide": "Stiahnuť terénny sprievodca (PDF)"
+  },
+  "healthQuiz": {
+    "meta": {
+      "title": "Zdravotný kvíz — Redi Health",
+      "description": "Otestujte si svoje zdravotné znalosti pomocou interaktívnych kvízov"
+    },
+    "title": "Zdravotný kvíz",
+    "subtitle": "Otestujte si svoje vedomosti. Naučte sa niečo nové.",
+    "backToQuizzes": "Späť ku kvízom",
+    "seeResults": "Pozrite si výsledky",
+    "nextQuestion": "Ďalšia otázka",
+    "questionsCount": "{count} otázok",
+    "results": {
+      "perfect": "Perfektné skóre!",
+      "great": "Skvelá práca!",
+      "good": "Dobré úsilie!",
+      "keepLearning": "Učte sa ďalej!",
+      "score": "Správne ste dosiahli {score} z {total}",
+      "tryAgain": "Skúste to znova",
+      "moreQuizzes": "Viac kvízov"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotiká",
+        "description": "Viete, kedy užívať antibiotiká?",
+        "questions": [
+          {
+            "question": "Môžu antibiotiká vyliečiť chrípku?",
+            "options": [
+              "áno",
+              "Nie",
+              "Niekedy"
+            ],
+            "explanation": "Chrípka je spôsobená vírusom. Antibiotiká zabíjajú iba baktérie. Užívanie antibiotík na chrípku nič nerobí a môže sťažiť liečbu budúcich infekcií."
+          },
+          {
+            "question": "Po 3 dňoch užívania antibiotík sa cítite lepšie. Mali by ste prestať?",
+            "options": [
+              "Áno, si vyliečený",
+              "Nie, dokončite celý kurz",
+              "Vezmite polovicu zvyšných tabliet"
+            ],
+            "explanation": "VŽDY dokončite celý kurz. Ak prestanete skoro, niektoré baktérie prežijú a stanú sa odolnými. Nabudúce to isté antibiotikum nezaberie."
+          },
+          {
+            "question": "Môžete zdieľať antibiotiká s členom rodiny, ktorý má podobné príznaky?",
+            "options": [
+              "Áno, šetrí to peniaze",
+              "Nie, nikdy",
+              "Iba ak ide o rovnakú chorobu"
+            ],
+            "explanation": "Nikdy nezdieľajte antibiotiká. Rôzne infekcie vyžadujú rôzne lieky. Nesprávne antibiotikum môže byť nebezpečné a nepomôže."
+          },
+          {
+            "question": "Čo sa stane, ak užívate antibiotiká príliš často?",
+            "options": [
+              "Nič zlé",
+              "Vaše telo sa stáva imúnnym voči chorobám",
+              "Baktérie sa stávajú odolnými a ťažšie sa zabíjajú"
+            ],
+            "explanation": "Antibiotická rezistencia je globálna kríza. Keď sa baktérie stanú odolnými, jednoduché infekcie sa môžu stať smrteľnými. Antibiotiká užívajte len vtedy, keď ich predpíše lekár."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "Vakcíny",
+        "description": "Oddeľte fakty od mýtov",
+        "questions": [
+          {
+            "question": "Spôsobujú vakcíny autizmus?",
+            "options": [
+              "áno",
+              "Nie",
+              "nevieme"
+            ],
+            "explanation": "NIE Tento mýtus vznikol na základe podvodnej štúdie, ktorá bola stiahnutá. Lekár, ktorý to zverejnil, prišiel o lekársku licenciu. Desiatky štúdií s miliónmi detí dokazujú, že vakcíny NEspôsobujú autizmus."
+          },
+          {
+            "question": "Je bezpečné dať dieťaťu viacero vakcín naraz?",
+            "options": [
+              "Nie, je toho priveľa",
+              "Áno, je to bezpečné a testované",
+              "Len po jednom"
+            ],
+            "explanation": "Imunitný systém detí sa každý deň vysporiada s tisíckami baktérií. Kombinované vakcíny sú dôkladne testované a bezpečné. Odloženie očkovania ponecháva vaše dieťa nechránené."
+          },
+          {
+            "question": "Moje dieťa má miernu nádchu. Môžu sa ešte dať zaočkovať?",
+            "options": [
+              "Nie, počkaj, kým nebude úplne zdravý",
+              "Áno, mierne prechladnutie je v poriadku",
+              "Len so súhlasom lekára"
+            ],
+            "explanation": "Mierna nádcha, nízka horúčka alebo nádcha NIE SÚ dôvodom na odloženie očkovania. Len ťažké ochorenie si vyžaduje odklad. Ak si nie ste istý, opýtajte sa svojho lekára."
+          },
+          {
+            "question": "Obsahujú vakcíny nebezpečné chemikálie?",
+            "options": [
+              "Áno, sú plné toxínov",
+              "Nie, všetky zložky sú v malých množstvách bezpečné",
+              "Niektorí áno, niektorí nie"
+            ],
+            "explanation": "Zložky vakcíny sú prítomné v malých, bezpečných množstvách. Z materského mlieka dostanete viac hliníka ako z vakcíny. Každá zložka bola testovaná na bezpečnosť."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Cukrovka",
+        "description": "Pochopenie liečby cukrovky",
+        "questions": [
+          {
+            "question": "Je cukrovka spôsobená konzumáciou príliš veľkého množstva cukru?",
+            "options": [
+              "áno",
+              "Nie, je to zložitejšie",
+              "Len typ 2"
+            ],
+            "explanation": "Diabetes je spôsobený genetikou, životným štýlom a tým, ako vaše telo spracováva inzulín. Konzumácia cukru to priamo nespôsobuje, ale nezdravá strava a obezita zvyšujú riziko."
+          },
+          {
+            "question": "Dá sa cukrovka vyliečiť prírodnými prostriedkami, ako je škorica?",
+            "options": [
+              "Áno, škorica to lieči",
+              "Nie, neexistuje žiadny liek, ale dá sa to zvládnuť",
+              "Áno, s dostatkom cesnaku a byliniek"
+            ],
+            "explanation": "Na cukrovku NEEXISTUJE liek. Dá sa to zvládnuť liekmi, zdravým jedlom a cvičením. Škorica môže mať malé výhody, ale NEMÔŽE nahradiť lieky. Ľudia, ktorí prestanú užívať lieky, skončia v nemocnici."
+          },
+          {
+            "question": "Diabetik pociťuje závraty a pot. Čo by ste mali urobiť?",
+            "options": [
+              "Dajte im inzulín",
+              "Okamžite im dajte niečo sladké",
+              "Povedzte im, aby si oddýchli"
+            ],
+            "explanation": "Toto sú príznaky NÍZKEHO cukru v krvi (hypoglykémia). Okamžite im dajte šťavu, cukrík alebo cukrovú vodu. To môže byť život ohrozujúce. Keď sa budú cítiť lepšie, mali by sa poriadne najesť."
+          },
+          {
+            "question": "Ako často by si mal diabetik kontrolovať chodidlá?",
+            "options": [
+              "Nikdy, nohy sú v poriadku",
+              "Každý deň",
+              "Raz za rok"
+            ],
+            "explanation": "Diabetes môže poškodiť nervy v nohách. Možno nebudete cítiť rezné rany alebo rany. KAŽDÝ DEŇ kontrolujte svoje chodidlá, či na nich nie sú rezné rany, pľuzgiere alebo zmeny farby. Malé rany sa môžu stať vážnymi infekciami."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Hygiena a prevencia",
+        "description": "Základné zdravotné návyky, ktoré zachraňujú životy",
+        "questions": [
+          {
+            "question": "Ako dlho by ste si mali umývať ruky mydlom?",
+            "options": [
+              "5 sekúnd",
+              "Minimálne 20 sekúnd",
+              "1 minúta"
+            ],
+            "explanation": "Umývajte sa aspoň 20 sekúnd, čo je približne čas potrebný na zaspievanie „Happy Birthday“ dvakrát. Tým sa odstráni väčšina choroboplodných zárodkov. Rýchle oplachy nefungujú."
+          },
+          {
+            "question": "Je bezpečné piť vodu z rieky alebo potoka?",
+            "options": [
+              "Áno, prírodná voda je čistá",
+              "Nie, vždy to najskôr prevarte alebo prefiltrujte",
+              "Iba ak to vyzerá jasne"
+            ],
+            "explanation": "Aj čistá voda môže obsahovať nebezpečné baktérie a parazity. Vodu vždy varte aspoň 1 minútu alebo použite filter. Špinavá voda spôsobuje hnačku, choleru a týfus."
+          },
+          {
+            "question": "Vaše dieťa má hnačku. Čo je najdôležitejšie?",
+            "options": [
+              "Zastavte všetko jedlo",
+              "Podávajte veľa tekutín (voda, ORS)",
+              "Podávajte antibiotiká"
+            ],
+            "explanation": "Dehydratácia z hnačky zabíja viac detí ako samotná hnačka. Podávajte perorálny rehydratačný roztok (ORS) alebo čistú vodu so štipkou soli a cukru. Nechajte deti dojčiť."
+          },
+          {
+            "question": "Kedy by ste si mali umývať ruky?",
+            "options": [
+              "Iba pred jedlom",
+              "Pred jedlom, po toalete, po dotyku zvierat, po kašli",
+              "Len keď vyzerajú špinavé"
+            ],
+            "explanation": "Baktérie sú neviditeľné. Umyte si ruky: pred jedlom/varením, po použití toalety, po výmene plienok, po dotyku zvierat, po kašľaní/kýchnutí a po dotyku chorých ľudí."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Poznajte svoje práva — Redi Health",
+      "description": "Práva pacientov, pomoc pri diskriminácii a právne kontakty pre rómske komunity"
+    },
+    "title": "Poznajte svoje práva",
+    "subtitle": "Ako pacient máte práva. Naučte sa ich. Použite ich.",
+    "back": "Späť",
+    "menu": {
+      "patientRights": {
+        "title": "Práva pacienta",
+        "desc": "8 práv má každý pacient"
+      },
+      "discrimination": {
+        "title": "Čeliť diskriminácii?",
+        "desc": "Čo povedať a urobiť – krok za krokom"
+      },
+      "contacts": {
+        "title": "Právna pomoc podľa krajiny",
+        "desc": "Ombudsman, antidiskriminácia, rómske organizácie"
+      }
+    },
+    "views": {
+      "patientRights": "Vaše práva pacienta",
+      "discrimination": "Ak čelíte diskriminácii",
+      "discriminationDesc": "Skutočné situácie a presne to, čo povedať a urobiť.",
+      "contacts": "Právna pomoc podľa krajiny"
+    },
+    "labels": {
+      "sayThis": "Povedz toto:",
+      "thenDo": "Potom urob toto:",
+      "patientOmbudsman": "Ombudsman pre pacientov",
+      "antiDiscrimination": "Proti diskriminácii",
+      "romaRightsOrg": "Organizácia za práva Rómov"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Právo na núdzové ošetrenie",
+        "description": "Každá nemocnica vás MUSÍ v prípade núdze ošetriť aj bez poistenia a dokladov. Toto je zákon v každej EU krajine. Ak odmietnu, opýtajte sa na meno lekára a nahláste to."
+      },
+      "information": {
+        "title": "Právo porozumieť svojej diagnóze",
+        "description": "Váš lekár vám musí vysvetliť váš stav slovami, ktorým rozumiete. Ak nerozumiete, povedzte: 'Môžete to vysvetliť jednoduchšie?' Môžete tiež požiadať o písomné zhrnutie."
+      },
+      "consent": {
+        "title": "Právo povedať nie",
+        "description": "Nikto vám nemôže nútiť liečbu. Pred akýmkoľvek zákrokom vám lekár musí vysvetliť, čo bude robiť, a vy musíte súhlasiť. Vždy môžete povedať 'Potrebujem čas na rozmyslenie.'"
+      },
+      "privacy": {
+        "title": "Právo na súkromie",
+        "description": "Vaše zdravotné informácie sú súkromné. Lekári ho bez vášho súhlasu nemôžu zdieľať s vaším zamestnávateľom, rodinou ani nikým iným. To zahŕňa váš stav HIV, tehotenstvo alebo duševné zdravie."
+      },
+      "interpreter": {
+        "title": "Právo na tlmočníka",
+        "description": "Ak neovládate dobre miestny jazyk, môžete požiadať o tlmočníka. Túto službu má veľa nemocníc. Ak nie, na preklad môžete priviesť niekoho, komu dôverujete."
+      },
+      "second-opinion": {
+        "title": "Právo na druhý názor",
+        "description": "Ak nesúhlasíte s diagnózou, môžete navštíviť iného lekára. Toto je vaše právo. Nemusíte vysvetľovať prečo."
+      },
+      "records": {
+        "title": "Právo na vaše zdravotné záznamy",
+        "description": "Kedykoľvek môžete požiadať o kópiu všetkých vašich zdravotných záznamov. Nemocnica ich musí poskytnúť. To je užitočné pri zmene lekára alebo pri sťahovaní do iného mesta."
+      },
+      "complaint": {
+        "title": "Právo sťažovať sa",
+        "description": "Ak sa cítite zle zaobchádzané alebo diskriminovaný, môžete podať sťažnosť. Každá nemocnica má svoj reklamačný poriadok. Môžete sa tiež obrátiť na ombudsmana pacientov vo vašej krajine."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "Nemocnica vás odmieta liečiť",
+        "whatToSay": "\"Mám právo na núdzové ošetrenie podľa zákona EU. Napíšte svoje meno a dôvod, prečo odmietate.\"",
+        "whatToDo": [
+          "Zostaňte pokojní, ale pevní",
+          "Opýtajte sa na celé meno lekára",
+          "Požiadajte o odmietnutie písomne",
+          "Zavolajte ombudsmana pacientov",
+          "Obráťte sa na organizáciu za práva Rómov"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Nemocničný personál je hrubý alebo odmietavý kvôli vašej etnickej príslušnosti",
+        "whatToSay": "\"Som tu pre lekársku pomoc. Očakávam, že sa ku mne budú správať s rovnakým rešpektom ako ku každému inému pacientovi.\"",
+        "whatToDo": [
+          "Požiadajte o rozhovor s vedúcou sestrou alebo vedúcim oddelenia",
+          "Všimnite si dátum, čas a mená",
+          "Podajte písomnú sťažnosť v nemocnici",
+          "Správa národnému antidiskriminačnému orgánu"
+        ]
+      },
+      "no-insurance": {
+        "situation": "Nemáte zdravotné poistenie",
+        "whatToSay": "\"Potrebujem lekársku pomoc. Aké mám možnosti pre nepoistených pacientov?\"",
+        "whatToDo": [
+          "Núdzová starostlivosť je vždy bezplatná – trvajte na tom",
+          "Opýtajte sa na programy sociálnej pomoci",
+          "Obráťte sa na zdravotného mediátora vo vašom okolí",
+          "Mnohé mimovládne organizácie poskytujú bezplatné kliniky – opýtajte sa v nemocnici"
+        ]
+      },
+      "language-barrier": {
+        "situation": "Nemôžete komunikovať s lekárom",
+        "whatToSay": "\"Potrebujem pomoc s porozumením. Môžete poskytnúť tlmočníka alebo hovoriť pomalšie?\"",
+        "whatToDo": [
+          "Pomocou tejto aplikácie môžete prekladať kľúčové frázy",
+          "Priveďte dôveryhodnú osobu, ktorá ovláda daný jazyk",
+          "Požiadajte o písomné pokyny, ktoré môžete preložiť neskôr",
+          "Na preklad dokumentov použite fotoaparát telefónu"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Komunitné príbehy — Redi Health",
+      "description": "Skutočné zdravotné skúsenosti z rómskych komunít v celej Európe"
+    },
+    "title": "Komunitné príbehy",
+    "subtitle": "Reálne skúsenosti z rómskych komunít. Učte sa od iných.",
+    "backToStories": "Späť k príbehom",
+    "lessonLearned": "Ponaučenie",
+    "whatToDoNext": "Čo robiť ďalej",
+    "categories": {
+      "vaccines": "Vakcíny",
+      "chronic": "Chronická choroba",
+      "maternal": "Tehotenstvo",
+      "discrimination": "práva",
+      "prevention": "Prevencia",
+      "mental": "Duševné zdravie"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Sprievodca vakcínou",
+      "askZuvo": "Spýtaj sa Zuvo",
+      "explainPrescription": "Vysvetlite predpis",
+      "navigateToCare": "Prejdite do starostlivosti",
+      "knowYourRights": "Poznajte svoje práva",
+      "learnPrevention": "Naučte sa prevenciu",
+      "checkSymptoms": "Skontrolujte príznaky",
+      "learnMentalHealth": "Získajte informácie o duševnom zdraví"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "Rumunsko",
+        "title": "Dcéru som skoro nedala zaočkovať",
+        "story": "Moja svokra mi povedala, že vakcíny sú jed. Všetci v osade hovorili to isté. Keď sa mi narodila dcéra, mala som strach. Ale zdravotník prišiel k nám domov a všetko vysvetlil – ako vakcíny fungujú, aké sú v skutočnosti vedľajšie účinky. Ukázala mi fotky detí s osýpkami. Viac som sa bála choroby ako vakcíny. Moja dcéra dostala všetky vakcíny. Je zdravá a silná.",
+        "lesson": "Porozprávajte sa so zdravotným mediátorom alebo lekárom skôr, ako sa rozhodnete na základe toho, čo hovoria ostatní. Vakcíny zachraňujú životy."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bulharsko",
+        "title": "Prestal som užívať lieky na cukrovku a takmer som zomrel",
+        "story": "Diabetes typu 2 mi diagnostikovali na 45. Z lieku ma bolelo brucho, tak som ho prestal brať. Môj sused povedal, že škoricový čaj ma vylieči. 2 roky som namiesto toho pila škoricový čaj. Potom som jedného dňa skolaboval. Moja hladina cukru v krvi bola vyššia ako 500. Lekári povedali, že mám poškodené obličky. Teraz beriem lieky každý deň. Kiežby som nikdy neprestal.",
+        "lesson": "Nikdy neprestaňte užívať liek bez toho, aby ste sa porozprávali so svojím lekárom. Prírodné lieky nemôžu nahradiť lieky na cukrovku."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Srbsko",
+        "title": "Moje prvé tehotenstvo — nevedela som, že môžem navštíviť lekára zadarmo",
+        "story": "Keď som otehotnela v 19, 6 mesiacov som nebola u lekára. Nemal som poistenie a myslel som si, že to bude stáť príliš veľa. Zdravotná mediátorka mi povedala, že prenatálna starostlivosť je pre všetky tehotné ženy v Srbsku bezplatná. Pomohla mi zaregistrovať sa. Lekár zistil, že mám anémiu a vysoký krvný tlak. Keby som neodišla, moje dieťa mohlo byť v nebezpečenstve.",
+        "lesson": "Prenatálna starostlivosť je vo väčšine európskych krajín bezplatná. Požiadajte zdravotného mediátora, aby vám pomohol s registráciou."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Maďarsko",
+        "title": "Nemocnica sa ma pokúsila poslať preč",
+        "story": "Išiel som na pohotovosť s bolesťou na hrudníku. Sestra sa na mňa pozrela a povedala 'Máme plno, choďte do inej nemocnice.' Vedel som, že to nie je správne. Povedal som: ‚Bolí ma hrudník. Musíte ma preskúmať. Prosím, povedzte mi svoje meno.“ Jej postoj sa okamžite zmenil. Vyšetrili ma a zistili, že mám problém so srdcom, ktorý si vyžaduje liečbu. Keby som odišiel, mohol som dostať infarkt.",
+        "lesson": "Máte právo na núdzové ošetrenie. Ak sa vás niekto pokúsi odmietnuť, opýtajte sa ho na meno a povedzte, že poznáte svoje práva."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Slovensko",
+        "title": "TB nie je rozsudok smrti – ale musíte dokončiť liek",
+        "story": "Kašlala som mesiace. Myslel som si, že je to len prechladnutie. Keď som konečne išiel k lekárovi, povedali mi, že mám tuberkulózu. Bol som vystrašený - myslel som, že zomriem. Ale lekár vysvetlil, že TB sa dá vyliečiť 6-mesačným liekom. Najťažšie bolo brať tabletky každý deň po dobu 6 mesiacov, aj keď som sa po 2 mesiacoch cítila lepšie. Ale skončil som. som vyliečený.",
+        "lesson": "Ak kašlete dlhšie ako 2 týždne, navštívte lekára. TB je liečiteľná, ale MUSÍTE dokončiť všetky lieky."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Severné Macedónsko",
+        "title": "Depresia nie je slabosť - je to choroba",
+        "story": "Po smrti môjho manžela som celé mesiace nemohla vstať z postele. Moja rodina povedala, že som lenivý. Povedali 'len buď silný.' Ale nemohol som. Zdravotnícky mediátor si všimol, že niečo nie je v poriadku a vzal ma k lekárovi. Lekár povedal, že mám depresiu - skutočný zdravotný stav. Začal som medicínu a rozprával som sa s poradcom. Pomaly som sa zlepšoval. Nie som slabý. Bolo mi zle.",
+        "lesson": "Depresia je zdravotný stav, nie charakterová vada. Pomôcť môže medicína a poradenstvo. Požiadajte o pomoc."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Výzvy — Redi Health",
+      "description": "Komunitné výzvy"
+    },
+    "title": "Aktívne výzvy",
+    "subtitle": "Pripojte sa k cieľom komunity a osobným výzvam a získajte bonusové XP a odznaky.",
+    "types": {
+      "community": "komunity",
+      "personal": "osobné"
+    },
+    "daysLeft": "Zostáva {count} dní",
+    "viewLeaderboard": "Zobraziť tabuľku výsledkov",
+    "items": {
+      "c1": {
+        "title": "Šampión vedomostí o očkovaní",
+        "description": "Získajte 50 študentov vo vašej oblasti, aby tento týždeň absolvovali modul vakcíny."
+      },
+      "c2": {
+        "title": "7-dňový cyklus zdravia",
+        "description": "Zaznamenajte svoju náladu a príjem vody 7 dní v rade."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Certifikát — Redi Health",
+      "description": "Národný certifikát zdravotnej gramotnosti"
+    },
+    "title": "Váš certifikát",
+    "subtitle": "Máte za sebou Národnú etapu Študentskej akadémie zdravia.",
+    "ofCompletion": "Osvedčenie o absolvovaní",
+    "diplomaTitle": "Národná zdravotná gramotnosť",
+    "awardedFor": "Udeľuje sa za dokončenie študijného programu Redi Health Student Academy.",
+    "date": "Dátum",
+    "downloadPdf": "Stiahnite si PDF",
+    "share": "zdieľať",
+    "gate": {
+      "title": "Najprv dokončite Akadémiu",
+      "description": "Ak chcete získať certifikát zdravotnej gramotnosti, musíte absolvovať všetky lekcie a prejsť kvízom na národnej úrovni Študentskej akadémie zdravia.",
+      "cta": "Choďte do Akadémie"
+    }
+  },
+  "policies": {
+    "title": "Platform Policies",
+    "subtitle": "The governance framework that defines what Redi Health can and cannot do — and the commitments we make to every user.",
+    "goNoGoTitle": "Feature release policy",
+    "goNoGoBody": "Features that may influence clinical decisions require completed policy controls before release: AI triage, symptom severity, prescription outputs, vaccine recommendations, Roma-friendly provider labels, mediator visit logging, youth sexual health, and legal guidance.",
+    "disclaimer": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "clinical-safetyTitle": "Clinical Safety & Escalation",
+    "clinical-safetyDesc": "Defines what the AI may and may not say, how emergencies are escalated before any AI call, and the governance model for all health-related changes.",
+    "clinicalSafety1": "The AI never diagnoses, never prescribes doses, and never advises stopping a prescribed medication.",
+    "clinicalSafety2": "11 emergency patterns bypass the AI entirely and immediately instruct the user to call 112 or a specialist helpline.",
+    "clinicalSafety3": "Every triage output is assigned one of five severity categories — Emergency, Urgent, Routine, Self-care, or Information only.",
+    "clinicalSafety4": "Changes to red-flag patterns, system prompts, or triage logic require sign-off from the clinical governance lead before deployment.",
+    "source-policyTitle": "Public Health Source Policy",
+    "source-policyDesc": "Defines which sources may be used for health claims, how they must be cited, and how they are kept up to date.",
+    "sourcePolicy1": "All health facts cite WHO, ECDC, IFRC, national ministries, or peer-reviewed clinical guidance — never social media, single studies, or commercial sources.",
+    "sourcePolicy2": "Every content module carries a 'last reviewed' date and reviewer role. Overdue modules are hidden automatically.",
+    "sourcePolicy3": "Country-specific overrides (vaccine schedules, emergency numbers, patient rights) follow a 5-step clinical review process before going live.",
+    "safeguardingTitle": "Safeguarding Policy",
+    "safeguardingDesc": "Protections for children, pregnant people, survivors of abuse and coercion, people in mental health crisis, and people seeking sexual health information.",
+    "safeguarding1": "Self-harm and suicidal ideation are intercepted before any AI response — the user receives a crisis line and an instruction to stay with someone they trust.",
+    "safeguarding2": "Descriptions of active domestic violence trigger a safety-first response with the local domestic violence helpline, not general advice.",
+    "safeguarding3": "Sexual health content in the Student Academy requires country-specific legal review and Tier 2 clinical sign-off before release.",
+    "safeguarding4": "Every AI page and triage result includes a visible 'I need help now' button linking to emergency and crisis numbers.",
+    "roma-equityTitle": "Roma Equity & Anti-Stigmatization",
+    "roma-equityDesc": "Standards for how Roma communities are described, how content is reviewed, and how surveillance and profiling are prevented.",
+    "romaEquity1": "All content about Roma communities must follow strengths-based framing — naming structural causes for health disparities, never cultural ones.",
+    "romaEquity2": "Content about Roma health is reviewed by a Roma health mediator or Roma-led NGO before publication.",
+    "romaEquity3": "Ethnicity data is never collected. Analytics are never segmented by ethnic identity. Location data is never stored.",
+    "romaEquity4": "A Roma Health Advisory Board reviews this policy annually and can flag content concerns at any time via equity@redi.healthcare.",
+    "provider-verificationTitle": "Provider Verification",
+    "provider-verificationDesc": "How clinic listings are verified, what 'Roma-friendly' means and requires, and how users can report harm.",
+    "providerVerification1": "The 'Roma-friendly' label requires: no documentation barriers beyond what all patients face, anti-discrimination training, no substantiated complaints in 3 years, and a Roma mediator assessment within 18 months.",
+    "providerVerification2": "Unverified listings carry a mandatory warning banner and an 'Unverified' badge — no Roma-friendly label is shown until criteria are met.",
+    "providerVerification3": "Users can report discrimination or incorrect information directly from every listing. Discrimination reports are reviewed within 3 business days.",
+    "mediator-policyTitle": "Mediator Operating Policy",
+    "mediator-policyDesc": "Role boundaries, consent requirements, data minimisation rules, and safety escalation protocols for field health mediators.",
+    "mediatorPolicy1": "Mediators provide education, navigation, and referral support — not clinical assessment or prescriptions.",
+    "mediatorPolicy2": "A consent attestation is required before every visit log is saved. Logs must not record ethnicity, immigration status, or clinical diagnoses.",
+    "mediatorPolicy3": "Mediators follow a defined referral escalation pathway — immediate 112 call for emergencies, helpline for safeguarding concerns, programme supervisor within 24 hours for non-immediate concerns.",
+    "mediatorPolicy4": "Mediator PINs expire after 12 months and are revoked immediately when a mediator leaves the programme.",
+    "data-governanceTitle": "Data Governance",
+    "data-governanceDesc": "How all data — local and server-stored — is classified, retained, and controlled, and how every user can export or delete their data.",
+    "dataGovernance1": "Local device data (family logs, progress, mediator visits) is treated with the same privacy rights as server data — exportable and deletable from Profile > Data.",
+    "dataGovernance2": "Health logs are retained for 5 years or until you delete them. Your account data is hard-deleted within 30 days of a deletion request.",
+    "dataGovernance3": "Guest and anonymous users are first-class subjects: the app explains what local data exists and how to clear it — no auth errors returned.",
+    "dataGovernance4": "Every admin configuration change, provider update, mediator PIN action, and GDPR request is logged in an audit trail accessible only to the Data Protection Officer."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of terms",
+        "body": "By accessing or using Redi Health, you agree to these Terms of Service. If you do not agree, do not use the service. These terms apply to all users including guests, registered users, health mediators, and programme administrators."
+      },
+      "service": {
+        "title": "2. What Redi Health provides",
+        "body": "Redi Health is a health literacy and navigation platform. It provides AI-assisted health information, educational content, misinformation fact-checking, symptom guidance, and tools for health mediators. The platform is intended for educational and informational purposes."
+      },
+      "notMedical": {
+        "title": "3. Not a medical device",
+        "body": "Redi Health is not a medical device and does not provide medical diagnosis, treatment, or prescriptions. All content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions. In an emergency, call 112 or your local emergency number immediately."
+      },
+      "aiLimits": {
+        "title": "4. AI limitations",
+        "body": "AI-generated responses are based on general health knowledge and may not reflect the latest clinical guidance, local health system rules, or your individual circumstances. They must not be treated as personalised medical advice. The AI does not diagnose and does not prescribe."
+      },
+      "userConduct": {
+        "title": "5. User conduct",
+        "body": "You must not use Redi Health to obtain specific medical prescriptions or diagnoses, to collect information about others without their consent, for commercial data harvesting, or to circumvent the platform's clinical safety boundaries. Mediators must comply with the Mediator Operating Policy."
+      },
+      "data": {
+        "title": "6. Data and privacy",
+        "body": "Your data is governed by our Privacy Policy and Data Governance Policy, which describe what is collected, how it is used, and how you can export or delete it. Local data (progress, family logs, check-ins) is stored on your device. Server data requires an account. Both are subject to your full data rights."
+      },
+      "liability": {
+        "title": "7. Limitation of liability",
+        "body": "Redi Health is provided 'as is' without warranties of accuracy or fitness for a particular purpose. To the maximum extent permitted by law, Redi Health is not liable for any harm arising from reliance on the platform's content, including AI-generated responses. You use the platform at your own risk."
+      },
+      "changes": {
+        "title": "8. Changes to these terms",
+        "body": "We may update these terms to reflect changes in the platform or applicable law. Material changes will be notified via the app. Continued use of the platform after notification constitutes acceptance of the updated terms."
+      },
+      "contact": {
+        "title": "9. Contact",
+        "body": "For questions about these terms, contact us at legal@redi.healthcare. For data and privacy matters, contact our Data Protection Officer at dpo@redi.healthcare."
+      }
+    }
   }
 }

@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { ArrowLeft, CheckCircle2, XCircle, Trophy, RotateCcw, GraduationCap } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { QUIZZES, type Quiz } from "@/data/quizzes";
 
 export function HealthQuiz() {
+  const t = useTranslations("healthQuiz");
   const [activeQuiz, setActiveQuiz] = useState<Quiz | null>(null);
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
@@ -13,10 +15,10 @@ export function HealthQuiz() {
   const [answered, setAnswered] = useState(false);
 
   const handleAnswer = (index: number) => {
-    if (answered) return;
+    if (answered || !activeQuiz) return;
     setSelected(index);
     setAnswered(true);
-    if (activeQuiz && index === activeQuiz.questions[currentQ].correctIndex) {
+    if (index === activeQuiz.questions[currentQ].correctIndex) {
       setScore((s) => s + 1);
     }
   };
@@ -53,14 +55,18 @@ export function HealthQuiz() {
     const total = activeQuiz.questions.length;
     const pct = Math.round((score / total) * 100);
     const emoji = pct === 100 ? "🏆" : pct >= 75 ? "🎉" : pct >= 50 ? "👍" : "📚";
-    const message = pct === 100 ? "Perfect score!" : pct >= 75 ? "Great job!" : pct >= 50 ? "Good effort!" : "Keep learning!";
+    const message =
+      pct === 100 ? t("results.perfect")
+      : pct >= 75 ? t("results.great")
+      : pct >= 50 ? t("results.good")
+      : t("results.keepLearning");
 
     return (
       <div className="text-center animate-scale-in">
         <span className="text-6xl">{emoji}</span>
         <h2 className="mt-4 text-[22px] font-black text-gray-900">{message}</h2>
         <p className="mt-2 text-[15px] text-gray-500">
-          You got <span className="font-black text-[#C0392B]">{score}</span> out of <span className="font-black">{total}</span> correct
+          {t("results.score", { score, total })}
         </p>
 
         <div className="mx-auto mt-4 h-3 w-48 overflow-hidden rounded-full bg-gray-100">
@@ -69,10 +75,10 @@ export function HealthQuiz() {
 
         <div className="mt-6 flex gap-3">
           <button onClick={retryQuiz} className="flex flex-1 h-[48px] items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 bg-white text-[14px] font-bold text-gray-700 active:scale-[0.97]">
-            <RotateCcw className="h-4 w-4" /> Try again
+            <RotateCcw className="h-4 w-4" /> {t("results.tryAgain")}
           </button>
           <button onClick={resetQuiz} className="flex flex-1 h-[48px] items-center justify-center gap-2 rounded-2xl text-[14px] font-bold text-white active:scale-[0.97]" style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" }}>
-            <Trophy className="h-4 w-4" /> More quizzes
+            <Trophy className="h-4 w-4" /> {t("results.moreQuizzes")}
           </button>
         </div>
       </div>
@@ -80,16 +86,21 @@ export function HealthQuiz() {
   }
 
   if (activeQuiz) {
-    const q = activeQuiz.questions[currentQ];
+    const questions = t.raw(`quizzes.${activeQuiz.id}.questions`) as Array<{
+      question: string;
+      options: string[];
+      explanation: string;
+    }>;
+    const q = questions[currentQ];
+    const correctIndex = activeQuiz.questions[currentQ].correctIndex;
     const total = activeQuiz.questions.length;
 
     return (
       <div>
         <button onClick={resetQuiz} className="mb-4 flex items-center gap-1 text-[13px] font-semibold text-gray-500">
-          <ArrowLeft className="h-4 w-4" /> Back to quizzes
+          <ArrowLeft className="h-4 w-4" /> {t("backToQuizzes")}
         </button>
 
-        {/* Progress */}
         <div className="mb-4 flex items-center gap-3">
           <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-100">
             <div className="h-full rounded-full bg-[#C0392B] transition-all" style={{ width: `${((currentQ + 1) / total) * 100}%` }} />
@@ -97,22 +108,20 @@ export function HealthQuiz() {
           <span className="text-[12px] font-bold text-gray-400">{currentQ + 1}/{total}</span>
         </div>
 
-        {/* Question */}
         <div className="mb-5 rounded-2xl bg-white p-5 shadow-sm animate-fade-in-up" style={{ border: "1px solid rgba(0,0,0,0.04)" }}>
           <p className="text-[16px] font-bold leading-snug text-gray-900">{q.question}</p>
         </div>
 
-        {/* Options */}
         <div className="space-y-2.5">
           {q.options.map((option, i) => {
             let style = "border-gray-100 bg-white text-gray-800";
             let icon = null;
 
             if (answered) {
-              if (i === q.correctIndex) {
+              if (i === correctIndex) {
                 style = "border-green-300 bg-green-50 text-green-800";
                 icon = <CheckCircle2 className="h-5 w-5 text-green-500" />;
-              } else if (i === selected && i !== q.correctIndex) {
+              } else if (i === selected && i !== correctIndex) {
                 style = "border-red-300 bg-red-50 text-red-800";
                 icon = <XCircle className="h-5 w-5 text-red-500" />;
               } else {
@@ -139,7 +148,6 @@ export function HealthQuiz() {
           })}
         </div>
 
-        {/* Explanation */}
         {answered && (
           <div className="mt-4 rounded-2xl border border-blue-100 bg-blue-50 p-4 animate-fade-in-up">
             <p className="text-[13px] leading-relaxed text-blue-800">{q.explanation}</p>
@@ -152,7 +160,7 @@ export function HealthQuiz() {
             className="mt-4 flex w-full h-[48px] items-center justify-center rounded-2xl text-[14px] font-bold text-white active:scale-[0.97]"
             style={{ background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" }}
           >
-            {currentQ + 1 >= total ? "See results" : "Next question"}
+            {currentQ + 1 >= total ? t("seeResults") : t("nextQuestion")}
           </button>
         )}
       </div>
@@ -165,10 +173,8 @@ export function HealthQuiz() {
         <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-amber-500 to-orange-600 shadow-xl shadow-amber-500/25">
           <GraduationCap className="h-10 w-10 text-white" />
         </div>
-        <h1 className="text-[22px] font-black text-gray-900">Health Quiz</h1>
-        <p className="mt-2 text-[13px] text-gray-500">
-          Test your knowledge. Learn something new.
-        </p>
+        <h1 className="text-[22px] font-black text-gray-900">{t("title")}</h1>
+        <p className="mt-2 text-[13px] text-gray-500">{t("subtitle")}</p>
       </div>
 
       <div className="space-y-3">
@@ -183,9 +189,9 @@ export function HealthQuiz() {
               <span className="text-2xl">{quiz.emoji}</span>
             </div>
             <div className="flex-1">
-              <span className="text-[15px] font-bold text-gray-900">{quiz.title}</span>
-              <p className="text-[12px] text-gray-500">{quiz.description}</p>
-              <p className="text-[11px] font-semibold text-gray-400">{quiz.questions.length} questions</p>
+              <span className="text-[15px] font-bold text-gray-900">{t(`quizzes.${quiz.id}.title`)}</span>
+              <p className="text-[12px] text-gray-500">{t(`quizzes.${quiz.id}.description`)}</p>
+              <p className="text-[11px] font-semibold text-gray-400">{t("questionsCount", { count: quiz.questions.length })}</p>
             </div>
           </button>
         ))}

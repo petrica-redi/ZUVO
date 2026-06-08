@@ -19,18 +19,26 @@ function mergeMessages(fallback: Messages, messages: Messages): Messages {
   return merged;
 }
 
+const FALLBACK_LOCALE = "en" as const;
+
 export default getRequestConfig(async ({ requestLocale }) => {
   const requested = await requestLocale;
   const locale = hasLocale(routing.locales, requested)
     ? requested
     : routing.defaultLocale;
-  const messages = (await import(`../../messages/${locale}.json`)).default;
 
+  const english = (await import(`../../messages/${FALLBACK_LOCALE}.json`)).default;
+
+  if (locale === FALLBACK_LOCALE) {
+    return { locale, messages: english };
+  }
+
+  const localeMessages = (await import(`../../messages/${locale}.json`)).default;
+
+  // Always use English as the fallback layer so that any key missing from a
+  // locale file shows in English rather than in the default locale (Romanian).
   return {
     locale,
-    messages:
-      locale === routing.defaultLocale
-        ? messages
-        : mergeMessages((await import(`../../messages/${routing.defaultLocale}.json`)).default, messages),
+    messages: mergeMessages(english, localeMessages),
   };
 });

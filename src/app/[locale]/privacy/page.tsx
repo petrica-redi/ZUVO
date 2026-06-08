@@ -73,6 +73,9 @@ export default async function PrivacyPage({ params }: Props) {
             authRequired={t("authRequired")}
             unavailable={t("unavailable")}
             successDeleted={t("successDeleted")}
+            localExportLabel={t("localExportLabel")}
+            localExportHint={t("localExportHint")}
+            guestNote={t("guestNote")}
           />
 
           {/* Sections */}

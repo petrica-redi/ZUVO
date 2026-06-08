@@ -72,7 +72,283 @@
     "croatia": "Croatia",
     "bosnia": "Bosnia",
     "kosovo": "Kosovo",
-    "slovenia": "Slovenia"
+    "slovenia": "Slovenia",
+    "romaPop": "Roma pop. {population}",
+    "detail": {
+      "back": "Back",
+      "romaPopulation": "Roma population",
+      "ofTotal": "of {total} total ({percent})",
+      "healthAccess": "Health access",
+      "healthChallenges": "Health challenges",
+      "organizationsHelp": "Organizations that can help",
+      "emergency": "Emergency: {number}",
+      "ambulance": "Ambulance: {number}",
+      "askAboutHealth": "Ask about health in {region}"
+    },
+    "healthIndex": {
+      "veryPoor": "Very poor",
+      "poor": "Poor",
+      "fair": "Fair",
+      "good": "Good",
+      "excellent": "Excellent"
+    },
+    "countries": {
+      "romania": {
+        "healthChallenges": {
+          "0": "Limited access to health insurance",
+          "1": "High infant and maternal mortality in Roma communities",
+          "2": "Tuberculosis rates higher than national average",
+          "3": "Low vaccination coverage in rural settlements",
+          "4": "Barriers to registering with family doctors"
+        },
+        "keyFact": "Romania has the largest Roma population in Europe and a national health mediator program.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights, health mediation"
+          },
+          "1": {
+            "focus": "Roma inclusion policies"
+          },
+          "2": {
+            "focus": "Mobile health clinics in marginalized communities"
+          }
+        }
+      },
+      "bulgaria": {
+        "healthChallenges": {
+          "0": "Segregated neighborhoods limiting healthcare access",
+          "1": "High unemployment reducing health insurance coverage",
+          "2": "Cardiovascular disease as leading cause of death",
+          "3": "Low life expectancy compared to national average",
+          "4": "Limited access to specialist care"
+        },
+        "keyFact": "Bulgaria's Roma community health mediator program was one of the first in the Balkans.",
+        "organizations": {
+          "0": {
+            "focus": "Roma health promotion and mediation"
+          },
+          "1": {
+            "focus": "Access to healthcare for marginalized Roma"
+          }
+        }
+      },
+      "hungary": {
+        "healthChallenges": {
+          "0": "Life expectancy 10–15 years lower than national average",
+          "1": "High rates of cardiovascular and respiratory disease",
+          "2": "Poverty-related malnutrition",
+          "3": "Low mental health service uptake",
+          "4": "Geographic isolation in northeastern Hungary"
+        },
+        "keyFact": "Hungary has significant Roma populations concentrated in the Borsod, Szabolcs, and Baranya regions.",
+        "organizations": {
+          "0": {
+            "focus": "Roma education including health literacy"
+          },
+          "1": {
+            "focus": "Roma welfare and health advocacy"
+          }
+        }
+      },
+      "northMacedonia": {
+        "healthChallenges": {
+          "0": "The Šuto Orizari (Sutka) municipality has specific healthcare needs",
+          "1": "Hepatitis B prevalence",
+          "2": "Limited access to gynecological and maternal health services",
+          "3": "High rates of anemia especially in children and women",
+          "4": "COVID-19 vaccination hesitancy"
+        },
+        "keyFact": "Šuto Orizari near Skopje is the largest Roma municipality in the world.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and health access"
+          },
+          "1": {
+            "focus": "Public health and harm reduction"
+          }
+        }
+      },
+      "slovakia": {
+        "healthChallenges": {
+          "0": "Segregated settlements (osady) in eastern Slovakia lack infrastructure",
+          "1": "Tuberculosis rates among the highest in the EU",
+          "2": "Child malnutrition and stunting",
+          "3": "Limited access to clean water and sanitation in settlements",
+          "4": "Discrimination in healthcare settings reported"
+        },
+        "keyFact": "Slovakia has the highest proportion of Roma living in segregated settlements in the EU.",
+        "organizations": {
+          "0": {
+            "focus": "Anti-discrimination in healthcare"
+          },
+          "1": {
+            "focus": "Public health programs including Roma health"
+          }
+        }
+      },
+      "serbia": {
+        "healthChallenges": {
+          "0": "Informal settlements (mahale) lacking health infrastructure",
+          "1": "High rates of hepatitis and intestinal parasites",
+          "2": "Limited birth registration affecting healthcare access",
+          "3": "Substance use challenges in urban Roma youth",
+          "4": "Mental health stigma within communities"
+        },
+        "keyFact": "Serbia's health mediator program trains Roma women as community health liaisons.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and health policy"
+          },
+          "1": {
+            "focus": "Women and children's health"
+          }
+        }
+      },
+      "turkey": {
+        "healthChallenges": {
+          "0": "Roma (Dom and Lom) communities face economic marginalization",
+          "1": "Limited documentation affecting healthcare access",
+          "2": "Higher rates of occupational health risks (waste collection workers)",
+          "3": "Limited maternal healthcare in informal urban areas",
+          "4": "Social isolation and mental health challenges"
+        },
+        "keyFact": "Roma communities in Turkey are largely concentrated in Istanbul, Edirne, and Izmir.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and social inclusion in Turkey"
+          },
+          "1": {
+            "focus": "Roma education and health literacy"
+          }
+        }
+      },
+      "greece": {
+        "healthChallenges": {
+          "0": "Roma in rural camps lack access to municipal health services",
+          "1": "Economic crisis impact on healthcare access for vulnerable groups",
+          "2": "Hepatitis C in some communities",
+          "3": "Limited access to dental care",
+          "4": "Economic precarity worsened by COVID-19"
+        },
+        "keyFact": "Greece has Roma communities in both settled and nomadic camps across Central Macedonia and Thessaly.",
+        "organizations": {
+          "0": {
+            "focus": "Roma inclusion across health, education, housing"
+          },
+          "1": {
+            "focus": "Social and health support for marginalized groups"
+          }
+        }
+      },
+      "albania": {
+        "healthChallenges": {
+          "0": "High child poverty and malnutrition rates",
+          "1": "Limited health insurance coverage",
+          "2": "Maternal mortality higher in Roma communities",
+          "3": "Limited access to safe housing affecting health",
+          "4": "Seasonal work leading to health instability"
+        },
+        "keyFact": "Albania also has an Ashkali (Egyptian) minority historically grouped with Roma communities.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and community development"
+          },
+          "1": {
+            "focus": "Education and health access for Roma"
+          }
+        }
+      },
+      "czech": {
+        "healthChallenges": {
+          "0": "Persistent segregation in housing with health impact",
+          "1": "High rates of preventable cardiovascular disease",
+          "2": "Lower vaccination rates in Roma communities",
+          "3": "Barriers in healthcare communication and literacy",
+          "4": "Challenges in accessing specialist care"
+        },
+        "keyFact": "The Czech Republic has a significant Roma population concentrated in Moravia and northern Bohemia.",
+        "organizations": {
+          "0": {
+            "focus": "Integrated approach to Roma inclusion"
+          },
+          "1": {
+            "focus": "European Roma Grassroots Organizations advocacy"
+          }
+        }
+      },
+      "croatia": {
+        "healthChallenges": {
+          "0": "Roma in Međimurje county face healthcare access barriers",
+          "1": "Language barriers limiting healthcare communication",
+          "2": "Higher rates of diabetes in older Roma adults",
+          "3": "Limited preschool vaccination uptake",
+          "4": "Poverty affecting nutrition and health"
+        },
+        "keyFact": "Croatia's largest Roma community is in Međimurje County near the Hungarian border.",
+        "organizations": {
+          "0": {
+            "focus": "Roma women's health and rights"
+          },
+          "1": {
+            "focus": "Roma policy and inclusion"
+          }
+        }
+      },
+      "bosnia": {
+        "healthChallenges": {
+          "0": "Post-war infrastructure affecting healthcare in some regions",
+          "1": "Lack of personal documents restricting healthcare access",
+          "2": "High unemployment leading to lack of health insurance",
+          "3": "Childhood malnutrition in poorer Roma families",
+          "4": "Limited mental health services for community trauma"
+        },
+        "keyFact": "Bosnia and Herzegovina has Roma communities in both the Federation and Republika Srpska entities.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights, health access, and documentation"
+          },
+          "1": {
+            "focus": "Minority rights including Roma health access"
+          }
+        }
+      },
+      "kosovo": {
+        "healthChallenges": {
+          "0": "Roma in Mitrovica were displaced to lead-contaminated camps",
+          "1": "Severe poverty limiting healthcare access",
+          "2": "Limited Roma health mediators",
+          "3": "Post-conflict trauma and mental health needs",
+          "4": "High child mortality compared to national average"
+        },
+        "keyFact": "Roma in North Mitrovica were exposed to severe lead poisoning in UN camps after the 1999 conflict.",
+        "organizations": {
+          "0": {
+            "focus": "Roma RAE community rights and health"
+          },
+          "1": {
+            "focus": "Health access for displaced Roma populations"
+          }
+        }
+      },
+      "slovenia": {
+        "healthChallenges": {
+          "0": "Roma in Dolenjska and Prekmurje regions face marginalization",
+          "1": "Lower educational attainment affecting health literacy",
+          "2": "Social exclusion impacting mental health",
+          "3": "Limited vaccination uptake in some settlements",
+          "4": "Poverty-related dietary deficiencies"
+        },
+        "keyFact": "Slovenia has two legally recognized Roma communities: the autochthonous (western) and non-autochthonous (eastern) Roma.",
+        "organizations": {
+          "0": {
+            "focus": "Roma social and cultural rights"
+          },
+          "1": {
+            "focus": "Roma welfare and health access"
+          }
+        }
+      }
+    }
   },
   "language": {
     "title": "Language",
@@ -1227,7 +1503,7 @@
     "navMediator": "Mediator workspace",
     "navMediatorDesc": "Log visits and community outreach.",
     "trustBadge1": "Clinically reviewed",
-    "trustBadge2": "15 languages",
+    "trustBadge2": "16 languages",
     "trustBadge3": "GDPR-grade privacy",
     "statLanguages": "Languages supported",
     "statMediators": "Active mediators",
@@ -1245,7 +1521,7 @@
     "heroCardAnswer": "No. Decades of large studies — including over a million children — show no link between vaccines and autism.",
     "heroCardFooter": "Sources verified · PII scrubbed · 0 data sold",
     "heroBadgeAvailable": "Available in",
-    "heroBadgeLanguages": "15 lang.",
+    "heroBadgeLanguages": "16 lang.",
     "heroBadgeMix": "AI + Mediators",
     "audienceKickerStudents": "Students",
     "audienceKickerCommunity": "Community",
@@ -1457,6 +1733,137 @@
     "meta": {
       "title": "Vaccine Guide — Redi Health",
       "description": "Every vaccine explained in simple words."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (Tuberculosis)",
+        "preventsDiseases": [
+          "Tuberculosis (TB)"
+        ],
+        "howItWorks": "This vaccine teaches your baby's body to fight tuberculosis — a serious lung disease that spreads through the air. One small injection in the arm gives protection for years.",
+        "sideEffects": "A small bump or scar on the arm where the injection was given. This is normal and means the vaccine is working.",
+        "mythDebunked": "MYTH: 'TB doesn't exist anymore.' TRUTH: TB still kills 1.5 million people every year. In crowded living conditions, it spreads fast. I have seen TB outbreaks in settlements where families refused this vaccine."
+      },
+      "hepb": {
+        "name": "Hepatitis B",
+        "preventsDiseases": [
+          "Hepatitis B (liver disease)"
+        ],
+        "howItWorks": "Protects the liver from a virus that can cause lifelong liver damage and cancer. Given at birth because babies are most vulnerable.",
+        "sideEffects": "Mild soreness at the injection site. Some babies are a little fussy for a day. Nothing serious.",
+        "mythDebunked": "MYTH: 'My baby is too young for vaccines at birth.' TRUTH: Newborns are actually the most vulnerable. The earlier we protect them, the safer they are. This vaccine has been given to billions of babies safely."
+      },
+      "dtap": {
+        "name": "DTaP (Diphtheria, Tetanus, Pertussis)",
+        "preventsDiseases": [
+          "Diphtheria",
+          "Tetanus (lockjaw)",
+          "Whooping cough"
+        ],
+        "howItWorks": "Three-in-one protection. Diphtheria can block your child's throat. Tetanus causes muscles to lock painfully. Whooping cough makes babies cough so hard they can't breathe.",
+        "sideEffects": "The injection site may be red and sore. Your child might have a mild fever for 1-2 days. Give them extra love and fluids.",
+        "mythDebunked": "MYTH: 'These diseases don't exist anymore, why vaccinate?' TRUTH: They don't exist BECAUSE of vaccines. When communities stop vaccinating, these diseases come back. I saw a whooping cough outbreak in a settlement in 2018 — three babies were hospitalized."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (paralysis)"
+        ],
+        "howItWorks": "Polio is a virus that can paralyze a child's legs permanently in hours. This vaccine has nearly eliminated polio from the world.",
+        "sideEffects": "Very mild. Some redness at the injection site. That's it.",
+        "mythDebunked": "MYTH: 'Polio is gone, we don't need this.' TRUTH: Polio is gone in Europe BECAUSE of this vaccine. It still exists in some countries. One unvaccinated traveler can bring it back."
+      },
+      "mmr": {
+        "name": "MMR (Measles, Mumps, Rubella)",
+        "preventsDiseases": [
+          "Measles",
+          "Mumps",
+          "Rubella (German measles)"
+        ],
+        "howItWorks": "Measles is extremely contagious and can cause brain damage and death. Mumps causes painful swelling. Rubella is dangerous for pregnant women. One vaccine protects against all three.",
+        "sideEffects": "About 1 in 10 children get a mild fever and rash 7-10 days after. This means the body is learning to fight. It goes away on its own.",
+        "mythDebunked": "MYTH: 'MMR causes autism.' TRUTH: This is the most studied vaccine myth in history. Over 1.2 million children studied — NO link to autism. The doctor who made this claim lost his medical license for fraud. I have personally seen children die from measles in settlements where this lie spread."
+      },
+      "pneumo": {
+        "name": "Pneumococcal (PCV13)",
+        "preventsDiseases": [
+          "Pneumonia",
+          "Meningitis",
+          "Blood infections"
+        ],
+        "howItWorks": "Protects against bacteria that cause pneumonia (lung infection), meningitis (brain infection), and blood infections. These are the biggest killers of young children.",
+        "sideEffects": "Mild fever, fussiness, soreness at injection site for 1-2 days.",
+        "mythDebunked": "MYTH: 'Children get sick from too many vaccines.' TRUTH: Children's immune systems handle thousands of germs every day. A few vaccines are nothing compared to what their body already fights."
+      },
+      "rota": {
+        "name": "Rotavirus",
+        "preventsDiseases": [
+          "Severe diarrhea and vomiting in babies"
+        ],
+        "howItWorks": "Given as drops in the mouth (not an injection!). Protects against the virus that causes severe diarrhea in babies — which can be deadly due to dehydration.",
+        "sideEffects": "Very mild. Occasionally a little fussiness or mild diarrhea.",
+        "mythDebunked": "MYTH: 'Diarrhea is normal for babies, they don't need a vaccine.' TRUTH: Rotavirus diarrhea is NOT normal — it causes severe dehydration that kills hundreds of thousands of children worldwide every year."
+      },
+      "varicella": {
+        "name": "Varicella (Chickenpox)",
+        "preventsDiseases": [
+          "Chickenpox"
+        ],
+        "howItWorks": "Chickenpox seems mild but can cause serious skin infections, pneumonia, and brain swelling. The vaccine prevents it almost completely.",
+        "sideEffects": "Mild soreness. Rarely, a few chickenpox-like spots near the injection site.",
+        "mythDebunked": "MYTH: 'It's better to get chickenpox naturally.' TRUTH: Natural chickenpox can cause serious complications and the virus stays in your body forever, causing painful shingles later in life."
+      },
+      "hpv": {
+        "name": "HPV (Human Papillomavirus)",
+        "preventsDiseases": [
+          "Cervical cancer",
+          "Other cancers"
+        ],
+        "howItWorks": "This vaccine prevents cancer. HPV is a very common virus that can cause cervical cancer in women and other cancers in both men and women. Given to teenagers before they are exposed to the virus.",
+        "sideEffects": "Sore arm, sometimes a brief headache or dizziness. Very safe.",
+        "mythDebunked": "MYTH: 'This vaccine encourages sexual activity.' TRUTH: This vaccine prevents CANCER. It has nothing to do with behavior. Would you refuse a cancer-preventing medicine for your child?"
+      },
+      "flu": {
+        "name": "Influenza (Flu)",
+        "preventsDiseases": [
+          "Seasonal flu"
+        ],
+        "howItWorks": "The flu is not just a cold — it can be serious for young children, elderly people, and pregnant women. This vaccine is updated every year to match the current flu strains.",
+        "sideEffects": "Mild soreness, occasionally a low fever for a day. You CANNOT get the flu from the flu vaccine.",
+        "mythDebunked": "MYTH: 'The flu vaccine gives you the flu.' TRUTH: Impossible. The vaccine contains no live virus. If you feel a little off for a day, that's your immune system learning — not the flu."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "At birth"
+      },
+      "2months": {
+        "label": "2 months"
+      },
+      "4months": {
+        "label": "4 months"
+      },
+      "6months": {
+        "label": "6 months"
+      },
+      "12months": {
+        "label": "12 months"
+      },
+      "18months": {
+        "label": "18 months"
+      },
+      "4years": {
+        "label": "4-6 years"
+      },
+      "9years": {
+        "label": "9-12 years"
+      },
+      "adult": {
+        "label": "Adults"
+      },
+      "pregnant": {
+        "label": "Pregnant women"
+      }
     }
   },
   "explain": {
@@ -1560,7 +1967,7 @@
     "values": {
       "careLabel": "Built with care",
       "careDesc": "By health mediators",
-      "languagesLabel": "15 languages",
+      "languagesLabel": "16 languages",
       "languagesDesc": "Across Europe",
       "evidenceLabel": "Evidence-based",
       "evidenceDesc": "WHO guidelines",
@@ -1576,12 +1983,862 @@
     }
   },
   "family": {
+    "title": "Family Health",
+    "subtitle": "Track health for your whole family. All data stays on your phone.",
+    "back": "Back to family",
+    "yearsOld": "{age} years old",
+    "expecting": "· Expecting",
+    "pregnancyTitle": "Pregnancy",
+    "pregnancyWeeks": "Week {weeks} of 40",
+    "pregnancyExpecting": "Expecting",
+    "logMood": "Log Mood",
+    "logWater": "Water",
+    "logActivity": "Activity",
+    "logFormTitle": "Log {type}",
+    "logNote": "Add a note (optional)",
+    "save": "Save",
+    "recentLogs": "Recent logs",
+    "noLogs": "No logs yet. Start tracking!",
+    "addMemberTitle": "Add family member",
+    "addMemberButton": "Add family member",
+    "addToFamily": "Add to family",
+    "namePlaceholder": "Name",
+    "agePlaceholder": "Age",
+    "pregnantLabel": "Currently pregnant",
+    "emptyTitle": "Your family health hub",
+    "emptyDesc": "Add family members to track their health, vaccinations, and medications. Everything stays on your phone — no account needed.",
+    "vaccineTrackingTitle": "Vaccine tracking",
+    "vaccineTrackingDesc": "Coming soon for each member",
+    "medicationRemindersTitle": "Medication reminders",
+    "medicationRemindersDesc": "Coming soon",
+    "logTypes": {
+      "mood": "Mood",
+      "water": "Water (glasses)",
+      "activity": "Activity (min)",
+      "weight": "Weight (kg)",
+      "note": "Note"
+    },
+    "genders": {
+      "female": "Female",
+      "male": "Male",
+      "other": "Other"
+    },
     "relation": {
       "self": "Me",
-      "child": "Child",
-      "spouse": "Spouse",
+      "child": "My child",
+      "spouse": "Spouse / Partner",
       "parent": "Parent",
       "other": "Other"
+    }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Health Glossary — Redi Health",
+      "description": "Medical terms explained in simple words"
+    },
+    "title": "Health Glossary",
+    "subtitle": "Medical terms explained in simple words.",
+    "searchPlaceholder": "Search terms...",
+    "searchAria": "Search medical terms",
+    "noResults": "No terms found. Try a different search.",
+    "allCount": "All ({count})",
+    "categories": {
+      "condition": "Conditions",
+      "medication": "Medications",
+      "procedure": "Procedures",
+      "body": "Body & Health",
+      "test": "Tests"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Hypertension",
+        "simple": "High blood pressure. Your blood pushes too hard against your blood vessels. Can cause heart attack or stroke if not treated. Take your medicine every day."
+      },
+      "diabetes-type-2": {
+        "term": "Diabetes (Type 2)",
+        "simple": "Your body can't use sugar properly. Sugar builds up in your blood and damages your organs. You need medicine, healthy food, and exercise. It is NOT caused by eating too much sugar."
+      },
+      "anemia": {
+        "term": "Anemia",
+        "simple": "Not enough healthy red blood cells. You feel tired, weak, dizzy. Often caused by not eating enough iron (meat, beans, spinach). Very common in pregnant women."
+      },
+      "asthma": {
+        "term": "Asthma",
+        "simple": "Your airways get narrow and swollen, making it hard to breathe. You may wheeze or cough. Use your inhaler when it happens. Avoid smoke and dust."
+      },
+      "tuberculosis-tb": {
+        "term": "Tuberculosis (TB)",
+        "simple": "A serious infection in your lungs. You cough for weeks, lose weight, sweat at night. It spreads through the air. It CAN be cured with 6 months of medicine — but you must finish ALL the pills."
+      },
+      "depression": {
+        "term": "Depression",
+        "simple": "A medical condition where you feel sad, hopeless, or empty for weeks. It is NOT weakness. It is NOT your fault. Medicine and talking to someone can help. Please ask for help."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatitis B/C",
+        "simple": "A virus that attacks your liver. You may not feel sick for years, but it damages your liver slowly. It spreads through blood and needles. There is a vaccine for Hepatitis B."
+      },
+      "pneumonia": {
+        "term": "Pneumonia",
+        "simple": "A serious infection in your lungs. You have fever, cough with mucus, and trouble breathing. You need antibiotics from a doctor. Can be dangerous for babies and old people."
+      },
+      "gastritis": {
+        "term": "Gastritis",
+        "simple": "Your stomach lining is irritated or inflamed. You feel burning pain, nausea, or bloating. Avoid spicy food, alcohol, and smoking. Medicine can help."
+      },
+      "eczema": {
+        "term": "Eczema",
+        "simple": "Itchy, red, dry patches on your skin. It is NOT contagious. Use moisturizer often. Avoid harsh soaps. A doctor can give you cream to help."
+      },
+      "antibiotic": {
+        "term": "Antibiotic",
+        "simple": "Medicine that kills bacteria (germs). It does NOT work against viruses like the flu or cold. You MUST finish the full course even if you feel better, or the germs come back stronger."
+      },
+      "ibuprofen": {
+        "term": "Ibuprofen",
+        "simple": "A painkiller that also reduces swelling and fever. Take with food to protect your stomach. Do not take more than the box says. Not safe during pregnancy."
+      },
+      "paracetamol": {
+        "term": "Paracetamol",
+        "simple": "A common painkiller for headaches and fever. Safe for most people, including pregnant women. Do NOT take more than 4 grams (8 tablets) per day — too much damages your liver."
+      },
+      "insulin": {
+        "term": "Insulin",
+        "simple": "A hormone your body needs to use sugar. People with diabetes may need insulin injections. It is NOT a sign that your diabetes is worse — it's just a different treatment."
+      },
+      "metformin": {
+        "term": "Metformin",
+        "simple": "The most common diabetes medicine. Helps your body use sugar better. Take with food. May cause stomach upset at first — this usually goes away."
+      },
+      "blood-test": {
+        "term": "Blood test",
+        "simple": "A small needle takes a little blood from your arm. It helps the doctor check for infections, anemia, diabetes, and many other things. It hurts for just a second."
+      },
+      "x-ray": {
+        "term": "X-ray",
+        "simple": "A picture of your bones and lungs using special light. You stand still for a few seconds. It does NOT hurt. Safe for most people, but tell the doctor if you are pregnant."
+      },
+      "ultrasound": {
+        "term": "Ultrasound",
+        "simple": "A picture of inside your body using sound waves. The doctor puts gel on your skin and moves a device over it. It does NOT hurt. Used to check babies during pregnancy."
+      },
+      "ecg-ekg": {
+        "term": "ECG / EKG",
+        "simple": "A test that checks your heart rhythm. Small stickers are placed on your chest. It does NOT hurt. Takes about 5 minutes. Shows if your heart is beating normally."
+      },
+      "vaccination": {
+        "term": "Vaccination",
+        "simple": "A small injection that teaches your body to fight a disease BEFORE you get sick. Like training for your immune system. Side effects (sore arm, mild fever) are NORMAL and mean it's working."
+      },
+      "blood-pressure": {
+        "term": "Blood pressure",
+        "simple": "The force of blood pushing against your blood vessel walls. Normal is around 120/80. High blood pressure (over 140/90) is dangerous because you can't feel it, but it damages your heart and brain."
+      },
+      "blood-sugar": {
+        "term": "Blood sugar",
+        "simple": "The amount of sugar (glucose) in your blood. Normal fasting level is 70-100 mg/dL. Too high means diabetes. Too low makes you dizzy and shaky. Test it regularly if you have diabetes."
+      },
+      "bmi": {
+        "term": "BMI",
+        "simple": "Body Mass Index — a number that shows if your weight is healthy for your height. Under 18.5 is underweight. 18.5-25 is normal. Over 25 is overweight. Over 30 is obese."
+      },
+      "immune-system": {
+        "term": "Immune system",
+        "simple": "Your body's army against germs. White blood cells fight infections. Vaccines train your immune system. Good food, sleep, and exercise make it stronger."
+      }
+    }
+  },
+  "healthQuiz": {
+    "meta": {
+      "title": "Health Quiz — Redi Health",
+      "description": "Test your health knowledge with interactive quizzes"
+    },
+    "title": "Health Quiz",
+    "subtitle": "Test your knowledge. Learn something new.",
+    "backToQuizzes": "Back to quizzes",
+    "seeResults": "See results",
+    "nextQuestion": "Next question",
+    "questionsCount": "{count} questions",
+    "results": {
+      "perfect": "Perfect score!",
+      "great": "Great job!",
+      "good": "Good effort!",
+      "keepLearning": "Keep learning!",
+      "score": "You got {score} out of {total} correct",
+      "tryAgain": "Try again",
+      "moreQuizzes": "More quizzes"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotics",
+        "description": "Do you know when to use antibiotics?",
+        "questions": [
+          {
+            "question": "Can antibiotics cure the flu?",
+            "options": [
+              "Yes",
+              "No",
+              "Sometimes"
+            ],
+            "explanation": "The flu is caused by a virus. Antibiotics only kill bacteria. Taking antibiotics for the flu does nothing and can make future infections harder to treat."
+          },
+          {
+            "question": "You feel better after 3 days of antibiotics. Should you stop?",
+            "options": [
+              "Yes, you're cured",
+              "No, finish the full course",
+              "Take half the remaining pills"
+            ],
+            "explanation": "ALWAYS finish the full course. If you stop early, some bacteria survive and become resistant. Next time, the same antibiotic won't work."
+          },
+          {
+            "question": "Can you share antibiotics with a family member who has similar symptoms?",
+            "options": [
+              "Yes, it saves money",
+              "No, never",
+              "Only if it's the same illness"
+            ],
+            "explanation": "Never share antibiotics. Different infections need different medicines. The wrong antibiotic can be dangerous and won't help."
+          },
+          {
+            "question": "What happens if you take antibiotics too often?",
+            "options": [
+              "Nothing bad",
+              "Your body becomes immune to illness",
+              "Bacteria become resistant and harder to kill"
+            ],
+            "explanation": "Antibiotic resistance is a global crisis. When bacteria become resistant, simple infections can become deadly. Only take antibiotics when a doctor prescribes them."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "Vaccines",
+        "description": "Separate facts from myths",
+        "questions": [
+          {
+            "question": "Do vaccines cause autism?",
+            "options": [
+              "Yes",
+              "No",
+              "We don't know"
+            ],
+            "explanation": "NO. This myth started from a fraudulent study that was retracted. The doctor who published it lost his medical license. Dozens of studies with millions of children prove vaccines do NOT cause autism."
+          },
+          {
+            "question": "Is it safe to give a baby multiple vaccines at once?",
+            "options": [
+              "No, it's too much",
+              "Yes, it's safe and tested",
+              "Only one at a time"
+            ],
+            "explanation": "Babies' immune systems handle thousands of germs every day. Combination vaccines are thoroughly tested and safe. Delaying vaccines leaves your child unprotected."
+          },
+          {
+            "question": "My child has a mild cold. Can they still get vaccinated?",
+            "options": [
+              "No, wait until fully healthy",
+              "Yes, a mild cold is fine",
+              "Only with doctor permission"
+            ],
+            "explanation": "A mild cold, low fever, or runny nose is NOT a reason to delay vaccination. Only severe illness requires postponement. Ask your doctor if unsure."
+          },
+          {
+            "question": "Do vaccines contain dangerous chemicals?",
+            "options": [
+              "Yes, they're full of toxins",
+              "No, all ingredients are safe in the tiny amounts used",
+              "Some do, some don't"
+            ],
+            "explanation": "Vaccine ingredients are present in tiny, safe amounts. You get more aluminum from breast milk than from a vaccine. Every ingredient has been tested for safety."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Diabetes",
+        "description": "Understanding diabetes management",
+        "questions": [
+          {
+            "question": "Is diabetes caused by eating too much sugar?",
+            "options": [
+              "Yes",
+              "No, it's more complex",
+              "Only Type 2"
+            ],
+            "explanation": "Diabetes is caused by genetics, lifestyle, and how your body processes insulin. Eating sugar doesn't directly cause it, but an unhealthy diet and obesity increase risk."
+          },
+          {
+            "question": "Can diabetes be cured with natural remedies like cinnamon?",
+            "options": [
+              "Yes, cinnamon cures it",
+              "No, there is no cure but it can be managed",
+              "Yes, with enough garlic and herbs"
+            ],
+            "explanation": "There is NO cure for diabetes. It can be MANAGED with medicine, healthy food, and exercise. Cinnamon may have tiny benefits but CANNOT replace medication. People who stop their medicine end up in hospital."
+          },
+          {
+            "question": "A diabetic person feels dizzy and sweaty. What should you do?",
+            "options": [
+              "Give them insulin",
+              "Give them something sweet immediately",
+              "Tell them to rest"
+            ],
+            "explanation": "These are signs of LOW blood sugar (hypoglycemia). Give them juice, candy, or sugar water immediately. This can be life-threatening. After they feel better, they should eat a proper meal."
+          },
+          {
+            "question": "How often should a diabetic person check their feet?",
+            "options": [
+              "Never, feet are fine",
+              "Every day",
+              "Once a year"
+            ],
+            "explanation": "Diabetes can damage nerves in your feet. You might not feel cuts or sores. Check your feet EVERY DAY for cuts, blisters, or color changes. Small wounds can become serious infections."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Hygiene & Prevention",
+        "description": "Basic health habits that save lives",
+        "questions": [
+          {
+            "question": "How long should you wash your hands with soap?",
+            "options": [
+              "5 seconds",
+              "At least 20 seconds",
+              "1 minute"
+            ],
+            "explanation": "Wash for at least 20 seconds — about the time it takes to sing 'Happy Birthday' twice. This removes most germs. Quick rinses don't work."
+          },
+          {
+            "question": "Is it safe to drink water from a river or stream?",
+            "options": [
+              "Yes, natural water is clean",
+              "No, always boil or filter it first",
+              "Only if it looks clear"
+            ],
+            "explanation": "Even clear water can contain dangerous bacteria and parasites. Always boil water for at least 1 minute or use a filter. Dirty water causes diarrhea, cholera, and typhoid."
+          },
+          {
+            "question": "Your child has diarrhea. What's the most important thing?",
+            "options": [
+              "Stop all food",
+              "Give lots of fluids (water, ORS)",
+              "Give antibiotics"
+            ],
+            "explanation": "Dehydration from diarrhea kills more children than the diarrhea itself. Give oral rehydration solution (ORS) or clean water with a pinch of salt and sugar. Keep breastfeeding babies."
+          },
+          {
+            "question": "When should you wash your hands?",
+            "options": [
+              "Only before eating",
+              "Before eating, after toilet, after touching animals, after coughing",
+              "Only when they look dirty"
+            ],
+            "explanation": "Germs are invisible. Wash hands: before eating/cooking, after using the toilet, after changing diapers, after touching animals, after coughing/sneezing, and after touching sick people."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Know Your Rights — Redi Health",
+      "description": "Patient rights, discrimination help, and legal contacts for Roma communities"
+    },
+    "title": "Know Your Rights",
+    "subtitle": "You have rights as a patient. Learn them. Use them.",
+    "back": "Back",
+    "menu": {
+      "patientRights": {
+        "title": "Patient Rights",
+        "desc": "8 rights every patient has"
+      },
+      "discrimination": {
+        "title": "Facing Discrimination?",
+        "desc": "What to say and do — step by step"
+      },
+      "contacts": {
+        "title": "Legal Help by Country",
+        "desc": "Ombudsman, anti-discrimination, Roma orgs"
+      }
+    },
+    "views": {
+      "patientRights": "Your Patient Rights",
+      "discrimination": "If You Face Discrimination",
+      "discriminationDesc": "Real situations and exactly what to say and do.",
+      "contacts": "Legal Help by Country"
+    },
+    "labels": {
+      "sayThis": "Say this:",
+      "thenDo": "Then do this:",
+      "patientOmbudsman": "Patient Ombudsman",
+      "antiDiscrimination": "Anti-Discrimination",
+      "romaRightsOrg": "Roma Rights Organization"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Right to emergency treatment",
+        "description": "Every hospital MUST treat you in an emergency, even without insurance or documents. This is law in every EU country. If they refuse, ask for the doctor's name and report it."
+      },
+      "information": {
+        "title": "Right to understand your diagnosis",
+        "description": "Your doctor must explain your condition in words you understand. If you don't understand, say: 'Can you explain this more simply?' You can also ask for a written summary."
+      },
+      "consent": {
+        "title": "Right to say no",
+        "description": "No one can force treatment on you. Before any procedure, the doctor must explain what they will do and you must agree. You can always say 'I need time to think.'"
+      },
+      "privacy": {
+        "title": "Right to privacy",
+        "description": "Your medical information is private. Doctors cannot share it with your employer, family, or anyone else without your permission. This includes your HIV status, pregnancy, or mental health."
+      },
+      "interpreter": {
+        "title": "Right to an interpreter",
+        "description": "If you don't speak the local language well, you can request an interpreter. Many hospitals have this service. If not, you can bring someone you trust to translate."
+      },
+      "second-opinion": {
+        "title": "Right to a second opinion",
+        "description": "If you disagree with a diagnosis, you can see another doctor. This is your right. You don't need to explain why."
+      },
+      "records": {
+        "title": "Right to your medical records",
+        "description": "You can ask for a copy of all your medical records at any time. The hospital must provide them. This is useful when changing doctors or moving to another city."
+      },
+      "complaint": {
+        "title": "Right to complain",
+        "description": "If you feel mistreated or discriminated against, you can file a complaint. Every hospital has a complaints procedure. You can also contact the patient ombudsman in your country."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "The hospital refuses to treat you",
+        "whatToSay": "\"I have the right to emergency treatment under EU law. Please write down your name and the reason you are refusing.\"",
+        "whatToDo": [
+          "Stay calm but firm",
+          "Ask for the doctor's full name",
+          "Ask for the refusal in writing",
+          "Call the patient ombudsman",
+          "Contact a Roma rights organization"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Hospital staff are rude or dismissive because of your ethnicity",
+        "whatToSay": "\"I am here for medical help. I expect to be treated with the same respect as every other patient.\"",
+        "whatToDo": [
+          "Ask to speak with the head nurse or department chief",
+          "Note the date, time, and names",
+          "File a written complaint at the hospital",
+          "Report to the national anti-discrimination body"
+        ]
+      },
+      "no-insurance": {
+        "situation": "You don't have health insurance",
+        "whatToSay": "\"I need medical help. What are my options for uninsured patients?\"",
+        "whatToDo": [
+          "Emergency care is always free — insist on it",
+          "Ask about social assistance programs",
+          "Contact a health mediator in your area",
+          "Many NGOs provide free clinics — ask at the hospital"
+        ]
+      },
+      "language-barrier": {
+        "situation": "You can't communicate with the doctor",
+        "whatToSay": "\"I need help understanding. Can you provide an interpreter or speak more slowly?\"",
+        "whatToDo": [
+          "Use this app to translate key phrases",
+          "Bring a trusted person who speaks the language",
+          "Ask for written instructions you can translate later",
+          "Use your phone's camera to translate documents"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Community Stories — Redi Health",
+      "description": "Real health experiences from Roma communities across Europe"
+    },
+    "title": "Community Stories",
+    "subtitle": "Real experiences from Roma communities. Learn from others.",
+    "backToStories": "Back to stories",
+    "lessonLearned": "Lesson learned",
+    "whatToDoNext": "What to do next",
+    "categories": {
+      "vaccines": "Vaccines",
+      "chronic": "Chronic Disease",
+      "maternal": "Pregnancy",
+      "discrimination": "Rights",
+      "prevention": "Prevention",
+      "mental": "Mental Health"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Vaccine guide",
+      "askZuvo": "Ask Zuvo",
+      "explainPrescription": "Explain prescription",
+      "navigateToCare": "Navigate to care",
+      "knowYourRights": "Know your rights",
+      "learnPrevention": "Learn prevention",
+      "checkSymptoms": "Check symptoms",
+      "learnMentalHealth": "Learn about mental health"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": 28,
+        "country": "Romania",
+        "title": "I almost didn't vaccinate my daughter",
+        "story": "My mother-in-law told me vaccines are poison. Everyone in the settlement said the same thing. When my daughter was born, I was scared. But the health mediator came to our home and explained everything — how vaccines work, what the side effects really are. She showed me photos of children with measles. I was more scared of the disease than the vaccine. My daughter got all her vaccines. She is healthy and strong.",
+        "lesson": "Talk to a health mediator or doctor before making decisions based on what others say. Vaccines save lives."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": 52,
+        "country": "Bulgaria",
+        "title": "I stopped my diabetes medicine and almost died",
+        "story": "I was diagnosed with Type 2 diabetes at 45. The medicine made my stomach hurt, so I stopped taking it. My neighbor said cinnamon tea would cure me. For 2 years I drank cinnamon tea instead. Then one day I collapsed. My blood sugar was over 500. The doctors said my kidneys were damaged. Now I take my medicine every day. I wish I had never stopped.",
+        "lesson": "Never stop your medicine without talking to your doctor. Natural remedies cannot replace diabetes medication."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": 22,
+        "country": "Serbia",
+        "title": "My first pregnancy — I didn't know I could see a doctor for free",
+        "story": "When I got pregnant at 19, I didn't go to a doctor for 6 months. I didn't have insurance and I thought it would cost too much. A health mediator told me that prenatal care is free for all pregnant women in Serbia. She helped me register. The doctor found that I had anemia and high blood pressure. If I hadn't gone, my baby could have been in danger.",
+        "lesson": "Prenatal care is free in most European countries. Ask a health mediator to help you register."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": 35,
+        "country": "Hungary",
+        "title": "The hospital tried to send me away",
+        "story": "I went to the emergency room with chest pain. The nurse looked at me and said 'We're full, go to another hospital.' I knew this wasn't right. I said: 'I have chest pain. You must examine me. Please give me your name.' Her attitude changed immediately. They examined me and found I had a heart problem that needed treatment. If I had left, I could have had a heart attack.",
+        "lesson": "You have the right to emergency treatment. If someone tries to turn you away, ask for their name and say you know your rights."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": 31,
+        "country": "Slovakia",
+        "title": "TB is not a death sentence — but you must finish the medicine",
+        "story": "I was coughing for months. I thought it was just a cold. When I finally went to the doctor, they said I had tuberculosis. I was terrified — I thought I would die. But the doctor explained that TB can be cured with 6 months of medicine. The hardest part was taking pills every day for 6 months, even when I felt better after 2 months. But I finished. I am cured.",
+        "lesson": "If you cough for more than 2 weeks, see a doctor. TB is curable, but you MUST finish all the medicine."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": 40,
+        "country": "North Macedonia",
+        "title": "Depression is not weakness — it's an illness",
+        "story": "After my husband died, I couldn't get out of bed for months. My family said I was lazy. They said 'just be strong.' But I couldn't. A health mediator noticed something was wrong and took me to a doctor. The doctor said I had depression — a real medical condition. I started medicine and talking to a counselor. Slowly, I got better. I am not weak. I was sick.",
+        "lesson": "Depression is a medical condition, not a character flaw. Medicine and counseling can help. Please ask for help."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Challenges — Redi Health",
+      "description": "Community Challenges"
+    },
+    "title": "Active Challenges",
+    "subtitle": "Join community goals and personal challenges to earn bonus XP and badges.",
+    "types": {
+      "community": "community",
+      "personal": "personal"
+    },
+    "daysLeft": "{count} days left",
+    "viewLeaderboard": "View Leaderboard",
+    "items": {
+      "c1": {
+        "title": "Vaccine Knowledge Champion",
+        "description": "Get 50 students in your local area to pass the Vaccine module this week."
+      },
+      "c2": {
+        "title": "7-Day Health Streak",
+        "description": "Log your mood and water intake for 7 days in a row."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Certificate — Redi Health",
+      "description": "National Health Literacy Certificate"
+    },
+    "title": "Your Certificate",
+    "subtitle": "You have completed the National Stage of the Student Health Academy.",
+    "ofCompletion": "Certificate of Completion",
+    "diplomaTitle": "National Health Literacy",
+    "awardedFor": "Awarded for completing the Redi Health Student Academy curriculum.",
+    "date": "Date",
+    "downloadPdf": "Download PDF",
+    "share": "Share",
+    "gate": {
+      "title": "Complete the Academy first",
+      "description": "To earn your Health Literacy Certificate, you need to complete all lessons and pass the quiz in the National stage of the Student Health Academy.",
+      "cta": "Go to the Academy"
+    }
+  },
+  "policies": {
+    "title": "Platform Policies",
+    "subtitle": "The governance framework that defines what Redi Health can and cannot do — and the commitments we make to every user.",
+    "goNoGoTitle": "Feature release policy",
+    "goNoGoBody": "Features that may influence clinical decisions require completed policy controls before release: AI triage, symptom severity, prescription outputs, vaccine recommendations, Roma-friendly provider labels, mediator visit logging, youth sexual health, and legal guidance.",
+    "disclaimer": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "clinical-safetyTitle": "Clinical Safety & Escalation",
+    "clinical-safetyDesc": "Defines what the AI may and may not say, how emergencies are escalated before any AI call, and the governance model for all health-related changes.",
+    "clinicalSafety1": "The AI never diagnoses, never prescribes doses, and never advises stopping a prescribed medication.",
+    "clinicalSafety2": "11 emergency patterns bypass the AI entirely and immediately instruct the user to call 112 or a specialist helpline.",
+    "clinicalSafety3": "Every triage output is assigned one of five severity categories — Emergency, Urgent, Routine, Self-care, or Information only.",
+    "clinicalSafety4": "Changes to red-flag patterns, system prompts, or triage logic require sign-off from the clinical governance lead before deployment.",
+    "source-policyTitle": "Public Health Source Policy",
+    "source-policyDesc": "Defines which sources may be used for health claims, how they must be cited, and how they are kept up to date.",
+    "sourcePolicy1": "All health facts cite WHO, ECDC, IFRC, national ministries, or peer-reviewed clinical guidance — never social media, single studies, or commercial sources.",
+    "sourcePolicy2": "Every content module carries a 'last reviewed' date and reviewer role. Overdue modules are hidden automatically.",
+    "sourcePolicy3": "Country-specific overrides (vaccine schedules, emergency numbers, patient rights) follow a 5-step clinical review process before going live.",
+    "safeguardingTitle": "Safeguarding Policy",
+    "safeguardingDesc": "Protections for children, pregnant people, survivors of abuse and coercion, people in mental health crisis, and people seeking sexual health information.",
+    "safeguarding1": "Self-harm and suicidal ideation are intercepted before any AI response — the user receives a crisis line and an instruction to stay with someone they trust.",
+    "safeguarding2": "Descriptions of active domestic violence trigger a safety-first response with the local domestic violence helpline, not general advice.",
+    "safeguarding3": "Sexual health content in the Student Academy requires country-specific legal review and Tier 2 clinical sign-off before release.",
+    "safeguarding4": "Every AI page and triage result includes a visible 'I need help now' button linking to emergency and crisis numbers.",
+    "roma-equityTitle": "Roma Equity & Anti-Stigmatization",
+    "roma-equityDesc": "Standards for how Roma communities are described, how content is reviewed, and how surveillance and profiling are prevented.",
+    "romaEquity1": "All content about Roma communities must follow strengths-based framing — naming structural causes for health disparities, never cultural ones.",
+    "romaEquity2": "Content about Roma health is reviewed by a Roma health mediator or Roma-led NGO before publication.",
+    "romaEquity3": "Ethnicity data is never collected. Analytics are never segmented by ethnic identity. Location data is never stored.",
+    "romaEquity4": "A Roma Health Advisory Board reviews this policy annually and can flag content concerns at any time via equity@redi.healthcare.",
+    "provider-verificationTitle": "Provider Verification",
+    "provider-verificationDesc": "How clinic listings are verified, what 'Roma-friendly' means and requires, and how users can report harm.",
+    "providerVerification1": "The 'Roma-friendly' label requires: no documentation barriers beyond what all patients face, anti-discrimination training, no substantiated complaints in 3 years, and a Roma mediator assessment within 18 months.",
+    "providerVerification2": "Unverified listings carry a mandatory warning banner and an 'Unverified' badge — no Roma-friendly label is shown until criteria are met.",
+    "providerVerification3": "Users can report discrimination or incorrect information directly from every listing. Discrimination reports are reviewed within 3 business days.",
+    "mediator-policyTitle": "Mediator Operating Policy",
+    "mediator-policyDesc": "Role boundaries, consent requirements, data minimisation rules, and safety escalation protocols for field health mediators.",
+    "mediatorPolicy1": "Mediators provide education, navigation, and referral support — not clinical assessment or prescriptions.",
+    "mediatorPolicy2": "A consent attestation is required before every visit log is saved. Logs must not record ethnicity, immigration status, or clinical diagnoses.",
+    "mediatorPolicy3": "Mediators follow a defined referral escalation pathway — immediate 112 call for emergencies, helpline for safeguarding concerns, programme supervisor within 24 hours for non-immediate concerns.",
+    "mediatorPolicy4": "Mediator PINs expire after 12 months and are revoked immediately when a mediator leaves the programme.",
+    "data-governanceTitle": "Data Governance",
+    "data-governanceDesc": "How all data — local and server-stored — is classified, retained, and controlled, and how every user can export or delete their data.",
+    "dataGovernance1": "Local device data (family logs, progress, mediator visits) is treated with the same privacy rights as server data — exportable and deletable from Profile > Data.",
+    "dataGovernance2": "Health logs are retained for 5 years or until you delete them. Your account data is hard-deleted within 30 days of a deletion request.",
+    "dataGovernance3": "Guest and anonymous users are first-class subjects: the app explains what local data exists and how to clear it — no auth errors returned.",
+    "dataGovernance4": "Every admin configuration change, provider update, mediator PIN action, and GDPR request is logged in an audit trail accessible only to the Data Protection Officer."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of terms",
+        "body": "By accessing or using Redi Health, you agree to these Terms of Service. If you do not agree, do not use the service. These terms apply to all users including guests, registered users, health mediators, and programme administrators."
+      },
+      "service": {
+        "title": "2. What Redi Health provides",
+        "body": "Redi Health is a health literacy and navigation platform. It provides AI-assisted health information, educational content, misinformation fact-checking, symptom guidance, and tools for health mediators. The platform is intended for educational and informational purposes."
+      },
+      "notMedical": {
+        "title": "3. Not a medical device",
+        "body": "Redi Health is not a medical device and does not provide medical diagnosis, treatment, or prescriptions. All content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions. In an emergency, call 112 or your local emergency number immediately."
+      },
+      "aiLimits": {
+        "title": "4. AI limitations",
+        "body": "AI-generated responses are based on general health knowledge and may not reflect the latest clinical guidance, local health system rules, or your individual circumstances. They must not be treated as personalised medical advice. The AI does not diagnose and does not prescribe."
+      },
+      "userConduct": {
+        "title": "5. User conduct",
+        "body": "You must not use Redi Health to obtain specific medical prescriptions or diagnoses, to collect information about others without their consent, for commercial data harvesting, or to circumvent the platform's clinical safety boundaries. Mediators must comply with the Mediator Operating Policy."
+      },
+      "data": {
+        "title": "6. Data and privacy",
+        "body": "Your data is governed by our Privacy Policy and Data Governance Policy, which describe what is collected, how it is used, and how you can export or delete it. Local data (progress, family logs, check-ins) is stored on your device. Server data requires an account. Both are subject to your full data rights."
+      },
+      "liability": {
+        "title": "7. Limitation of liability",
+        "body": "Redi Health is provided 'as is' without warranties of accuracy or fitness for a particular purpose. To the maximum extent permitted by law, Redi Health is not liable for any harm arising from reliance on the platform's content, including AI-generated responses. You use the platform at your own risk."
+      },
+      "changes": {
+        "title": "8. Changes to these terms",
+        "body": "We may update these terms to reflect changes in the platform or applicable law. Material changes will be notified via the app. Continued use of the platform after notification constitutes acceptance of the updated terms."
+      },
+      "contact": {
+        "title": "9. Contact",
+        "body": "For questions about these terms, contact us at legal@redi.healthcare. For data and privacy matters, contact our Data Protection Officer at dpo@redi.healthcare."
+      }
+    }
+  },
+  "training": {
+    "modules": {
+      "eciIntro": {
+        "title": "ECI introduction and team roles",
+        "summary": "Who is in the integrated community team, what each role does, and how you collaborate.",
+        "k1": "ECI: community nurse, social worker, school counsellor and (where applicable) Roma health mediator.",
+        "k2": "All members work on the same beneficiary — one shared intervention plan.",
+        "k3": "Your reporting line is the UAT coordinator and the county UJSS.",
+        "k4": "Priority beneficiaries: pregnant women, children, elderly, people with disabilities, guaranteed-minimum-income families."
+      },
+      "legal": {
+        "title": "Legal framework: POIDS and OUG 18/2017",
+        "summary": "Foundations of community medical assistance and the POIDS programme.",
+        "k1": "OUG 18/2017 defines community medical assistance and integrated community centres.",
+        "k2": "POIDS 2021–2027 funds 2,000 rural communes (SMIS 339395).",
+        "k3": "Data confidentiality: GDPR + beneficiary consent for any intervention."
+      },
+      "fir": {
+        "title": "FIR — Risk Identification Sheet",
+        "summary": "How to assess needs, complete the FIR and design a service plan.",
+        "k1": "FIR covers household, hygiene, employment, CNAS insurance, chronic conditions, vaccinations, screenings.",
+        "k2": "Families with 10+ unaddressed risks/needs get quarterly home-visit monitoring.",
+        "k3": "Tag the case in the workspace with the matching vulnerability tag.",
+        "k4": "Re-assess annually or on major events (birth, death, hospital admission)."
+      },
+      "caseMgmt": {
+        "title": "Case management in 5 steps",
+        "summary": "From identification to closure — how to manage a case with the integrated team.",
+        "k1": "Identification — in the field, via referral, or with SPAS/family doctor.",
+        "k2": "Assessment — use FIR and your own needs-assessment tools.",
+        "k3": "Intervention plan — measurable goals, deadlines, responsibles.",
+        "k4": "Monitoring — scheduled home visits, plan adjustments.",
+        "k5": "Closure — when goals are met or the case relocates."
+      },
+      "vaccination": {
+        "title": "Community vaccination: mobilisation and counselling",
+        "summary": "How to mobilise families, handle vaccine hesitancy, and work with the family doctor.",
+        "k1": "Know the national schedule — verify each child in your caseload is up to date.",
+        "k2": "Address myths (autism, content) with evidence — use the fact-check tool.",
+        "k3": "Schedule visits with the family doctor / DSP and accompany families when needed.",
+        "k4": "Document refusals with reasons and plan a follow-up within 30 days."
+      },
+      "maternal": {
+        "title": "Maternal and child health",
+        "summary": "Preventing teenage pregnancies, prenatal monitoring, breastfeeding, postnatal checks.",
+        "k1": "Identify pregnant women at first contact — help register with family doctor / midwife.",
+        "k2": "Folic acid in the first trimester — discuss as soon as pregnancy is confirmed.",
+        "k3": "Support exclusive breastfeeding for 6 months — counter formula myths.",
+        "k4": "Postnatal visits at 7 days and 6 weeks — screen for postnatal depression."
+      },
+      "chronic": {
+        "title": "Community management of chronic disease",
+        "summary": "Hypertension, diabetes, and other chronic conditions — your role in secondary prevention and adherence.",
+        "k1": "Log blood pressure / glucose at monthly visits, flag critical values.",
+        "k2": "Check treatment adherence and detect adverse effects.",
+        "k3": "Facilitate access to specialist follow-up every 3 months."
+      },
+      "tb": {
+        "title": "TB and communicable diseases",
+        "summary": "Spot suspected TB and initiate screening referrals.",
+        "k1": "Cough > 3 weeks, weight loss, night fever — red flags.",
+        "k2": "Refer to TB dispensary or DSP for screening (Mantoux / X-ray).",
+        "k3": "Ensure adherence to DOT (Directly Observed Therapy)."
+      },
+      "screening": {
+        "title": "Screening for cancer and NCDs",
+        "summary": "Cervical, breast, colorectal — how to mobilise the target population.",
+        "k1": "Women 25–64 — Pap smear every 3 years.",
+        "k2": "Women 50–69 — mammography every 2 years.",
+        "k3": "Adults 50–74 — FIT test for colorectal cancer."
+      },
+      "mentalHealth": {
+        "title": "Community mental health",
+        "summary": "Recognise depression, anxiety, and suicidal intent; connect to support.",
+        "k1": "PHQ-2 as a short screen; refer to a doctor if positive.",
+        "k2": "Emergencies: 112 for acute suicidal intent. Helpline: 0800.801.200.",
+        "k3": "Support the family, do not isolate the person; involve the family doctor."
+      },
+      "rights": {
+        "title": "Rights, CNAS insurance, ID documents",
+        "summary": "How to help beneficiaries access their rights, insurance, and ID.",
+        "k1": "CNAS insurance for low-income groups: free through SPAS.",
+        "k2": "ID documents: work with the town hall and the records office.",
+        "k3": "Free access to basic services — even without insurance.",
+        "k4": "Know patient rights — Law 46/2003 and Order 1410/2016."
+      },
+      "school": {
+        "title": "Preventing school dropout",
+        "summary": "Collaborate with the school counsellor to keep children in school.",
+        "k1": "Identify early — repeated absences, behavioural changes.",
+        "k2": "POIDS food packages — direct support for families with children.",
+        "k3": "Talk to parents and the school — build a shared plan."
+      },
+      "communication": {
+        "title": "Communicating with rural beneficiaries",
+        "summary": "Plain language, cultural respect, working with Roma families.",
+        "k1": "Use plain language, no medical jargon.",
+        "k2": "Respect the community's cultural codes — check with the Roma health mediator.",
+        "k3": "Document the family's informed consent for interventions."
+      },
+      "reporting": {
+        "title": "Monthly reporting to DSP / UJSS",
+        "summary": "How to generate the monthly report from the workspace and send it to your coordinator.",
+        "k1": "Indicators are computed automatically in the Indicators tab.",
+        "k2": "Use 'Print report' to save as PDF.",
+        "k3": "Submit to UJSS / county DSP by the 5th of the month."
+      }
     }
   }
 }

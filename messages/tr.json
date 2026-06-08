@@ -11,7 +11,7 @@
     "profile": "Profil",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Aile",
     "more": "More"
   },
   "hero": {
@@ -46,7 +46,283 @@
     "croatia": "Hırvatistan",
     "bosnia": "Bosna",
     "kosovo": "Kosova",
-    "slovenia": "Slovenya"
+    "slovenia": "Slovenya",
+    "romaPop": "Roma nüf. {population}",
+    "detail": {
+      "back": "Geri",
+      "romaPopulation": "Roma nüfusu",
+      "ofTotal": "{total} toplamın ({percent})",
+      "healthAccess": "Sağlık erişimi",
+      "healthChallenges": "Sağlık zorlukları",
+      "organizationsHelp": "Yardımcı olabilecek kuruluşlar",
+      "emergency": "Acil: {number}",
+      "ambulance": "Ambulans: {number}",
+      "askAboutHealth": "{region} bölgesinde sağlık hakkında sor"
+    },
+    "healthIndex": {
+      "veryPoor": "Çok kötü",
+      "poor": "Kötü",
+      "fair": "Orta",
+      "good": "İyi",
+      "excellent": "Mükemmel"
+    },
+    "countries": {
+      "romania": {
+        "healthChallenges": {
+          "0": "Sağlık sigortasına sınırlı erişim",
+          "1": "Roma topluluklarında yüksek bebek ve anne ölümü",
+          "2": "Tüberküloz oranı ulusal ortalamanın üzerinde",
+          "3": "Kırsal yerleşimlerde düşük aşı kapsamı",
+          "4": "Aile hekimine kayıt engelleri"
+        },
+        "keyFact": "Romanya'da Avrupa'nın en büyük Roma nüfusu ve ulusal sağlık arabulucu programı vardır.",
+        "organizations": {
+          "0": {
+            "focus": "Roma hakları, sağlık arabuluculuğu"
+          },
+          "1": {
+            "focus": "Roma dahil etme politikaları"
+          },
+          "2": {
+            "focus": "Marjinal topluluklarda mobil sağlık klinikleri"
+          }
+        }
+      },
+      "bulgaria": {
+        "healthChallenges": {
+          "0": "Sağlık erişimini sınırlayan ayrılmış mahalleler",
+          "1": "Yüksek işsizlik sigorta kapsamını azaltıyor",
+          "2": "Önde gelen ölüm nedeni olarak kardiyovasküler hastalık",
+          "3": "Ulusal ortalamadan düşük yaşam beklentisi",
+          "4": "Uzman bakıma sınırlı erişim"
+        },
+        "keyFact": "Bulgaristan'ın Roma topluluğu sağlık arabulucu programı Balkanlardaki ilklerdendi.",
+        "organizations": {
+          "0": {
+            "focus": "Roma sağlık tanıtımı ve arabuluculuk"
+          },
+          "1": {
+            "focus": "Marjinal Roma için sağlık erişimi"
+          }
+        }
+      },
+      "hungary": {
+        "healthChallenges": {
+          "0": "Yaşam beklentisi ulusal ortalamadan 10–15 yıl düşük",
+          "1": "Yüksek kardiyovasküler ve solunum hastalığı oranları",
+          "2": "Yoksullukla ilişkili yetersiz beslenme",
+          "3": "Düşük ruh sağlığı hizmeti kullanımı",
+          "4": "Kuzeydoğu Macaristan'da coğrafi izolasyon"
+        },
+        "keyFact": "Macaristan'da Borsod, Szabolcs ve Baranya bölgelerinde önemli Roma nüfusları vardır.",
+        "organizations": {
+          "0": {
+            "focus": "Sağlık okuryazarlığı dahil Roma eğitimi"
+          },
+          "1": {
+            "focus": "Roma refahı ve sağlık savunuculuğu"
+          }
+        }
+      },
+      "northMacedonia": {
+        "healthChallenges": {
+          "0": "Šuto Orizari (Sutka) belediyesinin özel sağlık ihtiyaçları var",
+          "1": "Hepatit B yaygınlığı",
+          "2": "Jinekolojik ve anne-çocuk hizmetlerine sınırlı erişim",
+          "3": "Özellikle çocuklarda ve kadınlarda yüksek anemi",
+          "4": "COVID-19 aşısına tereddüt"
+        },
+        "keyFact": "Üsküp yakınındaki Šuto Orizari dünyanın en büyük Roma belediyesidir.",
+        "organizations": {
+          "0": {
+            "focus": "Roma hakları ve sağlık erişimi"
+          },
+          "1": {
+            "focus": "Halk sağlığı ve zarar azaltma"
+          }
+        }
+      },
+      "slovakia": {
+        "healthChallenges": {
+          "0": "Doğu Slovakya'da altyapısız ayrılmış yerleşimler (osady)",
+          "1": "AB'de en yüksek tüberküloz oranlarından",
+          "2": "Çocuk yetersiz beslenmesi",
+          "3": "Yerleşimlerde temiz su ve sanitasyona sınırlı erişim",
+          "4": "Sağlık kurumlarında ayrımcılık bildiriliyor"
+        },
+        "keyFact": "Slovakya'da ayrılmış yerleşimlerde yaşayan Roma oranı AB'de en yüksektir.",
+        "organizations": {
+          "0": {
+            "focus": "Sağlıkta ayrımcılıkla mücadele"
+          },
+          "1": {
+            "focus": "Roma sağlığı dahil halk sağlığı programları"
+          }
+        }
+      },
+      "serbia": {
+        "healthChallenges": {
+          "0": "Sağlık altyapısı olmayan gayri resmi mahalleler (mahale)",
+          "1": "Yüksek hepatit ve bağırsak paraziti oranları",
+          "2": "Doğum kaydının sınırlı olması erişimi etkiliyor",
+          "3": "Kentsel Roma gençlerinde madde kullanımı",
+          "4": "Topluluklarda ruh sağlığı damgalanması"
+        },
+        "keyFact": "Sırbistan'ın sağlık arabulucu programı Roma kadınları topluluk sağlık elçisi olarak eğitiyor.",
+        "organizations": {
+          "0": {
+            "focus": "Roma hakları ve sağlık politikası"
+          },
+          "1": {
+            "focus": "Kadın ve çocuk sağlığı"
+          }
+        }
+      },
+      "turkey": {
+        "healthChallenges": {
+          "0": "Roma (Dom ve Lom) toplulukları ekonomik olarak marjinalleştirilmiş",
+          "1": "Sınırlı belgeler sağlık erişimini etkiliyor",
+          "2": "Daha yüksek mesleki sağlık riskleri (çöp toplayıcıları)",
+          "3": "Gayri resmi kentsel alanlarda sınırlı anne bakımı",
+          "4": "Sosyal izolasyon ve ruh sağlığı zorlukları"
+        },
+        "keyFact": "Türkiye'deki Roma toplulukları çoğunlukla İstanbul, Edirne ve İzmir'de yoğunlaşmıştır.",
+        "organizations": {
+          "0": {
+            "focus": "Türkiye'de Roma hakları ve sosyal dahil etme"
+          },
+          "1": {
+            "focus": "Roma eğitimi ve sağlık okuryazarlığı"
+          }
+        }
+      },
+      "greece": {
+        "healthChallenges": {
+          "0": "Kırsal kamplardaki Romalar belediye sağlık hizmetlerine erişemiyor",
+          "1": "Ekonomik krizin kırılgan gruplar üzerindeki etkisi",
+          "2": "Bazı topluluklarda Hepatit C",
+          "3": "Sınırlı diş bakımı",
+          "4": "COVID-19 ile kötüleşen ekonomik belirsizlik"
+        },
+        "keyFact": "Yunanistan'da Orta Makedonya ve Tesalya'da yerleşik ve göçebe kamplarda Roma toplulukları vardır.",
+        "organizations": {
+          "0": {
+            "focus": "Sağlık, eğitim, konut alanında Roma dahil etme"
+          },
+          "1": {
+            "focus": "Marjinal gruplar için sosyal ve sağlık desteği"
+          }
+        }
+      },
+      "albania": {
+        "healthChallenges": {
+          "0": "Yüksek çocuk yoksulluğu ve yetersiz beslenme",
+          "1": "Sınırlı sağlık sigortası",
+          "2": "Roma topluluklarında daha yüksek anne ölümü",
+          "3": "Sağlığı etkileyen güvenli konuta sınırlı erişim",
+          "4": "Mevsimlik iş sağlık istikrarsızlığına yol açıyor"
+        },
+        "keyFact": "Arnavutluk'ta tarihsel olarak Roma topluluklarıyla gruplandırılan Ashkali (Mısırlı) azınlığı da vardır.",
+        "organizations": {
+          "0": {
+            "focus": "Roma hakları ve topluluk kalkınması"
+          },
+          "1": {
+            "focus": "Roma için eğitim ve sağlık erişimi"
+          }
+        }
+      },
+      "czech": {
+        "healthChallenges": {
+          "0": "Sağlık üzerinde etkisi olan kalıcı konut ayrımı",
+          "1": "Yüksek önlenebilir kardiyovasküler hastalık oranları",
+          "2": "Roma topluluklarında daha düşük aşı oranları",
+          "3": "Sağlık iletişimi ve okuryazarlığında engeller",
+          "4": "Uzman bakıma erişim zorlukları"
+        },
+        "keyFact": "Çek Cumhuriyeti'nde Moravya ve Kuzey Bohemya'da önemli Roma nüfusu vardır.",
+        "organizations": {
+          "0": {
+            "focus": "Roma dahil etme için bütünleşik yaklaşım"
+          },
+          "1": {
+            "focus": "Avrupa Roma sivil toplum savunuculuğu"
+          }
+        }
+      },
+      "croatia": {
+        "healthChallenges": {
+          "0": "Međimurje'deki Romalar sağlık erişim engelleriyle karşılaşıyor",
+          "1": "Sağlık iletişimini sınırlayan dil engelleri",
+          "2": "Yaşlı Romalarda daha yüksek diyabet",
+          "3": "Sınırlı okul öncesi aşılama",
+          "4": "Yoksulluk beslenme ve sağlığı etkiliyor"
+        },
+        "keyFact": "Hırvatistan'ın en büyük Roma topluluğu Macar sınırı yakınındaki Međimurje'dedir.",
+        "organizations": {
+          "0": {
+            "focus": "Roma kadın sağlığı ve hakları"
+          },
+          "1": {
+            "focus": "Roma politikası ve dahil etme"
+          }
+        }
+      },
+      "bosnia": {
+        "healthChallenges": {
+          "0": "Savaş sonrası altyapı bazı bölgelerde sağlığı etkiliyor",
+          "1": "Kişisel belge eksikliği erişimi kısıtlıyor",
+          "2": "Yüksek işsizlik sağlık sigortası eksikliğine yol açıyor",
+          "3": "Daha fakir Roma ailelerinde çocuk yetersiz beslenmesi",
+          "4": "Topluluk travması için sınırlı ruh sağlığı hizmetleri"
+        },
+        "keyFact": "Bosna-Hersek'te hem Federasyon'da hem Republika Srpska'da Roma toplulukları vardır.",
+        "organizations": {
+          "0": {
+            "focus": "Roma hakları, sağlık erişimi ve belgeler"
+          },
+          "1": {
+            "focus": "Roma sağlık erişimi dahil azınlık hakları"
+          }
+        }
+      },
+      "kosovo": {
+        "healthChallenges": {
+          "0": "Mitrovica'daki Romalar kurşunla kirlenmiş kamplara yerleştirildi",
+          "1": "Şiddetli yoksulluk sağlık erişimini sınırlıyor",
+          "2": "Sınırlı Roma sağlık arabulucuları",
+          "3": "Savaş sonrası travma ve ruh sağlığı ihtiyaçları",
+          "4": "Ulusal ortalamaya göre yüksek çocuk ölümü"
+        },
+        "keyFact": "Kuzey Mitrovica'daki Romalar 1999 çatışmasından sonra BM kamplarında ağır kurşun zehirlenmesine maruz kaldı.",
+        "organizations": {
+          "0": {
+            "focus": "RAE topluluğu hakları ve sağlığı"
+          },
+          "1": {
+            "focus": "Yerinden edilmiş Romalar için sağlık erişimi"
+          }
+        }
+      },
+      "slovenia": {
+        "healthChallenges": {
+          "0": "Dolenjska ve Prekmurje'deki Romalar marjinalleştirilmiş",
+          "1": "Daha düşük eğitim sağlık okuryazarlığını etkiliyor",
+          "2": "Sosyal dışlanma ruh sağlığını etkiliyor",
+          "3": "Bazı yerleşimlerde sınırlı aşılama",
+          "4": "Yoksullukla ilişkili beslenme eksiklikleri"
+        },
+        "keyFact": "Slovenya iki yasal Roma topluluğunu tanır: yerli (batı) ve yerli olmayan (doğu).",
+        "organizations": {
+          "0": {
+            "focus": "Roma sosyal ve kültürel hakları"
+          },
+          "1": {
+            "focus": "Roma refahı ve sağlık erişimi"
+          }
+        }
+      }
+    }
   },
   "language": {
     "title": "Dil",
@@ -63,407 +339,486 @@
   },
   "studentHealth": {
     "meta": {
-      "title": "Student Health Academy",
-      "description": "A cinematic, mission-based health literacy academy for high school students: first aid, STIs, vaccines, and critical thinking."
+      "title": "Öğrenci Sağlık Akademisi",
+      "description": "Lise öğrencilerine yönelik sinematik, görev temelli bir sağlık okuryazarlığı akademisi: ilk yardım, STIs, aşılar ve eleştirel düşünme."
     },
     "hub": {
-      "title": "Student Health Academy",
-      "subtitle": "A mission-based health field guide for high school students. Learn what to do before help arrives, how to protect your body and relationships, and how to separate evidence from rumor.",
-      "disclaimer": "Educational field guide only: this is not medical care, diagnosis, or emergency instruction from a clinician. If someone may be in immediate danger, call emergency services. For sexual health, consent, or privacy concerns, seek a trusted adult, school nurse, doctor, clinic, or local helpline.",
-      "countryLabel": "Your country (for tips)",
-      "countryPlaceholder": "Select country (optional)",
-      "countryHint": "Used only on this device to show relevant context. You can change it anytime.",
-      "countryContext": "Context for tips: {country}",
+      "title": "Öğrenci Sağlık Akademisi",
+      "subtitle": "Lise öğrencileri için misyona dayalı bir sağlık alanı rehberi. Yardım gelmeden önce ne yapmanız gerektiğini, vücudunuzu ve ilişkilerinizi nasıl koruyacağınızı ve kanıtları söylentilerden nasıl ayıracağınızı öğrenin.",
+      "disclaimer": "Yalnızca eğitimsel alan kılavuzu: Bu, bir klinisyenden tıbbi bakım, teşhis veya acil durum eğitimi değildir. Birisi acil tehlike altındaysa acil servisleri arayın. Cinsel sağlık, rıza veya mahremiyetle ilgili endişeler için güvenilir bir yetişkine, okul hemşiresine, doktora, kliniğe veya yerel yardım hattına başvurun.",
+      "countryLabel": "Ülkeniz (ipuçları için)",
+      "countryPlaceholder": "Ülke seçin (isteğe bağlı)",
+      "countryHint": "İlgili bağlamı göstermek için yalnızca bu cihazda kullanılır. İstediğiniz zaman değiştirebilirsiniz.",
+      "countryContext": "İpuçları için bağlam: {country}",
       "xpLabel": "XP",
-      "levelLabel": "Level {level}",
-      "commandCenterTitle": "Expedition dashboard",
-      "commandCenterSubtitle": "{completed}/{total} field lessons complete — build practical skills you can use in school, at home, and online.",
-      "overallProgress": "Academy progress",
-      "levelProgress": "Level progress",
-      "maxLevel": "Max level reached",
-      "nextLevelXp": "Next level at {xp} XP",
-      "stageProgress": "Stage progress",
-      "badgesTitle": "Your badges",
-      "stageMapTitle": "Expedition route",
-      "modulesInStage": "modules",
-      "takeStageQuiz": "Stage quiz",
-      "quizLocked": "Complete all modules in this stage to unlock the stage quiz.",
-      "quizIntro": "Answer at least 70% correctly to unlock the next stage.",
-      "stageComplete": "Stage complete!",
-      "nextStageUnlocked": "You unlocked the next stage.",
-      "badgeLocal": "Local champion",
-      "badgeRegional": "Regional explorer",
-      "badgeNational": "National scholar",
-      "badgeLocalDesc": "Finished the local stage quiz.",
-      "badgeRegionalDesc": "Finished the regional stage quiz.",
-      "badgeNationalDesc": "Finished the national stage quiz.",
-      "allStagesComplete": "You completed the full academy path. Keep revisiting lessons to stay sharp.",
-      "kicker": "Field guide for real life",
-      "streakLabel": "Streak",
-      "streakUnitOne": "day",
-      "streakUnitMany": "days",
-      "streakHint": "Keep one lesson a day going",
-      "dayActive": "Active day",
-      "dayInactive": "No activity"
+      "levelLabel": "Seviye {level}",
+      "commandCenterTitle": "Keşif kontrol paneli",
+      "commandCenterSubtitle": "{completed}/{total} saha dersleri tamamlandı — okulda, evde ve internette kullanabileceğiniz pratik beceriler geliştirin.",
+      "overallProgress": "Akademi ilerlemesi",
+      "levelProgress": "Seviye ilerlemesi",
+      "maxLevel": "Maksimum seviyeye ulaşıldı",
+      "nextLevelXp": "Sonraki seviye {xp} XP",
+      "stageProgress": "Aşama ilerlemesi",
+      "badgesTitle": "Rozetleriniz",
+      "stageMapTitle": "Sefer rotası",
+      "modulesInStage": "modüller",
+      "takeStageQuiz": "Sahne sınavı",
+      "quizLocked": "Aşama testinin kilidini açmak için bu aşamadaki tüm modülleri tamamlayın.",
+      "quizIntro": "Bir sonraki aşamanın kilidini açmak için en az %70 doğru yanıt verin.",
+      "stageComplete": "Aşama tamamlandı!",
+      "nextStageUnlocked": "Bir sonraki aşamanın kilidini açtınız.",
+      "badgeLocal": "Yerel şampiyon",
+      "badgeRegional": "Bölgesel kaşif",
+      "badgeNational": "Ulusal bilim adamı",
+      "badgeLocalDesc": "Yerel sahne testini tamamladım.",
+      "badgeRegionalDesc": "Bölgesel aşama testini tamamladım.",
+      "badgeNationalDesc": "Ulusal sahne sınavını tamamladım.",
+      "allStagesComplete": "Akademi yolunun tamamını tamamladınız. Keskin kalmak için dersleri tekrar ziyaret etmeye devam edin.",
+      "kicker": "Gerçek hayat için saha rehberi",
+      "streakLabel": "Çizgi",
+      "streakUnitOne": "gün",
+      "streakUnitMany": "günler",
+      "streakHint": "Günde bir derse devam edin",
+      "dayActive": "Aktif gün",
+      "dayInactive": "Etkinlik yok"
     },
     "stages": {
-      "local": "Local",
-      "localDesc": "Immediate skills for school, home, and friends",
-      "regional": "Regional",
-      "regionalDesc": "Clinic, community, and public-health know-how",
-      "national": "National",
-      "nationalDesc": "Evidence, leadership, and capstone decisions"
+      "local": "Yerel",
+      "localDesc": "Okul, ev ve arkadaşlar için acil beceriler",
+      "regional": "Bölgesel",
+      "regionalDesc": "Klinik, toplum ve halk sağlığı bilgisi",
+      "national": "Ulusal",
+      "nationalDesc": "Kanıt, liderlik ve nihai kararlar"
     },
     "progress": {
-      "xp": "Experience points",
-      "stageLocked": "Locked — complete the previous stage quiz.",
-      "quizRequired": "Quiz required",
-      "allModulesDone": "All modules done — take the quiz!"
+      "xp": "Deneyim puanları",
+      "stageLocked": "Kilitli — önceki aşamadaki sınavı tamamlayın.",
+      "quizRequired": "Test gerekli",
+      "allModulesDone": "Tüm modüller tamamlandı; testi çözün!"
     },
     "quiz": {
-      "title": "Stage checkpoint",
-      "back": "Back to academy",
-      "progress": "Question",
-      "of": "of",
-      "submit": "Next",
-      "seeResults": "See results",
-      "pass": "Checkpoint cleared",
-      "fail": "Checkpoint not cleared yet",
-      "scoreLine": "You got {correct} out of {total} correct ({pct}%).",
-      "needPct": "You need at least 70% to unlock the next stage.",
-      "retry": "Try again",
-      "continueHub": "Back to academy",
-      "stageBriefTitle": "{stage} field checkpoint",
-      "stageBriefBody": "This checkpoint tests judgment, not memorization. Score {pct}% or more to unlock the next expedition stage.",
-      "continueNextStage": "Enter {stage} expedition",
-      "explainCorrect": "Why this is correct",
-      "explainWrong": "Field guide explainer"
+      "title": "Aşama kontrol noktası",
+      "back": "Akademiye geri dön",
+      "progress": "Soru",
+      "of": "arasında",
+      "submit": "Sonraki",
+      "seeResults": "Sonuçları görün",
+      "pass": "Kontrol noktası temizlendi",
+      "fail": "Kontrol noktası henüz temizlenmedi",
+      "scoreLine": "Doğru {total} içinden {correct} elde ettiniz (%{pct}).",
+      "needPct": "Bir sonraki aşamanın kilidini açmak için en az %70'ya ihtiyacınız var.",
+      "retry": "Tekrar dene",
+      "continueHub": "Akademiye geri dön",
+      "stageBriefTitle": "{stage} alan kontrol noktası",
+      "stageBriefBody": "Bu kontrol noktası ezberlemeyi değil muhakemeyi test eder. Bir sonraki sefer aşamasının kilidini açmak için %{pct} veya daha fazla puan alın.",
+      "continueNextStage": "{stage} seferini girin",
+      "explainCorrect": "Bu neden doğru",
+      "explainWrong": "Saha kılavuzu açıklayıcısı"
     },
     "lesson": {
-      "scenarioTitle": "Field scenario",
-      "challengeTitle": "Expedition challenge",
-      "supportTitle": "Confidential support matters",
-      "supportText": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
-      "findCare": "Find care",
-      "knowRights": "Know your rights",
-      "stepLabel": "Lesson {current} of {total}",
-      "completedNote": "Field note logged. You earned XP, saved progress, and unlocked the next best step.",
-      "sourcesTitle": "Verified sources",
-      "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab.",
-      "reviewUpToDate": "Reviewed for clinical accuracy",
-      "reviewOverdue": "Review overdue — verify with a clinician",
-      "reviewMeta": "Reviewed {date} by {reviewer}"
+      "scenarioTitle": "Saha senaryosu",
+      "challengeTitle": "Keşif mücadelesi",
+      "supportTitle": "Gizli destek önemlidir",
+      "supportText": "Bu konu hayatınızda gerçek bir şeye dokunuyorsa, bunu tek başınıza çözmek zorunda değilsiniz. Güvenilir bir yetişkine, okul hemşiresine, doktora, gençlik kliniğine veya yardım hattına yaşadığınız yerde hangi desteğin gizli olduğunu sorun.",
+      "findCare": "Bakım bulun",
+      "knowRights": "Haklarınızı bilin",
+      "stepLabel": "{total} dersinin {current} dersi",
+      "completedNote": "Alan notu günlüğe kaydedildi. XP kazandınız, ilerleme kaydettiniz ve bir sonraki en iyi adımın kilidini açtınız.",
+      "sourcesTitle": "Doğrulanmış kaynaklar",
+      "sourcesNote": "Bağımsız kaynaklar kendiniz doğrulayabilirsiniz. Orijinal kılavuzu yeni bir sekmede açmak için bir satıra dokunun.",
+      "reviewUpToDate": "Klinik doğruluk açısından incelendi",
+      "reviewOverdue": "Süresi geçmiş inceleme — bir klinisyenle doğrulayın",
+      "reviewMeta": "{date}, {reviewer} tarafından incelendi"
     },
     "modules": {
       "local": {
         "emergency101": {
-          "title": "Emergency signals: calling for help",
-          "description": "In an emergency, the first minute is a bridge between chaos and help. Your job is not to become a doctor. Your job is to stay safe, call the right number, and give clear information that helps trained responders find the scene fast.",
-          "tip1": "Lead with location: school name, street, building entrance, landmark, or GPS pin. A perfect medical description is useless if help cannot find you.",
-          "tip2": "Say what happened in one sentence: “A student collapsed and is not responding,” or “There is heavy bleeding from the arm.” Short, concrete details help dispatchers act.",
-          "tip3": "Put the phone on speaker if you can. The dispatcher may coach you while someone else gets an adult, opens a gate, or clears space.",
-          "tip4": "Never film an emergency for attention. Protect privacy, create space, and stay with the person if it is safe until help arrives.",
-          "fact": "Emergency systems are designed around fast, accurate information. Clear location plus a brief description can shorten the time between the call and professional care.",
-          "action": "Create a phone note called “Emergency info” with your home address, school address, and one nearby landmark for each.",
-          "scenario": "During sports practice, a classmate suddenly drops to the ground. The gym gets loud. One person is recording. No adult is beside the student yet.",
-          "challenge": "Write a 15-second emergency script: who you are, where you are, what happened, and what you need."
+          "title": "Acil durum sinyalleri: yardım çağırma",
+          "description": "Acil bir durumda ilk dakika, kaos ve yardım arasında bir köprüdür. Senin işin doktor olmak değil. Göreviniz güvende kalmak, doğru numarayı aramak ve eğitimli müdahale ekiplerinin olay yerini hızla bulmasına yardımcı olacak net bilgiler vermektir.",
+          "tip1": "Konum bilgisi: okul adı, cadde, bina girişi, önemli nokta veya GPS pini. Yardım sizi bulamazsa mükemmel bir tıbbi açıklama işe yaramaz.",
+          "tip2": "Ne olduğunu tek bir cümleyle anlatın: \"Bir öğrenci yere yığıldı ve tepki vermiyor\" veya \"Kolunda ağır kanama var.\" Kısa, somut ayrıntılar sevk görevlilerinin harekete geçmesine yardımcı olur.",
+          "tip3": "Mümkünse telefonu hoparlöre alın. Başkası bir yetişkini alırken, bir kapıyı açarken veya alanı temizlerken sevk memuru size koçluk yapabilir.",
+          "tip4": "Asla dikkat çekmek için acil bir durumu filme almayın. Gizliliği koruyun, alan yaratın ve yardım gelene kadar güvenliyse kişinin yanında kalın.",
+          "fact": "Acil durum sistemleri hızlı ve doğru bilgi etrafında tasarlanmıştır. Açık konum ve kısa bir açıklama, çağrı ile profesyonel bakım arasındaki süreyi kısaltabilir.",
+          "action": "Ev adresinizi, okul adresinizi ve her biri için yakındaki bir yer işaretini içeren \"Acil durum bilgisi\" adlı bir telefon notu oluşturun.",
+          "scenario": "Spor antrenmanı sırasında bir sınıf arkadaşı aniden yere düşüyor. Spor salonunun sesi artıyor. Bir kişi kayıt yapıyor. Henüz öğrencinin yanında yetişkin yok.",
+          "challenge": "15 saniyelik bir acil durum senaryosu yazın: kimsiniz, neredesiniz, ne oldu ve neye ihtiyacınız var."
         },
         "bleedingBasics": {
-          "title": "Bleeding: pressure buys time",
-          "description": "Blood can make people panic, but the first response is simple: protect yourself, press firmly, and get help. Pressure is not dramatic, but it is one of the most powerful first-aid actions a bystander can take.",
-          "tip1": "Protect yourself if possible: gloves are best, but a plastic bag or folded cloth is better than bare hands if blood is visible.",
-          "tip2": "Press directly on the wound with the cleanest cloth available. Strong, steady pressure matters more than constantly checking how it looks.",
-          "tip3": "If blood soaks through, add more cloth on top. Removing the first layer can pull away early clots and restart bleeding.",
-          "tip4": "Call emergency services for heavy bleeding, spurting blood, deep wounds, or bleeding that does not slow with firm pressure.",
-          "fact": "Many severe external bleeds can be slowed before professionals arrive. The difference is often whether someone starts firm pressure immediately.",
-          "action": "Find the first-aid kit at home or school and identify what could be used for clean pressure in an emergency.",
-          "scenario": "After school, someone cuts their forearm on broken glass. Their sleeve is wet with blood, and friends are afraid to touch anything.",
-          "challenge": "Practice saying the rule out loud: “Press. Add layers. Keep pressing. Call for help.”"
+          "title": "Kanama: Basınç zaman kazandırır",
+          "description": "Kan insanları paniğe sevk edebilir, ancak ilk tepki basittir: kendinizi koruyun, sıkıca bastırın ve yardım alın. Basınç dramatik değildir ancak olay yerinde bulunan birinin yapabileceği en güçlü ilk yardım eylemlerinden biridir.",
+          "tip1": "Mümkünse kendinizi koruyun: eldivenler en iyisidir, ancak kan görülüyorsa plastik bir torba veya katlanmış bir bez çıplak elle kullanmaktan daha iyidir.",
+          "tip2": "Mevcut en temiz bezle doğrudan yaranın üzerine bastırın. Güçlü ve sabit basınç, nasıl göründüğünü sürekli kontrol etmekten daha önemlidir.",
+          "tip3": "Kan emilirse üstüne daha fazla bez ekleyin. İlk katmanın çıkarılması erken pıhtıları uzaklaştırabilir ve kanamayı yeniden başlatabilir.",
+          "tip4": "Ağır kanama, fışkıran kan, derin yaralar veya sert baskıyla yavaşlamayan kanamalarda acil servisleri arayın.",
+          "fact": "Birçok şiddetli dış kanama, profesyoneller gelmeden önce yavaşlatılabilir. Aradaki fark genellikle birisinin hemen sıkı bir baskıya başlayıp başlamamasıdır.",
+          "action": "Evde veya okulda ilk yardım çantasını bulun ve acil bir durumda temiz basınç için neyin kullanılabileceğini belirleyin.",
+          "scenario": "Okuldan sonra birisi kırık cam yüzünden önkolunu kesti. Kolları kanla ıslanmış ve arkadaşları herhangi bir şeye dokunmaktan korkuyorlar.",
+          "challenge": "Kuralı yüksek sesle söyleyerek alıştırma yapın: \"Basın. Katman ekleyin. Basmaya devam edin. Yardım çağırın.\""
         },
         "burnsBasics": {
-          "title": "Burns: cool the heat, protect the skin",
-          "description": "A burn keeps damaging tissue after the heat source is gone. The goal is to cool the skin safely, avoid folk remedies that trap heat, and know when a burn needs urgent medical care.",
-          "tip1": "Cool running water is the first move for many minor burns. Keep it gentle and cool, not icy.",
-          "tip2": "Skip butter, oil, toothpaste, flour, or egg. They can trap heat, hide the injury, and raise infection risk.",
-          "tip3": "Remove tight rings, bracelets, or clothing near the burn if they are not stuck, because swelling can happen quickly.",
-          "tip4": "Get urgent care for burns on the face, hands, genitals, large areas, deep burns, chemical burns, electrical burns, or trouble breathing.",
-          "fact": "Early cooling can reduce pain and depth of injury. The best burn care often begins before anyone reaches a clinic.",
-          "action": "Teach one person the burn rule: cool water first, cover loosely, no kitchen remedies.",
-          "scenario": "A younger sibling touches a hot pan. An older relative reaches for toothpaste because “that always helped before.”",
-          "challenge": "Make a two-line poster: “Cool the burn. Do not cover it with food or paste.”"
+          "title": "Yanıklar: ısıyı soğutun, cildi koruyun",
+          "description": "Yanık, ısı kaynağı gittikten sonra bile dokuya zarar vermeye devam eder. Amaç, cildi güvenli bir şekilde soğutmak, ısıyı hapseden halk ilaçlarından kaçınmak ve yanıkların ne zaman acil tıbbi bakıma ihtiyaç duyduğunu bilmektir.",
+          "tip1": "Birçok küçük yanık için ilk hareket soğuk sudur. Buzlu değil, yumuşak ve serin tutun.",
+          "tip2": "Tereyağı, sıvı yağ, diş macunu, un veya yumurtayı atlayın. Isıyı hapsedebilir, yaralanmayı gizleyebilir ve enfeksiyon riskini artırabilirler.",
+          "tip3": "Yanık yakınındaki sıkı halkaları, bilezikleri veya giysileri, eğer sıkışmış değillerse çıkarın, çünkü şişme çok çabuk gerçekleşebilir.",
+          "tip4": "Yüzdeki, ellerdeki, cinsel organlardaki, geniş bölgelerdeki yanıklar, derin yanıklar, kimyasal yanıklar, elektrik yanıkları veya nefes almada zorluk için acil bakım alın.",
+          "fact": "Erken soğutma ağrıyı ve yaralanma derinliğini azaltabilir. En iyi yanık bakımı genellikle kimse kliniğe ulaşmadan başlar.",
+          "action": "Bir kişiye yanma kuralını öğretin: önce soğuk su, üzerini gevşek bir şekilde örtün, mutfak ilaçları kullanmayın.",
+          "scenario": "Küçük bir kardeş sıcak bir tavaya dokunuyor. Yaşlı bir akraba diş macununa uzanıyor çünkü \"bu daha önce de hep işe yaramıştı.\"",
+          "challenge": "İki satırlık bir poster hazırlayın: \"Yanığı soğutun. Üzerini yiyecek veya macunla kapatmayın.\""
         },
         "stiBasics": {
-          "title": "STIs: facts without shame",
-          "description": "Sexually transmitted infections are health conditions, not character judgments. Some are curable, some are manageable, and many have no symptoms at first. Accurate information protects people from stigma and from delayed care.",
-          "tip1": "Symptoms are not a reliable test. Many STIs can be silent while still affecting health or spreading to partners.",
-          "tip2": "Condoms and dental dams reduce risk when used correctly, but no tool works if someone is pressured or unable to use it safely.",
-          "tip3": "Testing is responsible. It is something people do to care for themselves and others, not something to gossip about.",
-          "tip4": "Ask clinics directly about confidentiality: who can see results, what age rules apply, and whether services are youth-friendly.",
-          "fact": "Untreated infections such as chlamydia and gonorrhea can lead to serious complications, but testing and treatment are effective when people get care early.",
-          "action": "Identify one trustworthy sexual-health source in your country: a health ministry page, youth clinic, school nurse, or helpline.",
-          "scenario": "A friend says, “I would know if someone had an STI just by looking.” Another student quietly stops talking.",
-          "challenge": "Prepare a stigma-free reply: “You cannot always tell. Testing is normal, private, and responsible.”"
+          "title": "STIs: utanmadan gerçekler",
+          "description": "Cinsel yolla bulaşan enfeksiyonlar karakter yargıları değil, sağlık koşullarıdır. Bazıları tedavi edilebilir, bazıları yönetilebilir ve birçoğunun ilk başta hiçbir semptomu yoktur. Doğru bilgi, insanları damgalanmaktan ve gecikmiş tedaviden korur.",
+          "tip1": "Semptomlar güvenilir bir test değildir. Pek çok STIs, sağlığı etkilemeye veya partnerlerine yayılmaya devam ederken sessiz kalabilir.",
+          "tip2": "Prezervatif ve diş barajları doğru kullanıldığında riski azaltır, ancak birisi baskı altındaysa veya onu güvenli bir şekilde kullanamıyorsa hiçbir alet işe yaramaz.",
+          "tip3": "Test sorumludur. Bu insanların kendilerine ve başkalarına değer vermek için yaptıkları bir şeydir, hakkında dedikodu yapılacak bir şey değil.",
+          "tip4": "Kliniklere gizlilik konusunu doğrudan sorun: sonuçları kim görebilir, hangi yaş kuralları geçerlidir ve hizmetlerin gençlere uygun olup olmadığı.",
+          "fact": "Klamidya ve bel soğukluğu gibi tedavi edilmeyen enfeksiyonlar ciddi komplikasyonlara yol açabilir, ancak insanlar erken müdahale ettiğinde test ve tedavi etkilidir.",
+          "action": "Ülkenizde güvenilir bir cinsel sağlık kaynağı belirleyin: bir sağlık bakanlığı sayfası, gençlik kliniği, okul hemşiresi veya yardım hattı.",
+          "scenario": "Bir arkadaşım şöyle diyor: \"Birinin STI olup olmadığını sadece bakarak anlardım.\" Başka bir öğrenci sessizce konuşmayı bırakıyor.",
+          "challenge": "Damgalanmadan uzak bir yanıt hazırlayın: \"Her zaman söyleyemezsiniz. Test yapmak normal, özel ve sorumlu bir işlemdir.\""
         },
         "consentBasics": {
-          "title": "Consent: the clearest yes",
-          "description": "Consent is not a technicality. It is the foundation of safety, respect, and trust. A healthy relationship gives every person the freedom to say yes, no, wait, or stop without fear of punishment.",
-          "tip1": "Consent must be freely chosen. Pressure, threats, guilt, alcohol, drugs, or power differences can make “yes” unsafe or invalid.",
-          "tip2": "Silence is not consent. Freezing, going quiet, or not fighting back is not the same as wanting something.",
-          "tip3": "Consent is ongoing. Someone can change their mind even if they agreed earlier, even in a relationship.",
-          "tip4": "Digital boundaries count. Repeatedly asking for photos, sharing private images, or threatening exposure is not respect.",
-          "fact": "Consent education reduces harm because it gives students practical language for boundaries before pressure becomes danger.",
-          "action": "Choose a trusted person or service you could contact if you or a friend felt pressured, unsafe, or threatened.",
-          "scenario": "Someone keeps asking for private photos after being told no, then says, “If you loved me, you would.”",
-          "challenge": "Write a boundary script you could send quickly: “No. Stop asking. I am leaving this conversation.”"
+          "title": "Onay: en açık evet",
+          "description": "Rıza teknik bir husus değildir. Güvenliğin, saygının ve güvenin temelidir. Sağlıklı bir ilişki herkese evet, hayır deme, bekleme veya ceza korkusu olmadan durma özgürlüğü verir.",
+          "tip1": "Rıza serbestçe seçilmelidir. Baskı, tehdit, suçluluk duygusu, alkol, uyuşturucu veya güç farklılıkları “evet”i güvensiz veya geçersiz kılabilir.",
+          "tip2": "Sessizlik rıza değildir. Donmak, sessiz kalmak ya da karşılık vermemek bir şeyi istemekle aynı şey değildir.",
+          "tip3": "Muvafakat devam ediyor. Birisi daha önce anlaşsa bile, bir ilişkide bile fikrini değiştirebilir.",
+          "tip4": "Dijital sınırlar önemlidir. Tekrar tekrar fotoğraf istemek, özel görselleri paylaşmak veya ifşa etme tehdidinde bulunmak saygı değildir.",
+          "fact": "Rıza eğitimi zararı azaltır çünkü öğrencilere baskı tehlikeye dönüşmeden önce sınırlar için pratik bir dil sağlar.",
+          "action": "Siz veya bir arkadaşınız kendinizi baskı altında, güvensiz veya tehdit altında hissettiğinizde iletişim kurabileceğiniz güvenilir bir kişiyi veya hizmeti seçin.",
+          "scenario": "Birisi hayır dedikten sonra özel fotoğraf istemeye devam ediyor ve ardından \"Beni sevseydin yapardın\" diyor.",
+          "challenge": "Hızlıca gönderebileceğiniz bir sınır senaryosu yazın: \"Hayır. Sormayı bırak. Bu sohbetten ayrılıyorum.\""
         }
       },
       "regional": {
         "chokingBasics": {
-          "title": "Choking: recognize the silent emergency",
-          "description": "Choking can turn a normal lunch table into a life-threatening emergency in seconds. The safest response begins with recognizing whether the person can cough or breathe, calling for help, and using trained techniques when needed.",
-          "tip1": "If the person is coughing hard, encourage coughing and stay close. A strong cough is the body’s best tool.",
-          "tip2": "If they cannot speak, cough, cry, or breathe, treat it as an emergency and call for help immediately.",
-          "tip3": "Back blows and abdominal thrusts should be learned from a certified first-aid instructor. Good technique matters.",
-          "tip4": "After a serious choking episode, medical evaluation is wise even if the person seems better.",
-          "fact": "Choking is often quiet, not dramatic. Bystanders who recognize the signs quickly can make the difference before professionals arrive.",
-          "action": "Ask your school who is trained in first aid and where students can learn CPR or choking response.",
-          "scenario": "In the cafeteria, a student suddenly stands up, grabs their throat, and cannot answer when friends ask what is wrong.",
-          "challenge": "Find out where your school keeps emergency contacts and who is first-aid trained."
+          "title": "Boğulma: sessiz acil durumu tanıyın",
+          "description": "Boğulma, normal bir öğle yemeği masasını saniyeler içinde yaşamı tehdit eden bir acil duruma dönüştürebilir. En güvenli müdahale, kişinin öksürüp öksüremediğini veya nefes alıp alamayacağını anlamak, yardım çağırmak ve gerektiğinde eğitimli teknikleri kullanmakla başlar.",
+          "tip1": "Kişi çok öksürüyorsa öksürmesini teşvik edin ve yakınınızda kalın. Güçlü bir öksürük vücudun en iyi aracıdır.",
+          "tip2": "Konuşamıyor, öksüremiyor, ağlayamıyor veya nefes alamıyorsa, bunu acil bir durum olarak değerlendirin ve hemen yardım çağırın.",
+          "tip3": "Sırta darbeler ve karına baskılar sertifikalı bir ilk yardım eğitmeninden öğrenilmelidir. İyi teknik önemlidir.",
+          "tip4": "Ciddi bir boğulma olayından sonra kişi daha iyi görünse bile tıbbi değerlendirme akıllıca olacaktır.",
+          "fact": "Boğulma genellikle sessizdir, dramatik değildir. İşaretleri hızlı bir şekilde tanıyan çevredeki kişiler, profesyoneller gelmeden önce fark yaratabilirler.",
+          "action": "Okulunuza kimin ilk yardım eğitimi aldığını ve öğrencilerin CPR veya boğulma tepkisini nerede öğrenebileceklerini sorun.",
+          "scenario": "Kafeteryada bir öğrenci aniden ayağa kalkıyor, boğazını tutuyor, arkadaşları ne olduğunu sorduğunda cevap veremiyor.",
+          "challenge": "Okulunuzun acil durum irtibat kişilerinin nerede bulunduğunu ve kimlerin ilk yardım eğitimi aldığını öğrenin."
         },
         "stiTesting": {
-          "title": "Testing and treatment: privacy, proof, care",
-          "description": "Testing replaces fear with facts. It can feel intimidating, but clinics do this every day. The strongest move is to ask clear questions about privacy, testing options, treatment, and partner safety.",
-          "tip1": "Tests may use urine, blood, or swabs. A clinician can explain what is needed based on exposure and symptoms.",
-          "tip2": "Be honest with clinicians. They are not there to judge; accurate information helps them choose the right tests.",
-          "tip3": "If treatment is prescribed, take it exactly as directed and ask when it is safe to have sex again.",
-          "tip4": "Partners may need testing or treatment. Clinics can help with safe, private ways to communicate this.",
-          "fact": "Early testing and treatment can prevent long-term complications and reduce transmission in a community.",
-          "action": "Write down three clinic questions: “Is this confidential?”, “Which tests do I need?”, “When should I retest?”",
-          "scenario": "A friend is worried after possible exposure but says, “If I go to a clinic, everyone will know.”",
-          "challenge": "Build a privacy checklist a student could use before making an appointment."
+          "title": "Test ve tedavi: gizlilik, kanıt, bakım",
+          "description": "Test, korkuyu gerçeklerle değiştirir. Korkutucu gelebilir ama klinikler bunu her gün yapıyor. En güçlü hamle gizlilik, test seçenekleri, tedavi ve partner güvenliği hakkında net sorular sormaktır.",
+          "tip1": "Testlerde idrar, kan veya swablar kullanılabilir. Bir klinisyen maruziyet ve semptomlara dayanarak neyin gerekli olduğunu açıklayabilir.",
+          "tip2": "Klinisyenlere karşı dürüst olun. Yargılamak için orada değiller; doğru bilgi, doğru testleri seçmelerine yardımcı olur.",
+          "tip3": "Eğer tedavi reçete edilirse, onu aynen anlatıldığı gibi alın ve tekrar seks yapmanın ne zaman güvenli olacağını sorun.",
+          "tip4": "Partnerlerin teste veya tedaviye ihtiyacı olabilir. Klinikler bunu iletmenin güvenli ve özel yollarını sunarak yardımcı olabilir.",
+          "fact": "Erken test ve tedavi, uzun vadeli komplikasyonları önleyebilir ve toplumdaki bulaşmayı azaltabilir.",
+          "action": "Üç klinik sorusunu yazın: \"Bu gizli mi?\", \"Hangi testlere ihtiyacım var?\", \"Ne zaman tekrar test yapmalıyım?\"",
+          "scenario": "Bir arkadaşım olası bir maruziyetten dolayı endişeleniyor ve “Kliniğe gidersem herkes öğrenecek” diyor.",
+          "challenge": "Randevu almadan önce öğrencinin kullanabileceği bir gizlilik kontrol listesi oluşturun."
         },
         "vaccineLiteracy": {
-          "title": "Vaccines: training the immune system",
-          "description": "Vaccines are not magic shields; they are training sessions for the immune system. They help the body recognize danger before a real infection has the chance to cause serious harm.",
-          "tip1": "A vaccine schedule is a map. It shows which protections are recommended at different ages and when catch-up doses may be needed.",
-          "tip2": "A sore arm or mild fever can happen because the immune system is responding. Clinics can tell you what is normal and what is not.",
-          "tip3": "Vaccines are monitored for safety before and after approval. Serious allergic reactions are rare, and clinics are prepared for them.",
-          "tip4": "If you missed a dose, do not guess. Ask a clinician or official schedule about catch-up options.",
-          "fact": "High vaccine coverage protects individuals and also helps protect people who cannot be vaccinated for medical reasons.",
-          "action": "Check your vaccine record with a parent, guardian, doctor, or school nurse and list one question to ask.",
-          "scenario": "A group chat claims a vaccine “rewrites your DNA.” The post has dramatic music and no source.",
-          "challenge": "Find the same vaccine on a public health website and write one evidence-based reply."
+          "title": "Aşılar: bağışıklık sistemini eğitmek",
+          "description": "Aşılar sihirli kalkanlar değildir; bağışıklık sistemi için eğitim seanslarıdır. Gerçek bir enfeksiyonun ciddi zarara neden olma şansına sahip olmadan önce vücudun tehlikeyi tanımasına yardımcı olurlar.",
+          "tip1": "Aşı takvimi bir haritadır. Farklı yaşlarda hangi korumaların önerildiğini ve ne zaman telafi dozlarına ihtiyaç duyulabileceğini gösterir.",
+          "tip2": "Bağışıklık sisteminin tepki vermesi nedeniyle kolda ağrı veya hafif ateş meydana gelebilir. Klinikler size neyin normal olup neyin olmadığını söyleyebilir.",
+          "tip3": "Aşılar onay öncesinde ve sonrasında güvenlik açısından izlenmektedir. Ciddi alerjik reaksiyonlar nadirdir ve klinikler bunlara göre hazırlanır.",
+          "tip4": "Bir dozu kaçırdıysanız tahmin etmeyin. Telafi seçenekleri hakkında bir klinisyene veya resmi programa danışın.",
+          "fact": "Yüksek aşı kapsamı bireyleri korur ve aynı zamanda tıbbi nedenlerle aşılanamayan kişilerin korunmasına da yardımcı olur.",
+          "action": "Aşı kayıtlarınızı bir ebeveyn, veli, doktor veya okul hemşiresiyle kontrol edin ve sorulacak bir soruyu listeleyin.",
+          "scenario": "Bir grup sohbeti, aşının \"DNA'nizi yeniden yazdığını\" iddia ediyor. Gönderide dramatik müzik var ve kaynak yok.",
+          "challenge": "Aynı aşıyı bir halk sağlığı web sitesinde bulun ve kanıta dayalı bir yanıt yazın."
         },
         "vpdExamples": {
-          "title": "Diseases vaccines can prevent",
-          "description": "A vaccine card is not just paperwork. It is a record of protection against diseases that once injured or killed far more young people: measles, hepatitis B, HPV-related cancers, and more.",
-          "tip1": "Measles spreads through the air and can cause pneumonia, brain swelling, and death. It is not just a rash.",
-          "tip2": "HPV vaccination can prevent several cancers later in life. It works best before exposure to the virus.",
-          "tip3": "Hepatitis B can become a chronic liver infection. Vaccination is a major tool for prevention.",
-          "tip4": "Disease stories travel fast online. Evidence from health agencies travels slower but is far more reliable.",
-          "fact": "Before widespread vaccination, measles killed millions globally. Vaccines changed what childhood risk looked like.",
-          "action": "Choose one vaccine-preventable disease and make a three-bullet “why it matters” card.",
-          "scenario": "Students are preparing for a school trip, but nobody agrees which vaccines matter for teens.",
-          "challenge": "Make a pocket guide: disease, how it spreads, vaccine that helps prevent it."
+          "title": "Aşıların önleyebileceği hastalıklar",
+          "description": "Aşı kartı sadece evrak işi değildir. Bu, bir zamanlar çok daha fazla gencin yaralanmasına veya ölümüne neden olan hastalıklara karşı korumanın bir kaydıdır: kızamık, hepatit B, HPV ile ilişkili kanserler ve daha fazlası.",
+          "tip1": "Kızamık hava yoluyla yayılır ve zatürreye, beyin şişmesine ve ölüme neden olabilir. Bu sadece bir döküntü değil.",
+          "tip2": "HPV aşısı yaşamın ilerleyen dönemlerinde birçok kanseri önleyebilir. Virüse maruz kalmadan önce en iyi şekilde çalışır.",
+          "tip3": "Hepatit B kronik bir karaciğer enfeksiyonuna dönüşebilir. Aşılama önlemede önemli bir araçtır.",
+          "tip4": "Hastalık hikayeleri internette hızla yayılıyor. Sağlık kuruluşlarından elde edilen kanıtlar daha yavaş yayılır ancak çok daha güvenilirdir.",
+          "fact": "Aşılamanın yaygınlaşmasından önce kızamık dünya çapında milyonlarca kişinin ölümüne neden oluyordu. Aşılar çocukluktaki riskin görünümünü değiştirdi.",
+          "action": "Aşıyla önlenebilir bir hastalık seçin ve üç maddelik bir “neden önemli” kartı hazırlayın.",
+          "scenario": "Öğrenciler okul gezisine hazırlanıyor ancak kimse gençler için hangi aşıların önemli olduğu konusunda hemfikir değil.",
+          "challenge": "Bir cep rehberi hazırlayın: hastalık, nasıl yayılır, onu önlemeye yardımcı olan aşı."
         }
       },
       "national": {
         "firstAidReview": {
-          "title": "First aid command: putting it together",
-          "description": "At the national stage, first aid becomes decision-making under pressure: protect yourself, get help, choose the right basic action, and keep the scene calm enough for professionals to take over.",
-          "tip1": "Scene safety comes first. You cannot help if you become the second injured person.",
-          "tip2": "Call early when the situation may be serious. Dispatchers would rather guide a cautious caller than arrive too late.",
-          "tip3": "Match action to problem: pressure for bleeding, cool water for burns, trained response for choking, space and reassurance for shock.",
-          "tip4": "Leadership can be simple: point to one person and say, “You call emergency services. You get a teacher. You clear space.”",
-          "fact": "In emergencies, calm role assignment reduces confusion and speeds up response, especially in crowded places like schools.",
-          "action": "Write a 60-second classroom emergency plan: caller, adult, space, supplies, comfort.",
-          "scenario": "One student is burned, another is bleeding, and the room is filling with noise. You are the first person thinking clearly.",
-          "challenge": "Draft a four-role emergency plan your class could practice safely with a teacher."
+          "title": "İlk yardım komutu: bir araya getirmek",
+          "description": "Ulusal aşamada, ilk yardım baskı altında karar verme sürecine dönüşür: kendinizi koruyun, yardım alın, doğru temel eylemi seçin ve sahneyi profesyonellerin devralabileceği kadar sakin tutun.",
+          "tip1": "Sahne güvenliği her şeyden önce gelir. İkinci yaralı kişi olursan yardım edemezsin.",
+          "tip2": "Durumun ciddi olabileceği durumlarda erken arayın. Sevk memurları, çok geç gelmektense, dikkatli bir arayan kişiye rehberlik etmeyi tercih ederler.",
+          "tip3": "Eylemi sorunla eşleştirin: Kanama için baskı, yanıklar için soğuk su, boğulma için eğitimli müdahale, şok için alan ve güvence.",
+          "tip4": "Liderlik basit olabilir: Bir kişiyi işaret edin ve şunu söyleyin: \"Acil servisleri ararsınız. Bir öğretmen bulursunuz. Alanı boşaltırsınız.\"",
+          "fact": "Acil durumlarda sakin rol ataması, özellikle okul gibi kalabalık yerlerde kafa karışıklığını azaltır ve müdahaleyi hızlandırır.",
+          "action": "60 saniyelik bir sınıf acil durum planı yazın: arayan, yetişkin, alan, malzeme, konfor.",
+          "scenario": "Bir öğrenci yandı, bir diğeri kanıyor ve oda gürültüyle doluyor. Açıkça düşünen ilk kişi sizsiniz.",
+          "challenge": "Sınıfınızın bir öğretmenle güvenli bir şekilde pratik yapabileceği dört rollü bir acil durum planı taslağı hazırlayın."
         },
         "stiMyths": {
-          "title": "STI myths: replacing gossip with evidence",
-          "description": "Myths thrive where shame is loud and facts are quiet. Health literacy means refusing gossip, protecting privacy, and pointing people toward testing and care instead of blame.",
-          "tip1": "Myth: You can always tell who has an STI. Reality: many infections have no visible signs.",
-          "tip2": "Myth: Only “certain people” get STIs. Reality: exposure is about biology and behavior, not someone’s worth.",
-          "tip3": "Myth: Two condoms are safer than one. Reality: friction can make condoms tear; one used correctly is safer.",
-          "tip4": "Myth: Borrowed antibiotics are enough. Reality: wrong treatment can fail and contribute to resistance.",
-          "fact": "Stigma delays testing. When communities talk about STIs as health issues, people seek care earlier.",
-          "action": "Practice one sentence that shuts down gossip while protecting privacy.",
-          "scenario": "A rumor spreads about a student who might need testing. People are laughing and guessing names.",
-          "challenge": "Write a response that says: stop gossiping, respect privacy, use real health information."
+          "title": "STI efsaneler: dedikodunun kanıtla değiştirilmesi",
+          "description": "Utancın gürültülü, gerçeklerin ise sessiz olduğu yerlerde mitler gelişir. Sağlık okuryazarlığı dedikoduyu reddetmek, mahremiyeti korumak ve insanları suçlamak yerine test ve bakıma yönlendirmek anlamına gelir.",
+          "tip1": "Efsane: Kimin STI sahibi olduğunu her zaman anlayabilirsiniz. Gerçek: Birçok enfeksiyonun gözle görülür belirtileri yoktur.",
+          "tip2": "Efsane: Yalnızca “belirli kişiler” STIs alır. Gerçek: maruz kalma biyoloji ve davranışla ilgilidir, birinin değeriyle değil.",
+          "tip3": "Efsane: İki prezervatif bir prezervatiften daha güvenlidir. Gerçek: Sürtünme prezervatifin yırtılmasına neden olabilir; Doğru kullanılan daha güvenlidir.",
+          "tip4": "Efsane: Ödünç alınan antibiyotikler yeterlidir. Gerçek: Yanlış tedavi başarısız olabilir ve dirence katkıda bulunabilir.",
+          "fact": "Stigma testi geciktirir. Topluluklar STIs hakkında sağlık sorunları olarak konuştuğunda, insanlar daha erken bakıma başvuruyor.",
+          "action": "Gizliliği korurken dedikoduyu ortadan kaldıran bir cümlenin alıştırmasını yapın.",
+          "scenario": "Bir öğrencinin sınava girmesi gerekebileceğine dair bir söylenti yayılır. İnsanlar gülüyor ve isim tahmin ediyor.",
+          "challenge": "Şunu söyleyen bir yanıt yazın: Dedikodu yapmayı bırakın, mahremiyete saygı gösterin, gerçek sağlık bilgilerini kullanın."
         },
         "sourceLiteracy": {
-          "title": "Health information: evidence in a noisy world",
-          "description": "Your feed is a health battlefield: miracle cures, fear posts, influencer advice, and real science all compete for attention. The skill is not knowing everything. The skill is knowing what deserves trust.",
-          "tip1": "Ask who made the claim, what evidence they show, and whether recognized health organizations agree.",
-          "tip2": "Beware of phrases like “doctors hate this,” “secret cure,” or “share before it is deleted.” They are designed to bypass critical thinking.",
-          "tip3": "Look for dates. Health guidance can change as evidence improves.",
-          "tip4": "Before sharing, pause. A false health post can spread fear faster than a virus.",
-          "fact": "Health literacy is linked to better decisions because people can find, understand, and use reliable information under pressure.",
-          "action": "Compare one viral health claim with an official health source and write the difference in plain language.",
-          "scenario": "A video promises a miracle cure, uses dramatic music, and says hospitals are hiding the truth.",
-          "challenge": "Run the three-question source test: Who says it? What proof? What do health agencies say?"
+          "title": "Sağlık bilgisi: gürültülü bir dünyada kanıtlar",
+          "description": "Yayınınız bir sağlık savaş alanıdır: mucize tedaviler, korku paylaşımları, etkileyici tavsiyeler ve gerçek bilim, hepsi dikkat çekmek için yarışıyor. Beceri her şeyi bilmek değildir. Beceri neyin güveni hak ettiğini bilmektir.",
+          "tip1": "İddiayı kimin yaptığını, hangi kanıtları gösterdiklerini ve tanınmış sağlık kuruluşlarının bu iddiayı kabul edip etmediğini sorun.",
+          "tip2": "“Doktorlar bundan nefret ediyor”, “gizli tedavi”, “silinmeden paylaşın” gibi ifadelere dikkat edin. Eleştirel düşünceyi atlamak için tasarlandılar.",
+          "tip3": "Tarihleri arayın. Kanıtlar geliştikçe sağlık rehberliği değişebilir.",
+          "tip4": "Paylaşmadan önce duraklatın. Sahte bir sağlık ilanı korkuyu virüsten daha hızlı yayabilir.",
+          "fact": "Sağlık okuryazarlığı daha iyi kararlarla bağlantılıdır çünkü insanlar baskı altında güvenilir bilgileri bulabilir, anlayabilir ve kullanabilir.",
+          "action": "Bir viral sağlık iddiasını resmi bir sağlık kaynağıyla karşılaştırın ve farkı sade bir dille yazın.",
+          "scenario": "Bir video mucizevi bir tedavi vaat ediyor, dramatik müzik kullanıyor ve hastanelerin gerçeği sakladığını söylüyor.",
+          "challenge": "Üç soruluk kaynak testini çalıştırın: Kim söylüyor? Hangi kanıt? Sağlık kurumları ne diyor?"
         },
         "capstoneMix": {
-          "title": "Capstone: lead a health mission",
-          "description": "The final mission asks you to combine everything: first response, sexual health, vaccines, consent, and evidence. The goal is not to be the expert in every room. The goal is to become the person who knows how to find help, reduce harm, and keep facts alive.",
-          "tip1": "Start with safety: emergency risks, pressure, consent, privacy, and reliable adults or services.",
-          "tip2": "Use prevention as a stack: vaccines, safer choices, testing, hygiene, trusted information, and timely care.",
-          "tip3": "Respect privacy. A helpful student does not expose someone’s health story to prove a point.",
-          "tip4": "Teach in plain language. If your younger sibling can understand it, your message is stronger.",
-          "fact": "Peer-led health education works best when it is practical, respectful, and connected to real services.",
-          "action": "Design a one-page school health mission plan with four stations: first aid, consent, vaccines, and fact-checking.",
-          "scenario": "You are asked to help plan a school health week. Students say they do not want another boring lecture.",
-          "challenge": "Create a four-station health week agenda with one activity, one trusted resource, and one takeaway per station."
+          "title": "Bitirme taşı: bir sağlık misyonuna liderlik etmek",
+          "description": "Son görev sizden her şeyi birleştirmenizi istiyor: ilk müdahale, cinsel sağlık, aşılar, rıza ve kanıtlar. Amaç her odada uzman olmak değil. Amaç, nasıl yardım bulacağını, zararı azaltacağını ve gerçekleri canlı tutacağını bilen kişi olmaktır.",
+          "tip1": "Güvenlikle başlayın: acil durum riskleri, baskı, rıza, mahremiyet ve güvenilir yetişkinler veya hizmetler.",
+          "tip2": "Önlemeyi bir yığın olarak kullanın: aşılar, daha güvenli seçimler, testler, hijyen, güvenilir bilgiler ve zamanında bakım.",
+          "tip3": "Gizliliğe saygı gösterin. Yardımsever bir öğrenci, bir konuyu kanıtlamak için birinin sağlık öyküsünü açığa çıkarmaz.",
+          "tip4": "Sade bir dille öğretin. Eğer küçük kardeşiniz bunu anlayabiliyorsa mesajınız daha güçlü olur.",
+          "fact": "Akran liderliğindeki sağlık eğitimi, pratik, saygılı ve gerçek hizmetlerle bağlantılı olduğunda en iyi sonucu verir.",
+          "action": "Dört istasyondan oluşan tek sayfalık bir okul sağlık misyonu planı tasarlayın: ilk yardım, onay, aşılar ve doğrulama.",
+          "scenario": "Sizden bir okul sağlığı haftasının planlanmasına yardım etmeniz isteniyor. Öğrenciler sıkıcı bir ders daha istemediklerini söylüyorlar.",
+          "challenge": "Bir aktivite, bir güvenilir kaynak ve istasyon başına bir paket servisi ile dört istasyonlu bir sağlık haftası gündemi oluşturun."
         }
       }
     },
     "stageQuiz": {
       "local": {
         "q0": {
-          "question": "What should you tell an emergency dispatcher first if possible?",
-          "a0": "Your full medical history",
-          "a1": "Where you are and what happened",
-          "a2": "Your social media handle",
-          "explanation": "Location and a brief description of the emergency help them send the right resources quickly."
+          "question": "Mümkünse acil durum görevlisine ilk olarak ne söylemelisiniz?",
+          "a0": "Tam tıbbi geçmişiniz",
+          "a1": "Neredesin ve ne oldu?",
+          "a2": "Sosyal medya yöneticiniz",
+          "explanation": "Acil durumun konumu ve kısa bir açıklaması, doğru kaynakları hızlı bir şekilde göndermelerine yardımcı olur."
         },
         "q1": {
-          "question": "For heavy bleeding that soaks through a cloth, you should:",
-          "a0": "Remove the cloth to look at the wound",
-          "a1": "Add another layer on top and keep pressing",
-          "a2": "Wait an hour to see if it stops",
-          "explanation": "Removing the cloth can disturb clots. Add pressure on top until help arrives."
+          "question": "Bir bezden süzülen ağır kanama için şunları yapmalısınız:",
+          "a0": "Yaraya bakmak için bezi çıkarın",
+          "a1": "Üstüne başka bir katman ekleyin ve basmaya devam edin",
+          "a2": "Durup durmadığını görmek için bir saat bekleyin",
+          "explanation": "Bezin çıkarılması pıhtıları rahatsız edebilir. Yardım gelene kadar üstüne baskı uygulayın."
         },
         "q2": {
-          "question": "For a small fresh burn, the best first step is usually:",
-          "a0": "Put butter on it",
-          "a1": "Cool with running cool water for several minutes",
-          "a2": "Wrap tightly with plastic",
-          "explanation": "Cool running water reduces heat in the tissue. Butter traps heat and increases infection risk."
+          "question": "Küçük bir taze yanık için en iyi ilk adım genellikle:",
+          "a0": "Üzerine tereyağı sürün",
+          "a1": "Birkaç dakika soğuk su akıtarak soğutun",
+          "a2": "Plastikle sıkıca sarın",
+          "explanation": "Soğuk akan su dokudaki ısıyı azaltır. Tereyağı ısıyı hapseder ve enfeksiyon riskini artırır."
         },
         "q3": {
-          "question": "Why might someone get an STI test even without symptoms?",
-          "a0": "Tests are only for people with symptoms",
-          "a1": "Many STIs can be silent but still harmful or spreadable",
-          "a2": "Testing cures all STIs instantly",
-          "explanation": "Many infections have no early symptoms; testing finds them so you can get care and protect partners."
+          "question": "Birisi semptomsuz bile neden STI testi yaptırabilir?",
+          "a0": "Testler yalnızca semptomları olan kişiler içindir",
+          "a1": "Pek çok STIs sessiz olabilir ancak yine de zararlı veya yayılabilir",
+          "a2": "Testler tüm STIs durumlarını anında iyileştirir",
+          "explanation": "Çoğu enfeksiyonun erken belirtileri yoktur; test onları bulur, böylece ortaklarınıza bakabilir ve onları koruyabilirsiniz."
         }
       },
       "regional": {
         "q0": {
-          "question": "If an adult suddenly cannot speak or breathe and holds their throat, you should:",
-          "a0": "Ignore them until they cough",
-          "a1": "Call emergency services immediately",
-          "a2": "Give them a glass of water",
-          "explanation": "Complete airway blockage is an emergency — trained help and EMS are needed urgently."
+          "question": "Bir yetişkin aniden konuşamaz veya nefes alamaz hale gelir ve boğazını tutarsa şunları yapmalısınız:",
+          "a0": "Öksürünceye kadar onları görmezden gelin",
+          "a1": "Derhal acil servisleri arayın",
+          "a2": "Onlara bir bardak su ver",
+          "explanation": "Hava yolunun tamamen tıkanması acil bir durumdur; eğitimli yardıma acilen ihtiyaç vardır."
         },
         "q1": {
-          "question": "If prescribed antibiotics for an STI, you should:",
-          "a0": "Stop when you feel better",
-          "a1": "Finish all pills as directed",
-          "a2": "Share extras with a partner",
-          "explanation": "Stopping early can fail to kill the bacteria and contribute to resistance. Never share antibiotics."
+          "question": "STI için antibiyotik reçete edilirse şunları yapmalısınız:",
+          "a0": "Kendinizi daha iyi hissettiğinizde durun",
+          "a1": "Tüm hapları belirtildiği gibi bitirin",
+          "a2": "Ekstraları bir iş ortağıyla paylaşın",
+          "explanation": "Erken durmak bakterileri öldürmekte başarısız olabilir ve dirence katkıda bulunabilir. Antibiyotiği asla paylaşmayın."
         },
         "q2": {
-          "question": "Vaccines mainly work by:",
-          "a0": "Replacing your blood",
-          "a1": "Training the immune system to recognize a germ",
-          "a2": "Curing active disease instantly",
-          "explanation": "Vaccines prepare your immune system so a future encounter with the real germ is much safer."
+          "question": "Aşılar esas olarak şu şekilde çalışır:",
+          "a0": "Kanının değiştirilmesi",
+          "a1": "Bağışıklık sistemini mikropları tanıyacak şekilde eğitmek",
+          "a2": "Aktif hastalığı anında tedavi etmek",
+          "explanation": "Aşılar bağışıklık sisteminizi hazırlar, böylece gelecekte gerçek mikropla karşılaşmanız çok daha güvenli olur."
         },
         "q3": {
-          "question": "Measles is:",
-          "a0": "Harmless in all children",
-          "a1": "A serious disease that vaccines have greatly reduced",
-          "a2": "Only spread by animals",
-          "explanation": "Measles can cause severe complications; vaccination is a key reason cases dropped worldwide."
+          "question": "Kızamık:",
+          "a0": "Tüm çocuklarda zararsızdır",
+          "a1": "Aşıların büyük ölçüde azalttığı ciddi bir hastalık",
+          "a2": "Sadece hayvanlar tarafından yayılır",
+          "explanation": "Kızamık ciddi komplikasyonlara neden olabilir; Aşılama, vakaların dünya çapında düşmesinin temel nedenidir."
         }
       },
       "national": {
         "q0": {
-          "question": "In a medical emergency at school, the best first step is usually:",
-          "a0": "Only post on social media",
-          "a1": "Get adult help and emergency services if needed",
-          "a2": "Wait until the end of class",
-          "explanation": "Trained adults and EMS are equipped to respond; time matters in emergencies."
+          "question": "Okulda tıbbi bir acil durumda atılacak en iyi ilk adım genellikle:",
+          "a0": "Yalnızca sosyal medyada yayınlayın",
+          "a1": "Gerekirse yetişkinlerin yardımını ve acil durum hizmetlerini alın",
+          "a2": "Dersin sonuna kadar bekle",
+          "explanation": "Eğitimli yetişkinler ve EMS yanıt verebilecek donanıma sahiptir; Acil durumlarda zaman önemlidir."
         },
         "q1": {
-          "question": "A reliable place to check vaccine facts is often:",
-          "a0": "Anonymous forum threads only",
-          "a1": "Your country's ministry of health or WHO",
-          "a2": "Memes with many likes",
-          "explanation": "Official health agencies review evidence and update guidance — use them to verify claims."
+          "question": "Aşıyla ilgili gerçekleri kontrol etmek için güvenilir bir yer genellikle:",
+          "a0": "Yalnızca anonim forum konuları",
+          "a1": "Ülkenizin sağlık bakanlığı veya WHO",
+          "a2": "Çok sayıda beğeni alan memler",
+          "explanation": "Resmi sağlık kuruluşları kanıtları inceler ve kılavuzları günceller; bunları iddiaları doğrulamak için kullanın."
         },
         "q2": {
-          "question": "Two condoms at once are:",
-          "a0": "Safer than one",
-          "a1": "Not recommended — friction can cause breakage",
-          "a2": "Required by law",
-          "explanation": "Using one condom correctly is safer than double-layering, which increases tear risk."
+          "question": "Aynı anda iki prezervatif:",
+          "a0": "Birinden daha güvenli",
+          "a1": "Tavsiye edilmez — sürtünme kırılmaya neden olabilir",
+          "a2": "Yasa gereği gerekli",
+          "explanation": "Tek prezervatifi doğru kullanmak çift kat kullanmaktan daha güvenlidir, bu da yırtılma riskini artırır."
         },
         "q3": {
-          "question": "Health literacy means:",
-          "a0": "Memorizing every disease name",
-          "a1": "Finding, understanding, and using reliable health information",
-          "a2": "Never seeing a doctor",
-          "explanation": "It is about skills to navigate real information and services, not encyclopedic memorization."
+          "question": "Sağlık okuryazarlığı şu anlama gelir:",
+          "a0": "Her hastalığın adını ezberlemek",
+          "a1": "Güvenilir sağlık bilgilerini bulma, anlama ve kullanma",
+          "a2": "Hiç doktor görmemek",
+          "explanation": "Ansiklopedik ezberlemeyle değil, gerçek bilgi ve hizmetlerde gezinme becerileriyle ilgilidir."
         }
       }
     },
     "workflow": {
-      "nextMission": "Next mission",
-      "nextMissionBody": "Follow this recommended step to keep the Academy moving without guessing what to do next.",
+      "nextMission": "Sonraki görev",
+      "nextMissionBody": "Bundan sonra ne yapılacağını tahmin etmeden Akademi'nin ilerlemesini sağlamak için önerilen bu adımı izleyin.",
       "continueLesson": "{stage}: {title}",
-      "takeQuiz": "{stage} stage checkpoint",
-      "finishedTitle": "Academy complete",
-      "finishedBody": "You finished the current Academy path. Review any lesson or retake a quiz to stay sharp.",
-      "startMission": "Start mission",
-      "startQuiz": "Take checkpoint",
-      "reviewPath": "Review path",
-      "takeStageQuiz": "Take stage checkpoint",
-      "lockedStatus": "Locked",
-      "completeStatus": "Complete",
-      "quizReadyStatus": "Checkpoint ready",
-      "inProgressStatus": "In progress"
+      "takeQuiz": "{stage} aşama kontrol noktası",
+      "finishedTitle": "Akademi tamamlandı",
+      "finishedBody": "Mevcut Akademi yolunu tamamladınız. Zeki kalmak için herhangi bir dersi gözden geçirin veya bir testi tekrar yapın.",
+      "startMission": "Görevi başlat",
+      "startQuiz": "Kontrol noktasını al",
+      "reviewPath": "Yolu incele",
+      "takeStageQuiz": "Sahne kontrol noktasına girin",
+      "lockedStatus": "Kilitli",
+      "completeStatus": "Tamamlandı",
+      "quizReadyStatus": "Kontrol noktası hazır",
+      "inProgressStatus": "Devam ediyor"
     },
     "fieldLab": {
-      "title": "Field Lab",
-      "subtitle": "Turn the lesson into a one-minute plan. Your note stays only on this device.",
-      "observeLabel": "Observe",
-      "decideLabel": "Decide",
-      "actLabel": "Act",
-      "placeholder": "Example: I would first check safety, then call for help, then tell an adult exactly what I saw...",
-      "saveLabel": "Save field note",
-      "savedLabel": "Saved on this device",
-      "observeHint": "What do you actually see, hear, or know in this scenario? Stick to the facts.",
-      "decideHint": "What is the smartest first move? Pick something a calm bystander can really do.",
-      "actHint": "Write the exact words or steps you would use in the next 60 seconds.",
-      "syncedLabel": "Saved",
-      "draftLabel": "Saving draft"
+      "title": "Saha Laboratuvarı",
+      "subtitle": "Dersi bir dakikalık bir plana dönüştürün. Notunuz yalnızca bu cihazda kalır.",
+      "observeLabel": "Gözlemle",
+      "decideLabel": "Karar ver",
+      "actLabel": "Kanun",
+      "placeholder": "Örnek: Önce güvenliği kontrol eder, sonra yardım çağırır, sonra da bir yetişkine tam olarak ne gördüğümü anlatırdım...",
+      "saveLabel": "Alan notunu kaydet",
+      "savedLabel": "Bu cihaza kaydedildi",
+      "observeHint": "Bu senaryoda gerçekte ne görüyorsunuz, duyuyorsunuz veya biliyorsunuz? Gerçeklere sadık kalın.",
+      "decideHint": "En akıllıca ilk hamle nedir? Sakin bir seyircinin gerçekten yapabileceği bir şey seçin.",
+      "actHint": "Sonraki 60 saniyede kullanacağınız kelimeleri veya adımları tam olarak yazın.",
+      "syncedLabel": "Kaydedildi",
+      "draftLabel": "Taslak kaydediliyor"
     },
     "visuals": {
-      "academy": "Students learning health skills through maps, phones, clinics, and community action",
-      "emergency": "Emergency call map with location pins and first response signal lines",
-      "firstAid": "First aid field kit with bandage, clean cloth, and safety steps",
-      "sexualHealth": "Private conversation bubble, shield, and clinic doorway for confidential sexual health support",
-      "vaccines": "Immune system shield, vaccine card, and public health network",
-      "literacy": "Fact-checking desk with phone, sources, magnifier, and evidence notes",
-      "capstone": "Capstone expedition map connecting first aid, vaccines, relationships, and evidence"
+      "academy": "Öğrenciler haritalar, telefonlar, klinikler ve topluluk eylemleri aracılığıyla sağlık becerilerini öğreniyor",
+      "emergency": "Konum işaretlerini ve ilk müdahale sinyal hatlarını içeren acil çağrı haritası",
+      "firstAid": "Bandaj, temiz bez ve güvenlik basamaklarından oluşan ilk yardım saha çantası",
+      "sexualHealth": "Gizli cinsel sağlık desteği için özel konuşma balonu, kalkan ve klinik kapısı",
+      "vaccines": "Bağışıklık sistemi kalkanı, aşı kartı ve halk sağlığı ağı",
+      "literacy": "Telefon, kaynaklar, büyüteç ve kanıt notlarının bulunduğu teyit masası",
+      "capstone": "İlk yardım, aşılar, ilişkiler ve kanıtları birbirine bağlayan son keşif gezisi haritası"
     },
     "hero": {
-      "chipFirstAid": "First aid that works",
-      "chipLiteracy": "Health literacy",
-      "chipMissions": "Mission-based learning"
+      "chipFirstAid": "İşe yarayan ilk yardım",
+      "chipLiteracy": "Sağlık okuryazarlığı",
+      "chipMissions": "Göreve dayalı öğrenme"
     },
     "toast": {
-      "lessonLoggedTitle": "Lesson logged",
-      "lessonLoggedBody": "+10 XP earned. Streak updated and your next mission is ready."
+      "lessonLoggedTitle": "Ders günlüğe kaydedildi",
+      "lessonLoggedBody": "+10 XP kazanıldı. Seri güncellendi ve bir sonraki göreviniz hazır."
     },
     "sexualHealthSupport": {
-      "title": "Confidential support matters",
-      "body": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
-      "findCare": "Find care",
-      "rights": "Know your rights"
+      "title": "Gizli destek önemlidir",
+      "body": "Bu konu hayatınızda gerçek bir şeye dokunuyorsa, bunu tek başınıza çözmek zorunda değilsiniz. Güvenilir bir yetişkine, okul hemşiresine, doktora, gençlik kliniğine veya yardım hattına yaşadığınız yerde hangi desteğin gizli olduğunu sorun.",
+      "findCare": "Bakım bulun",
+      "rights": "Haklarınızı bilin"
+    },
+    "stageBadgeFormat": "Aşama {n}",
+    "lessonIndexFormat": "L{n}/{total}",
+    "a11yLocked": "kilitli",
+    "metaSuffix": "Öğrenci Sağlık Akademisi",
+    "l8": {
+      "eyebrow": "Redi Sağlık Akademisi",
+      "heroTitle1": "Olmak",
+      "heroTitle2": "sağlık tercümanı",
+      "heroTitle3": "topluluğunuz için.",
+      "heroLead": "Yerel, bölgesel ve ulusal aşamaları kapsayan, klinik olarak gözden geçirilmiş, oyunlaştırılmış bir müfredat. Avrupa genelindeki Roman sağlık aracıları ile oluşturuldu.",
+      "heroStatPanelImageAlt": "Sağlık okuryazarlığı aşamalarını birlikte uygulayan öğrencileri vurgulayan illüstrasyon.",
+      "heroPrimaryCta": "Bugünün görevine başlayın",
+      "heroSecondaryCta": "Müfredatı görün",
+      "statLevel": "Seviye",
+      "statXp": "XP",
+      "statStreak": "Gün serisi",
+      "statBadges": "Rozetler",
+      "statLessons": "Yapılan dersler",
+      "statDaysActive": "Aktif günler",
+      "missionDeckTitle": "Görev güvertesi",
+      "missionDeckSubtitle": "Her hafta bu bileşikte üç oyun oynanıyor.",
+      "missionTodayLabel": "Bugün",
+      "missionTodayBody": "Kaldığınız yerden devam edin; yaklaşık {min} dakika.",
+      "missionTodayCta": "Göreve devam et",
+      "missionTodayQuiz": "Sahne sınavına katılın",
+      "missionTodayDone": "Tüm aşamalar temizlendi",
+      "missionTodayDoneBody": "Bir modülü inceleyin veya öğrendiklerinizi paylaşın.",
+      "missionStreakLabel": "Çizgi",
+      "missionStreakBody": "Ateşinizi canlı tutun. Yarın görün.",
+      "missionStreakDay": "{count, plural, one {# day} diğer {# days}}",
+      "missionStreakCta": "Kısa bir gerçeği günlüğe kaydedin",
+      "missionBadgeLabel": "Sonraki rozet",
+      "missionBadgeBody": "{stage}'de {remaining} daha {remaining, plural, one {lesson} diğer {lessons}} bitirin.",
+      "missionBadgeAllDone": "Kazanılan tüm rozetler; diplomanızı aşağıda paylaşın.",
+      "journeyTitle": "Yolculuğunuz",
+      "journeySubtitle": "Üç aşama. On iki görev. Sertifikalı bir saha arabulucusu.",
+      "journeyCurrent": "buradasın",
+      "journeyUnlocked": "Kilitli değil",
+      "journeyLocked": "Kilitli",
+      "journeyComplete": "Tamamlandı",
+      "journeyMilestoneLocal": "Yerel",
+      "journeyMilestoneRegional": "Bölgesel",
+      "journeyMilestoneNational": "Ulusal",
+      "moduleListTitle": "Bu aşamadaki modüller",
+      "moduleStatusLocked": "Kilitli",
+      "moduleStatusDone": "Bitti",
+      "moduleStatusOpen": "Açık",
+      "moduleStatusNew": "Yeni",
+      "achievementWallTitle": "Başarı duvarı",
+      "achievementWallSubtitle": "Buradaki her rozet paylaşabileceğiniz bir hikayedir.",
+      "achievementProgress": "Kilidi açmak için {percent}%",
+      "achievementEarned": "Kazanılan",
+      "achievementLockedHint": "Kilidi açmak için {stage} aşama testini geçin.",
+      "leaderboardTitle": "En iyi öğrenciler",
+      "leaderboardSubtitle": "Anonimleştirilmiş grup, haftalık olarak güncellenir.",
+      "leaderboardYou": "sen",
+      "leaderboardRank": "Sıra",
+      "leaderboardCountryFallback": "Avrupa",
+      "leaderboardEmpty": "Henüz yeterli veri yok; öğrenmeye devam edin, gelecek hafta burada görüneceksiniz.",
+      "diplomaTitle": "Saha Arabulucusu Diploması",
+      "diplomaSubtitle": "Neye doğru çalışıyorsun?",
+      "diplomaBody": "İşverenler ve STK'larla paylaşabileceğiniz bir dijital diploma kazanmak için üç aşamayı da geçin.",
+      "diplomaProgress": "{completed} / {total} gereksinimleri karşılandı",
+      "diplomaPreviewName": "Geleceğin Saha Arabulucusu",
+      "diplomaPreviewDate": "{date} ödülü verildi",
+      "diplomaSignature": "Redi Klinik Kurulu",
+      "diplomaPreview": "Önizleme",
+      "diplomaUnlocked": "Diploma hazır",
+      "diplomaCta": "Açık diploma",
+      "countryTitle": "Ülkeniz",
+      "countryHint": "Örnekleri, istatistikleri ve acil durum numaralarını yerelleştirin.",
+      "ctaBanner": "Sıkışmış mı? Sahada test edilmiş arabulucular bir dokunuş uzağınızda.",
+      "ctaBannerLink": "Bir soru sor",
+      "whatsInsideTitle": "İçinde ne var",
+      "whatsInsideFirstAid": "Acil müdahale ve ilk yardım",
+      "whatsInsideSTI": "Cinsel sağlık ve rıza",
+      "whatsInsideVaccines": "Aşılar ve bağışıklama",
+      "whatsInsideMyths": "Yanlış bilgi ve kaynaklar"
     }
   },
   "errors": {
@@ -768,5 +1123,1471 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Aile sağlığı",
+    "subtitle": "Tüm ailenizin sağlığını takip edin. Tüm veriler telefonunuzda kalır.",
+    "back": "Aileye dön",
+    "yearsOld": "{age} yaşında",
+    "expecting": "· Hamile",
+    "pregnancyTitle": "Hamilelik",
+    "pregnancyWeeks": "40 haftanın {weeks}. haftası",
+    "pregnancyExpecting": "Hamile",
+    "logMood": "Ruh hali kaydet",
+    "logWater": "Su",
+    "logActivity": "Aktivite",
+    "logFormTitle": "{type} kaydet",
+    "logNote": "Not ekle (isteğe bağlı)",
+    "save": "Kaydet",
+    "recentLogs": "Son kayıtlar",
+    "noLogs": "Henüz kayıt yok. Takibe başlayın!",
+    "addMemberTitle": "Aile üyesi ekle",
+    "addMemberButton": "Aile üyesi ekle",
+    "addToFamily": "Aileye ekle",
+    "namePlaceholder": "Ad",
+    "agePlaceholder": "Yaş",
+    "pregnantLabel": "Şu anda hamile",
+    "emptyTitle": "Aile sağlık merkeziniz",
+    "emptyDesc": "Sağlıklarını, aşılarını ve ilaçlarını takip etmek için aile üyeleri ekleyin. Her şey telefonunuzda kalır — hesap gerekmez.",
+    "vaccineTrackingTitle": "Aşı takibi",
+    "vaccineTrackingDesc": "Her üye için yakında",
+    "medicationRemindersTitle": "İlaç hatırlatıcıları",
+    "medicationRemindersDesc": "Yakında",
+    "logTypes": {
+      "mood": "Ruh hali",
+      "water": "Su (bardak)",
+      "activity": "Aktivite (dk)",
+      "weight": "Kilo (kg)",
+      "note": "Not"
+    },
+    "genders": {
+      "female": "Kadın",
+      "male": "Erkek",
+      "other": "Diğer"
+    },
+    "relation": {
+      "self": "Ben",
+      "child": "Çocuğum",
+      "spouse": "Eş / Partner",
+      "parent": "Ebeveyn",
+      "other": "Diğer"
+    }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Sağlık sözlüğü — Redi Health",
+      "description": "Tıbbi terimler basit kelimelerle açıklandı"
+    },
+    "title": "Sağlık sözlüğü",
+    "subtitle": "Tıbbi terimler basit kelimelerle açıklandı.",
+    "searchPlaceholder": "Terim ara...",
+    "searchAria": "Tıbbi terim ara",
+    "noResults": "Terim bulunamadı. Farklı bir arama deneyin.",
+    "allCount": "Tümü ({count})",
+    "categories": {
+      "condition": "Hastalıklar",
+      "medication": "İlaçlar",
+      "procedure": "İşlemler",
+      "body": "Vücut ve sağlık",
+      "test": "Testler"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Yüksek tansiyon",
+        "simple": "Kan damarların duvarına çok güçlü baskı yapar. Tedavi edilmezse kalp krizi veya felce yol açabilir. İlaçlar her gün alınmalıdır."
+      },
+      "diabetes-type-2": {
+        "term": "Diyabet (Tip 2)",
+        "simple": "Vücut şekeri doğru kullanamaz. Şeker kanda birikir ve organlara zarar verir. İlaç, sağlıklı yemek ve hareket gerekir. Sadece çok şeker yemekten olmaz."
+      },
+      "anemia": {
+        "term": "Kansızlık",
+        "simple": "Yeterli sağlıklı kırmızı kan hücresi yoktur. Kendinizi yorgun, güçsüz veya baş dönmesi içinde hissedebilirsiniz. Sık nedeni demir eksikliğidir. Hamile kadınlarda çok yaygındır."
+      },
+      "asthma": {
+        "term": "Astım",
+        "simple": "Hava yolları daralır ve şişer, bu yüzden nefes almak zorlaşır. Hırıltı veya öksürük olabilir. Böyle olduğunda inhaleri kullanın. Dumandan ve tozdan uzak durun."
+      },
+      "tuberculosis-tb": {
+        "term": "Tüberküloz (TB)",
+        "simple": "Akciğerlerde ciddi bir enfeksiyondur. Haftalarca öksürürsünüz, kilo verirsiniz ve gece terlersiniz. Hava yoluyla bulaşır. 6 aylık ilaçla iyileşebilir, ama tüm hapları bitirmek gerekir."
+      },
+      "depression": {
+        "term": "Depresyon",
+        "simple": "Haftalar boyunca üzgün, umutsuz veya boş hissettiğiniz tıbbi bir durumdur. Bu zayıflık değildir ve sizin suçunuz değildir. İlaç ve biriyle konuşmak yardımcı olabilir. Yardım isteyin."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatit B/C",
+        "simple": "Karaciğere saldıran bir virüstür. Yıllarca belirti olmayabilir ama karaciğere yavaşça zarar verir. Kan ve iğne ile bulaşır. Hepatit B için aşı vardır."
+      },
+      "pneumonia": {
+        "term": "Zatürre",
+        "simple": "Akciğerlerde ciddi bir enfeksiyondur. Ateş, balgamlı öksürük ve nefes darlığı olur. Doktordan antibiyotik gerekir. Bebekler ve yaşlılar için tehlikeli olabilir."
+      },
+      "gastritis": {
+        "term": "Gastrit",
+        "simple": "Mide iç yüzeyi tahriş olmuş veya iltihaplanmıştır. Yanma, bulantı veya şişkinlik hissedebilirsiniz. Acı yiyecek, alkol ve sigaradan uzak durun. İlaç yardımcı olabilir."
+      },
+      "eczema": {
+        "term": "Egzama",
+        "simple": "Ciltte kaşıntılı, kırmızı ve kuru alanlardır. Bulaşıcı değildir. Sık sık nemlendirici kullanın. Sert sabunlardan kaçının. Doktor yardımcı olacak krem verebilir."
+      },
+      "antibiotic": {
+        "term": "Antibiyotik",
+        "simple": "Bakterileri öldüren ilaçtır. Grip veya soğuk algınlığı gibi virüslere karşı işe yaramaz. Kendinizi iyi hissetseniz bile tüm tedaviyi bitirmelisiniz, yoksa mikroplar daha güçlü döner."
+      },
+      "ibuprofen": {
+        "term": "İbuprofen",
+        "simple": "Ağrıyı, iltihabı ve ateşi azaltan bir ilaçtır. Mideyi korumak için yemekle alın. Kutuda yazılandan fazla almayın. Hamilelikte güvenli değildir."
+      },
+      "paracetamol": {
+        "term": "Parasetamol",
+        "simple": "Baş ağrısı ve ateş için yaygın bir ilaçtır. Çoğu insan için, hamile kadınlar dahil, güvenlidir. Günde 4 gramdan fazla almayın, çünkü karaciğere zarar verir."
+      },
+      "insulin": {
+        "term": "İnsülin",
+        "simple": "Vücudun şekeri kullanması için gereken hormondur. Diyabeti olan kişiler insülin iğnesine ihtiyaç duyabilir. Bu, hastalığın daha kötü olduğu anlamına gelmez; sadece tedavi farklıdır."
+      },
+      "metformin": {
+        "term": "Metformin",
+        "simple": "Diyabet için en sık kullanılan ilaçtır. Vücudun şekeri daha iyi kullanmasına yardım eder. Yemekle alınır. Başta mideyi rahatsız edebilir, ama genelde geçer."
+      },
+      "blood-test": {
+        "term": "Kan testi",
+        "simple": "Küçük bir iğne koldan biraz kan alır. Doktor enfeksiyon, kansızlık, diyabet ve başka birçok şeyi bununla kontrol eder. Sadece kısa süre acır."
+      },
+      "x-ray": {
+        "term": "Röntgen",
+        "simple": "Kemiklerin ve akciğerlerin özel ışınlarla çekilen görüntüsüdür. Birkaç saniye hareketsiz durursunuz. Acıtmaz. Çoğu insan için güvenlidir, ama hamileyseniz doktora söyleyin."
+      },
+      "ultrasound": {
+        "term": "Ultrason",
+        "simple": "Ses dalgalarıyla vücudun içinin görüntüsüdür. Doktor cilde jel sürer ve cihazı gezdirir. Acıtmaz. Hamilelikte bebeği kontrol etmek için sık kullanılır."
+      },
+      "ecg-ekg": {
+        "term": "EKG",
+        "simple": "Kalbin ritmini kontrol eden testtir. Göğse küçük yapışkanlar yerleştirilir. Acıtmaz. Yaklaşık 5 dakika sürer. Kalbin normal atıp atmadığını gösterir."
+      },
+      "vaccination": {
+        "term": "Aşılama",
+        "simple": "Hastalanmadan önce vücuda hastalığa karşı savaşmayı öğreten küçük bir iğnedir. Kolda ağrı veya hafif ateş gibi küçük yan etkiler normaldir."
+      },
+      "blood-pressure": {
+        "term": "Kan basıncı",
+        "simple": "Kanın damar duvarlarına yaptığı baskıdır. Normal değer yaklaşık 120/80'dir. 140/90 üzerindeki yüksek tansiyon tehlikelidir; fark edilmeyebilir ama kalbe ve beyne zarar verir."
+      },
+      "blood-sugar": {
+        "term": "Kan şekeri",
+        "simple": "Kandaki glukoz miktarıdır. Açlıkta normal değer 70-100 mg/dL'dir. Çok yüksekse diyabet anlamına gelir. Çok düşükse baş dönmesi ve titreme yapar."
+      },
+      "bmi": {
+        "term": "VKİ",
+        "simple": "Vücut kitle indeksi, kilonuzun boyunuza göre sağlıklı olup olmadığını gösterir. 18,5 altı zayıflık, 18,5-25 normal, 25 üstü fazla kilo, 30 üstü obezitedir."
+      },
+      "immune-system": {
+        "term": "Bağışıklık sistemi",
+        "simple": "Bu, vücudun mikroplara karşı ordusudur. Beyaz kan hücreleri enfeksiyonlarla savaşır. Aşılar bağışıklık sistemini eğitir. İyi beslenme, uyku ve hareket onu güçlendirir."
+      }
+    }
+  },
+  "vaccines": {
+    "heroTitle": "Asi rehberi",
+    "heroSubtitle": "Her asi basitçe anlatildi. Daha fazlasini öğrenmek için herhangi bir asiya dokunun.",
+    "askCta": "Asilar hakkinda soru sor",
+    "backToSchedule": "Takvime dön",
+    "preventsLabel": "Korur",
+    "dosesNeeded": "{count, plural, one {# doz gerekir} other {# doz gerekir}}",
+    "howItWorks": "Nasil çalisir",
+    "sideEffects": "Yan etkiler (normal)",
+    "mythTitle": "Efsane vs. gerçek",
+    "qaTitle": "Asilar hakkinda sor",
+    "qaSubtitle": "Her soru olur. Saha deneyiminden dürüst cevaplar.",
+    "qaPlaceholder": "Asi sorunu yaz...",
+    "qaAria": "Asilar hakkinda soru sor",
+    "qaCommon": "Sik sorulan sorular",
+    "childAgePrompt": "Çocuğunuz kaç yaşinda?",
+    "childAgeAria": "Çocuk yaşini seçin",
+    "ageOptionDefault": "Yaş seçin...",
+    "ageNewborn": "Yeni doğan (0 ay)",
+    "age2m": "2 ay",
+    "age4m": "4 ay",
+    "age6m": "6 ay",
+    "age12m": "12 ay (1 yaş)",
+    "age18m": "18 ay",
+    "age48m": "4-6 yaş",
+    "age108m": "9-12 yaş",
+    "neededByAge": "Bu yaşta gereken aşılar:",
+    "vaccinesCount": "{count, plural, one {# aşı} other {# aşı}}",
+    "importance": {
+      "critical": "Gerekli",
+      "important": "Önemli",
+      "recommended": "Önerilen"
+    },
+    "fears": [
+      "Aşılar bebeğim için güvenli mi?",
+      "Çocuğumun canı yanacak mı?",
+      "Ya sonra ateşi çıkarsa?",
+      "Aşıları erteleyebilir miyim?",
+      "Çocuğum hasta - yine de aşı olabilir mi?"
+    ],
+    "meta": {
+      "title": "Asi rehberi - Redi Health",
+      "description": "Her asi basit kelimelerle anlatildi."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (verem)",
+        "preventsDiseases": [
+          "Verem (TB)"
+        ],
+        "howItWorks": "Bu asi bebeğin vücuduna veremle savaşmayı öğretir - havadan bulaşan ciddi bir akciğer hastalığıdır. Kola yapılan küçük bir iğne yıllarca koruma sağlar.",
+        "sideEffects": "İğnenin yapıldığı yerde küçük bir kabarcık veya iz olabilir. Bu normaldir ve aşının çalıştığını gösterir.",
+        "mythDebunked": "EFSANE: 'Verem artık yok.' GERÇEK: Verem hâlâ her yıl çok sayıda insanı öldürüyor. Kalabalık koşullarda hızla yayılıyor."
+      },
+      "hepb": {
+        "name": "Hepatit B",
+        "preventsDiseases": [
+          "Hepatit B (karaciğer hastalığı)"
+        ],
+        "howItWorks": "Karaciğeri, kalıcı hasar ve kansere yol açabilen bir virüsten korur. Yenidoğanlar en savunmasız olduğu için doğumda yapılır.",
+        "sideEffects": "İğne yerinde hafif ağrı olabilir. Bazı bebekler bir gün biraz huzursuz olabilir. Ciddi değildir.",
+        "mythDebunked": "EFSANE: 'Bebeğim doğumda asi olmak için çok küçük.' GERÇEK: Yenidoğanlar en savunmasız gruptur. Ne kadar erken korursak o kadar iyi."
+      },
+      "dtap": {
+        "name": "DTaP (difteri, tetanoz, boğmaca)",
+        "preventsDiseases": [
+          "Difteri",
+          "Tetanoz",
+          "Boğmaca"
+        ],
+        "howItWorks": "Bu asi aynı anda üç hastalığa karşı korur. Difteri boğazı tıkayabilir, tetanoz kasları kilitler, boğmaca ise bebeği nefessiz bırakabilir.",
+        "sideEffects": "İğne yeri kızarabilir ve acıyabilir. Çocuk 1-2 gün hafif ateşli olabilir.",
+        "mythDebunked": "EFSANE: 'Bu hastalıklar artık yok, neden asi olalım?' GERÇEK: Nadir olmalarının nedeni aşılamadır. Aşılama azalınca hastalıklar geri gelir."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (felç)"
+        ],
+        "howItWorks": "Polio birkaç saat içinde çocuğun bacaklarını kalıcı olarak felç edebilen bir virüstür. Bu asi hastalığı dünyanın birçok yerinden neredeyse sildi.",
+        "sideEffects": "Çok hafif yan etki yapar. Bazen sadece iğne yerinde biraz kızarıklık olur.",
+        "mythDebunked": "EFSANE: 'Polio bitti, bu aşıya gerek yok.' GERÇEK: Avrupa'da aşılama sayesinde bitti. Aşısız bir yolcu hastalığı geri getirebilir."
+      },
+      "mmr": {
+        "name": "MMR (kızamık, kabakulak, kızamıkçık)",
+        "preventsDiseases": [
+          "Kızamık",
+          "Kabakulak",
+          "Kızamıkçık"
+        ],
+        "howItWorks": "Kızamık çok bulaşıcıdır ve beyne zarar verebilir ya da öldürebilir. Bu asi tek dozla üç hastalığa da karşı korur.",
+        "sideEffects": "Yaklaşık her 10 çocuktan 1'inde 7-10 gün sonra hafif ateş ve döküntü olabilir. Bu, vücudun savunmayı öğrendiğini gösterir.",
+        "mythDebunked": "EFSANE: 'MMR otizme neden olur.' GERÇEK: Büyük çalışmalar otizmle hiçbir bağlantı bulmadı. Kızamık ise öldürebilir."
+      },
+      "pneumo": {
+        "name": "Pnömokok aşısı (PCV13)",
+        "preventsDiseases": [
+          "Zatürre",
+          "Menenjit",
+          "Kan enfeksiyonları"
+        ],
+        "howItWorks": "Zatürre, menenjit ve ciddi kan enfeksiyonlarına yol açan bakterilere karşı korur. Bunlar küçük çocuklar için en tehlikeli hastalıklardandır.",
+        "sideEffects": "1-2 gün hafif ateş, huzursuzluk ve iğne yerinde ağrı olabilir.",
+        "mythDebunked": "EFSANE: 'Çocuklar çok aşıdan hastalanır.' GERÇEK: Çocuğun bağışıklık sistemi her gün binlerce mikropla karşılaşır. Birkaç asi onun için fazla değildir."
+      },
+      "rota": {
+        "name": "Rotavirüs",
+        "preventsDiseases": [
+          "Bebeklerde ağır ishal ve kusma"
+        ],
+        "howItWorks": "İğne değil, ağızdan damla olarak verilir. Ağır ishale ve susuz kalmaya yol açan virüse karşı korur.",
+        "sideEffects": "Çok hafif yan etkiler olur. Bazen biraz huzursuzluk veya hafif ishal görülebilir.",
+        "mythDebunked": "EFSANE: 'İshal bebeklerde normaldir, aşı gerekmez.' GERÇEK: Rotavirüs ishali çocuğu hızlıca susuz bırakabilir ve tehlikeli olabilir."
+      },
+      "varicella": {
+        "name": "Suçiçeği",
+        "preventsDiseases": [
+          "Suçiçeği"
+        ],
+        "howItWorks": "Suçiçeği hafif görünebilir ama ciddi cilt enfeksiyonu, zatürre veya beyinle ilgili komplikasyonlara yol açabilir. Bu asi vakaların çoğunu önler.",
+        "sideEffects": "Hafif ağrı olabilir. Nadiren iğne yerinin yakınında birkaç suçiçeği benzeri nokta çıkar.",
+        "mythDebunked": "EFSANE: 'Suçiçeğini doğal geçirmek daha iyidir.' GERÇEK: Doğal enfeksiyon ciddi komplikasyonlara yol açabilir ve ileride zona yapabilir."
+      },
+      "hpv": {
+        "name": "HPV (insan papilloma virüsü)",
+        "preventsDiseases": [
+          "Rahim ağzı kanseri",
+          "Diğer kanserler"
+        ],
+        "howItWorks": "Bu asi kanseri önler. Gençler virüsle karşılaşmadan önce yapılır.",
+        "sideEffects": "Kolda ağrı, bazen kısa baş ağrısı veya baş dönmesi olabilir. Çok güvenlidir.",
+        "mythDebunked": "EFSANE: 'Bu asi cinsel davranışı teşvik eder.' GERÇEK: Bu asi KANSERİ önler. Davranışla ilgisi yoktur."
+      },
+      "flu": {
+        "name": "Grip",
+        "preventsDiseases": [
+          "Mevsimsel grip"
+        ],
+        "howItWorks": "Grip sadece soğuk algınlığı değildir. Küçük çocuklar, yaşlılar ve hamile kadınlar için tehlikeli olabilir. Bu asi her yıl güncellenir.",
+        "sideEffects": "Kolda hafif ağrı ve bazen bir gün süren düşük ateş olabilir. Bu aşıdan grip OLMAZSINIZ.",
+        "mythDebunked": "EFSANE: 'Grip aşısı grip yapar.' GERÇEK: Bu imkânsızdır. Aşıda canlı virüs yoktur."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Doğumda"
+      },
+      "2months": {
+        "label": "2 aylık"
+      },
+      "4months": {
+        "label": "4 aylık"
+      },
+      "6months": {
+        "label": "6 aylık"
+      },
+      "12months": {
+        "label": "12 aylık"
+      },
+      "18months": {
+        "label": "18 aylık"
+      },
+      "4years": {
+        "label": "4-6 yaş"
+      },
+      "9years": {
+        "label": "9-12 yaş"
+      },
+      "adult": {
+        "label": "Yetişkinler"
+      },
+      "pregnant": {
+        "label": "Hamile kadınlar"
+      }
+    }
+  },
+  "explain": {
+    "heroTitle": "Reçeteni anla",
+    "heroSubtitle": "Teşhis veya ilaç adını yaz. Basit kelimelerle açıklıyoruz.",
+    "heroArtAlt": "İllüstrasyon: reçeteyi anlamak için eczane tarzı yardım.",
+    "placeholder": "Teşhis, ilaç adı yaz veya reçeteyi yapıştır…\n\nÖrnek: „Hipertansiyon” veya „Metformin 500 mg”",
+    "inputAria": "Teşhis veya ilaç adını gir",
+    "cta": "Bunu açıkla",
+    "ctaAnalyzing": "Analiz ediliyor…",
+    "examplesHeading": "Sık örnekler",
+    "loading": "Reçeten okunuyor…",
+    "sections": {
+      "whatThisMeans": "Bu ne anlama geliyor",
+      "whyItMatters": "Neden önemli",
+      "ifIgnored": "Görmezden gelirsen",
+      "medicationsTitle": "İlaçların",
+      "howToTake": "Nasıl alınır",
+      "sideEffects": "Yan etkiler",
+      "neverDo": "Bunu asla yapma",
+      "questionsTitle": "Bir sonraki sefer doktoruna sor",
+      "tipsTitle": "Bugün ne yapabilirsin",
+      "emergencyTitle": "Şu durumda hastaneye git"
+    },
+    "anotherCta": "Başka reçete açıkla",
+    "disclaimerBold": "Tıbbi tavsiye değildir.",
+    "disclaimerBody": "Bu araç tıbbi terimleri basit dille açıklar. Her zaman doktorunun talimatlarını izle.",
+    "meta": {
+      "title": "Reçeteni anla — Redi Health",
+      "description": "Teşhis ve ilaçlar basit kelimelerle açıklandı"
+    },
+    "takePhoto": "Fotoğraf çek",
+    "uploadImage": "Görsel yükle",
+    "placeholderWithImage": "(İsteğe bağlı) Reçete hakkında bağlam ekle — yaşın, nasıl aldığın, ne endişelendiriyor…",
+    "imagePreviewAlt": "Reçete fotoğrafı önizlemesi",
+    "imageReady": "Fotoğraf hazır",
+    "imageReadyBody": "İlacı, dozu ve talimatları okuyup her şeyi basit kelimelerle açıklıyoruz.",
+    "imageRemove": "Fotoğrafı kaldır",
+    "preparingImage": "Fotoğraf hazırlanıyor…",
+    "imageFailed": "Bu fotoğraf okunamadı. Başka birini dene."
+  },
+  "symptoms": {
+    "heroTitle": "Neresi ağrıyor?",
+    "heroSubtitle": "Seni rahatsız eden vücut bölgesine dokun",
+    "heroArtAlt": "İllüstrasyon: insanlar günlük semptomlar hakkında nazik çok dilli rehberlik alıyor.",
+    "backToMap": "Vücut haritasına dön",
+    "checkAnother": "Başka bölgeyi kontrol et",
+    "selectSymptoms": "Geçerli tüm semptomları seç",
+    "extraPlaceholder": "Başka bir şey? (ne kadar süredir, ne kadar kötü…)",
+    "extraAria": "Ek semptom detayları",
+    "analyzing": "Semptomlar analiz ediliyor…",
+    "checkCta": "Semptomları kontrol et",
+    "whatToDoNow": "Şimdi ne yapmalı",
+    "homeCare": "Evde bakım",
+    "escalateTitle": "Şu durumda hastaneye git",
+    "commonCauses": "Yaygın nedenler",
+    "regions": {
+      "head": "Baş",
+      "chest": "Göğüs",
+      "abdomen": "Karın",
+      "leftArm": "Sol kol",
+      "rightArm": "Sağ kol",
+      "pelvis": "Alt gövde",
+      "leftLeg": "Sol bacak",
+      "rightLeg": "Sağ bacak"
+    },
+    "headSymptoms": [
+      "Baş ağrısı",
+      "Baş dönmesi",
+      "Bulanık görme",
+      "Kulak ağrısı",
+      "Boğaz ağrısı"
+    ],
+    "chestSymptoms": [
+      "Göğüs ağrısı",
+      "Nefes darlığı",
+      "Öksürük",
+      "Hızlı kalp atışı",
+      "Sıkışma"
+    ],
+    "abdomenSymptoms": [
+      "Karın ağrısı",
+      "Mide bulantısı / kusma",
+      "İshal",
+      "Şişkinlik",
+      "İştahsızlık"
+    ],
+    "armSymptoms": [
+      "Ağrı",
+      "Uyuşma",
+      "Şişlik",
+      "Hareket ettiremiyorum",
+      "Karıncalanma"
+    ],
+    "pelvisSymptoms": [
+      "İdrar yaparken ağrı",
+      "Bel ağrısı",
+      "Adet sorunları",
+      "Kasık ağrısı"
+    ],
+    "legSymptoms": [
+      "Bacak ağrısı",
+      "Şişlik",
+      "Yürüyemiyorum",
+      "Diz ağrısı",
+      "Uyuşma"
+    ],
+    "meta": {
+      "title": "Semptom kontrolü — Redi Health",
+      "description": "Neresi ağrıyorsa dokun. Ne yapacağına dair rehberlik al."
+    }
+  },
+  "consult": {
+    "heroTitle": "Sağlık danışmanlığı",
+    "heroSubtitle": "Seni neyin rahatsız ettiğini söyle. Birkaç soru soracağım ve ne yapacağına karar vermene yardım edeceğim.",
+    "prompt": "Bugün seni buraya ne getirdi?",
+    "orFreeform": "veya kendi kelimelerinle anlat",
+    "freeformPlaceholder": "Dünden beri başım ağrıyor…",
+    "freeformAria": "Sağlık sorununu anlat",
+    "chatHeader": "Sağlık danışmanlığı",
+    "chatSubtitle": "Birkaç soru sana daha iyi yardım etmemi sağlar",
+    "answerAria": "Cevabın",
+    "answerPlaceholder": "Cevabını yaz…",
+    "newSession": "Yeni danışma",
+    "assessment": "Değerlendirme",
+    "whatToDo": "Ne yapmalı",
+    "homeCare": "Evde bakım",
+    "watchFor": "Bu belirtilere dikkat et",
+    "showVisitCard": "Doktor ziyaret kartını göster",
+    "hideVisitCard": "Doktor ziyaret kartını gizle",
+    "visitCardTitle": "Doktor için özet",
+    "visitCardDisclaimer": "Redi Health Advisor tarafından oluşturuldu. Bu tıbbi bir teşhis değildir.",
+    "concerns": {
+      "fever": "Ateş / yüksek ateş",
+      "pain": "Bir yerde ağrı",
+      "breathing": "Nefes alma sorunları",
+      "skin": "Cilt sorunu / döküntü",
+      "pregnancy": "Hamilelik endişesi",
+      "child": "Çocuğum hasta",
+      "mental": "Stres / kaygı / üzüntü",
+      "heart": "Kalp / göğüs"
+    }
+  },
+  "navigate": {
+    "heroTitle": "Doktora gitmem gerekiyor",
+    "heroSubtitle": "Hazırlanmana yardım edeceğiz — ne götüreceğin, ne söyleyeceğin, hakların.",
+    "issuePrompt": "Sorun ne?",
+    "issues": {
+      "fever": "Ateş / enfeksiyon",
+      "pain": "Ağrı / yaralanma",
+      "pregnancy": "Hamilelik",
+      "chronic": "Kronik hastalık",
+      "mental": "Ruh sağlığı",
+      "skin": "Cilt / göz / kulak",
+      "child": "Hasta çocuk",
+      "other": "Başka bir şey"
+    },
+    "tellMore": "Daha fazla anlat",
+    "detailPlaceholder": "Ne olduğunu anlat… Ne kadar süredir? Ne kadar kötü?",
+    "detailAria": "Sağlık sorununu anlat",
+    "insuranceTitle": "Sağlık sigortan var mı?",
+    "insuranceSubtitle": "Ne götüreceğini söylememize yardım eder",
+    "insuranceYes": "Evet, sağlık kartım var",
+    "insuranceNo": "Hayır, sigortam yok",
+    "insuranceUnknown": "Emin değilim",
+    "countryTitle": "Hangi ülkedesin?",
+    "generating": "Ziyaret kartı hazırlanıyor…",
+    "generateCard": "Doktor ziyaret kartı oluştur",
+    "startOver": "Baştan başla",
+    "showDoctor": "Bunu doktora göster",
+    "generatedBy": "Redi Health Advisor tarafından oluşturuldu",
+    "whatToBring": "Ne götürmeli",
+    "askYourDoctor": "Doktoruna sor",
+    "patientRights": "Hasta olarak hakların",
+    "findHospital": "En yakın hastaneyi bul",
+    "mapHint": "Rotalı haritayı açar",
+    "meta": {
+      "title": "Sağlık navigatörü — Redi Health",
+      "description": "Doktor ziyaretine hazırlan — kart, ne götüreceğin, hakların."
+    }
+  },
+  "about": {
+    "brand": "Redi Health",
+    "tagline": "Kırsal ve dışlanmış topluluklar için sağlık okuryazarlığı",
+    "version": "Sürüm 1.0.0",
+    "missionBody": "Redi Health, resmi sağlık sistemlerinin sık sık yetersiz hizmet verdiği topluluklar için saha aracıları ve klinisyenlerle birlikte tasarlanmış bir AI yardımcısıdır — kırsal yerleşimlerden gayri resmi mahallelere kadar — özellikle Roman topluluklarına odaklanarak. Mesafe, dil engeli veya dışlanmanın erişimi engellediği okuryazarlık boşluğunu kapatıyoruz.",
+    "values": {
+      "careLabel": "Özenle yapıldı",
+      "careDesc": "Sağlık aracıları tarafından",
+      "languagesLabel": "15 dil",
+      "languagesDesc": "Avrupa genelinde",
+      "evidenceLabel": "Kanıta dayalı",
+      "evidenceDesc": "DSÖ kılavuzları",
+      "communityLabel": "Topluluk öncelikli",
+      "communityDesc": "Yargısız"
+    },
+    "privacyLink": "Gizlilik politikası",
+    "termsLink": "Hizmet şartları",
+    "disclaimer": "Redi Health tıbbi bir cihaz değildir. Tüm bilgiler yalnızca eğitim amaçlıdır. Tıbbi kararlar için her zaman nitelikli bir sağlık uzmanına danışın.",
+    "meta": {
+      "title": "Hakkında — Redi Health",
+      "description": "Redi Health sağlık okuryazarlığı platformu hakkında"
+    }
+  },
+  "theme": {
+    "ariaLabel": "Tema",
+    "light": "Açık tema",
+    "dark": "Koyu tema",
+    "system": "Sistem teması",
+    "switchTo": "Temayı değiştir — şu an {label}"
+  },
+  "emergency": {
+    "call112": "112'yi HEMEN ara",
+    "banner": "Acil durum mu? 112'yi ara",
+    "emergencyLabel": "Acil durum",
+    "ambulanceLabel": "Ambulans"
+  },
+  "voice": {
+    "start": "Konuşmaya başla",
+    "stop": "Dinlemeyi durdur",
+    "readAloud": "Sesli oku",
+    "readMessageAloud": "Mesajı sesli oku",
+    "readExplanationAloud": "Açıklamayı sesli oku",
+    "micDeepgram": "Konuşmak için dokun — çok dilli ses (Deepgram)",
+    "micError": "Mikrofona erişilemiyor.",
+    "detected": "Algılanan dil: {lang}"
+  },
+  "severity": {
+    "green": "Evde bakım",
+    "amber": "Yakında doktora git",
+    "red": "Acil — HEMEN git",
+    "redHospital": "HEMEN hastaneye git"
+  },
+  "learn": {
+    "progressLabel": "tamamlanan modül",
+    "startHere": "Buradan başlayın",
+    "continueLabel": "Devam et",
+    "allModules": "Tüm modüller",
+    "prevention": {
+      "description": "15 yıldır Roman yerleşimlerinde çalışırken, basit alışkanlıklarla önlenebilecek hastalıklarla yıkılan aileler gördüm. Bu bilgi lüks değil — hayatta kalmaktır.",
+      "handwashing": {
+        "title": "El yıkama",
+        "description": "Yerleşimlerdeki bütün ailelerin elden ele geçen aynı mide enfeksiyonundan hastalandığını gördüm. Doğru el yıkama, halihazırda erişebildiğiniz en ucuz ve en güçlü ilaçtır; hiçbir maliyeti yoktur ve topluluklarımızda en sık gördüğüm hastalıkları önler.",
+        "tip1": "Yiyeceklere dokunmadan önce, çocuğu beslemeden önce ve her tuvalet ziyaretinden sonra ellerinizi yıkayın. Yıkanmamış bir elin bütün ev halkını bir hafta boyunca ishal ettiğini gördüm",
+        "tip2": "Yavaşça 20'a kadar sayın veya bir şarkının bir bölümünü mırıldanın. Çoğu kişi 5 saniye boyunca yıkanır; bu da neredeyse hiçbir şeyi ortadan kaldırmaz. Mikropları öldüren şey elleriniz arasındaki sürtünmedir",
+        "tip3": "Sabun yok mu? Akan suyu olmayan yerleşim yerlerinde çalıştım. Kül işe yarıyor. Kum işe yarıyor. Fırçalamayla birlikte tek başına su, hiç yoktan iyidir. Mükemmelin iyiyi engellemesine izin vermeyin",
+        "tip4": "Ellerinizi havayla kurutun veya her gün değiştirdiğiniz temiz bir bez kullanın. Herkesin paylaştığı kirli bir havlu, temiz elleri yeniden kirletir; bunu her ev ziyaretimde açıklarım.",
+        "fact": "Birlikte çalıştığım topluluklarda, el yıkama kampanyaları çocuk ishal vakalarını üç ay içinde neredeyse yarı yarıya azalttı. WHO şunu doğruluyor: el yıkama ishali %40 oranında ve solunum yolu enfeksiyonlarını %21 kadar azaltır.",
+        "action": "Bu gece çocuklarınızla birlikte su kaynağının yanında durun ve birlikte ellerinizi yıkayın. Her yemekten önce bunu bir aile alışkanlığı haline getirin. Anne ve babasını izleyerek öğrenen çocuklar bunu ömür boyu taşıyacaklar."
+      },
+      "vaccination": {
+        "title": "Aşılama",
+        "description": "Roman annelere, belgeleri olmadığı, dili konuşamadıkları veya sadece daha sonra tekrar gelmeleri söylendiği için geri çevrildikleri sağlık merkezlerine kadar eşlik ettim. Aşılar çocuklarınızın yasal hakkıdır; ücretsiz, güvenli ve bir ebeveynin sağlayabileceği en güçlü korumadır. Bunu kimse size inkar edemez.",
+        "tip1": "Avrupa'daki her ülke doğumdan itibaren ücretsiz bir aşı programı sunmaktadır. Bu bir hayır işi değildir; çocuğunuzun yasal hakkıdır. Sağlık çalışanı reddederse amirinden isteyin ve bunu açıkça belirtin.",
+        "tip2": "Aşı kartı, çocuğunuzun doğum belgesinden sonra sahip olduğu en önemli belgedir. Onu güvende tutun, her doktor ziyaretinizde yanınızda bulundurun. Kaybolursa herhangi bir sağlık merkezi yenisini düzenlemelidir; reddi kabul etmeyin",
+        "tip3": "Hafif ateş, kolda ağrı, gün boyu huzursuzluk; bunlar normaldir ve aşının işe yaradığı anlamına gelir. Yüzlerce endişeli anneye bu konuda güvence verdim. 24–48 saatte geçer",
+        "tip4": "Aşılar için çoğu halk sağlığı merkezinde randevu almanıza gerek yoktur. İçeri girin. Bölgenizde bir Roman sağlık arabulucusu çalışıyorsa, ondan size eşlik etmesini isteyin; biz bunun için eğitildik.",
+        "fact": "Çalıştığım yerleşim yerlerinden birinde kızamık vakaları aşı kapsamının %60'a düşmesi nedeniyle ortaya çıktı. Üç çocuk hastaneye kaldırıldı. Toplumsal aşılama kampanyasının ardından %94'ye ulaştık ve salgınlar durdu. Avrupa çapında aşılar her yıl 2–3 milyon ölümü önlüyor.",
+        "action": "Çocuğunuzun aşı kartını hemen çıkarın. Sağlık merkezinizin duvarındaki programa göre kontrol edin. Aşılardan herhangi biri eksikse veya kartınız yoksa bu hafta sağlık ocağına gidin. Yardımcı olacaksa programı göstermesi için bu uygulamayı getirin."
+      },
+      "cleanWater": {
+        "title": "Temiz Su",
+        "description": "Ailelerin günde iki saat akan tek bir su noktasını paylaştığı yerleşim yerlerinde, musluk suyunun berrak göründüğü halde çocuklarda kronik mide sorunlarına neden olan bakterileri taşıdığı mahallelerde çalıştım. Su kalitesi her zaman gözle görülemiyor ve Roman topluluklarında yetkililer tarafından nadiren izleniyor. Ailenizin su müfettişi olmalısınız.",
+        "tip1": "Suyu depoladığınız her kabın üzerini kapatın. Özellikle sıcak havalarda sineklerin, tozun ve hatta hayvan atıklarının üstü açık kovaları saatler içinde kirlettiğini gördüm. Üst kısımdaki basit bir plaka çoğu kirlenmeyi önler",
+        "tip2": "Suyunuzdan emin değilseniz, tam bir dakika boyunca kaynayan ateşte kaynatın. Bu bakteri, virüs ve parazitlerin %99.9 kadarını öldürür. Neredeyse hiçbir maliyeti yok ve işe yarıyor. Bunu su kaynağının şüpheli olduğu düzinelerce yerleşim yerinde öğrettim.",
+        "tip3": "Su kaplarınızı haftada en az bir kez sabun ve temiz suyla yıkayın. Kirli bir kap temiz suyu kirletir. Bu, çocuklarda gördüğüm tekrarlayan ishalin en çok gözden kaçan nedenlerinden biridir.",
+        "tip4": "Dereler, göletler ve su birikintileri, su berrak görünse bile hiçbir zaman içmek için güvenli değildir. Gözle görülmeyen parazitler çocukların bağırsaklarında ve gelişiminde kronik hasara neden oluyor",
+        "fact": "Orta ve Doğu Avrupa'daki pek çok Roman yerleşim yerinde ailelerin güvenli borulu suya erişimi yok. Avrupa Roman Hakları Merkezi, Roman mahallelerinin su altyapısından sistematik olarak yetersiz yararlandığını belgeledi. Suyu kaynatmak ideal değildir; temiz su hakkınız yerine getirilene kadar bir hayatta kalma stratejisidir.",
+        "action": "Bugün ailenizin içme suyu depoladığı her kabı kontrol edin. Açık olanların üzerini örtün. Su kaynağının güvenli olduğunu doğrulayamıyorsanız bu geceden itibaren tüm içme ve yemek pişirme suyunu kaynatmaya başlayın."
+      },
+      "firstAid": {
+        "title": "Temel İlk Yardım",
+        "description": "Ambulansların gelmesinin daha uzun sürdüğü veya bazen hiç gelmediği uzak yerleşim birimlerinde ve kentsel mahallelerde, acil bir durumun ilk dakikalarında ne yapılacağını bilmek, yaşamla ölüm arasındaki farktır. Yüzlerce Roman topluluğu üyesine temel ilk yardım konusunda eğitim verdim ve bu bilginin, herhangi bir doktor gelmeden hayat kurtardığını gördüm.",
+        "tip1": "112 Avrupa'daki herhangi bir telefondan çalışır; hatta kredisiz, SIM kartsız, hatta kilitli bir telefondan bile. 7 üzeri çocuklar da dahil olmak üzere ailenizin her üyesine 112 numarasını tuşlamayı ve nerede olduklarını söylemeyi öğretin. Bunu uygulayın. Acil bir durumda panik insanlara unutturur",
+        "tip2": "Ağır kanama için: Elinizdeki en temiz bezle (gömlek, başörtüsü, herhangi bir şey) sıkıca bastırın ve kontrol etmek için kaldırmayın. Yardım gelene kadar basmaya devam edin. Bakmak için kumaşı çıkarmaya devam ettikleri için tehlikeli derecede kanayan insanlar gördüm. Kan emilirse üstüne daha fazla bez ekleyin",
+        "tip3": "Yanıklar: yanığı derhal en az 10 dakika boyunca soğuk akan suyun altına tutun. Asla tereyağı, sıvı yağ, diş macunu veya yumurta beyazı kullanmayın; birçok ailede karşılaştığım, aslında ısıyı hapseden ve daha kötü hasara ve enfeksiyona neden olan geleneksel ilaçlardır.",
+        "tip4": "Birisi yere yığılırsa ve nefes almıyorsa: 112'ı arayın, ardından göğsünün ortasını sert ve hızlı bir şekilde itin - dakikada 100 kez ('Stayin' Alive' şarkısının temposu). Yardım gelene kadar durmayın. Kusurlu CPR, CPR olmamasından sonsuz derecede daha iyidir",
+        "fact": "Araştırmalar, temel ilk yardım eğitiminin yaygın olduğu toplumlarda kalp krizinden kurtulma oranının iki katına çıktığını gösteriyor. Pek çok Roman topluluğunda, ambulans müdahale süreleri Roman olmayan bölgelere göre önemli ölçüde daha uzundur; bu da olay yerinde bulunan kişilere yapılan ilk yardımı daha da kritik hale getirmektedir.",
+        "action": "Şu anda her aile üyesine şunu sorun: 112'ı nasıl arayacağınızı biliyor musunuz? Ev adresimizi sevk görevlisine söyleyecek kadar iyi biliyor musun? Tam adresinizi bir kağıda yazın ve telefonun yanına koyun. Bugün çocuklarınıza öğretin."
+      }
+    },
+    "nutrition": {
+      "description": "Roma aileleriyle geçen yıllarda yemeğin sadece beslenme olmadığını — neye gücünüzün yettiği, mahallenizde ne bulunduğu ve ailenizin ne bildiği olduğunu öğrendim. Kinoa al demeyeceğim. Elinizdekilerle ailenizi nasıl iyi besleyeceğinizi anlatacağım.",
+      "balancedDiet": {
+        "title": "Her Bütçede İyi Beslenmek",
+        "description": "Roman topluluklarında gördüğüm en büyük beslenme sorunu yiyecek eksikliği değil; çok fazla ucuz ekmek, işlenmiş et ve şekerli içecekler, çok az sebze, yumurta ve baklagiller. Bu iradeyle alakalı değil. Bu neyin mevcut ve uygun fiyatlı olduğuyla ilgilidir. Ancak küçük değişiklikler sizin sağlığınız ve çocuklarınızın gelişimi üzerinde çok büyük farklar yaratır.",
+        "tip1": "Fasulye, mercimek ve nohut herhangi bir pazardaki en ucuz proteindir; etten daha ucuzdur, daha uzun ömürlüdür ve diyabet ile kalp hastalığını önler. Bir tencere fasulye yahnisi, bir aileyi bir paket işlenmiş sosisten daha azıyla doyurur ve çok daha besleyicidir",
+        "tip2": "Yumurta var olan en eksiksiz ucuz besindir. Çocuk başına günde iki yumurta, büyüyen bir beynin ihtiyaç duyduğu hemen hemen her şeyi sağlar. Çalıştığım her yerleşim yerinde çocuklar için birinci öncelikli besin olarak yumurtayı öneriyorum.",
+        "tip3": "Yerel pazardan veya bahçenizden mevsimlik sebzeler, süpermarket fiyatlarının çok altında bir fiyata satılıyor. Lahana, soğan, havuç, patates, biber; bunlar sağlıklı beslenmenin temelidir ve her Roma mutfağı geleneğinde yer alır.",
+        "tip4": "Şekerli içecekler (kola, meyve suyu, enerji içecekleri) Roman ailelerin beslenmesinde gördüğüm en zarar verici maddelerdir. Bir şişe kolada 10 çay kaşığı şeker bulunur. Su veya açık çay ile değiştirin ve çocuklarda gördüğüm en büyük obezite ve diş çürümesine neden olan etkeni ortadan kaldırın.",
+        "fact": "Romanya ve Bulgaristan'da birlikte çalıştığım Roman topluluklarında, aileler günlük beyaz ekmek ve işlenmiş eti fasulye, yumurta ve sebzelerle değiştirdiğinde, hatta ne kadar yediklerini değiştirmediklerinde, diyabet oranlarının ölçülebilir şekilde düştüğünü gördüm. Vücut sadece niceliğe değil niteliğe de tepki verir.",
+        "action": "Bu hafta, bir öğün ekmek ve işlenmiş et yerine soğan ve biberli bir tencere fasulye veya mercimek güveci kullanın. İki gün yetecek kadar pişirin. Daha ucuzdur, sizi daha uzun süre doyurur ve ailenizin sağlık gidişatını değiştirmeye başlar."
+      },
+      "childNutrition": {
+        "title": "Güçlü Bir Başlangıç İçin Çocukları Beslemek",
+        "description": "İlk 1,000 günler — hamilelikten 2 yaşına kadar — bir çocuğun tüm geleceğini şekillendirir: beynini, bağışıklık sistemini, öğrenme yeteneğini. Yerleşimlerdeki yetersiz beslenen çocukların genetik yüzünden değil, o kritik ilk aylarda yedikleri şeyler yüzünden akranlarının gerisinde kaldıklarını gördüm. Çocuğunuzu şu anda beslediğiniz şey, onun hayatına yapabileceğiniz en güçlü yatırımdır.",
+        "tip1": "6 ay boyunca tek başına anne sütü altın standarttır; ücretsizdir, her zaman mevcuttur, mükemmel derecede besleyicidir ve enfeksiyonlara karşı herhangi bir ilaçtan daha iyi korur. Mamanın 'modern' ve daha iyi olduğunu düşünen annelerle çalıştım. Değil. Anne sütü mükemmelleştirilmiş bir teknoloji evrimidir",
+        "tip2": "6 ayda emzirmenin yanı sıra yumuşak gıdalara başlayın: patates püresi, havuç, muz, pişmiş yumurta sarısı. Tepkileri izlemek için her 3 günde bir yeni yiyecek verin. Birlikte çalıştığım annelerin çoğu katı gıdalara çok geç başlıyor (8–9 ay) — bu da gelişimi geciktiriyor",
+        "tip3": "2 yaşın altındaki çocuklara asla şeker, bal, tuz, kola, cips veya şeker verilmemelidir. Büyükanne ve büyükbabaların bazen bebeği sakinleştirmek için şekerli çay verdiklerini biliyorum - lütfen durun. Bu yaştaki şeker, ömür boyu sürecek bir iştahı programlıyor ve dişler daha tam olarak ortaya çıkmadan zarar görüyor",
+        "tip4": "6 aydan büyük bir çocuk için günde bir yumurta, mevcut en basit beslenme yükseltmesidir. Ekvador'da yapılan bir araştırma, yumurtaların bodurluğu %47 oranında azalttığını gösterdi. Bunu her topluluk konuşmasında dile getiriyorum çünkü bu hemen hemen her aile için başarılabilir.",
+        "fact": "Beslenme programlarını yürüttüğüm topluluklarda, 6 ay boyunca her gün bir yumurta ve bir porsiyon sebze alan çocuklar, almayan çocuklara kıyasla büyüme ve bilişsel gelişimde ölçülebilir iyileşmeler gösterdi. Yetersiz beslenme yalnızca yoksullukla ilgili değildir; sahip olduğunuz kaynaklarla neye öncelik vereceğinizi bilmekle ilgilidir.",
+        "action": "Yarından itibaren, 6 aydan büyük çocuğunuza günde bir yumurta (püre veya çırpılmış) verin. Çocuğunuz 6 ayın altındaysa ve emziriyorsanız kendiniz fazladan bir yumurta yiyin; besinler sütünüze geçer."
+      },
+      "foodSafety": {
+        "title": "Yiyecekleri Güvende Tutmak",
+        "description": "Gıda zehirlenmesi, Roman ailelerin acil servislere gitmesinin en yaygın nedenlerinden biri; özellikle çocuklarda kusma, ishal ve dehidrasyon. Soğutmanın güvenilmez olduğu ve mutfakların ortak veya açık havada kullanıldığı yerleşim yerlerinde gıda güvenliği bir ders kitabı konusu değil, günlük bir hayatta kalma becerisidir.",
+        "tip1": "Sıcak havalarda, pişmiş yiyeceklerin 2 saatten fazla dışarıda bırakılması tehlikeli hale gelir. Buzdolabına koyamıyorsanız, tek öğünde bitireceğiniz daha küçük porsiyonları pişirin. Yaz aylarında bir gecede dışarıda bırakılan yeniden ısıtılmış güveç nedeniyle tüm ailelerin hastaneye kaldırıldığını gördüm",
+        "tip2": "Çiğ tavuk ve et asla ekmeğe, sebzeye veya pişmeden yenecek hiçbir şeye temas etmemelidir. Ayrı kesme yüzeyleri kullanın; düz bir şekilde yerleştirilmiş temiz bir plastik torba bile işe yarar. Bu çapraz bulaşma, karşılaştığım gıda zehirlenmesinin bir numaralı nedenidir",
+        "tip3": "Yiyecekler yanlış kokuyorsa, yanlış görünüyorsa veya sümüksü bir his veriyorsa, onu atın. Kontrol etmek için tadına bakmayın. Para kısıtlı olduğunda yiyecekleri atmanın acı verici olduğunu biliyorum, ancak bir gıda zehirlenmesi nöbeti ilaçta ve iş kaybında yiyeceğin değerinden daha pahalıya mal olur.",
+        "tip4": "Soymayı planlıyor olsanız bile, yemeden önce tüm meyve ve sebzeleri akan su altında yıkayın. Kestiğinizde dışarıdaki kir içeriye geçer. Bu, özellikle birçok kişi tarafından işlenmiş olabilecek pazar ürünleri için önemlidir.",
+        "fact": "WHO, her yıl 600 milyon insanın kontamine gıdalardan dolayı hastalandığını ve bu yükün %40'sini 5 yaşının altındaki çocukların taşıdığını tahmin ediyor. Gıda güvenliğini öğrettiğim topluluklarda gastroenterit nedeniyle hastane ziyaretleri ilk yazda önemli ölçüde azaldı.",
+        "action": "Hemen mutfağınızı kontrol edin: Yukarıda saklanan veya yemeye hazır yiyeceklere temas eden çiğ et var mı? 2 saatten uzun süredir dışarıda bekleyen pişmiş yiyecek var mı? Bugün bu iki şeyi düzeltin; bunlar ev ziyaretlerinde gördüğüm en yaygın tehlikeler."
+      }
+    },
+    "maternal": {
+      "description": "Roma kadınları ayrı odalara alındıkları, saygısız muamele gördükleri veya diğer kadınların aldığı epiduralın reddedildiği hastanelere eşlik ettim. Tek bir doğum öncesi ziyaretle yakalanabilecek komplikasyonlardan ölen kadınlar da gördüm. Bedeniniz, bebeğiniz, haklarınız. Üçünü de bilin.",
+      "prenatalCare": {
+        "title": "Doğum Öncesi Bakım",
+        "description": "15 yıllarındaki arabuluculuk çalışmalarında, tekrar tekrar gördüğüm kalıp, Roman kadınların 6 veya 7 aylık hamile olduklarında ilk kez doktora gitmeleridir; çoğunlukla kendilerini iyi hissettikleri, hastaneden korktukları için veya hiç kimse doğum öncesi bakımın ücretsiz ve hakları olduğunu açıklamadığı için. Bu noktada, preeklampsi veya gebelik diyabeti gibi tehlikeli durumlar aylardır sessizce gelişiyor olabilir.",
+        "tip1": "Regl döneminizi kaçırdığınız ve hamilelikten şüphelendiğiniz anda doktorunuza veya ebenize gidin. İlk üç aylık dönem, folik asidin bebeğinizdeki beyin ve omurga kusurlarını önlediği dönemdir. Beklemek size en kritik pencereyi kaybettirir. Pratisyen hekiminiz yoksa sağlık aracınız kayıt olmanıza yardımcı olabilir; bu yaptığımız işin temel bir parçasıdır",
+        "tip2": "Folik asit günlük 400mcg alımına hamile kalmaya çalıştığınızda veya hamile olduğunuzu öğrenir öğrenmez başlamalısınız. Herhangi bir eczanede ücretsiz veya çok ucuzdur. Ev ziyaretlerimde yanımda paket taşıyorum çünkü bu basit hap yıkıcı doğum kusurlarını önlüyor",
+        "tip3": "Demir açısından zengin besinler, birlikte çalıştığım Roman hamile kadınların neredeyse yarısında gördüğüm anemiyi önlüyor: fasulye, mercimek, koyu yeşil yapraklı sebzeler, karaciğer, kırmızı et. Anemi sizi yorar, doğumu daha tehlikeli hale getirir ve bebeğinizin beyin gelişimini etkiler.",
+        "tip4": "Kendi dilinizde doğum öncesi bakım alma, onurlu bir şekilde davranılma ve randevularınızda size eşlik edecek birini bulundurma hakkına sahipsiniz. Eğer doktor ilgisiz veya saygısız davranıyorsa şikayette bulunabilir ve başka bir sağlayıcı talep edebilirsiniz. Adı, tarihi ve söylenenleri belgeleyin. Ailelerin bunu düzenli olarak yapmalarına yardımcı oluyorum",
+        "fact": "Avrupa'daki Roman kadınların hamilelik komplikasyonları yaşama olasılıkları genel nüfusa göre 3 ila 5 kat daha fazladır, bunun nedeni büyük ölçüde doğum öncesi bakıma daha geç erişmeleri veya hiç erişememeleridir. Hamile kadınları ilk üç aylık dönemde bakıma bağlamak için çalıştığım topluluklarda komplikasyon oranları önemli ölçüde düştü.",
+        "action": "Hamileyseniz veya çevrenizde henüz doktora gitmemiş hamile bir kadın tanıyorsanız, o randevuyu bugün alın. Eğer korkuyorsa ya da nasıl yapılacağından emin değilse, onunla birlikte gidin ya da onu yerel sağlık aracısına bağlayın. O tek ziyaret her şeyi değiştirebilir."
+      },
+      "safeDelivery": {
+        "title": "Güvenli Teslimat",
+        "description": "Ambulanslarda doğum yapan kadınların çok geç bıraktığı için elinden tuttum, hastane koridorlarında Roman kadınların en son sırada yer aldığı, Roman olmayan kadınların ise önde olduğu hastane koridorlarında oturdum. Bu durumların her ikisi de önlenebilir. Teslimatınızı planlamak ve haklarınızı bilmek, bu deneyimi bir krizden sizin kontrol ettiğiniz bir şeye dönüştürür.",
+        "tip1": "34 haftasına kadar doğum planınızı hazırlayın: hangi hastaneye, sizinle kim gidecek, oraya nasıl gideceksiniz (özellikle geceleri), diğer çocuklarınıza kim bakacak. Son dakikada çabalayan çok fazla aile gördüm ve stres doğumu etkiliyor",
+        "tip2": "Neredeyse tüm Avrupa ülkelerinde doğum ve doğum sırasında yanınızda bir refakatçi (koca, anne, kız kardeş, arabulucu) bulundurma yasal hakkına sahipsiniz. Hastane hayır diyorsa, ülkenizin hasta hakları kanununa atıfta bulunun. Bu referansları taşıyoruz ve sağlayabiliriz",
+        "tip3": "Saat kaç olursa olsun ŞİMDİ HASTANEYE GİT anlamına gelen 5 tehlike işaretlerini öğrenin: (1) ağır kanama, (2) ellerin/yüzün şişmesiyle birlikte şiddetli baş ağrısı, (3) bebeğin hareket etmesi durur, (4) 37 haftadan önce su gelmesi, (5) 38°C'nin üzerinde ateş. Sabaha kadar beklemeyin. Bunları evde halletmeye çalışmayın",
+        "tip4": "Doğumdan sonra, kendinizi iyi hissetseniz bile, takip için en az 24 saat hastanede kalın. Hayatı tehdit eden birçok komplikasyon (kanama, enfeksiyon) ilk 24 saatlerde ortaya çıkar. Hastane ortamının düşmanca olabileceğini biliyorum ama saatlerce süren izleme hayat kurtarır",
+        "fact": "5 yıl boyunca çalıştığım bir bölgede, her hamile kadının bir doğum planına, ulaşım düzenlemesine ve 36 haftasına göre hazırlanmış bir hastane çantasına sahip olmasını sağlayarak Roman anne acil durumlarını %60 oranında azalttık. Yeni teknoloji yok; yalnızca hazırlık ve eşlik etme.",
+        "action": "Siz veya tanıdığınız biri 30 haftayı geçmişse: hastanenin adını, telefon numarasını ve güzergahını bir kağıda yazın. Duvara koy. Kimlik, aşı kartı, bebek kıyafetleri ve telefon şarj cihazının bulunduğu bir çanta hazırlayın. Bu 20 dakika sürer ve bir hayat kurtarabilir."
+      },
+      "breastfeeding": {
+        "title": "Emzirme",
+        "description": "Roman kültüründe emzirmeye çok değer veriliyor, ancak iyi niyetli akrabaları tarafından 'süt henüz gelmediği' gerekçesiyle ilk günlerde su, çay veya mama vermeleri söylenen genç annelerle karşılaşıyorum. Kolostrum (koyu, sarımsı ilk süt) bir şeylerin ters gittiğine dair bir işaret değildir. Yeni doğmuş bebeğinizi, yaşamının ilk haftalarında en tehlikeli enfeksiyonlardan koruyan antikorlarla dolu sıvı altındır.",
+        "tip1": "Doğumdan sonraki 1 saat içinde bebeğinizi ten tene temas ettirin ve memeyi bulmasına izin verin. Bu ilk kolostrum beslemesi bebeğinizin alacağı en önemli 'aşı'dır; bağırsaklarını enfeksiyona karşı korumayla kaplar. Tıbbi bir acil durum olmadıkça, bu durum gerçekleşmeden kimsenin bebeğinizi almasına izin vermeyin.",
+        "tip2": "Talep üzerine besleyin: Bebek açlık belirtileri gösterdiğinde (başını çevirmek, ellerini emmek, telaşlanmak). İlk haftalarda bu, 24 saatte 10–14 kez olabilir. Bu normaldir ve arzınızı belirler. Saat size bebeğinizin ne zaman aç olduğunu söyleyemez; bebeğiniz size söyler",
+        "tip3": "Doktor tıbbi bir nedenden dolayı özellikle reçete etmedikçe 6 ay boyunca su yok, çay yok, mama yok. Anne sütünüz, bebeğinizin tam ihtiyaçlarını karşılamak için gün boyunca bileşimini değiştirir; hiçbir fabrika bunu kopyalayamaz. İyi niyetli büyükannelerin pamukçuk ve ishale neden olan şekerli su verdiklerini gördüm.",
+        "tip4": "Emzirme acı veriyorsa mandal yanlıştır; vücudunuz değil. Bir ebe veya sağlık çalışanından bir beslenmeyi izlemesini ve pozisyonu ayarlamanıza yardımcı olmasını isteyin. Ağrı yardım almanın bir işaretidir, vazgeçmenin bir işareti değil. Yüzlerce annenin tek seansta çözülen kilitleme sorunlarını çözmesine yardımcı oldum",
+        "fact": "Emzirme destek programlarının mevcut olduğu Roman topluluklarında, 6 ay boyunca yalnızca anne sütü verilmesi, bebeklerin hastaneye yatırılma oranlarını %60'den fazla azaltır. Anne sütü, çevrenizde dolaşan belirli enfeksiyonlarla savaşmak için tam anlamıyla uyum sağlar; vücudunuzun ücretsiz olarak ürettiği kişiselleştirilmiş ilaçtır.",
+        "action": "Yeni bir anneyseniz veya bebek bekliyorsanız: şimdi ailenize 6 ay boyunca yalnızca emzirmeyi planladığınızı ve onların desteğine ihtiyacınız olduğunu söyleyin, başka yiyecekler ekleme tavsiyesine değil. Emzirme acı veriyorsa, emzirmeyi bırakmadan önce ebenizle veya sağlık aracınızla iletişime geçin; çözüm genellikle basittir."
+      },
+      "postpartum": {
+        "title": "Doğum Sonrası Bakım",
+        "description": "Roman kültüründe doğumdan sonraki haftalar ailenin annenin etrafında toplandığı bir dönemdir ve bu çok güzeldir. Ama bir de gölge tarafı gördüm: Her gün ağlayan ve bunun normal olduğu söylenen anneler. Ağır kanayan ve yardım istemek için çok uzun süre bekleyen anneler. 'Kadınların yaşadığı budur' diye acıları görmezden gelinen anneler. İyileşmeniz bebeğinizin sağlığı kadar önemlidir; çünkü bebeğinizin size canlı ve sağlıklı bir şekilde ihtiyacı vardır.",
+        "tip1": "Vücudunuzun iyileşmesi için minimum 6 haftaya ihtiyacı var. Doğumdan sonra kanama (loşi) 2–4 hafta boyunca normaldir, ancak aniden artarsa, büyük pıhtılar içerirse veya kötü kokarsa derhal hastaneye gidin. Ağır kanamanın normal olduğu söylendiği için annelerin tehlikeli miktarda kan kaybettiğini gördüm. öyle değil",
+        "tip2": "Sürekli olarak üzgün, boşlukta hissediyorsanız, bebeğinizle bağlantı kuramıyorsanız veya kendinize ya da bebeğinize zarar verme düşünceleriniz varsa; zayıf değilsiniz, kötü bir anne değilsiniz, tedaviye yanıt veren tıbbi bir durumunuz var. Bunu her ev ziyaretimde söylüyorum çünkü toplumlarımızda doğum sonrası depresyonla ilgili damgalama hayatlara mal oluyor",
+        "tip3": "6 haftalık doğum sonrası muayeneniz isteğe bağlı değildir; enfeksiyonu, iyileşmeyi, kan basıncını ve zihinsel sağlığı kontrol eder. Deneyimlerime göre, Roman kadınların %30'den azı bu ziyarete katılıyor. Lütfen %30 içinde olun. Eğer yardımı olacaksa yanınızda birini getirin",
+        "tip4": "Yemek pişirme, temizlik ve çocuk bakımı konusunda ailenizin her türlü yardım teklifini kabul edin. Bebek uyuduğunda siz de uyuyun. Tek işiniz bebeği beslemek ve iyileşmek. Diğer her şey bekleyebilir. Tanıdığım en güçlü anneler yardımı kabul edenlerdir",
+        "fact": "Doğum sonrası depresyon dünya çapında 5 kadınlarda 1'yi etkiliyor ancak yoksulluk stresi, ayrımcılık ve izolasyon nedeniyle Roman topluluklarında daha da yüksek olduğu tahmin ediliyor. Yeni anneler için akran destek grupları kurduğum her toplulukta depresyon oranları düştü ve emzirme oranları arttı; çünkü bağlantı iyileşiyor.",
+        "action": "Son 6 haftada doğum yaptıysanız ve doğum sonrası muayene yaptırmadıysanız bugün sağlık merkezinizi arayın. Sürekli olarak üzgün veya bunalmış hissediyorsanız, güvendiğiniz bir kişiye, annenize, sağlık aracınıza veya herhangi birine söyleyin. Bu ilk konuşma en zor adım ve en önemli adımdır."
+      }
+    },
+    "children": {
+      "description": "Roma çocukları topluluklarımızın geleceğidir ve her avantajı hak eder. Çalışmamda geride kalan çocuklar gördüm — yetenek eksikliğinden değil, önlenebilir hastalıklar, kaçırılan aşılar veya fark edilmeyen gecikmeler şanslarını çaldığı için. Bu bilgi o şansları geri verir.",
+      "growthMilestones": {
+        "title": "Büyüme ve Gelişme",
+        "description": "Her çocuk kendi hızında gelişir ve ebeveynlerin normal farklılıklar konusunda paniğe kapılmalarını asla istemem. Ancak erken müdahalenin dönüştürücü bir fark yaratabileceği durumlarda, gelişimi geciken, aileleri tarafından 'yetişecekler' diyerek göz ardı edilen çocuklar da gördüm. Neye dikkat edilmesi gerektiğini bilmek kaygı değil, dikkattir.",
+        "tip1": "İlk yıl aylık tartım en basit izleme aracıdır. Sağlık merkezinizde çocuğunuzun yolunda olup olmadığını gösteren büyüme çizelgeleri vardır. Kilo almayı bırakan veya aniden kilo kaybı yaşayan bir çocuğun derhal araştırılması gerekir; bu, beslenme ayarlaması kadar basit veya altta yatan bir hastalığın yakalanması kadar önemli olabilir.",
+        "tip2": "6 aya gelindiğinde çoğu bebek nesnelere uzanır ve isimlerine yanıt verir. 12 aya gelindiğinde çoğu kişi birkaç kelime söyler ve kendini ayağa kaldırır. 24 aya gelindiğinde çoğu kişi iyi yürür ve kısa cümlelerle konuşur. Çocuğunuz bu dönüm noktalarının önemli ölçüde gerisindeyse, gelişimsel bir değerlendirme isteyin; erken yardım en büyük farkı yaratır",
+        "tip3": "Çocuğunuzla sürekli konuşun; ne yaptığınızı anlatın, nesnelere isim verin, şarkı söyleyin. Roman ailelerin güçlü bir sözlü geleneği var; bunu kullanın. Daha fazla kelime duyan çocuklar daha geniş kelime dağarcığına ve daha güçlü bilişsel becerilere sahip olurlar. Bu ücretsizdir ve herhangi bir oyuncaktan daha etkilidir",
+        "tip4": "Dişler: Doğumdan itibaren bebeğinizin diş etlerini nemli bir bezle temizleyin ve ilk dişinden itibaren küçük bir miktar çocuk diş macunu sürün. 3 yaşına kadar Roman çocuklarda, çoğunlukla geceleri içilen tatlı çay şişelerinden dolayı şiddetli diş çürüğü görüyorum; bu, ağrıya, enfeksiyona ve büyümeyi etkileyen yeme sorunlarına neden oluyor",
+        "fact": "Araştırmalar, gelişimsel gecikmeleri 3 yaşından önce tespit edilen ve ele alınan çocukların okula beklenen düzeyde devam etme olasılıklarının 5 kat daha fazla olduğunu gösteriyor. Aylık tartım ve gelişim taraması kurduğum yerleşim yerlerinde erken müdahale için sevk oranları üç katına çıktı; bu da çocukların normalde kaçıracakları yardıma eriştiği anlamına geliyor.",
+        "action": "Çocuğunuz 2 yaşının altındaysa, onu bu ay sağlık merkezinizde kilo kontrolü ve gelişim taramasına götürün. Çocuğunuz 2 yaşını doldurduysa ve konuşma, yürüme veya davranışla ilgili endişeleriniz varsa, bir uzmana sevk edilmesini isteyin. Endişeniz geçerli; buna göre hareket edin."
+      },
+      "commonIllnesses": {
+        "title": "Çocuğunuz Hasta Olduğunda",
+        "description": "Aşırı kalabalık konutların, sınırlı hijyen koşullarının ve soğuk kışların olduğu yerleşim yerlerinde çocuklar sıklıkla hastalanıyor. Bu hastalıkların çoğu - ishal, öksürük, ateş - ne yapacağınızı ve ne zaman şiddetlendireceğinizi biliyorsanız evde yönetilebilir. Ancak ebeveynlerin çok uzun süre beklediklerini ya da evde basit bir tedavinin çözebileceği rahatsızlıklar için acil servislere koştuklarını da gördüm. Bu modül size farkı öğretir.",
+        "tip1": "38.5°C'nin altındaki ateş: çocuğunuzun vücudu enfeksiyonla savaşıyor; bu iyi bir şey. Onları rahat tutun, hafif giyinin ve bol miktarda sıvı verin. 38.5°C'nin üzerinde ateş: Çocuklara kilolarına göre doğru dozda parasetamol verin (yetişkinlere parasetamol DEĞİL). Ateş 3 günden fazla sürerse veya çocuk alışılmadık derecede uykuluysa tıbbi yardım alın",
+        "tip2": "İshal, enfeksiyonun kendisi değil, dehidrasyon yoluyla öldürür. Çocuğunuzun dışkısı gevşek olduğu anda, ağızdan rehidrasyona başlayın: 1 litre temiz kaynamış su + 6 düzeyinde çay kaşığı şeker + yarım çay kaşığı tuz. Birkaç dakikada bir küçük yudumlar verin. Bu tarif dünya çapında tüm antibiyotiklerden daha fazla çocuğun hayatını kurtardı",
+        "tip3": "Şunları görürseniz ÇOCUĞUNUZU DERHAL HASTANEYE GÖTÜRÜN: hızlı veya zor nefes alma, her nefeste göğsün içeri çekilmesi, su içememe veya emzirememe, her şeyin tekrar tekrar kusması, olağandışı uyuşukluk veya uyanmama, kasılmalar veya kanlı ishal. Beklemeyin. Bunlar acil durumlar",
+        "tip4": "Doktor reçetesi olmadan antibiyotik vermeyin. Başka bir çocuğun reçetesini paylaşmayın. Artan antibiyotikleri kullanmayın. Bunu topluluklarımızda sürekli görüyorum ve tedavisi çok daha zor olan, ilaca dirençli bakteriler yaratıyor. Antibiyotikler soğuk algınlığı, grip veya çoğu öksürük için hiçbir şey yapmaz",
+        "fact": "Çalıştığım topluluklarda, ebeveynleri oral rehidrasyon solüsyonu hazırlama ve kullanma konusunda eğitmek, çocukların ishal nedeniyle hastaneye yatmasını tek bir yıl içinde %40 oranında azalttı. Bilgi o kadar güçlü ki, malzemelerin maliyeti hastaneye giden otobüs biletinden daha ucuz.",
+        "action": "Şimdi şu tarifi ezberleyin: 1 litre temiz su + 6 çay kaşığı şeker + yarım çay kaşığı tuz. Bir kez yapmayı deneyin. Eğer istersen tadına bak; tadı gözyaşı gibi olmalı. Bunu hazır bulundurmak, çocuğunuz sabah 2'de ishal olduğunda paniğe kapılmak yerine hemen harekete geçebileceğiniz anlamına gelir."
+      },
+      "immunization": {
+        "title": "Aşılama Programı",
+        "description": "Doğrudan konuşacağım: Avrupa'daki Roman topluluklarında aşılama oranları ulusal ortalamanın altında ve bunun nedeni Roman ebeveynlerin çocuklarını önemsememeleri değil; sağlık sisteminin onlara saygı, erişim ve bilgi sunamaması. Yanlış bilgiler sosyal medya aracılığıyla da yayılıyor. Hiç orada olmaması gereken kızamık hastası çocukları hastanede tuttum. Aşılanmayan her çocuk sistemin başarısız olduğu bir çocuktur.",
+        "tip1": "Doğumdan 6 haftaya kadar: BCG (tüberküloz) ve Hepatit B. Bunlar taburcu olmadan önce hastanede verilir. Bebeğiniz evde doğduysa bu aşılar için onu yaşamının ilk haftasında sağlık ocağına götürün. Beklemeyin",
+        "tip2": "2, 3, 4 aylar: 'büyük üç' tur — DTP (difteri, tetanoz, boğmaca), Çocuk felci, Hib ve Hepatit B. Bunlar bebeklik döneminin en kritik aşılarıdır. Her tur bağışıklığı güçlendirir. Birinin eksik olması tüm zinciri zayıflatır",
+        "tip3": "12–15 ay: MMR (kızamık, kabakulak, kızamıkçık). Bunu yeterince vurgulayamam. Kızamık zararsız bir çocukluk hastalığı değildir; öldürür, beyin hasarına neden olur ve kör eder. 2019 yılında bir Roman yerleşim yerinde kızamık salgını gördüm çünkü kapsam %80'ün altına düşmüştü. Önlenebilirdi",
+        "tip4": "Aşılar her Avrupa ülkesinde devlete ait sağlık merkezlerinde ücretsizdir. Çoğu merkezde sigortaya ihtiyacınız yok, oturma iznine ihtiyacınız yok, randevuya ihtiyacınız yok. Hizmet almanız reddedilirse bu yasa dışıdır; sağlık aracınız veya hasta hakları ofisi ile iletişime geçin",
+        "fact": "Bazı Avrupa ülkelerinde Romanlarla Roman olmayanların aşılanma oranları arasındaki fark 15 yüzde puanını aşıyor. Bu fark Romanların aşılara olan inançlarından kaynaklanmıyor; anketler sürekli olarak Roman ebeveynlerin çocuklarının aşılanmasını istediklerini gösteriyor. Bu boşluğa erişim engelleri, sağlık hizmetlerinde ayrımcılık ve sosyal yardım eksikliği neden oluyor. Bu açığı kapatmak, Avrupa Sosyal Şartı'nın 11 Maddesi uyarınca devletin bir yükümlülüğüdür.",
+        "action": "Çocuğunuzun aşı kartını bulun. Aşılardan herhangi biri eksikse veya kartınız yoksa bu hafta en yakın sağlık kuruluşuna başvurun. Dil, belgeler, ret gibi engellerle karşılaşırsanız yerel sağlık aracınızla iletişime geçin. Biz de tam olarak bunun için buradayız."
+      }
+    },
+    "chronic": {
+      "description": "Romalar Avrupa ortalamasından ortalama 10 yıl daha erken ölüyor. Bu farkın büyük kısmı — diyabet, kalp ve solunum hastalıkları gibi — yıllarca sessizce gelişen kronik hastalıklardan geliyor. Belirtiler göründüğünde hasar çoktan olmuş oluyor. Ama çoğu önlenebilir ve erken yakalanırsa yönetilebilir.",
+      "diabetes": {
+        "title": "Diyabet: Sessiz Tehdit",
+        "description": "Tip 2 diyabet, Roman topluluklarında en sık karşılaştığım kronik hastalıktır. Ailelerden geçiyor, yoksulluğun insanları zorladığı ucuz, yüksek şekerli beslenmeyle gelişiyor ve siz bir sorun hissetmeden yıllar önce gözlerinize, böbreklerinize, ayaklarınıza ve kalbinize zarar veriyor. 40'li erkeklerin ayak parmaklarını kaybettiğini ve kadınların, hiç kan testi yaptırmadıkları için teşhis edilemeyen diyabet nedeniyle kör olduklarını gördüm. Bu önlenebilir.",
+        "tip1": "Ailenizde herhangi biri diyabet hastasıysa riskiniz 2–3 kat daha yüksektir. Bu kader değil; hemen harekete geçmenin bir işareti. Beyaz ekmeği, şekeri ve şekerli içecekleri azaltın. Fasulye, mercimek, sebze ve su ile değiştirin. Ailelerin bu değişikliklerle diyabet öncesi durumu tamamen tersine çevirdiğini gördüm",
+        "tip2": "Her gün 30 dakika yürümek diyabet riskinizi %58 azaltır. Koşmuyor. Spor salonu değil. Yürüme. Birlikte çalıştığım topluluklarda 35 üzerindeki herkese şunu söylüyorum: yürüyüş ilaçtır. Ücretsizdir ve önleme amaçlı çoğu haptan daha iyi çalışır.",
+        "tip3": "35 üzerindeyseniz, fazla kilonuz varsa veya aile geçmişiniz varsa yılda en az bir kez sağlık merkezinizde açlık kan şekeri testi yaptırmanızı isteyin. Bu basit bir parmak delme testidir, çoğu ülkede ücretsizdir ve 5 dakika sürer. Bu tek test, semptomlar ortaya çıkmadan yıllar önce diyabeti yakalayabilir",
+        "tip4": "Diyabetin halihazırda mevcut olabileceği anlamına gelen uyarı işaretlerini bilin: sürekli susama, çok sık idrara çıkma (özellikle geceleri), görmenin bulanıklaşması, yavaş iyileşen yaralar, açıklanamayan yorgunluk. Bunlardan iki veya daha fazlası sizde varsa, bu hafta test yaptırın, gelecek ay değil",
+        "fact": "Slovakya ve Romanya'daki Roman topluluklarında yapılan araştırmalar, diyabet prevalansının ulusal ortalamadan 2–3 kat daha yüksek olduğunu ve vakaların çoğuna teşhis konulamadığını ortaya çıkardı. Katıldığım bir programda, toplum temelli tarama, hiç test yapılmamış 40 üzeri yetişkinlerin %18'sinde diyabet tespit etti. Neredeyse hepsinde semptom yoktu.",
+        "action": "35 gününün üzerindeyseniz sağlık merkezinize gidin ve kan şekeri testi yaptırın. 5 dakika sürer. Sonuç 5.6 mmol/L (100 mg/dL) değerinin üzerindeyse, şimdi değişiklik yapmaya başlamanız gerekir. Bir aile üyesini getirin; eğer sizin riskiniz yüksekse, onunki de muhtemelen yüksektir."
+      },
+      "heartHealth": {
+        "title": "Kalbin",
+        "description": "Kardiyovasküler hastalıklar, Roman topluluklarında bir numaralı katildir; genetik yüzünden değil, içinde yaşadığımız koşullar nedeniyle: yoksulluk ve ayrımcılıktan kaynaklanan kronik stres, yüksek sigara içme oranları, yoksulluğun izin verdiği ölçüde şekillenen beslenme ve koruyucu taramalara neredeyse hiç erişimin olmaması. Tamamen önlenebilir kalp krizinden ölen 50'li erkeklerin cenazelerine katıldım. Bu modül daha fazla katılmayı reddettiğim için var.",
+        "tip1": "Sigara içmek kalbinize yapabileceğiniz en yıkıcı şeydir. Bunun topluluk kültürümüze derin bir şekilde gömülü olduğunu biliyorum ve yargılamak için burada değilim - ama size dürüstlük borçluyum. Her sigara kan damarlarınıza zarar verir. Bırakamıyorsanız azaltın. Bırakabilirseniz kalbiniz 24 saat içinde kendini onarmaya başlar",
+        "tip2": "Yüksek tansiyona sessiz katil denir çünkü felç ya da kalp krizi gelene kadar hiçbir şey hissetmezsiniz. Herhangi bir eczanede tansiyonunuzu kontrol ettirin; ücretsizdir. Normal 120/80 altındadır. 140/90 üzeri tehlikelidir ve tedavi gerektirir. Kendini tamamen sağlıklı hisseden kişilerde tehlikeli derecede yüksek tansiyon buldum",
+        "tip3": "Tuzu azaltın: Roma mutfağı lezzetli ve güzeldir ancak birçok geleneksel yemek çok tuzludur. Ekstra tuz eklemek yerine kırmızı biber, sarımsak, soğan, otlar ve karabiber kullanın. Tat alma duyularınız 2 hafta içinde uyum sağlar; yemeğin tadı daha kötü değil, daha iyi olur. Yalnızca bu değişiklik nedeniyle kan basıncımda 10 puanlık düşüş gördüm",
+        "tip4": "Ayrımcılık, yoksulluk, tahliye tehditleri ve aile çatışmalarından kaynaklanan kronik stres, kalp hastalığının doğrudan nedenidir. Bu bir fikir değil, belgelenmiş bir ilaçtır. Stres hormonları yıllar geçtikçe kan damarlarınıza zarar verir. Stresten kurtulmanın herhangi bir yolunu bulmak (yürüyüş, müzik, dua, konuşma, topluluk) kalp ilacıdır",
+        "fact": "Roman erkekler genel nüfusa göre ortalama 10–15 yıl daha erken kardiyovasküler hastalıklardan ölüyor. Avrupa Komisyonu'nun kendi verileri bunu gösteriyor. Ancak erken kalp krizlerinin %80'si yaşam tarzı değişiklikleri ve yüksek tansiyon ile kolesterolün erken tedavisi yoluyla önlenebilir. Önleme işe yarar - eğer erişiminiz varsa.",
+        "action": "Bu hafta iki şey yapın: (1) Bir eczaneye gidin ve tansiyonunuzu kontrol edin; sayıları yazın. (2) Günde kaç sigara içtiğinizi sayın ve günde 3 kadar azaltmayı deneyin. Bu iki eylem, bir bireyin atabileceği en güçlü kalp önleme adımlarıdır."
+      },
+      "respiratory": {
+        "title": "Akciğerler ve Solunum",
+        "description": "Ailelerin kışın ısınmak için odun, kömür, hatta plastik ve kauçuk yaktığı yerleşim yerlerinde çalıştım. 8 kişinin havalandırması olmayan iki odada uyuduğu yer. Duvarlardan nemin aktığı ve her köşede siyah küfün oluştuğu yer. Bu koşullarda solunum yolu hastalıkları şaşırtıcı değil; bu, hiç kimsenin yaşamak zorunda kalmaması gereken barınmaların öngörülebilir sonucudur. Daha iyi barınma için mücadele ederken aynı zamanda sahip olduğumuz akciğerleri de korumalıyız.",
+        "tip1": "Kapalı mekan dumanı gördüğüm en acil solunum tehlikesidir. Katı yakıtla ısıtıyorsanız havalandırmayı sağlayın; pencereyi kırmak bile işe yarayabilir. Asla plastik, kauçuk veya boyalı ahşabı yakmayın; dumanlar, özellikle akciğerleri hala gelişmekte olan çocuklarda kalıcı akciğer hasarına neden olan kimyasallar içerir.",
+        "tip2": "Nem ve küf astıma, kronik bronşite neden olur ve her türlü solunum yolu enfeksiyonunu daha da kötüleştirir. Görünür küfü su, sirke veya çamaşır suyu karışımıyla silin. Kışın bile pencereleri günde en az 15 dakika açın. Mümkünse ıslak çamaşırları dışarıya asın; çamaşırları iç mekanda kurutmak havaya çok büyük miktarda nem katar.",
+        "tip3": "3 haftadan uzun süren, özellikle kilo kaybı, gece terlemesi veya tükürükte kanın eşlik ettiği öksürüklerde tüberküloz açısından araştırılmalıdır. TB ücretsiz tedaviyle tedavi edilebilir, ancak aynı zamanda oldukça bulaşıcıdır. Roman topluluklarında TB oranları, birçok Avrupa ülkesindeki ulusal ortalamanın 3–5 katıdır. Erken test tüm ailenizi korur",
+        "tip4": "Dumanlı veya küflü ortamlarda büyüyen çocukların akciğer kapasitesi kalıcı olarak azalmıştır; hayatları boyunca daha az sağlıklı akciğerler taşıyacaklardır. Barınma durumunuzu hemen değiştiremeseniz bile, duman maruziyetini azaltmak ve mümkün olduğunca havalandırmak gelişmekte olan akciğerlerini korur.",
+        "fact": "WHO, evdeki hava kirliliğini dördüncü en büyük küresel sağlık riski olarak tanımlıyor. Çalıştığım Roman yerleşimlerinde çocukların %60'dan fazlası tekrarlayan solunum yolu enfeksiyonlarına sahipti; ailelerin havalandırmayı iyileştirmesi ve atık malzemelerin kapalı mekanda yakılmasının azaltılmasıyla bu oranlar önemli ölçüde düştü. Barınma koşulları ailelerin hatası değil ama sistemik değişim için mücadele edilirken uyum stratejileri hayat kurtarıyor.",
+        "action": "Bugün: Evinizde görünür küf olup olmadığını kontrol edin ve seyreltilmiş çamaşır suyu veya sirke ile temizleyin. 15 dakika boyunca en az bir pencere açın. Evinizde 3 haftadan uzun süredir öksürüğü olan herhangi biri varsa, TB taraması için sağlık merkezine gidin; bu ücretsizdir ve 15 dakika sürer."
+      }
+    },
+    "mental": {
+      "description": "15 yıldır Roman topluluklarında en ağır yükün fiziksel hastalık değil — ayrımcılık, yoksulluk, tahliye korkusu, çocukların geleceği kaygısı ve sistemde kimsenin umursamadığı hissi olduğunu öğrendim. Buna stres diyoruz. Yıllarca sürünce başka bir şeye dönüşür. Utanmadan adlandırılmayı, anlaşılmayı ve tedavi edilmeyi hak eder.",
+      "stressManagement": {
+        "title": "Stresle Yaşamak",
+        "description": "Nefes egzersizinin sorunlarınızı çözeceğini iddia etmeyeceğim. Ailenizin tahliye edilmesinden endişeleniyorsanız hiçbir meditasyon uygulaması bunu düzeltemez. Ancak toplumlarımızda çok büyük stres taşıyan yüzlerce insanla çalıştım ve bu stres yıllarca yönetilmediğinde neler olduğunu gördüm: 40'lı erkeklerde kalp krizleri, yemek yiyemeyen ve uyuyamayan kadınlar, gerilimden elektriklenen evlerde büyüyen çocuklar. Koşullarımızı her zaman değiştiremeyiz ama onları nasıl taşıdığımızı değiştirebiliriz.",
+        "tip1": "4-4-8 nefes alma yöntemi sinir sisteminizde anında çalışır. 4 kadar burnunuzdan nefes alın, 4 kadar tutun, 8 kadar ağzınızdan yavaşça nefes verin. Bunu 5 kez yapın. Nabzınız düşer, kaslarınız gevşer. Bunu ailelere hastane ziyaretlerinden önce, mahkeme duruşmalarından önce, herhangi bir stresli karşılaşmadan önce öğretiyorum. Her zaman yanınızda olan bir araçtır",
+        "tip2": "Yürüyüş, strese karşı en hafife alınan ilaçtır. 20 dakikalık yürüyüş (hızlı değil, sadece yürüyüş) stres hormonu kortizolünü %30'ye kadar azaltır. Evden çıkamıyorsanız daireler çizerek yürüyün. İşe yarayan şey, manzara değil, hareketin kendisidir",
+        "tip3": "Biriyle konuş. Sorunu çözmek için değil, sadece ağırlığı paylaşmak için. Topluluklarımızdaki erkeklerin her şeyi tek başına taşıdığını gördüm çünkü yardım istemek zayıflık gibi geliyor. Bu işin 15 yıllarında tanıştığım en güçlü insanlar 'mücadele ediyorum' demeyi öğrenenlerdir",
+        "tip4": "Aklınıza gelenler konusunda bilinçli olun. Sosyal medya, haberler, kafanızda tekrar eden aile tartışmaları; bunlar kontrol edebileceğiniz stres kaynaklarıdır. Gerçekleri görmezden gelin demiyorum. Diyorum ki, onunla ne zaman meşgul olacağınızı seçin ve gününüzde bilinçli olarak huzur içinde olduğunuz alanlar yaratın.",
+        "fact": "Roman toplulukları, halk sağlığının 'azınlık stresi' olarak adlandırdığı durumu, yani ayrımcılık, dışlanma ve yoksulluğun kronik fizyolojik bedelini yaşıyor. Araştırmalar bunun kortizol seviyelerini kalıcı olarak yükselttiğini, kalp hastalığını, diyabeti ve akıl hastalığını hızlandırdığını gösteriyor. Bu zayıflık değil. Adaletsizliğe yanıt veren biyolojidir.",
+        "action": "Bu gece uyumadan önce telefonunuzu başka bir odaya koyun ve 4-4-8 nefes egzersizini 5 dakika boyunca yapın. Eğer istekli bir partneriniz veya aile üyeniz varsa, bunu birlikte sessizce yapın. Bu küçük hareket, günün stresi ile uykunuz arasında bir sınır oluşturur ve uyku, vücudunuzun stresin neden olduğu hasarı onardığı zamandır."
+      },
+      "sleep": {
+        "title": "İlaç Olarak Uyku",
+        "description": "Televizyonun her zaman açık olduğu, çocukların ebeveynleriyle yatak paylaştığı, komşulardan veya sokaktan gelen gürültünün hiç durmadığı aşırı kalabalık evlerde uyku kaçınılmazdır. Bu, uğruna savaşmanız gereken bir şeydir. Yine de uyku, vücudunuzun kendini onardığı, beyninizin günün stresini işlediği ve bağışıklık sisteminizin yeniden kurulduğu zamandır. Kronik uyku yoksunluğu sigara içmek kadar tehlikelidir ve toplumlarımızda neredeyse evrenseldir.",
+        "tip1": "Hafta sonları da dahil olmak üzere her gün yaklaşık olarak aynı saatlerde uyuyup uyanmaya çalışın. Vardiyalı çalışma, küçük çocuklar veya gürültülü ortamlarda bunun zor olduğunu biliyorum; ancak 6 saatlik tutarlı bir aralık bile rastgele 8 saatlik bloklardan daha onarıcıdır. Vücudunuz ritim ister",
+        "tip2": "Yatmadan önce telefonlar ve ekranlar modern uykunun en kötü yıkıcılarından biridir. Mavi ışık beyninize gündüz olduğunu söyler. Telefonunuzu kullanmanız gerekiyorsa, saat 9pm'den sonra gece moduna ayarlayın. Daha da iyisi, başka bir odada şarj edin; bu tek değişiklikten sonra uyku kalitesinin önemli ölçüde arttığını gördüm.",
+        "tip3": "Kafein sisteminizde 8 saat kalır. O öğleden sonra saat 4'deki Türk kahvesi veya çayı gece yarısı hala kan dolaşımınızda aktif. Öğle yemeğinden sonra bitki çaylarına (papatya, ıhlamur) geçin. Bu, önerdiğim en basit iyileştirmelerden biri ve insanlar bunun ne kadar yardımcı olduğuna her zaman şaşırıyorlar.",
+        "tip4": "Bir odayı çocuklarla veya aile üyeleriyle paylaşıyorsanız, küçük değişikliklerin faydası olur: Işıkların tutarlı bir şekilde kapatılması, gürültünün kademeli olarak azaltılması, görsel bir uyku sınırı oluşturmak için perde kullanılması. Çocuklara uyku zamanının aile zamanı olduğunu öğretin; ev halkı birlikte sessizleştiğinde herkes daha iyi uyur",
+        "fact": "Dışlanmış topluluklarda uyku üzerine yapılan araştırmalar, aşırı kalabalık, gürültü ve stresin neden olduğu kronik uyku yoksunluğunun sağlık açığına önemli ölçüde katkıda bulunduğunu gösteriyor. Sürekli olarak 6 saatten daha az uyuyan kişilerin enfeksiyonlara yakalanma riski 4x, kalp hastalığı riski ise 2x daha yüksektir. Uyku bir lüks değil, hayatta kalmanın temelidir.",
+        "action": "Bu gece: Uyumak istemeden önce telefonunuzda 30 dakika öncesine bir uyku vakti alarmı kurun. Zil çaldığında TV'yi kapatın, telefonu bir kenara koyun ve uykuya dalıncaya kadar karanlıkta 4-4-8 nefes alarak uzanın. Bunu 7 geceleri yapın ve farkı görün."
+      },
+      "communitySupport": {
+        "title": "Bağlantının Gücü",
+        "description": "Roman kültürü, Batı tıbbının ancak şimdi ölçtüğü bir şeyi zaten anlıyor: Aidiyet, aile ve topluluk sağlığınızı herhangi bir ilaç kadar güçlü bir şekilde koruyor. İnsanların en zor koşullardan (tahliye, hastalık, kayıp) kurtulduklarını gördüm çünkü toplulukları onları elinde tutuyordu. Ve izole edildiklerinde insanların çok daha az altında çöktüğünü gördüm. Bilim artık atalarımızın bildiği şeyi doğruluyor: yalnızlık öldürür, bağlantı iyileştirir.",
+        "tip1": "Topluluğunuzda yakın zamanda bir aile üyesini kaybeden, hastalık teşhisi konan, işini kaybeden veya kriz yaşayan birini tanıyorsanız, onun yardım istemesini beklemeyin. Onları ziyaret edin. Yiyecek getir. Onlarla oturun. Roman kültüründe bu bir içgüdüdür. Sağlık biliminde buna 'sosyal reçete' denir ve çoğu haptan daha iyi işe yarar.",
+        "tip2": "Utanç sağlığın düşmanıdır. Toplumun ne söyleyeceğinden korktukları için diyabeti, depresyonu, HIV ve aile içi şiddeti yıllarca saklayan insanlarla tanıştım. Topluluğumuzdaki birisi mücadelesi hakkında açıkça konuştuğunda, bu başkalarına da izin vermiş olur. Her şeyi paylaşmanıza gerek yok; ancak bir şeyi paylaşmak, insanları hasta eden sessizliği bozar",
+        "tip3": "Toplantılar, kutlamalar, müzik, dua, hikaye anlatımı; bunlar sağlığınızı bozacak şeyler değil. Onlar sağlıktır. Çalışmalar, toplumsal kültürel faaliyetlere düzenli katılımın depresyon ve kardiyovasküler riski azalttığını göstermektedir. Yarattıkları neşe ve aidiyet ölçülebilir bir ilaçtır",
+        "tip4": "Toplumunuzdaki yaşlıları ve izole insanları kontrol edin. Yalnız yaşayan kişi, çocukları taşınan büyükanne, toplantılara gelmeyi bırakan adam. 10 dakikalık bir ziyaret veya telefon görüşmesi, o gün sahip oldukları tek insani bağlantı olabilir ve onları hayatta tutan da bu olabilir.",
+        "fact": "Harvard'ın yetişkin sağlığı üzerine 85 yıllık araştırması, sağlık ve uzun ömürlülüğün en güçlü tek belirleyicisinin diyet, egzersiz veya genetik değil, ilişkilerinizin kalitesi olduğu sonucuna vardı. Yalnızlık ölüm riskini %26 artırır; bu da her gün 15 sigara içmeye eşdeğerdir. Roman toplulukları sosyal bağlantı açısından gerçek bir sağlık varlığı olan kültürel bir zenginliğe sahiptir; onu koruyun.",
+        "action": "Bu hafta topluluğunuzda yakın zamanda konuşmadığınız bir kişiye ulaşın. Mesajla değil, sesle veya şahsen. Nasıl olduklarını sorun ve dinleyin. Bu bağlantı eylemi, en saf haliyle sağlığın teşviki ve geliştirilmesidir."
+      },
+      "seekHelp": {
+        "title": "Çok Fazla Olduğunda",
+        "description": "Stres, üzüntü ve endişenin profesyonel yardıma ihtiyaç duyan bir çizgiyi aştığı bir nokta vardır ve Roman topluluklarında bu çizgi neredeyse hiçbir zaman fark edilmez çünkü bize dayanmamız, güçlü olmamız ve aile içinde bununla başa çıkmamız öğretilir. Bu sessizliğin bedelini gördüm: Karaciğerleri iflas edene kadar içki içen erkekler, yemek yemeyi bırakan kadınlar, kendilerine zarar veren gençler. Yardım istemek kültürünüze ihanet etmek değildir. Size ihtiyacı olan insanların yanında olabilmeniz için hayatınızı koruyor.",
+        "tip1": "Siz veya tanıdığınız biri 2 haftadan daha uzun bir süredir normal bir şekilde çalışamıyorsa (uyuyamıyor, yemek yiyemiyor, çocuklara bakamıyor, sürekli ağlıyor veya hiçbir şey için enerjisi yoksa) bu normal stresin ötesindedir. Bu depresyondur ve diyabet kadar gerçek bir tıbbi durumdur. Zayıflık değildir ve tedaviye yanıt verir.",
+        "tip2": "İlk adımınız aile doktorunuzdur (GP). Şöyle deyin: '2 haftadan fazladır kendimi çok kötü hissediyorum ve yardıma ihtiyacım var.' Her şeyi açıklamanıza gerek yok. Pratisyen hekim sizi değerlendirebilir ve sizi bir psikolog veya psikiyatriste yönlendirebilir. Bu hizmet çoğu Avrupa ülkesinde ücretsiz veya düşük maliyetlidir. Pratisyen hekiminiz sizi işten çıkarırsa başka bir doktora görünün",
+        "tip3": "Ailenizden biri ölmek istediğinden, ortadan kaybolmak istediğinden veya onlar olmadan herkesin daha iyi durumda olacağını hissettiğinden bahsederse, bunu hemen ciddiye alın. Onlarla kal. İlaçlara ve keskin nesnelere erişimi kaldırın. Ulusal kriz hattını veya 112 numaralı telefonu arayın. Aşırı tepki vermiyorsun. Bu sözler cevaplanması gereken bir yardım çığlığıdır",
+        "tip4": "Akıl sağlığı ilaçları utanç verici, bağımlılık yapıcı veya 'çılgın insanlar için' değildir. Antidepresanlar dünya çapında milyonlarca insana reçete ediliyor ve hayat kurtarıyorlar. Kim olduğunuzu değiştirmezler; kim olduğunuzu engelleyen kimyasal sisi kaldırırlar. Damgalanma nedeniyle yıllarca direndikleri tedaviyle dönüşüme uğrayan insanlar gördüm",
+        "fact": "Roman toplulukları, ayrımcılık, yoksulluk ve hizmetlere erişim eksikliği gibi yapısal faktörlerin etkisiyle Avrupa'da en yüksek depresyon ve kaygı oranlarından birini yaşıyor. Ancak Roman topluluklarında ruh sağlığı hizmeti kullanımı en düşükler arasında yer alıyor. İnsanları kültürel açıdan hassas ruh sağlığı hizmetlerine bağlamaya yardımcı olduğum programlarda, yaşam kalitesindeki iyileşme sadece birey için değil, tüm aile için de derin oldu.",
+        "action": "Bu numarayı hemen telefonunuza kaydedin: ülkenizin akıl sağlığı krizi yardım hattı. Krizdeyseniz arayın. Tanıdığınız biri krizdeyse, onunla birlikte arayın. Ve eğer 2 haftadan fazla süredir mücadele ediyorsanız, bu hafta doktorunuzdan randevu alın. Daha iyi hissetmeyi hak ediyorsunuz ve yardım var."
+      }
+    }
+  },
+  "track": {
+    "title": "Günlük sağlık kontrolü",
+    "subtitle": "Bugün nasıl hissediyorsunuz?",
+    "moodTitle": "Ruh hali",
+    "moodGreat": "Harika",
+    "moodGood": "İyi",
+    "moodOkay": "Fena değil",
+    "moodLow": "Kötü",
+    "moodBad": "Çok kötü",
+    "waterTitle": "Su tüketimi",
+    "waterSubtitle": "Her içtiğinizde bardağa dokunun",
+    "waterGoal": "Hedef: 8 bardak",
+    "activityTitle": "Bugünkü aktivite",
+    "activityWalk": "Yürüdüm",
+    "activityExercise": "Egzersiz yaptım",
+    "activityRest": "Dinlendim",
+    "saveCheckin": "Bugünkü kontrolü kaydet",
+    "savedSuccess": "Kontrol kaydedildi!",
+    "weeklyTitle": "Bu hafta",
+    "streakDays": "gün serisi",
+    "loggedToday": "Bugün kaydedildi",
+    "noLogsYet": "İlk kontrolünüzü aşağıdan başlatın",
+    "historyTitle": "Son geçmiş"
+  },
+  "profile": {
+    "title": "Profil",
+    "guestUser": "Misafir",
+    "guestSubtitle": "Anonim öğreniyorsunuz",
+    "languagePreference": "Dil tercihi",
+    "changeLanguage": "Dili değiştir",
+    "learningProgress": "Öğrenme ilerlemesi",
+    "pillarsStarted": "Başlanan sütunlar",
+    "modulesCompleted": "Tamamlanan modüller",
+    "trackingStreak": "Takip serisi",
+    "days": "gün",
+    "exportData": "Verilerimi dışa aktar (GDPR)",
+    "exportDescription": "Tüm sağlık takip verilerinizi CSV dosyası olarak indirin.",
+    "clearData": "Tüm verileri temizle",
+    "clearDataConfirm": "Emin misiniz? Bu geri alınamaz.",
+    "aboutTitle": "Redi Health Hakkında",
+    "aboutText": "Redi Health, yetersiz hizmet alan bölgeler için ücretsiz çok dilli bir sağlık okuryazarlığı yardımcısıdır — köyler, çeper mahalleler, yerleşimler, Roman mahalleleri, Avrupa'nın kırsal bölgeleri — klinisyenlerin az olduğu, bakıma giden yolun uzun olduğu ve resmi mesajların çoğu zaman insanların diline ulaşmadığı yerler.",
+    "privacyPolicy": "Gizlilik politikası",
+    "contactUs": "Bize ulaşın",
+    "progressNone": "Henüz öğrenmeye başlamadınız.",
+    "progressStart": "Başlamak için Öğren'e gidin.",
+    "version": "Sürüm"
+  },
+  "mediator": {
+    "title": "Arabulucu paneli",
+    "subtitle": "Topluluğunuzun sağlığını destekleme",
+    "accessCode": "Erişim kodunu girin",
+    "accessCodePlaceholder": "4 haneli kod",
+    "accessCodeHint": "Erişim kodu için koordinatörünüze sorun",
+    "accessCodeError": "Yanlış kod. Lütfen tekrar deneyin.",
+    "accessCodeSubmit": "Panele eriş",
+    "communityMembers": "Topluluk üyeleri",
+    "logsThisMonth": "Bu ayki sağlık kayıtları",
+    "alertsActive": "Aktif uyarılar",
+    "quickActions": "Hızlı işlemler",
+    "logVisit": "Ziyaret kaydet",
+    "recordHealth": "Sağlık verisi kaydet",
+    "viewReports": "Raporları görüntüle",
+    "recentActivity": "Son aktivite",
+    "noActivity": "Son aktivite yok",
+    "memberName": "Üye adı",
+    "visitDate": "Ziyaret tarihi",
+    "notes": "Notlar",
+    "saveVisit": "Ziyareti kaydet",
+    "visitSaved": "Ziyaret başarıyla kaydedildi",
+    "healthSummary": "Topluluk sağlık özeti",
+    "pillarProgress": "Sütunlara göre öğrenme ilerlemesi",
+    "contactSupport": "Bölgesel koordinatörle iletişime geç",
+    "resources": "Arabulucu kaynakları",
+    "downloadGuide": "Saha rehberini indir (PDF)"
+  },
+  "healthQuiz": {
+    "meta": {
+      "title": "Sağlık Testi — Redi Health",
+      "description": "Etkileşimli sınavlarla sağlık bilginizi test edin"
+    },
+    "title": "Sağlık Testi",
+    "subtitle": "Bilginizi test edin. Yeni bir şey öğrenin.",
+    "backToQuizzes": "Testlere geri dön",
+    "seeResults": "Sonuçları görün",
+    "nextQuestion": "Sonraki soru",
+    "questionsCount": "{count} sorular",
+    "results": {
+      "perfect": "Mükemmel skor!",
+      "great": "Harika iş!",
+      "good": "İyi çaba!",
+      "keepLearning": "Öğrenmeye devam edin!",
+      "score": "{total}'den {score}'yi doğru çıkardınız",
+      "tryAgain": "Tekrar dene",
+      "moreQuizzes": "Daha fazla test"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiyotikler",
+        "description": "Antibiyotiklerin ne zaman kullanılacağını biliyor musunuz?",
+        "questions": [
+          {
+            "question": "Antibiyotikler gribi tedavi edebilir mi?",
+            "options": [
+              "Evet",
+              "Hayır",
+              "Bazen"
+            ],
+            "explanation": "Gribe bir virüs neden olur. Antibiyotikler yalnızca bakterileri öldürür. Grip için antibiyotik almak hiçbir şey yapmaz ve gelecekteki enfeksiyonların tedavisini zorlaştırabilir."
+          },
+          {
+            "question": "3 günlük antibiyotik tedavisinden sonra kendinizi daha iyi hissedersiniz. Durmalı mısın?",
+            "options": [
+              "Evet, iyileştin",
+              "Hayır, kursun tamamını bitir",
+              "Kalan hapların yarısını al"
+            ],
+            "explanation": "HER ZAMAN kursun tamamını bitirin. Erken durursanız bazı bakteriler hayatta kalır ve dirençli hale gelir. Bir dahaki sefere aynı antibiyotik işe yaramayacak."
+          },
+          {
+            "question": "Benzer semptomları olan bir aile üyesiyle antibiyotik paylaşabilir misiniz?",
+            "options": [
+              "Evet, para tasarrufu sağlar",
+              "Hayır, asla",
+              "Sadece aynı hastalıksa"
+            ],
+            "explanation": "Antibiyotiği asla paylaşmayın. Farklı enfeksiyonlar farklı ilaçlara ihtiyaç duyar. Yanlış antibiyotik tehlikeli olabilir ve faydası olmaz."
+          },
+          {
+            "question": "Çok sık antibiyotik alırsanız ne olur?",
+            "options": [
+              "Kötü bir şey yok",
+              "Vücudunuz hastalıklara karşı bağışıklık kazanır",
+              "Bakteriler dirençli hale geliyor ve öldürülmesi zorlaşıyor"
+            ],
+            "explanation": "Antibiyotik direnci küresel bir krizdir. Bakteriler dirençli hale geldiğinde basit enfeksiyonlar ölümcül olabilir. Antibiyotikleri yalnızca doktor önerdiğinde alın."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "aşılar",
+        "description": "Gerçekleri mitlerden ayırın",
+        "questions": [
+          {
+            "question": "Aşılar otizme neden olur mu?",
+            "options": [
+              "Evet",
+              "Hayır",
+              "Bilmiyoruz"
+            ],
+            "explanation": "Hayır. Bu efsane, geri çekilen sahte bir çalışmayla başladı. Bunu yayınlayan doktor tıp lisansını kaybetti. Milyonlarca çocukla yapılan düzinelerce çalışma, aşıların otizme neden OLMADIĞINI kanıtlıyor."
+          },
+          {
+            "question": "Bir bebeğe aynı anda birden fazla aşı yapmak güvenli midir?",
+            "options": [
+              "Hayır, bu çok fazla",
+              "Evet, güvenli ve test edilmiştir",
+              "Bir seferde yalnızca bir tane"
+            ],
+            "explanation": "Bebeklerin bağışıklık sistemleri her gün binlerce mikropla mücadele eder. Kombinasyon aşıları kapsamlı bir şekilde test edilmiştir ve güvenlidir. Aşıların geciktirilmesi çocuğunuzu korumasız bırakır."
+          },
+          {
+            "question": "Çocuğumda hafif bir soğuk algınlığı var. Yine de aşı olabilirler mi?",
+            "options": [
+              "Hayır, tamamen sağlıklı olana kadar bekle",
+              "Evet hafif bir soğuk iyidir",
+              "Sadece doktor izniyle"
+            ],
+            "explanation": "Hafif bir soğuk algınlığı, düşük ateş veya burun akıntısı aşıyı geciktirmek için bir neden DEĞİLDİR. Yalnızca ciddi hastalıklar ertelemeyi gerektirir. Emin değilseniz doktorunuza sorun."
+          },
+          {
+            "question": "Aşılar tehlikeli kimyasallar içeriyor mu?",
+            "options": [
+              "Evet, toksinlerle dolular",
+              "Hayır, tüm malzemeler kullanılan küçük miktarlarda bile güvenlidir",
+              "Bazıları yapar, bazıları yapmaz"
+            ],
+            "explanation": "Aşı bileşenleri küçük ve güvenli miktarlarda mevcuttur. Anne sütünden aşıdan daha fazla alüminyum alırsınız. Her bileşen güvenlik açısından test edilmiştir."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Diyabet",
+        "description": "Diyabet yönetimini anlamak",
+        "questions": [
+          {
+            "question": "Diyabet çok fazla şeker yemekten mi kaynaklanır?",
+            "options": [
+              "Evet",
+              "Hayır, daha karmaşık",
+              "Yalnızca Tip 2"
+            ],
+            "explanation": "Diyabetin nedeni genetik, yaşam tarzı ve vücudunuzun insülini işleme şeklidir. Şeker yemek doğrudan buna neden olmaz ancak sağlıksız beslenme ve obezite riski artırır."
+          },
+          {
+            "question": "Şeker hastalığı tarçın gibi doğal ilaçlarla tedavi edilebilir mi?",
+            "options": [
+              "Evet tarçın iyileştirir",
+              "Hayır tedavisi yok ama kontrol edilebilir",
+              "Evet, yeterli sarımsak ve otlarla"
+            ],
+            "explanation": "Diyabetin tedavisi YOKTUR. İlaç, sağlıklı beslenme ve egzersizle kontrol altına alınabilir. Tarçının küçük faydaları olabilir ancak ilacın yerini ALAMAZ. İlaçlarını bırakan insanlar hastaneye kaldırılıyor."
+          },
+          {
+            "question": "Diyabetik bir kişi baş dönmesi ve ter hisseder. Ne yapmalısın?",
+            "options": [
+              "Onlara insülin ver",
+              "Onlara hemen tatlı bir şeyler verin",
+              "Onlara dinlenmelerini söyle"
+            ],
+            "explanation": "Bunlar DÜŞÜK kan şekerinin (hipoglisemi) belirtileridir. Onlara hemen meyve suyu, şeker veya şekerli su verin. Bu yaşamı tehdit edici olabilir. Kendilerini daha iyi hissettikten sonra uygun bir yemek yemelidirler."
+          },
+          {
+            "question": "Diyabetli bir kişi ayaklarını ne sıklıkla kontrol etmelidir?",
+            "options": [
+              "Asla, ayaklar iyi",
+              "Her gün",
+              "Yılda bir kez"
+            ],
+            "explanation": "Diyabet ayaklarınızdaki sinirlere zarar verebilir. Kesik veya yara hissetmeyebilirsiniz. Ayaklarınızı HER GÜN kesik, kabarcık veya renk değişikliği açısından kontrol edin. Küçük yaralar ciddi enfeksiyonlara dönüşebilir."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Hijyen ve Önleme",
+        "description": "Hayat kurtaran temel sağlık alışkanlıkları",
+        "questions": [
+          {
+            "question": "Ellerinizi sabunla ne kadar süre yıkamalısınız?",
+            "options": [
+              "5 saniye",
+              "En az 20 saniye",
+              "1 dakika"
+            ],
+            "explanation": "En az 20 saniye boyunca yıkayın; bu yaklaşık olarak 'Happy Birthday' şarkısını iki kez söylemek için gereken süre kadardır. Bu, mikropların çoğunu ortadan kaldırır. Hızlı durulamalar işe yaramaz."
+          },
+          {
+            "question": "Bir nehirden veya dereden su içmek güvenli midir?",
+            "options": [
+              "Evet doğal su temizdir",
+              "Hayır, her zaman önce kaynatın veya filtreleyin",
+              "Sadece net görünüyorsa"
+            ],
+            "explanation": "Temiz su bile tehlikeli bakteri ve parazitler içerebilir. Suyu daima en az 1 dakika kaynatın veya filtre kullanın. Kirli su ishal, kolera ve tifoya neden olur."
+          },
+          {
+            "question": "Çocuğunuzun ishali var. En önemli şey nedir?",
+            "options": [
+              "Tüm yiyecekleri durdur",
+              "Bol miktarda sıvı verin (su, ORS)",
+              "Antibiyotik ver"
+            ],
+            "explanation": "İshalden kaynaklanan dehidrasyon, ishalin kendisinden daha fazla çocuğu öldürür. Oral rehidrasyon solüsyonu (ORS) veya bir tutam tuz ve şeker içeren temiz su verin. Bebekleri emzirmeye devam edin."
+          },
+          {
+            "question": "Ellerinizi ne zaman yıkamalısınız?",
+            "options": [
+              "Sadece yemekten önce",
+              "Yemekten önce, tuvaletten sonra, hayvanlara dokunduktan sonra, öksürdükten sonra",
+              "Sadece kirli göründüklerinde"
+            ],
+            "explanation": "Mikroplar görünmez. Ellerinizi yıkayın: Yemek yemeden/yemek pişirmeden önce, tuvaleti kullandıktan sonra, bebek bezini değiştirdikten sonra, hayvanlara dokunduktan sonra, öksürdükten/hapşırdıktan sonra ve hastalara dokunduktan sonra."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Haklarınızı Bilin — Redi Sağlık",
+      "description": "Roman toplulukları için hasta hakları, ayrımcılık yardımı ve yasal temaslar"
+    },
+    "title": "Haklarınızı Bilin",
+    "subtitle": "Hasta olarak haklarınız var. Onları öğrenin. Onları kullanın.",
+    "back": "Geri",
+    "menu": {
+      "patientRights": {
+        "title": "Hasta Hakları",
+        "desc": "Her hastanın sahip olduğu 8 hak"
+      },
+      "discrimination": {
+        "title": "Ayrımcılıkla mı Karşılaşıyorsunuz?",
+        "desc": "Ne söylenmeli ve ne yapılmalı — adım adım"
+      },
+      "contacts": {
+        "title": "Ülkeye Göre Yasal Yardım",
+        "desc": "Ombudsman, ayrımcılık karşıtı, Roman kuruluşları"
+      }
+    },
+    "views": {
+      "patientRights": "Hasta Haklarınız",
+      "discrimination": "Ayrımcılıkla Karşılaşırsanız",
+      "discriminationDesc": "Gerçek durumlar ve tam olarak ne söylenmesi ve yapılması gerektiği.",
+      "contacts": "Ülkeye Göre Yasal Yardım"
+    },
+    "labels": {
+      "sayThis": "Şunu söyle:",
+      "thenDo": "Sonra şunu yapın:",
+      "patientOmbudsman": "Hasta Ombudsmanı",
+      "antiDiscrimination": "Ayrımcılığa karşı",
+      "romaRightsOrg": "Roma hakları örgütü"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Acil tedavi hakkı",
+        "description": "Her hastane, sigorta veya belgeler olmasa bile, acil bir durumda sizi tedavi ETMEK ZORUNDADIR. Bu her EU ülkede yasadır. Reddederlerse doktorun adını sorun ve bildirin."
+      },
+      "information": {
+        "title": "Teşhisinizi anlama hakkı",
+        "description": "Doktorunuz durumunuzu anladığınız kelimelerle açıklamalıdır. Anlamadıysanız şunu söyleyin: 'Bunu daha basit bir şekilde açıklayabilir misiniz?' Ayrıca yazılı bir özet de isteyebilirsiniz."
+      },
+      "consent": {
+        "title": "Hayır deme hakkı",
+        "description": "Kimse sizi tedavi etmeye zorlayamaz. Herhangi bir işlemden önce doktorun ne yapacağını açıklaması ve sizin de kabul etmeniz gerekir. Her zaman 'Düşünmek için zamana ihtiyacım var' diyebilirsiniz."
+      },
+      "privacy": {
+        "title": "Gizlilik hakkı",
+        "description": "Tıbbi bilgileriniz gizlidir. Doktorlar izniniz olmadan bunu işvereninizle, ailenizle veya başkasıyla paylaşamaz. Buna HIV durumunuz, hamileliğiniz veya zihinsel sağlığınız da dahildir."
+      },
+      "interpreter": {
+        "title": "Tercüman hakkı",
+        "description": "Yerel dili iyi konuşamıyorsanız tercüman talep edebilirsiniz. Birçok hastanenin bu hizmeti var. Değilse, tercüme etmesi için güvendiğiniz birini getirebilirsiniz."
+      },
+      "second-opinion": {
+        "title": "İkinci görüş alma hakkı",
+        "description": "Eğer teşhise katılmıyorsanız başka bir doktora başvurabilirsiniz. Bu senin hakkın. Nedenini açıklamanıza gerek yok."
+      },
+      "records": {
+        "title": "Tıbbi kayıtlarınıza erişim hakkı",
+        "description": "İstediğiniz zaman tüm tıbbi kayıtlarınızın bir kopyasını isteyebilirsiniz. Hastanenin bunları sağlaması gerekiyor. Bu, doktor değiştirirken veya başka bir şehre taşınırken faydalıdır."
+      },
+      "complaint": {
+        "title": "Şikayet etme hakkı",
+        "description": "Kötü muameleye maruz kaldığınızı veya ayrımcılığa uğradığınızı düşünüyorsanız şikayette bulunabilirsiniz. Her hastanenin bir şikayet prosedürü vardır. Ayrıca ülkenizdeki hasta ombudsmanıyla da iletişime geçebilirsiniz."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "Hastane sizi tedavi etmeyi reddediyor",
+        "whatToSay": "\"EU yasası uyarınca acil tedavi hakkım var. Lütfen adınızı ve reddetme nedeninizi yazın.\"",
+        "whatToDo": [
+          "Sakin ama kararlı kalın",
+          "Doktorun tam adını isteyin",
+          "Reddi yazılı olarak isteyin",
+          "Hasta ombudsmanını arayın",
+          "Bir Roman hakları örgütüyle iletişime geçin"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Hastane personeli etnik kökeniniz nedeniyle kaba veya küçümseyici davranıyor",
+        "whatToSay": "\"Tıbbi yardım için buradayım. Diğer hastalarla aynı saygıyla davranılmayı bekliyorum.\"",
+        "whatToDo": [
+          "Başhemşire veya bölüm şefiyle konuşmayı isteyin",
+          "Tarihi, saati ve adları not edin",
+          "Hastaneye yazılı şikayette bulunun",
+          "Ulusal ayrımcılıkla mücadele kurumuna rapor verin"
+        ]
+      },
+      "no-insurance": {
+        "situation": "Sağlık sigortanız yok",
+        "whatToSay": "\"Tıbbi yardıma ihtiyacım var. Sigortasız hastalar için seçeneklerim nelerdir?\"",
+        "whatToDo": [
+          "Acil bakım her zaman ücretsizdir; bunda ısrar edin",
+          "Sosyal yardım programlarını sorun",
+          "Bölgenizdeki bir sağlık aracısına başvurun",
+          "Birçok STK ücretsiz klinik sağlıyor; hastaneye sorun"
+        ]
+      },
+      "language-barrier": {
+        "situation": "Doktorla iletişim kuramıyorsun",
+        "whatToSay": "\"Anlamak için yardıma ihtiyacım var. Bir tercüman sağlayabilir misiniz veya daha yavaş konuşabilir misiniz?\"",
+        "whatToDo": [
+          "Anahtar cümleleri çevirmek için bu uygulamayı kullanın",
+          "Dili konuşan güvenilir bir kişiyi getirin",
+          "Daha sonra çevirebileceğiniz yazılı talimatlar isteyin",
+          "Belgeleri çevirmek için telefonunuzun kamerasını kullanın"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Topluluk Hikayeleri — Redi Health",
+      "description": "Avrupa'daki Roman topluluklarından gerçek sağlık deneyimleri"
+    },
+    "title": "Topluluk Hikayeleri",
+    "subtitle": "Roman topluluklarından gerçek deneyimler. Başkalarından öğrenin.",
+    "backToStories": "Hikayelere geri dön",
+    "lessonLearned": "Öğrenilen ders",
+    "whatToDoNext": "Bundan sonra ne yapmalı",
+    "categories": {
+      "vaccines": "aşılar",
+      "chronic": "Kronik Hastalık",
+      "maternal": "Hamilelik",
+      "discrimination": "Haklar",
+      "prevention": "Önleme",
+      "mental": "Ruh Sağlığı"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Aşı rehberi",
+      "askZuvo": "Zuvo'ya sor",
+      "explainPrescription": "Reçeteyi açıkla",
+      "navigateToCare": "Bakıma gidin",
+      "knowYourRights": "Haklarınızı bilin",
+      "learnPrevention": "Önlemeyi öğrenin",
+      "checkSymptoms": "Belirtileri kontrol edin",
+      "learnMentalHealth": "Ruh sağlığı hakkında bilgi edinin"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "Romanya",
+        "title": "Neredeyse kızıma aşı yaptırmıyordum",
+        "story": "Kayınvalidem bana aşıların zehir olduğunu söyledi. Yerleşimdeki herkes aynı şeyi söyledi. Kızım doğduğunda çok korktum. Ancak sağlık aracısı evimize geldi ve aşıların nasıl çalıştığını, yan etkilerinin gerçekte neler olduğunu anlattı. Bana kızamık hastası çocukların fotoğraflarını gösterdi. Aşıdan çok hastalıktan korkuyordum. Kızımın tüm aşıları yapıldı. O sağlıklı ve güçlü.",
+        "lesson": "Başkalarının söylediklerine göre karar vermeden önce bir sağlık aracısı veya doktorla konuşun. Aşılar hayat kurtarır."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bulgaristan",
+        "title": "Diyabet ilacımı bıraktım ve neredeyse ölüyordum",
+        "story": "45 tarihinde bana Tip 2 diyabet teşhisi konuldu. İlaç midemi ağrıttı, bu yüzden almayı bıraktım. Komşum tarçın çayının bana şifa vereceğini söyledi. 2 yıl boyunca onun yerine tarçın çayı içtim. Sonra bir gün yere yığıldım. Kan şekerim 500'in üzerindeydi. Doktorlar böbreklerimin hasar gördüğünü söyledi. Artık her gün ilacımı alıyorum. Keşke hiç durmasaydım.",
+        "lesson": "Doktorunuzla konuşmadan asla ilacınızı kesmeyin. Doğal ilaçlar diyabet ilaçlarının yerini alamaz."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Sırbistan",
+        "title": "İlk hamileliğim — Ücretsiz olarak doktora gidebileceğimi bilmiyordum",
+        "story": "19'da hamile kaldığımda 6 ay boyunca doktora gitmedim. Sigortam yoktu ve çok pahalıya mal olacağını düşündüm. Bir sağlık aracısı bana Sırbistan'daki tüm hamile kadınlar için doğum öncesi bakımın ücretsiz olduğunu söyledi. Kayıt olmama yardım etti. Doktor kansızlığım ve yüksek tansiyonum olduğunu tespit etti. Eğer gitmeseydim bebeğim tehlikede olabilirdi.",
+        "lesson": "Çoğu Avrupa ülkesinde doğum öncesi bakım ücretsizdir. Kayıt olmanıza yardımcı olması için bir sağlık aracısından yardım isteyin."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Macaristan",
+        "title": "Hastane beni göndermeye çalıştı",
+        "story": "Göğüs ağrısı şikayetiyle acile gittim. Hemşire bana baktı ve 'Doyduk, başka hastaneye gidelim' dedi. Bunun doğru olmadığını biliyordum. Ben de 'Göğüs ağrım var' dedim. Beni muayene etmelisin. Lütfen bana isminizi verin.' Tutumu hemen değişti. Beni muayene ettiler ve tedavi gerektiren bir kalp problemim olduğunu tespit ettiler. Eğer gitseydim kalp krizi geçirebilirdim.",
+        "lesson": "Acil tedavi hakkına sahipsiniz. Birisi sizi geri çevirmeye çalışırsa adını sorun ve haklarınızı bildiğinizi söyleyin."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Slovakya",
+        "title": "TB ölüm cezası değil — ancak ilacı bitirmeniz gerekiyor",
+        "story": "Aylardır öksürüyordum. Sadece soğuk algınlığı olduğunu düşündüm. Sonunda doktora gittiğimde tüberküloz olduğumu söylediler. Çok korktum; öleceğimi düşündüm. Ancak doktor TB'nun 6 aylık ilaç tedavisiyle iyileştirilebileceğini açıkladı. En zor kısmı, 2 ay sonra kendimi daha iyi hissetsem bile 6 ay boyunca her gün hap almaktı. Ama bitirdim. İyileştim.",
+        "lesson": "Eğer 2 haftadan uzun süre öksürürseniz bir doktora görünün. TB tedavi edilebilir, ancak ilacın tamamını bitirmeniz GEREKİR."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Kuzey Makedonya",
+        "title": "Depresyon zayıflık değil, bir hastalıktır",
+        "story": "Kocam öldükten sonra aylarca yataktan çıkamadım. Ailem tembel olduğumu söyledi. 'Güçlü ol' dediler. Ama yapamadım. Bir sağlık aracısı bir şeylerin ters gittiğini fark etti ve beni doktora götürdü. Doktor depresyonumun gerçek bir tıbbi durum olduğunu söyledi. Tıbba başladım ve bir danışmanla konuştum. Yavaş yavaş iyileştim. Ben zayıf değilim. Ben hastaydım.",
+        "lesson": "Depresyon tıbbi bir durumdur, karakter kusuru değildir. Tıp ve danışmanlık yardımcı olabilir. Lütfen yardım isteyin."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Zorluklar — Redi Health",
+      "description": "Topluluk Zorlukları"
+    },
+    "title": "Aktif Mücadeleler",
+    "subtitle": "Bonus XP ve rozetler kazanmak için topluluk hedeflerine ve kişisel zorluklara katılın.",
+    "types": {
+      "community": "topluluk",
+      "personal": "kişisel"
+    },
+    "daysLeft": "{count} gün kaldı",
+    "viewLeaderboard": "Skor Tablosunu Görüntüle",
+    "items": {
+      "c1": {
+        "title": "Aşı Bilgi Şampiyonu",
+        "description": "Yerel bölgenizdeki 50 öğrencinin bu hafta Aşı modülünü geçmesini sağlayın."
+      },
+      "c2": {
+        "title": "7 Günlük Sağlık Serisi",
+        "description": "Arka arkaya 7 gün boyunca ruh halinizi ve su alımınızı kaydedin."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Sertifika – Redi Sağlık",
+      "description": "Ulusal Sağlık Okuryazarlığı Sertifikası"
+    },
+    "title": "Sertifikanız",
+    "subtitle": "Öğrenci Sağlık Akademisi Ulusal Aşamasını tamamladınız.",
+    "ofCompletion": "Bitirme Sertifikası",
+    "diplomaTitle": "Ulusal Sağlık Okuryazarlığı",
+    "awardedFor": "Redi Sağlık Öğrenci Akademisi müfredatını tamamladığınız için verilir.",
+    "date": "Tarih",
+    "downloadPdf": "PDF'yi indir",
+    "share": "Paylaş",
+    "gate": {
+      "title": "Önce Akademiyi tamamla",
+      "description": "Sağlık Okuryazarlığı Sertifikanızı kazanmak için Öğrenci Sağlık Akademisi Ulusal aşamasında tüm dersleri tamamlamanız ve sınavı geçmeniz gerekmektedir.",
+      "cta": "Akademiye git"
+    }
+  },
+  "policies": {
+    "title": "Platform Policies",
+    "subtitle": "The governance framework that defines what Redi Health can and cannot do — and the commitments we make to every user.",
+    "goNoGoTitle": "Feature release policy",
+    "goNoGoBody": "Features that may influence clinical decisions require completed policy controls before release: AI triage, symptom severity, prescription outputs, vaccine recommendations, Roma-friendly provider labels, mediator visit logging, youth sexual health, and legal guidance.",
+    "disclaimer": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "clinical-safetyTitle": "Clinical Safety & Escalation",
+    "clinical-safetyDesc": "Defines what the AI may and may not say, how emergencies are escalated before any AI call, and the governance model for all health-related changes.",
+    "clinicalSafety1": "The AI never diagnoses, never prescribes doses, and never advises stopping a prescribed medication.",
+    "clinicalSafety2": "11 emergency patterns bypass the AI entirely and immediately instruct the user to call 112 or a specialist helpline.",
+    "clinicalSafety3": "Every triage output is assigned one of five severity categories — Emergency, Urgent, Routine, Self-care, or Information only.",
+    "clinicalSafety4": "Changes to red-flag patterns, system prompts, or triage logic require sign-off from the clinical governance lead before deployment.",
+    "source-policyTitle": "Public Health Source Policy",
+    "source-policyDesc": "Defines which sources may be used for health claims, how they must be cited, and how they are kept up to date.",
+    "sourcePolicy1": "All health facts cite WHO, ECDC, IFRC, national ministries, or peer-reviewed clinical guidance — never social media, single studies, or commercial sources.",
+    "sourcePolicy2": "Every content module carries a 'last reviewed' date and reviewer role. Overdue modules are hidden automatically.",
+    "sourcePolicy3": "Country-specific overrides (vaccine schedules, emergency numbers, patient rights) follow a 5-step clinical review process before going live.",
+    "safeguardingTitle": "Safeguarding Policy",
+    "safeguardingDesc": "Protections for children, pregnant people, survivors of abuse and coercion, people in mental health crisis, and people seeking sexual health information.",
+    "safeguarding1": "Self-harm and suicidal ideation are intercepted before any AI response — the user receives a crisis line and an instruction to stay with someone they trust.",
+    "safeguarding2": "Descriptions of active domestic violence trigger a safety-first response with the local domestic violence helpline, not general advice.",
+    "safeguarding3": "Sexual health content in the Student Academy requires country-specific legal review and Tier 2 clinical sign-off before release.",
+    "safeguarding4": "Every AI page and triage result includes a visible 'I need help now' button linking to emergency and crisis numbers.",
+    "roma-equityTitle": "Roma Equity & Anti-Stigmatization",
+    "roma-equityDesc": "Standards for how Roma communities are described, how content is reviewed, and how surveillance and profiling are prevented.",
+    "romaEquity1": "All content about Roma communities must follow strengths-based framing — naming structural causes for health disparities, never cultural ones.",
+    "romaEquity2": "Content about Roma health is reviewed by a Roma health mediator or Roma-led NGO before publication.",
+    "romaEquity3": "Ethnicity data is never collected. Analytics are never segmented by ethnic identity. Location data is never stored.",
+    "romaEquity4": "A Roma Health Advisory Board reviews this policy annually and can flag content concerns at any time via equity@redi.healthcare.",
+    "provider-verificationTitle": "Provider Verification",
+    "provider-verificationDesc": "How clinic listings are verified, what 'Roma-friendly' means and requires, and how users can report harm.",
+    "providerVerification1": "The 'Roma-friendly' label requires: no documentation barriers beyond what all patients face, anti-discrimination training, no substantiated complaints in 3 years, and a Roma mediator assessment within 18 months.",
+    "providerVerification2": "Unverified listings carry a mandatory warning banner and an 'Unverified' badge — no Roma-friendly label is shown until criteria are met.",
+    "providerVerification3": "Users can report discrimination or incorrect information directly from every listing. Discrimination reports are reviewed within 3 business days.",
+    "mediator-policyTitle": "Mediator Operating Policy",
+    "mediator-policyDesc": "Role boundaries, consent requirements, data minimisation rules, and safety escalation protocols for field health mediators.",
+    "mediatorPolicy1": "Mediators provide education, navigation, and referral support — not clinical assessment or prescriptions.",
+    "mediatorPolicy2": "A consent attestation is required before every visit log is saved. Logs must not record ethnicity, immigration status, or clinical diagnoses.",
+    "mediatorPolicy3": "Mediators follow a defined referral escalation pathway — immediate 112 call for emergencies, helpline for safeguarding concerns, programme supervisor within 24 hours for non-immediate concerns.",
+    "mediatorPolicy4": "Mediator PINs expire after 12 months and are revoked immediately when a mediator leaves the programme.",
+    "data-governanceTitle": "Data Governance",
+    "data-governanceDesc": "How all data — local and server-stored — is classified, retained, and controlled, and how every user can export or delete their data.",
+    "dataGovernance1": "Local device data (family logs, progress, mediator visits) is treated with the same privacy rights as server data — exportable and deletable from Profile > Data.",
+    "dataGovernance2": "Health logs are retained for 5 years or until you delete them. Your account data is hard-deleted within 30 days of a deletion request.",
+    "dataGovernance3": "Guest and anonymous users are first-class subjects: the app explains what local data exists and how to clear it — no auth errors returned.",
+    "dataGovernance4": "Every admin configuration change, provider update, mediator PIN action, and GDPR request is logged in an audit trail accessible only to the Data Protection Officer."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of terms",
+        "body": "By accessing or using Redi Health, you agree to these Terms of Service. If you do not agree, do not use the service. These terms apply to all users including guests, registered users, health mediators, and programme administrators."
+      },
+      "service": {
+        "title": "2. What Redi Health provides",
+        "body": "Redi Health is a health literacy and navigation platform. It provides AI-assisted health information, educational content, misinformation fact-checking, symptom guidance, and tools for health mediators. The platform is intended for educational and informational purposes."
+      },
+      "notMedical": {
+        "title": "3. Not a medical device",
+        "body": "Redi Health is not a medical device and does not provide medical diagnosis, treatment, or prescriptions. All content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions. In an emergency, call 112 or your local emergency number immediately."
+      },
+      "aiLimits": {
+        "title": "4. AI limitations",
+        "body": "AI-generated responses are based on general health knowledge and may not reflect the latest clinical guidance, local health system rules, or your individual circumstances. They must not be treated as personalised medical advice. The AI does not diagnose and does not prescribe."
+      },
+      "userConduct": {
+        "title": "5. User conduct",
+        "body": "You must not use Redi Health to obtain specific medical prescriptions or diagnoses, to collect information about others without their consent, for commercial data harvesting, or to circumvent the platform's clinical safety boundaries. Mediators must comply with the Mediator Operating Policy."
+      },
+      "data": {
+        "title": "6. Data and privacy",
+        "body": "Your data is governed by our Privacy Policy and Data Governance Policy, which describe what is collected, how it is used, and how you can export or delete it. Local data (progress, family logs, check-ins) is stored on your device. Server data requires an account. Both are subject to your full data rights."
+      },
+      "liability": {
+        "title": "7. Limitation of liability",
+        "body": "Redi Health is provided 'as is' without warranties of accuracy or fitness for a particular purpose. To the maximum extent permitted by law, Redi Health is not liable for any harm arising from reliance on the platform's content, including AI-generated responses. You use the platform at your own risk."
+      },
+      "changes": {
+        "title": "8. Changes to these terms",
+        "body": "We may update these terms to reflect changes in the platform or applicable law. Material changes will be notified via the app. Continued use of the platform after notification constitutes acceptance of the updated terms."
+      },
+      "contact": {
+        "title": "9. Contact",
+        "body": "For questions about these terms, contact us at legal@redi.healthcare. For data and privacy matters, contact our Data Protection Officer at dpo@redi.healthcare."
+      }
+    }
   }
 }

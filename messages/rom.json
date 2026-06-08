@@ -11,7 +11,7 @@
     "profile": "Portret",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Familija",
     "more": "More",
     "ariaMain": "Glavna navigacia"
   },
@@ -47,7 +47,283 @@
     "croatia": "Hrvatija",
     "bosnia": "Bosnija",
     "kosovo": "Kosovo",
-    "slovenia": "Slovenija"
+    "slovenia": "Slovenija",
+    "romaPop": "Romenqo pop. {population}",
+    "detail": {
+      "back": "Pale",
+      "romaPopulation": "Romenqo pop",
+      "ofTotal": "katar {total} sa ({percent})",
+      "healthAccess": "Sastipen",
+      "healthChallenges": "Sastipen pharipe",
+      "organizationsHelp": "Organizacije so šaj te pomozin",
+      "emergency": "Urgentno: {number}",
+      "ambulance": "Ambulanca: {number}",
+      "askAboutHealth": "Puch o sastipen ande {region}"
+    },
+    "healthIndex": {
+      "veryPoor": "But pharo",
+      "poor": "Pharo",
+      "fair": "Maj lačho",
+      "good": "Lačho",
+      "excellent": "But lačho"
+    },
+    "countries": {
+      "romania": {
+        "healthChallenges": {
+          "0": "Phari limitacija ande sigurimipe e sastipenqesqo",
+          "1": "But phari mortaliteto e čhavorrenqo thaj džuvljengo ande Romenge",
+          "2": "Tuberkuloza si buteder sar e themutno si",
+          "3": "Tele vakcinacija ande gava",
+          "4": "Pharipe te registrisares pe doktorenge"
+        },
+        "keyFact": "Rumunija si e them le maj but Romenqo pop thaj si lesko nacionalno programo vaš sastipen mediatori.",
+        "organizations": {
+          "0": {
+            "focus": "Romenqo prava, sastipen mediacija"
+          },
+          "1": {
+            "focus": "Romenqo inkluzija politikura"
+          },
+          "2": {
+            "focus": "Mobilne klinike ande marginalizirime komunitete"
+          }
+        }
+      },
+      "bulgaria": {
+        "healthChallenges": {
+          "0": "Segregirime mahale na mukhen te avel sastipen",
+          "1": "But berošipe na kamavel sigurimipe",
+          "2": "Kardiovaskularo nasvalipen si maj baro kauzo e merimoske",
+          "3": "Tele živdipen sar e themutno",
+          "4": "Limitirime specialisto sastipen"
+        },
+        "keyFact": "Bulgarijaske Romenqo sastipen mediator programo si jekh kadja ande Balkani.",
+        "organizations": {
+          "0": {
+            "focus": "Romenqo sastipen promocija thaj mediacija"
+          },
+          "1": {
+            "focus": "Sastipen vaš marginalizirime Roma"
+          }
+        }
+      },
+      "hungary": {
+        "healthChallenges": {
+          "0": "Živdipen 10-15 berša tele sar e themutno",
+          "1": "But kardiovaskularo thaj pulmonalno nasvalimata",
+          "2": "Varovipen thaj na lačho xaben",
+          "3": "Tele sastipen mentialo servisi",
+          "4": "Geografikano izolacija ande severo-istocno Ungrija"
+        },
+        "keyFact": "Ungrija si le but Romenqo pop ande Borsod, Szabolcs thaj Baranya.",
+        "organizations": {
+          "0": {
+            "focus": "Romenqo edukacija vi sastipen literatura"
+          },
+          "1": {
+            "focus": "Romenqo miradovipe thaj sastipen avokacija"
+          }
+        }
+      },
+      "northMacedonia": {
+        "healthChallenges": {
+          "0": "Šuto Orizari (Sutka) si lesko specifiko sastipen trubujipe",
+          "1": "Hepatitis B prevalencija",
+          "2": "Limitirime ginekologikano thaj maternalo sastipen",
+          "3": "But anemija ande čhave thaj džuvlja",
+          "4": "COVID-19 vakcina hezitacija"
+        },
+        "keyFact": "Šuto Orizari pašal Skopje si e maj bara Romenqo municipio ande lumja.",
+        "organizations": {
+          "0": {
+            "focus": "Romenqo prava thaj sastipen"
+          },
+          "1": {
+            "focus": "Publiko sastipen thaj harm reduction"
+          }
+        }
+      },
+      "slovakia": {
+        "healthChallenges": {
+          "0": "Segregirime osady ande vosto Slovakija na si infrastruktura",
+          "1": "Tuberkuloza si maj but ande EU",
+          "2": "Čhavengo malnutricija",
+          "3": "Na si lačho paji thaj sanitacija",
+          "4": "Diskriminacija ande sastipen thana raportirime"
+        },
+        "keyFact": "Slovakija si e maj but proporcio Romenqo ande segregirime osady ande EU.",
+        "organizations": {
+          "0": {
+            "focus": "Antidiskriminacija ande sastipen"
+          },
+          "1": {
+            "focus": "Publiko sastipen programura vi Romenqo sastipen"
+          }
+        }
+      },
+      "serbia": {
+        "healthChallenges": {
+          "0": "Informalne mahale bi sastipen infrastruktura",
+          "1": "But hepatitis thaj intestinal paraziti",
+          "2": "Limitirime registracija e biandoske",
+          "3": "Substanco problema ande urbano Romenqo terne",
+          "4": "Mentalno sastipen stigma ande komunitete"
+        },
+        "keyFact": "Serbijaske sastipen mediator programo sikavel Romen džuvlja sar komunitetne liaison.",
+        "organizations": {
+          "0": {
+            "focus": "Romenqo prava thaj sastipen politika"
+          },
+          "1": {
+            "focus": "Džuvljengo thaj čhavengo sastipen"
+          }
+        }
+      },
+      "turkey": {
+        "healthChallenges": {
+          "0": "Roma (Dom thaj Lom) komunitete si ekonomikno marginalizirime",
+          "1": "Limitirime dokumentacija",
+          "2": "But okupaciono sastipen riziko",
+          "3": "Limitirime maternalo sastipen",
+          "4": "Socialno izolacija thaj mentalno sastipen"
+        },
+        "keyFact": "Roma ande Turkija si but ande Istanbul, Edirne thaj Izmir.",
+        "organizations": {
+          "0": {
+            "focus": "Romenqo prava thaj socialno inkluzija ande Turkija"
+          },
+          "1": {
+            "focus": "Romenqo edukacija thaj sastipen literatura"
+          }
+        }
+      },
+      "greece": {
+        "healthChallenges": {
+          "0": "Roma ande ruralo kampe na aven municipialno sastipen",
+          "1": "Ekonomik kriza našavel sastipen",
+          "2": "Hepatitis C ande varekane komunitete",
+          "3": "Limitirime dentalno sastipen",
+          "4": "Ekonomik precaritet palal COVID-19"
+        },
+        "keyFact": "Grecija si Roma ande settled thaj nomadik kampe ande Central Macedonia thaj Thessaly.",
+        "organizations": {
+          "0": {
+            "focus": "Romenqo inkluzija ande sastipen, edukacija, housing"
+          },
+          "1": {
+            "focus": "Socialno thaj sastipen podrška vaš marginalizirime grupe"
+          }
+        }
+      },
+      "albania": {
+        "healthChallenges": {
+          "0": "But čhavengo varovipen thaj malnutricija",
+          "1": "Limitirime sigurimipe",
+          "2": "Maj but maternalo mortaliteto ande Romenge",
+          "3": "Limitirime lačho housing",
+          "4": "Sezonalno buti na kerel nestabilno sastipen"
+        },
+        "keyFact": "Albanija si vi Ashkali (Egipćan) minoriteto historikno grupirime le Romença.",
+        "organizations": {
+          "0": {
+            "focus": "Romenqo prava thaj komunitetno development"
+          },
+          "1": {
+            "focus": "Edukacija thaj sastipen vaš Roma"
+          }
+        }
+      },
+      "czech": {
+        "healthChallenges": {
+          "0": "Persistento segregacija ande housing",
+          "1": "But preventable kardiovaskularo nasvalipen",
+          "2": "Tele vakcinacija ande Romenge",
+          "3": "Bariera ande komunikacija thaj literatura",
+          "4": "Pharipe te avel specialisto sastipen"
+        },
+        "keyFact": "Čehija si but Romenqo pop ande Moravia thaj severno Bohemia.",
+        "organizations": {
+          "0": {
+            "focus": "Integrimo pristup vaš Romenqo inkluzija"
+          },
+          "1": {
+            "focus": "ERGO Network avokacija"
+          }
+        }
+      },
+      "croatia": {
+        "healthChallenges": {
+          "0": "Roma ande Međimurje na aven sastipen",
+          "1": "Čhib bariera",
+          "2": "But diabeto ande phure Roma",
+          "3": "Tele preschool vakcinacija",
+          "4": "Varovipen našavel nutricija thaj sastipen"
+        },
+        "keyFact": "Kroatijaske maj bara Romenqo komuniteto si ande Međimurje County.",
+        "organizations": {
+          "0": {
+            "focus": "Romen džuvljengo sastipen thaj prava"
+          },
+          "1": {
+            "focus": "Romenqo politika thaj inkluzija"
+          }
+        }
+      },
+      "bosnia": {
+        "healthChallenges": {
+          "0": "Post-war infrastruktura našavel sastipen",
+          "1": "Na si dokumentura",
+          "2": "But berošipe, na si sigurimipe",
+          "3": "Čhavengo malnutricija",
+          "4": "Limitirime mentalno sastipen vaš trauma"
+        },
+        "keyFact": "Bosna thaj Hercegovina si Roma ande Federation thaj Republika Srpska.",
+        "organizations": {
+          "0": {
+            "focus": "Romenqo prava, sastipen, dokumentacija"
+          },
+          "1": {
+            "focus": "Minoriteto prava vi Romenqo sastipen"
+          }
+        }
+      },
+      "kosovo": {
+        "healthChallenges": {
+          "0": "Roma ande Mitrovica zhvendosime ande lead-kontaminirime kampe",
+          "1": "But phari varovipen",
+          "2": "Limitirime Romen sastipen mediatori",
+          "3": "Post-konflikt trauma",
+          "4": "But čhavengo mortaliteto"
+        },
+        "keyFact": "Roma ande severno Mitrovica ekspozirime ande phari lead poisoning ande UN kampe palal 1999.",
+        "organizations": {
+          "0": {
+            "focus": "RAE komunitetno prava thaj sastipen"
+          },
+          "1": {
+            "focus": "Sastipen vaš zhvendosime Roma"
+          }
+        }
+      },
+      "slovenia": {
+        "healthChallenges": {
+          "0": "Roma ande Dolenjska thaj Prekmurje marginalizirime",
+          "1": "Tele edukacija našavel sastipen literatura",
+          "2": "Socialno exclusion našavel mentalno sastipen",
+          "3": "Tele vakcinacija",
+          "4": "Varovipen našavel xaben"
+        },
+        "keyFact": "Slovenija si duj legalno arakhle Romenqe komunitete: autochthon thaj non-autochthon.",
+        "organizations": {
+          "0": {
+            "focus": "Romenqo socialno thaj kulturalno prava"
+          },
+          "1": {
+            "focus": "Romenqo miradovipe thaj sastipen"
+          }
+        }
+      }
+    }
   },
   "language": {
     "title": "Čhib",
@@ -87,486 +363,486 @@
   },
   "studentHealth": {
     "meta": {
-      "title": "Student Health Academy",
-      "description": "A cinematic, mission-based health literacy academy for high school students: first aid, STIs, vaccines, and critical thinking."
+      "title": "Academia de sastipen Studențească",
+      "description": "O akademija de alfabetizare în domeniul sănătății, bazată pe misija, pentru štilii de liceu: primul pomoć, STIs, vakcinuri thaj gândire critică."
     },
     "hub": {
-      "title": "Student Health Academy",
-      "subtitle": "A mission-based health field guide for high school students. Learn what to do before help arrives, how to protect your body and relationships, and how to separate evidence from rumor.",
-      "disclaimer": "Educational field guide only: this is not medical care, diagnosis, or emergency instruction from a clinician. If someone may be in immediate danger, call emergency services. For sexual health, consent, or privacy concerns, seek a trusted adult, school nurse, doctor, clinic, or local helpline.",
-      "countryLabel": "Your country (for tips)",
-      "countryPlaceholder": "Select country (optional)",
-      "countryHint": "Used only on this device to show relevant context. You can change it anytime.",
-      "countryContext": "Context for tips: {country}",
+      "title": "Academia de sastipen Studențească",
+      "subtitle": "Un ghid de domeniul sănătății bazat pe misiuni pentru štilii de liceu. Aflați ce să faceți înainte de sosirea pomoćului, cum să vă protejați corpul thaj relațiile thaj cum să separați dovezile de zvonuri.",
+      "disclaimer": "Numai ghid educațional de domeniu: aceasta na si îngrijire doktoroală, diagnostic vaj instrucțiuni de urgență de la un doktoro. te cineva se află în pericol imediat, sunați la serviciile de urgență. Pentru probleme legate de sastipena sexuală, consimțământul vaj privatnoitatea, căutați un adult de încredere, o asistentă doktoroală, un doktoro, o clinică vaj o linie de asistență locală.",
+      "countryLabel": "Țara dvs. (pentru sfaturi)",
+      "countryPlaceholder": "Selectați țara (opțional)",
+      "countryHint": "Folosit numai pe acest dispozitiv pentru a afișa contextul relevant. Îl poți schimba oricând.",
+      "countryContext": "Context pentru sfaturi: {country}",
       "xpLabel": "XP",
-      "levelLabel": "Level {level}",
-      "commandCenterTitle": "Expedition dashboard",
-      "commandCenterSubtitle": "{completed}/{total} field lessons complete — build practical skills you can use in school, at home, and online.",
-      "overallProgress": "Academy progress",
-      "levelProgress": "Level progress",
-      "maxLevel": "Max level reached",
-      "nextLevelXp": "Next level at {xp} XP",
-      "stageProgress": "Stage progress",
-      "badgesTitle": "Your badges",
-      "stageMapTitle": "Expedition route",
-      "modulesInStage": "modules",
-      "takeStageQuiz": "Stage quiz",
-      "quizLocked": "Complete all modules in this stage to unlock the stage quiz.",
-      "quizIntro": "Answer at least 70% correctly to unlock the next stage.",
-      "stageComplete": "Stage complete!",
-      "nextStageUnlocked": "You unlocked the next stage.",
-      "badgeLocal": "Local champion",
-      "badgeRegional": "Regional explorer",
-      "badgeNational": "National scholar",
-      "badgeLocalDesc": "Finished the local stage quiz.",
-      "badgeRegionalDesc": "Finished the regional stage quiz.",
-      "badgeNationalDesc": "Finished the national stage quiz.",
-      "allStagesComplete": "You completed the full academy path. Keep revisiting lessons to stay sharp.",
-      "kicker": "Field guide for real life",
+      "levelLabel": "Nivelul {level}",
+      "commandCenterTitle": "Tabloul de bord al expediției",
+      "commandCenterSubtitle": "{completed}/{total} lekcije de teren finalizate — dezvoltați abilități practice pe care le puteți utiliza la școală, acasă thaj online.",
+      "overallProgress": "Progresul akademijai",
+      "levelProgress": "Progres de nivel",
+      "maxLevel": "Nivelul maxim atins",
+      "nextLevelXp": "Următorul nivel la {xp} XP",
+      "stageProgress": "Progres de etapă",
+      "badgesTitle": "Insignele tale",
+      "stageMapTitle": "Ruta de expeditie",
+      "modulesInStage": "module",
+      "takeStageQuiz": "testo pe scenă",
+      "quizLocked": "Completați toate modulele din această etapă pentru a debloca testoul de etapă.",
+      "quizIntro": "Răspundeți corect cel puțin 70% pentru a debloca următoarea etapă.",
+      "stageComplete": "Etapa finalizată!",
+      "nextStageUnlocked": "Ai deblocat etapa următoare.",
+      "badgeLocal": "Campion local",
+      "badgeRegional": "Explorator regional",
+      "badgeNational": "Savant national",
+      "badgeLocalDesc": "Am terminat testoul pe scena locală.",
+      "badgeRegionalDesc": "Am terminat testoul de etapă regională.",
+      "badgeNationalDesc": "Am terminat testoul național.",
+      "allStagesComplete": "Ați finalizat întregul drum al akademijai. Continuați să revedeți lekcijele pentru a rămâne atent.",
+      "kicker": "Ghid de teren pentru viața reală",
       "streakLabel": "Streak",
-      "streakUnitOne": "day",
-      "streakUnitMany": "days",
-      "streakHint": "Keep one lesson a day going",
-      "dayActive": "Active day",
-      "dayInactive": "No activity"
+      "streakUnitOne": "dives",
+      "streakUnitMany": "dives",
+      "streakHint": "Ține o lekcija pe dives",
+      "dayActive": "dives activă",
+      "dayInactive": "Nicio activitate"
     },
     "stages": {
       "local": "Local",
-      "localDesc": "Immediate skills for school, home, and friends",
+      "localDesc": "Abilități imediate pentru școală, acasă thaj prieteni",
       "regional": "Regional",
-      "regionalDesc": "Clinic, community, and public-health know-how",
+      "regionalDesc": "Know-how din clinică, komuniteto thaj sastipen publică",
       "national": "National",
-      "nationalDesc": "Evidence, leadership, and capstone decisions"
+      "nationalDesc": "Dovezi, leadership thaj decizii de bază"
     },
     "progress": {
-      "xp": "Experience points",
-      "stageLocked": "Locked — complete the previous stage quiz.",
-      "quizRequired": "Quiz required",
-      "allModulesDone": "All modules done — take the quiz!"
+      "xp": "Puncte de experiență",
+      "stageLocked": "Blocat — finalizați testoul din etapa anterioară.",
+      "quizRequired": "testoul necesar",
+      "allModulesDone": "Toate modulele s-au terminat — susține testoul!"
     },
     "quiz": {
-      "title": "Stage checkpoint",
-      "back": "Back to academy",
-      "progress": "Question",
-      "of": "of",
-      "submit": "Next",
-      "seeResults": "See results",
-      "pass": "Checkpoint cleared",
-      "fail": "Checkpoint not cleared yet",
-      "scoreLine": "You got {correct} out of {total} correct ({pct}%).",
-      "needPct": "You need at least 70% to unlock the next stage.",
-      "retry": "Try again",
-      "continueHub": "Back to academy",
-      "stageBriefTitle": "{stage} field checkpoint",
-      "stageBriefBody": "This checkpoint tests judgment, not memorization. Score {pct}% or more to unlock the next expedition stage.",
-      "continueNextStage": "Enter {stage} expedition",
-      "explainCorrect": "Why this is correct",
-      "explainWrong": "Field guide explainer"
+      "title": "Etapa punct de control",
+      "back": "Înapoi la akademija",
+      "progress": "puximata",
+      "of": "de",
+      "submit": "În continuare",
+      "seeResults": "Vezi rezultatele",
+      "pass": "Punct de control eliberat",
+      "fail": "Punctul de control na a fost încă eliberat",
+      "scoreLine": "Ai luat {correct} din {total} corect ({pct}%).",
+      "needPct": "Aveți nevoie de cel puțin 70% pentru a debloca următoarea etapă.",
+      "retry": "Încercați din nou",
+      "continueHub": "Înapoi la akademija",
+      "stageBriefTitle": "{stage} punct de control al câmpului",
+      "stageBriefBody": "Acest punct de control testoează judecata, na memorarea. Scor {pct}% vaj mai mult pentru a debloca următoarea etapă de expediție.",
+      "continueNextStage": "Intrați în expediția {stage}",
+      "explainCorrect": "De ce acest lucru si corect",
+      "explainWrong": "Explicator de ghid de teren"
     },
     "lesson": {
-      "scenarioTitle": "Field scenario",
-      "challengeTitle": "Expedition challenge",
-      "supportTitle": "Confidential support matters",
-      "supportText": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
-      "findCare": "Find care",
-      "knowRights": "Know your rights",
-      "stepLabel": "Lesson {current} of {total}",
-      "completedNote": "Field note logged. You earned XP, saved progress, and unlocked the next best step.",
-      "sourcesTitle": "Verified sources",
-      "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab.",
-      "reviewUpToDate": "Reviewed for clinical accuracy",
-      "reviewOverdue": "Review overdue — verify with a clinician",
-      "reviewMeta": "Reviewed {date} by {reviewer}"
+      "scenarioTitle": "Scenariul de teren",
+      "challengeTitle": "Provocare de expediție",
+      "supportTitle": "Asistența privatnoă contează",
+      "supportText": "te acest subiect atinge ceva real în viața ta, na trebuie să-l rezolvi singur. Întrebați un adult de încredere, o asistentă școlară, un doktoro, o clinică pentru tineri vaj o linie de asistență care asistență si privatnoă acolo unde locuiți.",
+      "findCare": "Găsiți îngrijire",
+      "knowRights": "Cunoaște-ți hakajale",
+      "stepLabel": "Lecția {current} din {total}",
+      "completedNote": "Notă de câmp înregistrată. Ați câștigat XP, ați salvat progresul thaj ați deblocat următorul pas cel mai bun.",
+      "sourcesTitle": "Surse verificate",
+      "sourcesNote": "Surse independente pe care le puteți verifica singur. Atingeți un rând pentru a deschide ghidul original într-o filă nouă.",
+      "reviewUpToDate": "Revizuit pentru acuratețea clinică",
+      "reviewOverdue": "Examinare întârziată — verificați cu un doktoro",
+      "reviewMeta": "Examinat {date} de {reviewer}"
     },
     "modules": {
       "local": {
         "emergency101": {
-          "title": "Emergency signals: calling for help",
-          "description": "In an emergency, the first minute is a bridge between chaos and help. Your job is not to become a doctor. Your job is to stay safe, call the right number, and give clear information that helps trained responders find the scene fast.",
-          "tip1": "Lead with location: school name, street, building entrance, landmark, or GPS pin. A perfect medical description is useless if help cannot find you.",
-          "tip2": "Say what happened in one sentence: “A student collapsed and is not responding,” or “There is heavy bleeding from the arm.” Short, concrete details help dispatchers act.",
-          "tip3": "Put the phone on speaker if you can. The dispatcher may coach you while someone else gets an adult, opens a gate, or clears space.",
-          "tip4": "Never film an emergency for attention. Protect privacy, create space, and stay with the person if it is safe until help arrives.",
-          "fact": "Emergency systems are designed around fast, accurate information. Clear location plus a brief description can shorten the time between the call and professional care.",
-          "action": "Create a phone note called “Emergency info” with your home address, school address, and one nearby landmark for each.",
-          "scenario": "During sports practice, a classmate suddenly drops to the ground. The gym gets loud. One person is recording. No adult is beside the student yet.",
-          "challenge": "Write a 15-second emergency script: who you are, where you are, what happened, and what you need."
+          "title": "Semnale de urgență: apel pentru pomoć",
+          "description": "În caz de urgență, primul minut si o punte între haos thaj pomoć. Treaba ta na si să devii doktoro. Sarcina ta si să fii în siguranță, să suni la numărul potrivit thaj să oferi informații clare care să îi ajute pe cei instruiți să găsească locul rapid.",
+          "tip1": "Indicație cu locația: numele școlii, strada, intrarea în clădire, reper vaj codul GPS. O descriere doktoroală perfectă si inutilă te pomoćul na te šaj găsi.",
+          "tip2": "Spuneți ceea ce s-a întâmplat într-o singură propoziție: „Un štil s-a prăbușit thaj na răspunde” vaj „Există ratrare abundentă de la braț”. Detaliile scurte thaj concrete ajută dispecerii să acționeze.",
+          "tip3": "Pune telefonul pe difuzor te poți. Dispeceratul vă šaj antrena în timp ce altcineva primește un adult, deschide o poartă vaj eliberează spațiul.",
+          "tip4": "na filmați niciodată o urgență pentru atenție. Protejați privatnoitatea, creați spațiu thaj rămâneți cu persoana respectivă te si în siguranță până la sosirea pomoćului.",
+          "fact": "Sistemele de urgență si proiectate în jurul informațiilor rapide thaj precise. Locația clară plus o scurtă descriere pot scurta timpul dintre apel thaj îngrijirea profesională.",
+          "action": "Creați o notă telefonică numită „Informații de urgență” cu adresa de acasă, adresa școlii thaj un reper din apropiere pentru fiecare.",
+          "scenario": "În timpul practicii sportive, un coleg de clasă cade brusc la pământ. Sala de sport devine zgomotoasă. O persoană înregistrează. Niciun adult na si încă lângă student.",
+          "challenge": "Scrieți un script de urgență de 15 secunde: cine sunteți, unde vă aflați, ce s-a întâmplat thaj de ce aveți nevoie."
         },
         "bleedingBasics": {
-          "title": "Bleeding: pressure buys time",
-          "description": "Blood can make people panic, but the first response is simple: protect yourself, press firmly, and get help. Pressure is not dramatic, but it is one of the most powerful first-aid actions a bystander can take.",
-          "tip1": "Protect yourself if possible: gloves are best, but a plastic bag or folded cloth is better than bare hands if blood is visible.",
-          "tip2": "Press directly on the wound with the cleanest cloth available. Strong, steady pressure matters more than constantly checking how it looks.",
-          "tip3": "If blood soaks through, add more cloth on top. Removing the first layer can pull away early clots and restart bleeding.",
-          "tip4": "Call emergency services for heavy bleeding, spurting blood, deep wounds, or bleeding that does not slow with firm pressure.",
-          "fact": "Many severe external bleeds can be slowed before professionals arrive. The difference is often whether someone starts firm pressure immediately.",
-          "action": "Find the first-aid kit at home or school and identify what could be used for clean pressure in an emergency.",
-          "scenario": "After school, someone cuts their forearm on broken glass. Their sleeve is wet with blood, and friends are afraid to touch anything.",
-          "challenge": "Practice saying the rule out loud: “Press. Add layers. Keep pressing. Call for help.”"
+          "title": "ratrare: presiunea câștigă timp",
+          "description": "ratle šaj face oamenii să intre în panică, amari primul paso si simplu: protejați-vă, pajisați ferm thaj obțineți pomoć. Presiunea na si dramatică, amari si una dintre cele mai puternice acțiuni de prim pomoć pe care le šaj întreprinde un spectator.",
+          "tip1": "Protejați-vă te si posibil: mănușile si cele mai bune, amari o pungă de plastic vaj o cârpă pliată si mai bună decât vastale goale te ratle si vizibil.",
+          "tip2": "pajisați direct pe rană cu cea mai curată cârpă disponibilă. Presiunea puternică thaj constantă contează mai mult decât verificarea constantă a modului în care arată.",
+          "tip3": "te ratle trece, adăugați mai multă cârpă deasupra. Îndepărtarea primului strat šaj îndepărta cheagurile timpurii thaj repornirea ratrării.",
+          "tip4": "Apelați serviciile de urgență pentru ratrare abundentă, stropi de rat, răni adânci vaj ratrare care na încetinește la presiunea fermă.",
+          "fact": "Multe ratrări externe severe pot fi încetinite înainte de sosirea profesioniștilor. Diferența si adesea te cineva începe o presiune fermă imediat.",
+          "action": "Găsiți trusa de prim pomoć acasă vaj la școală thaj identificați ce ar putea fi folosit pentru presiune curată în caz de urgență.",
+          "scenario": "După școală, cineva își taie antebrațul pe sticlă spartă. Mâneca lor si udă de rat, iar prietenilor le si dar să atingă ceva.",
+          "challenge": "Exersați să spuneți regula cu voce tare: „pajisați. Adăugați straturi. Continuați să pajisați. Apelați pentru pomoć.”"
         },
         "burnsBasics": {
-          "title": "Burns: cool the heat, protect the skin",
-          "description": "A burn keeps damaging tissue after the heat source is gone. The goal is to cool the skin safely, avoid folk remedies that trap heat, and know when a burn needs urgent medical care.",
-          "tip1": "Cool running water is the first move for many minor burns. Keep it gentle and cool, not icy.",
-          "tip2": "Skip butter, oil, toothpaste, flour, or egg. They can trap heat, hide the injury, and raise infection risk.",
-          "tip3": "Remove tight rings, bracelets, or clothing near the burn if they are not stuck, because swelling can happen quickly.",
-          "tip4": "Get urgent care for burns on the face, hands, genitals, large areas, deep burns, chemical burns, electrical burns, or trouble breathing.",
-          "fact": "Early cooling can reduce pain and depth of injury. The best burn care often begins before anyone reaches a clinic.",
-          "action": "Teach one person the burn rule: cool water first, cover loosely, no kitchen remedies.",
-          "scenario": "A younger sibling touches a hot pan. An older relative reaches for toothpaste because “that always helped before.”",
-          "challenge": "Make a two-line poster: “Cool the burn. Do not cover it with food or paste.”"
+          "title": "Arsuri: răcește căldura, protejează pielea",
+          "description": "O arsură continuă să dăuneze țesutului după ce sursa de căldură dispare. Scopul si de a răci pielea în siguranță, de a evita remediile populare care captează căldura thaj de a ști kana o arsură necesită îngrijiri doktoroale pharie.",
+          "tip1": "Apa rece curgătoare si prima mișcare pentru multe arsuri minore. Păstrați-l blând thaj rece, na înghețat.",
+          "tip2": "Sari peste unt, ulei, pasta de dinti, faina vaj ou. Ele pot prinde căldura, pot ascunde rănirea thaj pot crește riscul de infekcija.",
+          "tip3": "Îndepărtați inelele strânse, brățările vaj îmbrăcămintea din apropierea arsurii te na si blocate, deoarece umflarea se šaj produce rapid.",
+          "tip4": "Obțineți îngrijire phariă pentru arsuri de pe față, vasta, organe genitale, suprafețe mari, arsuri profunde, arsuri chimice, arsuri electrice vaj probleme de respirație.",
+          "fact": "Răcirea timpurie šaj reduce durerea thaj adâncimea rănilor. Cea mai bună îngrijire a arsurilor începe adesea înainte ca cineva să ajungă la o clinică.",
+          "action": "Învățați o persoană regula de ardere: paji rece mai întâi, acoperiți lejer, fără remedii de bucătărie.",
+          "scenario": "Un frate mai mic atinge o tigaie fierbinte. O rudă mai în vârstă caută pastă de dinți pentru că „aceasta a ajutat întotdeauna înainte”.",
+          "challenge": "Faceți un poster cu două rânduri: „Răciți arsura. na o acoperiți cu alimente vaj pastă.”"
         },
         "stiBasics": {
-          "title": "STIs: facts without shame",
-          "description": "Sexually transmitted infections are health conditions, not character judgments. Some are curable, some are manageable, and many have no symptoms at first. Accurate information protects people from stigma and from delayed care.",
-          "tip1": "Symptoms are not a reliable test. Many STIs can be silent while still affecting health or spreading to partners.",
-          "tip2": "Condoms and dental dams reduce risk when used correctly, but no tool works if someone is pressured or unable to use it safely.",
-          "tip3": "Testing is responsible. It is something people do to care for themselves and others, not something to gossip about.",
-          "tip4": "Ask clinics directly about confidentiality: who can see results, what age rules apply, and whether services are youth-friendly.",
-          "fact": "Untreated infections such as chlamydia and gonorrhea can lead to serious complications, but testing and treatment are effective when people get care early.",
-          "action": "Identify one trustworthy sexual-health source in your country: a health ministry page, youth clinic, school nurse, or helpline.",
-          "scenario": "A friend says, “I would know if someone had an STI just by looking.” Another student quietly stops talking.",
-          "challenge": "Prepare a stigma-free reply: “You cannot always tell. Testing is normal, private, and responsible.”"
+          "title": "STIs: fapte fără rușine",
+          "description": "Infecțiile cu transmitere sexuală si condiții de sastipen, na judecăți de caracter. Unele si vindecabile, altele si gestionabile thaj multe na au simptome la început. Informațiile exacte protejează oamenii de stigmatizare thaj de îngrijire întârziată.",
+          "tip1": "Simptomele na si un testo de încredere. Mulți STIs pot fi tăcuți în timp ce încă afectează sastipena vaj se răspândesc la parteneri.",
+          "tip2": "Prezervativele thaj barajele dentare reduc riscul atunci kana si utilizate corect, amari niciun instrument na funcționează te cineva si presat vaj na šaj să le folosească în siguranță.",
+          "tip3": "testoarea si responsabilă. si ceva ce oamenii fac pentru a avea grijă de ei înșiși thaj de ceilalți, na ceva despre care să bârfească.",
+          "tip4": "Întrebați clinicile direct despre privatnoitate: cine šaj vedea rezultatele, ce reguli de vârstă se aplică thaj te serviciile si prietenoase pentru tineri.",
+          "fact": "Infecțiile netratate, cum ar fi chlamydia thaj gonoreea, pot duce la complicații grave, amari testoarea thaj tretmanoul si eficiente atunci kana oamenii primesc îngrijiri devreme.",
+          "action": "Identificați o sursă de încredere de sastipen sexuală în țara dvs.: o pagină a ministerului sănătății, o clinică pentru tineret, o asistentă școlară vaj o linie de asistență.",
+          "scenario": "Un prieten spune: „Aș ști te cineva ar avea un STI doar privind.” Un alt student încetează să mai vorbească.",
+          "challenge": "Pregătește un paso fără stigmatizare: „na poți spune întotdeauna. testoarea si normală, privată thaj responsabilă.”"
         },
         "consentBasics": {
-          "title": "Consent: the clearest yes",
-          "description": "Consent is not a technicality. It is the foundation of safety, respect, and trust. A healthy relationship gives every person the freedom to say yes, no, wait, or stop without fear of punishment.",
-          "tip1": "Consent must be freely chosen. Pressure, threats, guilt, alcohol, drugs, or power differences can make “yes” unsafe or invalid.",
-          "tip2": "Silence is not consent. Freezing, going quiet, or not fighting back is not the same as wanting something.",
-          "tip3": "Consent is ongoing. Someone can change their mind even if they agreed earlier, even in a relationship.",
-          "tip4": "Digital boundaries count. Repeatedly asking for photos, sharing private images, or threatening exposure is not respect.",
-          "fact": "Consent education reduces harm because it gives students practical language for boundaries before pressure becomes danger.",
-          "action": "Choose a trusted person or service you could contact if you or a friend felt pressured, unsafe, or threatened.",
-          "scenario": "Someone keeps asking for private photos after being told no, then says, “If you loved me, you would.”",
-          "challenge": "Write a boundary script you could send quickly: “No. Stop asking. I am leaving this conversation.”"
+          "title": "Consimțământ: cel mai clar Va",
+          "description": "Consimțământul na si un aspect tehnic. si fundamentul siguranței, respectului thaj încrederii. O relație sănătoasă oferă fiecărei persoane libertatea de a spune Va, na, a aștepta vaj a opri fără teama de pedeapsă.",
+          "tip1": "Consimțământul trebuie să fie liber ales. Presiunea, amenințările, vinovăția, alcoolul, drogurile vaj diferențele de putere pot face ca „Va” să fie nesigur vaj invalid.",
+          "tip2": "Tăcerea na si consimțământ. A îngheța, a tace vaj a na riposta na si același lucru cu a dori ceva.",
+          "tip3": "Consimțământul si în curs de desfășurare. Cineva se šaj răzgândi chiar te a fost de acord mai devreme, chiar thaj într-o relație.",
+          "tip4": "Granițele digitale contează. A cere în mod repetat fotografii, a partaja imagini private vaj a amenința cu expunerea na si respect.",
+          "fact": "Educația privind consimțământul reduce răul, deoarece oferă štililor un limbaj practic pentru limite înainte ca presiunea să devină pericol.",
+          "action": "Alegeți o persoană vaj un serviciu de încredere pe care îl puteți contacta te dvs. vaj un prieten v-ați simțit presat, nesigur vaj amenințat.",
+          "scenario": "Cineva continuă să ceară fotografii private după ce i s-a spus că na, apoi spune: „te m-ai iubi, m-ai face”.",
+          "challenge": "Scrieți un script de limită pe care îl puteți trimite rapid: „na. na mai întrebați. Părăsesc această conversație.”"
         }
       },
       "regional": {
         "chokingBasics": {
-          "title": "Choking: recognize the silent emergency",
-          "description": "Choking can turn a normal lunch table into a life-threatening emergency in seconds. The safest response begins with recognizing whether the person can cough or breathe, calling for help, and using trained techniques when needed.",
-          "tip1": "If the person is coughing hard, encourage coughing and stay close. A strong cough is the body’s best tool.",
-          "tip2": "If they cannot speak, cough, cry, or breathe, treat it as an emergency and call for help immediately.",
-          "tip3": "Back blows and abdominal thrusts should be learned from a certified first-aid instructor. Good technique matters.",
-          "tip4": "After a serious choking episode, medical evaluation is wise even if the person seems better.",
-          "fact": "Choking is often quiet, not dramatic. Bystanders who recognize the signs quickly can make the difference before professionals arrive.",
-          "action": "Ask your school who is trained in first aid and where students can learn CPR or choking response.",
-          "scenario": "In the cafeteria, a student suddenly stands up, grabs their throat, and cannot answer when friends ask what is wrong.",
-          "challenge": "Find out where your school keeps emergency contacts and who is first-aid trained."
+          "title": "Sufocare: recunoașteți urgența tăcută",
+          "description": "Sufocarea šaj transforma o masă normală de prânz într-o urgență care pune viața în pericol în câteva secunde. Cel mai sigur paso începe cu recunoașterea te persoana šaj tuse vaj respira, chemarea pomoćului thaj utilizarea tehnicilor antrenate atunci kana si necesar.",
+          "tip1": "te persoana tușește din greu, încurajați tusea thaj rămâneți aproape. O tuse puternică si cel mai bun instrument al organismului.",
+          "tip2": "te na pot să vorbească, să tușească, să plângă vaj să respire, tratați-o ca pe o urgență thaj chemați imediat pomoć.",
+          "tip3": "Loviturile din spate thaj împingurile abdominale trebuie învățate de la un instructor de prim pomoć certificat. Tehnica bună contează.",
+          "tip4": "După un episod grav de sufocare, evaluarea doktoroală si înțeleaptă chiar te persoana pare mai bună.",
+          "fact": "Sufocarea si adesea liniștită, na dramatică. Trecătorii care recunosc rapid semnele pot face diferența înainte de sosirea profesioniștilor.",
+          "action": "Întrebați școala dvs. care si instruită în primul pomoć thaj unde štilii pot învăța CPR vaj pasoul la sufocare.",
+          "scenario": "În cantină, un student se ridică brusc, îl apucă de gât thaj na šaj răspunde kana prietenii întreabă ce si în neregulă.",
+          "challenge": "Aflați unde școala dvs. păstrează contactele de urgență thaj cine si instruit pentru acordarea primului pomoć."
         },
         "stiTesting": {
-          "title": "Testing and treatment: privacy, proof, care",
-          "description": "Testing replaces fear with facts. It can feel intimidating, but clinics do this every day. The strongest move is to ask clear questions about privacy, testing options, treatment, and partner safety.",
-          "tip1": "Tests may use urine, blood, or swabs. A clinician can explain what is needed based on exposure and symptoms.",
-          "tip2": "Be honest with clinicians. They are not there to judge; accurate information helps them choose the right tests.",
-          "tip3": "If treatment is prescribed, take it exactly as directed and ask when it is safe to have sex again.",
-          "tip4": "Partners may need testing or treatment. Clinics can help with safe, private ways to communicate this.",
-          "fact": "Early testing and treatment can prevent long-term complications and reduce transmission in a community.",
-          "action": "Write down three clinic questions: “Is this confidential?”, “Which tests do I need?”, “When should I retest?”",
-          "scenario": "A friend is worried after possible exposure but says, “If I go to a clinic, everyone will know.”",
-          "challenge": "Build a privacy checklist a student could use before making an appointment."
+          "title": "testoare thaj tretmano: privatnoitate, dovadă, îngrijire",
+          "description": "testoarea înlocuiește frica cu fapte. šaj fi intimidant, amari clinicile fac asta în fiecare dives. Cea mai puternică mișcare si să pui întrebări clare despre privatnoitate, opțiuni de testoare, tretmano thaj siguranța partenerului.",
+          "tip1": "testoele pot folosi urină, rat vaj tampoane. Un clinician šaj explica ceea ce si necesar pe baza expunerii thaj simptomelor.",
+          "tip2": "Fii sincer cu clinicienii. Ei na si acolo pentru a judeca; informațiile corecte îi ajută să aleagă testoele potrivite.",
+          "tip3": "te si prescris un tretmano, luați-l exact așa cum si indicat thaj întrebați kana si sigur să faceți sex din nou.",
+          "tip4": "Partenerii pot avea nevoie de testoare vaj tretmano. Clinicile vă pot ajuta cu modalități sigure thaj private de a comunica acest lucru.",
+          "fact": "testoarea thaj tretmanoul precoce pot preveni complicațiile pe termen lung thaj pot reduce transmiterea într-o komuniteto.",
+          "action": "Notează trei întrebări clinice: „si privatno?”, „De ce testoe am nevoie?”, „kana ar trebui să testoez din nou?”",
+          "scenario": "Un prieten si îngrijorat după o posibilă expunere, amari spune: „te merg la o clinică, toată lumea va ști.”",
+          "challenge": "Creați o listă de verificare a privatnoității pe care un student ar putea să o folosească înainte de a face o programare."
         },
         "vaccineLiteracy": {
-          "title": "Vaccines: training the immune system",
-          "description": "Vaccines are not magic shields; they are training sessions for the immune system. They help the body recognize danger before a real infection has the chance to cause serious harm.",
-          "tip1": "A vaccine schedule is a map. It shows which protections are recommended at different ages and when catch-up doses may be needed.",
-          "tip2": "A sore arm or mild fever can happen because the immune system is responding. Clinics can tell you what is normal and what is not.",
-          "tip3": "Vaccines are monitored for safety before and after approval. Serious allergic reactions are rare, and clinics are prepared for them.",
-          "tip4": "If you missed a dose, do not guess. Ask a clinician or official schedule about catch-up options.",
-          "fact": "High vaccine coverage protects individuals and also helps protect people who cannot be vaccinated for medical reasons.",
-          "action": "Check your vaccine record with a parent, guardian, doctor, or school nurse and list one question to ask.",
-          "scenario": "A group chat claims a vaccine “rewrites your DNA.” The post has dramatic music and no source.",
-          "challenge": "Find the same vaccine on a public health website and write one evidence-based reply."
+          "title": "vakcinuri: antrenarea sistemului imunitar",
+          "description": "vakcinurile na si scuturi magice; si sesiuni de antrenament pentru sistemul imunitar. Ele ajută organismul să recunoască pericolul înainte ca o infekcija reală să aibă șansa de a provoca vătămări grave.",
+          "tip1": "Un program de vakcinare si o hartă. Arată ce protecții si recomandate la diferite vârste thaj kana pot fi necesare doze de recuperare.",
+          "tip2": "Un braț dureros vaj o febră ușoară šaj pajirea deoarece sistemul imunitar răspunde. Clinicile vă pot spune ce si normal thaj ce na.",
+          "tip3": "vakcinurile si monitorizate pentru siguranță înainte thaj după aprobare. Reacțiile alergice grave si rare, iar clinicile si pregătite pentru ele.",
+          "tip4": "te ați omis o doză, na ghiciți. Întrebați un clinician vaj un program oficial despre opțiunile de recuperare.",
+          "fact": "Acoperirea ridicată a vakcinurilor protejează persoanele thaj, de asemenea, ajută la protejarea persoanelor care na pot fi vakcinate din motive doktoroale.",
+          "action": "Verificați fișa de vakcinare cu un părinte, tutore, doktoro vaj asistentă școlară thaj enumerați o puximata de adresat.",
+          "scenario": "Un chat de grup susține că un vakcin „îți rescrie DNA”. Postarea are muzică dramatică thaj fără sursă.",
+          "challenge": "Găsiți același vakcin pe un site web de sastipen publică thaj scrieți un paso bazat pe dovezi."
         },
         "vpdExamples": {
-          "title": "Diseases vaccines can prevent",
-          "description": "A vaccine card is not just paperwork. It is a record of protection against diseases that once injured or killed far more young people: measles, hepatitis B, HPV-related cancers, and more.",
-          "tip1": "Measles spreads through the air and can cause pneumonia, brain swelling, and death. It is not just a rash.",
-          "tip2": "HPV vaccination can prevent several cancers later in life. It works best before exposure to the virus.",
-          "tip3": "Hepatitis B can become a chronic liver infection. Vaccination is a major tool for prevention.",
-          "tip4": "Disease stories travel fast online. Evidence from health agencies travels slower but is far more reliable.",
-          "fact": "Before widespread vaccination, measles killed millions globally. Vaccines changed what childhood risk looked like.",
-          "action": "Choose one vaccine-preventable disease and make a three-bullet “why it matters” card.",
-          "scenario": "Students are preparing for a school trip, but nobody agrees which vaccines matter for teens.",
-          "challenge": "Make a pocket guide: disease, how it spreads, vaccine that helps prevent it."
+          "title": "nasvalipenle pot preveni vakcinurile",
+          "description": "Un card de vakcin na si doar documente. si un record de protecție împotriva nasvalipenlor care odată au rănit vaj ucis mult mai mulți tineri: rujeola, hepatita B, cancerele legate de HPV thaj multe altele.",
+          "tip1": "Rujeola se răspândește prin aer thaj šaj provoca pneumonie, umflarea creierului thaj moartea. na si doar o erupție cutanată.",
+          "tip2": "HPV vakcinarea šaj preveni mai multe tipuri de cancer mai târziu în viață. Funcționează cel mai bine înainte de expunerea la virus.",
+          "tip3": "Hepatita B šaj deveni o infekcija cronică a ficatului. vakcinarea si un instrument major de prevenire.",
+          "tip4": "Poveștile despre nasvalipen călătoresc rapid online. Dovezile de la agențiile de sastipen călătoresc mai lent, amari si mult mai fiabile.",
+          "fact": "Înainte de vakcinarea pe scară largă, rujeola a ucis milioane de oameni la nivel global. vakcinurile au schimbat felul în care arăta riscul čhavoăriei.",
+          "action": "Alegeți o boală care šaj fi prevenită prin vakcin thaj faceți un card cu trei puncte „de ce contează”.",
+          "scenario": "štilii se pregătesc pentru o excursie școlară, amari nimeni na si de acord cu ce vakcinuri contează pentru adolescenți.",
+          "challenge": "Faceți un ghid de buzunar: boală, cum se răspândește, vakcin care ajută la prevenirea acesteia."
         }
       },
       "national": {
         "firstAidReview": {
-          "title": "First aid command: putting it together",
-          "description": "At the national stage, first aid becomes decision-making under pressure: protect yourself, get help, choose the right basic action, and keep the scene calm enough for professionals to take over.",
-          "tip1": "Scene safety comes first. You cannot help if you become the second injured person.",
-          "tip2": "Call early when the situation may be serious. Dispatchers would rather guide a cautious caller than arrive too late.",
-          "tip3": "Match action to problem: pressure for bleeding, cool water for burns, trained response for choking, space and reassurance for shock.",
-          "tip4": "Leadership can be simple: point to one person and say, “You call emergency services. You get a teacher. You clear space.”",
-          "fact": "In emergencies, calm role assignment reduces confusion and speeds up response, especially in crowded places like schools.",
-          "action": "Write a 60-second classroom emergency plan: caller, adult, space, supplies, comfort.",
-          "scenario": "One student is burned, another is bleeding, and the room is filling with noise. You are the first person thinking clearly.",
-          "challenge": "Draft a four-role emergency plan your class could practice safely with a teacher."
+          "title": "Comanda de prim pomoć: asamblarea acesteia",
+          "description": "La nivel național, primul pomoć devine luarea deciziilor sub presiune: protejați-vă, obțineți pomoć, alegeți acțiunea de bază potrivită thaj mențineți scena suficient de calmă pentru ca profesioniștii să preia conducerea.",
+          "tip1": "Siguranța scenei si pe primul loc. na poți ajuta te devii a doua persoană rănită.",
+          "tip2": "Sunați devreme kana situația šaj fi gravă. Dispecerii preferă să îndrume un apelant prudent decât să sosească prea târziu.",
+          "tip3": "Potriviți acțiunea cu problema: presiune pentru ratrare, paji rece pentru arsuri, paso antrenat pentru sufocare, spațiu thaj asigurare pentru șoc.",
+          "tip4": "Conducerea šaj fi simplă: arată către o persoană thaj spune: „Apelați la serviciile de urgență. Obțineți un profesor. Eliberați spațiul.”",
+          "fact": "În situații de urgență, atribuirea calmă a rolurilor reduce confuzia thaj accelerează pasoul, mai ales în locurile aglomerate, cum ar fi școlile.",
+          "action": "Scrieți un plan de urgență de 60-a doua clasă: apelant, adult, spațiu, rechizite, confort.",
+          "scenario": "Un student si ars, altul ratrează, iar camera se umple de zgomot. Ești prima persoană care gândește clar.",
+          "challenge": "Elaborați un plan de urgență cu patru roluri pe care clasa dvs. l-ar putea practica în siguranță cu un profesor."
         },
         "stiMyths": {
-          "title": "STI myths: replacing gossip with evidence",
-          "description": "Myths thrive where shame is loud and facts are quiet. Health literacy means refusing gossip, protecting privacy, and pointing people toward testing and care instead of blame.",
-          "tip1": "Myth: You can always tell who has an STI. Reality: many infections have no visible signs.",
-          "tip2": "Myth: Only “certain people” get STIs. Reality: exposure is about biology and behavior, not someone’s worth.",
-          "tip3": "Myth: Two condoms are safer than one. Reality: friction can make condoms tear; one used correctly is safer.",
-          "tip4": "Myth: Borrowed antibiotics are enough. Reality: wrong treatment can fail and contribute to resistance.",
-          "fact": "Stigma delays testing. When communities talk about STIs as health issues, people seek care earlier.",
-          "action": "Practice one sentence that shuts down gossip while protecting privacy.",
-          "scenario": "A rumor spreads about a student who might need testing. People are laughing and guessing names.",
-          "challenge": "Write a response that says: stop gossiping, respect privacy, use real health information."
+          "title": "STI mituri: înlocuirea bârfei cu dovezi",
+          "description": "Miturile prosperă acolo unde rușinea si tare thaj faptele si tăcute. Educația în domeniul sănătății înseamnă refuzul bârfei, protejarea vieții private thaj îndreptarea oamenilor către testoare thaj îngrijire în loc de vina.",
+          "tip1": "Mit: Întotdeauna poți spune cine are un STI. Realitate: multe infecții na au semne vizibile.",
+          "tip2": "Mit: Doar „anumite oameni” primesc STIs. Realitate: expunerea si despre biologie thaj comportament, na despre valoarea cuiva.",
+          "tip3": "Mit: Două prezervative si mai sigure decât unul. Realitate: frecarea šaj face prezervativele să se rupă; unul folosit corect si mai sigur.",
+          "tip4": "Mit: Antibioticele împrumutate si suficiente. Realitate: tretmanoul greșit šaj eșua thaj šaj contribui la rezistență.",
+          "fact": "Stigmatul întârzie testoarea. kana comunitățile vorbesc despre STIs ca fiind probleme de sastipen, oamenii caută îngrijire mai devreme.",
+          "action": "Exersează o propoziție care oprește bârfele, protejând în același timp privatnoitatea.",
+          "scenario": "Se răspândește un zvon despre un student care ar putea avea nevoie de testoare. Oamenii râd thaj ghicesc nume.",
+          "challenge": "Scrieți un paso care spune: na mai bârfiți, respectați privatnoitatea, folosiți informații reale despre sastipen."
         },
         "sourceLiteracy": {
-          "title": "Health information: evidence in a noisy world",
-          "description": "Your feed is a health battlefield: miracle cures, fear posts, influencer advice, and real science all compete for attention. The skill is not knowing everything. The skill is knowing what deserves trust.",
-          "tip1": "Ask who made the claim, what evidence they show, and whether recognized health organizations agree.",
-          "tip2": "Beware of phrases like “doctors hate this,” “secret cure,” or “share before it is deleted.” They are designed to bypass critical thinking.",
-          "tip3": "Look for dates. Health guidance can change as evidence improves.",
-          "tip4": "Before sharing, pause. A false health post can spread fear faster than a virus.",
-          "fact": "Health literacy is linked to better decisions because people can find, understand, and use reliable information under pressure.",
-          "action": "Compare one viral health claim with an official health source and write the difference in plain language.",
-          "scenario": "A video promises a miracle cure, uses dramatic music, and says hospitals are hiding the truth.",
-          "challenge": "Run the three-question source test: Who says it? What proof? What do health agencies say?"
+          "title": "Informații despre sastipen: dovezi într-o lume zgomotoasă",
+          "description": "Feed-ul dvs. si un câmp de luptă pentru sastipen: remedii miraculoase, postări de dar, sfaturi de influență thaj știință reală, toate concurează pentru atenție. Abilitatea si de a na ști totul. Abilitatea si să știi ce merită încredere.",
+          "tip1": "Întrebați cine a făcut afirmația, ce dovezi arată thaj te organizațiile de sastipen recunoscute si de acord.",
+          "tip2": "Feriți-vă de expresii precum „doktoroii urăsc asta”, „leac secret” vaj „distribuiți înainte de a fi șters”. si concepute pentru a ocoli gândirea critică.",
+          "tip3": "Căutați întâlniri. Îndrumările privind sastipena se pot schimba pe măsură ce dovezile se îmbunătățesc.",
+          "tip4": "Înainte de a distribui, întrerupeți. Un post de sastipen fals šaj răspândi frica mai repede decât un virus.",
+          "fact": "Educația în domeniul sănătății si legată de decizii mai bune, deoarece oamenii pot găsi, înțelege thaj utiliza informații de încredere sub presiune.",
+          "action": "Comparați o mențiune de sastipen virală cu o sursă oficială de sastipen thaj scrieți diferența într-un limbaj simplu.",
+          "scenario": "Un videoclip promite un leac miraculos, folosește muzică dramatică thaj spune că spitaloele ascund adevărul.",
+          "challenge": "Rulați testoul sursei cu trei întrebări: Cine spune asta? Ce dovadă? Ce spun agențiile de sastipen?"
         },
         "capstoneMix": {
-          "title": "Capstone: lead a health mission",
-          "description": "The final mission asks you to combine everything: first response, sexual health, vaccines, consent, and evidence. The goal is not to be the expert in every room. The goal is to become the person who knows how to find help, reduce harm, and keep facts alive.",
-          "tip1": "Start with safety: emergency risks, pressure, consent, privacy, and reliable adults or services.",
-          "tip2": "Use prevention as a stack: vaccines, safer choices, testing, hygiene, trusted information, and timely care.",
-          "tip3": "Respect privacy. A helpful student does not expose someone’s health story to prove a point.",
-          "tip4": "Teach in plain language. If your younger sibling can understand it, your message is stronger.",
-          "fact": "Peer-led health education works best when it is practical, respectful, and connected to real services.",
-          "action": "Design a one-page school health mission plan with four stations: first aid, consent, vaccines, and fact-checking.",
-          "scenario": "You are asked to help plan a school health week. Students say they do not want another boring lecture.",
-          "challenge": "Create a four-station health week agenda with one activity, one trusted resource, and one takeaway per station."
+          "title": "Capstone: conduce o misija de sastipen",
+          "description": "misijaa finală vă cere să combinați totul: primul paso, sastipen sexuală, vakcinuri, consimțământ thaj dovezi. Scopul na si să fii expert în fiecare cameră. Scopul si de a deveni persoana care știe să găsească pomoć, să reducă răul thaj să păstreze faptele vii.",
+          "tip1": "Începeți cu siguranță: riscuri de urgență, presiune, consimțământ, privatnoitate thaj adulți vaj servicii de încredere.",
+          "tip2": "Utilizați prevenirea ca o stivă: vakcinuri, alegeri mai sigure, testoare, igiena, informații de încredere thaj îngrijire la timp.",
+          "tip3": "Respectați intimitatea. Un štil de pomoć na expune povestea cuiva despre sastipen pentru a dovedi un punct.",
+          "tip4": "Predați într-un limbaj simplu. te fratele tău mai mic šaj înțelege, mesajul tău si mai puternic.",
+          "fact": "Educația pentru sastipen condusă de colegi funcționează cel mai bine atunci kana si practică, respectuoasă thaj conectată la servicii reale.",
+          "action": "Proiectați un plan de misija de sastipen școlară de o pagină cu patru stații: primul pomoć, consimțământ, vakcinuri thaj verificarea faptelor.",
+          "scenario": "Vi se cere să contribuiți la planificarea săptămânii sănătății școlare. štilii spun că na vor o altă prelegere plictisitoare.",
+          "challenge": "Creați o agendă pentru săptămâna sănătății cu patru stații, cu o singură activitate, o resursă de încredere thaj un pachet pentru fiecare stație."
         }
       }
     },
     "stageQuiz": {
       "local": {
         "q0": {
-          "question": "What should you tell an emergency dispatcher first if possible?",
-          "a0": "Your full medical history",
-          "a1": "Where you are and what happened",
-          "a2": "Your social media handle",
-          "explanation": "Location and a brief description of the emergency help them send the right resources quickly."
+          "question": "Ce ar trebui să-i spuneți mai întâi unui dispecer de urgență, te si posibil?",
+          "a0": "Istoricul dumneavoastră doktoroal complet",
+          "a1": "Unde ești thaj ce s-a întâmplat",
+          "a2": "Mânerul dvs. de socializare",
+          "explanation": "Locația thaj o scurtă descriere a situației de urgență îi ajută să trimită rapid resursele potrivite."
         },
         "q1": {
-          "question": "For heavy bleeding that soaks through a cloth, you should:",
-          "a0": "Remove the cloth to look at the wound",
-          "a1": "Add another layer on top and keep pressing",
-          "a2": "Wait an hour to see if it stops",
-          "explanation": "Removing the cloth can disturb clots. Add pressure on top until help arrives."
+          "question": "Pentru ratrări abundente care se înmoaie printr-o cârpă, ar trebui să:",
+          "a0": "Scoateți cârpa pentru a privi rana",
+          "a1": "Adăugați încă un strat deasupra thaj continuați să pajisați",
+          "a2": "Așteptați o oră să vedeți te se oprește",
+          "explanation": "Îndepărtarea cârpei šaj deranja cheaguri. Adaugă presiune deasupra până sosește pomoćul."
         },
         "q2": {
-          "question": "For a small fresh burn, the best first step is usually:",
-          "a0": "Put butter on it",
-          "a1": "Cool with running cool water for several minutes",
-          "a2": "Wrap tightly with plastic",
-          "explanation": "Cool running water reduces heat in the tissue. Butter traps heat and increases infection risk."
+          "question": "Pentru o arsură proaspătă mică, cel mai bun prim pas si de obicei:",
+          "a0": "Pune unt pe ea",
+          "a1": "Răciți cu paji rece timp de câteva minute",
+          "a2": "Înfășurați strâns cu plastic",
+          "explanation": "Apa rece care curge reduce căldura în țesut. Untul captează căldura thaj crește riscul de infekcija."
         },
         "q3": {
-          "question": "Why might someone get an STI test even without symptoms?",
-          "a0": "Tests are only for people with symptoms",
-          "a1": "Many STIs can be silent but still harmful or spreadable",
-          "a2": "Testing cures all STIs instantly",
-          "explanation": "Many infections have no early symptoms; testing finds them so you can get care and protect partners."
+          "question": "De ce ar putea cineva să facă un testo STI chiar thaj fără simptome?",
+          "a0": "testoele si doar pentru persoanele cu simptome",
+          "a1": "Multe STIs pot fi silențioase, amari totuși dăunătoare vaj răspândibile",
+          "a2": "testoarea vindecă toate STIs instantaneu",
+          "explanation": "Multe infecții na au simptome precoce; testoarea le găsește astfel încât să puteți primi îngrijire thaj să protejați partenerii."
         }
       },
       "regional": {
         "q0": {
-          "question": "If an adult suddenly cannot speak or breathe and holds their throat, you should:",
-          "a0": "Ignore them until they cough",
-          "a1": "Call emergency services immediately",
-          "a2": "Give them a glass of water",
-          "explanation": "Complete airway blockage is an emergency — trained help and EMS are needed urgently."
+          "question": "te un adult na šaj vorbi vaj respira brusc thaj își ține gâtul, ar trebui să:",
+          "a0": "Ignorați-le până kana tușesc",
+          "a1": "Sunați imediat serviciile de urgență",
+          "a2": "Dă-le un pahar cu paji",
+          "explanation": "Blocarea completă a căilor respiratorii si o urgență — si necesare phari pomoć instruit thaj EMS."
         },
         "q1": {
-          "question": "If prescribed antibiotics for an STI, you should:",
-          "a0": "Stop when you feel better",
-          "a1": "Finish all pills as directed",
-          "a2": "Share extras with a partner",
-          "explanation": "Stopping early can fail to kill the bacteria and contribute to resistance. Never share antibiotics."
+          "question": "te vi se prescriu antibiotice pentru un STI, ar trebui să:",
+          "a0": "Oprește-te kana te simți mai bine",
+          "a1": "Terminați toate pastilele conform instrucțiunilor",
+          "a2": "Distribuiți extra cu un partener",
+          "explanation": "Oprirea devreme na šaj ucide bacteriile thaj šaj contribui la rezistență. na împărtăși niciodată antibiotice."
         },
         "q2": {
-          "question": "Vaccines mainly work by:",
-          "a0": "Replacing your blood",
-          "a1": "Training the immune system to recognize a germ",
-          "a2": "Curing active disease instantly",
-          "explanation": "Vaccines prepare your immune system so a future encounter with the real germ is much safer."
+          "question": "vakcinurile funcționează în principal prin:",
+          "a0": "Înlocuirea ratlui tău",
+          "a1": "Antrenarea sistemului imunitar pentru a recunoaște un germen",
+          "a2": "Vindecarea nasvalipeni active instantaneu",
+          "explanation": "vakcinurile vă pregătesc sistemul imunitar, astfel încât o întâlnire viitoare cu germenul real si mult mai sigură."
         },
         "q3": {
-          "question": "Measles is:",
-          "a0": "Harmless in all children",
-          "a1": "A serious disease that vaccines have greatly reduced",
-          "a2": "Only spread by animals",
-          "explanation": "Measles can cause severe complications; vaccination is a key reason cases dropped worldwide."
+          "question": "Rujeola si:",
+          "a0": "Inofensiv pentru toți čhavorei",
+          "a1": "O boală gravă pe care vakcinurile au redus-o mult",
+          "a2": "Răspândit doar de animale",
+          "explanation": "Rujeola šaj provoca complicații severe; vakcinarea si un motiv cheie pentru care cazurile au scăzut în întreaga lume."
         }
       },
       "national": {
         "q0": {
-          "question": "In a medical emergency at school, the best first step is usually:",
-          "a0": "Only post on social media",
-          "a1": "Get adult help and emergency services if needed",
-          "a2": "Wait until the end of class",
-          "explanation": "Trained adults and EMS are equipped to respond; time matters in emergencies."
+          "question": "Într-o urgență doktoroală la școală, cel mai bun prim pas si de obicei:",
+          "a0": "Postați doar pe rețelele sociale",
+          "a1": "Obțineți pomoć pentru adulți thaj servicii de urgență te si necesar",
+          "a2": "Așteptați până la sfârșitul cursului",
+          "explanation": "Adulții instruiți thaj EMS si echipați pentru a răspunde; timpul contează în situații de urgență."
         },
         "q1": {
-          "question": "A reliable place to check vaccine facts is often:",
-          "a0": "Anonymous forum threads only",
-          "a1": "Your country's ministry of health or WHO",
-          "a2": "Memes with many likes",
-          "explanation": "Official health agencies review evidence and update guidance — use them to verify claims."
+          "question": "Un loc de încredere pentru a verifica faptele despre vakcin si adesea:",
+          "a0": "Numai subiecte anonime pe forum",
+          "a1": "Ministerul Sănătății din țara dvs. vaj WHO",
+          "a2": "Meme cu multe like-uri",
+          "explanation": "Agențiile oficiale de sastipen examinează dovezile thaj actualizează îndrumările - folosește-le pentru a verifica afirmațiile."
         },
         "q2": {
-          "question": "Two condoms at once are:",
-          "a0": "Safer than one",
-          "a1": "Not recommended — friction can cause breakage",
-          "a2": "Required by law",
-          "explanation": "Using one condom correctly is safer than double-layering, which increases tear risk."
+          "question": "Două prezervative simultan si:",
+          "a0": "Mai sigur decât unul",
+          "a1": "Nerecomandat - frecarea šaj provoca rupere",
+          "a2": "Obligat de lege",
+          "explanation": "Folosirea corectă a unui prezervativ si mai sigură decât stratificarea dublă, ceea ce crește riscul de rupere."
         },
         "q3": {
-          "question": "Health literacy means:",
-          "a0": "Memorizing every disease name",
-          "a1": "Finding, understanding, and using reliable health information",
-          "a2": "Never seeing a doctor",
-          "explanation": "It is about skills to navigate real information and services, not encyclopedic memorization."
+          "question": "Educația în domeniul sănătății înseamnă:",
+          "a0": "Memorarea fiecărui nume de boală",
+          "a1": "Găsirea, înțelegerea thaj utilizarea informațiilor de încredere despre sastipen",
+          "a2": "Niciodată să na vezi un doktoro",
+          "explanation": "si vorba despre abilități de a naviga în informații thaj servicii reale, na de memorare enciclopedică."
         }
       }
     },
     "workflow": {
-      "nextMission": "Next mission",
-      "nextMissionBody": "Follow this recommended step to keep the Academy moving without guessing what to do next.",
+      "nextMission": "Următoarea misija",
+      "nextMissionBody": "Urmați acest pas recomandat pentru a menține Academia în mișcare fără a ghici ce să faceți în continuare.",
       "continueLesson": "{stage}: {title}",
-      "takeQuiz": "{stage} stage checkpoint",
-      "finishedTitle": "Academy complete",
-      "finishedBody": "You finished the current Academy path. Review any lesson or retake a quiz to stay sharp.",
-      "startMission": "Start mission",
-      "startQuiz": "Take checkpoint",
-      "reviewPath": "Review path",
-      "takeStageQuiz": "Take stage checkpoint",
-      "lockedStatus": "Locked",
-      "completeStatus": "Complete",
-      "quizReadyStatus": "Checkpoint ready",
-      "inProgressStatus": "In progress"
+      "takeQuiz": "{stage} punct de control al etapei",
+      "finishedTitle": "Academia completă",
+      "finishedBody": "Ai terminat calea actuală a akademijai. Examinați orice lekcija vaj reluați un testo pentru a rămâne atent.",
+      "startMission": "Începe misijaa",
+      "startQuiz": "Luați punctul de control",
+      "reviewPath": "Revizuiți calea",
+      "takeStageQuiz": "Luați punctul de control al etapei",
+      "lockedStatus": "Blocat",
+      "completeStatus": "Complet",
+      "quizReadyStatus": "Punct de control gata",
+      "inProgressStatus": "În curs"
     },
     "fieldLab": {
-      "title": "Field Lab",
-      "subtitle": "Turn the lesson into a one-minute plan. Your note stays only on this device.",
-      "observeLabel": "Observe",
+      "title": "Laboratorul de teren",
+      "subtitle": "Transformă lecția într-un plan de un minut. Nota dvs. rămâne numai pe acest dispozitiv.",
+      "observeLabel": "Observați",
       "decideLabel": "Decide",
       "actLabel": "Act",
-      "placeholder": "Example: I would first check safety, then call for help, then tell an adult exactly what I saw...",
-      "saveLabel": "Save field note",
-      "savedLabel": "Saved on this device",
-      "observeHint": "What do you actually see, hear, or know in this scenario? Stick to the facts.",
-      "decideHint": "What is the smartest first move? Pick something a calm bystander can really do.",
-      "actHint": "Write the exact words or steps you would use in the next 60 seconds.",
-      "syncedLabel": "Saved",
-      "draftLabel": "Saving draft"
+      "placeholder": "Exemplu: aș verifica mai întâi siguranța, apoi aș suna pentru pomoć, apoi aș spune unui adult exact ce am văzut...",
+      "saveLabel": "Salvați nota de câmp",
+      "savedLabel": "Salvat pe acest dispozitiv",
+      "observeHint": "Ce vezi, auzi vaj știi de fapt în acest scenariu? Rămâneți la fapte.",
+      "decideHint": "Care si cea mai inteligentă primă mișcare? Alege ceva ce un spectator calm šaj face cu adevărat.",
+      "actHint": "Scrie cuvintele exacte vaj pașii pe care i-ai folosi în următoarele 60 secunde.",
+      "syncedLabel": "Salvat",
+      "draftLabel": "Se salvează schița"
     },
     "visuals": {
-      "academy": "Students learning health skills through maps, phones, clinics, and community action",
-      "emergency": "Emergency call map with location pins and first response signal lines",
-      "firstAid": "First aid field kit with bandage, clean cloth, and safety steps",
-      "sexualHealth": "Private conversation bubble, shield, and clinic doorway for confidential sexual health support",
-      "vaccines": "Immune system shield, vaccine card, and public health network",
-      "literacy": "Fact-checking desk with phone, sources, magnifier, and evidence notes",
-      "capstone": "Capstone expedition map connecting first aid, vaccines, relationships, and evidence"
+      "academy": "štilii învață abilități de sastipen prin hărți, telefoane, clinici thaj acțiuni comunitare",
+      "emergency": "Hartă pentru apeluri de urgență cu pini de locație thaj linii de semnal de prim paso",
+      "firstAid": "Trusă de prim pomoć cu bandaj, cârpă curată thaj măsuri de siguranță",
+      "sexualHealth": "Bulă de conversație privată, scut thaj ușă clinică pentru sprijin privatno pentru sastipena sexuală",
+      "vaccines": "Scut al sistemului imunitar, card de vakcin thaj rețea de sastipen publică",
+      "literacy": "Birou de verificare cu telefon, surse, lupă thaj note de probă",
+      "capstone": "Harta expediției Capstone care conectează primul pomoć, vakcinuri, relații thaj dovezi"
     },
     "hero": {
-      "chipFirstAid": "First aid that works",
-      "chipLiteracy": "Health literacy",
-      "chipMissions": "Mission-based learning"
+      "chipFirstAid": "Primul pomoć care funcționează",
+      "chipLiteracy": "Educație în domeniul sănătății",
+      "chipMissions": "Învățare bazată pe misija"
     },
     "toast": {
-      "lessonLoggedTitle": "Lesson logged",
-      "lessonLoggedBody": "+10 XP earned. Streak updated and your next mission is ready."
+      "lessonLoggedTitle": "Lecția înregistrată",
+      "lessonLoggedBody": "+10 XP câștigat. Seria actualizată thaj următoarea ta misija si gata."
     },
     "sexualHealthSupport": {
-      "title": "Confidential support matters",
-      "body": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
-      "findCare": "Find care",
-      "rights": "Know your rights"
+      "title": "Asistența privatnoă contează",
+      "body": "te acest subiect atinge ceva real în viața ta, na trebuie să-l rezolvi singur. Întrebați un adult de încredere, o asistentă școlară, un doktoro, o clinică pentru tineri vaj o linie de asistență care asistență si privatnoă acolo unde locuiți.",
+      "findCare": "Găsiți îngrijire",
+      "rights": "Cunoaște-ți hakajale"
     },
-    "stageBadgeFormat": "Staďo {n}",
+    "stageBadgeFormat": "Etapa {n}",
     "lessonIndexFormat": "L{n}/{total}",
-    "a11yLocked": "phandado",
-    "metaSuffix": "Akademia Sastimasqi vash Studentă",
+    "a11yLocked": "încuiat",
+    "metaSuffix": "Academia de sastipen Studențească",
     "l8": {
-      "eyebrow": "Redi Health Sastimasqi Akademia",
-      "heroTitle1": "Av",
-      "heroTitle2": "sastimasqo prevodilako",
-      "heroTitle3": "vash tiro khethanipe.",
-      "heroLead": "Klinikalno-verifikuime thaj gamifikuime kurikuluma trin staďongo — lokalno, regionalno thaj nacionalno. Kerdo le rromane sastimasqe mediatorenca pa sa Evropa.",
-      "heroStatPanelImageAlt": "Ilustracia pa savorre šikljove kai buterđine e sastimasqo sikljaripa.",
-      "heroPrimaryCta": "Šuru adjesutni misia",
-      "heroSecondaryCta": "Dikh i kurikuluma",
-      "statLevel": "Nivelo",
+      "eyebrow": "Redi Academia de sastipen",
+      "heroTitle1": "Deveniți",
+      "heroTitle2": "traducător de sastipen",
+      "heroTitle3": "pentru komunitetoa ta.",
+      "heroLead": "Un curriculum revizuit clinic, gamificat, care acoperă etapele locale, regionale thaj naționale. Construit cu mediatori sanitari romi din Europa.",
+      "heroStatPanelImageAlt": "Ilustrație care evidențiază studenții care practică împreună etapele de alfabetizare în domeniul sănătății.",
+      "heroPrimaryCta": "Începe misijaa de astăzi",
+      "heroSecondaryCta": "Vezi programa",
+      "statLevel": "Nivel",
       "statXp": "XP",
-      "statStreak": "Djesa pala djesa",
-      "statBadges": "Znakea",
-      "statLessons": "Sikljaribena agorisarde",
-      "statDaysActive": "Aktive djesa",
-      "missionDeckTitle": "Tirne misie",
-      "missionDeckSubtitle": "Trin phiravimata so čidipen ande savo kurko.",
-      "missionTodayLabel": "Adjes",
-      "missionTodayBody": "Kerav katar mukhlas — pasul {min} minuturea.",
-      "missionTodayCta": "Kerav i misia",
-      "missionTodayQuiz": "Le e staďosqo dikhipe",
-      "missionTodayDone": "Sa staďongo agorisarde",
-      "missionTodayDoneBody": "Dikh aver modulo vai phen so sikljarda.",
-      "missionStreakLabel": "Niz",
-      "missionStreakBody": "Inkav e jago. Av maj kethanes.",
-      "missionStreakDay": "{count, plural, one {# djes} other {# djesa}}",
-      "missionStreakCta": "Lekha jekh sigo čačipe",
-      "missionBadgeLabel": "Aver znako",
-      "missionBadgeBody": "Agorav inka {remaining} {remaining, plural, one {sikljaribe} other {sikljaribena}} pe {stage}.",
-      "missionBadgeAllDone": "Sa znakea livide — dikh i diploma tele.",
-      "journeyTitle": "Tiro phiravipe",
-      "journeySubtitle": "Trin staďongo. Dešudu misie. Jekh sertifikuime sastimasqo mediatoro.",
-      "journeyCurrent": "San akate",
-      "journeyUnlocked": "Phurde",
-      "journeyLocked": "Phandado",
-      "journeyComplete": "Agorisardo",
-      "journeyMilestoneLocal": "Lokalno",
-      "journeyMilestoneRegional": "Regionalno",
-      "journeyMilestoneNational": "Nacionalno",
-      "moduleListTitle": "Moduli ande akava staďo",
-      "moduleStatusLocked": "Phandado",
-      "moduleStatusDone": "Agorisardo",
-      "moduleStatusOpen": "Phurde",
-      "moduleStatusNew": "Nevo",
-      "achievementWallTitle": "Znakurenqo zido",
-      "achievementWallSubtitle": "Vareso znako akate si jekh paramica te phenes.",
-      "achievementProgress": "{percent}% dži ke phurdipe",
-      "achievementEarned": "Livime",
-      "achievementLockedHint": "Inkljar i staďosqo dikhipe {stage} te phurdes.",
-      "leaderboardTitle": "Maj feder sikljarne",
-      "leaderboardSubtitle": "Anonimno grupo, neviarno savo kurko.",
-      "leaderboardYou": "Tu",
-      "leaderboardRank": "Than",
-      "leaderboardCountryFallback": "Evropa",
-      "leaderboardEmpty": "Inka naj dosta data — sikljov maj angle thaj o aver kurko ka dikhes tut akate.",
-      "diplomaTitle": "Mediatorengi Diploma",
-      "diplomaSubtitle": "So keras.",
-      "diplomaBody": "Inkljar sa trin staďongo te les jekh digitalno diploma kola šaj sikaves NVO-enge thaj bukirne.",
-      "diplomaProgress": "{completed} katar {total} barajimata pherde",
-      "diplomaPreviewName": "Avgno Sastimasqo Mediatoro",
-      "diplomaPreviewDate": "Dindo {date}",
-      "diplomaSignature": "Redi Health Klinikalno Sovetimo",
-      "diplomaPreview": "Sikhibe",
+      "statStreak": "Urma zilei",
+      "statBadges": "Ecusoane",
+      "statLessons": "lekcije terminate",
+      "statDaysActive": "dives active",
+      "missionDeckTitle": "Puntea de misija",
+      "missionDeckSubtitle": "Trei piese care se compun în fiecare săptămână.",
+      "missionTodayLabel": "Astăzi",
+      "missionTodayBody": "Reluați de unde ați rămas — aproximativ {min} minute.",
+      "missionTodayCta": "Continuați misijaa",
+      "missionTodayQuiz": "Faceți un testo pe scenă",
+      "missionTodayDone": "Toate etapele au fost eliminate",
+      "missionTodayDoneBody": "Examinați un modul vaj împărtășiți ceea ce ați învățat.",
+      "missionStreakLabel": "Streak",
+      "missionStreakBody": "Păstrează-ți focul viu. Apare mâine.",
+      "missionStreakDay": "{count, plural, one {# day} alt {# days}}",
+      "missionStreakCta": "Înregistrați un fapt rapid",
+      "missionBadgeLabel": "Următoarea insignă",
+      "missionBadgeBody": "Terminați încă {remaining} {remaining, plural, one {lesson} alte {lessons}} în {stage}.",
+      "missionBadgeAllDone": "Toate insignele obținute — distribuiți-vă diploma mai jos.",
+      "journeyTitle": "Călătoria ta",
+      "journeySubtitle": "Trei etape. Douăsprezece misiuni. Un mediator de teren certificat.",
+      "journeyCurrent": "Sunteți aici",
+      "journeyUnlocked": "Deblocat",
+      "journeyLocked": "Blocat",
+      "journeyComplete": "Complet",
+      "journeyMilestoneLocal": "Local",
+      "journeyMilestoneRegional": "Regional",
+      "journeyMilestoneNational": "National",
+      "moduleListTitle": "Module în această etapă",
+      "moduleStatusLocked": "Blocat",
+      "moduleStatusDone": "Gata",
+      "moduleStatusOpen": "Deschide",
+      "moduleStatusNew": "Nou",
+      "achievementWallTitle": "Perete de realizare",
+      "achievementWallSubtitle": "Fiecare insignă de aici si o poveste pe care o poți împărtăși.",
+      "achievementProgress": "{percent}% pentru deblocare",
+      "achievementEarned": "Câștigat",
+      "achievementLockedHint": "Treceți testoul de etapă {stage} pentru a debloca.",
+      "leaderboardTitle": "Cei mai buni štili",
+      "leaderboardSubtitle": "Cohortă anonimizată, actualizată săptămânal.",
+      "leaderboardYou": "tu",
+      "leaderboardRank": "Rang",
+      "leaderboardCountryFallback": "Europa",
+      "leaderboardEmpty": "Încă na si suficiente date — continuă să înveți thaj vei pajirea aici săptămâna viitoare.",
+      "diplomaTitle": "Diploma de mediator de teren",
+      "diplomaSubtitle": "La ce lucrezi.",
+      "diplomaBody": "Treceți toate cele trei etape pentru a obține o diplomă digitală pe care o puteți partaja cu angajatorii thaj ONG-urile.",
+      "diplomaProgress": "{completed} din {total} cerințe îndeplinite",
+      "diplomaPreviewName": "Viitorul mediator de teren",
+      "diplomaPreviewDate": "Premiat cu {date}",
+      "diplomaSignature": "Redi Consiliul Clinic",
+      "diplomaPreview": "Previzualizare",
       "diplomaUnlocked": "Diploma gata",
-      "diplomaCta": "Phurde i diploma",
-      "countryTitle": "Tiro them",
-      "countryHint": "Lokaliziri primerea, statistika thaj sigundimasqe brojea.",
-      "ctaBanner": "Phandadilan? Iskusne mediatorea si pasul.",
-      "ctaBannerLink": "Phuch jekh phučipe",
-      "whatsInsideTitle": "So si andre",
-      "whatsInsideFirstAid": "Sigundimasqo vakaripe thaj angluno arakhipe",
-      "whatsInsideSTI": "Seksualno sastipe thaj saglasnost",
-      "whatsInsideVaccines": "Vaccinurea thaj imunizacia",
-      "whatsInsideMyths": "Dezinformacia thaj izvorea"
+      "diplomaCta": "Diploma deschisa",
+      "countryTitle": "Țara ta",
+      "countryHint": "Localizați exemple, statistici thaj numere de urgență.",
+      "ctaBanner": "Blocat? Mediatorii testoați pe teren si la o atingere distanță.",
+      "ctaBannerLink": "Pune o puximata",
+      "whatsInsideTitle": "Ce si înăuntru",
+      "whatsInsideFirstAid": "paso în caz de urgență thaj prim pomoć",
+      "whatsInsideSTI": "sastipen sexuală thaj consimțământ",
+      "whatsInsideVaccines": "vakcinuri thaj imunizare",
+      "whatsInsideMyths": "Dezinformare thaj surse"
     }
   },
   "errors": {
@@ -1148,6 +1424,137 @@
     "meta": {
       "title": "Vaccinurenqo sikljaripe — Redi Health",
       "description": "Sa vaccina ververdo lokhe lavenca."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (Tuberkuloza)",
+        "preventsDiseases": [
+          "Tuberkuloza (TB)"
+        ],
+        "howItWorks": "Akaja vakcina sikavel e čhavesqo trupo te marolpes kontra tuberkuloza - phari pulmoni nasvalipen so phirel pala vazduho. Jekh cikni injekcija ando vast arakhel but bersa.",
+        "sideEffects": "Šaj te avel cikni bumba vaj cikni semna ando vast kaj diňa pes i injekcija. Kada si normalno thaj sikavel kaj vakcina kerel buti.",
+        "mythDebunked": "MITO: 'Tuberkuloza na si maj.' ČAČIPE: Tuberkuloza akana vi murdarel but manušen sakko berš. Ande but manušesqe than phirel sig."
+      },
+      "hepb": {
+        "name": "Hepatitis B",
+        "preventsDiseases": [
+          "Hepatitis B (nasvalipen e džigerica)"
+        ],
+        "howItWorks": "Arakhel e džigerica katar jekh viruso so šaj te kerel longo našavipen thaj kancero. Del pes ande biandipe kaj o neve biande si maj pharimasa.",
+        "sideEffects": "Cikni duk ande than kaj diňa pes i injekcija. Dikhlin čhave šaj te aven cikne nervozne jekh dives. Na si ništa pharo.",
+        "mythDebunked": "MITO: 'Miro neve biando si but tikno vaš vakcina.' ČAČIPE: Neve biande si maj but pharimasa. Sar maj sig arakhas len, maj feder si."
+      },
+      "dtap": {
+        "name": "DTaP (Difterija, Tetanuso, Khosipen)",
+        "preventsDiseases": [
+          "Difterija",
+          "Tetanuso",
+          "Khosipen"
+        ],
+        "howItWorks": "Akaja vakcina arakhel andar trin nasvalimata jekhe dromeske. Difterija šaj te phandel o kanli, tetanuso kerel miškipa pharimasa, a o khosipen na mukhel o čhavorre te phuvin.",
+        "sideEffects": "I than kaj diňa pes i injekcija šaj te avel loli thaj dukhal. O čhavo šaj te avel le cikne temperaturasa 1-2 divesa.",
+        "mythDebunked": "MITO: 'Akala nasvalimata na si maj, soske vakcina?' ČAČIPE: Na si but sar angleder kaj vakcine arakhen. Kana khethanipe na vakcininelpes, nasvalimata pale aven."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (paraliza)"
+        ],
+        "howItWorks": "Polio si viruso so šaj ande cikne ora te paralyzirinel e čhavesqe pindre. Akaja vakcina but cikňarela poliovo ando them.",
+        "sideEffects": "But loko. Šaj te avel cikni lolipe ande than kaj diňa pes i injekcija.",
+        "mythDebunked": "MITO: 'Polio na si maj, na trubul akaja vakcina.' ČAČIPE: Polio na si but ande Europa baš akaja vakcina. Jekh manuš bi vakcina šaj te anel les pale."
+      },
+      "mmr": {
+        "name": "MMR (Kampi, Šaj, Rubeola)",
+        "preventsDiseases": [
+          "Kampi",
+          "Šaj",
+          "Rubeola"
+        ],
+        "howItWorks": "Kampi si but phirel thaj šaj te kerel našavipen ando šero vaj te murdarel. Akaja vakcina arakhel andar sa trin nasvalimata.",
+        "sideEffects": "Paše jekh andar deš čhave šaj te avel e cikne temperaturasa thaj cikno osip 7-10 divesa pala. Kada phenel kaj o trupo sikljolpes.",
+        "mythDebunked": "MITO: 'MMR kerel autizmo.' ČAČIPE: But bare studii na arakhle ni jekh lidhajpe le autizmosa. Kampi šaj te murdarel."
+      },
+      "pneumo": {
+        "name": "Pneumokokno (PCV13)",
+        "preventsDiseases": [
+          "Pneumonija",
+          "Meningitis",
+          "Ratune infekcije"
+        ],
+        "howItWorks": "Arakhel katar bakterije so keren pneumonija, meningitis thaj phare infekcije ande rat. Akala si maškar e maj phare nasvalimata vaš tikne čhave.",
+        "sideEffects": "Cikni temperatura, nervoza thaj duk ande than kaj diňa pes i injekcija 1-2 divesa.",
+        "mythDebunked": "MITO: 'Čhave nasvalon katar but vakcine.' ČAČIPE: Le čhavesqo imuniteto marolpes kontra but mikrobi sakko dives. Keci vakcine na si but vaš lesqo trupo."
+      },
+      "rota": {
+        "name": "Rotaviruso",
+        "preventsDiseases": [
+          "Phari diarija thaj vomitimos ande čhavorre"
+        ],
+        "howItWorks": "Del pes sar kapura ando muj, na sar injekcija. Arakhel katar o viruso so kerel phari diarija thaj sušipe ande čhavorre.",
+        "sideEffects": "But loko. Varekana cikni nervoza vaj cikni diarija.",
+        "mythDebunked": "MITO: 'Diarija si normalno ande čhavorre, na trubul vakcina.' ČAČIPE: Rotavirusoski diarija šaj sig te sušarel o trupo thaj šaj te avel phari."
+      },
+      "varicella": {
+        "name": "Varicela (Brânca)",
+        "preventsDiseases": [
+          "Brânca"
+        ],
+        "howItWorks": "Brânca dikhel lokhi, ama šaj te kerel phare kožake infekcije, pneumonija thaj pharipen ando šero. Vakcina arakhel andar but kasusura.",
+        "sideEffects": "Cikni duk. Rare šaj te aven cikne brâncako buti pašal i than kaj diňa pes i injekcija.",
+        "mythDebunked": "MITO: 'Maj feder si te aves nasvalo naturalno.' ČAČIPE: Naturalo infekcija šaj te kerel phare komplikacije thaj pašla ande trupo vaš but bersa."
+      },
+      "hpv": {
+        "name": "HPV (Humano papilloma viruso)",
+        "preventsDiseases": [
+          "Kancero e garadutnesqo grlo",
+          "Aver kancerura"
+        ],
+        "howItWorks": "Akaja vakcina arakhel katar kancero. Del pes angleder sar o ternimata te avel kontaktosa le virusosa.",
+        "sideEffects": "Duk ando vast, varekana cikni šeruni duk vaj vrtoglavo. But sigurno si.",
+        "mythDebunked": "MITO: 'Akaja vakcina kerel seksualno buti.' ČAČIPE: Akaja vakcina arakhel katar KANCERO. Na si baš ahajiba."
+      },
+      "flu": {
+        "name": "Influenza (gripa)",
+        "preventsDiseases": [
+          "Sezonalni gripa"
+        ],
+        "howItWorks": "Gripa na si numa prehlada. Šaj te avel phari vaš tikne čhave, phure manuša thaj pušne džuvlja. Vakcina sikhavel pes sakko berš.",
+        "sideEffects": "Cikni duk ando vast thaj varekana cikni temperatura jekh dives. Našti te les gripa katar akaja vakcina.",
+        "mythDebunked": "MITO: 'Griposki vakcina del tuke gripa.' ČAČIPE: Našti. Vakcina na si le živone virusosa."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Kana biandol"
+      },
+      "2months": {
+        "label": "2 čhona"
+      },
+      "4months": {
+        "label": "4 čhona"
+      },
+      "6months": {
+        "label": "6 čhona"
+      },
+      "12months": {
+        "label": "12 čhona"
+      },
+      "18months": {
+        "label": "18 čhona"
+      },
+      "4years": {
+        "label": "4-6 berš"
+      },
+      "9years": {
+        "label": "9-12 berš"
+      },
+      "adult": {
+        "label": "Bare manuša"
+      },
+      "pregnant": {
+        "label": "Pušne džuvlja"
+      }
     }
   },
   "explain": {
@@ -1251,12 +1658,1062 @@
     }
   },
   "family": {
+    "title": "Familijako sastipen",
+    "subtitle": "Dikh sar sa tiri familija si sasto. Sa data ramol pe tiro telefono.",
+    "back": "Pale ko familija",
+    "yearsOld": "{age} berš",
+    "expecting": "· Pušni",
+    "pregnancyTitle": "Pušnipen",
+    "pregnancyWeeks": "Săptămâna {weeks} andar 40",
+    "pregnancyExpecting": "Pušni",
+    "logMood": "Thov gond",
+    "logWater": "Paji",
+    "logActivity": "Buti",
+    "logFormTitle": "Thov {type}",
+    "logNote": "Thov jekh nota (opcionalno)",
+    "save": "Arakhel",
+    "recentLogs": "Neve thovimata",
+    "noLogs": "Na si thovimata. Šuru te dikhaves!",
+    "addMemberTitle": "Thov jekh manuš andar familija",
+    "addMemberButton": "Thov jekh manuš andar familija",
+    "addToFamily": "Thov andar familija",
+    "namePlaceholder": "Anav",
+    "agePlaceholder": "Berš",
+    "pregnantLabel": "Akana pušni",
+    "emptyTitle": "Tiri familijaki sastipen than",
+    "emptyDesc": "Thov manuš andar familija te dikhaves lenge sastipen, vakcinimata thaj lekura. Sa ramol pe tiro telefono — na trubul account.",
+    "vaccineTrackingTitle": "Vakcinimata dikhavipen",
+    "vaccineTrackingDesc": "Avela vaš savore manuš",
+    "medicationRemindersTitle": "Lekura sar dikhavipen",
+    "medicationRemindersDesc": "Avela",
+    "logTypes": {
+      "mood": "Gond",
+      "water": "Paji (gilaša)",
+      "activity": "Buti (min)",
+      "weight": "Grevo (kg)",
+      "note": "Nota"
+    },
+    "genders": {
+      "female": "Žuvli",
+      "male": "Murš",
+      "other": "Aver"
+    },
     "relation": {
       "self": "Me",
-      "child": "Čhavo",
-      "spouse": "Romnji/Rom",
-      "parent": "Dad/Dej",
+      "child": "Miro čhavo",
+      "spouse": "Romnji / Rom",
+      "parent": "Dad / Dej",
       "other": "Aver"
+    }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Glosaro vaš sastipen — Redi Health",
+      "description": "Doktorke alava vakerde ko simple vorbi"
+    },
+    "title": "Glosaro vaš sastipen",
+    "subtitle": "Doktorke alava vakerde ko simple vorbi.",
+    "searchPlaceholder": "Rod termura...",
+    "searchAria": "Rod doktorke alava",
+    "noResults": "Na arakhlepes ni jekh termino. Proba aver rodipen.",
+    "allCount": "Sa ({count})",
+    "categories": {
+      "condition": "Nasvalimata",
+      "medication": "Lekura",
+      "procedure": "Proceduri",
+      "body": "Trupo thaj sastipen",
+      "test": "Analize"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Bari tensija",
+        "simple": "Baro presija ande rat. Rat phendel but zorales pe vazura. Te na lečol, šaj te anel infarkto vaj udar ando šero. Pij lekuria sakko dives."
+      },
+      "diabetes-type-2": {
+        "term": "Diabeto (Tip 2)",
+        "simple": "Tiro trupo na istemal šukar o šećero. O šećero butarelpe ande rat thaj našavel organura. Trubul tuke lekura, lačho xaben thaj miškipen. Na avel numa andar but šećero."
+      },
+      "anemia": {
+        "term": "Anemija",
+        "simple": "Na si dosta lače lolo ratune ćelije. Šaj te aves zurales, slabo vaj vrtoglavo. Čači put si andar na dosta gvožđe ando xaben. But daždivutni džuvlja hin katar kada."
+      },
+      "asthma": {
+        "term": "Astma",
+        "simple": "O droma vaš o phuvipen thonpe anglo thaj šuvon, pa dur te phendes. Šaj te avel zviždipen vaj khosipen. Ister tiro inhalatori kana avel. Dural drom katar dimos thaj prašina."
+      },
+      "tuberculosis-tb": {
+        "term": "Tuberkuloza (TB)",
+        "simple": "Phari infekcija ande pulmona. Khoses but kurke, xas greutipe thaj sudores ratja. Džal pala vazduho. Šaj te lačol le 6 masekera lekurenca, ama trubul te phagres sa i tableti."
+      },
+      "depression": {
+        "term": "Depresija",
+        "simple": "Doktorki nasvalipen kana sal tužno, bi nadoždo vaj prazno but kurke. Na si slabipen thaj na si tiro doš. Lekura thaj vakeren evarenca šaj te pomožin. Mang pomoć."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatitis B/C",
+        "simple": "Viruso so atakirinel e džigerica. Šaj te na aves nasvalo but bersa, ama polokes našavel e džigerica. Phirel pala rat thaj igle. Vaš Hepatitis B si vakcina."
+      },
+      "pneumonia": {
+        "term": "Pneumonija",
+        "simple": "Phari infekcija ande pulmona. Si tuke temperatura, khosipen le sluzosa thaj pharo phuvipen. Trubul antibiotiko katar doktoro. Šaj te avel opasno vaš čhavorre thaj phure manuša."
+      },
+      "gastritis": {
+        "term": "Gastritis",
+        "simple": "I koža ande per šuvli vaj iritirime. Aves te jakharel, te mučis vaj te bumbul. Dural katar lolo xaben, alkoholo thaj cigarete. Lekura šaj te pomožin."
+      },
+      "eczema": {
+        "term": "Ekcema",
+        "simple": "Suve, lale thaj khamne thana pe tiri koža. Na phirel katar jekh pe aver. Ister krema vaš koža but droma. Dural katar zorale sapuni. Doktoro šaj te del krema."
+      },
+      "antibiotic": {
+        "term": "Antibiotiko",
+        "simple": "Lek so murdarel bakterije. Na pomožinel kontra virusura sar gripa vaj prehlada. Trubul te phagres sa o tretmano, makar sal feder, kaj e mikrobi te na aven pale."
+      },
+      "ibuprofen": {
+        "term": "Ibuprofen",
+        "simple": "Lek vaš duk thaj vaš upalipen thaj temperatura. Leha lesa xabenesa te arakhes o per. Na le buteder sar si ramome pe kutija. Na si sigurno ande pušnipen."
+      },
+      "paracetamol": {
+        "term": "Paracetamol",
+        "simple": "Sikavno lek vaš šerutni duk thaj temperatura. Sigurno vaš but manuša, vi vaš pušne džuvlja. Na le buteder andar 4 grama ando dives, kaj našavel e džigerica."
+      },
+      "insulin": {
+        "term": "Insulin",
+        "simple": "Hormono so tiro trupo trubul te istemal o šećero. Le manusha le diabetosa šaj te trubun injekcije. Kada na phenel kaj tiro diabeto si pharedo, numa aver tretmano si."
+      },
+      "metformin": {
+        "term": "Metformin",
+        "simple": "Najbut istemaldo lek vaš diabeto. Pomožinel e truposke te istemal maj lačhes o šećero. Leha lesa xabenesa. Ando početko šaj te iritirinel o per, ama angle džal."
+      },
+      "blood-test": {
+        "term": "Analiza rat",
+        "simple": "Cikni igla lel cikna rat andar o vast. Pomožinel e doktoroske te dikhel infekcije, anemija, diabeto thaj but aver. Dukhal numa jekh sekunda."
+      },
+      "x-ray": {
+        "term": "Rentgen",
+        "simple": "Slika andar kosti thaj pulmona le specialne zrakosa. Ačhos mirno cikne sekundura. Na dukhal. Sigurno vaš but manuša, ama phen e doktoroske te sal pušni."
+      },
+      "ultrasound": {
+        "term": "Ultrazvuko",
+        "simple": "Slika andar tiro trupo le zvukoske talasenca. Doktoro del gel pe koža thaj phirel aparato. Na dukhal. But puti istemalpe te dikhen o čhavo ande pušnipen."
+      },
+      "ecg-ekg": {
+        "term": "EKG",
+        "simple": "Analiza so dikhel sar khelel tiro jilo. Cikne lepilura thovelpe pe čhati. Na dukhal. Trajel pač minuta. Sikavel te o jilo čal normalno."
+      },
+      "vaccination": {
+        "term": "Vakcinacija",
+        "simple": "Cikni injekcija so sikhavel tiro trupo te marolpes kontra nasvalipen angleder te aves nasvalo. Cikne efekti sar duk pe vast vaj cikni temperatura si normalno thaj sikaven kaj kerel."
+      },
+      "blood-pressure": {
+        "term": "Tensija e rat",
+        "simple": "Zor so la rat phendel pe zidura le vazoske. Normalno si paše 120/80. Bori tensija upral 140/90 si opasno kaj na šaj te lačhes, ama našavel jilo thaj šero."
+      },
+      "blood-sugar": {
+        "term": "Šećero ande rat",
+        "simple": "Kobor glukoza si ande rat. Normalno na xale si 70-100 mg/dL. Te si but, si diabeto. Te si tele, avel tuke vrtoglavo thaj treses. Mero les but puti te si tuke diabeto."
+      },
+      "bmi": {
+        "term": "BMI",
+        "simple": "Indekso le truposke mase sikavel te si tiro greutipe lačho vaš tiro učiaripe. Telal 18.5 si cikno greutipe. 18.5-25 si normalno. Upral 25 si but greutipe. Upral 30 si obeziteta."
+      },
+      "immune-system": {
+        "term": "Imuniteto",
+        "simple": "Kada si e vojska le truposki kontra mikrobi. Parne ratune ćelije maren infekcije. Vakcine trenirinen o imuniteto. Lačho xaben, sovipen thaj miškipen kerel les maj zoralo."
+      }
+    }
+  },
+  "healthQuiz": {
+    "meta": {
+      "title": "Test de sastipen — Redi Health",
+      "description": "Testează-ți cunoștințele de sastipen cu chestionare interactive"
+    },
+    "title": "Sastipenaki quiz",
+    "subtitle": "Dikh sar zhanes. Sikhave kova nevo.",
+    "backToQuizzes": "Înapoi la chestionare",
+    "seeResults": "Vezi rezultatele",
+    "nextQuestion": "Următoarea puximata",
+    "questionsCount": "{count} întrebări",
+    "results": {
+      "perfect": "Scor perfect!",
+      "great": "Mare treaba!",
+      "good": "Efort bun!",
+      "keepLearning": "Continuați să învățați!",
+      "score": "Ai luat {score} din {total} corect",
+      "tryAgain": "Încercați din nou",
+      "moreQuizzes": "Mai multe chestionare"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotice",
+        "description": "Știi kana să folosești antibiotice?",
+        "questions": [
+          {
+            "question": "Pot antibioticele să vindece gripa?",
+            "options": [
+              "Va",
+              "na",
+              "Uneori"
+            ],
+            "explanation": "Gripa si cauzată de un virus. Antibioticele ucid doar bacteriile. Luarea de antibiotice pentru gripă na face nimic thaj šaj face infecțiile viitoare mai greu de tratat."
+          },
+          {
+            "question": "Te simti mai bine dupa 3 dives de antibiotice. Ar trebui să te oprești?",
+            "options": [
+              "Va, te-ai vindecat",
+              "na, termină cursul complet",
+              "Luați jumătate din pastilele rămase"
+            ],
+            "explanation": "Terminați ÎNTOTDEAUNA cursul complet. te te oprești devreme, unele bacterii supraviețuiesc thaj devin rezistente. Data viitoare, același antibiotic na va funcționa."
+          },
+          {
+            "question": "Puteți împărtăși antibiotice cu un membru al familijai care are simptome similare?",
+            "options": [
+              "Va, economisește bani",
+              "na, niciodată",
+              "Doar te si aceeași boală"
+            ],
+            "explanation": "na împărtăși niciodată antibiotice. Infecțiile diferite au nevoie de doktoroamente diferite. Antibioticul greșit šaj fi periculos thaj na va ajuta."
+          },
+          {
+            "question": "Ce se întâmplă te iei antibiotice prea des?",
+            "options": [
+              "Nimic rău",
+              "Corpul tău devine imun la nasvalipen",
+              "Bacteriile devin rezistente thaj mai greu de ucis"
+            ],
+            "explanation": "Rezistența la antibiotice si o criză globală. kana bacteriile devin rezistente, infecțiile simple pot deveni mortale. Luați antibiotice numai atunci kana vi le prescrie un doktoro."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "vakcinuri",
+        "description": "Separați faptele de mituri",
+        "questions": [
+          {
+            "question": "vakcinurile provoacă autism?",
+            "options": [
+              "Va",
+              "na",
+              "na știm"
+            ],
+            "explanation": "na. Acest mit a pornit de la un studiu fraudulos care a fost retras. doktoroul care a publicat-o thaj-a pierdut permisul doktoroal. Zeci de studii cu milioane de čhavore demonstrează că vakcinurile na provoacă autism."
+          },
+          {
+            "question": "si sigur să dai unui čhavo mai multe vakcinuri deodată?",
+            "options": [
+              "na, e prea mult",
+              "Va, si sigur thaj testat",
+              "Doar unul la un moment dat"
+            ],
+            "explanation": "Sistemul imunitar al bebelușilor gestionează mii de germeni în fiecare dives. vakcinurile combinate si testate temeinic thaj sigure. Amânarea vakcinurilor lasă čhavoul neprotejat."
+          },
+          {
+            "question": "čhavoul meu are o răceală ușoară. Se mai pot vakcina?",
+            "options": [
+              "na, așteptați până kana si complet sănătoși",
+              "Va, o răceală ușoară e bine",
+              "Doar cu permisiunea doktoroului"
+            ],
+            "explanation": "O răceală ușoară, febră scăzută vaj nasul care curge na si un motiv pentru a amâna vakcinarea. Doar nasvalipenle severe necesită amânare. Întrebați doktoroul dumneavoastră te na sunteți sigur."
+          },
+          {
+            "question": "Conțin vakcinurile substanțe chimice periculoase?",
+            "options": [
+              "Va, si pline de toxine",
+              "na, toate ingredientele si sigure în cantitățile mici folosite",
+              "Unii fac, alții na"
+            ],
+            "explanation": "Ingredientele vakcinului si prezente în cantități mici, sigure. Primești mai mult aluminiu din laptele matern decât dintr-un vakcin. Fiecare ingredient a fost testat pentru siguranță."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Diabetul",
+        "description": "Înțelegerea managementului diabetului",
+        "questions": [
+          {
+            "question": "si diabetul cauzat de consumul de prea mult zahăr?",
+            "options": [
+              "Va",
+              "na, e mai complex",
+              "Doar tipul 2"
+            ],
+            "explanation": "Diabetul si cauzat de genetică, stilul de viață thaj modul în care corpul dumneavoastră procesează insulina. Consumul de zahăr na îl cauzează în mod direct, amari o dietă nesănătoasă thaj obezitatea cresc riscul."
+          },
+          {
+            "question": "šaj fi vindecat diabetul cu remedii naturale precum scorțișoara?",
+            "options": [
+              "Va, scorțișoara o vindecă",
+              "na, na există leac, amari šaj fi gestionat",
+              "Va, cu destul usturoi thaj ierburi"
+            ],
+            "explanation": "na există tretmano pentru diabet. šaj fi GESTIONAT cu doktoroamente, mancare sanatoasa si exercitii fizice. Scorțișoara šaj avea beneficii minuscule, amari na šaj înlocui doktoroamentele. Oamenii care își opresc doktoroamentele ajung la spitalo."
+          },
+          {
+            "question": "O persoană cu diabet se simte amețită thaj transpirată. Ce ar trebui să faci?",
+            "options": [
+              "Dați-le insulină",
+              "Dă-le imediat ceva dulce",
+              "Spune-le să se odihnească"
+            ],
+            "explanation": "Acestea si semne ale glicemiei scăzute (hipoglicemie). Dă-le imediat suc, bomboane vaj paji cu zahăr. Acest lucru šaj pune viața în pericol. După ce se simt mai bine, ar trebui să mănânce o masă adecvată."
+          },
+          {
+            "question": "Cât de des ar trebui un diabetic să-thaj verifice picioarele?",
+            "options": [
+              "Niciodată, picioarele si bine",
+              "În fiecare dives",
+              "O dată pe berš"
+            ],
+            "explanation": "Diabetul šaj afecta nervii din picioare. si posibil să na simțiți tăieturi vaj răni. Verificați-vă picioarele în fiecare dives pentru tăieturi, vezicule vaj modificări de culoare. Rănile mici pot deveni infecții grave."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Igienă thaj prevenire",
+        "description": "Obiceiuri de bază pentru sastipen care salvează vieți",
+        "questions": [
+          {
+            "question": "Cât timp trebuie să vă spălați vastale cu săpun?",
+            "options": [
+              "5 secunde",
+              "Cel puțin 20 secunde",
+              "1 minut"
+            ],
+            "explanation": "Spălați cel puțin 20 secunde — aproximativ timpul necesar pentru a cânta „Happy Birthday” de două ori. Acest lucru elimină majoritatea germenilor. Clătirile rapide na funcționează."
+          },
+          {
+            "question": "si sigur să bei paji dintr-un râu vaj un pârâu?",
+            "options": [
+              "Va, apa naturală si curată",
+              "na, întotdeauna fierbeți vaj filtrați-l mai întâi",
+              "Doar te pare clar"
+            ],
+            "explanation": "Chiar thaj apa limpede šaj conține bacterii thaj paraziți periculoși. Fierbeți întotdeauna paji timp de cel puțin 1 minut vaj folosiți un filtru. Apa murdară provoacă diaree, holeră thaj tifoidă."
+          },
+          {
+            "question": "čhavoul dumneavoastră are diaree. Care si cel mai important lucru?",
+            "options": [
+              "Opriți toate alimentele",
+              "Dați multe lichide (paji, ORS)",
+              "Dați antibiotice"
+            ],
+            "explanation": "Deshidratarea cauzată de diaree ucide mai mulți čhavore decât diareea în sine. Dați soluție de rehidratare orală (ORS) vaj paji curată cu un praf de sare thaj zahăr. Continuați să alăptați bebelușii."
+          },
+          {
+            "question": "kana ar trebui să vă spălați pe vasta?",
+            "options": [
+              "Doar înainte de a mânca",
+              "Înainte de a mânca, după toaletă, după atingerea animalelor, după tuse",
+              "Doar kana par murdare"
+            ],
+            "explanation": "Germenii si invizibili. Spălați-vă vastale: înainte de a mânca/găti, după folosirea toaletei, după schimbarea scutecelor, după atingerea animalelor, după tuse/strănut thaj după atingerea persoanelor nasvaloe."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Cunoaște-ți hakajale — Redi Health",
+      "description": "hakajale pacienților, ajutor pentru discriminare thaj contacte juridice pentru comunitățile de romi"
+    },
+    "title": "Dikh tiri hakaja",
+    "subtitle": "Ai hakaja ca pacient. Învață-le. Folosește-le.",
+    "back": "Înapoi",
+    "menu": {
+      "patientRights": {
+        "title": "hakajale pacientului",
+        "desc": "8 hakaja pe care fiecare pacient le are"
+      },
+      "discrimination": {
+        "title": "Te confrunți cu discriminarea?",
+        "desc": "Ce să spui thaj să faci — pas cu pas"
+      },
+      "contacts": {
+        "title": "Asistență juridică în funcție de țară",
+        "desc": "Ombudsman, anti-discriminare, organizații de romi"
+      }
+    },
+    "views": {
+      "patientRights": "hakajale dumneavoastră pacientului",
+      "discrimination": "te vă confruntați cu discriminare",
+      "discriminationDesc": "Situații reale thaj exact ce să spui thaj să faci.",
+      "contacts": "Asistență juridică în funcție de țară"
+    },
+    "labels": {
+      "sayThis": "Spune asta:",
+      "thenDo": "Atunci fă asta:",
+      "patientOmbudsman": "Avocatul Pacienților",
+      "antiDiscrimination": "Anti-diskriminim",
+      "romaRightsOrg": "Organizacija vaš romane hakaja"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Dreptul la tretmano de urgență",
+        "description": "Fiecare spitalo TREBUIE să vă trateze în caz de urgență, chiar thaj fără asigurare vaj documente. Aceasta si legea în fiecare EU țară. te refuză, cereți numele doktoroului thaj raportați-l."
+      },
+      "information": {
+        "title": "Dreptul de a-ți înțelege diagnosticul",
+        "description": "doktoroul dumneavoastră trebuie să vă explice starea în cuvinte pe care le înțelegeți. te na înțelegeți, spuneți: „Poți explica asta mai simplu?” De asemenea, puteți solicita un rezumat scris."
+      },
+      "consent": {
+        "title": "Dreptul de a spune na",
+        "description": "Nimeni na vă šaj forța tretmanoul. Înainte de orice procedură, doktoroul trebuie să explice ce vor face thaj tu trebuie să fii de acord. Puteți spune oricând „Am nevoie de timp să mă gândesc”."
+      },
+      "privacy": {
+        "title": "Dreptul la intimitate",
+        "description": "Informațiile dumneavoastră doktoroale si private. doktoroii na-l pot împărtăși angajatorului, familijai vaj oricui altcineva fără permisiunea dumneavoastră. Aceasta include starea dvs. HIV, sarcina vaj sastipena mintală."
+      },
+      "interpreter": {
+        "title": "Dreptul la un interpret",
+        "description": "te na vorbiți bine limba locală, puteți solicita un interpret. Multe spitaloe au acest serviciu. te na, poți aduce pe cineva în care ai încredere să traducă."
+      },
+      "second-opinion": {
+        "title": "Dreptul la o a doua opinie",
+        "description": "te na sunteți de acord cu un diagnostic, puteți consulta un alt doktoro. Acesta si dreptul tău. na trebuie să explici de ce."
+      },
+      "records": {
+        "title": "Dreptul la dosarele dumneavoastră doktoroale",
+        "description": "Puteți cere oricând o copie a tuturor dosarelor dumneavoastră doktoroale. spitaloul trebuie să le furnizeze. Acest lucru si util atunci kana schimbați doktoroul vaj vă mutați în alt oraș."
+      },
+      "complaint": {
+        "title": "Dreptul de a se plânge",
+        "description": "te vă simțiți maltratat vaj discriminat, puteți depune o plângere. Fiecare spitalo are o procedură de reclamații. De asemenea, puteți contacta ombudsmanul pacienților din țara dumneavoastră."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "spitaloul refuză să te trateze",
+        "whatToSay": "„Am dreptul la tretmano de urgență conform legii EU. Vă rugăm să scrieți numele dumneavoastră thaj motivul pentru care refuzați.”",
+        "whatToDo": [
+          "Stai calm, amari ferm",
+          "Solicitați numele complet al doktoroului",
+          "Solicitați refuzul în scris",
+          "Sunați ombudsmanul pacientului",
+          "Contactați o organizație pentru hakajale romilor"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Personalul spitaloului si nepoliticos vaj disprețuitor din cauza etniei tale",
+        "whatToSay": "„si aici pentru ajutor doktoroal. Mă aștept să fiu tratat cu același respect ca orice alt pacient”.",
+        "whatToDo": [
+          "Cereți să vorbiți cu asistenta-șef vaj cu șeful de departament",
+          "Notați data, ora thaj numele",
+          "Depuneți o plângere scrisă la spitalo",
+          "Raportați către organismul național de luptă împotriva discriminării"
+        ]
+      },
+      "no-insurance": {
+        "situation": "na ai asigurare de sastipen",
+        "whatToSay": "\"Am nevoie de ajutor doktoroal. Care si opțiunile mele pentru pacienții neasigurați?\"",
+        "whatToDo": [
+          "Îngrijirea de urgență si întotdeauna makhloă - insistați asupra ei",
+          "Întrebați despre programele de asistență socială",
+          "Contactați un mediator sanitar din zona dumneavoastră",
+          "Multe ONG-uri oferă clinici makhloe - întrebați la spitalo"
+        ]
+      },
+      "language-barrier": {
+        "situation": "na poți comunica cu doktoroul",
+        "whatToSay": "„Am nevoie de ajutor pentru înțelegere. Puteți oferi un interpret vaj puteți vorbi mai încet?”",
+        "whatToDo": [
+          "Utilizați această aplicație pentru a traduce fraze cheie",
+          "Aduceți o persoană de încredere care vorbește limba",
+          "Solicitați instrucțiuni scrise pe care le puteți traduce mai târziu",
+          "Utilizați camera telefonului pentru a traduce documente"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Povești ale comunității — Redi Health",
+      "description": "Experiențe reale de sastipen din comunitățile de romi din Europa"
+    },
+    "title": "Paramiča andar komuniteto",
+    "subtitle": "Experiențe reale din comunitățile de romi. Învață de la alții.",
+    "backToStories": "Înapoi la povești",
+    "lessonLearned": "Lecția învățată",
+    "whatToDoNext": "Ce să faci în continuare",
+    "categories": {
+      "vaccines": "vakcinuri",
+      "chronic": "Boală cronică",
+      "maternal": "Sarcina",
+      "discrimination": "hakaja",
+      "prevention": "Prevenirea",
+      "mental": "sastipen mintală"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Ghid de vakcinare",
+      "askZuvo": "Întreabă-l pe Zuvo",
+      "explainPrescription": "Explicați prescripția",
+      "navigateToCare": "Navigați către îngrijire",
+      "knowYourRights": "Cunoaște-ți hakajale",
+      "learnPrevention": "Învață prevenirea",
+      "checkSymptoms": "Verificați simptomele",
+      "learnMentalHealth": "Aflați despre sastipena mintală"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "România",
+        "title": "Aproape că na mi-am vakcinat fiica",
+        "story": "Soacra mea mi-a spus că vakcinurile si otravă. Toți cei din așezare au spus același lucru. kana s-a născut fiica mea, m-am speriat. amari mediatorul sanitar a venit la noi acasă thaj ne-a explicat totul – cum funcționează vakcinurile, care si cu adevărat efectele secundare. Mi-a arătat fotografii cu čhavore cu rujeolă. Mi-a fost mai dar de boală decât de vakcin. Fiica mea thaj-a luat toate vakcinurile. Ea si sanatoasa si puternica.",
+        "lesson": "Discutați cu un mediator sanitar vaj cu un doktoro înainte de a lua decizii pe baza a ceea ce spun alții. vakcinurile salvează vieți."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bulgarija",
+        "title": "Mi-am oprit doktoroamentele pentru diabet thaj aproape că am murit",
+        "story": "Am fost diagnosticat cu diabet de tip 2 la 45. doktoroamentul m-a durut stomacul, așa că am încetat să-l mai iau. Vecinul meu a spus că ceaiul de scorțișoară mă va vindeca. Timp de 2 berša am baut in schimb ceai de scortisoara. Apoi, într-o dives, m-am prăbușit. Glicemia mea era peste 500. doktoroii au spus că rinichii mi-au fost afectați. Acum îmi iau doktoroamentele în fiecare dives. Mi-aș fi dorit să na mă fi oprit niciodată.",
+        "lesson": "na opriți niciodată doktoroamentul fără a discuta cu doktoroul dumneavoastră. Remediile naturale na pot înlocui doktoroamentele pentru diabet."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Serbija",
+        "title": "Prima mea sarcină — na știam că pot vedea un doktoro gratis",
+        "story": "kana am rămas însărcinată la 19, na am fost la doktoro timp de 6 luni. na aveam asigurare thaj m-am gândit că va costa prea mult. Un mediator sanitar mi-a spus că îngrijirea prenatală si makhloă pentru toate femeile însărcinate din Serbia. Ea m-a ajutat să mă înregistrez. doktoroul a constatat că am anemie thaj hipertensiune arterială. te na aș fi plecat, čhavoul meu ar fi putut fi în pericol.",
+        "lesson": "Îngrijirea prenatală si makhloă în majoritatea țărilor europene. Cereți unui mediator sanitar să vă ajute să vă înscrieți."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Ungaria",
+        "title": "spitaloul a încercat să mă trimită",
+        "story": "Am fost la camera de pharia cu dureri in piept. Asistenta s-a uitat la mine thaj a spus: „Suntem plini, mergi la alt spitalo”. Știam că acest lucru na si corect. Am spus: „Am dureri în piept. Trebuie să mă examinezi. Te rog să-mi spui numele tău. Atitudinea ei s-a schimbat imediat. M-au examinat thaj au descoperit că aveam o problemă cu inima care avea nevoie de tretmano. te aș fi plecat, aș fi putut face un atac de cord.",
+        "lesson": "Aveți dreptul la tretmano de urgență. te cineva încearcă să te îndepărteze, cere-i numele thaj spune-i că îți cunoști hakajale."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Slovacia",
+        "title": "TB na si o condamnare la moarte — amari trebuie să termini doktoroamentul",
+        "story": "Tușeam luni de dives. Am crezut că e doar o răceală. kana am fost în sfârșit la doktoro, mi-au spus că am tuberculoză. Eram îngrozit - am crezut că voi muri. amari doktoroul a explicat că TB se šaj vindeca cu 6 luni de doktoroamente. Cea mai grea parte a fost să iau pastile în fiecare dives timp de 6 luni, chiar thaj atunci kana mă simțeam mai bine după 2 luni. amari am terminat. si vindecat.",
+        "lesson": "te tușiți mai mult de 2 săptămâni, consultați un doktoro. TB si vindecabil, amari TREBUIE să termini toate doktoroamentele."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Macedonia de Nord",
+        "title": "Depresia na si slăbiciune - si o boală",
+        "story": "După ce a murit soțul meu, na m-am putut ridica din pat luni de dives. Familia mea a spus că si leneș. Au spus „doar fii puternic”. amari na am putut. Un mediator sanitar a observat că ceva na era în regulă thaj m-a dus la doktoro. doktoroul a spus că am depresie - o adevărată afecțiune doktoroală. Am început doktoroina thaj am vorbit cu un consilier. Încet-încet, m-am îmbunătățit. na si slab. Am fost nasvalo.",
+        "lesson": "Depresia si o condiție doktoroală, na un defect de caracter. doktoroina thaj consilierea pot ajuta. Vă rugăm să cereți ajutor."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Provocări — Redi Health",
+      "description": "Provocări ale comunității"
+    },
+    "title": "Provocări active",
+    "subtitle": "Alăturați-vă obiectivelor comunității thaj provocărilor personale pentru a câștiga bonus XP thaj insigne.",
+    "types": {
+      "community": "komuniteto",
+      "personal": "personale"
+    },
+    "daysLeft": "Au mai rămas {count} dives",
+    "viewLeaderboard": "Vedeți clasamentul",
+    "items": {
+      "c1": {
+        "title": "Campion al cunoașterii vakcinurilor",
+        "description": "Aduceți 50 studenți din zona dvs. locală să promoveze modulul vakcin în această săptămână."
+      },
+      "c2": {
+        "title": "Seria de sastipen de 7 dives",
+        "description": "Înregistrați-vă starea de spirit thaj consumul de paji timp de 7 dives la rând."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Certificat — Redi Health",
+      "description": "Certificat național de alfabetizare în domeniul sănătății"
+    },
+    "title": "Certificatul dvs",
+    "subtitle": "Ați finalizat Etapa Națională a Academiei de sastipen Studențească.",
+    "ofCompletion": "Certificat de finalizare",
+    "diplomaTitle": "Educație națională în domeniul sănătății",
+    "awardedFor": "Acordat pentru finalizarea curriculum-ului Redi Health Student Academy.",
+    "date": "Data",
+    "downloadPdf": "Descărcați PDF",
+    "share": "Distribuie",
+    "gate": {
+      "title": "Finalizează mai întâi Academia",
+      "description": "Pentru a obține certificatul de alfabetizare în domeniul sănătății, trebuie să finalizați toate lecțiile thaj să treceți testul în etapa națională a Academiei de sastipen a studenților.",
+      "cta": "Du-te la Academie"
+    }
+  },
+  "learn": {
+    "progressLabel": "pherde module",
+    "startHere": "Šuru kathe",
+    "continueLabel": "Phirdev",
+    "allModules": "Sa module",
+    "prevention": {
+      "description": "Ando 15 berša buti ande romane thana, dikhlem familije nasvalime kana lačhe ćaći našti te aven. Akava sikhavipen na si luksus — si te živaves.",
+      "handwashing": {
+        "title": "Spălarea vastalor",
+        "description": "Am văzut familii întregi din așezări îmbolnăvindu-se de aceeași infecție la stomac, transmisă vast în vast. Spălarea corectă a vastalor si cel mai ieftin thaj mai puternic doktoroament la care aveți deja acces - na costă nimic thaj previne nasvalipenle pe care le văd cel mai des în comunitățile noastre.",
+        "tip1": "Înainte de a atinge mâncarea, înainte de a hrăni un čhavo thaj după fiecare vizită la toaletă - spălați-vă. Am văzut că o vast nespălată provoacă o săptămână de diaree pentru o întreagă gospodărie",
+        "tip2": "Numără până la 20 încet vaj fredonează un vers al unui cântec. Majoritatea oamenilor se spală timp de 5 secunde - asta na elimină aproape nimic. Frecarea dintre vastale tale si cea care ucide microbii",
+        "tip3": "Fara sapun? Am lucrat în localități fără paji curentă. Ash funcționează. Lucrări cu nisip. Apa singură cu spălare funcționează mai bine decât nimic. na lăsa perfectul să împiedice binele",
+        "tip4": "Uscați-vă vastale la aer vaj folosiți o cârpă curată pe care o schimbați zilnic. Un prosop murdar împărtășit de toată lumea recontamina vastale curate - lucru pe care îl explic în fiecare vizită la domiciliu",
+        "fact": "În comunitățile cu care am lucrat, campaniile de spălare a vastalor au redus cazurile de diaree la čhavore cu aproape jumătate în decurs de trei luni. WHO confirmă: spălarea vastalor reduce diareea cu 40% thaj infecțiile respiratorii cu până la 21%.",
+        "action": "În seara asta, stați cu čhavorei la sursa de paji thaj spălați-vă vastale împreună. Faceți din el un obicei de familija înainte de fiecare masă. čhavorei care învață urmărindu-thaj părinții vor purta asta toată viața."
+      },
+      "vaccination": {
+        "title": "vakcinarea",
+        "description": "Am însoțit mame rome la centrele de sastipen unde au fost respinse pentru că na aveau documente, na puteau vorbi limba vaj pur thaj simplu li s-a spus să revină mai târziu. vakcinurile si dreptul legal al čhavorelor tăi – makhlo, sigur thaj cea mai puternică protecție pe care o šaj oferi un părinte. Nimeni na vă šaj nega asta.",
+        "tip1": "Fiecare țară din Europa oferă un program makhlo de vakcinare de la naștere. Aceasta na si caritate – si dreptul legal al čhavoului dumneavoastră. te un lucrător din domeniul sănătății refuză, cereți supervizorul său thaj precizați acest lucru în mod clar",
+        "tip2": "Cardul de vakcinare si cel mai important document pe care čhavoul dumneavoastră îl are după certificatul de naștere. Păstrați-l în siguranță, duceți-l la fiecare vizită la doktoro. te si pierdut, orice centru de sastipen trebuie să emită un înlocuitor - na accepta refuzul",
+        "tip3": "Febră ușoară, un punct dureros pe braț, agitație pentru o dives - acest lucru si normal thaj înseamnă că vakcinul funcționează. Am liniștit sute de mame îngrijorate despre asta. Trece în 24–48 ore",
+        "tip4": "na aveți nevoie de programare la majoritatea centrelor de sastipen publică pentru vakcinări. Intrați. te un mediator sanitar rom lucrează în zona dvs., rugați-i să vă însoțească - pentru asta suntem pregătiți",
+        "fact": "Într-o localitate în care am lucrat, rujeola s-a lovit deoarece acoperirea vakcinării a scăzut la 60%. Trei čhavore au fost internați în spitalo. După o campanie de vakcinare comunitară, am ajuns la 94% — thaj focarele au încetat. În toată Europa, vakcinurile previn 2–3 milioane de decese în fiecare berš.",
+        "action": "Scoateți cardul de vakcinare al čhavoului dvs. chiar akana. Verificați-l în raport cu programul de pe peretele centrului dvs. de sastipen. te lipsește vreun vakcin vaj na aveți card, vizitați centrul de sastipen în această săptămână. Aduceți această aplicație pentru a afișa programul te vă ajută."
+      },
+      "cleanWater": {
+        "title": "paji curată",
+        "description": "Am lucrat în așezări în care familiile împart un singur punct de paji care rulează două ore pe dives thaj în cartiere în care apa de la robinet pare limpede, amari poartă bacterii care provoacă probleme cronice de stomac la čhavore. Calitatea apei na si întotdeauna vizibilă – iar în comunitățile de romi, aceasta si rareori monitorizată de autorități. Trebuie să fii inspectorul de paji al familijai tale.",
+        "tip1": "Acoperiți fiecare recipient în care depozitați paji. Am văzut muște, praf thaj chiar deșeuri animale contaminând găleți descoperite în câteva ore, mai ales pe vreme caldă. O placă simplă peste partea de sus previne majoritatea contaminării",
+        "tip2": "te na sunteți sigur de paji, fierbeți-o la fierbere timp de un minut întreg. Aceasta ucide 99.9% dintre bacterii, viruși thaj paraziți. na costă aproape nimic thaj funcționează - am predat asta în zeci de așezări în care sursa de paji era discutabilă",
+        "tip3": "Spălați recipientele cu paji cu săpun thaj paji curată cel puțin o dată pe săptămână. Un recipient murdar murdărește apa curată. Aceasta si una dintre cele mai neglijate cauze ale diareei recurente pe care le-am văzut la čhavore",
+        "tip4": "Pârâurile, iazurile thaj bălțile în picioare na si niciodată sigure pentru băut – chiar te apa pare limpede. Paraziții invizibili pentru ochi provoacă leziuni cronice ale intestinelor thaj dezvoltării čhavorelor",
+        "fact": "În multe așezări de romi din Europa Centrală thaj de Est, familiile na au acces la paji potabilă. Centrul European pentru Drepturile Romilor a documentat că cartierele de romi si sistematic insuficient deservite de infrastructura de paji. Fierberea apei na si ideală - si o strategie de supraviețuire până kana îți vei îndeplini dreptul la paji curată.",
+        "action": "Astăzi, verifică fiecare recipient în care familia ta stochează paji potabilă. Acoperiți toate cele care si deschise. te na puteți verifica că sursa de paji si sigură, începeți să fierbeți toată apa de băut thaj de gătit începând din această seară."
+      },
+      "firstAid": {
+        "title": "Primul pomoć de bază",
+        "description": "În așezările îndepărtate thaj în cartierele urbane unde ambulanțele durează mai mult să ajungă – vaj uneori na vin deloc – a ști ce să facă în primele minute ale unei urgențe si diferența dintre viață thaj moarte. Am instruit sute de membri ai comunității de romi cu privire la primul pomoć de bază thaj am văzut că aceste cunoștințe salvează vieți înainte de sosirea oricărui doktoro.",
+        "tip1": "112 funcționează de pe orice telefon din Europa — chiar thaj fără credit, chiar thaj fără cartelă SIM, chiar thaj de pe un telefon blocat. Învață fiecare membru al familijai tale, inclusiv čhavorei peste 7, să formeze 112 thaj să spună unde se află. Practică asta. Într-o situație de urgență, panica îi face pe oameni să uite",
+        "tip2": "Pentru sângerări abundente: pajisați ferm cu cea mai curată cârpă pe care o aveți — o cămașă, o basma, orice — thaj na o ridicați pentru a verifica. Continuați să pajisați până sosește pomoćul. Am văzut oameni sângerând periculos pentru că au tot scos cârpa pentru a se uita. Adăugați mai multă cârpă deasupra te sângele trece",
+        "tip3": "Arsuri: puneți imediat arsura sub jet de paji rece timp de cel puțin 10 minute. na aplicați niciodată unt, ulei, pastă de dinți vaj albuș de ou - remedii tradiționale pe care le-am întâlnit în multe familii care de fapt captează căldura thaj provoacă daune thaj infecții mai grave.",
+        "tip4": "te cineva se prăbușește thaj na respiră: sunați 112, apoi împingeți puternic thaj repede în centrul pieptului — 100 ori pe minut (tempo-ul cântecului „Stayin' Alive”). na te opri până na sosește pomoćul. RCP imperfectă si infinit mai bună decât fără RCP",
+        "fact": "Studiile arată că în comunitățile în care pregătirea de bază a primului pomoć si larg răspândită, supraviețuirea după stop cardiac se dublează. În multe comunități de romi, timpii de răspuns ale ambulanțelor si semnificativ mai lungi decât în ​​zonele ne-romi, ceea ce face ca primul pomoć pentru trecători să fie thaj mai critic.",
+        "action": "Chiar akana, întreabă fiecare membru al familijai: știi cum să suni la 112? Cunoașteți adresa noastră de domiciliu suficient de bine pentru a phen dispeceratului? Scrie-ți adresa completă pe o foaie de hârtie thaj pune-o lângă telefon. Învață-ți čhavorei astăzi."
+      }
+    },
+    "nutrition": {
+      "description": "Ande but berša le romane familijenge, sikhavlem kaj xaben na si numa nutritija — si so tu šaj te len, so si ande tiri mahala thaj so tiri familija žanel. Na ka phenav te le quinoa. Ka phenav sar te lačhes xaves tiri familija le so si tut.",
+      "balancedDiet": {
+        "title": "Mănâncă bine cu orice buget",
+        "description": "Cea mai mare problemă de nutriție pe care o văd în comunitățile de romi na si lipsa alimentelor – si prea multă pâine ieftină, carne procesată thaj băuturi dulci thaj prea puține legume, ouă thaj leguminoase. na si vorba despre puterea de voință. si vorba despre ceea ce si disponibil thaj accesibil. amari schimbările mici fac diferențe enorme pentru sastipena dumneavoastră thaj dezvoltarea čhavorelor dumneavoastră.",
+        "tip1": "Fasolea, lintea thaj năutul si cele mai ieftine proteine de pe orice piață - mai ieftine decât carnea, durează mai mult thaj previn diabetul thaj nasvalipenle de inimă. O oală cu tocană de fasole hrănește o familija pentru mai puțin de un pachet de cârnați procesați thaj si mult mai hrănitoare",
+        "tip2": "Ouăle si cel mai complet aliment ieftin care există. Două ouă pe dives per čhavo oferă aproape tot ce are nevoie un creier în creștere. În fiecare localitate în care lucrez, recomand ouăle ca hrană prioritară pentru čhavore",
+        "tip3": "Legumele de sezon din piața locală vaj din grădina dvs. costă o fracțiune din prețurile de la supermarket. Varză, ceapă, morcovi, cartofi, ardei - acestea si fundamentul unei diete sănătoase thaj si în fiecare tradiție din bucătăria romilor",
+        "tip4": "Băuturile dulci (cola, suc, băuturi energizante) si cel mai dăunător produs pe care îl văd în dietele familijai de romi. O sticlă de cola are 10 lingurițe de zahăr. Înlocuiți cu paji vaj ceai slab thaj eliminați cel mai mare factor de obezitate thaj carii pe care îl văd la čhavore",
+        "fact": "În comunitățile de romi cu care am lucrat din România thaj Bulgaria, am văzut ratele diabetului zaharat scăzând considerabil atunci kana familiile înlocuiesc pâinea albă zilnică thaj carnea procesată cu fasole, ouă thaj legume – chiar thaj fără a modifica cât de mult mănâncă. Organismul răspunde la calitate, na doar la cantitate.",
+        "action": "În această săptămână, înlocuiți o masă de pâine thaj carne procesată cu o oală de tocană de fasole vaj linte cu ceapă thaj ardei. Gătiți suficient timp de două dives. si mai ieftin, te umple mai mult thaj începe să schimbe traiectoria de sastipen a familijai tale."
+      },
+      "childNutrition": {
+        "title": "Hrănirea čhavorelor pentru un început puternic",
+        "description": "Primele 1,000 dives — de la pušnipen la vârsta 2 — modelează întregul viitor al unui čhavo: creierul, sistemul imunitar, capacitatea de a învăța. Am văzut čhavorei subnutriți din așezări răbdând în urma colegilor lor na din cauza geneticii, ci din cauza a ceea ce au mâncat în acele prime luni critice. Ceea ce îți hrănești čhavoul akana si cea mai puternică investiție pe care o poți face în viața lui.",
+        "tip1": "Numai laptele matern timp de 6 luni si standardul de aur — si makhlo, întotdeauna disponibil, perfect nutritiv thaj protejează împotriva infecțiilor mai bine decât orice doktoroament. Am lucrat cu mame care credeau că formula si „modernă” thaj mai bună. na si. Laptele matern si evoluția tehnologiei perfecționată",
+        "tip2": "La 6 luni, începeți cu alimente moi pe lângă alăptare: piure de cartofi, morcovi, banane, gălbenuș de ou fiert. Introduceți un aliment nou la fiecare 3 dives pentru a urmări reacțiile. Multe mame cu care lucrez încep solide prea târziu (8–9 luni) - acest lucru întârzie dezvoltarea",
+        "tip3": "čhavorei sub 2 na ar trebui să consume niciodată zahăr, miere, sare, cola, chipsuri vaj dulciuri. Știu că bunicii dau uneori ceai cu zahăr pentru a calma un čhavo - te rog încetează. Zahărul la această vârstă programează o poftă pe tot parcursul vieții thaj dăunează dinților chiar înainte ca aceștia să iasă complet",
+        "tip4": "Un ou pe dives pentru un čhavo cu vârsta de peste 6 luni si cea mai simplă îmbunătățire a nutriției care există. Un studiu din Ecuador a arătat că ouăle au redus piperizarea cu 47%. Citez acest lucru în fiecare discuție comunitară, deoarece si realizabil pentru aproape fiecare familija",
+        "fact": "În comunitățile în care am derulat programe de nutriție, čhavorei care au primit zilnic un ou thaj o porție de legume timp de 6 luni au prezentat îmbunătățiri măsurabile ale creșterii thaj dezvoltării cognitive în comparație cu čhavorei care na au primit. Malnutriția na si doar despre sărăcie, ci despre a ști ce să prioritizezi cu resursele pe care le ai.",
+        "action": "Începând de mâine, dă-i čhavoului tău peste 6 luni un ou pe dives (piure vaj omletă). te čhavoul dumneavoastră are sub 6 luni thaj alăptați, mâncați singur un ou în plus – nutrienții trec prin laptele dumneavoastră."
+      },
+      "foodSafety": {
+        "title": "Păstrarea alimentelor în siguranță",
+        "description": "Toxiinfecția alimentară si unul dintre cele mai frecvente motive pentru care familiile de romi vizitează camerele de urgență — vărsături, diaree, deshidratare, în special la čhavore. În localitățile în care refrigerarea na si de încredere thaj bucătăriile si comune vaj în aer liber, siguranța alimentară na si un subiect de manual - si o abilitate de supraviețuire zilnică.",
+        "tip1": "Pe vreme caldă, alimentele gătite lăsate afară mai mult de 2 ore devin periculoase. te na îl puteți pune la frigider, gătiți porții mai mici pe care le terminați într-o singură masă. Am văzut familii întregi spitaloizate din tocană reîncălzită lăsate afară peste rat vara",
+        "tip2": "Puiul crud thaj carnea na trebuie să atingă niciodată pâinea, legumele vaj orice altceva care va fi consumat nefierte. Folosiți suprafețe de tăiere separate - chiar thaj o pungă de plastic curată, așezată în plan. Această contaminare încrucișată si cauza numărul unu de otrăvire alimentară pe care o întâlnesc",
+        "tip3": "te mâncarea miroase greșit, arată greșit vaj se simte moale, aruncați-o. na-l gusta pentru a verifica. Știu că aruncarea alimentelor si dureros atunci kana banii si strânși, amari o criză de otrăvire alimentară costă mai mult în doktoroină thaj pierderea muncii decât merita mâncarea",
+        "tip4": "Spălați toate fructele thaj legumele sub jet de paji înainte de a mânca, chiar te intenționați să le curățați de coajă. Murdăria din exterior se transferă în interior kana tăiați. Acest lucru si deosebit de important pentru produsele de pe piață care ar fi putut fi manipulate de mulți oameni",
+        "fact": "WHO estimează că 600 milioane de oameni se îmbolnăvesc din cauza alimentelor contaminate în fiecare berš, čhavorei sub 5 purtând 40% din povara. În comunitățile în care am predat siguranța alimentară, vizitele la spitalo pentru gastroenterită au scăzut semnificativ în prima vară.",
+        "action": "Verificați-vă bucătăria chiar akana: există carne crudă depozitată deasupra vaj atinge alimente gata de consumat? Există mâncare gătită care a stat afară de mai mult de 2 ore? Remediați aceste două lucruri astăzi - si cele mai frecvente pericole pe care le văd în vizitele la domiciliu."
+      }
+    },
+    "maternal": {
+      "description": "Phirde romni džuvlja ko spitalo kaj na aven alosarde, na respektirime vaj na den epiduralo. Dikhlem vi džuvlja so merde katar komplikacije kaj jekh prenatalno vizita ka našti te lela. Tiro trupo, tiro čhavo, tiri prava. Žan sa trin.",
+      "prenatalCare": {
+        "title": "Îngrijire prenatală",
+        "description": "În 15 berša de muncă de mediere, tiparul pe care îl văd în mod repetat si džuvljaile rome care vizitează prima dată la doktoro kana si deja gravide în 6 vaj 7 luni — de multe ori pentru că se simt bine, pentru că le si dar de spitalo vaj pentru că nimeni na a explicat că îngrijirea prenatală si makhloă thaj dreptul lor. Până în acel moment, afecțiunile periculoase precum preeclampsia vaj diabetul gestațional s-ar fi putut dezvolta în tăcere de luni de dives.",
+        "tip1": "jați la doktoroul de familija vaj la moașă în momentul în care vă lipsește menstruația thaj bănuiți că sunteți însărcinată. Primul trimestru si atunci kana acidul folic previne defectele creierului thaj coloanei vertebrale la čhavoul dumneavoastră. Așteptarea vă costă cea mai critică fereastră. te na aveți un doktoro de familija, mediatorul dumneavoastră de sastipen vă šaj ajuta să vă înregistrați - aceasta si o parte esențială a ceea ce facem",
+        "tip2": "Acid folic 400mcg zilnic ar trebui să înceapă atunci kana încercați să rămâneți gravidă vaj de îndată ce aflați că sunteți însărcinată. si makhlo vaj foarte ieftin la orice farmacie. Port pachete cu mine în vizitele la domiciliu, deoarece această pastilă simplă previne malformațiile congenitale devastatoare",
+        "tip3": "Alimentele bogate în fier previn anemia pe care o văd la aproape jumătate dintre džuvljaile rome însărcinate cu care lucrez: fasole, linte, verdeață închisă cu frunze verzi, ficat, carne roșie. Anemia te epuizează, face nașterea mai periculoasă thaj afectează dezvoltarea creierului bebelușului tău",
+        "tip4": "Aveți dreptul de a primi îngrijiri prenatale în limba dumneavoastră, de a fi tratată cu demnitate thaj de a avea cineva să vă însoțească la întâlniri. te un doktoro si disprețuitor vaj lipsit de respect, puteți depune o plângere thaj puteți solicita alt furnizor. Documentați numele, data thaj ceea ce s-a spus. Ajut familiile să facă acest lucru în mod regulat",
+        "fact": "džuvljaile rome din Europa au de 3 până la 5 ori mai multe șanse de a se confrunta cu complicații ale sarcinii decât populația generală, în mare parte pentru că accesează îngrijirea prenatală mai târziu vaj deloc. În comunitățile în care am lucrat pentru a conecta džuvljaile însărcinate la îngrijire în primul trimestru, ratele de complicații au scăzut dramatic.",
+        "action": "te sunteți însărcinată vaj cunoașteți o džuvljaie însărcinată din komunitetoa dvs. care na a consultat încă un doktoro, programați-vă astăzi. te îi si dar vaj na si sigură cum, jați cu ea vaj contactați-o cu mediatorul local de sastipen. O singură vizită šaj schimba totul."
+      },
+      "safeDelivery": {
+        "title": "Livrare sigură",
+        "description": "Am ținut mâna džuvljailor care nasc în ambulanțe pentru că au plecat prea târziu thaj m-am așezat pe coridoarele spitaloelor, unde džuvljaile rome au fost plasate ultimele la coadă, în timp ce džuvljaile ne-rome jaau înainte. Ambele situații pot fi prevenite. Planificarea livrării thaj cunoașterea drepturilor tale transformă această experiență dintr-o criză în ceva pe care îl controlezi.",
+        "tip1": "Până săptămâna 34, pregătiți-vă planul de naștere: care spitalo, cine va ja cu dvs., cum veți ajunge acolo (mai ales rata), cine vă va supraveghea pe ceilalți čhavore. Am văzut prea multe familii care se luptă în ultimul moment – iar stressul afectează nașterea",
+        "tip2": "Aveți dreptul legal de a avea alături un însoțitor (soț, mamă, soră, mediator) în timpul travaliului thaj al nașterii în aproape toate țările europene. te spitaloul phen na, citați legea privind drepturile pacienților din țara dumneavoastră. Deținem aceste referințe thaj le putem oferi",
+        "tip3": "Aflați 5 semnele de pericol care înseamnă ja LA spitalo akana, indiferent de ora: (1) sângerare abundentă, (2) cefalee severă cu vastale/fața umflate, (3) bebelușul na se mai mișcă, (4) apa se întrerupe înainte de PH_6___5_ PH febră ___5 38°C. na așteptați până dimineața. na încercați să le gestionați acasă",
+        "tip4": "După naștere, rămâneți în spitalo cel puțin 24 ore pentru monitorizare – chiar te vă simțiți bine. Multe complicații care pun viața în pericol (hemoragie, infecție) apar în primele 24 ore. Știu că mediul spitaloicesc šaj fi ostil, amari acele ore de monitorizare salvează vieți",
+        "fact": "Într-o regiune în care am lucrat 5 berša, am redus urgențele materne de etnie Rom cu 60% pur thaj simplu asigurându-ne că fiecare džuvljaie însărcinată are un plan de naștere, un aranjament de transport thaj o geantă de spitalo împachetată pe săptămână 36. Fără tehnologie nouă - doar pregătire thaj însoțire.",
+        "action": "te dumneavoastră vaj cineva pe care îl cunoașteți ați rămas însărcinată în ultimele 30 săptămâni: notați numele spitaloului, numărul de telefon thaj traseul pe hârtie. Pune-l pe perete. Împachetați o geantă cu actul de identitate, card de vakcinare, haine pentru bebeluși thaj încărcător pentru telefon. Acest lucru durează 20 minute thaj šaj salva o viață."
+      },
+      "breastfeeding": {
+        "title": "Alăptarea",
+        "description": "Alăptarea si profund apreciată în cultura Rom, totuși întâlnesc mame tinere cărora rudele bine intenționate le-au spus să dea paji, ceai vaj lapte praf în primele dives pentru că „laptele na a venit încă”. Colostrul - primul lapte gros, gălbui - na si un semn că ceva na si în regulă. si aur lichid, plin de anticorpi care vă protejează nou-născutul chiar de infecțiile care si cele mai periculoase în primele săptămâni de viață.",
+        "tip1": "În termen de 1 oră de la naștere, pune čhavoul piele pe piele pe piept thaj lasă-l să găsească sânul. Această primă hrănire cu colostru si cel mai important „vakcin” pe care îl va primi bebelușul tău – îi acoperă intestinul cu protecție împotriva infecțiilor. na lăsați pe nimeni să vă ia čhavoul înainte de a se întâmpla acest lucru, decât te există o urgență doktoroală",
+        "tip2": "Hrăniți la cerere — ori de câte ori čhavoul prezintă semne de foame (întoarcerea capului, sugerea vastalor, agitație). În primele săptămâni, aceasta šaj fi de 10–14 ori în 24 ore. Acest lucru si normal thaj vă stabilește aprovizionarea. Un ceas na îți šaj phen kana bebelușului tău îi si foame – čhavoul tău îți phen",
+        "tip3": "Fără paji, fără ceai, fără formulă pentru 6 luni, cu excepția cazului în care un doktoro o prescrie în mod specific dintr-un motiv doktoroal. Laptele dumneavoastră matern își schimbă compoziția pe parcursul zilei pentru a satisface nevoile exacte ale bebelușului dumneavoastră - nicio fabrică na šaj replica acest lucru. Am văzut bunici bine intenționate dând paji cu zahăr care a cauzat afte thaj diaree",
+        "tip4": "te alăptarea doare, zăvorul si greșit - na corpul tău. Cereți o moașă vaj un lucrător sanitar să urmărească o hrănire thaj să vă ajute să ajustați poziția. Durerea si un semnal de a primi pomoć, na un semn de a renunța. Am ajutat sute de mame să remedieze problemele de blocare care au fost rezolvate într-o singură sesiune",
+        "fact": "În comunitățile de romi în care există programe de sprijin pentru alăptare, alăptarea exclusivă timp de 6 luni reduce spitaloizările sugarilor cu peste 60%. Laptele matern se adaptează literalmente pentru a lupta împotriva infecțiilor specifice care circulă în mediul dumneavoastră – si un doktoroament personalizat pe care corpul dumneavoastră îl produce makhlo.",
+        "action": "te sunteți proaspătă mamă vaj așteptați: phenți familijai dvs. akana că intenționați să alăptați exclusiv timp de 6 luni thaj că aveți nevoie de sprijinul lor, na de sfaturi pentru a adăuga alte alimente. te alăptarea si dureroasă, contactați moașa vaj mediatorul sanitar înainte de a vă opri - soluția si de obicei simplă."
+      },
+      "postpartum": {
+        "title": "Îngrijire postpartum",
+        "description": "În cultura Rom, săptămânile de după naștere si un moment în care familia se adună în jurul mamei, iar acest lucru si frumos. amari am văzut thaj o latură umbră: mame care plâng în fiecare dives thaj li se phen că si normal. Mame care sângerează abundent thaj așteaptă prea mult pentru a căuta pomoć. Mame a căror durere si respinsă pentru că „asta trec džuvljaile”. Recuperarea ta contează la fel de mult ca thaj sastipena bebelușului tău - pentru că čhavoul tău are nevoie de tine viu thaj bine.",
+        "tip1": "Corpul tău are nevoie de minimum 6 săptămâni pentru a se vindeca. Sângerarea (lohia) după naștere si normală timp de 2–4 săptămâni, amari te crește brusc, conține cheaguri mari vaj miroase urât - jați imediat la spitalo. Am văzut mame care pierd cantități periculoase de sânge pentru că li s-a spus că sângerarea abundentă si normală. na si",
+        "tip2": "te te simți în mod persistent trist, gol, incapabil să te conectezi cu čhavoul tău vaj ai gânduri de a te răni pe tine vaj pe čhavoul tău - na ești slab, na ești o mamă rea, ai o afecțiune care răspunde la tratament. Spun asta în fiecare vizită la domiciliu, deoarece stigmatul din comunitățile noastre în jurul depresiei postpartum costă vieți",
+        "tip3": "Controlul dumneavoastră postnatal de 6 săptămâni na si opțional – verifică infecția, vindecarea, tensiunea arterială thaj sastipena mintală. Din experiența mea, mai puțin de 30% dintre džuvljaile rome participă la această vizită. Vă rugăm să fiți în acel 30%. Adu pe cineva cu tine te asta te ajută",
+        "tip4": "Acceptați fiecare ofertă de pomoć din partea familijai pentru gătit, curățenie thaj îngrijirea čhavorelor. Dormi kana čhavoul doarme. Singurele tale locuri de muncă si să hrănești čhavoul thaj să te recuperezi. Orice altceva šaj aștepta. Cele mai puternice mame pe care le cunosc si cele care au acceptat pomoćul",
+        "fact": "Depresia postpartum afectează 1 la 5 džuvljai din întreaga lume, amari se estimează că si chiar mai mare în comunitățile de romi din cauza stressului cauzat de sărăcie, discriminării thaj izolării. În fiecare komuniteto în care am înființat grupuri de sprijin pentru proaspete mame, ratele depresiei au scăzut thaj ratele alăptării au crescut - pentru că conexiunea se vindecă.",
+        "action": "te ați născut în ultimele 6 săptămâni thaj na ați avut un control postnatal, sunați astăzi la centrul dumneavoastră de sastipen. te te simți în mod persistent trist vaj copleșit, phen-i unei persoane de încredere - mama ta, mediatorul tău de sastipen, oricine. Prima conversație si pasul cel mai greu thaj cel mai important."
+      }
+    },
+    "children": {
+      "description": "Romane čhavorre si o avutno le amare komunitetenge thaj zaslužin sa lačhipen. Ando miro buti dikhlem čhavorre so na aven anglal — na katar našukipe, numa katar nasvalimata, vakcinimata vaj na dikhljov developmentalno derdi. Akava sikhavipen le del pale o šanse.",
+      "growthMilestones": {
+        "title": "Creștere thaj dezvoltare",
+        "description": "Fiecare čhavo se dezvoltă în propriul ritm thaj na vreau niciodată ca părinții să intre în panică din cauza variațiilor normale. amari am văzut thaj čhavore a căror dezvoltare întârziată a fost respinsă de familii ca „vor prinde din urmă” atunci kana intervenția timpurie ar fi putut face o diferență transformatoare. A ști la ce să urmărești na si anxietate - si atenție.",
+        "tip1": "Cântărirea lunară în primul berš si cel mai simplu instrument de monitorizare. Centrul tău de sastipen are diagrame de creștere care arată te čhavoul tău si pe drumul cel bun. Un čhavo care încetează să mai câștige în greutate vaj scade brusc pe diagramă are nevoie de investigație imediată - šaj fi la fel de simplu ca o ajustare a alimentației vaj la fel de important ca depistarea unei afecțiuni de bază",
+        "tip2": "Până la 6 luni, majoritatea bebelușilor se întind după obiecte thaj răspund la numele lor. Până la 12 luni, majoritatea spun câteva cuvinte thaj se ridică în picioare. Până la 24 luni, majoritatea merg bine thaj vorbesc în fraze scurte. te čhavoul dvs. se află în spatele acestor etape, cereți o evaluare a dezvoltării - pomoćul timpuriu face cea mai mare diferență",
+        "tip3": "Vorbește cu čhavoul tău în mod constant – povestește ceea ce faci, numește obiecte, cântă cântece. Familiile de romi au o tradiție orală puternică – folosește-o. čhavorei care aud mai multe cuvinte dezvoltă vocabulare mai mari thaj abilități cognitive mai puternice. Aceasta si makhloă thaj mai eficientă decât orice jucărie",
+        "tip4": "Dinții: curățați gingiile bebelușului cu o cârpă umedă încă de la naștere thaj folosiți un mic frotiu de pastă de dinți pentru čhavore de la primul dinte. Văd carii dentare severe la čhavorei romi la vârsta 3, adesea de la sticle de ceai dulce rata - acest lucru provoacă durere, infecție thaj probleme alimentare care afectează creșterea",
+        "fact": "Cercetările arată că čhavorei ale căror întârzieri de dezvoltare si identificate thaj abordate înainte de vârsta de 3 au șanse de 5 ori mai mari de a ja la școală la nivelul așteptat. În localitățile în care am înființat cântărire lunară thaj screening de dezvoltare, ratele de trimitere pentru intervenția timpurie s-au triplat - ceea ce înseamnă că čhavorei au primit pomoć pe care altfel l-ar fi ratat.",
+        "action": "te čhavoul dumneavoastră are sub 2, luați-l pentru o verificare a greutății thaj un screening de dezvoltare la centrul dumneavoastră de sastipen luna aceasta. te čhavoul dvs. a trecut de 2 thaj aveți îngrijorări cu privire la vorbire, mers pe jos vaj comportament, solicitați o trimitere la un specialist. Îngrijorarea ta si valabilă – acționează în conformitate cu ea."
+      },
+      "commonIllnesses": {
+        "title": "kana čhavoul tău si nasvalo",
+        "description": "În așezările cu locuințe supraaglomerate, salubritate limitată thaj ierni reci, čhavorei se îmbolnăvesc frecvent. Cele mai multe dintre aceste nasvalipen - diaree, tuse, febră - pot fi gestionate acasă te știi ce să faci thaj kana să escaladezi. amari am văzut thaj părinți așteptând prea mult, vaj grăbindu-se la camerele de urgență pentru afecțiuni pe care un simplu tratament la domiciliu le-ar fi rezolvat. Acest modul vă învață diferența.",
+        "tip1": "Febră sub 38.5°C: corpul čhavoului dumneavoastră luptă împotriva infecțiilor – si bine. Păstrați-le confortabil, îmbrăcate ușor thaj dați multe lichide. Febră peste 38.5°C: administrați čhavorelor paracetamol în doza corectă pentru greutatea lor (na paracetamol pentru adulți). te febra durează mai mult de 3 dives vaj čhavoul si neobișnuit de somnolent, solicitați asistență doktoroală",
+        "tip2": "Diareea ucide prin deshidratare, na prin infecția în sine. În momentul în care čhavoul dumneavoastră are scaune moale, începeți rehidratarea orală: 1 litru de paji curată fiartă + 6 lingurițe nivele de zahăr + jumătate de linguriță de sare. Dați înghițituri mici la fiecare câteva minute. Această rețetă a salvat mai mulți čhavore din întreaga lume decât orice antibiotic",
+        "tip3": "DUȚI čhavoUL LA spitalo te observați: respirație rapidă vaj dificilă, pieptul trăgând la fiecare respirație, imposibilitatea de a bea vaj de alăptat, vărsături repetate, somnolență neobișnuită vaj netrezire, convulsii vaj diaree cu sânge. na așteptați. Acestea si urgențe",
+        "tip4": "na administrați antibiotice fără prescripția doktoroului. na împărtășiți rețeta altui čhavo. na utilizați antibiotice rămase. Văd asta în mod constant în comunitățile noastre thaj creează bacterii rezistente la doktoroamente, care si mult mai greu de tratat. Antibioticele na fac nimic pentru răceli, gripă vaj majoritatea tusei",
+        "fact": "În comunitățile în care am lucrat, instruirea părinților să pregătească thaj să utilizeze soluția de rehidratare orală a redus spitaloizările čhavorelor pentru diaree cu peste 40% într-un singur berš. Cunoștințele si atât de puternice - iar ingredientele costă mai puțin decât un bilet de autobuz către spitalo.",
+        "action": "Chiar akana, memorează această rețetă: 1 litru paji curată + 6 lingurițe zahăr + jumătate linguriță sare. Exersați să o faceți o dată. te doriți, gustați - ar trebui să aibă gust de lacrimi. Să ai acest lucru gata înseamnă că atunci kana čhavoul tău are diaree la 2am, poți acționa imediat în loc să intri în panică."
+      },
+      "immunization": {
+        "title": "Programul de vakcinare",
+        "description": "Voi fi direct: în comunitățile de romi din Europa, ratele de vakcinare si mai mici decât media națională thaj asta na pentru că părinților romi na le pasă de čhavorei lor, ci pentru că sistemul de sastipen na a reușit să-i ajungă cu respect, acces thaj informații. Dezinformarea se răspândește thaj prin intermediul rețelelor sociale. Am ținut în spitalo čhavore cu rujeolă care na ar fi trebuit niciodată să fie acolo. Fiecare čhavo nevaccinat si un čhavo pe care sistemul l-a eșuat.",
+        "tip1": "Naștere până la 6 săptămâni: BCG (tuberculoză) thaj hepatită B. Acestea se administrează în spitalo înainte de externare. te čhavoul dumneavoastră s-a născut acasă, duceți-l la centrul de sastipen în prima săptămână de viață pentru aceste vakcinuri. na așteptați",
+        "tip2": "2, 3, 4 luni: cele „trei mari” reprize — DTP (difterie, tetanos, tuse convulsivă), poliomielita, Hib thaj hepatita B. Acestea si cele mai critice vakcinuri pentru čhavoărie. Fiecare rundă întărește imunitatea. Lipsa unuia slăbește întregul lanț",
+        "tip3": "12–15 luni: MMR (rujeolă, oreion, rubeolă). na pot sublinia suficient acest lucru. Rujeola na si o boală inofensivă a čhavoăriei - ucide, provoacă leziuni ale creierului thaj orbește. În 2019, am văzut un focar de rujeolă într-o așezare de romi, deoarece acoperirea a scăzut sub 80%. Era prevenit",
+        "tip4": "vakcinurile si makhloe în centrele de sastipen guvernamentale din fiecare țară europeană. na aveți nevoie de asigurare, na aveți nevoie de permis de ședere, na aveți nevoie de programare în majoritatea centrelor. te vi se refuză serviciul, acest lucru si ilegal - contactați mediatorul dumneavoastră de sastipen vaj biroul pentru drepturile pacienților",
+        "fact": "Diferența dintre ratele de vakcinare a romilor thaj ne-romii în unele țări europene depășește 15 puncte procentuale. Acest decalaj na si cauzat de credințele romilor despre vakcinuri – sondajele arată în mod constant părinții romi își doresc čhavorei vakcinați. Decalajul si cauzat de barierele de acces, discriminarea în asistența doktoroală thaj lipsa de informare. Reducerea acestui decalaj si o obligație a statului în temeiul articolului 11 din Carta Socială Europeană.",
+        "action": "Găsiți carnetul de vakcinare al čhavoului dvs. te lipsesc vreun vakcin vaj te na aveți un card, vizitați cel mai apropiat centru de sastipen în această săptămână. te vă confruntați cu bariere - limbă, documente, refuz - contactați mediatorul local de sastipen. Exact pentru asta suntem aici."
+      }
+    },
+    "chronic": {
+      "description": "Roma manuša meren 10 berša anglal sar aver Evropa. But hendek si katar kronikane nasvalimata — diabeto, jilo, phuvipen — so polokes phirvel thaj na sikavel kana si but berša. Kana avel simptomi, našavipen si kerdo. Amma but šaj te na avel thaj sa šaj te menadžol kana arakhljol sigo.",
+      "diabetes": {
+        "title": "Diabetul: amenințarea tăcută",
+        "description": "Diabetul de tip 2 si boala cronică pe care o întâlnesc cel mai frecvent în comunitățile de romi. Funcționează în familii, se dezvoltă cu dieta ieftină, bogată în zahăr, la care sărăcia îi obligă pe oameni thaj vă dăunează ochii, rinichii, picioarele thaj inima berša de dives înainte de a simți ceva rău. Am văzut bărbați cu 40 pierzând degetele de la picioare, iar džuvljaile orbesc, din cauza diabetului care na a fost niciodată diagnosticat pentru că na au făcut niciodată un test de sânge. Acest lucru šaj fi prevenit.",
+        "tip1": "te cineva din familia ta are diabet, riscul tău si de 2–3 ori mai mare. Aceasta na si soarta - si un semnal să acţionăm akana. Reduceți pâinea albă, zahărul thaj băuturile dulci. Înlocuiți-l cu fasole, linte, legume thaj paji. Am văzut familii inversând în totalitate pre-diabetul prin aceste schimbări",
+        "tip2": "30 minute de mers pe jos în fiecare dives reduc riscul de diabet cu 58%. na alerga. na sala de sport. Mersul pe jos. Îi spun fiecărui om peste 35 din comunitățile cu care lucrez: plimbarea si doktoroamentul. si makhlo thaj funcționează mai bine decât majoritatea pastilelor pentru prevenire",
+        "tip3": "Solicitați un test de glicemie a jeun la centrul dumneavoastră de sastipen cel puțin o dată pe berš te aveți peste 35, supraponderal vaj aveți antecedente familiale. si un simplu test de înțepătură cu degetul, si makhlo în majoritatea țărilor thaj durează 5 minute. Acest singur test šaj detecta diabetul cu berša înainte de apariția simptomelor",
+        "tip4": "Cunoașteți semnele de avertizare care înseamnă că diabetul šaj fi deja prezent: sete constantă, urinarea foarte frecventă (mai ales rata), vederea încețoșată, răni care se vindecă încet, oboseală inexplicabilă. te aveți două vaj mai multe dintre acestea, faceți-vă testarea săptămâna aceasta, na luna viitoare",
+        "fact": "Studiile efectuate în comunitățile de romi din Slovacia thaj România au găsit o prevalență a diabetului zaharat de 2–3 ori mai mare decât media națională, majoritatea cazurilor nediagnosticate. Într-un program la care am participat, screening-ul comunitar a detectat diabet la 18% dintre adulții peste 40 care na fuseseră niciodată testați. Aproape toate na au avut simptome.",
+        "action": "te aveți peste 35, jați la centrul dumneavoastră de sastipen thaj cereți un test de zahăr din sânge. Durează 5 minute. te rezultatul si peste 5.6 mmol/L (100 mg/dL), trebuie să începeți să faceți modificări akana. Aduceți un membru al familijai - te riscul dvs. si mare, probabil că thaj al lui si."
+      },
+      "heartHealth": {
+        "title": "Inima Ta",
+        "description": "Boala cardiovasculară si ucigașul numărul unu în comunitățile de romi – na din cauza geneticii, ci din cauza condițiilor în care trăim: stress cronic cauzat de sărăcie thaj discriminare, rate ridicate de fumat, diete modelate de ceea ce permite sărăcia thaj aproape lipsa accesului la screening preventiv. Am participat la funeraliile bărbaților din 50 care au murit din cauza unor atacuri de cord care au fost complet prevenite. Acest modul există pentru că refuz să particip mai mult.",
+        "tip1": "Fumatul si cel mai distructiv lucru pe care îl poți face inimii tale. Știu că si profund înrădăcinată în cultura comunității noastre thaj na si aici să judec, amari vă datorez onestitate. Fiecare țigară vă dăunează vaselor de sânge. te na puteți renunța, reduceți. te poți renunța, inima ta începe să se repare în 24 ore",
+        "tip2": "Hipertensiunea arterială si numită ucigașul tăcut, deoarece na simți nimic până kana apare un accident vascular cerebral vaj un atac de cord. Verificați-vă tensiunea arterială la orice farmacie - si makhlo. Normal si sub 120/80. Mai sus 140/90 si periculos thaj necesită tratament. Am găsit tensiune arterială periculoasă la oameni care s-au simțit perfect sănătoși",
+        "tip3": "Reduceți sare: Bucătăria Rom si aromată thaj frumoasă, amari multe preparate tradiționale si foarte sărate. Utilizați boia de ardei, usturoi, ceapă, ierburi thaj piper în loc să adăugați sare suplimentară. Papilele tale gustative se adaptează în 2 săptămâni — mâncarea va avea un gust mai bun, na mai rău. Am văzut că tensiunea arterială a scăzut cu 10 puncte numai din această schimbare",
+        "tip4": "stressul cronic cauzat de discriminare, sărăcie, amenințări de evacuare thaj conflicte familiale si o cauză directă a nasvalipenlor de inimă. Aceasta na si o opinie - si un doktoroament documentat. Hormonii stressului vă afectează vasele de sânge de-a lungul anilor. Găsirea oricărei modalități de a elibera stressul - mers pe jos, muzică, rugăciune, vorbire, komuniteto - si un doktoroament pentru inimă",
+        "fact": "Bărbații romi mor din cauza nasvalipenlor cardiovasculare în medie cu 10–15 berša mai devreme decât populația generală. Datele proprii ale Comisiei Europene arată acest lucru. amari 80% din atacurile de cord prematur pot fi prevenite prin modificări ale stilului de viață thaj tratamentul precoce al hipertensiunii arteriale thaj al colesterolului. Prevenirea funcționează – te aveți acces la ea.",
+        "action": "Săptămâna aceasta, faceți două lucruri: (1) jați la o farmacie thaj verificați-vă tensiunea arterială - notați numerele. (2) Numărați câte țigări fumați pe dives thaj încercați să reduceți cu 3 pe dives. Aceste două acțiuni si cele mai puternice măsuri de prevenire a inimii pe care o šaj lua orice individ."
+      },
+      "respiratory": {
+        "title": "Plămânii thaj respirația",
+        "description": "Am lucrat în așezări în care familiile ard lemne, cărbune vaj chiar plastic thaj cauciuc pentru încălzire iarna. Unde 8 persoane dorm în două camere fără ventilație. Unde umezeala curge pe pereți thaj mucegaiul negru crește în fiecare colț. Boala respiratorie în aceste condiții na si surprinzătoare – si rezultatul previzibil al locuinței în care nimeni na ar trebui să locuiască. În timp ce luptăm pentru o locuință mai bună, trebuie să protejăm thaj plămânii pe care îi avem.",
+        "tip1": "Fumul din interior si cel mai imediat pericol respirator pe care îl văd. te încălziți cu combustibil solid, asigurați-vă ventilația - chiar thaj crăparea unei ferestre ajută. na arde niciodată plastic, cauciuc vaj lemn vopsit - fumul conțin substanțe chimice care provoacă leziuni pulmonare permanente, în special la čhavorei ai căror plămâni si încă în curs de dezvoltare",
+        "tip2": "Umezeala thaj mucegaiul provoacă astm bronșic, bronșită cronică thaj agravează orice infecție respiratorie. Ștergeți mucegaiul vizibil cu un amestec de paji thaj oțet vaj înălbitor. Deschideți ferestrele cel puțin 15 minute zilnic, chiar thaj iarna. Agățați rufele umede afară atunci kana si posibil - uscarea rufelor în interior adaugă cantități enorme de umiditate aerului",
+        "tip3": "O tuse care durează mai mult de 3 săptămâni, în special cu scădere în greutate, transpirații nocturne vaj sânge în scuipat, trebuie investigată pentru tuberculoză. TB se vindecă cu tratament makhlo, amari si thaj foarte contagioasă. În comunitățile de romi, ratele TB si de 3–5 ori mai mari decât media națională în mai multe țări europene. Testarea timpurie vă protejează întreaga familija",
+        "tip4": "čhavorei care cresc în medii cu fum vaj mucegai au capacitatea pulmonară redusă permanent - vor purta plămâni mai puțin sănătoși toată viața. Chiar te na vă puteți schimba imediat situația locuinței, reducerea expunerii la fum thaj ventilarea cât mai mult posibil le protejează plămânii în curs de dezvoltare.",
+        "fact": "WHO identifică poluarea aerului casnic drept al patrulea cel mai mare risc global pentru sastipen. În așezările de romi în care am lucrat, peste 60% dintre čhavore au avut infecții respiratorii recurente - rate care au scăzut semnificativ atunci kana familiile au îmbunătățit ventilația thaj au redus arderea în interior a deșeurilor. Condițiile de locuit na si vina familiilor, amari strategiile de adaptare salvează vieți în timp ce se luptă pentru schimbarea sistemică.",
+        "action": "Astăzi: verificați te există mucegai vizibil în casa dvs. thaj curățați-l cu înălbitor vaj oțet diluat. Deschideți cel puțin o fereastră timp de 15 minute. te cineva din gospodăria dvs. a tuse de mai mult de 3 săptămâni, jați la centrul de sastipen pentru un screening TB — si makhlo thaj durează 15 minute."
+      }
+    },
+    "mental": {
+      "description": "Ando 15 berša ande romane komunitete, sikhavlem kaj o phari baro na si fizikano nasvalipen — si o baro diskriminacijako, čororipnasko, darosko katar evikcija, mangipen vaš o avutno le čhavengo thaj o gond kaj na kaske jekh ando sistem. Phenas stress. Kana but berša, avel aver. Zaslužinel te phenel, te žanel thaj te lačhol — bi laš.",
+      "stressManagement": {
+        "title": "Trăiește cu stress",
+        "description": "na voi pretinde că un exercițiu de respirație vă va rezolva problemele. te ești îngrijorat că familia ta va fi evacuată, nicio aplicație de meditație na va rezolva asta. amari am lucrat cu sute de oameni din comunitățile noastre care suferă de stress enorm thaj am văzut ce se întâmplă atunci kana stressul na si gestionat de berša de dives: atacuri de cord la bărbați în 40, džuvljai care na pot mânca vaj dormi, čhavore care cresc în gospodării electrizate de tensiune. na ne putem schimba întotdeauna circumstanțele, amari putem schimba modul în care le purtăm.",
+        "tip1": "Metoda de respirație 4-4-8 acţionează imediat asupra sistemului dumneavoastră nervos. Inspirați pe nas pentru 4 numără, țineți pajisat pentru 4, expirați încet pe gură pentru 8. Faceți acest lucru de 5 ori. Pulsul scade, mușchii se relaxează. Învăț acest lucru familiilor înainte de vizitele la spitalo, înainte de ședințele de judecată, înainte de orice întâlnire stressantă. si un instrument pe care îl ai mereu cu tine",
+        "tip2": "Mersul pe jos si cel mai subestimat doktoroament pentru stress. 20 minute de mers pe jos — na rapid, doar mers pe jos — reduc cortizolul, hormonul stressului, cu până la 30%. te na puteți ieși din casă, jați în cerc. Mișcarea în sine si cea care funcționează, na peisajul",
+        "tip3": "Vorbește cu cineva. na pentru a rezolva problema, ci doar pentru a împărți greutatea. Am văzut bărbați din comunitățile noastre purtând totul singuri, pentru că a cere pomoć se simte ca o slăbiciune. În 15 berša de această muncă, cei mai puternici oameni pe care i-am întâlnit si cei care au învățat să spună „mă lupt”",
+        "tip4": "Fii intenționat cu privire la ceea ce îți intră în minte. Rețelele de socializare, știrile, argumentele de familija care se repetă în capul tău - acestea si surse de stress pe care le poți controla. na spun să ignori realitatea. Spun că alegeți kana vă angajați cu ea thaj creați spații în dives voastră în care sunteți în mod deliberat în pace",
+        "fact": "Comunitățile de romi se confruntă cu ceea ce sastipena publică numește „stressul minoritar” – taxa fiziologică cronică a discriminării, excluderii thaj sărăciei. Cercetările arată că acest lucru crește nivelul de cortizol în mod permanent, accelerând nasvalipenle de inimă, diabetul thaj nasvalipenle mintale. Aceasta na si slăbiciune. si biologia care răspunde la nedreptate.",
+        "action": "În seara asta, înainte de culcare, puneți-vă telefonul într-o altă cameră thaj exersați 4-4-8 respirația timp de 5 minute. te aveți un partener vaj un membru al familijai care dorește, faceți-o împreună în tăcere. Acest mic act creează o graniță între stressul zilei thaj somnul tău - iar somnul si atunci kana corpul tău repară daunele cauzate de stress."
+      },
+      "sleep": {
+        "title": "Somnul ca doktoroament",
+        "description": "În casele supraaglomerate, unde televizorul si mereu pornit, în care čhavorei împart patul cu părinții, unde zgomotul vecinilor vaj a străzii na se oprește niciodată — somnul na si un dat. si ceva pentru care trebuie să lupți. thaj totuși, somnul si atunci kana corpul tău se repară singur, kana creierul tău procesează stressul zilei thaj kana sistemul tău imunitar se reconstruiește. Privarea cronică de somn si la fel de periculoasă ca fumatul - thaj în comunitățile noastre, si aproape universal.",
+        "tip1": "Încercați să dormiți thaj să vă treziți aproximativ la aceeași oră în fiecare dives, inclusiv în weekend. Știu că acest lucru si greu cu munca în schimburi, čhavorei mici vaj mediile zgomotoase, amari chiar thaj o fereastră constantă de 6 ore si mai reparatoare decât blocurile aleatorii de 8 ore. Corpul tău tânjește la ritm",
+        "tip2": "Telefoanele thaj ecranele înainte de culcare si unul dintre cele mai rele distrugătoare de somn moderne. Lumina albastră phen creierului tău că si dives. te trebuie să folosiți telefonul, setați-l în modul rat după 9pm. Mai bine încă, încărcați-l într-o altă cameră - am văzut că calitatea somnului se îmbunătățește dramatic de la această singură schimbare",
+        "tip3": "Cofeina rămâne în sistem timp de 8 ore. În acea după-amiază, cafeaua vaj ceaiul turcesc la 4p.m. si încă active în sânge la miezul nopții. Treceți la ceai de plante (mușețel, tei) după prânz. Aceasta si una dintre cele mai simple îmbunătățiri pe care le recomand thaj oamenii si mereu surprinși de cât de mult ajută",
+        "tip4": "te împărțiți o cameră cu čhavore vaj membri ai familijai, micile schimbări vă ajută: un timp constant de „stingere”, reducerea treptată a zgomotului, utilizarea unei perdele pentru a crea o limită vizuală a somnului. Învățați-i pe čhavore că timpul de somn si timpul în familija - kana gospodăria se liniștește împreună, toată lumea doarme mai bine",
+        "fact": "Cercetările privind somnul în comunitățile marginalizate arată că privarea cronică de somn cauzată de supraaglomerare, zgomot thaj stress contribuie în mod semnificativ la decalajul de sastipen. Persoanele care dorm în mod constant mai puțin de 6 ore au un risc de 4x mai mare de a contracta infecții thaj un risc de 2x mai mare de nasvalipen de inimă. Somnul na si un lux - si o bază pentru supraviețuire.",
+        "action": "În seara asta: setează o alarmă de culcare pe telefon cu 30 minute înainte de a dori să dormi. kana sună, închideți televizorul, puneți telefonul deoparte thaj întindeți-vă în întuneric făcând 4-4-8 respirând până adormi. Faceți acest lucru timp de 7 nopți thaj observați diferența."
+      },
+      "communitySupport": {
+        "title": "Puterea conexiunii",
+        "description": "Cultura Rom înțelege deja ceva pe care doktoroina occidentală îl măsoară abia akana: că apartenența, familia thaj komunitetoa vă protejează sastipena la fel de puternic ca orice doktoroament. Am văzut oameni supraviețuind celor mai dificile circumstanțe - evacuări, nasvalipen, pierderi - pentru că komunitetoa lor i-a ținut. thaj am văzut oameni prăbușindu-se sub mult mai puțin atunci kana erau izolați. Știința confirmă akana ceea ce știau strămoșii noștri: singurătatea ucide, conexiunea vindecă.",
+        "tip1": "te cunoașteți pe cineva din komunitetoa dvs. care a pierdut recent un membru al familijai, a fost diagnosticat cu o boală, thaj-a pierdut locul de muncă vaj trece printr-o criză - na așteptați ca acesta să ceară pomoć. Vizitează-i. Aduceți mâncare. Stai cu ei. În cultura Rom, acesta si instinctul. În știința sănătății, aceasta se numește „prescripție socială” – thaj funcționează mai bine decât majoritatea pastilelor",
+        "tip2": "Rușinea si dușmanul sănătății. Am întâlnit oameni care au ascuns diabetul, depresia, HIV thaj violența domestică de berša de dives pentru că se temeau de ceea ce va phen komunitetoa. De fiecare dată kana cineva din komunitetoa noastră vorbește deschis despre lupta sa, le dă voie altora. na trebuie să împărtășiți totul, amari împărtășirea a ceva rupe tăcerea care îi ține pe oameni nasvaloi",
+        "tip3": "Adunări, sărbători, muzică, rugăciune, povestiri - acestea na si distrageri de la sastipen. Ei si de sastipen. Studiile arată că participarea regulată la activități culturale comunitare reduce depresia thaj riscul cardiovascular. Bucuria thaj apartenența pe care le creează si doktoroamente măsurabile",
+        "tip4": "Verificați persoanele în vârstă thaj persoanele izolate din komunitetoa dvs. Persoana care locuiește singură, bunica ai cărei čhavore s-au mutat, bărbatul care a încetat să mai vină la adunări. O vizită de 10 minute vaj un apel telefonic šaj fi singura conexiune umană pe care o au în acea dives - thaj ar putea fi ceea ce îi ține în viață",
+        "fact": "Studiul de 85 de la Harvard privind sastipena adulților a concluzionat că cel mai puternic predictor al sănătății thaj longevității si calitatea relațiilor voastre - na dieta, exercițiile fizice vaj genetica. Singurătatea crește riscul de mortalitate cu 26%, echivalent cu fumatul zilnic cu 15 țigări. Comunitățile de romi au o bogăție culturală în conexiune socială, care si un adevărat bun pentru sastipen – protejează-o.",
+        "action": "Săptămâna aceasta, contactați o persoană din komunitetoa dvs. cu care na ați vorbit recent. na prin text - prin voce vaj în persoană. Întrebați cum si thaj ascultați. Acest act de conexiune si promovarea sănătății în forma sa cea mai pură."
+      },
+      "seekHelp": {
+        "title": "kana E Prea Mult",
+        "description": "Există un punct în care stressul, tristețea thaj îngrijorarea traversează o linie în ceva care are nevoie de pomoć profesional – iar în comunitățile de romi, această linie aproape niciodată na si recunoscută pentru că suntem învățați să înduram, să fim puternici, să ne descurcăm în familija. Am văzut costul acestei tăceri: bărbați care beau pentru a se descurca până kana ficatul le cedează, džuvljai care încetează să mănânce, adolescenți care își fac rău. A cere pomoć na înseamnă a-ți trăda cultura. Îți protejează viața, astfel încât să poți fi acolo pentru oamenii care au nevoie de tine.",
+        "tip1": "te tu vaj cineva pe care îl cunoști na ai reușit să funcționeze în mod normal timp de mai mult de 2 săptămâni – na poți dormi, na šaj mânca, na ai grijă de čhavore, plânge constant vaj na are energie pentru nimic – acest lucru depășește stressul normal. Aceasta si depresia thaj si o afecțiune la fel de reală ca diabetul. na si slăbiciune thaj răspunde la tratament",
+        "tip2": "Primul pas si doktoroul de familija. phenți: „Mă simt foarte rău de mai bine de 2 săptămâni thaj am nevoie de pomoć”. na trebuie să explici totul. doktoroul de familija vă šaj evalua thaj vă šaj trimite la un psiholog vaj psihiatru. Acest serviciu si makhlo vaj low-cost în majoritatea țărilor europene. te doktoroul dumneavoastră vă concediază, consultați altul",
+        "tip3": "te cineva din familia ta menționează că vrea să moară, vrea să dispară vaj simte că toată lumea ar fi mai bine fără ei - ia asta în serios imediat. Rămâi cu ei. Îndepărtați accesul la doktoroamente thaj obiecte ascuțite. Sunați la linia națională de criză vaj la 112. na reacționezi exagerat. Aceste cuvinte si un strigăt de pomoć la care trebuie răspuns",
+        "tip4": "doktoroamentele pentru sastipena mintală na si rușinoase, creează dependență vaj „pentru nebuni”. Antidepresivele si prescrise la milioane de oameni din întreaga lume thaj salvează vieți. Ele na schimbă cine ești – ele ridică ceața chimică care te împiedică să fii cine ești. Am văzut oameni transformați prin tratament la care au rezistat berša de dives din cauza stigmatizării",
+        "fact": "Comunitățile de romi se confruntă cu cele mai mari rate de depresie thaj anxietate din Europa, determinate de factori structurali precum discriminarea, sărăcia thaj lipsa accesului la servicii. Cu toate acestea, utilizarea serviciilor de sastipen mintală în comunitățile de romi si printre cele mai scăzute. În programele în care am contribuit la conectarea oamenilor la îngrijirea sănătății mintale sensibile din punct de vedere cultural, îmbunătățirea calității vieții a fost profundă – na doar pentru individ, ci pentru întreaga lor familija.",
+        "action": "Salvați acest număr în telefon chiar akana: linia de asistență pentru criza de sastipen mintală din țara dvs. te ești în criză, sună. te cineva pe care îl cunoști si în criză, sună-l cu el. thaj te te-ai luptat de mai mult de 2 săptămâni, rezervă o întâlnire cu doktoroul de familija în această săptămână. Meriți să te simți mai bine, iar pomoćul există."
+      }
+    }
+  },
+  "track": {
+    "title": "Divesko sastipen thovipen",
+    "subtitle": "Sar si tut astăzi?",
+    "moodTitle": "Gond",
+    "moodGreat": "But lačho",
+    "moodGood": "Lačho",
+    "moodOkay": "Maj lačho",
+    "moodLow": "Na but",
+    "moodBad": "But našalo",
+    "waterTitle": "Paji",
+    "waterSubtitle": "Thov savore gilash kana pives",
+    "waterGoal": "Lakho: 8 gilasha",
+    "activityTitle": "Buti ando dives",
+    "activityWalk": "Phirde",
+    "activityExercise": "Kerde buti",
+    "activityRest": "Sovel",
+    "saveCheckin": "Arakhel divesko thovipen",
+    "savedSuccess": "Thovipen arakhljov!",
+    "weeklyTitle": "Kado kurko",
+    "streakDays": "dives anglal",
+    "loggedToday": "Thovdo ando dives",
+    "noLogsYet": "Šuru tiro angluno thovipen telal",
+    "historyTitle": "Neve istorija"
+  },
+  "profile": {
+    "title": "Profilo",
+    "guestUser": "Gost",
+    "guestSubtitle": "Sikhaves anonimno",
+    "languagePreference": "Chibako alosaripen",
+    "changeLanguage": "Paruv chib",
+    "learningProgress": "Sikhavipen",
+    "pillarsStarted": "Šurune stolpura",
+    "modulesCompleted": "Pherdo module",
+    "trackingStreak": "Thovipen anglal",
+    "days": "dives",
+    "exportData": "Exporto mire data (GDPR)",
+    "exportDescription": "Lel sa tiri sastipen thovimata sar CSV failo.",
+    "clearData": "Xas sa data",
+    "clearDataConfirm": "Si sigurno? Na šaj te na avel pale.",
+    "aboutTitle": "Palal Redi Health",
+    "aboutText": "Redi Health si makhlo, multichibovdo sastipen sikhavipen vaš thana kaj na si but doktori — gava, thana, romane thana, ruralno Evropa — kaj o drom ko doktor si lungo thaj o oficijalno mesazho na avel ande tiri chib.",
+    "privacyPolicy": "Privatno politika",
+    "contactUs": "Kontaktirinen amen",
+    "progressNone": "Na san šurdo te sikhaves.",
+    "progressStart": "Ja ko Mëso te šurus.",
+    "version": "Versija"
+  },
+  "mediator": {
+    "title": "Mediataro dashboard",
+    "subtitle": "Pomož te sastipen le tiri komunitetosko",
+    "accessCode": "Thov o kodo",
+    "accessCodePlaceholder": "4 cifre",
+    "accessCodeHint": "Puch o koordinatoro vaš o kodo",
+    "accessCodeError": "Na lačho kodo. Proba pale.",
+    "accessCodeSubmit": "Ja ando dashboard",
+    "communityMembers": "Manuša ando komuniteto",
+    "logsThisMonth": "Sastipen thovimata kado mase",
+    "alertsActive": "Aktivne alarme",
+    "quickActions": "But droma",
+    "logVisit": "Thov jekh vizita",
+    "recordHealth": "Thov sastipen data",
+    "viewReports": "Dikh raporte",
+    "recentActivity": "Neve aktiviteto",
+    "noActivity": "Na si neve aktiviteto",
+    "memberName": "Anav le manušesko",
+    "visitDate": "Dives le vizitako",
+    "notes": "Nota",
+    "saveVisit": "Arakhel vizita",
+    "visitSaved": "Vizita arakhljov",
+    "healthSummary": "Sastipen sumaro le komunitetosko",
+    "pillarProgress": "Sikhavipen andar stolpura",
+    "contactSupport": "Kontakt regionalno koordinatoro",
+    "resources": "Resurse vaš mediatoro",
+    "downloadGuide": "Lel terenikani gajd (PDF)"
+  },
+  "policies": {
+    "title": "Platform Policies",
+    "subtitle": "The governance framework that defines what Redi Health can and cannot do — and the commitments we make to every user.",
+    "goNoGoTitle": "Feature release policy",
+    "goNoGoBody": "Features that may influence clinical decisions require completed policy controls before release: AI triage, symptom severity, prescription outputs, vaccine recommendations, Roma-friendly provider labels, mediator visit logging, youth sexual health, and legal guidance.",
+    "disclaimer": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "clinical-safetyTitle": "Clinical Safety & Escalation",
+    "clinical-safetyDesc": "Defines what the AI may and may not say, how emergencies are escalated before any AI call, and the governance model for all health-related changes.",
+    "clinicalSafety1": "The AI never diagnoses, never prescribes doses, and never advises stopping a prescribed medication.",
+    "clinicalSafety2": "11 emergency patterns bypass the AI entirely and immediately instruct the user to call 112 or a specialist helpline.",
+    "clinicalSafety3": "Every triage output is assigned one of five severity categories — Emergency, Urgent, Routine, Self-care, or Information only.",
+    "clinicalSafety4": "Changes to red-flag patterns, system prompts, or triage logic require sign-off from the clinical governance lead before deployment.",
+    "source-policyTitle": "Public Health Source Policy",
+    "source-policyDesc": "Defines which sources may be used for health claims, how they must be cited, and how they are kept up to date.",
+    "sourcePolicy1": "All health facts cite WHO, ECDC, IFRC, national ministries, or peer-reviewed clinical guidance — never social media, single studies, or commercial sources.",
+    "sourcePolicy2": "Every content module carries a 'last reviewed' date and reviewer role. Overdue modules are hidden automatically.",
+    "sourcePolicy3": "Country-specific overrides (vaccine schedules, emergency numbers, patient rights) follow a 5-step clinical review process before going live.",
+    "safeguardingTitle": "Safeguarding Policy",
+    "safeguardingDesc": "Protections for children, pregnant people, survivors of abuse and coercion, people in mental health crisis, and people seeking sexual health information.",
+    "safeguarding1": "Self-harm and suicidal ideation are intercepted before any AI response — the user receives a crisis line and an instruction to stay with someone they trust.",
+    "safeguarding2": "Descriptions of active domestic violence trigger a safety-first response with the local domestic violence helpline, not general advice.",
+    "safeguarding3": "Sexual health content in the Student Academy requires country-specific legal review and Tier 2 clinical sign-off before release.",
+    "safeguarding4": "Every AI page and triage result includes a visible 'I need help now' button linking to emergency and crisis numbers.",
+    "roma-equityTitle": "Roma Equity & Anti-Stigmatization",
+    "roma-equityDesc": "Standards for how Roma communities are described, how content is reviewed, and how surveillance and profiling are prevented.",
+    "romaEquity1": "All content about Roma communities must follow strengths-based framing — naming structural causes for health disparities, never cultural ones.",
+    "romaEquity2": "Content about Roma health is reviewed by a Roma health mediator or Roma-led NGO before publication.",
+    "romaEquity3": "Ethnicity data is never collected. Analytics are never segmented by ethnic identity. Location data is never stored.",
+    "romaEquity4": "A Roma Health Advisory Board reviews this policy annually and can flag content concerns at any time via equity@redi.healthcare.",
+    "provider-verificationTitle": "Provider Verification",
+    "provider-verificationDesc": "How clinic listings are verified, what 'Roma-friendly' means and requires, and how users can report harm.",
+    "providerVerification1": "The 'Roma-friendly' label requires: no documentation barriers beyond what all patients face, anti-discrimination training, no substantiated complaints in 3 years, and a Roma mediator assessment within 18 months.",
+    "providerVerification2": "Unverified listings carry a mandatory warning banner and an 'Unverified' badge — no Roma-friendly label is shown until criteria are met.",
+    "providerVerification3": "Users can report discrimination or incorrect information directly from every listing. Discrimination reports are reviewed within 3 business days.",
+    "mediator-policyTitle": "Mediator Operating Policy",
+    "mediator-policyDesc": "Role boundaries, consent requirements, data minimisation rules, and safety escalation protocols for field health mediators.",
+    "mediatorPolicy1": "Mediators provide education, navigation, and referral support — not clinical assessment or prescriptions.",
+    "mediatorPolicy2": "A consent attestation is required before every visit log is saved. Logs must not record ethnicity, immigration status, or clinical diagnoses.",
+    "mediatorPolicy3": "Mediators follow a defined referral escalation pathway — immediate 112 call for emergencies, helpline for safeguarding concerns, programme supervisor within 24 hours for non-immediate concerns.",
+    "mediatorPolicy4": "Mediator PINs expire after 12 months and are revoked immediately when a mediator leaves the programme.",
+    "data-governanceTitle": "Data Governance",
+    "data-governanceDesc": "How all data — local and server-stored — is classified, retained, and controlled, and how every user can export or delete their data.",
+    "dataGovernance1": "Local device data (family logs, progress, mediator visits) is treated with the same privacy rights as server data — exportable and deletable from Profile > Data.",
+    "dataGovernance2": "Health logs are retained for 5 years or until you delete them. Your account data is hard-deleted within 30 days of a deletion request.",
+    "dataGovernance3": "Guest and anonymous users are first-class subjects: the app explains what local data exists and how to clear it — no auth errors returned.",
+    "dataGovernance4": "Every admin configuration change, provider update, mediator PIN action, and GDPR request is logged in an audit trail accessible only to the Data Protection Officer."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of terms",
+        "body": "By accessing or using Redi Health, you agree to these Terms of Service. If you do not agree, do not use the service. These terms apply to all users including guests, registered users, health mediators, and programme administrators."
+      },
+      "service": {
+        "title": "2. What Redi Health provides",
+        "body": "Redi Health is a health literacy and navigation platform. It provides AI-assisted health information, educational content, misinformation fact-checking, symptom guidance, and tools for health mediators. The platform is intended for educational and informational purposes."
+      },
+      "notMedical": {
+        "title": "3. Not a medical device",
+        "body": "Redi Health is not a medical device and does not provide medical diagnosis, treatment, or prescriptions. All content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions. In an emergency, call 112 or your local emergency number immediately."
+      },
+      "aiLimits": {
+        "title": "4. AI limitations",
+        "body": "AI-generated responses are based on general health knowledge and may not reflect the latest clinical guidance, local health system rules, or your individual circumstances. They must not be treated as personalised medical advice. The AI does not diagnose and does not prescribe."
+      },
+      "userConduct": {
+        "title": "5. User conduct",
+        "body": "You must not use Redi Health to obtain specific medical prescriptions or diagnoses, to collect information about others without their consent, for commercial data harvesting, or to circumvent the platform's clinical safety boundaries. Mediators must comply with the Mediator Operating Policy."
+      },
+      "data": {
+        "title": "6. Data and privacy",
+        "body": "Your data is governed by our Privacy Policy and Data Governance Policy, which describe what is collected, how it is used, and how you can export or delete it. Local data (progress, family logs, check-ins) is stored on your device. Server data requires an account. Both are subject to your full data rights."
+      },
+      "liability": {
+        "title": "7. Limitation of liability",
+        "body": "Redi Health is provided 'as is' without warranties of accuracy or fitness for a particular purpose. To the maximum extent permitted by law, Redi Health is not liable for any harm arising from reliance on the platform's content, including AI-generated responses. You use the platform at your own risk."
+      },
+      "changes": {
+        "title": "8. Changes to these terms",
+        "body": "We may update these terms to reflect changes in the platform or applicable law. Material changes will be notified via the app. Continued use of the platform after notification constitutes acceptance of the updated terms."
+      },
+      "contact": {
+        "title": "9. Contact",
+        "body": "For questions about these terms, contact us at legal@redi.healthcare. For data and privacy matters, contact our Data Protection Officer at dpo@redi.healthcare."
+      }
     }
   }
 }

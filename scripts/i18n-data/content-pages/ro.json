@@ -1,0 +1,497 @@
+{
+  "healthQuiz": {
+    "meta": {
+      "title": "Test de sănătate — Redi Health",
+      "description": "Testează-ți cunoștințele de sănătate cu chestionare interactive"
+    },
+    "title": "Test de sănătate",
+    "subtitle": "Testează-ți cunoștințele. Învață ceva nou.",
+    "backToQuizzes": "Înapoi la chestionare",
+    "seeResults": "Vezi rezultatele",
+    "nextQuestion": "Următoarea întrebare",
+    "questionsCount": "{count} întrebări",
+    "results": {
+      "perfect": "Scor perfect!",
+      "great": "Mare treaba!",
+      "good": "Efort bun!",
+      "keepLearning": "Continuați să învățați!",
+      "score": "Ai luat {score} din {total} corect",
+      "tryAgain": "Încercați din nou",
+      "moreQuizzes": "Mai multe chestionare"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotice",
+        "description": "Știi când să folosești antibiotice?",
+        "questions": [
+          {
+            "question": "Pot antibioticele să vindece gripa?",
+            "options": [
+              "Da",
+              "Nu",
+              "Uneori"
+            ],
+            "explanation": "Gripa este cauzată de un virus. Antibioticele ucid doar bacteriile. Luarea de antibiotice pentru gripă nu face nimic și poate face infecțiile viitoare mai greu de tratat."
+          },
+          {
+            "question": "Te simti mai bine dupa 3 zile de antibiotice. Ar trebui să te oprești?",
+            "options": [
+              "Da, te-ai vindecat",
+              "Nu, termină cursul complet",
+              "Luați jumătate din pastilele rămase"
+            ],
+            "explanation": "Terminați ÎNTOTDEAUNA cursul complet. Dacă te oprești devreme, unele bacterii supraviețuiesc și devin rezistente. Data viitoare, același antibiotic nu va funcționa."
+          },
+          {
+            "question": "Puteți împărtăși antibiotice cu un membru al familiei care are simptome similare?",
+            "options": [
+              "Da, economisește bani",
+              "Nu, niciodată",
+              "Doar dacă este aceeași boală"
+            ],
+            "explanation": "Nu împărtăși niciodată antibiotice. Infecțiile diferite au nevoie de medicamente diferite. Antibioticul greșit poate fi periculos și nu va ajuta."
+          },
+          {
+            "question": "Ce se întâmplă dacă iei antibiotice prea des?",
+            "options": [
+              "Nimic rău",
+              "Corpul tău devine imun la boli",
+              "Bacteriile devin rezistente și mai greu de ucis"
+            ],
+            "explanation": "Rezistența la antibiotice este o criză globală. Când bacteriile devin rezistente, infecțiile simple pot deveni mortale. Luați antibiotice numai atunci când vi le prescrie un medic."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "Vaccinuri",
+        "description": "Separați faptele de mituri",
+        "questions": [
+          {
+            "question": "Vaccinurile provoacă autism?",
+            "options": [
+              "Da",
+              "Nu",
+              "Nu știm"
+            ],
+            "explanation": "NU. Acest mit a pornit de la un studiu fraudulos care a fost retras. Medicul care a publicat-o și-a pierdut permisul medical. Zeci de studii cu milioane de copii demonstrează că vaccinurile NU provoacă autism."
+          },
+          {
+            "question": "Este sigur să dai unui copil mai multe vaccinuri deodată?",
+            "options": [
+              "Nu, e prea mult",
+              "Da, este sigur și testat",
+              "Doar unul la un moment dat"
+            ],
+            "explanation": "Sistemul imunitar al bebelușilor gestionează mii de germeni în fiecare zi. Vaccinurile combinate sunt testate temeinic și sigure. Amânarea vaccinurilor lasă copilul neprotejat."
+          },
+          {
+            "question": "Copilul meu are o răceală ușoară. Se mai pot vaccina?",
+            "options": [
+              "Nu, așteptați până când sunt complet sănătoși",
+              "Da, o răceală ușoară e bine",
+              "Doar cu permisiunea medicului"
+            ],
+            "explanation": "O răceală ușoară, febră scăzută sau nasul care curge NU este un motiv pentru a amâna vaccinarea. Doar bolile severe necesită amânare. Întrebați medicul dumneavoastră dacă nu sunteți sigur."
+          },
+          {
+            "question": "Conțin vaccinurile substanțe chimice periculoase?",
+            "options": [
+              "Da, sunt pline de toxine",
+              "Nu, toate ingredientele sunt sigure în cantitățile mici folosite",
+              "Unii fac, alții nu"
+            ],
+            "explanation": "Ingredientele vaccinului sunt prezente în cantități mici, sigure. Primești mai mult aluminiu din laptele matern decât dintr-un vaccin. Fiecare ingredient a fost testat pentru siguranță."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Diabetul",
+        "description": "Înțelegerea managementului diabetului",
+        "questions": [
+          {
+            "question": "Este diabetul cauzat de consumul de prea mult zahăr?",
+            "options": [
+              "Da",
+              "Nu, e mai complex",
+              "Doar tipul 2"
+            ],
+            "explanation": "Diabetul este cauzat de genetică, stilul de viață și modul în care corpul dumneavoastră procesează insulina. Consumul de zahăr nu îl cauzează în mod direct, dar o dietă nesănătoasă și obezitatea cresc riscul."
+          },
+          {
+            "question": "Poate fi vindecat diabetul cu remedii naturale precum scorțișoara?",
+            "options": [
+              "Da, scorțișoara o vindecă",
+              "Nu, nu există leac, dar poate fi gestionat",
+              "Da, cu destul usturoi și ierburi"
+            ],
+            "explanation": "NU există tratament pentru diabet. Poate fi GESTIONAT cu medicamente, mancare sanatoasa si exercitii fizice. Scorțișoara poate avea beneficii minuscule, dar NU POATE înlocui medicamentele. Oamenii care își opresc medicamentele ajung la spital."
+          },
+          {
+            "question": "O persoană cu diabet se simte amețită și transpirată. Ce ar trebui să faci?",
+            "options": [
+              "Dați-le insulină",
+              "Dă-le imediat ceva dulce",
+              "Spune-le să se odihnească"
+            ],
+            "explanation": "Acestea sunt semne ale glicemiei scăzute (hipoglicemie). Dă-le imediat suc, bomboane sau apă cu zahăr. Acest lucru poate pune viața în pericol. După ce se simt mai bine, ar trebui să mănânce o masă adecvată."
+          },
+          {
+            "question": "Cât de des ar trebui un diabetic să-și verifice picioarele?",
+            "options": [
+              "Niciodată, picioarele sunt bine",
+              "În fiecare zi",
+              "O dată pe an"
+            ],
+            "explanation": "Diabetul poate afecta nervii din picioare. Este posibil să nu simțiți tăieturi sau răni. Verificați-vă picioarele în fiecare zi pentru tăieturi, vezicule sau modificări de culoare. Rănile mici pot deveni infecții grave."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Igienă și prevenire",
+        "description": "Obiceiuri de bază pentru sănătate care salvează vieți",
+        "questions": [
+          {
+            "question": "Cât timp trebuie să vă spălați mâinile cu săpun?",
+            "options": [
+              "5 secunde",
+              "Cel puțin 20 secunde",
+              "1 minut"
+            ],
+            "explanation": "Spălați cel puțin 20 secunde — aproximativ timpul necesar pentru a cânta „Happy Birthday” de două ori. Acest lucru elimină majoritatea germenilor. Clătirile rapide nu funcționează."
+          },
+          {
+            "question": "Este sigur să bei apă dintr-un râu sau un pârâu?",
+            "options": [
+              "Da, apa naturală este curată",
+              "Nu, întotdeauna fierbeți sau filtrați-l mai întâi",
+              "Doar dacă pare clar"
+            ],
+            "explanation": "Chiar și apa limpede poate conține bacterii și paraziți periculoși. Fierbeți întotdeauna apă timp de cel puțin 1 minut sau folosiți un filtru. Apa murdară provoacă diaree, holeră și tifoidă."
+          },
+          {
+            "question": "Copilul dumneavoastră are diaree. Care este cel mai important lucru?",
+            "options": [
+              "Opriți toate alimentele",
+              "Dați multe lichide (apă, ORS)",
+              "Dați antibiotice"
+            ],
+            "explanation": "Deshidratarea cauzată de diaree ucide mai mulți copii decât diareea în sine. Dați soluție de rehidratare orală (ORS) sau apă curată cu un praf de sare și zahăr. Continuați să alăptați bebelușii."
+          },
+          {
+            "question": "Când ar trebui să vă spălați pe mâini?",
+            "options": [
+              "Doar înainte de a mânca",
+              "Înainte de a mânca, după toaletă, după atingerea animalelor, după tuse",
+              "Doar când par murdare"
+            ],
+            "explanation": "Germenii sunt invizibili. Spălați-vă mâinile: înainte de a mânca/găti, după folosirea toaletei, după schimbarea scutecelor, după atingerea animalelor, după tuse/strănut și după atingerea persoanelor bolnave."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Cunoaște-ți drepturile — Redi Health",
+      "description": "Drepturile pacienților, ajutor pentru discriminare și contacte juridice pentru comunitățile de romi"
+    },
+    "title": "Cunoaște-ți drepturile",
+    "subtitle": "Ai drepturi ca pacient. Învață-le. Folosește-le.",
+    "back": "Înapoi",
+    "menu": {
+      "patientRights": {
+        "title": "Drepturile pacientului",
+        "desc": "8 drepturi pe care fiecare pacient le are"
+      },
+      "discrimination": {
+        "title": "Te confrunți cu discriminarea?",
+        "desc": "Ce să spui și să faci — pas cu pas"
+      },
+      "contacts": {
+        "title": "Asistență juridică în funcție de țară",
+        "desc": "Ombudsman, anti-discriminare, organizații de romi"
+      }
+    },
+    "views": {
+      "patientRights": "Drepturile dumneavoastră pacientului",
+      "discrimination": "Dacă vă confruntați cu discriminare",
+      "discriminationDesc": "Situații reale și exact ce să spui și să faci.",
+      "contacts": "Asistență juridică în funcție de țară"
+    },
+    "labels": {
+      "sayThis": "Spune asta:",
+      "thenDo": "Atunci fă asta:",
+      "patientOmbudsman": "Avocatul Pacienților",
+      "antiDiscrimination": "Anti-discriminare",
+      "romaRightsOrg": "Organizație pentru drepturile romilor"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Dreptul la tratament de urgență",
+        "description": "Fiecare spital TREBUIE să vă trateze în caz de urgență, chiar și fără asigurare sau documente. Aceasta este legea în fiecare EU țară. Dacă refuză, cereți numele medicului și raportați-l."
+      },
+      "information": {
+        "title": "Dreptul de a-ți înțelege diagnosticul",
+        "description": "Medicul dumneavoastră trebuie să vă explice starea în cuvinte pe care le înțelegeți. Dacă nu înțelegeți, spuneți: „Poți explica asta mai simplu?” De asemenea, puteți solicita un rezumat scris."
+      },
+      "consent": {
+        "title": "Dreptul de a spune nu",
+        "description": "Nimeni nu vă poate forța tratamentul. Înainte de orice procedură, medicul trebuie să explice ce vor face și tu trebuie să fii de acord. Puteți spune oricând „Am nevoie de timp să mă gândesc”."
+      },
+      "privacy": {
+        "title": "Dreptul la intimitate",
+        "description": "Informațiile dumneavoastră medicale sunt private. Medicii nu-l pot împărtăși angajatorului, familiei sau oricui altcineva fără permisiunea dumneavoastră. Aceasta include starea dvs. HIV, sarcina sau sănătatea mintală."
+      },
+      "interpreter": {
+        "title": "Dreptul la un interpret",
+        "description": "Dacă nu vorbiți bine limba locală, puteți solicita un interpret. Multe spitale au acest serviciu. Dacă nu, poți aduce pe cineva în care ai încredere să traducă."
+      },
+      "second-opinion": {
+        "title": "Dreptul la o a doua opinie",
+        "description": "Dacă nu sunteți de acord cu un diagnostic, puteți consulta un alt medic. Acesta este dreptul tău. Nu trebuie să explici de ce."
+      },
+      "records": {
+        "title": "Dreptul la dosarele dumneavoastră medicale",
+        "description": "Puteți cere oricând o copie a tuturor dosarelor dumneavoastră medicale. Spitalul trebuie să le furnizeze. Acest lucru este util atunci când schimbați doctorul sau vă mutați în alt oraș."
+      },
+      "complaint": {
+        "title": "Dreptul de a se plânge",
+        "description": "Dacă vă simțiți maltratat sau discriminat, puteți depune o plângere. Fiecare spital are o procedură de reclamații. De asemenea, puteți contacta ombudsmanul pacienților din țara dumneavoastră."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "Spitalul refuză să te trateze",
+        "whatToSay": "„Am dreptul la tratament de urgență conform legii EU. Vă rugăm să scrieți numele dumneavoastră și motivul pentru care refuzați.”",
+        "whatToDo": [
+          "Stai calm, dar ferm",
+          "Solicitați numele complet al medicului",
+          "Solicitați refuzul în scris",
+          "Sunați ombudsmanul pacientului",
+          "Contactați o organizație pentru drepturile romilor"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Personalul spitalului este nepoliticos sau disprețuitor din cauza etniei tale",
+        "whatToSay": "„Sunt aici pentru ajutor medical. Mă aștept să fiu tratat cu același respect ca orice alt pacient”.",
+        "whatToDo": [
+          "Cereți să vorbiți cu asistenta-șef sau cu șeful de departament",
+          "Notați data, ora și numele",
+          "Depuneți o plângere scrisă la spital",
+          "Raportați către organismul național de luptă împotriva discriminării"
+        ]
+      },
+      "no-insurance": {
+        "situation": "Nu ai asigurare de sănătate",
+        "whatToSay": "\"Am nevoie de ajutor medical. Care sunt opțiunile mele pentru pacienții neasigurați?\"",
+        "whatToDo": [
+          "Îngrijirea de urgență este întotdeauna gratuită - insistați asupra ei",
+          "Întrebați despre programele de asistență socială",
+          "Contactați un mediator sanitar din zona dumneavoastră",
+          "Multe ONG-uri oferă clinici gratuite - întrebați la spital"
+        ]
+      },
+      "language-barrier": {
+        "situation": "Nu poți comunica cu medicul",
+        "whatToSay": "„Am nevoie de ajutor pentru înțelegere. Puteți oferi un interpret sau puteți vorbi mai încet?”",
+        "whatToDo": [
+          "Utilizați această aplicație pentru a traduce fraze cheie",
+          "Aduceți o persoană de încredere care vorbește limba",
+          "Solicitați instrucțiuni scrise pe care le puteți traduce mai târziu",
+          "Utilizați camera telefonului pentru a traduce documente"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Povești ale comunității — Redi Health",
+      "description": "Experiențe reale de sănătate din comunitățile de romi din Europa"
+    },
+    "title": "Poveștile comunității",
+    "subtitle": "Experiențe reale din comunitățile de romi. Învață de la alții.",
+    "backToStories": "Înapoi la povești",
+    "lessonLearned": "Lecția învățată",
+    "whatToDoNext": "Ce să faci în continuare",
+    "categories": {
+      "vaccines": "Vaccinuri",
+      "chronic": "Boală cronică",
+      "maternal": "Sarcina",
+      "discrimination": "Drepturi",
+      "prevention": "Prevenirea",
+      "mental": "Sănătate mintală"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Ghid de vaccinare",
+      "askZuvo": "Întreabă-l pe Zuvo",
+      "explainPrescription": "Explicați prescripția",
+      "navigateToCare": "Navigați către îngrijire",
+      "knowYourRights": "Cunoaște-ți drepturile",
+      "learnPrevention": "Învață prevenirea",
+      "checkSymptoms": "Verificați simptomele",
+      "learnMentalHealth": "Aflați despre sănătatea mintală"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "România",
+        "title": "Aproape că nu mi-am vaccinat fiica",
+        "story": "Soacra mea mi-a spus că vaccinurile sunt otravă. Toți cei din așezare au spus același lucru. Când s-a născut fiica mea, m-am speriat. Dar mediatorul sanitar a venit la noi acasă și ne-a explicat totul – cum funcționează vaccinurile, care sunt cu adevărat efectele secundare. Mi-a arătat fotografii cu copii cu rujeolă. Mi-a fost mai frică de boală decât de vaccin. Fiica mea și-a luat toate vaccinurile. Ea este sanatoasa si puternica.",
+        "lesson": "Discutați cu un mediator sanitar sau cu un medic înainte de a lua decizii pe baza a ceea ce spun alții. Vaccinurile salvează vieți."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bulgaria",
+        "title": "Mi-am oprit medicamentele pentru diabet și aproape că am murit",
+        "story": "Am fost diagnosticat cu diabet de tip 2 la 45. Medicamentul m-a durut stomacul, așa că am încetat să-l mai iau. Vecinul meu a spus că ceaiul de scorțișoară mă va vindeca. Timp de 2 ani am baut in schimb ceai de scortisoara. Apoi, într-o zi, m-am prăbușit. Glicemia mea era peste 500. Medicii au spus că rinichii mi-au fost afectați. Acum îmi iau medicamentele în fiecare zi. Mi-aș fi dorit să nu mă fi oprit niciodată.",
+        "lesson": "Nu opriți niciodată medicamentul fără a discuta cu medicul dumneavoastră. Remediile naturale nu pot înlocui medicamentele pentru diabet."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Serbia",
+        "title": "Prima mea sarcină — nu știam că pot vedea un medic gratis",
+        "story": "Când am rămas însărcinată la 19, nu am fost la medic timp de 6 luni. Nu aveam asigurare și m-am gândit că va costa prea mult. Un mediator sanitar mi-a spus că îngrijirea prenatală este gratuită pentru toate femeile însărcinate din Serbia. Ea m-a ajutat să mă înregistrez. Doctorul a constatat că am anemie și hipertensiune arterială. Dacă nu aș fi plecat, copilul meu ar fi putut fi în pericol.",
+        "lesson": "Îngrijirea prenatală este gratuită în majoritatea țărilor europene. Cereți unui mediator sanitar să vă ajute să vă înscrieți."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Ungaria",
+        "title": "Spitalul a încercat să mă trimită",
+        "story": "Am fost la camera de urgenta cu dureri in piept. Asistenta s-a uitat la mine și a spus: „Suntem plini, mergi la alt spital”. Știam că acest lucru nu este corect. Am spus: „Am dureri în piept. Trebuie să mă examinezi. Te rog să-mi spui numele tău. Atitudinea ei s-a schimbat imediat. M-au examinat și au descoperit că aveam o problemă cu inima care avea nevoie de tratament. Dacă aș fi plecat, aș fi putut face un atac de cord.",
+        "lesson": "Aveți dreptul la tratament de urgență. Dacă cineva încearcă să te îndepărteze, cere-i numele și spune-i că îți cunoști drepturile."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Slovacia",
+        "title": "TB nu este o condamnare la moarte — dar trebuie să termini medicamentul",
+        "story": "Tușeam luni de zile. Am crezut că e doar o răceală. Când am fost în sfârșit la doctor, mi-au spus că am tuberculoză. Eram îngrozit - am crezut că voi muri. Dar medicul a explicat că TB se poate vindeca cu 6 luni de medicamente. Cea mai grea parte a fost să iau pastile în fiecare zi timp de 6 luni, chiar și atunci când mă simțeam mai bine după 2 luni. Dar am terminat. sunt vindecat.",
+        "lesson": "Dacă tușiți mai mult de 2 săptămâni, consultați un medic. TB este vindecabil, dar TREBUIE să termini toate medicamentele."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Macedonia de Nord",
+        "title": "Depresia nu este slăbiciune - este o boală",
+        "story": "După ce a murit soțul meu, nu m-am putut ridica din pat luni de zile. Familia mea a spus că sunt leneș. Au spus „doar fii puternic”. Dar nu am putut. Un mediator sanitar a observat că ceva nu era în regulă și m-a dus la medic. Doctorul a spus că am depresie - o adevărată afecțiune medicală. Am început medicina și am vorbit cu un consilier. Încet-încet, m-am îmbunătățit. nu sunt slab. Am fost bolnav.",
+        "lesson": "Depresia este o condiție medicală, nu un defect de caracter. Medicina și consilierea pot ajuta. Vă rugăm să cereți ajutor."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Provocări — Redi Health",
+      "description": "Provocări ale comunității"
+    },
+    "title": "Provocări active",
+    "subtitle": "Alăturați-vă obiectivelor comunității și provocărilor personale pentru a câștiga bonus XP și insigne.",
+    "types": {
+      "community": "comunitate",
+      "personal": "personale"
+    },
+    "daysLeft": "Au mai rămas {count} zile",
+    "viewLeaderboard": "Vedeți clasamentul",
+    "items": {
+      "c1": {
+        "title": "Campion al cunoașterii vaccinurilor",
+        "description": "Aduceți 50 studenți din zona dvs. locală să promoveze modulul Vaccin în această săptămână."
+      },
+      "c2": {
+        "title": "Seria de sănătate de 7 zile",
+        "description": "Înregistrați-vă starea de spirit și consumul de apă timp de 7 zile la rând."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Certificat — Redi Health",
+      "description": "Certificat național de alfabetizare în domeniul sănătății"
+    },
+    "title": "Certificatul dvs",
+    "subtitle": "Ați finalizat Etapa Națională a Academiei de Sănătate Studențească.",
+    "ofCompletion": "Certificat de finalizare",
+    "diplomaTitle": "Educație națională în domeniul sănătății",
+    "awardedFor": "Acordat pentru finalizarea curriculum-ului Redi Health Student Academy.",
+    "date": "Data",
+    "downloadPdf": "Descărcați PDF",
+    "share": "Distribuie",
+    "gate": {
+      "title": "Finalizează mai întâi Academia",
+      "description": "Pentru a obține certificatul de alfabetizare în domeniul sănătății, trebuie să finalizați toate lecțiile și să treceți testul în etapa națională a Academiei de sănătate a studenților.",
+      "cta": "Du-te la Academie"
+    }
+  }
+}

@@ -59,6 +59,103 @@ export default async function HomePage({ params }: Props) {
       <LandingHeader logoUrl={platformConfig?.logoUrl || undefined} />
 
       <main id="main-content" className="relative">
+        {/* ===== PLATFORM NAV DECK (first screen) ================== */}
+        <section
+          aria-labelledby="platform-nav-title"
+          className="relative border-b border-[var(--color-border-subtle)] bg-[var(--color-surface)]"
+        >
+          <div className="mx-auto max-w-6xl px-5 pb-10 pt-8 md:px-8 md:pb-14 md:pt-10">
+            <header className="mb-8 flex flex-col gap-3 md:mb-10 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="eyebrow">
+                  <span
+                    className="inline-block h-1.5 w-1.5 rounded-full"
+                    style={{ background: "var(--color-accent)" }}
+                  />
+                  {t("navTitle")}
+                </p>
+                <h2
+                  id="platform-nav-title"
+                  className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+                  style={{ fontSize: "clamp(1.5rem, 1.1rem + 1.4vw, 2rem)" }}
+                >
+                  {t("navSubtitle")}
+                </h2>
+              </div>
+              <a
+                href="tel:112"
+                className="inline-flex items-center gap-2 self-start rounded-full border border-[var(--color-danger-accent)]/30 bg-[var(--color-danger-bg)] px-4 py-2 text-xs font-extrabold text-[var(--color-danger-text)] transition-all hover:bg-[var(--color-danger-accent)] hover:text-white"
+              >
+                <Phone className="lucide h-3.5 w-3.5" strokeWidth={2.4} />
+                {tHome("emergencyCta")}
+              </a>
+            </header>
+
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+              <PlatformTile
+                href="/students"
+                icon={GraduationCap}
+                accent="ember"
+                title={t("navAcademy")}
+                desc={t("navAcademyDesc")}
+                primary
+              />
+              <PlatformTile
+                href="/explain"
+                icon={FileText}
+                accent="brand"
+                title={t("navExplain")}
+                desc={t("navExplainDesc")}
+                primary
+              />
+              <PlatformTile
+                href="/scan"
+                icon={Search}
+                accent="ember"
+                title={t("navScan")}
+                desc={t("navScanDesc")}
+                primary
+              />
+              <PlatformTile
+                href="/mediator"
+                icon={Handshake}
+                accent="sage"
+                title={t("navMediator")}
+                desc={t("navMediatorDesc")}
+                primary
+              />
+              <PlatformTile
+                href="/chat"
+                icon={MessageCircle}
+                accent="brand"
+                title={t("navAsk")}
+                desc={t("navAskDesc")}
+              />
+              <PlatformTile
+                href="/symptoms"
+                icon={Activity}
+                accent="sage"
+                title={t("navSymptoms")}
+                desc={t("navSymptomsDesc")}
+              />
+              <PlatformTile
+                href="/vaccines"
+                icon={Syringe}
+                accent="brand"
+                title={t("navVaccines")}
+                desc={t("navVaccinesDesc")}
+              />
+              <PlatformTile
+                href="/providers"
+                icon={MapPin}
+                accent="sage"
+                title={t("navProviders")}
+                desc={t("navProvidersDesc")}
+              />
+            </div>
+          </div>
+        </section>
+
         {/* ===== HERO ============================================== */}
         <section className={`relative overflow-hidden ${heroLayout === "center" ? "text-center" : ""}`}>
           {/* Atmospheric backdrop */}
@@ -111,11 +208,11 @@ export default async function HomePage({ params }: Props) {
 
                 <div className={`mt-9 flex flex-wrap items-center gap-3 animate-fade-in-up delay-300 ${heroLayout === "center" ? "justify-center" : ""}`}>
                   <Link
-                    href="/chat"
+                    href="/mediator"
                     className="group inline-flex h-13 items-center gap-2 rounded-full px-7 py-4 text-sm font-extrabold text-white gradient-brand grain-overlay shadow-brand transition-all hover:shadow-4 active:scale-[0.97]"
                     style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
                   >
-                    {t("ctaPrimary")}
+                    {t("navMediator")}
                     <ArrowRight
                       className="lucide h-4 w-4 transition-transform group-hover:translate-x-0.5"
                       strokeWidth={2.2}
@@ -191,104 +288,6 @@ export default async function HomePage({ params }: Props) {
                 </div>
                 <HeroComposition t={t} />
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ===== PLATFORM NAV DECK ================================ */}
-        {/* Eight-tile wayfinding band — academy, prescriptions, myths, mediator, and more. */}
-        <section
-          aria-labelledby="platform-nav-title"
-          className="relative border-t border-[var(--color-border-subtle)] bg-[var(--color-surface)]"
-        >
-          <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
-            <header className="mb-8 flex flex-col gap-3 md:mb-10 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p className="eyebrow">
-                  <span
-                    className="inline-block h-1.5 w-1.5 rounded-full"
-                    style={{ background: "var(--color-accent)" }}
-                  />
-                  {t("navTitle")}
-                </p>
-                <h2
-                  id="platform-nav-title"
-                  className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
-                  style={{ fontSize: "clamp(1.5rem, 1.1rem + 1.4vw, 2rem)" }}
-                >
-                  {t("navSubtitle")}
-                </h2>
-              </div>
-              <a
-                href="tel:112"
-                className="hidden items-center gap-2 self-start rounded-full border border-[var(--color-danger-accent)]/30 bg-[var(--color-danger-bg)] px-4 py-2 text-xs font-extrabold text-[var(--color-danger-text)] transition-all hover:bg-[var(--color-danger-accent)] hover:text-white md:inline-flex"
-              >
-                <Phone className="lucide h-3.5 w-3.5" strokeWidth={2.4} />
-                {tHome("emergencyCta")}
-              </a>
-            </header>
-
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-              <PlatformTile
-                href="/students"
-                icon={GraduationCap}
-                accent="ember"
-                title={t("navAcademy")}
-                desc={t("navAcademyDesc")}
-                primary
-              />
-              <PlatformTile
-                href="/explain"
-                icon={FileText}
-                accent="brand"
-                title={t("navExplain")}
-                desc={t("navExplainDesc")}
-                primary
-              />
-              <PlatformTile
-                href="/scan"
-                icon={Search}
-                accent="ember"
-                title={t("navScan")}
-                desc={t("navScanDesc")}
-                primary
-              />
-              <PlatformTile
-                href="/mediator"
-                icon={Handshake}
-                accent="sage"
-                title={t("navMediator")}
-                desc={t("navMediatorDesc")}
-                primary
-              />
-              <PlatformTile
-                href="/chat"
-                icon={MessageCircle}
-                accent="brand"
-                title={t("navAsk")}
-                desc={t("navAskDesc")}
-              />
-              <PlatformTile
-                href="/symptoms"
-                icon={Activity}
-                accent="sage"
-                title={t("navSymptoms")}
-                desc={t("navSymptomsDesc")}
-              />
-              <PlatformTile
-                href="/vaccines"
-                icon={Syringe}
-                accent="brand"
-                title={t("navVaccines")}
-                desc={t("navVaccinesDesc")}
-              />
-              <PlatformTile
-                href="/providers"
-                icon={MapPin}
-                accent="sage"
-                title={t("navProviders")}
-                desc={t("navProvidersDesc")}
-              />
             </div>
           </div>
         </section>

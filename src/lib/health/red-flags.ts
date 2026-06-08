@@ -7,7 +7,10 @@ export type EmergencyRedFlag = {
     | "suicide"
     | "severe_allergy"
     | "unconscious"
-    | "child_not_breathing";
+    | "child_not_breathing"
+    | "pregnancy_bleeding"
+    | "abuse_danger"
+    | "poisoning";
   pattern: RegExp;
   title: string;
   instruction: string;
@@ -61,6 +64,24 @@ export const EMERGENCY_REDFLAGS: EmergencyRedFlag[] = [
     pattern: /\b(child|baby|infant).*\b(not breathing|can'?t breathe|cannot breathe|blue lips|turning blue)\b/i,
     title: "Child breathing emergency",
     instruction: "Call 112 now. Follow dispatcher instructions immediately.",
+  },
+  {
+    id: "pregnancy_bleeding",
+    pattern: /\b(bleeding|blood).{0,30}(pregnan|bump|baby|unborn)|pregnan.{0,30}(bleeding|hemorrhage|blood pouring|blood loss)\b/i,
+    title: "Pregnancy emergency — bleeding",
+    instruction: "Go to hospital immediately or call 112 now. Do not wait. Heavy bleeding during pregnancy is a medical emergency.",
+  },
+  {
+    id: "abuse_danger",
+    pattern: /\b(he is hitting|she is hitting|being beaten|partner.{0,20}hurt(s|ing)|partner.{0,20}(hitt|strik|violen)|afraid of my (husband|wife|partner|boyfriend|girlfriend)|someone is hurting me|my (husband|wife|partner) hurt me)\b/i,
+    title: "Immediate safety concern",
+    instruction: "If you are in danger right now, call 112. If you are safe for now, call the domestic violence helpline in your country. You can also text or call in many countries — you do not have to speak out loud.",
+  },
+  {
+    id: "poisoning",
+    pattern: /\b(swallowed.{0,30}(too many|pills|tablets|medicine|chemical|poison)|overdose|took too many (pills|tablets|capsules)|drank.{0,20}(bleach|chemical|cleaning))\b/i,
+    title: "Possible poisoning or overdose",
+    instruction: "Call 112 or a poison control centre immediately. Tell them what was taken, how much, and when. Do not induce vomiting unless told to do so by emergency services.",
   },
 ];
 
