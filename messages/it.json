@@ -624,6 +624,22 @@
     "patientRights": "I tuoi diritti come paziente",
     "findHospital": "Trova l'ospedale più vicino",
     "mapHint": "Apre la mappa con le indicazioni",
+    "systemGuidesTitle": "Guide ai Sistemi Sanitari Nazionali",
+    "italySsnTitle": "Italia: Guida al Servizio Sanitario (SSN)",
+    "italyDoctorTitle": "Pediatra di Base vs. Medico di Medicina Generale (GP)",
+    "italyDoctorDesc": "I bambini fino a 14 anni devono essere iscritti con un pediatra di base. Gli adulti (dai 14 anni in su) si iscrivono con un medico di medicina generale. Entrambi i servizi sono gratuiti tramite il Servizio Sanitario Nazionale (SSN).",
+    "italyEnrollTitle": "Come iscriversi al SSN",
+    "italyEnrollSteps": [
+      "Trova l'ufficio ASL (Azienda Sanitaria Locale) più vicino alla tua zona.",
+      "Porta un documento d'identità valido, il tuo Codice Fiscale e una prova di domicilio.",
+      "Se non hai un permesso di soggiorno regolare, richiedi il codice STP (Straniero Temporaneamente Presente).",
+      "Scegli il tuo medico o pediatra dall'elenco locale dei medici disponibili.",
+      "Riceverai una tessera sanitaria cartacea per accedere gratuitamente a visite e ricette."
+    ],
+    "italyStpTitle": "Non Residenti: Il Codice STP",
+    "italyStpDesc": "Se non hai un permesso di soggiorno o sei privo di documenti, hai comunque il diritto legale a cure mediche urgenti ed essenziali. L'ASL ti rilascerà un codice STP (Straniero Temporaneamente Presente). È completamente anonimo, non comporta segnalazioni alle autorità di immigrazione e garantisce l'accesso a vaccinazioni, cure per la gravidanza e visite urgenti.",
+    "viewGuide": "Visualizza Guida",
+    "closeGuide": "Chiudi Guida",
     "meta": {
       "title": "Navigatore sanitario — Redi Health",
       "description": "Preparati per la visita medica — scheda di visita, cosa portare, i tuoi diritti."

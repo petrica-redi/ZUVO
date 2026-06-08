@@ -1432,7 +1432,17 @@
     "section2": "PII scrubbing",
     "desc2": "All messages are sanitized locally. Phone numbers, emails, IBANs, and National IDs are masked before leaving the device infrastructure.",
     "section3": "Clinical review",
-    "desc3": "Every lesson in the Student Health Academy undergoes clinical review by practicing Roma Health Mediators and physicians."
+    "desc3": "Every lesson in the Student Health Academy undergoes clinical review by practicing Roma Health Mediators and physicians.",
+    "section4": "Approved public health sources",
+    "desc4": "All factual health claims cite WHO, ECDC, IFRC, national ministries, or peer-reviewed guidelines. Social media claims, single study results, and commercial sources are never used as primary references.",
+    "section5": "Privacy by design",
+    "desc5": "Personal identifiers are removed from all AI inputs. No raw prompts are retained beyond the request lifecycle. Health records are stored with explicit consent, in EU regions, with full GDPR data subject rights including export and deletion.",
+    "section6": "Roma equity safeguards",
+    "desc6": "Content is reviewed for strengths-based language, absence of stigmatizing language, and avoidance of deficit narratives. Ethnic data is never collected. Provider and mediator tools are designed to prevent surveillance or profiling.",
+    "goNoGoTitle": "Feature release policy",
+    "goNoGoBody": "Features that may influence clinical decisions require completed policy controls before release: AI triage, symptom severity, prescription outputs, vaccine recommendations, Roma-friendly provider labels, mediator visit logging, youth sexual health, and legal guidance.",
+    "notMedicalDevice": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "viewPolicies": "Read the full platform policies"
   },
   "providers": {
     "title": "Roma-Friendly Clinics",
@@ -1938,6 +1948,22 @@
     "patientRights": "Your rights as a patient",
     "findHospital": "Find nearest hospital",
     "mapHint": "Opens map with directions",
+    "systemGuidesTitle": "Healthcare System Guides",
+    "italySsnTitle": "Italy: Healthcare System (SSN) Guide",
+    "italyDoctorTitle": "Pediatrician vs. General Practitioner (GP)",
+    "italyDoctorDesc": "Children up to 14 years old must be registered with a Pediatrician (Pediatra di Base). Adults (14 and older) register with a General Practitioner (Medico di Medicina Generale). Both services are free through the National Health Service (SSN).",
+    "italyEnrollTitle": "How to register with the SSN",
+    "italyEnrollSteps": [
+      "Find the nearest ASL (Azienda Sanitaria Locale) office in your area.",
+      "Bring a valid ID document, your Tax Code (Codice Fiscale), and proof of address.",
+      "If you do not have a regular residence permit, request an STP Code (Straniero Temporaneamente Presente).",
+      "Choose your doctor or pediatrician from the available local list.",
+      "You will receive a paper card (Tessera Sanitaria) to access free visits and prescriptions."
+    ],
+    "italyStpTitle": "Non-Residents: The STP Code",
+    "italyStpDesc": "If you do not have a residence permit or are undocumented, you still have a legal right to urgent and essential medical care. The ASL will issue an STP Code (Straniero Temporaneamente Presente). It is anonymous, does not report you to immigration authorities, and guarantees access to vaccinations, pregnancy care, and urgent clinic visits.",
+    "viewGuide": "View Guide",
+    "closeGuide": "Close Guide",
     "meta": {
       "title": "Healthcare Navigator — Redi Health",
       "description": "Prepare for your doctor visit — visit card, what to bring, your rights."
