@@ -1969,5 +1969,314 @@
       "description": "Pentru a obține certificatul de alfabetizare în sănătate, trebuie să finalizezi toate lecțiile și să treci testul din etapa Națională a Academiei de Sănătate.",
       "cta": "Mergi la Academie"
     }
+  },
+  "learn": {
+    "progressLabel": "module completate",
+    "startHere": "Începe aici",
+    "continueLabel": "Continuă",
+    "allModules": "Toate modulele",
+    "prevention": {
+      "description": "În 15 ani de muncă în așezările romă, am văzut familii devastate de boli ce puteau fi prevenite prin obiceiuri simple. Aceste cunoștințe nu sunt un lux — sunt supraviețuire.",
+      "handwashing": {
+        "title": "Spălarea mâinilor",
+        "description": "Am văzut familii întregi din așezări îmbolnăvindu-se de aceeași infecție la stomac, transmisă mână în mână. Spălarea corectă a mâinilor este cel mai ieftin și mai puternic medicament la care aveți deja acces - nu costă nimic și previne bolile pe care le văd cel mai des în comunitățile noastre.",
+        "tip1": "Înainte de a atinge mâncarea, înainte de a hrăni un copil și după fiecare vizită la toaletă - spălați-vă. Am văzut că o mână nespălată provoacă o săptămână de diaree pentru o întreagă gospodărie",
+        "tip2": "Numără până la 20 încet sau fredonează un vers al unui cântec. Majoritatea oamenilor se spală timp de 5 secunde - asta nu elimină aproape nimic. Frecarea dintre mâinile tale este cea care ucide microbii",
+        "tip3": "Fara sapun? Am lucrat în localități fără apă curentă. Ash funcționează. Lucrări cu nisip. Apa singură cu spălare funcționează mai bine decât nimic. Nu lăsa perfectul să împiedice binele",
+        "tip4": "Uscați-vă mâinile la aer sau folosiți o cârpă curată pe care o schimbați zilnic. Un prosop murdar împărtășit de toată lumea recontamina mâinile curate - lucru pe care îl explic în fiecare vizită la domiciliu",
+        "fact": "În comunitățile cu care am lucrat, campaniile de spălare a mâinilor au redus cazurile de diaree la copii cu aproape jumătate în decurs de trei luni. WHO confirmă: spălarea mâinilor reduce diareea cu 40% și infecțiile respiratorii cu până la 21%.",
+        "action": "În seara asta, stați cu copiii la sursa de apă și spălați-vă mâinile împreună. Faceți din el un obicei de familie înainte de fiecare masă. Copiii care învață urmărindu-și părinții vor purta asta toată viața."
+      },
+      "vaccination": {
+        "title": "Vaccinarea",
+        "description": "Am însoțit mame rome la centrele de sănătate unde au fost respinse pentru că nu aveau documente, nu puteau vorbi limba sau pur și simplu li s-a spus să revină mai târziu. Vaccinurile sunt dreptul legal al copiilor tăi – gratuit, sigur și cea mai puternică protecție pe care o poate oferi un părinte. Nimeni nu vă poate nega asta.",
+        "tip1": "Fiecare țară din Europa oferă un program gratuit de vaccinare de la naștere. Aceasta nu este caritate – este dreptul legal al copilului dumneavoastră. Dacă un lucrător din domeniul sănătății refuză, cereți supervizorul său și precizați acest lucru în mod clar",
+        "tip2": "Cardul de vaccinare este cel mai important document pe care copilul dumneavoastră îl are după certificatul de naștere. Păstrați-l în siguranță, duceți-l la fiecare vizită la medic. Dacă este pierdut, orice centru de sănătate trebuie să emită un înlocuitor - nu accepta refuzul",
+        "tip3": "Febră ușoară, un punct dureros pe braț, agitație pentru o zi - acest lucru este normal și înseamnă că vaccinul funcționează. Am liniștit sute de mame îngrijorate despre asta. Trece în 24–48 ore",
+        "tip4": "Nu aveți nevoie de programare la majoritatea centrelor de sănătate publică pentru vaccinări. Intrați. Dacă un mediator sanitar rom lucrează în zona dvs., rugați-i să vă însoțească - pentru asta suntem pregătiți",
+        "fact": "Într-o localitate în care am lucrat, rujeola s-a lovit deoarece acoperirea vaccinării a scăzut la 60%. Trei copii au fost internați în spital. După o campanie de vaccinare comunitară, am ajuns la 94% — și focarele au încetat. În toată Europa, vaccinurile previn 2–3 milioane de decese în fiecare an.",
+        "action": "Scoateți cardul de vaccinare al copilului dvs. chiar acum. Verificați-l în raport cu programul de pe peretele centrului dvs. de sănătate. Dacă lipsește vreun vaccin sau nu aveți card, vizitați centrul de sănătate în această săptămână. Aduceți această aplicație pentru a afișa programul dacă vă ajută."
+      },
+      "cleanWater": {
+        "title": "Apă curată",
+        "description": "Am lucrat în așezări în care familiile împart un singur punct de apă care rulează două ore pe zi și în cartiere în care apa de la robinet pare limpede, dar poartă bacterii care provoacă probleme cronice de stomac la copii. Calitatea apei nu este întotdeauna vizibilă – iar în comunitățile de romi, aceasta este rareori monitorizată de autorități. Trebuie să fii inspectorul de apă al familiei tale.",
+        "tip1": "Acoperiți fiecare recipient în care depozitați apă. Am văzut muște, praf și chiar deșeuri animale contaminând găleți descoperite în câteva ore, mai ales pe vreme caldă. O placă simplă peste partea de sus previne majoritatea contaminării",
+        "tip2": "Dacă nu sunteți sigur de apă, fierbeți-o la fierbere timp de un minut întreg. Aceasta ucide 99.9% dintre bacterii, viruși și paraziți. Nu costă aproape nimic și funcționează - am predat asta în zeci de așezări în care sursa de apă era discutabilă",
+        "tip3": "Spălați recipientele cu apă cu săpun și apă curată cel puțin o dată pe săptămână. Un recipient murdar murdărește apa curată. Aceasta este una dintre cele mai neglijate cauze ale diareei recurente pe care le-am văzut la copii",
+        "tip4": "Pârâurile, iazurile și bălțile în picioare nu sunt niciodată sigure pentru băut – chiar dacă apa pare limpede. Paraziții invizibili pentru ochi provoacă leziuni cronice ale intestinelor și dezvoltării copiilor",
+        "fact": "În multe așezări de romi din Europa Centrală și de Est, familiile nu au acces la apă potabilă. Centrul European pentru Drepturile Romilor a documentat că cartierele de romi sunt sistematic insuficient deservite de infrastructura de apă. Fierberea apei nu este ideală - este o strategie de supraviețuire până când îți vei îndeplini dreptul la apă curată.",
+        "action": "Astăzi, verifică fiecare recipient în care familia ta stochează apă potabilă. Acoperiți toate cele care sunt deschise. Dacă nu puteți verifica că sursa de apă este sigură, începeți să fierbeți toată apa de băut și de gătit începând din această seară."
+      },
+      "firstAid": {
+        "title": "Primul ajutor de bază",
+        "description": "În așezările îndepărtate și în cartierele urbane unde ambulanțele durează mai mult să ajungă – sau uneori nu vin deloc – a ști ce să facă în primele minute ale unei urgențe este diferența dintre viață și moarte. Am instruit sute de membri ai comunității de romi cu privire la primul ajutor de bază și am văzut că aceste cunoștințe salvează vieți înainte de sosirea oricărui medic.",
+        "tip1": "112 funcționează de pe orice telefon din Europa — chiar și fără credit, chiar și fără cartelă SIM, chiar și de pe un telefon blocat. Învață fiecare membru al familiei tale, inclusiv copiii peste 7, să formeze 112 și să spună unde se află. Practică asta. Într-o situație de urgență, panica îi face pe oameni să uite",
+        "tip2": "Pentru sângerări abundente: apăsați ferm cu cea mai curată cârpă pe care o aveți — o cămașă, o basma, orice — și nu o ridicați pentru a verifica. Continuați să apăsați până sosește ajutorul. Am văzut oameni sângerând periculos pentru că au tot scos cârpa pentru a se uita. Adăugați mai multă cârpă deasupra dacă sângele trece",
+        "tip3": "Arsuri: puneți imediat arsura sub jet de apă rece timp de cel puțin 10 minute. Nu aplicați niciodată unt, ulei, pastă de dinți sau albuș de ou - remedii tradiționale pe care le-am întâlnit în multe familii care de fapt captează căldura și provoacă daune și infecții mai grave.",
+        "tip4": "Dacă cineva se prăbușește și nu respiră: sunați 112, apoi împingeți puternic și repede în centrul pieptului — 100 ori pe minut (tempo-ul cântecului „Stayin' Alive”). Nu te opri până nu sosește ajutorul. RCP imperfectă este infinit mai bună decât fără RCP",
+        "fact": "Studiile arată că în comunitățile în care pregătirea de bază a primului ajutor este larg răspândită, supraviețuirea după stop cardiac se dublează. În multe comunități de romi, timpii de răspuns ale ambulanțelor sunt semnificativ mai lungi decât în ​​zonele ne-romi, ceea ce face ca primul ajutor pentru trecători să fie și mai critic.",
+        "action": "Chiar acum, întreabă fiecare membru al familiei: știi cum să suni la 112? Cunoașteți adresa noastră de domiciliu suficient de bine pentru a spune dispeceratului? Scrie-ți adresa completă pe o foaie de hârtie și pune-o lângă telefon. Învață-ți copiii astăzi."
+      }
+    },
+    "nutrition": {
+      "description": "În anii petrecuți cu familii romă, am învățat că mâncarea nu e doar nutriție — e ce îți permiți, ce găsești în cartier și ce știe familia ta. Nu îți voi spune să cumperi quinoa. Îți voi spune cum să hrănești bine familia cu ce ai.",
+      "balancedDiet": {
+        "title": "Mănâncă bine cu orice buget",
+        "description": "Cea mai mare problemă de nutriție pe care o văd în comunitățile de romi nu este lipsa alimentelor – este prea multă pâine ieftină, carne procesată și băuturi dulci și prea puține legume, ouă și leguminoase. Nu este vorba despre puterea de voință. Este vorba despre ceea ce este disponibil și accesibil. Dar schimbările mici fac diferențe enorme pentru sănătatea dumneavoastră și dezvoltarea copiilor dumneavoastră.",
+        "tip1": "Fasolea, lintea și năutul sunt cele mai ieftine proteine de pe orice piață - mai ieftine decât carnea, durează mai mult și previn diabetul și bolile de inimă. O oală cu tocană de fasole hrănește o familie pentru mai puțin de un pachet de cârnați procesați și este mult mai hrănitoare",
+        "tip2": "Ouăle sunt cel mai complet aliment ieftin care există. Două ouă pe zi per copil oferă aproape tot ce are nevoie un creier în creștere. În fiecare localitate în care lucrez, recomand ouăle ca hrană prioritară pentru copii",
+        "tip3": "Legumele de sezon din piața locală sau din grădina dvs. costă o fracțiune din prețurile de la supermarket. Varză, ceapă, morcovi, cartofi, ardei - acestea sunt fundamentul unei diete sănătoase și sunt în fiecare tradiție din bucătăria romilor",
+        "tip4": "Băuturile dulci (cola, suc, băuturi energizante) sunt cel mai dăunător produs pe care îl văd în dietele familiei de romi. O sticlă de cola are 10 lingurițe de zahăr. Înlocuiți cu apă sau ceai slab și eliminați cel mai mare factor de obezitate și carii pe care îl văd la copii",
+        "fact": "În comunitățile de romi cu care am lucrat din România și Bulgaria, am văzut ratele diabetului zaharat scăzând considerabil atunci când familiile înlocuiesc pâinea albă zilnică și carnea procesată cu fasole, ouă și legume – chiar și fără a modifica cât de mult mănâncă. Organismul răspunde la calitate, nu doar la cantitate.",
+        "action": "În această săptămână, înlocuiți o masă de pâine și carne procesată cu o oală de tocană de fasole sau linte cu ceapă și ardei. Gătiți suficient timp de două zile. Este mai ieftin, te umple mai mult și începe să schimbe traiectoria de sănătate a familiei tale."
+      },
+      "childNutrition": {
+        "title": "Hrănirea copiilor pentru un început puternic",
+        "description": "Primele 1,000 zile — de la sarcină la vârsta 2 — modelează întregul viitor al unui copil: creierul, sistemul imunitar, capacitatea de a învăța. Am văzut copiii subnutriți din așezări răbdând în urma colegilor lor nu din cauza geneticii, ci din cauza a ceea ce au mâncat în acele prime luni critice. Ceea ce îți hrănești copilul acum este cea mai puternică investiție pe care o poți face în viața lui.",
+        "tip1": "Numai laptele matern timp de 6 luni este standardul de aur — este gratuit, întotdeauna disponibil, perfect nutritiv și protejează împotriva infecțiilor mai bine decât orice medicament. Am lucrat cu mame care credeau că formula este „modernă” și mai bună. Nu este. Laptele matern este evoluția tehnologiei perfecționată",
+        "tip2": "La 6 luni, începeți cu alimente moi pe lângă alăptare: piure de cartofi, morcovi, banane, gălbenuș de ou fiert. Introduceți un aliment nou la fiecare 3 zile pentru a urmări reacțiile. Multe mame cu care lucrez încep solide prea târziu (8–9 luni) - acest lucru întârzie dezvoltarea",
+        "tip3": "Copiii sub 2 nu ar trebui să consume niciodată zahăr, miere, sare, cola, chipsuri sau dulciuri. Știu că bunicii dau uneori ceai cu zahăr pentru a calma un copil - te rog încetează. Zahărul la această vârstă programează o poftă pe tot parcursul vieții și dăunează dinților chiar înainte ca aceștia să iasă complet",
+        "tip4": "Un ou pe zi pentru un copil cu vârsta de peste 6 luni este cea mai simplă îmbunătățire a nutriției care există. Un studiu din Ecuador a arătat că ouăle au redus piperizarea cu 47%. Citez acest lucru în fiecare discuție comunitară, deoarece este realizabil pentru aproape fiecare familie",
+        "fact": "În comunitățile în care am derulat programe de nutriție, copiii care au primit zilnic un ou și o porție de legume timp de 6 luni au prezentat îmbunătățiri măsurabile ale creșterii și dezvoltării cognitive în comparație cu copiii care nu au primit. Malnutriția nu este doar despre sărăcie, ci despre a ști ce să prioritizezi cu resursele pe care le ai.",
+        "action": "Începând de mâine, dă-i copilului tău peste 6 luni un ou pe zi (piure sau omletă). Dacă copilul dumneavoastră are sub 6 luni și alăptați, mâncați singur un ou în plus – nutrienții trec prin laptele dumneavoastră."
+      },
+      "foodSafety": {
+        "title": "Păstrarea alimentelor în siguranță",
+        "description": "Toxiinfecția alimentară este unul dintre cele mai frecvente motive pentru care familiile de romi vizitează camerele de urgență — vărsături, diaree, deshidratare, în special la copii. În localitățile în care refrigerarea nu este de încredere și bucătăriile sunt comune sau în aer liber, siguranța alimentară nu este un subiect de manual - este o abilitate de supraviețuire zilnică.",
+        "tip1": "Pe vreme caldă, alimentele gătite lăsate afară mai mult de 2 ore devin periculoase. Dacă nu îl puteți pune la frigider, gătiți porții mai mici pe care le terminați într-o singură masă. Am văzut familii întregi spitalizate din tocană reîncălzită lăsate afară peste noapte vara",
+        "tip2": "Puiul crud și carnea nu trebuie să atingă niciodată pâinea, legumele sau orice altceva care va fi consumat nefierte. Folosiți suprafețe de tăiere separate - chiar și o pungă de plastic curată, așezată în plan. Această contaminare încrucișată este cauza numărul unu de otrăvire alimentară pe care o întâlnesc",
+        "tip3": "Dacă mâncarea miroase greșit, arată greșit sau se simte moale, aruncați-o. Nu-l gusta pentru a verifica. Știu că aruncarea alimentelor este dureros atunci când banii sunt strânși, dar o criză de otrăvire alimentară costă mai mult în medicină și pierderea muncii decât merita mâncarea",
+        "tip4": "Spălați toate fructele și legumele sub jet de apă înainte de a mânca, chiar dacă intenționați să le curățați de coajă. Murdăria din exterior se transferă în interior când tăiați. Acest lucru este deosebit de important pentru produsele de pe piață care ar fi putut fi manipulate de mulți oameni",
+        "fact": "WHO estimează că 600 milioane de oameni se îmbolnăvesc din cauza alimentelor contaminate în fiecare an, copiii sub 5 purtând 40% din povara. În comunitățile în care am predat siguranța alimentară, vizitele la spital pentru gastroenterită au scăzut semnificativ în prima vară.",
+        "action": "Verificați-vă bucătăria chiar acum: există carne crudă depozitată deasupra sau atinge alimente gata de consumat? Există mâncare gătită care a stat afară de mai mult de 2 ore? Remediați aceste două lucruri astăzi - sunt cele mai frecvente pericole pe care le văd în vizitele la domiciliu."
+      }
+    },
+    "maternal": {
+      "description": "Am însoțit femei romă la spitale unde au fost izolate, tratate cu lipsă de respect sau li s-au refuzat epidurale pe care alte femei le primeau. Am văzut și femei care au murit din complicații pe care o singură vizită prenatală le-ar fi prins la timp. Corpul tău, copilul tău, drepturile tale. Cunoaște-le pe toate trei.",
+      "prenatalCare": {
+        "title": "Îngrijire prenatală",
+        "description": "În 15 ani de muncă de mediere, tiparul pe care îl văd în mod repetat este femeile rome care vizitează prima dată la medic când sunt deja gravide în 6 sau 7 luni — de multe ori pentru că se simt bine, pentru că le este frică de spital sau pentru că nimeni nu a explicat că îngrijirea prenatală este gratuită și dreptul lor. Până în acel moment, afecțiunile periculoase precum preeclampsia sau diabetul gestațional s-ar fi putut dezvolta în tăcere de luni de zile.",
+        "tip1": "Mergeți la medicul de familie sau la moașă în momentul în care vă lipsește menstruația și bănuiți că sunteți însărcinată. Primul trimestru este atunci când acidul folic previne defectele creierului și coloanei vertebrale la copilul dumneavoastră. Așteptarea vă costă cea mai critică fereastră. Dacă nu aveți un medic de familie, mediatorul dumneavoastră de sănătate vă poate ajuta să vă înregistrați - aceasta este o parte esențială a ceea ce facem",
+        "tip2": "Acid folic 400mcg zilnic ar trebui să înceapă atunci când încercați să rămâneți gravidă sau de îndată ce aflați că sunteți însărcinată. Este gratuit sau foarte ieftin la orice farmacie. Port pachete cu mine în vizitele la domiciliu, deoarece această pastilă simplă previne malformațiile congenitale devastatoare",
+        "tip3": "Alimentele bogate în fier previn anemia pe care o văd la aproape jumătate dintre femeile rome însărcinate cu care lucrez: fasole, linte, verdeață închisă cu frunze verzi, ficat, carne roșie. Anemia te epuizează, face nașterea mai periculoasă și afectează dezvoltarea creierului bebelușului tău",
+        "tip4": "Aveți dreptul de a primi îngrijiri prenatale în limba dumneavoastră, de a fi tratată cu demnitate și de a avea cineva să vă însoțească la întâlniri. Dacă un medic este disprețuitor sau lipsit de respect, puteți depune o plângere și puteți solicita alt furnizor. Documentați numele, data și ceea ce s-a spus. Ajut familiile să facă acest lucru în mod regulat",
+        "fact": "Femeile rome din Europa au de 3 până la 5 ori mai multe șanse de a se confrunta cu complicații ale sarcinii decât populația generală, în mare parte pentru că accesează îngrijirea prenatală mai târziu sau deloc. În comunitățile în care am lucrat pentru a conecta femeile însărcinate la îngrijire în primul trimestru, ratele de complicații au scăzut dramatic.",
+        "action": "Dacă sunteți însărcinată sau cunoașteți o femeie însărcinată din comunitatea dvs. care nu a consultat încă un medic, programați-vă astăzi. Dacă îi este frică sau nu este sigură cum, mergeți cu ea sau contactați-o cu mediatorul local de sănătate. O singură vizită poate schimba totul."
+      },
+      "safeDelivery": {
+        "title": "Livrare sigură",
+        "description": "Am ținut mâna femeilor care nasc în ambulanțe pentru că au plecat prea târziu și m-am așezat pe coridoarele spitalelor, unde femeile rome au fost plasate ultimele la coadă, în timp ce femeile ne-rome mergeau înainte. Ambele situații pot fi prevenite. Planificarea livrării și cunoașterea drepturilor tale transformă această experiență dintr-o criză în ceva pe care îl controlezi.",
+        "tip1": "Până săptămâna 34, pregătiți-vă planul de naștere: care spital, cine va merge cu dvs., cum veți ajunge acolo (mai ales noaptea), cine vă va supraveghea pe ceilalți copii. Am văzut prea multe familii care se luptă în ultimul moment – iar stresul afectează nașterea",
+        "tip2": "Aveți dreptul legal de a avea alături un însoțitor (soț, mamă, soră, mediator) în timpul travaliului și al nașterii în aproape toate țările europene. Dacă spitalul spune nu, citați legea privind drepturile pacienților din țara dumneavoastră. Deținem aceste referințe și le putem oferi",
+        "tip3": "Aflați 5 semnele de pericol care înseamnă MERGI LA SPITAL ACUM, indiferent de ora: (1) sângerare abundentă, (2) cefalee severă cu mâinile/fața umflate, (3) bebelușul nu se mai mișcă, (4) apa se întrerupe înainte de PH_6___5_ PH febră ___5 38°C. Nu așteptați până dimineața. Nu încercați să le gestionați acasă",
+        "tip4": "După naștere, rămâneți în spital cel puțin 24 ore pentru monitorizare – chiar dacă vă simțiți bine. Multe complicații care pun viața în pericol (hemoragie, infecție) apar în primele 24 ore. Știu că mediul spitalicesc poate fi ostil, dar acele ore de monitorizare salvează vieți",
+        "fact": "Într-o regiune în care am lucrat 5 ani, am redus urgențele materne de etnie romă cu 60% pur și simplu asigurându-ne că fiecare femeie însărcinată are un plan de naștere, un aranjament de transport și o geantă de spital împachetată pe săptămână 36. Fără tehnologie nouă - doar pregătire și însoțire.",
+        "action": "Dacă dumneavoastră sau cineva pe care îl cunoașteți ați rămas însărcinată în ultimele 30 săptămâni: notați numele spitalului, numărul de telefon și traseul pe hârtie. Pune-l pe perete. Împachetați o geantă cu actul de identitate, card de vaccinare, haine pentru bebeluși și încărcător pentru telefon. Acest lucru durează 20 minute și poate salva o viață."
+      },
+      "breastfeeding": {
+        "title": "Alăptarea",
+        "description": "Alăptarea este profund apreciată în cultura romă, totuși întâlnesc mame tinere cărora rudele bine intenționate le-au spus să dea apă, ceai sau lapte praf în primele zile pentru că „laptele nu a venit încă”. Colostrul - primul lapte gros, gălbui - nu este un semn că ceva nu este în regulă. Este aur lichid, plin de anticorpi care vă protejează nou-născutul chiar de infecțiile care sunt cele mai periculoase în primele săptămâni de viață.",
+        "tip1": "În termen de 1 oră de la naștere, pune copilul piele pe piele pe piept și lasă-l să găsească sânul. Această primă hrănire cu colostru este cel mai important „vaccin” pe care îl va primi bebelușul tău – îi acoperă intestinul cu protecție împotriva infecțiilor. Nu lăsați pe nimeni să vă ia copilul înainte de a se întâmpla acest lucru, decât dacă există o urgență medicală",
+        "tip2": "Hrăniți la cerere — ori de câte ori copilul prezintă semne de foame (întoarcerea capului, sugerea mâinilor, agitație). În primele săptămâni, aceasta poate fi de 10–14 ori în 24 ore. Acest lucru este normal și vă stabilește aprovizionarea. Un ceas nu îți poate spune când bebelușului tău îi este foame – copilul tău îți spune",
+        "tip3": "Fără apă, fără ceai, fără formulă pentru 6 luni, cu excepția cazului în care un medic o prescrie în mod specific dintr-un motiv medical. Laptele dumneavoastră matern își schimbă compoziția pe parcursul zilei pentru a satisface nevoile exacte ale bebelușului dumneavoastră - nicio fabrică nu poate replica acest lucru. Am văzut bunici bine intenționate dând apă cu zahăr care a cauzat afte și diaree",
+        "tip4": "Dacă alăptarea doare, zăvorul este greșit - nu corpul tău. Cereți o moașă sau un lucrător sanitar să urmărească o hrănire și să vă ajute să ajustați poziția. Durerea este un semnal de a primi ajutor, nu un semn de a renunța. Am ajutat sute de mame să remedieze problemele de blocare care au fost rezolvate într-o singură sesiune",
+        "fact": "În comunitățile de romi în care există programe de sprijin pentru alăptare, alăptarea exclusivă timp de 6 luni reduce spitalizările sugarilor cu peste 60%. Laptele matern se adaptează literalmente pentru a lupta împotriva infecțiilor specifice care circulă în mediul dumneavoastră – este un medicament personalizat pe care corpul dumneavoastră îl produce gratuit.",
+        "action": "Dacă sunteți proaspătă mamă sau așteptați: spuneți familiei dvs. acum că intenționați să alăptați exclusiv timp de 6 luni și că aveți nevoie de sprijinul lor, nu de sfaturi pentru a adăuga alte alimente. Dacă alăptarea este dureroasă, contactați moașa sau mediatorul sanitar înainte de a vă opri - soluția este de obicei simplă."
+      },
+      "postpartum": {
+        "title": "Îngrijire postpartum",
+        "description": "În cultura romă, săptămânile de după naștere sunt un moment în care familia se adună în jurul mamei, iar acest lucru este frumos. Dar am văzut și o latură umbră: mame care plâng în fiecare zi și li se spune că este normal. Mame care sângerează abundent și așteaptă prea mult pentru a căuta ajutor. Mame a căror durere este respinsă pentru că „asta trec femeile”. Recuperarea ta contează la fel de mult ca și sănătatea bebelușului tău - pentru că copilul tău are nevoie de tine viu și bine.",
+        "tip1": "Corpul tău are nevoie de minimum 6 săptămâni pentru a se vindeca. Sângerarea (lohia) după naștere este normală timp de 2–4 săptămâni, dar dacă crește brusc, conține cheaguri mari sau miroase urât - mergeți imediat la spital. Am văzut mame care pierd cantități periculoase de sânge pentru că li s-a spus că sângerarea abundentă este normală. Nu este",
+        "tip2": "Dacă te simți în mod persistent trist, gol, incapabil să te conectezi cu copilul tău sau ai gânduri de a te răni pe tine sau pe copilul tău - nu ești slab, nu ești o mamă rea, ai o afecțiune care răspunde la tratament. Spun asta în fiecare vizită la domiciliu, deoarece stigmatul din comunitățile noastre în jurul depresiei postpartum costă vieți",
+        "tip3": "Controlul dumneavoastră postnatal de 6 săptămâni nu este opțional – verifică infecția, vindecarea, tensiunea arterială și sănătatea mintală. Din experiența mea, mai puțin de 30% dintre femeile rome participă la această vizită. Vă rugăm să fiți în acel 30%. Adu pe cineva cu tine dacă asta te ajută",
+        "tip4": "Acceptați fiecare ofertă de ajutor din partea familiei pentru gătit, curățenie și îngrijirea copiilor. Dormi când copilul doarme. Singurele tale locuri de muncă sunt să hrănești copilul și să te recuperezi. Orice altceva poate aștepta. Cele mai puternice mame pe care le cunosc sunt cele care au acceptat ajutorul",
+        "fact": "Depresia postpartum afectează 1 la 5 femei din întreaga lume, dar se estimează că este chiar mai mare în comunitățile de romi din cauza stresului cauzat de sărăcie, discriminării și izolării. În fiecare comunitate în care am înființat grupuri de sprijin pentru proaspete mame, ratele depresiei au scăzut și ratele alăptării au crescut - pentru că conexiunea se vindecă.",
+        "action": "Dacă ați născut în ultimele 6 săptămâni și nu ați avut un control postnatal, sunați astăzi la centrul dumneavoastră de sănătate. Dacă te simți în mod persistent trist sau copleșit, spune-i unei persoane de încredere - mama ta, mediatorul tău de sănătate, oricine. Prima conversație este pasul cel mai greu și cel mai important."
+      }
+    },
+    "children": {
+      "description": "Copiii romă sunt viitorul comunităților noastre și merită fiecare avantaj. În munca mea, am văzut copii care rămân în urmă — nu din lipsă de abilitate, ci pentru că boli prevenibile, vaccinuri ratate sau întârzieri nedetectate le-au furat șansele. Aceste cunoștințe le returnează aceste șanse.",
+      "growthMilestones": {
+        "title": "Creștere și dezvoltare",
+        "description": "Fiecare copil se dezvoltă în propriul ritm și nu vreau niciodată ca părinții să intre în panică din cauza variațiilor normale. Dar am văzut și copii a căror dezvoltare întârziată a fost respinsă de familii ca „vor prinde din urmă” atunci când intervenția timpurie ar fi putut face o diferență transformatoare. A ști la ce să urmărești nu este anxietate - este atenție.",
+        "tip1": "Cântărirea lunară în primul an este cel mai simplu instrument de monitorizare. Centrul tău de sănătate are diagrame de creștere care arată dacă copilul tău este pe drumul cel bun. Un copil care încetează să mai câștige în greutate sau scade brusc pe diagramă are nevoie de investigație imediată - poate fi la fel de simplu ca o ajustare a alimentației sau la fel de important ca depistarea unei afecțiuni de bază",
+        "tip2": "Până la 6 luni, majoritatea bebelușilor se întind după obiecte și răspund la numele lor. Până la 12 luni, majoritatea spun câteva cuvinte și se ridică în picioare. Până la 24 luni, majoritatea merg bine și vorbesc în fraze scurte. Dacă copilul dvs. se află în spatele acestor etape, cereți o evaluare a dezvoltării - ajutorul timpuriu face cea mai mare diferență",
+        "tip3": "Vorbește cu copilul tău în mod constant – povestește ceea ce faci, numește obiecte, cântă cântece. Familiile de romi au o tradiție orală puternică – folosește-o. Copiii care aud mai multe cuvinte dezvoltă vocabulare mai mari și abilități cognitive mai puternice. Aceasta este gratuită și mai eficientă decât orice jucărie",
+        "tip4": "Dinții: curățați gingiile bebelușului cu o cârpă umedă încă de la naștere și folosiți un mic frotiu de pastă de dinți pentru copii de la primul dinte. Văd carii dentare severe la copiii romi la vârsta 3, adesea de la sticle de ceai dulce noaptea - acest lucru provoacă durere, infecție și probleme alimentare care afectează creșterea",
+        "fact": "Cercetările arată că copiii ale căror întârzieri de dezvoltare sunt identificate și abordate înainte de vârsta de 3 au șanse de 5 ori mai mari de a merge la școală la nivelul așteptat. În localitățile în care am înființat cântărire lunară și screening de dezvoltare, ratele de trimitere pentru intervenția timpurie s-au triplat - ceea ce înseamnă că copiii au primit ajutor pe care altfel l-ar fi ratat.",
+        "action": "Dacă copilul dumneavoastră are sub 2, luați-l pentru o verificare a greutății și un screening de dezvoltare la centrul dumneavoastră de sănătate luna aceasta. Dacă copilul dvs. a trecut de 2 și aveți îngrijorări cu privire la vorbire, mers pe jos sau comportament, solicitați o trimitere la un specialist. Îngrijorarea ta este valabilă – acționează în conformitate cu ea."
+      },
+      "commonIllnesses": {
+        "title": "Când copilul tău este bolnav",
+        "description": "În așezările cu locuințe supraaglomerate, salubritate limitată și ierni reci, copiii se îmbolnăvesc frecvent. Cele mai multe dintre aceste boli - diaree, tuse, febră - pot fi gestionate acasă dacă știi ce să faci și când să escaladezi. Dar am văzut și părinți așteptând prea mult, sau grăbindu-se la camerele de urgență pentru afecțiuni pe care un simplu tratament la domiciliu le-ar fi rezolvat. Acest modul vă învață diferența.",
+        "tip1": "Febră sub 38.5°C: corpul copilului dumneavoastră luptă împotriva infecțiilor – este bine. Păstrați-le confortabil, îmbrăcate ușor și dați multe lichide. Febră peste 38.5°C: administrați copiilor paracetamol în doza corectă pentru greutatea lor (NU paracetamol pentru adulți). Dacă febra durează mai mult de 3 zile sau copilul este neobișnuit de somnolent, solicitați asistență medicală",
+        "tip2": "Diareea ucide prin deshidratare, nu prin infecția în sine. În momentul în care copilul dumneavoastră are scaune moale, începeți rehidratarea orală: 1 litru de apă curată fiartă + 6 lingurițe nivele de zahăr + jumătate de linguriță de sare. Dați înghițituri mici la fiecare câteva minute. Această rețetă a salvat mai mulți copii din întreaga lume decât orice antibiotic",
+        "tip3": "DUȚI COPILUL LA SPITAL dacă observați: respirație rapidă sau dificilă, pieptul trăgând la fiecare respirație, imposibilitatea de a bea sau de alăptat, vărsături repetate, somnolență neobișnuită sau netrezire, convulsii sau diaree cu sânge. Nu așteptați. Acestea sunt urgențe",
+        "tip4": "Nu administrați antibiotice fără prescripția medicului. Nu împărtășiți rețeta altui copil. Nu utilizați antibiotice rămase. Văd asta în mod constant în comunitățile noastre și creează bacterii rezistente la medicamente, care sunt mult mai greu de tratat. Antibioticele nu fac nimic pentru răceli, gripă sau majoritatea tusei",
+        "fact": "În comunitățile în care am lucrat, instruirea părinților să pregătească și să utilizeze soluția de rehidratare orală a redus spitalizările copiilor pentru diaree cu peste 40% într-un singur an. Cunoștințele sunt atât de puternice - iar ingredientele costă mai puțin decât un bilet de autobuz către spital.",
+        "action": "Chiar acum, memorează această rețetă: 1 litru apă curată + 6 lingurițe zahăr + jumătate linguriță sare. Exersați să o faceți o dată. Dacă doriți, gustați - ar trebui să aibă gust de lacrimi. Să ai acest lucru gata înseamnă că atunci când copilul tău are diaree la 2am, poți acționa imediat în loc să intri în panică."
+      },
+      "immunization": {
+        "title": "Programul de vaccinare",
+        "description": "Voi fi direct: în comunitățile de romi din Europa, ratele de vaccinare sunt mai mici decât media națională și asta nu pentru că părinților romi nu le pasă de copiii lor, ci pentru că sistemul de sănătate nu a reușit să-i ajungă cu respect, acces și informații. Dezinformarea se răspândește și prin intermediul rețelelor sociale. Am ținut în spital copii cu rujeolă care nu ar fi trebuit niciodată să fie acolo. Fiecare copil nevaccinat este un copil pe care sistemul l-a eșuat.",
+        "tip1": "Naștere până la 6 săptămâni: BCG (tuberculoză) și hepatită B. Acestea se administrează în spital înainte de externare. Dacă copilul dumneavoastră s-a născut acasă, duceți-l la centrul de sănătate în prima săptămână de viață pentru aceste vaccinuri. Nu așteptați",
+        "tip2": "2, 3, 4 luni: cele „trei mari” reprize — DTP (difterie, tetanos, tuse convulsivă), poliomielita, Hib și hepatita B. Acestea sunt cele mai critice vaccinuri pentru copilărie. Fiecare rundă întărește imunitatea. Lipsa unuia slăbește întregul lanț",
+        "tip3": "12–15 luni: MMR (rujeolă, oreion, rubeolă). Nu pot sublinia suficient acest lucru. Rujeola nu este o boală inofensivă a copilăriei - ucide, provoacă leziuni ale creierului și orbește. În 2019, am văzut un focar de rujeolă într-o așezare de romi, deoarece acoperirea a scăzut sub 80%. Era prevenit",
+        "tip4": "Vaccinurile sunt gratuite în centrele de sănătate guvernamentale din fiecare țară europeană. Nu aveți nevoie de asigurare, nu aveți nevoie de permis de ședere, nu aveți nevoie de programare în majoritatea centrelor. Dacă vi se refuză serviciul, acest lucru este ilegal - contactați mediatorul dumneavoastră de sănătate sau biroul pentru drepturile pacienților",
+        "fact": "Diferența dintre ratele de vaccinare a romilor și ne-romii în unele țări europene depășește 15 puncte procentuale. Acest decalaj nu este cauzat de credințele romilor despre vaccinuri – sondajele arată în mod constant părinții romi își doresc copiii vaccinați. Decalajul este cauzat de barierele de acces, discriminarea în asistența medicală și lipsa de informare. Reducerea acestui decalaj este o obligație a statului în temeiul articolului 11 din Carta Socială Europeană.",
+        "action": "Găsiți carnetul de vaccinare al copilului dvs. Dacă lipsesc vreun vaccin sau dacă nu aveți un card, vizitați cel mai apropiat centru de sănătate în această săptămână. Dacă vă confruntați cu bariere - limbă, documente, refuz - contactați mediatorul local de sănătate. Exact pentru asta suntem aici."
+      }
+    },
+    "chronic": {
+      "description": "Romii mor cu 10 ani mai devreme decât media europeană. Cea mai mare parte a acestui decalaj vine din bolile cronice — diabet, boli de inimă, boli respiratorii — care se dezvoltă încet și tăcut ani de zile. Când apar simptomele, daunele sunt deja făcute. Dar cea mai mare parte e prevenibilă și totul e gestionabil dacă e prins la timp.",
+      "diabetes": {
+        "title": "Diabetul: amenințarea tăcută",
+        "description": "Diabetul de tip 2 este boala cronică pe care o întâlnesc cel mai frecvent în comunitățile de romi. Funcționează în familii, se dezvoltă cu dieta ieftină, bogată în zahăr, la care sărăcia îi obligă pe oameni și vă dăunează ochii, rinichii, picioarele și inima ani de zile înainte de a simți ceva rău. Am văzut bărbați cu 40 pierzând degetele de la picioare, iar femeile orbesc, din cauza diabetului care nu a fost niciodată diagnosticat pentru că nu au făcut niciodată un test de sânge. Acest lucru poate fi prevenit.",
+        "tip1": "Dacă cineva din familia ta are diabet, riscul tău este de 2–3 ori mai mare. Aceasta nu este soarta - este un semnal să acţionăm acum. Reduceți pâinea albă, zahărul și băuturile dulci. Înlocuiți-l cu fasole, linte, legume și apă. Am văzut familii inversând în totalitate pre-diabetul prin aceste schimbări",
+        "tip2": "30 minute de mers pe jos în fiecare zi reduc riscul de diabet cu 58%. Nu alerga. Nu sala de sport. Mersul pe jos. Îi spun fiecărui om peste 35 din comunitățile cu care lucrez: plimbarea este medicamentul. Este gratuit și funcționează mai bine decât majoritatea pastilelor pentru prevenire",
+        "tip3": "Solicitați un test de glicemie a jeun la centrul dumneavoastră de sănătate cel puțin o dată pe an dacă aveți peste 35, supraponderal sau aveți antecedente familiale. Este un simplu test de înțepătură cu degetul, este gratuit în majoritatea țărilor și durează 5 minute. Acest singur test poate detecta diabetul cu ani înainte de apariția simptomelor",
+        "tip4": "Cunoașteți semnele de avertizare care înseamnă că diabetul poate fi deja prezent: sete constantă, urinarea foarte frecventă (mai ales noaptea), vederea încețoșată, răni care se vindecă încet, oboseală inexplicabilă. Dacă aveți două sau mai multe dintre acestea, faceți-vă testarea săptămâna aceasta, nu luna viitoare",
+        "fact": "Studiile efectuate în comunitățile de romi din Slovacia și România au găsit o prevalență a diabetului zaharat de 2–3 ori mai mare decât media națională, majoritatea cazurilor nediagnosticate. Într-un program la care am participat, screening-ul comunitar a detectat diabet la 18% dintre adulții peste 40 care nu fuseseră niciodată testați. Aproape toate nu au avut simptome.",
+        "action": "Dacă aveți peste 35, mergeți la centrul dumneavoastră de sănătate și cereți un test de zahăr din sânge. Durează 5 minute. Dacă rezultatul este peste 5.6 mmol/L (100 mg/dL), trebuie să începeți să faceți modificări acum. Aduceți un membru al familiei - dacă riscul dvs. este mare, probabil că și al lui este."
+      },
+      "heartHealth": {
+        "title": "Inima Ta",
+        "description": "Boala cardiovasculară este ucigașul numărul unu în comunitățile de romi – nu din cauza geneticii, ci din cauza condițiilor în care trăim: stres cronic cauzat de sărăcie și discriminare, rate ridicate de fumat, diete modelate de ceea ce permite sărăcia și aproape lipsa accesului la screening preventiv. Am participat la funeraliile bărbaților din 50 care au murit din cauza unor atacuri de cord care au fost complet prevenite. Acest modul există pentru că refuz să particip mai mult.",
+        "tip1": "Fumatul este cel mai distructiv lucru pe care îl poți face inimii tale. Știu că este profund înrădăcinată în cultura comunității noastre și nu sunt aici să judec, dar vă datorez onestitate. Fiecare țigară vă dăunează vaselor de sânge. Dacă nu puteți renunța, reduceți. Dacă poți renunța, inima ta începe să se repare în 24 ore",
+        "tip2": "Hipertensiunea arterială este numită ucigașul tăcut, deoarece nu simți nimic până când apare un accident vascular cerebral sau un atac de cord. Verificați-vă tensiunea arterială la orice farmacie - este gratuit. Normal este sub 120/80. Mai sus 140/90 este periculos și necesită tratament. Am găsit tensiune arterială periculoasă la oameni care s-au simțit perfect sănătoși",
+        "tip3": "Reduceți sare: Bucătăria romă este aromată și frumoasă, dar multe preparate tradiționale sunt foarte sărate. Utilizați boia de ardei, usturoi, ceapă, ierburi și piper în loc să adăugați sare suplimentară. Papilele tale gustative se adaptează în 2 săptămâni — mâncarea va avea un gust mai bun, nu mai rău. Am văzut că tensiunea arterială a scăzut cu 10 puncte numai din această schimbare",
+        "tip4": "Stresul cronic cauzat de discriminare, sărăcie, amenințări de evacuare și conflicte familiale este o cauză directă a bolilor de inimă. Aceasta nu este o opinie - este un medicament documentat. Hormonii stresului vă afectează vasele de sânge de-a lungul anilor. Găsirea oricărei modalități de a elibera stresul - mers pe jos, muzică, rugăciune, vorbire, comunitate - este un medicament pentru inimă",
+        "fact": "Bărbații romi mor din cauza bolilor cardiovasculare în medie cu 10–15 ani mai devreme decât populația generală. Datele proprii ale Comisiei Europene arată acest lucru. Dar 80% din atacurile de cord prematur pot fi prevenite prin modificări ale stilului de viață și tratamentul precoce al hipertensiunii arteriale și al colesterolului. Prevenirea funcționează – dacă aveți acces la ea.",
+        "action": "Săptămâna aceasta, faceți două lucruri: (1) Mergeți la o farmacie și verificați-vă tensiunea arterială - notați numerele. (2) Numărați câte țigări fumați pe zi și încercați să reduceți cu 3 pe zi. Aceste două acțiuni sunt cele mai puternice măsuri de prevenire a inimii pe care o poate lua orice individ."
+      },
+      "respiratory": {
+        "title": "Plămânii și respirația",
+        "description": "Am lucrat în așezări în care familiile ard lemne, cărbune sau chiar plastic și cauciuc pentru încălzire iarna. Unde 8 persoane dorm în două camere fără ventilație. Unde umezeala curge pe pereți și mucegaiul negru crește în fiecare colț. Boala respiratorie în aceste condiții nu este surprinzătoare – este rezultatul previzibil al locuinței în care nimeni nu ar trebui să locuiască. În timp ce luptăm pentru o locuință mai bună, trebuie să protejăm și plămânii pe care îi avem.",
+        "tip1": "Fumul din interior este cel mai imediat pericol respirator pe care îl văd. Dacă încălziți cu combustibil solid, asigurați-vă ventilația - chiar și crăparea unei ferestre ajută. Nu arde niciodată plastic, cauciuc sau lemn vopsit - fumul conțin substanțe chimice care provoacă leziuni pulmonare permanente, în special la copiii ai căror plămâni sunt încă în curs de dezvoltare",
+        "tip2": "Umezeala și mucegaiul provoacă astm bronșic, bronșită cronică și agravează orice infecție respiratorie. Ștergeți mucegaiul vizibil cu un amestec de apă și oțet sau înălbitor. Deschideți ferestrele cel puțin 15 minute zilnic, chiar și iarna. Agățați rufele umede afară atunci când este posibil - uscarea rufelor în interior adaugă cantități enorme de umiditate aerului",
+        "tip3": "O tuse care durează mai mult de 3 săptămâni, în special cu scădere în greutate, transpirații nocturne sau sânge în scuipat, trebuie investigată pentru tuberculoză. TB se vindecă cu tratament gratuit, dar este și foarte contagioasă. În comunitățile de romi, ratele TB sunt de 3–5 ori mai mari decât media națională în mai multe țări europene. Testarea timpurie vă protejează întreaga familie",
+        "tip4": "Copiii care cresc în medii cu fum sau mucegai au capacitatea pulmonară redusă permanent - vor purta plămâni mai puțin sănătoși toată viața. Chiar dacă nu vă puteți schimba imediat situația locuinței, reducerea expunerii la fum și ventilarea cât mai mult posibil le protejează plămânii în curs de dezvoltare.",
+        "fact": "WHO identifică poluarea aerului casnic drept al patrulea cel mai mare risc global pentru sănătate. În așezările de romi în care am lucrat, peste 60% dintre copii au avut infecții respiratorii recurente - rate care au scăzut semnificativ atunci când familiile au îmbunătățit ventilația și au redus arderea în interior a deșeurilor. Condițiile de locuit nu sunt vina familiilor, dar strategiile de adaptare salvează vieți în timp ce se luptă pentru schimbarea sistemică.",
+        "action": "Astăzi: verificați dacă există mucegai vizibil în casa dvs. și curățați-l cu înălbitor sau oțet diluat. Deschideți cel puțin o fereastră timp de 15 minute. Dacă cineva din gospodăria dvs. a tuse de mai mult de 3 săptămâni, mergeți la centrul de sănătate pentru un screening TB — este gratuit și durează 15 minute."
+      }
+    },
+    "mental": {
+      "description": "În 15 ani în comunități romă, am învățat că cea mai grea povară nu e boala fizică — e greutatea discriminării, sărăciei, fricii de evacuare, grijii pentru viitorul copiilor și sentimentul că nimeni din sistem nu îți pasă. O numim stres. Când durează ani, devine altceva. Merită numită, înțeleasă și tratată — fără rușine.",
+      "stressManagement": {
+        "title": "Trăiește cu Stres",
+        "description": "Nu voi pretinde că un exercițiu de respirație vă va rezolva problemele. Dacă ești îngrijorat că familia ta va fi evacuată, nicio aplicație de meditație nu va rezolva asta. Dar am lucrat cu sute de oameni din comunitățile noastre care suferă de stres enorm și am văzut ce se întâmplă atunci când stresul nu este gestionat de ani de zile: atacuri de cord la bărbați în 40, femei care nu pot mânca sau dormi, copii care cresc în gospodării electrizate de tensiune. Nu ne putem schimba întotdeauna circumstanțele, dar putem schimba modul în care le purtăm.",
+        "tip1": "Metoda de respirație 4-4-8 acţionează imediat asupra sistemului dumneavoastră nervos. Inspirați pe nas pentru 4 numără, țineți apăsat pentru 4, expirați încet pe gură pentru 8. Faceți acest lucru de 5 ori. Pulsul scade, mușchii se relaxează. Învăț acest lucru familiilor înainte de vizitele la spital, înainte de ședințele de judecată, înainte de orice întâlnire stresantă. Este un instrument pe care îl ai mereu cu tine",
+        "tip2": "Mersul pe jos este cel mai subestimat medicament pentru stres. 20 minute de mers pe jos — nu rapid, doar mers pe jos — reduc cortizolul, hormonul stresului, cu până la 30%. Dacă nu puteți ieși din casă, mergeți în cerc. Mișcarea în sine este cea care funcționează, nu peisajul",
+        "tip3": "Vorbește cu cineva. Nu pentru a rezolva problema, ci doar pentru a împărți greutatea. Am văzut bărbați din comunitățile noastre purtând totul singuri, pentru că a cere ajutor se simte ca o slăbiciune. În 15 ani de această muncă, cei mai puternici oameni pe care i-am întâlnit sunt cei care au învățat să spună „mă lupt”",
+        "tip4": "Fii intenționat cu privire la ceea ce îți intră în minte. Rețelele de socializare, știrile, argumentele de familie care se repetă în capul tău - acestea sunt surse de stres pe care le poți controla. Nu spun să ignori realitatea. Spun că alegeți când vă angajați cu ea și creați spații în ziua voastră în care sunteți în mod deliberat în pace",
+        "fact": "Comunitățile de romi se confruntă cu ceea ce sănătatea publică numește „stresul minoritar” – taxa fiziologică cronică a discriminării, excluderii și sărăciei. Cercetările arată că acest lucru crește nivelul de cortizol în mod permanent, accelerând bolile de inimă, diabetul și bolile mintale. Aceasta nu este slăbiciune. Este biologia care răspunde la nedreptate.",
+        "action": "În seara asta, înainte de culcare, puneți-vă telefonul într-o altă cameră și exersați 4-4-8 respirația timp de 5 minute. Dacă aveți un partener sau un membru al familiei care dorește, faceți-o împreună în tăcere. Acest mic act creează o graniță între stresul zilei și somnul tău - iar somnul este atunci când corpul tău repară daunele cauzate de stres."
+      },
+      "sleep": {
+        "title": "Somnul ca medicament",
+        "description": "În casele supraaglomerate, unde televizorul este mereu pornit, în care copiii împart patul cu părinții, unde zgomotul vecinilor sau a străzii nu se oprește niciodată — somnul nu este un dat. Este ceva pentru care trebuie să lupți. Și totuși, somnul este atunci când corpul tău se repară singur, când creierul tău procesează stresul zilei și când sistemul tău imunitar se reconstruiește. Privarea cronică de somn este la fel de periculoasă ca fumatul - și în comunitățile noastre, este aproape universal.",
+        "tip1": "Încercați să dormiți și să vă treziți aproximativ la aceeași oră în fiecare zi, inclusiv în weekend. Știu că acest lucru este greu cu munca în schimburi, copiii mici sau mediile zgomotoase, dar chiar și o fereastră constantă de 6 ore este mai reparatoare decât blocurile aleatorii de 8 ore. Corpul tău tânjește la ritm",
+        "tip2": "Telefoanele și ecranele înainte de culcare sunt unul dintre cele mai rele distrugătoare de somn moderne. Lumina albastră spune creierului tău că este zi. Dacă trebuie să folosiți telefonul, setați-l în modul noapte după 9pm. Mai bine încă, încărcați-l într-o altă cameră - am văzut că calitatea somnului se îmbunătățește dramatic de la această singură schimbare",
+        "tip3": "Cofeina rămâne în sistem timp de 8 ore. În acea după-amiază, cafeaua sau ceaiul turcesc la 4p.m. sunt încă active în sânge la miezul nopții. Treceți la ceai de plante (mușețel, tei) după prânz. Aceasta este una dintre cele mai simple îmbunătățiri pe care le recomand și oamenii sunt mereu surprinși de cât de mult ajută",
+        "tip4": "Dacă împărțiți o cameră cu copii sau membri ai familiei, micile schimbări vă ajută: un timp constant de „stingere”, reducerea treptată a zgomotului, utilizarea unei perdele pentru a crea o limită vizuală a somnului. Învățați-i pe copii că timpul de somn este timpul în familie - când gospodăria se liniștește împreună, toată lumea doarme mai bine",
+        "fact": "Cercetările privind somnul în comunitățile marginalizate arată că privarea cronică de somn cauzată de supraaglomerare, zgomot și stres contribuie în mod semnificativ la decalajul de sănătate. Persoanele care dorm în mod constant mai puțin de 6 ore au un risc de 4x mai mare de a contracta infecții și un risc de 2x mai mare de boli de inimă. Somnul nu este un lux - este o bază pentru supraviețuire.",
+        "action": "În seara asta: setează o alarmă de culcare pe telefon cu 30 minute înainte de a dori să dormi. Când sună, închideți televizorul, puneți telefonul deoparte și întindeți-vă în întuneric făcând 4-4-8 respirând până adormi. Faceți acest lucru timp de 7 nopți și observați diferența."
+      },
+      "communitySupport": {
+        "title": "Puterea conexiunii",
+        "description": "Cultura romă înțelege deja ceva pe care medicina occidentală îl măsoară abia acum: că apartenența, familia și comunitatea vă protejează sănătatea la fel de puternic ca orice medicament. Am văzut oameni supraviețuind celor mai dificile circumstanțe - evacuări, boli, pierderi - pentru că comunitatea lor i-a ținut. Și am văzut oameni prăbușindu-se sub mult mai puțin atunci când erau izolați. Știința confirmă acum ceea ce știau strămoșii noștri: singurătatea ucide, conexiunea vindecă.",
+        "tip1": "Dacă cunoașteți pe cineva din comunitatea dvs. care a pierdut recent un membru al familiei, a fost diagnosticat cu o boală, și-a pierdut locul de muncă sau trece printr-o criză - nu așteptați ca acesta să ceară ajutor. Vizitează-i. Aduceți mâncare. Stai cu ei. În cultura romă, acesta este instinctul. În știința sănătății, aceasta se numește „prescripție socială” – și funcționează mai bine decât majoritatea pastilelor",
+        "tip2": "Rușinea este dușmanul sănătății. Am întâlnit oameni care au ascuns diabetul, depresia, HIV și violența domestică de ani de zile pentru că se temeau de ceea ce va spune comunitatea. De fiecare dată când cineva din comunitatea noastră vorbește deschis despre lupta sa, le dă voie altora. Nu trebuie să împărtășiți totul, dar împărtășirea a ceva rupe tăcerea care îi ține pe oameni bolnavi",
+        "tip3": "Adunări, sărbători, muzică, rugăciune, povestiri - acestea nu sunt distrageri de la sănătate. Ei sunt de sănătate. Studiile arată că participarea regulată la activități culturale comunitare reduce depresia și riscul cardiovascular. Bucuria și apartenența pe care le creează sunt medicamente măsurabile",
+        "tip4": "Verificați persoanele în vârstă și persoanele izolate din comunitatea dvs. Persoana care locuiește singură, bunica ai cărei copii s-au mutat, bărbatul care a încetat să mai vină la adunări. O vizită de 10 minute sau un apel telefonic poate fi singura conexiune umană pe care o au în acea zi - și ar putea fi ceea ce îi ține în viață",
+        "fact": "Studiul de 85 de la Harvard privind sănătatea adulților a concluzionat că cel mai puternic predictor al sănătății și longevității este calitatea relațiilor voastre - nu dieta, exercițiile fizice sau genetica. Singurătatea crește riscul de mortalitate cu 26%, echivalent cu fumatul zilnic cu 15 țigări. Comunitățile de romi au o bogăție culturală în conexiune socială, care este un adevărat bun pentru sănătate – protejează-o.",
+        "action": "Săptămâna aceasta, contactați o persoană din comunitatea dvs. cu care nu ați vorbit recent. Nu prin text - prin voce sau în persoană. Întrebați cum sunt și ascultați. Acest act de conexiune este promovarea sănătății în forma sa cea mai pură."
+      },
+      "seekHelp": {
+        "title": "Când E Prea Mult",
+        "description": "Există un punct în care stresul, tristețea și îngrijorarea traversează o linie în ceva care are nevoie de ajutor profesional – iar în comunitățile de romi, această linie aproape niciodată nu este recunoscută pentru că suntem învățați să înduram, să fim puternici, să ne descurcăm în familie. Am văzut costul acestei tăceri: bărbați care beau pentru a se descurca până când ficatul le cedează, femei care încetează să mănânce, adolescenți care își fac rău. A cere ajutor nu înseamnă a-ți trăda cultura. Îți protejează viața, astfel încât să poți fi acolo pentru oamenii care au nevoie de tine.",
+        "tip1": "Dacă tu sau cineva pe care îl cunoști nu ai reușit să funcționeze în mod normal timp de mai mult de 2 săptămâni – nu poți dormi, nu poate mânca, nu ai grijă de copii, plânge constant sau nu are energie pentru nimic – acest lucru depășește stresul normal. Aceasta este depresia și este o afecțiune la fel de reală ca diabetul. Nu este slăbiciune și răspunde la tratament",
+        "tip2": "Primul pas este medicul de familie. Spuneți: „Mă simt foarte rău de mai bine de 2 săptămâni și am nevoie de ajutor”. Nu trebuie să explici totul. Medicul de familie vă poate evalua și vă poate trimite la un psiholog sau psihiatru. Acest serviciu este gratuit sau low-cost în majoritatea țărilor europene. Dacă medicul dumneavoastră vă concediază, consultați altul",
+        "tip3": "Dacă cineva din familia ta menționează că vrea să moară, vrea să dispară sau simte că toată lumea ar fi mai bine fără ei - ia asta în serios imediat. Rămâi cu ei. Îndepărtați accesul la medicamente și obiecte ascuțite. Sunați la linia națională de criză sau la 112. Nu reacționezi exagerat. Aceste cuvinte sunt un strigăt de ajutor la care trebuie răspuns",
+        "tip4": "Medicamentele pentru sănătatea mintală nu sunt rușinoase, creează dependență sau „pentru nebuni”. Antidepresivele sunt prescrise la milioane de oameni din întreaga lume și salvează vieți. Ele nu schimbă cine ești – ele ridică ceața chimică care te împiedică să fii cine ești. Am văzut oameni transformați prin tratament la care au rezistat ani de zile din cauza stigmatizării",
+        "fact": "Comunitățile de romi se confruntă cu cele mai mari rate de depresie și anxietate din Europa, determinate de factori structurali precum discriminarea, sărăcia și lipsa accesului la servicii. Cu toate acestea, utilizarea serviciilor de sănătate mintală în comunitățile de romi este printre cele mai scăzute. În programele în care am contribuit la conectarea oamenilor la îngrijirea sănătății mintale sensibile din punct de vedere cultural, îmbunătățirea calității vieții a fost profundă – nu doar pentru individ, ci pentru întreaga lor familie.",
+        "action": "Salvați acest număr în telefon chiar acum: linia de asistență pentru criza de sănătate mintală din țara dvs. Dacă ești în criză, sună. Dacă cineva pe care îl cunoști este în criză, sună-l cu el. Și dacă te-ai luptat de mai mult de 2 săptămâni, rezervă o întâlnire cu medicul de familie în această săptămână. Meriți să te simți mai bine, iar ajutorul există."
+      }
+    }
+  },
+  "track": {
+    "title": "Check-in zilnic de sănătate",
+    "subtitle": "Cum te simți astăzi?",
+    "moodTitle": "Dispoziție",
+    "moodGreat": "Excelent",
+    "moodGood": "Bine",
+    "moodOkay": "Acceptabil",
+    "moodLow": "Nu prea bine",
+    "moodBad": "Foarte rău",
+    "waterTitle": "Consum de apă",
+    "waterSubtitle": "Atinge fiecare pahar când bei",
+    "waterGoal": "Obiectiv: 8 pahare",
+    "activityTitle": "Activitate astăzi",
+    "activityWalk": "Am mers pe jos",
+    "activityExercise": "Am făcut exerciții",
+    "activityRest": "Am odihnit",
+    "saveCheckin": "Salvează check-in-ul de astăzi",
+    "savedSuccess": "Check-in salvat!",
+    "weeklyTitle": "Săptămâna aceasta",
+    "streakDays": "zile consecutive",
+    "loggedToday": "Înregistrat astăzi",
+    "noLogsYet": "Începe primul tău check-in mai jos",
+    "historyTitle": "Istoric recent"
+  },
+  "profile": {
+    "title": "Profil",
+    "guestUser": "Oaspete",
+    "guestSubtitle": "Înveți anonim",
+    "languagePreference": "Preferință de limbă",
+    "changeLanguage": "Schimbă limba",
+    "learningProgress": "Progres de învățare",
+    "pillarsStarted": "Piloni începuți",
+    "modulesCompleted": "Module completate",
+    "trackingStreak": "Serie de urmărire",
+    "days": "zile",
+    "exportData": "Exportă datele mele (GDPR)",
+    "exportDescription": "Descarcă toate datele de urmărire a sănătății ca fișier CSV.",
+    "clearData": "Șterge toate datele",
+    "clearDataConfirm": "Ești sigur? Aceasta nu poate fi anulată.",
+    "aboutTitle": "Despre Redi Health",
+    "aboutText": "Redi Health este un companion gratuit multilingv pentru alfabetizarea în sănătate în zone defavorizate — sate, cartiere periurbane, așezări, cartiere romă, regiuni rurale din Europa — unde clinicienii sunt puțini, drumurile spre îngrijire sunt lungi, iar mesajele oficiale adesea nu ajung în limba oamenilor.",
+    "privacyPolicy": "Politica de confidențialitate",
+    "contactUs": "Contactează-ne",
+    "progressNone": "Nu ai început încă să înveți.",
+    "progressStart": "Mergi la Învață pentru a începe.",
+    "version": "Versiune"
+  },
+  "mediator": {
+    "title": "Panou mediator",
+    "subtitle": "Sprijină sănătatea comunității tale",
+    "accessCode": "Introdu codul de acces",
+    "accessCodePlaceholder": "Cod din 4 cifre",
+    "accessCodeHint": "Întreabă coordonatorul pentru codul de acces",
+    "accessCodeError": "Cod incorect. Încearcă din nou.",
+    "accessCodeSubmit": "Accesează panoul",
+    "communityMembers": "Membri ai comunității",
+    "logsThisMonth": "Înregistrări de sănătate luna aceasta",
+    "alertsActive": "Alerte active",
+    "quickActions": "Acțiuni rapide",
+    "logVisit": "Înregistrează o vizită",
+    "recordHealth": "Înregistrează date de sănătate",
+    "viewReports": "Vezi rapoarte",
+    "recentActivity": "Activitate recentă",
+    "noActivity": "Nicio activitate recentă",
+    "memberName": "Numele membrului",
+    "visitDate": "Data vizitei",
+    "notes": "Note",
+    "saveVisit": "Salvează vizita",
+    "visitSaved": "Vizita a fost salvată cu succes",
+    "healthSummary": "Rezumatul sănătății comunității",
+    "pillarProgress": "Progresul învățării pe piloni",
+    "contactSupport": "Contactează coordonatorul regional",
+    "resources": "Resurse pentru mediator",
+    "downloadGuide": "Descarcă ghidul de teren (PDF)"
   }
 }

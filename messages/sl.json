@@ -1341,5 +1341,314 @@
     "amber": "Kmalu obiščite zdravnika",
     "red": "Nujno — Pojdi TAKOJ",
     "redHospital": "Pojdi v bolnišnico TAKOJ"
+  },
+  "learn": {
+    "progressLabel": "dokončanih modulov",
+    "startHere": "Začnite tukaj",
+    "continueLabel": "Nadaljuj",
+    "allModules": "Vsi moduli",
+    "prevention": {
+      "description": "V 15 letih dela v romskih naseljih sem videl družine, opustošene z boleznimi, ki bi jih preprečile preprote navade. To znanje ni luksuz — je preživetje.",
+      "handwashing": {
+        "title": "Umivanje rok",
+        "description": "Videl sem cele družine v naseljih, ki so zbolele za isto želodčno okužbo, ki se je prenašala iz roke v roko. Pravilno umivanje rok je edino najcenejše in najmočnejše zdravilo, do katerega že imate dostop – ne stane nič in preprečuje bolezni, ki jih najpogosteje srečujem v naših skupnostih.",
+        "tip1": "Preden se dotaknete hrane, preden nahranite otroka in po vsakem obisku stranišča - umijte se. Videl sem, da je ena neumita roka povzročila tedensko drisko za celotno gospodinjstvo",
+        "tip2": "Počasi štejte do 20 ali si zapevkajte verz pesmi. Večina ljudi se umiva 5 sekund – to ne odstrani skoraj ničesar. Trenje med vašimi rokami je tisto, kar ubija mikrobe",
+        "tip3": "Brez mila? Delal sem v naseljih brez tekoče vode. Ash deluje. Peščena dela. Sama voda s čiščenjem deluje bolje kot nič. Ne dovolite, da popolno prepreči dobro",
+        "tip4": "Roke posušite na zraku ali uporabite čisto krpo, ki jo menjate vsak dan. Umazana brisača, ki si jo delijo vsi, ponovno onesnaži čiste roke – to razložim ob vsakem obisku na domu",
+        "fact": "V skupnostih, s katerimi sem delal, so kampanje za umivanje rok zmanjšale primere driske pri otrocih za skoraj polovico v treh mesecih. WHO potrjuje: umivanje rok zmanjša drisko za 40 % in okužbe dihal za do 21 %.",
+        "action": "Nocoj stopite s svojimi otroki pri izviru vode in si skupaj umijte roke. Naj vam to postane družinska navada pred vsakim obrokom. Otroci, ki se učijo tako, da opazujejo svoje starše, bodo to nosili vse življenje."
+      },
+      "vaccination": {
+        "title": "Cepljenje",
+        "description": "Spremljala sem romske matere v zdravstvene domove, kjer so jih zavrnili, ker niso imele dokumentov, niso znale jezika ali pa so jim preprosto rekli, naj se vrnejo pozneje. Cepiva so zakonska pravica vaših otrok – brezplačna, varna in najmočnejša zaščita, ki jo lahko zagotovi starš. Nihče vam tega ne more odreči.",
+        "tip1": "Vsaka država v Evropi nudi brezplačen program cepljenja od rojstva. To ni dobrodelnost – to je zakonska pravica vašega otroka. Če zdravstveni delavec zavrne, prosite njegovega nadzornika in to jasno povejte",
+        "tip2": "Cepilni karton je za rojstnim listom najpomembnejši dokument, ki ga ima vaš otrok. Hranite ga na varnem, nosite ga ob vsakem obisku zdravnika. V primeru izgube mora kateri koli zdravstveni dom izdati zamenjavo - ne sprejmite zavrnitve",
+        "tip3": "Blaga vročina, boleče mesto na roki, sitnost za en dan – to je normalno in pomeni, da cepivo deluje. O tem sem pomirila na stotine zaskrbljenih mater. Mine v 24–48 urah",
+        "tip4": "Za cepljenje se v večini zdravstvenih domov ne potrebujete naročanja. Vstopite. Če romski zdravstveni mediator dela na vašem območju, ga prosite, naj vas spremlja – za to smo usposobljeni",
+        "fact": "V enem naselju, v katerem sem delal, so se pojavile ošpice, ker je precepljenost padla na 60%. Trije otroci so bili hospitalizirani. Po kampanji cepljenja v skupnosti smo dosegli 94 % — in izbruhi so se ustavili. Po vsej Evropi cepiva vsako leto preprečijo 2–3 milijonov smrti.",
+        "action": "Takoj vzemite otrokovo kartico cepljenja. Preverite glede na urnik na steni vašega zdravstvenega doma. Če kakšno cepivo manjka ali nimate kartona, obiščite zdravstveni dom ta teden. Prinesite to aplikacijo za prikaz urnika, če pomaga."
+      },
+      "cleanWater": {
+        "title": "Čista voda",
+        "description": "Delal sem v naseljih, kjer si družine delijo eno pipo, ki teče dve uri na dan, in v soseskah, kjer je voda iz pipe videti bistra, vendar prenaša bakterije, ki povzročajo kronične želodčne težave pri otrocih. Kakovost vode ni vedno vidna, v romskih skupnostih pa jo organi redko nadzirajo. Morate biti vodni inšpektor svoje družine.",
+        "tip1": "Pokrijte vsako posodo, v kateri shranjujete vodo. Videl sem, kako so muhe, prah in celo živalski iztrebki v nekaj urah onesnažili nepokrita vedra, zlasti v toplem vremenu. Preprosta plošča na vrhu prepreči večino kontaminacije",
+        "tip2": "Če niste prepričani glede svoje vode, jo kuhajte eno polno minuto pri nizkem vrenju. To uniči 99.9 % bakterij, virusov in parazitov. Skoraj nič ne stane in deluje — tega sem učil v desetinah naselij, kjer je bil vodni vir vprašljiv",
+        "tip3": "Vsaj enkrat na teden operite svoje posode z vodo z milom in čisto vodo. Umazana posoda naredi čisto vodo umazano. To je eden najbolj spregledanih vzrokov za ponavljajočo se drisko, ki sem jih opazil pri otrocih",
+        "tip4": "Potoki, ribniki in stoječe mlake nikoli niso varni za pitje – tudi če je voda videti bistra. Očesu nevidni paraziti povzročajo kronične poškodbe otrokovega črevesja in razvoja",
+        "fact": "V številnih romskih naseljih po srednji in vzhodni Evropi družine nimajo dostopa do varne vodovodne napeljave. Evropski center za pravice Romov je dokumentiral, da so romske soseske sistematično premalo opremljene z vodno infrastrukturo. Prekuhavanje vode ni idealno – je strategija preživetja, dokler vaša pravica do čiste vode ni izpolnjena.",
+        "action": "Danes preverite vsako posodo, v kateri vaša družina shranjuje pitno vodo. Pokrijte vse odprte. Če ne morete preveriti, ali je vodni vir varen, začnite z današnjim večerom kuhati vso vodo za pitje in kuhanje."
+      },
+      "firstAid": {
+        "title": "Osnovna prva pomoč",
+        "description": "V oddaljenih naseljih in mestnih soseskah, kjer reševalna vozila potrebujejo dlje časa, da pridejo – ali včasih sploh ne pridejo – je vedeti, kaj storiti v prvih minutah nujnega primera, razlika med življenjem in smrtjo. Na stotine članov romske skupnosti sem usposobil za osnovno prvo pomoč in videl sem, da je to znanje rešilo življenja, preden je prišel kateri koli zdravnik.",
+        "tip1": "112 deluje s katerim koli telefonom v Evropi — tudi brez kredita, tudi brez kartice SIM, tudi z zaklenjenega telefona. Naučite vsakega člana svoje družine, vključno z otroki nad 7, da pokličejo 112 in povedo, kje so. Vadite to. V sili zaradi panike ljudje pozabijo",
+        "tip2": "Pri močni krvavitvi: močno pritisnite z najčistejšo krpo, ki jo imate – srajco, naglavno ruto, karkoli – in je ne dvigujte, da bi preverili. Pritiskajte, dokler ne prispe pomoč. Videl sem ljudi, ki so nevarno krvaveli, ker so ves čas odstranjevali krpo, da bi pogledali. Dodajte več krpe na vrh, če se kri prepoji",
+        "tip3": "Opekline: opeklino takoj postavite pod hladno tekočo vodo za vsaj 10 minut. Nikoli ne nanašajte masla, olja, zobne paste ali jajčnega beljaka – tradicionalnih zdravil, ki sem jih srečal v mnogih družinah, dejansko zadržijo vročino in povzročijo hujšo škodo in okužbo",
+        "tip4": "Če se nekdo zgrudi in ne diha: pokličite 112, nato močno in hitro potisnite na sredino njegovih prsi — 100-krat na minuto (tempo pesmi 'Stayin' Alive'). Ne ustavljajte se, dokler ne prispe pomoč. Nepopolno oživljanje je neskončno boljše od brez oživljanja",
+        "fact": "Študije kažejo, da se v skupnostih, kjer je osnovno usposabljanje prve pomoči razširjeno, preživetje po srčnem zastoju podvoji. V mnogih romskih skupnostih so odzivni časi reševalnih vozil bistveno daljši kot v neromskih območjih, zaradi česar je prva pomoč navzočim še bolj kritična.",
+        "action": "Takoj vprašajte vsakega družinskega člana: ali veste, kako poklicati 112? Ali poznate naš domači naslov dovolj dobro, da bi to povedali dispečerju? Na list papirja napišite svoj polni naslov in ga položite blizu telefona. Naučite svoje otroke danes."
+      }
+    },
+    "nutrition": {
+      "description": "Po letih z romskimi družinami sem spoznal, da hrana ni le prehrana — je to, kar si lahko privoščite, kar je na voljo v soseski in kar vaša družina pozna. Ne bom rekel, naj kupite quinoo. Povedal vam bom, kako dobro nahraniti družino s tem, kar imate.",
+      "balancedDiet": {
+        "title": "Dobro prehranjevanje za vsak proračun",
+        "description": "Največji prehranski problem, ki ga vidim v romskih skupnostih, ni pomanjkanje hrane – gre za preveč poceni kruha, predelanega mesa in sladkih pijač ter premalo zelenjave, jajc in stročnic. Tu ne gre za moč volje. Gre za to, kar je na voljo in cenovno ugodno. Toda majhni premiki močno vplivajo na vaše zdravje in razvoj vaših otrok.",
+        "tip1": "Fižol, leča in čičerika so najcenejše beljakovine na katerem koli trgu – cenejše od mesa, trajnejše in preprečujejo sladkorno bolezen ter bolezni srca. Lonec fižolove enolončnice nahrani družino za manj kot zavojček predelanih klobas in je veliko bolj hranljiv",
+        "tip2": "Jajca so najpopolnejša poceni hrana, kar obstaja. Dve jajci na dan na otroka zagotavljata skoraj vse, kar potrebujejo rastoči možgani. V vsakem naselju, kjer delam, priporočam jajca kot prvo prednostno hrano za otroke",
+        "tip3": "Sezonska zelenjava z lokalne tržnice ali vašega vrta stane le delček cen v supermarketih. Zelje, čebula, korenje, krompir, paprika – to so osnova zdrave prehrane in so v vsaki romski kuhinjski tradiciji.",
+        "tip4": "Sladkane pijače (kola, sok, energijske pijače) so najbolj škodljiv izdelek, ki ga vidim v prehrani romskih družin. Ena steklenica kole vsebuje 10 čajnih žličk sladkorja. Zamenjajte z vodo ali šibkim čajem in odstranili boste največje gonilo debelosti in kariesa, ki ga opažam pri otrocih",
+        "fact": "V romskih skupnostih, s katerimi sem delal v Romuniji in Bolgariji, sem videl, da se je stopnja sladkorne bolezni merljivo zmanjšala, ko družine vsakodnevni beli kruh in predelano meso nadomestijo s fižolom, jajci in zelenjavo – tudi brez spremembe količine, ki jo zaužijejo. Telo se odziva na kvaliteto, ne samo na kvantiteto.",
+        "action": "Ta teden zamenjajte en obrok kruha in predelanega mesa z enolončnico fižola ali leče s čebulo in papriko. Kuhajte dovolj za dva dni. Je cenejši, nasiti vas dlje in začne spreminjati zdravstveno pot vaše družine."
+      },
+      "childNutrition": {
+        "title": "Hranjenje otrok za močan začetek",
+        "description": "Prvih 1, 000 dni — od nosečnosti do starosti 2 — oblikuje otrokovo celotno prihodnost: njegove možgane, imunski sistem, sposobnost učenja. Gledal sem podhranjene otroke v naseljih, ki zaostajajo za svojimi vrstniki, ne zaradi genetike, temveč zaradi tega, kar so jedli v tistih kritičnih prvih mesecih. To, kar zdaj nahranite svojega otroka, je najmočnejša naložba, ki jo lahko naredite v njegovem življenju.",
+        "tip1": "Samo materino mleko 6 mesecev je zlati standard – je brezplačno, vedno na voljo, popolnoma hranljivo in ščiti pred okužbami bolje kot katero koli zdravilo. Delal sem z materami, ki so mislile, da je adaptirano mleko 'moderno' in boljše. ni. Materino mleko je izpopolnjena tehnološka evolucija",
+        "tip2": "Pri 6 mesecih ob dojenju začnite z mehko hrano: pire krompir, korenček, banana, kuhan rumenjak. Uvedite eno novo hrano vsakih 3 dni, da opazujete reakcije. Mnoge matere, s katerimi delam, začnejo jesti trdno hrano prepozno (8–9 mesecev) – to upočasni razvoj",
+        "tip3": "Otroci, mlajši od 2, nikoli ne smejo uživati sladkorja, medu, soli, kole, čipsa ali sladkarij. Vem, da stari starši včasih dajejo čaj s sladkorjem, da pomirijo otroka - prosim nehaj. Sladkor v tej starosti programira vseživljenjsko željo in poškoduje zobe, še preden v celoti izrastejo",
+        "tip4": "Jajce na dan za otroka, starejšega od 6 mesecev, je najpreprostejša prehranska nadgradnja, kar obstaja. Študija v Ekvadorju je pokazala, da so jajca zmanjšala zaostanek v rasti za 47 %. To navajam v vsakem pogovoru v skupnosti, ker je to dosegljivo za skoraj vsako družino",
+        "fact": "V skupnostih, kjer sem izvajal prehranske programe, so otroci, ki so 6 mesecev dnevno prejemali eno jajce in porcijo zelenjave, pokazali merljive izboljšave v rasti in kognitivnem razvoju v primerjavi z otroki, ki niso. Pri podhranjenosti ne gre samo za revščino – gre za to, da veste, čemu dati prednost pri virih, ki jih imate.",
+        "action": "Od jutri dajte svojemu otroku, starejšemu od 6 mesecev, eno jajce na dan (zgnječeno ali umešano). Če je vaš otrok mlajši od 6 mesecev in dojite, sami pojejte dodatno jajce - hranilne snovi prehajajo skozi vaše mleko."
+      },
+      "foodSafety": {
+        "title": "Ohranjanje varne hrane",
+        "description": "Zastrupitve s hrano so eden najpogostejših razlogov, zaradi katerih romske družine obiskujejo urgence – bruhanje, driska, dehidracija, zlasti pri otrocih. V naseljih, kjer je hlajenje nezanesljivo in so kuhinje skupne ali na prostem, varnost hrane ni tema iz učbenikov – je vsakodnevna veščina preživetja.",
+        "tip1": "V toplem vremenu kuhana hrana, ki jo pustite več kot 2 ur, postane nevarna. Če ga ne morete ohladiti, skuhajte manjše porcije, ki jih pojeste v enem obroku. Videl sem cele družine v bolnišnicah, ker so poleti pogreto enolončnico pustili zunaj čez noč",
+        "tip2": "Surov piščanec in meso se ne smeta nikoli dotikati kruha, zelenjave ali česar koli, kar boste jedli nekuhano. Uporabite ločene površine za rezanje - celo čista plastična vrečka, položena ravno, deluje. Ta navzkrižna kontaminacija je vzrok številka ena za zastrupitev s hrano, s katerim se srečujem",
+        "tip3": "Če hrana diši, je napačnega videza ali sluzastega občutka – jo zavrzite. Ne poskusite ga, da bi preverili. Vem, da je metanje hrane proč boleče, ko je denarja malo, toda ena zastrupitev s hrano stane več v medicini in izgubljenem delu, kot je bila hrana vredna",
+        "tip4": "Vse sadje in zelenjavo pred uživanjem operite pod tekočo vodo, tudi če jih nameravate olupiti. Umazanija na zunanji strani se pri rezanju prenese v notranjost. To je še posebej pomembno za tržne pridelke, s katerimi je morda rokovalo veliko ljudi",
+        "fact": "WHO ocenjuje, da 600 milijonov ljudi vsako leto zboli zaradi okužene hrane, pri čemer otroci, mlajši od 5, nosijo 40 % bremena. V skupnostih, kjer sem poučeval o varnosti hrane, so obiski bolnišnic zaradi gastroenteritisa v prvem poletju znatno upadli.",
+        "action": "Takoj preverite svojo kuhinjo: ali je surovo meso shranjeno zgoraj ali se dotika hrane, pripravljene za uživanje? Ali obstaja kuhana hrana, ki je ležala zunaj več kot 2 ur? Popravite ti dve stvari danes - to sta najpogostejši nevarnosti, ki ju vidim pri obiskih na domu."
+      }
+    },
+    "maternal": {
+      "description": "Spremljal sem romske ženske v bolnišnice, kjer so jih dajali ločeno, se do njih niso spoštljivo obnašali ali so jim zavrnili epidural, ki so ga dobile druge ženske. Videl sem tudi ženske, ki so umrle zaradi zapletov, ki bi jih ena prenatalna obisk pravočasno ujel. Vaše telo, vaš otrok, vaše pravice. Poznajte vse tri.",
+      "prenatalCare": {
+        "title": "Predporodna nega",
+        "description": "V 15 letih mediacijskega dela vedno znova opažam, da Romke prvič obiščejo zdravnika, ko so že 6 ali 7 meseca noseče — pogosto zato, ker se dobro počutijo, ker se bojijo bolnišnice ali ker nihče ni pojasnil, da je predporodna oskrba brezplačna in njihova pravica. Do takrat so se lahko nevarna stanja, kot sta preeklampsija ali gestacijski diabetes, tiho razvijala več mesecev.",
+        "tip1": "Pojdite k osebnemu zdravniku ali babici v trenutku, ko vam izostane menstruacija in sumite na nosečnost. V prvem trimesečju folna kislina preprečuje okvare možganov in hrbtenice vašega otroka. Čakanje vas stane najbolj kritično okno. Če nimate osebnega zdravnika, vam lahko vaš zdravstveni posrednik pomaga pri registraciji – to je ključni del našega dela",
+        "tip2": "Folno kislino 400mcg dnevno morate začeti jemati, ko poskušate zanositi ali takoj, ko izveste, da ste. Je brezplačen ali zelo poceni v kateri koli lekarni. Zavojčke nosim s seboj na obiskih na domu, ker ta preprosta tabletka preprečuje uničujoče prirojene okvare",
+        "tip3": "Živila, bogata z železom, preprečujejo anemijo, ki jo opažam pri skoraj polovici nosečih Romk, s katerimi delam: fižol, leča, temno listnata zelenjava, jetra, rdeče meso. Anemija vas izčrpava, porod je bolj nevaren in vpliva na razvoj otrokovih možganov",
+        "tip4": "Imate pravico do predporodne oskrbe v vašem jeziku, do dostojne obravnave in do tega, da vas nekdo spremlja na sestanke. Če je zdravnik zaničljiv ali nespoštljiv, lahko vložite pritožbo in zahtevate drugega izvajalca. Dokumentirajte ime, datum in kaj je bilo rečeno. Družinam redno pomagam pri tem",
+        "fact": "Romke v Evropi imajo 3 do 5-krat večjo verjetnost, da bodo imele nosečniške zaplete kot splošna populacija, predvsem zato, ker imajo predporodno oskrbo pozneje ali je sploh nimajo. V skupnostih, kjer sem delal pri povezovanju nosečnic z nego v prvem trimesečju, se je stopnja zapletov dramatično zmanjšala.",
+        "action": "Če ste noseči ali poznate nosečnico v vaši skupnosti, ki še ni obiskala zdravnika, se naročite na ta termin še danes. Če se boji ali ne ve, kako, pojdite z njo ali jo povežite z lokalnim zdravstvenim posrednikom. En obisk lahko spremeni vse."
+      },
+      "safeDelivery": {
+        "title": "Varna dostava",
+        "description": "Za roke sem držala porodnice v rešilnih vozilih, ker so odšle prepozno, in sedela sem na bolnišničnih hodnikih, kjer so Romkinje postavljali zadnje v čakalno vrsto, Neromkinje pa so šle naprej. Obe situaciji je mogoče preprečiti. Načrtovanje dostave in poznavanje vaših pravic spremenita to izkušnjo iz krize v nekaj, kar imate pod nadzorom.",
+        "tip1": "Do 34 tedna pripravite svoj porodni načrt: v katero bolnišnico, kdo bo šel z vami, kako boste prišli tja (predvsem ponoči), kdo bo čuval vaše druge otroke. Preveč družin sem videl, kako se prerivajo v zadnjem trenutku - in stres vpliva na porod",
+        "tip2": "V skoraj vseh evropskih državah imate zakonsko pravico imeti ob sebi spremljevalca (moža, mamo, sestro, posrednika) med porodom. Če bolnišnica reče ne, navedite zakon o pacientovih pravicah vaše države. Te reference nosimo in jih lahko zagotovimo",
+        "tip3": "Naučite se 5 nevarnih znakov, ki pomenijo, da POJDITE V BOLNIŠNICO ZDAJ, ne glede na to, koliko je ura: (1) močna krvavitev, (2) hud glavobol z oteklimi rokami/obrazom, (3) dojenček se preneha premikati, (4) odtekanje vode pred 37 tedni, (5) povišana telesna temperatura nad 38°C. Ne čakajte do jutra. Ne poskušajte jih obvladati doma",
+        "tip4": "Po porodu ostanite v bolnišnici vsaj 24 ur za spremljanje – tudi če se počutite dobro. Številni življenjsko nevarni zapleti (krvavitev, okužba) se pojavijo v prvih 24 urah. Vem, da je bolnišnično okolje lahko sovražno, a te ure nadzora rešujejo življenja",
+        "fact": "V regiji, kjer sem delal 5 let, smo zmanjšali nujne primere pri romskih materah za 60 % preprosto tako, da smo zagotovili, da ima vsaka nosečnica porodni načrt, prevoz in bolnišnično torbo spakirano do 36 tedna. Brez nove tehnologije - samo priprava in spremljava.",
+        "action": "Če ste vi ali nekdo, ki ga poznate, noseči čez 30 tednov: na papir zapišite ime bolnišnice, telefonsko številko in pot. Postavite ga na steno. Spakirajte torbo z osebnim dokumentom, kartico cepljenja, otroškimi oblačili in polnilcem za telefon. To traja 20 minut in lahko reši življenje."
+      },
+      "breastfeeding": {
+        "title": "Dojenje",
+        "description": "V romski kulturi je dojenje zelo cenjeno, a kljub temu srečujem mlade mamice, ki so jim dobronamerni sorodniki rekli, naj prve dni dajo vodo, čaj ali adaptirano mleko, ker 'mleko še ni priteklo'. Kolostrum – tisto gosto, rumenkasto prvo mleko – ni znak, da je nekaj narobe. Je tekoče zlato, polno protiteles, ki ščitijo vašega novorojenčka prav pred okužbami, ki so najbolj nevarne v prvih tednih življenja.",
+        "tip1": "V 1 urah po rojstvu položite svojega dojenčka kožo na kožo na svoje prsi in pustite, da najde dojko. To prvo hranjenje s kolostrumom je najpomembnejše 'cepivo', ki ga bo prejel vaš dojenček – prekrije njegovo črevesje z zaščito pred okužbo. Ne dovolite, da bi kdorkoli odnesel vašega otroka, preden se to zgodi, razen v nujnih primerih",
+        "tip2": "Hranite na zahtevo — kadar koli dojenček kaže znake lakote (obračanje glave, sesanje rok, vznemirjanje). V prvih tednih je to lahko 10–14-krat v 24 urah. To je normalno in vzpostavi vašo oskrbo. Ura vam ne more povedati, kdaj je vaš dojenček lačen - vaš dojenček pove vam",
+        "tip3": "Brez vode, brez čaja, brez formule 6 mesecev, razen če zdravnik tega izrecno ne predpiše iz zdravstvenih razlogov. Vaše materino mleko čez dan spreminja sestavo, da zadosti natančnim potrebam vašega otroka – tega ne more ponoviti nobena tovarna. Videl sem, da so dobronamerne babice dajale sladko vodo, ki je povzročala soor in drisko",
+        "tip4": "Če dojenje boli, je zapah napačen - ne vaše telo. Prosite babico ali zdravstvenega delavca, naj gleda dovajanje in vam pomaga prilagoditi položaj. Bolečina je znak, da poiščete pomoč, ne znak, da obupate. Pomagala sem na stotine materam odpraviti težave z zapahom, ki so bile rešene v eni seji",
+        "fact": "V romskih skupnostih, kjer obstajajo programi za podporo dojenju, izključno dojenje 6 mesecev zmanjša število hospitalizacij dojenčkov za več kot 60 %. Materino mleko se dobesedno prilagodi za boj proti specifičnim okužbam, ki krožijo v vašem okolju – je prilagojeno zdravilo, ki ga vaše telo proizvaja brezplačno.",
+        "action": "Če ste novopečena mati ali nosečnica: povejte svoji družini, da nameravate 6 mesecev izključno dojiti in da potrebujete njihovo podporo, ne nasvetov o dodajanju drugih živil. Če je dojenje boleče, se pred prenehanjem posvetujte z babico ali zdravstvenim posrednikom – rešitev je običajno preprosta."
+      },
+      "postpartum": {
+        "title": "Poporodna nega",
+        "description": "V romski kulturi so tedni po rojstvu čas, ko se družina zbere okoli matere, in to je lepo. Videla pa sem tudi senčno stran: matere, ki vsak dan jočejo in jim pravijo, da je to normalno. Matere, ki močno krvavijo in predolgo čakajo, da poiščejo pomoč. Matere, katerih bolečina je odpuščena, ker 'to je tisto, skozi kar gredo ženske.' Vaše okrevanje je pomembno prav tako kot zdravje vašega otroka – ker vas otrok potrebuje živega in zdravega.",
+        "tip1": "Vaše telo potrebuje najmanj 6 tednov, da se ozdravi. Krvavitev (lohija) po rojstvu je normalna 2–4 tednov, če pa se nenadoma poveča, vsebuje velike strdke ali neprijeten vonj, takoj pojdite v bolnišnico. Videl sem matere, ki so izgubile nevarne količine krvi, ker so jim rekli, da je močna krvavitev normalna. ni",
+        "tip2": "Če se počutite vztrajno žalostne, prazne, se ne morete povezati s svojim otrokom ali imate misli, da bi poškodovali sebe ali svojega otroka - niste šibki, niste slaba mati, imate zdravstveno stanje, ki se odziva na zdravljenje. To povem ob vsakem obisku na domu, ker stigma v naših skupnostih zaradi poporodne depresije stane življenja",
+        "tip3": "Vaš 6-tedenski poporodni pregled ni neobvezen – preveri okužbo, ozdravitev, krvni tlak in duševno zdravje. Po mojih izkušnjah se tega obiska udeleži manj kot 30 % Romk. Prosim, bodite v tem 30%. Pripeljite nekoga s seboj, če to pomaga",
+        "tip4": "Sprejmite vsako ponudbo pomoči družine pri kuhanju, čiščenju in varstvu otrok. Spi, ko dojenček spi. Vaša edina naloga je nahraniti otroka in okrevati. Vse ostalo lahko počaka. Najmočnejše matere, ki jih poznam, so tiste, ki so sprejele pomoč",
+        "fact": "Poporodna depresija prizadene 1 pri 5 ženskah po vsem svetu, vendar se ocenjuje, da je še pogostejša v romskih skupnostih zaradi stresa zaradi revščine, diskriminacije in izolacije. V vseh skupnostih, kjer sem ustanovil skupine za medvrstniško podporo novopečenim materam, se je stopnja depresije zmanjšala in stopnja dojenja se je povečala – ker povezanost zdravi.",
+        "action": "Če ste rodili v zadnjih 6 tednih in niste bili na poporodnem pregledu, pokličite svoj zdravstveni dom še danes. Če ste nenehno žalostni ali preobremenjeni, povejte eni osebi, ki ji zaupate – svoji materi, zdravstvenemu posredniku, komur koli. Ta prvi pogovor je najtežji in najpomembnejši korak."
+      }
+    },
+    "children": {
+      "description": "Romske otroke so prihodnost naših skupnosti in si zaslužijo vsako prednost. Pri delu sem videl otroke, ki zaostajajo — ne zaradi pomanjkanja sposobnosti, temveč ker so jim preprečljive bolezni, zamujena cepljenja ali neodkrite zamude vzele priložnosti. To znanje jim te priložnosti vrne.",
+      "growthMilestones": {
+        "title": "Rast in razvoj",
+        "description": "Vsak otrok se razvija s svojim tempom in nikoli ne želim, da bi starši delali paniko zaradi običajnih variacij. Videla pa sem tudi otroke, katerih zapozneli razvoj so družine zavrnile kot \"bodo nadoknadili zamujeno\", ko bi zgodnja intervencija lahko naredila transformativno razliko. Vedeti, na kaj morate biti pozorni, ni tesnoba - je pozornost.",
+        "tip1": "Mesečno tehtanje v prvem letu je najenostavnejše orodje za spremljanje. Vaš zdravstveni dom ima grafikone rasti, ki kažejo, ali je vaš otrok na dobri poti. Otrok, ki neha pridobivati na teži ali nenadoma pade na lestvici, potrebuje takojšnjo preiskavo - lahko je tako preprosta kot prilagoditev hranjenja ali tako pomembna kot odkrivanje osnovne bolezni",
+        "tip2": "Do 6 meseca večina dojenčkov seže po predmetih in se odziva na njihovo ime. Do 12 meseca večina spregovori nekaj besed in se ustavi. Do 24 meseca večina dobro hodi in govori v kratkih frazah. Če vaš otrok močno zaostaja za temi mejniki, prosite za oceno razvoja – zgodnja pomoč je največja razlika",
+        "tip3": "Z otrokom se nenehno pogovarjajte - pripovedujte, kaj počnete, poimenujte predmete, pojte pesmi. Romske družine imajo močno ustno izročilo – uporabite ga. Otroci, ki slišijo več besed, razvijejo večji besedni zaklad in močnejše kognitivne sposobnosti. To je brezplačno in učinkovitejše od katere koli igrače",
+        "tip4": "Zobje: otrokove dlesni čistite z vlažno krpo že od rojstva naprej, uporabite droben madež otroške zobne paste od prvega zobka. Pri romskih otrocih, starih 3, opažam hudo zobno gnilobo, pogosto zaradi steklenic sladkega čaja ponoči – to povzroča bolečino, okužbo in težave pri prehranjevanju, ki vplivajo na rast",
+        "fact": "Raziskave kažejo, da je pri otrocih, katerih razvojni zaostanki so prepoznani in obravnavani pred 3 letom, 5-krat bolj verjetno, da bodo obiskovali šolo na pričakovani ravni. V naseljih, kjer sem vzpostavil mesečno tehtanje in razvojno presejanje, se je število napotitev za zgodnjo intervencijo potrojilo, kar pomeni, da so otroci dobili pomoč, ki bi je sicer zamudili.",
+        "action": "Če je vaš otrok mlajši od 2, ga ta mesec peljite na kontrolo telesne teže in razvojni pregled v vaš zdravstveni dom. Če je vaš otrok starejši od 2 in imate pomisleke glede govora, hoje ali vedenja, prosite za napotnico k specialistu. Vaša skrb je utemeljena - ukrepajte."
+      },
+      "commonIllnesses": {
+        "title": "Ko je vaš otrok bolan",
+        "description": "V naseljih s prenaseljenimi stanovanji, omejenimi sanitarnimi pogoji in mrzlimi zimami otroci pogosto zbolijo. Večino teh bolezni – drisko, kašelj, vročino – je mogoče obvladati doma, če veste, kaj storiti in kdaj stopnjevati. Videla pa sem tudi, da so starši predolgo čakali ali hiteli na urgentne sobe zaradi stanj, ki bi jih preprosto zdravljenje doma rešilo. Ta modul vas nauči razlike.",
+        "tip1": "Vročina pod 38.5°C: telo vašega otroka se bori z okužbo – to je dobro. Naj bodo udobno oblečeni in jim dajte dovolj tekočine. Vročina nad 38.5°C: otrokom dajte paracetamol v pravilnem odmerku glede na njihovo težo (NE paracetamola za odrasle). Če vročina traja več kot 3 dni ali je otrok nenavadno zaspan, poiščite zdravniško pomoč",
+        "tip2": "Driska ubije zaradi dehidracije, ne okužbe same. V trenutku, ko ima vaš otrok redko blato, začnite s peroralno rehidracijo: 1 liter čiste prekuhane vode + 6 ravnih žličk sladkorja + pol žličke soli. Dajte majhne požirke vsakih nekaj minut. Ta recept je rešil več življenj otrok po vsem svetu kot katerikoli antibiotik",
+        "tip3": "OTROKA TAKOJ VPELJITE V BOLNIŠNICO, če opazite: hitro ali težko dihanje, vlečenje prsnega koša z vsakim vdihom, nezmožnost piti ali dojiti, ponavljajoče se bruhanje vsega, nenavadno zaspanost ali neprebujanje, konvulzije ali krvavo drisko. Ne čakajte. To so nujni primeri",
+        "tip4": "Ne dajajte antibiotikov brez zdravniškega recepta. Ne delite recepta drugega otroka. Ne uporabljajte ostankov antibiotikov. To nenehno opažam v naših skupnostih in ustvarja bakterije, odporne na zdravila, ki jih je veliko težje zdraviti. Antibiotiki ne pomagajo pri prehladu, gripi ali večini kašlja",
+        "fact": "V skupnostih, v katerih sem delal, je usposabljanje staršev za pripravo in uporabo peroralne rehidracijske raztopine zmanjšalo število hospitalizacij otrok zaradi driske za več kot 40 % v enem samem letu. Znanje je tako močno — in sestavine stanejo manj kot avtobusna vozovnica do bolnišnice.",
+        "action": "Takoj si zapomnite ta recept: 1 liter čiste vode + 6 čajne žličke sladkorja + pol čajne žličke soli. Vadi se enkrat. Če želite, poskusite - okusiti bi moralo solze. Če imate to pripravljeno, pomeni, da lahko takoj ukrepate, ko vaš otrok ob 2 zjutraj dobi drisko, namesto da vas zgrabi panika."
+      },
+      "immunization": {
+        "title": "Urnik cepljenja",
+        "description": "Bom direkten: v romskih skupnostih po vsej Evropi je stopnja precepljenosti nižja od nacionalnega povprečja, in to ne zato, ker romskim staršem ni mar za svoje otroke – ampak zato, ker zdravstveni sistem do njih ni uspel priti s spoštovanjem, dostopom in informacijami. Dezinformacije se širijo tudi prek družbenih medijev. V bolnišnici sem imel otroke z ošpicami, ki nikoli ne bi smeli biti tam. Vsak necepljen otrok je otrok, ki mu je sistem zatajil.",
+        "tip1": "Od rojstva do 6 tednov: BCG (tuberkuloza) in hepatitis B. Te dobijo v bolnišnici pred odpustom. Če je bil vaš otrok rojen doma, ga odpeljite v zdravstveni dom v prvem tednu življenja za ta cepiva. Ne čakajte",
+        "tip2": "2, 3, 4 meseci: krogi 'velikih treh' — DTP (davica, tetanus, oslovski kašelj), otroška paraliza, Hib in hepatitis B. To so najbolj kritična cepiva v otroštvu. Vsak krog krepi imuniteto. Če enega manjka, oslabi celotno verigo",
+        "tip3": "12–15 mesecev: MMR (ošpice, mumps, rdečke). Tega ne morem dovolj poudariti. Ošpice niso neškodljiva otroška bolezen – ubijajo, povzročajo poškodbe možganov in oslepijo. Leta 2019 sem videl izbruh ošpic v romskem naselju, ker je pokritost padla pod 80%. Bilo je mogoče preprečiti",
+        "tip4": "Cepiva so brezplačna v državnih zdravstvenih centrih v vseh evropskih državah. Ne potrebujete zavarovanja, ne potrebujete dovoljenja za bivanje, ne potrebujete sestanka v večini centrov. Če vam storitev zavrnejo, je to nezakonito – obrnite se na svojega zdravstvenega posrednika ali urad za pravice pacientov",
+        "fact": "Razlika med precepljenostjo Romov in neromov v nekaterih evropskih državah presega 15 odstotnih točk. Te vrzeli ne povzročajo prepričanja Romov o cepivih – raziskave dosledno kažejo, da romski starši želijo cepljenje svojih otrok. Vrzel povzročajo ovire pri dostopu, diskriminacija v zdravstvu in pomanjkanje dosega. Odprava te vrzeli je državna obveznost v skladu s členom 11 Evropske socialne listine.",
+        "action": "Poiščite otrokovo kartico cepljenja. Če kakšno cepivo manjka ali če nimate kartona, obiščite najbližji zdravstveni dom še ta teden. Če naletite na ovire – jezik, dokumenti, zavrnitev – se obrnite na lokalnega zdravstvenega posrednika. Prav zaradi tega smo tukaj."
+      }
+    },
+    "chronic": {
+      "description": "Romi v povprečju umrejo 10 let prej kot evropsko povprečje. Večina te razlike izhaja iz kroničnih bolezni — sladkorne bolezni, srčnih in dihalnih bolezni — ki se leta tiho razvijajo. Ko se pojavijo simptomi, je škoda že narejena. Večino pa je mogoče preprečiti in vse obvladati, če se zgodaj ujame.",
+      "diabetes": {
+        "title": "Sladkorna bolezen: tiha grožnja",
+        "description": "Sladkorna bolezen tipa 2 je kronična bolezen, s katero se najpogosteje srečujem v romskih skupnostih. Pojavlja se v družinah, uspeva na poceni dieti z visoko vsebnostjo sladkorja, h kateri ljudi sili revščina, in škoduje vašim očem, ledvicam, stopalom in srcu leta, preden se počutite kaj narobe. Videl sem, kako moški v svojih 40 letih izgubljajo prste na nogah, ženske pa oslepijo zaradi sladkorne bolezni, ki jim nikoli niso diagnosticirali, ker niso nikoli opravili krvnega testa. To je mogoče preprečiti.",
+        "tip1": "Če ima kdo v vaši družini sladkorno bolezen, je vaše tveganje 2–3-krat večje. To ni usoda - to je znak za takojšnje ukrepanje. Zmanjšajte količino belega kruha, sladkorja in sladkih pijač. Zamenjajte s fižolom, lečo, zelenjavo in vodo. Videl sem, da so družine s temi spremembami v celoti spremenile stanje pred diabetesom",
+        "tip2": "30 minut hoje vsak dan zmanjša tveganje za sladkorno bolezen za 58 %. Ne teče. Ne telovadnica. Hoja. Vsaki osebi nad 35 v skupnostih, s katerimi delam, povem: sprehod je zdravilo. Je brezplačna in deluje bolje kot večina tablet za preprečevanje",
+        "tip3": "Če imate več kot 35, imate prekomerno telesno težo ali imate družinsko anamnezo, prosite za test glukoze v krvi na tešče v vašem zdravstvenem domu vsaj enkrat letno. To je preprost test z vbodom v prst, v večini držav je brezplačen in traja 5 minut. S tem enim testom lahko sladkorno bolezen odkrijemo leta, preden se pojavijo simptomi",
+        "tip4": "Spoznajte opozorilne znake, ki pomenijo, da je sladkorna bolezen morda že prisotna: stalna žeja, zelo pogosto uriniranje (zlasti ponoči), zamegljen vid, rane, ki se počasi celijo, nepojasnjena utrujenost. Če imate dva ali več teh, se testirajte ta teden - ne naslednji mesec",
+        "fact": "Študije v romskih skupnostih na Slovaškem in v Romuniji so pokazale, da je razširjenost sladkorne bolezni 2–3-krat večja od nacionalnega povprečja, pri čemer večina primerov ni bila diagnosticirana. V enem programu, v katerem sem sodeloval, je presejalni pregled v skupnosti odkril sladkorno bolezen pri 18 % odraslih, starejših od 40, ki še nikoli niso bili testirani. Skoraj vsi niso imeli simptomov.",
+        "action": "Če ste starejši od 35, pojdite v zdravstveni dom in zahtevajte preiskavo krvnega sladkorja. Traja 5 minut. Če je rezultat nad 5.6 mmol/L (100 mg/dL), morate začeti s spremembami zdaj. Pripeljite družinskega člana - če je vaše tveganje veliko, je verjetno tudi njihovo."
+      },
+      "heartHealth": {
+        "title": "Tvoje Srce",
+        "description": "Srčno-žilne bolezni so glavni morilec v romskih skupnostih – ne zaradi genetike, ampak zaradi pogojev, v katerih živimo: kroničnega stresa zaradi revščine in diskriminacije, visoke stopnje kajenja, prehrane, oblikovane glede na to, kar revščina dopušča, in skoraj nobenega dostopa do preventivnih pregledov. Udeležil sem se pogrebov moških v svojih 50 letih, ki so umrli zaradi srčnih napadov, ki jih je bilo povsem mogoče preprečiti. Ta modul obstaja, ker nočem več obiskovati.",
+        "tip1": "Kajenje je najbolj uničujoča stvar, ki jo lahko naredite svojemu srcu. Vem, da je to globoko zasidrano v kulturi naše skupnosti in nisem tukaj, da bi sodil, vendar vam dolgujem poštenost. Vsaka cigareta poškoduje krvne žile. Če ne morete odnehati, zmanjšajte. Če lahko nehate, se vaše srce začne popravljati v 24 urah",
+        "tip2": "Visok krvni tlak imenujemo tihi ubijalec, ker ne čutite ničesar, dokler vas ne doleti možganska ali srčna kap. Izmerite si krvni tlak v kateri koli lekarni – brezplačno je. Normalno je pod 120/80. Nad 140/90 je nevarno in zahteva zdravljenje. Ugotovil sem nevarno visok krvni tlak pri ljudeh, ki so se počutili popolnoma zdrave",
+        "tip3": "Zmanjšajte sol: romska kuhinja je okusna in lepa, vendar je veliko tradicionalnih jedi zelo slanih. Namesto dodajanja dodatne soli uporabite papriko, česen, čebulo, zelišča in poper. Vaše brbončice se prilagodijo v 2 tednih – hrana bo okusnejša, ne slabša. Samo zaradi te spremembe sem opazil padec krvnega tlaka za 10 točk",
+        "tip4": "Kronični stres zaradi diskriminacije, revščine, groženj z izselitvijo in družinskih konfliktov je neposreden vzrok bolezni srca. To ni mnenje - to je dokumentirana medicina. Stresni hormoni z leti poškodujejo vaše krvne žile. Iskanje kakršnega koli načina za sprostitev stresa - hoja, glasba, molitev, pogovor, skupnost - je zdravilo za srce",
+        "fact": "Romi umrejo zaradi bolezni srca in ožilja v povprečju 10–15 let prej kot splošna populacija. To kažejo lastni podatki Evropske komisije. Toda 80 % prezgodnjih srčnih napadov je mogoče preprečiti s spremembo življenjskega sloga in zgodnjim zdravljenjem visokega krvnega tlaka in holesterola. Preprečevanje deluje – če imate dostop do njega.",
+        "action": "Ta teden naredite dve stvari: (1) Pojdite v lekarno in preverite svoj krvni tlak – zapišite si številke. (2) Preštejte, koliko cigaret pokadite na dan, in poskusite zmanjšati za 3 na dan. Ti dve dejanji sta najmočnejša koraka za preprečevanje bolezni srca, ki jih lahko sprejme vsak posameznik."
+      },
+      "respiratory": {
+        "title": "Pljuča in dihanje",
+        "description": "Delal sem v naseljih, kjer družine pozimi za ogrevanje uporabljajo drva, premog ali celo plastiko in gumo. Kjer 8 ljudi spi v dveh sobah brez prezračevanja. Kjer vlaga teče po stenah in v vsakem kotu raste črna plesen. Bolezni dihal v teh razmerah niso presenetljive – to je predvidljiva posledica stanovanj, v katerih ne bi smel nihče živeti. Medtem ko se borimo za boljše stanovanje, moramo zaščititi tudi pljuča, ki jih imamo.",
+        "tip1": "Dim v zaprtih prostorih je najbolj neposredna nevarnost za dihala, ki jo vidim. Če se ogrevate na trdo gorivo, poskrbite za zračenje - pomaga tudi pokanje okna. Nikoli ne sežigajte plastike, gume ali barvanega lesa – hlapi vsebujejo kemikalije, ki povzročajo trajne poškodbe pljuč, zlasti pri otrocih, katerih pljuča se še razvijajo",
+        "tip2": "Vlaga in plesen povzročata astmo, kronični bronhitis in poslabšata vsako okužbo dihal. Vidno plesen obrišite z mešanico vode in kisa ali belila. Odprite okna vsaj 15 minut dnevno tudi pozimi. Če je mogoče, mokro perilo obesite zunaj – sušenje oblačil v zaprtih prostorih dodaja ogromno vlage v zrak",
+        "tip3": "Kašelj, ki traja več kot 3 tednov, zlasti z izgubo teže, nočnim potenjem ali izpljunkom krvi, je treba raziskati za tuberkulozo. TB je ozdravljiv z brezplačnim zdravljenjem, vendar je tudi zelo nalezljiv. V romskih skupnostih so stopnje TB 3–5-kratnik nacionalnega povprečja v več evropskih državah. Zgodnje testiranje ščiti celotno družino",
+        "tip4": "Otroci, ki odraščajo v zakajenem ali plesnivem okolju, imajo trajno zmanjšano kapaciteto pljuč – vse življenje bodo imeli manj zdrava pljuča. Tudi če ne morete takoj spremeniti stanovanjske situacije, zmanjšanje izpostavljenosti dimu in prezračevanje, kolikor je le mogoče, zaščitita njihova razvijajoča se pljuča",
+        "fact": "WHO opredeljuje onesnaženost zraka v gospodinjstvih kot četrto največje svetovno tveganje za zdravje. V romskih naseljih, v katerih sem delal, je imelo več kot 60 % otrok ponavljajoče se okužbe dihal – stopnje, ki so se znatno zmanjšale, ko so družine izboljšale prezračevanje in zmanjšale kurjenje odpadkov v zaprtih prostorih. Za stanovanjske razmere niso krive družine, ampak strategije prilagajanja rešujejo življenja, medtem ko se borijo za sistemske spremembe.",
+        "action": "Danes: preverite, ali je v vašem domu vidna plesen in ga očistite z razredčenim belilom ali kisom. Odprite vsaj eno okno za 15 minut. Če ima kdo v vašem gospodinjstvu kašelj več kot 3 tednov, pojdite v zdravstveni dom na TB pregled – brezplačen je in traja 15 minut."
+      }
+    },
+    "mental": {
+      "description": "V 15 letih v romskih skupnostih sem spoznal, da najtežje breme ni fizična bolezen — temveč teža diskriminacije, revščine, strahu pred izselitvijo, skrbi za prihodnost otrok in občutka, da se nihče v sistemu ne zanima. Temu rečemo stres. Ko traja leta, postane nekaj drugega. Zaslužuje si, da se poimenuje, razume in zdravi — brez sramu.",
+      "stressManagement": {
+        "title": "Življenje s stresom",
+        "description": "Ne bom se pretvarjal, da bo dihalna vaja rešila vaše težave. Če vas skrbi, da bodo vašo družino izselili, tega ne bo rešila nobena aplikacija za meditacijo. Vendar sem delal s stotinami ljudi v naših skupnostih, ki so pod ogromnim stresom, in videl sem, kaj se zgodi, ko tega stresa več let ne obvladamo: srčni napadi pri moških v 40 letih, ženske, ki ne morejo jesti ali spati, otroci, ki odraščajo v gospodinjstvih, naelektrenih z napetostjo. Svojih okoliščin ne moremo vedno spremeniti, lahko pa spremenimo, kako jih prenašamo.",
+        "tip1": "Metoda dihanja 4-4-8 takoj deluje na vaš živčni sistem. Vdihnite skozi nos 4, zadržite 4, počasi izdihnite skozi usta 8. Naredite to 5-krat. Srčni utrip se zmanjša, mišice se sprostijo. Tega učim družine pred obiski v bolnišnici, pred sodnimi obravnavami, pred vsakim stresnim srečanjem. Je orodje, ki ga imate vedno pri sebi",
+        "tip2": "Hoja je najbolj podcenjeno zdravilo proti stresu. 20 minut hoje – ne hitro, samo hoja – zmanjša stresni hormon kortizol do 30 %. Če ne morete zapustiti hiše, hodite v krogu. Gibanje samo je tisto, kar deluje, ne kulisa",
+        "tip3": "Pogovori se z nekom. Ne zato, da bi rešil težavo – samo da bi si delil težo. Videl sem moške v naših skupnostih, ki vse nosijo sami, ker se mi zdi, da je prositi za pomoč šibkost. V 15 letih tega dela so bili najmočnejši ljudje, ki sem jih srečal, tisti, ki so se naučili reči 'borim se'",
+        "tip4": "Bodite namerni glede tega, kar vam pade na pamet. Družbeni mediji, novice, družinski prepiri, ki se ponavljajo v vaši glavi – to so viri stresa, ki ga lahko nadzorujete. Ne pravim ignoriranja realnosti. Pravim, da izberite, kdaj se boste s tem ukvarjali, in ustvarite prostore v svojem dnevu, kjer ste namerno mirni",
+        "fact": "Romske skupnosti doživljajo tisto, čemur javno zdravje pravi 'manjšinski stres' – kronični fiziološki davek diskriminacije, izključenosti in revščine. Raziskave kažejo, da to trajno zviša raven kortizola, pospešuje bolezni srca, sladkorno bolezen in duševne bolezni. To ni slabost. To je biologija, ki se odziva na nepravičnost.",
+        "action": "Nocoj pred spanjem odložite telefon v drugo sobo in vadite 4-4-8 dihanje za 5 minut. Če imate pripravljenega partnerja ali družinskega člana, to storite skupaj v tišini. To majhno dejanje ustvari mejo med dnevnim stresom in vašim spanjem – spanje pa je čas, ko vaše telo popravi škodo, ki jo je povzročil stres."
+      },
+      "sleep": {
+        "title": "Spanje kot zdravilo",
+        "description": "V prenatrpanih domovih, kjer je vedno prižgan televizor, kjer si otroci delijo posteljo s starši, kjer hrup sosedov ali ulice nikoli ne utihne — spanje ni samoumevno. To je nekaj, za kar se morate boriti. Pa vendar je spanje čas, ko se vaše telo obnovi, ko vaši možgani predelajo dnevni stres in ko se vaš imunski sistem obnovi. Kronično pomanjkanje spanja je enako nevarno kot kajenje - in v naših skupnostih je skoraj univerzalno.",
+        "tip1": "Poskusite spati in se zbuditi vsak dan ob približno istem času, vključno z vikendi. Vem, da je to težko pri izmenskem delu, majhnih otrocih ali hrupnem okolju – toda celo dosledno okno 6 ur je bolj poživljajoče kot naključni 8-urni bloki. Vaše telo hrepeni po ritmu",
+        "tip2": "Telefoni in ekrani pred spanjem so eni najhujših sodobnih uničevalcev spanca. Modra svetloba pove vašim možganom, da je dan. Če morate uporabljati telefon, ga nastavite na nočni način po 9popoldne. Še bolje, napolnite ga v drugi sobi – videl sem, da se je kakovost spanja dramatično izboljšala zaradi te ene same spremembe",
+        "tip3": "Kofein ostane v vašem sistemu 8 ur. Tista popoldanska turška kava ali čaj ob 4 popoldne sta še vedno aktivna v vašem krvnem obtoku ob polnoči. Po kosilu preidite na zeliščni čaj (kamilica, lipa). To je ena najpreprostejših izboljšav, ki jih priporočam, in ljudje so vedno presenečeni, kako zelo pomaga",
+        "tip4": "Če si delite sobo z otroki ali družinskimi člani, pomagajo majhne spremembe: dosleden čas 'ugasnjene luči', postopno zmanjšanje hrupa, uporaba zavese za ustvarjanje vizualne meje spanja. Naučite otroke, da je čas za spanje družinski čas – ko se družina skupaj umiri, vsi bolje spijo",
+        "fact": "Raziskave o spanju v marginaliziranih skupnostih kažejo, da kronično pomanjkanje spanja, ki ga povzročajo prenatrpanost, hrup in stres, pomembno prispeva k zdravstveni vrzeli. Ljudje, ki stalno spijo manj kot 6 ur, imajo 4x večje tveganje za okužbe in 2x večje tveganje za bolezni srca. Spanje ni razkošje - je temelj preživetja.",
+        "action": "Nocoj: na telefonu nastavite budilko za spanje za 30 minut, preden želite spati. Ko zazvoni, ugasnite TV, odložite telefon in lezite v temo ter 4-4-8 dihajte, dokler ne zaspite. Počnite to 7 noči in opazite razliko."
+      },
+      "communitySupport": {
+        "title": "Moč povezave",
+        "description": "Romska kultura že razume nekaj, kar zahodna medicina šele zdaj meri: da pripadnost, družina in skupnost varujejo vaše zdravje enako močno kot katera koli medicina. Videl sem ljudi, ki so preživeli najtežje okoliščine – deložacije, bolezni, izgube – ker jih je njihova skupnost držala. In videl sem, da so se ljudje sesuli pod veliko manj, ko so bili izolirani. Znanost zdaj potrjuje, kar so vedeli naši predniki: osamljenost ubija, povezanost zdravi.",
+        "tip1": "Če poznate nekoga v vaši skupnosti, ki je pred kratkim izgubil družinskega člana, so mu diagnosticirali bolezen, izgubil službo ali preživlja krizo – ne čakajte, da bo zaprosil za pomoč. Obiščite jih. Prinesite hrano. Sedi z njimi. V romski kulturi je to instinkt. V zdravstveni znanosti se to imenuje \"socialni recept\" - in deluje bolje kot večina tablet",
+        "tip2": "Sram je sovražnik zdravja. Srečal sem ljudi, ki so leta skrivali sladkorno bolezen, depresijo, HIV in nasilje v družini, ker so se bali, kaj bo rekla skupnost. Vsakič, ko nekdo v naši skupnosti odkrito spregovori o svojem boju, daje dovoljenje drugim. Ni vam treba deliti vsega – toda če nekaj delite, prekinete tišino, zaradi katere so ljudje bolni",
+        "tip3": "Srečanja, praznovanja, glasba, molitev, pripovedovanje zgodb — to niso motnje zdravja. So zdravje. Študije kažejo, da redna udeležba v kulturnih dejavnostih skupnosti zmanjšuje depresijo in tveganje za srčno-žilne bolezni. Veselje in pripadnost, ki jo ustvarjata, sta merljivo zdravilo",
+        "tip4": "Preverite starejše in izolirane ljudi v vaši skupnosti. Oseba, ki živi sama, babica, katere otroci so se odselili, moški, ki ni več prihajal na srečanja. 10-minutni obisk ali telefonski klic je morda edina človeška povezava, ki jo imajo ta dan – in morda je to tisto, kar jih ohranja pri življenju",
+        "fact": "Harvardova 85-letna študija o zdravju odraslih je zaključila, da je najmočnejši napovedovalec zdravja in dolgoživosti kakovost vaših odnosov – ne prehrana, vadba ali genetika. Osamljenost poveča tveganje smrtnosti za 26 %, kar je enakovredno pokajenim 15 cigaret na dan. Romske skupnosti imajo kulturno bogastvo v družbeni povezanosti, ki je resnično zdravstveno bogastvo – varujte ga.",
+        "action": "Ta teden stopite v stik z eno osebo v vaši skupnosti, s katero v zadnjem času niste govorili. Ne z besedilom - z glasom ali osebno. Vprašajte, kako so, in poslušajte. To dejanje povezovanja je promocija zdravja v najčistejši obliki."
+      },
+      "seekHelp": {
+        "title": "Ko je preveč",
+        "description": "Obstaja točka, kjer stres, žalost in zaskrbljenost prestopijo mejo v nekaj, kar potrebuje strokovno pomoč - in v romskih skupnostih te meje skoraj nikoli ne prepoznamo, ker smo naučeni vzdržati, biti močni, ravnati s tem v družini. Videl sem ceno te tišine: moški, ki pijejo, da bi se spopadli, dokler jim jetra ne odpovedo, ženske, ki nehajo jesti, najstniki, ki si škodijo. Prošnja za pomoč ni izdaja vaše kulture. Varuje vaše življenje, da ste lahko tam za ljudi, ki vas potrebujejo.",
+        "tip1": "Če vi ali nekdo, ki ga poznate, ne morete normalno delovati več kot 2 tednov – ne morete spati, ne morete jesti, ne morete skrbeti za otroke, neprestano jokate ali nimate energije za karkoli – to presega običajen stres. To je depresija in je tako resnično zdravstveno stanje kot sladkorna bolezen. To ni slabost in se odziva na zdravljenje",
+        "tip2": "Vaš prvi korak je vaš družinski zdravnik (GP). Recite: 'Že več kot 2 tednov se počutim zelo slabo in potrebujem pomoč.' Ni vam treba vsega razlagati. Splošni zdravnik vas lahko oceni in napoti k psihologu ali psihiatru. Ta storitev je v večini evropskih držav brezplačna ali poceni. Če vas osebni zdravnik odpusti, obiščite drugega",
+        "tip3": "Če nekdo v vaši družini omeni, da želi umreti, želi izginiti ali čuti, da bi bilo vsem bolje brez njega - to takoj vzemite resno. Ostani z njimi. Odstranite dostop do zdravil in ostrih predmetov. Pokličite nacionalno krizno linijo ali 112. Ne pretiravaš. Te besede so klic na pomoč, na katerega je treba odgovoriti",
+        "tip4": "Zdravila za duševno zdravje niso sramotna, zasvojljiva ali \"za norce\". Antidepresive predpisujejo milijonom ljudi po vsem svetu in rešujejo življenja. Ne spremenijo vas - dvignejo kemično meglo, ki vam preprečuje, da bi bili to, kar ste. Videl sem ljudi, ki so se spremenili zaradi zdravljenja, ki so se mu leta upirali zaradi stigme",
+        "fact": "Romske skupnosti doživljajo eno najvišjih stopenj depresije in anksioznosti v Evropi, ki jih poganjajo strukturni dejavniki, kot so diskriminacija, revščina in pomanjkanje dostopa do storitev. Kljub temu je uporaba storitev duševnega zdravja v romskih skupnostih med najnižjimi. V programih, kjer sem ljudem pomagal pri povezovanju s kulturno občutljivo oskrbo duševnega zdravja, je bilo izboljšanje kakovosti življenja globoko – ne samo za posameznika, ampak za celotno družino.",
+        "action": "Takoj shranite to številko v svoj telefon: telefonska številka za pomoč pri duševnih težavah v vaši državi. Če si v krizi, pokliči. Če je nekdo, ki ga poznate, v krizi, ga pokličite. In če imate težave že več kot 2 tednov, se ta teden naročite na pregled pri osebnem zdravniku. Zaslužiš si, da se počutiš bolje in pomoč obstaja."
+      }
+    }
+  },
+  "track": {
+    "title": "Dnevni zdravstveni pregled",
+    "subtitle": "Kako se danes počutite?",
+    "moodTitle": "Razpoloženje",
+    "moodGreat": "Odlično",
+    "moodGood": "Dobro",
+    "moodOkay": "V redu",
+    "moodLow": "Slabo",
+    "moodBad": "Zelo slabo",
+    "waterTitle": "Vnos vode",
+    "waterSubtitle": "Tapnite vsak kozarec, ko pijete",
+    "waterGoal": "Cilj: 8 kozarcev",
+    "activityTitle": "Aktivnost danes",
+    "activityWalk": "Hodil/a sem",
+    "activityExercise": "Telovadil/a sem",
+    "activityRest": "Počival/a sem",
+    "saveCheckin": "Shrani današnji vnos",
+    "savedSuccess": "Vnos shranjen!",
+    "weeklyTitle": "Ta teden",
+    "streakDays": "dni zapored",
+    "loggedToday": "Zabeleženo danes",
+    "noLogsYet": "Začnite prvi vnos spodaj",
+    "historyTitle": "Nedavna zgodovina"
+  },
+  "profile": {
+    "title": "Profil",
+    "guestUser": "Gost",
+    "guestSubtitle": "Učite se anonimno",
+    "languagePreference": "Jezikovna nastavitev",
+    "changeLanguage": "Spremeni jezik",
+    "learningProgress": "Napredek pri učenju",
+    "pillarsStarted": "Začeti stebri",
+    "modulesCompleted": "Dokončani moduli",
+    "trackingStreak": "Niz sledenja",
+    "days": "dni",
+    "exportData": "Izvozi moje podatke (GDPR)",
+    "exportDescription": "Prenesite vse podatke o sledenju zdravja kot datoteko CSV.",
+    "clearData": "Izbriši vse podatke",
+    "clearDataConfirm": "Ste prepričani? Tega ni mogoče razveljaviti.",
+    "aboutTitle": "O Redi Health",
+    "aboutText": "Redi Health je brezplačen večjezični spremljevalec zdravstvene pismenosti za premalo oskrbovana območja — vasi, obrobja, naselja, romska naselja, podeželske regije v Evropi — kjer je klinikov malo, pot do oskrbe je dolga in uradna sporočila pogosto ne pridejo v jeziku ljudi.",
+    "privacyPolicy": "Pravilnik o zasebnosti",
+    "contactUs": "Kontaktirajte nas",
+    "progressNone": "Še niste začeli učiti.",
+    "progressStart": "Pojdite na Učenje in začnite.",
+    "version": "Različica"
+  },
+  "mediator": {
+    "title": "Nadzorna plošča mediatorja",
+    "subtitle": "Podpora zdravju vaše skupnosti",
+    "accessCode": "Vnesite dostopno kodo",
+    "accessCodePlaceholder": "4-mestna koda",
+    "accessCodeHint": "Vprašajte koordinatorja za dostopno kodo",
+    "accessCodeError": "Napačna koda. Poskusite znova.",
+    "accessCodeSubmit": "Dostop do plošče",
+    "communityMembers": "Člani skupnosti",
+    "logsThisMonth": "Zdravstveni zapisi ta mesec",
+    "alertsActive": "Aktivna opozorila",
+    "quickActions": "Hitra dejanja",
+    "logVisit": "Zabeleži obisk",
+    "recordHealth": "Zabeleži zdravstvene podatke",
+    "viewReports": "Ogled poročil",
+    "recentActivity": "Nedavna dejavnost",
+    "noActivity": "Ni nedavne dejavnosti",
+    "memberName": "Ime člana",
+    "visitDate": "Datum obiska",
+    "notes": "Opombe",
+    "saveVisit": "Shrani obisk",
+    "visitSaved": "Obisk uspešno shranjen",
+    "healthSummary": "Zdravstveni povzetek skupnosti",
+    "pillarProgress": "Napredek učenja po stebrih",
+    "contactSupport": "Kontaktiraj regionalnega koordinatorja",
+    "resources": "Viri za mediatorja",
+    "downloadGuide": "Prenesi terenski vodnik (PDF)"
   }
 }
