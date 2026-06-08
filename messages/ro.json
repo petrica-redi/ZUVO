@@ -1194,7 +1194,7 @@
     "navMediator": "Spațiul mediatorului",
     "navMediatorDesc": "Înregistrează vizite și activitate în comunitate.",
     "trustBadge1": "Verificat clinic",
-    "trustBadge2": "15 limbi",
+    "trustBadge2": "16 limbi",
     "trustBadge3": "Confidențialitate GDPR",
     "statLanguages": "Limbi acceptate",
     "statMediators": "Mediatori activi",
@@ -1212,7 +1212,7 @@
     "heroCardAnswer": "Nu. Decenii de studii ample — pe peste un milion de copii — nu arată nicio legătură între vaccinuri și autism.",
     "heroCardFooter": "Surse verificate · PII mascate · 0 date vândute",
     "heroBadgeAvailable": "Disponibil în",
-    "heroBadgeLanguages": "15 limbi",
+    "heroBadgeLanguages": "16 limbi",
     "heroBadgeMix": "AI + Mediatori",
     "audienceKickerStudents": "Elevi",
     "audienceKickerCommunity": "Comunitate",
@@ -1642,7 +1642,7 @@
     "values": {
       "careLabel": "Făcut cu grijă",
       "careDesc": "De mediatori sanitari",
-      "languagesLabel": "15 limbi",
+      "languagesLabel": "16 limbi",
       "languagesDesc": "În toată Europa",
       "evidenceLabel": "Bazat pe dovezi",
       "evidenceDesc": "Ghiduri OMS",
@@ -2626,5 +2626,203 @@
     "contactSupport": "Contactează coordonatorul regional",
     "resources": "Resurse pentru mediator",
     "downloadGuide": "Descarcă ghidul de teren (PDF)"
+  },
+  "policies": {
+    "title": "Politicile platformei",
+    "subtitle": "Cadrul de guvernanță care definește ce poate și ce nu poate face Redi Health — și angajamentele pe care le luăm față de fiecare utilizator.",
+    "goNoGoTitle": "Politica de lansare a funcționalităților",
+    "goNoGoBody": "Funcționalitățile care pot influența deciziile clinice necesită controale de politică finalizate înainte de lansare: triage AI, severitatea simptomelor, rezultatele prescripțiilor, recomandările de vaccinare, etichetele furnizorilor 'romă-prietenoși', înregistrarea vizitelor mediatorilor, sănătatea sexuală pentru tineri și orientarea juridică.",
+    "disclaimer": "Redi Health nu este un dispozitiv medical. Toate informațiile sunt doar în scop educațional. Consultați întotdeauna un profesionist calificat în domeniul sănătății pentru decizii medicale.",
+    "clinical-safetyTitle": "Siguranță clinică și escaladare",
+    "clinical-safetyDesc": "Definește ce poate și ce nu poate spune AI-ul, cum sunt escaladarea urgențele înainte de orice apel AI și modelul de guvernanță pentru toate modificările legate de sănătate.",
+    "clinicalSafety1": "AI-ul nu diagnostichează niciodată, nu prescrie niciodată doze și nu sfătuiește niciodată oprirea unui medicament prescris.",
+    "clinicalSafety2": "11 modele de urgență ocolesc complet AI-ul și instruiesc imediat utilizatorul să sune la 112 sau la o linie de asistență specializată.",
+    "clinicalSafety3": "Fiecare rezultat de triage este atribuit uneia din cinci categorii de severitate: Urgență, Urgent, Rutină, Autoîngrijire sau Doar informații.",
+    "clinicalSafety4": "Modificările la modelele de semnale de alertă, prompturile de sistem sau logica de triage necesită aprobarea responsabilului cu guvernanța clinică înainte de deployment.",
+    "source-policyTitle": "Politica privind sursele de sănătate publică",
+    "source-policyDesc": "Definește ce surse pot fi utilizate pentru afirmații de sănătate, cum trebuie citate și cum sunt menținute la zi.",
+    "sourcePolicy1": "Toate faptele de sănătate citează OMS, ECDC, IFRC, ministere naționale sau orientări clinice peer-reviewed — niciodată rețele sociale, studii individuale sau surse comerciale.",
+    "sourcePolicy2": "Fiecare modul de conținut are o dată de 'ultima revizuire' și rolul revizorului. Conținutul expirat este ascuns automat.",
+    "sourcePolicy3": "Substituirile specifice țării (calendare vaccinale, numere de urgență, drepturi ale pacienților) urmează un proces de revizuire clinică în 5 pași înainte de publicare.",
+    "safeguardingTitle": "Politica de protecție",
+    "safeguardingDesc": "Protecții pentru copii, femei însărcinate, supraviețuitori ai abuzurilor și constrângerii, persoane în criză de sănătate mintală și persoane care solicită informații despre sănătatea sexuală.",
+    "safeguarding1": "Autoagresiunea și ideația suicidară sunt interceptate înainte de orice răspuns AI — utilizatorul primește o linie de criză și instrucțiunea de a rămâne cu cineva de încredere.",
+    "safeguarding2": "Descrierile violenței domestice active declanșează un răspuns care prioritizează siguranța, cu linia de urgență locală pentru violența domestică.",
+    "safeguarding3": "Conținutul de sănătate sexuală din Academia pentru studenți necesită revizuire juridică specifică țării și aprobare clinică de Nivel 2 înainte de lansare.",
+    "safeguarding4": "Fiecare pagină AI și rezultat de triage include un buton vizibil 'Am nevoie de ajutor acum' cu numerele de urgență și criză.",
+    "roma-equityTitle": "Echitate romă și anti-stigmatizare",
+    "roma-equityDesc": "Standarde pentru modul în care sunt descrise comunitățile rome, cum este revizuit conținutul și cum sunt prevenite supravegherea și profilarea.",
+    "romaEquity1": "Tot conținutul despre comunitățile rome trebuie să urmeze un limbaj bazat pe puncte forte — numind cauze structurale pentru disparitățile de sănătate, niciodată culturale.",
+    "romaEquity2": "Conținutul despre sănătatea romă este revizuit de un mediator sanitar romă sau de un ONG condus de romi înainte de publicare.",
+    "romaEquity3": "Datele etnice nu sunt colectate niciodată. Analiza nu este niciodată segmentată după identitatea etnică. Datele de localizare nu sunt stocate niciodată.",
+    "romaEquity4": "Un Consiliu consultativ pentru sănătatea romă revizuiește această politică anual și poate semnala probleme de conținut oricând la equity@redi.healthcare.",
+    "provider-verificationTitle": "Verificarea furnizorilor",
+    "provider-verificationDesc": "Cum sunt verificate listările clinicilor, ce înseamnă 'romă-prietenos' și ce necesită, și cum pot utilizatorii raporta daune.",
+    "providerVerification1": "Eticheta 'romă-prietenos' necesită: fără bariere documentare dincolo de cele pentru toți pacienții, formare anti-discriminare, fără reclamații fundamentate în ultimii 3 ani și o evaluare a mediatorului romă în ultimele 18 luni.",
+    "providerVerification2": "Listările neverificate au un banner de avertizare obligatoriu și o insignă 'Neverificat' — nicio etichetă romă-prietenos nu este afișată până când criteriile nu sunt îndeplinite.",
+    "providerVerification3": "Utilizatorii pot raporta discriminare sau informații incorecte direct din fiecare listare. Rapoartele de discriminare sunt revizuite în 3 zile lucrătoare.",
+    "mediator-policyTitle": "Politica operațională a mediatorului",
+    "mediator-policyDesc": "Limitele rolului, cerințele de consimțământ, regulile de minimizare a datelor și protocoalele de escaladare a siguranței pentru mediatorii sanitari de teren.",
+    "mediatorPolicy1": "Mediatorii oferă educație, navigare și suport pentru trimiteri — nu evaluare clinică sau prescripții.",
+    "mediatorPolicy2": "O atestare de consimțământ este necesară înainte ca fiecare jurnal de vizită să fie salvat. Jurnalele nu trebuie să înregistreze etnia, statutul de imigrare sau diagnosticele clinice.",
+    "mediatorPolicy3": "Mediatorii urmează un traseu definit de escaladare a trimiterilor — apel imediat la 112 pentru urgențe, linie de asistență pentru probleme de protecție, supervizor de program în 24 de ore pentru probleme non-imediate.",
+    "mediatorPolicy4": "PIN-urile mediatorilor expiră după 12 luni și sunt revocate imediat când un mediator părăsește programul.",
+    "data-governanceTitle": "Guvernanța datelor",
+    "data-governanceDesc": "Cum sunt clasificate, reținute și controlate toate datele — locale și stocate pe server — și cum poate fiecare utilizator să exporte sau să șteargă datele.",
+    "dataGovernance1": "Datele locale ale dispozitivului (jurnale de familie, progres, vizite ale mediatorilor) au aceleași drepturi de confidențialitate ca datele de pe server — exportabile și ștergibile din Profil > Date.",
+    "dataGovernance2": "Jurnalele de sănătate sunt păstrate timp de 5 ani sau până când le ștergi. Datele contului sunt șterse definitiv în 30 de zile de la o cerere de ștergere.",
+    "dataGovernance3": "Utilizatorii oaspeți și anonimi sunt subiecți de prim rang: aplicația explică ce date locale există și cum să le ștergi — nu sunt returnate erori de autentificare.",
+    "dataGovernance4": "Fiecare modificare de configurare admin, actualizare a furnizorului, acțiune PIN mediator și cerere GDPR este înregistrată într-un jurnal de audit accesibil doar Responsabilului cu protecția datelor."
+  },
+  "terms": {
+    "title": "Termeni și condiții",
+    "lastUpdated": "Ultima actualizare: iunie 2026",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptarea termenilor",
+        "body": "Prin accesarea sau utilizarea Redi Health, ești de acord cu acești termeni. Dacă nu ești de acord, nu utiliza serviciul. Acești termeni se aplică tuturor utilizatorilor, inclusiv oaspeților, utilizatorilor înregistrați, mediatorilor sanitari și administratorilor."
+      },
+      "service": {
+        "title": "2. Ce oferă Redi Health",
+        "body": "Redi Health este o platformă de alfabetizare și navigare în domeniul sănătății. Oferă informații sanitare asistate de AI, conținut educațional, verificarea dezinformărilor, ghidare pentru simptome și instrumente pentru mediatorii sanitari. Platforma este destinată scopurilor educaționale și informaționale."
+      },
+      "notMedical": {
+        "title": "3. Nu este un dispozitiv medical",
+        "body": "Redi Health nu este un dispozitiv medical și nu oferă diagnosticare, tratament sau prescripții medicale. Tot conținutul este doar în scop educațional. Consultați întotdeauna un profesionist calificat în domeniul sănătății pentru decizii medicale. În caz de urgență, sunați imediat la 112."
+      },
+      "aiLimits": {
+        "title": "4. Limitele AI",
+        "body": "Răspunsurile generate de AI se bazează pe cunoștințe generale de sănătate și pot să nu reflecte cele mai recente orientări clinice sau circumstanțele individuale. Nu trebuie tratate ca sfaturi medicale personalizate. AI-ul nu diagnostichează și nu prescrie."
+      },
+      "userConduct": {
+        "title": "5. Conduita utilizatorului",
+        "body": "Nu trebuie să utilizați Redi Health pentru a obține prescripții sau diagnostice medicale specifice, pentru a colecta informații despre alții fără consimțământul lor sau pentru a eluda limitele de siguranță clinică ale platformei. Mediatorii trebuie să respecte Politica operațională a mediatorilor."
+      },
+      "data": {
+        "title": "6. Date și confidențialitate",
+        "body": "Datele tale sunt guvernate de Politica de confidențialitate și Politica de guvernanță a datelor. Datele locale (progres, jurnale de familie, check-in-uri) sunt stocate pe dispozitivul tău. Datele de pe server necesită un cont. Ambele sunt supuse drepturilor tale complete."
+      },
+      "liability": {
+        "title": "7. Limitarea răspunderii",
+        "body": "Redi Health este furnizat 'ca atare', fără garanții de acuratețe. În măsura maximă permisă de lege, Redi Health nu este responsabil pentru niciun prejudiciu rezultat din utilizarea platformei. Utilizați platforma pe propriul risc."
+      },
+      "changes": {
+        "title": "8. Modificări ale termenilor",
+        "body": "Putem actualiza acești termeni. Modificările semnificative vor fi notificate prin aplicație. Utilizarea continuă a platformei după notificare constituie acceptarea termenilor actualizați."
+      },
+      "contact": {
+        "title": "9. Contact",
+        "body": "Pentru întrebări despre acești termeni, contactați-ne la legal@redi.healthcare. Pentru aspecte de date și confidențialitate, contactați Responsabilul cu protecția datelor la dpo@redi.healthcare."
+      }
+    }
+  },
+  "training": {
+    "modules": {
+      "eciIntro": {
+        "title": "Introducere ECI și rolurile echipei",
+        "summary": "Cine este în echipa comunitară integrată, ce face fiecare rol și cum colaborați în comunitate.",
+        "k1": "Echipa ECI: AMC, asistent social, consilier școlar și (unde se aplică) mediator sanitar.",
+        "k2": "Toți membrii lucrează în jurul aceluiași beneficiar — un singur plan de intervenție.",
+        "k3": "Coordonatorul UAT și UJSS-ul județean sunt linia ta de raportare.",
+        "k4": "Beneficiari prioritari: gravide, copii, vârstnici, persoane cu dizabilități, familii cu venit minim garantat."
+      },
+      "legal": {
+        "title": "Cadrul legal POIDS și OUG 18/2017",
+        "summary": "Bazele legale ale asistenței medicale comunitare și ale programului POIDS.",
+        "k1": "OUG 18/2017 definește asistența medicală comunitară și centrele comunitare integrate.",
+        "k2": "POIDS 2021–2027 finanțează 2.000 de comune rurale (proiect SMIS 339395).",
+        "k3": "Confidențialitatea datelor: GDPR + consimțământul beneficiarului pentru intervenții."
+      },
+      "fir": {
+        "title": "FIR — Fișa de Identificare a Riscurilor",
+        "summary": "Cum identifici corect nevoile, completezi FIR și decizi un plan de servicii.",
+        "k1": "FIR acoperă: gospodărie, igienă, muncă, asigurare CNAS, sănătate cronică, vaccinări, screeninguri.",
+        "k2": "Familiile cu peste 10 riscuri/nevoi neacoperite au prioritate de monitorizare trimestrială.",
+        "k3": "Marchează beneficiarul în Cazuri cu eticheta de vulnerabilitate potrivită.",
+        "k4": "Refacem evaluarea anual sau la schimbări majore (naștere, deces, internare)."
+      },
+      "caseMgmt": {
+        "title": "Management de caz în 5 pași",
+        "summary": "De la identificare la închidere — cum gestionezi un caz cu echipa integrată.",
+        "k1": "Identificare — pe teren, prin sesizare sau colaborare cu SPAS/medic de familie.",
+        "k2": "Evaluare — folosește FIR și instrumente proprii de evaluare a nevoilor.",
+        "k3": "Plan de intervenție — obiective măsurabile, termene, persoane responsabile.",
+        "k4": "Monitorizare — vizite la domiciliu programate, ajustarea planului.",
+        "k5": "Închidere — atunci când obiectivele sunt atinse sau cazul migrează."
+      },
+      "vaccination": {
+        "title": "Vaccinare comunitară: mobilizare și comunicare",
+        "summary": "Cum mobilizezi familiile la vaccinare, ce să faci cu refuzul vaccinal și cum lucrezi cu medicul de familie.",
+        "k1": "Cunoaște calendarul național — verifică dacă fiecare copil din evidență este la zi.",
+        "k2": "Adresează clar miturile (autism, conținut), cu surse — folosește instrumentul de verificare.",
+        "k3": "Programează vaccinări cu medicul de familie / DSP, însoțește familia când e nevoie.",
+        "k4": "Documentează refuzul cu motivele și planifică o revenire în 30 de zile."
+      },
+      "maternal": {
+        "title": "Sănătatea mamei și a copilului",
+        "summary": "Prevenția gravidelor minore, monitorizare prenatală, alăptare și controale postnatale.",
+        "k1": "Identifică gravidele la primul contact — ajută la înregistrarea la medic de familie/moașă.",
+        "k2": "Acid folic în primul trimestru — discută din momentul confirmării sarcinii.",
+        "k3": "Sprijină alăptarea exclusivă 6 luni — adresa miturile despre laptele praf.",
+        "k4": "Vizite postnatale: 7 zile, 6 săptămâni — depistare depresie postnatală."
+      },
+      "chronic": {
+        "title": "Managementul bolilor cronice în comunitate",
+        "summary": "HTA, diabet și alte boli cronice — rolul tău în prevenție secundară și aderență la tratament.",
+        "k1": "Înregistrează tensiunea / glicemia la vizitele lunare, raportează valorile critice.",
+        "k2": "Verifică aderența la tratament și depistează efectele adverse.",
+        "k3": "Facilitează accesul la medic specialist / control trimestrial."
+      },
+      "tb": {
+        "title": "TBC și boli transmisibile",
+        "summary": "Recunoaște simptomele suspecte de TBC și inițiază trimiterea la screening.",
+        "k1": "Tuse persistentă > 3 săptămâni, scădere în greutate, febră serală — semnal de alarmă.",
+        "k2": "Trimite la dispensar TBC sau DSP pentru screening (test cutanat / radiografie).",
+        "k3": "Asigură aderența la tratament DOT (Directly Observed Therapy)."
+      },
+      "screening": {
+        "title": "Screening pentru cancer și boli netransmisibile",
+        "summary": "Cancer de col uterin, sân, colorectal — cum mobilizezi populația țintă.",
+        "k1": "Femei 25–64 ani — Babeș-Papanicolau la 3 ani.",
+        "k2": "Femei 50–69 ani — mamografie la 2 ani.",
+        "k3": "Adulți 50–74 ani — test FIT pentru cancer colorectal."
+      },
+      "mentalHealth": {
+        "title": "Sănătatea mintală în comunitate",
+        "summary": "Recunoaște semnele de depresie, anxietate, intenții suicidare și liniile de sprijin.",
+        "k1": "PHQ-2 ca instrument scurt de screening; trimite la medic dacă pozitiv.",
+        "k2": "Linia de urgență: 112 pentru intenții suicidare acute. TelVerde: 0800.801.200.",
+        "k3": "Susține familia, nu izola persoana — comunică cu medicul de familie."
+      },
+      "rights": {
+        "title": "Drepturi, asigurare CNAS și acte",
+        "summary": "Cum sprijini beneficiarii să-și obțină drepturile, asigurarea și actele de identitate.",
+        "k1": "Asigurare CNAS pentru grupurile fără venituri: obținută gratuit prin SPAS.",
+        "k2": "Acte de identitate: colaborează cu primăria și serviciile de evidență.",
+        "k3": "Acces gratuit la serviciile de bază — chiar și fără asigurare.",
+        "k4": "Cunoaște-ți drepturile pacientului — Legea 46/2003 și Ordinul 1410/2016."
+      },
+      "school": {
+        "title": "Prevenirea abandonului școlar",
+        "summary": "Colaborare cu consilierul școlar pentru a păstra copiii în școală.",
+        "k1": "Identifică timpuriu — absențe repetate, schimbări în starea copilului.",
+        "k2": "Pachete alimentare POIDS — sprijin direct pentru familiile cu copii.",
+        "k3": "Discută cu părinții și cu școala — plan comun."
+      },
+      "communication": {
+        "title": "Comunicare cu beneficiari în comunități rurale",
+        "summary": "Limbaj simplu, respect cultural, lucru cu familii de etnie romă.",
+        "k1": "Folosește limbaj simplu, fără jargon medical.",
+        "k2": "Respectă codurile culturale ale comunității — verifică cu mediatorul sanitar romă.",
+        "k3": "Documentează acordul familiei pentru intervenții (consimțământ informat)."
+      },
+      "reporting": {
+        "title": "Raportare lunară către DSP / UJSS",
+        "summary": "Cum generezi raportul lunar din spațiul de lucru și-l trimiți coordonatorului.",
+        "k1": "Indicatorii sunt calculați automat din tabul „Indicatori”.",
+        "k2": "Folosește butonul „Tipărește raport” pentru a salva PDF.",
+        "k3": "Trimite raportul către coordonatorul UJSS / DSP județeană până în ziua 5 a lunii."
+      }
+    }
   }
 }

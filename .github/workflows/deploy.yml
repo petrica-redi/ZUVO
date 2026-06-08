@@ -1,10 +1,14 @@
 name: Deploy to Vercel
 
-# Runs on every push to `main` once VERCEL_TOKEN is set in repo Secrets.
-# Skips itself if the token is missing so an unconfigured repo doesn't fail CI.
+# Production deploy on every push to `main`.
+# Preview deploy on every push to an open pull request.
+# Manual dispatch supports both environments.
+# All jobs silently skip themselves when VERCEL_TOKEN is not set.
 on:
   push:
     branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
     inputs:
       environment:
@@ -20,9 +24,11 @@ concurrency:
 
 jobs:
   deploy:
-    name: Vercel ${{ github.event.inputs.environment || 'production' }}
+    name: Vercel ${{ (github.event_name == 'pull_request' && 'preview') || github.event.inputs.environment || 'production' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      pull-requests: write
     env:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -57,7 +63,11 @@ jobs:
         if: env.VERCEL_TOKEN != ''
         id: target
         run: |
-          env_name="${{ github.event.inputs.environment || 'production' }}"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            env_name="preview"
+          else
+            env_name="${{ github.event.inputs.environment || 'production' }}"
+          fi
           echo "name=$env_name" >> "$GITHUB_OUTPUT"
           if [ "$env_name" = "production" ]; then
             echo "prod_flag=--prod" >> "$GITHUB_OUTPUT"
@@ -80,6 +90,48 @@ jobs:
           url=$(vercel deploy --prebuilt ${{ steps.target.outputs.prod_flag }} --token=$VERCEL_TOKEN)
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "::notice title=Deploy URL::$url"
+
+      - name: Comment preview URL on PR
+        if: env.VERCEL_TOKEN != '' && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = '${{ steps.deploy.outputs.url }}';
+            const sha  = context.payload.pull_request.head.sha.slice(0, 7);
+            const body = [
+              '### Vercel preview deployed',
+              '',
+              `| | |`,
+              `|---|---|`,
+              `| **URL** | ${url} |`,
+              `| **Commit** | \`${sha}\` |`,
+              `| **Environment** | preview |`,
+            ].join('\n');
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find(c =>
+              c.user.login === 'github-actions[bot]' &&
+              c.body.includes('Vercel preview deployed')
+            );
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
 
       - name: Summary
         if: env.VERCEL_TOKEN != ''
