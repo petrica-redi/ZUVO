@@ -31,11 +31,7 @@ const STORAGE_KEY = "zuvo_family";
 const HEALTH_KEY = "zuvo_health_logs";
 
 const ALLOWED_RELATIONSHIPS = new Set<FamilyMember["relationship"]>([
-  "self",
-  "child",
-  "spouse",
-  "parent",
-  "other",
+  "self", "child", "spouse", "parent", "other",
 ]);
 const ALLOWED_GENDERS = new Set<FamilyMember["gender"]>(["male", "female", "other"]);
 
@@ -88,8 +84,7 @@ function saveHealthLogs(logs: HealthEntry[]) {
 }
 
 export function FamilyHub() {
-  const tRelation = useTranslations("family.relation");
-  const relationLabel = (id: FamilyMember["relationship"]) => tRelation(id);
+  const t = useTranslations("family");
   const [members, setMembers] = useState<FamilyMember[]>([]);
   const [selectedMember, setSelectedMember] = useState<FamilyMember | null>(null);
   const [showAddForm, setShowAddForm] = useState(false);
@@ -97,24 +92,22 @@ export function FamilyHub() {
   const [showLogForm, setShowLogForm] = useState(false);
   const [now] = useState(() => Date.now());
 
-  // Form state
   const [formName, setFormName] = useState("");
   const [formRelationship, setFormRelationship] = useState<FamilyMember["relationship"]>("child");
   const [formAge, setFormAge] = useState("");
   const [formGender, setFormGender] = useState<FamilyMember["gender"]>("female");
   const [formPregnant, setFormPregnant] = useState(false);
 
-  // Health log form
   const [logType, setLogType] = useState<HealthEntry["type"]>("mood");
   const [logValue, setLogValue] = useState(3);
   const [logNote, setLogNote] = useState("");
 
   useEffect(() => {
-    const timeoutId = window.setTimeout(() => {
+    const id = window.setTimeout(() => {
       setMembers(getMembers());
       setHealthLogs(getHealthLogs());
     }, 0);
-    return () => window.clearTimeout(timeoutId);
+    return () => window.clearTimeout(id);
   }, []);
 
   const addMember = () => {
@@ -173,9 +166,6 @@ export function FamilyHub() {
   };
 
   const moodEmojis = ["😢", "😟", "😐", "🙂", "😊"];
-  const logTypeLabels: Record<string, string> = {
-    mood: "Mood", water: "Water (glasses)", activity: "Activity (min)", weight: "Weight (kg)", note: "Note",
-  };
 
   // Member detail view
   if (selectedMember) {
@@ -186,16 +176,19 @@ export function FamilyHub() {
 
     return (
       <div>
-        <button onClick={() => setSelectedMember(null)} className="mb-4 text-sm text-gray-500 flex items-center gap-1">
-          <ChevronRight className="h-4 w-4 rotate-180" /> Back to family
+        <button
+          onClick={() => setSelectedMember(null)}
+          className="mb-4 text-sm text-[var(--color-text-muted)] flex items-center gap-1"
+        >
+          <ChevronRight className="h-4 w-4 rotate-180" /> {t("back")}
         </button>
 
-        <div className="mb-4 flex items-center gap-4 rounded-2xl bg-white p-4 shadow-sm">
+        <div className="mb-4 flex items-center gap-4 rounded-2xl bg-[var(--color-surface)] p-4 shadow-1">
           <span className="text-4xl">{getAvatar(selectedMember)}</span>
           <div>
-            <h2 className="text-lg font-bold text-gray-900">{selectedMember.name}</h2>
-            <p className="text-sm text-gray-500">
-              {relationLabel(selectedMember.relationship)} · {selectedMember.age} years old
+            <h2 className="text-lg font-bold text-[var(--color-text-primary)]">{selectedMember.name}</h2>
+            <p className="text-sm text-[var(--color-text-secondary)]">
+              {t(`relation.${selectedMember.relationship}`)} · {t("yearsOld", { age: selectedMember.age })}
             </p>
           </div>
         </div>
@@ -203,47 +196,40 @@ export function FamilyHub() {
         {selectedMember.isPregnant && (
           <div className="mb-4 rounded-2xl border border-pink-200 bg-pink-50 p-4">
             <h3 className="flex items-center gap-2 text-sm font-bold text-pink-800">
-              <Heart className="h-4 w-4" /> Pregnancy
+              <Heart className="h-4 w-4" /> {t("pregnancyTitle")}
             </h3>
             {pregnancyWeeks !== null ? (
-              <p className="mt-1 text-sm text-pink-700">Week {pregnancyWeeks} of 40</p>
+              <p className="mt-1 text-sm text-pink-700">{t("pregnancyWeeks", { weeks: pregnancyWeeks })}</p>
             ) : (
-              <p className="mt-1 text-sm text-pink-700">Expecting</p>
+              <p className="mt-1 text-sm text-pink-700">{t("pregnancyExpecting")}</p>
             )}
           </div>
         )}
 
-        {/* Quick actions */}
         <div className="mb-4 grid grid-cols-3 gap-2">
-          <button
-            onClick={() => { setShowLogForm(true); setLogType("mood"); }}
-            className="flex flex-col items-center gap-1 rounded-xl border border-gray-100 bg-white p-3 shadow-sm active:scale-95"
-          >
-            <span className="text-xl">😊</span>
-            <span className="text-[10px] font-semibold text-gray-600">Log Mood</span>
-          </button>
-          <button
-            onClick={() => { setShowLogForm(true); setLogType("water"); }}
-            className="flex flex-col items-center gap-1 rounded-xl border border-gray-100 bg-white p-3 shadow-sm active:scale-95"
-          >
-            <span className="text-xl">💧</span>
-            <span className="text-[10px] font-semibold text-gray-600">Water</span>
-          </button>
-          <button
-            onClick={() => { setShowLogForm(true); setLogType("activity"); }}
-            className="flex flex-col items-center gap-1 rounded-xl border border-gray-100 bg-white p-3 shadow-sm active:scale-95"
-          >
-            <span className="text-xl">🏃</span>
-            <span className="text-[10px] font-semibold text-gray-600">Activity</span>
-          </button>
+          {(["mood", "water", "activity"] as const).map((type) => (
+            <button
+              key={type}
+              onClick={() => { setShowLogForm(true); setLogType(type); }}
+              className="flex flex-col items-center gap-1 rounded-xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-3 shadow-1 active:scale-95"
+            >
+              <span className="text-xl">{type === "mood" ? "😊" : type === "water" ? "💧" : "🏃"}</span>
+              <span className="text-[10px] font-semibold text-[var(--color-text-secondary)]">
+                {t(`logTypes.${type}`)}
+              </span>
+            </button>
+          ))}
         </div>
 
-        {/* Log form */}
         {showLogForm && (
-          <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+          <div className="mb-4 rounded-2xl border border-[var(--color-border-default)] bg-[var(--color-surface)] p-4 shadow-1">
             <div className="mb-3 flex items-center justify-between">
-              <h3 className="text-sm font-bold text-gray-900">Log {logTypeLabels[logType]}</h3>
-              <button onClick={() => setShowLogForm(false)}><X className="h-4 w-4 text-gray-400" /></button>
+              <h3 className="text-sm font-bold text-[var(--color-text-primary)]">
+                {t("logFormTitle", { type: t(`logTypes.${logType}`) })}
+              </h3>
+              <button onClick={() => setShowLogForm(false)}>
+                <X className="h-4 w-4 text-[var(--color-text-muted)]" />
+              </button>
             </div>
             {logType === "mood" ? (
               <div className="mb-3 flex justify-center gap-3">
@@ -262,43 +248,47 @@ export function FamilyHub() {
                 type="number"
                 value={logValue}
                 onChange={(e) => setLogValue(Number(e.target.value))}
-                aria-label="Log value"
-                className="mb-3 w-full rounded-lg border border-gray-200 px-3 py-2 text-center text-lg font-bold focus:outline-none"
+                aria-label={t(`logTypes.${logType}`)}
+                className="mb-3 w-full rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-3 py-2 text-center text-lg font-bold text-[var(--color-text-primary)] focus:outline-none"
               />
             )}
             <input
               value={logNote}
               onChange={(e) => setLogNote(e.target.value)}
-              aria-label="Add a note" placeholder="Add a note (optional)"
-              className="mb-3 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none"
+              aria-label={t("logNote")}
+              placeholder={t("logNote")}
+              className="mb-3 w-full rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-3 py-2 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:outline-none"
             />
             <button
               onClick={addHealthLog}
               className="w-full rounded-xl bg-[#C0392B] py-2.5 text-sm font-semibold text-white shadow-md active:scale-[0.98]"
             >
-              Save
+              {t("save")}
             </button>
           </div>
         )}
 
-        {/* Recent logs */}
-        <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">Recent logs</h3>
+        <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
+          {t("recentLogs")}
+        </h3>
         {logs.length === 0 ? (
-          <p className="rounded-xl bg-white p-4 text-center text-sm text-gray-400">No logs yet. Start tracking!</p>
+          <p className="rounded-xl bg-[var(--color-surface)] p-4 text-center text-sm text-[var(--color-text-muted)] shadow-1">
+            {t("noLogs")}
+          </p>
         ) : (
           <div className="space-y-2">
             {logs.map((log) => (
-              <div key={log.id} className="flex items-center gap-3 rounded-xl bg-white p-3 shadow-sm">
+              <div key={log.id} className="flex items-center gap-3 rounded-xl bg-[var(--color-surface)] p-3 shadow-1">
                 <span className="text-xl">
                   {log.type === "mood" ? moodEmojis[(log.value || 3) - 1] : log.type === "water" ? "💧" : log.type === "activity" ? "🏃" : "📝"}
                 </span>
                 <div className="flex-1">
-                  <span className="text-sm font-medium text-gray-800">
-                    {logTypeLabels[log.type]}: {log.type === "mood" ? moodEmojis[(log.value || 3) - 1] : log.value}
+                  <span className="text-sm font-medium text-[var(--color-text-primary)]">
+                    {t(`logTypes.${log.type}`)}: {log.type === "mood" ? moodEmojis[(log.value || 3) - 1] : log.value}
                   </span>
-                  {log.note && <p className="text-xs text-gray-400">{log.note}</p>}
+                  {log.note && <p className="text-xs text-[var(--color-text-muted)]">{log.note}</p>}
                 </div>
-                <span className="text-[10px] text-gray-400">
+                <span className="text-[10px] text-[var(--color-text-muted)]">
                   {new Date(log.date).toLocaleDateString()}
                 </span>
               </div>
@@ -316,36 +306,33 @@ export function FamilyHub() {
         <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-pink-500 to-rose-600 shadow-xl shadow-pink-500/25">
           <Heart className="h-10 w-10 text-white" />
         </div>
-        <h1 className="text-2xl font-black text-gray-900">Family Health</h1>
-        <p className="mt-2 text-sm text-gray-500">
-          Track health for your whole family. All data stays on your phone.
-        </p>
+        <h1 className="text-2xl font-black text-[var(--color-text-primary)]">{t("title")}</h1>
+        <p className="mt-2 text-sm text-[var(--color-text-secondary)]">{t("subtitle")}</p>
       </div>
 
-      {/* Family members */}
       {members.length > 0 && (
         <div className="mb-4 space-y-2">
           {members.map((m) => (
             <div
               key={m.id}
-              className="flex items-center gap-3 rounded-xl border border-gray-100 bg-white p-3 shadow-sm"
+              className="flex items-center gap-3 rounded-xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-3 shadow-1"
             >
               <button onClick={() => setSelectedMember(m)} className="flex flex-1 items-center gap-3">
                 <span className="text-3xl">{getAvatar(m)}</span>
                 <div className="text-left">
-                  <span className="text-sm font-semibold text-gray-800">{m.name}</span>
-                  <p className="text-xs text-gray-400">
-                    {relationLabel(m.relationship)} · {m.age}y
-                    {m.isPregnant && " · 🤰 Expecting"}
+                  <span className="text-sm font-semibold text-[var(--color-text-primary)]">{m.name}</span>
+                  <p className="text-xs text-[var(--color-text-muted)]">
+                    {t(`relation.${m.relationship}`)} · {m.age}y
+                    {m.isPregnant && ` ${t("expecting")}`}
                   </p>
                 </div>
               </button>
               <div className="flex items-center gap-2">
-                <button onClick={() => setSelectedMember(m)} className="rounded-lg bg-gray-50 p-2">
-                  <Activity className="h-4 w-4 text-gray-400" />
+                <button onClick={() => setSelectedMember(m)} className="rounded-lg bg-[var(--color-surface-subtle)] p-2">
+                  <Activity className="h-4 w-4 text-[var(--color-text-muted)]" />
                 </button>
-                <button onClick={() => removeMember(m.id)} className="rounded-lg bg-red-50 p-2">
-                  <Trash2 className="h-4 w-4 text-red-400" />
+                <button onClick={() => removeMember(m.id)} className="rounded-lg bg-[var(--color-danger-bg)] p-2">
+                  <Trash2 className="h-4 w-4 text-[var(--color-danger-accent)]" />
                 </button>
               </div>
             </div>
@@ -353,100 +340,97 @@ export function FamilyHub() {
         </div>
       )}
 
-      {/* Add member form */}
       {showAddForm ? (
-        <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+        <div className="mb-4 rounded-2xl border border-[var(--color-border-default)] bg-[var(--color-surface)] p-4 shadow-1">
           <div className="mb-3 flex items-center justify-between">
-            <h3 className="text-sm font-bold text-gray-900">Add family member</h3>
-            <button onClick={() => setShowAddForm(false)}><X className="h-4 w-4 text-gray-400" /></button>
+            <h3 className="text-sm font-bold text-[var(--color-text-primary)]">{t("addMemberTitle")}</h3>
+            <button onClick={() => setShowAddForm(false)}>
+              <X className="h-4 w-4 text-[var(--color-text-muted)]" />
+            </button>
           </div>
           <div className="space-y-3">
             <input
               value={formName}
               onChange={(e) => setFormName(e.target.value)}
-              aria-label="Family member name" placeholder="Name"
-              className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:border-pink-500 focus:outline-none"
+              aria-label={t("namePlaceholder")}
+              placeholder={t("namePlaceholder")}
+              className="w-full rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-3 py-2.5 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:border-pink-500 focus:outline-none"
             />
             <select
               value={formRelationship}
               onChange={(e) => setFormRelationship(e.target.value as FamilyMember["relationship"])}
               aria-label="Relationship"
-              className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none"
+              className="w-full rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-3 py-2.5 text-sm text-[var(--color-text-primary)] focus:outline-none"
             >
-              <option value="self">Me</option>
-              <option value="child">My child</option>
-              <option value="spouse">Spouse / Partner</option>
-              <option value="parent">Parent</option>
-              <option value="other">Other</option>
+              {(["self", "child", "spouse", "parent", "other"] as const).map((rel) => (
+                <option key={rel} value={rel}>{t(`relation.${rel}`)}</option>
+              ))}
             </select>
             <div className="flex gap-2">
               <input
                 type="number"
                 value={formAge}
                 onChange={(e) => setFormAge(e.target.value)}
-                aria-label="Age" placeholder="Age"
-                className="flex-1 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none"
+                aria-label={t("agePlaceholder")}
+                placeholder={t("agePlaceholder")}
+                className="flex-1 rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-3 py-2.5 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:outline-none"
               />
               <select
                 value={formGender}
                 onChange={(e) => setFormGender(e.target.value as FamilyMember["gender"])}
                 aria-label="Gender"
-                className="flex-1 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none"
+                className="flex-1 rounded-lg border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-3 py-2.5 text-sm text-[var(--color-text-primary)] focus:outline-none"
               >
-                <option value="female">Female</option>
-                <option value="male">Male</option>
-                <option value="other">Other</option>
+                {(["female", "male", "other"] as const).map((g) => (
+                  <option key={g} value={g}>{t(`genders.${g}`)}</option>
+                ))}
               </select>
             </div>
-            <label className="flex items-center gap-2 text-sm text-gray-700">
+            <label className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
               <input
                 type="checkbox"
                 checked={formPregnant}
                 onChange={(e) => setFormPregnant(e.target.checked)}
                 className="rounded"
               />
-              Currently pregnant
+              {t("pregnantLabel")}
             </label>
             <button
               onClick={addMember}
               disabled={!formName.trim()}
               className="w-full rounded-xl bg-pink-500 py-2.5 text-sm font-semibold text-white shadow-md active:scale-[0.98] disabled:opacity-50"
             >
-              Add to family
+              {t("addToFamily")}
             </button>
           </div>
         </div>
       ) : (
         <button
           onClick={() => setShowAddForm(true)}
-          className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-dashed border-gray-200 bg-white py-4 text-sm font-semibold text-gray-500 transition-all hover:border-pink-300 hover:text-pink-500 active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-dashed border-[var(--color-border-default)] bg-[var(--color-surface)] py-4 text-sm font-semibold text-[var(--color-text-muted)] transition-all hover:border-pink-300 hover:text-pink-500 active:scale-[0.98]"
         >
-          <Plus className="h-5 w-5" /> Add family member
+          <Plus className="h-5 w-5" /> {t("addMemberButton")}
         </button>
       )}
 
       {members.length === 0 && (
-        <div className="mt-6 rounded-3xl bg-white p-8 text-center shadow-sm animate-fade-in-up delay-200">
+        <div className="mt-6 rounded-3xl bg-[var(--color-surface)] p-8 text-center shadow-1 animate-fade-in-up delay-200">
           <span className="text-6xl">👨‍👩‍👧‍👦</span>
-          <h3 className="mt-4 text-base font-black text-gray-800">Your family health hub</h3>
-          <p className="mt-2 text-sm text-gray-500">
-            Add family members to track their health, vaccinations, and medications.
-            Everything stays on your phone — no account needed.
-          </p>
+          <h3 className="mt-4 text-base font-black text-[var(--color-text-primary)]">{t("emptyTitle")}</h3>
+          <p className="mt-2 text-sm text-[var(--color-text-secondary)]">{t("emptyDesc")}</p>
         </div>
       )}
 
-      {/* Info cards */}
       <div className="mt-6 grid grid-cols-2 gap-2">
         <div className="rounded-xl border border-green-100 bg-green-50 p-3">
           <Syringe className="mb-1 h-5 w-5 text-green-500" />
-          <span className="text-xs font-semibold text-green-800">Vaccine tracking</span>
-          <p className="text-[10px] text-green-600">Coming soon for each member</p>
+          <span className="text-xs font-semibold text-green-800">{t("vaccineTrackingTitle")}</span>
+          <p className="text-[10px] text-green-600">{t("vaccineTrackingDesc")}</p>
         </div>
         <div className="rounded-xl border border-blue-100 bg-blue-50 p-3">
           <Calendar className="mb-1 h-5 w-5 text-blue-500" />
-          <span className="text-xs font-semibold text-blue-800">Medication reminders</span>
-          <p className="text-[10px] text-blue-600">Coming soon</p>
+          <span className="text-xs font-semibold text-blue-800">{t("medicationRemindersTitle")}</span>
+          <p className="text-[10px] text-blue-600">{t("medicationRemindersDesc")}</p>
         </div>
       </div>
     </div>

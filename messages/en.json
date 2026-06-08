@@ -1580,10 +1580,50 @@
     }
   },
   "family": {
+    "title": "Family Health",
+    "subtitle": "Track health for your whole family. All data stays on your phone.",
+    "back": "Back to family",
+    "yearsOld": "{age} years old",
+    "expecting": "· Expecting",
+    "pregnancyTitle": "Pregnancy",
+    "pregnancyWeeks": "Week {weeks} of 40",
+    "pregnancyExpecting": "Expecting",
+    "logMood": "Log Mood",
+    "logWater": "Water",
+    "logActivity": "Activity",
+    "logFormTitle": "Log {type}",
+    "logNote": "Add a note (optional)",
+    "save": "Save",
+    "recentLogs": "Recent logs",
+    "noLogs": "No logs yet. Start tracking!",
+    "addMemberTitle": "Add family member",
+    "addMemberButton": "Add family member",
+    "addToFamily": "Add to family",
+    "namePlaceholder": "Name",
+    "agePlaceholder": "Age",
+    "pregnantLabel": "Currently pregnant",
+    "emptyTitle": "Your family health hub",
+    "emptyDesc": "Add family members to track their health, vaccinations, and medications. Everything stays on your phone — no account needed.",
+    "vaccineTrackingTitle": "Vaccine tracking",
+    "vaccineTrackingDesc": "Coming soon for each member",
+    "medicationRemindersTitle": "Medication reminders",
+    "medicationRemindersDesc": "Coming soon",
+    "logTypes": {
+      "mood": "Mood",
+      "water": "Water (glasses)",
+      "activity": "Activity (min)",
+      "weight": "Weight (kg)",
+      "note": "Note"
+    },
+    "genders": {
+      "female": "Female",
+      "male": "Male",
+      "other": "Other"
+    },
     "relation": {
       "self": "Me",
-      "child": "Child",
-      "spouse": "Spouse",
+      "child": "My child",
+      "spouse": "Spouse / Partner",
       "parent": "Parent",
       "other": "Other"
     }

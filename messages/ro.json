@@ -1270,10 +1270,50 @@
     }
   },
   "family": {
+    "title": "Sănătatea familiei",
+    "subtitle": "Urmărește sănătatea întregii familii. Toate datele rămân pe telefonul tău.",
+    "back": "Înapoi la familie",
+    "yearsOld": "{age} ani",
+    "expecting": "· Gravidă",
+    "pregnancyTitle": "Sarcină",
+    "pregnancyWeeks": "Săptămâna {weeks} din 40",
+    "pregnancyExpecting": "Gravidă",
+    "logMood": "Înregistrează dispoziția",
+    "logWater": "Apă",
+    "logActivity": "Activitate",
+    "logFormTitle": "Înregistrează {type}",
+    "logNote": "Adaugă o notă (opțional)",
+    "save": "Salvează",
+    "recentLogs": "Înregistrări recente",
+    "noLogs": "Nicio înregistrare încă. Începe urmărirea!",
+    "addMemberTitle": "Adaugă un membru al familiei",
+    "addMemberButton": "Adaugă un membru al familiei",
+    "addToFamily": "Adaugă în familie",
+    "namePlaceholder": "Nume",
+    "agePlaceholder": "Vârstă",
+    "pregnantLabel": "În prezent gravidă",
+    "emptyTitle": "Hub-ul de sănătate al familiei tale",
+    "emptyDesc": "Adaugă membri ai familiei pentru a urmări sănătatea, vaccinările și medicamentele lor. Totul rămâne pe telefonul tău — nu este necesar un cont.",
+    "vaccineTrackingTitle": "Urmărire vaccinuri",
+    "vaccineTrackingDesc": "În curând pentru fiecare membru",
+    "medicationRemindersTitle": "Remindere medicamente",
+    "medicationRemindersDesc": "În curând",
+    "logTypes": {
+      "mood": "Dispoziție",
+      "water": "Apă (pahare)",
+      "activity": "Activitate (min)",
+      "weight": "Greutate (kg)",
+      "note": "Notă"
+    },
+    "genders": {
+      "female": "Femeie",
+      "male": "Bărbat",
+      "other": "Alt"
+    },
     "relation": {
       "self": "Eu",
-      "child": "Copil",
-      "spouse": "Soț/Soție",
+      "child": "Copilul meu",
+      "spouse": "Soț / Partener",
       "parent": "Părinte",
       "other": "Altul"
     }
