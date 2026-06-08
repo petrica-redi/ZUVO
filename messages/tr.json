@@ -934,5 +934,181 @@
         "simple": "Bu, vücudun mikroplara karşı ordusudur. Beyaz kan hücreleri enfeksiyonlarla savaşır. Aşılar bağışıklık sistemini eğitir. İyi beslenme, uyku ve hareket onu güçlendirir."
       }
     }
+  },
+  "vaccines": {
+    "heroTitle": "Asi rehberi",
+    "heroSubtitle": "Her asi basitçe anlatildi. Daha fazlasini öğrenmek için herhangi bir asiya dokunun.",
+    "askCta": "Asilar hakkinda soru sor",
+    "backToSchedule": "Takvime dön",
+    "preventsLabel": "Korur",
+    "dosesNeeded": "{count, plural, one {# doz gerekir} other {# doz gerekir}}",
+    "howItWorks": "Nasil çalisir",
+    "sideEffects": "Yan etkiler (normal)",
+    "mythTitle": "Efsane vs. gerçek",
+    "qaTitle": "Asilar hakkinda sor",
+    "qaSubtitle": "Her soru olur. Saha deneyiminden dürüst cevaplar.",
+    "qaPlaceholder": "Asi sorunu yaz...",
+    "qaAria": "Asilar hakkinda soru sor",
+    "qaCommon": "Sik sorulan sorular",
+    "childAgePrompt": "Çocuğunuz kaç yaşinda?",
+    "childAgeAria": "Çocuk yaşini seçin",
+    "ageOptionDefault": "Yaş seçin...",
+    "ageNewborn": "Yeni doğan (0 ay)",
+    "age2m": "2 ay",
+    "age4m": "4 ay",
+    "age6m": "6 ay",
+    "age12m": "12 ay (1 yaş)",
+    "age18m": "18 ay",
+    "age48m": "4-6 yaş",
+    "age108m": "9-12 yaş",
+    "neededByAge": "Bu yaşta gereken aşılar:",
+    "vaccinesCount": "{count, plural, one {# aşı} other {# aşı}}",
+    "importance": {
+      "critical": "Gerekli",
+      "important": "Önemli",
+      "recommended": "Önerilen"
+    },
+    "fears": [
+      "Aşılar bebeğim için güvenli mi?",
+      "Çocuğumun canı yanacak mı?",
+      "Ya sonra ateşi çıkarsa?",
+      "Aşıları erteleyebilir miyim?",
+      "Çocuğum hasta - yine de aşı olabilir mi?"
+    ],
+    "meta": {
+      "title": "Asi rehberi - Redi Health",
+      "description": "Her asi basit kelimelerle anlatildi."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (verem)",
+        "preventsDiseases": [
+          "Verem (TB)"
+        ],
+        "howItWorks": "Bu asi bebeğin vücuduna veremle savaşmayı öğretir - havadan bulaşan ciddi bir akciğer hastalığıdır. Kola yapılan küçük bir iğne yıllarca koruma sağlar.",
+        "sideEffects": "İğnenin yapıldığı yerde küçük bir kabarcık veya iz olabilir. Bu normaldir ve aşının çalıştığını gösterir.",
+        "mythDebunked": "EFSANE: 'Verem artık yok.' GERÇEK: Verem hâlâ her yıl çok sayıda insanı öldürüyor. Kalabalık koşullarda hızla yayılıyor."
+      },
+      "hepb": {
+        "name": "Hepatit B",
+        "preventsDiseases": [
+          "Hepatit B (karaciğer hastalığı)"
+        ],
+        "howItWorks": "Karaciğeri, kalıcı hasar ve kansere yol açabilen bir virüsten korur. Yenidoğanlar en savunmasız olduğu için doğumda yapılır.",
+        "sideEffects": "İğne yerinde hafif ağrı olabilir. Bazı bebekler bir gün biraz huzursuz olabilir. Ciddi değildir.",
+        "mythDebunked": "EFSANE: 'Bebeğim doğumda asi olmak için çok küçük.' GERÇEK: Yenidoğanlar en savunmasız gruptur. Ne kadar erken korursak o kadar iyi."
+      },
+      "dtap": {
+        "name": "DTaP (difteri, tetanoz, boğmaca)",
+        "preventsDiseases": [
+          "Difteri",
+          "Tetanoz",
+          "Boğmaca"
+        ],
+        "howItWorks": "Bu asi aynı anda üç hastalığa karşı korur. Difteri boğazı tıkayabilir, tetanoz kasları kilitler, boğmaca ise bebeği nefessiz bırakabilir.",
+        "sideEffects": "İğne yeri kızarabilir ve acıyabilir. Çocuk 1-2 gün hafif ateşli olabilir.",
+        "mythDebunked": "EFSANE: 'Bu hastalıklar artık yok, neden asi olalım?' GERÇEK: Nadir olmalarının nedeni aşılamadır. Aşılama azalınca hastalıklar geri gelir."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (felç)"
+        ],
+        "howItWorks": "Polio birkaç saat içinde çocuğun bacaklarını kalıcı olarak felç edebilen bir virüstür. Bu asi hastalığı dünyanın birçok yerinden neredeyse sildi.",
+        "sideEffects": "Çok hafif yan etki yapar. Bazen sadece iğne yerinde biraz kızarıklık olur.",
+        "mythDebunked": "EFSANE: 'Polio bitti, bu aşıya gerek yok.' GERÇEK: Avrupa'da aşılama sayesinde bitti. Aşısız bir yolcu hastalığı geri getirebilir."
+      },
+      "mmr": {
+        "name": "MMR (kızamık, kabakulak, kızamıkçık)",
+        "preventsDiseases": [
+          "Kızamık",
+          "Kabakulak",
+          "Kızamıkçık"
+        ],
+        "howItWorks": "Kızamık çok bulaşıcıdır ve beyne zarar verebilir ya da öldürebilir. Bu asi tek dozla üç hastalığa da karşı korur.",
+        "sideEffects": "Yaklaşık her 10 çocuktan 1'inde 7-10 gün sonra hafif ateş ve döküntü olabilir. Bu, vücudun savunmayı öğrendiğini gösterir.",
+        "mythDebunked": "EFSANE: 'MMR otizme neden olur.' GERÇEK: Büyük çalışmalar otizmle hiçbir bağlantı bulmadı. Kızamık ise öldürebilir."
+      },
+      "pneumo": {
+        "name": "Pnömokok aşısı (PCV13)",
+        "preventsDiseases": [
+          "Zatürre",
+          "Menenjit",
+          "Kan enfeksiyonları"
+        ],
+        "howItWorks": "Zatürre, menenjit ve ciddi kan enfeksiyonlarına yol açan bakterilere karşı korur. Bunlar küçük çocuklar için en tehlikeli hastalıklardandır.",
+        "sideEffects": "1-2 gün hafif ateş, huzursuzluk ve iğne yerinde ağrı olabilir.",
+        "mythDebunked": "EFSANE: 'Çocuklar çok aşıdan hastalanır.' GERÇEK: Çocuğun bağışıklık sistemi her gün binlerce mikropla karşılaşır. Birkaç asi onun için fazla değildir."
+      },
+      "rota": {
+        "name": "Rotavirüs",
+        "preventsDiseases": [
+          "Bebeklerde ağır ishal ve kusma"
+        ],
+        "howItWorks": "İğne değil, ağızdan damla olarak verilir. Ağır ishale ve susuz kalmaya yol açan virüse karşı korur.",
+        "sideEffects": "Çok hafif yan etkiler olur. Bazen biraz huzursuzluk veya hafif ishal görülebilir.",
+        "mythDebunked": "EFSANE: 'İshal bebeklerde normaldir, aşı gerekmez.' GERÇEK: Rotavirüs ishali çocuğu hızlıca susuz bırakabilir ve tehlikeli olabilir."
+      },
+      "varicella": {
+        "name": "Suçiçeği",
+        "preventsDiseases": [
+          "Suçiçeği"
+        ],
+        "howItWorks": "Suçiçeği hafif görünebilir ama ciddi cilt enfeksiyonu, zatürre veya beyinle ilgili komplikasyonlara yol açabilir. Bu asi vakaların çoğunu önler.",
+        "sideEffects": "Hafif ağrı olabilir. Nadiren iğne yerinin yakınında birkaç suçiçeği benzeri nokta çıkar.",
+        "mythDebunked": "EFSANE: 'Suçiçeğini doğal geçirmek daha iyidir.' GERÇEK: Doğal enfeksiyon ciddi komplikasyonlara yol açabilir ve ileride zona yapabilir."
+      },
+      "hpv": {
+        "name": "HPV (insan papilloma virüsü)",
+        "preventsDiseases": [
+          "Rahim ağzı kanseri",
+          "Diğer kanserler"
+        ],
+        "howItWorks": "Bu asi kanseri önler. Gençler virüsle karşılaşmadan önce yapılır.",
+        "sideEffects": "Kolda ağrı, bazen kısa baş ağrısı veya baş dönmesi olabilir. Çok güvenlidir.",
+        "mythDebunked": "EFSANE: 'Bu asi cinsel davranışı teşvik eder.' GERÇEK: Bu asi KANSERİ önler. Davranışla ilgisi yoktur."
+      },
+      "flu": {
+        "name": "Grip",
+        "preventsDiseases": [
+          "Mevsimsel grip"
+        ],
+        "howItWorks": "Grip sadece soğuk algınlığı değildir. Küçük çocuklar, yaşlılar ve hamile kadınlar için tehlikeli olabilir. Bu asi her yıl güncellenir.",
+        "sideEffects": "Kolda hafif ağrı ve bazen bir gün süren düşük ateş olabilir. Bu aşıdan grip OLMAZSINIZ.",
+        "mythDebunked": "EFSANE: 'Grip aşısı grip yapar.' GERÇEK: Bu imkânsızdır. Aşıda canlı virüs yoktur."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Doğumda"
+      },
+      "2months": {
+        "label": "2 aylık"
+      },
+      "4months": {
+        "label": "4 aylık"
+      },
+      "6months": {
+        "label": "6 aylık"
+      },
+      "12months": {
+        "label": "12 aylık"
+      },
+      "18months": {
+        "label": "18 aylık"
+      },
+      "4years": {
+        "label": "4-6 yaş"
+      },
+      "9years": {
+        "label": "9-12 yaş"
+      },
+      "adult": {
+        "label": "Yetişkinler"
+      },
+      "pregnant": {
+        "label": "Hamile kadınlar"
+      }
+    }
   }
 }

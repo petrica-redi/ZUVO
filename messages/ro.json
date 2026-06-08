@@ -1167,6 +1167,137 @@
     "meta": {
       "title": "Ghid vaccinuri — Redi Health",
       "description": "Fiecare vaccin explicat în cuvinte simple."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (Tuberculoză)",
+        "preventsDiseases": [
+          "Tuberculoză (TB)"
+        ],
+        "howItWorks": "Acest vaccin învață corpul bebelușului să lupte cu tuberculoza - o boală gravă de plămâni care se transmite prin aer. O injecție mică în braț oferă protecție ani de zile.",
+        "sideEffects": "Poate apărea un mic nodul sau o cicatrice pe braț unde s-a făcut injecția. Este normal și arată că vaccinul funcționează.",
+        "mythDebunked": "MIT: 'Tuberculoza nu mai există.' ADEVĂR: Tuberculoza încă omoară mulți oameni în fiecare an. În locuri aglomerate se răspândește repede."
+      },
+      "hepb": {
+        "name": "Hepatita B",
+        "preventsDiseases": [
+          "Hepatita B (boală de ficat)"
+        ],
+        "howItWorks": "Protejează ficatul de un virus care poate provoca leziuni pe viață și cancer. Se dă la naștere pentru că bebelușii sunt cei mai vulnerabili.",
+        "sideEffects": "Ușoară durere la locul injecției. Unii bebeluși sunt puțin agitați o zi. Nimic grav.",
+        "mythDebunked": "MIT: 'Bebelușul meu e prea mic pentru vaccin la naștere.' ADEVĂR: Nou-născuții sunt cei mai vulnerabili. Cu cât îi protejăm mai devreme, cu atât sunt mai în siguranță."
+      },
+      "dtap": {
+        "name": "DTaP (Difterie, Tetanos, Tuse convulsivă)",
+        "preventsDiseases": [
+          "Difterie",
+          "Tetanos",
+          "Tuse convulsivă"
+        ],
+        "howItWorks": "Acest vaccin protejează împotriva a trei boli dintr-o dată. Difteria poate bloca gâtul, tetanosul înțepenește mușchii, iar tusea convulsivă îi lasă pe bebeluși fără aer.",
+        "sideEffects": "Locul injecției poate fi roșu și dureros. Copilul poate avea febră ușoară 1-2 zile.",
+        "mythDebunked": "MIT: 'Bolile astea nu mai există, de ce să vaccinăm?' ADEVĂR: Sunt rare tocmai pentru că vaccinăm. Când vaccinarea scade, bolile revin."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (paralizie)"
+        ],
+        "howItWorks": "Polio este un virus care poate paraliza picioarele unui copil în doar câteva ore. Acest vaccin aproape a eliminat boala din multe părți ale lumii.",
+        "sideEffects": "Foarte ușor. Uneori doar puțină roșeață la locul injecției.",
+        "mythDebunked": "MIT: 'Polio a dispărut, nu mai avem nevoie de vaccin.' ADEVĂR: În Europa a dispărut pentru că oamenii se vaccinează. Un călător nevaccinat îl poate readuce."
+      },
+      "mmr": {
+        "name": "MMR (Rujeolă, Oreion, Rubeolă)",
+        "preventsDiseases": [
+          "Rujeolă",
+          "Oreion",
+          "Rubeolă"
+        ],
+        "howItWorks": "Rujeola este extrem de contagioasă și poate provoca leziuni cerebrale sau moarte. Un singur vaccin protejează împotriva tuturor celor trei boli.",
+        "sideEffects": "Cam 1 din 10 copii poate avea febră ușoară și erupție la 7-10 zile după vaccin. Asta arată că organismul învață să se apere.",
+        "mythDebunked": "MIT: 'MMR provoacă autism.' ADEVĂR: Studii foarte mari au arătat că nu există nicio legătură cu autismul. Rujeola, în schimb, poate ucide."
+      },
+      "pneumo": {
+        "name": "Pneumococic (PCV13)",
+        "preventsDiseases": [
+          "Pneumonie",
+          "Meningită",
+          "Infecții în sânge"
+        ],
+        "howItWorks": "Protejează împotriva bacteriilor care provoacă pneumonie, meningită și infecții grave în sânge. Aceste boli sunt printre cele mai periculoase pentru copiii mici.",
+        "sideEffects": "Febră ușoară, agitație și durere la locul injecției timp de 1-2 zile.",
+        "mythDebunked": "MIT: 'Copiii se îmbolnăvesc de la prea multe vaccinuri.' ADEVĂR: Sistemul imunitar al copilului luptă zilnic cu mii de microbi. Câteva vaccinuri nu sunt prea mult pentru organism."
+      },
+      "rota": {
+        "name": "Rotavirus",
+        "preventsDiseases": [
+          "Diaree severă și vărsături la bebeluși"
+        ],
+        "howItWorks": "Se dă sub formă de picături în gură, nu prin injecție. Protejează împotriva virusului care provoacă diaree severă și deshidratare la bebeluși.",
+        "sideEffects": "Foarte ușor. Uneori puțină agitație sau diaree ușoară.",
+        "mythDebunked": "MIT: 'Diareea e normală la bebeluși, nu trebuie vaccin.' ADEVĂR: Diareea cu rotavirus poate deshidrata rapid copilul și poate deveni foarte periculoasă."
+      },
+      "varicella": {
+        "name": "Varicelă (Vărsat de vânt)",
+        "preventsDiseases": [
+          "Vărsat de vânt"
+        ],
+        "howItWorks": "Varicela pare ușoară, dar poate provoca infecții grave ale pielii, pneumonie și inflamație a creierului. Vaccinul previne majoritatea cazurilor.",
+        "sideEffects": "Ușoară durere. Rar apar câteva bubițe asemănătoare varicelei lângă locul injecției.",
+        "mythDebunked": "MIT: 'E mai bine să faci vărsat de vânt natural.' ADEVĂR: Boala naturală poate da complicații serioase și poate duce mai târziu la zona zoster."
+      },
+      "hpv": {
+        "name": "HPV (Virusul papiloma uman)",
+        "preventsDiseases": [
+          "Cancer de col uterin",
+          "Alte tipuri de cancer"
+        ],
+        "howItWorks": "Acest vaccin previne cancerul. Se face înainte ca adolescenții să intre în contact cu virusul.",
+        "sideEffects": "Braț dureros, uneori ușoară durere de cap sau amețeală. Este foarte sigur.",
+        "mythDebunked": "MIT: 'Vaccinul acesta încurajează activitatea sexuală.' ADEVĂR: Vaccinul previne CANCERUL. Nu are legătură cu comportamentul."
+      },
+      "flu": {
+        "name": "Gripă sezonieră",
+        "preventsDiseases": [
+          "Gripă sezonieră"
+        ],
+        "howItWorks": "Gripa nu este doar o răceală. Poate fi periculoasă pentru copiii mici, vârstnici și femeile însărcinate. Vaccinul se actualizează în fiecare an.",
+        "sideEffects": "Ușoară durere în braț și uneori febră mică pentru o zi. NU poți face gripă de la vaccinul gripal.",
+        "mythDebunked": "MIT: 'Vaccinul antigripal îți dă gripă.' ADEVĂR: Este imposibil. Vaccinul nu conține virus viu."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "La naștere"
+      },
+      "2months": {
+        "label": "2 luni"
+      },
+      "4months": {
+        "label": "4 luni"
+      },
+      "6months": {
+        "label": "6 luni"
+      },
+      "12months": {
+        "label": "12 luni"
+      },
+      "18months": {
+        "label": "18 luni"
+      },
+      "4years": {
+        "label": "4-6 ani"
+      },
+      "9years": {
+        "label": "9-12 ani"
+      },
+      "adult": {
+        "label": "Adulți"
+      },
+      "pregnant": {
+        "label": "Femei însărcinate"
+      }
     }
   },
   "explain": {

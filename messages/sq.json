@@ -1148,6 +1148,137 @@
     "meta": {
       "title": "Udhëzues vaksinash — Redi Health",
       "description": "Çdo vaksinë shpjeguar me fjalë të thjeshta."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (Tuberkulozi)",
+        "preventsDiseases": [
+          "Tuberkulozi (TB)"
+        ],
+        "howItWorks": "Kjo vaksinë e mëson trupin e bebit të luftojë tuberkulozin - një sëmundje serioze e mushkërive që përhapet në ajër. Një injeksion i vogël në krah jep mbrojtje për vite.",
+        "sideEffects": "Mund të dalë një kokërr e vogël ose një shenjë në krah ku u bë injeksioni. Kjo është normale dhe tregon se vaksina po vepron.",
+        "mythDebunked": "MIT: 'Tuberkulozi nuk ekziston më.' E VËRTETA: Tuberkulozi ende vret shumë njerëz çdo vit. Në vende të mbipopulluara përhapet shpejt."
+      },
+      "hepb": {
+        "name": "Hepatiti B",
+        "preventsDiseases": [
+          "Hepatiti B (sëmundje e mëlçisë)"
+        ],
+        "howItWorks": "Mbron mëlçinë nga një virus që mund të shkaktojë dëmtime të përhershme dhe kancer. Jepet që në lindje sepse bebet janë më të pambrojtura.",
+        "sideEffects": "Pak dhimbje në vendin e injeksionit. Disa bebe mund të jenë pak të bezdisura për një ditë. Nuk është diçka serioze.",
+        "mythDebunked": "MIT: 'Bebi im është shumë i vogël për vaksina në lindje.' E VËRTETA: Të porsalindurit janë më të pambrojturit. Sa më herët t'i mbrojmë, aq më të sigurt janë."
+      },
+      "dtap": {
+        "name": "DTaP (Difteria, Tetanozi, Kolla e mirë)",
+        "preventsDiseases": [
+          "Difteria",
+          "Tetanozi",
+          "Kolla e mirë"
+        ],
+        "howItWorks": "Kjo vaksinë mbron nga tri sëmundje njëherësh. Difteria mund të bllokojë fytin, tetanozi ngurtëson muskujt dhe kolla e mirë i lë foshnjat pa frymë.",
+        "sideEffects": "Vendi i injeksionit mund të skuqet dhe të dhembë. Fëmija mund të ketë temperaturë të lehtë për 1-2 ditë.",
+        "mythDebunked": "MIT: 'Këto sëmundje nuk ekzistojnë më, pse të vaksinojmë?' E VËRTETA: Janë bërë të rralla pikërisht sepse vaksinojmë. Kur vaksinat shtyhen, sëmundjet kthehen."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (paralizë)"
+        ],
+        "howItWorks": "Polio është virus që mund t'i paralizojë këmbët e një fëmije për pak orë. Kjo vaksinë e ka ulur pothuajse në zero polion në shumë vende.",
+        "sideEffects": "Shumë e lehtë. Ndonjëherë ka pak skuqje në vendin e injeksionit.",
+        "mythDebunked": "MIT: 'Polio është zhdukur, nuk na duhet kjo vaksinë.' E VËRTETA: Polio është zhdukur në Evropë sepse njerëzit vaksinohen. Një udhëtar i pavaksinuar mund ta rikthejë."
+      },
+      "mmr": {
+        "name": "MMR (Fruthi, Shytat, Rubeola)",
+        "preventsDiseases": [
+          "Fruthi",
+          "Shytat",
+          "Rubeola"
+        ],
+        "howItWorks": "Fruthi është shumë ngjitës dhe mund të dëmtojë trurin ose të shkaktojë vdekje. Kjo vaksinë mbron nga të tria sëmundjet me një injeksion.",
+        "sideEffects": "Rreth 1 në 10 fëmijë mund të ketë temperaturë të lehtë dhe skuqje 7-10 ditë më vonë. Kjo tregon se trupi po mëson të mbrohet.",
+        "mythDebunked": "MIT: 'MMR shkakton autizëm.' E VËRTETA: Studime shumë të mëdha nuk gjetën asnjë lidhje me autizmin. Fruthi, përkundrazi, mund të vrasë."
+      },
+      "pneumo": {
+        "name": "Pneumokoku (PCV13)",
+        "preventsDiseases": [
+          "Pneumoni",
+          "Meningjit",
+          "Infeksione në gjak"
+        ],
+        "howItWorks": "Mbron nga bakteret që shkaktojnë pneumoni, meningjit dhe infeksione të rënda në gjak. Këto janë ndër rreziqet më të mëdha për fëmijët e vegjël.",
+        "sideEffects": "Temperaturë e lehtë, bezdisje dhe dhimbje në vendin e injeksionit për 1-2 ditë.",
+        "mythDebunked": "MIT: 'Fëmijët sëmuren nga shumë vaksina.' E VËRTETA: Sistemi imunitar i fëmijës përballet me mijëra mikrobe çdo ditë. Disa vaksina nuk janë tepër për trupin e tyre."
+      },
+      "rota": {
+        "name": "Rotavirus",
+        "preventsDiseases": [
+          "Diarre dhe të vjella të rënda te foshnjat"
+        ],
+        "howItWorks": "Jepet si pika në gojë, jo si injeksion. Mbron nga virusi që shkakton diarre të rëndë dhe dehidrim te foshnjat.",
+        "sideEffects": "Shumë e lehtë. Ndonjëherë pak bezdisje ose diarre e lehtë.",
+        "mythDebunked": "MIT: 'Diarreja është normale te foshnjat, nuk duhet vaksinë.' E VËRTETA: Diarreja nga rotavirusi mund të thajë trupin shpejt dhe mund të jetë vdekjeprurëse."
+      },
+      "varicella": {
+        "name": "Varicela (Lija e dhenve)",
+        "preventsDiseases": [
+          "Lija e dhenve"
+        ],
+        "howItWorks": "Lija e dhenve duket e lehtë, por mund të shkaktojë infeksione të rënda të lëkurës, pneumoni dhe ënjtje të trurit. Vaksina parandalon shumicën e rasteve.",
+        "sideEffects": "Dhimbje e lehtë. Rrallë mund të dalin disa pika si lia pranë vendit të injeksionit.",
+        "mythDebunked": "MIT: 'Është më mirë ta kalosh natyrshëm lijën e dhenve.' E VËRTETA: Infeksioni natyral mund të japë komplikime serioze dhe mund të çojë më vonë në herpes zoster."
+      },
+      "hpv": {
+        "name": "HPV (Virusi Papilloma Njerëzor)",
+        "preventsDiseases": [
+          "Kanceri i qafës së mitrës",
+          "Kancere të tjera"
+        ],
+        "howItWorks": "Kjo vaksinë parandalon kancerin. Jepet zakonisht para adoleshencës së vonë, para se trupi të ekspozohet ndaj virusit.",
+        "sideEffects": "Dhimbje në krah, ndonjëherë pak dhimbje koke ose marramendje. Është shumë e sigurt.",
+        "mythDebunked": "MIT: 'Kjo vaksinë nxit aktivitet seksual.' E VËRTETA: Kjo vaksinë parandalon kancerin. Nuk ka lidhje me sjelljen."
+      },
+      "flu": {
+        "name": "Gripi sezonal",
+        "preventsDiseases": [
+          "Grip sezonal"
+        ],
+        "howItWorks": "Gripi nuk është thjesht ftohje. Mund të jetë i rrezikshëm për fëmijët e vegjël, të moshuarit dhe gratë shtatzëna. Vaksina përditësohet çdo vit.",
+        "sideEffects": "Dhimbje e lehtë në krah dhe ndonjëherë temperaturë e ulët për një ditë. Nga vaksina e gripit NUK merr grip.",
+        "mythDebunked": "MIT: 'Vaksina e gripit të jep grip.' E VËRTETA: Kjo është e pamundur. Vaksina nuk ka virus të gjallë."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Në lindje"
+      },
+      "2months": {
+        "label": "2 muaj"
+      },
+      "4months": {
+        "label": "4 muaj"
+      },
+      "6months": {
+        "label": "6 muaj"
+      },
+      "12months": {
+        "label": "12 muaj"
+      },
+      "18months": {
+        "label": "18 muaj"
+      },
+      "4years": {
+        "label": "4-6 vjeç"
+      },
+      "9years": {
+        "label": "9-12 vjeç"
+      },
+      "adult": {
+        "label": "Të rritur"
+      },
+      "pregnant": {
+        "label": "Gratë shtatzëna"
+      }
     }
   },
   "explain": {

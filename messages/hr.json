@@ -934,5 +934,181 @@
         "simple": "To je vojska tijela protiv mikroba. Bijele krvne stanice bore se protiv infekcija. Cjepiva treniraju imunološki sustav. Dobra hrana, san i kretanje ga jačaju."
       }
     }
+  },
+  "vaccines": {
+    "heroTitle": "Vodič kroz cjepiva",
+    "heroSubtitle": "Svako cjepivo objašnjeno jednostavno. Dodirnite bilo koje cjepivo da saznate više.",
+    "askCta": "Postavi pitanje o cjepivima",
+    "backToSchedule": "Natrag na kalendar",
+    "preventsLabel": "Štiti od",
+    "dosesNeeded": "{count, plural, one {# potrebna doza} other {# potrebne doze}}",
+    "howItWorks": "Kako djeluje",
+    "sideEffects": "Nuspojave (normalne)",
+    "mythTitle": "Mit vs. istina",
+    "qaTitle": "Pitaj o cjepivima",
+    "qaSubtitle": "Svako pitanje je dobrodošlo. Iskreni odgovori iz iskustva na terenu.",
+    "qaPlaceholder": "Upišite svoje pitanje o cjepivima...",
+    "qaAria": "Postavi pitanje o cjepivima",
+    "qaCommon": "Česta pitanja",
+    "childAgePrompt": "Koliko godina ima vaše dijete?",
+    "childAgeAria": "Odaberite dob djeteta",
+    "ageOptionDefault": "Odaberite dob...",
+    "ageNewborn": "Novorođenče (0 mjeseci)",
+    "age2m": "2 mjeseca",
+    "age4m": "4 mjeseca",
+    "age6m": "6 mjeseci",
+    "age12m": "12 mjeseci (1 godina)",
+    "age18m": "18 mjeseci",
+    "age48m": "4-6 godina",
+    "age108m": "9-12 godina",
+    "neededByAge": "Cjepiva potrebna u ovoj dobi:",
+    "vaccinesCount": "{count, plural, one {# cjepivo} other {# cjepiva}}",
+    "importance": {
+      "critical": "Neophodno",
+      "important": "Važno",
+      "recommended": "Preporučeno"
+    },
+    "fears": [
+      "Jesu li cjepiva sigurna za moju bebu?",
+      "Hoće li moje dijete boljeti?",
+      "Što ako dobije temperaturu poslije?",
+      "Mogu li odgoditi cjepiva?",
+      "Moje dijete je bolesno - može li se ipak cijepiti?"
+    ],
+    "meta": {
+      "title": "Vodič kroz cjepiva - Redi Health",
+      "description": "Svako cjepivo objašnjeno jednostavnim riječima."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (tuberkuloza)",
+        "preventsDiseases": [
+          "Tuberkuloza (TB)"
+        ],
+        "howItWorks": "Ovo cjepivo uči bebin organizam kako se boriti protiv tuberkuloze - teške plućne bolesti koja se širi zrakom. Jedna mala injekcija u ruku štiti godinama.",
+        "sideEffects": "Na ruci se može pojaviti mala kvržica ili ožiljak. To je normalno i znači da cjepivo djeluje.",
+        "mythDebunked": "MIT: 'Tuberkuloze više nema.' ISTINA: Tuberkuloza i dalje svake godine ubija mnoge ljude. U prenapučenim uvjetima brzo se širi."
+      },
+      "hepb": {
+        "name": "Hepatitis B",
+        "preventsDiseases": [
+          "Hepatitis B (bolest jetre)"
+        ],
+        "howItWorks": "Štiti jetru od virusa koji može uzrokovati trajno oštećenje i rak. Daje se pri rođenju jer su novorođenčad najugroženija.",
+        "sideEffects": "Blaga bol na mjestu uboda. Neke bebe su dan malo nervoznije. Ništa ozbiljno.",
+        "mythDebunked": "MIT: 'Moja je beba premala za cjepivo pri rođenju.' ISTINA: Novorođenčad su najranjivija. Što ih ranije zaštitimo, to bolje."
+      },
+      "dtap": {
+        "name": "DTaP (difterija, tetanus, hripavac)",
+        "preventsDiseases": [
+          "Difterija",
+          "Tetanus",
+          "Hripavac"
+        ],
+        "howItWorks": "Ovo cjepivo štiti od tri bolesti odjednom. Difterija može zatvoriti grlo, tetanus ukoči mišiće, a hripavac može bebu ostaviti bez zraka.",
+        "sideEffects": "Mjesto uboda može biti crveno i bolno. Dijete može imati blagu temperaturu 1-2 dana.",
+        "mythDebunked": "MIT: 'Te bolesti više ne postoje, zašto cijepiti?' ISTINA: Rijetke su upravo zato što cijepimo. Kad se prestane, bolesti se vraćaju."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (paraliza)"
+        ],
+        "howItWorks": "Polio je virus koji u nekoliko sati može trajno paralizirati dječje noge. Ovo cjepivo gotovo je uklonilo bolest iz mnogih dijelova svijeta.",
+        "sideEffects": "Vrlo blage reakcije. Ponekad samo malo crvenila na mjestu uboda.",
+        "mythDebunked": "MIT: 'Polio je nestao, ovo cjepivo više ne trebamo.' ISTINA: U Europi je nestao upravo zbog cijepljenja. Necijepljen putnik može ga vratiti."
+      },
+      "mmr": {
+        "name": "MMR (ospice, zaušnjaci, rubeola)",
+        "preventsDiseases": [
+          "Ospice",
+          "Zaušnjaci",
+          "Rubeola"
+        ],
+        "howItWorks": "Ospice su vrlo zarazne i mogu oštetiti mozak ili ubiti. Ovo cjepivo štiti od sve tri bolesti jednom dozom.",
+        "sideEffects": "Oko 1 od 10 djece može imati blagu temperaturu i osip 7-10 dana kasnije. To znači da tijelo uči obranu.",
+        "mythDebunked": "MIT: 'MMR uzrokuje autizam.' ISTINA: Velike studije nisu pokazale nikakvu vezu s autizmom. Ospice, s druge strane, ubijaju."
+      },
+      "pneumo": {
+        "name": "Pneumokokno cjepivo (PCV13)",
+        "preventsDiseases": [
+          "Upala pluća",
+          "Meningitis",
+          "Infekcije krvi"
+        ],
+        "howItWorks": "Štiti od bakterija koje uzrokuju upalu pluća, meningitis i teške infekcije krvi. To su među najopasnijim bolestima za malu djecu.",
+        "sideEffects": "Blaga temperatura, razdražljivost i bol na mjestu uboda 1-2 dana.",
+        "mythDebunked": "MIT: 'Djeca se razbole od previše cjepiva.' ISTINA: Dječji imunosni sustav svakodnevno susreće tisuće mikroba. Nekoliko cjepiva nije previše."
+      },
+      "rota": {
+        "name": "Rotavirus",
+        "preventsDiseases": [
+          "Teški proljev i povraćanje kod beba"
+        ],
+        "howItWorks": "Daje se kao kapi u usta, ne kao injekcija. Štiti od virusa koji uzrokuje teški proljev i dehidraciju.",
+        "sideEffects": "Vrlo blage reakcije. Ponekad malo razdražljivosti ili blagi proljev.",
+        "mythDebunked": "MIT: 'Proljev je normalan kod beba, ne treba cjepivo.' ISTINA: Rotavirusni proljev može brzo opasno isušiti dijete."
+      },
+      "varicella": {
+        "name": "Varicella (vodene kozice)",
+        "preventsDiseases": [
+          "Vodene kozice"
+        ],
+        "howItWorks": "Vodene kozice mogu izgledati blago, ali mogu uzrokovati tešku infekciju kože, upalu pluća ili komplikacije na mozgu. Cjepivo sprječava većinu slučajeva.",
+        "sideEffects": "Blaga bol. Rijetko se pojavi nekoliko točkica sličnih kozicama oko mjesta uboda.",
+        "mythDebunked": "MIT: 'Bolje je prirodno preboljeti vodene kozice.' ISTINA: Prirodna infekcija može izazvati ozbiljne komplikacije i kasnije herpes zoster."
+      },
+      "hpv": {
+        "name": "HPV (humani papiloma virus)",
+        "preventsDiseases": [
+          "Rak vrata maternice",
+          "Druge vrste raka"
+        ],
+        "howItWorks": "Ovo cjepivo sprječava rak. Daje se prije nego što tinejdžeri dođu u kontakt s virusom.",
+        "sideEffects": "Bolna ruka, ponekad kratka glavobolja ili vrtoglavica. Vrlo je sigurno.",
+        "mythDebunked": "MIT: 'Ovo cjepivo potiče seksualnu aktivnost.' ISTINA: Ovo cjepivo sprječava RAK. Nema veze s ponašanjem."
+      },
+      "flu": {
+        "name": "Gripa",
+        "preventsDiseases": [
+          "Sezonska gripa"
+        ],
+        "howItWorks": "Gripa nije samo prehlada. Može biti opasna za malu djecu, starije osobe i trudnice. Cjepivo se svake godine ažurira.",
+        "sideEffects": "Blaga bol u ruci i ponekad niska temperatura jedan dan. Od ovog cjepiva NE možete dobiti gripu.",
+        "mythDebunked": "MIT: 'Cjepivo protiv gripe daje gripu.' ISTINA: To je nemoguće. Cjepivo ne sadrži živi virus."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Pri rođenju"
+      },
+      "2months": {
+        "label": "2 mjeseca"
+      },
+      "4months": {
+        "label": "4 mjeseca"
+      },
+      "6months": {
+        "label": "6 mjeseci"
+      },
+      "12months": {
+        "label": "12 mjeseci"
+      },
+      "18months": {
+        "label": "18 mjeseci"
+      },
+      "4years": {
+        "label": "4-6 godina"
+      },
+      "9years": {
+        "label": "9-12 godina"
+      },
+      "adult": {
+        "label": "Odrasli"
+      },
+      "pregnant": {
+        "label": "Trudnice"
+      }
+    }
   }
 }

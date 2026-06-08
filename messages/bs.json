@@ -934,5 +934,181 @@
         "simple": "To je vojska tijela protiv mikroba. Bijela krvna zrnca bore se protiv infekcija. Vakcine treniraju imuni sistem. Dobra hrana, san i kretanje ga jačaju."
       }
     }
+  },
+  "vaccines": {
+    "heroTitle": "Vodič kroz vakcine",
+    "heroSubtitle": "Svaka vakcina objašnjena jednostavno. Dodirnite bilo koju vakcinu da saznate više.",
+    "askCta": "Postavi pitanje o vakcinama",
+    "backToSchedule": "Nazad na kalendar",
+    "preventsLabel": "Štiti od",
+    "dosesNeeded": "{count, plural, one {# potrebna doza} other {# potrebne doze}}",
+    "howItWorks": "Kako djeluje",
+    "sideEffects": "Nuspojave (normalne)",
+    "mythTitle": "Mit vs. istina",
+    "qaTitle": "Pitaj o vakcinama",
+    "qaSubtitle": "Svako pitanje je dobrodošlo. Iskreni odgovori iz iskustva na terenu.",
+    "qaPlaceholder": "Upišite svoje pitanje o vakcinama...",
+    "qaAria": "Postavi pitanje o vakcinama",
+    "qaCommon": "Česta pitanja",
+    "childAgePrompt": "Koliko godina ima vaše dijete?",
+    "childAgeAria": "Odaberite dob djeteta",
+    "ageOptionDefault": "Odaberite dob...",
+    "ageNewborn": "Novorođenče (0 mjeseci)",
+    "age2m": "2 mjeseca",
+    "age4m": "4 mjeseca",
+    "age6m": "6 mjeseci",
+    "age12m": "12 mjeseci (1 godina)",
+    "age18m": "18 mjeseci",
+    "age48m": "4-6 godina",
+    "age108m": "9-12 godina",
+    "neededByAge": "Vakcine potrebne u ovoj dobi:",
+    "vaccinesCount": "{count, plural, one {# vakcina} other {# vakcine}}",
+    "importance": {
+      "critical": "Neophodna",
+      "important": "Važna",
+      "recommended": "Preporučena"
+    },
+    "fears": [
+      "Jesu li vakcine sigurne za moju bebu?",
+      "Hoće li moje dijete boljeti?",
+      "Šta ako dobije temperaturu poslije?",
+      "Mogu li odgoditi vakcine?",
+      "Moje dijete je bolesno - može li se ipak vakcinisati?"
+    ],
+    "meta": {
+      "title": "Vodič kroz vakcine - Redi Health",
+      "description": "Svaka vakcina objašnjena jednostavnim riječima."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (tuberkuloza)",
+        "preventsDiseases": [
+          "Tuberkuloza (TB)"
+        ],
+        "howItWorks": "Ova vakcina uči bebin organizam da se bori protiv tuberkuloze - teške plućne bolesti koja se širi zrakom. Jedna mala injekcija u ruku štiti godinama.",
+        "sideEffects": "Na ruci se može pojaviti mala kvržica ili ožiljak. To je normalno i znači da vakcina djeluje.",
+        "mythDebunked": "MIT: 'Tuberkuloze više nema.' ISTINA: Tuberkuloza i dalje svake godine ubija mnogo ljudi. U prenapučenim uslovima brzo se širi."
+      },
+      "hepb": {
+        "name": "Hepatitis B",
+        "preventsDiseases": [
+          "Hepatitis B (bolest jetre)"
+        ],
+        "howItWorks": "Štiti jetru od virusa koji može izazvati trajno oštećenje i rak. Daje se pri rođenju jer su novorođenčad najugroženija.",
+        "sideEffects": "Blaga bol na mjestu uboda. Neke bebe su dan malo nervoznije. Ništa ozbiljno.",
+        "mythDebunked": "MIT: 'Moja beba je premala za vakcinu pri rođenju.' ISTINA: Novorođenčad su najranjivija. Što ih ranije zaštitimo, to bolje."
+      },
+      "dtap": {
+        "name": "DTaP (difterija, tetanus, hripavac)",
+        "preventsDiseases": [
+          "Difterija",
+          "Tetanus",
+          "Hripavac"
+        ],
+        "howItWorks": "Ova vakcina štiti od tri bolesti odjednom. Difterija može zatvoriti grlo, tetanus ukoči mišiće, a hripavac može bebu ostaviti bez zraka.",
+        "sideEffects": "Mjesto uboda može biti crveno i bolno. Dijete može imati blagu temperaturu 1-2 dana.",
+        "mythDebunked": "MIT: 'Te bolesti više ne postoje, zašto vakcinisati?' ISTINA: Rijetke su baš zato što vakcinišemo. Kad se prestane, bolesti se vraćaju."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (paraliza)"
+        ],
+        "howItWorks": "Polio je virus koji u nekoliko sati može trajno paralizirati dječije noge. Ova vakcina gotovo je uklonila bolest iz mnogih dijelova svijeta.",
+        "sideEffects": "Vrlo blage reakcije. Ponekad samo malo crvenila na mjestu uboda.",
+        "mythDebunked": "MIT: 'Polio je nestao, ova vakcina više ne treba.' ISTINA: U Evropi je nestao upravo zbog vakcinacije. Nevaksinisan putnik može ga vratiti."
+      },
+      "mmr": {
+        "name": "MMR (ospice, zaušnjaci, rubeola)",
+        "preventsDiseases": [
+          "Ospice",
+          "Zaušnjaci",
+          "Rubeola"
+        ],
+        "howItWorks": "Ospice su vrlo zarazne i mogu oštetiti mozak ili ubiti. Ova vakcina štiti od sve tri bolesti jednom dozom.",
+        "sideEffects": "Oko 1 od 10 djece može imati blagu temperaturu i osip 7-10 dana kasnije. To znači da tijelo uči odbranu.",
+        "mythDebunked": "MIT: 'MMR uzrokuje autizam.' ISTINA: Velike studije nisu pokazale nikakvu vezu s autizmom. Ospice, s druge strane, ubijaju."
+      },
+      "pneumo": {
+        "name": "Pneumokokna vakcina (PCV13)",
+        "preventsDiseases": [
+          "Upala pluća",
+          "Meningitis",
+          "Infekcije krvi"
+        ],
+        "howItWorks": "Štiti od bakterija koje izazivaju upalu pluća, meningitis i teške infekcije krvi. To su među najopasnijim bolestima za malu djecu.",
+        "sideEffects": "Blaga temperatura, razdražljivost i bol na mjestu uboda 1-2 dana.",
+        "mythDebunked": "MIT: 'Djeca se razbole od previše vakcina.' ISTINA: Dječiji imuni sistem svakodnevno susreće hiljade mikroba. Nekoliko vakcina nije previše."
+      },
+      "rota": {
+        "name": "Rotavirus",
+        "preventsDiseases": [
+          "Teški proljev i povraćanje kod beba"
+        ],
+        "howItWorks": "Daje se kao kapi u usta, ne kao injekcija. Štiti od virusa koji izaziva teški proljev i dehidraciju.",
+        "sideEffects": "Vrlo blage reakcije. Ponekad malo razdražljivosti ili blagi proljev.",
+        "mythDebunked": "MIT: 'Proljev je normalan kod beba, ne treba vakcina.' ISTINA: Rotavirusni proljev može brzo opasno isušiti dijete."
+      },
+      "varicella": {
+        "name": "Varicella (vodene kozice)",
+        "preventsDiseases": [
+          "Vodene kozice"
+        ],
+        "howItWorks": "Vodene kozice mogu izgledati blago, ali mogu izazvati tešku infekciju kože, upalu pluća ili komplikacije na mozgu. Vakcina sprečava većinu slučajeva.",
+        "sideEffects": "Blaga bol. Rijetko se pojavi nekoliko tačkica sličnih kozicama oko mjesta uboda.",
+        "mythDebunked": "MIT: 'Bolje je prirodno preležati vodene kozice.' ISTINA: Prirodna infekcija može izazvati ozbiljne komplikacije i kasnije herpes zoster."
+      },
+      "hpv": {
+        "name": "HPV (humani papiloma virus)",
+        "preventsDiseases": [
+          "Rak grlića materice",
+          "Druge vrste raka"
+        ],
+        "howItWorks": "Ova vakcina sprečava rak. Daje se prije nego što tinejdžeri dođu u kontakt s virusom.",
+        "sideEffects": "Bolna ruka, ponekad kratka glavobolja ili vrtoglavica. Vrlo je sigurna.",
+        "mythDebunked": "MIT: 'Ova vakcina podstiče seksualnu aktivnost.' ISTINA: Ova vakcina sprečava RAK. Nema veze s ponašanjem."
+      },
+      "flu": {
+        "name": "Gripa",
+        "preventsDiseases": [
+          "Sezonska gripa"
+        ],
+        "howItWorks": "Gripa nije samo prehlada. Može biti opasna za malu djecu, starije osobe i trudnice. Vakcina se svake godine ažurira.",
+        "sideEffects": "Blaga bol u ruci i ponekad niska temperatura jedan dan. Od ove vakcine NE možete dobiti gripu.",
+        "mythDebunked": "MIT: 'Vakcina protiv gripe ti daje gripu.' ISTINA: To je nemoguće. Vakcina ne sadrži živi virus."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Po rođenju"
+      },
+      "2months": {
+        "label": "2 mjeseca"
+      },
+      "4months": {
+        "label": "4 mjeseca"
+      },
+      "6months": {
+        "label": "6 mjeseci"
+      },
+      "12months": {
+        "label": "12 mjeseci"
+      },
+      "18months": {
+        "label": "18 mjeseci"
+      },
+      "4years": {
+        "label": "4-6 godina"
+      },
+      "9years": {
+        "label": "9-12 godina"
+      },
+      "adult": {
+        "label": "Odrasli"
+      },
+      "pregnant": {
+        "label": "Trudnice"
+      }
+    }
   }
 }

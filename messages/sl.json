@@ -934,5 +934,181 @@
         "simple": "To je vojska telesa proti mikrobom. Bele krvne celice se borijo proti okužbam. Cepiva trenirajo imunski sistem. Dobra hrana, spanje in gibanje ga krepijo."
       }
     }
+  },
+  "vaccines": {
+    "heroTitle": "Vodnik po cepljenju",
+    "heroSubtitle": "Vsako cepivo je razloženo preprosto. Tapnite katerokoli cepivo in izvedite več.",
+    "askCta": "Vprašaj o cepivih",
+    "backToSchedule": "Nazaj na koledar",
+    "preventsLabel": "Ščiti pred",
+    "dosesNeeded": "{count, plural, one {# potreben odmerek} other {# potrebni odmerki}}",
+    "howItWorks": "Kako deluje",
+    "sideEffects": "Stranski učinki (običajni)",
+    "mythTitle": "Mit vs. resnica",
+    "qaTitle": "Vprašaj o cepivih",
+    "qaSubtitle": "Vsako vprašanje je dobrodošlo. Iskreni odgovori iz terenske prakse.",
+    "qaPlaceholder": "Vpišite svoje vprašanje o cepivih...",
+    "qaAria": "Postavi vprašanje o cepivih",
+    "qaCommon": "Pogosta vprašanja",
+    "childAgePrompt": "Koliko je star vaš otrok?",
+    "childAgeAria": "Izberite starost otroka",
+    "ageOptionDefault": "Izberite starost...",
+    "ageNewborn": "Novorojenček (0 mesecev)",
+    "age2m": "2 meseca",
+    "age4m": "4 mesece",
+    "age6m": "6 mesecev",
+    "age12m": "12 mesecev (1 leto)",
+    "age18m": "18 mesecev",
+    "age48m": "4-6 let",
+    "age108m": "9-12 let",
+    "neededByAge": "Cepiva, potrebna v tej starosti:",
+    "vaccinesCount": "{count, plural, one {# cepivo} other {# cepiva}}",
+    "importance": {
+      "critical": "Nujno",
+      "important": "Pomembno",
+      "recommended": "Priporočeno"
+    },
+    "fears": [
+      "Ali so cepiva varna za mojega dojenčka?",
+      "Ali bo mojega otroka bolelo?",
+      "Kaj če dobi potem vročino?",
+      "Ali lahko cepljenje odložim?",
+      "Moj otrok je bolan - ali se lahko vseeno cepi?"
+    ],
+    "meta": {
+      "title": "Vodnik po cepljenju - Redi Health",
+      "description": "Vsako cepivo je razloženo s preprostimi besedami."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (tuberkuloza)",
+        "preventsDiseases": [
+          "Tuberkuloza (TB)"
+        ],
+        "howItWorks": "To cepivo uči otrokovo telo, kako se boriti proti tuberkulozi - hudi pljučni bolezni, ki se širi po zraku. Ena majhna injekcija v roko ščiti več let.",
+        "sideEffects": "Na roki se lahko pojavi majhna bunka ali brazgotina. To je normalno in pomeni, da cepivo deluje.",
+        "mythDebunked": "MIT: 'Tuberkuloze ni več.' RESNICA: Tuberkuloza še vedno vsako leto ubije veliko ljudi. V prenatrpanih razmerah se hitro širi."
+      },
+      "hepb": {
+        "name": "Hepatitis B",
+        "preventsDiseases": [
+          "Hepatitis B (bolezen jeter)"
+        ],
+        "howItWorks": "Ščiti jetra pred virusom, ki lahko povzroči trajno okvaro in raka. Dobi se ob rojstvu, ker so novorojenčki najbolj ranljivi.",
+        "sideEffects": "Blaga bolečina na mestu vboda. Nekateri dojenčki so en dan nekoliko bolj nemirni. Nič resnega.",
+        "mythDebunked": "MIT: 'Moj dojenček je premajhen za cepljenje ob rojstvu.' RESNICA: Novorojenčki so najbolj ogroženi. Čim prej jih zaščitimo, tem bolje."
+      },
+      "dtap": {
+        "name": "DTaP (davica, tetanus, oslovski kašelj)",
+        "preventsDiseases": [
+          "Davica",
+          "Tetanus",
+          "Oslovski kašelj"
+        ],
+        "howItWorks": "To cepivo ščiti pred tremi boleznimi naenkrat. Davica lahko zapre grlo, tetanus krčevito zategne mišice, oslovski kašelj pa lahko dojenčku vzame dih.",
+        "sideEffects": "Mesto vboda je lahko rdeče in boleče. Otrok ima lahko 1-2 dni blago vročino.",
+        "mythDebunked": "MIT: 'Te bolezni ne obstajajo več, zakaj cepiti?' RESNICA: Redke so prav zato, ker cepimo. Ko se cepljenje ustavi, se vrnejo."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (paraliza)"
+        ],
+        "howItWorks": "Polio je virus, ki lahko v nekaj urah trajno ohromi otrokove noge. To cepivo je bolezen skoraj odstranilo iz mnogih delov sveta.",
+        "sideEffects": "Zelo blage reakcije. Včasih le malo rdečine na mestu vboda.",
+        "mythDebunked": "MIT: 'Polio je izginil, tega cepiva ne potrebujemo.' RESNICA: V Evropi je izginil prav zaradi cepljenja. Necepljen potnik ga lahko vrne."
+      },
+      "mmr": {
+        "name": "MMR (ošpice, mumps, rdečke)",
+        "preventsDiseases": [
+          "Ošpice",
+          "Mumps",
+          "Rdečke"
+        ],
+        "howItWorks": "Ošpice so zelo nalezljive in lahko poškodujejo možgane ali ubijejo. To cepivo z eno dozo ščiti pred vsemi tremi boleznimi.",
+        "sideEffects": "Približno 1 od 10 otrok ima lahko 7-10 dni kasneje blago vročino in izpuščaj. To pomeni, da se telo uči obrambe.",
+        "mythDebunked": "MIT: 'MMR povzroča avtizem.' RESNICA: Velike raziskave niso pokazale nobene povezave z avtizmom. Ošpice pa ubijajo."
+      },
+      "pneumo": {
+        "name": "Pnevmokokno cepivo (PCV13)",
+        "preventsDiseases": [
+          "Pljučnica",
+          "Meningitis",
+          "Okužbe krvi"
+        ],
+        "howItWorks": "Ščiti pred bakterijami, ki povzročajo pljučnico, meningitis in hude okužbe krvi. To so med najnevarnejšimi boleznimi za majhne otroke.",
+        "sideEffects": "Blaga vročina, razdražljivost in bolečina na mestu vboda 1-2 dni.",
+        "mythDebunked": "MIT: 'Otroci zbolijo zaradi preveč cepiv.' RESNICA: Otroški imunski sistem vsak dan sreča tisoče mikrobov. Nekaj cepiv ni preveč."
+      },
+      "rota": {
+        "name": "Rotavirus",
+        "preventsDiseases": [
+          "Huda driska in bruhanje pri dojenčkih"
+        ],
+        "howItWorks": "Daje se kot kapljice v usta, ne kot injekcija. Ščiti pred virusom, ki povzroča hudo drisko in dehidracijo.",
+        "sideEffects": "Zelo blage reakcije. Včasih malo razdražljivosti ali blaga driska.",
+        "mythDebunked": "MIT: 'Driska je pri dojenčkih normalna, cepivo ni potrebno.' RESNICA: Rotavirusna driska lahko otroka hitro nevarno izsuši."
+      },
+      "varicella": {
+        "name": "Varicella (norice)",
+        "preventsDiseases": [
+          "Norice"
+        ],
+        "howItWorks": "Norice so lahko videti blage, a lahko povzročijo hudo okužbo kože, pljučnico ali zaplete na možganih. Cepivo prepreči večino primerov.",
+        "sideEffects": "Blaga bolečina. Redko se okoli mesta vboda pojavi nekaj pikic podobnih noricam.",
+        "mythDebunked": "MIT: 'Bolje je, da otrok norice preboli naravno.' RESNICA: Naravna okužba lahko povzroči resne zaplete in kasneje pasovec."
+      },
+      "hpv": {
+        "name": "HPV (humani papilomavirus)",
+        "preventsDiseases": [
+          "Rak materničnega vratu",
+          "Druge vrste raka"
+        ],
+        "howItWorks": "To cepivo preprečuje raka. Daje se, preden najstniki pridejo v stik z virusom.",
+        "sideEffects": "Boleča roka, včasih kratek glavobol ali omotica. Zelo je varno.",
+        "mythDebunked": "MIT: 'To cepivo spodbuja spolno aktivnost.' RESNICA: To cepivo preprečuje RAKA. Nima povezave z vedenjem."
+      },
+      "flu": {
+        "name": "Gripa",
+        "preventsDiseases": [
+          "Sezonska gripa"
+        ],
+        "howItWorks": "Gripa ni samo prehlad. Lahko je nevarna za majhne otroke, starejše ljudi in nosečnice. Cepivo se vsako leto posodobi.",
+        "sideEffects": "Blaga bolečina v roki in včasih nizka temperatura en dan. Od tega cepiva NE morete dobiti gripe.",
+        "mythDebunked": "MIT: 'Cepivo proti gripi povzroči gripo.' RESNICA: To ni mogoče. Cepivo ne vsebuje živega virusa."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Ob rojstvu"
+      },
+      "2months": {
+        "label": "2 meseca"
+      },
+      "4months": {
+        "label": "4 mesece"
+      },
+      "6months": {
+        "label": "6 mesecev"
+      },
+      "12months": {
+        "label": "12 mesecev"
+      },
+      "18months": {
+        "label": "18 mesecev"
+      },
+      "4years": {
+        "label": "4-6 let"
+      },
+      "9years": {
+        "label": "9-12 let"
+      },
+      "adult": {
+        "label": "Odrasli"
+      },
+      "pregnant": {
+        "label": "Nosečnice"
+      }
+    }
   }
 }

@@ -934,5 +934,181 @@
         "simple": "Je to obrana těla proti mikrobům. Bílé krvinky bojují s infekcemi. Vakcíny imunitní systém trénují. Dobré jídlo, spánek a pohyb ho posilují."
       }
     }
+  },
+  "vaccines": {
+    "heroTitle": "Průvodce očkováním",
+    "heroSubtitle": "Každá vakcína vysvětlená jednoduše. Klepněte na kteroukoliv vakcínu a zjistěte víc.",
+    "askCta": "Zeptejte se na vakcíny",
+    "backToSchedule": "Zpět k očkovacímu kalendáři",
+    "preventsLabel": "Chrání před",
+    "dosesNeeded": "{count, plural, one {# potřebná dávka} other {# potřebné dávky}}",
+    "howItWorks": "Jak to funguje",
+    "sideEffects": "Vedlejší účinky (běžné)",
+    "mythTitle": "Mýtus vs. pravda",
+    "qaTitle": "Zeptejte se na vakcíny",
+    "qaSubtitle": "Jakýkoliv dotaz. Upřímné odpovědi z terénní praxe.",
+    "qaPlaceholder": "Napište svou otázku o vakcínách...",
+    "qaAria": "Položit otázku o vakcínách",
+    "qaCommon": "Časté otázky",
+    "childAgePrompt": "Kolik je vašemu dítěti?",
+    "childAgeAria": "Vyberte věk dítěte",
+    "ageOptionDefault": "Vyberte věk...",
+    "ageNewborn": "Novorozenec (0 měsíců)",
+    "age2m": "2 měsíce",
+    "age4m": "4 měsíce",
+    "age6m": "6 měsíců",
+    "age12m": "12 měsíců (1 rok)",
+    "age18m": "18 měsíců",
+    "age48m": "4-6 let",
+    "age108m": "9-12 let",
+    "neededByAge": "Vakcíny potřebné v tomto věku:",
+    "vaccinesCount": "{count, plural, one {# vakcína} other {# vakcíny}}",
+    "importance": {
+      "critical": "Nezbytná",
+      "important": "Důležitá",
+      "recommended": "Doporučená"
+    },
+    "fears": [
+      "Jsou vakcíny bezpečné pro moje miminko?",
+      "Bude to moje dítě bolet?",
+      "Co když bude mít potom horečku?",
+      "Můžu očkování odložit?",
+      "Moje dítě je nemocné - může i tak dostat vakcínu?"
+    ],
+    "meta": {
+      "title": "Průvodce očkováním - Redi Health",
+      "description": "Každá vakcína vysvětlená jednoduchými slovy."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (tuberkulóza)",
+        "preventsDiseases": [
+          "Tuberkulóza (TB)"
+        ],
+        "howItWorks": "Tato vakcína učí tělo miminka bojovat proti tuberkulóze - závažné plicní nemoci, která se šíří vzduchem. Jedna malá injekce do paže chrání na roky.",
+        "sideEffects": "Na paži se může objevit malý hrbolek nebo jizva. Je to normální a znamená to, že vakcína funguje.",
+        "mythDebunked": "MÝTUS: 'Tuberkulóza už neexistuje.' PRAVDA: Tuberkulóza stále každý rok zabíjí mnoho lidí. V přeplněných podmínkách se šíří rychle."
+      },
+      "hepb": {
+        "name": "Hepatitida B",
+        "preventsDiseases": [
+          "Hepatitida B (onemocnění jater)"
+        ],
+        "howItWorks": "Chrání játra před virem, který může způsobit celoživotní poškození a rakovinu. Dává se při narození, protože novorozenci jsou nejzranitelnější.",
+        "sideEffects": "Mírná bolest v místě vpichu. Některá miminka jsou den trochu neklidná. Nic vážného.",
+        "mythDebunked": "MÝTUS: 'Moje miminko je na vakcínu při narození příliš malé.' PRAVDA: Novorozenci jsou nejzranitelnější. Čím dříve je ochráníme, tím lépe."
+      },
+      "dtap": {
+        "name": "DTaP (záškrt, tetanus, černý kašel)",
+        "preventsDiseases": [
+          "Záškrt",
+          "Tetanus",
+          "Černý kašel"
+        ],
+        "howItWorks": "Tato vakcína chrání proti třem nemocem najednou. Záškrt může ucpat hrdlo, tetanus bolestivě stáhne svaly a černý kašel může dítěti vzít dech.",
+        "sideEffects": "Místo vpichu může být červené a bolestivé. Dítě může mít 1-2 dny mírnou horečku.",
+        "mythDebunked": "MÝTUS: 'Tyto nemoci už nejsou, proč očkovat?' PRAVDA: Jsou vzácné právě proto, že očkujeme. Když se přestane očkovat, vrátí se."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (obrna)"
+        ],
+        "howItWorks": "Polio je virus, který může během několika hodin trvale ochromit dětské nohy. Tato vakcína nemoc téměř odstranila z velké části světa.",
+        "sideEffects": "Velmi mírné. Někdy jen malé zarudnutí v místě vpichu.",
+        "mythDebunked": "MÝTUS: 'Polio zmizelo, tuto vakcínu už nepotřebujeme.' PRAVDA: V Evropě zmizelo právě díky očkování. Neočkovaný cestovatel ho může vrátit."
+      },
+      "mmr": {
+        "name": "MMR (spalničky, příušnice, zarděnky)",
+        "preventsDiseases": [
+          "Spalničky",
+          "Příušnice",
+          "Zarděnky"
+        ],
+        "howItWorks": "Spalničky jsou velmi nakažlivé a mohou poškodit mozek nebo zabít. Tato vakcína chrání proti všem třem nemocem jednou dávkou.",
+        "sideEffects": "Asi 1 z 10 dětí může mít 7-10 dní po očkování mírnou horečku a vyrážku. Znamená to, že se tělo učí bránit.",
+        "mythDebunked": "MÝTUS: 'MMR způsobuje autismus.' PRAVDA: Velké studie neprokázaly žádnou souvislost s autismem. Spalničky ale zabíjejí."
+      },
+      "pneumo": {
+        "name": "Pneumokoková vakcína (PCV13)",
+        "preventsDiseases": [
+          "Zápal plic",
+          "Meningitida",
+          "Infekce krve"
+        ],
+        "howItWorks": "Chrání proti bakteriím, které způsobují zápal plic, meningitidu a těžké infekce krve. Pro malé děti patří mezi nejnebezpečnější infekce.",
+        "sideEffects": "Mírná horečka, neklid a bolest v místě vpichu 1-2 dny.",
+        "mythDebunked": "MÝTUS: 'Děti onemocní z příliš mnoha vakcín.' PRAVDA: Dětská imunita se denně setkává s tisíci mikrobů. Několik vakcín pro ni není moc."
+      },
+      "rota": {
+        "name": "Rotavirus",
+        "preventsDiseases": [
+          "Těžký průjem a zvracení u miminek"
+        ],
+        "howItWorks": "Podává se jako kapky do úst, ne injekcí. Chrání před virem, který způsobuje těžký průjem a dehydrataci.",
+        "sideEffects": "Velmi mírné. Někdy trochu neklidu nebo lehký průjem.",
+        "mythDebunked": "MÝTUS: 'Průjem je u miminek normální, vakcínu nepotřebují.' PRAVDA: Rotavirový průjem může dítě rychle nebezpečně odvodnit."
+      },
+      "varicella": {
+        "name": "Varicella (plané neštovice)",
+        "preventsDiseases": [
+          "Plané neštovice"
+        ],
+        "howItWorks": "Plané neštovice mohou vypadat lehce, ale mohou způsobit závažnou kožní infekci, zápal plic nebo komplikace v mozku. Vakcína většině případů zabrání.",
+        "sideEffects": "Mírná bolest. Vzácně se objeví pár pupínků podobných neštovicím u místa vpichu.",
+        "mythDebunked": "MÝTUS: 'Je lepší prodělat plané neštovice přirozeně.' PRAVDA: Přirozená infekce může způsobit vážné komplikace a později pásový opar."
+      },
+      "hpv": {
+        "name": "HPV (lidský papilomavirus)",
+        "preventsDiseases": [
+          "Rakovina děložního čípku",
+          "Jiné druhy rakoviny"
+        ],
+        "howItWorks": "Tato vakcína předchází rakovině. Podává se ještě předtím, než se dospívající setkají s virem.",
+        "sideEffects": "Bolest paže, někdy krátká bolest hlavy nebo závrať. Je velmi bezpečná.",
+        "mythDebunked": "MÝTUS: 'Tato vakcína podporuje sexuální aktivitu.' PRAVDA: Tato vakcína předchází RAKOVINĚ. Nemá nic společného s chováním."
+      },
+      "flu": {
+        "name": "Chřipka",
+        "preventsDiseases": [
+          "Sezónní chřipka"
+        ],
+        "howItWorks": "Chřipka není jen nachlazení. Může být nebezpečná pro malé děti, seniory a těhotné ženy. Vakcína se každý rok upravuje.",
+        "sideEffects": "Mírná bolest paže a někdy nízká horečka na jeden den. Z vakcíny proti chřipce NEMŮŽETE dostat chřipku.",
+        "mythDebunked": "MÝTUS: 'Vakcína proti chřipce vám dá chřipku.' PRAVDA: To není možné. Vakcína neobsahuje živý virus."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Při narození"
+      },
+      "2months": {
+        "label": "2 měsíce"
+      },
+      "4months": {
+        "label": "4 měsíce"
+      },
+      "6months": {
+        "label": "6 měsíců"
+      },
+      "12months": {
+        "label": "12 měsíců"
+      },
+      "18months": {
+        "label": "18 měsíců"
+      },
+      "4years": {
+        "label": "4-6 let"
+      },
+      "9years": {
+        "label": "9-12 let"
+      },
+      "adult": {
+        "label": "Dospělí"
+      },
+      "pregnant": {
+        "label": "Těhotné ženy"
+      }
+    }
   }
 }

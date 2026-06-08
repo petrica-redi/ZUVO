@@ -1148,6 +1148,137 @@
     "meta": {
       "title": "Vaccinurenqo sikljaripe — Redi Health",
       "description": "Sa vaccina ververdo lokhe lavenca."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (Tuberkuloza)",
+        "preventsDiseases": [
+          "Tuberkuloza (TB)"
+        ],
+        "howItWorks": "Akaja vakcina sikavel e čhavesqo trupo te marolpes kontra tuberkuloza - phari pulmoni nasvalipen so phirel pala vazduho. Jekh cikni injekcija ando vast arakhel but bersa.",
+        "sideEffects": "Šaj te avel cikni bumba vaj cikni semna ando vast kaj diňa pes i injekcija. Kada si normalno thaj sikavel kaj vakcina kerel buti.",
+        "mythDebunked": "MITO: 'Tuberkuloza na si maj.' ČAČIPE: Tuberkuloza akana vi murdarel but manušen sakko berš. Ande but manušesqe than phirel sig."
+      },
+      "hepb": {
+        "name": "Hepatitis B",
+        "preventsDiseases": [
+          "Hepatitis B (nasvalipen e džigerica)"
+        ],
+        "howItWorks": "Arakhel e džigerica katar jekh viruso so šaj te kerel longo našavipen thaj kancero. Del pes ande biandipe kaj o neve biande si maj pharimasa.",
+        "sideEffects": "Cikni duk ande than kaj diňa pes i injekcija. Dikhlin čhave šaj te aven cikne nervozne jekh dives. Na si ništa pharo.",
+        "mythDebunked": "MITO: 'Miro neve biando si but tikno vaš vakcina.' ČAČIPE: Neve biande si maj but pharimasa. Sar maj sig arakhas len, maj feder si."
+      },
+      "dtap": {
+        "name": "DTaP (Difterija, Tetanuso, Khosipen)",
+        "preventsDiseases": [
+          "Difterija",
+          "Tetanuso",
+          "Khosipen"
+        ],
+        "howItWorks": "Akaja vakcina arakhel andar trin nasvalimata jekhe dromeske. Difterija šaj te phandel o kanli, tetanuso kerel miškipa pharimasa, a o khosipen na mukhel o čhavorre te phuvin.",
+        "sideEffects": "I than kaj diňa pes i injekcija šaj te avel loli thaj dukhal. O čhavo šaj te avel le cikne temperaturasa 1-2 divesa.",
+        "mythDebunked": "MITO: 'Akala nasvalimata na si maj, soske vakcina?' ČAČIPE: Na si but sar angleder kaj vakcine arakhen. Kana khethanipe na vakcininelpes, nasvalimata pale aven."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (paraliza)"
+        ],
+        "howItWorks": "Polio si viruso so šaj ande cikne ora te paralyzirinel e čhavesqe pindre. Akaja vakcina but cikňarela poliovo ando them.",
+        "sideEffects": "But loko. Šaj te avel cikni lolipe ande than kaj diňa pes i injekcija.",
+        "mythDebunked": "MITO: 'Polio na si maj, na trubul akaja vakcina.' ČAČIPE: Polio na si but ande Europa baš akaja vakcina. Jekh manuš bi vakcina šaj te anel les pale."
+      },
+      "mmr": {
+        "name": "MMR (Kampi, Šaj, Rubeola)",
+        "preventsDiseases": [
+          "Kampi",
+          "Šaj",
+          "Rubeola"
+        ],
+        "howItWorks": "Kampi si but phirel thaj šaj te kerel našavipen ando šero vaj te murdarel. Akaja vakcina arakhel andar sa trin nasvalimata.",
+        "sideEffects": "Paše jekh andar deš čhave šaj te avel e cikne temperaturasa thaj cikno osip 7-10 divesa pala. Kada phenel kaj o trupo sikljolpes.",
+        "mythDebunked": "MITO: 'MMR kerel autizmo.' ČAČIPE: But bare studii na arakhle ni jekh lidhajpe le autizmosa. Kampi šaj te murdarel."
+      },
+      "pneumo": {
+        "name": "Pneumokokno (PCV13)",
+        "preventsDiseases": [
+          "Pneumonija",
+          "Meningitis",
+          "Ratune infekcije"
+        ],
+        "howItWorks": "Arakhel katar bakterije so keren pneumonija, meningitis thaj phare infekcije ande rat. Akala si maškar e maj phare nasvalimata vaš tikne čhave.",
+        "sideEffects": "Cikni temperatura, nervoza thaj duk ande than kaj diňa pes i injekcija 1-2 divesa.",
+        "mythDebunked": "MITO: 'Čhave nasvalon katar but vakcine.' ČAČIPE: Le čhavesqo imuniteto marolpes kontra but mikrobi sakko dives. Keci vakcine na si but vaš lesqo trupo."
+      },
+      "rota": {
+        "name": "Rotaviruso",
+        "preventsDiseases": [
+          "Phari diarija thaj vomitimos ande čhavorre"
+        ],
+        "howItWorks": "Del pes sar kapura ando muj, na sar injekcija. Arakhel katar o viruso so kerel phari diarija thaj sušipe ande čhavorre.",
+        "sideEffects": "But loko. Varekana cikni nervoza vaj cikni diarija.",
+        "mythDebunked": "MITO: 'Diarija si normalno ande čhavorre, na trubul vakcina.' ČAČIPE: Rotavirusoski diarija šaj sig te sušarel o trupo thaj šaj te avel phari."
+      },
+      "varicella": {
+        "name": "Varicela (Brânca)",
+        "preventsDiseases": [
+          "Brânca"
+        ],
+        "howItWorks": "Brânca dikhel lokhi, ama šaj te kerel phare kožake infekcije, pneumonija thaj pharipen ando šero. Vakcina arakhel andar but kasusura.",
+        "sideEffects": "Cikni duk. Rare šaj te aven cikne brâncako buti pašal i than kaj diňa pes i injekcija.",
+        "mythDebunked": "MITO: 'Maj feder si te aves nasvalo naturalno.' ČAČIPE: Naturalo infekcija šaj te kerel phare komplikacije thaj pašla ande trupo vaš but bersa."
+      },
+      "hpv": {
+        "name": "HPV (Humano papilloma viruso)",
+        "preventsDiseases": [
+          "Kancero e garadutnesqo grlo",
+          "Aver kancerura"
+        ],
+        "howItWorks": "Akaja vakcina arakhel katar kancero. Del pes angleder sar o ternimata te avel kontaktosa le virusosa.",
+        "sideEffects": "Duk ando vast, varekana cikni šeruni duk vaj vrtoglavo. But sigurno si.",
+        "mythDebunked": "MITO: 'Akaja vakcina kerel seksualno buti.' ČAČIPE: Akaja vakcina arakhel katar KANCERO. Na si baš ahajiba."
+      },
+      "flu": {
+        "name": "Influenza (gripa)",
+        "preventsDiseases": [
+          "Sezonalni gripa"
+        ],
+        "howItWorks": "Gripa na si numa prehlada. Šaj te avel phari vaš tikne čhave, phure manuša thaj pušne džuvlja. Vakcina sikhavel pes sakko berš.",
+        "sideEffects": "Cikni duk ando vast thaj varekana cikni temperatura jekh dives. Našti te les gripa katar akaja vakcina.",
+        "mythDebunked": "MITO: 'Griposki vakcina del tuke gripa.' ČAČIPE: Našti. Vakcina na si le živone virusosa."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Kana biandol"
+      },
+      "2months": {
+        "label": "2 čhona"
+      },
+      "4months": {
+        "label": "4 čhona"
+      },
+      "6months": {
+        "label": "6 čhona"
+      },
+      "12months": {
+        "label": "12 čhona"
+      },
+      "18months": {
+        "label": "18 čhona"
+      },
+      "4years": {
+        "label": "4-6 berš"
+      },
+      "9years": {
+        "label": "9-12 berš"
+      },
+      "adult": {
+        "label": "Bare manuša"
+      },
+      "pregnant": {
+        "label": "Pušne džuvlja"
+      }
     }
   },
   "explain": {

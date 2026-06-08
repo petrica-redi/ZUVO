@@ -934,5 +934,181 @@
         "simple": "Ez a tested védelme a kórokozók ellen. A fehérvérsejtek a fertőzésekkel harcolnak. Az oltások edzik az immunrendszert. A jó étel, az alvás és a mozgás erősíti."
       }
     }
+  },
+  "vaccines": {
+    "heroTitle": "Oltási útmutató",
+    "heroSubtitle": "Minden oltás egyszerűen elmagyarázva. Koppints bármelyik oltásra, hogy többet tudj meg.",
+    "askCta": "Kérdezz az oltásokról",
+    "backToSchedule": "Vissza az oltási naptárhoz",
+    "preventsLabel": "Megelőzi",
+    "dosesNeeded": "{count, plural, one {# adag szükséges} other {# adag szükséges}}",
+    "howItWorks": "Hogyan működik",
+    "sideEffects": "Mellékhatások (normálisak)",
+    "mythTitle": "Tévhit vs. igazság",
+    "qaTitle": "Kérdezz az oltásokról",
+    "qaSubtitle": "Bármilyen kérdés. Őszinte válaszok tereptapasztalatból.",
+    "qaPlaceholder": "Írd be az oltással kapcsolatos kérdésed...",
+    "qaAria": "Tegyél fel kérdést az oltásokról",
+    "qaCommon": "Gyakori kérdések",
+    "childAgePrompt": "Hány éves a gyermeked?",
+    "childAgeAria": "Gyermek életkorának kiválasztása",
+    "ageOptionDefault": "Válassz életkort...",
+    "ageNewborn": "Újszülött (0 hónap)",
+    "age2m": "2 hónap",
+    "age4m": "4 hónap",
+    "age6m": "6 hónap",
+    "age12m": "12 hónap (1 év)",
+    "age18m": "18 hónap",
+    "age48m": "4-6 év",
+    "age108m": "9-12 év",
+    "neededByAge": "Ebben a korban szükséges oltások:",
+    "vaccinesCount": "{count, plural, one {# oltás} other {# oltás}}",
+    "importance": {
+      "critical": "Létfontosságú",
+      "important": "Fontos",
+      "recommended": "Ajánlott"
+    },
+    "fears": [
+      "Biztonságosak az oltások a babámnak?",
+      "Fájni fog a gyermekemnek?",
+      "Mi van, ha utána lázas lesz?",
+      "Elhalaszthatom az oltásokat?",
+      "A gyermekem beteg - így is kaphat oltást?"
+    ],
+    "meta": {
+      "title": "Oltási útmutató - Redi Health",
+      "description": "Minden oltás egyszerű szavakkal elmagyarázva."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (tuberkulózis)",
+        "preventsDiseases": [
+          "Tuberkulózis (TBC)"
+        ],
+        "howItWorks": "Ez az oltás megtanítja a baba szervezetét a tuberkulózis elleni védekezésre - ez egy súlyos, levegőben terjedő tüdőbetegség. Egy kis karba adott injekció évekre védelmet ad.",
+        "sideEffects": "Az oltás helyén kis csomó vagy heg lehet a karon. Ez normális, és azt jelzi, hogy az oltás működik.",
+        "mythDebunked": "TÉVHIT: 'A TBC már nem létezik.' IGAZSÁG: A TBC ma is sok embert megöl minden évben. Zsúfolt körülmények között gyorsan terjed."
+      },
+      "hepb": {
+        "name": "Hepatitis B",
+        "preventsDiseases": [
+          "Hepatitis B (májbetegség)"
+        ],
+        "howItWorks": "Megvédi a májat egy olyan vírustól, amely élethosszig tartó károsodást és rákot okozhat. Születéskor adják, mert a csecsemők a legvédtelenebbek.",
+        "sideEffects": "Enyhe fájdalom az injekció helyén. Néhány baba egy napig nyűgösebb lehet. Nem súlyos.",
+        "mythDebunked": "TÉVHIT: 'A babám túl kicsi az újszülöttkori oltáshoz.' IGAZSÁG: Az újszülöttek a legsebezhetőbbek. Minél korábban védjük meg őket, annál biztonságosabb."
+      },
+      "dtap": {
+        "name": "DTaP (diftéria, tetanusz, szamárköhögés)",
+        "preventsDiseases": [
+          "Diftéria",
+          "Tetanusz",
+          "Szamárköhögés"
+        ],
+        "howItWorks": "Ez az oltás egyszerre három betegség ellen véd. A diftéria elzárhatja a torkot, a tetanusz görcsbe húzza az izmokat, a szamárköhögés pedig fulladást okozhat a babáknál.",
+        "sideEffects": "Az injekció helye piros és fájdalmas lehet. A gyermek 1-2 napig enyhén lázas lehet.",
+        "mythDebunked": "TÉVHIT: 'Ezek a betegségek már nincsenek, minek oltani?' IGAZSÁG: Azért ritkák, mert oltunk. Ha a közösségek abbahagyják az oltást, a betegségek visszatérnek."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (bénulás)"
+        ],
+        "howItWorks": "A polio egy vírus, amely órák alatt végleges bénulást okozhat a gyermek lábában. Ez az oltás szinte eltüntette a betegséget a világ nagy részéről.",
+        "sideEffects": "Nagyon enyhe. Legfeljebb egy kis bőrpír az injekció helyén.",
+        "mythDebunked": "TÉVHIT: 'A polio eltűnt, erre már nincs szükség.' IGAZSÁG: Európában azért tűnt el, mert oltunk. Egy oltatlan utazó visszahozhatja."
+      },
+      "mmr": {
+        "name": "MMR (kanyaró, mumpsz, rubeola)",
+        "preventsDiseases": [
+          "Kanyaró",
+          "Mumpsz",
+          "Rubeola"
+        ],
+        "howItWorks": "A kanyaró rendkívül fertőző, és agykárosodást vagy halált is okozhat. Ez az oltás egyetlen injekcióval mindhárom betegség ellen véd.",
+        "sideEffects": "Körülbelül 10 gyerekből 1-nél enyhe láz és kiütés jelentkezhet 7-10 nappal később. Ez azt jelzi, hogy a szervezet tanul védekezni.",
+        "mythDebunked": "TÉVHIT: 'Az MMR autizmust okoz.' IGAZSÁG: Nagy vizsgálatok nem találtak kapcsolatot az autizmussal. A kanyaró viszont ölhet."
+      },
+      "pneumo": {
+        "name": "Pneumococcus (PCV13)",
+        "preventsDiseases": [
+          "Tüdőgyulladás",
+          "Agyhártyagyulladás",
+          "Véráramfertőzések"
+        ],
+        "howItWorks": "Megvéd azoktól a baktériumoktól, amelyek tüdőgyulladást, agyhártyagyulladást és súlyos vérfertőzést okoznak. Ezek a kisgyermekek legnagyobb veszélyei közé tartoznak.",
+        "sideEffects": "Enyhe láz, nyűgösség és fájdalom az oltás helyén 1-2 napig.",
+        "mythDebunked": "TÉVHIT: 'A gyerekek a túl sok oltástól lesznek betegek.' IGAZSÁG: A gyermek immunrendszere naponta több ezer kórokozóval találkozik. Néhány oltás nem túl sok számára."
+      },
+      "rota": {
+        "name": "Rotavírus",
+        "preventsDiseases": [
+          "Súlyos hasmenés és hányás csecsemőknél"
+        ],
+        "howItWorks": "Szájon át adott cseppek formájában kapják, nem injekcióként. Megvéd a súlyos hasmenést és kiszáradást okozó vírustól.",
+        "sideEffects": "Nagyon enyhe. Néha egy kis nyűgösség vagy enyhe hasmenés jelentkezhet.",
+        "mythDebunked": "TÉVHIT: 'A hasmenés normális a babáknál, nem kell oltás.' IGAZSÁG: A rotavírusos hasmenés gyors kiszáradást okozhat, és veszélyes lehet."
+      },
+      "varicella": {
+        "name": "Varicella (bárányhimlő)",
+        "preventsDiseases": [
+          "Bárányhimlő"
+        ],
+        "howItWorks": "A bárányhimlő enyhének tűnhet, mégis súlyos bőrfertőzést, tüdőgyulladást vagy agyi szövődményt okozhat. Az oltás a legtöbb esetet megelőzi.",
+        "sideEffects": "Enyhe fájdalom. Ritkán néhány bárányhimlőszerű pötty jelenhet meg az oltás helye közelében.",
+        "mythDebunked": "TÉVHIT: 'Jobb természetesen átesni a bárányhimlőn.' IGAZSÁG: A természetes fertőzés súlyos szövődményeket okozhat, és később övsömörhöz vezethet."
+      },
+      "hpv": {
+        "name": "HPV (humán papillomavírus)",
+        "preventsDiseases": [
+          "Méhnyakrák",
+          "Más daganatok"
+        ],
+        "howItWorks": "Ez az oltás rákot előz meg. Általában még azelőtt adják, hogy a tinédzser kapcsolatba kerülne a vírussal.",
+        "sideEffects": "Fájó kar, néha enyhe fejfájás vagy szédülés. Nagyon biztonságos.",
+        "mythDebunked": "TÉVHIT: 'Ez az oltás szexuális aktivitásra bátorít.' IGAZSÁG: Ez az oltás a RÁKOT előzi meg. Semmi köze a viselkedéshez."
+      },
+      "flu": {
+        "name": "Influenza (szezonális influenza)",
+        "preventsDiseases": [
+          "Szezonális influenza"
+        ],
+        "howItWorks": "Az influenza nem egyszerű megfázás. A kisgyermekekre, idősekre és várandós nőkre különösen veszélyes lehet. Az oltást évente frissítik.",
+        "sideEffects": "Enyhe karfájdalom és néha alacsony láz egy napig. Az influenzaoltástól NEM lehet influenzát kapni.",
+        "mythDebunked": "TÉVHIT: 'Az influenzaoltás influenzát okoz.' IGAZSÁG: Ez lehetetlen. Az oltás nem tartalmaz élő vírust."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "Születéskor"
+      },
+      "2months": {
+        "label": "2 hónaposan"
+      },
+      "4months": {
+        "label": "4 hónaposan"
+      },
+      "6months": {
+        "label": "6 hónaposan"
+      },
+      "12months": {
+        "label": "12 hónaposan"
+      },
+      "18months": {
+        "label": "18 hónaposan"
+      },
+      "4years": {
+        "label": "4-6 évesen"
+      },
+      "9years": {
+        "label": "9-12 évesen"
+      },
+      "adult": {
+        "label": "Felnőttek"
+      },
+      "pregnant": {
+        "label": "Terhes nők"
+      }
+    }
   }
 }
