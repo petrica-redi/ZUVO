@@ -1110,5 +1110,236 @@
         "label": "Nosečnice"
       }
     }
+  },
+  "explain": {
+    "heroTitle": "Razumi svoj recept",
+    "heroSubtitle": "Vnesi diagnozo ali ime zdravila. Razložimo z enostavnimi besedami.",
+    "heroArtAlt": "Ilustracija: pomoč v stilu lekarne za razumevanje recepta.",
+    "placeholder": "Vnesi diagnozo, ime zdravila ali prilepi recept…\n\nPrimer: „Hipertenzija” ali „Metformin 500 mg”",
+    "inputAria": "Vnesi diagnozo ali ime zdravila",
+    "cta": "Razloži to",
+    "ctaAnalyzing": "Analiziram…",
+    "examplesHeading": "Pogosti primeri",
+    "loading": "Berem tvoj recept…",
+    "sections": {
+      "whatThisMeans": "Kaj to pomeni",
+      "whyItMatters": "Zakaj je pomembno",
+      "ifIgnored": "Če to ignoriraš",
+      "medicationsTitle": "Tvoja zdravila",
+      "howToTake": "Kako jemati",
+      "sideEffects": "Neželeni učinki",
+      "neverDo": "Nikoli ne naredi tega",
+      "questionsTitle": "Vprašaj zdravnika naslednjič",
+      "tipsTitle": "Kaj lahko narediš danes",
+      "emergencyTitle": "Pojdi v bolnišnico, če"
+    },
+    "anotherCta": "Razloži drug recept",
+    "disclaimerBold": "Ni medicinski nasvet.",
+    "disclaimerBody": "To orodje razloži medicinske izraze z enostavnim jezikom. Vedno sledi navodilom svojega zdravnika.",
+    "meta": {
+      "title": "Razumi svoj recept — Redi Health",
+      "description": "Diagnoza in zdravila razložena z enostavnimi besedami"
+    },
+    "takePhoto": "Posnemi",
+    "uploadImage": "Naloži sliko",
+    "placeholderWithImage": "(Izbirno) Dodaj kontekst o receptu — starost, kako jemlješ, kaj te skrbi…",
+    "imagePreviewAlt": "Predogled slike recepta",
+    "imageReady": "Slika je pripravljena",
+    "imageReadyBody": "Preberemo zdravilo, odmerjanje in navodila ter vse razložimo z enostavnimi besedami.",
+    "imageRemove": "Odstrani sliko",
+    "preparingImage": "Pripravljam sliko…",
+    "imageFailed": "Te slike nisem mogel prebrati. Poskusi drugo."
+  },
+  "symptoms": {
+    "heroTitle": "Kje te boli?",
+    "heroSubtitle": "Dotakni se dela telesa, ki te muči",
+    "heroArtAlt": "Ilustracija: ljudje prejemajo nežne večjezične nasvete o vsakodnevnih simptomih.",
+    "backToMap": "Nazaj na zemljevid telesa",
+    "checkAnother": "Preveri drugo območje",
+    "selectSymptoms": "Izberi vse simptome, ki veljajo",
+    "extraPlaceholder": "Še kaj? (kako dolgo, kako hudo…)",
+    "extraAria": "Dodatni podatki o simptomih",
+    "analyzing": "Analiziram simptome…",
+    "checkCta": "Preveri simptome",
+    "whatToDoNow": "Kaj storiti zdaj",
+    "homeCare": "Oskrba doma",
+    "escalateTitle": "Pojdi v bolnišnico, če",
+    "commonCauses": "Pogosti vzroki",
+    "regions": {
+      "head": "Glava",
+      "chest": "Prsi",
+      "abdomen": "Trebuh",
+      "leftArm": "Leva roka",
+      "rightArm": "Desna roka",
+      "pelvis": "Medenica",
+      "leftLeg": "Leva noga",
+      "rightLeg": "Desna noga"
+    },
+    "headSymptoms": [
+      "Glavobol",
+      "Vrtoglavica",
+      "Zamegljen vid",
+      "Bolečina v ušesu",
+      "Bolečina v grlu"
+    ],
+    "chestSymptoms": [
+      "Bolečina v prsnem košu",
+      "Težko dihanje",
+      "Kašelj",
+      "Hitro srce",
+      "Stiskanje"
+    ],
+    "abdomenSymptoms": [
+      "Bolečina v trebuhu",
+      "Slabost / bruhanje",
+      "Driska",
+      "Napihnjenost",
+      "Brez apetita"
+    ],
+    "armSymptoms": [
+      "Bolečina",
+      "Mravljinčenje",
+      "Oteklina",
+      "Ne morem ga premakniti",
+      "Mravljinčenje"
+    ],
+    "pelvisSymptoms": [
+      "Bolečina pri uriniranju",
+      "Bolečina v hrbtu",
+      "Menstrualne težave",
+      "Bolečina v dimljah"
+    ],
+    "legSymptoms": [
+      "Bolečina v nogi",
+      "Oteklina",
+      "Ne morem hoditi",
+      "Bolečina v kolenu",
+      "Mravljinčenje"
+    ],
+    "meta": {
+      "title": "Preverjanje simptomov — Redi Health",
+      "description": "Dotakni se, kje te boli. Prejmi navodila, kaj storiti."
+    }
+  },
+  "consult": {
+    "heroTitle": "Zdravstveno svetovanje",
+    "heroSubtitle": "Povej mi, kaj te muči. Postavil bom nekaj vprašanj in ti pomagal odločiti, kaj storiti.",
+    "prompt": "Kaj te je danes pripeljalo sem?",
+    "orFreeform": "ali opiši s svojimi besedami",
+    "freeformPlaceholder": "Od včeraj me boli glava…",
+    "freeformAria": "Opiši svoj zdravstveni problem",
+    "chatHeader": "Zdravstveno svetovanje",
+    "chatSubtitle": "Nekaj vprašanj mi pomaga, da ti bolje pomagam",
+    "answerAria": "Tvoj odgovor",
+    "answerPlaceholder": "Vnesi odgovor…",
+    "newSession": "Novo svetovanje",
+    "assessment": "Ocena",
+    "whatToDo": "Kaj storiti",
+    "homeCare": "Oskrba doma",
+    "watchFor": "Pazljivo na te znake",
+    "showVisitCard": "Prikaži kartico za obisk zdravnika",
+    "hideVisitCard": "Skrij kartico za obisk",
+    "visitCardTitle": "Povzetek za zdravnika",
+    "visitCardDisclaimer": "Ustvaril Redi Health Advisor. To ni medicinska diagnoza.",
+    "concerns": {
+      "fever": "Vročina / visoka temperatura",
+      "pain": "Bolečina nekje",
+      "breathing": "Težave z dihanjem",
+      "skin": "Težava s kožo / izpuščaj",
+      "pregnancy": "Skrb zaradi nosečnosti",
+      "child": "Moj otrok je bolan",
+      "mental": "Stres / tesnoba / žalost",
+      "heart": "Srce / prsi"
+    }
+  },
+  "navigate": {
+    "heroTitle": "Potrebujem zdravnika",
+    "heroSubtitle": "Pomagali ti bomo pripraviti se — kaj vzeti, kaj povedati, tvoje pravice.",
+    "issuePrompt": "Kakšen je problem?",
+    "issues": {
+      "fever": "Vročina / okužba",
+      "pain": "Bolečina / poškodba",
+      "pregnancy": "Nosečnost",
+      "chronic": "Kronična bolezen",
+      "mental": "Duševno zdravje",
+      "skin": "Koža / oči / ušesa",
+      "child": "Bolan otrok",
+      "other": "Nekaj drugega"
+    },
+    "tellMore": "Povej nam več",
+    "detailPlaceholder": "Opiši, kaj se dogaja… Kako dolgo? Kako hudo?",
+    "detailAria": "Opiši svoj zdravstveni problem",
+    "insuranceTitle": "Imaš zdravstveno zavarovanje?",
+    "insuranceSubtitle": "Pomaga nam povedati, kaj vzeti",
+    "insuranceYes": "Da, imam zdravstveno kartico",
+    "insuranceNo": "Ne, nimam zavarovanja",
+    "insuranceUnknown": "Nisem prepričan/a",
+    "countryTitle": "V kateri državi si?",
+    "generating": "Pripravljam kartico za obisk…",
+    "generateCard": "Ustvari kartico za obisk zdravnika",
+    "startOver": "Začni znova",
+    "showDoctor": "Pokaži to zdravniku",
+    "generatedBy": "Ustvaril Redi Health Advisor",
+    "whatToBring": "Kaj vzeti",
+    "askYourDoctor": "Vprašaj svojega zdravnika",
+    "patientRights": "Tvoje pravice kot pacienta",
+    "findHospital": "Poišči najbližjo bolnišnico",
+    "mapHint": "Odpre zemljevid z potjo",
+    "meta": {
+      "title": "Zdravstveni navigator — Redi Health",
+      "description": "Pripravi se na obisk zdravnika — kartica, kaj vzeti, tvoje pravice."
+    }
+  },
+  "about": {
+    "brand": "Redi Health",
+    "tagline": "Zdravstvena pismenost za podeželske in marginalizirane skupnosti",
+    "version": "Različica 1.0.0",
+    "missionBody": "Redi Health je AI pomočnik, so-oblikovan s terenskimi mediatorji in kliničarji za skupnosti, ki jih uradni zdravstveni sistemi pogosto premalo oskrbujejo — od podeželja do neformalnih naselij — s posebno pozornostjo na romske skupnosti. Zmanjšujemo vrzel v pismenosti, kjer razdalja, jezikovna ovira ali izključenost preprečujejo dostop.",
+    "values": {
+      "careLabel": "Narejeno s skrbjo",
+      "careDesc": "Od zdravstvenih mediatorjev",
+      "languagesLabel": "15 jezikov",
+      "languagesDesc": "Po vsej Evropi",
+      "evidenceLabel": "Temelji na dokazih",
+      "evidenceDesc": "Smernice SZO",
+      "communityLabel": "Skupnost na prvem mestu",
+      "communityDesc": "Brez obsojanja"
+    },
+    "privacyLink": "Pravilnik o zasebnosti",
+    "termsLink": "Pogoji uporabe",
+    "disclaimer": "Redi Health ni medicinska naprava. Vse informacije so samo v izobraževalne namene. Za medicinske odločitve se vedno posvetuj s kvalificiranim zdravstvenim delavcem.",
+    "meta": {
+      "title": "O nas — Redi Health",
+      "description": "O platformi za zdravstveno pismenost Redi Health"
+    }
+  },
+  "theme": {
+    "ariaLabel": "Tema",
+    "light": "Svetla tema",
+    "dark": "Temna tema",
+    "system": "Sistemska tema",
+    "switchTo": "Preklopi temo — zdaj {label}"
+  },
+  "emergency": {
+    "call112": "Pokličite 112 TAKOJ",
+    "banner": "Nujna situacija? Pokličite 112",
+    "emergencyLabel": "Nujna situacija",
+    "ambulanceLabel": "Nujna pomoč"
+  },
+  "voice": {
+    "start": "Začni govoriti",
+    "stop": "Ustavi poslušanje",
+    "readAloud": "Preberi na glas",
+    "readMessageAloud": "Preberi sporočilo na glas",
+    "readExplanationAloud": "Preberi razlago na glas",
+    "micDeepgram": "Dotakni se za govor — večjezični glas (Deepgram)",
+    "micError": "Ni dostopa do mikrofona.",
+    "detected": "Zaznan jezik: {lang}"
+  },
+  "severity": {
+    "green": "Oskrba doma",
+    "amber": "Kmalu obiščite zdravnika",
+    "red": "Nujno — Pojdi TAKOJ",
+    "redHospital": "Pojdi v bolnišnico TAKOJ"
   }
 }

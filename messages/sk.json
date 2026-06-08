@@ -1110,5 +1110,236 @@
         "label": "Tehotné ženy"
       }
     }
+  },
+  "explain": {
+    "heroTitle": "Pochopte svoj recept",
+    "heroSubtitle": "Napíšte diagnózu alebo názov lieku. Vysvetlíme to jednoduchými slovami.",
+    "heroArtAlt": "Ilustrácia: pomoc v štýle lekárne pri dekódovaní receptu.",
+    "placeholder": "Napíšte diagnózu, názov lieku alebo vložte recept…\n\nPríklad: „Hypertenzia” alebo „Metformín 500 mg”",
+    "inputAria": "Zadajte diagnózu alebo názov lieku",
+    "cta": "Vysvetli to",
+    "ctaAnalyzing": "Analyzujem…",
+    "examplesHeading": "Bežné príklady",
+    "loading": "Čítam váš recept…",
+    "sections": {
+      "whatThisMeans": "Čo to znamená",
+      "whyItMatters": "Prečo je to dôležité",
+      "ifIgnored": "Ak to ignorujete",
+      "medicationsTitle": "Vaše lieky",
+      "howToTake": "Ako užívať",
+      "sideEffects": "Vedľajšie účinky",
+      "neverDo": "Nikdy nerobte toto",
+      "questionsTitle": "Opýtajte sa lekára nabudúce",
+      "tipsTitle": "Čo môžete urobiť dnes",
+      "emergencyTitle": "Choďte do nemocnice, ak"
+    },
+    "anotherCta": "Vysvetliť ďalší recept",
+    "disclaimerBold": "Nie je to lekárska rada.",
+    "disclaimerBody": "Tento nástroj vysvetľuje lekárske termíny jednoduchým jazykom. Vždy dodržiavajte pokyny lekára.",
+    "meta": {
+      "title": "Pochopte svoj recept — Redi Health",
+      "description": "Diagnóza a lieky vysvetlené jednoduchými slovami"
+    },
+    "takePhoto": "Odfotiť",
+    "uploadImage": "Nahrať obrázok",
+    "placeholderWithImage": "(Voliteľné) Pridajte kontext k receptu — vek, ako užívate, čo vás znepokojuje…",
+    "imagePreviewAlt": "Náhľad fotky receptu",
+    "imageReady": "Fotka je pripravená",
+    "imageReadyBody": "Prečítame liek, dávku a pokyny a všetko vysvetlíme jednoduchými slovami.",
+    "imageRemove": "Odstrániť fotku",
+    "preparingImage": "Pripravujem fotku…",
+    "imageFailed": "Nepodarilo sa prečítať túto fotku. Skúste inú."
+  },
+  "symptoms": {
+    "heroTitle": "Kde vás bolí?",
+    "heroSubtitle": "Ťuknite na časť tela, ktorá vás trápi",
+    "heroArtAlt": "Ilustrácia: ľudia dostávajú jemné viacjazyčné poradenstvo o bežných príznakoch.",
+    "backToMap": "Späť na mapu tela",
+    "checkAnother": "Skontrolovať inú oblasť",
+    "selectSymptoms": "Vyberte všetky príznaky, ktoré platia",
+    "extraPlaceholder": "Niečo ďalšie? (ako dlho, ako zle…)",
+    "extraAria": "Ďalšie podrobnosti o príznakoch",
+    "analyzing": "Analyzujem príznaky…",
+    "checkCta": "Skontrolovať príznaky",
+    "whatToDoNow": "Čo robiť teraz",
+    "homeCare": "Domáca starostlivosť",
+    "escalateTitle": "Choďte do nemocnice, ak",
+    "commonCauses": "Bežné príčiny",
+    "regions": {
+      "head": "Hlava",
+      "chest": "Hruď",
+      "abdomen": "Brucho",
+      "leftArm": "Ľavá ruka",
+      "rightArm": "Pravá ruka",
+      "pelvis": "Panva",
+      "leftLeg": "Ľavá noha",
+      "rightLeg": "Pravá noha"
+    },
+    "headSymptoms": [
+      "Bolesť hlavy",
+      "Závraty",
+      "Rozmazané videnie",
+      "Bolesť ucha",
+      "Bolesť v krku"
+    ],
+    "chestSymptoms": [
+      "Bolesť na hrudi",
+      "Ťažkosti s dýchaním",
+      "Kašeľ",
+      "Rýchle srdce",
+      "Tlak"
+    ],
+    "abdomenSymptoms": [
+      "Bolesť brucha",
+      "Nevoľnosť / vracanie",
+      "Hnačka",
+      "Nadúvanie",
+      "Bez chuti do jedla"
+    ],
+    "armSymptoms": [
+      "Bolesť",
+      "Mravenčenie",
+      "Opuch",
+      "Nemôžem ho pohnúť",
+      "Brnenie"
+    ],
+    "pelvisSymptoms": [
+      "Bolesť pri močení",
+      "Bolesť chrbta",
+      "Menštruačné problémy",
+      "Bolesť v slabine"
+    ],
+    "legSymptoms": [
+      "Bolesť nohy",
+      "Opuch",
+      "Nemôžem chodiť",
+      "Bolesť kolena",
+      "Mravenčenie"
+    ],
+    "meta": {
+      "title": "Kontrola príznakov — Redi Health",
+      "description": "Ťuknite, kde vás bolí. Získate pokyny, čo robiť."
+    }
+  },
+  "consult": {
+    "heroTitle": "Zdravotná konzultácia",
+    "heroSubtitle": "Povedzte mi, čo vás trápi. Položím pár otázok a pomôžem vám rozhodnúť, čo robiť.",
+    "prompt": "Čo vás sem dnes priviedlo?",
+    "orFreeform": "alebo opíšte vlastnými slovami",
+    "freeformPlaceholder": "Od včera ma bolí hlava…",
+    "freeformAria": "Opíšte svoj zdravotný problém",
+    "chatHeader": "Zdravotná konzultácia",
+    "chatSubtitle": "Pár otázok mi pomôže lepšie vám pomôcť",
+    "answerAria": "Vaša odpoveď",
+    "answerPlaceholder": "Napíšte odpoveď…",
+    "newSession": "Nová konzultácia",
+    "assessment": "Hodnotenie",
+    "whatToDo": "Čo robiť",
+    "homeCare": "Domáca starostlivosť",
+    "watchFor": "Dávajte pozor na tieto príznaky",
+    "showVisitCard": "Zobraziť kartu návštevy lekára",
+    "hideVisitCard": "Skryť kartu návštevy lekára",
+    "visitCardTitle": "Súhrn pre lekára",
+    "visitCardDisclaimer": "Vygenerované Redi Health Advisor. Toto nie je lekárska diagnóza.",
+    "concerns": {
+      "fever": "Horúčka / vysoká teplota",
+      "pain": "Bolesť niekde",
+      "breathing": "Problémy s dýchaním",
+      "skin": "Kožný problém / vyrážka",
+      "pregnancy": "Obavy o tehotenstvo",
+      "child": "Moje dieťa je choré",
+      "mental": "Stres / úzkosť / smútok",
+      "heart": "Srdce / hrudník"
+    }
+  },
+  "navigate": {
+    "heroTitle": "Potrebujem ísť k lekárovi",
+    "heroSubtitle": "Pomôžeme vám pripraviť sa — čo vziať, čo povedať, vaše práva.",
+    "issuePrompt": "Aký je problém?",
+    "issues": {
+      "fever": "Horúčka / infekcia",
+      "pain": "Bolesť / zranenie",
+      "pregnancy": "Tehotenstvo",
+      "chronic": "Chronické ochorenie",
+      "mental": "Duševné zdravie",
+      "skin": "Koža / oči / uši",
+      "child": "Choré dieťa",
+      "other": "Niečo iné"
+    },
+    "tellMore": "Povedzte nám viac",
+    "detailPlaceholder": "Opíšte, čo sa deje… Ako dlho? Ako zle?",
+    "detailAria": "Opíšte svoj zdravotný problém",
+    "insuranceTitle": "Máte zdravotné poistenie?",
+    "insuranceSubtitle": "Pomôže nám povedať, čo si vziať",
+    "insuranceYes": "Áno, mám zdravotnú kartu",
+    "insuranceNo": "Nie, nemám poistenie",
+    "insuranceUnknown": "Nie som si istý/á",
+    "countryTitle": "V ktorej krajine ste?",
+    "generating": "Pripravujem kartu návštevy…",
+    "generateCard": "Vytvoriť kartu návštevy lekára",
+    "startOver": "Začať odznova",
+    "showDoctor": "Ukážte toto lekárovi",
+    "generatedBy": "Vygenerované Redi Health Advisor",
+    "whatToBring": "Čo si vziať",
+    "askYourDoctor": "Opýtajte sa lekára",
+    "patientRights": "Vaše práva ako pacienta",
+    "findHospital": "Nájsť najbližšiu nemocnicu",
+    "mapHint": "Otvorí mapu s trasou",
+    "meta": {
+      "title": "Navigátor zdravotnej starostlivosti — Redi Health",
+      "description": "Pripravte sa na návštevu lekára — karta, čo vziať, vaše práva."
+    }
+  },
+  "about": {
+    "brand": "Redi Health",
+    "tagline": "Zdravotná gramotnosť pre vidiecke a vylúčené komunity",
+    "version": "Verzia 1.0.0",
+    "missionBody": "Redi Health je AI sprievodca navrhnutý spolu s terénnymi mediátormi a klinickými pracovníkmi pre komunity, ktoré oficiálne zdravotné systémy často nedostatočne obsluhujú — od vidieckych obcí po neformálne osady — s osobitnou pozornosťou na rómske komunity. Zmenšujeme medzeru v gramotnosti tam, kde vzdialenosť, jazyková bariéra alebo vylúčenie bránia prístupu.",
+    "values": {
+      "careLabel": "Vytvorené s starostlivosťou",
+      "careDesc": "Zdravotnými mediátormi",
+      "languagesLabel": "15 jazykov",
+      "languagesDesc": "Po celej Európe",
+      "evidenceLabel": "Založené na dôkazoch",
+      "evidenceDesc": "Smernice WHO",
+      "communityLabel": "Komunita na prvom mieste",
+      "communityDesc": "Bez odsudzovania"
+    },
+    "privacyLink": "Zásady ochrany súkromia",
+    "termsLink": "Podmienky služby",
+    "disclaimer": "Redi Health nie je zdravotnícka pomôcka. Všetky informácie sú len na vzdelávacie účely. Pri lekárskych rozhodnutiach sa vždy poraďte s kvalifikovaným zdravotníkom.",
+    "meta": {
+      "title": "O nás — Redi Health",
+      "description": "O platforme zdravotnej gramotnosti Redi Health"
+    }
+  },
+  "theme": {
+    "ariaLabel": "Téma",
+    "light": "Svetlá téma",
+    "dark": "Tmavá téma",
+    "system": "Systémová téma",
+    "switchTo": "Prepnúť tému — aktuálne {label}"
+  },
+  "emergency": {
+    "call112": "Zavolajte 112 TERAZ",
+    "banner": "Núdzová situácia? Zavolajte 112",
+    "emergencyLabel": "Núdzová situácia",
+    "ambulanceLabel": "Ambulancia"
+  },
+  "voice": {
+    "start": "Začať hovoriť",
+    "stop": "Zastaviť počúvanie",
+    "readAloud": "Prečítať nahlas",
+    "readMessageAloud": "Prečítať správu nahlas",
+    "readExplanationAloud": "Prečítať vysvetlenie nahlas",
+    "micDeepgram": "Ťuknite pre reč — viacjazyčný hlas (Deepgram)",
+    "micError": "Nepodarilo sa získať prístup k mikrofónu.",
+    "detected": "Zistený jazyk: {lang}"
+  },
+  "severity": {
+    "green": "Liečba doma",
+    "amber": "Čoskoro navštívte lekára",
+    "red": "Núdzová situácia — Choďte TERAZ",
+    "redHospital": "Choďte TERAZ do nemocnice"
   }
 }

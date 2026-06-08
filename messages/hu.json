@@ -1110,5 +1110,236 @@
         "label": "Terhes nők"
       }
     }
+  },
+  "explain": {
+    "heroTitle": "Értsd meg a receptet",
+    "heroSubtitle": "Írd be a diagnózist vagy a gyógyszer nevét. Egyszerű szavakkal elmagyarázzuk.",
+    "heroArtAlt": "Illusztráció: gyógyszertári segítség a recept megértéséhez.",
+    "placeholder": "Írd be a diagnózist, gyógyszer nevét vagy illeszd be a receptet…\n\nPélda: „Hipertónia” vagy „Metformin 500 mg”",
+    "inputAria": "Add meg a diagnózist vagy a gyógyszer nevét",
+    "cta": "Magyarázd el",
+    "ctaAnalyzing": "Elemzés…",
+    "examplesHeading": "Gyakori példák",
+    "loading": "Recepted olvasása…",
+    "sections": {
+      "whatThisMeans": "Mit jelent ez",
+      "whyItMatters": "Miért fontos",
+      "ifIgnored": "Ha figyelmen kívül hagyod",
+      "medicationsTitle": "Gyógyszereid",
+      "howToTake": "Hogyan szedjed",
+      "sideEffects": "Mellékhatások",
+      "neverDo": "Soha ne tedd ezt",
+      "questionsTitle": "Kérdezd meg legközelebb az orvosod",
+      "tipsTitle": "Mit tehetsz ma",
+      "emergencyTitle": "Menj kórházba, ha"
+    },
+    "anotherCta": "Másik recept magyarázata",
+    "disclaimerBold": "Nem orvosi tanács.",
+    "disclaimerBody": "Ez az eszköz orvosi kifejezéseket magyaráz el egyszerű nyelven. Mindig kövesd az orvosod utasításait.",
+    "meta": {
+      "title": "Értsd meg a receptet — Redi Health",
+      "description": "Diagnózis és gyógyszerek egyszerű szavakkal"
+    },
+    "takePhoto": "Fénykép készítése",
+    "uploadImage": "Kép feltöltése",
+    "placeholderWithImage": "(Opcionális) Adj meg extra kontextust a receptről — életkorod, hogyan szeded, mi aggaszt…",
+    "imagePreviewAlt": "Receptfotó előnézete",
+    "imageReady": "A fénykép kész",
+    "imageReadyBody": "Elolvassuk a gyógyszert, adagot és utasításokat, és mindent egyszerűen elmagyarázunk.",
+    "imageRemove": "Fénykép eltávolítása",
+    "preparingImage": "Fénykép előkészítése…",
+    "imageFailed": "Nem sikerült olvasni ezt a fényképet. Próbálj másikat."
+  },
+  "symptoms": {
+    "heroTitle": "Hol fáj?",
+    "heroSubtitle": "Érintsd meg a test azon részét, ami zavar",
+    "heroArtAlt": "Illusztráció: emberek egyszerű, többnyelvű útmutatást kapnak a mindennapi tünetekről.",
+    "backToMap": "Vissza a testtérképhez",
+    "checkAnother": "Másik terület ellenőrzése",
+    "selectSymptoms": "Jelöld be az összes illő tünetet",
+    "extraPlaceholder": "Más is? (mióta, milyen rossz…)",
+    "extraAria": "További tünetrészletek",
+    "analyzing": "Tünetek elemzése…",
+    "checkCta": "Tünetek ellenőrzése",
+    "whatToDoNow": "Mit tegyél most",
+    "homeCare": "Otthoni ápolás",
+    "escalateTitle": "Menj kórházba, ha",
+    "commonCauses": "Gyakori okok",
+    "regions": {
+      "head": "Fej",
+      "chest": "Mellkas",
+      "abdomen": "Has",
+      "leftArm": "Bal kar",
+      "rightArm": "Jobb kar",
+      "pelvis": "Altest",
+      "leftLeg": "Bal láb",
+      "rightLeg": "Jobb láb"
+    },
+    "headSymptoms": [
+      "Fejfájás",
+      "Szédülés",
+      "Homályos látás",
+      "Fülfájás",
+      "Torokfájás"
+    ],
+    "chestSymptoms": [
+      "Mellkasi fájdalom",
+      "Légszomj",
+      "Köhögés",
+      "Gyors szívverés",
+      "Szorító érzés"
+    ],
+    "abdomenSymptoms": [
+      "Hasfájás",
+      "Hányinger / hányás",
+      "Hasmenés",
+      "Felfúvódás",
+      "Étvágytalanság"
+    ],
+    "armSymptoms": [
+      "Fájdalom",
+      "Zsibbadás",
+      "Duzzanat",
+      "Nem tudom mozgatni",
+      "Csípés"
+    ],
+    "pelvisSymptoms": [
+      "Fájdalom vizeléskor",
+      "Derékfájás",
+      "Menstruációs problémák",
+      "Lágyéki fájdalom"
+    ],
+    "legSymptoms": [
+      "Lábfájás",
+      "Duzzanat",
+      "Nem tudok járni",
+      "Térd fájdalom",
+      "Zsibbadás"
+    ],
+    "meta": {
+      "title": "Tünetellenőrző — Redi Health",
+      "description": "Érintsd meg, hol fáj. Útmutatást kapsz, mit tegyél."
+    }
+  },
+  "consult": {
+    "heroTitle": "Egészségügyi konzultáció",
+    "heroSubtitle": "Mondd el, mi zavar. Felteszek pár kérdést, és segítek eldönteni, mit tegyél.",
+    "prompt": "Mi hozott ma ide?",
+    "orFreeform": "vagy írd le saját szavaiddal",
+    "freeformPlaceholder": "Tegnap óta fáj a fejem…",
+    "freeformAria": "Írd le az egészségügyi panaszod",
+    "chatHeader": "Egészségügyi konzultáció",
+    "chatSubtitle": "Néhány kérdés segít jobban segíteni",
+    "answerAria": "A válaszod",
+    "answerPlaceholder": "Írd be a válaszod…",
+    "newSession": "Új konzultáció",
+    "assessment": "Értékelés",
+    "whatToDo": "Mit tegyél",
+    "homeCare": "Otthoni ápolás",
+    "watchFor": "Figyeld ezeket a jeleket",
+    "showVisitCard": "Orvosi látogatási kártya mutatása",
+    "hideVisitCard": "Orvosi látogatási kártya elrejtése",
+    "visitCardTitle": "Betegösszefoglaló — orvosnak",
+    "visitCardDisclaimer": "A Redi Health Advisor készítette. Ez nem orvosi diagnózis.",
+    "concerns": {
+      "fever": "Láz / magas hőmérséklet",
+      "pain": "Fájdalom valahol",
+      "breathing": "Légzési problémák",
+      "skin": "Bőrprobléma / kiütés",
+      "pregnancy": "Terhességi aggodalom",
+      "child": "A gyermekem beteg",
+      "mental": "Stressz / szorongás / szomorúság",
+      "heart": "Szív / mellkas"
+    }
+  },
+  "navigate": {
+    "heroTitle": "Orvoshoz kell mennem",
+    "heroSubtitle": "Segítünk felkészülni — mit vigyél, mit mondj, milyen jogaid vannak.",
+    "issuePrompt": "Mi a probléma?",
+    "issues": {
+      "fever": "Láz / fertőzés",
+      "pain": "Fájdalom / sérülés",
+      "pregnancy": "Terhesség",
+      "chronic": "Krónikus betegség",
+      "mental": "Mentális egészség",
+      "skin": "Bőr / szem / fül",
+      "child": "Beteg gyermek",
+      "other": "Valami más"
+    },
+    "tellMore": "Mondj többet",
+    "detailPlaceholder": "Írd le, mi történik… Mióta? Mennyire rossz?",
+    "detailAria": "Írd le az egészségügyi problémádat",
+    "insuranceTitle": "Van egészségbiztosításod?",
+    "insuranceSubtitle": "Ez segít elmondani, mit vigyél magaddal",
+    "insuranceYes": "Igen, van egészségkártyám",
+    "insuranceNo": "Nem, nincs biztosításom",
+    "insuranceUnknown": "Nem vagyok biztos benne",
+    "countryTitle": "Melyik országban vagy?",
+    "generating": "Orvosi látogatási kártya előkészítése…",
+    "generateCard": "Orvosi látogatási kártya készítése",
+    "startOver": "Kezdjük elölről",
+    "showDoctor": "Mutasd meg ezt az orvosnak",
+    "generatedBy": "A Redi Health Advisor készítette",
+    "whatToBring": "Mit vigyél magaddal",
+    "askYourDoctor": "Kérdezd meg az orvosod",
+    "patientRights": "Jogaid betegként",
+    "findHospital": "Legközelebbi kórház keresése",
+    "mapHint": "Térkép megnyitása útvonallal",
+    "meta": {
+      "title": "Egészségügyi navigátor — Redi Health",
+      "description": "Készülj fel az orvosi látogatásra — látogatási kártya, mit vigyél, jogaid."
+    }
+  },
+  "about": {
+    "brand": "Redi Health",
+    "tagline": "Egészségügyi műveltség vidéki és kirekesztett közösségeknek",
+    "version": "1.0.0 verzió",
+    "missionBody": "A Redi Health egy AI-társ, amelyet terepi mediátorokkal és klinikusokkal közösen terveztek olyan közösségeknek, amelyeket a hivatalos egészségügyi rendszer gyakran alul szolgál ki — vidéki településektől az informális telepekig — különös figyelemmel a roma közösségekre. Csökkentjük a tudásbeli szakadékot, ahol a távolság, a nyelvi akadály vagy az előítélet akadályozza a hozzáférést.",
+    "values": {
+      "careLabel": "Gondosan készült",
+      "careDesc": "Egészségügyi mediátorokkal",
+      "languagesLabel": "15 nyelv",
+      "languagesDesc": "Egész Európában",
+      "evidenceLabel": "Bizonyítékokon alapul",
+      "evidenceDesc": "WHO irányelvek",
+      "communityLabel": "Közösség az első",
+      "communityDesc": "Ítélet nélkül"
+    },
+    "privacyLink": "Adatvédelmi irányelvek",
+    "termsLink": "Szolgáltatási feltételek",
+    "disclaimer": "A Redi Health nem orvostechnikai eszköz. Minden információ oktatási célú. Orvosi döntésekhez mindig kérj szakképzett egészségügyi szakember véleményét.",
+    "meta": {
+      "title": "Rólunk — Redi Health",
+      "description": "A Redi Health egészségügyi műveltségi platformjáról"
+    }
+  },
+  "theme": {
+    "ariaLabel": "Téma",
+    "light": "Világos téma",
+    "dark": "Sötét téma",
+    "system": "Rendszer téma",
+    "switchTo": "Téma váltása — jelenleg {label}"
+  },
+  "emergency": {
+    "call112": "Hívd a 112-t AZONNAL",
+    "banner": "Vészhelyzet? Hívd a 112-t",
+    "emergencyLabel": "Vészhelyzet",
+    "ambulanceLabel": "Mentő"
+  },
+  "voice": {
+    "start": "Beszéd indítása",
+    "stop": "Hallgatás leállítása",
+    "readAloud": "Felolvasás",
+    "readMessageAloud": "Üzenet felolvasása",
+    "readExplanationAloud": "Magyarázat felolvasása",
+    "micDeepgram": "Koppints a beszédhez — többnyelvű hang (Deepgram)",
+    "micError": "Nem sikerült hozzáférni a mikrofonhoz.",
+    "detected": "Észlelt nyelv: {lang}"
+  },
+  "severity": {
+    "green": "Kezelés otthon",
+    "amber": "Hamarosan fordulj orvoshoz",
+    "red": "Vészhelyzet — Menj AZONNAL",
+    "redHospital": "Menj AZONNAL a kórházba"
   }
 }

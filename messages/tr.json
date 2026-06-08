@@ -1110,5 +1110,236 @@
         "label": "Hamile kadınlar"
       }
     }
+  },
+  "explain": {
+    "heroTitle": "Reçeteni anla",
+    "heroSubtitle": "Teşhis veya ilaç adını yaz. Basit kelimelerle açıklıyoruz.",
+    "heroArtAlt": "İllüstrasyon: reçeteyi anlamak için eczane tarzı yardım.",
+    "placeholder": "Teşhis, ilaç adı yaz veya reçeteyi yapıştır…\n\nÖrnek: „Hipertansiyon” veya „Metformin 500 mg”",
+    "inputAria": "Teşhis veya ilaç adını gir",
+    "cta": "Bunu açıkla",
+    "ctaAnalyzing": "Analiz ediliyor…",
+    "examplesHeading": "Sık örnekler",
+    "loading": "Reçeten okunuyor…",
+    "sections": {
+      "whatThisMeans": "Bu ne anlama geliyor",
+      "whyItMatters": "Neden önemli",
+      "ifIgnored": "Görmezden gelirsen",
+      "medicationsTitle": "İlaçların",
+      "howToTake": "Nasıl alınır",
+      "sideEffects": "Yan etkiler",
+      "neverDo": "Bunu asla yapma",
+      "questionsTitle": "Bir sonraki sefer doktoruna sor",
+      "tipsTitle": "Bugün ne yapabilirsin",
+      "emergencyTitle": "Şu durumda hastaneye git"
+    },
+    "anotherCta": "Başka reçete açıkla",
+    "disclaimerBold": "Tıbbi tavsiye değildir.",
+    "disclaimerBody": "Bu araç tıbbi terimleri basit dille açıklar. Her zaman doktorunun talimatlarını izle.",
+    "meta": {
+      "title": "Reçeteni anla — Redi Health",
+      "description": "Teşhis ve ilaçlar basit kelimelerle açıklandı"
+    },
+    "takePhoto": "Fotoğraf çek",
+    "uploadImage": "Görsel yükle",
+    "placeholderWithImage": "(İsteğe bağlı) Reçete hakkında bağlam ekle — yaşın, nasıl aldığın, ne endişelendiriyor…",
+    "imagePreviewAlt": "Reçete fotoğrafı önizlemesi",
+    "imageReady": "Fotoğraf hazır",
+    "imageReadyBody": "İlacı, dozu ve talimatları okuyup her şeyi basit kelimelerle açıklıyoruz.",
+    "imageRemove": "Fotoğrafı kaldır",
+    "preparingImage": "Fotoğraf hazırlanıyor…",
+    "imageFailed": "Bu fotoğraf okunamadı. Başka birini dene."
+  },
+  "symptoms": {
+    "heroTitle": "Neresi ağrıyor?",
+    "heroSubtitle": "Seni rahatsız eden vücut bölgesine dokun",
+    "heroArtAlt": "İllüstrasyon: insanlar günlük semptomlar hakkında nazik çok dilli rehberlik alıyor.",
+    "backToMap": "Vücut haritasına dön",
+    "checkAnother": "Başka bölgeyi kontrol et",
+    "selectSymptoms": "Geçerli tüm semptomları seç",
+    "extraPlaceholder": "Başka bir şey? (ne kadar süredir, ne kadar kötü…)",
+    "extraAria": "Ek semptom detayları",
+    "analyzing": "Semptomlar analiz ediliyor…",
+    "checkCta": "Semptomları kontrol et",
+    "whatToDoNow": "Şimdi ne yapmalı",
+    "homeCare": "Evde bakım",
+    "escalateTitle": "Şu durumda hastaneye git",
+    "commonCauses": "Yaygın nedenler",
+    "regions": {
+      "head": "Baş",
+      "chest": "Göğüs",
+      "abdomen": "Karın",
+      "leftArm": "Sol kol",
+      "rightArm": "Sağ kol",
+      "pelvis": "Alt gövde",
+      "leftLeg": "Sol bacak",
+      "rightLeg": "Sağ bacak"
+    },
+    "headSymptoms": [
+      "Baş ağrısı",
+      "Baş dönmesi",
+      "Bulanık görme",
+      "Kulak ağrısı",
+      "Boğaz ağrısı"
+    ],
+    "chestSymptoms": [
+      "Göğüs ağrısı",
+      "Nefes darlığı",
+      "Öksürük",
+      "Hızlı kalp atışı",
+      "Sıkışma"
+    ],
+    "abdomenSymptoms": [
+      "Karın ağrısı",
+      "Mide bulantısı / kusma",
+      "İshal",
+      "Şişkinlik",
+      "İştahsızlık"
+    ],
+    "armSymptoms": [
+      "Ağrı",
+      "Uyuşma",
+      "Şişlik",
+      "Hareket ettiremiyorum",
+      "Karıncalanma"
+    ],
+    "pelvisSymptoms": [
+      "İdrar yaparken ağrı",
+      "Bel ağrısı",
+      "Adet sorunları",
+      "Kasık ağrısı"
+    ],
+    "legSymptoms": [
+      "Bacak ağrısı",
+      "Şişlik",
+      "Yürüyemiyorum",
+      "Diz ağrısı",
+      "Uyuşma"
+    ],
+    "meta": {
+      "title": "Semptom kontrolü — Redi Health",
+      "description": "Neresi ağrıyorsa dokun. Ne yapacağına dair rehberlik al."
+    }
+  },
+  "consult": {
+    "heroTitle": "Sağlık danışmanlığı",
+    "heroSubtitle": "Seni neyin rahatsız ettiğini söyle. Birkaç soru soracağım ve ne yapacağına karar vermene yardım edeceğim.",
+    "prompt": "Bugün seni buraya ne getirdi?",
+    "orFreeform": "veya kendi kelimelerinle anlat",
+    "freeformPlaceholder": "Dünden beri başım ağrıyor…",
+    "freeformAria": "Sağlık sorununu anlat",
+    "chatHeader": "Sağlık danışmanlığı",
+    "chatSubtitle": "Birkaç soru sana daha iyi yardım etmemi sağlar",
+    "answerAria": "Cevabın",
+    "answerPlaceholder": "Cevabını yaz…",
+    "newSession": "Yeni danışma",
+    "assessment": "Değerlendirme",
+    "whatToDo": "Ne yapmalı",
+    "homeCare": "Evde bakım",
+    "watchFor": "Bu belirtilere dikkat et",
+    "showVisitCard": "Doktor ziyaret kartını göster",
+    "hideVisitCard": "Doktor ziyaret kartını gizle",
+    "visitCardTitle": "Doktor için özet",
+    "visitCardDisclaimer": "Redi Health Advisor tarafından oluşturuldu. Bu tıbbi bir teşhis değildir.",
+    "concerns": {
+      "fever": "Ateş / yüksek ateş",
+      "pain": "Bir yerde ağrı",
+      "breathing": "Nefes alma sorunları",
+      "skin": "Cilt sorunu / döküntü",
+      "pregnancy": "Hamilelik endişesi",
+      "child": "Çocuğum hasta",
+      "mental": "Stres / kaygı / üzüntü",
+      "heart": "Kalp / göğüs"
+    }
+  },
+  "navigate": {
+    "heroTitle": "Doktora gitmem gerekiyor",
+    "heroSubtitle": "Hazırlanmana yardım edeceğiz — ne götüreceğin, ne söyleyeceğin, hakların.",
+    "issuePrompt": "Sorun ne?",
+    "issues": {
+      "fever": "Ateş / enfeksiyon",
+      "pain": "Ağrı / yaralanma",
+      "pregnancy": "Hamilelik",
+      "chronic": "Kronik hastalık",
+      "mental": "Ruh sağlığı",
+      "skin": "Cilt / göz / kulak",
+      "child": "Hasta çocuk",
+      "other": "Başka bir şey"
+    },
+    "tellMore": "Daha fazla anlat",
+    "detailPlaceholder": "Ne olduğunu anlat… Ne kadar süredir? Ne kadar kötü?",
+    "detailAria": "Sağlık sorununu anlat",
+    "insuranceTitle": "Sağlık sigortan var mı?",
+    "insuranceSubtitle": "Ne götüreceğini söylememize yardım eder",
+    "insuranceYes": "Evet, sağlık kartım var",
+    "insuranceNo": "Hayır, sigortam yok",
+    "insuranceUnknown": "Emin değilim",
+    "countryTitle": "Hangi ülkedesin?",
+    "generating": "Ziyaret kartı hazırlanıyor…",
+    "generateCard": "Doktor ziyaret kartı oluştur",
+    "startOver": "Baştan başla",
+    "showDoctor": "Bunu doktora göster",
+    "generatedBy": "Redi Health Advisor tarafından oluşturuldu",
+    "whatToBring": "Ne götürmeli",
+    "askYourDoctor": "Doktoruna sor",
+    "patientRights": "Hasta olarak hakların",
+    "findHospital": "En yakın hastaneyi bul",
+    "mapHint": "Rotalı haritayı açar",
+    "meta": {
+      "title": "Sağlık navigatörü — Redi Health",
+      "description": "Doktor ziyaretine hazırlan — kart, ne götüreceğin, hakların."
+    }
+  },
+  "about": {
+    "brand": "Redi Health",
+    "tagline": "Kırsal ve dışlanmış topluluklar için sağlık okuryazarlığı",
+    "version": "Sürüm 1.0.0",
+    "missionBody": "Redi Health, resmi sağlık sistemlerinin sık sık yetersiz hizmet verdiği topluluklar için saha aracıları ve klinisyenlerle birlikte tasarlanmış bir AI yardımcısıdır — kırsal yerleşimlerden gayri resmi mahallelere kadar — özellikle Roman topluluklarına odaklanarak. Mesafe, dil engeli veya dışlanmanın erişimi engellediği okuryazarlık boşluğunu kapatıyoruz.",
+    "values": {
+      "careLabel": "Özenle yapıldı",
+      "careDesc": "Sağlık aracıları tarafından",
+      "languagesLabel": "15 dil",
+      "languagesDesc": "Avrupa genelinde",
+      "evidenceLabel": "Kanıta dayalı",
+      "evidenceDesc": "DSÖ kılavuzları",
+      "communityLabel": "Topluluk öncelikli",
+      "communityDesc": "Yargısız"
+    },
+    "privacyLink": "Gizlilik politikası",
+    "termsLink": "Hizmet şartları",
+    "disclaimer": "Redi Health tıbbi bir cihaz değildir. Tüm bilgiler yalnızca eğitim amaçlıdır. Tıbbi kararlar için her zaman nitelikli bir sağlık uzmanına danışın.",
+    "meta": {
+      "title": "Hakkında — Redi Health",
+      "description": "Redi Health sağlık okuryazarlığı platformu hakkında"
+    }
+  },
+  "theme": {
+    "ariaLabel": "Tema",
+    "light": "Açık tema",
+    "dark": "Koyu tema",
+    "system": "Sistem teması",
+    "switchTo": "Temayı değiştir — şu an {label}"
+  },
+  "emergency": {
+    "call112": "112'yi HEMEN ara",
+    "banner": "Acil durum mu? 112'yi ara",
+    "emergencyLabel": "Acil durum",
+    "ambulanceLabel": "Ambulans"
+  },
+  "voice": {
+    "start": "Konuşmaya başla",
+    "stop": "Dinlemeyi durdur",
+    "readAloud": "Sesli oku",
+    "readMessageAloud": "Mesajı sesli oku",
+    "readExplanationAloud": "Açıklamayı sesli oku",
+    "micDeepgram": "Konuşmak için dokun — çok dilli ses (Deepgram)",
+    "micError": "Mikrofona erişilemiyor.",
+    "detected": "Algılanan dil: {lang}"
+  },
+  "severity": {
+    "green": "Evde bakım",
+    "amber": "Yakında doktora git",
+    "red": "Acil — HEMEN git",
+    "redHospital": "HEMEN hastaneye git"
   }
 }

@@ -1110,5 +1110,236 @@
         "label": "Trudnice"
       }
     }
+  },
+  "explain": {
+    "heroTitle": "Razumij svoj recept",
+    "heroSubtitle": "Unesi dijagnozu ili naziv lijeka. Objašnjavamo jednostavnim riječima.",
+    "heroArtAlt": "Ilustracija: pomoć u stilu apoteke za razumijevanje recepta.",
+    "placeholder": "Unesi dijagnozu, naziv lijeka ili zalijepi recept…\n\nPrimjer: „Hipertenzija” ili „Metformin 500 mg”",
+    "inputAria": "Unesi dijagnozu ili naziv lijeka",
+    "cta": "Objasni ovo",
+    "ctaAnalyzing": "Analiziram…",
+    "examplesHeading": "Česti primjeri",
+    "loading": "Čitam tvoj recept…",
+    "sections": {
+      "whatThisMeans": "Šta to znači",
+      "whyItMatters": "Zašto je važno",
+      "ifIgnored": "Ako to zanemariš",
+      "medicationsTitle": "Tvoji lijekovi",
+      "howToTake": "Kako uzimati",
+      "sideEffects": "Nuspojave",
+      "neverDo": "Nikad ne radi ovo",
+      "questionsTitle": "Pitaj ljekara sljedeći put",
+      "tipsTitle": "Šta možeš danas",
+      "emergencyTitle": "Idi u bolnicu ako"
+    },
+    "anotherCta": "Objasni drugi recept",
+    "disclaimerBold": "Nije medicinski savjet.",
+    "disclaimerBody": "Ovaj alat objašnjava medicinske termine jednostavnim jezikom. Uvijek slijedi upute svog ljekara.",
+    "meta": {
+      "title": "Razumij svoj recept — Redi Health",
+      "description": "Dijagnoza i lijekovi objašnjeni jednostavnim riječima"
+    },
+    "takePhoto": "Slikaj",
+    "uploadImage": "Prenesi sliku",
+    "placeholderWithImage": "(Opcionalno) Dodaj kontekst o receptu — godine, kako uzimaš, šta te brine…",
+    "imagePreviewAlt": "Pregled slike recepta",
+    "imageReady": "Slika je spremna",
+    "imageReadyBody": "Čitamo lijek, dozu i upute i objašnjavamo sve jednostavnim riječima.",
+    "imageRemove": "Ukloni sliku",
+    "preparingImage": "Pripremam sliku…",
+    "imageFailed": "Nisam mogao pročitati ovu sliku. Probaj drugu."
+  },
+  "symptoms": {
+    "heroTitle": "Gdje te boli?",
+    "heroSubtitle": "Dodirni dio tijela koji te muči",
+    "heroArtAlt": "Ilustracija: ljudi dobivaju nježne višejezične savjete o svakodnevnim simptomima.",
+    "backToMap": "Nazad na mapu tijela",
+    "checkAnother": "Provjeri drugo područje",
+    "selectSymptoms": "Odaberi sve simptome koji vrijede",
+    "extraPlaceholder": "Nešto drugo? (koliko dugo, koliko loše…)",
+    "extraAria": "Dodatni detalji o simptomima",
+    "analyzing": "Analiziram simptome…",
+    "checkCta": "Provjeri simptome",
+    "whatToDoNow": "Šta sada učiniti",
+    "homeCare": "Njega kod kuće",
+    "escalateTitle": "Idi u bolnicu ako",
+    "commonCauses": "Uobičajeni uzroci",
+    "regions": {
+      "head": "Glava",
+      "chest": "Grudi",
+      "abdomen": "Trbuh",
+      "leftArm": "Lijeva ruka",
+      "rightArm": "Desna ruka",
+      "pelvis": "Zdjelica",
+      "leftLeg": "Lijeva noga",
+      "rightLeg": "Desna noga"
+    },
+    "headSymptoms": [
+      "Glavobolja",
+      "Vrtoglavica",
+      "Zamućen vid",
+      "Bol u uhu",
+      "Bol u grlu"
+    ],
+    "chestSymptoms": [
+      "Bol u grudima",
+      "Otežano disanje",
+      "Kašalj",
+      "Ubrzan rad srca",
+      "Stiskanje"
+    ],
+    "abdomenSymptoms": [
+      "Bol u trbuhu",
+      "Mučnina / povraćanje",
+      "Proljev",
+      "Nadutost",
+      "Nema apetita"
+    ],
+    "armSymptoms": [
+      "Bol",
+      "Trnci",
+      "Otekline",
+      "Ne mogu ga pomjeriti",
+      "Trnci"
+    ],
+    "pelvisSymptoms": [
+      "Bol pri mokrenju",
+      "Bol u leđima",
+      "Menstrualni problemi",
+      "Bol u preponama"
+    ],
+    "legSymptoms": [
+      "Bol u nozi",
+      "Otekline",
+      "Ne mogu hodati",
+      "Bol u koljenu",
+      "Trnci"
+    ],
+    "meta": {
+      "title": "Provjera simptoma — Redi Health",
+      "description": "Dodirni gdje te boli. Dobij smjernice šta učiniti."
+    }
+  },
+  "consult": {
+    "heroTitle": "Zdravstvena konzultacija",
+    "heroSubtitle": "Reci mi šta te muči. Postavit ću nekoliko pitanja i pomoći ću ti odlučiti šta učiniti.",
+    "prompt": "Šta te je danas dovelo ovdje?",
+    "orFreeform": "ili opiši svojim riječima",
+    "freeformPlaceholder": "Od jučer me boli glava…",
+    "freeformAria": "Opiši svoj zdravstveni problem",
+    "chatHeader": "Zdravstvena konzultacija",
+    "chatSubtitle": "Nekoliko pitanja mi pomaže da ti bolje pomognem",
+    "answerAria": "Tvoj odgovor",
+    "answerPlaceholder": "Unesi odgovor…",
+    "newSession": "Nova konzultacija",
+    "assessment": "Procjena",
+    "whatToDo": "Šta učiniti",
+    "homeCare": "Njega kod kuće",
+    "watchFor": "Pazi na ove znakove",
+    "showVisitCard": "Prikaži karticu za posjet ljekaru",
+    "hideVisitCard": "Sakrij karticu za posjet",
+    "visitCardTitle": "Sažetak za ljekara",
+    "visitCardDisclaimer": "Generisao Redi Health Advisor. Ovo nije medicinska dijagnoza.",
+    "concerns": {
+      "fever": "Groznica / visoka temperatura",
+      "pain": "Bol negdje",
+      "breathing": "Problemi s disanjem",
+      "skin": "Problem s kožom / osip",
+      "pregnancy": "Zabrinutost zbog trudnoće",
+      "child": "Moje dijete je bolesno",
+      "mental": "Stres / anksioznost / tuga",
+      "heart": "Srce / grudi"
+    }
+  },
+  "navigate": {
+    "heroTitle": "Trebam ljekara",
+    "heroSubtitle": "Pomoći ćemo ti pripremiti se — šta ponijeti, šta reći, tvoja prava.",
+    "issuePrompt": "Koji je problem?",
+    "issues": {
+      "fever": "Groznica / infekcija",
+      "pain": "Bol / povreda",
+      "pregnancy": "Trudnoća",
+      "chronic": "Hronična bolest",
+      "mental": "Mentalno zdravlje",
+      "skin": "Koža / oči / uši",
+      "child": "Bolesno dijete",
+      "other": "Nešto drugo"
+    },
+    "tellMore": "Reci nam više",
+    "detailPlaceholder": "Opiši šta se dešava… Koliko dugo? Koliko loše?",
+    "detailAria": "Opiši svoj zdravstveni problem",
+    "insuranceTitle": "Imaš li zdravstveno osiguranje?",
+    "insuranceSubtitle": "Pomaže nam reći šta ponijeti",
+    "insuranceYes": "Da, imam zdravstvenu karticu",
+    "insuranceNo": "Ne, nemam osiguranje",
+    "insuranceUnknown": "Nisam siguran/na",
+    "countryTitle": "U kojoj si državi?",
+    "generating": "Pripremam karticu za posjet…",
+    "generateCard": "Generiši karticu za posjet ljekaru",
+    "startOver": "Počni iznova",
+    "showDoctor": "Pokaži ovo ljekaru",
+    "generatedBy": "Generisao Redi Health Advisor",
+    "whatToBring": "Šta ponijeti",
+    "askYourDoctor": "Pitaj svog ljekara",
+    "patientRights": "Tvoja prava kao pacijenta",
+    "findHospital": "Pronađi najbližu bolnicu",
+    "mapHint": "Otvara mapu s rutom",
+    "meta": {
+      "title": "Zdravstveni navigator — Redi Health",
+      "description": "Pripremi se za posjet ljekaru — kartica, šta ponijeti, tvoja prava."
+    }
+  },
+  "about": {
+    "brand": "Redi Health",
+    "tagline": "Zdravstvena pismenost za sela i marginalizirane zajednice",
+    "version": "Verzija 1.0.0",
+    "missionBody": "Redi Health je AI pomoćnik su-dizajniran s terenskim mediatorima i kliničarima za zajednice koje službeni zdravstveni sistemi često nedovoljno opslužuju — od sela do neformalnih naselja — s posebnom pažnjom na romske zajednice. Smanjujemo jaz u pismenosti gdje udaljenost, jezična barijera ili isključenost sprječavaju pristup.",
+    "values": {
+      "careLabel": "Napravljeno s brigom",
+      "careDesc": "Od zdravstvenih medijatora",
+      "languagesLabel": "15 jezika",
+      "languagesDesc": "Širom Europe",
+      "evidenceLabel": "Temeljeno na dokazima",
+      "evidenceDesc": "Smjernice SZO-a",
+      "communityLabel": "Zajednica na prvom mjestu",
+      "communityDesc": "Bez osuđivanja"
+    },
+    "privacyLink": "Pravila privatnosti",
+    "termsLink": "Uslovi korištenja",
+    "disclaimer": "Redi Health nije medicinski uređaj. Sve informacije su samo u obrazovne svrhe. Uvijek se konzultiraj s kvalificiranim zdravstvenim radnikom za medicinske odluke.",
+    "meta": {
+      "title": "O nama — Redi Health",
+      "description": "O platformi za zdravstvenu pismenost Redi Health"
+    }
+  },
+  "theme": {
+    "ariaLabel": "Tema",
+    "light": "Svijetla tema",
+    "dark": "Tamna tema",
+    "system": "Sistemska tema",
+    "switchTo": "Promijeni temu — sada {label}"
+  },
+  "emergency": {
+    "call112": "Pozovite 112 ODMAH",
+    "banner": "Hitna situacija? Pozovite 112",
+    "emergencyLabel": "Hitna situacija",
+    "ambulanceLabel": "Hitna pomoć"
+  },
+  "voice": {
+    "start": "Počni govoriti",
+    "stop": "Zaustavi slušanje",
+    "readAloud": "Pročitaj naglas",
+    "readMessageAloud": "Pročitaj poruku naglas",
+    "readExplanationAloud": "Pročitaj objašnjenje naglas",
+    "micDeepgram": "Dodirni za govor — višejezični glas (Deepgram)",
+    "micError": "Nema pristupa mikrofonu.",
+    "detected": "Otkriven jezik: {lang}"
+  },
+  "severity": {
+    "green": "Njega kod kuće",
+    "amber": "Uskoro posjetite ljekara",
+    "red": "Hitno — Idi ODMAH",
+    "redHospital": "Idi u bolnicu ODMAH"
   }
 }

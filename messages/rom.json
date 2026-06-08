@@ -1546,5 +1546,409 @@
         "simple": "Kada si e vojska le truposki kontra mikrobi. Parne ratune ćelije maren infekcije. Vakcine trenirinen o imuniteto. Lačho xaben, sovipen thaj miškipen kerel les maj zoralo."
       }
     }
+  },
+  "healthQuiz": {
+    "meta": {
+      "title": "Sastipenasqo quiz — Redi Health",
+      "description": "Testisar tiro sastipenasqe sikljovipen le interaktivne quizura"
+    },
+    "title": "Sastipenasqo quiz",
+    "subtitle": "Testisar tiro sikljovipen. Sikhljol nevo buti.",
+    "backToQuizzes": "Pale ko quizura",
+    "seeResults": "Dikh rezultatura",
+    "nextQuestion": "Agore phuv",
+    "questionsCount": "{count} phuvi",
+    "results": {
+      "perfect": "Perfekto rezultato!",
+      "great": "Buti buti!",
+      "good": "Buti zumavipen!",
+      "keepLearning": "Phir sikhljol!",
+      "score": "Tu {score} katar {total} čačipe",
+      "tryAgain": "Phirav",
+      "moreQuizzes": "Maj but quizura"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotics",
+        "description": "Do you know when to use antibiotics?",
+        "questions": [
+          {
+            "question": "Can antibiotics cure the flu?",
+            "options": [
+              "Yes",
+              "No",
+              "Sometimes"
+            ],
+            "explanation": "The flu is caused by a virus. Antibiotics only kill bacteria. Taking antibiotics for the flu does nothing and can make future infections harder to treat."
+          },
+          {
+            "question": "You feel better after 3 days of antibiotics. Should you stop?",
+            "options": [
+              "Yes, you're cured",
+              "No, finish the full course",
+              "Take half the remaining pills"
+            ],
+            "explanation": "ALWAYS finish the full course. If you stop early, some bacteria survive and become resistant. Next time, the same antibiotic won't work."
+          },
+          {
+            "question": "Can you share antibiotics with a family member who has similar symptoms?",
+            "options": [
+              "Yes, it saves money",
+              "No, never",
+              "Only if it's the same illness"
+            ],
+            "explanation": "Never share antibiotics. Different infections need different medicines. The wrong antibiotic can be dangerous and won't help."
+          },
+          {
+            "question": "What happens if you take antibiotics too often?",
+            "options": [
+              "Nothing bad",
+              "Your body becomes immune to illness",
+              "Bacteria become resistant and harder to kill"
+            ],
+            "explanation": "Antibiotic resistance is a global crisis. When bacteria become resistant, simple infections can become deadly. Only take antibiotics when a doctor prescribes them."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "Vaccines",
+        "description": "Separate facts from myths",
+        "questions": [
+          {
+            "question": "Do vaccines cause autism?",
+            "options": [
+              "Yes",
+              "No",
+              "We don't know"
+            ],
+            "explanation": "NO. This myth started from a fraudulent study that was retracted. The doctor who published it lost his medical license. Dozens of studies with millions of children prove vaccines do NOT cause autism."
+          },
+          {
+            "question": "Is it safe to give a baby multiple vaccines at once?",
+            "options": [
+              "No, it's too much",
+              "Yes, it's safe and tested",
+              "Only one at a time"
+            ],
+            "explanation": "Babies' immune systems handle thousands of germs every day. Combination vaccines are thoroughly tested and safe. Delaying vaccines leaves your child unprotected."
+          },
+          {
+            "question": "My child has a mild cold. Can they still get vaccinated?",
+            "options": [
+              "No, wait until fully healthy",
+              "Yes, a mild cold is fine",
+              "Only with doctor permission"
+            ],
+            "explanation": "A mild cold, low fever, or runny nose is NOT a reason to delay vaccination. Only severe illness requires postponement. Ask your doctor if unsure."
+          },
+          {
+            "question": "Do vaccines contain dangerous chemicals?",
+            "options": [
+              "Yes, they're full of toxins",
+              "No, all ingredients are safe in the tiny amounts used",
+              "Some do, some don't"
+            ],
+            "explanation": "Vaccine ingredients are present in tiny, safe amounts. You get more aluminum from breast milk than from a vaccine. Every ingredient has been tested for safety."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Diabetes",
+        "description": "Understanding diabetes management",
+        "questions": [
+          {
+            "question": "Is diabetes caused by eating too much sugar?",
+            "options": [
+              "Yes",
+              "No, it's more complex",
+              "Only Type 2"
+            ],
+            "explanation": "Diabetes is caused by genetics, lifestyle, and how your body processes insulin. Eating sugar doesn't directly cause it, but an unhealthy diet and obesity increase risk."
+          },
+          {
+            "question": "Can diabetes be cured with natural remedies like cinnamon?",
+            "options": [
+              "Yes, cinnamon cures it",
+              "No, there is no cure but it can be managed",
+              "Yes, with enough garlic and herbs"
+            ],
+            "explanation": "There is NO cure for diabetes. It can be MANAGED with medicine, healthy food, and exercise. Cinnamon may have tiny benefits but CANNOT replace medication. People who stop their medicine end up in hospital."
+          },
+          {
+            "question": "A diabetic person feels dizzy and sweaty. What should you do?",
+            "options": [
+              "Give them insulin",
+              "Give them something sweet immediately",
+              "Tell them to rest"
+            ],
+            "explanation": "These are signs of LOW blood sugar (hypoglycemia). Give them juice, candy, or sugar water immediately. This can be life-threatening. After they feel better, they should eat a proper meal."
+          },
+          {
+            "question": "How often should a diabetic person check their feet?",
+            "options": [
+              "Never, feet are fine",
+              "Every day",
+              "Once a year"
+            ],
+            "explanation": "Diabetes can damage nerves in your feet. You might not feel cuts or sores. Check your feet EVERY DAY for cuts, blisters, or color changes. Small wounds can become serious infections."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Hygiene & Prevention",
+        "description": "Basic health habits that save lives",
+        "questions": [
+          {
+            "question": "How long should you wash your hands with soap?",
+            "options": [
+              "5 seconds",
+              "At least 20 seconds",
+              "1 minute"
+            ],
+            "explanation": "Wash for at least 20 seconds — about the time it takes to sing 'Happy Birthday' twice. This removes most germs. Quick rinses don't work."
+          },
+          {
+            "question": "Is it safe to drink water from a river or stream?",
+            "options": [
+              "Yes, natural water is clean",
+              "No, always boil or filter it first",
+              "Only if it looks clear"
+            ],
+            "explanation": "Even clear water can contain dangerous bacteria and parasites. Always boil water for at least 1 minute or use a filter. Dirty water causes diarrhea, cholera, and typhoid."
+          },
+          {
+            "question": "Your child has diarrhea. What's the most important thing?",
+            "options": [
+              "Stop all food",
+              "Give lots of fluids (water, ORS)",
+              "Give antibiotics"
+            ],
+            "explanation": "Dehydration from diarrhea kills more children than the diarrhea itself. Give oral rehydration solution (ORS) or clean water with a pinch of salt and sugar. Keep breastfeeding babies."
+          },
+          {
+            "question": "When should you wash your hands?",
+            "options": [
+              "Only before eating",
+              "Before eating, after toilet, after touching animals, after coughing",
+              "Only when they look dirty"
+            ],
+            "explanation": "Germs are invisible. Wash hands: before eating/cooking, after using the toilet, after changing diapers, after touching animals, after coughing/sneezing, and after touching sick people."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Ja tiri hakaja — Redi Health",
+      "description": "Pacientosqe hakaja, pomoc katar diskriminacia thaj legalne kontaktura"
+    },
+    "title": "Ja tiri hakaja",
+    "subtitle": "Si tu hakaja sar paciento. Sikhljol len. Phirav len.",
+    "back": "Pale",
+    "menu": {
+      "patientRights": {
+        "title": "Pacientosqe hakaja",
+        "desc": "8 hakaja so si savore pacientosa"
+      },
+      "discrimination": {
+        "title": "Dikhaves diskriminacia?",
+        "desc": "So te phenes thaj keres — stepo pa stepo"
+      },
+      "contacts": {
+        "title": "Legalno pomoc palal thema",
+        "desc": "Ombudsman, anti-diskriminacia, romane organizacie"
+      }
+    },
+    "views": {
+      "patientRights": "Tiri hakaja sar paciento",
+      "discrimination": "Te dikhaves diskriminacia",
+      "discriminationDesc": "Čačipe situacie thaj sasto so te phenes thaj keres.",
+      "contacts": "Legalno pomoc palal thema"
+    },
+    "labels": {
+      "sayThis": "Phen akava:",
+      "thenDo": "Palal ker akava:",
+      "patientOmbudsman": "Pacientosqo ombudsman",
+      "antiDiscrimination": "Anti-diskriminacia",
+      "romaRightsOrg": "Organizacia vaš romane hakaja"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Right to emergency treatment",
+        "description": "Every hospital MUST treat you in an emergency, even without insurance or documents. This is law in every EU country. If they refuse, ask for the doctor's name and report it."
+      },
+      "information": {
+        "title": "Right to understand your diagnosis",
+        "description": "Your doctor must explain your condition in words you understand. If you don't understand, say: 'Can you explain this more simply?' You can also ask for a written summary."
+      },
+      "consent": {
+        "title": "Right to say no",
+        "description": "No one can force treatment on you. Before any procedure, the doctor must explain what they will do and you must agree. You can always say 'I need time to think.'"
+      },
+      "privacy": {
+        "title": "Right to privacy",
+        "description": "Your medical information is private. Doctors cannot share it with your employer, family, or anyone else without your permission. This includes your HIV status, pregnancy, or mental health."
+      },
+      "interpreter": {
+        "title": "Right to an interpreter",
+        "description": "If you don't speak the local language well, you can request an interpreter. Many hospitals have this service. If not, you can bring someone you trust to translate."
+      },
+      "second-opinion": {
+        "title": "Right to a second opinion",
+        "description": "If you disagree with a diagnosis, you can see another doctor. This is your right. You don't need to explain why."
+      },
+      "records": {
+        "title": "Right to your medical records",
+        "description": "You can ask for a copy of all your medical records at any time. The hospital must provide them. This is useful when changing doctors or moving to another city."
+      },
+      "complaint": {
+        "title": "Right to complain",
+        "description": "If you feel mistreated or discriminated against, you can file a complaint. Every hospital has a complaints procedure. You can also contact the patient ombudsman in your country."
+      }
+    },
+    "scenarios": {},
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Khethanipasko istorija — Redi Health",
+      "description": "Čačipe sastipenasqe eksperiencie anda romane khethanipa ande Evropa"
+    },
+    "title": "Khethanipasko istorija",
+    "subtitle": "Čačipe eksperiencie anda romane khethanipa. Sikhljol katar aver.",
+    "backToStories": "Pale ko istorija",
+    "lessonLearned": "Sikljovipen",
+    "whatToDoNext": "So te keres palal",
+    "categories": {
+      "vaccines": "Vakcina",
+      "chronic": "Hronikalno nasvalipe",
+      "maternal": "Pušnipen",
+      "discrimination": "Hakaja",
+      "prevention": "Parandalipen",
+      "mental": "Goďengo sastipe"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Vakcinasko gido",
+      "askZuvo": "Phuch Zuvo",
+      "explainPrescription": "Ververde receto",
+      "navigateToCare": "Navigirinel ko sastipe",
+      "knowYourRights": "Ja tiri hakaja",
+      "learnPrevention": "Sikhljol parandalipen",
+      "checkSymptoms": "Dikh symptomura",
+      "learnMentalHealth": "Sikhljol pa goďengo sastipe"
+    },
+    "entries": {}
+  },
+  "challenges": {
+    "meta": {
+      "title": "Challenge — Redi Health",
+      "description": "Khethanipasko challenge"
+    },
+    "title": "Aktivno challenge",
+    "subtitle": "Ulen ko khethanipasko thaj personalno challenge te les bonus XP thaj badge.",
+    "types": {
+      "community": "khethanipe",
+      "personal": "personalno"
+    },
+    "daysLeft": "{count} dives ramne",
+    "viewLeaderboard": "Dikh leaderboard",
+    "items": {
+      "c1": {
+        "title": "Vakcinasko championo",
+        "description": "Pomoz 50 školaverde ande tiro than te phiren o Vakcina modul akaja săptămâna."
+      },
+      "c2": {
+        "title": "7-divesqo sastipen",
+        "description": "Thov tiro gond thaj paji 7 dives anglal."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Sertifikato — Redi Health",
+      "description": "Nacionalno sastipenasqo sikljovipen sertifikato"
+    },
+    "title": "Tiro sertifikato",
+    "subtitle": "Tu agorisares o Nacionalno stadijako Student Health Academy.",
+    "ofCompletion": "Sertifikato agorisaripasko",
+    "diplomaTitle": "Nacionalno sastipenasqo sikljovipen",
+    "awardedFor": "Delo vash agorisaripen e Redi Health Academy kurrikulako.",
+    "date": "Dato",
+    "downloadPdf": "Shkarko PDF",
+    "share": "Ulav",
+    "gate": {
+      "title": "Agorisar anglal Akademija",
+      "description": "Te les tiro sastipenasqo sikljovipen sertifikato, trubul te agorisares sa lekcie thaj te phires o quiz ando Nacionalno stadio.",
+      "cta": "Dža ko Akademija"
+    }
   }
 }
