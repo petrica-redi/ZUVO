@@ -1650,5 +1650,500 @@
     "contactSupport": "Kontaktovať regionálneho koordinátora",
     "resources": "Zdroje pre mediátora",
     "downloadGuide": "Stiahnuť terénny sprievodca (PDF)"
+  },
+  "healthQuiz": {
+    "meta": {
+      "title": "Zdravotný kvíz — Redi Health",
+      "description": "Otestujte si svoje zdravotné znalosti pomocou interaktívnych kvízov"
+    },
+    "title": "Zdravotný kvíz",
+    "subtitle": "Otestujte si svoje vedomosti. Naučte sa niečo nové.",
+    "backToQuizzes": "Späť ku kvízom",
+    "seeResults": "Pozrite si výsledky",
+    "nextQuestion": "Ďalšia otázka",
+    "questionsCount": "{count} otázok",
+    "results": {
+      "perfect": "Perfektné skóre!",
+      "great": "Skvelá práca!",
+      "good": "Dobré úsilie!",
+      "keepLearning": "Učte sa ďalej!",
+      "score": "Správne ste dosiahli {score} z {total}",
+      "tryAgain": "Skúste to znova",
+      "moreQuizzes": "Viac kvízov"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotiká",
+        "description": "Viete, kedy užívať antibiotiká?",
+        "questions": [
+          {
+            "question": "Môžu antibiotiká vyliečiť chrípku?",
+            "options": [
+              "áno",
+              "Nie",
+              "Niekedy"
+            ],
+            "explanation": "Chrípka je spôsobená vírusom. Antibiotiká zabíjajú iba baktérie. Užívanie antibiotík na chrípku nič nerobí a môže sťažiť liečbu budúcich infekcií."
+          },
+          {
+            "question": "Po 3 dňoch užívania antibiotík sa cítite lepšie. Mali by ste prestať?",
+            "options": [
+              "Áno, si vyliečený",
+              "Nie, dokončite celý kurz",
+              "Vezmite polovicu zvyšných tabliet"
+            ],
+            "explanation": "VŽDY dokončite celý kurz. Ak prestanete skoro, niektoré baktérie prežijú a stanú sa odolnými. Nabudúce to isté antibiotikum nezaberie."
+          },
+          {
+            "question": "Môžete zdieľať antibiotiká s členom rodiny, ktorý má podobné príznaky?",
+            "options": [
+              "Áno, šetrí to peniaze",
+              "Nie, nikdy",
+              "Iba ak ide o rovnakú chorobu"
+            ],
+            "explanation": "Nikdy nezdieľajte antibiotiká. Rôzne infekcie vyžadujú rôzne lieky. Nesprávne antibiotikum môže byť nebezpečné a nepomôže."
+          },
+          {
+            "question": "Čo sa stane, ak užívate antibiotiká príliš často?",
+            "options": [
+              "Nič zlé",
+              "Vaše telo sa stáva imúnnym voči chorobám",
+              "Baktérie sa stávajú odolnými a ťažšie sa zabíjajú"
+            ],
+            "explanation": "Antibiotická rezistencia je globálna kríza. Keď sa baktérie stanú odolnými, jednoduché infekcie sa môžu stať smrteľnými. Antibiotiká užívajte len vtedy, keď ich predpíše lekár."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "Vakcíny",
+        "description": "Oddeľte fakty od mýtov",
+        "questions": [
+          {
+            "question": "Spôsobujú vakcíny autizmus?",
+            "options": [
+              "áno",
+              "Nie",
+              "nevieme"
+            ],
+            "explanation": "NIE Tento mýtus vznikol na základe podvodnej štúdie, ktorá bola stiahnutá. Lekár, ktorý to zverejnil, prišiel o lekársku licenciu. Desiatky štúdií s miliónmi detí dokazujú, že vakcíny NEspôsobujú autizmus."
+          },
+          {
+            "question": "Je bezpečné dať dieťaťu viacero vakcín naraz?",
+            "options": [
+              "Nie, je toho priveľa",
+              "Áno, je to bezpečné a testované",
+              "Len po jednom"
+            ],
+            "explanation": "Imunitný systém detí sa každý deň vysporiada s tisíckami baktérií. Kombinované vakcíny sú dôkladne testované a bezpečné. Odloženie očkovania ponecháva vaše dieťa nechránené."
+          },
+          {
+            "question": "Moje dieťa má miernu nádchu. Môžu sa ešte dať zaočkovať?",
+            "options": [
+              "Nie, počkaj, kým nebude úplne zdravý",
+              "Áno, mierne prechladnutie je v poriadku",
+              "Len so súhlasom lekára"
+            ],
+            "explanation": "Mierna nádcha, nízka horúčka alebo nádcha NIE SÚ dôvodom na odloženie očkovania. Len ťažké ochorenie si vyžaduje odklad. Ak si nie ste istý, opýtajte sa svojho lekára."
+          },
+          {
+            "question": "Obsahujú vakcíny nebezpečné chemikálie?",
+            "options": [
+              "Áno, sú plné toxínov",
+              "Nie, všetky zložky sú v malých množstvách bezpečné",
+              "Niektorí áno, niektorí nie"
+            ],
+            "explanation": "Zložky vakcíny sú prítomné v malých, bezpečných množstvách. Z materského mlieka dostanete viac hliníka ako z vakcíny. Každá zložka bola testovaná na bezpečnosť."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Cukrovka",
+        "description": "Pochopenie liečby cukrovky",
+        "questions": [
+          {
+            "question": "Je cukrovka spôsobená konzumáciou príliš veľkého množstva cukru?",
+            "options": [
+              "áno",
+              "Nie, je to zložitejšie",
+              "Len typ 2"
+            ],
+            "explanation": "Diabetes je spôsobený genetikou, životným štýlom a tým, ako vaše telo spracováva inzulín. Konzumácia cukru to priamo nespôsobuje, ale nezdravá strava a obezita zvyšujú riziko."
+          },
+          {
+            "question": "Dá sa cukrovka vyliečiť prírodnými prostriedkami, ako je škorica?",
+            "options": [
+              "Áno, škorica to lieči",
+              "Nie, neexistuje žiadny liek, ale dá sa to zvládnuť",
+              "Áno, s dostatkom cesnaku a byliniek"
+            ],
+            "explanation": "Na cukrovku NEEXISTUJE liek. Dá sa to zvládnuť liekmi, zdravým jedlom a cvičením. Škorica môže mať malé výhody, ale NEMÔŽE nahradiť lieky. Ľudia, ktorí prestanú užívať lieky, skončia v nemocnici."
+          },
+          {
+            "question": "Diabetik pociťuje závraty a pot. Čo by ste mali urobiť?",
+            "options": [
+              "Dajte im inzulín",
+              "Okamžite im dajte niečo sladké",
+              "Povedzte im, aby si oddýchli"
+            ],
+            "explanation": "Toto sú príznaky NÍZKEHO cukru v krvi (hypoglykémia). Okamžite im dajte šťavu, cukrík alebo cukrovú vodu. To môže byť život ohrozujúce. Keď sa budú cítiť lepšie, mali by sa poriadne najesť."
+          },
+          {
+            "question": "Ako často by si mal diabetik kontrolovať chodidlá?",
+            "options": [
+              "Nikdy, nohy sú v poriadku",
+              "Každý deň",
+              "Raz za rok"
+            ],
+            "explanation": "Diabetes môže poškodiť nervy v nohách. Možno nebudete cítiť rezné rany alebo rany. KAŽDÝ DEŇ kontrolujte svoje chodidlá, či na nich nie sú rezné rany, pľuzgiere alebo zmeny farby. Malé rany sa môžu stať vážnymi infekciami."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Hygiena a prevencia",
+        "description": "Základné zdravotné návyky, ktoré zachraňujú životy",
+        "questions": [
+          {
+            "question": "Ako dlho by ste si mali umývať ruky mydlom?",
+            "options": [
+              "5 sekúnd",
+              "Minimálne 20 sekúnd",
+              "1 minúta"
+            ],
+            "explanation": "Umývajte sa aspoň 20 sekúnd, čo je približne čas potrebný na zaspievanie „Happy Birthday“ dvakrát. Tým sa odstráni väčšina choroboplodných zárodkov. Rýchle oplachy nefungujú."
+          },
+          {
+            "question": "Je bezpečné piť vodu z rieky alebo potoka?",
+            "options": [
+              "Áno, prírodná voda je čistá",
+              "Nie, vždy to najskôr prevarte alebo prefiltrujte",
+              "Iba ak to vyzerá jasne"
+            ],
+            "explanation": "Aj čistá voda môže obsahovať nebezpečné baktérie a parazity. Vodu vždy varte aspoň 1 minútu alebo použite filter. Špinavá voda spôsobuje hnačku, choleru a týfus."
+          },
+          {
+            "question": "Vaše dieťa má hnačku. Čo je najdôležitejšie?",
+            "options": [
+              "Zastavte všetko jedlo",
+              "Podávajte veľa tekutín (voda, ORS)",
+              "Podávajte antibiotiká"
+            ],
+            "explanation": "Dehydratácia z hnačky zabíja viac detí ako samotná hnačka. Podávajte perorálny rehydratačný roztok (ORS) alebo čistú vodu so štipkou soli a cukru. Nechajte deti dojčiť."
+          },
+          {
+            "question": "Kedy by ste si mali umývať ruky?",
+            "options": [
+              "Iba pred jedlom",
+              "Pred jedlom, po toalete, po dotyku zvierat, po kašli",
+              "Len keď vyzerajú špinavé"
+            ],
+            "explanation": "Baktérie sú neviditeľné. Umyte si ruky: pred jedlom/varením, po použití toalety, po výmene plienok, po dotyku zvierat, po kašľaní/kýchnutí a po dotyku chorých ľudí."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Poznajte svoje práva — Redi Health",
+      "description": "Práva pacientov, pomoc pri diskriminácii a právne kontakty pre rómske komunity"
+    },
+    "title": "Poznajte svoje práva",
+    "subtitle": "Ako pacient máte práva. Naučte sa ich. Použite ich.",
+    "back": "Späť",
+    "menu": {
+      "patientRights": {
+        "title": "Práva pacienta",
+        "desc": "8 práv má každý pacient"
+      },
+      "discrimination": {
+        "title": "Čeliť diskriminácii?",
+        "desc": "Čo povedať a urobiť – krok za krokom"
+      },
+      "contacts": {
+        "title": "Právna pomoc podľa krajiny",
+        "desc": "Ombudsman, antidiskriminácia, rómske organizácie"
+      }
+    },
+    "views": {
+      "patientRights": "Vaše práva pacienta",
+      "discrimination": "Ak čelíte diskriminácii",
+      "discriminationDesc": "Skutočné situácie a presne to, čo povedať a urobiť.",
+      "contacts": "Právna pomoc podľa krajiny"
+    },
+    "labels": {
+      "sayThis": "Povedz toto:",
+      "thenDo": "Potom urob toto:",
+      "patientOmbudsman": "Ombudsman pre pacientov",
+      "antiDiscrimination": "Proti diskriminácii",
+      "romaRightsOrg": "Organizácia za práva Rómov"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Právo na núdzové ošetrenie",
+        "description": "Každá nemocnica vás MUSÍ v prípade núdze ošetriť aj bez poistenia a dokladov. Toto je zákon v každej EU krajine. Ak odmietnu, opýtajte sa na meno lekára a nahláste to."
+      },
+      "information": {
+        "title": "Právo porozumieť svojej diagnóze",
+        "description": "Váš lekár vám musí vysvetliť váš stav slovami, ktorým rozumiete. Ak nerozumiete, povedzte: 'Môžete to vysvetliť jednoduchšie?' Môžete tiež požiadať o písomné zhrnutie."
+      },
+      "consent": {
+        "title": "Právo povedať nie",
+        "description": "Nikto vám nemôže nútiť liečbu. Pred akýmkoľvek zákrokom vám lekár musí vysvetliť, čo bude robiť, a vy musíte súhlasiť. Vždy môžete povedať 'Potrebujem čas na rozmyslenie.'"
+      },
+      "privacy": {
+        "title": "Právo na súkromie",
+        "description": "Vaše zdravotné informácie sú súkromné. Lekári ho bez vášho súhlasu nemôžu zdieľať s vaším zamestnávateľom, rodinou ani nikým iným. To zahŕňa váš stav HIV, tehotenstvo alebo duševné zdravie."
+      },
+      "interpreter": {
+        "title": "Právo na tlmočníka",
+        "description": "Ak neovládate dobre miestny jazyk, môžete požiadať o tlmočníka. Túto službu má veľa nemocníc. Ak nie, na preklad môžete priviesť niekoho, komu dôverujete."
+      },
+      "second-opinion": {
+        "title": "Právo na druhý názor",
+        "description": "Ak nesúhlasíte s diagnózou, môžete navštíviť iného lekára. Toto je vaše právo. Nemusíte vysvetľovať prečo."
+      },
+      "records": {
+        "title": "Právo na vaše zdravotné záznamy",
+        "description": "Kedykoľvek môžete požiadať o kópiu všetkých vašich zdravotných záznamov. Nemocnica ich musí poskytnúť. To je užitočné pri zmene lekára alebo pri sťahovaní do iného mesta."
+      },
+      "complaint": {
+        "title": "Právo sťažovať sa",
+        "description": "Ak sa cítite zle zaobchádzané alebo diskriminovaný, môžete podať sťažnosť. Každá nemocnica má svoj reklamačný poriadok. Môžete sa tiež obrátiť na ombudsmana pacientov vo vašej krajine."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "Nemocnica vás odmieta liečiť",
+        "whatToSay": "\"Mám právo na núdzové ošetrenie podľa zákona EU. Napíšte svoje meno a dôvod, prečo odmietate.\"",
+        "whatToDo": [
+          "Zostaňte pokojní, ale pevní",
+          "Opýtajte sa na celé meno lekára",
+          "Požiadajte o odmietnutie písomne",
+          "Zavolajte ombudsmana pacientov",
+          "Obráťte sa na organizáciu za práva Rómov"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Nemocničný personál je hrubý alebo odmietavý kvôli vašej etnickej príslušnosti",
+        "whatToSay": "\"Som tu pre lekársku pomoc. Očakávam, že sa ku mne budú správať s rovnakým rešpektom ako ku každému inému pacientovi.\"",
+        "whatToDo": [
+          "Požiadajte o rozhovor s vedúcou sestrou alebo vedúcim oddelenia",
+          "Všimnite si dátum, čas a mená",
+          "Podajte písomnú sťažnosť v nemocnici",
+          "Správa národnému antidiskriminačnému orgánu"
+        ]
+      },
+      "no-insurance": {
+        "situation": "Nemáte zdravotné poistenie",
+        "whatToSay": "\"Potrebujem lekársku pomoc. Aké mám možnosti pre nepoistených pacientov?\"",
+        "whatToDo": [
+          "Núdzová starostlivosť je vždy bezplatná – trvajte na tom",
+          "Opýtajte sa na programy sociálnej pomoci",
+          "Obráťte sa na zdravotného mediátora vo vašom okolí",
+          "Mnohé mimovládne organizácie poskytujú bezplatné kliniky – opýtajte sa v nemocnici"
+        ]
+      },
+      "language-barrier": {
+        "situation": "Nemôžete komunikovať s lekárom",
+        "whatToSay": "\"Potrebujem pomoc s porozumením. Môžete poskytnúť tlmočníka alebo hovoriť pomalšie?\"",
+        "whatToDo": [
+          "Pomocou tejto aplikácie môžete prekladať kľúčové frázy",
+          "Priveďte dôveryhodnú osobu, ktorá ovláda daný jazyk",
+          "Požiadajte o písomné pokyny, ktoré môžete preložiť neskôr",
+          "Na preklad dokumentov použite fotoaparát telefónu"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Komunitné príbehy — Redi Health",
+      "description": "Skutočné zdravotné skúsenosti z rómskych komunít v celej Európe"
+    },
+    "title": "Komunitné príbehy",
+    "subtitle": "Reálne skúsenosti z rómskych komunít. Učte sa od iných.",
+    "backToStories": "Späť k príbehom",
+    "lessonLearned": "Ponaučenie",
+    "whatToDoNext": "Čo robiť ďalej",
+    "categories": {
+      "vaccines": "Vakcíny",
+      "chronic": "Chronická choroba",
+      "maternal": "Tehotenstvo",
+      "discrimination": "práva",
+      "prevention": "Prevencia",
+      "mental": "Duševné zdravie"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Sprievodca vakcínou",
+      "askZuvo": "Spýtaj sa Zuvo",
+      "explainPrescription": "Vysvetlite predpis",
+      "navigateToCare": "Prejdite do starostlivosti",
+      "knowYourRights": "Poznajte svoje práva",
+      "learnPrevention": "Naučte sa prevenciu",
+      "checkSymptoms": "Skontrolujte príznaky",
+      "learnMentalHealth": "Získajte informácie o duševnom zdraví"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "Rumunsko",
+        "title": "Dcéru som skoro nedala zaočkovať",
+        "story": "Moja svokra mi povedala, že vakcíny sú jed. Všetci v osade hovorili to isté. Keď sa mi narodila dcéra, mala som strach. Ale zdravotník prišiel k nám domov a všetko vysvetlil – ako vakcíny fungujú, aké sú v skutočnosti vedľajšie účinky. Ukázala mi fotky detí s osýpkami. Viac som sa bála choroby ako vakcíny. Moja dcéra dostala všetky vakcíny. Je zdravá a silná.",
+        "lesson": "Porozprávajte sa so zdravotným mediátorom alebo lekárom skôr, ako sa rozhodnete na základe toho, čo hovoria ostatní. Vakcíny zachraňujú životy."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bulharsko",
+        "title": "Prestal som užívať lieky na cukrovku a takmer som zomrel",
+        "story": "Diabetes typu 2 mi diagnostikovali na 45. Z lieku ma bolelo brucho, tak som ho prestal brať. Môj sused povedal, že škoricový čaj ma vylieči. 2 roky som namiesto toho pila škoricový čaj. Potom som jedného dňa skolaboval. Moja hladina cukru v krvi bola vyššia ako 500. Lekári povedali, že mám poškodené obličky. Teraz beriem lieky každý deň. Kiežby som nikdy neprestal.",
+        "lesson": "Nikdy neprestaňte užívať liek bez toho, aby ste sa porozprávali so svojím lekárom. Prírodné lieky nemôžu nahradiť lieky na cukrovku."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Srbsko",
+        "title": "Moje prvé tehotenstvo — nevedela som, že môžem navštíviť lekára zadarmo",
+        "story": "Keď som otehotnela v 19, 6 mesiacov som nebola u lekára. Nemal som poistenie a myslel som si, že to bude stáť príliš veľa. Zdravotná mediátorka mi povedala, že prenatálna starostlivosť je pre všetky tehotné ženy v Srbsku bezplatná. Pomohla mi zaregistrovať sa. Lekár zistil, že mám anémiu a vysoký krvný tlak. Keby som neodišla, moje dieťa mohlo byť v nebezpečenstve.",
+        "lesson": "Prenatálna starostlivosť je vo väčšine európskych krajín bezplatná. Požiadajte zdravotného mediátora, aby vám pomohol s registráciou."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Maďarsko",
+        "title": "Nemocnica sa ma pokúsila poslať preč",
+        "story": "Išiel som na pohotovosť s bolesťou na hrudníku. Sestra sa na mňa pozrela a povedala 'Máme plno, choďte do inej nemocnice.' Vedel som, že to nie je správne. Povedal som: ‚Bolí ma hrudník. Musíte ma preskúmať. Prosím, povedzte mi svoje meno.“ Jej postoj sa okamžite zmenil. Vyšetrili ma a zistili, že mám problém so srdcom, ktorý si vyžaduje liečbu. Keby som odišiel, mohol som dostať infarkt.",
+        "lesson": "Máte právo na núdzové ošetrenie. Ak sa vás niekto pokúsi odmietnuť, opýtajte sa ho na meno a povedzte, že poznáte svoje práva."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Slovensko",
+        "title": "TB nie je rozsudok smrti – ale musíte dokončiť liek",
+        "story": "Kašlala som mesiace. Myslel som si, že je to len prechladnutie. Keď som konečne išiel k lekárovi, povedali mi, že mám tuberkulózu. Bol som vystrašený - myslel som, že zomriem. Ale lekár vysvetlil, že TB sa dá vyliečiť 6-mesačným liekom. Najťažšie bolo brať tabletky každý deň po dobu 6 mesiacov, aj keď som sa po 2 mesiacoch cítila lepšie. Ale skončil som. som vyliečený.",
+        "lesson": "Ak kašlete dlhšie ako 2 týždne, navštívte lekára. TB je liečiteľná, ale MUSÍTE dokončiť všetky lieky."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Severné Macedónsko",
+        "title": "Depresia nie je slabosť - je to choroba",
+        "story": "Po smrti môjho manžela som celé mesiace nemohla vstať z postele. Moja rodina povedala, že som lenivý. Povedali 'len buď silný.' Ale nemohol som. Zdravotnícky mediátor si všimol, že niečo nie je v poriadku a vzal ma k lekárovi. Lekár povedal, že mám depresiu - skutočný zdravotný stav. Začal som medicínu a rozprával som sa s poradcom. Pomaly som sa zlepšoval. Nie som slabý. Bolo mi zle.",
+        "lesson": "Depresia je zdravotný stav, nie charakterová vada. Pomôcť môže medicína a poradenstvo. Požiadajte o pomoc."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Výzvy — Redi Health",
+      "description": "Komunitné výzvy"
+    },
+    "title": "Aktívne výzvy",
+    "subtitle": "Pripojte sa k cieľom komunity a osobným výzvam a získajte bonusové XP a odznaky.",
+    "types": {
+      "community": "komunity",
+      "personal": "osobné"
+    },
+    "daysLeft": "Zostáva {count} dní",
+    "viewLeaderboard": "Zobraziť tabuľku výsledkov",
+    "items": {
+      "c1": {
+        "title": "Šampión vedomostí o očkovaní",
+        "description": "Získajte 50 študentov vo vašej oblasti, aby tento týždeň absolvovali modul vakcíny."
+      },
+      "c2": {
+        "title": "7-dňový cyklus zdravia",
+        "description": "Zaznamenajte svoju náladu a príjem vody 7 dní v rade."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Certifikát — Redi Health",
+      "description": "Národný certifikát zdravotnej gramotnosti"
+    },
+    "title": "Váš certifikát",
+    "subtitle": "Máte za sebou Národnú etapu Študentskej akadémie zdravia.",
+    "ofCompletion": "Osvedčenie o absolvovaní",
+    "diplomaTitle": "Národná zdravotná gramotnosť",
+    "awardedFor": "Udeľuje sa za dokončenie študijného programu Redi Health Student Academy.",
+    "date": "Dátum",
+    "downloadPdf": "Stiahnite si PDF",
+    "share": "zdieľať",
+    "gate": {
+      "title": "Najprv dokončite Akadémiu",
+      "description": "Ak chcete získať certifikát zdravotnej gramotnosti, musíte absolvovať všetky lekcie a prejsť kvízom na národnej úrovni Študentskej akadémie zdravia.",
+      "cta": "Choďte do Akadémie"
+    }
   }
 }

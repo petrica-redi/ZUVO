@@ -1549,190 +1549,190 @@
   },
   "healthQuiz": {
     "meta": {
-      "title": "Kuiz shëndeti — Redi Health",
-      "description": "Testo njohuritë e tua shëndetësore me kuize interaktive"
+      "title": "Kuiz Shëndetësor — Redi Health",
+      "description": "Testoni njohuritë tuaja shëndetësore me kuize interaktive"
     },
-    "title": "Kuiz shëndeti",
-    "subtitle": "Testo njohuritë e tua. Mëso diçka të re.",
-    "backToQuizzes": "Kthehu te kuizet",
-    "seeResults": "Shiko rezultatet",
-    "nextQuestion": "Pyetja tjetër",
+    "title": "Kuiz për shëndetin",
+    "subtitle": "Testoni njohuritë tuaja. Mësoni diçka të re.",
+    "backToQuizzes": "Kthehu te kuize",
+    "seeResults": "Shihni rezultatet",
+    "nextQuestion": "Pyetja e radhës",
     "questionsCount": "{count} pyetje",
     "results": {
-      "perfect": "Rezultat perfekt!",
-      "great": "Punë e shkëlqyer!",
+      "perfect": "Rezultati perfekt!",
+      "great": "Punë e madhe!",
       "good": "Përpjekje e mirë!",
-      "keepLearning": "Vazhdo të mësosh!",
-      "score": "Ke {score} nga {total} saktë",
-      "tryAgain": "Provo përsëri",
+      "keepLearning": "Vazhdoni të mësoni!",
+      "score": "Ju morët {score} nga {total} të sakta",
+      "tryAgain": "Provo sërish",
       "moreQuizzes": "Më shumë kuize"
     },
     "quizzes": {
       "antibiotics": {
-        "title": "Antibiotics",
-        "description": "Do you know when to use antibiotics?",
+        "title": "Antibiotikët",
+        "description": "A e dini se kur duhet të përdorni antibiotikë?",
         "questions": [
           {
-            "question": "Can antibiotics cure the flu?",
+            "question": "A mund ta kurojnë gripin antibiotikët?",
             "options": [
-              "Yes",
-              "No",
-              "Sometimes"
+              "po",
+              "Nr",
+              "Ndonjëherë"
             ],
-            "explanation": "The flu is caused by a virus. Antibiotics only kill bacteria. Taking antibiotics for the flu does nothing and can make future infections harder to treat."
+            "explanation": "Gripi shkaktohet nga një virus. Antibiotikët vrasin vetëm bakteret. Marrja e antibiotikëve për gripin nuk bën asgjë dhe mund t'i bëjë infeksionet e ardhshme më të vështira për t'u trajtuar."
           },
           {
-            "question": "You feel better after 3 days of antibiotics. Should you stop?",
+            "question": "Ndiheni më mirë pas 3 ditësh antibiotikë. A duhet të ndalosh?",
             "options": [
-              "Yes, you're cured",
-              "No, finish the full course",
-              "Take half the remaining pills"
+              "Po, ju jeni shëruar",
+              "Jo, përfundoni kursin e plotë",
+              "Merrni gjysmën e pilulave të mbetura"
             ],
-            "explanation": "ALWAYS finish the full course. If you stop early, some bacteria survive and become resistant. Next time, the same antibiotic won't work."
+            "explanation": "GJITHMONË përfundoni kursin e plotë. Nëse ndaloni herët, disa baktere mbijetojnë dhe bëhen rezistente. Herën tjetër, i njëjti antibiotik nuk do të funksionojë."
           },
           {
-            "question": "Can you share antibiotics with a family member who has similar symptoms?",
+            "question": "A mund të ndani antibiotikë me një anëtar të familjes që ka simptoma të ngjashme?",
             "options": [
-              "Yes, it saves money",
-              "No, never",
-              "Only if it's the same illness"
+              "Po, kursen para",
+              "Jo, kurrë",
+              "Vetëm nëse është e njëjta sëmundje"
             ],
-            "explanation": "Never share antibiotics. Different infections need different medicines. The wrong antibiotic can be dangerous and won't help."
+            "explanation": "Asnjëherë mos ndani antibiotikë. Infeksione të ndryshme kanë nevojë për ilaçe të ndryshme. Antibiotiku i gabuar mund të jetë i rrezikshëm dhe nuk do të ndihmojë."
           },
           {
-            "question": "What happens if you take antibiotics too often?",
+            "question": "Çfarë ndodh nëse merrni antibiotikë shumë shpesh?",
             "options": [
-              "Nothing bad",
-              "Your body becomes immune to illness",
-              "Bacteria become resistant and harder to kill"
+              "Asgjë e keqe",
+              "Trupi juaj bëhet imun ndaj sëmundjeve",
+              "Bakteret bëhen rezistente dhe më të vështira për t'u vrarë"
             ],
-            "explanation": "Antibiotic resistance is a global crisis. When bacteria become resistant, simple infections can become deadly. Only take antibiotics when a doctor prescribes them."
+            "explanation": "Rezistenca ndaj antibiotikëve është një krizë globale. Kur bakteret bëhen rezistente, infeksionet e thjeshta mund të bëhen vdekjeprurëse. Merrni antibiotikë vetëm kur i përshkruan mjeku."
           }
         ]
       },
       "vaccines": {
-        "title": "Vaccines",
-        "description": "Separate facts from myths",
+        "title": "Vaksinat",
+        "description": "Ndani faktet nga mitet",
         "questions": [
           {
-            "question": "Do vaccines cause autism?",
+            "question": "A shkaktojnë vaksinat autizëm?",
             "options": [
-              "Yes",
-              "No",
-              "We don't know"
+              "po",
+              "Nr",
+              "Nuk e dimë"
             ],
-            "explanation": "NO. This myth started from a fraudulent study that was retracted. The doctor who published it lost his medical license. Dozens of studies with millions of children prove vaccines do NOT cause autism."
+            "explanation": "NR. Ky mit nisi nga një studim mashtrues që u tërhoq. Mjeku që e publikoi e humbi licencën mjekësore. Dhjetra studime me miliona fëmijë vërtetojnë se vaksinat NUK shkaktojnë autizëm."
           },
           {
-            "question": "Is it safe to give a baby multiple vaccines at once?",
+            "question": "A është e sigurt për t'i dhënë një foshnje disa vaksina në të njëjtën kohë?",
             "options": [
-              "No, it's too much",
-              "Yes, it's safe and tested",
-              "Only one at a time"
+              "Jo, është shumë",
+              "Po, është i sigurt dhe i testuar",
+              "Vetëm një nga një"
             ],
-            "explanation": "Babies' immune systems handle thousands of germs every day. Combination vaccines are thoroughly tested and safe. Delaying vaccines leaves your child unprotected."
+            "explanation": "Sistemi imunitar i foshnjave trajton mijëra mikrobe çdo ditë. Vaksinat e kombinuara janë testuar tërësisht dhe të sigurta. Vonesa e vaksinave e lë fëmijën tuaj të pambrojtur."
           },
           {
-            "question": "My child has a mild cold. Can they still get vaccinated?",
+            "question": "Fëmija im ka një ftohje të lehtë. A mund të vaksinohen akoma?",
             "options": [
-              "No, wait until fully healthy",
-              "Yes, a mild cold is fine",
-              "Only with doctor permission"
+              "Jo, prisni derisa të jeni plotësisht të shëndetshëm",
+              "Po, një ftohje e lehtë është mirë",
+              "Vetëm me lejen e mjekut"
             ],
-            "explanation": "A mild cold, low fever, or runny nose is NOT a reason to delay vaccination. Only severe illness requires postponement. Ask your doctor if unsure."
+            "explanation": "Ftohja e lehtë, temperatura e ulët ose rrjedhja e hundës NUK është një arsye për të vonuar vaksinimin. Vetëm sëmundja e rëndë kërkon shtyrje. Pyesni mjekun tuaj nëse nuk jeni të sigurt."
           },
           {
-            "question": "Do vaccines contain dangerous chemicals?",
+            "question": "A përmbajnë vaksinat kimikate të rrezikshme?",
             "options": [
-              "Yes, they're full of toxins",
-              "No, all ingredients are safe in the tiny amounts used",
-              "Some do, some don't"
+              "Po, ato janë plot me toksina",
+              "Jo, të gjithë përbërësit janë të sigurt në sasi të vogla të përdorura",
+              "Disa e bëjnë, disa jo"
             ],
-            "explanation": "Vaccine ingredients are present in tiny, safe amounts. You get more aluminum from breast milk than from a vaccine. Every ingredient has been tested for safety."
+            "explanation": "Përbërësit e vaksinës janë të pranishëm në sasi të vogla dhe të sigurta. Ju merrni më shumë alumin nga qumështi i gjirit sesa nga një vaksinë. Çdo përbërës është testuar për siguri."
           }
         ]
       },
       "diabetes": {
-        "title": "Diabetes",
-        "description": "Understanding diabetes management",
+        "title": "Diabeti",
+        "description": "Kuptimi i menaxhimit të diabetit",
         "questions": [
           {
-            "question": "Is diabetes caused by eating too much sugar?",
+            "question": "A shkaktohet diabeti nga ngrënia e tepërt e sheqerit?",
             "options": [
-              "Yes",
-              "No, it's more complex",
-              "Only Type 2"
+              "po",
+              "Jo, është më komplekse",
+              "Vetëm Lloji 2"
             ],
-            "explanation": "Diabetes is caused by genetics, lifestyle, and how your body processes insulin. Eating sugar doesn't directly cause it, but an unhealthy diet and obesity increase risk."
+            "explanation": "Diabeti shkaktohet nga gjenetika, mënyra e jetesës dhe mënyra se si trupi juaj përpunon insulinën. Ngrënia e sheqerit nuk e shkakton drejtpërdrejt atë, por një dietë e pashëndetshme dhe obeziteti rrisin rrezikun."
           },
           {
-            "question": "Can diabetes be cured with natural remedies like cinnamon?",
+            "question": "A mund të kurohet diabeti me ilaçe natyrale si kanella?",
             "options": [
-              "Yes, cinnamon cures it",
-              "No, there is no cure but it can be managed",
-              "Yes, with enough garlic and herbs"
+              "Po, kanella e shëron",
+              "Jo, nuk ka kurë, por mund të menaxhohet",
+              "Po, me mjaft hudhra dhe barishte"
             ],
-            "explanation": "There is NO cure for diabetes. It can be MANAGED with medicine, healthy food, and exercise. Cinnamon may have tiny benefits but CANNOT replace medication. People who stop their medicine end up in hospital."
+            "explanation": "Nuk ka kurë për diabetin. Mund të MENAXHET me ilaçe, ushqim të shëndetshëm dhe stërvitje. Kanella mund të ketë përfitime të vogla, por NUK MUND të zëvendësojë mjekimin. Njerëzit që ndalojnë mjekimin përfundojnë në spital."
           },
           {
-            "question": "A diabetic person feels dizzy and sweaty. What should you do?",
+            "question": "Një person diabetik ndihet i trullosur dhe i djersitur. Çfarë duhet të bëni?",
             "options": [
-              "Give them insulin",
-              "Give them something sweet immediately",
-              "Tell them to rest"
+              "Jepini atyre insulinë",
+              "Jepini atyre diçka të ëmbël menjëherë",
+              "Thuaju të pushojnë"
             ],
-            "explanation": "These are signs of LOW blood sugar (hypoglycemia). Give them juice, candy, or sugar water immediately. This can be life-threatening. After they feel better, they should eat a proper meal."
+            "explanation": "Këto janë shenja të sheqerit të ulët në gjak (hipoglicemia). Jepini menjëherë lëng, karamele ose ujë me sheqer. Kjo mund të jetë kërcënuese për jetën. Pasi të ndihen më mirë, duhet të hanë një vakt të duhur."
           },
           {
-            "question": "How often should a diabetic person check their feet?",
+            "question": "Sa shpesh duhet të kontrollojë këmbët një diabetik?",
             "options": [
-              "Never, feet are fine",
-              "Every day",
-              "Once a year"
+              "Asnjëherë, këmbët janë mirë",
+              "Çdo ditë",
+              "Një herë në vit"
             ],
-            "explanation": "Diabetes can damage nerves in your feet. You might not feel cuts or sores. Check your feet EVERY DAY for cuts, blisters, or color changes. Small wounds can become serious infections."
+            "explanation": "Diabeti mund të dëmtojë nervat në këmbët tuaja. Ju mund të mos ndjeni prerje ose plagë. Kontrolloni këmbët tuaja çdo ditë për prerje, flluska ose ndryshime ngjyrash. Plagët e vogla mund të bëhen infeksione serioze."
           }
         ]
       },
       "hygiene": {
-        "title": "Hygiene & Prevention",
-        "description": "Basic health habits that save lives",
+        "title": "Higjiena dhe Parandalimi",
+        "description": "Zakonet themelore shëndetësore që shpëtojnë jetë",
         "questions": [
           {
-            "question": "How long should you wash your hands with soap?",
+            "question": "Sa kohë duhet t'i lani duart me sapun?",
             "options": [
-              "5 seconds",
-              "At least 20 seconds",
-              "1 minute"
+              "5 sekonda",
+              "Të paktën 20 sekonda",
+              "1 minutë"
             ],
-            "explanation": "Wash for at least 20 seconds — about the time it takes to sing 'Happy Birthday' twice. This removes most germs. Quick rinses don't work."
+            "explanation": "Lani për të paktën 20 sekonda - rreth kohës që duhet për të kënduar \"Happy Birthday\" dy herë. Kjo largon shumicën e mikrobeve. Shpëlarjet e shpejta nuk funksionojnë."
           },
           {
-            "question": "Is it safe to drink water from a river or stream?",
+            "question": "A është e sigurt të pini ujë nga një lumë apo përrua?",
             "options": [
-              "Yes, natural water is clean",
-              "No, always boil or filter it first",
-              "Only if it looks clear"
+              "Po, uji natyral është i pastër",
+              "Jo, gjithmonë ziejeni ose filtroni fillimisht",
+              "Vetëm nëse duket qartë"
             ],
-            "explanation": "Even clear water can contain dangerous bacteria and parasites. Always boil water for at least 1 minute or use a filter. Dirty water causes diarrhea, cholera, and typhoid."
+            "explanation": "Edhe uji i pastër mund të përmbajë baktere dhe parazitë të rrezikshëm. Gjithmonë zieni ujin për të paktën 1 minutë ose përdorni një filtër. Uji i ndotur shkakton diarre, kolerë dhe tifo."
           },
           {
-            "question": "Your child has diarrhea. What's the most important thing?",
+            "question": "Fëmija juaj ka diarre. Cila është gjëja më e rëndësishme?",
             "options": [
-              "Stop all food",
-              "Give lots of fluids (water, ORS)",
-              "Give antibiotics"
+              "Ndaloni të gjitha ushqimet",
+              "Jepni shumë lëngje (ujë, ORS)",
+              "Jepni antibiotikë"
             ],
-            "explanation": "Dehydration from diarrhea kills more children than the diarrhea itself. Give oral rehydration solution (ORS) or clean water with a pinch of salt and sugar. Keep breastfeeding babies."
+            "explanation": "Dehidratimi nga diarreja vret më shumë fëmijë sesa vetë diarreja. Jepni tretësirë ​​rehidrimi oral (ORS) ose ujë të pastër me pak kripë dhe sheqer. Mbani foshnjat me gji."
           },
           {
-            "question": "When should you wash your hands?",
+            "question": "Kur duhet të lani duart?",
             "options": [
-              "Only before eating",
-              "Before eating, after toilet, after touching animals, after coughing",
-              "Only when they look dirty"
+              "Vetëm para se të hahet",
+              "Para ngrënies, pas tualetit, pas prekjes së kafshëve, pas kollitjes",
+              "Vetëm kur duken të pista"
             ],
-            "explanation": "Germs are invisible. Wash hands: before eating/cooking, after using the toilet, after changing diapers, after touching animals, after coughing/sneezing, and after touching sick people."
+            "explanation": "Mikrobet janë të padukshëm. Lani duart: para ngrënies/gatimit, pas përdorimit të tualetit, pas ndërrimit të pelenave, pasi prekni kafshët, pasi kolliteni/teshtitni dhe pasi prekni njerëzit e sëmurë."
           }
         ]
       }
@@ -1740,74 +1740,116 @@
   },
   "rights": {
     "meta": {
-      "title": "Njih të drejtat e tua — Redi Health",
-      "description": "Të drejtat e pacientit, ndihmë kundër diskriminimit dhe kontakte ligjore"
+      "title": "Njihni të drejtat tuaja - Shëndeti Redi",
+      "description": "Të drejtat e pacientëve, ndihma për diskriminimin dhe kontaktet ligjore për komunitetet rome"
     },
-    "title": "Njih të drejtat e tua",
-    "subtitle": "Ke të drejta si pacient. Mësoji. Përdori.",
-    "back": "Kthehu",
+    "title": "Njihni të drejtat tuaja",
+    "subtitle": "Ju keni të drejta si pacient. Mësoni ato. Përdorni ato.",
+    "back": "Mbrapa",
     "menu": {
       "patientRights": {
         "title": "Të drejtat e pacientit",
         "desc": "8 të drejta që ka çdo pacient"
       },
       "discrimination": {
-        "title": "Po përball diskriminim?",
-        "desc": "Çfarë të thuash dhe bësh — hap pas hapi"
+        "title": "Duke u përballur me diskriminimin?",
+        "desc": "Çfarë të thuash dhe të bësh - hap pas hapi"
       },
       "contacts": {
-        "title": "Ndihmë ligjore sipas vendit",
-        "desc": "Avokati i popullit, anti-diskriminim, organizata romë"
+        "title": "Ndihmë Ligjore sipas Vendit",
+        "desc": "Avokati i Popullit, Antidiskriminimi, Organizatat Rome"
       }
     },
     "views": {
-      "patientRights": "Të drejtat e tua si pacient",
-      "discrimination": "Nëse përball diskriminim",
-      "discriminationDesc": "Situata reale dhe saktësisht çfarë të thuash dhe bësh.",
-      "contacts": "Ndihmë ligjore sipas vendit"
+      "patientRights": "Të drejtat e pacientit tuaj",
+      "discrimination": "Nëse përballeni me diskriminim",
+      "discriminationDesc": "Situata reale dhe saktësisht çfarë të thuash dhe të bësh.",
+      "contacts": "Ndihmë Ligjore sipas Vendit"
     },
     "labels": {
       "sayThis": "Thuaj këtë:",
-      "thenDo": "Pastaj bëj këtë:",
-      "patientOmbudsman": "Avokati i pacientit",
-      "antiDiscrimination": "Anti-diskriminim",
+      "thenDo": "Pastaj bëni këtë:",
+      "patientOmbudsman": "Avokati i Popullit për pacientët",
+      "antiDiscrimination": "Kundër diskriminimit",
       "romaRightsOrg": "Organizatë për të drejtat e romëve"
     },
     "rights": {
       "treatment": {
-        "title": "Right to emergency treatment",
-        "description": "Every hospital MUST treat you in an emergency, even without insurance or documents. This is law in every EU country. If they refuse, ask for the doctor's name and report it."
+        "title": "E drejta për trajtim urgjent",
+        "description": "Çdo spital DUHET t'ju trajtojë në raste urgjence, edhe pa sigurim apo dokumente. Ky është ligj në çdo vend EU. Nëse ata refuzojnë, kërkoni emrin e mjekut dhe raportoni atë."
       },
       "information": {
-        "title": "Right to understand your diagnosis",
-        "description": "Your doctor must explain your condition in words you understand. If you don't understand, say: 'Can you explain this more simply?' You can also ask for a written summary."
+        "title": "E drejta për të kuptuar diagnozën tuaj",
+        "description": "Mjeku juaj duhet të shpjegojë gjendjen tuaj me fjalë që kuptoni. Nëse nuk kuptoni, thoni: 'A mund ta shpjegoni këtë më thjeshtë?' Ju gjithashtu mund të kërkoni një përmbledhje me shkrim."
       },
       "consent": {
-        "title": "Right to say no",
-        "description": "No one can force treatment on you. Before any procedure, the doctor must explain what they will do and you must agree. You can always say 'I need time to think.'"
+        "title": "E drejta për të thënë jo",
+        "description": "Askush nuk mund t'ju detyrojë trajtim. Para çdo procedure, mjeku duhet të shpjegojë se çfarë do të bëjë dhe ju duhet të bini dakord. Gjithmonë mund të thuash 'Më duhet kohë për të menduar.'"
       },
       "privacy": {
-        "title": "Right to privacy",
-        "description": "Your medical information is private. Doctors cannot share it with your employer, family, or anyone else without your permission. This includes your HIV status, pregnancy, or mental health."
+        "title": "E drejta për privatësi",
+        "description": "Informacioni juaj mjekësor është privat. Mjekët nuk mund ta ndajnë atë me punëdhënësin, familjen ose dikë tjetër pa lejen tuaj. Kjo përfshin statusin tuaj HIV, shtatzëninë ose shëndetin mendor."
       },
       "interpreter": {
-        "title": "Right to an interpreter",
-        "description": "If you don't speak the local language well, you can request an interpreter. Many hospitals have this service. If not, you can bring someone you trust to translate."
+        "title": "E drejta për një përkthyes",
+        "description": "Nëse nuk e flisni mirë gjuhën vendase, mund të kërkoni një përkthyes. Shumë spitale e kanë këtë shërbim. Nëse jo, mund të sillni dikë që keni besim për të përkthyer."
       },
       "second-opinion": {
-        "title": "Right to a second opinion",
-        "description": "If you disagree with a diagnosis, you can see another doctor. This is your right. You don't need to explain why."
+        "title": "E drejta për një mendim të dytë",
+        "description": "Nëse nuk jeni dakord me një diagnozë, mund të shihni një mjek tjetër. Kjo është e drejta juaj. Nuk keni nevojë të shpjegoni pse."
       },
       "records": {
-        "title": "Right to your medical records",
-        "description": "You can ask for a copy of all your medical records at any time. The hospital must provide them. This is useful when changing doctors or moving to another city."
+        "title": "E drejta për të dhënat tuaja mjekësore",
+        "description": "Ju mund të kërkoni një kopje të të gjitha të dhënave tuaja mjekësore në çdo kohë. Spitali duhet t'i sigurojë ato. Kjo është e dobishme kur ndryshoni mjekë ose lëvizni në një qytet tjetër."
       },
       "complaint": {
-        "title": "Right to complain",
-        "description": "If you feel mistreated or discriminated against, you can file a complaint. Every hospital has a complaints procedure. You can also contact the patient ombudsman in your country."
+        "title": "E drejta për t'u ankuar",
+        "description": "Nëse ndiheni të keqtrajtuar ose të diskriminuar, mund të bëni një ankesë. Çdo spital ka një procedurë ankesash. Ju gjithashtu mund të kontaktoni ombudsmenin e pacientëve në vendin tuaj."
       }
     },
-    "scenarios": {},
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "Spitali refuzon t'ju trajtojë",
+        "whatToSay": "\"Unë kam të drejtën për trajtim urgjent sipas ligjit EU. Ju lutemi shkruani emrin tuaj dhe arsyen që po refuzoni.\"",
+        "whatToDo": [
+          "Qëndroni të qetë, por të vendosur",
+          "Kërkoni emrin e plotë të mjekut",
+          "Kërkoni refuzimin me shkrim",
+          "Thirrni ombudsmenin e pacientit",
+          "Kontaktoni një organizatë për të drejtat e romëve"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Stafi i spitalit është i pasjellshëm ose shpërfillës për shkak të përkatësisë suaj etnike",
+        "whatToSay": "\"Unë jam këtu për ndihmë mjekësore. Pres të trajtohem me të njëjtin respekt si çdo pacient tjetër.\"",
+        "whatToDo": [
+          "Kërkoni të flisni me kryeinfermieren ose shefin e departamentit",
+          "Vini re datën, orën dhe emrat",
+          "Paraqisni një ankesë me shkrim në spital",
+          "Raportoni në organin kombëtar kundër diskriminimit"
+        ]
+      },
+      "no-insurance": {
+        "situation": "Ju nuk keni sigurim shëndetësor",
+        "whatToSay": "\"Kam nevojë për ndihmë mjekësore. Cilat janë opsionet e mia për pacientët e pasiguruar?\"",
+        "whatToDo": [
+          "Kujdesi urgjent është gjithmonë falas - insistoni në të",
+          "Pyesni për programet e ndihmës sociale",
+          "Kontaktoni një ndërmjetës shëndetësor në zonën tuaj",
+          "Shumë OJQ ofrojnë klinika falas — pyesni në spital"
+        ]
+      },
+      "language-barrier": {
+        "situation": "Nuk mund të komunikosh me mjekun",
+        "whatToSay": "\"Kam nevojë për ndihmë për të kuptuar. A mund të jepni një përkthyes apo të flisni më ngadalë?\"",
+        "whatToDo": [
+          "Përdorni këtë aplikacion për të përkthyer frazat kryesore",
+          "Sillni një person të besuar që flet gjuhën",
+          "Kërkoni udhëzime me shkrim që mund t'i përktheni më vonë",
+          "Përdorni kamerën e telefonit tuaj për të përkthyer dokumente"
+        ]
+      }
+    },
     "contacts": {
       "romania": {
         "country": "Romania",
@@ -1880,75 +1922,124 @@
   },
   "stories": {
     "meta": {
-      "title": "Histori nga komuniteti — Redi Health",
-      "description": "Përvoja reale shëndetësore nga komunitetet romë në Evropë"
+      "title": "Tregime Komuniteti - Shëndeti Redi",
+      "description": "Përvoja reale shëndetësore nga komunitetet rome në të gjithë Evropën"
     },
-    "title": "Histori nga komuniteti",
-    "subtitle": "Përvoja reale nga komunitetet romë. Mëso nga të tjerët.",
-    "backToStories": "Kthehu te historitë",
+    "title": "Histori Komuniteti",
+    "subtitle": "Përvoja reale nga komunitetet rome. Mësoni nga të tjerët.",
+    "backToStories": "Kthehu tek historitë",
     "lessonLearned": "Mësimi i nxjerrë",
-    "whatToDoNext": "Çfarë të bësh më pas",
+    "whatToDoNext": "Çfarë duhet bërë më pas",
     "categories": {
-      "vaccines": "Vaksina",
+      "vaccines": "Vaksinat",
       "chronic": "Sëmundje kronike",
-      "maternal": "Shtatzëni",
-      "discrimination": "Të drejta",
-      "prevention": "Parandalim",
-      "mental": "Shëndet mendor"
+      "maternal": "Shtatzënia",
+      "discrimination": "Të drejtat",
+      "prevention": "Parandalimi",
+      "mental": "Shëndeti Mendor"
     },
     "nextSteps": {
-      "vaccineGuide": "Udhëzues vaksinash",
-      "askZuvo": "Pyet Zuvo",
-      "explainPrescription": "Shpjego recetën",
-      "navigateToCare": "Navigo drejt kujdesit",
-      "knowYourRights": "Njih të drejtat e tua",
-      "learnPrevention": "Mëso parandalimin",
-      "checkSymptoms": "Kontrollo simptomat",
-      "learnMentalHealth": "Mëso për shëndetin mendor"
+      "vaccineGuide": "Udhëzues për vaksinat",
+      "askZuvo": "Pyete Zuvo",
+      "explainPrescription": "Shpjegoni recetën",
+      "navigateToCare": "Navigoni drejt kujdesit",
+      "knowYourRights": "Njihni të drejtat tuaja",
+      "learnPrevention": "Mësoni parandalimin",
+      "checkSymptoms": "Kontrolloni simptomat",
+      "learnMentalHealth": "Mësoni për shëndetin mendor"
     },
-    "entries": {}
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "Rumania",
+        "title": "Unë pothuajse nuk e vaksinova vajzën time",
+        "story": "Vjehrra më tha se vaksinat janë helm. Të gjithë në vendbanim thanë të njëjtën gjë. Kur lindi vajza ime, u tremba. Por ndërmjetësi shëndetësor erdhi në shtëpinë tonë dhe na shpjegoi gjithçka - si funksionojnë vaksinat, cilat janë në të vërtetë efektet anësore. Ajo më tregoi foto të fëmijëve me fruth. Unë kisha më shumë frikë nga sëmundja sesa nga vaksina. Vajza ime mori të gjitha vaksinat e saj. Ajo është e shëndetshme dhe e fortë.",
+        "lesson": "Flisni me një ndërmjetës shëndetësor ose mjek përpara se të merrni vendime bazuar në atë që thonë të tjerët. Vaksinat shpëtojnë jetë."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bullgaria",
+        "title": "E ndërpreva mjekimin për diabetin dhe për pak sa nuk vdiqa",
+        "story": "Unë u diagnostikova me diabet të tipit 2 në 45. Ilaçi më dhimbte stomakun, ndaj e ndërpreva. Fqinji im tha se çaji i kanellës do të më shëronte. Për 2 vjet kam pirë çaj kanelle në vend të saj. Pastaj një ditë u rrëzova. Sheqeri im në gjak ishte mbi 500. Mjekët më thanë se veshkat më ishin dëmtuar. Tani i marr ilaçet çdo ditë. Do të doja të mos kisha ndalur kurrë.",
+        "lesson": "Asnjëherë mos e ndaloni mjekimin pa folur me mjekun tuaj. Ilaçet natyrale nuk mund të zëvendësojnë mjekimin e diabetit."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Serbisë",
+        "title": "Shtatzënia ime e parë - nuk e dija se mund të vizitoja një mjek falas",
+        "story": "Kur mbeta shtatzënë në 19, nuk shkova te mjeku për 6 muaj. Nuk kisha sigurim dhe mendova se do të kushtonte shumë. Një ndërmjetës shëndetësor më tha se kujdesi prenatal është falas për të gjitha gratë shtatzëna në Serbi. Ajo më ndihmoi të regjistrohesha. Mjeku zbuloi se kisha anemi dhe tension të lartë. Nëse nuk do të kisha shkuar, fëmija im mund të ishte në rrezik.",
+        "lesson": "Kujdesi prenatal është falas në shumicën e vendeve evropiane. Kërkoni nga një ndërmjetës shëndetësor t'ju ndihmojë të regjistroheni."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Hungaria",
+        "title": "Spitali u përpoq të më largonte",
+        "story": "Shkova në urgjencë me dhimbje gjoksi. Infermierja më shikoi dhe më tha 'Jemi ngopur, shkoni në një spital tjetër'. E dija që kjo nuk ishte e drejtë. I thashë: 'Kam dhimbje gjoksi. Duhet të më ekzaminosh. Ju lutem më jepni emrin tuaj.' Qëndrimi i saj ndryshoi menjëherë. Ata më ekzaminuan dhe zbuluan se kisha një problem me zemrën që kërkonte trajtim. Nëse do të isha larguar, mund të kisha pasur një atak në zemër.",
+        "lesson": "Ju keni të drejtën për trajtim urgjent. Nëse dikush përpiqet t'ju largojë, kërkoni emrin e tij dhe thoni se i dini të drejtat tuaja."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Sllovakia",
+        "title": "TB nuk është një dënim me vdekje - por ju duhet të përfundoni ilaçin",
+        "story": "Unë kollitja për muaj të tërë. Mendova se ishte thjesht një i ftohtë. Kur më në fund shkova te mjeku, më thanë se kisha tuberkuloz. Isha i tmerruar - mendova se do të vdisja. Por mjeku shpjegoi se TB mund të shërohet me 6 muaj ilaçe. Pjesa më e vështirë ishte marrja e pilulave çdo ditë për 6 muaj, edhe kur u ndjeva më mirë pas 2 muajsh. Por mbarova. jam kuruar.",
+        "lesson": "Nëse kolliteni për më shumë se 2 javë, shkoni te mjeku. TB është i shërueshëm, por ju DUHET të përfundoni të gjithë ilaçin."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Maqedonia e Veriut",
+        "title": "Depresioni nuk është dobësi - është një sëmundje",
+        "story": "Pasi më vdiq burri, nuk mund të ngrihesha nga shtrati për muaj të tërë. Familja ime tha se isha dembel. Ata thanë 'vetëm bëhu i fortë'. Por nuk munda. Një ndërmjetës shëndetësor vuri re se diçka nuk ishte në rregull dhe më çoi te një mjek. Doktori tha se kisha depresion - një gjendje e vërtetë mjekësore. Fillova mjekimin dhe fola me një këshilltar. Ngadalë, u bëra më mirë. Unë nuk jam i dobët. isha i sëmurë.",
+        "lesson": "Depresioni është një gjendje mjekësore, jo një e metë karakteri. Mjekësia dhe këshillimi mund të ndihmojnë. Ju lutemi kërkoni ndihmë."
+      }
+    }
   },
   "challenges": {
     "meta": {
-      "title": "Sfidat — Redi Health",
-      "description": "Sfidat e komunitetit"
+      "title": "Sfidat — Shëndeti Redi",
+      "description": "Sfidat e Komunitetit"
     },
-    "title": "Sfidat aktive",
-    "subtitle": "Bashkohu me objektivat e komunitetit dhe sfidat personale për XP dhe distinktiva bonus.",
+    "title": "Sfidat Aktive",
+    "subtitle": "Bashkohuni me qëllimet e komunitetit dhe sfidat personale për të fituar bonus XP dhe distinktivë.",
     "types": {
-      "community": "komunitet",
-      "personal": "personal"
+      "community": "komunitetit",
+      "personal": "personale"
     },
     "daysLeft": "{count} ditë të mbetura",
-    "viewLeaderboard": "Shiko renditjen",
+    "viewLeaderboard": "Shiko tabelën e drejtuesve",
     "items": {
       "c1": {
         "title": "Kampion i njohurive për vaksinat",
-        "description": "Ndihmo 50 nxënës në zonën tënde të kalojnë modulin e Vaksinave këtë javë."
+        "description": "Merrni 50 studentë në zonën tuaj lokale për të kaluar modulin e vaksinës këtë javë."
       },
       "c2": {
-        "title": "Seri 7-ditore shëndeti",
-        "description": "Regjistro humorin dhe ujin për 7 ditë radhazi."
+        "title": "Rrjedha shëndetësore 7-ditore",
+        "description": "Regjistroni gjendjen shpirtërore dhe marrjen e ujit për 7 ditë rresht."
       }
     }
   },
   "certificate": {
     "meta": {
       "title": "Certifikata — Redi Health",
-      "description": "Certifikatë kombëtare alfabetizimi shëndetësor"
+      "description": "Certifikata Kombëtare e Alfabetizmit Shëndetësor"
     },
-    "title": "Certifikata jote",
-    "subtitle": "Ke përfunduar fazën Kombëtare të Akademisë së Shëndetit për Studentë.",
-    "ofCompletion": "Certifikatë përfundimi",
-    "diplomaTitle": "Alfabetizim shëndetësor kombëtar",
-    "awardedFor": "Dhënë për përfundimin e kurrikulës së Akademisë Redi Health.",
+    "title": "Certifikata juaj",
+    "subtitle": "Ju keni përfunduar Fazën Kombëtare të Akademisë së Shëndetit Studentor.",
+    "ofCompletion": "Certifikata e Përfundimit",
+    "diplomaTitle": "Alfabetizmi Kombëtar i Shëndetit",
+    "awardedFor": "Shpërblyer për plotësimin e kurrikulës së Akademisë Studentore të Shëndetit Redi.",
     "date": "Data",
-    "downloadPdf": "Shkarko PDF",
-    "share": "Ndaj",
+    "downloadPdf": "Shkarkoni PDF",
+    "share": "Shpërndaje",
     "gate": {
-      "title": "Përfundo së pari Akademinë",
-      "description": "Për të fituar certifikatën e alfabetizimit shëndetësor, duhet të përfundosh të gjitha mësimet dhe të kalosh kuizin në fazën Kombëtare.",
-      "cta": "Shko te Akademia"
+      "title": "Përfundoni së pari Akademinë",
+      "description": "Për të fituar Certifikatën e Alfabetizmit Shëndetësor, duhet të përfundoni të gjitha mësimet dhe të kaloni kuizin në fazën Kombëtare të Akademisë së Shëndetit Studentor.",
+      "cta": "Shkoni në Akademi"
     }
   },
   "learn": {

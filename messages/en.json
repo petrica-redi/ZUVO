@@ -2135,7 +2135,49 @@
         "description": "If you feel mistreated or discriminated against, you can file a complaint. Every hospital has a complaints procedure. You can also contact the patient ombudsman in your country."
       }
     },
-    "scenarios": {},
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "The hospital refuses to treat you",
+        "whatToSay": "\"I have the right to emergency treatment under EU law. Please write down your name and the reason you are refusing.\"",
+        "whatToDo": [
+          "Stay calm but firm",
+          "Ask for the doctor's full name",
+          "Ask for the refusal in writing",
+          "Call the patient ombudsman",
+          "Contact a Roma rights organization"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Hospital staff are rude or dismissive because of your ethnicity",
+        "whatToSay": "\"I am here for medical help. I expect to be treated with the same respect as every other patient.\"",
+        "whatToDo": [
+          "Ask to speak with the head nurse or department chief",
+          "Note the date, time, and names",
+          "File a written complaint at the hospital",
+          "Report to the national anti-discrimination body"
+        ]
+      },
+      "no-insurance": {
+        "situation": "You don't have health insurance",
+        "whatToSay": "\"I need medical help. What are my options for uninsured patients?\"",
+        "whatToDo": [
+          "Emergency care is always free — insist on it",
+          "Ask about social assistance programs",
+          "Contact a health mediator in your area",
+          "Many NGOs provide free clinics — ask at the hospital"
+        ]
+      },
+      "language-barrier": {
+        "situation": "You can't communicate with the doctor",
+        "whatToSay": "\"I need help understanding. Can you provide an interpreter or speak more slowly?\"",
+        "whatToDo": [
+          "Use this app to translate key phrases",
+          "Bring a trusted person who speaks the language",
+          "Ask for written instructions you can translate later",
+          "Use your phone's camera to translate documents"
+        ]
+      }
+    },
     "contacts": {
       "romania": {
         "country": "Romania",
@@ -2234,7 +2276,56 @@
       "checkSymptoms": "Check symptoms",
       "learnMentalHealth": "Learn about mental health"
     },
-    "entries": {}
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": 28,
+        "country": "Romania",
+        "title": "I almost didn't vaccinate my daughter",
+        "story": "My mother-in-law told me vaccines are poison. Everyone in the settlement said the same thing. When my daughter was born, I was scared. But the health mediator came to our home and explained everything — how vaccines work, what the side effects really are. She showed me photos of children with measles. I was more scared of the disease than the vaccine. My daughter got all her vaccines. She is healthy and strong.",
+        "lesson": "Talk to a health mediator or doctor before making decisions based on what others say. Vaccines save lives."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": 52,
+        "country": "Bulgaria",
+        "title": "I stopped my diabetes medicine and almost died",
+        "story": "I was diagnosed with Type 2 diabetes at 45. The medicine made my stomach hurt, so I stopped taking it. My neighbor said cinnamon tea would cure me. For 2 years I drank cinnamon tea instead. Then one day I collapsed. My blood sugar was over 500. The doctors said my kidneys were damaged. Now I take my medicine every day. I wish I had never stopped.",
+        "lesson": "Never stop your medicine without talking to your doctor. Natural remedies cannot replace diabetes medication."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": 22,
+        "country": "Serbia",
+        "title": "My first pregnancy — I didn't know I could see a doctor for free",
+        "story": "When I got pregnant at 19, I didn't go to a doctor for 6 months. I didn't have insurance and I thought it would cost too much. A health mediator told me that prenatal care is free for all pregnant women in Serbia. She helped me register. The doctor found that I had anemia and high blood pressure. If I hadn't gone, my baby could have been in danger.",
+        "lesson": "Prenatal care is free in most European countries. Ask a health mediator to help you register."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": 35,
+        "country": "Hungary",
+        "title": "The hospital tried to send me away",
+        "story": "I went to the emergency room with chest pain. The nurse looked at me and said 'We're full, go to another hospital.' I knew this wasn't right. I said: 'I have chest pain. You must examine me. Please give me your name.' Her attitude changed immediately. They examined me and found I had a heart problem that needed treatment. If I had left, I could have had a heart attack.",
+        "lesson": "You have the right to emergency treatment. If someone tries to turn you away, ask for their name and say you know your rights."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": 31,
+        "country": "Slovakia",
+        "title": "TB is not a death sentence — but you must finish the medicine",
+        "story": "I was coughing for months. I thought it was just a cold. When I finally went to the doctor, they said I had tuberculosis. I was terrified — I thought I would die. But the doctor explained that TB can be cured with 6 months of medicine. The hardest part was taking pills every day for 6 months, even when I felt better after 2 months. But I finished. I am cured.",
+        "lesson": "If you cough for more than 2 weeks, see a doctor. TB is curable, but you MUST finish all the medicine."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": 40,
+        "country": "North Macedonia",
+        "title": "Depression is not weakness — it's an illness",
+        "story": "After my husband died, I couldn't get out of bed for months. My family said I was lazy. They said 'just be strong.' But I couldn't. A health mediator noticed something was wrong and took me to a doctor. The doctor said I had depression — a real medical condition. I started medicine and talking to a counselor. Slowly, I got better. I am not weak. I was sick.",
+        "lesson": "Depression is a medical condition, not a character flaw. Medicine and counseling can help. Please ask for help."
+      }
+    }
   },
   "challenges": {
     "meta": {
