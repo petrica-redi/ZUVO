@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Phone, X, Heart, Shield, Pill, MapPin, AlertTriangle } from "lucide-react";
 
 const EMERGENCY_NUMBERS: Record<string, { ambulance: string; police: string; fire: string; domestic: string; poison: string }> = {
+  italy:     { ambulance: "118", police: "112", fire: "115", domestic: "1522", poison: "02 6610 1029" },
   albania:   { ambulance: "127", police: "129", fire: "128", domestic: "116 117", poison: "127" },
   romania:   { ambulance: "112", police: "112", fire: "112", domestic: "0800 500 333", poison: "021 318 3606" },
   bulgaria:  { ambulance: "150", police: "166", fire: "160", domestic: "02 981 7686", poison: "112" },
@@ -25,10 +26,55 @@ const FIRST_AID = [
 
 export function SosButton() {
   const t = useTranslations("sos");
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
   const [showFirstAid, setShowFirstAid] = useState<string | null>(null);
 
-  const numbers = EMERGENCY_NUMBERS.default;
+  const getActiveCountry = () => {
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz) {
+        if (tz.includes("Rome") || tz.includes("San_Marino") || tz.includes("Vatican")) return "italy";
+        if (tz.includes("Bucharest")) return "romania";
+        if (tz.includes("Sofia")) return "bulgaria";
+        if (tz.includes("Tirana")) return "albania";
+        if (tz.includes("Budapest")) return "hungary";
+        if (tz.includes("Bratislava")) return "slovakia";
+        if (
+          tz.includes("Belgrade") ||
+          tz.includes("Podgorica") ||
+          tz.includes("Sarajevo") ||
+          tz.includes("Skopje") ||
+          tz.includes("Zagreb") ||
+          tz.includes("Ljubljana")
+        ) {
+          return "serbia";
+        }
+      }
+    } catch (e) {
+      // safe fallback
+    }
+
+    if (locale === "it") return "italy";
+    if (locale === "ro" || locale === "rom") return "romania";
+    if (locale === "bg") return "bulgaria";
+    if (locale === "sq") return "albania";
+    if (locale === "hu") return "hungary";
+    if (locale === "sk") return "slovakia";
+    if (
+      locale === "sr" ||
+      locale === "hr" ||
+      locale === "bs" ||
+      locale === "mk" ||
+      locale === "sl"
+    ) {
+      return "serbia";
+    }
+    return "default";
+  };
+
+  const activeCountry = getActiveCountry();
+  const numbers = EMERGENCY_NUMBERS[activeCountry] || EMERGENCY_NUMBERS.default;
 
   if (!open) {
     return (
