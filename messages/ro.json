@@ -47,7 +47,26 @@
     "croatia": "Croația",
     "bosnia": "Bosnia",
     "kosovo": "Kosovo",
-    "slovenia": "Slovenia"
+    "slovenia": "Slovenia",
+    "romaPop": "Pop. romă {population}",
+    "detail": {
+      "back": "Înapoi",
+      "romaPopulation": "Populație romă",
+      "ofTotal": "din {total} total ({percent})",
+      "healthAccess": "Acces la sănătate",
+      "healthChallenges": "Provocări de sănătate",
+      "organizationsHelp": "Organizații care pot ajuta",
+      "emergency": "Urgență: {number}",
+      "ambulance": "Ambulanță: {number}",
+      "askAboutHealth": "Întreabă despre sănătate în {region}"
+    },
+    "healthIndex": {
+      "veryPoor": "Foarte slab",
+      "poor": "Slab",
+      "fair": "Acceptabil",
+      "good": "Bun",
+      "excellent": "Excelent"
+    }
   },
   "language": {
     "title": "Limbă",
@@ -1257,6 +1276,527 @@
       "spouse": "Soț/Soție",
       "parent": "Părinte",
       "other": "Altul"
+    }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Glosar medical — Redi Health",
+      "description": "Termeni medicali explicați cu cuvinte simple"
+    },
+    "title": "Glosar medical",
+    "subtitle": "Termeni medicali explicați cu cuvinte simple.",
+    "searchPlaceholder": "Caută termeni...",
+    "searchAria": "Caută termeni medicali",
+    "noResults": "Niciun termen găsit. Încearcă o altă căutare.",
+    "allCount": "Toate ({count})",
+    "categories": {
+      "condition": "Afecțiuni",
+      "medication": "Medicamente",
+      "procedure": "Proceduri",
+      "body": "Corp și sănătate",
+      "test": "Analize"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Hypertension",
+        "simple": "High blood pressure. Your blood pushes too hard against your blood vessels. Can cause heart attack or stroke if not treated. Take your medicine every day."
+      },
+      "diabetes-type-2": {
+        "term": "Diabetes (Type 2)",
+        "simple": "Your body can't use sugar properly. Sugar builds up in your blood and damages your organs. You need medicine, healthy food, and exercise. It is NOT caused by eating too much sugar."
+      },
+      "anemia": {
+        "term": "Anemia",
+        "simple": "Not enough healthy red blood cells. You feel tired, weak, dizzy. Often caused by not eating enough iron (meat, beans, spinach). Very common in pregnant women."
+      },
+      "asthma": {
+        "term": "Asthma",
+        "simple": "Your airways get narrow and swollen, making it hard to breathe. You may wheeze or cough. Use your inhaler when it happens. Avoid smoke and dust."
+      },
+      "tuberculosis-tb": {
+        "term": "Tuberculosis (TB)",
+        "simple": "A serious infection in your lungs. You cough for weeks, lose weight, sweat at night. It spreads through the air. It CAN be cured with 6 months of medicine — but you must finish ALL the pills."
+      },
+      "depression": {
+        "term": "Depression",
+        "simple": "A medical condition where you feel sad, hopeless, or empty for weeks. It is NOT weakness. It is NOT your fault. Medicine and talking to someone can help. Please ask for help."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatitis B/C",
+        "simple": "A virus that attacks your liver. You may not feel sick for years, but it damages your liver slowly. It spreads through blood and needles. There is a vaccine for Hepatitis B."
+      },
+      "pneumonia": {
+        "term": "Pneumonia",
+        "simple": "A serious infection in your lungs. You have fever, cough with mucus, and trouble breathing. You need antibiotics from a doctor. Can be dangerous for babies and old people."
+      },
+      "gastritis": {
+        "term": "Gastritis",
+        "simple": "Your stomach lining is irritated or inflamed. You feel burning pain, nausea, or bloating. Avoid spicy food, alcohol, and smoking. Medicine can help."
+      },
+      "eczema": {
+        "term": "Eczema",
+        "simple": "Itchy, red, dry patches on your skin. It is NOT contagious. Use moisturizer often. Avoid harsh soaps. A doctor can give you cream to help."
+      },
+      "antibiotic": {
+        "term": "Antibiotic",
+        "simple": "Medicine that kills bacteria (germs). It does NOT work against viruses like the flu or cold. You MUST finish the full course even if you feel better, or the germs come back stronger."
+      },
+      "ibuprofen": {
+        "term": "Ibuprofen",
+        "simple": "A painkiller that also reduces swelling and fever. Take with food to protect your stomach. Do not take more than the box says. Not safe during pregnancy."
+      },
+      "paracetamol": {
+        "term": "Paracetamol",
+        "simple": "A common painkiller for headaches and fever. Safe for most people, including pregnant women. Do NOT take more than 4 grams (8 tablets) per day — too much damages your liver."
+      },
+      "insulin": {
+        "term": "Insulin",
+        "simple": "A hormone your body needs to use sugar. People with diabetes may need insulin injections. It is NOT a sign that your diabetes is worse — it's just a different treatment."
+      },
+      "metformin": {
+        "term": "Metformin",
+        "simple": "The most common diabetes medicine. Helps your body use sugar better. Take with food. May cause stomach upset at first — this usually goes away."
+      },
+      "blood-test": {
+        "term": "Blood test",
+        "simple": "A small needle takes a little blood from your arm. It helps the doctor check for infections, anemia, diabetes, and many other things. It hurts for just a second."
+      },
+      "x-ray": {
+        "term": "X-ray",
+        "simple": "A picture of your bones and lungs using special light. You stand still for a few seconds. It does NOT hurt. Safe for most people, but tell the doctor if you are pregnant."
+      },
+      "ultrasound": {
+        "term": "Ultrasound",
+        "simple": "A picture of inside your body using sound waves. The doctor puts gel on your skin and moves a device over it. It does NOT hurt. Used to check babies during pregnancy."
+      },
+      "ecg-ekg": {
+        "term": "ECG / EKG",
+        "simple": "A test that checks your heart rhythm. Small stickers are placed on your chest. It does NOT hurt. Takes about 5 minutes. Shows if your heart is beating normally."
+      },
+      "vaccination": {
+        "term": "Vaccination",
+        "simple": "A small injection that teaches your body to fight a disease BEFORE you get sick. Like training for your immune system. Side effects (sore arm, mild fever) are NORMAL and mean it's working."
+      },
+      "blood-pressure": {
+        "term": "Blood pressure",
+        "simple": "The force of blood pushing against your blood vessel walls. Normal is around 120/80. High blood pressure (over 140/90) is dangerous because you can't feel it, but it damages your heart and brain."
+      },
+      "blood-sugar": {
+        "term": "Blood sugar",
+        "simple": "The amount of sugar (glucose) in your blood. Normal fasting level is 70-100 mg/dL. Too high means diabetes. Too low makes you dizzy and shaky. Test it regularly if you have diabetes."
+      },
+      "bmi": {
+        "term": "BMI",
+        "simple": "Body Mass Index — a number that shows if your weight is healthy for your height. Under 18.5 is underweight. 18.5-25 is normal. Over 25 is overweight. Over 30 is obese."
+      },
+      "immune-system": {
+        "term": "Immune system",
+        "simple": "Your body's army against germs. White blood cells fight infections. Vaccines train your immune system. Good food, sleep, and exercise make it stronger."
+      }
+    }
+  },
+  "healthQuiz": {
+    "meta": {
+      "title": "Test de sănătate — Redi Health",
+      "description": "Testează-ți cunoștințele de sănătate"
+    },
+    "title": "Test de sănătate",
+    "subtitle": "Testează-ți cunoștințele. Învață ceva nou.",
+    "backToQuizzes": "Înapoi la teste",
+    "seeResults": "Vezi rezultatele",
+    "nextQuestion": "Următoarea întrebare",
+    "questionsCount": "{count} întrebări",
+    "results": {
+      "perfect": "Scor perfect!",
+      "great": "Foarte bine!",
+      "good": "Efort bun!",
+      "keepLearning": "Continuă să înveți!",
+      "score": "Ai răspuns corect la {score} din {total}",
+      "tryAgain": "Încearcă din nou",
+      "moreQuizzes": "Mai multe teste"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotics",
+        "description": "Do you know when to use antibiotics?",
+        "questions": [
+          {
+            "question": "Can antibiotics cure the flu?",
+            "options": [
+              "Yes",
+              "No",
+              "Sometimes"
+            ],
+            "explanation": "The flu is caused by a virus. Antibiotics only kill bacteria. Taking antibiotics for the flu does nothing and can make future infections harder to treat."
+          },
+          {
+            "question": "You feel better after 3 days of antibiotics. Should you stop?",
+            "options": [
+              "Yes, you're cured",
+              "No, finish the full course",
+              "Take half the remaining pills"
+            ],
+            "explanation": "ALWAYS finish the full course. If you stop early, some bacteria survive and become resistant. Next time, the same antibiotic won't work."
+          },
+          {
+            "question": "Can you share antibiotics with a family member who has similar symptoms?",
+            "options": [
+              "Yes, it saves money",
+              "No, never",
+              "Only if it's the same illness"
+            ],
+            "explanation": "Never share antibiotics. Different infections need different medicines. The wrong antibiotic can be dangerous and won't help."
+          },
+          {
+            "question": "What happens if you take antibiotics too often?",
+            "options": [
+              "Nothing bad",
+              "Your body becomes immune to illness",
+              "Bacteria become resistant and harder to kill"
+            ],
+            "explanation": "Antibiotic resistance is a global crisis. When bacteria become resistant, simple infections can become deadly. Only take antibiotics when a doctor prescribes them."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "Vaccines",
+        "description": "Separate facts from myths",
+        "questions": [
+          {
+            "question": "Do vaccines cause autism?",
+            "options": [
+              "Yes",
+              "No",
+              "We don't know"
+            ],
+            "explanation": "NO. This myth started from a fraudulent study that was retracted. The doctor who published it lost his medical license. Dozens of studies with millions of children prove vaccines do NOT cause autism."
+          },
+          {
+            "question": "Is it safe to give a baby multiple vaccines at once?",
+            "options": [
+              "No, it's too much",
+              "Yes, it's safe and tested",
+              "Only one at a time"
+            ],
+            "explanation": "Babies' immune systems handle thousands of germs every day. Combination vaccines are thoroughly tested and safe. Delaying vaccines leaves your child unprotected."
+          },
+          {
+            "question": "My child has a mild cold. Can they still get vaccinated?",
+            "options": [
+              "No, wait until fully healthy",
+              "Yes, a mild cold is fine",
+              "Only with doctor permission"
+            ],
+            "explanation": "A mild cold, low fever, or runny nose is NOT a reason to delay vaccination. Only severe illness requires postponement. Ask your doctor if unsure."
+          },
+          {
+            "question": "Do vaccines contain dangerous chemicals?",
+            "options": [
+              "Yes, they're full of toxins",
+              "No, all ingredients are safe in the tiny amounts used",
+              "Some do, some don't"
+            ],
+            "explanation": "Vaccine ingredients are present in tiny, safe amounts. You get more aluminum from breast milk than from a vaccine. Every ingredient has been tested for safety."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Diabetes",
+        "description": "Understanding diabetes management",
+        "questions": [
+          {
+            "question": "Is diabetes caused by eating too much sugar?",
+            "options": [
+              "Yes",
+              "No, it's more complex",
+              "Only Type 2"
+            ],
+            "explanation": "Diabetes is caused by genetics, lifestyle, and how your body processes insulin. Eating sugar doesn't directly cause it, but an unhealthy diet and obesity increase risk."
+          },
+          {
+            "question": "Can diabetes be cured with natural remedies like cinnamon?",
+            "options": [
+              "Yes, cinnamon cures it",
+              "No, there is no cure but it can be managed",
+              "Yes, with enough garlic and herbs"
+            ],
+            "explanation": "There is NO cure for diabetes. It can be MANAGED with medicine, healthy food, and exercise. Cinnamon may have tiny benefits but CANNOT replace medication. People who stop their medicine end up in hospital."
+          },
+          {
+            "question": "A diabetic person feels dizzy and sweaty. What should you do?",
+            "options": [
+              "Give them insulin",
+              "Give them something sweet immediately",
+              "Tell them to rest"
+            ],
+            "explanation": "These are signs of LOW blood sugar (hypoglycemia). Give them juice, candy, or sugar water immediately. This can be life-threatening. After they feel better, they should eat a proper meal."
+          },
+          {
+            "question": "How often should a diabetic person check their feet?",
+            "options": [
+              "Never, feet are fine",
+              "Every day",
+              "Once a year"
+            ],
+            "explanation": "Diabetes can damage nerves in your feet. You might not feel cuts or sores. Check your feet EVERY DAY for cuts, blisters, or color changes. Small wounds can become serious infections."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Hygiene & Prevention",
+        "description": "Basic health habits that save lives",
+        "questions": [
+          {
+            "question": "How long should you wash your hands with soap?",
+            "options": [
+              "5 seconds",
+              "At least 20 seconds",
+              "1 minute"
+            ],
+            "explanation": "Wash for at least 20 seconds — about the time it takes to sing 'Happy Birthday' twice. This removes most germs. Quick rinses don't work."
+          },
+          {
+            "question": "Is it safe to drink water from a river or stream?",
+            "options": [
+              "Yes, natural water is clean",
+              "No, always boil or filter it first",
+              "Only if it looks clear"
+            ],
+            "explanation": "Even clear water can contain dangerous bacteria and parasites. Always boil water for at least 1 minute or use a filter. Dirty water causes diarrhea, cholera, and typhoid."
+          },
+          {
+            "question": "Your child has diarrhea. What's the most important thing?",
+            "options": [
+              "Stop all food",
+              "Give lots of fluids (water, ORS)",
+              "Give antibiotics"
+            ],
+            "explanation": "Dehydration from diarrhea kills more children than the diarrhea itself. Give oral rehydration solution (ORS) or clean water with a pinch of salt and sugar. Keep breastfeeding babies."
+          },
+          {
+            "question": "When should you wash your hands?",
+            "options": [
+              "Only before eating",
+              "Before eating, after toilet, after touching animals, after coughing",
+              "Only when they look dirty"
+            ],
+            "explanation": "Germs are invisible. Wash hands: before eating/cooking, after using the toilet, after changing diapers, after touching animals, after coughing/sneezing, and after touching sick people."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Cunoaște-ți drepturile — Redi Health",
+      "description": "Drepturile pacientului, ajutor la discriminare și contacte legale"
+    },
+    "title": "Cunoaște-ți drepturile",
+    "subtitle": "Ai drepturi ca pacient. Învață-le. Folosește-le.",
+    "back": "Înapoi",
+    "menu": {
+      "patientRights": {
+        "title": "Drepturile pacientului",
+        "desc": "8 drepturi pe care le are fiecare pacient"
+      },
+      "discrimination": {
+        "title": "Te confrunți cu discriminare?",
+        "desc": "Ce să spui și ce să faci — pas cu pas"
+      },
+      "contacts": {
+        "title": "Ajutor legal pe țări",
+        "desc": "Avocatul poporului, anti-discriminare, organizații roma"
+      }
+    },
+    "views": {
+      "patientRights": "Drepturile tale ca pacient",
+      "discrimination": "Dacă te confrunți cu discriminare",
+      "discriminationDesc": "Situații reale și exact ce să spui și să faci.",
+      "contacts": "Ajutor legal pe țări"
+    },
+    "labels": {
+      "sayThis": "Spune asta:",
+      "thenDo": "Apoi fă asta:",
+      "patientOmbudsman": "Avocatul pacientului",
+      "antiDiscrimination": "Anti-discriminare",
+      "romaRightsOrg": "Organizație pentru drepturile romilor"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Right to emergency treatment",
+        "description": "Every hospital MUST treat you in an emergency, even without insurance or documents. This is law in every EU country. If they refuse, ask for the doctor's name and report it."
+      },
+      "information": {
+        "title": "Right to understand your diagnosis",
+        "description": "Your doctor must explain your condition in words you understand. If you don't understand, say: 'Can you explain this more simply?' You can also ask for a written summary."
+      },
+      "consent": {
+        "title": "Right to say no",
+        "description": "No one can force treatment on you. Before any procedure, the doctor must explain what they will do and you must agree. You can always say 'I need time to think.'"
+      },
+      "privacy": {
+        "title": "Right to privacy",
+        "description": "Your medical information is private. Doctors cannot share it with your employer, family, or anyone else without your permission. This includes your HIV status, pregnancy, or mental health."
+      },
+      "interpreter": {
+        "title": "Right to an interpreter",
+        "description": "If you don't speak the local language well, you can request an interpreter. Many hospitals have this service. If not, you can bring someone you trust to translate."
+      },
+      "second-opinion": {
+        "title": "Right to a second opinion",
+        "description": "If you disagree with a diagnosis, you can see another doctor. This is your right. You don't need to explain why."
+      },
+      "records": {
+        "title": "Right to your medical records",
+        "description": "You can ask for a copy of all your medical records at any time. The hospital must provide them. This is useful when changing doctors or moving to another city."
+      },
+      "complaint": {
+        "title": "Right to complain",
+        "description": "If you feel mistreated or discriminated against, you can file a complaint. Every hospital has a complaints procedure. You can also contact the patient ombudsman in your country."
+      }
+    },
+    "scenarios": {},
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Povești din comunitate — Redi Health",
+      "description": "Experiențe reale de sănătate din comunitățile rome din Europa"
+    },
+    "title": "Povești din comunitate",
+    "subtitle": "Experiențe reale din comunitățile rome. Învață de la alții.",
+    "backToStories": "Înapoi la povești",
+    "lessonLearned": "Lecția învățată",
+    "whatToDoNext": "Ce să faci în continuare",
+    "categories": {
+      "vaccines": "Vaccinuri",
+      "chronic": "Boli cronice",
+      "maternal": "Sarcină",
+      "discrimination": "Drepturi",
+      "prevention": "Prevenție",
+      "mental": "Sănătate mintală"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Ghid vaccinuri",
+      "askZuvo": "Întreabă Zuvo",
+      "explainPrescription": "Explică rețeta",
+      "navigateToCare": "Navighează spre îngrijire",
+      "knowYourRights": "Cunoaște-ți drepturile",
+      "learnPrevention": "Învață prevenția",
+      "checkSymptoms": "Verifică simptomele",
+      "learnMentalHealth": "Învață despre sănătatea mintală"
+    },
+    "entries": {}
+  },
+  "challenges": {
+    "meta": {
+      "title": "Provocări — Redi Health",
+      "description": "Provocări comunitare"
+    },
+    "title": "Provocări active",
+    "subtitle": "Alătură-te obiectivelor comunitare și provocărilor personale pentru XP și insigne bonus.",
+    "types": {
+      "community": "comunitate",
+      "personal": "personal"
+    },
+    "daysLeft": "{count} zile rămase",
+    "viewLeaderboard": "Vezi clasamentul",
+    "items": {
+      "c1": {
+        "title": "Campion al cunoștințelor despre vaccinuri",
+        "description": "Ajută 50 de elevi din zona ta să treacă modulul Vaccinuri săptămâna aceasta."
+      },
+      "c2": {
+        "title": "Serie de 7 zile de sănătate",
+        "description": "Înregistrează-ți starea și consumul de apă timp de 7 zile la rând."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Certificat — Redi Health",
+      "description": "Certificat național de alfabetizare în sănătate"
+    },
+    "title": "Certificatul tău",
+    "subtitle": "Ai finalizat etapa Națională a Academiei de Sănătate pentru Elevi.",
+    "ofCompletion": "Certificat de finalizare",
+    "diplomaTitle": "Alfabetizare în sănătate națională",
+    "awardedFor": "Acordat pentru finalizarea curriculumului Academiei Redi Health.",
+    "date": "Data",
+    "downloadPdf": "Descarcă PDF",
+    "share": "Distribuie",
+    "gate": {
+      "title": "Finalizează mai întâi Academia",
+      "description": "Pentru a obține certificatul de alfabetizare în sănătate, trebuie să finalizezi toate lecțiile și să treci testul din etapa Națională a Academiei de Sănătate.",
+      "cta": "Mergi la Academie"
     }
   }
 }

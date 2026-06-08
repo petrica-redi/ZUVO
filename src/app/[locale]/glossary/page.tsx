@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { SosButton } from "@/components/SosButton";
 import { HealthGlossary } from "@/components/HealthGlossary";
 
-export const metadata: Metadata = {
-  title: "Health Glossary — Zuvo",
-  description: "Medical terms explained in simple words",
-};
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "glossary" });
+  return { title: t("meta.title"), description: t("meta.description") };
+}
 
 export default function GlossaryPage() {
   return (
