@@ -91,6 +91,263 @@
       "fair": "Fair",
       "good": "Good",
       "excellent": "Excellent"
+    },
+    "countries": {
+      "romania": {
+        "healthChallenges": {
+          "0": "Limited access to health insurance",
+          "1": "High infant and maternal mortality in Roma communities",
+          "2": "Tuberculosis rates higher than national average",
+          "3": "Low vaccination coverage in rural settlements",
+          "4": "Barriers to registering with family doctors"
+        },
+        "keyFact": "Romania has the largest Roma population in Europe and a national health mediator program.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights, health mediation"
+          },
+          "1": {
+            "focus": "Roma inclusion policies"
+          },
+          "2": {
+            "focus": "Mobile health clinics in marginalized communities"
+          }
+        }
+      },
+      "bulgaria": {
+        "healthChallenges": {
+          "0": "Segregated neighborhoods limiting healthcare access",
+          "1": "High unemployment reducing health insurance coverage",
+          "2": "Cardiovascular disease as leading cause of death",
+          "3": "Low life expectancy compared to national average",
+          "4": "Limited access to specialist care"
+        },
+        "keyFact": "Bulgaria's Roma community health mediator program was one of the first in the Balkans.",
+        "organizations": {
+          "0": {
+            "focus": "Roma health promotion and mediation"
+          },
+          "1": {
+            "focus": "Access to healthcare for marginalized Roma"
+          }
+        }
+      },
+      "hungary": {
+        "healthChallenges": {
+          "0": "Life expectancy 10–15 years lower than national average",
+          "1": "High rates of cardiovascular and respiratory disease",
+          "2": "Poverty-related malnutrition",
+          "3": "Low mental health service uptake",
+          "4": "Geographic isolation in northeastern Hungary"
+        },
+        "keyFact": "Hungary has significant Roma populations concentrated in the Borsod, Szabolcs, and Baranya regions.",
+        "organizations": {
+          "0": {
+            "focus": "Roma education including health literacy"
+          },
+          "1": {
+            "focus": "Roma welfare and health advocacy"
+          }
+        }
+      },
+      "northMacedonia": {
+        "healthChallenges": {
+          "0": "The Šuto Orizari (Sutka) municipality has specific healthcare needs",
+          "1": "Hepatitis B prevalence",
+          "2": "Limited access to gynecological and maternal health services",
+          "3": "High rates of anemia especially in children and women",
+          "4": "COVID-19 vaccination hesitancy"
+        },
+        "keyFact": "Šuto Orizari near Skopje is the largest Roma municipality in the world.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and health access"
+          },
+          "1": {
+            "focus": "Public health and harm reduction"
+          }
+        }
+      },
+      "slovakia": {
+        "healthChallenges": {
+          "0": "Segregated settlements (osady) in eastern Slovakia lack infrastructure",
+          "1": "Tuberculosis rates among the highest in the EU",
+          "2": "Child malnutrition and stunting",
+          "3": "Limited access to clean water and sanitation in settlements",
+          "4": "Discrimination in healthcare settings reported"
+        },
+        "keyFact": "Slovakia has the highest proportion of Roma living in segregated settlements in the EU.",
+        "organizations": {
+          "0": {
+            "focus": "Anti-discrimination in healthcare"
+          },
+          "1": {
+            "focus": "Public health programs including Roma health"
+          }
+        }
+      },
+      "serbia": {
+        "healthChallenges": {
+          "0": "Informal settlements (mahale) lacking health infrastructure",
+          "1": "High rates of hepatitis and intestinal parasites",
+          "2": "Limited birth registration affecting healthcare access",
+          "3": "Substance use challenges in urban Roma youth",
+          "4": "Mental health stigma within communities"
+        },
+        "keyFact": "Serbia's health mediator program trains Roma women as community health liaisons.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and health policy"
+          },
+          "1": {
+            "focus": "Women and children's health"
+          }
+        }
+      },
+      "turkey": {
+        "healthChallenges": {
+          "0": "Roma (Dom and Lom) communities face economic marginalization",
+          "1": "Limited documentation affecting healthcare access",
+          "2": "Higher rates of occupational health risks (waste collection workers)",
+          "3": "Limited maternal healthcare in informal urban areas",
+          "4": "Social isolation and mental health challenges"
+        },
+        "keyFact": "Roma communities in Turkey are largely concentrated in Istanbul, Edirne, and Izmir.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and social inclusion in Turkey"
+          },
+          "1": {
+            "focus": "Roma education and health literacy"
+          }
+        }
+      },
+      "greece": {
+        "healthChallenges": {
+          "0": "Roma in rural camps lack access to municipal health services",
+          "1": "Economic crisis impact on healthcare access for vulnerable groups",
+          "2": "Hepatitis C in some communities",
+          "3": "Limited access to dental care",
+          "4": "Economic precarity worsened by COVID-19"
+        },
+        "keyFact": "Greece has Roma communities in both settled and nomadic camps across Central Macedonia and Thessaly.",
+        "organizations": {
+          "0": {
+            "focus": "Roma inclusion across health, education, housing"
+          },
+          "1": {
+            "focus": "Social and health support for marginalized groups"
+          }
+        }
+      },
+      "albania": {
+        "healthChallenges": {
+          "0": "High child poverty and malnutrition rates",
+          "1": "Limited health insurance coverage",
+          "2": "Maternal mortality higher in Roma communities",
+          "3": "Limited access to safe housing affecting health",
+          "4": "Seasonal work leading to health instability"
+        },
+        "keyFact": "Albania also has an Ashkali (Egyptian) minority historically grouped with Roma communities.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and community development"
+          },
+          "1": {
+            "focus": "Education and health access for Roma"
+          }
+        }
+      },
+      "czech": {
+        "healthChallenges": {
+          "0": "Persistent segregation in housing with health impact",
+          "1": "High rates of preventable cardiovascular disease",
+          "2": "Lower vaccination rates in Roma communities",
+          "3": "Barriers in healthcare communication and literacy",
+          "4": "Challenges in accessing specialist care"
+        },
+        "keyFact": "The Czech Republic has a significant Roma population concentrated in Moravia and northern Bohemia.",
+        "organizations": {
+          "0": {
+            "focus": "Integrated approach to Roma inclusion"
+          },
+          "1": {
+            "focus": "European Roma Grassroots Organizations advocacy"
+          }
+        }
+      },
+      "croatia": {
+        "healthChallenges": {
+          "0": "Roma in Međimurje county face healthcare access barriers",
+          "1": "Language barriers limiting healthcare communication",
+          "2": "Higher rates of diabetes in older Roma adults",
+          "3": "Limited preschool vaccination uptake",
+          "4": "Poverty affecting nutrition and health"
+        },
+        "keyFact": "Croatia's largest Roma community is in Međimurje County near the Hungarian border.",
+        "organizations": {
+          "0": {
+            "focus": "Roma women's health and rights"
+          },
+          "1": {
+            "focus": "Roma policy and inclusion"
+          }
+        }
+      },
+      "bosnia": {
+        "healthChallenges": {
+          "0": "Post-war infrastructure affecting healthcare in some regions",
+          "1": "Lack of personal documents restricting healthcare access",
+          "2": "High unemployment leading to lack of health insurance",
+          "3": "Childhood malnutrition in poorer Roma families",
+          "4": "Limited mental health services for community trauma"
+        },
+        "keyFact": "Bosnia and Herzegovina has Roma communities in both the Federation and Republika Srpska entities.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights, health access, and documentation"
+          },
+          "1": {
+            "focus": "Minority rights including Roma health access"
+          }
+        }
+      },
+      "kosovo": {
+        "healthChallenges": {
+          "0": "Roma in Mitrovica were displaced to lead-contaminated camps",
+          "1": "Severe poverty limiting healthcare access",
+          "2": "Limited Roma health mediators",
+          "3": "Post-conflict trauma and mental health needs",
+          "4": "High child mortality compared to national average"
+        },
+        "keyFact": "Roma in North Mitrovica were exposed to severe lead poisoning in UN camps after the 1999 conflict.",
+        "organizations": {
+          "0": {
+            "focus": "Roma RAE community rights and health"
+          },
+          "1": {
+            "focus": "Health access for displaced Roma populations"
+          }
+        }
+      },
+      "slovenia": {
+        "healthChallenges": {
+          "0": "Roma in Dolenjska and Prekmurje regions face marginalization",
+          "1": "Lower educational attainment affecting health literacy",
+          "2": "Social exclusion impacting mental health",
+          "3": "Limited vaccination uptake in some settlements",
+          "4": "Poverty-related dietary deficiencies"
+        },
+        "keyFact": "Slovenia has two legally recognized Roma communities: the autochthonous (western) and non-autochthonous (eastern) Roma.",
+        "organizations": {
+          "0": {
+            "focus": "Roma social and cultural rights"
+          },
+          "1": {
+            "focus": "Roma welfare and health access"
+          }
+        }
+      }
     }
   },
   "language": {

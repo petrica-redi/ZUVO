@@ -108,7 +108,7 @@ export default async function RegionPage({ params }: Props) {
 
           <div className="mb-4 rounded-2xl border border-amber-200 bg-amber-50 p-4">
             <p className="text-[13px] font-bold leading-relaxed text-amber-800">
-              💡 {data.keyFact}
+              💡 {t(`countries.${data.id}.keyFact`)}
             </p>
           </div>
 
@@ -131,10 +131,12 @@ export default async function RegionPage({ params }: Props) {
               <AlertTriangle className="h-4 w-4 text-red-500" /> {t("detail.healthChallenges")}
             </h2>
             <div className="space-y-2">
-              {data.healthChallenges.map((challenge, i) => (
+              {data.healthChallenges.map((challengeKey, i) => (
                 <div key={i} className="flex items-start gap-2.5">
                   <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-red-400" />
-                  <p className="text-[13px] leading-relaxed text-gray-700">{challenge}</p>
+                  <p className="text-[13px] leading-relaxed text-gray-700">
+                    {t(`countries.${data.id}.healthChallenges.${challengeKey}`)}
+                  </p>
                 </div>
               ))}
             </div>
@@ -153,7 +155,9 @@ export default async function RegionPage({ params }: Props) {
                       <OrgIcon className="h-4 w-4 text-gray-500" />
                       <span className="text-[13px] font-bold text-gray-800">{org.name}</span>
                     </div>
-                    <p className="text-[12px] text-gray-500">{org.focus}</p>
+                    <p className="text-[12px] text-gray-500">
+                      {t(`countries.${data.id}.organizations.${org.focus}.focus`)}
+                    </p>
                     {org.phone && (
                       <a href={`tel:${org.phone}`} className="mt-1 inline-flex items-center gap-1 text-[12px] font-semibold text-[#C0392B]">
                         <Phone className="h-3 w-3" /> {org.phone}

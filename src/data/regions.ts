@@ -11,6 +11,7 @@
 export type HealthOrganization = {
   name: string;
   type: "ngo" | "government" | "international";
+  /** i18n key under regions.countries.{regionId}.organizations.{focus}.focus */
   focus: string;
   website?: string;
   phone?: string;
@@ -26,8 +27,10 @@ export type RegionData = {
   capitalCity: string;
   emergencyNumber: string;
   ambulanceNumber: string;
+  /** i18n keys under regions.countries.{id}.healthChallenges.{key} */
   healthChallenges: string[];
   organizations: HealthOrganization[];
+  /** i18n key under regions.countries.{id}.keyFact */
   keyFact: string;
   healthIndex: number; // 1-5, 5 being best access to healthcare
 };
@@ -43,33 +46,27 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Bucharest",
     emergencyNumber: "112",
     ambulanceNumber: "112",
-    healthChallenges: [
-      "Limited access to health insurance",
-      "High infant and maternal mortality in Roma communities",
-      "Tuberculosis rates higher than national average",
-      "Low vaccination coverage in rural settlements",
-      "Barriers to registering with family doctors",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Romani CRISS",
         type: "ngo",
-        focus: "Roma rights, health mediation",
+        focus: "0",
         website: "www.romanicriss.org",
       },
       {
         name: "National Agency for Roma",
         type: "government",
-        focus: "Roma inclusion policies",
+        focus: "1",
       },
       {
         name: "Médecins Sans Frontières (MSF)",
         type: "international",
-        focus: "Mobile health clinics in marginalized communities",
+        focus: "2",
         website: "www.msf.org",
       },
     ],
-    keyFact: "Romania has the largest Roma population in Europe and a national health mediator program.",
+    keyFact: "keyFact",
     healthIndex: 3,
   },
   {
@@ -82,27 +79,21 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Sofia",
     emergencyNumber: "112",
     ambulanceNumber: "112",
-    healthChallenges: [
-      "Segregated neighborhoods limiting healthcare access",
-      "High unemployment reducing health insurance coverage",
-      "Cardiovascular disease as leading cause of death",
-      "Low life expectancy compared to national average",
-      "Limited access to specialist care",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Health and Social Development Foundation (HSDF)",
         type: "ngo",
-        focus: "Roma health promotion and mediation",
+        focus: "0",
         website: "www.hsdf.bg",
       },
       {
         name: "Roma Health Project Bulgaria",
         type: "international",
-        focus: "Access to healthcare for marginalized Roma",
+        focus: "1",
       },
     ],
-    keyFact: "Bulgaria's Roma community health mediator program was one of the first in the Balkans.",
+    keyFact: "keyFact",
     healthIndex: 2,
   },
   {
@@ -115,27 +106,21 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Budapest",
     emergencyNumber: "112",
     ambulanceNumber: "104",
-    healthChallenges: [
-      "Life expectancy 10–15 years lower than national average",
-      "High rates of cardiovascular and respiratory disease",
-      "Poverty-related malnutrition",
-      "Low mental health service uptake",
-      "Geographic isolation in northeastern Hungary",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Romaversitas Foundation",
         type: "ngo",
-        focus: "Roma education including health literacy",
+        focus: "0",
         website: "www.romaversitas.hu",
       },
       {
         name: "National Roma Self-Government",
         type: "government",
-        focus: "Roma welfare and health advocacy",
+        focus: "1",
       },
     ],
-    keyFact: "Hungary has significant Roma populations concentrated in the Borsod, Szabolcs, and Baranya regions.",
+    keyFact: "keyFact",
     healthIndex: 3,
   },
   {
@@ -148,26 +133,20 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Skopje",
     emergencyNumber: "112",
     ambulanceNumber: "194",
-    healthChallenges: [
-      "The Šuto Orizari (Sutka) municipality has specific healthcare needs",
-      "Hepatitis B prevalence",
-      "Limited access to gynecological and maternal health services",
-      "High rates of anemia especially in children and women",
-      "COVID-19 vaccination hesitancy",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "National Roma Centrum",
         type: "ngo",
-        focus: "Roma rights and health access",
+        focus: "0",
       },
       {
         name: "HOPS – Healthy Options Project Skopje",
         type: "ngo",
-        focus: "Public health and harm reduction",
+        focus: "1",
       },
     ],
-    keyFact: "Šuto Orizari near Skopje is the largest Roma municipality in the world.",
+    keyFact: "keyFact",
     healthIndex: 2,
   },
   {
@@ -180,27 +159,21 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Bratislava",
     emergencyNumber: "112",
     ambulanceNumber: "155",
-    healthChallenges: [
-      "Segregated settlements (osady) in eastern Slovakia lack infrastructure",
-      "Tuberculosis rates among the highest in the EU",
-      "Child malnutrition and stunting",
-      "Limited access to clean water and sanitation in settlements",
-      "Discrimination in healthcare settings reported",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Center for Civil and Human Rights (Poradňa)",
         type: "ngo",
-        focus: "Anti-discrimination in healthcare",
+        focus: "0",
         website: "www.poradna-prava.sk",
       },
       {
         name: "WHO Slovakia",
         type: "international",
-        focus: "Public health programs including Roma health",
+        focus: "1",
       },
     ],
-    keyFact: "Slovakia has the highest proportion of Roma living in segregated settlements in the EU.",
+    keyFact: "keyFact",
     healthIndex: 2,
   },
   {
@@ -213,26 +186,20 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Belgrade",
     emergencyNumber: "112",
     ambulanceNumber: "194",
-    healthChallenges: [
-      "Informal settlements (mahale) lacking health infrastructure",
-      "High rates of hepatitis and intestinal parasites",
-      "Limited birth registration affecting healthcare access",
-      "Substance use challenges in urban Roma youth",
-      "Mental health stigma within communities",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Roma National Council Serbia",
         type: "government",
-        focus: "Roma rights and health policy",
+        focus: "0",
       },
       {
         name: "Bibija Roma Women's Center",
         type: "ngo",
-        focus: "Women and children's health",
+        focus: "1",
       },
     ],
-    keyFact: "Serbia's health mediator program trains Roma women as community health liaisons.",
+    keyFact: "keyFact",
     healthIndex: 3,
   },
   {
@@ -245,26 +212,20 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Ankara",
     emergencyNumber: "112",
     ambulanceNumber: "112",
-    healthChallenges: [
-      "Roma (Dom and Lom) communities face economic marginalization",
-      "Limited documentation affecting healthcare access",
-      "Higher rates of occupational health risks (waste collection workers)",
-      "Limited maternal healthcare in informal urban areas",
-      "Social isolation and mental health challenges",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Roman Bir-Der",
         type: "ngo",
-        focus: "Roma rights and social inclusion in Turkey",
+        focus: "0",
       },
       {
         name: "BRIC – Başkent Roma Integration Center",
         type: "ngo",
-        focus: "Roma education and health literacy",
+        focus: "1",
       },
     ],
-    keyFact: "Roma communities in Turkey are largely concentrated in Istanbul, Edirne, and Izmir.",
+    keyFact: "keyFact",
     healthIndex: 3,
   },
   {
@@ -277,26 +238,20 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Athens",
     emergencyNumber: "112",
     ambulanceNumber: "166",
-    healthChallenges: [
-      "Roma in rural camps lack access to municipal health services",
-      "Economic crisis impact on healthcare access for vulnerable groups",
-      "Hepatitis C in some communities",
-      "Limited access to dental care",
-      "Economic precarity worsened by COVID-19",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Greek National Roma Integration Strategy",
         type: "government",
-        focus: "Roma inclusion across health, education, housing",
+        focus: "0",
       },
       {
         name: "ARSIS – Association for Social Support of Youth",
         type: "ngo",
-        focus: "Social and health support for marginalized groups",
+        focus: "1",
       },
     ],
-    keyFact: "Greece has Roma communities in both settled and nomadic camps across Central Macedonia and Thessaly.",
+    keyFact: "keyFact",
     healthIndex: 3,
   },
   {
@@ -309,26 +264,20 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Tirana",
     emergencyNumber: "112",
     ambulanceNumber: "127",
-    healthChallenges: [
-      "High child poverty and malnutrition rates",
-      "Limited health insurance coverage",
-      "Maternal mortality higher in Roma communities",
-      "Limited access to safe housing affecting health",
-      "Seasonal work leading to health instability",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Roma and Balkan Egyptian Community of Albania",
         type: "ngo",
-        focus: "Roma rights and community development",
+        focus: "0",
       },
       {
         name: "Amaro Drom Albania",
         type: "ngo",
-        focus: "Education and health access for Roma",
+        focus: "1",
       },
     ],
-    keyFact: "Albania also has an Ashkali (Egyptian) minority historically grouped with Roma communities.",
+    keyFact: "keyFact",
     healthIndex: 2,
   },
   {
@@ -341,26 +290,20 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Prague",
     emergencyNumber: "112",
     ambulanceNumber: "155",
-    healthChallenges: [
-      "Persistent segregation in housing with health impact",
-      "High rates of preventable cardiovascular disease",
-      "Lower vaccination rates in Roma communities",
-      "Barriers in healthcare communication and literacy",
-      "Challenges in accessing specialist care",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Agency for Social Inclusion (Czech Government)",
         type: "government",
-        focus: "Integrated approach to Roma inclusion",
+        focus: "0",
       },
       {
         name: "ERGO Network – Czech Member",
         type: "ngo",
-        focus: "European Roma Grassroots Organizations advocacy",
+        focus: "1",
       },
     ],
-    keyFact: "The Czech Republic has a significant Roma population concentrated in Moravia and northern Bohemia.",
+    keyFact: "keyFact",
     healthIndex: 3,
   },
   {
@@ -373,26 +316,20 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Zagreb",
     emergencyNumber: "112",
     ambulanceNumber: "194",
-    healthChallenges: [
-      "Roma in Međimurje county face healthcare access barriers",
-      "Language barriers limiting healthcare communication",
-      "Higher rates of diabetes in older Roma adults",
-      "Limited preschool vaccination uptake",
-      "Poverty affecting nutrition and health",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Kali Sara – Roma Women's Center Croatia",
         type: "ngo",
-        focus: "Roma women's health and rights",
+        focus: "0",
       },
       {
         name: "Roma National Council of Croatia",
         type: "government",
-        focus: "Roma policy and inclusion",
+        focus: "1",
       },
     ],
-    keyFact: "Croatia's largest Roma community is in Međimurje County near the Hungarian border.",
+    keyFact: "keyFact",
     healthIndex: 3,
   },
   {
@@ -405,26 +342,20 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Sarajevo",
     emergencyNumber: "112",
     ambulanceNumber: "124",
-    healthChallenges: [
-      "Post-war infrastructure affecting healthcare in some regions",
-      "Lack of personal documents restricting healthcare access",
-      "High unemployment leading to lack of health insurance",
-      "Childhood malnutrition in poorer Roma families",
-      "Limited mental health services for community trauma",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Roma Center Sarajevo",
         type: "ngo",
-        focus: "Roma rights, health access, and documentation",
+        focus: "0",
       },
       {
         name: "OSCE Mission to Bosnia",
         type: "international",
-        focus: "Minority rights including Roma health access",
+        focus: "1",
       },
     ],
-    keyFact: "Bosnia and Herzegovina has Roma communities in both the Federation and Republika Srpska entities.",
+    keyFact: "keyFact",
     healthIndex: 2,
   },
   {
@@ -437,26 +368,20 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Pristina",
     emergencyNumber: "112",
     ambulanceNumber: "194",
-    healthChallenges: [
-      "Roma in Mitrovica were displaced to lead-contaminated camps",
-      "Severe poverty limiting healthcare access",
-      "Limited Roma health mediators",
-      "Post-conflict trauma and mental health needs",
-      "High child mortality compared to national average",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Voice of Roma, Ashkali and Egyptians in Kosovo",
         type: "ngo",
-        focus: "Roma RAE community rights and health",
+        focus: "0",
       },
       {
         name: "UNHCR Kosovo",
         type: "international",
-        focus: "Health access for displaced Roma populations",
+        focus: "1",
       },
     ],
-    keyFact: "Roma in North Mitrovica were exposed to severe lead poisoning in UN camps after the 1999 conflict.",
+    keyFact: "keyFact",
     healthIndex: 1,
   },
   {
@@ -469,26 +394,20 @@ export const REGIONS: RegionData[] = [
     capitalCity: "Ljubljana",
     emergencyNumber: "112",
     ambulanceNumber: "112",
-    healthChallenges: [
-      "Roma in Dolenjska and Prekmurje regions face marginalization",
-      "Lower educational attainment affecting health literacy",
-      "Social exclusion impacting mental health",
-      "Limited vaccination uptake in some settlements",
-      "Poverty-related dietary deficiencies",
-    ],
+    healthChallenges: ["0", "1", "2", "3", "4"],
     organizations: [
       {
         name: "Romano Them Roma Association",
         type: "ngo",
-        focus: "Roma social and cultural rights",
+        focus: "0",
       },
       {
         name: "Republic of Slovenia Roma Community Council",
         type: "government",
-        focus: "Roma welfare and health access",
+        focus: "1",
       },
     ],
-    keyFact: "Slovenia has two legally recognized Roma communities: the autochthonous (western) and non-autochthonous (eastern) Roma.",
+    keyFact: "keyFact",
     healthIndex: 3,
   },
 ];
