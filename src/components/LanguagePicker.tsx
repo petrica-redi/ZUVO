@@ -16,6 +16,7 @@ type LanguageOption = {
 
 const LANGUAGES: LanguageOption[] = [
   { code: "en",  nativeName: "English",      englishName: "English",        flag: "🇬🇧" },
+  { code: "it",  nativeName: "Italiano",     englishName: "Italian",        flag: "🇮🇹" },
   { code: "sq",  nativeName: "Shqip",        englishName: "Albanian",       flag: "🇦🇱" },
   { code: "rom", nativeName: "Romani",       englishName: "Romani",         flag: "🎡" },
   { code: "ro",  nativeName: "Română",       englishName: "Romanian",       flag: "🇷🇴" },
@@ -45,8 +46,8 @@ export function LanguagePicker({ variant = "default" }: { variant?: "default" | 
 
   function selectLanguage(code: string) {
     setOpen(false);
-    document.cookie = `NEXT_LOCALE=${code}; path=/; max-age=31536000; SameSite=Lax`;
     startTransition(() => {
+      document.cookie = `NEXT_LOCALE=${code}; path=/; max-age=31536000; SameSite=Lax`;
       router.replace(pathname, { locale: code as Locale });
       router.refresh();
     });

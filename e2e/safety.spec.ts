@@ -113,18 +113,15 @@ test.describe("Rate limiting", () => {
 });
 
 test.describe("Localised emergency content", () => {
-  test("home page shows 112 emergency CTA in default locale", async ({ page }) => {
+  test("home page shows 112 emergency CTA in default locale (Romanian)", async ({ page }) => {
     await page.goto("/");
-    // Multiple 112 references on the landing (tel: anchor + footer copy);
-    // assert at least one visible occurrence.
+    await expect(page.getByText(/Urgență\?/i).first()).toBeVisible();
     await expect(page.getByText(/112/).first()).toBeVisible();
   });
 
-  test("Romanian locale renders translated home", async ({ page }) => {
-    await page.goto("/ro");
-    // Romanian for "Emergency? Call 112" — multiple touchpoints (header CTA +
-    // emergency strip), so assert at least one visible occurrence.
-    await expect(page.getByText(/Urgență\?/i).first()).toBeVisible();
+  test("English locale renders at /en prefix", async ({ page }) => {
+    await page.goto("/en");
+    await expect(page.getByText(/Emergency\?/i).first()).toBeVisible();
   });
 
   test("Italian locale renders translated home", async ({ page }) => {

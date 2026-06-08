@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { getAppConfig } from "@/lib/env";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
-import { MapPin, CheckCircle2, ShieldCheck, HeartPulse, Building2, Map } from "lucide-react";
+import { MapPin, CheckCircle2, HeartPulse, Building2, Map, AlertTriangle } from "lucide-react";
 import { Card, Badge } from "@/components/ui";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -15,14 +15,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: `${t("title")} — ${appName}`, description: t("subtitle") };
 }
 
-// Dummy data for the provider directory. In a real app this would be fetched from the DB.
+/**
+ * Placeholder listings only — not verified against the database.
+ * Per the Provider Verification Policy (docs/PROVIDER_VERIFICATION.md),
+ * no "Roma-friendly" badge may appear on unverified listings, and
+ * a prominent warning banner must be shown above all results.
+ * Replace this array with a DB-backed query once verification is complete.
+ */
 const PROVIDERS = [
   {
     id: "p1",
     name: "Clinica Sfânta Maria",
     city: "Bucharest",
     type: "General Clinic",
-    isRomaFriendly: true,
     isFree: true,
     hasInterpreter: true,
     distance: "2.4 km",
@@ -32,7 +37,6 @@ const PROVIDERS = [
     name: "Centrul de Sănătate Ferentari",
     city: "Bucharest",
     type: "Community Health",
-    isRomaFriendly: true,
     isFree: true,
     hasInterpreter: true,
     distance: "3.1 km",
@@ -42,11 +46,10 @@ const PROVIDERS = [
     name: "Spitalul Județean Ilfov",
     city: "Ilfov",
     type: "Hospital",
-    isRomaFriendly: true,
     isFree: false,
     hasInterpreter: false,
     distance: "12 km",
-  }
+  },
 ];
 
 export default async function ProvidersPage({ params }: Props) {
@@ -70,9 +73,18 @@ export default async function ProvidersPage({ params }: Props) {
             </p>
           </div>
 
-          <div className="mb-6 relative animate-fade-in-up delay-100">
-            <input 
-              type="text" 
+          {/* Unverified data warning — required by Provider Verification Policy */}
+          <div className="mb-6 rounded-2xl border border-amber-300 bg-amber-50 p-4 flex gap-3 animate-fade-in-up delay-100" role="alert">
+            <AlertTriangle className="lucide h-5 w-5 flex-shrink-0 text-amber-600 mt-0.5" strokeWidth={1.85} />
+            <div>
+              <p className="text-sm font-bold text-amber-900">{t("unverifiedWarningTitle")}</p>
+              <p className="text-xs text-amber-800 mt-1 leading-relaxed">{t("unverifiedWarningBody")}</p>
+            </div>
+          </div>
+
+          <div className="mb-6 relative animate-fade-in-up delay-150">
+            <input
+              type="text"
               placeholder={t("searchPlaceholder")}
               className="w-full rounded-2xl border border-[var(--color-border-default)] bg-[var(--color-surface)] px-5 py-4 pl-12 text-sm text-[var(--color-text-primary)] shadow-1 focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
             />
@@ -97,13 +109,12 @@ export default async function ProvidersPage({ params }: Props) {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {provider.isRomaFriendly && (
-                    <Badge variant="success">
-                      <ShieldCheck className="lucide h-3 w-3" strokeWidth={1.85} />
-                      {t("verified")}
-                    </Badge>
-                  )}
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {/* Unverified status — no Roma-friendly badge until verified per policy */}
+                  <Badge variant="warning">
+                    <AlertTriangle className="lucide h-3 w-3" strokeWidth={1.85} />
+                    {t("unverifiedBadge")}
+                  </Badge>
                   {provider.isFree && (
                     <Badge variant="info">
                       <HeartPulse className="lucide h-3 w-3" strokeWidth={1.85} />
@@ -117,6 +128,8 @@ export default async function ProvidersPage({ params }: Props) {
                     </Badge>
                   )}
                 </div>
+
+                <p className="text-xs text-[var(--color-text-muted)] mb-3">{t("unverifiedListingNote")}</p>
 
                 <button className="w-full py-2.5 rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] text-sm font-bold text-[var(--color-text-primary)] hover:bg-[var(--color-surface-hover)] transition-colors flex items-center justify-center gap-2">
                   <MapPin className="lucide h-4 w-4" strokeWidth={1.85} />
