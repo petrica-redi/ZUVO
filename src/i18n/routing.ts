@@ -5,6 +5,7 @@ export const LOCALES = [
   "sq",  // Albanian
   "rom", // Romani
   "ro",  // Romanian
+  "it",  // Italian
   "hu",  // Hungarian
   "sk",  // Slovak
   "cs",  // Czech

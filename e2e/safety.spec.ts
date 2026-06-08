@@ -127,6 +127,11 @@ test.describe("Localised emergency content", () => {
     await expect(page.getByText(/Urgență\?/i).first()).toBeVisible();
   });
 
+  test("Italian locale renders translated home", async ({ page }) => {
+    await page.goto("/it");
+    await expect(page.getByText(/Emergenza\?/i).first()).toBeVisible();
+  });
+
   test("Albanian locale renders translated home", async ({ page }) => {
     await page.goto("/sq");
     await expect(page.getByText(/Emergjencë\?/i).first()).toBeVisible();
