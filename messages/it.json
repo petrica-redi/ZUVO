@@ -108,7 +108,11 @@
     "no": "No",
     "notSure": "Non sono sicuro",
     "tryAgain": "Riprova",
-    "analyzing": "Analizzando…"
+    "analyzing": "Analizzando…",
+    "save": "Salva",
+    "delete": "Elimina",
+    "cancel": "Annulla",
+    "confirm": "Conferma"
   },
   "providers": {
     "title": "Trova assistenza sanitaria",
@@ -228,7 +232,16 @@
     "meta": {
       "title": "Scanner disinformazione — Redi Health",
       "description": "Verifica le affermazioni sulla salute da social media."
-    }
+    },
+    "heroTitle": "Verifica un'affermazione sulla salute",
+    "heroSubtitle": "Incolla una voce da WhatsApp, TikTok o Facebook. Ti aiutiamo a capire cosa dicono le prove.",
+    "cta": "Verifica affermazione",
+    "loading": "Controllo delle prove...",
+    "verdict": "Verdetto",
+    "why": "Perche",
+    "sources": "Fonti affidabili",
+    "share": "Condividi risposta",
+    "tryAnother": "Verifica un'altra affermazione"
   },
   "symptoms": {
     "title": "Come ti senti?",
@@ -731,7 +744,8 @@
       "title": "Mediatori sanitari",
       "subtitle": "Strumenti professionali per la tua comunità",
       "openDashboard": "Apri dashboard"
-    }
+    },
+    "title": "Redi Health"
   },
   "landing": {
     "eyebrow": "Team integrati di comunità · Romania rurale",
@@ -831,7 +845,9 @@
     "imageMosaicMediatorAlt": "Illustrazione di un mediatore comunitario che condivide la sensibilizzazione sanitaria con i vicini.",
     "imageAudienceStudentsAlt": "Illustrazione di giovani che collaborano su abitudini sanitarie quotidiane.",
     "imageAudienceCommunityAlt": "Illustrazione di un cerchio comunitario accogliente incentrato sulla cura preventiva.",
-    "imageAudiencePartnersAlt": "Illustrazione di politici che esaminano dati anonimizzati di salute pubblica."
+    "imageAudiencePartnersAlt": "Illustrazione di politici che esaminano dati anonimizzati di salute pubblica.",
+    "emergencyCta": "Emergenza? Chiama 112",
+    "emergencySub": "Disponibile 24/7 in tutta Europa"
   },
   "track": {
     "title": "Check-in sanitario quotidiano",
@@ -911,7 +927,10 @@
     "call112": "Chiama il 112 ORA",
     "banner": "Emergenza? Chiama il 112",
     "emergencyLabel": "Emergenza",
-    "ambulanceLabel": "Ambulanza"
+    "ambulanceLabel": "Ambulanza",
+    "title": "Emergenza",
+    "callNow": "Chiama ora",
+    "disclaimer": "Se qualcuno e in pericolo immediato, chiama il 112."
   },
   "voice": {
     "start": "Inizia a parlare",
