@@ -1,0 +1,497 @@
+{
+  "healthQuiz": {
+    "meta": {
+      "title": "Test de sastipen — Redi Health",
+      "description": "Testează-ți cunoștințele de sastipen cu chestionare interactive"
+    },
+    "title": "Sastipenaki quiz",
+    "subtitle": "Dikh sar zhanes. Sikhave kova nevo.",
+    "backToQuizzes": "Înapoi la chestionare",
+    "seeResults": "Vezi rezultatele",
+    "nextQuestion": "Următoarea puximata",
+    "questionsCount": "{count} întrebări",
+    "results": {
+      "perfect": "Scor perfect!",
+      "great": "Mare treaba!",
+      "good": "Efort bun!",
+      "keepLearning": "Continuați să învățați!",
+      "score": "Ai luat {score} din {total} corect",
+      "tryAgain": "Încercați din nou",
+      "moreQuizzes": "Mai multe chestionare"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotice",
+        "description": "Știi kana să folosești antibiotice?",
+        "questions": [
+          {
+            "question": "Pot antibioticele să vindece gripa?",
+            "options": [
+              "Va",
+              "na",
+              "Uneori"
+            ],
+            "explanation": "Gripa si cauzată de un virus. Antibioticele ucid doar bacteriile. Luarea de antibiotice pentru gripă na face nimic thaj šaj face infecțiile viitoare mai greu de tratat."
+          },
+          {
+            "question": "Te simti mai bine dupa 3 dives de antibiotice. Ar trebui să te oprești?",
+            "options": [
+              "Va, te-ai vindecat",
+              "na, termină cursul complet",
+              "Luați jumătate din pastilele rămase"
+            ],
+            "explanation": "Terminați ÎNTOTDEAUNA cursul complet. te te oprești devreme, unele bacterii supraviețuiesc thaj devin rezistente. Data viitoare, același antibiotic na va funcționa."
+          },
+          {
+            "question": "Puteți împărtăși antibiotice cu un membru al familijai care are simptome similare?",
+            "options": [
+              "Va, economisește bani",
+              "na, niciodată",
+              "Doar te si aceeași boală"
+            ],
+            "explanation": "na împărtăși niciodată antibiotice. Infecțiile diferite au nevoie de doktoroamente diferite. Antibioticul greșit šaj fi periculos thaj na va ajuta."
+          },
+          {
+            "question": "Ce se întâmplă te iei antibiotice prea des?",
+            "options": [
+              "Nimic rău",
+              "Corpul tău devine imun la nasvalipen",
+              "Bacteriile devin rezistente thaj mai greu de ucis"
+            ],
+            "explanation": "Rezistența la antibiotice si o criză globală. kana bacteriile devin rezistente, infecțiile simple pot deveni mortale. Luați antibiotice numai atunci kana vi le prescrie un doktoro."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "vakcinuri",
+        "description": "Separați faptele de mituri",
+        "questions": [
+          {
+            "question": "vakcinurile provoacă autism?",
+            "options": [
+              "Va",
+              "na",
+              "na știm"
+            ],
+            "explanation": "na. Acest mit a pornit de la un studiu fraudulos care a fost retras. doktoroul care a publicat-o thaj-a pierdut permisul doktoroal. Zeci de studii cu milioane de čhavore demonstrează că vakcinurile na provoacă autism."
+          },
+          {
+            "question": "si sigur să dai unui čhavo mai multe vakcinuri deodată?",
+            "options": [
+              "na, e prea mult",
+              "Va, si sigur thaj testat",
+              "Doar unul la un moment dat"
+            ],
+            "explanation": "Sistemul imunitar al bebelușilor gestionează mii de germeni în fiecare dives. vakcinurile combinate si testate temeinic thaj sigure. Amânarea vakcinurilor lasă čhavoul neprotejat."
+          },
+          {
+            "question": "čhavoul meu are o răceală ușoară. Se mai pot vakcina?",
+            "options": [
+              "na, așteptați până kana si complet sănătoși",
+              "Va, o răceală ușoară e bine",
+              "Doar cu permisiunea doktoroului"
+            ],
+            "explanation": "O răceală ușoară, febră scăzută vaj nasul care curge na si un motiv pentru a amâna vakcinarea. Doar nasvalipenle severe necesită amânare. Întrebați doktoroul dumneavoastră te na sunteți sigur."
+          },
+          {
+            "question": "Conțin vakcinurile substanțe chimice periculoase?",
+            "options": [
+              "Va, si pline de toxine",
+              "na, toate ingredientele si sigure în cantitățile mici folosite",
+              "Unii fac, alții na"
+            ],
+            "explanation": "Ingredientele vakcinului si prezente în cantități mici, sigure. Primești mai mult aluminiu din laptele matern decât dintr-un vakcin. Fiecare ingredient a fost testat pentru siguranță."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Diabetul",
+        "description": "Înțelegerea managementului diabetului",
+        "questions": [
+          {
+            "question": "si diabetul cauzat de consumul de prea mult zahăr?",
+            "options": [
+              "Va",
+              "na, e mai complex",
+              "Doar tipul 2"
+            ],
+            "explanation": "Diabetul si cauzat de genetică, stilul de viață thaj modul în care corpul dumneavoastră procesează insulina. Consumul de zahăr na îl cauzează în mod direct, amari o dietă nesănătoasă thaj obezitatea cresc riscul."
+          },
+          {
+            "question": "šaj fi vindecat diabetul cu remedii naturale precum scorțișoara?",
+            "options": [
+              "Va, scorțișoara o vindecă",
+              "na, na există leac, amari šaj fi gestionat",
+              "Va, cu destul usturoi thaj ierburi"
+            ],
+            "explanation": "na există tretmano pentru diabet. šaj fi GESTIONAT cu doktoroamente, mancare sanatoasa si exercitii fizice. Scorțișoara šaj avea beneficii minuscule, amari na šaj înlocui doktoroamentele. Oamenii care își opresc doktoroamentele ajung la spitalo."
+          },
+          {
+            "question": "O persoană cu diabet se simte amețită thaj transpirată. Ce ar trebui să faci?",
+            "options": [
+              "Dați-le insulină",
+              "Dă-le imediat ceva dulce",
+              "Spune-le să se odihnească"
+            ],
+            "explanation": "Acestea si semne ale glicemiei scăzute (hipoglicemie). Dă-le imediat suc, bomboane vaj paji cu zahăr. Acest lucru šaj pune viața în pericol. După ce se simt mai bine, ar trebui să mănânce o masă adecvată."
+          },
+          {
+            "question": "Cât de des ar trebui un diabetic să-thaj verifice picioarele?",
+            "options": [
+              "Niciodată, picioarele si bine",
+              "În fiecare dives",
+              "O dată pe berš"
+            ],
+            "explanation": "Diabetul šaj afecta nervii din picioare. si posibil să na simțiți tăieturi vaj răni. Verificați-vă picioarele în fiecare dives pentru tăieturi, vezicule vaj modificări de culoare. Rănile mici pot deveni infecții grave."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Igienă thaj prevenire",
+        "description": "Obiceiuri de bază pentru sastipen care salvează vieți",
+        "questions": [
+          {
+            "question": "Cât timp trebuie să vă spălați vastale cu săpun?",
+            "options": [
+              "5 secunde",
+              "Cel puțin 20 secunde",
+              "1 minut"
+            ],
+            "explanation": "Spălați cel puțin 20 secunde — aproximativ timpul necesar pentru a cânta „Happy Birthday” de două ori. Acest lucru elimină majoritatea germenilor. Clătirile rapide na funcționează."
+          },
+          {
+            "question": "si sigur să bei paji dintr-un râu vaj un pârâu?",
+            "options": [
+              "Va, apa naturală si curată",
+              "na, întotdeauna fierbeți vaj filtrați-l mai întâi",
+              "Doar te pare clar"
+            ],
+            "explanation": "Chiar thaj apa limpede šaj conține bacterii thaj paraziți periculoși. Fierbeți întotdeauna paji timp de cel puțin 1 minut vaj folosiți un filtru. Apa murdară provoacă diaree, holeră thaj tifoidă."
+          },
+          {
+            "question": "čhavoul dumneavoastră are diaree. Care si cel mai important lucru?",
+            "options": [
+              "Opriți toate alimentele",
+              "Dați multe lichide (paji, ORS)",
+              "Dați antibiotice"
+            ],
+            "explanation": "Deshidratarea cauzată de diaree ucide mai mulți čhavore decât diareea în sine. Dați soluție de rehidratare orală (ORS) vaj paji curată cu un praf de sare thaj zahăr. Continuați să alăptați bebelușii."
+          },
+          {
+            "question": "kana ar trebui să vă spălați pe vasta?",
+            "options": [
+              "Doar înainte de a mânca",
+              "Înainte de a mânca, după toaletă, după atingerea animalelor, după tuse",
+              "Doar kana par murdare"
+            ],
+            "explanation": "Germenii si invizibili. Spălați-vă vastale: înainte de a mânca/găti, după folosirea toaletei, după schimbarea scutecelor, după atingerea animalelor, după tuse/strănut thaj după atingerea persoanelor nasvaloe."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Cunoaște-ți hakajale — Redi Health",
+      "description": "hakajale pacienților, ajutor pentru discriminare thaj contacte juridice pentru comunitățile de romi"
+    },
+    "title": "Dikh tiri hakaja",
+    "subtitle": "Ai hakaja ca pacient. Învață-le. Folosește-le.",
+    "back": "Înapoi",
+    "menu": {
+      "patientRights": {
+        "title": "hakajale pacientului",
+        "desc": "8 hakaja pe care fiecare pacient le are"
+      },
+      "discrimination": {
+        "title": "Te confrunți cu discriminarea?",
+        "desc": "Ce să spui thaj să faci — pas cu pas"
+      },
+      "contacts": {
+        "title": "Asistență juridică în funcție de țară",
+        "desc": "Ombudsman, anti-discriminare, organizații de romi"
+      }
+    },
+    "views": {
+      "patientRights": "hakajale dumneavoastră pacientului",
+      "discrimination": "te vă confruntați cu discriminare",
+      "discriminationDesc": "Situații reale thaj exact ce să spui thaj să faci.",
+      "contacts": "Asistență juridică în funcție de țară"
+    },
+    "labels": {
+      "sayThis": "Spune asta:",
+      "thenDo": "Atunci fă asta:",
+      "patientOmbudsman": "Avocatul Pacienților",
+      "antiDiscrimination": "Anti-diskriminim",
+      "romaRightsOrg": "Organizacija vaš romane hakaja"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Dreptul la tretmano de urgență",
+        "description": "Fiecare spitalo TREBUIE să vă trateze în caz de urgență, chiar thaj fără asigurare vaj documente. Aceasta si legea în fiecare EU țară. te refuză, cereți numele doktoroului thaj raportați-l."
+      },
+      "information": {
+        "title": "Dreptul de a-ți înțelege diagnosticul",
+        "description": "doktoroul dumneavoastră trebuie să vă explice starea în cuvinte pe care le înțelegeți. te na înțelegeți, spuneți: „Poți explica asta mai simplu?” De asemenea, puteți solicita un rezumat scris."
+      },
+      "consent": {
+        "title": "Dreptul de a spune na",
+        "description": "Nimeni na vă šaj forța tretmanoul. Înainte de orice procedură, doktoroul trebuie să explice ce vor face thaj tu trebuie să fii de acord. Puteți spune oricând „Am nevoie de timp să mă gândesc”."
+      },
+      "privacy": {
+        "title": "Dreptul la intimitate",
+        "description": "Informațiile dumneavoastră doktoroale si private. doktoroii na-l pot împărtăși angajatorului, familijai vaj oricui altcineva fără permisiunea dumneavoastră. Aceasta include starea dvs. HIV, sarcina vaj sastipena mintală."
+      },
+      "interpreter": {
+        "title": "Dreptul la un interpret",
+        "description": "te na vorbiți bine limba locală, puteți solicita un interpret. Multe spitaloe au acest serviciu. te na, poți aduce pe cineva în care ai încredere să traducă."
+      },
+      "second-opinion": {
+        "title": "Dreptul la o a doua opinie",
+        "description": "te na sunteți de acord cu un diagnostic, puteți consulta un alt doktoro. Acesta si dreptul tău. na trebuie să explici de ce."
+      },
+      "records": {
+        "title": "Dreptul la dosarele dumneavoastră doktoroale",
+        "description": "Puteți cere oricând o copie a tuturor dosarelor dumneavoastră doktoroale. spitaloul trebuie să le furnizeze. Acest lucru si util atunci kana schimbați doktoroul vaj vă mutați în alt oraș."
+      },
+      "complaint": {
+        "title": "Dreptul de a se plânge",
+        "description": "te vă simțiți maltratat vaj discriminat, puteți depune o plângere. Fiecare spitalo are o procedură de reclamații. De asemenea, puteți contacta ombudsmanul pacienților din țara dumneavoastră."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "spitaloul refuză să te trateze",
+        "whatToSay": "„Am dreptul la tretmano de urgență conform legii EU. Vă rugăm să scrieți numele dumneavoastră thaj motivul pentru care refuzați.”",
+        "whatToDo": [
+          "Stai calm, amari ferm",
+          "Solicitați numele complet al doktoroului",
+          "Solicitați refuzul în scris",
+          "Sunați ombudsmanul pacientului",
+          "Contactați o organizație pentru hakajale romilor"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Personalul spitaloului si nepoliticos vaj disprețuitor din cauza etniei tale",
+        "whatToSay": "„si aici pentru ajutor doktoroal. Mă aștept să fiu tratat cu același respect ca orice alt pacient”.",
+        "whatToDo": [
+          "Cereți să vorbiți cu asistenta-șef vaj cu șeful de departament",
+          "Notați data, ora thaj numele",
+          "Depuneți o plângere scrisă la spitalo",
+          "Raportați către organismul național de luptă împotriva discriminării"
+        ]
+      },
+      "no-insurance": {
+        "situation": "na ai asigurare de sastipen",
+        "whatToSay": "\"Am nevoie de ajutor doktoroal. Care si opțiunile mele pentru pacienții neasigurați?\"",
+        "whatToDo": [
+          "Îngrijirea de urgență si întotdeauna makhloă - insistați asupra ei",
+          "Întrebați despre programele de asistență socială",
+          "Contactați un mediator sanitar din zona dumneavoastră",
+          "Multe ONG-uri oferă clinici makhloe - întrebați la spitalo"
+        ]
+      },
+      "language-barrier": {
+        "situation": "na poți comunica cu doktoroul",
+        "whatToSay": "„Am nevoie de ajutor pentru înțelegere. Puteți oferi un interpret vaj puteți vorbi mai încet?”",
+        "whatToDo": [
+          "Utilizați această aplicație pentru a traduce fraze cheie",
+          "Aduceți o persoană de încredere care vorbește limba",
+          "Solicitați instrucțiuni scrise pe care le puteți traduce mai târziu",
+          "Utilizați camera telefonului pentru a traduce documente"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Povești ale comunității — Redi Health",
+      "description": "Experiențe reale de sastipen din comunitățile de romi din Europa"
+    },
+    "title": "Paramiča andar komuniteto",
+    "subtitle": "Experiențe reale din comunitățile de romi. Învață de la alții.",
+    "backToStories": "Înapoi la povești",
+    "lessonLearned": "Lecția învățată",
+    "whatToDoNext": "Ce să faci în continuare",
+    "categories": {
+      "vaccines": "vakcinuri",
+      "chronic": "Boală cronică",
+      "maternal": "Sarcina",
+      "discrimination": "hakaja",
+      "prevention": "Prevenirea",
+      "mental": "sastipen mintală"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Ghid de vakcinare",
+      "askZuvo": "Întreabă-l pe Zuvo",
+      "explainPrescription": "Explicați prescripția",
+      "navigateToCare": "Navigați către îngrijire",
+      "knowYourRights": "Cunoaște-ți hakajale",
+      "learnPrevention": "Învață prevenirea",
+      "checkSymptoms": "Verificați simptomele",
+      "learnMentalHealth": "Aflați despre sastipena mintală"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "România",
+        "title": "Aproape că na mi-am vakcinat fiica",
+        "story": "Soacra mea mi-a spus că vakcinurile si otravă. Toți cei din așezare au spus același lucru. kana s-a născut fiica mea, m-am speriat. amari mediatorul sanitar a venit la noi acasă thaj ne-a explicat totul – cum funcționează vakcinurile, care si cu adevărat efectele secundare. Mi-a arătat fotografii cu čhavore cu rujeolă. Mi-a fost mai dar de boală decât de vakcin. Fiica mea thaj-a luat toate vakcinurile. Ea si sanatoasa si puternica.",
+        "lesson": "Discutați cu un mediator sanitar vaj cu un doktoro înainte de a lua decizii pe baza a ceea ce spun alții. vakcinurile salvează vieți."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bulgarija",
+        "title": "Mi-am oprit doktoroamentele pentru diabet thaj aproape că am murit",
+        "story": "Am fost diagnosticat cu diabet de tip 2 la 45. doktoroamentul m-a durut stomacul, așa că am încetat să-l mai iau. Vecinul meu a spus că ceaiul de scorțișoară mă va vindeca. Timp de 2 berša am baut in schimb ceai de scortisoara. Apoi, într-o dives, m-am prăbușit. Glicemia mea era peste 500. doktoroii au spus că rinichii mi-au fost afectați. Acum îmi iau doktoroamentele în fiecare dives. Mi-aș fi dorit să na mă fi oprit niciodată.",
+        "lesson": "na opriți niciodată doktoroamentul fără a discuta cu doktoroul dumneavoastră. Remediile naturale na pot înlocui doktoroamentele pentru diabet."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Serbija",
+        "title": "Prima mea sarcină — na știam că pot vedea un doktoro gratis",
+        "story": "kana am rămas însărcinată la 19, na am fost la doktoro timp de 6 luni. na aveam asigurare thaj m-am gândit că va costa prea mult. Un mediator sanitar mi-a spus că îngrijirea prenatală si makhloă pentru toate femeile însărcinate din Serbia. Ea m-a ajutat să mă înregistrez. doktoroul a constatat că am anemie thaj hipertensiune arterială. te na aș fi plecat, čhavoul meu ar fi putut fi în pericol.",
+        "lesson": "Îngrijirea prenatală si makhloă în majoritatea țărilor europene. Cereți unui mediator sanitar să vă ajute să vă înscrieți."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Ungaria",
+        "title": "spitaloul a încercat să mă trimită",
+        "story": "Am fost la camera de pharia cu dureri in piept. Asistenta s-a uitat la mine thaj a spus: „Suntem plini, mergi la alt spitalo”. Știam că acest lucru na si corect. Am spus: „Am dureri în piept. Trebuie să mă examinezi. Te rog să-mi spui numele tău. Atitudinea ei s-a schimbat imediat. M-au examinat thaj au descoperit că aveam o problemă cu inima care avea nevoie de tretmano. te aș fi plecat, aș fi putut face un atac de cord.",
+        "lesson": "Aveți dreptul la tretmano de urgență. te cineva încearcă să te îndepărteze, cere-i numele thaj spune-i că îți cunoști hakajale."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Slovacia",
+        "title": "TB na si o condamnare la moarte — amari trebuie să termini doktoroamentul",
+        "story": "Tușeam luni de dives. Am crezut că e doar o răceală. kana am fost în sfârșit la doktoro, mi-au spus că am tuberculoză. Eram îngrozit - am crezut că voi muri. amari doktoroul a explicat că TB se šaj vindeca cu 6 luni de doktoroamente. Cea mai grea parte a fost să iau pastile în fiecare dives timp de 6 luni, chiar thaj atunci kana mă simțeam mai bine după 2 luni. amari am terminat. si vindecat.",
+        "lesson": "te tușiți mai mult de 2 săptămâni, consultați un doktoro. TB si vindecabil, amari TREBUIE să termini toate doktoroamentele."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Macedonia de Nord",
+        "title": "Depresia na si slăbiciune - si o boală",
+        "story": "După ce a murit soțul meu, na m-am putut ridica din pat luni de dives. Familia mea a spus că si leneș. Au spus „doar fii puternic”. amari na am putut. Un mediator sanitar a observat că ceva na era în regulă thaj m-a dus la doktoro. doktoroul a spus că am depresie - o adevărată afecțiune doktoroală. Am început doktoroina thaj am vorbit cu un consilier. Încet-încet, m-am îmbunătățit. na si slab. Am fost nasvalo.",
+        "lesson": "Depresia si o condiție doktoroală, na un defect de caracter. doktoroina thaj consilierea pot ajuta. Vă rugăm să cereți ajutor."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Provocări — Redi Health",
+      "description": "Provocări ale comunității"
+    },
+    "title": "Provocări active",
+    "subtitle": "Alăturați-vă obiectivelor comunității thaj provocărilor personale pentru a câștiga bonus XP thaj insigne.",
+    "types": {
+      "community": "komuniteto",
+      "personal": "personale"
+    },
+    "daysLeft": "Au mai rămas {count} dives",
+    "viewLeaderboard": "Vedeți clasamentul",
+    "items": {
+      "c1": {
+        "title": "Campion al cunoașterii vakcinurilor",
+        "description": "Aduceți 50 studenți din zona dvs. locală să promoveze modulul vakcin în această săptămână."
+      },
+      "c2": {
+        "title": "Seria de sastipen de 7 dives",
+        "description": "Înregistrați-vă starea de spirit thaj consumul de paji timp de 7 dives la rând."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Certificat — Redi Health",
+      "description": "Certificat național de alfabetizare în domeniul sănătății"
+    },
+    "title": "Certificatul dvs",
+    "subtitle": "Ați finalizat Etapa Națională a Academiei de sastipen Studențească.",
+    "ofCompletion": "Certificat de finalizare",
+    "diplomaTitle": "Educație națională în domeniul sănătății",
+    "awardedFor": "Acordat pentru finalizarea curriculum-ului Redi Health Student Academy.",
+    "date": "Data",
+    "downloadPdf": "Descărcați PDF",
+    "share": "Distribuie",
+    "gate": {
+      "title": "Finalizează mai întâi Academia",
+      "description": "Pentru a obține certificatul de alfabetizare în domeniul sănătății, trebuie să finalizați toate lecțiile thaj să treceți testul în etapa națională a Academiei de sastipen a studenților.",
+      "cta": "Du-te la Academie"
+    }
+  }
+}

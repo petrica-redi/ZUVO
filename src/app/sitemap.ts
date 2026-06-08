@@ -1,32 +1,38 @@
 import type { MetadataRoute } from "next";
 import { getAppConfig } from "@/lib/env";
 import { LOCALES } from "@/i18n/routing";
-import { STUDENT_MODULES, STAGE_ORDER } from "@/data/student-health";
+import { getPublicSitemapRoutes } from "@/lib/sitemap-routes";
+
+function localePath(locale: string, route: string): string {
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  if (route === "/") return prefix || "/";
+  return `${prefix}${route}`;
+}
+
+function routePriority(route: string): number {
+  if (route === "/") return 1;
+  if (route === "/learn" || route === "/chat" || route === "/family") return 0.9;
+  if (route.startsWith("/learn/") || route.startsWith("/students")) return 0.75;
+  if (route.startsWith("/regions/")) return 0.7;
+  return 0.8;
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { appUrl } = getAppConfig();
   const base = appUrl ?? "http://localhost:3000";
   const now = new Date();
-
-  const studentRoutes = [
-    "/students",
-    ...STAGE_ORDER.map((s) => `/students/quiz/${s}`),
-    ...STUDENT_MODULES.map((m) => `/students/${m.stageId}/${m.id}`),
-  ];
-
-  const routes = ["/", "/learn", "/track", "/mediator", "/regions", ...studentRoutes];
+  const routes = getPublicSitemapRoutes();
 
   const entries: MetadataRoute.Sitemap = [];
 
   for (const route of routes) {
     for (const locale of LOCALES) {
-      const prefix = locale === "en" ? "" : `/${locale}`;
-      const url = `${base}${prefix}${route === "/" ? "" : route}` || `${base}/`;
+      const path = localePath(locale, route);
       entries.push({
-        url,
+        url: `${base}${path === "/" ? "" : path}` || `${base}/`,
         lastModified: now,
         changeFrequency: route === "/" ? "weekly" : "monthly",
-        priority: route === "/" ? 1 : 0.8,
+        priority: routePriority(route),
       });
     }
   }

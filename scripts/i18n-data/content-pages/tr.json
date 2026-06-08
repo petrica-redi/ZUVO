@@ -1,0 +1,497 @@
+{
+  "healthQuiz": {
+    "meta": {
+      "title": "Sağlık Testi — Redi Health",
+      "description": "Etkileşimli sınavlarla sağlık bilginizi test edin"
+    },
+    "title": "Sağlık Testi",
+    "subtitle": "Bilginizi test edin. Yeni bir şey öğrenin.",
+    "backToQuizzes": "Testlere geri dön",
+    "seeResults": "Sonuçları görün",
+    "nextQuestion": "Sonraki soru",
+    "questionsCount": "{count} sorular",
+    "results": {
+      "perfect": "Mükemmel skor!",
+      "great": "Harika iş!",
+      "good": "İyi çaba!",
+      "keepLearning": "Öğrenmeye devam edin!",
+      "score": "{total}'den {score}'yi doğru çıkardınız",
+      "tryAgain": "Tekrar dene",
+      "moreQuizzes": "Daha fazla test"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiyotikler",
+        "description": "Antibiyotiklerin ne zaman kullanılacağını biliyor musunuz?",
+        "questions": [
+          {
+            "question": "Antibiyotikler gribi tedavi edebilir mi?",
+            "options": [
+              "Evet",
+              "Hayır",
+              "Bazen"
+            ],
+            "explanation": "Gribe bir virüs neden olur. Antibiyotikler yalnızca bakterileri öldürür. Grip için antibiyotik almak hiçbir şey yapmaz ve gelecekteki enfeksiyonların tedavisini zorlaştırabilir."
+          },
+          {
+            "question": "3 günlük antibiyotik tedavisinden sonra kendinizi daha iyi hissedersiniz. Durmalı mısın?",
+            "options": [
+              "Evet, iyileştin",
+              "Hayır, kursun tamamını bitir",
+              "Kalan hapların yarısını al"
+            ],
+            "explanation": "HER ZAMAN kursun tamamını bitirin. Erken durursanız bazı bakteriler hayatta kalır ve dirençli hale gelir. Bir dahaki sefere aynı antibiyotik işe yaramayacak."
+          },
+          {
+            "question": "Benzer semptomları olan bir aile üyesiyle antibiyotik paylaşabilir misiniz?",
+            "options": [
+              "Evet, para tasarrufu sağlar",
+              "Hayır, asla",
+              "Sadece aynı hastalıksa"
+            ],
+            "explanation": "Antibiyotiği asla paylaşmayın. Farklı enfeksiyonlar farklı ilaçlara ihtiyaç duyar. Yanlış antibiyotik tehlikeli olabilir ve faydası olmaz."
+          },
+          {
+            "question": "Çok sık antibiyotik alırsanız ne olur?",
+            "options": [
+              "Kötü bir şey yok",
+              "Vücudunuz hastalıklara karşı bağışıklık kazanır",
+              "Bakteriler dirençli hale geliyor ve öldürülmesi zorlaşıyor"
+            ],
+            "explanation": "Antibiyotik direnci küresel bir krizdir. Bakteriler dirençli hale geldiğinde basit enfeksiyonlar ölümcül olabilir. Antibiyotikleri yalnızca doktor önerdiğinde alın."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "aşılar",
+        "description": "Gerçekleri mitlerden ayırın",
+        "questions": [
+          {
+            "question": "Aşılar otizme neden olur mu?",
+            "options": [
+              "Evet",
+              "Hayır",
+              "Bilmiyoruz"
+            ],
+            "explanation": "Hayır. Bu efsane, geri çekilen sahte bir çalışmayla başladı. Bunu yayınlayan doktor tıp lisansını kaybetti. Milyonlarca çocukla yapılan düzinelerce çalışma, aşıların otizme neden OLMADIĞINI kanıtlıyor."
+          },
+          {
+            "question": "Bir bebeğe aynı anda birden fazla aşı yapmak güvenli midir?",
+            "options": [
+              "Hayır, bu çok fazla",
+              "Evet, güvenli ve test edilmiştir",
+              "Bir seferde yalnızca bir tane"
+            ],
+            "explanation": "Bebeklerin bağışıklık sistemleri her gün binlerce mikropla mücadele eder. Kombinasyon aşıları kapsamlı bir şekilde test edilmiştir ve güvenlidir. Aşıların geciktirilmesi çocuğunuzu korumasız bırakır."
+          },
+          {
+            "question": "Çocuğumda hafif bir soğuk algınlığı var. Yine de aşı olabilirler mi?",
+            "options": [
+              "Hayır, tamamen sağlıklı olana kadar bekle",
+              "Evet hafif bir soğuk iyidir",
+              "Sadece doktor izniyle"
+            ],
+            "explanation": "Hafif bir soğuk algınlığı, düşük ateş veya burun akıntısı aşıyı geciktirmek için bir neden DEĞİLDİR. Yalnızca ciddi hastalıklar ertelemeyi gerektirir. Emin değilseniz doktorunuza sorun."
+          },
+          {
+            "question": "Aşılar tehlikeli kimyasallar içeriyor mu?",
+            "options": [
+              "Evet, toksinlerle dolular",
+              "Hayır, tüm malzemeler kullanılan küçük miktarlarda bile güvenlidir",
+              "Bazıları yapar, bazıları yapmaz"
+            ],
+            "explanation": "Aşı bileşenleri küçük ve güvenli miktarlarda mevcuttur. Anne sütünden aşıdan daha fazla alüminyum alırsınız. Her bileşen güvenlik açısından test edilmiştir."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Diyabet",
+        "description": "Diyabet yönetimini anlamak",
+        "questions": [
+          {
+            "question": "Diyabet çok fazla şeker yemekten mi kaynaklanır?",
+            "options": [
+              "Evet",
+              "Hayır, daha karmaşık",
+              "Yalnızca Tip 2"
+            ],
+            "explanation": "Diyabetin nedeni genetik, yaşam tarzı ve vücudunuzun insülini işleme şeklidir. Şeker yemek doğrudan buna neden olmaz ancak sağlıksız beslenme ve obezite riski artırır."
+          },
+          {
+            "question": "Şeker hastalığı tarçın gibi doğal ilaçlarla tedavi edilebilir mi?",
+            "options": [
+              "Evet tarçın iyileştirir",
+              "Hayır tedavisi yok ama kontrol edilebilir",
+              "Evet, yeterli sarımsak ve otlarla"
+            ],
+            "explanation": "Diyabetin tedavisi YOKTUR. İlaç, sağlıklı beslenme ve egzersizle kontrol altına alınabilir. Tarçının küçük faydaları olabilir ancak ilacın yerini ALAMAZ. İlaçlarını bırakan insanlar hastaneye kaldırılıyor."
+          },
+          {
+            "question": "Diyabetik bir kişi baş dönmesi ve ter hisseder. Ne yapmalısın?",
+            "options": [
+              "Onlara insülin ver",
+              "Onlara hemen tatlı bir şeyler verin",
+              "Onlara dinlenmelerini söyle"
+            ],
+            "explanation": "Bunlar DÜŞÜK kan şekerinin (hipoglisemi) belirtileridir. Onlara hemen meyve suyu, şeker veya şekerli su verin. Bu yaşamı tehdit edici olabilir. Kendilerini daha iyi hissettikten sonra uygun bir yemek yemelidirler."
+          },
+          {
+            "question": "Diyabetli bir kişi ayaklarını ne sıklıkla kontrol etmelidir?",
+            "options": [
+              "Asla, ayaklar iyi",
+              "Her gün",
+              "Yılda bir kez"
+            ],
+            "explanation": "Diyabet ayaklarınızdaki sinirlere zarar verebilir. Kesik veya yara hissetmeyebilirsiniz. Ayaklarınızı HER GÜN kesik, kabarcık veya renk değişikliği açısından kontrol edin. Küçük yaralar ciddi enfeksiyonlara dönüşebilir."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Hijyen ve Önleme",
+        "description": "Hayat kurtaran temel sağlık alışkanlıkları",
+        "questions": [
+          {
+            "question": "Ellerinizi sabunla ne kadar süre yıkamalısınız?",
+            "options": [
+              "5 saniye",
+              "En az 20 saniye",
+              "1 dakika"
+            ],
+            "explanation": "En az 20 saniye boyunca yıkayın; bu yaklaşık olarak 'Happy Birthday' şarkısını iki kez söylemek için gereken süre kadardır. Bu, mikropların çoğunu ortadan kaldırır. Hızlı durulamalar işe yaramaz."
+          },
+          {
+            "question": "Bir nehirden veya dereden su içmek güvenli midir?",
+            "options": [
+              "Evet doğal su temizdir",
+              "Hayır, her zaman önce kaynatın veya filtreleyin",
+              "Sadece net görünüyorsa"
+            ],
+            "explanation": "Temiz su bile tehlikeli bakteri ve parazitler içerebilir. Suyu daima en az 1 dakika kaynatın veya filtre kullanın. Kirli su ishal, kolera ve tifoya neden olur."
+          },
+          {
+            "question": "Çocuğunuzun ishali var. En önemli şey nedir?",
+            "options": [
+              "Tüm yiyecekleri durdur",
+              "Bol miktarda sıvı verin (su, ORS)",
+              "Antibiyotik ver"
+            ],
+            "explanation": "İshalden kaynaklanan dehidrasyon, ishalin kendisinden daha fazla çocuğu öldürür. Oral rehidrasyon solüsyonu (ORS) veya bir tutam tuz ve şeker içeren temiz su verin. Bebekleri emzirmeye devam edin."
+          },
+          {
+            "question": "Ellerinizi ne zaman yıkamalısınız?",
+            "options": [
+              "Sadece yemekten önce",
+              "Yemekten önce, tuvaletten sonra, hayvanlara dokunduktan sonra, öksürdükten sonra",
+              "Sadece kirli göründüklerinde"
+            ],
+            "explanation": "Mikroplar görünmez. Ellerinizi yıkayın: Yemek yemeden/yemek pişirmeden önce, tuvaleti kullandıktan sonra, bebek bezini değiştirdikten sonra, hayvanlara dokunduktan sonra, öksürdükten/hapşırdıktan sonra ve hastalara dokunduktan sonra."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Haklarınızı Bilin — Redi Sağlık",
+      "description": "Roman toplulukları için hasta hakları, ayrımcılık yardımı ve yasal temaslar"
+    },
+    "title": "Haklarınızı Bilin",
+    "subtitle": "Hasta olarak haklarınız var. Onları öğrenin. Onları kullanın.",
+    "back": "Geri",
+    "menu": {
+      "patientRights": {
+        "title": "Hasta Hakları",
+        "desc": "Her hastanın sahip olduğu 8 hak"
+      },
+      "discrimination": {
+        "title": "Ayrımcılıkla mı Karşılaşıyorsunuz?",
+        "desc": "Ne söylenmeli ve ne yapılmalı — adım adım"
+      },
+      "contacts": {
+        "title": "Ülkeye Göre Yasal Yardım",
+        "desc": "Ombudsman, ayrımcılık karşıtı, Roman kuruluşları"
+      }
+    },
+    "views": {
+      "patientRights": "Hasta Haklarınız",
+      "discrimination": "Ayrımcılıkla Karşılaşırsanız",
+      "discriminationDesc": "Gerçek durumlar ve tam olarak ne söylenmesi ve yapılması gerektiği.",
+      "contacts": "Ülkeye Göre Yasal Yardım"
+    },
+    "labels": {
+      "sayThis": "Şunu söyle:",
+      "thenDo": "Sonra şunu yapın:",
+      "patientOmbudsman": "Hasta Ombudsmanı",
+      "antiDiscrimination": "Ayrımcılığa karşı",
+      "romaRightsOrg": "Roma hakları örgütü"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Acil tedavi hakkı",
+        "description": "Her hastane, sigorta veya belgeler olmasa bile, acil bir durumda sizi tedavi ETMEK ZORUNDADIR. Bu her EU ülkede yasadır. Reddederlerse doktorun adını sorun ve bildirin."
+      },
+      "information": {
+        "title": "Teşhisinizi anlama hakkı",
+        "description": "Doktorunuz durumunuzu anladığınız kelimelerle açıklamalıdır. Anlamadıysanız şunu söyleyin: 'Bunu daha basit bir şekilde açıklayabilir misiniz?' Ayrıca yazılı bir özet de isteyebilirsiniz."
+      },
+      "consent": {
+        "title": "Hayır deme hakkı",
+        "description": "Kimse sizi tedavi etmeye zorlayamaz. Herhangi bir işlemden önce doktorun ne yapacağını açıklaması ve sizin de kabul etmeniz gerekir. Her zaman 'Düşünmek için zamana ihtiyacım var' diyebilirsiniz."
+      },
+      "privacy": {
+        "title": "Gizlilik hakkı",
+        "description": "Tıbbi bilgileriniz gizlidir. Doktorlar izniniz olmadan bunu işvereninizle, ailenizle veya başkasıyla paylaşamaz. Buna HIV durumunuz, hamileliğiniz veya zihinsel sağlığınız da dahildir."
+      },
+      "interpreter": {
+        "title": "Tercüman hakkı",
+        "description": "Yerel dili iyi konuşamıyorsanız tercüman talep edebilirsiniz. Birçok hastanenin bu hizmeti var. Değilse, tercüme etmesi için güvendiğiniz birini getirebilirsiniz."
+      },
+      "second-opinion": {
+        "title": "İkinci görüş alma hakkı",
+        "description": "Eğer teşhise katılmıyorsanız başka bir doktora başvurabilirsiniz. Bu senin hakkın. Nedenini açıklamanıza gerek yok."
+      },
+      "records": {
+        "title": "Tıbbi kayıtlarınıza erişim hakkı",
+        "description": "İstediğiniz zaman tüm tıbbi kayıtlarınızın bir kopyasını isteyebilirsiniz. Hastanenin bunları sağlaması gerekiyor. Bu, doktor değiştirirken veya başka bir şehre taşınırken faydalıdır."
+      },
+      "complaint": {
+        "title": "Şikayet etme hakkı",
+        "description": "Kötü muameleye maruz kaldığınızı veya ayrımcılığa uğradığınızı düşünüyorsanız şikayette bulunabilirsiniz. Her hastanenin bir şikayet prosedürü vardır. Ayrıca ülkenizdeki hasta ombudsmanıyla da iletişime geçebilirsiniz."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "Hastane sizi tedavi etmeyi reddediyor",
+        "whatToSay": "\"EU yasası uyarınca acil tedavi hakkım var. Lütfen adınızı ve reddetme nedeninizi yazın.\"",
+        "whatToDo": [
+          "Sakin ama kararlı kalın",
+          "Doktorun tam adını isteyin",
+          "Reddi yazılı olarak isteyin",
+          "Hasta ombudsmanını arayın",
+          "Bir Roman hakları örgütüyle iletişime geçin"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Hastane personeli etnik kökeniniz nedeniyle kaba veya küçümseyici davranıyor",
+        "whatToSay": "\"Tıbbi yardım için buradayım. Diğer hastalarla aynı saygıyla davranılmayı bekliyorum.\"",
+        "whatToDo": [
+          "Başhemşire veya bölüm şefiyle konuşmayı isteyin",
+          "Tarihi, saati ve adları not edin",
+          "Hastaneye yazılı şikayette bulunun",
+          "Ulusal ayrımcılıkla mücadele kurumuna rapor verin"
+        ]
+      },
+      "no-insurance": {
+        "situation": "Sağlık sigortanız yok",
+        "whatToSay": "\"Tıbbi yardıma ihtiyacım var. Sigortasız hastalar için seçeneklerim nelerdir?\"",
+        "whatToDo": [
+          "Acil bakım her zaman ücretsizdir; bunda ısrar edin",
+          "Sosyal yardım programlarını sorun",
+          "Bölgenizdeki bir sağlık aracısına başvurun",
+          "Birçok STK ücretsiz klinik sağlıyor; hastaneye sorun"
+        ]
+      },
+      "language-barrier": {
+        "situation": "Doktorla iletişim kuramıyorsun",
+        "whatToSay": "\"Anlamak için yardıma ihtiyacım var. Bir tercüman sağlayabilir misiniz veya daha yavaş konuşabilir misiniz?\"",
+        "whatToDo": [
+          "Anahtar cümleleri çevirmek için bu uygulamayı kullanın",
+          "Dili konuşan güvenilir bir kişiyi getirin",
+          "Daha sonra çevirebileceğiniz yazılı talimatlar isteyin",
+          "Belgeleri çevirmek için telefonunuzun kamerasını kullanın"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Topluluk Hikayeleri — Redi Health",
+      "description": "Avrupa'daki Roman topluluklarından gerçek sağlık deneyimleri"
+    },
+    "title": "Topluluk Hikayeleri",
+    "subtitle": "Roman topluluklarından gerçek deneyimler. Başkalarından öğrenin.",
+    "backToStories": "Hikayelere geri dön",
+    "lessonLearned": "Öğrenilen ders",
+    "whatToDoNext": "Bundan sonra ne yapmalı",
+    "categories": {
+      "vaccines": "aşılar",
+      "chronic": "Kronik Hastalık",
+      "maternal": "Hamilelik",
+      "discrimination": "Haklar",
+      "prevention": "Önleme",
+      "mental": "Ruh Sağlığı"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Aşı rehberi",
+      "askZuvo": "Zuvo'ya sor",
+      "explainPrescription": "Reçeteyi açıkla",
+      "navigateToCare": "Bakıma gidin",
+      "knowYourRights": "Haklarınızı bilin",
+      "learnPrevention": "Önlemeyi öğrenin",
+      "checkSymptoms": "Belirtileri kontrol edin",
+      "learnMentalHealth": "Ruh sağlığı hakkında bilgi edinin"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "Romanya",
+        "title": "Neredeyse kızıma aşı yaptırmıyordum",
+        "story": "Kayınvalidem bana aşıların zehir olduğunu söyledi. Yerleşimdeki herkes aynı şeyi söyledi. Kızım doğduğunda çok korktum. Ancak sağlık aracısı evimize geldi ve aşıların nasıl çalıştığını, yan etkilerinin gerçekte neler olduğunu anlattı. Bana kızamık hastası çocukların fotoğraflarını gösterdi. Aşıdan çok hastalıktan korkuyordum. Kızımın tüm aşıları yapıldı. O sağlıklı ve güçlü.",
+        "lesson": "Başkalarının söylediklerine göre karar vermeden önce bir sağlık aracısı veya doktorla konuşun. Aşılar hayat kurtarır."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bulgaristan",
+        "title": "Diyabet ilacımı bıraktım ve neredeyse ölüyordum",
+        "story": "45 tarihinde bana Tip 2 diyabet teşhisi konuldu. İlaç midemi ağrıttı, bu yüzden almayı bıraktım. Komşum tarçın çayının bana şifa vereceğini söyledi. 2 yıl boyunca onun yerine tarçın çayı içtim. Sonra bir gün yere yığıldım. Kan şekerim 500'in üzerindeydi. Doktorlar böbreklerimin hasar gördüğünü söyledi. Artık her gün ilacımı alıyorum. Keşke hiç durmasaydım.",
+        "lesson": "Doktorunuzla konuşmadan asla ilacınızı kesmeyin. Doğal ilaçlar diyabet ilaçlarının yerini alamaz."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Sırbistan",
+        "title": "İlk hamileliğim — Ücretsiz olarak doktora gidebileceğimi bilmiyordum",
+        "story": "19'da hamile kaldığımda 6 ay boyunca doktora gitmedim. Sigortam yoktu ve çok pahalıya mal olacağını düşündüm. Bir sağlık aracısı bana Sırbistan'daki tüm hamile kadınlar için doğum öncesi bakımın ücretsiz olduğunu söyledi. Kayıt olmama yardım etti. Doktor kansızlığım ve yüksek tansiyonum olduğunu tespit etti. Eğer gitmeseydim bebeğim tehlikede olabilirdi.",
+        "lesson": "Çoğu Avrupa ülkesinde doğum öncesi bakım ücretsizdir. Kayıt olmanıza yardımcı olması için bir sağlık aracısından yardım isteyin."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Macaristan",
+        "title": "Hastane beni göndermeye çalıştı",
+        "story": "Göğüs ağrısı şikayetiyle acile gittim. Hemşire bana baktı ve 'Doyduk, başka hastaneye gidelim' dedi. Bunun doğru olmadığını biliyordum. Ben de 'Göğüs ağrım var' dedim. Beni muayene etmelisin. Lütfen bana isminizi verin.' Tutumu hemen değişti. Beni muayene ettiler ve tedavi gerektiren bir kalp problemim olduğunu tespit ettiler. Eğer gitseydim kalp krizi geçirebilirdim.",
+        "lesson": "Acil tedavi hakkına sahipsiniz. Birisi sizi geri çevirmeye çalışırsa adını sorun ve haklarınızı bildiğinizi söyleyin."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Slovakya",
+        "title": "TB ölüm cezası değil — ancak ilacı bitirmeniz gerekiyor",
+        "story": "Aylardır öksürüyordum. Sadece soğuk algınlığı olduğunu düşündüm. Sonunda doktora gittiğimde tüberküloz olduğumu söylediler. Çok korktum; öleceğimi düşündüm. Ancak doktor TB'nun 6 aylık ilaç tedavisiyle iyileştirilebileceğini açıkladı. En zor kısmı, 2 ay sonra kendimi daha iyi hissetsem bile 6 ay boyunca her gün hap almaktı. Ama bitirdim. İyileştim.",
+        "lesson": "Eğer 2 haftadan uzun süre öksürürseniz bir doktora görünün. TB tedavi edilebilir, ancak ilacın tamamını bitirmeniz GEREKİR."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Kuzey Makedonya",
+        "title": "Depresyon zayıflık değil, bir hastalıktır",
+        "story": "Kocam öldükten sonra aylarca yataktan çıkamadım. Ailem tembel olduğumu söyledi. 'Güçlü ol' dediler. Ama yapamadım. Bir sağlık aracısı bir şeylerin ters gittiğini fark etti ve beni doktora götürdü. Doktor depresyonumun gerçek bir tıbbi durum olduğunu söyledi. Tıbba başladım ve bir danışmanla konuştum. Yavaş yavaş iyileştim. Ben zayıf değilim. Ben hastaydım.",
+        "lesson": "Depresyon tıbbi bir durumdur, karakter kusuru değildir. Tıp ve danışmanlık yardımcı olabilir. Lütfen yardım isteyin."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Zorluklar — Redi Health",
+      "description": "Topluluk Zorlukları"
+    },
+    "title": "Aktif Mücadeleler",
+    "subtitle": "Bonus XP ve rozetler kazanmak için topluluk hedeflerine ve kişisel zorluklara katılın.",
+    "types": {
+      "community": "topluluk",
+      "personal": "kişisel"
+    },
+    "daysLeft": "{count} gün kaldı",
+    "viewLeaderboard": "Skor Tablosunu Görüntüle",
+    "items": {
+      "c1": {
+        "title": "Aşı Bilgi Şampiyonu",
+        "description": "Yerel bölgenizdeki 50 öğrencinin bu hafta Aşı modülünü geçmesini sağlayın."
+      },
+      "c2": {
+        "title": "7 Günlük Sağlık Serisi",
+        "description": "Arka arkaya 7 gün boyunca ruh halinizi ve su alımınızı kaydedin."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Sertifika – Redi Sağlık",
+      "description": "Ulusal Sağlık Okuryazarlığı Sertifikası"
+    },
+    "title": "Sertifikanız",
+    "subtitle": "Öğrenci Sağlık Akademisi Ulusal Aşamasını tamamladınız.",
+    "ofCompletion": "Bitirme Sertifikası",
+    "diplomaTitle": "Ulusal Sağlık Okuryazarlığı",
+    "awardedFor": "Redi Sağlık Öğrenci Akademisi müfredatını tamamladığınız için verilir.",
+    "date": "Tarih",
+    "downloadPdf": "PDF'yi indir",
+    "share": "Paylaş",
+    "gate": {
+      "title": "Önce Akademiyi tamamla",
+      "description": "Sağlık Okuryazarlığı Sertifikanızı kazanmak için Öğrenci Sağlık Akademisi Ulusal aşamasında tüm dersleri tamamlamanız ve sınavı geçmeniz gerekmektedir.",
+      "cta": "Akademiye git"
+    }
+  }
+}

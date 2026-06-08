@@ -11,7 +11,7 @@
     "profile": "Профил",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Семејство",
     "more": "More"
   },
   "hero": {
@@ -46,7 +46,283 @@
     "croatia": "Хрватска",
     "bosnia": "Босна",
     "kosovo": "Косово",
-    "slovenia": "Словенија"
+    "slovenia": "Словенија",
+    "romaPop": "Роми {population}",
+    "detail": {
+      "back": "Назад",
+      "romaPopulation": "Ромско население",
+      "ofTotal": "од {total} вкупно ({percent})",
+      "healthAccess": "Пристап до здравје",
+      "healthChallenges": "Здравствени предизвици",
+      "organizationsHelp": "Организации што можат да помогнат",
+      "emergency": "Итна помош: {number}",
+      "ambulance": "Брза помош: {number}",
+      "askAboutHealth": "Прашај за здравје во {region}"
+    },
+    "healthIndex": {
+      "veryPoor": "Многу лош",
+      "poor": "Лош",
+      "fair": "Среден",
+      "good": "Добар",
+      "excellent": "Одличен"
+    },
+    "countries": {
+      "romania": {
+        "healthChallenges": {
+          "0": "Ограничен пристап до здравствено осигурување",
+          "1": "Висока детска и материнска смртност во ромските заедници",
+          "2": "Туберкулоза над националниот просек",
+          "3": "Ниска вакцинација на руралните населби",
+          "4": "Пречки при запишување кај семеен лекар"
+        },
+        "keyFact": "Романија има најголема ромска популација во Европа и национална програма за здравствени медијатори.",
+        "organizations": {
+          "0": {
+            "focus": "Ромски права, здравствена медијација"
+          },
+          "1": {
+            "focus": "Политики за ромска инклузија"
+          },
+          "2": {
+            "focus": "Мобилни клиники во маргинализирани заедници"
+          }
+        }
+      },
+      "bulgaria": {
+        "healthChallenges": {
+          "0": "Сегрегирани населби го ограничуваат пристапот",
+          "1": "Висока невработеност ја намалува покриеноста",
+          "2": "Кардиоваскуларни болести како водечка причина за смрт",
+          "3": "Понизок животен век од просекот",
+          "4": "Ограничен пристап до специјалистичка нега"
+        },
+        "keyFact": "Бугарската програма за медијатори беше една од првите на Балканот.",
+        "organizations": {
+          "0": {
+            "focus": "Промоција на ромско здравје и медијација"
+          },
+          "1": {
+            "focus": "Пристап до здравство за маргинализирани Роми"
+          }
+        }
+      },
+      "hungary": {
+        "healthChallenges": {
+          "0": "Животен век 10–15 години пократок од просекот",
+          "1": "Високи стапки на кардиоваскуларни и респираторни болести",
+          "2": "Недоволна исхрана поради сиромаштија",
+          "3": "Ниска употреба на услуги за ментално здравје",
+          "4": "Географска изолација во североисточна Унгарија"
+        },
+        "keyFact": "Унгарија има значајни ромски популации во Боршод, Саболч и Барања.",
+        "organizations": {
+          "0": {
+            "focus": "Ромско образование вклучувајќи здравствена писменост"
+          },
+          "1": {
+            "focus": "Ромска добробит и здравствено застапување"
+          }
+        }
+      },
+      "northMacedonia": {
+        "healthChallenges": {
+          "0": "Општина Шуто Оризари (Сутка) има специфични здравствени потреби",
+          "1": "Преваленција на хепатитис Б",
+          "2": "Ограничен пристап до гинеколошки и матерински услуги",
+          "3": "Висока анемија особено кај деца и жени",
+          "4": "Колебање кон COVID-19 вакцинација"
+        },
+        "keyFact": "Шуто Оризари крај Скопје е најголемата ромска општина во светот.",
+        "organizations": {
+          "0": {
+            "focus": "Ромски права и пристап до здравство"
+          },
+          "1": {
+            "focus": "Јавно здравје и намалување на штети"
+          }
+        }
+      },
+      "slovakia": {
+        "healthChallenges": {
+          "0": "Сегрегирани насеља (осади) без инфраструктура",
+          "1": "Туберкулоза меѓу највисоките во ЕУ",
+          "2": "Детска недоисхранетост",
+          "3": "Ограничен пристап до чиста вода и санитација",
+          "4": "Дискриминација во здравствените установи"
+        },
+        "keyFact": "Словачка има најголем удел Роми во сегрегирани насеља во ЕУ.",
+        "organizations": {
+          "0": {
+            "focus": "Антидискриминација во здравството"
+          },
+          "1": {
+            "focus": "Јавно здравствени програми вклучувајќи ромско здравје"
+          }
+        }
+      },
+      "serbia": {
+        "healthChallenges": {
+          "0": "Неформални насеља (махали) без здравствена инфраструктура",
+          "1": "Високи стапки на хепатитис и цревни паразити",
+          "2": "Ограничена регистрација на раѓање",
+          "3": "Проблеми со супстанци кај урбана ромска младост",
+          "4": "Стигма на менталното здравје"
+        },
+        "keyFact": "Српската програма за медијатори обучува Ромки како здравствени врски.",
+        "organizations": {
+          "0": {
+            "focus": "Ромски права и здравствена политика"
+          },
+          "1": {
+            "focus": "Здравје на жени и деца"
+          }
+        }
+      },
+      "turkey": {
+        "healthChallenges": {
+          "0": "Ромските (Дом и Лом) заедници се економски маргинализирани",
+          "1": "Ограничена документација влијае на пристапот",
+          "2": "Поголеми професионални здравствени ризици",
+          "3": "Ограничена материнска нега во неформални градски зони",
+          "4": "Социјална изолација и ментално здравје"
+        },
+        "keyFact": "Ромските заедници во Турција се главно во Истанбул, Едирне и Измир.",
+        "organizations": {
+          "0": {
+            "focus": "Ромски права и социјална инклузија во Турција"
+          },
+          "1": {
+            "focus": "Ромско образование и здравствена писменост"
+          }
+        }
+      },
+      "greece": {
+        "healthChallenges": {
+          "0": "Ромите во рурални кампови немаат пристап до општински услуги",
+          "1": "Влијание на економската криза врз ранливите групи",
+          "2": "Хепатитис Ц во некои заедници",
+          "3": "Ограничена стоматолошка нега",
+          "4": "Економска несигурност влошена од COVID-19"
+        },
+        "keyFact": "Грција има ромски заедници во населени и номадски кампови во Централна Македонија и Тесалија.",
+        "organizations": {
+          "0": {
+            "focus": "Ромска инклузија во здравје, образование, живеалиште"
+          },
+          "1": {
+            "focus": "Социјална и здравствена поддршка за маргинализирани групи"
+          }
+        }
+      },
+      "albania": {
+        "healthChallenges": {
+          "0": "Висока детска сиромаштија и недоисхранетост",
+          "1": "Ограничено здравствено осигурување",
+          "2": "Повисока материнска смртност во ромските заедници",
+          "3": "Ограничен пристап до безбедно живеалиште",
+          "4": "Сезонска работа води до нестабилност на здравјето"
+        },
+        "keyFact": "Албанија има и ашкалска (египетска) малцинство историски групирано со ромските заедници.",
+        "organizations": {
+          "0": {
+            "focus": "Ромски права и развој на заедницата"
+          },
+          "1": {
+            "focus": "Образование и пристап до здравство за Роми"
+          }
+        }
+      },
+      "czech": {
+        "healthChallenges": {
+          "0": "Трајна сегрегација во живеалиштето",
+          "1": "Високи стапки на спречливи кардиоваскуларни болести",
+          "2": "Пониски стапки на вакцинација",
+          "3": "Пречки во комуникацијата и писменоста",
+          "4": "Тешкотии во пристап до специјалистичка нега"
+        },
+        "keyFact": "Чешката Република има значајна ромска популација во Моравија и северна Бохемија.",
+        "organizations": {
+          "0": {
+            "focus": "Интегриран пристап кон ромска инклузија"
+          },
+          "1": {
+            "focus": "Застапување на европските ромски организации"
+          }
+        }
+      },
+      "croatia": {
+        "healthChallenges": {
+          "0": "Ромите во Меѓимурје се соочуваат со пречки",
+          "1": "Јазични бариери",
+          "2": "Повисока стапка на дијабетес кај постари Роми",
+          "3": "Ограничена предучилишна вакцинација",
+          "4": "Сиромаштијата влијае на исхраната и здравјето"
+        },
+        "keyFact": "Најголемата ромска заедница во Хрватска е во Меѓимурје крај унгарската граница.",
+        "organizations": {
+          "0": {
+            "focus": "Здравје и права на ромските жени"
+          },
+          "1": {
+            "focus": "Ромска политика и инклузија"
+          }
+        }
+      },
+      "bosnia": {
+        "healthChallenges": {
+          "0": "Повоена инфраструктура влијае на здравството",
+          "1": "Недостаток лични документи",
+          "2": "Висока невработеност и недостаток осигурување",
+          "3": "Детска недоисхранетост во посиромашни семејства",
+          "4": "Ограничени услуги за ментално здравје"
+        },
+        "keyFact": "Босна и Херцеговина има ромски заедници во Федерацијата и Република Српска.",
+        "organizations": {
+          "0": {
+            "focus": "Ромски права, здравство и документација"
+          },
+          "1": {
+            "focus": "Права на малцинствата вклучувајќи ромски здравствен пристап"
+          }
+        }
+      },
+      "kosovo": {
+        "healthChallenges": {
+          "0": "Ромите во Митровица се раселени во лагери загадени со олово",
+          "1": "Тешка сиромаштија",
+          "2": "Малку ромски медијатори",
+          "3": "Повоена траума и ментално здравје",
+          "4": "Висока детска смртност"
+        },
+        "keyFact": "Ромите во северна Митровица беа изложени на тешко труење со олово во ОН кампови по 1999.",
+        "organizations": {
+          "0": {
+            "focus": "Права и здравје на RAE заедницата"
+          },
+          "1": {
+            "focus": "Пристап до здравство за раселени Роми"
+          }
+        }
+      },
+      "slovenia": {
+        "healthChallenges": {
+          "0": "Ромите во Долењска и Прекмурје се маргинализирани",
+          "1": "Понизно образование влијае на писменоста",
+          "2": "Социјална исклученост",
+          "3": "Ограничена вакцинација",
+          "4": "Исхранбени недостатоци"
+        },
+        "keyFact": "Словенија признава две ромски заедници: автохтона и неавтохтона.",
+        "organizations": {
+          "0": {
+            "focus": "Ромски социјални и културни права"
+          },
+          "1": {
+            "focus": "Ромска добробит и пристап до здравство"
+          }
+        }
+      }
+    }
   },
   "language": {
     "title": "Јазик",
@@ -63,407 +339,486 @@
   },
   "studentHealth": {
     "meta": {
-      "title": "Student Health Academy",
-      "description": "A cinematic, mission-based health literacy academy for high school students: first aid, STIs, vaccines, and critical thinking."
+      "title": "Студентска здравствена академија",
+      "description": "Кинематографска академија за здравствена писменост заснована на мисија за средношколци: прва помош, STIs, вакцини и критичко размислување."
     },
     "hub": {
-      "title": "Student Health Academy",
-      "subtitle": "A mission-based health field guide for high school students. Learn what to do before help arrives, how to protect your body and relationships, and how to separate evidence from rumor.",
-      "disclaimer": "Educational field guide only: this is not medical care, diagnosis, or emergency instruction from a clinician. If someone may be in immediate danger, call emergency services. For sexual health, consent, or privacy concerns, seek a trusted adult, school nurse, doctor, clinic, or local helpline.",
-      "countryLabel": "Your country (for tips)",
-      "countryPlaceholder": "Select country (optional)",
-      "countryHint": "Used only on this device to show relevant context. You can change it anytime.",
-      "countryContext": "Context for tips: {country}",
+      "title": "Студентска здравствена академија",
+      "subtitle": "Водич за здравствено поле заснован на мисија за средношколци. Научете што да правите пред да пристигне помошта, како да го заштитите вашето тело и врски и како да ги одделите доказите од гласините.",
+      "disclaimer": "Само водич за образовно поле: ова не е медицинска нега, дијагноза или итна инструкција од клиничар. Ако некој може да биде во непосредна опасност, повикајте брза помош. За загриженост за сексуалното здравје, согласност или приватност, побарајте доверлив возрасен, училишна медицинска сестра, лекар, клиника или локална телефонска линија за помош.",
+      "countryLabel": "Вашата земја (за совети)",
+      "countryPlaceholder": "Изберете земја (изборно)",
+      "countryHint": "Се користи само на овој уред за да се прикаже релевантниот контекст. Можете да го промените во секое време.",
+      "countryContext": "Контекст за совети: {country}",
       "xpLabel": "XP",
-      "levelLabel": "Level {level}",
-      "commandCenterTitle": "Expedition dashboard",
-      "commandCenterSubtitle": "{completed}/{total} field lessons complete — build practical skills you can use in school, at home, and online.",
-      "overallProgress": "Academy progress",
-      "levelProgress": "Level progress",
-      "maxLevel": "Max level reached",
-      "nextLevelXp": "Next level at {xp} XP",
-      "stageProgress": "Stage progress",
-      "badgesTitle": "Your badges",
-      "stageMapTitle": "Expedition route",
-      "modulesInStage": "modules",
-      "takeStageQuiz": "Stage quiz",
-      "quizLocked": "Complete all modules in this stage to unlock the stage quiz.",
-      "quizIntro": "Answer at least 70% correctly to unlock the next stage.",
-      "stageComplete": "Stage complete!",
-      "nextStageUnlocked": "You unlocked the next stage.",
-      "badgeLocal": "Local champion",
-      "badgeRegional": "Regional explorer",
-      "badgeNational": "National scholar",
-      "badgeLocalDesc": "Finished the local stage quiz.",
-      "badgeRegionalDesc": "Finished the regional stage quiz.",
-      "badgeNationalDesc": "Finished the national stage quiz.",
-      "allStagesComplete": "You completed the full academy path. Keep revisiting lessons to stay sharp.",
-      "kicker": "Field guide for real life",
-      "streakLabel": "Streak",
-      "streakUnitOne": "day",
-      "streakUnitMany": "days",
-      "streakHint": "Keep one lesson a day going",
-      "dayActive": "Active day",
-      "dayInactive": "No activity"
+      "levelLabel": "Ниво {level}",
+      "commandCenterTitle": "Контролна табла за експедиција",
+      "commandCenterSubtitle": "{completed}/{total} лекциите на терен заврши - изградете практични вештини што можете да ги користите на училиште, дома и на интернет.",
+      "overallProgress": "Напредокот на академијата",
+      "levelProgress": "Напредокот на ниво",
+      "maxLevel": "Достигнато е максимално ниво",
+      "nextLevelXp": "Следно ниво на {xp} XP",
+      "stageProgress": "Сценски напредок",
+      "badgesTitle": "Вашите значки",
+      "stageMapTitle": "Рута на експедиција",
+      "modulesInStage": "модули",
+      "takeStageQuiz": "Сценски квиз",
+      "quizLocked": "Завршете ги сите модули во оваа фаза за да го отклучите квизот на сцената.",
+      "quizIntro": "Одговорете барем 70% точно за да ја отклучите следната фаза.",
+      "stageComplete": "Фазата заврши!",
+      "nextStageUnlocked": "Ја отклучивте следната фаза.",
+      "badgeLocal": "Локален шампион",
+      "badgeRegional": "Регионален истражувач",
+      "badgeNational": "Национален научник",
+      "badgeLocalDesc": "Заврши квизот на локалната сцена.",
+      "badgeRegionalDesc": "Заврши квизот на регионалната сцена.",
+      "badgeNationalDesc": "Заврши квизот на националната сцена.",
+      "allStagesComplete": "Го завршивте целиот академски пат. Продолжете да ги посетувате лекциите за да останете остри.",
+      "kicker": "Теренски водич за реалниот живот",
+      "streakLabel": "Редеа",
+      "streakUnitOne": "ден",
+      "streakUnitMany": "денови",
+      "streakHint": "Одржувајте по една лекција на ден",
+      "dayActive": "Активен ден",
+      "dayInactive": "Нема активност"
     },
     "stages": {
-      "local": "Local",
-      "localDesc": "Immediate skills for school, home, and friends",
-      "regional": "Regional",
-      "regionalDesc": "Clinic, community, and public-health know-how",
-      "national": "National",
-      "nationalDesc": "Evidence, leadership, and capstone decisions"
+      "local": "Локално",
+      "localDesc": "Непосредни вештини за училиште, дома и пријатели",
+      "regional": "Регионални",
+      "regionalDesc": "Клиника, заедница и знаење за јавното здравство",
+      "national": "Национален",
+      "nationalDesc": "Докази, лидерство и највисоки одлуки"
     },
     "progress": {
-      "xp": "Experience points",
-      "stageLocked": "Locked — complete the previous stage quiz.",
-      "quizRequired": "Quiz required",
-      "allModulesDone": "All modules done — take the quiz!"
+      "xp": "Поени за искуство",
+      "stageLocked": "Заклучено - пополнете го квизот од претходната фаза.",
+      "quizRequired": "Потребен е квиз",
+      "allModulesDone": "Сите модули се завршени - земете го квизот!"
     },
     "quiz": {
-      "title": "Stage checkpoint",
-      "back": "Back to academy",
-      "progress": "Question",
-      "of": "of",
-      "submit": "Next",
-      "seeResults": "See results",
-      "pass": "Checkpoint cleared",
-      "fail": "Checkpoint not cleared yet",
-      "scoreLine": "You got {correct} out of {total} correct ({pct}%).",
-      "needPct": "You need at least 70% to unlock the next stage.",
-      "retry": "Try again",
-      "continueHub": "Back to academy",
-      "stageBriefTitle": "{stage} field checkpoint",
-      "stageBriefBody": "This checkpoint tests judgment, not memorization. Score {pct}% or more to unlock the next expedition stage.",
-      "continueNextStage": "Enter {stage} expedition",
-      "explainCorrect": "Why this is correct",
-      "explainWrong": "Field guide explainer"
+      "title": "Сценски контролен пункт",
+      "back": "Назад на академијата",
+      "progress": "Прашање",
+      "of": "на",
+      "submit": "Следно",
+      "seeResults": "Видете ги резултатите",
+      "pass": "Контролната точка е исчистена",
+      "fail": "Контролниот пункт сè уште не е исчистен",
+      "scoreLine": "Имате {correct} од {total} точни ({pct}%).",
+      "needPct": "Потребен ви е најмалку 70% за да ја отклучите следната фаза.",
+      "retry": "Обидете се повторно",
+      "continueHub": "Назад на академијата",
+      "stageBriefTitle": "{stage} теренски контролен пункт",
+      "stageBriefBody": "Овој контролен пункт го тестира расудувањето, а не меморирањето. Освојте {pct}% или повеќе за да ја отклучите следната фаза на експедиција.",
+      "continueNextStage": "Влезете во {stage} експедиција",
+      "explainCorrect": "Зошто е ова точно",
+      "explainWrong": "Објаснувач на теренски водич"
     },
     "lesson": {
-      "scenarioTitle": "Field scenario",
-      "challengeTitle": "Expedition challenge",
-      "supportTitle": "Confidential support matters",
-      "supportText": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
-      "findCare": "Find care",
-      "knowRights": "Know your rights",
-      "stepLabel": "Lesson {current} of {total}",
-      "completedNote": "Field note logged. You earned XP, saved progress, and unlocked the next best step.",
-      "sourcesTitle": "Verified sources",
-      "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab.",
-      "reviewUpToDate": "Reviewed for clinical accuracy",
-      "reviewOverdue": "Review overdue — verify with a clinician",
-      "reviewMeta": "Reviewed {date} by {reviewer}"
+      "scenarioTitle": "Теренско сценарио",
+      "challengeTitle": "Предизвик за експедиција",
+      "supportTitle": "Се работи за доверлива поддршка",
+      "supportText": "Ако оваа тема допре нешто реално во вашиот живот, не мора да го решавате сами. Прашајте доверлив возрасен, училишна медицинска сестра, лекар, младинска клиника или линија за помош каква поддршка е доверлива каде живеете.",
+      "findCare": "Најдете грижа",
+      "knowRights": "Знајте ги вашите права",
+      "stepLabel": "Лекција {current} од {total}",
+      "completedNote": "Теренската белешка е најавена. Заработивте XP, го зачувавте напредокот и го отклучивте следниот најдобар чекор.",
+      "sourcesTitle": "Потврдени извори",
+      "sourcesNote": "Независни извори можете сами да ги потврдите. Допрете ред за да го отворите оригиналното упатство во нова картичка.",
+      "reviewUpToDate": "Прегледани за клиничка точност",
+      "reviewOverdue": "Прегледот е задоцнет - потврдете со клиничар",
+      "reviewMeta": "Прегледано {date} од {reviewer}"
     },
     "modules": {
       "local": {
         "emergency101": {
-          "title": "Emergency signals: calling for help",
-          "description": "In an emergency, the first minute is a bridge between chaos and help. Your job is not to become a doctor. Your job is to stay safe, call the right number, and give clear information that helps trained responders find the scene fast.",
-          "tip1": "Lead with location: school name, street, building entrance, landmark, or GPS pin. A perfect medical description is useless if help cannot find you.",
-          "tip2": "Say what happened in one sentence: “A student collapsed and is not responding,” or “There is heavy bleeding from the arm.” Short, concrete details help dispatchers act.",
-          "tip3": "Put the phone on speaker if you can. The dispatcher may coach you while someone else gets an adult, opens a gate, or clears space.",
-          "tip4": "Never film an emergency for attention. Protect privacy, create space, and stay with the person if it is safe until help arrives.",
-          "fact": "Emergency systems are designed around fast, accurate information. Clear location plus a brief description can shorten the time between the call and professional care.",
-          "action": "Create a phone note called “Emergency info” with your home address, school address, and one nearby landmark for each.",
-          "scenario": "During sports practice, a classmate suddenly drops to the ground. The gym gets loud. One person is recording. No adult is beside the student yet.",
-          "challenge": "Write a 15-second emergency script: who you are, where you are, what happened, and what you need."
+          "title": "Сигнали за итни случаи: повикување на помош",
+          "description": "Во итен случај, првата минута е мост помеѓу хаосот и помошта. Вашата работа не е да станете лекар. Ваша задача е да останете безбедни, да се јавите на вистинскиот број и да давате јасни информации што им помагаат на обучените лица кои реагираат брзо да ја најдат сцената.",
+          "tip1": "Олово со локација: име на училиште, улица, влез во зграда, обележје или GPS пин. Совршен медицински опис е бескорисен ако помошта не може да ве најде.",
+          "tip2": "Кажете што се случило во една реченица: „Ученик колабирал и не реагира“ или „Има тешко крварење од раката“. Кратките, конкретни детали им помагаат на диспечерите да дејствуваат.",
+          "tip3": "Ако можете, ставете го телефонот на звучникот. Диспечерот може да ве тренира додека некој друг добива возрасен, отвора порта или ослободува простор.",
+          "tip4": "Никогаш не снимајте итен случај за внимание. Заштитете ја приватноста, создадете простор и останете со лицето ако е безбедно додека не пристигне помошта.",
+          "fact": "Системите за итни случаи се дизајнирани околу брзи, точни информации. Јасната локација плус краток опис може да го скрати времето помеѓу повикот и професионалната нега.",
+          "action": "Направете телефонска белешка наречена „Информации за итни случаи“ со вашата домашна адреса, адреса на училиште и по едно обележје во близина за секоја од нив.",
+          "scenario": "За време на спортската вежба, соученик одеднаш паѓа на земја. Салата станува гласна. Едно лице снима. Сè уште нема возрасен човек покрај ученикот.",
+          "challenge": "Напишете 15-втора скрипта за итни случаи: кој сте, каде сте, што се случило и што ви треба."
         },
         "bleedingBasics": {
-          "title": "Bleeding: pressure buys time",
-          "description": "Blood can make people panic, but the first response is simple: protect yourself, press firmly, and get help. Pressure is not dramatic, but it is one of the most powerful first-aid actions a bystander can take.",
-          "tip1": "Protect yourself if possible: gloves are best, but a plastic bag or folded cloth is better than bare hands if blood is visible.",
-          "tip2": "Press directly on the wound with the cleanest cloth available. Strong, steady pressure matters more than constantly checking how it looks.",
-          "tip3": "If blood soaks through, add more cloth on top. Removing the first layer can pull away early clots and restart bleeding.",
-          "tip4": "Call emergency services for heavy bleeding, spurting blood, deep wounds, or bleeding that does not slow with firm pressure.",
-          "fact": "Many severe external bleeds can be slowed before professionals arrive. The difference is often whether someone starts firm pressure immediately.",
-          "action": "Find the first-aid kit at home or school and identify what could be used for clean pressure in an emergency.",
-          "scenario": "After school, someone cuts their forearm on broken glass. Their sleeve is wet with blood, and friends are afraid to touch anything.",
-          "challenge": "Practice saying the rule out loud: “Press. Add layers. Keep pressing. Call for help.”"
+          "title": "Крварење: притисокот купува време",
+          "description": "Крвта може да ги натера луѓето да паничат, но првиот одговор е едноставен: заштитете се, притиснете цврсто и побарајте помош. Притисокот не е драматичен, но е една од најмоќните акции за прва помош што може да ги преземе случаен минувач.",
+          "tip1": "Заштитете се ако е можно: ракавиците се најдобри, но пластична кеса или свиткана крпа е подобра од голи раце ако се гледа крв.",
+          "tip2": "Притиснете директно на раната со најчистата достапна крпа. Силниот, постојан притисок е повеќе важен отколку постојаното проверување како изгледа.",
+          "tip3": "Ако крвта се впие, додадете повеќе крпа одозгора. Отстранувањето на првиот слој може да ги отстрани раните згрутчувања и да го рестартира крварењето.",
+          "tip4": "Повикајте служби за итни случаи за обилно крварење, бликање крв, длабоки рани или крварење што не забавува со силен притисок.",
+          "fact": "Многу тешки надворешни крварења може да се забават пред да пристигнат професионалци. Разликата често е дали некој веднаш ќе започне цврст притисок.",
+          "action": "Најдете го комплетот за прва помош дома или на училиште и идентификувајте што може да се користи за чист притисок во итен случај.",
+          "scenario": "По училиште, некој им ја сече подлактицата на скршено стакло. Нивниот ракав е влажен со крв, а пријателите се плашат да допрат што било.",
+          "challenge": "Вежбајте да го кажувате правилото гласно: „Притиснете. Додајте слоеви. Продолжете да притискате. Повикајте помош“."
         },
         "burnsBasics": {
-          "title": "Burns: cool the heat, protect the skin",
-          "description": "A burn keeps damaging tissue after the heat source is gone. The goal is to cool the skin safely, avoid folk remedies that trap heat, and know when a burn needs urgent medical care.",
-          "tip1": "Cool running water is the first move for many minor burns. Keep it gentle and cool, not icy.",
-          "tip2": "Skip butter, oil, toothpaste, flour, or egg. They can trap heat, hide the injury, and raise infection risk.",
-          "tip3": "Remove tight rings, bracelets, or clothing near the burn if they are not stuck, because swelling can happen quickly.",
-          "tip4": "Get urgent care for burns on the face, hands, genitals, large areas, deep burns, chemical burns, electrical burns, or trouble breathing.",
-          "fact": "Early cooling can reduce pain and depth of injury. The best burn care often begins before anyone reaches a clinic.",
-          "action": "Teach one person the burn rule: cool water first, cover loosely, no kitchen remedies.",
-          "scenario": "A younger sibling touches a hot pan. An older relative reaches for toothpaste because “that always helped before.”",
-          "challenge": "Make a two-line poster: “Cool the burn. Do not cover it with food or paste.”"
+          "title": "Изгореници: изладете ја топлината, заштитете ја кожата",
+          "description": "Изгорениците продолжуваат да го оштетуваат ткивото откако ќе исчезне изворот на топлина. Целта е безбедно да се излади кожата, да се избегнуваат народни лекови кои ја задржуваат топлината и да се знае кога на изгореницата му е потребна итна медицинска помош.",
+          "tip1": "Ладна проточна вода е првиот потег за многу помали изгореници. Чувајте го нежно и ладно, а не ледено.",
+          "tip2": "Прескокнете путер, масло, паста за заби, брашно или јајце. Тие можат да ја заробат топлината, да ја сокријат повредата и да го зголемат ризикот од инфекција.",
+          "tip3": "Отстранете ги тесните прстени, нараквиците или облеката во близина на изгореницата ако не се заглавени, бидејќи отокот може брзо да се случи.",
+          "tip4": "Добијте итна нега за изгореници на лицето, рацете, гениталиите, големи површини, длабоки изгореници, хемиски изгореници, електрични изгореници или проблеми со дишењето.",
+          "fact": "Раното ладење може да ја намали болката и длабочината на повредата. Најдобрата нега на изгореници често започнува пред некој да стигне до клиника.",
+          "action": "Научете едно лице на правилото за изгореници: прво ладна вода, лабаво покријте, без кујнски лекови.",
+          "scenario": "Помлад брат или сестра допира жешка тава. Еден постар роднина посегнува по паста за заби затоа што „тоа секогаш помагало порано“.",
+          "challenge": "Направете постер во две линии: „Оладете го изгореникот. Не покривајте го со храна или паста“."
         },
         "stiBasics": {
-          "title": "STIs: facts without shame",
-          "description": "Sexually transmitted infections are health conditions, not character judgments. Some are curable, some are manageable, and many have no symptoms at first. Accurate information protects people from stigma and from delayed care.",
-          "tip1": "Symptoms are not a reliable test. Many STIs can be silent while still affecting health or spreading to partners.",
-          "tip2": "Condoms and dental dams reduce risk when used correctly, but no tool works if someone is pressured or unable to use it safely.",
-          "tip3": "Testing is responsible. It is something people do to care for themselves and others, not something to gossip about.",
-          "tip4": "Ask clinics directly about confidentiality: who can see results, what age rules apply, and whether services are youth-friendly.",
-          "fact": "Untreated infections such as chlamydia and gonorrhea can lead to serious complications, but testing and treatment are effective when people get care early.",
-          "action": "Identify one trustworthy sexual-health source in your country: a health ministry page, youth clinic, school nurse, or helpline.",
-          "scenario": "A friend says, “I would know if someone had an STI just by looking.” Another student quietly stops talking.",
-          "challenge": "Prepare a stigma-free reply: “You cannot always tell. Testing is normal, private, and responsible.”"
+          "title": "STIs: факти без срам",
+          "description": "Сексуално преносливите инфекции се здравствени состојби, а не проценки на карактерот. Некои се излечиви, некои се податливи, а многу од нив на почетокот немаат никакви симптоми. Точните информации ги штитат луѓето од стигма и од одложена грижа.",
+          "tip1": "Симптомите не се сигурен тест. Многу STIs можат да молчат додека сè уште влијаат на здравјето или се шират на партнерите.",
+          "tip2": "Кондомите и забните брани го намалуваат ризикот кога се користат правилно, но ниту една алатка не работи ако некој е под притисок или не може безбедно да ја користи.",
+          "tip3": "Тестирањето е одговорно. Тоа е нешто што луѓето го прават за да се грижат за себе и за другите, а не за озборување.",
+          "tip4": "Прашајте ги клиниките директно за доверливоста: кој може да ги види резултатите, кои правила за возраст важат и дали услугите се погодни за младите.",
+          "fact": "Нелекуваните инфекции како што се кламидија и гонореја може да доведат до сериозни компликации, но тестирањето и третманот се ефективни кога луѓето се грижат рано.",
+          "action": "Идентификувајте еден доверлив извор на сексуално здравје во вашата земја: страница на Министерството за здравство, клиника за млади, училишна медицинска сестра или линија за помош.",
+          "scenario": "Еден пријател вели: „Би знаел дали некој има STI само гледајќи“. Друг студент тивко престанува да зборува.",
+          "challenge": "Подгответе одговор без стигма: „Не можете секогаш да знаете. Тестирањето е нормално, приватно и одговорно“."
         },
         "consentBasics": {
-          "title": "Consent: the clearest yes",
-          "description": "Consent is not a technicality. It is the foundation of safety, respect, and trust. A healthy relationship gives every person the freedom to say yes, no, wait, or stop without fear of punishment.",
-          "tip1": "Consent must be freely chosen. Pressure, threats, guilt, alcohol, drugs, or power differences can make “yes” unsafe or invalid.",
-          "tip2": "Silence is not consent. Freezing, going quiet, or not fighting back is not the same as wanting something.",
-          "tip3": "Consent is ongoing. Someone can change their mind even if they agreed earlier, even in a relationship.",
-          "tip4": "Digital boundaries count. Repeatedly asking for photos, sharing private images, or threatening exposure is not respect.",
-          "fact": "Consent education reduces harm because it gives students practical language for boundaries before pressure becomes danger.",
-          "action": "Choose a trusted person or service you could contact if you or a friend felt pressured, unsafe, or threatened.",
-          "scenario": "Someone keeps asking for private photos after being told no, then says, “If you loved me, you would.”",
-          "challenge": "Write a boundary script you could send quickly: “No. Stop asking. I am leaving this conversation.”"
+          "title": "Согласност: најјасно да",
+          "description": "Согласноста не е технички аспект. Тоа е основата на безбедноста, почитта и довербата. Здравата врска му дава слобода на секој човек да каже да, не, да чека или да престане без страв од казна.",
+          "tip1": "Согласноста мора да биде слободно избрана. Притисокот, заканите, чувството на вина, алкохолот, дрогата или разликите во моќта може да го направат „да“ небезбедно или невалидно.",
+          "tip2": "Молчењето не е согласност. Да се ​​замрзнеш, да молчиш или да не се бориш не е исто што и да сакаш нешто.",
+          "tip3": "Согласноста е во тек. Некој може да се предомисли дури и ако се договорил порано, дури и во врска.",
+          "tip4": "Дигиталните граници се бројат. Постојаното барање фотографии, споделувањето приватни слики или заканувачката изложеност не е почит.",
+          "fact": "Образованието за согласност ја намалува штетата бидејќи на учениците им дава практичен јазик за границите пред притисокот да стане опасност.",
+          "action": "Изберете доверлива личност или услуга со која би можеле да контактирате доколку вие или некој пријател се чувствувате под притисок, небезбедно или загрозено.",
+          "scenario": "Некој постојано бара приватни фотографии откако ќе му кажат не, а потоа вели: „Ако ме сакаше, ќе ме сакаше“.",
+          "challenge": "Напишете скрипта за граница што можете брзо да ја испратите: „Не. Престани да прашуваш. Го напуштам разговоров“."
         }
       },
       "regional": {
         "chokingBasics": {
-          "title": "Choking: recognize the silent emergency",
-          "description": "Choking can turn a normal lunch table into a life-threatening emergency in seconds. The safest response begins with recognizing whether the person can cough or breathe, calling for help, and using trained techniques when needed.",
-          "tip1": "If the person is coughing hard, encourage coughing and stay close. A strong cough is the body’s best tool.",
-          "tip2": "If they cannot speak, cough, cry, or breathe, treat it as an emergency and call for help immediately.",
-          "tip3": "Back blows and abdominal thrusts should be learned from a certified first-aid instructor. Good technique matters.",
-          "tip4": "After a serious choking episode, medical evaluation is wise even if the person seems better.",
-          "fact": "Choking is often quiet, not dramatic. Bystanders who recognize the signs quickly can make the difference before professionals arrive.",
-          "action": "Ask your school who is trained in first aid and where students can learn CPR or choking response.",
-          "scenario": "In the cafeteria, a student suddenly stands up, grabs their throat, and cannot answer when friends ask what is wrong.",
-          "challenge": "Find out where your school keeps emergency contacts and who is first-aid trained."
+          "title": "Гушење: препознајте ја тивката итност",
+          "description": "Гушењето може да ја претвори нормалната маса за ручек во итен случај опасен по живот за неколку секунди. Најбезбедниот одговор започнува со препознавање дали лицето може да кашла или дише, повикување на помош и користење обучени техники кога е потребно.",
+          "tip1": "Ако личноста силно кашла, поттикнете ја кашлањето и останете блиску. Силната кашлица е најдобрата алатка на телото.",
+          "tip2": "Ако не можат да зборуваат, кашлаат, плачат или дишат, третирајте го како итен случај и веднаш повикајте помош.",
+          "tip3": "Ударите на грбот и абдоминалните удари треба да се научат од овластен инструктор за прва помош. Добрата техника е важна.",
+          "tip4": "По сериозна епизода на гушење, медицинската проценка е мудра дури и ако лицето изгледа подобро.",
+          "fact": "Гушењето е често тивко, а не драматично. Случајните минувачи кои брзо ги препознаваат знаците можат да направат разлика пред да пристигнат професионалци.",
+          "action": "Прашајте го вашето училиште кој е обучен за прва помош и каде учениците можат да научат CPR или одговор на гушење.",
+          "scenario": "Во кафетеријата, еден ученик одеднаш станува, го фаќа за грло и не може да одговори кога пријателите ќе прашаат што не е во ред.",
+          "challenge": "Откријте каде вашето училиште одржува контакти за итни случаи и кој е обучен за прва помош."
         },
         "stiTesting": {
-          "title": "Testing and treatment: privacy, proof, care",
-          "description": "Testing replaces fear with facts. It can feel intimidating, but clinics do this every day. The strongest move is to ask clear questions about privacy, testing options, treatment, and partner safety.",
-          "tip1": "Tests may use urine, blood, or swabs. A clinician can explain what is needed based on exposure and symptoms.",
-          "tip2": "Be honest with clinicians. They are not there to judge; accurate information helps them choose the right tests.",
-          "tip3": "If treatment is prescribed, take it exactly as directed and ask when it is safe to have sex again.",
-          "tip4": "Partners may need testing or treatment. Clinics can help with safe, private ways to communicate this.",
-          "fact": "Early testing and treatment can prevent long-term complications and reduce transmission in a community.",
-          "action": "Write down three clinic questions: “Is this confidential?”, “Which tests do I need?”, “When should I retest?”",
-          "scenario": "A friend is worried after possible exposure but says, “If I go to a clinic, everyone will know.”",
-          "challenge": "Build a privacy checklist a student could use before making an appointment."
+          "title": "Тестирање и третман: приватност, докажување, грижа",
+          "description": "Тестирањето го заменува стравот со факти. Може да се чувствува застрашувачки, но клиниките го прават тоа секој ден. Најсилниот потег е да се постават јасни прашања за приватноста, опциите за тестирање, третманот и безбедноста на партнерот.",
+          "tip1": "Тестовите може да користат урина, крв или брисеви. Лекарот може да објасни што е потребно врз основа на изложеноста и симптомите.",
+          "tip2": "Бидете искрени со лекарите. Тие не се таму за да судат; точните информации им помагаат да ги изберат вистинските тестови.",
+          "tip3": "Ако е препишан третман, земете го точно како што е наведено и прашајте кога е безбедно повторно да имате секс.",
+          "tip4": "На партнерите можеби ќе им треба тестирање или третман. Клиниките можат да помогнат со безбедни, приватни начини да се пренесе ова.",
+          "fact": "Раното тестирање и третман може да спречат долгорочни компликации и да го намалат преносот во заедницата.",
+          "action": "Запишете три прашања од клиниката: „Дали е ова доверливо?“, „Кои тестови ми се потребни?“, „Кога треба повторно да тестирам?“",
+          "scenario": "Еден пријател е загрижен по можна изложеност, но вели: „Ако одам на клиника, сите ќе знаат“.",
+          "challenge": "Направете листа за проверка на приватност што студентот би можел да ја користи пред да закаже состанок."
         },
         "vaccineLiteracy": {
-          "title": "Vaccines: training the immune system",
-          "description": "Vaccines are not magic shields; they are training sessions for the immune system. They help the body recognize danger before a real infection has the chance to cause serious harm.",
-          "tip1": "A vaccine schedule is a map. It shows which protections are recommended at different ages and when catch-up doses may be needed.",
-          "tip2": "A sore arm or mild fever can happen because the immune system is responding. Clinics can tell you what is normal and what is not.",
-          "tip3": "Vaccines are monitored for safety before and after approval. Serious allergic reactions are rare, and clinics are prepared for them.",
-          "tip4": "If you missed a dose, do not guess. Ask a clinician or official schedule about catch-up options.",
-          "fact": "High vaccine coverage protects individuals and also helps protect people who cannot be vaccinated for medical reasons.",
-          "action": "Check your vaccine record with a parent, guardian, doctor, or school nurse and list one question to ask.",
-          "scenario": "A group chat claims a vaccine “rewrites your DNA.” The post has dramatic music and no source.",
-          "challenge": "Find the same vaccine on a public health website and write one evidence-based reply."
+          "title": "Вакцини: обука на имунолошкиот систем",
+          "description": "Вакцините не се магични штитови; тие се тренинг сесии за имунолошкиот систем. Тие му помагаат на телото да ја препознае опасноста пред вистинската инфекција да има шанса да предизвика сериозна штета.",
+          "tip1": "Распоредот за вакцини е мапа. Покажува кои заштитни мерки се препорачуваат на различни возрасти и кога може да бидат потребни дополнителни дози.",
+          "tip2": "Може да се појави болна рака или блага треска бидејќи имунолошкиот систем реагира. Клиниките можат да ви кажат што е нормално, а што не.",
+          "tip3": "Вакцините се следат за безбедност пред и по одобрувањето. Сериозните алергиски реакции се ретки, а за нив се подготвени клиники.",
+          "tip4": "Ако сте пропуштиле доза, не погодувајте. Прашајте клиничар или официјален распоред за опциите за следење.",
+          "fact": "Високата покриеност со вакцини ги штити поединците и исто така помага да се заштитат луѓето кои не можат да се вакцинираат од медицински причини.",
+          "action": "Проверете ја вашата евиденција за вакцинација со родител, старател, лекар или училишна медицинска сестра и наведете едно прашање што треба да го поставите.",
+          "scenario": "Групниот разговор тврди дека вакцината „го препишува вашиот DNA“. Објавата има драматична музика и нема извор.",
+          "challenge": "Најдете ја истата вакцина на веб-страница за јавно здравје и напишете еден одговор заснован на докази."
         },
         "vpdExamples": {
-          "title": "Diseases vaccines can prevent",
-          "description": "A vaccine card is not just paperwork. It is a record of protection against diseases that once injured or killed far more young people: measles, hepatitis B, HPV-related cancers, and more.",
-          "tip1": "Measles spreads through the air and can cause pneumonia, brain swelling, and death. It is not just a rash.",
-          "tip2": "HPV vaccination can prevent several cancers later in life. It works best before exposure to the virus.",
-          "tip3": "Hepatitis B can become a chronic liver infection. Vaccination is a major tool for prevention.",
-          "tip4": "Disease stories travel fast online. Evidence from health agencies travels slower but is far more reliable.",
-          "fact": "Before widespread vaccination, measles killed millions globally. Vaccines changed what childhood risk looked like.",
-          "action": "Choose one vaccine-preventable disease and make a three-bullet “why it matters” card.",
-          "scenario": "Students are preparing for a school trip, but nobody agrees which vaccines matter for teens.",
-          "challenge": "Make a pocket guide: disease, how it spreads, vaccine that helps prevent it."
+          "title": "Вакцините можат да ги спречат болестите",
+          "description": "Вакцинската картичка не е само документација. Тоа е рекорд за заштита од болести кои некогаш повредиле или убиле многу повеќе млади луѓе: сипаници, хепатитис Б, рак поврзани со HPV и многу повеќе.",
+          "tip1": "Малите сипаници се шират низ воздухот и може да предизвикаат пневмонија, оток на мозокот и смрт. Тоа не е само осип.",
+          "tip2": "HPV вакцинацијата може да спречи неколку видови на рак подоцна во животот. Најдобро делува пред изложување на вирусот.",
+          "tip3": "Хепатитис Б може да стане хронична инфекција на црниот дроб. Вакцинацијата е главна алатка за превенција.",
+          "tip4": "Приказните за болестите патуваат брзо на интернет. Доказите од здравствените агенции патуваат побавно, но се многу поверодостојни.",
+          "fact": "Пред широко распространетата вакцинација, сипаниците убиле милиони глобално. Вакцините го сменија изгледот на ризикот од детството.",
+          "action": "Изберете една болест што може да се спречи со вакцини и направете картичка со три точки „зошто е важно“.",
+          "scenario": "Учениците се подготвуваат за училишна екскурзија, но никој не се согласува кои вакцини се важни за тинејџерите.",
+          "challenge": "Направете џебен водич: болест, како се шири, вакцина што помага да се спречи."
         }
       },
       "national": {
         "firstAidReview": {
-          "title": "First aid command: putting it together",
-          "description": "At the national stage, first aid becomes decision-making under pressure: protect yourself, get help, choose the right basic action, and keep the scene calm enough for professionals to take over.",
-          "tip1": "Scene safety comes first. You cannot help if you become the second injured person.",
-          "tip2": "Call early when the situation may be serious. Dispatchers would rather guide a cautious caller than arrive too late.",
-          "tip3": "Match action to problem: pressure for bleeding, cool water for burns, trained response for choking, space and reassurance for shock.",
-          "tip4": "Leadership can be simple: point to one person and say, “You call emergency services. You get a teacher. You clear space.”",
-          "fact": "In emergencies, calm role assignment reduces confusion and speeds up response, especially in crowded places like schools.",
-          "action": "Write a 60-second classroom emergency plan: caller, adult, space, supplies, comfort.",
-          "scenario": "One student is burned, another is bleeding, and the room is filling with noise. You are the first person thinking clearly.",
-          "challenge": "Draft a four-role emergency plan your class could practice safely with a teacher."
+          "title": "Команда за прва помош: составување",
+          "description": "На националната сцена, првата помош станува одлучувачка под притисок: заштитете се, побарајте помош, изберете ја вистинската основна акција и одржувајте ја сцената доволно мирна за професионалците да ја преземат.",
+          "tip1": "Безбедноста на сцената е на прво место. Не можете да помогнете ако станете вториот повреден.",
+          "tip2": "Јавете се рано кога ситуацијата може да биде сериозна. Диспечерите попрво ќе водат претпазлив повикувач отколку да пристигнат предоцна.",
+          "tip3": "Поврзете дејство со проблемот: притисок за крварење, ладна вода за изгореници, трениран одговор при гушење, простор и уверување за шок.",
+          "tip4": "Лидерството може да биде едноставно: покажете на едно лице и кажете: „Повикувате служби за итни случаи. Ќе добиете учител. Ќе ослободите простор“.",
+          "fact": "Во итни случаи, мирното доделување улоги ја намалува конфузијата и го забрзува одговорот, особено на преполни места како училиштата.",
+          "action": "Напишете 60-втор план за итни случаи во училницата: повикувач, возрасен, простор, материјали, удобност.",
+          "scenario": "Еден ученик изгоре, друг крвари, а просторијата се полни со бучава. Вие сте првиот човек кој размислува јасно.",
+          "challenge": "Нацртајте план за итни случаи со четири улоги што вашиот клас би можел безбедно да го практикува со наставник."
         },
         "stiMyths": {
-          "title": "STI myths: replacing gossip with evidence",
-          "description": "Myths thrive where shame is loud and facts are quiet. Health literacy means refusing gossip, protecting privacy, and pointing people toward testing and care instead of blame.",
-          "tip1": "Myth: You can always tell who has an STI. Reality: many infections have no visible signs.",
-          "tip2": "Myth: Only “certain people” get STIs. Reality: exposure is about biology and behavior, not someone’s worth.",
-          "tip3": "Myth: Two condoms are safer than one. Reality: friction can make condoms tear; one used correctly is safer.",
-          "tip4": "Myth: Borrowed antibiotics are enough. Reality: wrong treatment can fail and contribute to resistance.",
-          "fact": "Stigma delays testing. When communities talk about STIs as health issues, people seek care earlier.",
-          "action": "Practice one sentence that shuts down gossip while protecting privacy.",
-          "scenario": "A rumor spreads about a student who might need testing. People are laughing and guessing names.",
-          "challenge": "Write a response that says: stop gossiping, respect privacy, use real health information."
+          "title": "STI митови: замена на озборувањата со докази",
+          "description": "Митовите напредуваат таму каде што срамот е гласен, а фактите се тивки. Здравствената писменост значи одбивање на озборувања, заштита на приватноста и упатување на луѓето кон тестирање и грижа наместо да се обвинуваат.",
+          "tip1": "Мит: Секогаш можеш да кажеш кој има STI. Реалност: многу инфекции немаат видливи знаци.",
+          "tip2": "Мит: Само „одредени луѓе“ добиваат STIs. Реалност: изложеноста е поврзана со биологијата и однесувањето, а не со нечија вредност.",
+          "tip3": "Мит: Два кондоми се побезбедни од еден. Реалност: триењето може да предизвика кинење на кондомите; оној што се користи правилно е побезбеден.",
+          "tip4": "Мит: Позајмени антибиотици се доволни. Реалност: погрешниот третман може да не успее и да придонесе за отпор.",
+          "fact": "Стигмата го одложува тестирањето. Кога заедниците зборуваат за STIs како здравствени проблеми, луѓето бараат грижа порано.",
+          "action": "Вежбајте една реченица која ги исклучува озборувањата додека ја штити приватноста.",
+          "scenario": "Се шири гласина за студент на кој можеби му треба тестирање. Луѓето се смеат и погодуваат имиња.",
+          "challenge": "Напишете одговор кој вели: престанете да озборувате, почитувајте ја приватноста, користете вистински здравствени информации."
         },
         "sourceLiteracy": {
-          "title": "Health information: evidence in a noisy world",
-          "description": "Your feed is a health battlefield: miracle cures, fear posts, influencer advice, and real science all compete for attention. The skill is not knowing everything. The skill is knowing what deserves trust.",
-          "tip1": "Ask who made the claim, what evidence they show, and whether recognized health organizations agree.",
-          "tip2": "Beware of phrases like “doctors hate this,” “secret cure,” or “share before it is deleted.” They are designed to bypass critical thinking.",
-          "tip3": "Look for dates. Health guidance can change as evidence improves.",
-          "tip4": "Before sharing, pause. A false health post can spread fear faster than a virus.",
-          "fact": "Health literacy is linked to better decisions because people can find, understand, and use reliable information under pressure.",
-          "action": "Compare one viral health claim with an official health source and write the difference in plain language.",
-          "scenario": "A video promises a miracle cure, uses dramatic music, and says hospitals are hiding the truth.",
-          "challenge": "Run the three-question source test: Who says it? What proof? What do health agencies say?"
+          "title": "Здравствени информации: докази во бучен свет",
+          "description": "Вашиот извор е бојно поле за здравје: чудотворните лекови, објавите за страв, советите за влијателни лица и вистинската наука се натпреваруваат за внимание. Умешноста не е да се знае сè. Вештината е да се знае што заслужува доверба.",
+          "tip1": "Прашајте кој го дал тврдењето, какви докази покажуваат и дали се согласуваат признатите здравствени организации.",
+          "tip2": "Пазете се од фрази како „докторите го мразат ова“, „таен лек“ или „споделете пред да се избрише“. Тие се дизајнирани да го заобиколат критичкото размислување.",
+          "tip3": "Барајте датуми. Здравствените упатства може да се променат како што се подобруваат доказите.",
+          "tip4": "Пред споделување, паузирајте. Лажна здравствена објава може да шири страв побрзо од вирусот.",
+          "fact": "Здравствената писменост е поврзана со подобри одлуки бидејќи луѓето можат да најдат, разберат и користат веродостојни информации под притисок.",
+          "action": "Споредете едно тврдење за вирусно здравје со официјален здравствен извор и напишете ја разликата на едноставен јазик.",
+          "scenario": "Видеото ветува чудесен лек, користи драматична музика и вели дека болниците ја кријат вистината.",
+          "challenge": "Извршете го изворниот тест со три прашања: Кој го вели тоа? Каков доказ? Што велат здравствените агенции?"
         },
         "capstoneMix": {
-          "title": "Capstone: lead a health mission",
-          "description": "The final mission asks you to combine everything: first response, sexual health, vaccines, consent, and evidence. The goal is not to be the expert in every room. The goal is to become the person who knows how to find help, reduce harm, and keep facts alive.",
-          "tip1": "Start with safety: emergency risks, pressure, consent, privacy, and reliable adults or services.",
-          "tip2": "Use prevention as a stack: vaccines, safer choices, testing, hygiene, trusted information, and timely care.",
-          "tip3": "Respect privacy. A helpful student does not expose someone’s health story to prove a point.",
-          "tip4": "Teach in plain language. If your younger sibling can understand it, your message is stronger.",
-          "fact": "Peer-led health education works best when it is practical, respectful, and connected to real services.",
-          "action": "Design a one-page school health mission plan with four stations: first aid, consent, vaccines, and fact-checking.",
-          "scenario": "You are asked to help plan a school health week. Students say they do not want another boring lecture.",
-          "challenge": "Create a four-station health week agenda with one activity, one trusted resource, and one takeaway per station."
+          "title": "Capstone: водете здравствена мисија",
+          "description": "Последната мисија бара да комбинирате сè: прв одговор, сексуално здравје, вакцини, согласност и докази. Целта не е да се биде експерт во секоја соба. Целта е да станете личност која знае како да најде помош, да ја намали штетата и да ги одржува фактите живи.",
+          "tip1": "Започнете со безбедност: итни ризици, притисок, согласност, приватност и доверливи возрасни или услуги.",
+          "tip2": "Користете ја превенцијата како оџак: вакцини, побезбедни избори, тестирање, хигиена, доверливи информации и навремена грижа.",
+          "tip3": "Почитувајте ја приватноста. Корисен ученик не открива нечија здравствена приказна за да докаже нешто.",
+          "tip4": "Настава на обичен јазик. Ако вашиот помлад брат или сестра може да го разбере тоа, вашата порака е посилна.",
+          "fact": "Здравственото образование предводено од колеги најдобро функционира кога е практично, почитувано и поврзано со вистински услуги.",
+          "action": "Дизајнирајте план за училишна здравствена мисија на една страница со четири станици: прва помош, согласност, вакцини и проверка на факти.",
+          "scenario": "Од вас се бара да помогнете во планирањето на училишната здравствена недела. Студентите велат дека не сакаат уште едно досадно предавање.",
+          "challenge": "Создадете агенда за здравствена недела со четири станици со една активност, еден доверлив ресурс и едно готово по станица."
         }
       }
     },
     "stageQuiz": {
       "local": {
         "q0": {
-          "question": "What should you tell an emergency dispatcher first if possible?",
-          "a0": "Your full medical history",
-          "a1": "Where you are and what happened",
-          "a2": "Your social media handle",
-          "explanation": "Location and a brief description of the emergency help them send the right resources quickly."
+          "question": "Што треба прво да му кажете на диспечерот за итни случаи ако е можно?",
+          "a0": "Вашата целосна медицинска историја",
+          "a1": "Каде си и што се случило",
+          "a2": "Рачката со вашите социјални медиуми",
+          "explanation": "Локацијата и краткиот опис на итната помош им помагаат брзо да ги испратат вистинските ресурси."
         },
         "q1": {
-          "question": "For heavy bleeding that soaks through a cloth, you should:",
-          "a0": "Remove the cloth to look at the wound",
-          "a1": "Add another layer on top and keep pressing",
-          "a2": "Wait an hour to see if it stops",
-          "explanation": "Removing the cloth can disturb clots. Add pressure on top until help arrives."
+          "question": "За обилно крварење кое се впива низ крпа, треба:",
+          "a0": "Отстранете ја крпата за да ја погледнете раната",
+          "a1": "Додадете уште еден слој одозгора и продолжете да притискате",
+          "a2": "Почекајте еден час за да видите дали ќе престане",
+          "explanation": "Отстранувањето на крпата може да ги наруши згрутчувањето. Додадете притисок на врвот додека не пристигне помошта."
         },
         "q2": {
-          "question": "For a small fresh burn, the best first step is usually:",
-          "a0": "Put butter on it",
-          "a1": "Cool with running cool water for several minutes",
-          "a2": "Wrap tightly with plastic",
-          "explanation": "Cool running water reduces heat in the tissue. Butter traps heat and increases infection risk."
+          "question": "За мало свежо изгореници, најдобриот прв чекор обично е:",
+          "a0": "Ставете путер врз неа",
+          "a1": "Се лади со проточна ладна вода неколку минути",
+          "a2": "Цврсто завиткајте со пластика",
+          "explanation": "Ладната проточна вода ја намалува топлината во ткивото. Путерот ја заробува топлината и го зголемува ризикот од инфекција."
         },
         "q3": {
-          "question": "Why might someone get an STI test even without symptoms?",
-          "a0": "Tests are only for people with symptoms",
-          "a1": "Many STIs can be silent but still harmful or spreadable",
-          "a2": "Testing cures all STIs instantly",
-          "explanation": "Many infections have no early symptoms; testing finds them so you can get care and protect partners."
+          "question": "Зошто некој може да направи STI тест дури и без симптоми?",
+          "a0": "Тестовите се само за луѓе со симптоми",
+          "a1": "Многу STIs може да бидат тивки, но сепак штетни или да се шират",
+          "a2": "Тестирањето ги лекува сите STIs веднаш",
+          "explanation": "Многу инфекции немаат рани симптоми; тестирањето ги наоѓа за да може да се грижите и да ги заштитите партнерите."
         }
       },
       "regional": {
         "q0": {
-          "question": "If an adult suddenly cannot speak or breathe and holds their throat, you should:",
-          "a0": "Ignore them until they cough",
-          "a1": "Call emergency services immediately",
-          "a2": "Give them a glass of water",
-          "explanation": "Complete airway blockage is an emergency — trained help and EMS are needed urgently."
+          "question": "Ако возрасен човек одеднаш не може да зборува или дише и го држи грлото, треба:",
+          "a0": "Игнорирајте ги додека не кашлаат",
+          "a1": "Веднаш повикајте брза помош",
+          "a2": "Дајте им чаша вода",
+          "explanation": "Целосното блокирање на дишните патишта е итен случај - итно е потребна обучена помош и EMS."
         },
         "q1": {
-          "question": "If prescribed antibiotics for an STI, you should:",
-          "a0": "Stop when you feel better",
-          "a1": "Finish all pills as directed",
-          "a2": "Share extras with a partner",
-          "explanation": "Stopping early can fail to kill the bacteria and contribute to resistance. Never share antibiotics."
+          "question": "Ако ви се препишани антибиотици за STI, треба:",
+          "a0": "Престанете кога ќе се чувствувате подобро",
+          "a1": "Завршете ги сите апчиња како што е наведено",
+          "a2": "Споделете додатоци со партнер",
+          "explanation": "Раното запирање може да не ги убие бактериите и да придонесе за отпорност. Никогаш не споделувајте антибиотици."
         },
         "q2": {
-          "question": "Vaccines mainly work by:",
-          "a0": "Replacing your blood",
-          "a1": "Training the immune system to recognize a germ",
-          "a2": "Curing active disease instantly",
-          "explanation": "Vaccines prepare your immune system so a future encounter with the real germ is much safer."
+          "question": "Вакцините главно делуваат на:",
+          "a0": "Замена на вашата крв",
+          "a1": "Тренирање на имунолошкиот систем да препознае микроб",
+          "a2": "Веднаш лекува активна болест",
+          "explanation": "Вакцините го подготвуваат вашиот имунолошки систем, така што идната средба со вистинскиот микроб е многу побезбедна."
         },
         "q3": {
-          "question": "Measles is:",
-          "a0": "Harmless in all children",
-          "a1": "A serious disease that vaccines have greatly reduced",
-          "a2": "Only spread by animals",
-          "explanation": "Measles can cause severe complications; vaccination is a key reason cases dropped worldwide."
+          "question": "Малите сипаници се:",
+          "a0": "Безопасни кај сите деца",
+          "a1": "Тешка болест која вакцините значително ја намалија",
+          "a2": "Се шири само од животни",
+          "explanation": "Малите сипаници може да предизвикаат тешки компликации; вакцинацијата е клучна причина поради која се намалија случаите ширум светот."
         }
       },
       "national": {
         "q0": {
-          "question": "In a medical emergency at school, the best first step is usually:",
-          "a0": "Only post on social media",
-          "a1": "Get adult help and emergency services if needed",
-          "a2": "Wait until the end of class",
-          "explanation": "Trained adults and EMS are equipped to respond; time matters in emergencies."
+          "question": "Во итен медицински случај на училиште, најдобриот прв чекор обично е:",
+          "a0": "Објавувајте само на социјалните мрежи",
+          "a1": "Доколку е потребно, побарајте помош од возрасни и итни служби",
+          "a2": "Почекајте до крајот на часот",
+          "explanation": "Обучените возрасни и EMS се опремени да одговорат; времето е важно во итни случаи."
         },
         "q1": {
-          "question": "A reliable place to check vaccine facts is often:",
-          "a0": "Anonymous forum threads only",
-          "a1": "Your country's ministry of health or WHO",
-          "a2": "Memes with many likes",
-          "explanation": "Official health agencies review evidence and update guidance — use them to verify claims."
+          "question": "Сигурно место за проверка на фактите за вакцината често е:",
+          "a0": "Само анонимни теми на форумот",
+          "a1": "Министерството за здравство на вашата земја или WHO",
+          "a2": "Меми со многу лајкови",
+          "explanation": "Официјалните здравствени агенции ги прегледуваат доказите и ги ажурираат упатствата - користете ги за да ги потврдите тврдењата."
         },
         "q2": {
-          "question": "Two condoms at once are:",
-          "a0": "Safer than one",
-          "a1": "Not recommended — friction can cause breakage",
-          "a2": "Required by law",
-          "explanation": "Using one condom correctly is safer than double-layering, which increases tear risk."
+          "question": "Два кондоми одеднаш се:",
+          "a0": "Побезбеден од еден",
+          "a1": "Не се препорачува - триењето може да предизвика кршење",
+          "a2": "Се бара со закон",
+          "explanation": "Правилната употреба на еден кондом е побезбедна од двослојната, што го зголемува ризикот од кинење."
         },
         "q3": {
-          "question": "Health literacy means:",
-          "a0": "Memorizing every disease name",
-          "a1": "Finding, understanding, and using reliable health information",
-          "a2": "Never seeing a doctor",
-          "explanation": "It is about skills to navigate real information and services, not encyclopedic memorization."
+          "question": "Здравствената писменост значи:",
+          "a0": "Меморирање на секое име на болеста",
+          "a1": "Наоѓање, разбирање и користење веродостојни здравствени информации",
+          "a2": "Никогаш не одење на лекар",
+          "explanation": "Станува збор за вештини за навигација со вистински информации и услуги, а не за енциклопедиско меморирање."
         }
       }
     },
     "workflow": {
-      "nextMission": "Next mission",
-      "nextMissionBody": "Follow this recommended step to keep the Academy moving without guessing what to do next.",
+      "nextMission": "Следна мисија",
+      "nextMissionBody": "Следете го овој препорачан чекор за да ја задржите Академијата во движење без да погодувате што да правите следно.",
       "continueLesson": "{stage}: {title}",
-      "takeQuiz": "{stage} stage checkpoint",
-      "finishedTitle": "Academy complete",
-      "finishedBody": "You finished the current Academy path. Review any lesson or retake a quiz to stay sharp.",
-      "startMission": "Start mission",
-      "startQuiz": "Take checkpoint",
-      "reviewPath": "Review path",
-      "takeStageQuiz": "Take stage checkpoint",
-      "lockedStatus": "Locked",
-      "completeStatus": "Complete",
-      "quizReadyStatus": "Checkpoint ready",
-      "inProgressStatus": "In progress"
+      "takeQuiz": "{stage} фаза контролен пункт",
+      "finishedTitle": "Академијата е завршена",
+      "finishedBody": "Ја завршивте тековната патека на Академијата. Прегледајте ја секоја лекција или повторете квиз за да останете остри.",
+      "startMission": "Започнете ја мисијата",
+      "startQuiz": "Земете контролен пункт",
+      "reviewPath": "Патека за прегледување",
+      "takeStageQuiz": "Земете контролен пункт на сцената",
+      "lockedStatus": "Заклучен",
+      "completeStatus": "Целосно",
+      "quizReadyStatus": "Контролната точка подготвена",
+      "inProgressStatus": "Во тек"
     },
     "fieldLab": {
-      "title": "Field Lab",
-      "subtitle": "Turn the lesson into a one-minute plan. Your note stays only on this device.",
-      "observeLabel": "Observe",
-      "decideLabel": "Decide",
-      "actLabel": "Act",
-      "placeholder": "Example: I would first check safety, then call for help, then tell an adult exactly what I saw...",
-      "saveLabel": "Save field note",
-      "savedLabel": "Saved on this device",
-      "observeHint": "What do you actually see, hear, or know in this scenario? Stick to the facts.",
-      "decideHint": "What is the smartest first move? Pick something a calm bystander can really do.",
-      "actHint": "Write the exact words or steps you would use in the next 60 seconds.",
-      "syncedLabel": "Saved",
-      "draftLabel": "Saving draft"
+      "title": "Теренска лабораторија",
+      "subtitle": "Претворете ја лекцијата во едноминутен план. Вашата белешка останува само на овој уред.",
+      "observeLabel": "Набљудувај",
+      "decideLabel": "Одлучи",
+      "actLabel": "Акт",
+      "placeholder": "Пример: Прво би ја проверил безбедноста, потоа ќе повикам помош, а потоа ќе му кажам на возрасен точно што видов...",
+      "saveLabel": "Зачувајте ја белешката на теренот",
+      "savedLabel": "Зачувано на овој уред",
+      "observeHint": "Што всушност гледате, слушате или знаете во ова сценарио? Држете се до фактите.",
+      "decideHint": "Кој е најпаметниот прв потег? Изберете нешто што навистина може да направи мирен случаен минувач.",
+      "actHint": "Напишете ги точните зборови или чекори што би ги користеле во следните 60 секунди.",
+      "syncedLabel": "Зачувано",
+      "draftLabel": "Се зачувува нацрт"
     },
     "visuals": {
-      "academy": "Students learning health skills through maps, phones, clinics, and community action",
-      "emergency": "Emergency call map with location pins and first response signal lines",
-      "firstAid": "First aid field kit with bandage, clean cloth, and safety steps",
-      "sexualHealth": "Private conversation bubble, shield, and clinic doorway for confidential sexual health support",
-      "vaccines": "Immune system shield, vaccine card, and public health network",
-      "literacy": "Fact-checking desk with phone, sources, magnifier, and evidence notes",
-      "capstone": "Capstone expedition map connecting first aid, vaccines, relationships, and evidence"
+      "academy": "Студентите учат здравствени вештини преку мапи, телефони, клиники и акција во заедницата",
+      "emergency": "Карта за итни повици со иглички за локација и линии за сигнал за прв одговор",
+      "firstAid": "Прибор за прва помош на терен со завој, чиста крпа и безбедносни чекори",
+      "sexualHealth": "Меур за приватен разговор, штит и врата на клиниката за доверлива поддршка за сексуалното здравје",
+      "vaccines": "Штит на имунолошкиот систем, картичка за вакцина и мрежа за јавно здравје",
+      "literacy": "Биро за проверка на факти со телефон, извори, лупа и белешки за докази",
+      "capstone": "Мапа на експедиција Capstone што ги поврзува прва помош, вакцини, врски и докази"
     },
     "hero": {
-      "chipFirstAid": "First aid that works",
-      "chipLiteracy": "Health literacy",
-      "chipMissions": "Mission-based learning"
+      "chipFirstAid": "Прва помош која работи",
+      "chipLiteracy": "Здравствена писменост",
+      "chipMissions": "Учење засновано на мисија"
     },
     "toast": {
-      "lessonLoggedTitle": "Lesson logged",
-      "lessonLoggedBody": "+10 XP earned. Streak updated and your next mission is ready."
+      "lessonLoggedTitle": "Лекцијата е најавена",
+      "lessonLoggedBody": "+10 XP заработени. Серијата е ажурирана и вашата следна мисија е подготвена."
     },
     "sexualHealthSupport": {
-      "title": "Confidential support matters",
-      "body": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
-      "findCare": "Find care",
-      "rights": "Know your rights"
+      "title": "Се работи за доверлива поддршка",
+      "body": "Ако оваа тема допре нешто реално во вашиот живот, не мора да го решавате сами. Прашајте доверлив возрасен, училишна медицинска сестра, лекар, младинска клиника или линија за помош каква поддршка е доверлива каде живеете.",
+      "findCare": "Најдете грижа",
+      "rights": "Знајте ги вашите права"
+    },
+    "stageBadgeFormat": "Фаза {n}",
+    "lessonIndexFormat": "L{n}/{total}",
+    "a11yLocked": "заклучен",
+    "metaSuffix": "Студентска здравствена академија",
+    "l8": {
+      "eyebrow": "Redi Здравствена академија",
+      "heroTitle1": "Станете го",
+      "heroTitle2": "здравствен преведувач",
+      "heroTitle3": "за вашата заедница.",
+      "heroLead": "Клинички прегледана, гејмифицирана наставна програма која опфаќа локални, регионални и национални фази. Изграден со ромски здравствени медијатори низ Европа.",
+      "heroStatPanelImageAlt": "Илустрација што ги истакнува учениците кои заедно практикуваат пресвртници за здравствена писменост.",
+      "heroPrimaryCta": "Започнете ја денешната мисија",
+      "heroSecondaryCta": "Видете ја наставната програма",
+      "statLevel": "Ниво",
+      "statXp": "XP",
+      "statStreak": "Дневна низа",
+      "statBadges": "Значки",
+      "statLessons": "Направени лекции",
+      "statDaysActive": "Активни денови",
+      "missionDeckTitle": "Палубата на мисијата",
+      "missionDeckSubtitle": "Три претстави кои се соединуваат секоја недела.",
+      "missionTodayLabel": "Денес",
+      "missionTodayBody": "Продолжете таму каде што сте застанале - околу {min} минути.",
+      "missionTodayCta": "Продолжете со мисијата",
+      "missionTodayQuiz": "Земете квиз на сцената",
+      "missionTodayDone": "Сите фази се исчистени",
+      "missionTodayDoneBody": "Прегледајте модул или споделете го она што сте го научиле.",
+      "missionStreakLabel": "Редеа",
+      "missionStreakBody": "Чувајте го вашиот оган жив. Појавете се утре.",
+      "missionStreakDay": "{count, plural, one {# day} друго {# days}}",
+      "missionStreakCta": "Пријавете брз факт",
+      "missionBadgeLabel": "Следна значка",
+      "missionBadgeBody": "Завршете {remaining} уште {remaining, plural, one {lesson} други {lessons}} во {stage}.",
+      "missionBadgeAllDone": "Сите заработени значки - споделете ја вашата диплома подолу.",
+      "journeyTitle": "Вашето патување",
+      "journeySubtitle": "Три фази. Дванаесет мисии. Еден сертифициран теренски медијатор.",
+      "journeyCurrent": "Вие сте тука",
+      "journeyUnlocked": "Отклучен",
+      "journeyLocked": "Заклучен",
+      "journeyComplete": "Целосно",
+      "journeyMilestoneLocal": "Локално",
+      "journeyMilestoneRegional": "Регионални",
+      "journeyMilestoneNational": "Национален",
+      "moduleListTitle": "Модули во оваа фаза",
+      "moduleStatusLocked": "Заклучен",
+      "moduleStatusDone": "Готово",
+      "moduleStatusOpen": "Отвори",
+      "moduleStatusNew": "Ново",
+      "achievementWallTitle": "Ѕид на достигнувања",
+      "achievementWallSubtitle": "Секоја значка овде е приказна што можете да ја споделите.",
+      "achievementProgress": "{percent}% за отклучување",
+      "achievementEarned": "Заработени",
+      "achievementLockedHint": "Поминете го квизот на {stage} фаза за отклучување.",
+      "leaderboardTitle": "Врвни ученици",
+      "leaderboardSubtitle": "Анонимизирана група, ажурирана неделно.",
+      "leaderboardYou": "Вие",
+      "leaderboardRank": "Ранг",
+      "leaderboardCountryFallback": "Европа",
+      "leaderboardEmpty": "Сè уште нема доволно податоци - продолжете да учите и ќе се појавите овде следната недела.",
+      "diplomaTitle": "Диплома за медијатор на терен",
+      "diplomaSubtitle": "На што работите.",
+      "diplomaBody": "Поминете ги сите три фази за да заработите дигитална диплома што можете да ја споделите со работодавците и невладините организации.",
+      "diplomaProgress": "Исполнети се {completed} од {total} барања",
+      "diplomaPreviewName": "Иден медијатор на терен",
+      "diplomaPreviewDate": "Доделено {date}",
+      "diplomaSignature": "Redi Клинички одбор",
+      "diplomaPreview": "Преглед",
+      "diplomaUnlocked": "Диплома подготвена",
+      "diplomaCta": "Отворена диплома",
+      "countryTitle": "Вашата земја",
+      "countryHint": "Локализирајте примери, статистики и броеви за итни случаи.",
+      "ctaBanner": "Заглавени? Медијаторите тестирани на терен се оддалечени еден допир.",
+      "ctaBannerLink": "Поставете прашање",
+      "whatsInsideTitle": "Што има внатре",
+      "whatsInsideFirstAid": "Одговор за итни случаи и прва помош",
+      "whatsInsideSTI": "Сексуално здравје и согласност",
+      "whatsInsideVaccines": "Вакцини и имунизација",
+      "whatsInsideMyths": "Дезинформации и извори"
     }
   },
   "errors": {
@@ -528,10 +883,7 @@
         "title": "Data Protection Officer",
         "body": "Email dpo@redi.healthcare with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
       }
-    },
-    "localExportLabel": "Download local data",
-    "localExportHint": "Exports everything saved on this device — progress, check-ins, family logs, mediator visits. No account needed.",
-    "guestNote": "Using as a guest? Your local data (progress, check-ins, family logs) is only on this device. Download it below. Server export and delete require an account."
+    }
   },
   "home": {
     "kicker": "AI-Powered Health Companion",
@@ -598,9 +950,7 @@
       "tools": "Health Tools",
       "learn": "Learn & Grow",
       "professional": "Professional",
-      "account": "Account",
-      "track": "Track & Family",
-      "trust": "Trust & Safety"
+      "account": "Account"
     },
     "items": {
       "scanLabel": "Misinformation Scanner",
@@ -632,21 +982,7 @@
       "profileLabel": "Profile",
       "profileDesc": "Language, progress, data",
       "aboutLabel": "About Redi Health",
-      "aboutDesc": "Version, privacy, contact",
-      "providersLabel": "Find Healthcare",
-      "providersDesc": "Clinics and services near you",
-      "trackLabel": "Daily Wellness",
-      "trackDesc": "Track mood, water, and activity",
-      "familyLabel": "Family Health",
-      "familyDesc": "Health logs for your whole family",
-      "challengesLabel": "Health Challenges",
-      "challengesDesc": "Community goals and habit streaks",
-      "methodologyLabel": "How it works",
-      "methodologyDesc": "Our safety and clinical governance",
-      "policiesLabel": "Platform Policies",
-      "policiesDesc": "Clinical safety, data rights, Roma equity",
-      "impactLabel": "Public Health Impact",
-      "impactDesc": "Evidence and programme results"
+      "aboutDesc": "Version, privacy, contact"
     }
   },
   "sos": {
@@ -687,9 +1023,7 @@
     "orDescribe": "or describe what you heard",
     "verdictVerified": "Verified",
     "verdictMisleading": "Misleading",
-    "verdictFalse": "False",
-    "learnVaccines": "Read vaccine guide",
-    "openGlossary": "Look up in glossary"
+    "verdictFalse": "False"
   },
   "install": {
     "installApp": "Install Redi Health",
@@ -702,10 +1036,7 @@
     "toInstall": "to install on iOS."
   },
   "chat": {
-    "askMeAnything": "Ask me anything",
-    "handoffVisitCard": "Prepare visit card",
-    "handoffSymptoms": "Check symptoms",
-    "handoffExplain": "Explain a prescription"
+    "askMeAnything": "Ask me anything"
   },
   "impact": {
     "title": "Public Health Impact",
@@ -726,17 +1057,7 @@
     "section2": "PII Scrubbing",
     "desc2": "All messages are sanitized locally. Phone numbers, emails, IBANs, and National IDs are masked before leaving the device infrastructure.",
     "section3": "Clinical Review",
-    "desc3": "Every lesson in the Student Health Academy undergoes clinical review by practicing Roma Health Mediators and physicians.",
-    "section4": "Approved public health sources",
-    "desc4": "All factual health claims cite WHO, ECDC, IFRC, national ministries, or peer-reviewed guidance. Social media claims, single-study findings, and commercial sources are never used as primary references.",
-    "section5": "Privacy by design",
-    "desc5": "Personal identifiers are scrubbed from all AI inputs. No raw prompts are retained beyond the request. Health logs are stored with explicit consent, in EU regions, under full GDPR data-subject rights including export and deletion.",
-    "section6": "Roma equity safeguards",
-    "desc6": "Content is reviewed for strengths-based framing, absence of stigmatising language, and avoidance of deficit narratives. Ethnicity data is never collected. Provider and mediator tools are designed to prevent surveillance or profiling.",
-    "goNoGoTitle": "Feature release policy",
-    "goNoGoBody": "Features that may influence clinical decisions — AI triage, symptom severity, prescription explanation, vaccine recommendations, mediator visit logging, youth sexual health, and legal guidance — require completed policy controls before release. Navigation, glossary, progress, and content organisation improvements may ship at any time.",
-    "notMedicalDevice": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
-    "viewPolicies": "Read the full platform policies"
+    "desc3": "Every lesson in the Student Health Academy undergoes clinical review by practicing Roma Health Mediators and physicians."
   },
   "providers": {
     "title": "Roma-Friendly Clinics",
@@ -746,11 +1067,7 @@
     "verified": "Verified Roma-Friendly",
     "freeClinic": "Free Services Available",
     "interpreter": "Romani Interpreter",
-    "getDirections": "Get Directions",
-    "unverifiedWarningTitle": "This directory is under development",
-    "unverifiedWarningBody": "The listings shown are examples only and have not been verified. Do not rely on this information to make healthcare decisions. Contact your local health centre, NGO, or health mediator to find care near you.",
-    "unverifiedBadge": "Not yet verified",
-    "unverifiedListingNote": "Listing not yet verified — please contact the provider directly to confirm services."
+    "getDirections": "Get Directions"
   },
   "landing": {
     "eyebrow": "Health literacy for Roma communities",
@@ -805,8 +1122,1384 @@
     "privacy": "Privacy",
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
-    "builtWith": "Built with Roma health mediators across 15 countries.",
-    "policies": "Policies"
+    "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Семејно здравје",
+    "subtitle": "Следете го здравјето на целото семејство. Сите податоци остануваат на вашиот телефон.",
+    "back": "Назад кон семејството",
+    "yearsOld": "{age} години",
+    "expecting": "· Бремена",
+    "pregnancyTitle": "Бременост",
+    "pregnancyWeeks": "Недела {weeks} од 40",
+    "pregnancyExpecting": "Бремена",
+    "logMood": "Забележи расположение",
+    "logWater": "Вода",
+    "logActivity": "Активност",
+    "logFormTitle": "Забележи {type}",
+    "logNote": "Додај белешка (опционално)",
+    "save": "Зачувај",
+    "recentLogs": "Неодамнешни записи",
+    "noLogs": "Сè уште нема записи. Започнете со следење!",
+    "addMemberTitle": "Додај член на семејството",
+    "addMemberButton": "Додај член на семејството",
+    "addToFamily": "Додај во семејството",
+    "namePlaceholder": "Име",
+    "agePlaceholder": "Возраст",
+    "pregnantLabel": "Моментално бремена",
+    "emptyTitle": "Вашиот семеен здравствен центар",
+    "emptyDesc": "Додајте членови на семејството за да го следите нивното здравје, вакцини и лекови. Сè останува на вашиот телефон — не е потребна сметка.",
+    "vaccineTrackingTitle": "Следење на вакцини",
+    "vaccineTrackingDesc": "Наскоро за секој член",
+    "medicationRemindersTitle": "Потсетници за лекови",
+    "medicationRemindersDesc": "Наскоро",
+    "logTypes": {
+      "mood": "Расположение",
+      "water": "Вода (чаши)",
+      "activity": "Активност (мин)",
+      "weight": "Тежина (кг)",
+      "note": "Белешка"
+    },
+    "genders": {
+      "female": "Жена",
+      "male": "Маж",
+      "other": "Друго"
+    },
+    "relation": {
+      "self": "Јас",
+      "child": "Мое дете",
+      "spouse": "Сопруг/а / Партнер",
+      "parent": "Родител",
+      "other": "Друго"
+    }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Здравствен речник — Redi Health",
+      "description": "Медицински поими објаснети со едноставни зборови"
+    },
+    "title": "Здравствен речник",
+    "subtitle": "Медицински поими објаснети со едноставни зборови.",
+    "searchPlaceholder": "Пребарај поими...",
+    "searchAria": "Пребарај медицински поими",
+    "noResults": "Не се пронајдени поими. Обидете се со друго пребарување.",
+    "allCount": "Сите ({count})",
+    "categories": {
+      "condition": "Состојби",
+      "medication": "Лекови",
+      "procedure": "Постапки",
+      "body": "Тело и здравје",
+      "test": "Испитувања"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Висок крвен притисок",
+        "simple": "Крвта премногу силно притиска на ѕидовите на крвните садови. Ако не се лекува, може да предизвика инфаркт или мозочен удар. Лековите треба да се земаат секој ден."
+      },
+      "diabetes-type-2": {
+        "term": "Дијабетес (тип 2)",
+        "simple": "Телото не го користи шеќерот правилно. Шеќерот се собира во крвта и ги оштетува органите. Потребни се лекови, здрава храна и движење. Не настанува само од јадење многу шеќер."
+      },
+      "anemia": {
+        "term": "Анемија",
+        "simple": "Нема доволно здрави црвени крвни клетки. Се чувствувате уморно, слабо или вртоглаво. Често причината е недостаток на железо. Многу е честа кај бремени жени."
+      },
+      "asthma": {
+        "term": "Астма",
+        "simple": "Дишните патишта се стеснуваат и отекуваат, па е тешко да се дише. Може да свирите при дишење или да кашлате. Кога ќе се случи тоа, користете инхалатор. Избегнувајте чад и прашина."
+      },
+      "tuberculosis-tb": {
+        "term": "Туберкулоза (ТБ)",
+        "simple": "Сериозна инфекција на белите дробови. Кашлате со недели, слабеете и ноќе се потите. Се шири преку воздух. Може да се излекува со 6 месеци лекови, но мора да се испијат сите таблети."
+      },
+      "depression": {
+        "term": "Депресија",
+        "simple": "Медицинска состојба кога со недели се чувствувате тажно, без надеж или празно. Тоа не е слабост и не е ваша вина. Лекови и разговор можат да помогнат. Побарајте помош."
+      },
+      "hepatitis-b-c": {
+        "term": "Хепатит Б/Ц",
+        "simple": "Вирус што го напаѓа црниот дроб. Може со години да немате симптоми, но полека го оштетува црниот дроб. Се пренесува преку крв и игли. За хепатит Б постои вакцина."
+      },
+      "pneumonia": {
+        "term": "Пневмонија",
+        "simple": "Сериозна инфекција на белите дробови. Имате температура, кашлица со секрет и тешко дишете. Потребни се антибиотици од лекар. Може да биде опасна за бебиња и постари луѓе."
+      },
+      "gastritis": {
+        "term": "Гастритис",
+        "simple": "Слузницата на желудникот е надразнета или воспалена. Чувствувате печење, мачнина или надуеност. Избегнувајте лута храна, алкохол и пушење. Лековите можат да помогнат."
+      },
+      "eczema": {
+        "term": "Егзема",
+        "simple": "Чешачки, црвени и суви места на кожата. Не е заразна. Често користете хидратантна крема. Избегнувајте силни сапуни. Лекар може да даде крема што помага."
+      },
+      "antibiotic": {
+        "term": "Антибиотик",
+        "simple": "Лек што убива бактерии. Не делува против вируси како грип или настинка. Мора да се испие целата терапија и кога ќе ви стане подобро, инаку бактериите се враќаат посилни."
+      },
+      "ibuprofen": {
+        "term": "Ибупрофен",
+        "simple": "Лек против болка што ја намалува и воспаленоста и температурата. Земете го со храна за да го заштитите желудникот. Не земајте повеќе од напишаното на кутијата. Не е безбеден во бременост."
+      },
+      "paracetamol": {
+        "term": "Парацетамол",
+        "simple": "Чест лек за главоболка и температура. Безбеден е за повеќето луѓе, и за бремени жени. Не земајте повеќе од 4 грама дневно, бидејќи го оштетува црниот дроб."
+      },
+      "insulin": {
+        "term": "Инсулин",
+        "simple": "Хормон што му треба на телото за да го користи шеќерот. Луѓето со дијабетес понекогаш имаат потреба од инсулински инјекции. Тоа не значи дека болеста е полоша, туку дека третманот е различен."
+      },
+      "metformin": {
+        "term": "Метформин",
+        "simple": "Најчестиот лек за дијабетес. Му помага на телото подобро да го користи шеќерот. Се зема со храна. На почеток може да предизвика тегоби во желудникот, но тоа обично поминува."
+      },
+      "blood-test": {
+        "term": "Крвна анализа",
+        "simple": "Мала игла зема малку крв од раката. Така лекарот проверува инфекции, анемија, дијабетес и многу други работи. Боли само кратко."
+      },
+      "x-ray": {
+        "term": "Рендген",
+        "simple": "Слика на коските и белите дробови со посебни зраци. Стоите мирно неколку секунди. Не боли. Безбеден е за повеќето луѓе, но кажете му на лекарот ако сте бремени."
+      },
+      "ultrasound": {
+        "term": "Ултразвук",
+        "simple": "Слика од внатрешноста на телото со звучни бранови. Лекарот става гел на кожата и движи апарат. Не боли. Често се користи за преглед на бебе во бременост."
+      },
+      "ecg-ekg": {
+        "term": "ЕКГ",
+        "simple": "Испитување што го проверува срцевиот ритам. На градите се ставаат мали лепенки. Не боли. Трае околу 5 минути. Покажува дали срцето чука нормално."
+      },
+      "vaccination": {
+        "term": "Вакцинација",
+        "simple": "Мала инјекција што го учи телото да се бори против болест уште пред да се разболите. Благи несакани ефекти, како болка во раката или мала температура, се нормални."
+      },
+      "blood-pressure": {
+        "term": "Крвен притисок",
+        "simple": "Силата со која крвта притиска на ѕидовите на крвните садови. Нормално е околу 120/80. Висок притисок над 140/90 е опасен бидејќи често не се чувствува, а ги оштетува срцето и мозокот."
+      },
+      "blood-sugar": {
+        "term": "Шеќер во крвта",
+        "simple": "Количината на глукоза во крвта. Нормалната вредност на гладно е 70-100 mg/dL. Премногу висока вредност значи дијабетес. Премногу ниска предизвикува вртоглавица и тресење."
+      },
+      "bmi": {
+        "term": "БМИ",
+        "simple": "Индексот на телесна маса покажува дали тежината е здрава за вашата висина. Под 18,5 е потхранетост. 18,5-25 е нормално. Над 25 е прекумерна тежина. Над 30 е дебелина."
+      },
+      "immune-system": {
+        "term": "Имун систем",
+        "simple": "Тоа е војската на телото против микробите. Белите крвни клетки се борат со инфекции. Вакцините го тренираат имунолошкиот систем. Добра храна, сон и движење го зајакнуваат."
+      }
+    }
+  },
+  "vaccines": {
+    "heroTitle": "Водич за вакцини",
+    "heroSubtitle": "Секоја вакцина е објаснета едноставно. Допрете која било вакцина за да дознаете повеќе.",
+    "askCta": "Постави прашање за вакцините",
+    "backToSchedule": "Назад кон календарот",
+    "preventsLabel": "Штити од",
+    "dosesNeeded": "{count, plural, one {# потребна доза} other {# потребни дози}}",
+    "howItWorks": "Како делува",
+    "sideEffects": "Несакани реакции (нормални)",
+    "mythTitle": "Мит vs. вистина",
+    "qaTitle": "Прашај за вакцините",
+    "qaSubtitle": "Секое прашање е добредојдено. Искрени одговори од искуство на терен.",
+    "qaPlaceholder": "Напиши го твоето прашање за вакцините...",
+    "qaAria": "Постави прашање за вакцините",
+    "qaCommon": "Чести прашања",
+    "childAgePrompt": "Колку години има вашето дете?",
+    "childAgeAria": "Изберете возраст на детето",
+    "ageOptionDefault": "Изберете возраст...",
+    "ageNewborn": "Новороденче (0 месеци)",
+    "age2m": "2 месеци",
+    "age4m": "4 месеци",
+    "age6m": "6 месеци",
+    "age12m": "12 месеци (1 година)",
+    "age18m": "18 месеци",
+    "age48m": "4-6 години",
+    "age108m": "9-12 години",
+    "neededByAge": "Вакцини потребни на оваа возраст:",
+    "vaccinesCount": "{count, plural, one {# вакцина} other {# вакцини}}",
+    "importance": {
+      "critical": "Неопходна",
+      "important": "Важна",
+      "recommended": "Препорачана"
+    },
+    "fears": [
+      "Дали вакцините се безбедни за моето бебе?",
+      "Дали ќе го боли моето дете?",
+      "Што ако добие температура потоа?",
+      "Може ли да ги одложам вакцините?",
+      "Моето дете е болно - може ли сепак да се вакцинира?"
+    ],
+    "meta": {
+      "title": "Водич за вакцини - Redi Health",
+      "description": "Секоја вакцина е објаснета со едноставни зборови."
+    },
+    "items": {
+      "bcg": {
+        "name": "BCG (туберкулоза)",
+        "preventsDiseases": [
+          "Туберкулоза (ТБ)"
+        ],
+        "howItWorks": "Оваа вакцина го учи телото на бебето да се бори против туберкулозата - тешка белодробна болест што се шири преку воздух. Една мала инјекција во раката штити со години.",
+        "sideEffects": "Може да се појави мало јазолче или лузна на раката. Тоа е нормално и значи дека вакцината делува.",
+        "mythDebunked": "МИТ: 'Туберкулоза веќе нема.' ВИСТИНА: Туберкулозата и понатаму убива многу луѓе секоја година. Во пренатрупани услови брзо се шири."
+      },
+      "hepb": {
+        "name": "Хепатит Б",
+        "preventsDiseases": [
+          "Хепатит Б (болест на црниот дроб)"
+        ],
+        "howItWorks": "Го штити црниот дроб од вирус што може да предизвика трајно оштетување и рак. Се дава при раѓање затоа што новороденчињата се најранливи.",
+        "sideEffects": "Лесна болка на местото на убодот. Некои бебиња се малку понемирни еден ден. Ништо сериозно.",
+        "mythDebunked": "МИТ: 'Моето бебе е премало за вакцина при раѓање.' ВИСТИНА: Новороденчињата се најзагрозени. Колку порано ги заштитиме, толку подобро."
+      },
+      "dtap": {
+        "name": "DTaP (дифтерија, тетанус, голема кашлица)",
+        "preventsDiseases": [
+          "Дифтерија",
+          "Тетанус",
+          "Голема кашлица"
+        ],
+        "howItWorks": "Оваа вакцина штити од три болести одеднаш. Дифтеријата може да го затвори грлото, тетанусот ги стега мускулите, а големата кашлица може да го остави бебето без здив.",
+        "sideEffects": "Местото на убодот може да биде црвено и болно. Детето може да има лесна температура 1-2 дена.",
+        "mythDebunked": "МИТ: 'Овие болести веќе не постојат, зошто да вакцинираме?' ВИСТИНА: Ретки се токму затоа што вакцинираме. Кога ќе се прекине, се враќаат."
+      },
+      "ipv": {
+        "name": "Полио (IPV)",
+        "preventsDiseases": [
+          "Полио (парализа)"
+        ],
+        "howItWorks": "Полиото е вирус што за неколку часа може трајно да ги парализира детските нозе. Оваа вакцина речиси ја отстрани болеста од многу делови на светот.",
+        "sideEffects": "Многу благи реакции. Понекогаш само малку црвенило на местото на убодот.",
+        "mythDebunked": "МИТ: 'Полиото исчезна, оваа вакцина не ни треба.' ВИСТИНА: Во Европа исчезна токму поради вакцинацијата. Невакциниран патник може да го врати."
+      },
+      "mmr": {
+        "name": "MMR (мали сипаници, заушки, рубеола)",
+        "preventsDiseases": [
+          "Мали сипаници",
+          "Заушки",
+          "Рубеола"
+        ],
+        "howItWorks": "Малите сипаници се многу заразни и можат да го оштетат мозокот или да убијат. Оваа вакцина штити од сите три болести со една доза.",
+        "sideEffects": "Околу 1 од 10 деца може да има лесна температура и осип 7-10 дена подоцна. Тоа значи дека телото учи да се брани.",
+        "mythDebunked": "МИТ: 'MMR предизвикува аутизам.' ВИСТИНА: Големи студии не покажале никаква врска со аутизмот. Малите сипаници, напротив, можат да убијат."
+      },
+      "pneumo": {
+        "name": "Пневмококна вакцина (PCV13)",
+        "preventsDiseases": [
+          "Пневмонија",
+          "Менингитис",
+          "Инфекции во крвта"
+        ],
+        "howItWorks": "Штити од бактерии што предизвикуваат пневмонија, менингитис и тешки инфекции во крвта. Ова се меѓу најопасните болести за малите деца.",
+        "sideEffects": "Лесна температура, раздразливост и болка на местото на убодот 1-2 дена.",
+        "mythDebunked": "МИТ: 'Децата се разболуваат од премногу вакцини.' ВИСТИНА: Детскиот имун систем секој ден среќава илјадници микроби. Неколку вакцини не се премногу."
+      },
+      "rota": {
+        "name": "Ротавирус",
+        "preventsDiseases": [
+          "Тешка дијареја и повраќање кај бебиња"
+        ],
+        "howItWorks": "Се дава како капки во уста, не како инјекција. Штити од вирусот што предизвикува тешка дијареја и дехидратација.",
+        "sideEffects": "Многу благи реакции. Понекогаш малку раздразливост или лесна дијареја.",
+        "mythDebunked": "МИТ: 'Дијарејата е нормална кај бебињата, не треба вакцина.' ВИСТИНА: Ротавирусната дијареја може брзо опасно да го исуши детето."
+      },
+      "varicella": {
+        "name": "Варицела (овчи сипаници)",
+        "preventsDiseases": [
+          "Овчи сипаници"
+        ],
+        "howItWorks": "Овчите сипаници може да изгледаат лесни, но можат да предизвикаат тешка инфекција на кожата, пневмонија или мозочни компликации. Вакцината спречува најголем дел од случаите.",
+        "sideEffects": "Лесна болка. Ретко се појавуваат неколку точки слични на сипаници околу местото на убодот.",
+        "mythDebunked": "МИТ: 'Подобро е природно да се прележат овчи сипаници.' ВИСТИНА: Природната инфекција може да донесе сериозни компликации и подоцна херпес зостер."
+      },
+      "hpv": {
+        "name": "HPV (хуман папилома вирус)",
+        "preventsDiseases": [
+          "Рак на грлото на матката",
+          "Други видови рак"
+        ],
+        "howItWorks": "Оваа вакцина спречува рак. Се дава пред тинејџерите да дојдат во контакт со вирусот.",
+        "sideEffects": "Болка во раката, понекогаш кратка главоболка или вртоглавица. Многу е безбедна.",
+        "mythDebunked": "МИТ: 'Оваа вакцина поттикнува сексуална активност.' ВИСТИНА: Оваа вакцина спречува РАК. Нема врска со однесувањето."
+      },
+      "flu": {
+        "name": "Грип",
+        "preventsDiseases": [
+          "Сезонски грип"
+        ],
+        "howItWorks": "Грипот не е само настинка. Може да биде опасен за мали деца, постари лица и бремени жени. Вакцината се ажурира секоја година.",
+        "sideEffects": "Лесна болка во раката и понекогаш ниска температура еден ден. Од оваа вакцина НЕ можете да добиете грип.",
+        "mythDebunked": "МИТ: 'Вакцината против грип ти дава грип.' ВИСТИНА: Тоа е невозможно. Вакцината не содржи жив вирус."
+      }
+    },
+    "ageGroups": {
+      "birth": {
+        "label": "При раѓање"
+      },
+      "2months": {
+        "label": "2 месеци"
+      },
+      "4months": {
+        "label": "4 месеци"
+      },
+      "6months": {
+        "label": "6 месеци"
+      },
+      "12months": {
+        "label": "12 месеци"
+      },
+      "18months": {
+        "label": "18 месеци"
+      },
+      "4years": {
+        "label": "4-6 години"
+      },
+      "9years": {
+        "label": "9-12 години"
+      },
+      "adult": {
+        "label": "Возрасни"
+      },
+      "pregnant": {
+        "label": "Бремени жени"
+      }
+    }
+  },
+  "explain": {
+    "heroTitle": "Разбери ја својата рецепта",
+    "heroSubtitle": "Внеси дијагноза или име на лек. Објаснуваме со едноставни зборови.",
+    "heroArtAlt": "Илустрација: помош во стил на аптека за разбирање на рецепта.",
+    "placeholder": "Внеси дијагноза, име на лек или залепи рецепта…\n\nПример: „Хипертензија” или „Метформин 500 mg”",
+    "inputAria": "Внеси дијагноза или име на лек",
+    "cta": "Објасни го ова",
+    "ctaAnalyzing": "Анализирам…",
+    "examplesHeading": "Чести примери",
+    "loading": "Ја читам твојата рецепта…",
+    "sections": {
+      "whatThisMeans": "Што значи ова",
+      "whyItMatters": "Зошто е важно",
+      "ifIgnored": "Ако го игнорираш",
+      "medicationsTitle": "Твоите лекови",
+      "howToTake": "Како да ги земаш",
+      "sideEffects": "Несакани ефекти",
+      "neverDo": "Никогаш не прави го ова",
+      "questionsTitle": "Прашај го лекарот следниот пат",
+      "tipsTitle": "Што можеш денес",
+      "emergencyTitle": "Оди во болница ако"
+    },
+    "anotherCta": "Објасни друга рецепта",
+    "disclaimerBold": "Не е медицински совет.",
+    "disclaimerBody": "Овој алат објаснува медицински термини на едноставен јазик. Секогаш следи ги упатствата на твојот лекар.",
+    "meta": {
+      "title": "Разбери ја својата рецепта — Redi Health",
+      "description": "Дијагноза и лекови објаснети со едноставни зборови"
+    },
+    "takePhoto": "Сликај",
+    "uploadImage": "Прикачи слика",
+    "placeholderWithImage": "(Опционално) Додај контекст за рецептата — возраст, како земаш, што те загрижува…",
+    "imagePreviewAlt": "Преглед на слика од рецепта",
+    "imageReady": "Сликата е подготвена",
+    "imageReadyBody": "Ги читаме лекот, дозата и упатствата и објаснуваме сè со едноставни зборови.",
+    "imageRemove": "Отстрани слика",
+    "preparingImage": "Ја подготвувам сликата…",
+    "imageFailed": "Не можев да ја прочитам оваа слика. Пробај друга."
+  },
+  "symptoms": {
+    "heroTitle": "Каде те боли?",
+    "heroSubtitle": "Допри го делот од телото што те мачи",
+    "heroArtAlt": "Илустрација: луѓе добиваат нежни повеќејазични совети за секојдневни симптоми.",
+    "backToMap": "Назад на мапата на телото",
+    "checkAnother": "Провери друга област",
+    "selectSymptoms": "Избери ги сите симптоми што важат",
+    "extraPlaceholder": "Нешто друго? (колку долго, колку лошо…)",
+    "extraAria": "Дополнителни детали за симптомите",
+    "analyzing": "Анализирам симптоми…",
+    "checkCta": "Провери симптоми",
+    "whatToDoNow": "Што да правиш сега",
+    "homeCare": "Нега дома",
+    "escalateTitle": "Оди во болница ако",
+    "commonCauses": "Чести причини",
+    "regions": {
+      "head": "Глава",
+      "chest": "Гради",
+      "abdomen": "Стомак",
+      "leftArm": "Лева рака",
+      "rightArm": "Десна рака",
+      "pelvis": "Здолниште",
+      "leftLeg": "Лева нога",
+      "rightLeg": "Десна нога"
+    },
+    "headSymptoms": [
+      "Главоболка",
+      "Вртоглавица",
+      "Заматен вид",
+      "Болка во уво",
+      "Болка во грло"
+    ],
+    "chestSymptoms": [
+      "Болка во градите",
+      "Затежнато дишење",
+      "Кашлица",
+      "Брзо срце",
+      "Стискање"
+    ],
+    "abdomenSymptoms": [
+      "Болка во стомакот",
+      "Мачнина / повраќање",
+      "Дијареја",
+      "Надуменост",
+      "Нема апетит"
+    ],
+    "armSymptoms": [
+      "Болка",
+      "Мрдење",
+      "Отекување",
+      "Не можам да го мрдам",
+      "Печење"
+    ],
+    "pelvisSymptoms": [
+      "Болка при мокрење",
+      "Болка во грбот",
+      "Менструални проблеми",
+      "Болка во препоните"
+    ],
+    "legSymptoms": [
+      "Болка во нога",
+      "Отекување",
+      "Не можам да одам",
+      "Болка во колено",
+      "Мрдење"
+    ],
+    "meta": {
+      "title": "Проверка на симптоми — Redi Health",
+      "description": "Допри каде те боли. Добиј насоки што да правиш."
+    }
+  },
+  "consult": {
+    "heroTitle": "Здравствена консултација",
+    "heroSubtitle": "Кажи ми што те мачи. Ќе поставам неколку прашања и ќе ти помогнам да одлучиш што да правиш.",
+    "prompt": "Што те доведе овде денес?",
+    "orFreeform": "или опиши со свои зборови",
+    "freeformPlaceholder": "Од вчера ме боли главата…",
+    "freeformAria": "Опиши го својот здравствен проблем",
+    "chatHeader": "Здравствена консултација",
+    "chatSubtitle": "Неколку прашања ми помагаат подобро да ти помогнам",
+    "answerAria": "Твојот одговор",
+    "answerPlaceholder": "Внеси одговор…",
+    "newSession": "Нова консултација",
+    "assessment": "Процена",
+    "whatToDo": "Што да правиш",
+    "homeCare": "Нега дома",
+    "watchFor": "Внимавај на овие знаци",
+    "showVisitCard": "Прикажи картичка за посета кај лекар",
+    "hideVisitCard": "Скриј картичка за посета",
+    "visitCardTitle": "Резиме за лекар",
+    "visitCardDisclaimer": "Генерирано од Redi Health Advisor. Ова не е медицинска дијагноза.",
+    "concerns": {
+      "fever": "Температура / висока температура",
+      "pain": "Болка некаде",
+      "breathing": "Проблеми со дишење",
+      "skin": "Проблем со кожа / осип",
+      "pregnancy": "Загриженост за бременост",
+      "child": "Моето дете е болно",
+      "mental": "Стрес / анксиозност / тага",
+      "heart": "Срце / гради"
+    }
+  },
+  "navigate": {
+    "heroTitle": "Треба да видам лекар",
+    "heroSubtitle": "Ќе ти помогнеме да се подготвиш — што да понесеш, што да кажеш, твоите права.",
+    "issuePrompt": "Кој е проблемот?",
+    "issues": {
+      "fever": "Температура / инфекција",
+      "pain": "Болка / повреда",
+      "pregnancy": "Бременост",
+      "chronic": "Хронична болест",
+      "mental": "Ментално здравје",
+      "skin": "Кожа / очи / уши",
+      "child": "Болно дете",
+      "other": "Нешто друго"
+    },
+    "tellMore": "Кажи ни повеќе",
+    "detailPlaceholder": "Опиши што се случува… Колку долго? Колку лошо?",
+    "detailAria": "Опиши го својот здравствен проблем",
+    "insuranceTitle": "Дали имаш здравствено осигурување?",
+    "insuranceSubtitle": "Ни помага да кажеме што да понесеш",
+    "insuranceYes": "Да, имам здравствена картичка",
+    "insuranceNo": "Не, немам осигурување",
+    "insuranceUnknown": "Не сум сигурен/на",
+    "countryTitle": "Во која држава си?",
+    "generating": "Ја подготвувам картичката за посета…",
+    "generateCard": "Генерирај картичка за посета кај лекар",
+    "startOver": "Започни одново",
+    "showDoctor": "Покажи го ова на лекарот",
+    "generatedBy": "Генерирано од Redi Health Advisor",
+    "whatToBring": "Што да понесеш",
+    "askYourDoctor": "Прашај го својот лекар",
+    "patientRights": "Твоите права како пациент",
+    "findHospital": "Најди ја најблиската болница",
+    "mapHint": "Отвора мапа со рута",
+    "meta": {
+      "title": "Здравствен навигатор — Redi Health",
+      "description": "Подготви се за посета кај лекар — картичка, што да понесеш, твоите права."
+    }
+  },
+  "about": {
+    "brand": "Redi Health",
+    "tagline": "Здравствена писменост за села и маргинализирани заедници",
+    "version": "Верзија 1.0.0",
+    "missionBody": "Redi Health е AI помошник ко-дизајниран со теренски медијатори и клиничари за заедници кои официјалните здравствени системи често недоволно ги опслужуваат — од села до неформални населби — со посебно внимание на ромските заедници. Го намалуваме јазот во писменоста каде што растојанието, јазичната бариера или исклученоста го спречуваат пристапот.",
+    "values": {
+      "careLabel": "Направено со грижа",
+      "careDesc": "Од здравствени медијатори",
+      "languagesLabel": "15 јазици",
+      "languagesDesc": "Низ цела Европа",
+      "evidenceLabel": "Засновано на докази",
+      "evidenceDesc": "Насоки на СЗО",
+      "communityLabel": "Заедницата на прво место",
+      "communityDesc": "Без осудување"
+    },
+    "privacyLink": "Политика за приватност",
+    "termsLink": "Услови за користење",
+    "disclaimer": "Redi Health не е медицински уред. Сите информации се само за образовни цели. Секогаш консултирај се со квалификуван здравствен работник за медицински одлуки.",
+    "meta": {
+      "title": "За нас — Redi Health",
+      "description": "За платформата за здравствена писменост Redi Health"
+    }
+  },
+  "theme": {
+    "ariaLabel": "Тема",
+    "light": "Светла тема",
+    "dark": "Темна тема",
+    "system": "Системска тема",
+    "switchTo": "Смени тема — сега {label}"
+  },
+  "emergency": {
+    "call112": "Повикајте 112 ВЕДНАШ",
+    "banner": "Итна состојба? Повикајте 112",
+    "emergencyLabel": "Итна состојба",
+    "ambulanceLabel": "Итна помош"
+  },
+  "voice": {
+    "start": "Започни да зборуваш",
+    "stop": "Запри слушање",
+    "readAloud": "Прочитај наглас",
+    "readMessageAloud": "Прочитај порака наглас",
+    "readExplanationAloud": "Прочитај објаснување наглас",
+    "micDeepgram": "Допри за говор — повеќејазичен глас (Deepgram)",
+    "micError": "Нема пристап до микрофон.",
+    "detected": "Откриен јазик: {lang}"
+  },
+  "severity": {
+    "green": "Нега дома",
+    "amber": "Наскоро посетете лекар",
+    "red": "Итно — Оди ВЕДНАШ",
+    "redHospital": "Оди во болница ВЕДНАШ"
+  },
+  "learn": {
+    "progressLabel": "завршени модули",
+    "startHere": "Започнете тука",
+    "continueLabel": "Продолжи",
+    "allModules": "Сите модули",
+    "prevention": {
+      "description": "За 15 години работа во ромски населби видов семејства опустошени од болести што едноставните навики можеа да ги спречат. Ова знаење не е луксуз — тоа е опстанок.",
+      "handwashing": {
+        "title": "Миење раце",
+        "description": "Сум видел цели семејства во населени места како се разболуваат од истата стомачна инфекција, од рака на рака. Правилното миење раце е единствениот најевтин, најмоќен лек до кој веќе имате пристап - не чини ништо и ги спречува болестите што најчесто ги гледам во нашите заедници.",
+        "tip1": "Пред да ја допрете храната, пред да нахраните дете и после секоја посета на тоалет - измијте. Сум видел една неизмиена рака предизвикува дијареа една недела кај цело домаќинство",
+        "tip2": "Бројте до 20 полека или потпевнете стих од песна. Повеќето луѓе мијат 5 секунди - тоа не отстранува речиси ништо. Триењето меѓу вашите раце е она што ги убива бактериите",
+        "tip3": "Нема сапун? Сум работел во населби без вода. Пепелта работи. Песокот работи. Водата сама со чистење работи подобро од ништо. Не дозволувајте совршеното да го спречи доброто",
+        "tip4": "Исушете ги рацете на воздух или користете чиста крпа што ја менувате секојдневно. Валканата крпа што ја споделуваат сите повторно ги контаминира чистите раце - нешто што го објаснувам при секоја домашна посета",
+        "fact": "Во заедниците со кои сум работел, кампањите за миење раце ги намалија случаите на детска дијареа за речиси половина во рок од три месеци. WHO потврдува: миењето раце ја намалува дијареата за 40% и респираторните инфекции до 21%.",
+        "action": "Вечерва застанете со вашите деца на изворот на вода и измијте ги рацете заедно. Направете го тоа семејна навика пред секој оброк. Децата кои учат гледајќи ги своите родители ќе го носат ова доживотно."
+      },
+      "vaccination": {
+        "title": "Вакцинација",
+        "description": "Ги придружував мајките Роми во здравствените домови каде што беа одбиени затоа што немаа документи, не знаеја да го зборуваат јазикот или едноставно им беше кажано да се вратат подоцна. Вакцините се законско право на вашите деца - бесплатна, безбедна и најмоќната заштита што може да ја даде еден родител. Никој не може да ви го оспори ова.",
+        "tip1": "Секоја земја во Европа обезбедува бесплатен распоред за вакцинација од самото раѓање. Ова не е добротворна организација - тоа е законско право на вашето дете. Ако здравствениот работник одбие, побарајте го неговиот претпоставен и јасно наведете го тоа",
+        "tip2": "Вакциналната картичка е најважниот документ што го има вашето дете по изводот на родените. Чувајте го безбедно, носете го на секоја посета на лекар. Ако се изгуби, секој здравствен центар мора да издаде замена - не прифаќајте одбивање",
+        "tip3": "Блага треска, болно место на раката, гужва во текот на еден ден - ова е нормално и значи дека вакцината делува. Уверив стотици загрижени мајки за ова. Поминува за 24–48 часа",
+        "tip4": "Не ви треба термин во повеќето центри за јавно здравје за вакцинација. Влезете внатре. Ако во вашата област работи ромски здравствен посредник, замолете го да ве придружува - за ова сме обучени",
+        "fact": "Во едно населено место во кое работев, се појавија морбили бидејќи опфатот со вакцинација падна на 60%. Три деца се хоспитализирани. По кампањата за вакцинација во заедницата, стигнавме до 94% - и епидемиите престанаа. Низ Европа, вакцините спречуваат 2–3 милиони смртни случаи секоја година.",
+        "action": "Извадете ја вакциналната картичка на вашето дете веднаш. Проверете го според распоредот на ѕидот на вашиот здравствен дом. Доколку ви недостасува некоја вакцина или немате картичка, посетете го здравствениот дом оваа недела. Донесете ја оваа апликација за да го покаже распоредот ако помага."
+      },
+      "cleanWater": {
+        "title": "Чиста вода",
+        "description": "Работев во населби каде што семејствата делат единствена водна точка која работи по два часа на ден, и во населби каде што водата од чешма изгледа чиста, но носи бактерии кои предизвикуваат хронични стомачни проблеми кај децата. Квалитетот на водата не е секогаш видлив - и во ромските заедници ретко се следи од властите. Мора да бидете инспектор за вода на вашето семејство.",
+        "tip1": "Покријте го секој сад каде што складирате вода. Сум видел муви, прашина, па дури и животински отпад како ги загадуваат откриените кофи за неколку часа, особено во топло време. Едноставната чинија одозгора ја спречува најголемата контаминација",
+        "tip2": "Ако не сте сигурни за вашата вода, варете ја на тркалање цела минута. Ова убива 99.9% од бактерии, вируси и паразити. Не чини речиси ништо и функционира - ова го научив во десетици населени места каде што изворот на вода беше сомнителен",
+        "tip3": "Измијте ги садовите со вода со сапун и чиста вода најмалку еднаш неделно. Валканиот сад ја прави чистата вода валкана. Ова е една од најзанемарените причини за повторлива дијареа што сум ја видел кај децата",
+        "tip4": "Потоците, езерцата и стоечките локви никогаш не се безбедни за пиење - дури и ако водата изгледа чиста. Паразитите невидливи за окото предизвикуваат хронично оштетување на цревата и развојот на децата",
+        "fact": "Во многу ромски населби низ Централна и Источна Европа, семејствата немаат пристап до безбедна вода со цевки. Европскиот центар за правата на Ромите документира дека ромските населби се систематски недоволно опслужени со водна инфраструктура. Водата што врие не е идеална - тоа е стратегија за преживување додека не се исполни вашето право на чиста вода.",
+        "action": "Денес, проверете го секој контејнер во кој вашето семејство складира вода за пиење. Покријте ги сите што се отворени. Ако не можете да потврдите дека изворот на вода е безбеден, почнете да ја вриете целата вода за пиење и готвење почнувајќи од вечерва."
+      },
+      "firstAid": {
+        "title": "Основна прва помош",
+        "description": "Во оддалечените населби и урбаните населби каде што на амбулантите им треба подолго време да пристигнат - или понекогаш воопшто не доаѓаат - да се знае што да се прави во првите минути од итен случај е разликата помеѓу животот и смртта. Јас обучив стотици членови на ромската заедница за основна прва помош и видов дека ова знаење спасува животи пред да дојде кој било лекар.",
+        "tip1": "112 работи од кој било телефон во Европа — дури и без кредит, дури и без SIM-картичка, дури и од заклучен телефон. Научете го секој член на вашето семејство, вклучително и децата над 7, да вртат 112 и да кажат каде се. Практикувајте го ова. Во итен случај, паниката ги тера луѓето да заборават",
+        "tip2": "За обилно крварење: цврсто притиснете со најчистата крпа што ја имате - кошула, марама, било што - и не кревајте ја за да проверите. Продолжете да притискате додека не пристигне помошта. Сум видел луѓе опасно крварат затоа што постојано ја ваделе крпата за да погледнат. Додадете повеќе крпа одозгора ако крвта се впие",
+        "tip3": "Изгореници: веднаш ставете го изгореницата под ладна проточна вода најмалку 10 минути. Никогаш не нанесувајте путер, масло, паста за заби или белка од јајце - традиционални лекови што сум ги сретнал во многу семејства кои всушност ја задржуваат топлината и предизвикуваат полоша штета и инфекција",
+        "tip4": "Ако некој колабира и не дише: јавете се на 112, а потоа туркајте силно и брзо во центарот на неговите гради — 100 пати во минута (темпото на песната „Stayin' Alive“). Не застанувајте додека не пристигне помошта. Несовршениот CPR е бескрајно подобар од без CPR",
+        "fact": "Истражувањата покажуваат дека во заедниците каде основната обука за прва помош е широко распространета, преживувањето од срцев удар се удвојува. Во многу ромски заедници, времето на одговор на брзата помош е значително подолго отколку во неромските области - што ја прави првата помош на случајните минувачи уште покритична.",
+        "action": "Во моментов, прашајте го секој член на семејството: дали знаете како да се јавите на 112? Дали ја знаеш нашата домашна адреса доволно добро за да му кажеш на диспечерот? Напишете ја вашата целосна адреса на парче хартија и ставете ја во близина на телефонот. Научете ги вашите деца денес."
+      }
+    },
+    "nutrition": {
+      "description": "Со години работа со ромски семејства научив дека храната не е само исхрана — туку она што можете да си дозволите, што е достапно во населбата и што вашето семејство го знае. Нема да ви кажам да купувате киноа. Ќе ви кажам како добро да го храните семејството со она што го имате.",
+      "balancedDiet": {
+        "title": "Јадете добро со кој било буџет",
+        "description": "Најголемиот проблем со исхраната што го гледам во ромските заедници не е недостатокот на храна - тоа е премногу евтин леб, преработено месо и засладени пијалоци и премалку зеленчук, јајца и мешунки. Не се работи за волја. Станува збор за она што е достапно и достапно. Но, малите промени прават огромни разлики за вашето здравје и развојот на вашите деца.",
+        "tip1": "Гравот, леќата и наутот се најевтиниот протеин на кој било пазар - поевтини од месото, подолготрајни и спречуваат дијабетес и срцеви заболувања. Тенџере со чорба од грав го храни семејството за помалку од пакет преработени колбаси и е многу похранливо",
+        "tip2": "Јајцата се најкомплетната евтина храна што постои. Две јајца дневно по дете обезбедуваат речиси се што му е потребно на растечкиот мозок. Во секое населено место во кое работам препорачувам јајцата како првоприоритетна храна за децата",
+        "tip3": "Сезонскиот зеленчук од локалниот пазар или вашата градина чини мал дел од цените на супермаркетите. Зелка, кромид, моркови, компири, пиперки - ова се основата на здравата исхрана и тие се во секоја ромска кујнска традиција",
+        "tip4": "Зашеќерените пијалоци (кола, сок, енергетски пијалоци) се единствената најштетна ставка што ја гледам во исхраната на ромското семејство. Едно шише кола има 10 лажички шеќер. Заменете со вода или слаб чај и ќе го отстраните најголемиот двигател на дебелината и расипувањето на забите што го гледам кај децата",
+        "fact": "Во ромските заедници со кои работев низ Романија и Бугарија, видов дека стапките на дијабетес значително се намалуваат кога семејствата го заменуваат дневниот бел леб и преработеното месо со грав, јајца и зеленчук - дури и без да се промени колку јадат. Телото реагира на квалитетот, а не само на квантитетот.",
+        "action": "Оваа недела заменете еден оброк леб и преработено месо со тенџере чорба од грав или леќа со кромид и пиперки. Гответе доволно два дена. Тоа е поевтино, ве исполнува подолго и почнува да ја менува здравствената траекторија на вашето семејство."
+      },
+      "childNutrition": {
+        "title": "Хранење на децата за силен почеток",
+        "description": "Првите 1,000 дена - од бременост до возраст 2 - ја обликуваат целата иднина на детето: неговиот мозок, неговиот имунолошки систем, неговата способност за учење. Гледав неухранети деца во населбите како заостануваат зад своите врсници не поради генетиката, туку поради тоа што јаделе во тие критични рани месеци. Она што го храните вашето дете сега е најмоќната инвестиција што можете да ја направите во неговиот живот.",
+        "tip1": "Само мајчиното млеко за 6 месеци е златен стандард - бесплатно е, секогаш достапно, совршено хранливо и штити од инфекции подобро од кој било лек. Работев со мајки кои мислеа дека формулата е „модерна“ и подобра. Тоа не е. Мајчиното млеко е усовршена технолошка еволуција",
+        "tip2": "На 6 месеци, започнете со мека храна заедно со доењето: пире од компири, морков, банана, варена жолчка од јајце. Воведете по една нова храна на секои 3 дена за да ги следите реакциите. Многу мајки со кои работам почнуваат со цврсти производи премногу доцна (8–9 месеци) - ова го одложува развојот",
+        "tip3": "Децата под 2 никогаш не треба да имаат шеќер, мед, сол, кола, чипс или слатки. Знам дека бабите и дедовците понекогаш даваат чај со шеќер за да го смират бебето - ве молам престанете. Шеќерот на оваа возраст ја програмира доживотната желба и ги оштетува забите уште пред тие целосно да излезат",
+        "tip4": "Јајце на ден за дете над 6 месеци е наједноставната надградба на исхраната што постои. Студија во Еквадор покажа дека јајцата го намалуваат заостанувањето за 47%. Ова го цитирам во секој разговор во заедницата затоа што е остварливо за речиси секое семејство",
+        "fact": "Во заедниците каде што сум водел програми за исхрана, децата кои примале јајце и порција зеленчук дневно за 6 месеци покажале мерливи подобрувања во растот и когнитивниот развој во споредба со децата кои не примале. Неухранетоста не е само за сиромаштија - тоа е за да знаете што да дадете приоритет со ресурсите што ги имате.",
+        "action": "Почнувајќи од утре, дајте му на вашето дете над 6 месеци по едно јајце дневно (пасирано или изматено). Ако вашето дете е помладо од 6 месеци, а вие доите, изедете дополнително јајце сами - хранливите материи минуваат низ вашето млеко."
+      },
+      "foodSafety": {
+        "title": "Одржување на храната безбедна",
+        "description": "Труењето со храна е една од најчестите причини поради кои ромските семејства ги посетуваат ургентните соби - повраќање, дијареа, дехидрација, особено кај децата. Во населбите каде што ладењето не е доверливо, а кујните се заеднички или на отворено, безбедноста на храната не е тема во учебникот - тоа е секојдневна вештина за преживување.",
+        "tip1": "На топло време, зготвената храна што се остава надвор повеќе од 2 часа станува опасна. Ако не можете да го ставите во фрижидер, згответе помали порции кои ќе ги завршите во еден оброк. Сум видел цели семејства хоспитализирани од загреана чорба оставена преку ноќ во лето",
+        "tip2": "Суровото пилешко и месо никогаш не смеат да допираат леб, зеленчук или нешто што ќе се јаде неварено. Користете посебни површини за сечење - дури и чиста пластична кеса поставена рамно. Оваа вкрстена контаминација е причина број еден за труење со храна со која се среќавам",
+        "tip3": "Ако храната мириса погрешно, изгледа погрешно или се чувствува лигава - фрлете ја. Не го вкусувајте за да го проверите. Знам дека фрлањето храна е болно кога парите се тесни, но еден напад на труење со храна чини повеќе лекови и изгубена работа отколку што вреди храната",
+        "tip4": "Измијте ги сите овошја и зеленчуци под млаз вода пред јадење, дури и ако планирате да ги излупите. Нечистотијата однадвор се пренесува навнатре кога сечете. Ова е особено важно за пазарните производи со кои можеби ракувале многу луѓе",
+        "fact": "WHO проценува дека 600 милиони луѓе се разболуваат од контаминирана храна секоја година, а децата под 5 го носат 40% од товарот. Во заедниците каде што предавав за безбедноста на храната, посетите во болница за гастроентеритис значително се намалија во првото лето.",
+        "action": "Проверете ја вашата кујна во моментов: дали некое сурово месо се чува горе или допира готова храна? Дали има зготвена храна што седи надвор повеќе од 2 часа? Поправете ги овие две работи денес - тие се најчестите опасности што ги гледам во домашните посети."
+      }
+    },
+    "maternal": {
+      "description": "Придружував ромски жени во болници каде што ги ставаа одделно, непочитливо се однесуваа или им одбија епидурал што други жени го добиваат. Видов и жени што починаа од компликации што еден пренатален преглед би ги фатил навреме. Вашето тело, вашето дете, вашите права. Познајте ги сите три.",
+      "prenatalCare": {
+        "title": "Пренатална нега",
+        "description": "Во 15 години работа на медијација, шаблонот што постојано го гледам е дека жените Ромки првпат посетуваат лекар кога се веќе 6 или 7 месец бремени - често затоа што се чувствуваат добро, затоа што се плашат од болницата или затоа што никој не објасни дека пренаталната нега е бесплатна и нивно право. До тој момент, опасните состојби како прееклампсија или гестациски дијабетес можеби тивко се развиваат со месеци.",
+        "tip1": "Одете кај вашиот општ лекар или акушерка во моментот кога ќе пропуштите менструација и ќе се посомневате во бременост. Првиот триместар е кога фолната киселина ги спречува дефектите на мозокот и 'рбетот кај вашето бебе. Чекањето ве чини најкритичниот прозорец. Ако немате општ лекар, вашиот здравствен посредник може да ви помогне да се регистрирате - ова е суштински дел од она што го правиме",
+        "tip2": "Фолната киселина 400mcg дневно треба да започне кога се обидувате да забремените или веднаш штом ќе дознаете дека сте. Тоа е бесплатно или многу евтино во која било аптека. Носам пакетчиња со мене при домашните посети бидејќи оваа едноставна пилула спречува катастрофални вродени дефекти",
+        "tip3": "Храната богата со железо ја спречува анемијата што ја гледам кај речиси половина од бремените Ромки со кои работам: грав, леќа, темно лиснат зеленчук, црн дроб, црвено месо. Анемијата ве исцрпува, го прави породувањето поопасно и влијае на развојот на мозокот на вашето бебе",
+        "tip4": "Имате право да добивате пренатална нега на вашиот јазик, да ве третираат достоинствено и да имате некој да ве придружува на состаноци. Ако лекарот е отфрлен или непочитуван, можете да поднесете жалба и да побарате друг провајдер. Документирајте го името, датумот и она што е кажано. Им помагам на семејствата да го прават тоа редовно",
+        "fact": "Ромките во Европа имаат 3 до 5 пати поголеми шанси да доживеат компликации од бременоста отколку општата популација, главно затоа што имаат пристап до пренаталната нега подоцна или воопшто не. Во заедниците каде што работев на поврзување на бремените жени со нега во првиот триместар, стапките на компликации драстично се намалија.",
+        "action": "Ако сте бремени или познавате бремена жена во вашата заедница која сè уште не посетила лекар, закажете го тој состанок уште денес. Ако се плаши или не е сигурна како, одете со неа или поврзете ја со локалниот здравствен посредник. Таа една посета може да промени сè."
+      },
+      "safeDelivery": {
+        "title": "Безбедна испорака",
+        "description": "Ги држев рацете на жените кои се пораѓаа во амбулантни возила затоа што тие ја напуштија предоцна, а јас седев во болничките ходници каде Ромките беа ставени последни во редот додека жените не-Ромки одеа напред. И двете од овие ситуации може да се спречат. Планирањето на вашата испорака и познавањето на вашите права го трансформира ова искуство од криза во нешто што вие го контролирате.",
+        "tip1": "До 34 недела, подгответе го вашиот план за раѓање: која болница, кој ќе оди со вас, како ќе стигнете таму (особено ноќе), кој ќе ги гледа другите деца. Сум видел премногу семејства како се мачат во последен момент - и стресот влијае на породувањето",
+        "tip2": "Имате законско право да имате придружник (сопруг, мајка, сестра, посредник) со вас за време на породувањето и породувањето буквално во сите европски земји. Ако болницата ви каже не, наведете го законот за правата на пациентите во вашата земја. Ги носиме овие референци и можеме да ги обезбедиме",
+        "tip3": "Научете ги 5 знаците за опасност што значат ОДИ ВО БОЛНИЦА СЕГА, без разлика колку е часот: (1) обилно крварење, (2) силна главоболка со отечени раце/лице, (3) бебето престанува да се движи, (4) температурата на водата пукне пред ___PH_PH_5_недели пред ___PH) 38°C. Не чекајте до утрото. Не обидувајте се да управувате со нив дома",
+        "tip4": "По породувањето, останете во болница најмалку 24 часа за следење - дури и ако се чувствувате добро. Многу опасни по живот компликации (хеморагија, инфекција) се појавуваат во првите 24 часа. Знам дека болничката средина може да биде непријателска, но тие часови на следење спасуваат животи",
+        "fact": "Во регион каде што работев 5 години, ги намаливме итните случаи на мајки Роми за 60% едноставно со тоа што се осигуравме дека секоја бремена жена има план за раѓање, договор за транспорт и болничка торба спакувана по недела 36. Нема нова технологија - само подготовка и придружба.",
+        "action": "Ако вие или некој што го познавате е во изминатата 30 недела од бременоста: запишете го името на болницата, телефонскиот број и маршрутата на хартија. Ставете го на ѕидот. Спакувајте торба со лична карта, картичка за вакцинација, бебешка облека и полнач за телефон. Ова трае 20 минути и може да спаси живот."
+      },
+      "breastfeeding": {
+        "title": "Доење",
+        "description": "Доењето е длабоко ценето во ромската култура, но сепак среќавам млади мајки на кои добронамерните роднини им рекле да дадат вода, чај или формула во првите денови бидејќи „млекото сè уште не е дојдено“. Колострумот - тоа густо, жолтеникаво прво млеко - не е знак дека нешто не е во ред. Тоа е течно злато, преполно со антитела кои го штитат вашето новороденче од самите инфекции кои се најопасни во првите недели од животот.",
+        "tip1": "Во рок од 1 час по раѓањето, ставете го вашето бебе кожа на кожа на градите и оставете го да ги најде градите. Ова прво внесување на колострум е најважната „вакцина“ што ќе ја прими вашето бебе - ги обложува нивните црева со заштита од инфекција. Не дозволувајте некој да го однесе вашето бебе пред тоа да се случи, освен ако не постои итен медицински случај",
+        "tip2": "Хранете се на барање - секогаш кога бебето покажува знаци на глад (вртење на главата, цицање раце, гужва). Во првите недели, ова може да биде 10–14 пати во 24 часа. Ова е нормално и го воспоставува вашето снабдување. Часовникот не може да ви каже кога вашето бебе е гладно - вашето бебе ви кажува",
+        "tip3": "Без вода, без чај, без формула за 6 месеци, освен ако лекар конкретно не го препише од медицинска причина. Вашето мајчино млеко го менува составот во текот на денот за да ги задоволи точните потреби на вашето бебе - ниту една фабрика не може да го повтори ова. Сум видел добронамерни баби како даваат шеќерна вода што предизвикува дрозд и дијареа",
+        "tip4": "Ако доењето боли, бравата е погрешна - не вашето тело. Побарајте бабица или здравствен работник да гледа храна и да ви помогне да ја прилагодите положбата. Болката е сигнал за добивање помош, а не знак за откажување. Им помогнав на стотици мајки да ги поправат проблемите со лепењето што беа решени во една сесија",
+        "fact": "Во ромските заедници каде што постојат програми за поддршка на доењето, ексклузивно доење за 6 месеци ја намалува хоспитализацијата на доенчињата за над 60%. Мајчиното млеко буквално се прилагодува за да се бори против специфичните инфекции кои циркулираат во вашата околина - тоа е персонализиран лек што вашето тело го произведува бесплатно.",
+        "action": "Ако сте нова мајка или очекувате: кажете му на вашето семејство сега дека планирате да доите исклучиво 6 месеци и дека ви треба нивната поддршка, а не совет за додавање друга храна. Ако доењето е болно, контактирајте ја вашата бабица или здравствен посредник пред да престанете - решението е обично едноставно."
+      },
+      "postpartum": {
+        "title": "Постпартална нега",
+        "description": "Во ромската култура, неделите по раѓањето се период кога семејството се собира околу мајката и ова е убаво. Но, видов и страна во сенка: мајки кои плачат секој ден и им велат дека тоа е нормално. Мајки кои силно крварат и предолго чекаат да побараат помош. Мајки чија болка е отфрлена затоа што „вака поминуваат жените“. Вашето закрепнување е важно колку и здравјето на вашето бебе - затоа што на вашето бебе му требате живи и здрави.",
+        "tip1": "На вашето тело му треба минимум 6 недели за да заздрави. Крварењето (лохиите) по раѓањето е нормално за 2–4 недели, но ако наеднаш се зголеми, содржи големи згрутчувања или мириса лошо - веднаш одете во болница. Сум видел мајки да губат опасни количини крв затоа што им било кажано дека обилно крварење е нормално. Тоа не е",
+        "tip2": "Ако се чувствувате постојано тажно, празно, не можете да се поврзете со вашето бебе или имате мисли да си наштетите на себе или на вашето бебе - не сте слаби, не сте лоша мајка, имате медицинска состојба која одговара на третманот. Ова го кажувам при секоја домашна посета бидејќи стигмата во нашите заедници околу постпородилната депресија чини животи",
+        "tip3": "Вашата 6-неделна постнатална проверка не е изборна - таа проверува дали има инфекција, заздравување, крвен притисок и ментално здравје. Според моето искуство, помалку од 30% од Ромките присуствуваат на оваа посета. Ве молиме бидете во тој 30%. Понесете некого со вас ако тоа ви помогне",
+        "tip4": "Прифатете ја секоја понуда за помош од семејството за готвење, чистење и грижа за децата. Спијте кога бебето спие. Вашата единствена работа е хранење на бебето и опоравување. Сè друго може да почека. Најсилните мајки што ги познавам се оние кои прифатија помош",
+        "fact": "Постпородилната депресија влијае на 1 кај 5 жени ширум светот, но се проценува дека е уште поголема во ромските заедници поради стресот од сиромаштија, дискриминацијата и изолацијата. Во секоја заедница каде што имам формирано групи за поддршка од врсници за новите мајки, стапките на депресија паднаа и стапките на доење се зголемија - затоа што врската заздравува.",
+        "action": "Ако сте се породиле во последните 6 недели и не сте направиле постнатален преглед, јавете се денес во вашиот здравствен центар. Ако се чувствувате упорно тажни или преоптоварени, кажете му на една доверлива личност - вашата мајка, вашиот здравствен посредник, кој било. Тој прв разговор е најтешкиот чекор и најважниот."
+      }
+    },
+    "children": {
+      "description": "Ромските деца се иднината на нашите заедници и заслужуваат секое предимство. Во мојата работа видов деца што заостануваат — не поради недостаток на способности, туку затоа што им спречливи болести, пропуштени вакцини или неоткриени задоцнувања им ги одзедоа шансите. Ова знаење им ги враќа тие шанси.",
+      "growthMilestones": {
+        "title": "Раст и развој",
+        "description": "Секое дете се развива со свое темпо и никогаш не сакам родителите да паничат поради нормалната варијација. Но, видов и деца чиј задоцнет развој беше отфрлен од семејствата како „ќе стигнат“ кога раната интервенција можеше да направи трансформативна разлика. Да знаете што да внимавате не е анксиозност - тоа е внимание.",
+        "tip1": "Месечното мерење во првата година е наједноставната алатка за следење. Вашиот здравствен центар има графикони за раст кои покажуваат дали вашето дете е на вистинскиот пат. Детето кое престанува да добива тежина или ненадејно паѓа на табелата, треба итно да се испита - тоа може да биде едноставно како прилагодување на хранењето или важно како фаќање на основната состојба",
+        "tip2": "До 6 месеци, повеќето бебиња посегнуваат по предмети и одговараат на нивното име. До 12 месеци, повеќето кажуваат неколку зборови и се повлекуваат да стојат. До 24 месеци, повеќето одат добро и зборуваат со кратки фрази. Ако вашето дете е значително зад овие пресвртници, побарајте проценка за развој - раната помош ја прави најголемата разлика",
+        "tip3": "Разговарајте со вашето дете постојано - раскажувајте што правите, именувајте предмети, пејте песни. Ромските семејства имаат моќна орална традиција — искористете ја. Децата кои слушаат повеќе зборови развиваат поголем вокабулар и посилни когнитивни вештини. Ова е бесплатно и поефективно од која било играчка",
+        "tip4": "Заби: исчистете ги непцата на вашето бебе со влажна крпа од самото раѓање и употребете мал брис од детска паста од првиот заб. Гледам сериозно расипување на забите кај ромските деца на возраст од 3, често од шишиња сладок чај во текот на ноќта - тоа предизвикува болка, инфекции и проблеми со јадењето кои влијаат на растот",
+        "fact": "Истражувањата покажуваат дека децата чии доцнења во развојот се идентификувани и решени пред возраст од 3 имаат 5 пати поголема веројатност да одат на училиште на очекуваното ниво. Во населбите каде што поставив месечно мерење и скрининг за развој, стапките на упатување за рана интервенција се зголемија тројно - што значи дека децата добија помош што инаку би ја пропуштиле.",
+        "action": "Ако вашето дете е помладо од 2, однесете го на проверка на тежината и скрининг за развој во вашиот здравствен центар овој месец. Ако вашето дете е над 2 и се грижите за говорот, одењето или однесувањето, побарајте упат кај специјалист. Вашата загриженост е валидна - постапете според неа."
+      },
+      "commonIllnesses": {
+        "title": "Кога вашето дете е болно",
+        "description": "Во населбите со пренаселени станови, ограничени санитарни услови и студени зими, децата често се разболуваат. Повеќето од овие болести - дијареа, кашлица, треска - се справуваат дома ако знаете што да правите и кога да ескалирате. Но, видов и родители кои предолго чекаат или брзаат во собите за итни случаи поради состојби кои би ги решил со едноставен третман дома. Овој модул ве учи за разликата.",
+        "tip1": "Треска под 38.5°C: телото на вашето дете се бори со инфекција - ова е добро. Чувајте ги удобно, лесно облечени и давајте многу течности. Треска над 38.5°C: дајте им на децата парацетамол во точната доза за нивната тежина (НЕ парацетамол за возрасни). Ако треската трае повеќе од 3 дена или детето е невообичаено поспано, побарајте медицинска помош",
+        "tip2": "Дијареата убива преку дехидрација, а не преку самата инфекција. Во моментот кога вашето дете има течна столица, започнете со орална рехидратација: 1 литар чиста зовриена вода + 6 лажички шеќер + половина лажичка сол. Дајте мали голтки на секои неколку минути. Овој рецепт спаси повеќе детски животи ширум светот од кој било антибиотик",
+        "tip3": "ВЕДНАШ ОДНЕСЕТЕ ГО ВАШЕТО ДЕТЕ ВО БОЛНИЦА ако видите: брзо или отежнато дишење, повлекување на градите при секој здив, неможност да пие или дои, постојано повраќање од се, невообичаена поспаност или небудење, конвулзии или крвава дијареа. Не чекајте. Тоа се итни случаи",
+        "tip4": "Не давајте антибиотици без лекарски рецепт. Не споделувајте рецепт на друго дете. Не користете преостанати антибиотици. Ова постојано го гледам во нашите заедници и создава бактерии отпорни на лекови кои се многу потешки за лекување. Антибиотиците не прават ништо за настинки, грип или повеќето кашлица",
+        "fact": "Во заедниците во кои сум работел, тренирајќи ги родителите да подготвуваат и користат раствор за орална рехидратација ги намалија детските хоспитализации за дијареа за над 40% во една година. Знаењето е толку моќно - а состојките чинат помалку од автобуски билет до болница.",
+        "action": "Токму сега, запомнете го овој рецепт: 1 литар чиста вода + 6 лажички шеќер + половина лажичка сол. Вежбајте да го направите еднаш. Ако сакате, вкусете го - треба да има вкус на солзи. Ако го подготвите ова значи дека кога вашето дете ќе добие дијареа во 2часот, можете веднаш да дејствувате наместо да паничите."
+      },
+      "immunization": {
+        "title": "Распоред за вакцинација",
+        "description": "Ќе бидам директен: во ромските заедници низ Европа, стапките на вакцинација се пониски од националниот просек, и тоа не е затоа што родителите Роми не се грижат за своите деца - тоа е затоа што здравствениот систем не успеа да ги достигне со почит, пристап и информации. Дезинформации се шират и преку социјалните мрежи. Во болница држев деца со сипаници кои никогаш не требаше да бидат таму. Секое невакцинирано дете е дете на кое системот пропаднал.",
+        "tip1": "Од раѓање до 6 недели: BCG (туберкулоза) и хепатитис Б. Тие се даваат во болница пред отпуштање. Ако вашето бебе е родено дома, однесете го во здравствениот центар во првата недела од животот за овие вакцини. Не чекајте",
+        "tip2": "2, 3, 4 месеци: „големите три“ кругови - DTP (дифтерија, тетанус, голема кашлица), детска парализа, Hib и хепатитис Б. Ова се најкритичните вакцини за детството. Секој круг го зајакнува имунитетот. Недостасувањето на еден го ослабува целиот синџир",
+        "tip3": "12–15 месеци: MMR (мали сипаници, заушки, рубеола). Не можам доволно да го нагласам ова. Малите сипаници не се безопасна детска болест - убиваат, предизвикуваат оштетување на мозокот и заслепуваат. Во 2019, видов епидемија на сипаници во ромска населба бидејќи опфатот падна под 80%. Тоа можеше да се спречи",
+        "tip4": "Вакцините се бесплатни во владините здравствени центри во секоја европска земја. Не ви треба осигурување, не ви треба дозвола за престој, не ви треба термин во повеќето центри. Ако ви биде одбиена услугата, тоа е нелегално - контактирајте со вашиот здравствен медијатор или канцеларијата за правата на пациентот",
+        "fact": "Јазот меѓу стапките на вакцинација Роми и не-Роми во некои европски земји надминува 15 процентни поени. Овој јаз не е предизвикан од ромските верувања за вакцините - истражувањата постојано покажуваат дека родителите Роми сакаат нивните деца да се вакцинираат. Јазот е предизвикан од бариерите за пристап, дискриминацијата во здравството и недостигот на достапност. Затворањето на оваа празнина е државна обврска согласно член 11 од Европската социјална повелба.",
+        "action": "Најдете ја картичката за вакцинација на вашето дете. Доколку недостасуваат вакцини или ако немате картичка, посетете го најблискиот здравствен дом оваа недела. Ако се соочувате со бариери - јазик, документи, одбивање - контактирајте со вашиот локален здравствен посредник. Токму за тоа сме тука."
+      }
+    },
+    "chronic": {
+      "description": "Ромите умираат во просек 10 години порано од европскиот просек. Најголемиот дел од оваа разлика доаѓа од хронични болести — дијабетес, срцеви и респираторни болести — што се развиваат бавно и тивко години наназад. Кога ќе се појават симптомите, штетата е веќе направена. Но повеќето може да се спречи и сè може да се управува ако се фати навреме.",
+      "diabetes": {
+        "title": "Дијабетес: Тивка закана",
+        "description": "Дијабетес тип 2 е хронично заболување со кое најчесто се среќавам во ромските заедници. Работи во семејства, напредува на евтината диета богата со шеќер на која сиромаштијата ги тера луѓето, и ги оштетува вашите очи, бубрези, стапала и срце со години пред да почувствувате нешто погрешно. Сум видел мажи во нивните 40 губат прсти на нозете, а жените ослепуваат, од дијабетес кој никогаш не бил дијагностициран бидејќи никогаш не направиле тест на крвта. Ова може да се спречи.",
+        "tip1": "Ако некој во вашето семејство има дијабетес, вашиот ризик е 2–3 пати поголем. Ова не е судбина - тоа е сигнал да се дејствува сега. Намалете го белиот леб, шеќерот и засладените пијалоци. Заменете го со грав, леќа, зеленчук и вода. Видов дека семејствата целосно го менуваат преддијабетесот преку овие промени",
+        "tip2": "30 минути пешачење секој ден го намалува ризикот од дијабетес за 58%. Не трчање. Не теретана. Одење. Им кажувам на секој човек над 35 во заедниците со кои работам: прошетката е лекот. Бесплатно е и делува подобро од повеќето апчиња за превенција",
+        "tip3": "Побарајте тест за гликоза во крвта на гладно во вашиот здравствен центар барем еднаш годишно ако сте над 35, имате прекумерна тежина или имате семејна историја. Тоа е едноставен тест со убод со прст, тој е бесплатен во повеќето земји и трае 5 минути. Овој еден тест може да фати дијабетес години пред да се појават симптомите",
+        "tip4": "Знајте ги предупредувачките знаци кои значат дека дијабетесот веќе е присутен: постојана жед, многу често мокрење (особено ноќе), видот станува заматен, рани кои полека зараснуваат, необјаснет замор. Ако имате две или повеќе од нив, тестирајте се оваа недела - не следниот месец",
+        "fact": "Студиите во ромските заедници во Словачка и Романија открија преваленца на дијабетес 2–3 пати повисока од националниот просек, при што повеќето случаи не се дијагностицирани. Во една програма во која учествував, скринингот во заедница откри дијабетес кај 18% од возрасните над 40 кои никогаш не биле тестирани. Скоро сите од нив немале никакви симптоми.",
+        "action": "Ако сте над 35, одете во вашиот здравствен центар и побарајте тест за шеќер во крвта. Потребни се 5 минути. Ако резултатот е над 5.6 mmol/L (100 mg/dL), треба да започнете да правите промени сега. Донесете член на семејството - ако вашиот ризик е висок, веројатно е и нивниот."
+      },
+      "heartHealth": {
+        "title": "Твоето срце",
+        "description": "Кардиоваскуларните болести се убиец број еден во ромските заедници - не поради генетиката, туку поради условите во кои живееме: хроничен стрес од сиромаштија и дискриминација, високи стапки на пушење, диети обликувани според она што сиромаштијата го дозволува и речиси никаков пристап до превентивен скрининг. Сум присуствувал на погреби на мажи во нивните 50s кои умреле од срцев удар што можеше целосно да се спречи. Овој модул постои затоа што одбивам да присуствувам повеќе.",
+        "tip1": "Пушењето е единствената најразорна работа што можете да ја направите на вашето срце. Знам дека тоа е длабоко вградено во културата на нашата заедница и не сум тука да судам - ​​но ви должам искреност. Секоја цигара ги оштетува вашите крвни садови. Ако не можете да се откажете, намалете. Ако можете да се откажете, вашето срце почнува да се поправа во рок од 24 часа",
+        "tip2": "Високиот крвен притисок се нарекува тивок убиец затоа што не чувствувате ништо додека не дојде до мозочен удар или срцев удар. Проверете го вашиот крвен притисок во која било аптека - тоа е бесплатно. Нормално е под 120/80. Над 140/90 е опасно и бара третман. Најдов опасно висок крвен притисок кај луѓе кои се чувствуваа совршено здрави",
+        "tip3": "Намалете ја солта: ромската кујна е вкусна и убава, но многу традиционални јадења се многу солени. Користете пиперка, лук, кромид, билки и бибер наместо да додадете дополнителна сол. Вашите пупки за вкус се прилагодуваат во рок од 2 недели - храната ќе има подобар вкус, а не полош. Сум видел пад на крвниот притисок 10 поени само од оваа промена",
+        "tip4": "Хроничниот стрес од дискриминација, сиромаштија, закани за иселување и семејни конфликти е директна причина за срцеви заболувања. Ова не е мислење - тоа е документирана медицина. Хормоните на стрес ги оштетуваат вашите крвни садови со години. Да се најде начин за ослободување од стресот - одење, музика, молитва, разговор, заедница - е лек за срцето",
+        "fact": "Мажите Роми умираат од кардиоваскуларни болести во просек 10–15 години порано од општата популација. Ова го покажуваат сопствените податоци на Европската комисија. Но, 80% од предвремените срцеви удари може да се спречат преку промени во животниот стил и ран третман на висок крвен притисок и холестерол. Превенцијата функционира - ако имате пристап до неа.",
+        "action": "Оваа недела, направете две работи: (1) Одете во аптека и проверете го вашиот крвен притисок - запишете ги бројките. (2) Пребројте колку цигари пушите дневно и обидете се да намалите за 3 дневно. Овие две дејства се најмоќните чекори за срцева превенција што секој поединец може да ги преземе."
+      },
+      "respiratory": {
+        "title": "Белите дробови и дишењето",
+        "description": "Сум работел во населби каде што семејствата горат дрва, јаглен, па дури и пластика и гума за греење во зима. Каде што 8 луѓе спијат во две соби без вентилација. Онаму каде што влагата тече по ѕидовите, а црна мувла расте во секој агол. Респираторните заболувања во овие услови не изненадуваат - тоа е предвидливиот резултат на домувањето во кое никој не треба да живее. Додека се бориме за подобро домување, мораме да ги заштитиме и белите дробови што ги имаме.",
+        "tip1": "Чадот од затворен простор е најнепосредната респираторна опасност што ја гледам. Ако се загревате со цврсто гориво, обезбедете вентилација - дури и пукањето на прозорецот помага. Никогаш не палете пластика, гума или бојадисано дрво - испарувањата содржат хемикалии кои предизвикуваат трајно оштетување на белите дробови, особено кај деца чии бели дробови сè уште се развиваат",
+        "tip2": "Влагата и мувлата предизвикуваат астма, хроничен бронхитис и ја влошуваат секоја респираторна инфекција. Избришете ја видливата мувла со мешавина од вода и оцет или белило. Отворете ги прозорците најмалку 15 минути дневно дури и во зима. Закачете ги влажните алишта надвор кога е можно - сушењето алишта во затворен простор додава огромна количина на влага во воздухот",
+        "tip3": "Кашлица која трае повеќе од 3 недели, особено со губење на тежината, ноќно потење или крв при плукање, мора да се испита за туберкулоза. TB се лекува со бесплатен третман, но исто така е многу заразен. Во ромските заедници, TB стапките се 3–5 пати повеќе од националниот просек во неколку европски земји. Раното тестирање го штити целото ваше семејство",
+        "tip4": "Децата кои растат во зачадени или мувлосани средини имаат трајно намален капацитет на белите дробови - тие ќе носат помалку здрави бели дробови целиот свој живот. Дури и ако не можете веднаш да ја промените ситуацијата во вашиот дом, намалувањето на изложеноста на чад и вентилацијата што е можно повеќе ги штити нивните бели дробови во развој",
+        "fact": "WHO го идентификува загадувањето на воздухот во домаќинствата како четврти најголем глобален ризик по здравјето. Во ромските населби во кои сум работел, над 60% од децата имале повторливи респираторни инфекции - стапки кои значително се намалиле кога семејствата ја подобриле вентилацијата и го намалиле согорувањето на отпадот во затворени простории. Условите за домување не се виновни на семејствата, но стратегиите за адаптација спасуваат животи додека се бори за системската промена.",
+        "action": "Денес: проверете дали има видлива мувла во вашиот дом и исчистете ја со разреден белило или оцет. Отворете барем еден прозорец 15 минути. Ако некој во вашето домаќинство има кашлица повеќе од 3 недели, одете во здравствениот центар на TB скрининг - тоа е бесплатно и трае 15 минути."
+      }
+    },
+    "mental": {
+      "description": "За 15 години во ромски заедници научив дека најтешкиот товар не е физичката болест — туку тежината на дискриминацијата, сиромаштијата, стравот од иселување, грижата за иднината на децата и чувството дека никој во системот не се грижи. Викаме стрес. Кога трае години, станува нешто друго. Заслужува да се именува, разбере и лечи — без срам.",
+      "stressManagement": {
+        "title": "Живеење со стрес",
+        "description": "Нема да се преправам дека вежбата за дишење ќе ви ги реши проблемите. Ако сте загрижени дали вашето семејство ќе биде иселено, ниту една апликација за медитација нема да го поправи тоа. Но, работев со стотици луѓе во нашите заедници кои носат огромен стрес и видов што се случува кога тој стрес не се контролира со години: срцеви удари кај мажи во нивните 40s, жени кои не можат да јадат или спијат, деца кои растат во домаќинства наелектризирани од напнатост. Не можеме секогаш да ги менуваме нашите околности, но можеме да го промениме начинот на кој ги носиме.",
+        "tip1": "Методот на дишење 4-4-8 работи веднаш на вашиот нервен систем. Вдишете низ носот за 4 точки, задржете 4, издишете полека низ устата за 8. Направете го ова 5 пати. Отчукувањата на срцето се намалуваат, мускулите се релаксираат. Ова им го учам на семејствата пред посети во болница, пред судски рочишта, пред каква било стресна средба. Тоа е алатка која секогаш ја имате со вас",
+        "tip2": "Пешачењето е најпотценетиот лек за стрес. 20 минути пешачење — не брзо, само одење — го намалува хормонот на стрес кортизол до 30%. Ако не можете да излезете од дома, одете во круг. Самото движење е она што функционира, а не сценографијата",
+        "tip3": "Разговарајте со некого. Не за да го решите проблемот - само за да ја споделите тежината. Сум видел мажи во нашите заедници носат сè сами, бидејќи барањето помош се чувствува како слабост. За 15 години од оваа работа, најсилните луѓе што ги запознав се оние кои научија да кажат „се борам“",
+        "tip4": "Бидете намерни за она што ви влегува во умот. Социјалните медиуми, вестите, семејните расправии кои се повторуваат во вашата глава - ова се извори на стрес што можете да ги контролирате. Не велам игнорирајте ја реалноста. Велам изберете кога ќе се вклучите со тоа и создадете простори во вашиот ден каде што намерно сте во мир",
+        "fact": "Ромските заедници го доживуваат она што јавното здравство го нарекува „малцински стрес“ - хроничната физиолошка жртва на дискриминација, исклученост и сиромаштија. Истражувањата покажуваат дека ова трајно го зголемува нивото на кортизол, забрзувајќи ги срцевите заболувања, дијабетесот и менталните болести. Ова не е слабост. Тоа е биологија која реагира на неправдата.",
+        "action": "Вечерва пред спиење, ставете го телефонот во друга соба и вежбајте 4-4-8 дишење 5 минути. Ако имате партнер или член на семејството што сака, направете го тоа заедно во тишина. Овој мал чин создава граница помеѓу дневниот стрес и вашиот сон - а спиењето е кога вашето тело ја поправа штетата што ја предизвикал стресот."
+      },
+      "sleep": {
+        "title": "Спиј како лек",
+        "description": "Во пренаселените домови каде што телевизорот е постојано вклучен, каде децата ги делат креветите со родителите, каде бучавата од соседите или улицата никогаш не престанува - спиењето не е дадено. Тоа е нешто за што треба да се борите. А сепак, спиењето е кога вашето тело се поправа, кога вашиот мозок го обработува дневниот стрес и кога вашиот имунолошки систем се обновува. Хроничниот недостаток на сон е исто толку опасен како и пушењето - и во нашите заедници е речиси универзален.",
+        "tip1": "Обидете се да спиете и да се будите во приближно исто време секој ден, вклучувајќи ги и викендите. Знам дека ова е тешко со работа во смени, мали деца или бучни средини - но дури и постојаниот прозорец од 6 часа е повеќе реставрирачки од случајните блокови од 8-часови. Вашето тело копнее за ритам",
+        "tip2": "Телефоните и екраните пред спиење се едни од најлошите модерни уништувачи на сонот. Сината светлина му кажува на вашиот мозок дека е ден. Ако мора да го користите телефонот, поставете го на ноќен режим по 9pm. Уште подобро, наполнете го во друга соба - видов дека квалитетот на спиењето драстично се подобрува од оваа единствена промена",
+        "tip3": "Кофеинот останува во вашиот систем 8 часа. Тоа попладне турско кафе или чај во 4pm се уште се активни во вашиот крвоток на полноќ. Префрлете се на билен чај (камилица, липа) после ручек. Ова е едно од наједноставните подобрувања што ги препорачувам и луѓето секогаш се изненадени колку помага",
+        "tip4": "Ако ја делите просторијата со деца или членови на семејството, малите промени помагаат: постојано време на „исклучување на светлата“, постепено намалување на бучавата, користење завеса за да се создаде визуелна граница за спиење. Научете ги децата дека времето за спиење е семејно време - кога домаќинството ќе се смири заедно, сите спијат подобро",
+        "fact": "Истражувањата за спиење во маргинализираните заедници покажуваат дека хроничното лишување од сон предизвикано од пренатрупаност, бучава и стрес значително придонесува за здравствениот јаз. Луѓето кои постојано спијат помалку од 6 часа имаат 4x поголем ризик да заболат од инфекции и 2x поголем ризик од срцеви заболувања. Спиењето не е луксуз - тоа е основа за преживување.",
+        "action": "Вечерва: поставете аларм за спиење на телефонот 30 минути пред да сакате да спиете. Кога ќе заѕвони, исклучете го телевизорот, тргнете го телефонот и легнете во мракот вршејќи 4-4-8 дишење додека не заспиете. Направете го ова 7 ноќи и забележете ја разликата."
+      },
+      "communitySupport": {
+        "title": "Моќта на поврзувањето",
+        "description": "Ромската култура веќе разбира нешто што западната медицина дури сега го мери: дека припадноста, семејството и заедницата го штитат вашето здравје исто толку моќно како и секој лек. Сум видел како луѓето преживуваат во најтешките околности - иселување, болест, загуба - затоа што нивната заедница ги држела. Сум видел луѓе како многу помалку колабираат кога биле изолирани. Науката сега го потврдува она што го знаеле нашите предци: осаменоста убива, врската лекува.",
+        "tip1": "Ако познавате некој во вашата заедница кој неодамна изгубил член на семејството, му била дијагностицирана болест, ја изгубил работата или минува низ криза - не чекајте да побара помош. Посетете ги. Донеси храна. Седнете со нив. Во ромската култура ова е инстинкт. Во здравствената наука, ова се нарекува „социјален рецепт“ - и делува подобро од повеќето апчиња",
+        "tip2": "Срамот е непријател на здравјето. Сретнав луѓе кои со години криеја дијабетес, депресија, HIV и семејно насилство затоа што се плашеа што ќе каже заедницата. Секој пат кога некој во нашата заедница отворено зборува за својата борба, тоа им дава дозвола на другите. Не треба да споделувате сè - но споделувањето нешто ја нарушува тишината што ги прави луѓето болни",
+        "tip3": "Собири, прослави, музика, молитва, раскажување приказни - тоа не се одвлекување на вниманието од здравјето. Тие се здравје. Истражувањата покажуваат дека редовното учество во културните активности во заедницата ја намалува депресијата и кардиоваскуларниот ризик. Радоста и припадноста што ја создаваат се мерлив лек",
+        "tip4": "Проверете ги постарите и изолираните луѓе во вашата заедница. Личноста која живее сама, бабата чии деца се иселиле, човекот кој престанал да доаѓа на собири. Една 10-минутна посета или телефонски повик можеби е единствената човечка врска што ја имаат тој ден - и тоа може да биде она што ги одржува во живот",
+        "fact": "85-годишната студија на Харвард за здравјето на возрасните заклучи дека единствениот најсилен предиктор за здравјето и долговечноста е квалитетот на вашите врски - не исхраната, вежбањето или генетиката. Осаменоста го зголемува ризикот од смртност за 26%, што е еквивалентно на пушењето 15 цигари дневно. Ромските заедници имаат културно богатство во социјалната поврзаност што е вистинска здравствена предност - заштитете го.",
+        "action": "Оваа недела, контактирајте со една личност во вашата заедница со која не сте разговарале неодамна. Не преку текст - со глас или лично. Прашајте како се и слушајте. Тој чин на поврзување е промоција на здравјето во неговата најчиста форма."
+      },
+      "seekHelp": {
+        "title": "Кога е премногу",
+        "description": "Има момент кога стресот, тагата и грижата ја преминуваат границата во нешто на кое му е потребна стручна помош - а во ромските заедници таа линија речиси никогаш не се препознава затоа што сме научени да издржиме, да бидеме силни, да се справиме со тоа во семејството. Ја видов цената на оваа тишина: мажи кои пијат за да се справат додека не им попушти црниот дроб, жени кои престануваат да јадат, тинејџери кои си нанесуваат штета. Барањето помош не е предавство на вашата култура. Тоа го штити вашиот живот за да можете да бидете тука за луѓето на кои им требате.",
+        "tip1": "Ако вие или некој што го познавате не можел да функционира нормално повеќе од 2 недели - не може да спие, не може да јаде, не може да се грижи за деца, постојано плаче или нема енергија за ништо - ова е надвор од нормалниот стрес. Ова е депресија и е медицинска состојба реална како дијабетес. Тоа не е слабост и реагира на лекување",
+        "tip2": "Вашиот прв чекор е вашиот матичен лекар (GP). Кажи: 'Се чувствувам многу лошо повеќе од 2 недели и ми треба помош.' Не треба се да објаснувате. Општиот лекар може да ве процени и да ве упати кај психолог или психијатар. Оваа услуга е бесплатна или ефтина во повеќето европски земји. Ако вашиот општ лекар ве отпушти, видете друг",
+        "tip3": "Ако некој од вашето семејство спомне дека сака да умре, сака да исчезне или чувствува дека на сите би им било подобро без нив - веднаш сфатете го ова сериозно. Останете со нив. Отстранете го пристапот до лекови и остри предмети. Јавете се на националната кризна линија или 112. Не претерувате. Овие зборови се крик за помош на кој мора да се одговори",
+        "tip4": "Лековите за ментално здравје не се срамни, зависни или „за луди луѓе“. Антидепресивите се препишуваат на милиони луѓе ширум светот и тие спасуваат животи. Тие не го менуваат тоа што сте - тие ја креваат хемиската магла што ве спречува да бидете тоа што сте. Сум видел луѓе трансформирани со третман на кој се спротивставувале со години поради стигмата",
+        "fact": "Ромските заедници се меѓу највисоките стапки на депресија и анксиозност во Европа, поттикнати од структурни фактори како дискриминација, сиромаштија и недостаток на пристап до услуги. Сепак, користењето на услугите за ментално здравје во ромските заедници е меѓу најниските. Во програмите каде што помогнав да се поврзат луѓето со културно чувствителна грижа за менталното здравје, подобрувањето на квалитетот на животот беше длабоко - не само за поединецот, туку и за целото нивно семејство.",
+        "action": "Зачувајте го овој број во вашиот телефон во моментов: телефонска линија за помош за ментално здравје во вашата земја. Ако сте во криза, јавете се. Ако некој што го познавате е во криза, јавете се со него. И ако се мачите повеќе од 2 недели, закажете состанок со вашиот општ лекар оваа недела. Вие заслужувате да се чувствувате подобро, а помошта постои."
+      }
+    }
+  },
+  "track": {
+    "title": "Дневна здравствена проверка",
+    "subtitle": "Како се чувствувате денес?",
+    "moodTitle": "Расположение",
+    "moodGreat": "Одлично",
+    "moodGood": "Добро",
+    "moodOkay": "Прифатливо",
+    "moodLow": "Лошо",
+    "moodBad": "Многу лошо",
+    "waterTitle": "Внес на вода",
+    "waterSubtitle": "Допрете ја секоја чаша кога пиете",
+    "waterGoal": "Цел: 8 чаши",
+    "activityTitle": "Активност денес",
+    "activityWalk": "Прошетав",
+    "activityExercise": "Вежбав",
+    "activityRest": "Одморував",
+    "saveCheckin": "Зачувај денешна проверка",
+    "savedSuccess": "Проверката е зачувана!",
+    "weeklyTitle": "Оваа недела",
+    "streakDays": "дена по ред",
+    "loggedToday": "Евидентирано денес",
+    "noLogsYet": "Започнете ја првата проверка подолу",
+    "historyTitle": "Скорешна историја"
+  },
+  "profile": {
+    "title": "Профил",
+    "guestUser": "Гостин",
+    "guestSubtitle": "Учите анонимно",
+    "languagePreference": "Јазична поставка",
+    "changeLanguage": "Смени јазик",
+    "learningProgress": "Напредок во учењето",
+    "pillarsStarted": "Започнати столбови",
+    "modulesCompleted": "Завршени модули",
+    "trackingStreak": "Серија на следење",
+    "days": "дена",
+    "exportData": "Извези ги моите податоци (GDPR)",
+    "exportDescription": "Преземете ги сите податоци за следење на здравјето како CSV датотека.",
+    "clearData": "Избриши ги сите податоци",
+    "clearDataConfirm": "Дали сте сигурни? Ова не може да се врати.",
+    "aboutTitle": "За Redi Health",
+    "aboutText": "Redi Health е бесплатен повеќејазичен придружник за здравствена писменост во недоволно опслужувани области — села, периферни четврти, населби, ромски населби, рурални региони во Европа — каде што клиничарите се малку, патот до нега е долг, а официјалните пораки често не стигнуваат на јазикот на луѓето.",
+    "privacyPolicy": "Политика за приватност",
+    "contactUs": "Контактирајте не",
+    "progressNone": "Сè уште не сте започнале да учите.",
+    "progressStart": "Одете на Учење за да започнете.",
+    "version": "Верзија"
+  },
+  "mediator": {
+    "title": "Табла на медијатор",
+    "subtitle": "Поддршка за здравјето на вашата заедница",
+    "accessCode": "Внесете пристапен код",
+    "accessCodePlaceholder": "4-цифрен код",
+    "accessCodeHint": "Прашајте го координаторот за пристапен код",
+    "accessCodeError": "Погрешен код. Обидете се повторно.",
+    "accessCodeSubmit": "Пристапи на таблата",
+    "communityMembers": "Членови на заедницата",
+    "logsThisMonth": "Здравствени записи овој месец",
+    "alertsActive": "Активни предупредувања",
+    "quickActions": "Брзи акции",
+    "logVisit": "Евидентирај посета",
+    "recordHealth": "Евидентирај здравствени податоци",
+    "viewReports": "Погледни извештаи",
+    "recentActivity": "Скорешна активност",
+    "noActivity": "Нема скорешна активност",
+    "memberName": "Име на член",
+    "visitDate": "Датум на посета",
+    "notes": "Белешки",
+    "saveVisit": "Зачувај посета",
+    "visitSaved": "Посетата е успешно зачувана",
+    "healthSummary": "Здравствен преглед на заедницата",
+    "pillarProgress": "Напредок во учењето по столбови",
+    "contactSupport": "Контактирај регионален координатор",
+    "resources": "Ресурси за медијатор",
+    "downloadGuide": "Преземи теренски водич (PDF)"
+  },
+  "healthQuiz": {
+    "meta": {
+      "title": "Квиз за здравје — Реди здравје",
+      "description": "Тестирајте го вашето знаење за здравјето со интерактивни квизови"
+    },
+    "title": "Квиз за здравје",
+    "subtitle": "Тестирајте го вашето знаење. Научете нешто ново.",
+    "backToQuizzes": "Назад на квизови",
+    "seeResults": "Видете ги резултатите",
+    "nextQuestion": "Следно прашање",
+    "questionsCount": "{count} прашања",
+    "results": {
+      "perfect": "Совршен резултат!",
+      "great": "Одлична работа!",
+      "good": "Добар напор!",
+      "keepLearning": "Продолжете да учите!",
+      "score": "Имате {score} од {total} точни",
+      "tryAgain": "Обидете се повторно",
+      "moreQuizzes": "Повеќе квизови"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Антибиотици",
+        "description": "Дали знаете кога да користите антибиотици?",
+        "questions": [
+          {
+            "question": "Дали антибиотиците можат да го излечат грипот?",
+            "options": [
+              "Да",
+              "Бр",
+              "Понекогаш"
+            ],
+            "explanation": "Грипот е предизвикан од вирус. Антибиотиците убиваат само бактерии. Земањето антибиотици за грип не прави ништо и може да ги отежне идните инфекции за лекување."
+          },
+          {
+            "question": "Се чувствувате подобро по 3 дена антибиотици. Дали треба да престанете?",
+            "options": [
+              "Да, излечен си",
+              "Не, завршете го целосниот курс",
+              "Земете половина од преостанатите апчиња"
+            ],
+            "explanation": "СЕКОГАШ завршете го целосниот курс. Ако престанете рано, некои бактерии преживуваат и стануваат отпорни. Следниот пат, истиот антибиотик нема да делува."
+          },
+          {
+            "question": "Можете ли да споделите антибиотици со член на семејството кој има слични симптоми?",
+            "options": [
+              "Да, тоа заштедува пари",
+              "Не, никогаш",
+              "Само ако се работи за истата болест"
+            ],
+            "explanation": "Никогаш не споделувајте антибиотици. За различни инфекции се потребни различни лекови. Погрешниот антибиотик може да биде опасен и нема да помогне."
+          },
+          {
+            "question": "Што се случува ако премногу често земате антибиотици?",
+            "options": [
+              "Ништо лошо",
+              "Вашето тело станува имуно на болести",
+              "Бактериите стануваат отпорни и потешко се убиваат"
+            ],
+            "explanation": "Отпорноста на антибиотици е глобална криза. Кога бактериите стануваат отпорни, едноставните инфекции можат да станат смртоносни. Пијте антибиотици само кога ќе ви препише лекар."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "Вакцини",
+        "description": "Одделете ги фактите од митовите",
+        "questions": [
+          {
+            "question": "Дали вакцините предизвикуваат аутизам?",
+            "options": [
+              "Да",
+              "Бр",
+              "Не знаеме"
+            ],
+            "explanation": "БР. Овој мит започна од една лажна студија која беше повлечена. Лекарот кој го објавил ја изгубил лекарската лиценца. Десетици студии со милиони деца докажаа дека вакцините НЕ предизвикуваат аутизам."
+          },
+          {
+            "question": "Дали е безбедно да се даде на бебето повеќе вакцини одеднаш?",
+            "options": [
+              "Не, премногу е",
+              "Да, тоа е безбедно и тестирано",
+              "Само еден по еден"
+            ],
+            "explanation": "Имунолошкиот систем на бебињата се справува со илјадници бактерии секој ден. Комбинираните вакцини се темелно тестирани и безбедни. Одложувањето на вакцините го остава вашето дете незаштитено."
+          },
+          {
+            "question": "Моето дете има блага настинка. Дали сè уште можат да се вакцинираат?",
+            "options": [
+              "Не, почекајте да биде целосно здрав",
+              "Да, блага настинка е во ред",
+              "Само со дозвола на лекар"
+            ],
+            "explanation": "Блага настинка, ниска температура или течење на носот НЕ се причина за одложување на вакцинацијата. Само тешката болест бара одложување. Прашајте го вашиот лекар ако не сте сигурни."
+          },
+          {
+            "question": "Дали вакцините содржат опасни хемикалии?",
+            "options": [
+              "Да, тие се полни со токсини",
+              "Не, сите состојки се безбедни во мали количини што се користат",
+              "Некои прават, некои не"
+            ],
+            "explanation": "Состојките на вакцината се присутни во мали, безбедни количини. Повеќе алуминиум добивате од мајчиното млеко отколку од вакцината. Секоја состојка е тестирана за безбедност."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Дијабетес",
+        "description": "Разбирање на управувањето со дијабетес",
+        "questions": [
+          {
+            "question": "Дали дијабетесот е предизвикан од консумирање премногу шеќер?",
+            "options": [
+              "Да",
+              "Не, покомплексно е",
+              "Само тип 2"
+            ],
+            "explanation": "Дијабетесот е предизвикан од генетиката, начинот на живот и начинот на кој вашето тело го обработува инсулинот. Јадењето шеќер не го предизвикува директно, но нездравата исхрана и дебелината го зголемуваат ризикот."
+          },
+          {
+            "question": "Може ли дијабетесот да се излечи со природни лекови како цимет?",
+            "options": [
+              "Да, циметот го лечи",
+              "Не, нема лек, но може да се управува",
+              "Да, со доволно лук и билки"
+            ],
+            "explanation": "НЕМА лек за дијабетес. Може да се менаџира со лекови, здрава храна и вежбање. Циметот може да има мали придобивки, но НЕ МОЖЕ да го замени лекот. Луѓето кои го прекинуваат лекот завршуваат во болница."
+          },
+          {
+            "question": "Дијабетичарот чувствува вртоглавица и пот. Што треба да направите?",
+            "options": [
+              "Дајте им инсулин",
+              "Веднаш дајте им нешто слатко",
+              "Кажете им да се одморат"
+            ],
+            "explanation": "Ова се знаци на ниско ниво на шеќер во крвта (хипогликемија). Веднаш дајте им сок, бонбони или шеќерна вода. Ова може да биде опасно по живот. Откако ќе се чувствуваат подобро, треба да јадат соодветен оброк."
+          },
+          {
+            "question": "Колку често дијабетичарот треба да ги проверува стапалата?",
+            "options": [
+              "Никогаш, стапалата се во ред",
+              "Секој ден",
+              "Еднаш годишно"
+            ],
+            "explanation": "Дијабетесот може да ги оштети нервите на вашите стапала. Можеби нема да почувствувате исеченици или рани. Проверувајте ги стапалата СЕКОЈ ДЕН за исекотини, плускавци или промени во бојата. Малите рани можат да станат сериозни инфекции."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Хигиена и превенција",
+        "description": "Основни здравствени навики кои спасуваат животи",
+        "questions": [
+          {
+            "question": "Колку долго треба да ги миете рацете со сапун?",
+            "options": [
+              "5 секунди",
+              "Најмалку 20 секунди",
+              "1 минута"
+            ],
+            "explanation": "Измијте најмалку 20 секунди - околу времето потребно за двапати да се пее „Happy Birthday“. Ова ги отстранува повеќето бактерии. Брзите плакнења не функционираат."
+          },
+          {
+            "question": "Дали е безбедно да се пие вода од река или поток?",
+            "options": [
+              "Да, природната вода е чиста",
+              "Не, секогаш прво варете го или филтрирајте го",
+              "Само ако изгледа јасно"
+            ],
+            "explanation": "Дури и чистата вода може да содржи опасни бактерии и паразити. Секогаш вриејте ја водата најмалку 1 минута или користете филтер. Нечистата вода предизвикува дијареа, колера и тифус."
+          },
+          {
+            "question": "Вашето дете има дијареа. Што е најважно?",
+            "options": [
+              "Престанете со сета храна",
+              "Дајте многу течности (вода, ORS)",
+              "Дајте антибиотици"
+            ],
+            "explanation": "Дехидрацијата од дијареа убива повеќе деца отколку самата дијареа. Дајте орален раствор за рехидратација (ORS) или чиста вода со малку сол и шеќер. Продолжете да ги доите бебињата."
+          },
+          {
+            "question": "Кога треба да ги миете рацете?",
+            "options": [
+              "Само пред јадење",
+              "Пред јадење, после тоалет, по допирање животни, после кашлање",
+              "Само кога изгледаат валкано"
+            ],
+            "explanation": "Микробите се невидливи. Измијте ги рацете: пред јадење/готвење, по користење на тоалет, по менување пелени, по допирање животни, по кашлање/кивање и по допирање на болни луѓе."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Знајте ги вашите права - Реди здравје",
+      "description": "Права на пациенти, помош при дискриминација и правни контакти за ромските заедници"
+    },
+    "title": "Знајте ги вашите права",
+    "subtitle": "Имате права како пациент. Научете ги. Користете ги.",
+    "back": "Назад",
+    "menu": {
+      "patientRights": {
+        "title": "Права на пациентот",
+        "desc": "8 права има секој пациент"
+      },
+      "discrimination": {
+        "title": "Се соочувате со дискриминација?",
+        "desc": "Што да се каже и направи - чекор по чекор"
+      },
+      "contacts": {
+        "title": "Правна помош по земја",
+        "desc": "Народен правобранител, антидискриминација, ромски органи"
+      }
+    },
+    "views": {
+      "patientRights": "Вашите права на пациентот",
+      "discrimination": "Ако се соочите со дискриминација",
+      "discriminationDesc": "Реални ситуации и што точно да се каже и направи.",
+      "contacts": "Правна помош по земја"
+    },
+    "labels": {
+      "sayThis": "Кажи го ова:",
+      "thenDo": "Потоа направете го ова:",
+      "patientOmbudsman": "Народен правобранител за пациенти",
+      "antiDiscrimination": "Против дискриминација",
+      "romaRightsOrg": "Организација за правата на Ромите"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Право на итен третман",
+        "description": "Секоја болница МОРА да ве лекува во итен случај, дури и без осигурување или документи. Ова е закон во секоја EU земја. Ако одбијат, прашајте го името на докторот и пријавете го."
+      },
+      "information": {
+        "title": "Право да се разбере вашата дијагноза",
+        "description": "Вашиот лекар мора да ја објасни вашата состојба со зборови што ги разбирате. Ако не разбирате, кажете: 'Можете ли да го објасните ова поедноставно?' Можете исто така да побарате писмено резиме."
+      },
+      "consent": {
+        "title": "Право да се каже не",
+        "description": "Никој не може да ви присили третман. Пред каква било процедура, лекарот мора да објасни што ќе направат и мора да се согласите. Секогаш можете да кажете „Ми треба време за размислување“."
+      },
+      "privacy": {
+        "title": "Право на приватност",
+        "description": "Вашите медицински информации се приватни. Лекарите не можат да го споделат со вашиот работодавец, семејството или некој друг без ваша дозвола. Ова го вклучува вашиот статус HIV, бременост или ментално здравје."
+      },
+      "interpreter": {
+        "title": "Право на преведувач",
+        "description": "Ако не го зборувате добро локалниот јазик, можете да побарате преведувач. Многу болници ја имаат оваа услуга. Ако не, можете да доведете некој кому му верувате да преведува."
+      },
+      "second-opinion": {
+        "title": "Право на второ мислење",
+        "description": "Ако не се согласувате со дијагнозата, можете да посетите друг лекар. Ова е твое право. Не треба да објаснувате зошто."
+      },
+      "records": {
+        "title": "Право на вашата медицинска евиденција",
+        "description": "Можете да побарате копија од сите ваши медицински досиеја во секое време. Болницата мора да ги обезбеди. Ова е корисно кога менувате лекари или се преселувате во друг град."
+      },
+      "complaint": {
+        "title": "Право да се жалите",
+        "description": "Ако се чувствувате малтретирано или дискриминирани, можете да поднесете жалба. Секоја болница има постапка за жалби. Можете исто така да контактирате со омбудсманот за пациенти во вашата земја."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "Болницата одбива да ве лекува",
+        "whatToSay": "„Имам право на итен третман според законот EU. Ве молиме запишете го вашето име и причината што ја одбивате.",
+        "whatToDo": [
+          "Останете смирени, но цврсти",
+          "Прашајте го целото име на докторот",
+          "Побарајте го одбивањето писмено",
+          "Повикајте го народниот правобранител на пациентите",
+          "Контактирајте со организација за правата на Ромите"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Персоналот во болницата е груб или отфрлен поради вашата етничка припадност",
+        "whatToSay": "„Тука сум за медицинска помош. Очекувам да ме третираат со иста почит како и секој друг пациент.",
+        "whatToDo": [
+          "Побарајте да разговарате со главната медицинска сестра или шефот на одделот",
+          "Забележете го датумот, времето и имињата",
+          "Поднесете писмена жалба во болница",
+          "Пријавете се до националното тело за антидискриминација"
+        ]
+      },
+      "no-insurance": {
+        "situation": "Немате здравствено осигурување",
+        "whatToSay": "„Ми треба медицинска помош. Кои се моите опции за неосигурани пациенти?",
+        "whatToDo": [
+          "Итната помош е секогаш бесплатна - инсистирајте на тоа",
+          "Прашајте за програмите за социјална помош",
+          "Контактирајте со здравствен посредник во вашата област",
+          "Многу невладини организации обезбедуваат бесплатни клиники - прашајте во болницата"
+        ]
+      },
+      "language-barrier": {
+        "situation": "Не можете да комуницирате со докторот",
+        "whatToSay": "„Ми треба помош за разбирање. Дали можеш да обезбедиш преведувач или да зборуваш побавно?",
+        "whatToDo": [
+          "Користете ја оваа апликација за да преведувате клучни фрази",
+          "Донесете доверлива личност која го зборува јазикот",
+          "Побарајте писмени упатства што можете да ги преведете подоцна",
+          "Користете ја камерата на вашиот телефон за да преведувате документи"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Приказни за заедницата - Реди здравје",
+      "description": "Вистински здравствени искуства од ромските заедници низ Европа"
+    },
+    "title": "Приказни за заедницата",
+    "subtitle": "Вистински искуства од ромските заедници. Учете од другите.",
+    "backToStories": "Назад на приказните",
+    "lessonLearned": "Научена лекција",
+    "whatToDoNext": "Што да се прави следно",
+    "categories": {
+      "vaccines": "Вакцини",
+      "chronic": "Хронична болест",
+      "maternal": "Бременост",
+      "discrimination": "Права",
+      "prevention": "Превенција",
+      "mental": "Ментално здравје"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Водич за вакцини",
+      "askZuvo": "Прашај го Зуво",
+      "explainPrescription": "Објаснете го рецептот",
+      "navigateToCare": "Одете до грижата",
+      "knowYourRights": "Знајте ги вашите права",
+      "learnPrevention": "Научете превенција",
+      "checkSymptoms": "Проверете ги симптомите",
+      "learnMentalHealth": "Дознајте за менталното здравје"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "Романија",
+        "title": "Речиси не ја вакцинирав ќерка ми",
+        "story": "Свекрва ми ми рече дека вакцините се отров. Сите во населбата го кажаа истото. Кога се роди ќерка ми, бев исплашен. Но, здравствениот посредник дојде во нашиот дом и објасни сè - како функционираат вакцините, кои се навистина несаканите ефекти. Таа ми покажа фотографии од деца со сипаници. Повеќе се плашев од болеста отколку од вакцината. Ќерка ми ги прими сите вакцини. Таа е здрава и силна.",
+        "lesson": "Разговарајте со здравствен посредник или лекар пред да донесете одлуки врз основа на она што го велат другите. Вакцините спасуваат животи."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Бугарија",
+        "title": "Го прекинав лекот за дијабетес и за малку ќе умрев",
+        "story": "Ми беше дијагностициран дијабетес тип 2 на 45. Лекот ме боли стомакот, па престанав да го земам. Мојот сосед рече дека чајот од цимет ќе ме излечи. 2 години наместо тоа пиев чај од цимет. Потоа еден ден колабирав. Шеќерот во крвта ми беше над 500. Лекарите рекоа дека моите бубрези се оштетени. Сега го пијам мојот лек секој ден. Посакувам никогаш да не застанав.",
+        "lesson": "Никогаш не го прекинувајте лекот без да разговарате со вашиот лекар. Природните лекови не можат да ги заменат лековите за дијабетес."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Србија",
+        "title": "Мојата прва бременост - не знаев дека можам да одам на лекар бесплатно",
+        "story": "Кога забременив на 19, не отидов на лекар 6 месеци. Немав осигурување и мислев дека ќе чини премногу. Здравствен медијатор ми кажа дека пренаталната нега е бесплатна за сите трудници во Србија. Таа ми помогна да се регистрирам. Докторот откри дека имам анемија и висок крвен притисок. Да не одев, моето бебе можеше да биде во опасност.",
+        "lesson": "Пренаталната нега е бесплатна во повеќето европски земји. Побарајте здравствен посредник да ви помогне да се регистрирате."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Унгарија",
+        "title": "Болницата се обиде да ме испрати",
+        "story": "Отидов во собата за итни случаи со болки во градите. Медицинската сестра ме погледна и ми рече: „Сити сме, оди во друга болница“. Знаев дека ова не е правилно. Реков: „Имам болка во градите. Мора да ме испитате. Те молам дај ми го твоето име.' Нејзиниот став веднаш се промени. Ме прегледаа и открија дека имам срцев проблем за кој треба да се лекувам. Да си заминав, можев да доживеам срцев удар.",
+        "lesson": "Имате право на итен третман. Ако некој се обиде да ве одврати, прашајте го неговото име и кажете дека ги знаете вашите права."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Словачка",
+        "title": "TB не е смртна казна - но мора да го завршите лекот",
+        "story": "Кашлав со месеци. Мислев дека е само настинка. Кога конечно отидов на лекар, ми рекоа дека имам туберкулоза. Бев преплашен - мислев дека ќе умрам. Но, докторот објасни дека TB може да се излечи со 6 месеци лек. Најтешкиот дел беше земање апчиња секој ден 6 месеци, дури и кога се чувствував подобро после 2 месеци. Но јас завршив. излечен сум.",
+        "lesson": "Ако кашлате повеќе од 2 недели, посетете лекар. TB се лекува, но МОРА да го завршите целиот лек."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Северна Македонија",
+        "title": "Депресијата не е слабост - тоа е болест",
+        "story": "Откако почина мојот сопруг, со месеци не можев да станам од кревет. Моето семејство рече дека сум мрзелив. Тие рекоа „само биди силен“. Но, не можев. Еден здравствен посредник забележа дека нешто не е во ред и ме одведе на лекар. Докторот рече дека имам депресија - вистинска медицинска состојба. Почнав да се лекувам и да разговарам со советник. Полека се подобрив. Јас не сум слаб. Бев болен.",
+        "lesson": "Депресијата е медицинска состојба, а не карактерна мана. Лекот и советувањето можат да помогнат. Ве молиме побарајте помош."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Предизвици - Реди здравје",
+      "description": "Предизвици на заедницата"
+    },
+    "title": "Активни предизвици",
+    "subtitle": "Придружете се на целите на заедницата и личните предизвици за да заработите бонус XP и значки.",
+    "types": {
+      "community": "заедница",
+      "personal": "лични"
+    },
+    "daysLeft": "Преостануваат {count} дена",
+    "viewLeaderboard": "Прикажи табла на водачи",
+    "items": {
+      "c1": {
+        "title": "Шампион на знаење за вакцини",
+        "description": "Добијте 50 студенти во вашата локална област да го поминат модулот за вакцина оваа недела."
+      },
+      "c2": {
+        "title": "7-дневна здравствена низа",
+        "description": "Пријавете го вашето расположение и внесот на вода 7 дена по ред."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Сертификат — Реди здравје",
+      "description": "Национален сертификат за здравствена писменост"
+    },
+    "title": "Вашиот сертификат",
+    "subtitle": "Ја завршивте Националната сцена на Студентската здравствена академија.",
+    "ofCompletion": "Сертификат за завршување",
+    "diplomaTitle": "Национална здравствена писменост",
+    "awardedFor": "Доделено за пополнување на наставната програма за студентска академија за здравство Реди.",
+    "date": "Датум",
+    "downloadPdf": "Преземете PDF",
+    "share": "Споделете",
+    "gate": {
+      "title": "Прво завршете ја Академијата",
+      "description": "За да го заработите вашиот сертификат за здравствена писменост, треба да ги завршите сите лекции и да го поминете квизот во Националната фаза на Студентската здравствена академија.",
+      "cta": "Одете на Академијата"
+    }
   },
   "policies": {
     "title": "Platform Policies",
@@ -895,95 +2588,6 @@
         "title": "9. Contact",
         "body": "For questions about these terms, contact us at legal@redi.healthcare. For data and privacy matters, contact our Data Protection Officer at dpo@redi.healthcare."
       }
-    }
-  },
-  "track": {
-    "title": "Daily Health Check-in",
-    "subtitle": "How are you feeling today?",
-    "moodTitle": "Mood",
-    "moodGreat": "Great",
-    "moodGood": "Good",
-    "moodOkay": "Okay",
-    "moodLow": "Low",
-    "moodBad": "Very low",
-    "waterTitle": "Water intake",
-    "waterSubtitle": "Tap each glass when you drink it",
-    "waterGoal": "Goal: 8 glasses",
-    "activityTitle": "Activity today",
-    "activityWalk": "Walked",
-    "activityExercise": "Exercised",
-    "activityRest": "Rested",
-    "saveCheckin": "Save today's check-in",
-    "savedSuccess": "Check-in saved!",
-    "weeklyTitle": "This week",
-    "streakDays": "day streak",
-    "loggedToday": "Logged today",
-    "noLogsYet": "Start your first check-in below",
-    "historyTitle": "Recent history"
-  },
-  "mediator": {
-    "roleBoundaryNotice": "Mediators provide health education, navigation, and referral support — not clinical assessment or prescriptions. Record only the minimum information necessary for each visit.",
-    "dataMinimisationNote": "Record only what is needed for health continuity. Do not record ethnicity, immigration status, or clinical diagnoses. Use a name or reference code — full personal details are not required.",
-    "consentAttestation": "I confirm that the beneficiary (or a caregiver on their behalf) has agreed to this visit being recorded."
-  },
-  "explain": {
-    "followUpChat": "Ask Zuvo a question",
-    "followUpNavigate": "Prepare doctor visit card",
-    "followUpGlossary": "Look up a medical term"
-  },
-  "navigate": {
-    "findHospitalHint": "Browse the healthcare directory"
-  },
-  "about": {
-    "policiesLink": "Platform Policies"
-  },
-  "family": {
-    "title": "Family Health",
-    "subtitle": "Track health for your whole family. All data stays on your phone.",
-    "back": "Back to family",
-    "yearsOld": "{age} years old",
-    "expecting": "· Expecting",
-    "pregnancyTitle": "Pregnancy",
-    "pregnancyWeeks": "Week {weeks} of 40",
-    "pregnancyExpecting": "Expecting",
-    "logMood": "Log Mood",
-    "logWater": "Water",
-    "logActivity": "Activity",
-    "logFormTitle": "Log {type}",
-    "logNote": "Add a note (optional)",
-    "save": "Save",
-    "recentLogs": "Recent logs",
-    "noLogs": "No logs yet. Start tracking!",
-    "addMemberTitle": "Add family member",
-    "addMemberButton": "Add family member",
-    "addToFamily": "Add to family",
-    "namePlaceholder": "Name",
-    "agePlaceholder": "Age",
-    "pregnantLabel": "Currently pregnant",
-    "emptyTitle": "Your family health hub",
-    "emptyDesc": "Add family members to track their health, vaccinations, and medications. Everything stays on your phone — no account needed.",
-    "vaccineTrackingTitle": "Vaccine tracking",
-    "vaccineTrackingDesc": "Coming soon for each member",
-    "medicationRemindersTitle": "Medication reminders",
-    "medicationRemindersDesc": "Coming soon",
-    "logTypes": {
-      "mood": "Mood",
-      "water": "Water (glasses)",
-      "activity": "Activity (min)",
-      "weight": "Weight (kg)",
-      "note": "Note"
-    },
-    "genders": {
-      "female": "Female",
-      "male": "Male",
-      "other": "Other"
-    },
-    "relation": {
-      "self": "Me",
-      "child": "My child",
-      "spouse": "Spouse / Partner",
-      "parent": "Parent",
-      "other": "Other"
     }
   }
 }

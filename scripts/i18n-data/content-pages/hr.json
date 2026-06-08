@@ -1,0 +1,497 @@
+{
+  "healthQuiz": {
+    "meta": {
+      "title": "Zdravstveni kviz — Redi Health",
+      "description": "Provjerite svoje zdravstveno znanje pomoću interaktivnih kvizova"
+    },
+    "title": "Zdravstveni kviz",
+    "subtitle": "Provjerite svoje znanje. Naučite nešto novo.",
+    "backToQuizzes": "Natrag na kvizove",
+    "seeResults": "Pogledajte rezultate",
+    "nextQuestion": "Sljedeće pitanje",
+    "questionsCount": "{count} pitanja",
+    "results": {
+      "perfect": "Savršen rezultat!",
+      "great": "odličan posao!",
+      "good": "Dobar trud!",
+      "keepLearning": "Nastavi učiti!",
+      "score": "Dobili ste {score} od {total} točnih",
+      "tryAgain": "Pokušajte ponovno",
+      "moreQuizzes": "Više kvizova"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotici",
+        "description": "Znate li kada treba koristiti antibiotike?",
+        "questions": [
+          {
+            "question": "Mogu li antibiotici izliječiti gripu?",
+            "options": [
+              "da",
+              "br",
+              "Ponekad"
+            ],
+            "explanation": "Gripu uzrokuje virus. Antibiotici ubijaju samo bakterije. Uzimanje antibiotika za gripu ne čini ništa i može otežati liječenje budućih infekcija."
+          },
+          {
+            "question": "Osjećate se bolje nakon 3 dana uzimanja antibiotika. Trebate li prestati?",
+            "options": [
+              "Da, izliječen si",
+              "Ne, završi cijeli tečaj",
+              "Uzmite polovicu preostalih tableta"
+            ],
+            "explanation": "UVIJEK završite cijeli tečaj. Ako rano prestanete, neke bakterije prežive i postanu otporne. Sljedeći put, isti antibiotik neće djelovati."
+          },
+          {
+            "question": "Možete li podijeliti antibiotike s članom obitelji koji ima slične simptome?",
+            "options": [
+              "Da, štedi novac",
+              "Ne, nikada",
+              "Samo ako se radi o istoj bolesti"
+            ],
+            "explanation": "Nikada nemojte dijeliti antibiotike. Za različite infekcije potrebni su različiti lijekovi. Pogrešan antibiotik može biti opasan i neće pomoći."
+          },
+          {
+            "question": "Što se događa ako prečesto uzimate antibiotike?",
+            "options": [
+              "Ništa loše",
+              "Vaše tijelo postaje imuno na bolesti",
+              "Bakterije postaju otporne i teže ih je ubiti"
+            ],
+            "explanation": "Otpornost na antibiotike je globalna kriza. Kada bakterije postanu otporne, jednostavne infekcije mogu postati smrtonosne. Antibiotike uzimajte samo kada ih liječnik prepiše."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "Cjepiva",
+        "description": "Odvojite činjenice od mitova",
+        "questions": [
+          {
+            "question": "Uzrokuju li cjepiva autizam?",
+            "options": [
+              "da",
+              "br",
+              "Ne znamo"
+            ],
+            "explanation": "NE Ovaj mit je krenuo od lažne studije koja je povučena. Liječnik koji je to objavio izgubio je liječničku licencu. Deseci studija s milijunima djece dokazuju da cjepiva NE uzrokuju autizam."
+          },
+          {
+            "question": "Je li sigurno dati bebi više cjepiva odjednom?",
+            "options": [
+              "Ne, to je previše",
+              "Da, siguran je i testiran",
+              "Samo jedan po jedan"
+            ],
+            "explanation": "Imunološki sustav beba svakodnevno se nosi s tisućama klica. Kombinirana cjepiva su temeljito ispitana i sigurna. Odgađanje cjepiva ostavlja vaše dijete nezaštićenim."
+          },
+          {
+            "question": "Moje dijete ima blagu prehladu. Mogu li se ipak cijepiti?",
+            "options": [
+              "Ne, čekaj dok ne bude potpuno zdrav",
+              "Da, blaga prehlada je u redu",
+              "Samo uz dopuštenje liječnika"
+            ],
+            "explanation": "Blaga prehlada, niska temperatura ili curenje nosa NISU razlog za odgodu cijepljenja. Samo teška bolest zahtijeva odgodu. Pitajte svog liječnika ako niste sigurni."
+          },
+          {
+            "question": "Sadrže li cjepiva opasne kemikalije?",
+            "options": [
+              "Da, puni su toksina",
+              "Ne, svi sastojci su sigurni u malim količinama",
+              "Neki da, neki ne"
+            ],
+            "explanation": "Sastojci cjepiva prisutni su u malim, sigurnim količinama. Dobivate više aluminija iz majčinog mlijeka nego iz cjepiva. Svaki je sastojak testiran na sigurnost."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Dijabetes",
+        "description": "Razumijevanje upravljanja dijabetesom",
+        "questions": [
+          {
+            "question": "Je li dijabetes uzrokovan unosom previše šećera?",
+            "options": [
+              "da",
+              "Ne, složenije je",
+              "Samo tip 2"
+            ],
+            "explanation": "Dijabetes je uzrokovan genetikom, načinom života i načinom na koji vaše tijelo obrađuje inzulin. Konzumiranje šećera ga izravno ne uzrokuje, ali nezdrava prehrana i pretilost povećavaju rizik."
+          },
+          {
+            "question": "Može li se dijabetes izliječiti prirodnim lijekovima poput cimeta?",
+            "options": [
+              "Da, cimet ga liječi",
+              "Ne, nema lijeka, ali se može riješiti",
+              "Da, s dovoljno češnjaka i začinskog bilja"
+            ],
+            "explanation": "NEMA lijeka za dijabetes. Može se upravljati lijekovima, zdravom hranom i tjelovježbom. Cimet može imati male koristi, ali NE MOŽE zamijeniti lijekove. Ljudi koji prestanu uzimati lijek završe u bolnici."
+          },
+          {
+            "question": "Dijabetičar osjeća vrtoglavicu i znoj se. Što trebate učiniti?",
+            "options": [
+              "Dajte im inzulin",
+              "Odmah im dajte nešto slatko",
+              "Reci im da se odmore"
+            ],
+            "explanation": "Ovo su znakovi NISKOG šećera u krvi (hipoglikemije). Odmah im dajte sok, slatkiše ili šećernu vodicu. Ovo može biti opasno po život. Nakon što se osjećaju bolje, trebali bi pojesti odgovarajući obrok."
+          },
+          {
+            "question": "Koliko često dijabetičar treba pregledavati svoja stopala?",
+            "options": [
+              "Nikad, noge su u redu",
+              "Svaki dan",
+              "Jednom godišnje"
+            ],
+            "explanation": "Dijabetes može oštetiti živce u vašim stopalima. Možda nećete osjetiti posjekotine ili ranice. Provjeravajte svoja stopala SVAKI DAN na posjekotine, žuljeve ili promjene boje. Male rane mogu postati ozbiljne infekcije."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Higijena i prevencija",
+        "description": "Osnovne zdravstvene navike koje spašavaju živote",
+        "questions": [
+          {
+            "question": "Koliko dugo trebate prati ruke sapunom?",
+            "options": [
+              "5 sekundi",
+              "Najmanje 20 sekundi",
+              "1 minuta"
+            ],
+            "explanation": "Perite se najmanje 20 sekundi — otprilike onoliko vremena koliko je potrebno da dva puta otpjevate 'Happy Birthday'. Ovo uklanja većinu klica. Brza ispiranja ne rade."
+          },
+          {
+            "question": "Je li sigurno piti vodu iz rijeke ili potoka?",
+            "options": [
+              "Da, prirodna voda je čista",
+              "Ne, uvijek ga prvo prokuhajte ili filtrirajte",
+              "Samo ako izgleda jasno"
+            ],
+            "explanation": "Čak i bistra voda može sadržavati opasne bakterije i parazite. Vodu uvijek kuhajte najmanje 1 minutu ili koristite filter. Prljava voda uzrokuje proljev, koleru i tifus."
+          },
+          {
+            "question": "Vaše dijete ima proljev. Što je najvažnije?",
+            "options": [
+              "Zaustavite svu hranu",
+              "Dajte puno tekućine (voda, ORS)",
+              "Dajte antibiotike"
+            ],
+            "explanation": "Dehidracija uzrokovana proljevom ubije više djece nego sam proljev. Dajte otopinu za oralnu rehidraciju (ORS) ili čistu vodu s prstohvatom soli i šećera. Nastavite dojiti bebe."
+          },
+          {
+            "question": "Kada treba oprati ruke?",
+            "options": [
+              "Samo prije jela",
+              "Prije jela, nakon toaleta, nakon dodirivanja životinja, nakon kašljanja",
+              "Samo kad izgledaju prljavo"
+            ],
+            "explanation": "Klice su nevidljive. Perite ruke: prije jela/kuhanja, nakon korištenja toaleta, nakon mijenjanja pelena, nakon dodirivanja životinja, nakon kašljanja/kihanja i nakon dodirivanja bolesnih osoba."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Upoznajte svoja prava — Redi Health",
+      "description": "Prava pacijenata, pomoć protiv diskriminacije i pravni kontakti za romske zajednice"
+    },
+    "title": "Upoznajte svoja prava",
+    "subtitle": "Imate prava kao pacijent. Naučite ih. Koristite ih.",
+    "back": "natrag",
+    "menu": {
+      "patientRights": {
+        "title": "Prava pacijenata",
+        "desc": "8 prava koja svaki pacijent ima"
+      },
+      "discrimination": {
+        "title": "Suočavanje s diskriminacijom?",
+        "desc": "Što reći i učiniti — korak po korak"
+      },
+      "contacts": {
+        "title": "Pravna pomoć po zemlji",
+        "desc": "Ombudsman, antidiskriminacija, romske organizacije"
+      }
+    },
+    "views": {
+      "patientRights": "Vaša prava pacijenata",
+      "discrimination": "Ako ste suočeni s diskriminacijom",
+      "discriminationDesc": "Stvarne situacije i točno što reći i učiniti.",
+      "contacts": "Pravna pomoć po zemlji"
+    },
+    "labels": {
+      "sayThis": "Reci ovo:",
+      "thenDo": "Zatim učinite ovo:",
+      "patientOmbudsman": "Pravobranitelj za pacijente",
+      "antiDiscrimination": "Protiv diskriminacije",
+      "romaRightsOrg": "Organizacija za prava Roma"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Pravo na hitno liječenje",
+        "description": "Svaka vas bolnica MORA liječiti u hitnim slučajevima, čak i bez osiguranja ili dokumenata. Ovo je zakon u svakoj EU zemlji. Ako odbiju, zatražite ime liječnika i prijavite ga."
+      },
+      "information": {
+        "title": "Pravo na razumijevanje vaše dijagnoze",
+        "description": "Vaš liječnik mora objasniti vaše stanje riječima koje razumijete. Ako ne razumijete, recite: 'Možete li ovo objasniti jednostavnije?' Također možete zatražiti pisani sažetak."
+      },
+      "consent": {
+        "title": "Pravo reći ne",
+        "description": "Nitko vas ne može prisiliti na liječenje. Prije bilo kakvog zahvata liječnik mora objasniti što će učiniti, a vi se morate složiti. Uvijek možete reći 'treba mi vremena za razmišljanje.'"
+      },
+      "privacy": {
+        "title": "Pravo na privatnost",
+        "description": "Vaši medicinski podaci su privatni. Liječnici to ne mogu dijeliti s vašim poslodavcem, obitelji ili bilo kim drugim bez vašeg dopuštenja. To uključuje vaš HIV status, trudnoću ili mentalno zdravlje."
+      },
+      "interpreter": {
+        "title": "Pravo na tumača",
+        "description": "Ako ne govorite dobro lokalni jezik, možete zatražiti tumača. Mnoge bolnice imaju ovu uslugu. Ako ne, možete dovesti nekoga kome vjerujete da prevede."
+      },
+      "second-opinion": {
+        "title": "Pravo na drugo mišljenje",
+        "description": "Ako se ne slažete s dijagnozom, možete posjetiti drugog liječnika. Ovo je tvoje pravo. Ne morate objašnjavati zašto."
+      },
+      "records": {
+        "title": "Pravo na vašu medicinsku dokumentaciju",
+        "description": "U svakom trenutku možete zatražiti presliku svih svojih medicinskih podataka. Bolnica ih mora osigurati. Ovo je korisno kada mijenjate liječnika ili se selite u drugi grad."
+      },
+      "complaint": {
+        "title": "Pravo na žalbu",
+        "description": "Ako se osjećate zlostavljano ili diskriminirano, možete podnijeti pritužbu. Svaka bolnica ima postupak za pritužbe. Također se možete obratiti pravobranitelju za pacijente u svojoj zemlji."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "Bolnica vas odbija liječiti",
+        "whatToSay": "\"Imam pravo na hitno liječenje prema zakonu EU. Molimo zapišite svoje ime i razlog odbijanja.\"",
+        "whatToDo": [
+          "Ostanite mirni, ali čvrsti",
+          "Zatražite puno ime liječnika",
+          "Zatražite odbijanje pismenim putem",
+          "Nazovite pravobranitelja za pacijente",
+          "Obratite se organizaciji za prava Roma"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Bolničko osoblje je nepristojno ili omalovažavajuće zbog vaše etničke pripadnosti",
+        "whatToSay": "\"Ovdje sam zbog medicinske pomoći. Očekujem da me tretiraju s istim poštovanjem kao i svakog drugog pacijenta.\"",
+        "whatToDo": [
+          "Zatražite razgovor s glavnom sestrom ili šefom odjela",
+          "Zabilježite datum, vrijeme i imena",
+          "Podnesite pisani prigovor u bolnici",
+          "Prijavite nacionalnom tijelu za suzbijanje diskriminacije"
+        ]
+      },
+      "no-insurance": {
+        "situation": "Nemate zdravstveno osiguranje",
+        "whatToSay": "\"Trebam liječničku pomoć. Koje su moje mogućnosti za neosigurane pacijente?\"",
+        "whatToDo": [
+          "Hitna pomoć je uvijek besplatna — inzistirajte na tome",
+          "Raspitajte se o programima socijalne pomoći",
+          "Obratite se zdravstvenom posredniku u vašem području",
+          "Mnoge nevladine organizacije pružaju besplatne klinike - pitajte u bolnici"
+        ]
+      },
+      "language-barrier": {
+        "situation": "Ne možete komunicirati s liječnikom",
+        "whatToSay": "\"Trebam pomoć za razumijevanje. Možete li osigurati prevoditelja ili govoriti sporije?\"",
+        "whatToDo": [
+          "Koristite ovu aplikaciju za prijevod ključnih izraza",
+          "Dovedite osobu od povjerenja koja govori jezik",
+          "Zatražite pisane upute koje kasnije možete prevesti",
+          "Koristite kameru svog telefona za prijevod dokumenata"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Priče zajednice — Redi Health",
+      "description": "Prava zdravstvena iskustva iz romskih zajednica diljem Europe"
+    },
+    "title": "Priče zajednice",
+    "subtitle": "Prava iskustva iz romskih zajednica. Učite od drugih.",
+    "backToStories": "Natrag na priče",
+    "lessonLearned": "Naučena lekcija",
+    "whatToDoNext": "Što dalje činiti",
+    "categories": {
+      "vaccines": "Cjepiva",
+      "chronic": "Kronična bolest",
+      "maternal": "Trudnoća",
+      "discrimination": "Prava",
+      "prevention": "Prevencija",
+      "mental": "Mentalno zdravlje"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Vodič za cjepiva",
+      "askZuvo": "Pitaj Zuvo",
+      "explainPrescription": "Objasnite recept",
+      "navigateToCare": "Navigirajte do brige",
+      "knowYourRights": "Upoznajte svoja prava",
+      "learnPrevention": "Naučite prevenciju",
+      "checkSymptoms": "Provjerite simptome",
+      "learnMentalHealth": "Učite o mentalnom zdravlju"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "Rumunjska",
+        "title": "Kćer skoro nisam cijepila",
+        "story": "Moja svekrva mi je rekla da su cjepiva otrovna. Svi u naselju su rekli isto. Kad mi se kćer rodila, bilo me strah. Ali zdravstvena medijatorka došla je u naš dom i sve nam objasnila — kako cjepiva djeluju, kakve su zapravo nuspojave. Pokazala mi je fotografije djece s ospicama. Više sam se bojala bolesti nego cjepiva. Moja kći je dobila sva cjepiva. Zdrava je i jaka.",
+        "lesson": "Razgovarajte sa zdravstvenim medijatorom ili liječnikom prije donošenja odluka na temelju onoga što drugi kažu. Cjepiva spašavaju živote."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bugarska",
+        "title": "Prestala sam uzimati lijekove za dijabetes i skoro umrla",
+        "story": "Dijagnosticiran mi je dijabetes tipa 2 u 45. Od lijeka me zabolio želudac pa sam ga prestala uzimati. Moj susjed je rekao da će me čaj od cimeta izliječiti. Umjesto toga 2 godine sam pila čaj od cimeta. Onda sam se jednog dana srušio. Šećer u krvi mi je bio preko 500. Doktori su rekli da su mi bubrezi oštećeni. Sada pijem lijek svaki dan. Volio bih da nikad nisam prestao.",
+        "lesson": "Nikada nemojte prestati uzimati lijek bez razgovora s liječnikom. Prirodni lijekovi ne mogu zamijeniti lijekove za dijabetes."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Srbija",
+        "title": "Moja prva trudnoća — nisam znala da mogu posjetiti liječnika besplatno",
+        "story": "Kad sam zatrudnjela u 19, nisam išla liječniku 6 mjeseci. Nisam imao osiguranje i mislio sam da će koštati previše. Zdravstvena medijatorka mi je rekla da je prenatalna njega besplatna za sve trudnice u Srbiji. Pomogla mi je da se registriram. Liječnik je ustanovio da imam anemiju i visok krvni tlak. Da nisam otišla, moje dijete je moglo biti u opasnosti.",
+        "lesson": "Prenatalna skrb besplatna je u većini europskih zemalja. Zamolite zdravstvenog medijatora da vam pomogne u prijavi."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Mađarska",
+        "title": "U bolnici su me pokušali poslati",
+        "story": "Otišao sam na hitnu s bolovima u prsima. Sestra me pogledala i rekla 'Siti smo, idi u drugu bolnicu.' Znao sam da ovo nije u redu. Rekao sam: 'Imam bol u prsima. Morate me pregledati. Molim te daj mi svoje ime.' Njezin se stav odmah promijenio. Pregledali su me i ustanovili da imam srčani problem koji treba liječiti. Da sam otišao, mogao sam dobiti srčani udar.",
+        "lesson": "Imate pravo na hitno liječenje. Ako vas netko pokuša odbiti, pitajte ga za ime i recite da znate svoja prava."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Slovačka",
+        "title": "TB nije smrtna kazna — ali morate dovršiti lijek",
+        "story": "Kašljao sam mjesecima. Mislio sam da je samo prehlada. Kad sam konačno otišao liječniku, rekli su da imam tuberkulozu. Bio sam prestravljen — mislio sam da ću umrijeti. Ali liječnik je objasnio da se TB može izliječiti 6 mjeseci lijeka. Najteže mi je bilo piti tablete svaki dan 6 mjeseci, čak i kad sam se nakon 2 mjeseca osjećala bolje. Ali završio sam. izliječen sam.",
+        "lesson": "Ako kašljete dulje od 2 tjedna, posjetite liječnika. TB je izlječiv, ali MORATE popiti sav lijek."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Sjeverna Makedonija",
+        "title": "Depresija nije slabost - to je bolest",
+        "story": "Nakon što mi je muž umro, mjesecima nisam mogla ustati iz kreveta. Moja obitelj je rekla da sam lijen. Rekli su 'samo budi jak'. Ali nisam mogla. Zdravstvena medijatorka je primijetila da nešto nije u redu i odvela me liječniku. Liječnik je rekao da imam depresiju - stvarno zdravstveno stanje. Počeo sam s medicinom i razgovarao sa savjetnikom. Polako mi je bilo bolje. Nisam slaba. bila sam bolesna.",
+        "lesson": "Depresija je zdravstveno stanje, a ne karakterna mana. Lijekovi i savjetovanje mogu pomoći. Molimo zatražite pomoć."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Izazovi — Redi Health",
+      "description": "Izazovi zajednice"
+    },
+    "title": "Aktivni izazovi",
+    "subtitle": "Pridružite se ciljevima zajednice i osobnim izazovima da zaradite bonus XP i značke.",
+    "types": {
+      "community": "zajednice",
+      "personal": "osobni"
+    },
+    "daysLeft": "Još {count} dana",
+    "viewLeaderboard": "Pregledajte Leaderboard",
+    "items": {
+      "c1": {
+        "title": "Šampion znanja o cjepivima",
+        "description": "Navedite 50 učenika u vašem lokalnom području da polože modul Cjepivo ovaj tjedan."
+      },
+      "c2": {
+        "title": "7-dnevni zdravstveni niz",
+        "description": "Zabilježite svoje raspoloženje i unos vode 7 dana zaredom."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Certifikat — Redi Health",
+      "description": "Državni certifikat o zdravstvenoj pismenosti"
+    },
+    "title": "Vaš certifikat",
+    "subtitle": "Završili ste Nacionalnu etapu Studentske zdravstvene akademije.",
+    "ofCompletion": "Potvrda o završenom studiju",
+    "diplomaTitle": "Nacionalna zdravstvena pismenost",
+    "awardedFor": "Dodjeljuje se za završetak kurikuluma Redi Health Student Academy.",
+    "date": "Datum",
+    "downloadPdf": "Preuzmite PDF",
+    "share": "Podijelite",
+    "gate": {
+      "title": "Najprije završite Akademiju",
+      "description": "Da biste stekli svoj certifikat o zdravstvenoj pismenosti, trebate završiti sve lekcije i položiti kviz u nacionalnoj fazi Studentske zdravstvene akademije.",
+      "cta": "Idi na Akademiju"
+    }
+  }
+}

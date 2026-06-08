@@ -1,0 +1,497 @@
+{
+  "healthQuiz": {
+    "meta": {
+      "title": "Egészségügyi kvíz – Redi Health",
+      "description": "Tesztelje egészségügyi ismereteit interaktív vetélkedőkkel"
+    },
+    "title": "Egészségügyi kvíz",
+    "subtitle": "Tesztelje tudását. Tanulj valami újat.",
+    "backToQuizzes": "Vissza a kvízekhez",
+    "seeResults": "Lásd az eredményeket",
+    "nextQuestion": "Következő kérdés",
+    "questionsCount": "{count} kérdés",
+    "results": {
+      "perfect": "Tökéletes pontszám!",
+      "great": "Remek munka!",
+      "good": "Jó erőfeszítést!",
+      "keepLearning": "Tanulj tovább!",
+      "score": "{score}/{total} helyes eredmény",
+      "tryAgain": "Próbáld újra",
+      "moreQuizzes": "Még több kvíz"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotikumok",
+        "description": "Tudja, mikor kell antibiotikumot alkalmazni?",
+        "questions": [
+          {
+            "question": "Az antibiotikumok gyógyíthatják az influenzát?",
+            "options": [
+              "Igen",
+              "Nem",
+              "Néha"
+            ],
+            "explanation": "Az influenzát vírus okozza. Az antibiotikumok csak a baktériumokat pusztítják el. Az influenza elleni antibiotikumok szedése semmit sem okoz, és megnehezítheti a jövőbeni fertőzések kezelését."
+          },
+          {
+            "question": "3 napos antibiotikum kezelés után jobban érzi magát. Meg kellene állnod?",
+            "options": [
+              "Igen, meggyógyultál",
+              "Nem, fejezze be a teljes tanfolyamot",
+              "Vegye be a maradék tabletták felét"
+            ],
+            "explanation": "MINDIG fejezze be a teljes tanfolyamot. Ha korán abbahagyja, néhány baktérium túléli és rezisztenssé válik. Legközelebb ugyanaz az antibiotikum nem fog hatni."
+          },
+          {
+            "question": "Megoszthat antibiotikumot egy családtaggal, akinek hasonló tünetei vannak?",
+            "options": [
+              "Igen, pénzt takarít meg",
+              "Nem, soha",
+              "Csak ha ugyanaz a betegség"
+            ],
+            "explanation": "Soha ne osszon antibiotikumot. A különböző fertőzésekhez különböző gyógyszerekre van szükség. A nem megfelelő antibiotikum veszélyes lehet, és nem segít."
+          },
+          {
+            "question": "Mi történik, ha túl gyakran szed antibiotikumot?",
+            "options": [
+              "Semmi rossz",
+              "A szervezet immunissá válik a betegségekkel szemben",
+              "A baktériumok ellenállóvá válnak, és nehezebb elpusztulni"
+            ],
+            "explanation": "Az antibiotikum-rezisztencia globális válság. Amikor a baktériumok ellenállóvá válnak, az egyszerű fertőzések halálossá válhatnak. Csak akkor vegyen be antibiotikumot, ha az orvos felírja."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "Védőoltások",
+        "description": "Különítsd el a tényeket a mítoszoktól",
+        "questions": [
+          {
+            "question": "Okoznak a védőoltások autizmust?",
+            "options": [
+              "Igen",
+              "Nem",
+              "Nem tudjuk"
+            ],
+            "explanation": "NEM. Ez a mítosz egy csaló tanulmányból indult ki, amelyet visszavontak. Az orvos, aki közzétette, elvesztette orvosi engedélyét. Több millió gyermekkel végzett tanulmányok tucatjai bizonyítják, hogy a vakcinák NEM okoznak autizmust."
+          },
+          {
+            "question": "Biztonságos-e egyszerre több oltást beadni a babának?",
+            "options": [
+              "Nem, túl sok",
+              "Igen, biztonságos és tesztelt",
+              "Egyszerre csak egyet"
+            ],
+            "explanation": "A csecsemők immunrendszere naponta több ezer baktériumot kezel. A kombinált vakcinák alaposan teszteltek és biztonságosak. A védőoltások késleltetése védtelenné teszi gyermekét."
+          },
+          {
+            "question": "Gyermekem enyhe nátha. Kaphatnak még oltást?",
+            "options": [
+              "Nem, várja meg, amíg teljesen egészséges lesz",
+              "Igen, az enyhe megfázás is jó",
+              "Csak orvosi engedéllyel"
+            ],
+            "explanation": "Enyhe megfázás, alacsony láz vagy orrfolyás NEM ok az oltás elhalasztására. Csak súlyos betegség esetén van szükség halasztásra. Ha bizonytalan, kérdezze meg orvosát."
+          },
+          {
+            "question": "Tartalmaznak veszélyes vegyi anyagokat a vakcinák?",
+            "options": [
+              "Igen, tele vannak méreganyagokkal",
+              "Nem, minden összetevő biztonságos kis mennyiségben is",
+              "Van aki igen, van aki nem"
+            ],
+            "explanation": "A vakcina összetevői kis, biztonságos mennyiségben vannak jelen. Az anyatejből több alumíniumot kapsz, mint egy vakcinából. Minden összetevőt teszteltek a biztonság érdekében."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Cukorbetegség",
+        "description": "A cukorbetegség kezelésének megértése",
+        "questions": [
+          {
+            "question": "A cukorbetegség oka a túl sok cukorfogyasztás?",
+            "options": [
+              "Igen",
+              "Nem, ez bonyolultabb",
+              "Csak a 2. típus"
+            ],
+            "explanation": "A cukorbetegség oka a genetika, az életmód és az, hogy a szervezet hogyan dolgozza fel az inzulint. A cukorfogyasztás közvetlenül nem okozza, de az egészségtelen táplálkozás és az elhízás növeli a kockázatot."
+          },
+          {
+            "question": "A cukorbetegség gyógyítható természetes gyógymódokkal, például a fahéjjal?",
+            "options": [
+              "Igen, a fahéj gyógyít",
+              "Nem, nincs gyógymód, de kezelhető",
+              "Igen, elegendő fokhagymával és fűszernövényekkel"
+            ],
+            "explanation": "A cukorbetegségre NINCS gyógymód. Gyógyszerekkel, egészséges ételekkel és testmozgással KEZELHETŐ. A fahéjnak apró előnyei lehetnek, de NEM helyettesítheti a gyógyszert. Azok, akik abbahagyják a gyógyszer szedését, kórházba kerülnek."
+          },
+          {
+            "question": "A cukorbetegek szédülnek és izzadnak. Mit kell tenned?",
+            "options": [
+              "Adj nekik inzulint",
+              "Azonnal adj nekik valami édeset",
+              "Mondd meg nekik, hogy pihenjenek"
+            ],
+            "explanation": "Ezek az ALACSONY vércukorszint (hipoglikémia) jelei. Azonnal adjon nekik gyümölcslevet, cukorkát vagy cukros vizet. Ez életveszélyes lehet. Miután jobban érzik magukat, megfelelő ételt kell enniük."
+          },
+          {
+            "question": "Milyen gyakran kell egy cukorbetegnek ellenőriznie a lábát?",
+            "options": [
+              "Soha, a lábak jól vannak",
+              "Minden nap",
+              "Évente egyszer"
+            ],
+            "explanation": "A cukorbetegség károsíthatja a láb idegeit. Előfordulhat, hogy nem érez vágásokat vagy sebeket. MINDEN NAP ellenőrizze lábát vágások, hólyagok vagy színváltozások szempontjából. A kis sebek súlyos fertőzésekké válhatnak."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Higiénia és megelőzés",
+        "description": "Alapvető egészségügyi szokások, amelyek életeket menthetnek",
+        "questions": [
+          {
+            "question": "Meddig kell kezet mosni szappannal?",
+            "options": [
+              "5 másodperc",
+              "Legalább 20 másodpercig",
+              "1 perc"
+            ],
+            "explanation": "Moss legalább 20 másodpercig – körülbelül annyi idő, mint a „Happy Birthday” kétszeri eléneklése. Ez eltávolítja a legtöbb baktériumot. A gyors öblítés nem működik."
+          },
+          {
+            "question": "Biztonságos-e folyóból vagy patakból vizet inni?",
+            "options": [
+              "Igen, a természetes víz tiszta",
+              "Nem, mindig először forraljuk fel vagy szűrjük le",
+              "Csak ha tisztán látszik"
+            ],
+            "explanation": "Még a tiszta víz is tartalmazhat veszélyes baktériumokat és parazitákat. Mindig forraljon vizet legalább 1 percig, vagy használjon szűrőt. A piszkos víz hasmenést, kolerát és tífuszt okoz."
+          },
+          {
+            "question": "Gyermekének hasmenése van. Mi a legfontosabb?",
+            "options": [
+              "Állítson le minden ételt",
+              "Adjon sok folyadékot (víz, ORS)",
+              "Adj antibiotikumot"
+            ],
+            "explanation": "A hasmenés okozta kiszáradás több gyermeket öl meg, mint maga a hasmenés. Adjon orális rehidratáló oldatot (ORS) vagy tiszta vizet egy csipet sóval és cukorral. Továbbra is szoptassa a babákat."
+          },
+          {
+            "question": "Mikor kell kezet mosni?",
+            "options": [
+              "Csak evés előtt",
+              "Étkezés előtt, WC után, állatok érintése után, köhögés után",
+              "Csak akkor, ha piszkosnak tűnnek"
+            ],
+            "explanation": "A baktériumok láthatatlanok. Mossunk kezet: evés/főzés előtt, vécéhasználat után, pelenkázás után, állatok érintése után, köhögés/tüsszentés, beteg emberek érintése után."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Ismerje meg jogait – Redi Health",
+      "description": "Betegjogok, diszkriminációs segítség, jogi kapcsolattartás a roma közösségek számára"
+    },
+    "title": "Ismerje meg jogait",
+    "subtitle": "Betegként jogai vannak. Tanuld meg őket. Használd őket.",
+    "back": "Vissza",
+    "menu": {
+      "patientRights": {
+        "title": "Betegjogok",
+        "desc": "8 joga van minden betegnek"
+      },
+      "discrimination": {
+        "title": "Szembesülni a diszkriminációval?",
+        "desc": "Mit kell mondani és tenni – lépésről lépésre"
+      },
+      "contacts": {
+        "title": "Jogi segítség országonként",
+        "desc": "Ombudsman, antidiszkrimináció, roma orgs"
+      }
+    },
+    "views": {
+      "patientRights": "Az Ön betegjogai",
+      "discrimination": "Ha diszkriminációval szembesül",
+      "discriminationDesc": "Valós helyzetek és pontosan mit kell mondani és tenni.",
+      "contacts": "Jogi segítség országonként"
+    },
+    "labels": {
+      "sayThis": "Mondd ezt:",
+      "thenDo": "Ezután tegye ezt:",
+      "patientOmbudsman": "Betegombudsman",
+      "antiDiscrimination": "Diszkrimináció elleni védelem",
+      "romaRightsOrg": "Roma jogvédő szervezet"
+    },
+    "rights": {
+      "treatment": {
+        "title": "Sürgősségi ellátáshoz való jog",
+        "description": "Minden kórháznak KELL ellátnia Önt vészhelyzetben, még biztosítás vagy dokumentumok nélkül is. Ez minden EU-tagállam törvénye. Ha megtagadják, kérdezze meg az orvos nevét és jelentse."
+      },
+      "information": {
+        "title": "Joga, hogy megértse a diagnózisát",
+        "description": "Orvosának olyan szavakkal kell elmagyaráznia állapotát, amelyeket megért. Ha nem érted, mondd: \"El tudnád ezt magyarázni egyszerűbben?\" Kérhet írásos összefoglalót is."
+      },
+      "consent": {
+        "title": "Joga nemet mondani",
+        "description": "Senki sem kényszerítheti rád a kezelést. Minden eljárás előtt az orvosnak el kell magyaráznia, mit fog tenni, és Önnek meg kell állapodnia. Mindig mondhatod, hogy \"gondolkodási időre van szükségem\"."
+      },
+      "privacy": {
+        "title": "A magánélethez való jog",
+        "description": "Orvosi adatai privátak. Az orvosok nem oszthatják meg munkáltatójával, családjával vagy bárki mással az Ön engedélye nélkül. Ez magában foglalja az Ön HIV-státuszát, terhességét vagy mentális egészségét."
+      },
+      "interpreter": {
+        "title": "Tolmácshoz való jog",
+        "description": "Ha nem beszéli jól a helyi nyelvet, kérhet tolmácsot. Sok kórház rendelkezik ezzel a szolgáltatással. Ha nem, hozhat valakit, akiben megbízik, hogy fordítson le."
+      },
+      "second-opinion": {
+        "title": "Második vélemény joga",
+        "description": "Ha nem ért egyet a diagnózissal, egy másik orvoshoz fordulhat. Ez a jogod. Nem kell magyarázni, miért."
+      },
+      "records": {
+        "title": "Az orvosi feljegyzéseihez való jog",
+        "description": "Bármikor kérhet másolatot az összes orvosi feljegyzéséről. A kórháznak biztosítania kell őket. Ez akkor hasznos, ha orvost vált, vagy másik városba költözik."
+      },
+      "complaint": {
+        "title": "Panasz joga",
+        "description": "Ha úgy érzi, hogy rosszul bánnak vele, vagy diszkriminálják, panaszt tehet. Minden kórházban van panaszkezelési eljárás. Felveheti a kapcsolatot országa betegombudsmanjával is."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "A kórház nem hajlandó kezelni",
+        "whatToSay": "\"Az uniós jog értelmében jogom van sürgősségi ellátáshoz. Kérjük, írja le a nevét és az elutasítás okát.\"",
+        "whatToDo": [
+          "Maradj nyugodt, de határozott",
+          "Kérd meg az orvos teljes nevét",
+          "Kérje írásban az elutasítást",
+          "Hívja a beteg ombudsmant",
+          "Vegye fel a kapcsolatot egy romajogi szervezettel"
+        ]
+      },
+      "rude-staff": {
+        "situation": "A kórházi személyzet durva vagy elutasító az Ön etnikai hovatartozása miatt",
+        "whatToSay": "\"Orvosi segítségért vagyok itt. Elvárom, hogy ugyanolyan tisztelettel bánjanak velem, mint minden más beteggel.\"",
+        "whatToDo": [
+          "Kérje meg, hogy beszéljen a főnővérrel vagy az osztályvezetővel",
+          "Jegyezze fel a dátumot, az időt és a neveket",
+          "Írjon panaszt a kórházban",
+          "Jelentés a nemzeti diszkriminációellenes testületnek"
+        ]
+      },
+      "no-insurance": {
+        "situation": "Nincs egészségbiztosításod",
+        "whatToSay": "\"Orvosi segítségre van szükségem. Milyen lehetőségeim vannak a nem biztosított betegek számára?\"",
+        "whatToDo": [
+          "A sürgősségi ellátás mindig ingyenes – ragaszkodjon hozzá",
+          "Érdeklődjön a szociális segélyprogramokról",
+          "Vegye fel a kapcsolatot egy egészségügyi közvetítővel a környéken",
+          "Sok civil szervezet ingyenes klinikát biztosít – érdeklődjön a kórházban"
+        ]
+      },
+      "language-barrier": {
+        "situation": "Nem tudsz kommunikálni az orvossal",
+        "whatToSay": "\"Segítségre van szükségem a megértéshez. Tudsz tolmácsot biztosítani, vagy lassabban beszélsz?\"",
+        "whatToDo": [
+          "Használja ezt az alkalmazást kulcskifejezések lefordításához",
+          "Hozz magaddal egy megbízható személyt, aki beszéli a nyelvet",
+          "Kérjen írásos utasításokat, amelyeket később lefordíthat",
+          "Használja telefonja kameráját dokumentumok fordításához"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Közösségi történetek – Redi Health",
+      "description": "Valódi egészségügyi tapasztalatok a roma közösségekből Európa-szerte"
+    },
+    "title": "Közösségi történetek",
+    "subtitle": "Valódi élmények roma közösségekből. Tanulj másoktól.",
+    "backToStories": "Vissza a történetekhez",
+    "lessonLearned": "A tanulság",
+    "whatToDoNext": "Mi a teendő ezután",
+    "categories": {
+      "vaccines": "Védőoltások",
+      "chronic": "Krónikus Betegség",
+      "maternal": "Terhesség",
+      "discrimination": "jogok",
+      "prevention": "Megelőzés",
+      "mental": "Mentális egészség"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Vakcina útmutató",
+      "askZuvo": "Kérdezd meg Zuvo-t",
+      "explainPrescription": "Magyarázza el a receptet",
+      "navigateToCare": "Navigáljon a gondoskodáshoz",
+      "knowYourRights": "Ismerje meg a jogait",
+      "learnPrevention": "Ismerje meg a megelőzést",
+      "checkSymptoms": "Ellenőrizze a tüneteket",
+      "learnMentalHealth": "Ismerje meg a mentális egészséget"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "Románia",
+        "title": "Szinte nem oltattam be a lányomat",
+        "story": "Az anyósom azt mondta, hogy az oltások mérgek. A településen mindenki ugyanezt mondta. Amikor a lányom megszületett, féltem. De az egészségügyi közvetítő eljött az otthonunkba, és mindent elmagyarázott – hogyan működnek a védőoltások, mik a tényleges mellékhatások. Mutatta nekem a kanyarós gyerekek fényképeit. Jobban féltem a betegségtől, mint az oltástól. A lányom megkapta az összes oltását. Egészséges és erős.",
+        "lesson": "Beszéljen egy egészségügyi közvetítővel vagy orvossal, mielőtt döntéseket hozna mások véleménye alapján. A vakcinák életeket mentenek."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bulgária",
+        "title": "Abbahagytam a cukorbetegség gyógyszereimet, és majdnem meghaltam",
+        "story": "45 évesen 2-es típusú cukorbetegséget diagnosztizáltak nálam. A gyógyszertől megfájdult a gyomrom, ezért abbahagytam a szedését. A szomszédom azt mondta, hogy a fahéjas tea meggyógyít. 2 évig inkább fahéjas teát ittam. Aztán egy nap összeestem. A vércukorszintem 500 felett volt. Az orvosok azt mondták, hogy sérült a vesém. Most minden nap beveszem a gyógyszerem. Bárcsak soha nem álltam volna meg.",
+        "lesson": "Soha ne hagyja abba a gyógyszer szedését anélkül, hogy beszélt volna orvosával. A természetes gyógymódok nem helyettesíthetik a cukorbetegség elleni gyógyszereket."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Szerbia",
+        "title": "Első terhességem – nem tudtam, hogy ingyen járhatok orvoshoz",
+        "story": "Amikor 19 évesen teherbe estem, 6 hónapig nem jártam orvoshoz. Nem volt biztosításom, és azt hittem, túl sokba fog kerülni. Egy egészségügyi közvetítő elmondta, hogy Szerbiában minden terhes nő számára ingyenes a terhesgondozás. Segített regisztrálni. Az orvos megállapította, hogy vérszegénységem és magas vérnyomásom van. Ha nem mentem volna el, veszélyben lehetett volna a babám.",
+        "lesson": "A terhesgondozás a legtöbb európai országban ingyenes. Kérjen egészségügyi közvetítőt, hogy segítsen a regisztrációban."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Magyarország",
+        "title": "A kórház megpróbált elküldeni",
+        "story": "Mellkasi fájdalommal mentem az ügyeletre. A nővér rám nézett, és azt mondta: \"Telek vagyunk, menjen egy másik kórházba.\" Tudtam, hogy ez nem helyes. Azt mondtam: „Fáj a mellkasom. Meg kell vizsgálnod. Kérem, adja meg a nevét. A hozzáállása azonnal megváltozott. Megvizsgáltak és megállapították, hogy szívproblémám van, ami kezelést igényel. Ha elmentem volna, szívrohamot kaphattam volna.",
+        "lesson": "Joga van sürgősségi ellátáshoz. Ha valaki megpróbálja visszautasítani, kérdezze meg a nevét, és mondja el, hogy ismeri a jogait."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Szlovákia",
+        "title": "A tuberkulózis nem halálos ítélet – de be kell fejeznie a gyógyszert",
+        "story": "Hónapokig köhögtem. Azt hittem, csak megfázás. Amikor végre elmentem az orvoshoz, azt mondták, hogy tuberkulózisom van. Megrémültem – azt hittem, meghalok. De az orvos elmagyarázta, hogy a tbc 6 hónapos gyógyszerrel gyógyítható. A legnehezebb az volt, hogy 6 hónapon keresztül minden nap tablettát szedjek, még akkor is, ha 2 hónap után jobban éreztem magam. De befejeztem. meggyógyultam.",
+        "lesson": "Ha 2 hétnél tovább köhög, forduljon orvoshoz. A tbc gyógyítható, de az összes gyógyszert be KELL végeznie."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Észak-Macedónia",
+        "title": "A depresszió nem gyengeség, hanem betegség",
+        "story": "Miután a férjem meghalt, hónapokig nem tudtam felkelni az ágyból. A családom azt mondta, lusta vagyok. Azt mondták, csak légy erős. De nem tudtam. Egy egészségügyi közvetítő észrevette, hogy valami nincs rendben, és orvoshoz vitt. Az orvos azt mondta, hogy depresszióm van – valódi egészségügyi állapot. Elkezdtem a gyógyszert, és beszéltem egy tanácsadóval. Lassan jobban lettem. nem vagyok gyenge. beteg voltam.",
+        "lesson": "A depresszió egészségügyi állapot, nem jellemhiba. Az orvostudomány és a tanácsadás segíthet. Kérjen segítséget."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Kihívások – Redi Health",
+      "description": "Közösségi kihívások"
+    },
+    "title": "Aktív kihívások",
+    "subtitle": "Csatlakozz a közösségi célokhoz és a személyes kihívásokhoz, és szerezz bónusz XP-t és jelvényeket.",
+    "types": {
+      "community": "közösség",
+      "personal": "személyes"
+    },
+    "daysLeft": "{count} nap van hátra",
+    "viewLeaderboard": "Ranglista megtekintése",
+    "items": {
+      "c1": {
+        "title": "Vakcina tudás bajnoka",
+        "description": "Kérjen meg 50 diákot a helyi körzetében, hogy adja át a vakcina modult ezen a héten."
+      },
+      "c2": {
+        "title": "7 napos egészségügyi sorozat",
+        "description": "Jegyezze fel hangulatát és vízfogyasztását 7 egymást követő napon."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Tanúsítvány – Redi Health",
+      "description": "Országos egészségügyi műveltségi bizonyítvány"
+    },
+    "title": "Az Ön bizonyítványa",
+    "subtitle": "Elvégezted az Egészségügyi Diákakadémia Országos Színpadját.",
+    "ofCompletion": "Teljesítési igazolás",
+    "diplomaTitle": "Nemzeti Egészségügyi Műveltség",
+    "awardedFor": "A Redi Egészségügyi Diákakadémia tananyagának elvégzéséért díjazták.",
+    "date": "Dátum",
+    "downloadPdf": "PDF letöltése",
+    "share": "Részesedés",
+    "gate": {
+      "title": "Először fejezze be az Akadémiát",
+      "description": "Az Egészségügyi Művelődési Tanúsítvány megszerzéséhez teljesítenie kell az összes leckét, és teljesítenie kell a kvízt az Egészségügyi Diákakadémia Országos szakaszában.",
+      "cta": "Menj az Akadémiára"
+    }
+  }
+}
