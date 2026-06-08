@@ -11,7 +11,7 @@
     "profile": "Профил",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Семейство",
     "more": "More"
   },
   "hero": {
@@ -768,5 +768,54 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Семейно здраве",
+    "subtitle": "Следете здравето на цялото семейство. Всички данни остават на телефона ви.",
+    "back": "Обратно към семейството",
+    "yearsOld": "{age} години",
+    "expecting": "· Бременна",
+    "pregnancyTitle": "Бременност",
+    "pregnancyWeeks": "Седмица {weeks} от 40",
+    "pregnancyExpecting": "Бременна",
+    "logMood": "Запиши настроение",
+    "logWater": "Вода",
+    "logActivity": "Активност",
+    "logFormTitle": "Запиши {type}",
+    "logNote": "Добави бележка (по избор)",
+    "save": "Запази",
+    "recentLogs": "Скорошни записи",
+    "noLogs": "Все още няма записи. Започнете проследяването!",
+    "addMemberTitle": "Добави член на семейството",
+    "addMemberButton": "Добави член на семейството",
+    "addToFamily": "Добави към семейството",
+    "namePlaceholder": "Име",
+    "agePlaceholder": "Възраст",
+    "pregnantLabel": "В момента бременна",
+    "emptyTitle": "Вашият семеен здравен център",
+    "emptyDesc": "Добавете членове на семейството, за да следите здравето, ваксините и лекарствата им. Всичко остава на телефона ви — не е нужен акаунт.",
+    "vaccineTrackingTitle": "Проследяване на ваксини",
+    "vaccineTrackingDesc": "Скоро за всеки член",
+    "medicationRemindersTitle": "Напомняния за лекарства",
+    "medicationRemindersDesc": "Скоро",
+    "logTypes": {
+      "mood": "Настроение",
+      "water": "Вода (чаши)",
+      "activity": "Активност (мин)",
+      "weight": "Тегло (кг)",
+      "note": "Бележка"
+    },
+    "genders": {
+      "female": "Жена",
+      "male": "Мъж",
+      "other": "Друго"
+    },
+    "relation": {
+      "self": "Аз",
+      "child": "Моето дете",
+      "spouse": "Съпруг/а / Партньор",
+      "parent": "Родител",
+      "other": "Друго"
+    }
   }
 }

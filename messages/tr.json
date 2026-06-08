@@ -11,7 +11,7 @@
     "profile": "Profil",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Aile",
     "more": "More"
   },
   "hero": {
@@ -768,5 +768,54 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Aile sağlığı",
+    "subtitle": "Tüm ailenizin sağlığını takip edin. Tüm veriler telefonunuzda kalır.",
+    "back": "Aileye dön",
+    "yearsOld": "{age} yaşında",
+    "expecting": "· Hamile",
+    "pregnancyTitle": "Hamilelik",
+    "pregnancyWeeks": "40 haftanın {weeks}. haftası",
+    "pregnancyExpecting": "Hamile",
+    "logMood": "Ruh hali kaydet",
+    "logWater": "Su",
+    "logActivity": "Aktivite",
+    "logFormTitle": "{type} kaydet",
+    "logNote": "Not ekle (isteğe bağlı)",
+    "save": "Kaydet",
+    "recentLogs": "Son kayıtlar",
+    "noLogs": "Henüz kayıt yok. Takibe başlayın!",
+    "addMemberTitle": "Aile üyesi ekle",
+    "addMemberButton": "Aile üyesi ekle",
+    "addToFamily": "Aileye ekle",
+    "namePlaceholder": "Ad",
+    "agePlaceholder": "Yaş",
+    "pregnantLabel": "Şu anda hamile",
+    "emptyTitle": "Aile sağlık merkeziniz",
+    "emptyDesc": "Sağlıklarını, aşılarını ve ilaçlarını takip etmek için aile üyeleri ekleyin. Her şey telefonunuzda kalır — hesap gerekmez.",
+    "vaccineTrackingTitle": "Aşı takibi",
+    "vaccineTrackingDesc": "Her üye için yakında",
+    "medicationRemindersTitle": "İlaç hatırlatıcıları",
+    "medicationRemindersDesc": "Yakında",
+    "logTypes": {
+      "mood": "Ruh hali",
+      "water": "Su (bardak)",
+      "activity": "Aktivite (dk)",
+      "weight": "Kilo (kg)",
+      "note": "Not"
+    },
+    "genders": {
+      "female": "Kadın",
+      "male": "Erkek",
+      "other": "Diğer"
+    },
+    "relation": {
+      "self": "Ben",
+      "child": "Çocuğum",
+      "spouse": "Eş / Partner",
+      "parent": "Ebeveyn",
+      "other": "Diğer"
+    }
   }
 }

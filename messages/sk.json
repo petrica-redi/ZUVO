@@ -11,7 +11,7 @@
     "profile": "Profil",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Rodina",
     "more": "More"
   },
   "hero": {
@@ -768,5 +768,54 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Zdravie rodiny",
+    "subtitle": "Sledujte zdravie celej rodiny. Všetky údaje zostávajú vo vašom telefóne.",
+    "back": "Späť k rodine",
+    "yearsOld": "{age} rokov",
+    "expecting": "· Tehotná",
+    "pregnancyTitle": "Tehotenstvo",
+    "pregnancyWeeks": "Týždeň {weeks} z 40",
+    "pregnancyExpecting": "Tehotná",
+    "logMood": "Zaznamenať náladu",
+    "logWater": "Voda",
+    "logActivity": "Aktivita",
+    "logFormTitle": "Zaznamenať {type}",
+    "logNote": "Pridať poznámku (voliteľné)",
+    "save": "Uložiť",
+    "recentLogs": "Nedávne záznamy",
+    "noLogs": "Zatiaľ žiadne záznamy. Začnite sledovať!",
+    "addMemberTitle": "Pridať člena rodiny",
+    "addMemberButton": "Pridať člena rodiny",
+    "addToFamily": "Pridať do rodiny",
+    "namePlaceholder": "Meno",
+    "agePlaceholder": "Vek",
+    "pregnantLabel": "Momentálne tehotná",
+    "emptyTitle": "Vaše rodinné zdravotné centrum",
+    "emptyDesc": "Pridajte členov rodiny na sledovanie ich zdravia, očkovaní a liekov. Všetko zostáva vo vašom telefóne — účet nie je potrebný.",
+    "vaccineTrackingTitle": "Sledovanie očkovaní",
+    "vaccineTrackingDesc": "Čoskoro pre každého člena",
+    "medicationRemindersTitle": "Pripomienky liekov",
+    "medicationRemindersDesc": "Čoskoro",
+    "logTypes": {
+      "mood": "Nálada",
+      "water": "Voda (poháre)",
+      "activity": "Aktivita (min)",
+      "weight": "Hmotnosť (kg)",
+      "note": "Poznámka"
+    },
+    "genders": {
+      "female": "Žena",
+      "male": "Muž",
+      "other": "Iné"
+    },
+    "relation": {
+      "self": "Ja",
+      "child": "Moje dieťa",
+      "spouse": "Manžel/ka / Partner",
+      "parent": "Rodič",
+      "other": "Iné"
+    }
   }
 }

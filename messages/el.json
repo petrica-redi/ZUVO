@@ -11,7 +11,7 @@
     "profile": "Προφίλ",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Οικογένεια",
     "more": "More"
   },
   "hero": {
@@ -768,5 +768,54 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Υγεία οικογένειας",
+    "subtitle": "Παρακολουθήστε την υγεία όλης της οικογένειας. Όλα τα δεδομένα μένουν στο τηλέφωνό σας.",
+    "back": "Πίσω στην οικογένεια",
+    "yearsOld": "{age} ετών",
+    "expecting": "· Έγκυος",
+    "pregnancyTitle": "Εγκυμοσύνη",
+    "pregnancyWeeks": "Εβδομάδα {weeks} από 40",
+    "pregnancyExpecting": "Έγκυος",
+    "logMood": "Καταγραφή διάθεσης",
+    "logWater": "Νερό",
+    "logActivity": "Δραστηριότητα",
+    "logFormTitle": "Καταγραφή {type}",
+    "logNote": "Προσθήκη σημείωσης (προαιρετικό)",
+    "save": "Αποθήκευση",
+    "recentLogs": "Πρόσφατες καταγραφές",
+    "noLogs": "Δεν υπάρχουν ακόμα καταγραφές. Ξεκινήστε την παρακολούθηση!",
+    "addMemberTitle": "Προσθήκη μέλους οικογένειας",
+    "addMemberButton": "Προσθήκη μέλους οικογένειας",
+    "addToFamily": "Προσθήκη στην οικογένεια",
+    "namePlaceholder": "Όνομα",
+    "agePlaceholder": "Ηλικία",
+    "pregnantLabel": "Επί του παρόντος έγκυος",
+    "emptyTitle": "Το κέντρο υγείας της οικογένειάς σας",
+    "emptyDesc": "Προσθέστε μέλη οικογένειας για να παρακολουθείτε την υγεία, τα εμβόλια και τα φάρμακά τους. Όλα μένουν στο τηλέφωνό σας — δεν χρειάζεται λογαριασμός.",
+    "vaccineTrackingTitle": "Παρακολούθηση εμβολίων",
+    "vaccineTrackingDesc": "Σύντομα για κάθε μέλος",
+    "medicationRemindersTitle": "Υπενθυμίσεις φαρμάκων",
+    "medicationRemindersDesc": "Σύντομα",
+    "logTypes": {
+      "mood": "Διάθεση",
+      "water": "Νερό (ποτήρια)",
+      "activity": "Δραστηριότητα (λεπτά)",
+      "weight": "Βάρος (κιλά)",
+      "note": "Σημείωση"
+    },
+    "genders": {
+      "female": "Γυναίκα",
+      "male": "Άνδρας",
+      "other": "Άλλο"
+    },
+    "relation": {
+      "self": "Εγώ",
+      "child": "Το παιδί μου",
+      "spouse": "Σύζυγος / Σύντροφος",
+      "parent": "Γονέας",
+      "other": "Άλλο"
+    }
   }
 }

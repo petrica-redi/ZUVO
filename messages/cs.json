@@ -11,7 +11,7 @@
     "profile": "Profil",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Rodina",
     "more": "More"
   },
   "hero": {
@@ -768,5 +768,54 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Zdraví rodiny",
+    "subtitle": "Sledujte zdraví celé rodiny. Všechna data zůstávají ve vašem telefonu.",
+    "back": "Zpět k rodině",
+    "yearsOld": "{age} let",
+    "expecting": "· Těhotná",
+    "pregnancyTitle": "Těhotenství",
+    "pregnancyWeeks": "Týden {weeks} z 40",
+    "pregnancyExpecting": "Těhotná",
+    "logMood": "Zaznamenat náladu",
+    "logWater": "Voda",
+    "logActivity": "Aktivita",
+    "logFormTitle": "Zaznamenat {type}",
+    "logNote": "Přidat poznámku (volitelné)",
+    "save": "Uložit",
+    "recentLogs": "Nedávné záznamy",
+    "noLogs": "Zatím žádné záznamy. Začněte sledovat!",
+    "addMemberTitle": "Přidat člena rodiny",
+    "addMemberButton": "Přidat člena rodiny",
+    "addToFamily": "Přidat do rodiny",
+    "namePlaceholder": "Jméno",
+    "agePlaceholder": "Věk",
+    "pregnantLabel": "Aktuálně těhotná",
+    "emptyTitle": "Vaše rodinné zdravotní centrum",
+    "emptyDesc": "Přidejte členy rodiny pro sledování jejich zdraví, očkování a léků. Vše zůstává ve vašem telefonu — účet není potřeba.",
+    "vaccineTrackingTitle": "Sledování očkování",
+    "vaccineTrackingDesc": "Brzy pro každého člena",
+    "medicationRemindersTitle": "Připomínky léků",
+    "medicationRemindersDesc": "Brzy",
+    "logTypes": {
+      "mood": "Nálada",
+      "water": "Voda (sklenice)",
+      "activity": "Aktivita (min)",
+      "weight": "Hmotnost (kg)",
+      "note": "Poznámka"
+    },
+    "genders": {
+      "female": "Žena",
+      "male": "Muž",
+      "other": "Jiné"
+    },
+    "relation": {
+      "self": "Já",
+      "child": "Mé dítě",
+      "spouse": "Manžel/ka / Partner",
+      "parent": "Rodič",
+      "other": "Jiné"
+    }
   }
 }

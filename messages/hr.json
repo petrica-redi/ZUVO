@@ -11,7 +11,7 @@
     "profile": "Profil",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Obitelj",
     "more": "More"
   },
   "hero": {
@@ -768,5 +768,54 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Obiteljsko zdravlje",
+    "subtitle": "Pratite zdravlje cijele obitelji. Svi podaci ostaju na vašem telefonu.",
+    "back": "Natrag na obitelj",
+    "yearsOld": "{age} godina",
+    "expecting": "· Trudna",
+    "pregnancyTitle": "Trudnoća",
+    "pregnancyWeeks": "Tjedan {weeks} od 40",
+    "pregnancyExpecting": "Trudna",
+    "logMood": "Zabilježi raspoloženje",
+    "logWater": "Voda",
+    "logActivity": "Aktivnost",
+    "logFormTitle": "Zabilježi {type}",
+    "logNote": "Dodaj bilješku (opcionalno)",
+    "save": "Spremi",
+    "recentLogs": "Nedavni zapisi",
+    "noLogs": "Još nema zapisa. Započnite praćenje!",
+    "addMemberTitle": "Dodaj člana obitelji",
+    "addMemberButton": "Dodaj člana obitelji",
+    "addToFamily": "Dodaj u obitelj",
+    "namePlaceholder": "Ime",
+    "agePlaceholder": "Dob",
+    "pregnantLabel": "Trenutno trudna",
+    "emptyTitle": "Vaš obiteljski zdravstveni centar",
+    "emptyDesc": "Dodajte članove obitelji za praćenje njihovog zdravlja, cjepiva i lijekova. Sve ostaje na vašem telefonu — račun nije potreban.",
+    "vaccineTrackingTitle": "Praćenje cjepiva",
+    "vaccineTrackingDesc": "Uskoro za svakog člana",
+    "medicationRemindersTitle": "Podsjetnici za lijekove",
+    "medicationRemindersDesc": "Uskoro",
+    "logTypes": {
+      "mood": "Raspoloženje",
+      "water": "Voda (čaše)",
+      "activity": "Aktivnost (min)",
+      "weight": "Težina (kg)",
+      "note": "Bilješka"
+    },
+    "genders": {
+      "female": "Žena",
+      "male": "Muškarac",
+      "other": "Ostalo"
+    },
+    "relation": {
+      "self": "Ja",
+      "child": "Moje dijete",
+      "spouse": "Supružnik/a / Partner",
+      "parent": "Roditelj",
+      "other": "Ostalo"
+    }
   }
 }

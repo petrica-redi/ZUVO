@@ -11,7 +11,7 @@
     "profile": "Profil",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Család",
     "more": "More"
   },
   "hero": {
@@ -768,5 +768,54 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Családi egészség",
+    "subtitle": "Kövesd az egész családod egészségét. Minden adat a telefonodon marad.",
+    "back": "Vissza a családhoz",
+    "yearsOld": "{age} éves",
+    "expecting": "· Várandós",
+    "pregnancyTitle": "Terhesség",
+    "pregnancyWeeks": "{weeks}. hét a 40-ből",
+    "pregnancyExpecting": "Várandós",
+    "logMood": "Hangulat rögzítése",
+    "logWater": "Víz",
+    "logActivity": "Aktivitás",
+    "logFormTitle": "{type} rögzítése",
+    "logNote": "Megjegyzés hozzáadása (opcionális)",
+    "save": "Mentés",
+    "recentLogs": "Legutóbbi bejegyzések",
+    "noLogs": "Még nincs bejegyzés. Kezdd el a követést!",
+    "addMemberTitle": "Családtag hozzáadása",
+    "addMemberButton": "Családtag hozzáadása",
+    "addToFamily": "Hozzáadás a családhoz",
+    "namePlaceholder": "Név",
+    "agePlaceholder": "Életkor",
+    "pregnantLabel": "Jelenleg várandós",
+    "emptyTitle": "Családi egészségközpontod",
+    "emptyDesc": "Adj hozzá családtagokat az egészségük, oltásaik és gyógyszereik követéséhez. Minden a telefonodon marad — fiók nem szükséges.",
+    "vaccineTrackingTitle": "Oltáskövetés",
+    "vaccineTrackingDesc": "Hamarosan minden tag számára",
+    "medicationRemindersTitle": "Gyógyszeremlékeztetők",
+    "medicationRemindersDesc": "Hamarosan",
+    "logTypes": {
+      "mood": "Hangulat",
+      "water": "Víz (pohár)",
+      "activity": "Aktivitás (perc)",
+      "weight": "Súly (kg)",
+      "note": "Jegyzet"
+    },
+    "genders": {
+      "female": "Nő",
+      "male": "Férfi",
+      "other": "Egyéb"
+    },
+    "relation": {
+      "self": "Én",
+      "child": "Gyermekem",
+      "spouse": "Házastárs / Partner",
+      "parent": "Szülő",
+      "other": "Egyéb"
+    }
   }
 }

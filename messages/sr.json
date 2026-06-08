@@ -11,7 +11,7 @@
     "profile": "Профил",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Породица",
     "more": "More"
   },
   "hero": {
@@ -768,5 +768,54 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Здравље породице",
+    "subtitle": "Пратите здравље целе породице. Сви подаци остају на вашем телефону.",
+    "back": "Назад на породицу",
+    "yearsOld": "{age} година",
+    "expecting": "· Трудна",
+    "pregnancyTitle": "Трудноћа",
+    "pregnancyWeeks": "Недеља {weeks} од 40",
+    "pregnancyExpecting": "Трудна",
+    "logMood": "Забележи расположење",
+    "logWater": "Вода",
+    "logActivity": "Активност",
+    "logFormTitle": "Забележи {type}",
+    "logNote": "Додај белешку (опционо)",
+    "save": "Сачувај",
+    "recentLogs": "Недавни записи",
+    "noLogs": "Још нема записа. Започните праћење!",
+    "addMemberTitle": "Додај члана породице",
+    "addMemberButton": "Додај члана породице",
+    "addToFamily": "Додај у породицу",
+    "namePlaceholder": "Име",
+    "agePlaceholder": "Године",
+    "pregnantLabel": "Тренутно трудна",
+    "emptyTitle": "Ваш здравствени центар за породицу",
+    "emptyDesc": "Додајте чланове породице да бисте пратили њихово здравље, вакцине и лекове. Све остаје на вашем телефону — налог није потребан.",
+    "vaccineTrackingTitle": "Праћење вакцина",
+    "vaccineTrackingDesc": "Ускоро за сваког члана",
+    "medicationRemindersTitle": "Подсетници за лекове",
+    "medicationRemindersDesc": "Ускоро",
+    "logTypes": {
+      "mood": "Расположење",
+      "water": "Вода (чаше)",
+      "activity": "Активност (мин)",
+      "weight": "Тежина (кг)",
+      "note": "Белешка"
+    },
+    "genders": {
+      "female": "Жена",
+      "male": "Мушкарац",
+      "other": "Друго"
+    },
+    "relation": {
+      "self": "Ја",
+      "child": "Моје дете",
+      "spouse": "Супруг/а / Партнер",
+      "parent": "Родитељ",
+      "other": "Друго"
+    }
   }
 }

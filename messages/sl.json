@@ -11,7 +11,7 @@
     "profile": "Profil",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Družina",
     "more": "More"
   },
   "hero": {
@@ -768,5 +768,54 @@
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
     "builtWith": "Built with Roma health mediators across 15 countries."
+  },
+  "family": {
+    "title": "Družinsko zdravje",
+    "subtitle": "Spremljajte zdravje celotne družine. Vsi podatki ostanejo v vašem telefonu.",
+    "back": "Nazaj k družini",
+    "yearsOld": "{age} let",
+    "expecting": "· Noseča",
+    "pregnancyTitle": "Nosečnost",
+    "pregnancyWeeks": "Teden {weeks} od 40",
+    "pregnancyExpecting": "Noseča",
+    "logMood": "Zabeleži razpoloženje",
+    "logWater": "Voda",
+    "logActivity": "Aktivnost",
+    "logFormTitle": "Zabeleži {type}",
+    "logNote": "Dodaj opombo (neobvezno)",
+    "save": "Shrani",
+    "recentLogs": "Nedavni zapisi",
+    "noLogs": "Še ni zapisov. Začnite s spremljanjem!",
+    "addMemberTitle": "Dodaj družinskega člana",
+    "addMemberButton": "Dodaj družinskega člana",
+    "addToFamily": "Dodaj v družino",
+    "namePlaceholder": "Ime",
+    "agePlaceholder": "Starost",
+    "pregnantLabel": "Trenutno noseča",
+    "emptyTitle": "Vaš družinski zdravstveni center",
+    "emptyDesc": "Dodajte družinske člane za spremljanje njihovega zdravja, cepljenj in zdravil. Vse ostane v vašem telefonu — račun ni potreben.",
+    "vaccineTrackingTitle": "Spremljanje cepljenj",
+    "vaccineTrackingDesc": "Kmalu za vsakega člana",
+    "medicationRemindersTitle": "Opomniki za zdravila",
+    "medicationRemindersDesc": "Kmalu",
+    "logTypes": {
+      "mood": "Razpoloženje",
+      "water": "Voda (kozarci)",
+      "activity": "Aktivnost (min)",
+      "weight": "Teža (kg)",
+      "note": "Opomba"
+    },
+    "genders": {
+      "female": "Ženska",
+      "male": "Moški",
+      "other": "Drugo"
+    },
+    "relation": {
+      "self": "Jaz",
+      "child": "Moj otrok",
+      "spouse": "Zakonec/a / Partner",
+      "parent": "Starš",
+      "other": "Drugo"
+    }
   }
 }

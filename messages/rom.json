@@ -11,7 +11,7 @@
     "profile": "Portret",
     "explain": "Explain",
     "chat": "Ask",
-    "family": "Family",
+    "family": "Familija",
     "more": "More",
     "ariaMain": "Glavna navigacia"
   },
@@ -1251,11 +1251,51 @@
     }
   },
   "family": {
+    "title": "Familijako sastipen",
+    "subtitle": "Dikh sar sa tiri familija si sasto. Sa data ramol pe tiro telefono.",
+    "back": "Pale ko familija",
+    "yearsOld": "{age} berš",
+    "expecting": "· Pušni",
+    "pregnancyTitle": "Pušnipen",
+    "pregnancyWeeks": "Săptămâna {weeks} andar 40",
+    "pregnancyExpecting": "Pušni",
+    "logMood": "Thov gond",
+    "logWater": "Paji",
+    "logActivity": "Buti",
+    "logFormTitle": "Thov {type}",
+    "logNote": "Thov jekh nota (opcionalno)",
+    "save": "Arakhel",
+    "recentLogs": "Neve thovimata",
+    "noLogs": "Na si thovimata. Šuru te dikhaves!",
+    "addMemberTitle": "Thov jekh manuš andar familija",
+    "addMemberButton": "Thov jekh manuš andar familija",
+    "addToFamily": "Thov andar familija",
+    "namePlaceholder": "Anav",
+    "agePlaceholder": "Berš",
+    "pregnantLabel": "Akana pušni",
+    "emptyTitle": "Tiri familijaki sastipen than",
+    "emptyDesc": "Thov manuš andar familija te dikhaves lenge sastipen, vakcinimata thaj lekura. Sa ramol pe tiro telefono — na trubul account.",
+    "vaccineTrackingTitle": "Vakcinimata dikhavipen",
+    "vaccineTrackingDesc": "Avela vaš savore manuš",
+    "medicationRemindersTitle": "Lekura sar dikhavipen",
+    "medicationRemindersDesc": "Avela",
+    "logTypes": {
+      "mood": "Gond",
+      "water": "Paji (gilaša)",
+      "activity": "Buti (min)",
+      "weight": "Grevo (kg)",
+      "note": "Nota"
+    },
+    "genders": {
+      "female": "Žuvli",
+      "male": "Murš",
+      "other": "Aver"
+    },
     "relation": {
       "self": "Me",
-      "child": "Čhavo",
-      "spouse": "Romnji/Rom",
-      "parent": "Dad/Dej",
+      "child": "Miro čhavo",
+      "spouse": "Romnji / Rom",
+      "parent": "Dad / Dej",
       "other": "Aver"
     }
   }
