@@ -2,6 +2,7 @@
  * Reports i18n coverage per locale vs messages/en.json.
  * Run: node scripts/audit-i18n.mjs
  */
+import { execSync } from "node:child_process";
 import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -133,3 +134,12 @@ for (const file of localeFiles.sort()) {
 }
 
 console.log(`Total gap score (lower is better): ${totalMissing}`);
+
+if (process.argv.includes("--list-pages")) {
+  const out = execSync(
+    "npx tsx -e \"import { getPublicSitemapRoutes } from './src/lib/sitemap-routes.ts'; console.log(getPublicSitemapRoutes().join('\\\\n'))\"",
+    { cwd: ROOT, encoding: "utf8" },
+  );
+  const pages = out.trim().split("\n");
+  console.log(`\nPublic pages (${pages.length}):\n${out}`);
+}
