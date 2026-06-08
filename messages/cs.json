@@ -817,5 +817,122 @@
       "parent": "Rodič",
       "other": "Jiné"
     }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Zdravotní slovník — Redi Health",
+      "description": "Lékařské pojmy vysvětlené jednoduchými slovy"
+    },
+    "title": "Zdravotní slovník",
+    "subtitle": "Lékařské pojmy vysvětlené jednoduchými slovy.",
+    "searchPlaceholder": "Hledat pojmy...",
+    "searchAria": "Hledat lékařské pojmy",
+    "noResults": "Nebyly nalezeny žádné pojmy. Zkuste jiné hledání.",
+    "allCount": "Vše ({count})",
+    "categories": {
+      "condition": "Onemocnění",
+      "medication": "Léky",
+      "procedure": "Postupy",
+      "body": "Tělo a zdraví",
+      "test": "Vyšetření"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Vysoký krevní tlak",
+        "simple": "Krev tlačí příliš silně na stěny cév. Bez léčby může způsobit infarkt nebo mrtvici. Léky je potřeba brát každý den."
+      },
+      "diabetes-type-2": {
+        "term": "Cukrovka (2. typu)",
+        "simple": "Tělo neumí správně používat cukr. Cukr se hromadí v krvi a poškozuje orgány. Potřebujete léky, zdravé jídlo a pohyb. Nevzniká jen z toho, že jíte moc cukru."
+      },
+      "anemia": {
+        "term": "Anémie",
+        "simple": "V těle není dost zdravých červených krvinek. Cítíte únavu, slabost nebo motání hlavy. Často ji způsobuje nedostatek železa. U těhotných žen je velmi častá."
+      },
+      "asthma": {
+        "term": "Astma",
+        "simple": "Dýchací cesty se zúží a otečou, proto se hůře dýchá. Můžete sípat nebo kašlat. Když se to stane, použijte inhalátor. Vyhýbejte se kouři a prachu."
+      },
+      "tuberculosis-tb": {
+        "term": "Tuberkulóza (TB)",
+        "simple": "Vážná infekce plic. Kašlete celé týdny, hubnete a v noci se potíte. Šíří se vzduchem. Lze ji vyléčit za 6 měsíců léků, ale musíte dobrat všechny tablety."
+      },
+      "depression": {
+        "term": "Deprese",
+        "simple": "Zdravotní stav, kdy jste celé týdny smutní, bez naděje nebo prázdní. Není to slabost ani vaše vina. Pomoci mohou léky i rozhovor s někým. Požádejte o pomoc."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatitida B/C",
+        "simple": "Virus, který napadá játra. Roky nemusíte nic cítit, ale játra se pomalu poškozují. Šíří se krví a jehlami. Proti hepatitidě B existuje očkování."
+      },
+      "pneumonia": {
+        "term": "Zápal plic",
+        "simple": "Vážná infekce plic. Máte horečku, kašel s hlenem a špatně se vám dýchá. Potřebujete antibiotika od lékaře. Pro miminka a starší lidi může být nebezpečný."
+      },
+      "gastritis": {
+        "term": "Gastritida",
+        "simple": "Sliznice žaludku je podrážděná nebo zanícená. Cítíte pálení, nevolnost nebo nadýmání. Vyhýbejte se pálivému jídlu, alkoholu a kouření. Léky mohou pomoci."
+      },
+      "eczema": {
+        "term": "Ekzém",
+        "simple": "Svědivá, červená a suchá místa na kůži. Není nakažlivý. Často používejte hydratační krém. Vyhýbejte se silným mýdlům. Lékař může dát krém, který pomůže."
+      },
+      "antibiotic": {
+        "term": "Antibiotikum",
+        "simple": "Lék, který zabíjí bakterie. Nepůsobí na viry, jako je chřipka nebo nachlazení. Musíte dobrat celou kúru, i když je vám lépe, jinak se bakterie vrátí silnější."
+      },
+      "ibuprofen": {
+        "term": "Ibuprofen",
+        "simple": "Lék proti bolesti, který snižuje i zánět a horečku. Berte ho s jídlem, aby chránil žaludek. Neberte více, než je napsáno na krabičce. V těhotenství není bezpečný."
+      },
+      "paracetamol": {
+        "term": "Paracetamol",
+        "simple": "Běžný lék na bolest hlavy a horečku. Je bezpečný pro většinu lidí, i pro těhotné ženy. Neužívejte více než 4 gramy denně, protože poškozuje játra."
+      },
+      "insulin": {
+        "term": "Inzulin",
+        "simple": "Hormon, který tělo potřebuje k využití cukru. Lidé s cukrovkou mohou potřebovat inzulinové injekce. Neznamená to, že je cukrovka horší, jen je potřeba jiná léčba."
+      },
+      "metformin": {
+        "term": "Metformin",
+        "simple": "Nejběžnější lék na cukrovku. Pomáhá tělu lépe používat cukr. Užívá se s jídlem. Na začátku může dráždit žaludek, ale většinou to přejde."
+      },
+      "blood-test": {
+        "term": "Krevní test",
+        "simple": "Malá jehla vezme trochu krve z ruky. Lékař tak kontroluje infekce, anémii, cukrovku a mnoho dalších věcí. Bolí to jen chvilku."
+      },
+      "x-ray": {
+        "term": "Rentgen",
+        "simple": "Obrázek kostí a plic pomocí zvláštního záření. Několik sekund stojíte bez pohybu. Nebolí to. Je bezpečný pro většinu lidí, ale těhotenství je potřeba říct lékaři."
+      },
+      "ultrasound": {
+        "term": "Ultrazvuk",
+        "simple": "Obrázek z vnitřku těla pomocí zvukových vln. Lékař dá na kůži gel a pohybuje přístrojem. Nebolí to. Často se používá ke kontrole dítěte v těhotenství."
+      },
+      "ecg-ekg": {
+        "term": "EKG",
+        "simple": "Vyšetření srdečního rytmu. Na hrudník se nalepí malé elektrody. Nebolí to. Trvá asi 5 minut. Ukáže, jestli srdce tluče normálně."
+      },
+      "vaccination": {
+        "term": "Očkování",
+        "simple": "Malá injekce, která naučí tělo bojovat proti nemoci ještě předtím, než onemocníte. Mírné nežádoucí účinky, například bolest ruky nebo slabá horečka, jsou normální."
+      },
+      "blood-pressure": {
+        "term": "Krevní tlak",
+        "simple": "Síla, kterou krev tlačí na stěny cév. Normální hodnota je kolem 120/80. Vysoký tlak nad 140/90 je nebezpečný, protože ho nemusíte cítit, ale poškozuje srdce a mozek."
+      },
+      "blood-sugar": {
+        "term": "Cukr v krvi",
+        "simple": "Množství glukózy v krvi. Normální hodnota nalačno je 70-100 mg/dL. Příliš vysoká znamená cukrovku. Příliš nízká způsobuje motání hlavy a třes."
+      },
+      "bmi": {
+        "term": "BMI",
+        "simple": "Index tělesné hmotnosti ukazuje, jestli je vaše váha zdravá vzhledem k výšce. Pod 18,5 je podváha, 18,5-25 normální, nad 25 nadváha a nad 30 obezita."
+      },
+      "immune-system": {
+        "term": "Imunitní systém",
+        "simple": "Je to obrana těla proti mikrobům. Bílé krvinky bojují s infekcemi. Vakcíny imunitní systém trénují. Dobré jídlo, spánek a pohyb ho posilují."
+      }
+    }
   }
 }

@@ -817,5 +817,122 @@
       "parent": "Ebeveyn",
       "other": "Diğer"
     }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Sağlık sözlüğü — Redi Health",
+      "description": "Tıbbi terimler basit kelimelerle açıklandı"
+    },
+    "title": "Sağlık sözlüğü",
+    "subtitle": "Tıbbi terimler basit kelimelerle açıklandı.",
+    "searchPlaceholder": "Terim ara...",
+    "searchAria": "Tıbbi terim ara",
+    "noResults": "Terim bulunamadı. Farklı bir arama deneyin.",
+    "allCount": "Tümü ({count})",
+    "categories": {
+      "condition": "Hastalıklar",
+      "medication": "İlaçlar",
+      "procedure": "İşlemler",
+      "body": "Vücut ve sağlık",
+      "test": "Testler"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Yüksek tansiyon",
+        "simple": "Kan damarların duvarına çok güçlü baskı yapar. Tedavi edilmezse kalp krizi veya felce yol açabilir. İlaçlar her gün alınmalıdır."
+      },
+      "diabetes-type-2": {
+        "term": "Diyabet (Tip 2)",
+        "simple": "Vücut şekeri doğru kullanamaz. Şeker kanda birikir ve organlara zarar verir. İlaç, sağlıklı yemek ve hareket gerekir. Sadece çok şeker yemekten olmaz."
+      },
+      "anemia": {
+        "term": "Kansızlık",
+        "simple": "Yeterli sağlıklı kırmızı kan hücresi yoktur. Kendinizi yorgun, güçsüz veya baş dönmesi içinde hissedebilirsiniz. Sık nedeni demir eksikliğidir. Hamile kadınlarda çok yaygındır."
+      },
+      "asthma": {
+        "term": "Astım",
+        "simple": "Hava yolları daralır ve şişer, bu yüzden nefes almak zorlaşır. Hırıltı veya öksürük olabilir. Böyle olduğunda inhaleri kullanın. Dumandan ve tozdan uzak durun."
+      },
+      "tuberculosis-tb": {
+        "term": "Tüberküloz (TB)",
+        "simple": "Akciğerlerde ciddi bir enfeksiyondur. Haftalarca öksürürsünüz, kilo verirsiniz ve gece terlersiniz. Hava yoluyla bulaşır. 6 aylık ilaçla iyileşebilir, ama tüm hapları bitirmek gerekir."
+      },
+      "depression": {
+        "term": "Depresyon",
+        "simple": "Haftalar boyunca üzgün, umutsuz veya boş hissettiğiniz tıbbi bir durumdur. Bu zayıflık değildir ve sizin suçunuz değildir. İlaç ve biriyle konuşmak yardımcı olabilir. Yardım isteyin."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatit B/C",
+        "simple": "Karaciğere saldıran bir virüstür. Yıllarca belirti olmayabilir ama karaciğere yavaşça zarar verir. Kan ve iğne ile bulaşır. Hepatit B için aşı vardır."
+      },
+      "pneumonia": {
+        "term": "Zatürre",
+        "simple": "Akciğerlerde ciddi bir enfeksiyondur. Ateş, balgamlı öksürük ve nefes darlığı olur. Doktordan antibiyotik gerekir. Bebekler ve yaşlılar için tehlikeli olabilir."
+      },
+      "gastritis": {
+        "term": "Gastrit",
+        "simple": "Mide iç yüzeyi tahriş olmuş veya iltihaplanmıştır. Yanma, bulantı veya şişkinlik hissedebilirsiniz. Acı yiyecek, alkol ve sigaradan uzak durun. İlaç yardımcı olabilir."
+      },
+      "eczema": {
+        "term": "Egzama",
+        "simple": "Ciltte kaşıntılı, kırmızı ve kuru alanlardır. Bulaşıcı değildir. Sık sık nemlendirici kullanın. Sert sabunlardan kaçının. Doktor yardımcı olacak krem verebilir."
+      },
+      "antibiotic": {
+        "term": "Antibiyotik",
+        "simple": "Bakterileri öldüren ilaçtır. Grip veya soğuk algınlığı gibi virüslere karşı işe yaramaz. Kendinizi iyi hissetseniz bile tüm tedaviyi bitirmelisiniz, yoksa mikroplar daha güçlü döner."
+      },
+      "ibuprofen": {
+        "term": "İbuprofen",
+        "simple": "Ağrıyı, iltihabı ve ateşi azaltan bir ilaçtır. Mideyi korumak için yemekle alın. Kutuda yazılandan fazla almayın. Hamilelikte güvenli değildir."
+      },
+      "paracetamol": {
+        "term": "Parasetamol",
+        "simple": "Baş ağrısı ve ateş için yaygın bir ilaçtır. Çoğu insan için, hamile kadınlar dahil, güvenlidir. Günde 4 gramdan fazla almayın, çünkü karaciğere zarar verir."
+      },
+      "insulin": {
+        "term": "İnsülin",
+        "simple": "Vücudun şekeri kullanması için gereken hormondur. Diyabeti olan kişiler insülin iğnesine ihtiyaç duyabilir. Bu, hastalığın daha kötü olduğu anlamına gelmez; sadece tedavi farklıdır."
+      },
+      "metformin": {
+        "term": "Metformin",
+        "simple": "Diyabet için en sık kullanılan ilaçtır. Vücudun şekeri daha iyi kullanmasına yardım eder. Yemekle alınır. Başta mideyi rahatsız edebilir, ama genelde geçer."
+      },
+      "blood-test": {
+        "term": "Kan testi",
+        "simple": "Küçük bir iğne koldan biraz kan alır. Doktor enfeksiyon, kansızlık, diyabet ve başka birçok şeyi bununla kontrol eder. Sadece kısa süre acır."
+      },
+      "x-ray": {
+        "term": "Röntgen",
+        "simple": "Kemiklerin ve akciğerlerin özel ışınlarla çekilen görüntüsüdür. Birkaç saniye hareketsiz durursunuz. Acıtmaz. Çoğu insan için güvenlidir, ama hamileyseniz doktora söyleyin."
+      },
+      "ultrasound": {
+        "term": "Ultrason",
+        "simple": "Ses dalgalarıyla vücudun içinin görüntüsüdür. Doktor cilde jel sürer ve cihazı gezdirir. Acıtmaz. Hamilelikte bebeği kontrol etmek için sık kullanılır."
+      },
+      "ecg-ekg": {
+        "term": "EKG",
+        "simple": "Kalbin ritmini kontrol eden testtir. Göğse küçük yapışkanlar yerleştirilir. Acıtmaz. Yaklaşık 5 dakika sürer. Kalbin normal atıp atmadığını gösterir."
+      },
+      "vaccination": {
+        "term": "Aşılama",
+        "simple": "Hastalanmadan önce vücuda hastalığa karşı savaşmayı öğreten küçük bir iğnedir. Kolda ağrı veya hafif ateş gibi küçük yan etkiler normaldir."
+      },
+      "blood-pressure": {
+        "term": "Kan basıncı",
+        "simple": "Kanın damar duvarlarına yaptığı baskıdır. Normal değer yaklaşık 120/80'dir. 140/90 üzerindeki yüksek tansiyon tehlikelidir; fark edilmeyebilir ama kalbe ve beyne zarar verir."
+      },
+      "blood-sugar": {
+        "term": "Kan şekeri",
+        "simple": "Kandaki glukoz miktarıdır. Açlıkta normal değer 70-100 mg/dL'dir. Çok yüksekse diyabet anlamına gelir. Çok düşükse baş dönmesi ve titreme yapar."
+      },
+      "bmi": {
+        "term": "VKİ",
+        "simple": "Vücut kitle indeksi, kilonuzun boyunuza göre sağlıklı olup olmadığını gösterir. 18,5 altı zayıflık, 18,5-25 normal, 25 üstü fazla kilo, 30 üstü obezitedir."
+      },
+      "immune-system": {
+        "term": "Bağışıklık sistemi",
+        "simple": "Bu, vücudun mikroplara karşı ordusudur. Beyaz kan hücreleri enfeksiyonlarla savaşır. Aşılar bağışıklık sistemini eğitir. İyi beslenme, uyku ve hareket onu güçlendirir."
+      }
+    }
   }
 }

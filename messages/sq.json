@@ -1298,5 +1298,122 @@
       "parent": "Prind",
       "other": "Tjetër"
     }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Fjalor shëndetësor — Redi Health",
+      "description": "Terma mjekësorë të shpjeguar me fjalë të thjeshta"
+    },
+    "title": "Fjalor shëndetësor",
+    "subtitle": "Terma mjekësorë të shpjeguar me fjalë të thjeshta.",
+    "searchPlaceholder": "Kërko terma...",
+    "searchAria": "Kërko terma mjekësorë",
+    "noResults": "Nuk u gjet asnjë term. Provo një kërkim tjetër.",
+    "allCount": "Të gjitha ({count})",
+    "categories": {
+      "condition": "Sëmundje",
+      "medication": "Barna",
+      "procedure": "Procedura",
+      "body": "Trupi dhe shëndeti",
+      "test": "Analiza"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Tension i lartë i gjakut",
+        "simple": "Presion i lartë i gjakut. Gjaku shtyn shumë fort muret e enëve të gjakut. Pa trajtim mund të shkaktojë infarkt ose goditje në tru. Merr barnat çdo ditë."
+      },
+      "diabetes-type-2": {
+        "term": "Diabeti (Tipi 2)",
+        "simple": "Trupi yt nuk e përdor mirë sheqerin. Sheqeri grumbullohet në gjak dhe dëmton organet. Të duhen barna, ushqim i shëndetshëm dhe lëvizje. NUK shkaktohet vetëm nga ngrënia e shumë sheqerit."
+      },
+      "anemia": {
+        "term": "Anemi",
+        "simple": "Nuk ke mjaft qeliza të kuqe të shëndetshme. Ndihesh i lodhur, i dobët ose i trullosur. Shpesh vjen nga mungesa e hekurit. Është shumë e zakonshme në shtatzëni."
+      },
+      "asthma": {
+        "term": "Astmë",
+        "simple": "Rrugët e frymëmarrjes ngushtohen dhe fryhen, prandaj e ke të vështirë të marrësh frymë. Mund të kesh fishkëllimë ose kollë. Përdor inhalatorin kur ndodh. Shmang tymin dhe pluhurin."
+      },
+      "tuberculosis-tb": {
+        "term": "Tuberkuloz (TB)",
+        "simple": "Infeksion serioz në mushkëri. Kollitesh për javë, humb peshë dhe djersitesh natën. Përhapet në ajër. MUND të shërohet me 6 muaj barna, por duhet t'i mbarosh TË GJITHA tabletat."
+      },
+      "depression": {
+        "term": "Depresion",
+        "simple": "Gjendje mjekësore kur ndihesh i trishtuar, pa shpresë ose bosh për javë të tëra. NUK është dobësi dhe NUK është faji yt. Barnat dhe biseda me dikë mund të ndihmojnë. Kërko ndihmë."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatiti B/C",
+        "simple": "Virus që sulmon mëlçinë. Mund të mos ndihesh i sëmurë për vite, por e dëmton mëlçinë ngadalë. Përhapet me gjak dhe gjilpëra. Ka vaksinë për hepatitin B."
+      },
+      "pneumonia": {
+        "term": "Pneumoni",
+        "simple": "Infeksion serioz në mushkëri. Ke temperaturë, kollë me sekrecione dhe vështirësi në frymëmarrje. Të duhen antibiotikë nga mjeku. Mund të jetë e rrezikshme për foshnjat dhe të moshuarit."
+      },
+      "gastritis": {
+        "term": "Gastrit",
+        "simple": "Shtresa e brendshme e stomakut është e irrituar ose e përflakur. Ndien djegie, të përziera ose fryrje. Shmang ushqimin pikant, alkoolin dhe duhanin. Barnat mund të ndihmojnë."
+      },
+      "eczema": {
+        "term": "Ekzemë",
+        "simple": "Zona të kruajtura, të kuqe dhe të thata në lëkurë. NUK ngjitet. Përdor shpesh krem hidratues. Shmang sapunët e fortë. Mjeku mund të japë krem që ndihmon."
+      },
+      "antibiotic": {
+        "term": "Antibiotik",
+        "simple": "Bar që vret bakteret. NUK vepron kundër viruseve si gripi ose ftohja. DUHET ta mbarosh të gjithë kurën edhe kur ndihesh më mirë, përndryshe mikrobet kthehen më të forta."
+      },
+      "ibuprofen": {
+        "term": "Ibuprofen",
+        "simple": "Qetësues dhimbjeje që ul edhe ënjtjen dhe temperaturën. Merre me ushqim për të mbrojtur stomakun. Mos merr më shumë se sa shkruan në kuti. Nuk është i sigurt në shtatzëni."
+      },
+      "paracetamol": {
+        "term": "Paracetamol",
+        "simple": "Qetësues i zakonshëm për dhimbje koke dhe temperaturë. I sigurt për shumicën e njerëzve, edhe për gratë shtatzëna. Mos merr më shumë se 4 gramë në ditë, sepse dëmton mëlçinë."
+      },
+      "insulin": {
+        "term": "Insulinë",
+        "simple": "Hormon që trupi yt e përdor për të shfrytëzuar sheqerin. Njerëzit me diabet mund të kenë nevojë për injeksione me insulinë. Nuk do të thotë se diabeti është më i rëndë, vetëm se trajtimi është ndryshe."
+      },
+      "metformin": {
+        "term": "Metformin",
+        "simple": "Barnat më të zakonshme për diabet. Ndihmon trupin të përdorë më mirë sheqerin. Merret me ushqim. Në fillim mund të japë shqetësim në stomak, por zakonisht kalon."
+      },
+      "blood-test": {
+        "term": "Analizë gjaku",
+        "simple": "Një gjilpërë e vogël merr pak gjak nga krahu yt. E ndihmon mjekun të kontrollojë infeksione, anemi, diabet dhe shumë gjëra të tjera. Dhemb vetëm për një çast."
+      },
+      "x-ray": {
+        "term": "Rëntgen",
+        "simple": "Pamje e kockave dhe mushkërive me rreze të veçanta. Qëndron i palëvizur për pak sekonda. Nuk dhemb. Është i sigurt për shumicën, por thuaji mjekut nëse je shtatzënë."
+      },
+      "ultrasound": {
+        "term": "Eko",
+        "simple": "Pamje nga brenda trupit me valë zanore. Mjeku vendos xhel në lëkurë dhe lëviz një aparat mbi të. Nuk dhemb. Përdoret shpesh për të kontrolluar foshnjën në shtatzëni."
+      },
+      "ecg-ekg": {
+        "term": "EKG",
+        "simple": "Analizë që kontrollon ritmin e zemrës. Në kraharor vendosen ngjitëse të vogla. Nuk dhemb. Zgjat rreth 5 minuta. Tregon nëse zemra rreh normalisht."
+      },
+      "vaccination": {
+        "term": "Vaksinim",
+        "simple": "Një injeksion i vogël që e mëson trupin të luftojë një sëmundje para se të sëmuresh. Efektet anësore të lehta, si dhimbja e krahut ose temperatura e ulët, janë normale dhe tregojnë se po vepron."
+      },
+      "blood-pressure": {
+        "term": "Presioni i gjakut",
+        "simple": "Forca me të cilën gjaku shtyn muret e enëve të gjakut. Normalja është rreth 120/80. Presioni i lartë mbi 140/90 është i rrezikshëm sepse nuk ndihet, por dëmton zemrën dhe trurin."
+      },
+      "blood-sugar": {
+        "term": "Sheqeri në gjak",
+        "simple": "Sasia e glukozës në gjak. Niveli normal esëll është 70-100 mg/dL. Shumë i lartë do të thotë diabet. Shumë i ulët të bën të trullosur dhe të dridhesh."
+      },
+      "bmi": {
+        "term": "BMI",
+        "simple": "Indeksi i masës trupore tregon nëse pesha jote është e shëndetshme për gjatësinë tënde. Nën 18.5 është nënpeshë. 18.5-25 është normale. Mbi 25 është mbipeshë. Mbi 30 është obezitet."
+      },
+      "immune-system": {
+        "term": "Sistemi imunitar",
+        "simple": "Është ushtria e trupit kundër mikrobeve. Qelizat e bardha luftojnë infeksionet. Vaksinat e stërvitin sistemin imunitar. Ushqimi i mirë, gjumi dhe lëvizja e forcojnë."
+      }
+    }
   }
 }

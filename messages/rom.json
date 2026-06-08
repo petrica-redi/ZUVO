@@ -1298,5 +1298,122 @@
       "parent": "Dad / Dej",
       "other": "Aver"
     }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Glosaro vaš sastipen — Redi Health",
+      "description": "Doktorke alava vakerde ko simple vorbi"
+    },
+    "title": "Glosaro vaš sastipen",
+    "subtitle": "Doktorke alava vakerde ko simple vorbi.",
+    "searchPlaceholder": "Rod termura...",
+    "searchAria": "Rod doktorke alava",
+    "noResults": "Na arakhlepes ni jekh termino. Proba aver rodipen.",
+    "allCount": "Sa ({count})",
+    "categories": {
+      "condition": "Nasvalimata",
+      "medication": "Lekura",
+      "procedure": "Proceduri",
+      "body": "Trupo thaj sastipen",
+      "test": "Analize"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Bari tensija",
+        "simple": "Baro presija ande rat. Rat phendel but zorales pe vazura. Te na lečol, šaj te anel infarkto vaj udar ando šero. Pij lekuria sakko dives."
+      },
+      "diabetes-type-2": {
+        "term": "Diabeto (Tip 2)",
+        "simple": "Tiro trupo na istemal šukar o šećero. O šećero butarelpe ande rat thaj našavel organura. Trubul tuke lekura, lačho xaben thaj miškipen. Na avel numa andar but šećero."
+      },
+      "anemia": {
+        "term": "Anemija",
+        "simple": "Na si dosta lače lolo ratune ćelije. Šaj te aves zurales, slabo vaj vrtoglavo. Čači put si andar na dosta gvožđe ando xaben. But daždivutni džuvlja hin katar kada."
+      },
+      "asthma": {
+        "term": "Astma",
+        "simple": "O droma vaš o phuvipen thonpe anglo thaj šuvon, pa dur te phendes. Šaj te avel zviždipen vaj khosipen. Ister tiro inhalatori kana avel. Dural drom katar dimos thaj prašina."
+      },
+      "tuberculosis-tb": {
+        "term": "Tuberkuloza (TB)",
+        "simple": "Phari infekcija ande pulmona. Khoses but kurke, xas greutipe thaj sudores ratja. Džal pala vazduho. Šaj te lačol le 6 masekera lekurenca, ama trubul te phagres sa i tableti."
+      },
+      "depression": {
+        "term": "Depresija",
+        "simple": "Doktorki nasvalipen kana sal tužno, bi nadoždo vaj prazno but kurke. Na si slabipen thaj na si tiro doš. Lekura thaj vakeren evarenca šaj te pomožin. Mang pomoć."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatitis B/C",
+        "simple": "Viruso so atakirinel e džigerica. Šaj te na aves nasvalo but bersa, ama polokes našavel e džigerica. Phirel pala rat thaj igle. Vaš Hepatitis B si vakcina."
+      },
+      "pneumonia": {
+        "term": "Pneumonija",
+        "simple": "Phari infekcija ande pulmona. Si tuke temperatura, khosipen le sluzosa thaj pharo phuvipen. Trubul antibiotiko katar doktoro. Šaj te avel opasno vaš čhavorre thaj phure manuša."
+      },
+      "gastritis": {
+        "term": "Gastritis",
+        "simple": "I koža ande per šuvli vaj iritirime. Aves te jakharel, te mučis vaj te bumbul. Dural katar lolo xaben, alkoholo thaj cigarete. Lekura šaj te pomožin."
+      },
+      "eczema": {
+        "term": "Ekcema",
+        "simple": "Suve, lale thaj khamne thana pe tiri koža. Na phirel katar jekh pe aver. Ister krema vaš koža but droma. Dural katar zorale sapuni. Doktoro šaj te del krema."
+      },
+      "antibiotic": {
+        "term": "Antibiotiko",
+        "simple": "Lek so murdarel bakterije. Na pomožinel kontra virusura sar gripa vaj prehlada. Trubul te phagres sa o tretmano, makar sal feder, kaj e mikrobi te na aven pale."
+      },
+      "ibuprofen": {
+        "term": "Ibuprofen",
+        "simple": "Lek vaš duk thaj vaš upalipen thaj temperatura. Leha lesa xabenesa te arakhes o per. Na le buteder sar si ramome pe kutija. Na si sigurno ande pušnipen."
+      },
+      "paracetamol": {
+        "term": "Paracetamol",
+        "simple": "Sikavno lek vaš šerutni duk thaj temperatura. Sigurno vaš but manuša, vi vaš pušne džuvlja. Na le buteder andar 4 grama ando dives, kaj našavel e džigerica."
+      },
+      "insulin": {
+        "term": "Insulin",
+        "simple": "Hormono so tiro trupo trubul te istemal o šećero. Le manusha le diabetosa šaj te trubun injekcije. Kada na phenel kaj tiro diabeto si pharedo, numa aver tretmano si."
+      },
+      "metformin": {
+        "term": "Metformin",
+        "simple": "Najbut istemaldo lek vaš diabeto. Pomožinel e truposke te istemal maj lačhes o šećero. Leha lesa xabenesa. Ando početko šaj te iritirinel o per, ama angle džal."
+      },
+      "blood-test": {
+        "term": "Analiza rat",
+        "simple": "Cikni igla lel cikna rat andar o vast. Pomožinel e doktoroske te dikhel infekcije, anemija, diabeto thaj but aver. Dukhal numa jekh sekunda."
+      },
+      "x-ray": {
+        "term": "Rentgen",
+        "simple": "Slika andar kosti thaj pulmona le specialne zrakosa. Ačhos mirno cikne sekundura. Na dukhal. Sigurno vaš but manuša, ama phen e doktoroske te sal pušni."
+      },
+      "ultrasound": {
+        "term": "Ultrazvuko",
+        "simple": "Slika andar tiro trupo le zvukoske talasenca. Doktoro del gel pe koža thaj phirel aparato. Na dukhal. But puti istemalpe te dikhen o čhavo ande pušnipen."
+      },
+      "ecg-ekg": {
+        "term": "EKG",
+        "simple": "Analiza so dikhel sar khelel tiro jilo. Cikne lepilura thovelpe pe čhati. Na dukhal. Trajel pač minuta. Sikavel te o jilo čal normalno."
+      },
+      "vaccination": {
+        "term": "Vakcinacija",
+        "simple": "Cikni injekcija so sikhavel tiro trupo te marolpes kontra nasvalipen angleder te aves nasvalo. Cikne efekti sar duk pe vast vaj cikni temperatura si normalno thaj sikaven kaj kerel."
+      },
+      "blood-pressure": {
+        "term": "Tensija e rat",
+        "simple": "Zor so la rat phendel pe zidura le vazoske. Normalno si paše 120/80. Bori tensija upral 140/90 si opasno kaj na šaj te lačhes, ama našavel jilo thaj šero."
+      },
+      "blood-sugar": {
+        "term": "Šećero ande rat",
+        "simple": "Kobor glukoza si ande rat. Normalno na xale si 70-100 mg/dL. Te si but, si diabeto. Te si tele, avel tuke vrtoglavo thaj treses. Mero les but puti te si tuke diabeto."
+      },
+      "bmi": {
+        "term": "BMI",
+        "simple": "Indekso le truposke mase sikavel te si tiro greutipe lačho vaš tiro učiaripe. Telal 18.5 si cikno greutipe. 18.5-25 si normalno. Upral 25 si but greutipe. Upral 30 si obeziteta."
+      },
+      "immune-system": {
+        "term": "Imuniteto",
+        "simple": "Kada si e vojska le truposki kontra mikrobi. Parne ratune ćelije maren infekcije. Vakcine trenirinen o imuniteto. Lačho xaben, sovipen thaj miškipen kerel les maj zoralo."
+      }
+    }
   }
 }

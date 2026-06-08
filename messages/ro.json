@@ -1338,100 +1338,100 @@
     },
     "entries": {
       "hypertension": {
-        "term": "Hypertension",
-        "simple": "High blood pressure. Your blood pushes too hard against your blood vessels. Can cause heart attack or stroke if not treated. Take your medicine every day."
+        "term": "Hipertensiune",
+        "simple": "Tensiune arterială mare. Sângele apasă prea tare pe vasele de sânge. Poate provoca infarct sau accident vascular cerebral dacă nu este tratată. Ia medicamentele în fiecare zi."
       },
       "diabetes-type-2": {
-        "term": "Diabetes (Type 2)",
-        "simple": "Your body can't use sugar properly. Sugar builds up in your blood and damages your organs. You need medicine, healthy food, and exercise. It is NOT caused by eating too much sugar."
+        "term": "Diabet (Tip 2)",
+        "simple": "Corpul tău nu folosește zahărul corect. Zahărul se acumulează în sânge și îți afectează organele. Ai nevoie de medicamente, mâncare sănătoasă și mișcare. NU este cauzat de prea mult zahăr."
       },
       "anemia": {
-        "term": "Anemia",
-        "simple": "Not enough healthy red blood cells. You feel tired, weak, dizzy. Often caused by not eating enough iron (meat, beans, spinach). Very common in pregnant women."
+        "term": "Anemie",
+        "simple": "Prea puține globule roșii sănătoase. Te simți obosit, slăbit, amețit. Adesea cauzată de lipsa fierului (carne, fasole, spanac). Foarte frecventă la femei însărcinate."
       },
       "asthma": {
-        "term": "Asthma",
-        "simple": "Your airways get narrow and swollen, making it hard to breathe. You may wheeze or cough. Use your inhaler when it happens. Avoid smoke and dust."
+        "term": "Astm",
+        "simple": "Căile respiratorii se îngustează și se umflă, făcând respirația dificilă. Poți șuiera sau tuși. Folosește inhalatorul când se întâmplă. Evită fumul și praful."
       },
       "tuberculosis-tb": {
-        "term": "Tuberculosis (TB)",
-        "simple": "A serious infection in your lungs. You cough for weeks, lose weight, sweat at night. It spreads through the air. It CAN be cured with 6 months of medicine — but you must finish ALL the pills."
+        "term": "Tuberculoză (TB)",
+        "simple": "O infecție gravă la plămâni. Tuși săptămâni întregi, slăbești, transpiri noaptea. Se transmite prin aer. POATE fi vindecată cu 6 luni de medicamente — dar trebuie să termini TOATE pastilele."
       },
       "depression": {
-        "term": "Depression",
-        "simple": "A medical condition where you feel sad, hopeless, or empty for weeks. It is NOT weakness. It is NOT your fault. Medicine and talking to someone can help. Please ask for help."
+        "term": "Depresie",
+        "simple": "O afecțiune medicală în care te simți trist, fără speranță sau gol interior săptămâni întregi. NU este slăbiciune. NU este vina ta. Medicamentele și vorbitul cu cineva pot ajuta. Te rugăm să ceri ajutor."
       },
       "hepatitis-b-c": {
-        "term": "Hepatitis B/C",
-        "simple": "A virus that attacks your liver. You may not feel sick for years, but it damages your liver slowly. It spreads through blood and needles. There is a vaccine for Hepatitis B."
+        "term": "Hepatită B/C",
+        "simple": "Un virus care atacă ficatul. Poate nu te simți bolnav ani de zile, dar îți afectează ficatul încet. Se transmite prin sânge și ace. Există vaccin pentru Hepatita B."
       },
       "pneumonia": {
-        "term": "Pneumonia",
-        "simple": "A serious infection in your lungs. You have fever, cough with mucus, and trouble breathing. You need antibiotics from a doctor. Can be dangerous for babies and old people."
+        "term": "Pneumonie",
+        "simple": "O infecție gravă la plămâni. Ai febră, tuse cu mucus și dificultăți la respirație. Ai nevoie de antibiotice de la medic. Poate fi periculoasă pentru bebeluși și persoanele în vârstă."
       },
       "gastritis": {
-        "term": "Gastritis",
-        "simple": "Your stomach lining is irritated or inflamed. You feel burning pain, nausea, or bloating. Avoid spicy food, alcohol, and smoking. Medicine can help."
+        "term": "Gastrită",
+        "simple": "Mucoasa stomacului este iritată sau inflamată. Simți durere înțepătoare, greață sau balonare. Evită mâncarea picantă, alcoolul și fumatul. Medicamentele pot ajuta."
       },
       "eczema": {
-        "term": "Eczema",
-        "simple": "Itchy, red, dry patches on your skin. It is NOT contagious. Use moisturizer often. Avoid harsh soaps. A doctor can give you cream to help."
+        "term": "Eczemă",
+        "simple": "Zone mâncărime, roșii și uscate pe piele. NU este contagioasă. Folosește cremă hidratantă des. Evită săpunurile agresive. Medicul poate da o cremă care ajută."
       },
       "antibiotic": {
         "term": "Antibiotic",
-        "simple": "Medicine that kills bacteria (germs). It does NOT work against viruses like the flu or cold. You MUST finish the full course even if you feel better, or the germs come back stronger."
+        "simple": "Medicament care ucide bacteriile (microbi). NU funcționează împotriva virusurilor precum gripa sau răceala. TREBUIE să termini tot tratamentul chiar dacă te simți mai bine, altfel microbii revin mai puternici."
       },
       "ibuprofen": {
         "term": "Ibuprofen",
-        "simple": "A painkiller that also reduces swelling and fever. Take with food to protect your stomach. Do not take more than the box says. Not safe during pregnancy."
+        "simple": "Un analgezic care reduce și inflamația și febra. Ia-l cu mâncare pentru a proteja stomacul. Nu lua mai mult decât scrie pe cutie. Nesigur în timpul sarcinii."
       },
       "paracetamol": {
         "term": "Paracetamol",
-        "simple": "A common painkiller for headaches and fever. Safe for most people, including pregnant women. Do NOT take more than 4 grams (8 tablets) per day — too much damages your liver."
+        "simple": "Un analgezic obișnuit pentru dureri de cap și febră. Sigur pentru majoritatea oamenilor, inclusiv femei însărcinate. NU lua mai mult de 4 grame (8 comprimate) pe zi — prea mult îți afectează ficatul."
       },
       "insulin": {
-        "term": "Insulin",
-        "simple": "A hormone your body needs to use sugar. People with diabetes may need insulin injections. It is NOT a sign that your diabetes is worse — it's just a different treatment."
+        "term": "Insulină",
+        "simple": "Un hormon de care corpul tău are nevoie pentru a folosi zahărul. Persoanele cu diabet pot avea nevoie de injecții cu insulină. NU înseamnă că diabetul tău e mai grav — e doar un alt tratament."
       },
       "metformin": {
         "term": "Metformin",
-        "simple": "The most common diabetes medicine. Helps your body use sugar better. Take with food. May cause stomach upset at first — this usually goes away."
+        "simple": "Cel mai frecvent medicament pentru diabet. Ajută corpul să folosească zahărul mai bine. Ia-l cu mâncare. Poate provoca disconfort stomacal la început — de obicei trece."
       },
       "blood-test": {
-        "term": "Blood test",
-        "simple": "A small needle takes a little blood from your arm. It helps the doctor check for infections, anemia, diabetes, and many other things. It hurts for just a second."
+        "term": "Analiză de sânge",
+        "simple": "Un ac mic ia puțin sânge din braț. Ajută medicul să verifice infecții, anemie, diabet și multe altele. Doare doar o secundă."
       },
       "x-ray": {
-        "term": "X-ray",
-        "simple": "A picture of your bones and lungs using special light. You stand still for a few seconds. It does NOT hurt. Safe for most people, but tell the doctor if you are pregnant."
+        "term": "Radiografie",
+        "simple": "O imagine a oaselor și plămânilor folosind lumină specială. Stai nemișcat câteva secunde. NU doare. Sigură pentru majoritatea oamenilor, dar spune medicului dacă ești însărcinată."
       },
       "ultrasound": {
-        "term": "Ultrasound",
-        "simple": "A picture of inside your body using sound waves. The doctor puts gel on your skin and moves a device over it. It does NOT hurt. Used to check babies during pregnancy."
+        "term": "Ecografie",
+        "simple": "O imagine din interiorul corpului folosind unde sonore. Medicul pune gel pe piele și mișcă un aparat. NU doare. Folosită pentru a verifica bebelușii în sarcină."
       },
       "ecg-ekg": {
         "term": "ECG / EKG",
-        "simple": "A test that checks your heart rhythm. Small stickers are placed on your chest. It does NOT hurt. Takes about 5 minutes. Shows if your heart is beating normally."
+        "simple": "Un test care verifică ritmul inimii. Se pun mici plăcuțe pe piept. NU doare. Durează circa 5 minute. Arată dacă inima bate normal."
       },
       "vaccination": {
-        "term": "Vaccination",
-        "simple": "A small injection that teaches your body to fight a disease BEFORE you get sick. Like training for your immune system. Side effects (sore arm, mild fever) are NORMAL and mean it's working."
+        "term": "Vaccinare",
+        "simple": "O injecție mică care învață corpul să lupte împotriva unei boli ÎNAINTE să te îmbolnăvești. Efectele secundare (durere la braț, febră ușoară) sunt NORMALE și înseamnă că funcționează."
       },
       "blood-pressure": {
-        "term": "Blood pressure",
-        "simple": "The force of blood pushing against your blood vessel walls. Normal is around 120/80. High blood pressure (over 140/90) is dangerous because you can't feel it, but it damages your heart and brain."
+        "term": "Tensiune arterială",
+        "simple": "Forța cu care sângele apasă pe pereții vaselor. Normal este în jur de 120/80. Tensiunea mare (peste 140/90) e periculoasă pentru că nu o simți, dar îți afectează inima și creierul."
       },
       "blood-sugar": {
-        "term": "Blood sugar",
-        "simple": "The amount of sugar (glucose) in your blood. Normal fasting level is 70-100 mg/dL. Too high means diabetes. Too low makes you dizzy and shaky. Test it regularly if you have diabetes."
+        "term": "Glicemie",
+        "simple": "Cantitatea de zahăr (glucoză) din sânge. Nivelul normal la nemâncat este 70-100 mg/dL. Prea mare înseamnă diabet. Prea mică te face amețit și tremurător."
       },
       "bmi": {
-        "term": "BMI",
-        "simple": "Body Mass Index — a number that shows if your weight is healthy for your height. Under 18.5 is underweight. 18.5-25 is normal. Over 25 is overweight. Over 30 is obese."
+        "term": "IMC",
+        "simple": "Indicele de masă corporală — arată dacă greutatea ta e sănătoasă pentru înălțimea ta. Sub 18,5 e subponderal. 18,5-25 e normal. Peste 25 e supraponderal. Peste 30 e obezitate."
       },
       "immune-system": {
-        "term": "Immune system",
-        "simple": "Your body's army against germs. White blood cells fight infections. Vaccines train your immune system. Good food, sleep, and exercise make it stronger."
+        "term": "Sistem imunitar",
+        "simple": "Armata corpului tău împotriva microbilor. Globulele albe luptă împotriva infecțiilor. Vaccinurile antrenează sistemul imunitar. Mâncare bună, somn și mișcare îl întăresc."
       }
     }
   },

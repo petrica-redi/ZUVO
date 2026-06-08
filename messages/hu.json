@@ -817,5 +817,122 @@
       "parent": "Szülő",
       "other": "Egyéb"
     }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Egészségügyi szótár — Redi Health",
+      "description": "Orvosi kifejezések egyszerűen elmagyarázva"
+    },
+    "title": "Egészségügyi szótár",
+    "subtitle": "Orvosi kifejezések egyszerűen elmagyarázva.",
+    "searchPlaceholder": "Keresés a fogalmak között...",
+    "searchAria": "Orvosi kifejezések keresése",
+    "noResults": "Nincs találat. Próbáljon másik keresést.",
+    "allCount": "Összes ({count})",
+    "categories": {
+      "condition": "Betegségek",
+      "medication": "Gyógyszerek",
+      "procedure": "Beavatkozások",
+      "body": "Test és egészség",
+      "test": "Vizsgálatok"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Magas vérnyomás",
+        "simple": "A vér túl erősen nyomja az erek falát. Kezelés nélkül szívrohamot vagy stroke-ot okozhat. A gyógyszert minden nap be kell venni."
+      },
+      "diabetes-type-2": {
+        "term": "Cukorbetegség (2-es típus)",
+        "simple": "A tested nem tudja jól használni a cukrot. A cukor felgyűlik a vérben és károsítja a szerveket. Gyógyszer, egészséges étel és mozgás kell. Nem csak a sok cukorevéstől alakul ki."
+      },
+      "anemia": {
+        "term": "Vérszegénység",
+        "simple": "Nincs elég egészséges vörösvértest a szervezetben. Fáradtnak, gyengének vagy szédülősnek érezheted magad. Gyakran vashiány okozza. Terhes nőknél nagyon gyakori."
+      },
+      "asthma": {
+        "term": "Asztma",
+        "simple": "A légutak beszűkülnek és megduzzadnak, ezért nehéz levegőt venni. Sípoló légzés vagy köhögés jelentkezhet. Ilyenkor használd az inhalátort. Kerüld a füstöt és a port."
+      },
+      "tuberculosis-tb": {
+        "term": "Tuberkulózis (TBC)",
+        "simple": "Súlyos tüdőfertőzés. Hetekig köhögsz, fogysz és éjszaka izzadsz. Levegővel terjed. Hat hónap gyógyszerrel gyógyítható, de az összes tablettát végig kell szedni."
+      },
+      "depression": {
+        "term": "Depresszió",
+        "simple": "Olyan betegség, amikor hetekig szomorúnak, reménytelennek vagy üresnek érzed magad. Nem gyengeség, és nem a te hibád. Gyógyszer és beszélgetés is segíthet. Kérj segítséget."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatitis B/C",
+        "simple": "A májat támadó vírus. Évekig lehet tünet nélkül, mégis lassan károsítja a májat. Vérrel és tűvel terjed. Hepatitis B ellen van oltás."
+      },
+      "pneumonia": {
+        "term": "Tüdőgyulladás",
+        "simple": "Súlyos fertőzés a tüdőben. Láz, váladékos köhögés és nehézlégzés jelentkezik. Orvostól kapott antibiotikum kell. Csecsemőknél és időseknél veszélyes lehet."
+      },
+      "gastritis": {
+        "term": "Gyomorhurut",
+        "simple": "A gyomor nyálkahártyája irritált vagy gyulladt. Égő fájdalmat, hányingert vagy puffadást okozhat. Kerüld a csípős ételt, az alkoholt és a dohányzást. A gyógyszer segíthet."
+      },
+      "eczema": {
+        "term": "Ekcéma",
+        "simple": "Viszkető, piros, száraz foltok a bőrön. Nem fertőző. Gyakran használj hidratáló krémet. Kerüld az erős szappanokat. Az orvos segítő krémet írhat fel."
+      },
+      "antibiotic": {
+        "term": "Antibiotikum",
+        "simple": "A baktériumokat pusztító gyógyszer. Vírusok, például influenza vagy nátha ellen nem hat. A teljes kúrát végig kell szedni akkor is, ha jobban vagy, különben a baktériumok visszatérnek."
+      },
+      "ibuprofen": {
+        "term": "Ibuprofen",
+        "simple": "Fájdalomcsillapító, ami a gyulladást és a lázat is csökkenti. Étellel vedd be, hogy kíméld a gyomrot. Ne vegyél be többet a dobozon jelzettnél. Terhesség alatt nem biztonságos."
+      },
+      "paracetamol": {
+        "term": "Paracetamol",
+        "simple": "Gyakori fájdalom- és lázcsillapító. A legtöbb embernek biztonságos, terhes nőknek is. Napi 4 grammnál többet ne szedj, mert károsítja a májat."
+      },
+      "insulin": {
+        "term": "Inzulin",
+        "simple": "Hormon, amely segíti a szervezetet a cukor használatában. A cukorbetegeknek néha inzulininjekció kell. Ez nem azt jelenti, hogy rosszabb lett a betegség, csak más kezelés szükséges."
+      },
+      "metformin": {
+        "term": "Metformin",
+        "simple": "A leggyakoribb cukorbetegség elleni gyógyszer. Segít, hogy a tested jobban használja a cukrot. Étellel kell bevenni. Kezdetben gyomorpanaszt okozhat, de ez többnyire elmúlik."
+      },
+      "blood-test": {
+        "term": "Vérvizsgálat",
+        "simple": "Egy kis tű kevés vért vesz a karodból. Az orvos így ellenőriz fertőzést, vérszegénységet, cukorbetegséget és sok más dolgot. Csak egy pillanatig fáj."
+      },
+      "x-ray": {
+        "term": "Röntgen",
+        "simple": "Kép a csontokról és a tüdőről speciális sugárral. Néhány másodpercig mozdulatlanul kell állni. Nem fáj. A legtöbb embernek biztonságos, de terhességet jelezni kell az orvosnak."
+      },
+      "ultrasound": {
+        "term": "Ultrahang",
+        "simple": "Kép a test belsejéről hanghullámokkal. Az orvos gélt tesz a bőrre, majd egy eszközt mozgat rajta. Nem fáj. Terhességben gyakran a baba ellenőrzésére használják."
+      },
+      "ecg-ekg": {
+        "term": "EKG",
+        "simple": "A szív ritmusát vizsgáló teszt. Kis tappancsokat tesznek a mellkasra. Nem fáj. Körülbelül 5 percig tart. Megmutatja, hogy rendesen ver-e a szív."
+      },
+      "vaccination": {
+        "term": "Védőoltás",
+        "simple": "Kis injekció, amely megtanítja a szervezetet harcolni egy betegség ellen még azelőtt, hogy megbetegednél. Az enyhe mellékhatások, például a fájó kar vagy kis láz normálisak."
+      },
+      "blood-pressure": {
+        "term": "Vérnyomás",
+        "simple": "Az a nyomás, amellyel a vér az erek falát nyomja. A normális érték körülbelül 120/80. A 140/90 feletti magas vérnyomás veszélyes, mert nem mindig érezhető, mégis károsítja a szívet és az agyat."
+      },
+      "blood-sugar": {
+        "term": "Vércukor",
+        "simple": "A vérben lévő cukor mennyisége. Éhgyomorra a normál érték 70-100 mg/dL. A túl magas érték cukorbetegségre utal. A túl alacsony szédülést és remegést okoz."
+      },
+      "bmi": {
+        "term": "BMI",
+        "simple": "A testtömegindex megmutatja, hogy a súlyod megfelelő-e a magasságodhoz. 18,5 alatt soványság, 18,5-25 között normál, 25 fölött túlsúly, 30 fölött elhízás."
+      },
+      "immune-system": {
+        "term": "Immunrendszer",
+        "simple": "Ez a tested védelme a kórokozók ellen. A fehérvérsejtek a fertőzésekkel harcolnak. Az oltások edzik az immunrendszert. A jó étel, az alvás és a mozgás erősíti."
+      }
+    }
   }
 }

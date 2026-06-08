@@ -817,5 +817,122 @@
       "parent": "Roditelj",
       "other": "Ostalo"
     }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Zdravstveni rječnik — Redi Health",
+      "description": "Medicinski pojmovi objašnjeni jednostavnim riječima"
+    },
+    "title": "Zdravstveni rječnik",
+    "subtitle": "Medicinski pojmovi objašnjeni jednostavnim riječima.",
+    "searchPlaceholder": "Pretraži pojmove...",
+    "searchAria": "Pretraži medicinske pojmove",
+    "noResults": "Nijedan pojam nije pronađen. Pokušajte s drugom pretragom.",
+    "allCount": "Sve ({count})",
+    "categories": {
+      "condition": "Stanja",
+      "medication": "Lijekovi",
+      "procedure": "Postupci",
+      "body": "Tijelo i zdravlje",
+      "test": "Pretrage"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Visoki krvni tlak",
+        "simple": "Krv prejako pritišće stijenke krvnih žila. Ako se ne liječi, može uzrokovati infarkt ili moždani udar. Lijekove treba uzimati svaki dan."
+      },
+      "diabetes-type-2": {
+        "term": "Dijabetes (tip 2)",
+        "simple": "Tijelo ne koristi šećer kako treba. Šećer se nakuplja u krvi i oštećuje organe. Potrebni su lijekovi, zdrava hrana i kretanje. Ne nastaje samo od jedenja puno šećera."
+      },
+      "anemia": {
+        "term": "Anemija",
+        "simple": "Nema dovoljno zdravih crvenih krvnih stanica. Osjećate umor, slabost ili vrtoglavicu. Često je uzrok manjak željeza. Vrlo je česta kod trudnica."
+      },
+      "asthma": {
+        "term": "Astma",
+        "simple": "Dišni putovi se suze i oteknu pa je teško disati. Možete piskati ili kašljati. Kad se to dogodi, koristite inhalator. Izbjegavajte dim i prašinu."
+      },
+      "tuberculosis-tb": {
+        "term": "Tuberkuloza (TB)",
+        "simple": "Ozbiljna infekcija pluća. Kašljete tjednima, mršavite i znojite se noću. Širi se zrakom. Može se izliječiti sa 6 mjeseci lijekova, ali sve tablete treba popiti do kraja."
+      },
+      "depression": {
+        "term": "Depresija",
+        "simple": "Medicinsko stanje kada se tjednima osjećate tužno, bez nade ili prazno. To nije slabost i nije vaša krivnja. Lijekovi i razgovor mogu pomoći. Zatražite pomoć."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatitis B/C",
+        "simple": "Virus koji napada jetru. Godinama možda nećete osjećati simptome, ali polako oštećuje jetru. Prenosi se krvlju i iglama. Za hepatitis B postoji cjepivo."
+      },
+      "pneumonia": {
+        "term": "Upala pluća",
+        "simple": "Ozbiljna infekcija pluća. Imate temperaturu, kašalj sa sluzi i teško dišete. Potrebni su antibiotici od liječnika. Može biti opasna za bebe i starije osobe."
+      },
+      "gastritis": {
+        "term": "Gastritis",
+        "simple": "Sluznica želuca je nadražena ili upaljena. Osjećate pečenje, mučninu ili nadutost. Izbjegavajte ljutu hranu, alkohol i pušenje. Lijekovi mogu pomoći."
+      },
+      "eczema": {
+        "term": "Ekcem",
+        "simple": "Svrbljive, crvene i suhe promjene na koži. Nije zarazan. Često koristite hidratantnu kremu. Izbjegavajte jake sapune. Liječnik može dati kremu koja pomaže."
+      },
+      "antibiotic": {
+        "term": "Antibiotik",
+        "simple": "Lijek koji ubija bakterije. Ne djeluje protiv virusa kao što su gripa ili prehlada. Morate popiti cijelu terapiju čak i kada vam bude bolje, inače se bakterije vraćaju jače."
+      },
+      "ibuprofen": {
+        "term": "Ibuprofen",
+        "simple": "Lijek protiv bolova koji smanjuje i upalu i temperaturu. Uzimajte ga uz hranu kako biste zaštitili želudac. Nemojte uzimati više nego što piše na kutiji. Nije siguran u trudnoći."
+      },
+      "paracetamol": {
+        "term": "Paracetamol",
+        "simple": "Čest lijek za glavobolju i temperaturu. Siguran je za većinu ljudi, uključujući trudnice. Nemojte uzimati više od 4 grama dnevno jer oštećuje jetru."
+      },
+      "insulin": {
+        "term": "Inzulin",
+        "simple": "Hormon koji tijelu treba da koristi šećer. Osobama s dijabetesom ponekad trebaju inzulinske injekcije. To ne znači da je bolest gora, nego da je liječenje drukčije."
+      },
+      "metformin": {
+        "term": "Metformin",
+        "simple": "Najčešći lijek za dijabetes. Pomaže tijelu da bolje koristi šećer. Uzima se uz hranu. Na početku može uzrokovati smetnje u želucu, ali to obično prođe."
+      },
+      "blood-test": {
+        "term": "Krvna pretraga",
+        "simple": "Mala igla uzima malo krvi iz ruke. Liječnik tako provjerava infekcije, anemiju, dijabetes i mnogo drugih stvari. Boli samo kratko."
+      },
+      "x-ray": {
+        "term": "Rendgen",
+        "simple": "Snimka kostiju i pluća pomoću posebnih zraka. Mirno stojite nekoliko sekundi. Ne boli. Siguran je za većinu ljudi, ali recite liječniku ako ste trudni."
+      },
+      "ultrasound": {
+        "term": "Ultrazvuk",
+        "simple": "Slika unutrašnjosti tijela pomoću zvučnih valova. Liječnik stavi gel na kožu i pomiče uređaj. Ne boli. Često se koristi za pregled bebe u trudnoći."
+      },
+      "ecg-ekg": {
+        "term": "EKG",
+        "simple": "Pretraga koja provjerava ritam srca. Na prsa se stave male naljepnice. Ne boli. Traje oko 5 minuta. Pokazuje kuca li srce normalno."
+      },
+      "vaccination": {
+        "term": "Cijepljenje",
+        "simple": "Mala injekcija koja uči tijelo da se bori protiv bolesti prije nego što se razbolite. Blage nuspojave, kao što su bol u ruci ili blaga temperatura, normalne su."
+      },
+      "blood-pressure": {
+        "term": "Krvni tlak",
+        "simple": "Sila kojom krv pritišće stijenke krvnih žila. Normalno je oko 120/80. Visok tlak iznad 140/90 je opasan jer ga često ne osjećate, a oštećuje srce i mozak."
+      },
+      "blood-sugar": {
+        "term": "Šećer u krvi",
+        "simple": "Količina glukoze u krvi. Normalna vrijednost natašte je 70-100 mg/dL. Previsoka vrijednost znači dijabetes. Preniska uzrokuje vrtoglavicu i drhtanje."
+      },
+      "bmi": {
+        "term": "BMI",
+        "simple": "Indeks tjelesne mase pokazuje je li težina zdrava za vašu visinu. Ispod 18,5 je pothranjenost. 18,5-25 je normalno. Iznad 25 je prekomjerna težina. Iznad 30 je debljina."
+      },
+      "immune-system": {
+        "term": "Imunološki sustav",
+        "simple": "To je vojska tijela protiv mikroba. Bijele krvne stanice bore se protiv infekcija. Cjepiva treniraju imunološki sustav. Dobra hrana, san i kretanje ga jačaju."
+      }
+    }
   }
 }

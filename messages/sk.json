@@ -817,5 +817,122 @@
       "parent": "Rodič",
       "other": "Iné"
     }
+  },
+  "glossary": {
+    "meta": {
+      "title": "Zdravotný slovník — Redi Health",
+      "description": "Zdravotné pojmy vysvetlené jednoduchými slovami"
+    },
+    "title": "Zdravotný slovník",
+    "subtitle": "Zdravotné pojmy vysvetlené jednoduchými slovami.",
+    "searchPlaceholder": "Hľadať pojmy...",
+    "searchAria": "Hľadať zdravotné pojmy",
+    "noResults": "Nenašli sa žiadne pojmy. Skúste iné hľadanie.",
+    "allCount": "Všetko ({count})",
+    "categories": {
+      "condition": "Ochorenia",
+      "medication": "Lieky",
+      "procedure": "Postupy",
+      "body": "Telo a zdravie",
+      "test": "Vyšetrenia"
+    },
+    "entries": {
+      "hypertension": {
+        "term": "Vysoký krvný tlak",
+        "simple": "Krv tlačí príliš silno na steny ciev. Ak sa nelieči, môže spôsobiť infarkt alebo mozgovú príhodu. Lieky treba užívať každý deň."
+      },
+      "diabetes-type-2": {
+        "term": "Cukrovka (2. typ)",
+        "simple": "Telo nevie správne používať cukor. Cukor sa hromadí v krvi a poškodzuje orgány. Potrebujete lieky, zdravé jedlo a pohyb. Nevzniká iba z toho, že jete veľa cukru."
+      },
+      "anemia": {
+        "term": "Anémia",
+        "simple": "V tele nie je dosť zdravých červených krviniek. Cítite únavu, slabosť alebo závrat. Často ju spôsobuje nedostatok železa. Je veľmi častá u tehotných žien."
+      },
+      "asthma": {
+        "term": "Astma",
+        "simple": "Dýchacie cesty sa zúžia a opuchnú, preto sa ťažko dýcha. Môžete sipieť alebo kašľať. Keď sa to stane, použite inhalátor. Vyhýbajte sa dymu a prachu."
+      },
+      "tuberculosis-tb": {
+        "term": "Tuberkulóza (TB)",
+        "simple": "Vážna infekcia pľúc. Kašlete celé týždne, chudnete a v noci sa potíte. Šíri sa vzduchom. Dá sa vyliečiť za 6 mesiacov liekov, ale musíte doužívať všetky tablety."
+      },
+      "depression": {
+        "term": "Depresia",
+        "simple": "Zdravotný stav, pri ktorom sa celé týždne cítite smutní, bez nádeje alebo prázdni. Nie je to slabosť ani vaša vina. Pomôcť môžu lieky a rozhovor s niekým. Požiadajte o pomoc."
+      },
+      "hepatitis-b-c": {
+        "term": "Hepatitída B/C",
+        "simple": "Vírus, ktorý napáda pečeň. Roky nemusíte nič cítiť, ale pečeň sa pomaly poškodzuje. Šíri sa krvou a ihlami. Proti hepatitíde B existuje očkovanie."
+      },
+      "pneumonia": {
+        "term": "Zápal pľúc",
+        "simple": "Vážna infekcia pľúc. Máte horúčku, kašeľ s hlienom a ťažko sa vám dýcha. Potrebujete antibiotiká od lekára. Pre bábätká a starších ľudí môže byť nebezpečný."
+      },
+      "gastritis": {
+        "term": "Gastritída",
+        "simple": "Sliznica žalúdka je podráždená alebo zapálená. Cítite pálenie, nevoľnosť alebo nafukovanie. Vyhýbajte sa pikantnému jedlu, alkoholu a fajčeniu. Lieky môžu pomôcť."
+      },
+      "eczema": {
+        "term": "Ekzém",
+        "simple": "Svrbiace, červené a suché miesta na koži. Nie je nákazlivý. Často používajte hydratačný krém. Vyhýbajte sa silným mydlám. Lekár môže dať liečivý krém."
+      },
+      "antibiotic": {
+        "term": "Antibiotikum",
+        "simple": "Liek, ktorý zabíja baktérie. Nepôsobí na vírusy, ako je chrípka alebo nádcha. Musíte dobrat celú kúru aj keď sa cítite lepšie, inak sa baktérie vrátia silnejšie."
+      },
+      "ibuprofen": {
+        "term": "Ibuprofen",
+        "simple": "Liek proti bolesti, ktorý znižuje aj zápal a horúčku. Užívajte ho s jedlom, aby chránil žalúdok. Neberte viac, než je uvedené na balení. V tehotenstve nie je bezpečný."
+      },
+      "paracetamol": {
+        "term": "Paracetamol",
+        "simple": "Bežný liek na bolesť hlavy a horúčku. Je bezpečný pre väčšinu ľudí, aj pre tehotné ženy. Neužívajte viac ako 4 gramy denne, lebo poškodzuje pečeň."
+      },
+      "insulin": {
+        "term": "Inzulín",
+        "simple": "Hormón, ktorý telo potrebuje na používanie cukru. Ľudia s cukrovkou môžu potrebovať inzulínové injekcie. Neznamená to, že je cukrovka horšia, iba že treba iný typ liečby."
+      },
+      "metformin": {
+        "term": "Metformín",
+        "simple": "Najčastejší liek na cukrovku. Pomáha telu lepšie používať cukor. Berie sa s jedlom. Na začiatku môže podráždiť žalúdok, ale zvyčajne to prejde."
+      },
+      "blood-test": {
+        "term": "Krvný test",
+        "simple": "Malá ihla odoberie trochu krvi z ruky. Lekár tak kontroluje infekcie, anémiu, cukrovku a veľa iných vecí. Bolí to iba chvíľu."
+      },
+      "x-ray": {
+        "term": "Röntgen",
+        "simple": "Obrázok kostí a pľúc pomocou špeciálneho žiarenia. Na pár sekúnd stojíte bez pohybu. Nebolí to. Je bezpečný pre väčšinu ľudí, ale tehotenstvo treba povedať lekárovi."
+      },
+      "ultrasound": {
+        "term": "Ultrazvuk",
+        "simple": "Obrázok z vnútra tela pomocou zvukových vĺn. Lekár dá na kožu gél a pohybuje prístrojom. Nebolí to. Často sa používa na kontrolu dieťaťa v tehotenstve."
+      },
+      "ecg-ekg": {
+        "term": "EKG",
+        "simple": "Vyšetrenie srdcového rytmu. Na hrudník sa nalepia malé elektródy. Nebolí to. Trvá asi 5 minút. Ukáže, či srdce bije normálne."
+      },
+      "vaccination": {
+        "term": "Očkovanie",
+        "simple": "Malá injekcia, ktorá naučí telo bojovať proti chorobe ešte skôr, ako ochoriete. Mierne vedľajšie účinky, napríklad boľavá ruka alebo slabá horúčka, sú normálne."
+      },
+      "blood-pressure": {
+        "term": "Krvný tlak",
+        "simple": "Sila, ktorou krv tlačí na steny ciev. Normálna hodnota je asi 120/80. Vysoký tlak nad 140/90 je nebezpečný, lebo ho necítite, ale poškodzuje srdce a mozog."
+      },
+      "blood-sugar": {
+        "term": "Cukor v krvi",
+        "simple": "Množstvo glukózy v krvi. Normálna hodnota nalačno je 70-100 mg/dL. Príliš vysoká znamená cukrovku. Príliš nízka spôsobí závrat a tras."
+      },
+      "bmi": {
+        "term": "BMI",
+        "simple": "Index telesnej hmotnosti ukazuje, či je vaša hmotnosť zdravá vzhľadom na výšku. Pod 18,5 je podváha, 18,5-25 je normálne, nad 25 nadváha a nad 30 obezita."
+      },
+      "immune-system": {
+        "term": "Imunitný systém",
+        "simple": "Je to obrana tela proti mikróbom. Biele krvinky bojujú s infekciami. Vakcíny imunitný systém trénujú. Dobré jedlo, spánok a pohyb ho posilňujú."
+      }
+    }
   }
 }
