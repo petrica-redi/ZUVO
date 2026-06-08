@@ -1913,7 +1913,10 @@
     "imageReadyBody": "We'll read the medication, dose, and instructions and explain everything in plain words.",
     "imageRemove": "Remove photo",
     "preparingImage": "Preparing photo…",
-    "imageFailed": "Could not read this photo. Try another one."
+    "imageFailed": "Could not read this photo. Try another one.",
+    "followUpChat": "Ask AI Advisor",
+    "followUpNavigate": "Find doctor",
+    "followUpGlossary": "Medical terms"
   },
   "navigate": {
     "heroTitle": "I need to see a doctor",

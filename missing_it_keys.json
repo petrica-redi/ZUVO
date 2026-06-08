@@ -1,0 +1,2301 @@
+[
+  {
+    "path": "regions.romaPop",
+    "enVal": "Roma pop. {population}"
+  },
+  {
+    "path": "regions.detail",
+    "enVal": {
+      "back": "Back",
+      "romaPopulation": "Roma population",
+      "ofTotal": "of {total} total ({percent})",
+      "healthAccess": "Health access",
+      "healthChallenges": "Health challenges",
+      "organizationsHelp": "Organizations that can help",
+      "emergency": "Emergency: {number}",
+      "ambulance": "Ambulance: {number}",
+      "askAboutHealth": "Ask about health in {region}"
+    }
+  },
+  {
+    "path": "regions.healthIndex",
+    "enVal": {
+      "veryPoor": "Very poor",
+      "poor": "Poor",
+      "fair": "Fair",
+      "good": "Good",
+      "excellent": "Excellent"
+    }
+  },
+  {
+    "path": "regions.countries",
+    "enVal": {
+      "romania": {
+        "healthChallenges": {
+          "0": "Limited access to health insurance",
+          "1": "High infant and maternal mortality in Roma communities",
+          "2": "Tuberculosis rates higher than national average",
+          "3": "Low vaccination coverage in rural settlements",
+          "4": "Barriers to registering with family doctors"
+        },
+        "keyFact": "Romania has the largest Roma population in Europe and a national health mediator program.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights, health mediation"
+          },
+          "1": {
+            "focus": "Roma inclusion policies"
+          },
+          "2": {
+            "focus": "Mobile health clinics in marginalized communities"
+          }
+        }
+      },
+      "bulgaria": {
+        "healthChallenges": {
+          "0": "Segregated neighborhoods limiting healthcare access",
+          "1": "High unemployment reducing health insurance coverage",
+          "2": "Cardiovascular disease as leading cause of death",
+          "3": "Low life expectancy compared to national average",
+          "4": "Limited access to specialist care"
+        },
+        "keyFact": "Bulgaria's Roma community health mediator program was one of the first in the Balkans.",
+        "organizations": {
+          "0": {
+            "focus": "Roma health promotion and mediation"
+          },
+          "1": {
+            "focus": "Access to healthcare for marginalized Roma"
+          }
+        }
+      },
+      "hungary": {
+        "healthChallenges": {
+          "0": "Life expectancy 10–15 years lower than national average",
+          "1": "High rates of cardiovascular and respiratory disease",
+          "2": "Poverty-related malnutrition",
+          "3": "Low mental health service uptake",
+          "4": "Geographic isolation in northeastern Hungary"
+        },
+        "keyFact": "Hungary has significant Roma populations concentrated in the Borsod, Szabolcs, and Baranya regions.",
+        "organizations": {
+          "0": {
+            "focus": "Roma education including health literacy"
+          },
+          "1": {
+            "focus": "Roma welfare and health advocacy"
+          }
+        }
+      },
+      "northMacedonia": {
+        "healthChallenges": {
+          "0": "The Šuto Orizari (Sutka) municipality has specific healthcare needs",
+          "1": "Hepatitis B prevalence",
+          "2": "Limited access to gynecological and maternal health services",
+          "3": "High rates of anemia especially in children and women",
+          "4": "COVID-19 vaccination hesitancy"
+        },
+        "keyFact": "Šuto Orizari near Skopje is the largest Roma municipality in the world.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and health access"
+          },
+          "1": {
+            "focus": "Public health and harm reduction"
+          }
+        }
+      },
+      "slovakia": {
+        "healthChallenges": {
+          "0": "Segregated settlements (osady) in eastern Slovakia lack infrastructure",
+          "1": "Tuberculosis rates among the highest in the EU",
+          "2": "Child malnutrition and stunting",
+          "3": "Limited access to clean water and sanitation in settlements",
+          "4": "Discrimination in healthcare settings reported"
+        },
+        "keyFact": "Slovakia has the highest proportion of Roma living in segregated settlements in the EU.",
+        "organizations": {
+          "0": {
+            "focus": "Anti-discrimination in healthcare"
+          },
+          "1": {
+            "focus": "Public health programs including Roma health"
+          }
+        }
+      },
+      "serbia": {
+        "healthChallenges": {
+          "0": "Informal settlements (mahale) lacking health infrastructure",
+          "1": "High rates of hepatitis and intestinal parasites",
+          "2": "Limited birth registration affecting healthcare access",
+          "3": "Substance use challenges in urban Roma youth",
+          "4": "Mental health stigma within communities"
+        },
+        "keyFact": "Serbia's health mediator program trains Roma women as community health liaisons.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and health policy"
+          },
+          "1": {
+            "focus": "Women and children's health"
+          }
+        }
+      },
+      "turkey": {
+        "healthChallenges": {
+          "0": "Roma (Dom and Lom) communities face economic marginalization",
+          "1": "Limited documentation affecting healthcare access",
+          "2": "Higher rates of occupational health risks (waste collection workers)",
+          "3": "Limited maternal healthcare in informal urban areas",
+          "4": "Social isolation and mental health challenges"
+        },
+        "keyFact": "Roma communities in Turkey are largely concentrated in Istanbul, Edirne, and Izmir.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and social inclusion in Turkey"
+          },
+          "1": {
+            "focus": "Roma education and health literacy"
+          }
+        }
+      },
+      "greece": {
+        "healthChallenges": {
+          "0": "Roma in rural camps lack access to municipal health services",
+          "1": "Economic crisis impact on healthcare access for vulnerable groups",
+          "2": "Hepatitis C in some communities",
+          "3": "Limited access to dental care",
+          "4": "Economic precarity worsened by COVID-19"
+        },
+        "keyFact": "Greece has Roma communities in both settled and nomadic camps across Central Macedonia and Thessaly.",
+        "organizations": {
+          "0": {
+            "focus": "Roma inclusion across health, education, housing"
+          },
+          "1": {
+            "focus": "Social and health support for marginalized groups"
+          }
+        }
+      },
+      "albania": {
+        "healthChallenges": {
+          "0": "High child poverty and malnutrition rates",
+          "1": "Limited health insurance coverage",
+          "2": "Maternal mortality higher in Roma communities",
+          "3": "Limited access to safe housing affecting health",
+          "4": "Seasonal work leading to health instability"
+        },
+        "keyFact": "Albania also has an Ashkali (Egyptian) minority historically grouped with Roma communities.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights and community development"
+          },
+          "1": {
+            "focus": "Education and health access for Roma"
+          }
+        }
+      },
+      "czech": {
+        "healthChallenges": {
+          "0": "Persistent segregation in housing with health impact",
+          "1": "High rates of preventable cardiovascular disease",
+          "2": "Lower vaccination rates in Roma communities",
+          "3": "Barriers in healthcare communication and literacy",
+          "4": "Challenges in accessing specialist care"
+        },
+        "keyFact": "The Czech Republic has a significant Roma population concentrated in Moravia and northern Bohemia.",
+        "organizations": {
+          "0": {
+            "focus": "Integrated approach to Roma inclusion"
+          },
+          "1": {
+            "focus": "European Roma Grassroots Organizations advocacy"
+          }
+        }
+      },
+      "croatia": {
+        "healthChallenges": {
+          "0": "Roma in Međimurje county face healthcare access barriers",
+          "1": "Language barriers limiting healthcare communication",
+          "2": "Higher rates of diabetes in older Roma adults",
+          "3": "Limited preschool vaccination uptake",
+          "4": "Poverty affecting nutrition and health"
+        },
+        "keyFact": "Croatia's largest Roma community is in Međimurje County near the Hungarian border.",
+        "organizations": {
+          "0": {
+            "focus": "Roma women's health and rights"
+          },
+          "1": {
+            "focus": "Roma policy and inclusion"
+          }
+        }
+      },
+      "bosnia": {
+        "healthChallenges": {
+          "0": "Post-war infrastructure affecting healthcare in some regions",
+          "1": "Lack of personal documents restricting healthcare access",
+          "2": "High unemployment leading to lack of health insurance",
+          "3": "Childhood malnutrition in poorer Roma families",
+          "4": "Limited mental health services for community trauma"
+        },
+        "keyFact": "Bosnia and Herzegovina has Roma communities in both the Federation and Republika Srpska entities.",
+        "organizations": {
+          "0": {
+            "focus": "Roma rights, health access, and documentation"
+          },
+          "1": {
+            "focus": "Minority rights including Roma health access"
+          }
+        }
+      },
+      "kosovo": {
+        "healthChallenges": {
+          "0": "Roma in Mitrovica were displaced to lead-contaminated camps",
+          "1": "Severe poverty limiting healthcare access",
+          "2": "Limited Roma health mediators",
+          "3": "Post-conflict trauma and mental health needs",
+          "4": "High child mortality compared to national average"
+        },
+        "keyFact": "Roma in North Mitrovica were exposed to severe lead poisoning in UN camps after the 1999 conflict.",
+        "organizations": {
+          "0": {
+            "focus": "Roma RAE community rights and health"
+          },
+          "1": {
+            "focus": "Health access for displaced Roma populations"
+          }
+        }
+      },
+      "slovenia": {
+        "healthChallenges": {
+          "0": "Roma in Dolenjska and Prekmurje regions face marginalization",
+          "1": "Lower educational attainment affecting health literacy",
+          "2": "Social exclusion impacting mental health",
+          "3": "Limited vaccination uptake in some settlements",
+          "4": "Poverty-related dietary deficiencies"
+        },
+        "keyFact": "Slovenia has two legally recognized Roma communities: the autochthonous (western) and non-autochthonous (eastern) Roma.",
+        "organizations": {
+          "0": {
+            "focus": "Roma social and cultural rights"
+          },
+          "1": {
+            "focus": "Roma welfare and health access"
+          }
+        }
+      }
+    }
+  },
+  {
+    "path": "learn",
+    "enVal": {
+      "progressLabel": "modules completed",
+      "startHere": "Start here",
+      "continueLabel": "Continue",
+      "allModules": "All modules",
+      "prevention": {
+        "description": "In 15 years working in Roma settlements, I have seen families devastated by illnesses that simple habits could have prevented. This knowledge is not luxury — it is survival.",
+        "handwashing": {
+          "title": "Handwashing",
+          "description": "I have seen entire families in settlements fall sick from the same stomach infection, passed hand to hand. Proper handwashing is the single cheapest, most powerful medicine you already have access to — it costs nothing and prevents the illnesses I see most often in our communities.",
+          "tip1": "Before you touch food, before you feed a child, and after every toilet visit — wash. I have seen one unwashed hand cause a week of diarrhea for a whole household",
+          "tip2": "Count to 20 slowly, or hum a verse of a song. Most people wash for 5 seconds — that removes almost nothing. The friction between your hands is what kills germs",
+          "tip3": "No soap? I have worked in settlements with no running water. Ash works. Sand works. Water alone with scrubbing works better than nothing. Do not let the perfect prevent the good",
+          "tip4": "Air-dry your hands or use a clean cloth you change daily. A dirty towel shared by everyone re-contaminates clean hands — something I explain in every home visit",
+          "fact": "In communities I have worked with, handwashing campaigns cut child diarrhea cases by nearly half within three months. The WHO confirms: handwashing reduces diarrhea by 40% and respiratory infections by up to 21%.",
+          "action": "Tonight, stand with your children at the water source and wash hands together. Make it a family habit before every meal. Children who learn by watching their parents will carry this for life."
+        },
+        "vaccination": {
+          "title": "Vaccination",
+          "description": "I have accompanied Roma mothers to health centers where they were turned away because they lacked documents, could not speak the language, or were simply told to come back later. Vaccines are your children's legal right — free, safe, and the most powerful protection a parent can give. No one can deny you this.",
+          "tip1": "Every country in Europe provides a free vaccination schedule from birth. This is not charity — it is your child's legal entitlement. If a health worker refuses, ask for their supervisor and state this clearly",
+          "tip2": "The vaccination card is the most important document your child has after their birth certificate. Keep it safe, carry it to every doctor visit. If lost, any health center must issue a replacement — do not accept refusal",
+          "tip3": "Mild fever, a sore spot on the arm, fussiness for a day — this is normal and means the vaccine is working. I have reassured hundreds of worried mothers about this. It passes in 24–48 hours",
+          "tip4": "You do not need an appointment at most public health centers for vaccinations. Walk in. If a Roma health mediator works in your area, ask them to accompany you — this is what we are trained for",
+          "fact": "In one settlement I worked in, measles hit because vaccination coverage had dropped to 60%. Three children were hospitalized. After a community vaccination campaign, we reached 94% — and the outbreaks stopped. Across Europe, vaccines prevent 2–3 million deaths every year.",
+          "action": "Take out your child's vaccination card right now. Check it against the schedule on the wall of your health center. If any vaccine is missing or you have no card, visit the health center this week. Bring this app to show the schedule if it helps."
+        },
+        "cleanWater": {
+          "title": "Clean Water",
+          "description": "I have worked in settlements where families share a single water point that runs for two hours a day, and in neighborhoods where the tap water looks clear but carries bacteria that cause chronic stomach problems in children. Water quality is not always visible — and in Roma communities, it is rarely monitored by authorities. You must be your family's water inspector.",
+          "tip1": "Cover every container where you store water. I have seen flies, dust, and even animal waste contaminate uncovered buckets within hours, especially in warm weather. A simple plate over the top prevents most contamination",
+          "tip2": "If you are unsure about your water, boil it at a rolling boil for one full minute. This kills 99.9% of bacteria, viruses, and parasites. It costs almost nothing and it works — I have taught this in dozens of settlements where the water source was questionable",
+          "tip3": "Wash your water containers with soap and clean water at least once a week. A dirty container makes clean water dirty. This is one of the most overlooked causes of recurring diarrhea that I have seen in children",
+          "tip4": "Streams, ponds, and standing puddles are never safe for drinking — even if the water looks clear. Parasites invisible to the eye cause chronic damage to children's guts and development",
+          "fact": "In many Roma settlements across Central and Eastern Europe, families lack access to safe piped water. The European Roma Rights Centre has documented that Roma neighborhoods are systematically underserved by water infrastructure. Boiling water is not ideal — it is a survival strategy until your right to clean water is fulfilled.",
+          "action": "Today, check every container where your family stores drinking water. Cover any that are open. If you cannot verify the water source is safe, begin boiling all drinking and cooking water starting tonight."
+        },
+        "firstAid": {
+          "title": "Basic First Aid",
+          "description": "In remote settlements and urban neighborhoods where ambulances take longer to arrive — or sometimes do not come at all — knowing what to do in the first minutes of an emergency is the difference between life and death. I have trained hundreds of Roma community members in basic first aid, and I have seen this knowledge save lives before any doctor arrived.",
+          "tip1": "112 works from any phone in Europe — even without credit, even without a SIM card, even from a locked phone. Teach every member of your family, including children over 7, to dial 112 and say where they are. Practice this. In an emergency, panic makes people forget",
+          "tip2": "For heavy bleeding: press firmly with the cleanest cloth you have — a shirt, a headscarf, anything — and do not lift it to check. Keep pressing until help arrives. I have seen people bleed dangerously because they kept removing the cloth to look. Add more cloth on top if blood soaks through",
+          "tip3": "Burns: immediately place the burn under cool running water for at least 10 minutes. Never apply butter, oil, toothpaste, or egg white — traditional remedies I have encountered in many families that actually trap the heat and cause worse damage and infection",
+          "tip4": "If someone collapses and is not breathing: call 112, then push hard and fast in the center of their chest — 100 times per minute (the tempo of the song 'Stayin' Alive'). Do not stop until help arrives. Imperfect CPR is infinitely better than no CPR",
+          "fact": "Studies show that in communities where basic first aid training is widespread, survival from cardiac arrest doubles. In many Roma communities, ambulance response times are significantly longer than in non-Roma areas — making bystander first aid even more critical.",
+          "action": "Right now, ask each family member: do you know how to call 112? Do you know our home address well enough to tell the dispatcher? Write your full address on a piece of paper and put it near the phone. Teach your children today."
+        }
+      },
+      "nutrition": {
+        "description": "In my years working with Roma families, I have learned that food is never just about nutrition — it is about what you can afford, what is available in your neighborhood, and what your family knows. I will not tell you to buy quinoa. I will tell you how to feed your family well with what you have.",
+        "balancedDiet": {
+          "title": "Eating Well on Any Budget",
+          "description": "The biggest nutrition problem I see in Roma communities is not lack of food — it is too much cheap bread, processed meat, and sugary drinks, and too few vegetables, eggs, and legumes. This is not about willpower. It is about what is available and affordable. But small shifts make enormous differences to your health and your children's development.",
+          "tip1": "Beans, lentils, and chickpeas are the cheapest protein in any market — cheaper than meat, longer lasting, and they prevent diabetes and heart disease. A pot of bean stew feeds a family for less than a pack of processed sausages and is far more nutritious",
+          "tip2": "Eggs are the most complete cheap food that exists. Two eggs per day per child provides nearly everything a growing brain needs. In every settlement I work in, I recommend eggs as the first priority food for children",
+          "tip3": "Seasonal vegetables from the local market or your garden cost a fraction of supermarket prices. Cabbage, onions, carrots, potatoes, peppers — these are the foundation of a healthy diet and they are in every Roma kitchen tradition",
+          "tip4": "Sugary drinks (cola, juice, energy drinks) are the single most damaging item I see in Roma family diets. One bottle of cola has 10 teaspoons of sugar. Replace with water or weak tea and you remove the biggest driver of obesity and tooth decay I see in children",
+          "fact": "In the Roma communities I have worked with across Romania and Bulgaria, I have seen diabetes rates drop measurably when families replace daily white bread and processed meat with beans, eggs, and vegetables — even without changing how much they eat. The body responds to quality, not just quantity.",
+          "action": "This week, replace one meal of bread and processed meat with a pot of bean or lentil stew with onions and peppers. Cook enough for two days. It is cheaper, fills you up longer, and begins to shift your family's health trajectory."
+        },
+        "childNutrition": {
+          "title": "Feeding Children for a Strong Start",
+          "description": "The first 1,000 days — from pregnancy to age 2 — shape a child's entire future: their brain, their immune system, their ability to learn. I have watched malnourished children in settlements fall behind their peers not because of genetics but because of what they ate in those critical early months. What you feed your child now is the most powerful investment you can make in their life.",
+          "tip1": "Breast milk alone for 6 months is the gold standard — it is free, always available, perfectly nutritious, and protects against infections better than any medicine. I have worked with mothers who thought formula was 'modern' and better. It is not. Breast milk is the technology evolution perfected",
+          "tip2": "At 6 months, start soft foods alongside breastfeeding: mashed potato, carrot, banana, cooked egg yolk. Introduce one new food every 3 days to watch for reactions. Many mothers I work with start solids too late (8–9 months) — this delays development",
+          "tip3": "Children under 2 should never have sugar, honey, salt, cola, chips, or sweets. I know grandparents sometimes give tea with sugar to calm a baby — please stop. Sugar at this age programs a lifelong craving and damages teeth before they even fully emerge",
+          "tip4": "An egg a day for a child over 6 months old is the simplest nutrition upgrade that exists. A study in Ecuador showed eggs reduced stunting by 47%. I cite this in every community talk because it is achievable for almost every family",
+          "fact": "In communities where I have run nutrition programs, children who received an egg and a serving of vegetables daily for 6 months showed measurable improvements in growth and cognitive development compared to children who did not. Malnutrition is not about poverty alone — it is about knowing what to prioritize with the resources you have.",
+          "action": "Starting tomorrow, give your child over 6 months one egg per day (mashed or scrambled). If your child is under 6 months and you are breastfeeding, eat an extra egg yourself — the nutrients pass through your milk."
+        },
+        "foodSafety": {
+          "title": "Keeping Food Safe",
+          "description": "Food poisoning is one of the most common reasons Roma families visit emergency rooms — vomiting, diarrhea, dehydration, especially in children. In settlements where refrigeration is unreliable and kitchens are shared or outdoor, food safety is not a textbook topic — it is a daily survival skill.",
+          "tip1": "In warm weather, cooked food left out for more than 2 hours becomes dangerous. If you cannot refrigerate it, cook smaller portions that you finish in one meal. I have seen entire families hospitalized from reheated stew left out overnight in summer",
+          "tip2": "Raw chicken and meat must never touch bread, vegetables, or anything that will be eaten uncooked. Use separate cutting surfaces — even a clean plastic bag laid flat works. This cross-contamination is the number one cause of food poisoning I encounter",
+          "tip3": "If food smells wrong, looks wrong, or feels slimy — throw it away. Do not taste it to check. I know throwing food away is painful when money is tight, but one bout of food poisoning costs more in medicine and lost work than the food was worth",
+          "tip4": "Wash all fruits and vegetables under running water before eating, even if you plan to peel them. Dirt on the outside transfers to the inside when you cut. This is especially important for market produce that may have been handled by many people",
+          "fact": "The WHO estimates that 600 million people fall ill from contaminated food every year, with children under 5 bearing 40% of the burden. In communities where I have taught food safety, hospital visits for gastroenteritis dropped significantly within the first summer.",
+          "action": "Check your kitchen right now: is any raw meat stored above or touching ready-to-eat food? Is there cooked food that has been sitting out for more than 2 hours? Fix these two things today — they are the most common dangers I see in home visits."
+        }
+      },
+      "maternal": {
+        "description": "I have accompanied Roma women to hospitals where they were put in separate rooms, spoken to disrespectfully, or refused epidurals that other women received. I have also seen women die from complications that a single prenatal visit would have caught. Your body, your baby, your rights. Know all three.",
+        "prenatalCare": {
+          "title": "Prenatal Care",
+          "description": "In 15 years of mediation work, the pattern I see repeatedly is Roma women visiting a doctor for the first time when they are already 6 or 7 months pregnant — often because they feel fine, because they fear the hospital, or because no one explained that prenatal care is free and their right. By that point, dangerous conditions like pre-eclampsia or gestational diabetes may have been silently developing for months.",
+          "tip1": "Go to your GP or midwife the moment you miss your period and suspect pregnancy. The first trimester is when folic acid prevents brain and spine defects in your baby. Waiting costs you the most critical window. If you do not have a GP, your health mediator can help you register — this is a core part of what we do",
+          "tip2": "Folic acid 400mcg daily should start when you are trying to get pregnant, or as soon as you learn you are. It is free or very cheap at any pharmacy. I carry packets with me on home visits because this simple pill prevents devastating birth defects",
+          "tip3": "Iron-rich foods prevent the anemia I see in nearly half the pregnant Roma women I work with: beans, lentils, dark leafy greens, liver, red meat. Anemia makes you exhausted, makes delivery more dangerous, and affects your baby's brain development",
+          "tip4": "You have the right to receive prenatal care in your language, to be treated with dignity, and to have someone accompany you to appointments. If a doctor is dismissive or disrespectful, you can file a complaint and request another provider. Document the name, date, and what was said. I help families do this regularly",
+          "fact": "Roma women in Europe are 3 to 5 times more likely to experience pregnancy complications than the general population, largely because they access prenatal care later or not at all. In communities where I have worked to connect pregnant women to care in the first trimester, complication rates dropped dramatically.",
+          "action": "If you are pregnant or know a pregnant woman in your community who has not yet seen a doctor, make that appointment today. If she is afraid or unsure how, go with her or connect her with the local health mediator. That one visit can change everything."
+        },
+        "safeDelivery": {
+          "title": "Safe Delivery",
+          "description": "I have held the hands of women giving birth in ambulances because they left it too late, and I have sat in hospital corridors where Roma women were placed last in the queue while non-Roma women went ahead. Both of these situations are preventable. Planning your delivery and knowing your rights transforms this experience from a crisis into something you control.",
+          "tip1": "By week 34, have your birth plan ready: which hospital, who will go with you, how will you get there (especially at night), who will watch your other children. I have seen too many families scrambling at the last minute — and the stress affects the delivery",
+          "tip2": "You have the legal right to have a companion (husband, mother, sister, mediator) with you during labor and delivery in virtually all European countries. If the hospital says no, cite your country's patient rights law. We carry these references and can provide them",
+          "tip3": "Learn the 5 danger signs that mean GO TO HOSPITAL NOW, no matter what time it is: (1) heavy bleeding, (2) severe headache with swollen hands/face, (3) baby stops moving, (4) water breaks before 37 weeks, (5) fever above 38°C. Do not wait until morning. Do not try to manage these at home",
+          "tip4": "After delivery, stay in hospital at least 24 hours for monitoring — even if you feel fine. Many life-threatening complications (hemorrhage, infection) appear in the first 24 hours. I know the hospital environment can be hostile, but those hours of monitoring save lives",
+          "fact": "In a region where I worked for 5 years, we reduced Roma maternal emergencies by 60% simply by ensuring every pregnant woman had a birth plan, a transport arrangement, and a hospital bag packed by week 36. No new technology — just preparation and accompaniment.",
+          "action": "If you or someone you know is past 30 weeks pregnant: write down the hospital name, phone number, and route on paper. Put it on the wall. Pack a bag with ID, vaccination card, baby clothes, and phone charger. This takes 20 minutes and can save a life."
+        },
+        "breastfeeding": {
+          "title": "Breastfeeding",
+          "description": "Breastfeeding is deeply valued in Roma culture, yet I meet young mothers who have been told by well-meaning relatives to give water, tea, or formula in the first days because 'the milk has not come yet.' The colostrum — that thick, yellowish first milk — is not a sign that something is wrong. It is liquid gold, packed with antibodies that protect your newborn from the very infections that are most dangerous in the first weeks of life.",
+          "tip1": "Within 1 hour of birth, put your baby skin-to-skin on your chest and let them find the breast. This first feed of colostrum is the most important 'vaccine' your baby will receive — it coats their gut with protection against infection. Do not let anyone take your baby away before this happens unless there is a medical emergency",
+          "tip2": "Feed on demand — whenever the baby shows hunger signs (turning head, sucking hands, fussing). In the first weeks, this may be 10–14 times in 24 hours. This is normal and establishes your supply. A clock cannot tell you when your baby is hungry — your baby tells you",
+          "tip3": "No water, no tea, no formula for 6 months unless a doctor specifically prescribes it for a medical reason. Your breast milk changes composition throughout the day to meet your baby's exact needs — no factory can replicate this. I have seen well-meaning grandmothers give sugar water that caused thrush and diarrhea",
+          "tip4": "If breastfeeding hurts, the latch is wrong — not your body. Ask a midwife or health worker to watch a feed and help you adjust the position. Pain is a signal to get help, not a sign to give up. I have helped hundreds of mothers fix latching issues that were resolved in one session",
+          "fact": "In Roma communities where breastfeeding support programs exist, exclusive breastfeeding for 6 months reduces infant hospitalizations by over 60%. Breast milk literally adapts to fight the specific infections circulating in your environment — it is personalized medicine that your body produces for free.",
+          "action": "If you are a new mother or expecting: tell your family now that you plan to breastfeed exclusively for 6 months and that you need their support, not advice to add other foods. If breastfeeding is painful, contact your midwife or health mediator before you stop — the solution is usually simple."
+        },
+        "postpartum": {
+          "title": "Postpartum Care",
+          "description": "In Roma culture, the weeks after birth are a time when the family gathers around the mother, and this is beautiful. But I have also seen a shadow side: mothers who cry every day and are told it is normal. Mothers who bleed heavily and wait too long to seek help. Mothers whose pain is dismissed because 'this is what women go through.' Your recovery matters as much as your baby's health — because your baby needs you alive and well.",
+          "tip1": "Your body needs 6 weeks minimum to heal. The bleeding (lochia) after birth is normal for 2–4 weeks, but if it suddenly increases, contains large clots, or smells bad — go to the hospital immediately. I have seen mothers lose dangerous amounts of blood because they were told heavy bleeding was normal. It is not",
+          "tip2": "If you feel persistently sad, empty, unable to connect with your baby, or have thoughts of harming yourself or your baby — you are not weak, you are not a bad mother, you have a medical condition that responds to treatment. I say this in every home visit because the stigma in our communities around postpartum depression costs lives",
+          "tip3": "Your 6-week postnatal check-up is not optional — it checks for infection, healing, blood pressure, and mental health. In my experience, fewer than 30% of Roma women attend this visit. Please be in that 30%. Bring someone with you if that helps",
+          "tip4": "Accept every offer of help from family with cooking, cleaning, and childcare. Sleep when the baby sleeps. Your only jobs are feeding the baby and recovering. Everything else can wait. The strongest mothers I know are the ones who accepted help",
+          "fact": "Postpartum depression affects 1 in 5 women worldwide but is estimated to be even higher in Roma communities due to poverty stress, discrimination, and isolation. In every community where I have set up peer support groups for new mothers, depression rates dropped and breastfeeding rates rose — because connection heals.",
+          "action": "If you gave birth in the last 6 weeks and have not had a postnatal check-up, call your health center today. If you feel persistently sad or overwhelmed, tell one trusted person — your mother, your health mediator, anyone. That first conversation is the hardest step and the most important one."
+        }
+      },
+      "children": {
+        "description": "Roma children are the future of our communities, and they deserve every advantage. In my work, I have seen children fall behind — not because of ability, but because preventable illnesses, missed vaccinations, or undetected developmental delays stole opportunities from them. This knowledge gives those opportunities back.",
+        "growthMilestones": {
+          "title": "Growth & Development",
+          "description": "Every child develops at their own pace, and I never want parents to panic over normal variation. But I have also seen children whose delayed development was dismissed by families as 'they will catch up' when early intervention could have made a transformative difference. Knowing what to watch for is not anxiety — it is attention.",
+          "tip1": "Monthly weighing in the first year is the simplest monitoring tool. Your health center has growth charts that show whether your child is on track. A child who stops gaining weight or suddenly drops on the chart needs immediate investigation — it may be as simple as a feeding adjustment or as important as catching an underlying condition",
+          "tip2": "By 6 months, most babies reach for objects and respond to their name. By 12 months, most say a few words and pull themselves to standing. By 24 months, most walk well and speak in short phrases. If your child is significantly behind these milestones, ask for a developmental assessment — early help makes the biggest difference",
+          "tip3": "Talk to your child constantly — narrate what you are doing, name objects, sing songs. Roma families have a powerful oral tradition — use it. Children who hear more words develop larger vocabularies and stronger cognitive skills. This is free and more effective than any toy",
+          "tip4": "Teeth: clean your baby's gums with a damp cloth from birth, and use a tiny smear of children's toothpaste from the first tooth. I see severe tooth decay in Roma children by age 3, often from bottles of sweet tea at night — this causes pain, infection, and problems eating that affect growth",
+          "fact": "Research shows that children whose developmental delays are identified and addressed before age 3 are 5 times more likely to attend school at the expected level. In settlements where I have set up monthly weighing and developmental screening, referral rates for early intervention tripled — meaning children got help they would otherwise have missed.",
+          "action": "If your child is under 2, take them for a weight check and developmental screening at your health center this month. If your child is over 2 and you have concerns about speech, walking, or behavior, ask for a referral to a specialist. Your concern is valid — act on it."
+        },
+        "commonIllnesses": {
+          "title": "When Your Child Is Sick",
+          "description": "In settlements with overcrowded housing, limited sanitation, and cold winters, children get sick frequently. Most of these illnesses — diarrhea, coughs, fevers — are manageable at home if you know what to do and when to escalate. But I have also seen parents wait too long, or rush to emergency rooms for conditions that a simple treatment at home would have resolved. This module teaches you the difference.",
+          "tip1": "Fever below 38.5°C: your child's body is fighting infection — this is good. Keep them comfortable, lightly clothed, and give plenty of fluids. Fever above 38.5°C: give children's paracetamol at the correct dose for their weight (NOT adult paracetamol). If fever lasts more than 3 days or the child is unusually drowsy, seek medical care",
+          "tip2": "Diarrhea kills through dehydration, not the infection itself. The moment your child has loose stools, start oral rehydration: 1 liter of clean boiled water + 6 level teaspoons of sugar + half a teaspoon of salt. Give small sips every few minutes. This recipe has saved more children's lives worldwide than any antibiotic",
+          "tip3": "TAKE YOUR CHILD TO HOSPITAL IMMEDIATELY if you see: fast or difficult breathing, chest pulling in with each breath, unable to drink or breastfeed, repeated vomiting of everything, unusual drowsiness or not waking, convulsions, or bloody diarrhea. Do not wait. These are emergencies",
+          "tip4": "Do not give antibiotics without a doctor's prescription. Do not share another child's prescription. Do not use leftover antibiotics. I see this constantly in our communities and it creates drug-resistant bacteria that are much harder to treat. Antibiotics do nothing for colds, flu, or most coughs",
+          "fact": "In the communities I have worked in, training parents to prepare and use oral rehydration solution reduced child hospitalizations for diarrhea by over 40% in a single year. The knowledge is that powerful — and the ingredients cost less than a bus ticket to the hospital.",
+          "action": "Right now, memorize this recipe: 1 liter clean water + 6 teaspoons sugar + half teaspoon salt. Practice making it once. If you want, taste it — it should taste like tears. Having this ready means that when your child gets diarrhea at 2am, you can act immediately instead of panicking."
+        },
+        "immunization": {
+          "title": "Vaccination Schedule",
+          "description": "I will be direct: in Roma communities across Europe, vaccination rates are lower than the national average, and this is not because Roma parents do not care about their children — it is because the healthcare system has failed to reach them with respect, access, and information. Misinformation also spreads through social media. I have held children in hospital with measles who should never have been there. Every unvaccinated child is a child the system has failed.",
+          "tip1": "Birth to 6 weeks: BCG (tuberculosis) and Hepatitis B. These are given in the hospital before discharge. If your baby was born at home, take them to the health center within the first week of life for these vaccines. Do not wait",
+          "tip2": "2, 3, 4 months: the 'big three' rounds — DTP (diphtheria, tetanus, whooping cough), Polio, Hib, and Hepatitis B. These are the most critical vaccines of infancy. Each round strengthens the immunity. Missing one weakens the entire chain",
+          "tip3": "12–15 months: MMR (measles, mumps, rubella). I cannot stress this enough. Measles is not a harmless childhood illness — it kills, it causes brain damage, and it blinds. In 2019, I saw a measles outbreak in a Roma settlement because coverage had dropped below 80%. It was preventable",
+          "tip4": "Vaccines are free at government health centers in every European country. You do not need insurance, you do not need a residence permit, you do not need an appointment in most centers. If you are refused service, this is illegal — contact your health mediator or the patient rights office",
+          "fact": "The gap between Roma and non-Roma vaccination rates in some European countries exceeds 15 percentage points. This gap is not caused by Roma beliefs about vaccines — surveys consistently show Roma parents want their children vaccinated. The gap is caused by access barriers, discrimination in healthcare, and lack of outreach. Closing this gap is a state obligation under Article 11 of the European Social Charter.",
+          "action": "Find your child's vaccination card. If any vaccines are missing, or if you do not have a card, visit your nearest health center this week. If you face barriers — language, documents, refusal — contact your local health mediator. That is exactly what we are here for."
+        }
+      },
+      "chronic": {
+        "description": "Roma people die 10 years younger than the European average. Most of this gap comes from chronic diseases — diabetes, heart disease, respiratory illness — that develop slowly and silently over years. By the time symptoms appear, damage has been done. But most of it is preventable, and all of it is manageable when caught early.",
+        "diabetes": {
+          "title": "Diabetes: The Silent Threat",
+          "description": "Type 2 diabetes is the chronic disease I encounter most frequently in Roma communities. It runs in families, it thrives on the cheap, high-sugar diet that poverty forces people toward, and it damages your eyes, kidneys, feet, and heart for years before you feel anything wrong. I have seen men in their 40s lose toes, and women go blind, from diabetes that was never diagnosed because they never had a blood test. This is preventable.",
+          "tip1": "If anyone in your family has diabetes, your risk is 2–3 times higher. This is not fate — it is a signal to act now. Reduce white bread, sugar, and sugary drinks. Replace with beans, lentils, vegetables, and water. I have seen families reverse pre-diabetes entirely through these changes",
+          "tip2": "30 minutes of walking every single day reduces your diabetes risk by 58%. Not running. Not gym. Walking. I tell every person over 35 in the communities I work with: the walk is the medicine. It is free and it works better than most pills for prevention",
+          "tip3": "Ask for a fasting blood glucose test at your health center at least once a year if you are over 35, overweight, or have family history. It is a simple finger-prick test, it is free in most countries, and it takes 5 minutes. This one test can catch diabetes years before symptoms appear",
+          "tip4": "Know the warning signs that mean diabetes may already be present: constant thirst, urinating very frequently (especially at night), vision becoming blurry, wounds that heal slowly, unexplained fatigue. If you have two or more of these, get tested this week — not next month",
+          "fact": "Studies in Roma communities in Slovakia and Romania have found diabetes prevalence 2–3 times higher than the national average, with the majority of cases undiagnosed. In one program I participated in, community-based screening detected diabetes in 18% of adults over 40 who had never been tested. Nearly all of them had no symptoms.",
+          "action": "If you are over 35, go to your health center and ask for a blood sugar test. It takes 5 minutes. If the result is above 5.6 mmol/L (100 mg/dL), you need to start making changes now. Bring a family member — if your risk is high, theirs likely is too."
+        },
+        "heartHealth": {
+          "title": "Your Heart",
+          "description": "Cardiovascular disease is the number one killer in Roma communities — not because of genetics, but because of the conditions we live in: chronic stress from poverty and discrimination, high smoking rates, diets shaped by what poverty allows, and almost no access to preventive screening. I have attended funerals of men in their 50s who died of heart attacks that were entirely preventable. This module exists because I refuse to attend more.",
+          "tip1": "Smoking is the single most destructive thing you can do to your heart. I know it is deeply embedded in our community culture and I am not here to judge — but I owe you honesty. Every cigarette damages your blood vessels. If you cannot quit, reduce. If you can quit, your heart begins to repair itself within 24 hours",
+          "tip2": "High blood pressure is called the silent killer because you feel nothing until a stroke or heart attack hits. Get your blood pressure checked at any pharmacy — it is free. Normal is below 120/80. Above 140/90 is dangerous and needs treatment. I have found dangerously high blood pressure in people who felt perfectly healthy",
+          "tip3": "Reduce salt: Roma cuisine is flavorful and beautiful, but many traditional dishes are very salty. Use paprika, garlic, onion, herbs, and pepper instead of adding extra salt. Your taste buds adapt within 2 weeks — food will taste better, not worse. I have seen blood pressure drop 10 points from this change alone",
+          "tip4": "Chronic stress from discrimination, poverty, eviction threats, and family conflict is a direct cause of heart disease. This is not opinion — it is documented medicine. Stress hormones damage your blood vessels over years. Finding any way to release stress — walking, music, prayer, talking, community — is heart medicine",
+          "fact": "Roma men die from cardiovascular disease on average 10–15 years earlier than the general population. The European Commission's own data shows this. But 80% of premature heart attacks are preventable through lifestyle changes and early treatment of high blood pressure and cholesterol. Prevention works — if you have access to it.",
+          "action": "This week, do two things: (1) Go to a pharmacy and check your blood pressure — write down the numbers. (2) Count how many cigarettes you smoke per day and try to reduce by 3 per day. These two actions are the most powerful cardiac prevention steps any individual can take."
+        },
+        "respiratory": {
+          "title": "Lungs & Breathing",
+          "description": "I have worked in settlements where families burn wood, coal, or even plastic and rubber for heating in winter. Where 8 people sleep in two rooms with no ventilation. Where damp runs down the walls and black mold grows in every corner. Respiratory disease in these conditions is not surprising — it is the predictable result of housing that no one should have to live in. While we fight for better housing, we must also protect the lungs we have.",
+          "tip1": "Indoor smoke is the most immediate respiratory danger I see. If you heat with solid fuel, ensure ventilation — even cracking a window helps. Never burn plastic, rubber, or painted wood — the fumes contain chemicals that cause permanent lung damage, especially in children whose lungs are still developing",
+          "tip2": "Damp and mold cause asthma, chronic bronchitis, and make every respiratory infection worse. Wipe visible mold with a mix of water and vinegar or bleach. Open windows for at least 15 minutes daily even in winter. Hang wet laundry outside when possible — drying clothes indoors adds enormous amounts of moisture to the air",
+          "tip3": "A cough lasting more than 3 weeks, especially with weight loss, night sweats, or blood in spit, must be investigated for tuberculosis. TB is curable with free treatment, but it is also highly contagious. In Roma communities, TB rates are 3–5 times the national average in several European countries. Early testing protects your entire family",
+          "tip4": "Children who grow up in smoky or moldy environments have permanently reduced lung capacity — they will carry less healthy lungs their entire lives. Even if you cannot change your housing situation immediately, reducing smoke exposure and ventilating as much as possible protects their developing lungs",
+          "fact": "The WHO identifies household air pollution as the fourth greatest global health risk. In Roma settlements I have worked in, over 60% of children had recurring respiratory infections — rates that dropped significantly when families improved ventilation and reduced indoor burning of waste materials. The housing conditions are not the families' fault, but adaptation strategies save lives while the systemic change is fought for.",
+          "action": "Today: check for visible mold in your home and clean it with diluted bleach or vinegar. Open at least one window for 15 minutes. If anyone in your household has had a cough for more than 3 weeks, go to the health center for a TB screening — it is free and it takes 15 minutes."
+        }
+      },
+      "mental": {
+        "description": "In 15 years of working in Roma communities, I have learned that the heaviest burden people carry is not physical illness — it is the weight of discrimination, poverty, fear of eviction, worry about their children's future, and the feeling that no one in the system cares. We call this stress. When it lasts for years, it becomes something more. It deserves to be named, understood, and treated — without shame.",
+        "stressManagement": {
+          "title": "Living with Stress",
+          "description": "I will not pretend that a breathing exercise will solve your problems. If you are worried about your family being evicted, no meditation app will fix that. But I have worked with hundreds of people in our communities who carry enormous stress, and I have seen what happens when that stress goes unmanaged for years: heart attacks in men in their 40s, women who cannot eat or sleep, children who grow up in households electrified with tension. We cannot always change our circumstances, but we can change how we carry them.",
+          "tip1": "The 4-4-8 breathing method works immediately on your nervous system. Breathe in through your nose for 4 counts, hold for 4, breathe out slowly through your mouth for 8. Do this 5 times. Your heart rate drops, your muscles relax. I teach this to families before hospital visits, before court hearings, before any stressful encounter. It is a tool you always have with you",
+          "tip2": "Walking is the most underrated medicine for stress. 20 minutes of walking — not fast, just walking — reduces the stress hormone cortisol by up to 30%. If you cannot leave the house, walk in circles. The movement itself is what works, not the scenery",
+          "tip3": "Talk to someone. Not to fix the problem — just to share the weight. I have seen men in our communities carry everything alone because asking for help feels like weakness. In 15 years of this work, the strongest people I have met are the ones who learned to say 'I am struggling'",
+          "tip4": "Be intentional about what enters your mind. Social media, news, family arguments that replay in your head — these are sources of stress you can control. I am not saying ignore reality. I am saying choose when you engage with it, and create spaces in your day where you are deliberately at peace",
+          "fact": "Roma communities experience what public health calls 'minority stress' — the chronic physiological toll of discrimination, exclusion, and poverty. Research shows this elevates cortisol levels permanently, accelerating heart disease, diabetes, and mental illness. This is not weakness. It is biology responding to injustice.",
+          "action": "Tonight before sleep, put your phone in another room and practice 4-4-8 breathing for 5 minutes. If you have a partner or family member willing, do it together in silence. This small act creates a boundary between the day's stress and your sleep — and sleep is when your body repairs the damage stress has caused."
+        },
+        "sleep": {
+          "title": "Sleep as Medicine",
+          "description": "In overcrowded homes where the TV is always on, where children share beds with parents, where noise from neighbors or the street never stops — sleep is not a given. It is something you have to fight for. And yet, sleep is when your body repairs itself, when your brain processes the day's stress, and when your immune system rebuilds. Chronic sleep deprivation is as dangerous as smoking — and in our communities, it is almost universal.",
+          "tip1": "Try to sleep and wake at roughly the same time every day, including weekends. I know this is hard with shift work, young children, or noisy environments — but even a consistent window of 6 hours is more restorative than random 8-hour blocks. Your body craves rhythm",
+          "tip2": "Phones and screens before bed are one of the worst modern sleep destroyers. The blue light tells your brain it is daytime. If you must use your phone, set it to night mode after 9pm. Better yet, charge it in another room — I have seen sleep quality improve dramatically from this single change",
+          "tip3": "Caffeine stays in your system for 8 hours. That afternoon Turkish coffee or tea at 4pm is still active in your bloodstream at midnight. Switch to herbal tea (chamomile, linden) after lunch. This is one of the simplest improvements I recommend and people are always surprised how much it helps",
+          "tip4": "If you share a room with children or family members, small changes help: a consistent 'lights off' time, reducing noise gradually, using a curtain to create a visual sleep boundary. Teach children that sleep time is family time — when the household quiets together, everyone sleeps better",
+          "fact": "Research on sleep in marginalized communities shows that chronic sleep deprivation caused by overcrowding, noise, and stress contributes significantly to the health gap. People who consistently sleep less than 6 hours have 4x higher risk of catching infections and 2x higher risk of heart disease. Sleep is not a luxury — it is a foundation of survival.",
+          "action": "Tonight: set a bedtime alarm on your phone for 30 minutes before you want to sleep. When it rings, turn off the TV, put the phone away, and lie in the dark doing 4-4-8 breathing until you fall asleep. Do this for 7 nights and notice the difference."
+        },
+        "communitySupport": {
+          "title": "The Power of Connection",
+          "description": "Roma culture already understands something that Western medicine is only now measuring: that belonging, family, and community protect your health as powerfully as any medicine. I have seen people survive the most difficult circumstances — evictions, illness, loss — because their community held them. And I have seen people collapse under far less when they were isolated. The science now confirms what our ancestors knew: loneliness kills, connection heals.",
+          "tip1": "If you know someone in your community who has recently lost a family member, been diagnosed with an illness, lost their job, or is going through a crisis — do not wait for them to ask for help. Visit them. Bring food. Sit with them. In Roma culture, this is instinct. In health science, this is called 'social prescription' — and it works better than most pills",
+          "tip2": "Shame is the enemy of health. I have met people who hid diabetes, depression, HIV, and domestic violence for years because they feared what the community would say. Every time someone in our community speaks openly about their struggle, it gives permission to others. You do not need to share everything — but sharing something breaks the silence that keeps people sick",
+          "tip3": "Gatherings, celebrations, music, prayer, storytelling — these are not distractions from health. They are health. Studies show that regular participation in community cultural activities reduces depression and cardiovascular risk. The joy and belonging they create are measurable medicine",
+          "tip4": "Check on the elderly and isolated people in your community. The person who lives alone, the grandmother whose children moved away, the man who stopped coming to gatherings. A 10-minute visit or phone call may be the only human connection they have that day — and it could be what keeps them alive",
+          "fact": "Harvard's 85-year study on adult health concluded that the single strongest predictor of health and longevity is the quality of your relationships — not diet, exercise, or genetics. Loneliness increases mortality risk by 26%, equivalent to smoking 15 cigarettes daily. Roma communities have a cultural wealth in social connection that is a genuine health asset — protect it.",
+          "action": "This week, reach out to one person in your community you have not spoken to recently. Not by text — by voice or in person. Ask how they are and listen. That act of connection is health promotion in its purest form."
+        },
+        "seekHelp": {
+          "title": "When It's Too Much",
+          "description": "There is a point where stress, sadness, and worry cross a line into something that needs professional help — and in Roma communities, that line is almost never recognized because we are taught to endure, to be strong, to handle it within the family. I have seen the cost of this silence: men who drink to cope until their liver fails, women who stop eating, teenagers who harm themselves. Asking for help is not betraying your culture. It is protecting your life so you can be there for the people who need you.",
+          "tip1": "If you or someone you know has been unable to function normally for more than 2 weeks — cannot sleep, cannot eat, cannot care for children, cries constantly, or has no energy for anything — this is beyond normal stress. This is depression and it is a medical condition as real as diabetes. It is not weakness and it responds to treatment",
+          "tip2": "Your first step is your family doctor (GP). Say: 'I have been feeling very bad for more than 2 weeks and I need help.' You do not need to explain everything. The GP can assess you and refer you to a psychologist or psychiatrist. This service is free or low-cost in most European countries. If your GP dismisses you, see another one",
+          "tip3": "If someone in your family mentions wanting to die, wanting to disappear, or feeling that everyone would be better off without them — take this seriously immediately. Stay with them. Remove access to medicines and sharp objects. Call the national crisis line or 112. You are not overreacting. These words are a cry for help that must be answered",
+          "tip4": "Mental health medication is not shameful, addictive, or 'for crazy people.' Antidepressants are prescribed to millions of people worldwide and they save lives. They do not change who you are — they lift the chemical fog that prevents you from being who you are. I have seen people transformed by treatment they resisted for years because of stigma",
+          "fact": "Roma communities experience among the highest rates of depression and anxiety in Europe, driven by structural factors like discrimination, poverty, and lack of access to services. Yet mental health service use in Roma communities is among the lowest. In programs where I have helped connect people to culturally sensitive mental health care, the improvement in quality of life was profound — not just for the individual, but for their entire family.",
+          "action": "Save this number in your phone right now: your country's mental health crisis helpline. If you are in crisis, call it. If someone you know is in crisis, call it with them. And if you have been struggling for more than 2 weeks, book an appointment with your GP this week. You deserve to feel better, and help exists."
+        }
+      }
+    }
+  },
+  {
+    "path": "mediator.accessCode",
+    "enVal": "Enter access code"
+  },
+  {
+    "path": "mediator.alertsActive",
+    "enVal": "Active alerts"
+  },
+  {
+    "path": "mediator.recordHealth",
+    "enVal": "Record health data"
+  },
+  {
+    "path": "mediator.viewReports",
+    "enVal": "View reports"
+  },
+  {
+    "path": "mediator.healthSummary",
+    "enVal": "Community health summary"
+  },
+  {
+    "path": "mediator.pillarProgress",
+    "enVal": "Pillar learning progress"
+  },
+  {
+    "path": "profile.exportDescription",
+    "enVal": "Download all your health tracking data as a CSV file."
+  },
+  {
+    "path": "profile.clearData",
+    "enVal": "Clear all data"
+  },
+  {
+    "path": "profile.clearDataConfirm",
+    "enVal": "Are you sure? This cannot be undone."
+  },
+  {
+    "path": "profile.aboutTitle",
+    "enVal": "About Redi Health"
+  },
+  {
+    "path": "profile.aboutText",
+    "enVal": "Redi Health is a free multilingual health-literacy companion for underserved areas — villages, peri-urban wards, settlements, Roma neighbourhoods, rural regions in Europe — where clinicians are scarce, journeys to care are long, and official messaging often misses people's language."
+  },
+  {
+    "path": "profile.privacyPolicy",
+    "enVal": "Privacy policy"
+  },
+  {
+    "path": "profile.contactUs",
+    "enVal": "Contact us"
+  },
+  {
+    "path": "profile.progressNone",
+    "enVal": "You haven't started learning yet."
+  },
+  {
+    "path": "profile.progressStart",
+    "enVal": "Go to Learn to begin."
+  },
+  {
+    "path": "profile.version",
+    "enVal": "Version"
+  },
+  {
+    "path": "studentHealth",
+    "enVal": {
+      "meta": {
+        "title": "Student Health Academy",
+        "description": "A cinematic, mission-based health literacy academy for high school students: first aid, STIs, vaccines, and critical thinking."
+      },
+      "hub": {
+        "title": "Student Health Academy",
+        "subtitle": "A mission-based health field guide for high school students. Learn what to do before help arrives, how to protect your body and relationships, and how to separate evidence from rumor.",
+        "disclaimer": "Educational field guide only: this is not medical care, diagnosis, or emergency instruction from a clinician. If someone may be in immediate danger, call emergency services. For sexual health, consent, or privacy concerns, seek a trusted adult, school nurse, doctor, clinic, or local helpline.",
+        "countryLabel": "Your country (for tips)",
+        "countryPlaceholder": "Select country (optional)",
+        "countryHint": "Used only on this device to show relevant context. You can change it anytime.",
+        "countryContext": "Context for tips: {country}",
+        "xpLabel": "XP",
+        "levelLabel": "Level {level}",
+        "commandCenterTitle": "Expedition dashboard",
+        "commandCenterSubtitle": "{completed}/{total} field lessons complete — build practical skills you can use in school, at home, and online.",
+        "overallProgress": "Academy progress",
+        "levelProgress": "Level progress",
+        "maxLevel": "Max level reached",
+        "nextLevelXp": "Next level at {xp} XP",
+        "stageProgress": "Stage progress",
+        "badgesTitle": "Your badges",
+        "stageMapTitle": "Expedition route",
+        "modulesInStage": "modules",
+        "takeStageQuiz": "Stage quiz",
+        "quizLocked": "Complete all modules in this stage to unlock the stage quiz.",
+        "quizIntro": "Answer at least 70% correctly to unlock the next stage.",
+        "stageComplete": "Stage complete!",
+        "nextStageUnlocked": "You unlocked the next stage.",
+        "badgeLocal": "Local champion",
+        "badgeRegional": "Regional explorer",
+        "badgeNational": "National scholar",
+        "badgeLocalDesc": "Finished the local stage quiz.",
+        "badgeRegionalDesc": "Finished the regional stage quiz.",
+        "badgeNationalDesc": "Finished the national stage quiz.",
+        "allStagesComplete": "You completed the full academy path. Keep revisiting lessons to stay sharp.",
+        "kicker": "Field guide for real life",
+        "streakLabel": "Streak",
+        "streakUnitOne": "day",
+        "streakUnitMany": "days",
+        "streakHint": "Keep one lesson a day going",
+        "dayActive": "Active day",
+        "dayInactive": "No activity"
+      },
+      "stages": {
+        "local": "Local",
+        "localDesc": "Immediate skills for school, home, and friends",
+        "regional": "Regional",
+        "regionalDesc": "Clinic, community, and public-health know-how",
+        "national": "National",
+        "nationalDesc": "Evidence, leadership, and capstone decisions"
+      },
+      "progress": {
+        "xp": "Experience points",
+        "stageLocked": "Locked — complete the previous stage quiz.",
+        "quizRequired": "Quiz required",
+        "allModulesDone": "All modules done — take the quiz!"
+      },
+      "quiz": {
+        "title": "Stage checkpoint",
+        "back": "Back to academy",
+        "progress": "Question",
+        "of": "of",
+        "submit": "Next",
+        "seeResults": "See results",
+        "pass": "Checkpoint cleared",
+        "fail": "Checkpoint not cleared yet",
+        "scoreLine": "You got {correct} out of {total} correct ({pct}%).",
+        "needPct": "You need at least 70% to unlock the next stage.",
+        "retry": "Try again",
+        "continueHub": "Back to academy",
+        "stageBriefTitle": "{stage} field checkpoint",
+        "stageBriefBody": "This checkpoint tests judgment, not memorization. Score {pct}% or more to unlock the next expedition stage.",
+        "continueNextStage": "Enter {stage} expedition",
+        "explainCorrect": "Why this is correct",
+        "explainWrong": "Field guide explainer"
+      },
+      "lesson": {
+        "scenarioTitle": "Field scenario",
+        "challengeTitle": "Expedition challenge",
+        "supportTitle": "Confidential support matters",
+        "supportText": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
+        "findCare": "Find care",
+        "knowRights": "Know your rights",
+        "stepLabel": "Lesson {current} of {total}",
+        "completedNote": "Field note logged. You earned XP, saved progress, and unlocked the next best step.",
+        "sourcesTitle": "Verified sources",
+        "sourcesNote": "Independent sources you can verify yourself. Tap a row to open the original guidance in a new tab.",
+        "reviewUpToDate": "Reviewed for clinical accuracy",
+        "reviewOverdue": "Review overdue — verify with a clinician",
+        "reviewMeta": "Reviewed {date} by {reviewer}"
+      },
+      "modules": {
+        "local": {
+          "emergency101": {
+            "title": "Emergency signals: calling for help",
+            "description": "In an emergency, the first minute is a bridge between chaos and help. Your job is not to become a doctor. Your job is to stay safe, call the right number, and give clear information that helps trained responders find the scene fast.",
+            "tip1": "Lead with location: school name, street, building entrance, landmark, or GPS pin. A perfect medical description is useless if help cannot find you.",
+            "tip2": "Say what happened in one sentence: “A student collapsed and is not responding,” or “There is heavy bleeding from the arm.” Short, concrete details help dispatchers act.",
+            "tip3": "Put the phone on speaker if you can. The dispatcher may coach you while someone else gets an adult, opens a gate, or clears space.",
+            "tip4": "Never film an emergency for attention. Protect privacy, create space, and stay with the person if it is safe until help arrives.",
+            "fact": "Emergency systems are designed around fast, accurate information. Clear location plus a brief description can shorten the time between the call and professional care.",
+            "action": "Create a phone note called “Emergency info” with your home address, school address, and one nearby landmark for each.",
+            "scenario": "During sports practice, a classmate suddenly drops to the ground. The gym gets loud. One person is recording. No adult is beside the student yet.",
+            "challenge": "Write a 15-second emergency script: who you are, where you are, what happened, and what you need."
+          },
+          "bleedingBasics": {
+            "title": "Bleeding: pressure buys time",
+            "description": "Blood can make people panic, but the first response is simple: protect yourself, press firmly, and get help. Pressure is not dramatic, but it is one of the most powerful first-aid actions a bystander can take.",
+            "tip1": "Protect yourself if possible: gloves are best, but a plastic bag or folded cloth is better than bare hands if blood is visible.",
+            "tip2": "Press directly on the wound with the cleanest cloth available. Strong, steady pressure matters more than constantly checking how it looks.",
+            "tip3": "If blood soaks through, add more cloth on top. Removing the first layer can pull away early clots and restart bleeding.",
+            "tip4": "Call emergency services for heavy bleeding, spurting blood, deep wounds, or bleeding that does not slow with firm pressure.",
+            "fact": "Many severe external bleeds can be slowed before professionals arrive. The difference is often whether someone starts firm pressure immediately.",
+            "action": "Find the first-aid kit at home or school and identify what could be used for clean pressure in an emergency.",
+            "scenario": "After school, someone cuts their forearm on broken glass. Their sleeve is wet with blood, and friends are afraid to touch anything.",
+            "challenge": "Practice saying the rule out loud: “Press. Add layers. Keep pressing. Call for help.”"
+          },
+          "burnsBasics": {
+            "title": "Burns: cool the heat, protect the skin",
+            "description": "A burn keeps damaging tissue after the heat source is gone. The goal is to cool the skin safely, avoid folk remedies that trap heat, and know when a burn needs urgent medical care.",
+            "tip1": "Cool running water is the first move for many minor burns. Keep it gentle and cool, not icy.",
+            "tip2": "Skip butter, oil, toothpaste, flour, or egg. They can trap heat, hide the injury, and raise infection risk.",
+            "tip3": "Remove tight rings, bracelets, or clothing near the burn if they are not stuck, because swelling can happen quickly.",
+            "tip4": "Get urgent care for burns on the face, hands, genitals, large areas, deep burns, chemical burns, electrical burns, or trouble breathing.",
+            "fact": "Early cooling can reduce pain and depth of injury. The best burn care often begins before anyone reaches a clinic.",
+            "action": "Teach one person the burn rule: cool water first, cover loosely, no kitchen remedies.",
+            "scenario": "A younger sibling touches a hot pan. An older relative reaches for toothpaste because “that always helped before.”",
+            "challenge": "Make a two-line poster: “Cool the burn. Do not cover it with food or paste.”"
+          },
+          "stiBasics": {
+            "title": "STIs: facts without shame",
+            "description": "Sexually transmitted infections are health conditions, not character judgments. Some are curable, some are manageable, and many have no symptoms at first. Accurate information protects people from stigma and from delayed care.",
+            "tip1": "Symptoms are not a reliable test. Many STIs can be silent while still affecting health or spreading to partners.",
+            "tip2": "Condoms and dental dams reduce risk when used correctly, but no tool works if someone is pressured or unable to use it safely.",
+            "tip3": "Testing is responsible. It is something people do to care for themselves and others, not something to gossip about.",
+            "tip4": "Ask clinics directly about confidentiality: who can see results, what age rules apply, and whether services are youth-friendly.",
+            "fact": "Untreated infections such as chlamydia and gonorrhea can lead to serious complications, but testing and treatment are effective when people get care early.",
+            "action": "Identify one trustworthy sexual-health source in your country: a health ministry page, youth clinic, school nurse, or helpline.",
+            "scenario": "A friend says, “I would know if someone had an STI just by looking.” Another student quietly stops talking.",
+            "challenge": "Prepare a stigma-free reply: “You cannot always tell. Testing is normal, private, and responsible.”"
+          },
+          "consentBasics": {
+            "title": "Consent: the clearest yes",
+            "description": "Consent is not a technicality. It is the foundation of safety, respect, and trust. A healthy relationship gives every person the freedom to say yes, no, wait, or stop without fear of punishment.",
+            "tip1": "Consent must be freely chosen. Pressure, threats, guilt, alcohol, drugs, or power differences can make “yes” unsafe or invalid.",
+            "tip2": "Silence is not consent. Freezing, going quiet, or not fighting back is not the same as wanting something.",
+            "tip3": "Consent is ongoing. Someone can change their mind even if they agreed earlier, even in a relationship.",
+            "tip4": "Digital boundaries count. Repeatedly asking for photos, sharing private images, or threatening exposure is not respect.",
+            "fact": "Consent education reduces harm because it gives students practical language for boundaries before pressure becomes danger.",
+            "action": "Choose a trusted person or service you could contact if you or a friend felt pressured, unsafe, or threatened.",
+            "scenario": "Someone keeps asking for private photos after being told no, then says, “If you loved me, you would.”",
+            "challenge": "Write a boundary script you could send quickly: “No. Stop asking. I am leaving this conversation.”"
+          }
+        },
+        "regional": {
+          "chokingBasics": {
+            "title": "Choking: recognize the silent emergency",
+            "description": "Choking can turn a normal lunch table into a life-threatening emergency in seconds. The safest response begins with recognizing whether the person can cough or breathe, calling for help, and using trained techniques when needed.",
+            "tip1": "If the person is coughing hard, encourage coughing and stay close. A strong cough is the body’s best tool.",
+            "tip2": "If they cannot speak, cough, cry, or breathe, treat it as an emergency and call for help immediately.",
+            "tip3": "Back blows and abdominal thrusts should be learned from a certified first-aid instructor. Good technique matters.",
+            "tip4": "After a serious choking episode, medical evaluation is wise even if the person seems better.",
+            "fact": "Choking is often quiet, not dramatic. Bystanders who recognize the signs quickly can make the difference before professionals arrive.",
+            "action": "Ask your school who is trained in first aid and where students can learn CPR or choking response.",
+            "scenario": "In the cafeteria, a student suddenly stands up, grabs their throat, and cannot answer when friends ask what is wrong.",
+            "challenge": "Find out where your school keeps emergency contacts and who is first-aid trained."
+          },
+          "stiTesting": {
+            "title": "Testing and treatment: privacy, proof, care",
+            "description": "Testing replaces fear with facts. It can feel intimidating, but clinics do this every day. The strongest move is to ask clear questions about privacy, testing options, treatment, and partner safety.",
+            "tip1": "Tests may use urine, blood, or swabs. A clinician can explain what is needed based on exposure and symptoms.",
+            "tip2": "Be honest with clinicians. They are not there to judge; accurate information helps them choose the right tests.",
+            "tip3": "If treatment is prescribed, take it exactly as directed and ask when it is safe to have sex again.",
+            "tip4": "Partners may need testing or treatment. Clinics can help with safe, private ways to communicate this.",
+            "fact": "Early testing and treatment can prevent long-term complications and reduce transmission in a community.",
+            "action": "Write down three clinic questions: “Is this confidential?”, “Which tests do I need?”, “When should I retest?”",
+            "scenario": "A friend is worried after possible exposure but says, “If I go to a clinic, everyone will know.”",
+            "challenge": "Build a privacy checklist a student could use before making an appointment."
+          },
+          "vaccineLiteracy": {
+            "title": "Vaccines: training the immune system",
+            "description": "Vaccines are not magic shields; they are training sessions for the immune system. They help the body recognize danger before a real infection has the chance to cause serious harm.",
+            "tip1": "A vaccine schedule is a map. It shows which protections are recommended at different ages and when catch-up doses may be needed.",
+            "tip2": "A sore arm or mild fever can happen because the immune system is responding. Clinics can tell you what is normal and what is not.",
+            "tip3": "Vaccines are monitored for safety before and after approval. Serious allergic reactions are rare, and clinics are prepared for them.",
+            "tip4": "If you missed a dose, do not guess. Ask a clinician or official schedule about catch-up options.",
+            "fact": "High vaccine coverage protects individuals and also helps protect people who cannot be vaccinated for medical reasons.",
+            "action": "Check your vaccine record with a parent, guardian, doctor, or school nurse and list one question to ask.",
+            "scenario": "A group chat claims a vaccine “rewrites your DNA.” The post has dramatic music and no source.",
+            "challenge": "Find the same vaccine on a public health website and write one evidence-based reply."
+          },
+          "vpdExamples": {
+            "title": "Diseases vaccines can prevent",
+            "description": "A vaccine card is not just paperwork. It is a record of protection against diseases that once injured or killed far more young people: measles, hepatitis B, HPV-related cancers, and more.",
+            "tip1": "Measles spreads through the air and can cause pneumonia, brain swelling, and death. It is not just a rash.",
+            "tip2": "HPV vaccination can prevent several cancers later in life. It works best before exposure to the virus.",
+            "tip3": "Hepatitis B can become a chronic liver infection. Vaccination is a major tool for prevention.",
+            "tip4": "Disease stories travel fast online. Evidence from health agencies travels slower but is far more reliable.",
+            "fact": "Before widespread vaccination, measles killed millions globally. Vaccines changed what childhood risk looked like.",
+            "action": "Choose one vaccine-preventable disease and make a three-bullet “why it matters” card.",
+            "scenario": "Students are preparing for a school trip, but nobody agrees which vaccines matter for teens.",
+            "challenge": "Make a pocket guide: disease, how it spreads, vaccine that helps prevent it."
+          }
+        },
+        "national": {
+          "firstAidReview": {
+            "title": "First aid command: putting it together",
+            "description": "At the national stage, first aid becomes decision-making under pressure: protect yourself, get help, choose the right basic action, and keep the scene calm enough for professionals to take over.",
+            "tip1": "Scene safety comes first. You cannot help if you become the second injured person.",
+            "tip2": "Call early when the situation may be serious. Dispatchers would rather guide a cautious caller than arrive too late.",
+            "tip3": "Match action to problem: pressure for bleeding, cool water for burns, trained response for choking, space and reassurance for shock.",
+            "tip4": "Leadership can be simple: point to one person and say, “You call emergency services. You get a teacher. You clear space.”",
+            "fact": "In emergencies, calm role assignment reduces confusion and speeds up response, especially in crowded places like schools.",
+            "action": "Write a 60-second classroom emergency plan: caller, adult, space, supplies, comfort.",
+            "scenario": "One student is burned, another is bleeding, and the room is filling with noise. You are the first person thinking clearly.",
+            "challenge": "Draft a four-role emergency plan your class could practice safely with a teacher."
+          },
+          "stiMyths": {
+            "title": "STI myths: replacing gossip with evidence",
+            "description": "Myths thrive where shame is loud and facts are quiet. Health literacy means refusing gossip, protecting privacy, and pointing people toward testing and care instead of blame.",
+            "tip1": "Myth: You can always tell who has an STI. Reality: many infections have no visible signs.",
+            "tip2": "Myth: Only “certain people” get STIs. Reality: exposure is about biology and behavior, not someone’s worth.",
+            "tip3": "Myth: Two condoms are safer than one. Reality: friction can make condoms tear; one used correctly is safer.",
+            "tip4": "Myth: Borrowed antibiotics are enough. Reality: wrong treatment can fail and contribute to resistance.",
+            "fact": "Stigma delays testing. When communities talk about STIs as health issues, people seek care earlier.",
+            "action": "Practice one sentence that shuts down gossip while protecting privacy.",
+            "scenario": "A rumor spreads about a student who might need testing. People are laughing and guessing names.",
+            "challenge": "Write a response that says: stop gossiping, respect privacy, use real health information."
+          },
+          "sourceLiteracy": {
+            "title": "Health information: evidence in a noisy world",
+            "description": "Your feed is a health battlefield: miracle cures, fear posts, influencer advice, and real science all compete for attention. The skill is not knowing everything. The skill is knowing what deserves trust.",
+            "tip1": "Ask who made the claim, what evidence they show, and whether recognized health organizations agree.",
+            "tip2": "Beware of phrases like “doctors hate this,” “secret cure,” or “share before it is deleted.” They are designed to bypass critical thinking.",
+            "tip3": "Look for dates. Health guidance can change as evidence improves.",
+            "tip4": "Before sharing, pause. A false health post can spread fear faster than a virus.",
+            "fact": "Health literacy is linked to better decisions because people can find, understand, and use reliable information under pressure.",
+            "action": "Compare one viral health claim with an official health source and write the difference in plain language.",
+            "scenario": "A video promises a miracle cure, uses dramatic music, and says hospitals are hiding the truth.",
+            "challenge": "Run the three-question source test: Who says it? What proof? What do health agencies say?"
+          },
+          "capstoneMix": {
+            "title": "Capstone: lead a health mission",
+            "description": "The final mission asks you to combine everything: first response, sexual health, vaccines, consent, and evidence. The goal is not to be the expert in every room. The goal is to become the person who knows how to find help, reduce harm, and keep facts alive.",
+            "tip1": "Start with safety: emergency risks, pressure, consent, privacy, and reliable adults or services.",
+            "tip2": "Use prevention as a stack: vaccines, safer choices, testing, hygiene, trusted information, and timely care.",
+            "tip3": "Respect privacy. A helpful student does not expose someone’s health story to prove a point.",
+            "tip4": "Teach in plain language. If your younger sibling can understand it, your message is stronger.",
+            "fact": "Peer-led health education works best when it is practical, respectful, and connected to real services.",
+            "action": "Design a one-page school health mission plan with four stations: first aid, consent, vaccines, and fact-checking.",
+            "scenario": "You are asked to help plan a school health week. Students say they do not want another boring lecture.",
+            "challenge": "Create a four-station health week agenda with one activity, one trusted resource, and one takeaway per station."
+          }
+        }
+      },
+      "stageQuiz": {
+        "local": {
+          "q0": {
+            "question": "What should you tell an emergency dispatcher first if possible?",
+            "a0": "Your full medical history",
+            "a1": "Where you are and what happened",
+            "a2": "Your social media handle",
+            "explanation": "Location and a brief description of the emergency help them send the right resources quickly."
+          },
+          "q1": {
+            "question": "For heavy bleeding that soaks through a cloth, you should:",
+            "a0": "Remove the cloth to look at the wound",
+            "a1": "Add another layer on top and keep pressing",
+            "a2": "Wait an hour to see if it stops",
+            "explanation": "Removing the cloth can disturb clots. Add pressure on top until help arrives."
+          },
+          "q2": {
+            "question": "For a small fresh burn, the best first step is usually:",
+            "a0": "Put butter on it",
+            "a1": "Cool with running cool water for several minutes",
+            "a2": "Wrap tightly with plastic",
+            "explanation": "Cool running water reduces heat in the tissue. Butter traps heat and increases infection risk."
+          },
+          "q3": {
+            "question": "Why might someone get an STI test even without symptoms?",
+            "a0": "Tests are only for people with symptoms",
+            "a1": "Many STIs can be silent but still harmful or spreadable",
+            "a2": "Testing cures all STIs instantly",
+            "explanation": "Many infections have no early symptoms; testing finds them so you can get care and protect partners."
+          }
+        },
+        "regional": {
+          "q0": {
+            "question": "If an adult suddenly cannot speak or breathe and holds their throat, you should:",
+            "a0": "Ignore them until they cough",
+            "a1": "Call emergency services immediately",
+            "a2": "Give them a glass of water",
+            "explanation": "Complete airway blockage is an emergency — trained help and EMS are needed urgently."
+          },
+          "q1": {
+            "question": "If prescribed antibiotics for an STI, you should:",
+            "a0": "Stop when you feel better",
+            "a1": "Finish all pills as directed",
+            "a2": "Share extras with a partner",
+            "explanation": "Stopping early can fail to kill the bacteria and contribute to resistance. Never share antibiotics."
+          },
+          "q2": {
+            "question": "Vaccines mainly work by:",
+            "a0": "Replacing your blood",
+            "a1": "Training the immune system to recognize a germ",
+            "a2": "Curing active disease instantly",
+            "explanation": "Vaccines prepare your immune system so a future encounter with the real germ is much safer."
+          },
+          "q3": {
+            "question": "Measles is:",
+            "a0": "Harmless in all children",
+            "a1": "A serious disease that vaccines have greatly reduced",
+            "a2": "Only spread by animals",
+            "explanation": "Measles can cause severe complications; vaccination is a key reason cases dropped worldwide."
+          }
+        },
+        "national": {
+          "q0": {
+            "question": "In a medical emergency at school, the best first step is usually:",
+            "a0": "Only post on social media",
+            "a1": "Get adult help and emergency services if needed",
+            "a2": "Wait until the end of class",
+            "explanation": "Trained adults and EMS are equipped to respond; time matters in emergencies."
+          },
+          "q1": {
+            "question": "A reliable place to check vaccine facts is often:",
+            "a0": "Anonymous forum threads only",
+            "a1": "Your country's ministry of health or WHO",
+            "a2": "Memes with many likes",
+            "explanation": "Official health agencies review evidence and update guidance — use them to verify claims."
+          },
+          "q2": {
+            "question": "Two condoms at once are:",
+            "a0": "Safer than one",
+            "a1": "Not recommended — friction can cause breakage",
+            "a2": "Required by law",
+            "explanation": "Using one condom correctly is safer than double-layering, which increases tear risk."
+          },
+          "q3": {
+            "question": "Health literacy means:",
+            "a0": "Memorizing every disease name",
+            "a1": "Finding, understanding, and using reliable health information",
+            "a2": "Never seeing a doctor",
+            "explanation": "It is about skills to navigate real information and services, not encyclopedic memorization."
+          }
+        }
+      },
+      "workflow": {
+        "nextMission": "Next mission",
+        "nextMissionBody": "Follow this recommended step to keep the Academy moving without guessing what to do next.",
+        "continueLesson": "{stage}: {title}",
+        "takeQuiz": "{stage} stage checkpoint",
+        "finishedTitle": "Academy complete",
+        "finishedBody": "You finished the current Academy path. Review any lesson or retake a quiz to stay sharp.",
+        "startMission": "Start mission",
+        "startQuiz": "Take checkpoint",
+        "reviewPath": "Review path",
+        "takeStageQuiz": "Take stage checkpoint",
+        "lockedStatus": "Locked",
+        "completeStatus": "Complete",
+        "quizReadyStatus": "Checkpoint ready",
+        "inProgressStatus": "In progress"
+      },
+      "fieldLab": {
+        "title": "Field Lab",
+        "subtitle": "Turn the lesson into a one-minute plan. Your note stays only on this device.",
+        "observeLabel": "Observe",
+        "decideLabel": "Decide",
+        "actLabel": "Act",
+        "placeholder": "Example: I would first check safety, then call for help, then tell an adult exactly what I saw...",
+        "saveLabel": "Save field note",
+        "savedLabel": "Saved on this device",
+        "observeHint": "What do you actually see, hear, or know in this scenario? Stick to the facts.",
+        "decideHint": "What is the smartest first move? Pick something a calm bystander can really do.",
+        "actHint": "Write the exact words or steps you would use in the next 60 seconds.",
+        "syncedLabel": "Saved",
+        "draftLabel": "Saving draft"
+      },
+      "visuals": {
+        "academy": "Students learning health skills through maps, phones, clinics, and community action",
+        "emergency": "Emergency call map with location pins and first response signal lines",
+        "firstAid": "First aid field kit with bandage, clean cloth, and safety steps",
+        "sexualHealth": "Private conversation bubble, shield, and clinic doorway for confidential sexual health support",
+        "vaccines": "Immune system shield, vaccine card, and public health network",
+        "literacy": "Fact-checking desk with phone, sources, magnifier, and evidence notes",
+        "capstone": "Capstone expedition map connecting first aid, vaccines, relationships, and evidence"
+      },
+      "hero": {
+        "chipFirstAid": "First aid that works",
+        "chipLiteracy": "Health literacy",
+        "chipMissions": "Mission-based learning"
+      },
+      "toast": {
+        "lessonLoggedTitle": "Lesson logged",
+        "lessonLoggedBody": "+10 XP earned. Streak updated and your next mission is ready."
+      },
+      "sexualHealthSupport": {
+        "title": "Confidential support matters",
+        "body": "If this topic touches something real in your life, you do not have to solve it alone. Ask a trusted adult, school nurse, doctor, youth clinic, or helpline what support is confidential where you live.",
+        "findCare": "Find care",
+        "rights": "Know your rights"
+      },
+      "stageBadgeFormat": "Stage {n}",
+      "lessonIndexFormat": "L{n}/{total}",
+      "a11yLocked": "locked",
+      "metaSuffix": "Student Health Academy",
+      "l8": {
+        "eyebrow": "Redi Health Academy",
+        "heroTitle1": "Become the",
+        "heroTitle2": "health translator",
+        "heroTitle3": "for your community.",
+        "heroLead": "A clinically reviewed, gamified curriculum spanning local, regional, and national stages. Built with Roma health mediators across Europe.",
+        "heroStatPanelImageAlt": "Illustration highlighting students practising health-literacy milestones together.",
+        "heroPrimaryCta": "Start today's mission",
+        "heroSecondaryCta": "See the curriculum",
+        "statLevel": "Level",
+        "statXp": "XP",
+        "statStreak": "Day streak",
+        "statBadges": "Badges",
+        "statLessons": "Lessons done",
+        "statDaysActive": "Active days",
+        "missionDeckTitle": "Mission deck",
+        "missionDeckSubtitle": "Three plays that compound each week.",
+        "missionTodayLabel": "Today",
+        "missionTodayBody": "Pick up where you left off — about {min} minutes.",
+        "missionTodayCta": "Continue mission",
+        "missionTodayQuiz": "Take stage quiz",
+        "missionTodayDone": "All stages cleared",
+        "missionTodayDoneBody": "Review a module or share what you learned.",
+        "missionStreakLabel": "Streak",
+        "missionStreakBody": "Keep your fire alive. Show up tomorrow.",
+        "missionStreakDay": "{count, plural, one {# day} other {# days}}",
+        "missionStreakCta": "Log a quick fact",
+        "missionBadgeLabel": "Next badge",
+        "missionBadgeBody": "Finish {remaining} more {remaining, plural, one {lesson} other {lessons}} in {stage}.",
+        "missionBadgeAllDone": "All badges earned — share your diploma below.",
+        "journeyTitle": "Your journey",
+        "journeySubtitle": "Three stages. Twelve missions. One certified field mediator.",
+        "journeyCurrent": "You are here",
+        "journeyUnlocked": "Unlocked",
+        "journeyLocked": "Locked",
+        "journeyComplete": "Complete",
+        "journeyMilestoneLocal": "Local",
+        "journeyMilestoneRegional": "Regional",
+        "journeyMilestoneNational": "National",
+        "moduleListTitle": "Modules in this stage",
+        "moduleStatusLocked": "Locked",
+        "moduleStatusDone": "Done",
+        "moduleStatusOpen": "Open",
+        "moduleStatusNew": "New",
+        "achievementWallTitle": "Achievement wall",
+        "achievementWallSubtitle": "Every badge here is a story you can share.",
+        "achievementProgress": "{percent}% to unlock",
+        "achievementEarned": "Earned",
+        "achievementLockedHint": "Pass the {stage} stage quiz to unlock.",
+        "leaderboardTitle": "Top learners",
+        "leaderboardSubtitle": "Anonymized cohort, updated weekly.",
+        "leaderboardYou": "You",
+        "leaderboardRank": "Rank",
+        "leaderboardCountryFallback": "Europe",
+        "leaderboardEmpty": "Not enough data yet — keep learning and you'll appear here next week.",
+        "diplomaTitle": "Field Mediator Diploma",
+        "diplomaSubtitle": "What you're working toward.",
+        "diplomaBody": "Pass all three stages to earn a digital diploma you can share with employers and NGOs.",
+        "diplomaProgress": "{completed} of {total} requirements met",
+        "diplomaPreviewName": "Future Field Mediator",
+        "diplomaPreviewDate": "Awarded {date}",
+        "diplomaSignature": "Redi Clinical Board",
+        "diplomaPreview": "Preview",
+        "diplomaUnlocked": "Diploma ready",
+        "diplomaCta": "Open diploma",
+        "countryTitle": "Your country",
+        "countryHint": "Localize examples, statistics, and emergency numbers.",
+        "ctaBanner": "Stuck? Field-tested mediators are one tap away.",
+        "ctaBannerLink": "Ask a question",
+        "whatsInsideTitle": "What's inside",
+        "whatsInsideFirstAid": "Emergency response & first aid",
+        "whatsInsideSTI": "Sexual health & consent",
+        "whatsInsideVaccines": "Vaccines & immunization",
+        "whatsInsideMyths": "Misinformation & sources"
+      }
+    }
+  },
+  {
+    "path": "privacy.metaTitle",
+    "enVal": "Privacy & data"
+  },
+  {
+    "path": "privacy.metaDescription",
+    "enVal": "How Redi Health handles your data and how to exercise your rights"
+  },
+  {
+    "path": "privacy.lastUpdated",
+    "enVal": "Last updated: {date}"
+  },
+  {
+    "path": "privacy.actionsTitle",
+    "enVal": "Your data, your choice"
+  },
+  {
+    "path": "privacy.actionsSubtitle",
+    "enVal": "Download a copy of everything we have, or request permanent deletion. Both are processed immediately and audit-logged."
+  },
+  {
+    "path": "privacy.exportLabel",
+    "enVal": "Download my data"
+  },
+  {
+    "path": "privacy.exportHint",
+    "enVal": "Returns a JSON bundle of every record tied to your account. Field Lab notes stay on your device."
+  },
+  {
+    "path": "privacy.deleteLabel",
+    "enVal": "Delete my account"
+  },
+  {
+    "path": "privacy.deleteHint",
+    "enVal": "Scrubs your identifying fields immediately. Hard delete after 30 days."
+  },
+  {
+    "path": "privacy.deleteConfirmTitle",
+    "enVal": "Delete your account?"
+  },
+  {
+    "path": "privacy.deleteConfirmBody",
+    "enVal": "This scrubs your identifying fields right now. Your account is unrecoverable after this. Hard delete completes within 30 days. Local progress on this device will also be cleared."
+  },
+  {
+    "path": "privacy.deleteConfirmCta",
+    "enVal": "Yes, delete my account"
+  },
+  {
+    "path": "privacy.deleteCancel",
+    "enVal": "Cancel"
+  },
+  {
+    "path": "privacy.authRequired",
+    "enVal": "Please sign in to continue"
+  },
+  {
+    "path": "privacy.unavailable",
+    "enVal": "Service unavailable. Please try again later."
+  },
+  {
+    "path": "privacy.successDeleted",
+    "enVal": "Your data has been scrubbed. Goodbye for now."
+  },
+  {
+    "path": "privacy.disclaimer",
+    "enVal": "Redi Health is not a medical device and does not provide medical advice. All AI-generated content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions."
+  },
+  {
+    "path": "privacy.sections",
+    "enVal": {
+      "collect": {
+        "title": "What we collect",
+        "body": "Account, preferences, lesson progress, mood and water check-ins you log, and audit records of high-value actions. We do not collect raw AI prompts or Field Lab notes — those stay on your device."
+      },
+      "use": {
+        "title": "How we use it",
+        "body": "We personalise the academy, prevent abuse, and improve content. We never sell your data. We use anonymous, aggregated analytics when enabled (PostHog) and respect Do-Not-Track."
+      },
+      "storage": {
+        "title": "Where it lives",
+        "body": "Your account and progress are stored in EU-region Supabase Postgres. Server logs and error reports use EU-region Sentry. Field Lab notes, streaks, and XP are device-local."
+      },
+      "processors": {
+        "title": "Third-party processors",
+        "body": "OpenAI processes AI prompts in real time (we scrub PII first). Sentry handles error tracking. Resend handles email. PostHog handles optional analytics. Upstash handles rate-limit counters. Each is contractually bound by a data-processing agreement."
+      },
+      "rights": {
+        "title": "Your GDPR rights",
+        "body": "You can access, port, correct, or delete your data at any time. Use the buttons above. We respond to requests within 30 days. You can also lodge a complaint with your local data-protection authority."
+      },
+      "transfers": {
+        "title": "International transfers",
+        "body": "Some processors operate globally (e.g. OpenAI). Where data leaves the EEA we rely on Standard Contractual Clauses. You can use the academy without enabling AI features."
+      },
+      "deletion": {
+        "title": "How deletion works",
+        "body": "When you click Delete, we immediately scrub identifying fields (email, name, phone). After 30 days, all rows tied to your account are permanently removed. Pseudonymised statistics may persist for population health research."
+      },
+      "contact": {
+        "title": "Data Protection Officer",
+        "body": "Email dpo@redi.healthcare with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
+      }
+    }
+  },
+  {
+    "path": "scan.inputAria",
+    "enVal": "Paste health claim to fact-check"
+  },
+  {
+    "path": "scan.sourceLabel",
+    "enVal": "Source"
+  },
+  {
+    "path": "scan.shareTagline",
+    "enVal": "Checked by Redi Health Advisor"
+  },
+  {
+    "path": "scan.shareTitle",
+    "enVal": "Health Fact Check"
+  },
+  {
+    "path": "scan.errors",
+    "enVal": {
+      "analyze": "Failed to analyze claim",
+      "network": "Network error. Please check your connection."
+    }
+  },
+  {
+    "path": "scan.eyebrow",
+    "enVal": "Fact check"
+  },
+  {
+    "path": "scan.heroArtAlt",
+    "enVal": "Illustration representing myth-busting and verified health claims."
+  },
+  {
+    "path": "severity.redHospital",
+    "enVal": "Go to hospital NOW"
+  },
+  {
+    "path": "symptoms.heroTitle",
+    "enVal": "Where does it hurt?"
+  },
+  {
+    "path": "symptoms.heroSubtitle",
+    "enVal": "Tap the area on the body that is bothering you"
+  },
+  {
+    "path": "symptoms.heroArtAlt",
+    "enVal": "Illustration of people getting gentle multilingual guidance about everyday symptoms."
+  },
+  {
+    "path": "symptoms.backToMap",
+    "enVal": "Back to body map"
+  },
+  {
+    "path": "symptoms.checkAnother",
+    "enVal": "Check another area"
+  },
+  {
+    "path": "symptoms.selectSymptoms",
+    "enVal": "Select all symptoms that apply"
+  },
+  {
+    "path": "symptoms.extraPlaceholder",
+    "enVal": "Anything else? (how long, how bad...)"
+  },
+  {
+    "path": "symptoms.extraAria",
+    "enVal": "Additional symptom details"
+  },
+  {
+    "path": "symptoms.analyzing",
+    "enVal": "Analyzing symptoms…"
+  },
+  {
+    "path": "symptoms.checkCta",
+    "enVal": "Check symptoms"
+  },
+  {
+    "path": "symptoms.whatToDoNow",
+    "enVal": "What to do now"
+  },
+  {
+    "path": "symptoms.homeCare",
+    "enVal": "Home care"
+  },
+  {
+    "path": "symptoms.escalateTitle",
+    "enVal": "Go to hospital if"
+  },
+  {
+    "path": "symptoms.commonCauses",
+    "enVal": "Common causes"
+  },
+  {
+    "path": "symptoms.regions",
+    "enVal": {
+      "head": "Head",
+      "chest": "Chest",
+      "abdomen": "Stomach",
+      "leftArm": "Left arm",
+      "rightArm": "Right arm",
+      "pelvis": "Lower body",
+      "leftLeg": "Left leg",
+      "rightLeg": "Right leg"
+    }
+  },
+  {
+    "path": "symptoms.headSymptoms",
+    "enVal": [
+      "Headache",
+      "Dizziness",
+      "Blurry vision",
+      "Ear pain",
+      "Sore throat"
+    ]
+  },
+  {
+    "path": "symptoms.chestSymptoms",
+    "enVal": [
+      "Chest pain",
+      "Difficulty breathing",
+      "Cough",
+      "Heart racing",
+      "Tightness"
+    ]
+  },
+  {
+    "path": "symptoms.abdomenSymptoms",
+    "enVal": [
+      "Stomach pain",
+      "Nausea / vomiting",
+      "Diarrhea",
+      "Bloating",
+      "No appetite"
+    ]
+  },
+  {
+    "path": "symptoms.armSymptoms",
+    "enVal": [
+      "Pain",
+      "Numbness",
+      "Swelling",
+      "Can't move it",
+      "Tingling"
+    ]
+  },
+  {
+    "path": "symptoms.pelvisSymptoms",
+    "enVal": [
+      "Pain when urinating",
+      "Lower back pain",
+      "Menstrual problems",
+      "Groin pain"
+    ]
+  },
+  {
+    "path": "symptoms.legSymptoms",
+    "enVal": [
+      "Leg pain",
+      "Swelling",
+      "Can't walk",
+      "Knee pain",
+      "Numbness"
+    ]
+  },
+  {
+    "path": "consult.heroTitle",
+    "enVal": "Health Consultation"
+  },
+  {
+    "path": "consult.heroSubtitle",
+    "enVal": "Tell me what's bothering you. I'll ask a few questions and help you decide what to do."
+  },
+  {
+    "path": "consult.prompt",
+    "enVal": "What brings you here today?"
+  },
+  {
+    "path": "consult.orFreeform",
+    "enVal": "or describe in your own words"
+  },
+  {
+    "path": "consult.freeformPlaceholder",
+    "enVal": "I have a headache since yesterday…"
+  },
+  {
+    "path": "consult.freeformAria",
+    "enVal": "Describe your health concern"
+  },
+  {
+    "path": "consult.chatHeader",
+    "enVal": "Health Consultation"
+  },
+  {
+    "path": "consult.chatSubtitle",
+    "enVal": "Answering a few questions helps me help you better"
+  },
+  {
+    "path": "consult.answerAria",
+    "enVal": "Your answer"
+  },
+  {
+    "path": "consult.answerPlaceholder",
+    "enVal": "Type your answer…"
+  },
+  {
+    "path": "consult.newSession",
+    "enVal": "New consultation"
+  },
+  {
+    "path": "consult.assessment",
+    "enVal": "Assessment"
+  },
+  {
+    "path": "consult.whatToDo",
+    "enVal": "What to do"
+  },
+  {
+    "path": "consult.homeCare",
+    "enVal": "Home care"
+  },
+  {
+    "path": "consult.watchFor",
+    "enVal": "Watch for these signs"
+  },
+  {
+    "path": "consult.showVisitCard",
+    "enVal": "Show Doctor Visit Card"
+  },
+  {
+    "path": "consult.hideVisitCard",
+    "enVal": "Hide Doctor Visit Card"
+  },
+  {
+    "path": "consult.visitCardTitle",
+    "enVal": "Patient Summary — For Doctor"
+  },
+  {
+    "path": "consult.visitCardDisclaimer",
+    "enVal": "Generated by Redi Health Advisor. This is not a medical diagnosis."
+  },
+  {
+    "path": "consult.concerns",
+    "enVal": {
+      "fever": "Fever / High temperature",
+      "pain": "Pain somewhere",
+      "breathing": "Breathing problems",
+      "skin": "Skin problem / Rash",
+      "pregnancy": "Pregnancy concern",
+      "child": "My child is sick",
+      "mental": "Stress / Anxiety / Sadness",
+      "heart": "Heart / Chest problem"
+    }
+  },
+  {
+    "path": "vaccines.fears",
+    "enVal": [
+      "Are vaccines safe for my baby?",
+      "Will it hurt my child?",
+      "What if my child gets a fever after?",
+      "Can I delay vaccines?",
+      "My child is sick — can they still get vaccinated?"
+    ]
+  },
+  {
+    "path": "vaccines.items",
+    "enVal": {
+      "bcg": {
+        "name": "BCG (Tuberculosis)",
+        "preventsDiseases": [
+          "Tuberculosis (TB)"
+        ],
+        "howItWorks": "This vaccine teaches your baby's body to fight tuberculosis — a serious lung disease that spreads through the air. One small injection in the arm gives protection for years.",
+        "sideEffects": "A small bump or scar on the arm where the injection was given. This is normal and means the vaccine is working.",
+        "mythDebunked": "MYTH: 'TB doesn't exist anymore.' TRUTH: TB still kills 1.5 million people every year. In crowded living conditions, it spreads fast. I have seen TB outbreaks in settlements where families refused this vaccine."
+      },
+      "hepb": {
+        "name": "Hepatitis B",
+        "preventsDiseases": [
+          "Hepatitis B (liver disease)"
+        ],
+        "howItWorks": "Protects the liver from a virus that can cause lifelong liver damage and cancer. Given at birth because babies are most vulnerable.",
+        "sideEffects": "Mild soreness at the injection site. Some babies are a little fussy for a day. Nothing serious.",
+        "mythDebunked": "MYTH: 'My baby is too young for vaccines at birth.' TRUTH: Newborns are actually the most vulnerable. The earlier we protect them, the safer they are. This vaccine has been given to billions of babies safely."
+      },
+      "dtap": {
+        "name": "DTaP (Diphtheria, Tetanus, Pertussis)",
+        "preventsDiseases": [
+          "Diphtheria",
+          "Tetanus (lockjaw)",
+          "Whooping cough"
+        ],
+        "howItWorks": "Three-in-one protection. Diphtheria can block your child's throat. Tetanus causes muscles to lock painfully. Whooping cough makes babies cough so hard they can't breathe.",
+        "sideEffects": "The injection site may be red and sore. Your child might have a mild fever for 1-2 days. Give them extra love and fluids.",
+        "mythDebunked": "MYTH: 'These diseases don't exist anymore, why vaccinate?' TRUTH: They don't exist BECAUSE of vaccines. When communities stop vaccinating, these diseases come back. I saw a whooping cough outbreak in a settlement in 2018 — three babies were hospitalized."
+      },
+      "ipv": {
+        "name": "Polio (IPV)",
+        "preventsDiseases": [
+          "Polio (paralysis)"
+        ],
+        "howItWorks": "Polio is a virus that can paralyze a child's legs permanently in hours. This vaccine has nearly eliminated polio from the world.",
+        "sideEffects": "Very mild. Some redness at the injection site. That's it.",
+        "mythDebunked": "MYTH: 'Polio is gone, we don't need this.' TRUTH: Polio is gone in Europe BECAUSE of this vaccine. It still exists in some countries. One unvaccinated traveler can bring it back."
+      },
+      "mmr": {
+        "name": "MMR (Measles, Mumps, Rubella)",
+        "preventsDiseases": [
+          "Measles",
+          "Mumps",
+          "Rubella (German measles)"
+        ],
+        "howItWorks": "Measles is extremely contagious and can cause brain damage and death. Mumps causes painful swelling. Rubella is dangerous for pregnant women. One vaccine protects against all three.",
+        "sideEffects": "About 1 in 10 children get a mild fever and rash 7-10 days after. This means the body is learning to fight. It goes away on its own.",
+        "mythDebunked": "MYTH: 'MMR causes autism.' TRUTH: This is the most studied vaccine myth in history. Over 1.2 million children studied — NO link to autism. The doctor who made this claim lost his medical license for fraud. I have personally seen children die from measles in settlements where this lie spread."
+      },
+      "pneumo": {
+        "name": "Pneumococcal (PCV13)",
+        "preventsDiseases": [
+          "Pneumonia",
+          "Meningitis",
+          "Blood infections"
+        ],
+        "howItWorks": "Protects against bacteria that cause pneumonia (lung infection), meningitis (brain infection), and blood infections. These are the biggest killers of young children.",
+        "sideEffects": "Mild fever, fussiness, soreness at injection site for 1-2 days.",
+        "mythDebunked": "MYTH: 'Children get sick from too many vaccines.' TRUTH: Children's immune systems handle thousands of germs every day. A few vaccines are nothing compared to what their body already fights."
+      },
+      "rota": {
+        "name": "Rotavirus",
+        "preventsDiseases": [
+          "Severe diarrhea and vomiting in babies"
+        ],
+        "howItWorks": "Given as drops in the mouth (not an injection!). Protects against the virus that causes severe diarrhea in babies — which can be deadly due to dehydration.",
+        "sideEffects": "Very mild. Occasionally a little fussiness or mild diarrhea.",
+        "mythDebunked": "MYTH: 'Diarrhea is normal for babies, they don't need a vaccine.' TRUTH: Rotavirus diarrhea is NOT normal — it causes severe dehydration that kills hundreds of thousands of children worldwide every year."
+      },
+      "varicella": {
+        "name": "Varicella (Chickenpox)",
+        "preventsDiseases": [
+          "Chickenpox"
+        ],
+        "howItWorks": "Chickenpox seems mild but can cause serious skin infections, pneumonia, and brain swelling. The vaccine prevents it almost completely.",
+        "sideEffects": "Mild soreness. Rarely, a few chickenpox-like spots near the injection site.",
+        "mythDebunked": "MYTH: 'It's better to get chickenpox naturally.' TRUTH: Natural chickenpox can cause serious complications and the virus stays in your body forever, causing painful shingles later in life."
+      },
+      "hpv": {
+        "name": "HPV (Human Papillomavirus)",
+        "preventsDiseases": [
+          "Cervical cancer",
+          "Other cancers"
+        ],
+        "howItWorks": "This vaccine prevents cancer. HPV is a very common virus that can cause cervical cancer in women and other cancers in both men and women. Given to teenagers before they are exposed to the virus.",
+        "sideEffects": "Sore arm, sometimes a brief headache or dizziness. Very safe.",
+        "mythDebunked": "MYTH: 'This vaccine encourages sexual activity.' TRUTH: This vaccine prevents CANCER. It has nothing to do with behavior. Would you refuse a cancer-preventing medicine for your child?"
+      },
+      "flu": {
+        "name": "Influenza (Flu)",
+        "preventsDiseases": [
+          "Seasonal flu"
+        ],
+        "howItWorks": "The flu is not just a cold — it can be serious for young children, elderly people, and pregnant women. This vaccine is updated every year to match the current flu strains.",
+        "sideEffects": "Mild soreness, occasionally a low fever for a day. You CANNOT get the flu from the flu vaccine.",
+        "mythDebunked": "MYTH: 'The flu vaccine gives you the flu.' TRUTH: Impossible. The vaccine contains no live virus. If you feel a little off for a day, that's your immune system learning — not the flu."
+      }
+    }
+  },
+  {
+    "path": "vaccines.ageGroups",
+    "enVal": {
+      "birth": {
+        "label": "At birth"
+      },
+      "2months": {
+        "label": "2 months"
+      },
+      "4months": {
+        "label": "4 months"
+      },
+      "6months": {
+        "label": "6 months"
+      },
+      "12months": {
+        "label": "12 months"
+      },
+      "18months": {
+        "label": "18 months"
+      },
+      "4years": {
+        "label": "4-6 years"
+      },
+      "9years": {
+        "label": "9-12 years"
+      },
+      "adult": {
+        "label": "Adults"
+      },
+      "pregnant": {
+        "label": "Pregnant women"
+      }
+    }
+  },
+  {
+    "path": "glossary",
+    "enVal": {
+      "meta": {
+        "title": "Health Glossary — Redi Health",
+        "description": "Medical terms explained in simple words"
+      },
+      "title": "Health Glossary",
+      "subtitle": "Medical terms explained in simple words.",
+      "searchPlaceholder": "Search terms...",
+      "searchAria": "Search medical terms",
+      "noResults": "No terms found. Try a different search.",
+      "allCount": "All ({count})",
+      "categories": {
+        "condition": "Conditions",
+        "medication": "Medications",
+        "procedure": "Procedures",
+        "body": "Body & Health",
+        "test": "Tests"
+      },
+      "entries": {
+        "hypertension": {
+          "term": "Hypertension",
+          "simple": "High blood pressure. Your blood pushes too hard against your blood vessels. Can cause heart attack or stroke if not treated. Take your medicine every day."
+        },
+        "diabetes-type-2": {
+          "term": "Diabetes (Type 2)",
+          "simple": "Your body can't use sugar properly. Sugar builds up in your blood and damages your organs. You need medicine, healthy food, and exercise. It is NOT caused by eating too much sugar."
+        },
+        "anemia": {
+          "term": "Anemia",
+          "simple": "Not enough healthy red blood cells. You feel tired, weak, dizzy. Often caused by not eating enough iron (meat, beans, spinach). Very common in pregnant women."
+        },
+        "asthma": {
+          "term": "Asthma",
+          "simple": "Your airways get narrow and swollen, making it hard to breathe. You may wheeze or cough. Use your inhaler when it happens. Avoid smoke and dust."
+        },
+        "tuberculosis-tb": {
+          "term": "Tuberculosis (TB)",
+          "simple": "A serious infection in your lungs. You cough for weeks, lose weight, sweat at night. It spreads through the air. It CAN be cured with 6 months of medicine — but you must finish ALL the pills."
+        },
+        "depression": {
+          "term": "Depression",
+          "simple": "A medical condition where you feel sad, hopeless, or empty for weeks. It is NOT weakness. It is NOT your fault. Medicine and talking to someone can help. Please ask for help."
+        },
+        "hepatitis-b-c": {
+          "term": "Hepatitis B/C",
+          "simple": "A virus that attacks your liver. You may not feel sick for years, but it damages your liver slowly. It spreads through blood and needles. There is a vaccine for Hepatitis B."
+        },
+        "pneumonia": {
+          "term": "Pneumonia",
+          "simple": "A serious infection in your lungs. You have fever, cough with mucus, and trouble breathing. You need antibiotics from a doctor. Can be dangerous for babies and old people."
+        },
+        "gastritis": {
+          "term": "Gastritis",
+          "simple": "Your stomach lining is irritated or inflamed. You feel burning pain, nausea, or bloating. Avoid spicy food, alcohol, and smoking. Medicine can help."
+        },
+        "eczema": {
+          "term": "Eczema",
+          "simple": "Itchy, red, dry patches on your skin. It is NOT contagious. Use moisturizer often. Avoid harsh soaps. A doctor can give you cream to help."
+        },
+        "antibiotic": {
+          "term": "Antibiotic",
+          "simple": "Medicine that kills bacteria (germs). It does NOT work against viruses like the flu or cold. You MUST finish the full course even if you feel better, or the germs come back stronger."
+        },
+        "ibuprofen": {
+          "term": "Ibuprofen",
+          "simple": "A painkiller that also reduces swelling and fever. Take with food to protect your stomach. Do not take more than the box says. Not safe during pregnancy."
+        },
+        "paracetamol": {
+          "term": "Paracetamol",
+          "simple": "A common painkiller for headaches and fever. Safe for most people, including pregnant women. Do NOT take more than 4 grams (8 tablets) per day — too much damages your liver."
+        },
+        "insulin": {
+          "term": "Insulin",
+          "simple": "A hormone your body needs to use sugar. People with diabetes may need insulin injections. It is NOT a sign that your diabetes is worse — it's just a different treatment."
+        },
+        "metformin": {
+          "term": "Metformin",
+          "simple": "The most common diabetes medicine. Helps your body use sugar better. Take with food. May cause stomach upset at first — this usually goes away."
+        },
+        "blood-test": {
+          "term": "Blood test",
+          "simple": "A small needle takes a little blood from your arm. It helps the doctor check for infections, anemia, diabetes, and many other things. It hurts for just a second."
+        },
+        "x-ray": {
+          "term": "X-ray",
+          "simple": "A picture of your bones and lungs using special light. You stand still for a few seconds. It does NOT hurt. Safe for most people, but tell the doctor if you are pregnant."
+        },
+        "ultrasound": {
+          "term": "Ultrasound",
+          "simple": "A picture of inside your body using sound waves. The doctor puts gel on your skin and moves a device over it. It does NOT hurt. Used to check babies during pregnancy."
+        },
+        "ecg-ekg": {
+          "term": "ECG / EKG",
+          "simple": "A test that checks your heart rhythm. Small stickers are placed on your chest. It does NOT hurt. Takes about 5 minutes. Shows if your heart is beating normally."
+        },
+        "vaccination": {
+          "term": "Vaccination",
+          "simple": "A small injection that teaches your body to fight a disease BEFORE you get sick. Like training for your immune system. Side effects (sore arm, mild fever) are NORMAL and mean it's working."
+        },
+        "blood-pressure": {
+          "term": "Blood pressure",
+          "simple": "The force of blood pushing against your blood vessel walls. Normal is around 120/80. High blood pressure (over 140/90) is dangerous because you can't feel it, but it damages your heart and brain."
+        },
+        "blood-sugar": {
+          "term": "Blood sugar",
+          "simple": "The amount of sugar (glucose) in your blood. Normal fasting level is 70-100 mg/dL. Too high means diabetes. Too low makes you dizzy and shaky. Test it regularly if you have diabetes."
+        },
+        "bmi": {
+          "term": "BMI",
+          "simple": "Body Mass Index — a number that shows if your weight is healthy for your height. Under 18.5 is underweight. 18.5-25 is normal. Over 25 is overweight. Over 30 is obese."
+        },
+        "immune-system": {
+          "term": "Immune system",
+          "simple": "Your body's army against germs. White blood cells fight infections. Vaccines train your immune system. Good food, sleep, and exercise make it stronger."
+        }
+      }
+    }
+  },
+  {
+    "path": "healthQuiz",
+    "enVal": {
+      "meta": {
+        "title": "Health Quiz — Redi Health",
+        "description": "Test your health knowledge with interactive quizzes"
+      },
+      "title": "Health Quiz",
+      "subtitle": "Test your knowledge. Learn something new.",
+      "backToQuizzes": "Back to quizzes",
+      "seeResults": "See results",
+      "nextQuestion": "Next question",
+      "questionsCount": "{count} questions",
+      "results": {
+        "perfect": "Perfect score!",
+        "great": "Great job!",
+        "good": "Good effort!",
+        "keepLearning": "Keep learning!",
+        "score": "You got {score} out of {total} correct",
+        "tryAgain": "Try again",
+        "moreQuizzes": "More quizzes"
+      },
+      "quizzes": {
+        "antibiotics": {
+          "title": "Antibiotics",
+          "description": "Do you know when to use antibiotics?",
+          "questions": [
+            {
+              "question": "Can antibiotics cure the flu?",
+              "options": [
+                "Yes",
+                "No",
+                "Sometimes"
+              ],
+              "explanation": "The flu is caused by a virus. Antibiotics only kill bacteria. Taking antibiotics for the flu does nothing and can make future infections harder to treat."
+            },
+            {
+              "question": "You feel better after 3 days of antibiotics. Should you stop?",
+              "options": [
+                "Yes, you're cured",
+                "No, finish the full course",
+                "Take half the remaining pills"
+              ],
+              "explanation": "ALWAYS finish the full course. If you stop early, some bacteria survive and become resistant. Next time, the same antibiotic won't work."
+            },
+            {
+              "question": "Can you share antibiotics with a family member who has similar symptoms?",
+              "options": [
+                "Yes, it saves money",
+                "No, never",
+                "Only if it's the same illness"
+              ],
+              "explanation": "Never share antibiotics. Different infections need different medicines. The wrong antibiotic can be dangerous and won't help."
+            },
+            {
+              "question": "What happens if you take antibiotics too often?",
+              "options": [
+                "Nothing bad",
+                "Your body becomes immune to illness",
+                "Bacteria become resistant and harder to kill"
+              ],
+              "explanation": "Antibiotic resistance is a global crisis. When bacteria become resistant, simple infections can become deadly. Only take antibiotics when a doctor prescribes them."
+            }
+          ]
+        },
+        "vaccines": {
+          "title": "Vaccines",
+          "description": "Separate facts from myths",
+          "questions": [
+            {
+              "question": "Do vaccines cause autism?",
+              "options": [
+                "Yes",
+                "No",
+                "We don't know"
+              ],
+              "explanation": "NO. This myth started from a fraudulent study that was retracted. The doctor who published it lost his medical license. Dozens of studies with millions of children prove vaccines do NOT cause autism."
+            },
+            {
+              "question": "Is it safe to give a baby multiple vaccines at once?",
+              "options": [
+                "No, it's too much",
+                "Yes, it's safe and tested",
+                "Only one at a time"
+              ],
+              "explanation": "Babies' immune systems handle thousands of germs every day. Combination vaccines are thoroughly tested and safe. Delaying vaccines leaves your child unprotected."
+            },
+            {
+              "question": "My child has a mild cold. Can they still get vaccinated?",
+              "options": [
+                "No, wait until fully healthy",
+                "Yes, a mild cold is fine",
+                "Only with doctor permission"
+              ],
+              "explanation": "A mild cold, low fever, or runny nose is NOT a reason to delay vaccination. Only severe illness requires postponement. Ask your doctor if unsure."
+            },
+            {
+              "question": "Do vaccines contain dangerous chemicals?",
+              "options": [
+                "Yes, they're full of toxins",
+                "No, all ingredients are safe in the tiny amounts used",
+                "Some do, some don't"
+              ],
+              "explanation": "Vaccine ingredients are present in tiny, safe amounts. You get more aluminum from breast milk than from a vaccine. Every ingredient has been tested for safety."
+            }
+          ]
+        },
+        "diabetes": {
+          "title": "Diabetes",
+          "description": "Understanding diabetes management",
+          "questions": [
+            {
+              "question": "Is diabetes caused by eating too much sugar?",
+              "options": [
+                "Yes",
+                "No, it's more complex",
+                "Only Type 2"
+              ],
+              "explanation": "Diabetes is caused by genetics, lifestyle, and how your body processes insulin. Eating sugar doesn't directly cause it, but an unhealthy diet and obesity increase risk."
+            },
+            {
+              "question": "Can diabetes be cured with natural remedies like cinnamon?",
+              "options": [
+                "Yes, cinnamon cures it",
+                "No, there is no cure but it can be managed",
+                "Yes, with enough garlic and herbs"
+              ],
+              "explanation": "There is NO cure for diabetes. It can be MANAGED with medicine, healthy food, and exercise. Cinnamon may have tiny benefits but CANNOT replace medication. People who stop their medicine end up in hospital."
+            },
+            {
+              "question": "A diabetic person feels dizzy and sweaty. What should you do?",
+              "options": [
+                "Give them insulin",
+                "Give them something sweet immediately",
+                "Tell them to rest"
+              ],
+              "explanation": "These are signs of LOW blood sugar (hypoglycemia). Give them juice, candy, or sugar water immediately. This can be life-threatening. After they feel better, they should eat a proper meal."
+            },
+            {
+              "question": "How often should a diabetic person check their feet?",
+              "options": [
+                "Never, feet are fine",
+                "Every day",
+                "Once a year"
+              ],
+              "explanation": "Diabetes can damage nerves in your feet. You might not feel cuts or sores. Check your feet EVERY DAY for cuts, blisters, or color changes. Small wounds can become serious infections."
+            }
+          ]
+        },
+        "hygiene": {
+          "title": "Hygiene & Prevention",
+          "description": "Basic health habits that save lives",
+          "questions": [
+            {
+              "question": "How long should you wash your hands with soap?",
+              "options": [
+                "5 seconds",
+                "At least 20 seconds",
+                "1 minute"
+              ],
+              "explanation": "Wash for at least 20 seconds — about the time it takes to sing 'Happy Birthday' twice. This removes most germs. Quick rinses don't work."
+            },
+            {
+              "question": "Is it safe to drink water from a river or stream?",
+              "options": [
+                "Yes, natural water is clean",
+                "No, always boil or filter it first",
+                "Only if it looks clear"
+              ],
+              "explanation": "Even clear water can contain dangerous bacteria and parasites. Always boil water for at least 1 minute or use a filter. Dirty water causes diarrhea, cholera, and typhoid."
+            },
+            {
+              "question": "Your child has diarrhea. What's the most important thing?",
+              "options": [
+                "Stop all food",
+                "Give lots of fluids (water, ORS)",
+                "Give antibiotics"
+              ],
+              "explanation": "Dehydration from diarrhea kills more children than the diarrhea itself. Give oral rehydration solution (ORS) or clean water with a pinch of salt and sugar. Keep breastfeeding babies."
+            },
+            {
+              "question": "When should you wash your hands?",
+              "options": [
+                "Only before eating",
+                "Before eating, after toilet, after touching animals, after coughing",
+                "Only when they look dirty"
+              ],
+              "explanation": "Germs are invisible. Wash hands: before eating/cooking, after using the toilet, after changing diapers, after touching animals, after coughing/sneezing, and after touching sick people."
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "path": "rights",
+    "enVal": {
+      "meta": {
+        "title": "Know Your Rights — Redi Health",
+        "description": "Patient rights, discrimination help, and legal contacts for Roma communities"
+      },
+      "title": "Know Your Rights",
+      "subtitle": "You have rights as a patient. Learn them. Use them.",
+      "back": "Back",
+      "menu": {
+        "patientRights": {
+          "title": "Patient Rights",
+          "desc": "8 rights every patient has"
+        },
+        "discrimination": {
+          "title": "Facing Discrimination?",
+          "desc": "What to say and do — step by step"
+        },
+        "contacts": {
+          "title": "Legal Help by Country",
+          "desc": "Ombudsman, anti-discrimination, Roma orgs"
+        }
+      },
+      "views": {
+        "patientRights": "Your Patient Rights",
+        "discrimination": "If You Face Discrimination",
+        "discriminationDesc": "Real situations and exactly what to say and do.",
+        "contacts": "Legal Help by Country"
+      },
+      "labels": {
+        "sayThis": "Say this:",
+        "thenDo": "Then do this:",
+        "patientOmbudsman": "Patient Ombudsman",
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
+      },
+      "rights": {
+        "treatment": {
+          "title": "Right to emergency treatment",
+          "description": "Every hospital MUST treat you in an emergency, even without insurance or documents. This is law in every EU country. If they refuse, ask for the doctor's name and report it."
+        },
+        "information": {
+          "title": "Right to understand your diagnosis",
+          "description": "Your doctor must explain your condition in words you understand. If you don't understand, say: 'Can you explain this more simply?' You can also ask for a written summary."
+        },
+        "consent": {
+          "title": "Right to say no",
+          "description": "No one can force treatment on you. Before any procedure, the doctor must explain what they will do and you must agree. You can always say 'I need time to think.'"
+        },
+        "privacy": {
+          "title": "Right to privacy",
+          "description": "Your medical information is private. Doctors cannot share it with your employer, family, or anyone else without your permission. This includes your HIV status, pregnancy, or mental health."
+        },
+        "interpreter": {
+          "title": "Right to an interpreter",
+          "description": "If you don't speak the local language well, you can request an interpreter. Many hospitals have this service. If not, you can bring someone you trust to translate."
+        },
+        "second-opinion": {
+          "title": "Right to a second opinion",
+          "description": "If you disagree with a diagnosis, you can see another doctor. This is your right. You don't need to explain why."
+        },
+        "records": {
+          "title": "Right to your medical records",
+          "description": "You can ask for a copy of all your medical records at any time. The hospital must provide them. This is useful when changing doctors or moving to another city."
+        },
+        "complaint": {
+          "title": "Right to complain",
+          "description": "If you feel mistreated or discriminated against, you can file a complaint. Every hospital has a complaints procedure. You can also contact the patient ombudsman in your country."
+        }
+      },
+      "scenarios": {
+        "refused-treatment": {
+          "situation": "The hospital refuses to treat you",
+          "whatToSay": "\"I have the right to emergency treatment under EU law. Please write down your name and the reason you are refusing.\"",
+          "whatToDo": [
+            "Stay calm but firm",
+            "Ask for the doctor's full name",
+            "Ask for the refusal in writing",
+            "Call the patient ombudsman",
+            "Contact a Roma rights organization"
+          ]
+        },
+        "rude-staff": {
+          "situation": "Hospital staff are rude or dismissive because of your ethnicity",
+          "whatToSay": "\"I am here for medical help. I expect to be treated with the same respect as every other patient.\"",
+          "whatToDo": [
+            "Ask to speak with the head nurse or department chief",
+            "Note the date, time, and names",
+            "File a written complaint at the hospital",
+            "Report to the national anti-discrimination body"
+          ]
+        },
+        "no-insurance": {
+          "situation": "You don't have health insurance",
+          "whatToSay": "\"I need medical help. What are my options for uninsured patients?\"",
+          "whatToDo": [
+            "Emergency care is always free — insist on it",
+            "Ask about social assistance programs",
+            "Contact a health mediator in your area",
+            "Many NGOs provide free clinics — ask at the hospital"
+          ]
+        },
+        "language-barrier": {
+          "situation": "You can't communicate with the doctor",
+          "whatToSay": "\"I need help understanding. Can you provide an interpreter or speak more slowly?\"",
+          "whatToDo": [
+            "Use this app to translate key phrases",
+            "Bring a trusted person who speaks the language",
+            "Ask for written instructions you can translate later",
+            "Use your phone's camera to translate documents"
+          ]
+        }
+      },
+      "contacts": {
+        "romania": {
+          "country": "Romania",
+          "ombudsman": "Avocatul Poporului",
+          "antiDiscrimination": "CNCD",
+          "ombudsmanPhone": "021 312 7134",
+          "antiDiscriminationPhone": "021 312 6578",
+          "romaRightsOrg": "Romani CRISS"
+        },
+        "bulgaria": {
+          "country": "Bulgaria",
+          "ombudsman": "Ombudsman of Bulgaria",
+          "antiDiscrimination": "Commission for Protection against Discrimination",
+          "ombudsmanPhone": "02 810 6955",
+          "romaRightsOrg": "Amalipe Center"
+        },
+        "hungary": {
+          "country": "Hungary",
+          "ombudsman": "Commissioner for Fundamental Rights",
+          "antiDiscrimination": "Equal Treatment Authority",
+          "ombudsmanPhone": "06 1 475 7100",
+          "romaRightsOrg": "Romaversitas Foundation"
+        },
+        "slovakia": {
+          "country": "Slovakia",
+          "ombudsman": "Public Defender of Rights",
+          "antiDiscrimination": "Slovak National Centre for Human Rights",
+          "ombudsmanPhone": "02 4828 7401",
+          "romaRightsOrg": "ETP Slovakia"
+        },
+        "czech-republic": {
+          "country": "Czech Republic",
+          "ombudsman": "Public Defender of Rights",
+          "antiDiscrimination": "Office of the Public Defender",
+          "ombudsmanPhone": "542 542 888",
+          "romaRightsOrg": "Romea.cz"
+        },
+        "serbia": {
+          "country": "Serbia",
+          "ombudsman": "Protector of Citizens",
+          "antiDiscrimination": "Commissioner for Equality",
+          "ombudsmanPhone": "011 206 8100",
+          "romaRightsOrg": "Praxis"
+        },
+        "albania": {
+          "country": "Albania",
+          "ombudsman": "People's Advocate",
+          "antiDiscrimination": "Commissioner for Protection from Discrimination",
+          "ombudsmanPhone": "042 380 300"
+        },
+        "north-macedonia": {
+          "country": "North Macedonia",
+          "ombudsman": "Ombudsman",
+          "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+          "ombudsmanPhone": "02 3129 335"
+        },
+        "greece": {
+          "country": "Greece",
+          "ombudsman": "Greek Ombudsman",
+          "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+          "ombudsmanPhone": "213 130 6600"
+        },
+        "croatia": {
+          "country": "Croatia",
+          "ombudsman": "Ombudswoman",
+          "antiDiscrimination": "Ombudswoman",
+          "ombudsmanPhone": "01 4851 855"
+        }
+      }
+    }
+  },
+  {
+    "path": "stories",
+    "enVal": {
+      "meta": {
+        "title": "Community Stories — Redi Health",
+        "description": "Real health experiences from Roma communities across Europe"
+      },
+      "title": "Community Stories",
+      "subtitle": "Real experiences from Roma communities. Learn from others.",
+      "backToStories": "Back to stories",
+      "lessonLearned": "Lesson learned",
+      "whatToDoNext": "What to do next",
+      "categories": {
+        "vaccines": "Vaccines",
+        "chronic": "Chronic Disease",
+        "maternal": "Pregnancy",
+        "discrimination": "Rights",
+        "prevention": "Prevention",
+        "mental": "Mental Health"
+      },
+      "nextSteps": {
+        "vaccineGuide": "Vaccine guide",
+        "askZuvo": "Ask Zuvo",
+        "explainPrescription": "Explain prescription",
+        "navigateToCare": "Navigate to care",
+        "knowYourRights": "Know your rights",
+        "learnPrevention": "Learn prevention",
+        "checkSymptoms": "Check symptoms",
+        "learnMentalHealth": "Learn about mental health"
+      },
+      "entries": {
+        "maria-vaccines": {
+          "name": "Maria",
+          "age": 28,
+          "country": "Romania",
+          "title": "I almost didn't vaccinate my daughter",
+          "story": "My mother-in-law told me vaccines are poison. Everyone in the settlement said the same thing. When my daughter was born, I was scared. But the health mediator came to our home and explained everything — how vaccines work, what the side effects really are. She showed me photos of children with measles. I was more scared of the disease than the vaccine. My daughter got all her vaccines. She is healthy and strong.",
+          "lesson": "Talk to a health mediator or doctor before making decisions based on what others say. Vaccines save lives."
+        },
+        "stefan-diabetes": {
+          "name": "Stefan",
+          "age": 52,
+          "country": "Bulgaria",
+          "title": "I stopped my diabetes medicine and almost died",
+          "story": "I was diagnosed with Type 2 diabetes at 45. The medicine made my stomach hurt, so I stopped taking it. My neighbor said cinnamon tea would cure me. For 2 years I drank cinnamon tea instead. Then one day I collapsed. My blood sugar was over 500. The doctors said my kidneys were damaged. Now I take my medicine every day. I wish I had never stopped.",
+          "lesson": "Never stop your medicine without talking to your doctor. Natural remedies cannot replace diabetes medication."
+        },
+        "elena-pregnancy": {
+          "name": "Elena",
+          "age": 22,
+          "country": "Serbia",
+          "title": "My first pregnancy — I didn't know I could see a doctor for free",
+          "story": "When I got pregnant at 19, I didn't go to a doctor for 6 months. I didn't have insurance and I thought it would cost too much. A health mediator told me that prenatal care is free for all pregnant women in Serbia. She helped me register. The doctor found that I had anemia and high blood pressure. If I hadn't gone, my baby could have been in danger.",
+          "lesson": "Prenatal care is free in most European countries. Ask a health mediator to help you register."
+        },
+        "janos-discrimination": {
+          "name": "János",
+          "age": 35,
+          "country": "Hungary",
+          "title": "The hospital tried to send me away",
+          "story": "I went to the emergency room with chest pain. The nurse looked at me and said 'We're full, go to another hospital.' I knew this wasn't right. I said: 'I have chest pain. You must examine me. Please give me your name.' Her attitude changed immediately. They examined me and found I had a heart problem that needed treatment. If I had left, I could have had a heart attack.",
+          "lesson": "You have the right to emergency treatment. If someone tries to turn you away, ask for their name and say you know your rights."
+        },
+        "ana-tb": {
+          "name": "Ana",
+          "age": 31,
+          "country": "Slovakia",
+          "title": "TB is not a death sentence — but you must finish the medicine",
+          "story": "I was coughing for months. I thought it was just a cold. When I finally went to the doctor, they said I had tuberculosis. I was terrified — I thought I would die. But the doctor explained that TB can be cured with 6 months of medicine. The hardest part was taking pills every day for 6 months, even when I felt better after 2 months. But I finished. I am cured.",
+          "lesson": "If you cough for more than 2 weeks, see a doctor. TB is curable, but you MUST finish all the medicine."
+        },
+        "mirela-depression": {
+          "name": "Mirela",
+          "age": 40,
+          "country": "North Macedonia",
+          "title": "Depression is not weakness — it's an illness",
+          "story": "After my husband died, I couldn't get out of bed for months. My family said I was lazy. They said 'just be strong.' But I couldn't. A health mediator noticed something was wrong and took me to a doctor. The doctor said I had depression — a real medical condition. I started medicine and talking to a counselor. Slowly, I got better. I am not weak. I was sick.",
+          "lesson": "Depression is a medical condition, not a character flaw. Medicine and counseling can help. Please ask for help."
+        }
+      }
+    }
+  },
+  {
+    "path": "challenges",
+    "enVal": {
+      "meta": {
+        "title": "Challenges — Redi Health",
+        "description": "Community Challenges"
+      },
+      "title": "Active Challenges",
+      "subtitle": "Join community goals and personal challenges to earn bonus XP and badges.",
+      "types": {
+        "community": "community",
+        "personal": "personal"
+      },
+      "daysLeft": "{count} days left",
+      "viewLeaderboard": "View Leaderboard",
+      "items": {
+        "c1": {
+          "title": "Vaccine Knowledge Champion",
+          "description": "Get 50 students in your local area to pass the Vaccine module this week."
+        },
+        "c2": {
+          "title": "7-Day Health Streak",
+          "description": "Log your mood and water intake for 7 days in a row."
+        }
+      }
+    }
+  },
+  {
+    "path": "certificate",
+    "enVal": {
+      "meta": {
+        "title": "Certificate — Redi Health",
+        "description": "National Health Literacy Certificate"
+      },
+      "title": "Your Certificate",
+      "subtitle": "You have completed the National Stage of the Student Health Academy.",
+      "ofCompletion": "Certificate of Completion",
+      "diplomaTitle": "National Health Literacy",
+      "awardedFor": "Awarded for completing the Redi Health Student Academy curriculum.",
+      "date": "Date",
+      "downloadPdf": "Download PDF",
+      "share": "Share",
+      "gate": {
+        "title": "Complete the Academy first",
+        "description": "To earn your Health Literacy Certificate, you need to complete all lessons and pass the quiz in the National stage of the Student Health Academy.",
+        "cta": "Go to the Academy"
+      }
+    }
+  },
+  {
+    "path": "terms",
+    "enVal": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: June 2026",
+      "sections": {
+        "acceptance": {
+          "title": "1. Acceptance of terms",
+          "body": "By accessing or using Redi Health, you agree to these Terms of Service. If you do not agree, do not use the service. These terms apply to all users including guests, registered users, health mediators, and programme administrators."
+        },
+        "service": {
+          "title": "2. What Redi Health provides",
+          "body": "Redi Health is a health literacy and navigation platform. It provides AI-assisted health information, educational content, misinformation fact-checking, symptom guidance, and tools for health mediators. The platform is intended for educational and informational purposes."
+        },
+        "notMedical": {
+          "title": "3. Not a medical device",
+          "body": "Redi Health is not a medical device and does not provide medical diagnosis, treatment, or prescriptions. All content is for educational purposes only. Always consult a qualified healthcare professional for medical decisions. In an emergency, call 112 or your local emergency number immediately."
+        },
+        "aiLimits": {
+          "title": "4. AI limitations",
+          "body": "AI-generated responses are based on general health knowledge and may not reflect the latest clinical guidance, local health system rules, or your individual circumstances. They must not be treated as personalised medical advice. The AI does not diagnose and does not prescribe."
+        },
+        "userConduct": {
+          "title": "5. User conduct",
+          "body": "You must not use Redi Health to obtain specific medical prescriptions or diagnoses, to collect information about others without their consent, for commercial data harvesting, or to circumvent the platform's clinical safety boundaries. Mediators must comply with the Mediator Operating Policy."
+        },
+        "data": {
+          "title": "6. Data and privacy",
+          "body": "Your data is governed by our Privacy Policy and Data Governance Policy, which describe what is collected, how it is used, and how you can export or delete it. Local data (progress, family logs, check-ins) is stored on your device. Server data requires an account. Both are subject to your full data rights."
+        },
+        "liability": {
+          "title": "7. Limitation of liability",
+          "body": "Redi Health is provided 'as is' without warranties of accuracy or fitness for a particular purpose. To the maximum extent permitted by law, Redi Health is not liable for any harm arising from reliance on the platform's content, including AI-generated responses. You use the platform at your own risk."
+        },
+        "changes": {
+          "title": "8. Changes to these terms",
+          "body": "We may update these terms to reflect changes in the platform or applicable law. Material changes will be notified via the app. Continued use of the platform after notification constitutes acceptance of the updated terms."
+        },
+        "contact": {
+          "title": "9. Contact",
+          "body": "For questions about these terms, contact us at legal@redi.healthcare. For data and privacy matters, contact our Data Protection Officer at dpo@redi.healthcare."
+        }
+      }
+    }
+  },
+  {
+    "path": "training.modules.screening",
+    "enVal": {
+      "title": "Screening for cancer and NCDs",
+      "summary": "Cervical, breast, colorectal — how to mobilise the target population.",
+      "k1": "Women 25–64 — Pap smear every 3 years.",
+      "k2": "Women 50–69 — mammography every 2 years.",
+      "k3": "Adults 50–74 — FIT test for colorectal cancer."
+    }
+  },
+  {
+    "path": "training.modules.rights.k4",
+    "enVal": "Know patient rights — Law 46/2003 and Order 1410/2016."
+  },
+  {
+    "path": "training.modules.school",
+    "enVal": {
+      "title": "Preventing school dropout",
+      "summary": "Collaborate with the school counsellor to keep children in school.",
+      "k1": "Identify early — repeated absences, behavioural changes.",
+      "k2": "POIDS food packages — direct support for families with children.",
+      "k3": "Talk to parents and the school — build a shared plan."
+    }
+  },
+  {
+    "path": "training.modules.communication",
+    "enVal": {
+      "title": "Communicating with rural beneficiaries",
+      "summary": "Plain language, cultural respect, working with Roma families.",
+      "k1": "Use plain language, no medical jargon.",
+      "k2": "Respect the community's cultural codes — check with the Roma health mediator.",
+      "k3": "Document the family's informed consent for interventions."
+    }
+  },
+  {
+    "path": "training.modules.reporting",
+    "enVal": {
+      "title": "Monthly reporting to DSP / UJSS",
+      "summary": "How to generate the monthly report from the workspace and send it to your coordinator.",
+      "k1": "Indicators are computed automatically in the Indicators tab.",
+      "k2": "Use 'Print report' to save as PDF.",
+      "k3": "Submit to UJSS / county DSP by the 5th of the month."
+    }
+  }
+]

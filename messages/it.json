@@ -589,7 +589,10 @@
     "imageReadyBody": "Leggeremo il farmaco, la dose e le istruzioni e spiegheremo tutto con parole semplici.",
     "imageRemove": "Rimuovi foto",
     "preparingImage": "Preparando la foto…",
-    "imageFailed": "Impossibile leggere questa foto. Prova con un'altra."
+    "imageFailed": "Impossibile leggere questa foto. Prova con un'altra.",
+    "followUpChat": "Chiedi al consulente AI",
+    "followUpNavigate": "Trova un medico",
+    "followUpGlossary": "Termini medici"
   },
   "navigate": {
     "heroTitle": "Ho bisogno di vedere un medico",

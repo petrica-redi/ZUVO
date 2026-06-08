@@ -1604,7 +1604,10 @@
     "imageReadyBody": "Citim medicamentul, doza și instrucțiunile și îți explicăm totul în cuvinte simple.",
     "imageRemove": "Șterge poza",
     "preparingImage": "Se pregătește poza…",
-    "imageFailed": "Nu am putut citi poza. Încearcă alta."
+    "imageFailed": "Nu am putut citi poza. Încearcă alta.",
+    "followUpChat": "Întreabă AI-ul",
+    "followUpNavigate": "Găsește medic",
+    "followUpGlossary": "Termeni medicali"
   },
   "navigate": {
     "heroTitle": "Am nevoie să văd un medic",
