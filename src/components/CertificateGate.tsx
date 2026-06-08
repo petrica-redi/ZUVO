@@ -4,17 +4,19 @@ import { useEffect, useState } from "react";
 import { Link } from "@/navigation";
 import { Lock, GraduationCap } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { readAcademyState, isStageQuizPassed, allStageModulesCompleted } from "@/lib/student-health-progress";
+import { isStageQuizPassed, allStageModulesCompleted } from "@/lib/student-health-progress";
 
 export function CertificateGate({ children }: { children: React.ReactNode }) {
   const t = useTranslations("certificate.gate");
   const [status, setStatus] = useState<"loading" | "locked" | "unlocked">("loading");
 
   useEffect(() => {
-    const state = readAcademyState();
     const allCompleted = allStageModulesCompleted("national");
     const quizPassed = isStageQuizPassed("national");
-    setStatus(allCompleted && quizPassed ? "unlocked" : "locked");
+    const timer = setTimeout(() => {
+      setStatus(allCompleted && quizPassed ? "unlocked" : "locked");
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   if (status === "loading") return null;

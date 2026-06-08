@@ -1432,7 +1432,17 @@
     "section2": "PII scrubbing",
     "desc2": "All messages are sanitized locally. Phone numbers, emails, IBANs, and National IDs are masked before leaving the device infrastructure.",
     "section3": "Clinical review",
-    "desc3": "Every lesson in the Student Health Academy undergoes clinical review by practicing Roma Health Mediators and physicians."
+    "desc3": "Every lesson in the Student Health Academy undergoes clinical review by practicing Roma Health Mediators and physicians.",
+    "section4": "Approved public health sources",
+    "desc4": "All factual health claims cite WHO, ECDC, IFRC, national ministries, or peer-reviewed guidelines. Social media claims, single study results, and commercial sources are never used as primary references.",
+    "section5": "Privacy by design",
+    "desc5": "Personal identifiers are removed from all AI inputs. No raw prompts are retained beyond the request lifecycle. Health records are stored with explicit consent, in EU regions, with full GDPR data subject rights including export and deletion.",
+    "section6": "Roma equity safeguards",
+    "desc6": "Content is reviewed for strengths-based language, absence of stigmatizing language, and avoidance of deficit narratives. Ethnic data is never collected. Provider and mediator tools are designed to prevent surveillance or profiling.",
+    "goNoGoTitle": "Feature release policy",
+    "goNoGoBody": "Features that may influence clinical decisions require completed policy controls before release: AI triage, symptom severity, prescription outputs, vaccine recommendations, Roma-friendly provider labels, mediator visit logging, youth sexual health, and legal guidance.",
+    "notMedicalDevice": "Redi Health is not a medical device. All information is for educational purposes only. Always consult a qualified healthcare professional for medical decisions.",
+    "viewPolicies": "Read the full platform policies"
   },
   "providers": {
     "title": "Roma-Friendly Clinics",

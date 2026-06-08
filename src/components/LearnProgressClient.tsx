@@ -41,10 +41,13 @@ export function LearnProgressClient({
   const [progress, setProgress] = useState<number[]>(pillars.map(() => 0));
 
   useEffect(() => {
-    setProgress(pillars.map((p) => getCompletedCount(p.id)));
+    const nextProgress = pillars.map((p) => getCompletedCount(p.id));
+    const timer = setTimeout(() => {
+      setProgress(nextProgress);
+    }, 0);
+    return () => clearTimeout(timer);
   }, [pillars]);
 
-  const startedCount = progress.filter((c) => c > 0).length;
   const totalModules = pillars.reduce((s, p) => s + p.total, 0);
   const completedModules = progress.reduce((s, c) => s + c, 0);
 

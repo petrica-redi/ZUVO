@@ -1123,7 +1123,17 @@
     "section2": "Mascarea datelor personale (PII)",
     "desc2": "Toate mesajele sunt curățate local. Numere de telefon, adrese de email, IBAN-uri și CNP-uri sunt mascate înainte de a părăsi infrastructura dispozitivului.",
     "section3": "Revizuire clinică",
-    "desc3": "Fiecare lecție din Academia pentru elevi este revizuită clinic de mediatori sanitari romi și de medici în activitate."
+    "desc3": "Fiecare lecție din Academia pentru elevi este revizuită clinic de mediatori sanitari romi și de medici în activitate.",
+    "section4": "Surse de sănătate publică aprobate",
+    "desc4": "Toate afirmațiile factuale despre sănătate citează OMS, ECDC, IFRC, ministerele naționale sau ghidurile evaluate colegial (peer-reviewed). Afirmațiile de pe rețelele sociale, rezultatele unui singur studiu și sursele comerciale nu sunt utilizate niciodată ca referințe primare.",
+    "section5": "Confidențialitate prin design",
+    "desc5": "Identificatorii personali sunt eliminați din toate intrările AI. Niciun prompt brut nu este reținut dincolo de ciclul de viață al solicitării. Dosarele de sănătate sunt stocate cu consimțământ explicit, în regiuni din UE, cu drepturi depline de acces conform GDPR, inclusiv exportul și ștergerea.",
+    "section6": "Măsuri de protecție pentru echitatea romilor",
+    "desc6": "Conținutul este revizuit pentru un limbaj bazat pe punctele forte, absența limbajului stigmatizant și evitarea narațiunilor deficitare. Datele etnice nu sunt colectate niciodată. Instrumentele pentru furnizori și mediatori sunt concepute pentru a preveni supravegherea sau profilarea.",
+    "goNoGoTitle": "Politica de lansare a funcționalităților",
+    "goNoGoBody": "Funcționalitățile care pot influența deciziile clinice necesită controale de politică finalizate înainte de lansare: triage AI, severitatea simptomelor, rezultatele prescripțiilor, recomandările de vaccinare, etichetele furnizorilor 'romă-prietenoși', înregistrarea vizitelor mediatorilor, sănătatea sexuală pentru tineri și orientarea juridică.",
+    "notMedicalDevice": "Redi Health nu este un dispozitiv medical. Toate informațiile sunt doar în scop educațional. Consultați întotdeauna un profesionist calificat în domeniul sănătății pentru decizii medicale.",
+    "viewPolicies": "Citește politicile complete ale platformei"
   },
   "providers": {
     "title": "Clinici prietenoase cu romii",
