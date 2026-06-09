@@ -70,6 +70,14 @@ export async function LandingFooter({ locale }: { locale: string }) {
               </li>
               <li>
                 <Link
+                  href="/policies"
+                  className="text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
+                >
+                  {t("policies")}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/impact"
                   className="text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
                 >

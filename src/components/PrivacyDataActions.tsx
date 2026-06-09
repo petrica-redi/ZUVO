@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Download, ShieldOff, Loader2, AlertTriangle } from "lucide-react";
+import { Download, ShieldOff, Loader2, AlertTriangle, HardDrive } from "lucide-react";
 import { Button, Card, Badge } from "@/components/ui";
 import { useToast } from "@/components/ui/Toast";
-import { clearAllLocalAppData } from "@/lib/local-data-keys";
+import { clearAllLocalAppData, LOCAL_KEYS, LOCAL_KEY_PREFIXES } from "@/lib/local-data-keys";
 
 type Props = {
   title: string;
@@ -20,6 +20,9 @@ type Props = {
   authRequired: string;
   unavailable: string;
   successDeleted: string;
+  localExportLabel: string;
+  localExportHint: string;
+  guestNote: string;
 };
 
 export function PrivacyDataActions({
@@ -36,11 +39,49 @@ export function PrivacyDataActions({
   authRequired,
   unavailable,
   successDeleted,
+  localExportLabel,
+  localExportHint,
+  guestNote,
 }: Props) {
   const toast = useToast();
   const [exporting, setExporting] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
+
+  function handleLocalExport() {
+    if (typeof window === "undefined") return;
+    const data: Record<string, unknown> = {};
+    for (const key of LOCAL_KEYS) {
+      try {
+        const val = localStorage.getItem(key);
+        if (val !== null) {
+          try { data[key] = JSON.parse(val); } catch { data[key] = val; }
+        }
+      } catch { /* private mode */ }
+    }
+    try {
+      for (const key of Object.keys(localStorage)) {
+        if (LOCAL_KEY_PREFIXES.some((p) => key.startsWith(p))) {
+          try {
+            const val = localStorage.getItem(key);
+            if (val !== null) {
+              try { data[key] = JSON.parse(val); } catch { data[key] = val; }
+            }
+          } catch { /* skip */ }
+        }
+      }
+    } catch { /* private mode */ }
+
+    const blob = new Blob([JSON.stringify({ exportedAt: new Date().toISOString(), localData: data }, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `redi-local-data-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
 
   // Compute headers per-request so we always pick up the freshest anon-id.
   function buildHeaders(): Record<string, string> {
@@ -115,7 +156,24 @@ export function PrivacyDataActions({
         </div>
         <p className="mb-4 text-sm leading-relaxed text-gray-600">{subtitle}</p>
 
+        {/* Guest note */}
+        <p className="mb-3 text-xs text-[var(--color-text-muted)] leading-relaxed">{guestNote}</p>
+
         <div className="grid gap-3 sm:grid-cols-2">
+          {/* Local data export — always works, no auth needed */}
+          <button
+            type="button"
+            onClick={handleLocalExport}
+            className="flex flex-col gap-2 rounded-2xl border-2 border-sky-100 bg-sky-50/40 p-4 text-left transition hover:-translate-y-0.5 hover:border-sky-200 hover:shadow-md"
+          >
+            <div className="flex items-center gap-2">
+              <HardDrive className="h-5 w-5 text-sky-500" />
+              <span className="text-sm font-black text-sky-900">{localExportLabel}</span>
+            </div>
+            <span className="text-xs leading-relaxed text-sky-700/80">{localExportHint}</span>
+          </button>
+
+          {/* Server export — requires account */}
           <button
             type="button"
             onClick={handleExport}
@@ -137,7 +195,7 @@ export function PrivacyDataActions({
             type="button"
             onClick={() => setConfirmOpen(true)}
             disabled={deleting}
-            className="flex flex-col gap-2 rounded-2xl border-2 border-rose-100 bg-rose-50/40 p-4 text-left transition hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-md disabled:cursor-wait disabled:opacity-60"
+            className="flex flex-col gap-2 rounded-2xl border-2 border-rose-100 bg-rose-50/40 p-4 text-left transition hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-md disabled:cursor-wait disabled:opacity-60 sm:col-span-2"
           >
             <div className="flex items-center gap-2">
               <ShieldOff className="h-5 w-5 text-rose-500" />

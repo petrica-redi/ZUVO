@@ -2,7 +2,8 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
-import { Search, Mic, Share2, AlertTriangle, CheckCircle2, XCircle, Loader2, Volume2 } from "lucide-react";
+import { Search, Mic, Share2, AlertTriangle, CheckCircle2, XCircle, Loader2, Volume2, Syringe, BookOpen } from "lucide-react";
+import { useRouter } from "@/navigation";
 import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
 import { ToolHero } from "@/components/ui";
@@ -70,15 +71,37 @@ const VERDICT_STYLES = {
   },
 };
 
+const SCAN_HISTORY_KEY = "redi_scan_history";
+
+function loadHistory(): { claim: string; verdict: Verdict }[] {
+  if (typeof window === "undefined") return [];
+  try {
+    return JSON.parse(localStorage.getItem(SCAN_HISTORY_KEY) ?? "[]");
+  } catch {
+    return [];
+  }
+}
+
+function saveHistory(history: { claim: string; verdict: Verdict }[]) {
+  if (typeof window === "undefined") return;
+  try {
+    localStorage.setItem(SCAN_HISTORY_KEY, JSON.stringify(history.slice(0, 20)));
+  } catch { /* private mode */ }
+}
+
+const VACCINE_KEYWORDS = /\b(vaccine|vaccination|mmr|polio|measles|covid|flu shot|hpv|hepatitis|booster|immunis|immuniz)\b/i;
+const GLOSSARY_KEYWORDS = /\b(diabetes|insulin|metformin|hypertension|cholesterol|antibiotic|cancer|tuberculosis|tb|asthma)\b/i;
+
 export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: string }) {
   const tScan = useTranslations("scan");
   const tVoice = useTranslations("voice");
+  const router = useRouter();
   const searchParams = useSearchParams();
   const [claim, setClaim] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Verdict | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [history, setHistory] = useState<{ claim: string; verdict: Verdict }[]>([]);
+  const [history, setHistory] = useState<{ claim: string; verdict: Verdict }[]>(() => loadHistory());
 
   const { isListening, supported: voiceSupported, toggleListening } = useSpeechRecognition({
     onResult: useCallback((text) => setClaim((prev) => prev + " " + text), [])
@@ -111,7 +134,11 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
       const data = await res.json();
       if (res.ok && data?.success === true && isVerdict(data?.data)) {
         setResult(data.data);
-        setHistory((prev) => [{ claim: claim.trim(), verdict: data.data as Verdict }, ...prev].slice(0, 10));
+        setHistory((prev) => {
+          const next = [{ claim: claim.trim(), verdict: data.data as Verdict }, ...prev].slice(0, 20);
+          saveHistory(next);
+          return next;
+        });
       } else {
         setError(
           typeof data?.error === "string" ? data.error : tScan("errors.analyze"),
@@ -253,6 +280,28 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
               <Share2 className="h-4 w-4" />
               {labels.shareButton}
             </button>
+
+            {/* Cross-links based on claim content */}
+            <div className="mt-3 flex flex-wrap gap-2">
+              {VACCINE_KEYWORDS.test(claim) && (
+                <button
+                  onClick={() => router.push("/vaccines")}
+                  className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-700 border border-emerald-200 transition-colors hover:bg-emerald-100"
+                >
+                  <Syringe className="h-3.5 w-3.5" strokeWidth={2} />
+                  {tScan("learnVaccines")}
+                </button>
+              )}
+              {GLOSSARY_KEYWORDS.test(claim) && (
+                <button
+                  onClick={() => router.push("/glossary")}
+                  className="flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1.5 text-xs font-bold text-blue-700 border border-blue-200 transition-colors hover:bg-blue-100"
+                >
+                  <BookOpen className="h-3.5 w-3.5" strokeWidth={2} />
+                  {tScan("openGlossary")}
+                </button>
+              )}
+            </div>
           </div>
         </div>
       )}

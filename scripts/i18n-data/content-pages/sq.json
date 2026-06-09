@@ -1,0 +1,497 @@
+{
+  "healthQuiz": {
+    "meta": {
+      "title": "Kuiz Shëndetësor — Redi Health",
+      "description": "Testoni njohuritë tuaja shëndetësore me kuize interaktive"
+    },
+    "title": "Kuiz për shëndetin",
+    "subtitle": "Testoni njohuritë tuaja. Mësoni diçka të re.",
+    "backToQuizzes": "Kthehu te kuize",
+    "seeResults": "Shihni rezultatet",
+    "nextQuestion": "Pyetja e radhës",
+    "questionsCount": "{count} pyetje",
+    "results": {
+      "perfect": "Rezultati perfekt!",
+      "great": "Punë e madhe!",
+      "good": "Përpjekje e mirë!",
+      "keepLearning": "Vazhdoni të mësoni!",
+      "score": "Ju morët {score} nga {total} të sakta",
+      "tryAgain": "Provo sërish",
+      "moreQuizzes": "Më shumë kuize"
+    },
+    "quizzes": {
+      "antibiotics": {
+        "title": "Antibiotikët",
+        "description": "A e dini se kur duhet të përdorni antibiotikë?",
+        "questions": [
+          {
+            "question": "A mund ta kurojnë gripin antibiotikët?",
+            "options": [
+              "po",
+              "Nr",
+              "Ndonjëherë"
+            ],
+            "explanation": "Gripi shkaktohet nga një virus. Antibiotikët vrasin vetëm bakteret. Marrja e antibiotikëve për gripin nuk bën asgjë dhe mund t'i bëjë infeksionet e ardhshme më të vështira për t'u trajtuar."
+          },
+          {
+            "question": "Ndiheni më mirë pas 3 ditësh antibiotikë. A duhet të ndalosh?",
+            "options": [
+              "Po, ju jeni shëruar",
+              "Jo, përfundoni kursin e plotë",
+              "Merrni gjysmën e pilulave të mbetura"
+            ],
+            "explanation": "GJITHMONË përfundoni kursin e plotë. Nëse ndaloni herët, disa baktere mbijetojnë dhe bëhen rezistente. Herën tjetër, i njëjti antibiotik nuk do të funksionojë."
+          },
+          {
+            "question": "A mund të ndani antibiotikë me një anëtar të familjes që ka simptoma të ngjashme?",
+            "options": [
+              "Po, kursen para",
+              "Jo, kurrë",
+              "Vetëm nëse është e njëjta sëmundje"
+            ],
+            "explanation": "Asnjëherë mos ndani antibiotikë. Infeksione të ndryshme kanë nevojë për ilaçe të ndryshme. Antibiotiku i gabuar mund të jetë i rrezikshëm dhe nuk do të ndihmojë."
+          },
+          {
+            "question": "Çfarë ndodh nëse merrni antibiotikë shumë shpesh?",
+            "options": [
+              "Asgjë e keqe",
+              "Trupi juaj bëhet imun ndaj sëmundjeve",
+              "Bakteret bëhen rezistente dhe më të vështira për t'u vrarë"
+            ],
+            "explanation": "Rezistenca ndaj antibiotikëve është një krizë globale. Kur bakteret bëhen rezistente, infeksionet e thjeshta mund të bëhen vdekjeprurëse. Merrni antibiotikë vetëm kur i përshkruan mjeku."
+          }
+        ]
+      },
+      "vaccines": {
+        "title": "Vaksinat",
+        "description": "Ndani faktet nga mitet",
+        "questions": [
+          {
+            "question": "A shkaktojnë vaksinat autizëm?",
+            "options": [
+              "po",
+              "Nr",
+              "Nuk e dimë"
+            ],
+            "explanation": "NR. Ky mit nisi nga një studim mashtrues që u tërhoq. Mjeku që e publikoi e humbi licencën mjekësore. Dhjetra studime me miliona fëmijë vërtetojnë se vaksinat NUK shkaktojnë autizëm."
+          },
+          {
+            "question": "A është e sigurt për t'i dhënë një foshnje disa vaksina në të njëjtën kohë?",
+            "options": [
+              "Jo, është shumë",
+              "Po, është i sigurt dhe i testuar",
+              "Vetëm një nga një"
+            ],
+            "explanation": "Sistemi imunitar i foshnjave trajton mijëra mikrobe çdo ditë. Vaksinat e kombinuara janë testuar tërësisht dhe të sigurta. Vonesa e vaksinave e lë fëmijën tuaj të pambrojtur."
+          },
+          {
+            "question": "Fëmija im ka një ftohje të lehtë. A mund të vaksinohen akoma?",
+            "options": [
+              "Jo, prisni derisa të jeni plotësisht të shëndetshëm",
+              "Po, një ftohje e lehtë është mirë",
+              "Vetëm me lejen e mjekut"
+            ],
+            "explanation": "Ftohja e lehtë, temperatura e ulët ose rrjedhja e hundës NUK është një arsye për të vonuar vaksinimin. Vetëm sëmundja e rëndë kërkon shtyrje. Pyesni mjekun tuaj nëse nuk jeni të sigurt."
+          },
+          {
+            "question": "A përmbajnë vaksinat kimikate të rrezikshme?",
+            "options": [
+              "Po, ato janë plot me toksina",
+              "Jo, të gjithë përbërësit janë të sigurt në sasi të vogla të përdorura",
+              "Disa e bëjnë, disa jo"
+            ],
+            "explanation": "Përbërësit e vaksinës janë të pranishëm në sasi të vogla dhe të sigurta. Ju merrni më shumë alumin nga qumështi i gjirit sesa nga një vaksinë. Çdo përbërës është testuar për siguri."
+          }
+        ]
+      },
+      "diabetes": {
+        "title": "Diabeti",
+        "description": "Kuptimi i menaxhimit të diabetit",
+        "questions": [
+          {
+            "question": "A shkaktohet diabeti nga ngrënia e tepërt e sheqerit?",
+            "options": [
+              "po",
+              "Jo, është më komplekse",
+              "Vetëm Lloji 2"
+            ],
+            "explanation": "Diabeti shkaktohet nga gjenetika, mënyra e jetesës dhe mënyra se si trupi juaj përpunon insulinën. Ngrënia e sheqerit nuk e shkakton drejtpërdrejt atë, por një dietë e pashëndetshme dhe obeziteti rrisin rrezikun."
+          },
+          {
+            "question": "A mund të kurohet diabeti me ilaçe natyrale si kanella?",
+            "options": [
+              "Po, kanella e shëron",
+              "Jo, nuk ka kurë, por mund të menaxhohet",
+              "Po, me mjaft hudhra dhe barishte"
+            ],
+            "explanation": "Nuk ka kurë për diabetin. Mund të MENAXHET me ilaçe, ushqim të shëndetshëm dhe stërvitje. Kanella mund të ketë përfitime të vogla, por NUK MUND të zëvendësojë mjekimin. Njerëzit që ndalojnë mjekimin përfundojnë në spital."
+          },
+          {
+            "question": "Një person diabetik ndihet i trullosur dhe i djersitur. Çfarë duhet të bëni?",
+            "options": [
+              "Jepini atyre insulinë",
+              "Jepini atyre diçka të ëmbël menjëherë",
+              "Thuaju të pushojnë"
+            ],
+            "explanation": "Këto janë shenja të sheqerit të ulët në gjak (hipoglicemia). Jepini menjëherë lëng, karamele ose ujë me sheqer. Kjo mund të jetë kërcënuese për jetën. Pasi të ndihen më mirë, duhet të hanë një vakt të duhur."
+          },
+          {
+            "question": "Sa shpesh duhet të kontrollojë këmbët një diabetik?",
+            "options": [
+              "Asnjëherë, këmbët janë mirë",
+              "Çdo ditë",
+              "Një herë në vit"
+            ],
+            "explanation": "Diabeti mund të dëmtojë nervat në këmbët tuaja. Ju mund të mos ndjeni prerje ose plagë. Kontrolloni këmbët tuaja çdo ditë për prerje, flluska ose ndryshime ngjyrash. Plagët e vogla mund të bëhen infeksione serioze."
+          }
+        ]
+      },
+      "hygiene": {
+        "title": "Higjiena dhe Parandalimi",
+        "description": "Zakonet themelore shëndetësore që shpëtojnë jetë",
+        "questions": [
+          {
+            "question": "Sa kohë duhet t'i lani duart me sapun?",
+            "options": [
+              "5 sekonda",
+              "Të paktën 20 sekonda",
+              "1 minutë"
+            ],
+            "explanation": "Lani për të paktën 20 sekonda - rreth kohës që duhet për të kënduar \"Happy Birthday\" dy herë. Kjo largon shumicën e mikrobeve. Shpëlarjet e shpejta nuk funksionojnë."
+          },
+          {
+            "question": "A është e sigurt të pini ujë nga një lumë apo përrua?",
+            "options": [
+              "Po, uji natyral është i pastër",
+              "Jo, gjithmonë ziejeni ose filtroni fillimisht",
+              "Vetëm nëse duket qartë"
+            ],
+            "explanation": "Edhe uji i pastër mund të përmbajë baktere dhe parazitë të rrezikshëm. Gjithmonë zieni ujin për të paktën 1 minutë ose përdorni një filtër. Uji i ndotur shkakton diarre, kolerë dhe tifo."
+          },
+          {
+            "question": "Fëmija juaj ka diarre. Cila është gjëja më e rëndësishme?",
+            "options": [
+              "Ndaloni të gjitha ushqimet",
+              "Jepni shumë lëngje (ujë, ORS)",
+              "Jepni antibiotikë"
+            ],
+            "explanation": "Dehidratimi nga diarreja vret më shumë fëmijë sesa vetë diarreja. Jepni tretësirë ​​rehidrimi oral (ORS) ose ujë të pastër me pak kripë dhe sheqer. Mbani foshnjat me gji."
+          },
+          {
+            "question": "Kur duhet të lani duart?",
+            "options": [
+              "Vetëm para se të hahet",
+              "Para ngrënies, pas tualetit, pas prekjes së kafshëve, pas kollitjes",
+              "Vetëm kur duken të pista"
+            ],
+            "explanation": "Mikrobet janë të padukshëm. Lani duart: para ngrënies/gatimit, pas përdorimit të tualetit, pas ndërrimit të pelenave, pasi prekni kafshët, pasi kolliteni/teshtitni dhe pasi prekni njerëzit e sëmurë."
+          }
+        ]
+      }
+    }
+  },
+  "rights": {
+    "meta": {
+      "title": "Njihni të drejtat tuaja - Shëndeti Redi",
+      "description": "Të drejtat e pacientëve, ndihma për diskriminimin dhe kontaktet ligjore për komunitetet rome"
+    },
+    "title": "Njihni të drejtat tuaja",
+    "subtitle": "Ju keni të drejta si pacient. Mësoni ato. Përdorni ato.",
+    "back": "Mbrapa",
+    "menu": {
+      "patientRights": {
+        "title": "Të drejtat e pacientit",
+        "desc": "8 të drejta që ka çdo pacient"
+      },
+      "discrimination": {
+        "title": "Duke u përballur me diskriminimin?",
+        "desc": "Çfarë të thuash dhe të bësh - hap pas hapi"
+      },
+      "contacts": {
+        "title": "Ndihmë Ligjore sipas Vendit",
+        "desc": "Avokati i Popullit, Antidiskriminimi, Organizatat Rome"
+      }
+    },
+    "views": {
+      "patientRights": "Të drejtat e pacientit tuaj",
+      "discrimination": "Nëse përballeni me diskriminim",
+      "discriminationDesc": "Situata reale dhe saktësisht çfarë të thuash dhe të bësh.",
+      "contacts": "Ndihmë Ligjore sipas Vendit"
+    },
+    "labels": {
+      "sayThis": "Thuaj këtë:",
+      "thenDo": "Pastaj bëni këtë:",
+      "patientOmbudsman": "Avokati i Popullit për pacientët",
+      "antiDiscrimination": "Anti-Discrimination",
+      "romaRightsOrg": "Roma Rights Organization"
+    },
+    "rights": {
+      "treatment": {
+        "title": "E drejta për trajtim urgjent",
+        "description": "Çdo spital DUHET t'ju trajtojë në raste urgjence, edhe pa sigurim apo dokumente. Ky është ligj në çdo vend EU. Nëse ata refuzojnë, kërkoni emrin e mjekut dhe raportoni atë."
+      },
+      "information": {
+        "title": "E drejta për të kuptuar diagnozën tuaj",
+        "description": "Mjeku juaj duhet të shpjegojë gjendjen tuaj me fjalë që kuptoni. Nëse nuk kuptoni, thoni: 'A mund ta shpjegoni këtë më thjeshtë?' Ju gjithashtu mund të kërkoni një përmbledhje me shkrim."
+      },
+      "consent": {
+        "title": "E drejta për të thënë jo",
+        "description": "Askush nuk mund t'ju detyrojë trajtim. Para çdo procedure, mjeku duhet të shpjegojë se çfarë do të bëjë dhe ju duhet të bini dakord. Gjithmonë mund të thuash 'Më duhet kohë për të menduar.'"
+      },
+      "privacy": {
+        "title": "E drejta për privatësi",
+        "description": "Informacioni juaj mjekësor është privat. Mjekët nuk mund ta ndajnë atë me punëdhënësin, familjen ose dikë tjetër pa lejen tuaj. Kjo përfshin statusin tuaj HIV, shtatzëninë ose shëndetin mendor."
+      },
+      "interpreter": {
+        "title": "E drejta për një përkthyes",
+        "description": "Nëse nuk e flisni mirë gjuhën vendase, mund të kërkoni një përkthyes. Shumë spitale e kanë këtë shërbim. Nëse jo, mund të sillni dikë që keni besim për të përkthyer."
+      },
+      "second-opinion": {
+        "title": "E drejta për një mendim të dytë",
+        "description": "Nëse nuk jeni dakord me një diagnozë, mund të shihni një mjek tjetër. Kjo është e drejta juaj. Nuk keni nevojë të shpjegoni pse."
+      },
+      "records": {
+        "title": "E drejta për të dhënat tuaja mjekësore",
+        "description": "Ju mund të kërkoni një kopje të të gjitha të dhënave tuaja mjekësore në çdo kohë. Spitali duhet t'i sigurojë ato. Kjo është e dobishme kur ndryshoni mjekë ose lëvizni në një qytet tjetër."
+      },
+      "complaint": {
+        "title": "E drejta për t'u ankuar",
+        "description": "Nëse ndiheni të keqtrajtuar ose të diskriminuar, mund të bëni një ankesë. Çdo spital ka një procedurë ankesash. Ju gjithashtu mund të kontaktoni ombudsmenin e pacientëve në vendin tuaj."
+      }
+    },
+    "scenarios": {
+      "refused-treatment": {
+        "situation": "Spitali refuzon t'ju trajtojë",
+        "whatToSay": "\"Unë kam të drejtën për trajtim urgjent sipas ligjit EU. Ju lutemi shkruani emrin tuaj dhe arsyen që po refuzoni.\"",
+        "whatToDo": [
+          "Qëndroni të qetë, por të vendosur",
+          "Kërkoni emrin e plotë të mjekut",
+          "Kërkoni refuzimin me shkrim",
+          "Thirrni ombudsmenin e pacientit",
+          "Kontaktoni një organizatë për të drejtat e romëve"
+        ]
+      },
+      "rude-staff": {
+        "situation": "Stafi i spitalit është i pasjellshëm ose shpërfillës për shkak të përkatësisë suaj etnike",
+        "whatToSay": "\"Unë jam këtu për ndihmë mjekësore. Pres të trajtohem me të njëjtin respekt si çdo pacient tjetër.\"",
+        "whatToDo": [
+          "Kërkoni të flisni me kryeinfermieren ose shefin e departamentit",
+          "Vini re datën, orën dhe emrat",
+          "Paraqisni një ankesë me shkrim në spital",
+          "Raportoni në organin kombëtar kundër diskriminimit"
+        ]
+      },
+      "no-insurance": {
+        "situation": "Ju nuk keni sigurim shëndetësor",
+        "whatToSay": "\"Kam nevojë për ndihmë mjekësore. Cilat janë opsionet e mia për pacientët e pasiguruar?\"",
+        "whatToDo": [
+          "Kujdesi urgjent është gjithmonë falas - insistoni në të",
+          "Pyesni për programet e ndihmës sociale",
+          "Kontaktoni një ndërmjetës shëndetësor në zonën tuaj",
+          "Shumë OJQ ofrojnë klinika falas — pyesni në spital"
+        ]
+      },
+      "language-barrier": {
+        "situation": "Nuk mund të komunikosh me mjekun",
+        "whatToSay": "\"Kam nevojë për ndihmë për të kuptuar. A mund të jepni një përkthyes apo të flisni më ngadalë?\"",
+        "whatToDo": [
+          "Përdorni këtë aplikacion për të përkthyer frazat kryesore",
+          "Sillni një person të besuar që flet gjuhën",
+          "Kërkoni udhëzime me shkrim që mund t'i përktheni më vonë",
+          "Përdorni kamerën e telefonit tuaj për të përkthyer dokumente"
+        ]
+      }
+    },
+    "contacts": {
+      "romania": {
+        "country": "Romania",
+        "ombudsman": "Avocatul Poporului",
+        "antiDiscrimination": "CNCD",
+        "ombudsmanPhone": "021 312 7134",
+        "antiDiscriminationPhone": "021 312 6578",
+        "romaRightsOrg": "Romani CRISS"
+      },
+      "bulgaria": {
+        "country": "Bulgaria",
+        "ombudsman": "Ombudsman of Bulgaria",
+        "antiDiscrimination": "Commission for Protection against Discrimination",
+        "ombudsmanPhone": "02 810 6955",
+        "romaRightsOrg": "Amalipe Center"
+      },
+      "hungary": {
+        "country": "Hungary",
+        "ombudsman": "Commissioner for Fundamental Rights",
+        "antiDiscrimination": "Equal Treatment Authority",
+        "ombudsmanPhone": "06 1 475 7100",
+        "romaRightsOrg": "Romaversitas Foundation"
+      },
+      "slovakia": {
+        "country": "Slovakia",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Slovak National Centre for Human Rights",
+        "ombudsmanPhone": "02 4828 7401",
+        "romaRightsOrg": "ETP Slovakia"
+      },
+      "czech-republic": {
+        "country": "Czech Republic",
+        "ombudsman": "Public Defender of Rights",
+        "antiDiscrimination": "Office of the Public Defender",
+        "ombudsmanPhone": "542 542 888",
+        "romaRightsOrg": "Romea.cz"
+      },
+      "serbia": {
+        "country": "Serbia",
+        "ombudsman": "Protector of Citizens",
+        "antiDiscrimination": "Commissioner for Equality",
+        "ombudsmanPhone": "011 206 8100",
+        "romaRightsOrg": "Praxis"
+      },
+      "albania": {
+        "country": "Albania",
+        "ombudsman": "People's Advocate",
+        "antiDiscrimination": "Commissioner for Protection from Discrimination",
+        "ombudsmanPhone": "042 380 300"
+      },
+      "north-macedonia": {
+        "country": "North Macedonia",
+        "ombudsman": "Ombudsman",
+        "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+        "ombudsmanPhone": "02 3129 335"
+      },
+      "greece": {
+        "country": "Greece",
+        "ombudsman": "Greek Ombudsman",
+        "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+        "ombudsmanPhone": "213 130 6600"
+      },
+      "croatia": {
+        "country": "Croatia",
+        "ombudsman": "Ombudswoman",
+        "antiDiscrimination": "Ombudswoman",
+        "ombudsmanPhone": "01 4851 855"
+      }
+    }
+  },
+  "stories": {
+    "meta": {
+      "title": "Tregime Komuniteti - Shëndeti Redi",
+      "description": "Përvoja reale shëndetësore nga komunitetet rome në të gjithë Evropën"
+    },
+    "title": "Histori Komuniteti",
+    "subtitle": "Përvoja reale nga komunitetet rome. Mësoni nga të tjerët.",
+    "backToStories": "Kthehu tek historitë",
+    "lessonLearned": "Mësimi i nxjerrë",
+    "whatToDoNext": "Çfarë duhet bërë më pas",
+    "categories": {
+      "vaccines": "Vaksinat",
+      "chronic": "Sëmundje kronike",
+      "maternal": "Shtatzënia",
+      "discrimination": "Të drejtat",
+      "prevention": "Parandalimi",
+      "mental": "Shëndeti Mendor"
+    },
+    "nextSteps": {
+      "vaccineGuide": "Udhëzues për vaksinat",
+      "askZuvo": "Pyete Zuvo",
+      "explainPrescription": "Shpjegoni recetën",
+      "navigateToCare": "Navigoni drejt kujdesit",
+      "knowYourRights": "Njihni të drejtat tuaja",
+      "learnPrevention": "Mësoni parandalimin",
+      "checkSymptoms": "Kontrolloni simptomat",
+      "learnMentalHealth": "Mësoni për shëndetin mendor"
+    },
+    "entries": {
+      "maria-vaccines": {
+        "name": "Maria",
+        "age": "28",
+        "country": "Rumania",
+        "title": "Unë pothuajse nuk e vaksinova vajzën time",
+        "story": "Vjehrra më tha se vaksinat janë helm. Të gjithë në vendbanim thanë të njëjtën gjë. Kur lindi vajza ime, u tremba. Por ndërmjetësi shëndetësor erdhi në shtëpinë tonë dhe na shpjegoi gjithçka - si funksionojnë vaksinat, cilat janë në të vërtetë efektet anësore. Ajo më tregoi foto të fëmijëve me fruth. Unë kisha më shumë frikë nga sëmundja sesa nga vaksina. Vajza ime mori të gjitha vaksinat e saj. Ajo është e shëndetshme dhe e fortë.",
+        "lesson": "Flisni me një ndërmjetës shëndetësor ose mjek përpara se të merrni vendime bazuar në atë që thonë të tjerët. Vaksinat shpëtojnë jetë."
+      },
+      "stefan-diabetes": {
+        "name": "Stefan",
+        "age": "52",
+        "country": "Bullgaria",
+        "title": "E ndërpreva mjekimin për diabetin dhe për pak sa nuk vdiqa",
+        "story": "Unë u diagnostikova me diabet të tipit 2 në 45. Ilaçi më dhimbte stomakun, ndaj e ndërpreva. Fqinji im tha se çaji i kanellës do të më shëronte. Për 2 vjet kam pirë çaj kanelle në vend të saj. Pastaj një ditë u rrëzova. Sheqeri im në gjak ishte mbi 500. Mjekët më thanë se veshkat më ishin dëmtuar. Tani i marr ilaçet çdo ditë. Do të doja të mos kisha ndalur kurrë.",
+        "lesson": "Asnjëherë mos e ndaloni mjekimin pa folur me mjekun tuaj. Ilaçet natyrale nuk mund të zëvendësojnë mjekimin e diabetit."
+      },
+      "elena-pregnancy": {
+        "name": "Elena",
+        "age": "22",
+        "country": "Serbisë",
+        "title": "Shtatzënia ime e parë - nuk e dija se mund të vizitoja një mjek falas",
+        "story": "Kur mbeta shtatzënë në 19, nuk shkova te mjeku për 6 muaj. Nuk kisha sigurim dhe mendova se do të kushtonte shumë. Një ndërmjetës shëndetësor më tha se kujdesi prenatal është falas për të gjitha gratë shtatzëna në Serbi. Ajo më ndihmoi të regjistrohesha. Mjeku zbuloi se kisha anemi dhe tension të lartë. Nëse nuk do të kisha shkuar, fëmija im mund të ishte në rrezik.",
+        "lesson": "Kujdesi prenatal është falas në shumicën e vendeve evropiane. Kërkoni nga një ndërmjetës shëndetësor t'ju ndihmojë të regjistroheni."
+      },
+      "janos-discrimination": {
+        "name": "János",
+        "age": "35",
+        "country": "Hungaria",
+        "title": "Spitali u përpoq të më largonte",
+        "story": "Shkova në urgjencë me dhimbje gjoksi. Infermierja më shikoi dhe më tha 'Jemi ngopur, shkoni në një spital tjetër'. E dija që kjo nuk ishte e drejtë. I thashë: 'Kam dhimbje gjoksi. Duhet të më ekzaminosh. Ju lutem më jepni emrin tuaj.' Qëndrimi i saj ndryshoi menjëherë. Ata më ekzaminuan dhe zbuluan se kisha një problem me zemrën që kërkonte trajtim. Nëse do të isha larguar, mund të kisha pasur një atak në zemër.",
+        "lesson": "Ju keni të drejtën për trajtim urgjent. Nëse dikush përpiqet t'ju largojë, kërkoni emrin e tij dhe thoni se i dini të drejtat tuaja."
+      },
+      "ana-tb": {
+        "name": "Ana",
+        "age": "31",
+        "country": "Sllovakia",
+        "title": "TB nuk është një dënim me vdekje - por ju duhet të përfundoni ilaçin",
+        "story": "Unë kollitja për muaj të tërë. Mendova se ishte thjesht një i ftohtë. Kur më në fund shkova te mjeku, më thanë se kisha tuberkuloz. Isha i tmerruar - mendova se do të vdisja. Por mjeku shpjegoi se TB mund të shërohet me 6 muaj ilaçe. Pjesa më e vështirë ishte marrja e pilulave çdo ditë për 6 muaj, edhe kur u ndjeva më mirë pas 2 muajsh. Por mbarova. jam kuruar.",
+        "lesson": "Nëse kolliteni për më shumë se 2 javë, shkoni te mjeku. TB është i shërueshëm, por ju DUHET të përfundoni të gjithë ilaçin."
+      },
+      "mirela-depression": {
+        "name": "Mirela",
+        "age": "40",
+        "country": "Maqedonia e Veriut",
+        "title": "Depresioni nuk është dobësi - është një sëmundje",
+        "story": "Pasi më vdiq burri, nuk mund të ngrihesha nga shtrati për muaj të tërë. Familja ime tha se isha dembel. Ata thanë 'vetëm bëhu i fortë'. Por nuk munda. Një ndërmjetës shëndetësor vuri re se diçka nuk ishte në rregull dhe më çoi te një mjek. Doktori tha se kisha depresion - një gjendje e vërtetë mjekësore. Fillova mjekimin dhe fola me një këshilltar. Ngadalë, u bëra më mirë. Unë nuk jam i dobët. isha i sëmurë.",
+        "lesson": "Depresioni është një gjendje mjekësore, jo një e metë karakteri. Mjekësia dhe këshillimi mund të ndihmojnë. Ju lutemi kërkoni ndihmë."
+      }
+    }
+  },
+  "challenges": {
+    "meta": {
+      "title": "Sfidat — Shëndeti Redi",
+      "description": "Sfidat e Komunitetit"
+    },
+    "title": "Sfidat Aktive",
+    "subtitle": "Bashkohuni me qëllimet e komunitetit dhe sfidat personale për të fituar bonus XP dhe distinktivë.",
+    "types": {
+      "community": "komunitetit",
+      "personal": "personale"
+    },
+    "daysLeft": "{count} ditë të mbetura",
+    "viewLeaderboard": "Shiko tabelën e drejtuesve",
+    "items": {
+      "c1": {
+        "title": "Kampion i njohurive për vaksinat",
+        "description": "Merrni 50 studentë në zonën tuaj lokale për të kaluar modulin e vaksinës këtë javë."
+      },
+      "c2": {
+        "title": "Rrjedha shëndetësore 7-ditore",
+        "description": "Regjistroni gjendjen shpirtërore dhe marrjen e ujit për 7 ditë rresht."
+      }
+    }
+  },
+  "certificate": {
+    "meta": {
+      "title": "Certifikata — Redi Health",
+      "description": "Certifikata Kombëtare e Alfabetizmit Shëndetësor"
+    },
+    "title": "Certifikata juaj",
+    "subtitle": "Ju keni përfunduar Fazën Kombëtare të Akademisë së Shëndetit Studentor.",
+    "ofCompletion": "Certifikata e Përfundimit",
+    "diplomaTitle": "Alfabetizmi Kombëtar i Shëndetit",
+    "awardedFor": "Shpërblyer për plotësimin e kurrikulës së Akademisë Studentore të Shëndetit Redi.",
+    "date": "Data",
+    "downloadPdf": "Shkarkoni PDF",
+    "share": "Shpërndaje",
+    "gate": {
+      "title": "Përfundoni së pari Akademinë",
+      "description": "Për të fituar Certifikatën e Alfabetizmit Shëndetësor, duhet të përfundoni të gjitha mësimet dhe të kaloni kuizin në fazën Kombëtare të Akademisë së Shëndetit Studentor.",
+      "cta": "Shkoni në Akademi"
+    }
+  }
+}

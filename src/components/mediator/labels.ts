@@ -109,6 +109,9 @@ const STATIC_KEYS = [
   "trainingTierSocial",
   "trainingTierFieldwork",
   "reportKpiSection",
+  "roleBoundaryNotice",
+  "dataMinimisationNote",
+  "consentAttestation",
 ] as const;
 
 type StaticKey = (typeof STATIC_KEYS)[number];

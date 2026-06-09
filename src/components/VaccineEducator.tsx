@@ -37,6 +37,13 @@ export function VaccineEducator({ locale }: { locale: string }) {
   const importanceLabel = (level: keyof typeof IMPORTANCE_BADGE) =>
     t(`importance.${level}`);
 
+  const vaccineName = (id: string) => t(`items.${id}.name`);
+  const vaccineDiseases = (id: string) => t.raw(`items.${id}.preventsDiseases`) as string[];
+  const vaccineHowItWorks = (id: string) => t(`items.${id}.howItWorks`);
+  const vaccineSideEffects = (id: string) => t(`items.${id}.sideEffects`);
+  const vaccineMyth = (id: string) => t(`items.${id}.mythDebunked`);
+  const ageGroupLabel = (id: string) => t(`ageGroups.${id}.label`);
+
   const openDetail = (v: Vaccine) => {
     setSelectedVaccine(v);
     setView("detail");
@@ -113,7 +120,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
               <Syringe className="h-6 w-6 text-blue-500" />
             </div>
             <div>
-              <h2 className="text-base font-bold text-gray-900">{selectedVaccine.name}</h2>
+              <h2 className="text-base font-bold text-gray-900">{vaccineName(selectedVaccine.id)}</h2>
               <span className={`inline-flex rounded-full px-2 py-0.5 text-[10px] font-bold ${badge.bg} ${badge.text}`}>
                 {importanceLabel(selectedVaccine.importanceLevel)}
               </span>
@@ -121,7 +128,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
           </div>
 
           <div className="mb-3 flex flex-wrap gap-1">
-            {selectedVaccine.preventsDiseases.map((d) => (
+            {vaccineDiseases(selectedVaccine.id).map((d) => (
               <span key={d} className="rounded-full bg-green-50 px-2.5 py-1 text-xs font-medium text-green-700">
                 {t("preventsLabel")}: {d}
               </span>
@@ -137,19 +144,19 @@ export function VaccineEducator({ locale }: { locale: string }) {
           <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-green-800">
             <Shield className="h-4 w-4" /> {t("howItWorks")}
           </h3>
-          <p className="text-sm leading-relaxed text-green-700">{selectedVaccine.howItWorks}</p>
+          <p className="text-sm leading-relaxed text-green-700">{vaccineHowItWorks(selectedVaccine.id)}</p>
         </div>
 
         <div className="rounded-2xl border border-amber-100 bg-amber-50 p-4">
           <h3 className="mb-1 flex items-center gap-2 text-sm font-bold text-amber-800">
             <AlertTriangle className="h-4 w-4" /> {t("sideEffects")}
           </h3>
-          <p className="text-sm leading-relaxed text-amber-700">{selectedVaccine.sideEffects}</p>
+          <p className="text-sm leading-relaxed text-amber-700">{vaccineSideEffects(selectedVaccine.id)}</p>
         </div>
 
         <div className="rounded-2xl border border-red-100 bg-red-50 p-4">
           <h3 className="mb-1 text-sm font-bold text-red-800">{t("mythTitle")}</h3>
-          <p className="text-sm leading-relaxed text-red-700">{selectedVaccine.mythDebunked}</p>
+          <p className="text-sm leading-relaxed text-red-700">{vaccineMyth(selectedVaccine.id)}</p>
         </div>
       </div>
     );
@@ -292,7 +299,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
                   )}
                 </div>
                 <div className="text-left">
-                  <span className="text-sm font-semibold text-gray-900">{group.label}</span>
+                  <span className="text-sm font-semibold text-gray-900">{ageGroupLabel(group.id)}</span>
                   <p className="text-xs text-gray-400">
                     {t("vaccinesCount", { count: group.vaccines.length })}
                   </p>
@@ -319,9 +326,9 @@ export function VaccineEducator({ locale }: { locale: string }) {
                     >
                       <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-green-400" />
                       <div className="flex-1 min-w-0">
-                        <span className="text-sm font-medium text-gray-800">{v.name}</span>
+                        <span className="text-sm font-medium text-gray-800">{vaccineName(v.id)}</span>
                         <p className="truncate text-xs text-gray-400">
-                          {t("preventsLabel")}: {v.preventsDiseases.join(", ")}
+                          {t("preventsLabel")}: {vaccineDiseases(v.id).join(", ")}
                         </p>
                       </div>
                       <span className={`rounded-full px-2 py-0.5 text-[9px] font-bold ${badge.bg} ${badge.text}`}>

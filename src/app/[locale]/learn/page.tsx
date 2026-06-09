@@ -4,6 +4,8 @@ import { getTranslations } from "next-intl/server";
 import { ChevronRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
+import { LearnProgressClient } from "@/components/LearnProgressClient";
+import { getPillar } from "@/data/content";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -25,30 +27,21 @@ const PILLARS = [
 export default async function LearnPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "pillars" });
+  const tLearn = await getTranslations({ locale, namespace: "learn" });
+
+  const pillarsWithCounts = PILLARS.map((p) => ({
+    ...p,
+    total: getPillar(p.id)?.modules.length ?? 0,
+  }));
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
       <Header />
       <main id="main-content" className="flex-1 pb-2">
         <div className="px-5 py-8">
-          <h1 className="mb-6 text-2xl font-bold text-gray-900">{t("title")}</h1>
-          <div className="flex flex-col gap-2">
-            {PILLARS.map((pillar) => (
-              <Link
-                key={pillar.id}
-                href={pillar.href}
-                className="flex items-center gap-4 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition-all hover:shadow-md active:scale-[0.99]"
-              >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl text-2xl">
-                  {pillar.emoji}
-                </span>
-                <span className="flex-1 font-semibold text-gray-800">
-                  {t(pillar.id)}
-                </span>
-                <ChevronRight className="h-5 w-5 text-gray-300" />
-              </Link>
-            ))}
-          </div>
+          <h1 className="mb-2 text-2xl font-bold text-[var(--color-text-primary)]">{t("title")}</h1>
+          <p className="mb-6 text-sm text-[var(--color-text-secondary)]">{tLearn("continueLabel")}</p>
+          <LearnProgressClient pillars={pillarsWithCounts} pillarNames={PILLARS.map(p => t(p.id))} continueLabel={tLearn("continueLabel")} progressLabel={tLearn("progressLabel")} />
         </div>
       </main>
       <BottomNav />

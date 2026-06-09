@@ -7,6 +7,7 @@ import {
   Stethoscope, Baby, Brain, Heart, Thermometer, Eye,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useRouter } from "@/navigation";
 
 type VisitCard = {
   patientSummary: string;
@@ -43,6 +44,7 @@ const ISSUE_TYPES: Array<{ id: IssueId; icon: typeof Thermometer; color: string 
 // name is defined; can be extended to a per-locale dictionary later).
 const COUNTRIES = [
   { code: "al", name: "Albania" },
+  { code: "it", name: "Italy" },
   { code: "ro", name: "Romania" },
   { code: "bg", name: "Bulgaria" },
   { code: "hu", name: "Hungary" },
@@ -62,6 +64,7 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
   const t = useTranslations("navigate");
   const tCommon = useTranslations("common");
   const tEmergency = useTranslations("emergency");
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [issueType, setIssueType] = useState("");
   const [issueDetail, setIssueDetail] = useState("");
@@ -127,6 +130,29 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
               </button>
             );
           })}
+        </div>
+
+        {/* Country Health System Guides */}
+        <div className="mt-8 border-t border-gray-100 pt-6 animate-fade-in-up" style={{ animationDelay: "900ms" }}>
+          <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+            {t("systemGuidesTitle")}
+          </h2>
+          <div className="grid grid-cols-1 gap-3">
+            <button
+              type="button"
+              onClick={() => setStep(6)}
+              className="card-hover flex items-center justify-between rounded-2xl border border-sky-100 bg-sky-50/50 p-4 text-left shadow-sm transition-all active:scale-[0.98]"
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-2xl" aria-hidden="true">🇮🇹</span>
+                <div>
+                  <span className="block text-sm font-bold text-sky-900">{t("italySsnTitle")}</span>
+                  <span className="block text-xs text-sky-600 font-semibold">{t("viewGuide")}</span>
+                </div>
+              </div>
+              <ArrowRight className="h-5 w-5 text-sky-500" />
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -321,19 +347,57 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
           </div>
         )}
 
-        {/* Find nearest hospital */}
-        <a
-          href="https://www.google.com/maps/search/hospital+near+me"
-          target="_blank"
-          rel="noopener"
-          className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all active:bg-gray-50"
-        >
-          <MapPin className="h-5 w-5 text-cyan-500" />
-          <div>
-            <span className="text-sm font-semibold text-gray-800">{t("findHospital")}</span>
-            <p className="text-xs text-gray-400">{t("mapHint")}</p>
+        {/* If country is Italy, show the SSN/STP guide card at the bottom */}
+        {country === "it" && (
+          <div className="rounded-2xl border border-sky-100 bg-sky-50/30 p-5 space-y-4 text-left">
+            <div className="flex items-center gap-2 border-b border-sky-100/50 pb-2">
+              <span className="text-xl" aria-hidden="true">🇮🇹</span>
+              <span className="text-sm font-bold text-sky-900">{t("italySsnTitle")}</span>
+            </div>
+            
+            <div className="space-y-4">
+              <div>
+                <h4 className="text-xs font-bold text-sky-900 flex items-center gap-1.5">
+                  <Stethoscope className="h-3.5 w-3.5 text-sky-500" /> {t("italyDoctorTitle")}
+                </h4>
+                <p className="text-xs leading-relaxed text-sky-850 mt-1">{t("italyDoctorDesc")}</p>
+              </div>
+
+              <div>
+                <h4 className="text-xs font-bold text-sky-900 flex items-center gap-1.5">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" /> {t("italyEnrollTitle")}
+                </h4>
+                <ul className="space-y-1.5 mt-1.5">
+                  {(t.raw("italyEnrollSteps") as string[] || []).map((s, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-sky-850">
+                      <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-sky-450" />
+                      <span>{s}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-xl border border-amber-100 bg-amber-50/40 p-3">
+                <h4 className="text-xs font-bold text-amber-900 flex items-center gap-1.5">
+                  <Shield className="h-3.5 w-3.5 text-amber-600" /> {t("italyStpTitle")}
+                </h4>
+                <p className="text-xs leading-relaxed text-amber-800 mt-1">{t("italyStpDesc")}</p>
+              </div>
+            </div>
           </div>
-        </a>
+        )}
+
+        {/* Find care nearby — links to providers directory */}
+        <button
+          onClick={() => router.push("/providers")}
+          className="flex w-full items-center gap-3 rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] p-4 shadow-1 transition-all hover:bg-[var(--color-surface-hover)] active:bg-[var(--color-surface-subtle)]"
+        >
+          <MapPin className="h-5 w-5 text-cyan-500 flex-shrink-0" />
+          <div className="text-left">
+            <span className="text-sm font-semibold text-[var(--color-text-primary)]">{t("findHospital")}</span>
+            <p className="text-xs text-[var(--color-text-muted)]">{t("findHospitalHint")}</p>
+          </div>
+        </button>
 
         {/* Emergency */}
         <a
@@ -342,6 +406,67 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
         >
           <Phone className="h-4 w-4" /> {tEmergency("banner")}
         </a>
+      </div>
+    );
+  }
+
+  // Step 6: Italy Healthcare Guide
+  if (step === 6) {
+    const steps: string[] = t.raw("italyEnrollSteps") || [];
+    return (
+      <div className="space-y-4 animate-fade-in text-left">
+        <button onClick={() => setStep(1)} className="mb-2 flex items-center gap-1 text-sm text-gray-500">
+          <ArrowLeft className="h-4 w-4" /> {tCommon("back")}
+        </button>
+
+        <div className="mb-2 flex items-center gap-3">
+          <span className="text-3xl" aria-hidden="true">🇮🇹</span>
+          <h1 className="text-xl font-black text-gray-900">{t("italySsnTitle")}</h1>
+        </div>
+
+        {/* Pediatrician vs GP */}
+        <div className="rounded-2xl border border-sky-100 bg-white p-5 shadow-sm">
+          <h2 className="mb-2 flex items-center gap-2 text-sm font-bold text-sky-900">
+            <Stethoscope className="h-5 w-5 text-sky-500" />
+            {t("italyDoctorTitle")}
+          </h2>
+          <p className="text-sm leading-relaxed text-gray-700">{t("italyDoctorDesc")}</p>
+        </div>
+
+        {/* How to Enroll */}
+        <div className="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm">
+          <h2 className="mb-3 flex items-center gap-2 text-sm font-bold text-emerald-900">
+            <CheckCircle2 className="h-5 w-5 text-emerald-500" />
+            {t("italyEnrollTitle")}
+          </h2>
+          <ol className="space-y-3">
+            {steps.map((s, i) => (
+              <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
+                <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-800">
+                  {i + 1}
+                </span>
+                <span className="leading-tight">{s}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        {/* STP Code */}
+        <div className="rounded-2xl border border-amber-100 bg-amber-50/50 p-5 shadow-sm">
+          <h2 className="mb-2 flex items-center gap-2 text-sm font-bold text-amber-900">
+            <Shield className="h-5 w-5 text-amber-600" />
+            {t("italyStpTitle")}
+          </h2>
+          <p className="text-sm leading-relaxed text-gray-700">{t("italyStpDesc")}</p>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setStep(1)}
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-gray-900 py-3 text-sm font-semibold text-white shadow-md active:scale-[0.98]"
+        >
+          {t("closeGuide")}
+        </button>
       </div>
     );
   }
