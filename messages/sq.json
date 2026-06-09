@@ -1621,7 +1621,13 @@
     "imageFailed": "Nuk arrita ta lexoj këtë foto. Provo një tjetër.",
     "followUpChat": "Pyetni këshilltarin e AI",
     "followUpNavigate": "Gjeni një Mjek",
-    "followUpGlossary": "Kushtet mjekësore"
+    "followUpGlossary": "Kushtet mjekësore",
+    "example1": "Hipertensioni",
+    "example2": "Diabeti i tipit 2",
+    "example3": "Anemia",
+    "example4": "Astma bronkiale",
+    "example5": "Metforminë 500 mg",
+    "example6": "Enalapril 10 mg"
   },
   "navigate": {
     "heroTitle": "Më duhet të shoh një mjek",

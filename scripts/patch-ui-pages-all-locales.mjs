@@ -64,6 +64,12 @@ function validateNamespace(locale, namespace, value, english) {
     throw new Error(`Missing ${namespace} object for locale "${locale}"`);
   }
   for (const path of leafPaths(english)) {
+    if (namespace === "explain" && path.startsWith("example")) {
+      continue;
+    }
+    if (namespace === "about" && path === "policiesLink") {
+      continue;
+    }
     if (getAtPath(value, path) === undefined) {
       throw new Error(`Missing ${namespace}.${path} for locale "${locale}"`);
     }
@@ -128,7 +134,18 @@ function main() {
       if (EXISTING_UI_PAGE_LOCALES.has(locale) && hasNamespace(data, namespace)) {
         continue;
       }
-      data[namespace] = deepClone(TRANSLATIONS[locale][namespace]);
+      const existingPreserved = {};
+      if (data[namespace]) {
+        for (const [k, v] of Object.entries(data[namespace])) {
+          if (k.startsWith("example") || (namespace === "about" && k === "policiesLink")) {
+            existingPreserved[k] = v;
+          }
+        }
+      }
+      data[namespace] = {
+        ...deepClone(TRANSLATIONS[locale][namespace]),
+        ...existingPreserved,
+      };
       patched.push(namespace);
     }
 

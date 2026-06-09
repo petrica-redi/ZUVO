@@ -1072,7 +1072,13 @@
     "imageFailed": "Impossibile leggere questa foto. Provane un altro.",
     "followUpChat": "Chiedi all'assistente AI",
     "followUpNavigate": "Trova un medico",
-    "followUpGlossary": "Termini medici"
+    "followUpGlossary": "Termini medici",
+    "example1": "Ipertensione",
+    "example2": "Diabete di tipo 2",
+    "example3": "Anemia",
+    "example4": "Asma bronchiale",
+    "example5": "Metformina 500mg",
+    "example6": "Enalapril 10mg"
   },
   "navigate": {
     "heroTitle": "Ho bisogno di vedere un dottore",

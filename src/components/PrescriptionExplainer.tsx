@@ -120,12 +120,12 @@ type ExplainResult = {
 };
 
 const EXAMPLES = [
-  "Hipertensiune arteriala",
-  "Diabet tip 2",
-  "Anemie",
-  "Astm bronsic",
-  "Metformin 500mg",
-  "Enalapril 10mg",
+  "example1",
+  "example2",
+  "example3",
+  "example4",
+  "example5",
+  "example6",
 ];
 
 export function PrescriptionExplainer({ locale }: { locale: string }) {
@@ -347,10 +347,10 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
             {EXAMPLES.map((ex) => (
               <button
                 key={ex}
-                onClick={() => handleExplain(ex)}
+                onClick={() => handleExplain(t(ex))}
                 className="rounded-full border border-[var(--color-border-default)] bg-[var(--color-surface)] px-3 py-1.5 text-xs font-medium text-[var(--color-text-secondary)] shadow-1 transition-all hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] active:scale-95"
               >
-                {ex}
+                {t(ex)}
               </button>
             ))}
           </div>

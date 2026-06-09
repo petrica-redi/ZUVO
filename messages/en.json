@@ -2056,7 +2056,13 @@
     "imageFailed": "Could not read this photo. Try another one.",
     "followUpChat": "Ask AI Advisor",
     "followUpNavigate": "Find doctor",
-    "followUpGlossary": "Medical terms"
+    "followUpGlossary": "Medical terms",
+    "example1": "Hypertension",
+    "example2": "Type 2 diabetes",
+    "example3": "Anemia",
+    "example4": "Bronchial asthma",
+    "example5": "Metformin 500mg",
+    "example6": "Enalapril 10mg"
   },
   "navigate": {
     "heroTitle": "I need to see a doctor",

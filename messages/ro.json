@@ -1631,7 +1631,13 @@
     "imageFailed": "Nu am putut citi poza. Încearcă alta.",
     "followUpChat": "Întreabă AI-ul",
     "followUpNavigate": "Găsește medic",
-    "followUpGlossary": "Termeni medicali"
+    "followUpGlossary": "Termeni medicali",
+    "example1": "Hipertensiune arterială",
+    "example2": "Diabet tip 2",
+    "example3": "Anemie",
+    "example4": "Astm bronșic",
+    "example5": "Metformin 500mg",
+    "example6": "Enalapril 10mg"
   },
   "navigate": {
     "heroTitle": "Am nevoie să văd un medic",
