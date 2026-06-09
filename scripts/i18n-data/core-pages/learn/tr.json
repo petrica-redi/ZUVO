@@ -1,10 +1,10 @@
 {
-  "progressLabel": "tamamlanan modül",
+  "progressLabel": "tamamlanan modüller",
   "startHere": "Buradan başlayın",
   "continueLabel": "Devam et",
   "allModules": "Tüm modüller",
   "prevention": {
-    "description": "15 yıldır Roman yerleşimlerinde çalışırken, basit alışkanlıklarla önlenebilecek hastalıklarla yıkılan aileler gördüm. Bu bilgi lüks değil — hayatta kalmaktır.",
+    "description": "15 yıllarında Roman yerleşimlerinde çalışırken, ailelerin basit alışkanlıkların önleyebileceği hastalıklar nedeniyle perişan olduğunu gördüm. Bu bilgi lüks değil, hayatta kalmadır.",
     "handwashing": {
       "title": "El yıkama",
       "description": "Yerleşimlerdeki bütün ailelerin elden ele geçen aynı mide enfeksiyonundan hastalandığını gördüm. Doğru el yıkama, halihazırda erişebildiğiniz en ucuz ve en güçlü ilaçtır; hiçbir maliyeti yoktur ve topluluklarımızda en sık gördüğüm hastalıkları önler.",
@@ -27,7 +27,7 @@
     },
     "cleanWater": {
       "title": "Temiz Su",
-      "description": "Ailelerin günde iki saat akan tek bir su noktasını paylaştığı yerleşim yerlerinde, musluk suyunun berrak göründüğü halde çocuklarda kronik mide sorunlarına neden olan bakterileri taşıdığı mahallelerde çalıştım. Su kalitesi her zaman gözle görülemiyor ve Roman topluluklarında yetkililer tarafından nadiren izleniyor. Ailenizin su müfettişi olmalısınız.",
+      "description": "Ailelerin günde iki saat akan tek su noktasını paylaştığı yerleşim yerlerinde, musluk suyunun berrak göründüğü halde çocuklarda kronik mide sorunlarına neden olan bakterileri taşıdığı mahallelerde çalıştım. Su kalitesi her zaman gözle görülemiyor ve Roman topluluklarında yetkililer tarafından nadiren izleniyor. Ailenizin su müfettişi olmalısınız.",
       "tip1": "Suyu depoladığınız her kabın üzerini kapatın. Özellikle sıcak havalarda sineklerin, tozun ve hatta hayvan atıklarının üstü açık kovaları saatler içinde kirlettiğini gördüm. Üst kısımdaki basit bir plaka çoğu kirlenmeyi önler",
       "tip2": "Suyunuzdan emin değilseniz, tam bir dakika boyunca kaynayan ateşte kaynatın. Bu bakteri, virüs ve parazitlerin %99.9 kadarını öldürür. Neredeyse hiçbir maliyeti yok ve işe yarıyor. Bunu su kaynağının şüpheli olduğu düzinelerce yerleşim yerinde öğrettim.",
       "tip3": "Su kaplarınızı haftada en az bir kez sabun ve temiz suyla yıkayın. Kirli bir kap temiz suyu kirletir. Bu, çocuklarda gördüğüm tekrarlayan ishalin en çok gözden kaçan nedenlerinden biridir.",
@@ -41,13 +41,13 @@
       "tip1": "112 Avrupa'daki herhangi bir telefondan çalışır; hatta kredisiz, SIM kartsız, hatta kilitli bir telefondan bile. 7 üzeri çocuklar da dahil olmak üzere ailenizin her üyesine 112 numarasını tuşlamayı ve nerede olduklarını söylemeyi öğretin. Bunu uygulayın. Acil bir durumda panik insanlara unutturur",
       "tip2": "Ağır kanama için: Elinizdeki en temiz bezle (gömlek, başörtüsü, herhangi bir şey) sıkıca bastırın ve kontrol etmek için kaldırmayın. Yardım gelene kadar basmaya devam edin. Bakmak için kumaşı çıkarmaya devam ettikleri için tehlikeli derecede kanayan insanlar gördüm. Kan emilirse üstüne daha fazla bez ekleyin",
       "tip3": "Yanıklar: yanığı derhal en az 10 dakika boyunca soğuk akan suyun altına tutun. Asla tereyağı, sıvı yağ, diş macunu veya yumurta beyazı kullanmayın; birçok ailede karşılaştığım, aslında ısıyı hapseden ve daha kötü hasara ve enfeksiyona neden olan geleneksel ilaçlardır.",
-      "tip4": "Birisi yere yığılırsa ve nefes almıyorsa: 112'ı arayın, ardından göğsünün ortasını sert ve hızlı bir şekilde itin - dakikada 100 kez ('Stayin' Alive' şarkısının temposu). Yardım gelene kadar durmayın. Kusurlu CPR, CPR olmamasından sonsuz derecede daha iyidir",
+      "tip4": "Birisi bayılırsa ve nefes almıyorsa: 112'ı arayın, ardından göğsünün ortasını sert ve hızlı bir şekilde itin - dakikada 100 kez ('Stayin' Alive' şarkısının temposu). Yardım gelene kadar durmayın. Kusurlu CPR, CPR olmamasından sonsuz derecede daha iyidir",
       "fact": "Araştırmalar, temel ilk yardım eğitiminin yaygın olduğu toplumlarda kalp krizinden kurtulma oranının iki katına çıktığını gösteriyor. Pek çok Roman topluluğunda, ambulans müdahale süreleri Roman olmayan bölgelere göre önemli ölçüde daha uzundur; bu da olay yerinde bulunan kişilere yapılan ilk yardımı daha da kritik hale getirmektedir.",
       "action": "Şu anda her aile üyesine şunu sorun: 112'ı nasıl arayacağınızı biliyor musunuz? Ev adresimizi sevk görevlisine söyleyecek kadar iyi biliyor musun? Tam adresinizi bir kağıda yazın ve telefonun yanına koyun. Bugün çocuklarınıza öğretin."
     }
   },
   "nutrition": {
-    "description": "Roma aileleriyle geçen yıllarda yemeğin sadece beslenme olmadığını — neye gücünüzün yettiği, mahallenizde ne bulunduğu ve ailenizin ne bildiği olduğunu öğrendim. Kinoa al demeyeceğim. Elinizdekilerle ailenizi nasıl iyi besleyeceğinizi anlatacağım.",
+    "description": "Roman ailelerle çalıştığım yıllar boyunca, yemeğin asla sadece beslenmeyle ilgili olmadığını öğrendim; önemli olan, paranızın yettiği kadar, mahallenizde neyin mevcut olduğu ve ailenizin ne bildiği ile ilgili. Sana kinoa al demeyeceğim. Ailenizi sahip olduklarınızla nasıl iyi besleyeceğinizi size anlatacağım.",
     "balancedDiet": {
       "title": "Her Bütçede İyi Beslenmek",
       "description": "Roman topluluklarında gördüğüm en büyük beslenme sorunu yiyecek eksikliği değil; çok fazla ucuz ekmek, işlenmiş et ve şekerli içecekler, çok az sebze, yumurta ve baklagiller. Bu iradeyle alakalı değil. Bu neyin mevcut ve uygun fiyatlı olduğuyla ilgilidir. Ancak küçük değişiklikler sizin sağlığınız ve çocuklarınızın gelişimi üzerinde çok büyük farklar yaratır.",
@@ -69,18 +69,18 @@
       "action": "Yarından itibaren, 6 aydan büyük çocuğunuza günde bir yumurta (püre veya çırpılmış) verin. Çocuğunuz 6 ayın altındaysa ve emziriyorsanız kendiniz fazladan bir yumurta yiyin; besinler sütünüze geçer."
     },
     "foodSafety": {
-      "title": "Yiyecekleri Güvende Tutmak",
+      "title": "Yiyecekleri Güvenli Tutmak",
       "description": "Gıda zehirlenmesi, Roman ailelerin acil servislere gitmesinin en yaygın nedenlerinden biri; özellikle çocuklarda kusma, ishal ve dehidrasyon. Soğutmanın güvenilmez olduğu ve mutfakların ortak veya açık havada kullanıldığı yerleşim yerlerinde gıda güvenliği bir ders kitabı konusu değil, günlük bir hayatta kalma becerisidir.",
       "tip1": "Sıcak havalarda, pişmiş yiyeceklerin 2 saatten fazla dışarıda bırakılması tehlikeli hale gelir. Buzdolabına koyamıyorsanız, tek öğünde bitireceğiniz daha küçük porsiyonları pişirin. Yaz aylarında bir gecede dışarıda bırakılan yeniden ısıtılmış güveç nedeniyle tüm ailelerin hastaneye kaldırıldığını gördüm",
       "tip2": "Çiğ tavuk ve et asla ekmeğe, sebzeye veya pişmeden yenecek hiçbir şeye temas etmemelidir. Ayrı kesme yüzeyleri kullanın; düz bir şekilde yerleştirilmiş temiz bir plastik torba bile işe yarar. Bu çapraz bulaşma, karşılaştığım gıda zehirlenmesinin bir numaralı nedenidir",
-      "tip3": "Yiyecekler yanlış kokuyorsa, yanlış görünüyorsa veya sümüksü bir his veriyorsa, onu atın. Kontrol etmek için tadına bakmayın. Para kısıtlı olduğunda yiyecekleri atmanın acı verici olduğunu biliyorum, ancak bir gıda zehirlenmesi nöbeti ilaçta ve iş kaybında yiyeceğin değerinden daha pahalıya mal olur.",
+      "tip3": "Yiyecekler yanlış kokuyorsa, yanlış görünüyorsa veya sümüksü bir his veriyorsa, onu atın. Kontrol etmek için tadına bakmayın. Para kısıtlı olduğunda yiyecekleri çöpe atmanın acı verici olduğunu biliyorum, ancak bir gıda zehirlenmesi nöbeti tıpta yiyeceğin değerinden daha pahalıya mal olur ve iş kaybı olur.",
       "tip4": "Soymayı planlıyor olsanız bile, yemeden önce tüm meyve ve sebzeleri akan su altında yıkayın. Kestiğinizde dışarıdaki kir içeriye geçer. Bu, özellikle birçok kişi tarafından işlenmiş olabilecek pazar ürünleri için önemlidir.",
-      "fact": "WHO, her yıl 600 milyon insanın kontamine gıdalardan dolayı hastalandığını ve bu yükün %40'sini 5 yaşının altındaki çocukların taşıdığını tahmin ediyor. Gıda güvenliğini öğrettiğim topluluklarda gastroenterit nedeniyle hastane ziyaretleri ilk yazda önemli ölçüde azaldı.",
+      "fact": "WHO, her yıl 600 milyon kişinin kontamine gıdalardan dolayı hastalandığını ve bu yükün %40'sini 5 yaşının altındaki çocukların taşıdığını tahmin ediyor. Gıda güvenliğini öğrettiğim topluluklarda gastroenterit nedeniyle hastane ziyaretleri ilk yazda önemli ölçüde azaldı.",
       "action": "Hemen mutfağınızı kontrol edin: Yukarıda saklanan veya yemeye hazır yiyeceklere temas eden çiğ et var mı? 2 saatten uzun süredir dışarıda bekleyen pişmiş yiyecek var mı? Bugün bu iki şeyi düzeltin; bunlar ev ziyaretlerinde gördüğüm en yaygın tehlikeler."
     }
   },
   "maternal": {
-    "description": "Roma kadınları ayrı odalara alındıkları, saygısız muamele gördükleri veya diğer kadınların aldığı epiduralın reddedildiği hastanelere eşlik ettim. Tek bir doğum öncesi ziyaretle yakalanabilecek komplikasyonlardan ölen kadınlar da gördüm. Bedeniniz, bebeğiniz, haklarınız. Üçünü de bilin.",
+    "description": "Roman kadınlara, ayrı odalara yerleştirildikleri, saygısızca konuştukları veya diğer kadınların epidural ameliyatlarını reddettikleri hastanelere kadar eşlik ettim. Kadınların tek bir doğum öncesi ziyaretin bile yakalayabileceği komplikasyonlardan öldüğünü de gördüm. Vücudunuz, bebeğiniz, haklarınız. Üçünü de tanıyın.",
     "prenatalCare": {
       "title": "Doğum Öncesi Bakım",
       "description": "15 yıllarındaki arabuluculuk çalışmalarında, tekrar tekrar gördüğüm kalıp, Roman kadınların 6 veya 7 aylık hamile olduklarında ilk kez doktora gitmeleridir; çoğunlukla kendilerini iyi hissettikleri, hastaneden korktukları için veya hiç kimse doğum öncesi bakımın ücretsiz ve hakları olduğunu açıklamadığı için. Bu noktada, preeklampsi veya gebelik diyabeti gibi tehlikeli durumlar aylardır sessizce gelişiyor olabilir.",
@@ -102,7 +102,7 @@
       "action": "Siz veya tanıdığınız biri 30 haftayı geçmişse: hastanenin adını, telefon numarasını ve güzergahını bir kağıda yazın. Duvara koy. Kimlik, aşı kartı, bebek kıyafetleri ve telefon şarj cihazının bulunduğu bir çanta hazırlayın. Bu 20 dakika sürer ve bir hayat kurtarabilir."
     },
     "breastfeeding": {
-      "title": "Emzirme",
+      "title": "emzirme",
       "description": "Roman kültüründe emzirmeye çok değer veriliyor, ancak iyi niyetli akrabaları tarafından 'süt henüz gelmediği' gerekçesiyle ilk günlerde su, çay veya mama vermeleri söylenen genç annelerle karşılaşıyorum. Kolostrum (koyu, sarımsı ilk süt) bir şeylerin ters gittiğine dair bir işaret değildir. Yeni doğmuş bebeğinizi, yaşamının ilk haftalarında en tehlikeli enfeksiyonlardan koruyan antikorlarla dolu sıvı altındır.",
       "tip1": "Doğumdan sonraki 1 saat içinde bebeğinizi ten tene temas ettirin ve memeyi bulmasına izin verin. Bu ilk kolostrum beslemesi bebeğinizin alacağı en önemli 'aşı'dır; bağırsaklarını enfeksiyona karşı korumayla kaplar. Tıbbi bir acil durum olmadıkça, bu durum gerçekleşmeden kimsenin bebeğinizi almasına izin vermeyin.",
       "tip2": "Talep üzerine besleyin: Bebek açlık belirtileri gösterdiğinde (başını çevirmek, ellerini emmek, telaşlanmak). İlk haftalarda bu, 24 saatte 10–14 kez olabilir. Bu normaldir ve arzınızı belirler. Saat size bebeğinizin ne zaman aç olduğunu söyleyemez; bebeğiniz size söyler",
@@ -123,11 +123,11 @@
     }
   },
   "children": {
-    "description": "Roma çocukları topluluklarımızın geleceğidir ve her avantajı hak eder. Çalışmamda geride kalan çocuklar gördüm — yetenek eksikliğinden değil, önlenebilir hastalıklar, kaçırılan aşılar veya fark edilmeyen gecikmeler şanslarını çaldığı için. Bu bilgi o şansları geri verir.",
+    "description": "Roman çocuklar toplumlarımızın geleceğidir ve her türlü avantajı hak ediyorlar. Çalışmalarımda çocukların geride kaldıklarını gördüm; yetenekleri nedeniyle değil, önlenebilir hastalıklar, kaçırılan aşılar veya tespit edilemeyen gelişimsel gecikmeler onlardan fırsatları çaldığı için. Bu bilgi bu fırsatları geri verir.",
     "growthMilestones": {
       "title": "Büyüme ve Gelişme",
       "description": "Her çocuk kendi hızında gelişir ve ebeveynlerin normal farklılıklar konusunda paniğe kapılmalarını asla istemem. Ancak erken müdahalenin dönüştürücü bir fark yaratabileceği durumlarda, gelişimi geciken, aileleri tarafından 'yetişecekler' diyerek göz ardı edilen çocuklar da gördüm. Neye dikkat edilmesi gerektiğini bilmek kaygı değil, dikkattir.",
-      "tip1": "İlk yıl aylık tartım en basit izleme aracıdır. Sağlık merkezinizde çocuğunuzun yolunda olup olmadığını gösteren büyüme çizelgeleri vardır. Kilo almayı bırakan veya aniden kilo kaybı yaşayan bir çocuğun derhal araştırılması gerekir; bu, beslenme ayarlaması kadar basit veya altta yatan bir hastalığın yakalanması kadar önemli olabilir.",
+      "tip1": "İlk yıl aylık tartım en basit izleme aracıdır. Sağlık merkezinizde çocuğunuzun yolunda olup olmadığını gösteren büyüme çizelgeleri vardır. Kilo almayı bırakan veya aniden kilo kaybı yaşayan bir çocuğun acilen araştırılması gerekir; bu, beslenme ayarlaması kadar basit veya altta yatan bir hastalığın yakalanması kadar önemli olabilir.",
       "tip2": "6 aya gelindiğinde çoğu bebek nesnelere uzanır ve isimlerine yanıt verir. 12 aya gelindiğinde çoğu kişi birkaç kelime söyler ve kendini ayağa kaldırır. 24 aya gelindiğinde çoğu kişi iyi yürür ve kısa cümlelerle konuşur. Çocuğunuz bu dönüm noktalarının önemli ölçüde gerisindeyse, gelişimsel bir değerlendirme isteyin; erken yardım en büyük farkı yaratır",
       "tip3": "Çocuğunuzla sürekli konuşun; ne yaptığınızı anlatın, nesnelere isim verin, şarkı söyleyin. Roman ailelerin güçlü bir sözlü geleneği var; bunu kullanın. Daha fazla kelime duyan çocuklar daha geniş kelime dağarcığına ve daha güçlü bilişsel becerilere sahip olurlar. Bu ücretsizdir ve herhangi bir oyuncaktan daha etkilidir",
       "tip4": "Dişler: Doğumdan itibaren bebeğinizin diş etlerini nemli bir bezle temizleyin ve ilk dişinden itibaren küçük bir miktar çocuk diş macunu sürün. 3 yaşına kadar Roman çocuklarda, çoğunlukla geceleri içilen tatlı çay şişelerinden dolayı şiddetli diş çürüğü görüyorum; bu, ağrıya, enfeksiyona ve büyümeyi etkileyen yeme sorunlarına neden oluyor",
@@ -156,7 +156,7 @@
     }
   },
   "chronic": {
-    "description": "Romalar Avrupa ortalamasından ortalama 10 yıl daha erken ölüyor. Bu farkın büyük kısmı — diyabet, kalp ve solunum hastalıkları gibi — yıllarca sessizce gelişen kronik hastalıklardan geliyor. Belirtiler göründüğünde hasar çoktan olmuş oluyor. Ama çoğu önlenebilir ve erken yakalanırsa yönetilebilir.",
+    "description": "Romanlar Avrupa ortalamasından 10 yıl daha genç ölüyor. Bu açığın çoğu, yıllar içinde yavaş yavaş ve sessizce gelişen diyabet, kalp hastalığı, solunum yolu hastalıkları gibi kronik hastalıklardan kaynaklanıyor. Semptomlar ortaya çıktığında hasar oluşmuş demektir. Ancak çoğu önlenebilir ve erken yakalandığında tamamı yönetilebilir.",
     "diabetes": {
       "title": "Diyabet: Sessiz Tehdit",
       "description": "Tip 2 diyabet, Roman topluluklarında en sık karşılaştığım kronik hastalıktır. Ailelerden geçiyor, yoksulluğun insanları zorladığı ucuz, yüksek şekerli beslenmeyle gelişiyor ve siz bir sorun hissetmeden yıllar önce gözlerinize, böbreklerinize, ayaklarınıza ve kalbinize zarar veriyor. 40'li erkeklerin ayak parmaklarını kaybettiğini ve kadınların, hiç kan testi yaptırmadıkları için teşhis edilemeyen diyabet nedeniyle kör olduklarını gördüm. Bu önlenebilir.",
@@ -179,17 +179,17 @@
     },
     "respiratory": {
       "title": "Akciğerler ve Solunum",
-      "description": "Ailelerin kışın ısınmak için odun, kömür, hatta plastik ve kauçuk yaktığı yerleşim yerlerinde çalıştım. 8 kişinin havalandırması olmayan iki odada uyuduğu yer. Duvarlardan nemin aktığı ve her köşede siyah küfün oluştuğu yer. Bu koşullarda solunum yolu hastalıkları şaşırtıcı değil; bu, hiç kimsenin yaşamak zorunda kalmaması gereken barınmaların öngörülebilir sonucudur. Daha iyi barınma için mücadele ederken aynı zamanda sahip olduğumuz akciğerleri de korumalıyız.",
+      "description": "Ailelerin kışın ısınmak için odun, kömür, hatta plastik ve kauçuk yaktığı yerleşim yerlerinde çalıştım. 8 kişinin havalandırması olmayan iki odada uyuduğu yer. Duvarlardan nemin aktığı ve her köşede siyah küfün oluştuğu yer. Bu koşullarda solunum yolu hastalıkları şaşırtıcı değil; bu, kimsenin yaşamak zorunda kalmaması gereken barınmaların öngörülebilir sonucudur. Daha iyi barınma için mücadele ederken aynı zamanda sahip olduğumuz akciğerleri de korumalıyız.",
       "tip1": "Kapalı mekan dumanı gördüğüm en acil solunum tehlikesidir. Katı yakıtla ısıtıyorsanız havalandırmayı sağlayın; pencereyi kırmak bile işe yarayabilir. Asla plastik, kauçuk veya boyalı ahşabı yakmayın; dumanlar, özellikle akciğerleri hala gelişmekte olan çocuklarda kalıcı akciğer hasarına neden olan kimyasallar içerir.",
       "tip2": "Nem ve küf astıma, kronik bronşite neden olur ve her türlü solunum yolu enfeksiyonunu daha da kötüleştirir. Görünür küfü su, sirke veya çamaşır suyu karışımıyla silin. Kışın bile pencereleri günde en az 15 dakika açın. Mümkünse ıslak çamaşırları dışarıya asın; çamaşırları iç mekanda kurutmak havaya çok büyük miktarda nem katar.",
       "tip3": "3 haftadan uzun süren, özellikle kilo kaybı, gece terlemesi veya tükürükte kanın eşlik ettiği öksürüklerde tüberküloz açısından araştırılmalıdır. TB ücretsiz tedaviyle tedavi edilebilir, ancak aynı zamanda oldukça bulaşıcıdır. Roman topluluklarında TB oranları, birçok Avrupa ülkesindeki ulusal ortalamanın 3–5 katıdır. Erken test tüm ailenizi korur",
       "tip4": "Dumanlı veya küflü ortamlarda büyüyen çocukların akciğer kapasitesi kalıcı olarak azalmıştır; hayatları boyunca daha az sağlıklı akciğerler taşıyacaklardır. Barınma durumunuzu hemen değiştiremeseniz bile, duman maruziyetini azaltmak ve mümkün olduğunca havalandırmak gelişmekte olan akciğerlerini korur.",
-      "fact": "WHO, evdeki hava kirliliğini dördüncü en büyük küresel sağlık riski olarak tanımlıyor. Çalıştığım Roman yerleşimlerinde çocukların %60'dan fazlası tekrarlayan solunum yolu enfeksiyonlarına sahipti; ailelerin havalandırmayı iyileştirmesi ve atık malzemelerin kapalı mekanda yakılmasının azaltılmasıyla bu oranlar önemli ölçüde düştü. Barınma koşulları ailelerin hatası değil ama sistemik değişim için mücadele edilirken uyum stratejileri hayat kurtarıyor.",
+      "fact": "WHO, evdeki hava kirliliğini dördüncü en büyük küresel sağlık riski olarak tanımlıyor. Çalıştığım Roman yerleşimlerinde çocukların %60'den fazlasında tekrarlayan solunum yolu enfeksiyonları görülüyordu; ailelerin havalandırmayı iyileştirmesi ve atık malzemelerin kapalı mekanda yakılmasının azaltılmasıyla bu oranlar önemli ölçüde düştü. Barınma koşulları ailelerin hatası değil ama sistemik değişim için mücadele edilirken uyum stratejileri hayat kurtarıyor.",
       "action": "Bugün: Evinizde görünür küf olup olmadığını kontrol edin ve seyreltilmiş çamaşır suyu veya sirke ile temizleyin. 15 dakika boyunca en az bir pencere açın. Evinizde 3 haftadan uzun süredir öksürüğü olan herhangi biri varsa, TB taraması için sağlık merkezine gidin; bu ücretsizdir ve 15 dakika sürer."
     }
   },
   "mental": {
-    "description": "15 yıldır Roman topluluklarında en ağır yükün fiziksel hastalık değil — ayrımcılık, yoksulluk, tahliye korkusu, çocukların geleceği kaygısı ve sistemde kimsenin umursamadığı hissi olduğunu öğrendim. Buna stres diyoruz. Yıllarca sürünce başka bir şeye dönüşür. Utanmadan adlandırılmayı, anlaşılmayı ve tedavi edilmeyi hak eder.",
+    "description": "15 yıllarında Roman topluluklarında çalıştığım süre boyunca, insanların taşıdığı en ağır yükün fiziksel hastalık olmadığını öğrendim; bu yük, ayrımcılığın, yoksulluğun, tahliye korkusunun, çocuklarının geleceğiyle ilgili endişelerin ve sistemdeki kimsenin umursamadığı duygusunun ağırlığıdır. Biz buna stres diyoruz. Yıllarca sürdüğünde daha fazlası oluyor. Utanmadan adlandırılmayı, anlaşılmayı ve tedavi edilmeyi hak ediyor.",
     "stressManagement": {
       "title": "Stresle Yaşamak",
       "description": "Nefes egzersizinin sorunlarınızı çözeceğini iddia etmeyeceğim. Ailenizin tahliye edilmesinden endişeleniyorsanız hiçbir meditasyon uygulaması bunu düzeltemez. Ancak toplumlarımızda çok büyük stres taşıyan yüzlerce insanla çalıştım ve bu stres yıllarca yönetilmediğinde neler olduğunu gördüm: 40'lı erkeklerde kalp krizleri, yemek yiyemeyen ve uyuyamayan kadınlar, gerilimden elektriklenen evlerde büyüyen çocuklar. Koşullarımızı her zaman değiştiremeyiz ama onları nasıl taşıdığımızı değiştirebiliriz.",
@@ -217,7 +217,7 @@
       "tip2": "Utanç sağlığın düşmanıdır. Toplumun ne söyleyeceğinden korktukları için diyabeti, depresyonu, HIV ve aile içi şiddeti yıllarca saklayan insanlarla tanıştım. Topluluğumuzdaki birisi mücadelesi hakkında açıkça konuştuğunda, bu başkalarına da izin vermiş olur. Her şeyi paylaşmanıza gerek yok; ancak bir şeyi paylaşmak, insanları hasta eden sessizliği bozar",
       "tip3": "Toplantılar, kutlamalar, müzik, dua, hikaye anlatımı; bunlar sağlığınızı bozacak şeyler değil. Onlar sağlıktır. Çalışmalar, toplumsal kültürel faaliyetlere düzenli katılımın depresyon ve kardiyovasküler riski azalttığını göstermektedir. Yarattıkları neşe ve aidiyet ölçülebilir bir ilaçtır",
       "tip4": "Toplumunuzdaki yaşlıları ve izole insanları kontrol edin. Yalnız yaşayan kişi, çocukları taşınan büyükanne, toplantılara gelmeyi bırakan adam. 10 dakikalık bir ziyaret veya telefon görüşmesi, o gün sahip oldukları tek insani bağlantı olabilir ve onları hayatta tutan da bu olabilir.",
-      "fact": "Harvard'ın yetişkin sağlığı üzerine 85 yıllık araştırması, sağlık ve uzun ömürlülüğün en güçlü tek belirleyicisinin diyet, egzersiz veya genetik değil, ilişkilerinizin kalitesi olduğu sonucuna vardı. Yalnızlık ölüm riskini %26 artırır; bu da her gün 15 sigara içmeye eşdeğerdir. Roman toplulukları sosyal bağlantı açısından gerçek bir sağlık varlığı olan kültürel bir zenginliğe sahiptir; onu koruyun.",
+      "fact": "Harvard'ın yetişkin sağlığı üzerine 85 yıllık araştırması, sağlık ve uzun ömürlülüğün en güçlü tek belirleyicisinin diyet, egzersiz veya genetik değil, ilişkilerinizin kalitesi olduğu sonucuna vardı. Yalnızlık, ölüm riskini %26 artırır; bu, günde 15 sigara içmeye eşdeğerdir. Roman toplulukları sosyal bağlantı açısından gerçek bir sağlık varlığı olan kültürel bir zenginliğe sahiptir; onu koruyun.",
       "action": "Bu hafta topluluğunuzda yakın zamanda konuşmadığınız bir kişiye ulaşın. Mesajla değil, sesle veya şahsen. Nasıl olduklarını sorun ve dinleyin. Bu bağlantı eylemi, en saf haliyle sağlığın teşviki ve geliştirilmesidir."
     },
     "seekHelp": {

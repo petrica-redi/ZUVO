@@ -14,6 +14,7 @@ EN_PATH = ROOT / "messages" / "en.json"
 DELIM = "\n###REDI###\n"
 
 LOCALE_TARGETS = {
+    "it": "it",
     "sq": "sq",
     "ro": "ro",
     "hu": "hu",
@@ -157,7 +158,7 @@ def translate_locale(locale, target, en_flat, en_template, cache):
         for (p, _), val, k in zip(chunk_vals, translated, cache_keys):
             locale_flat[p] = val
             cache[k] = val
-        CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2))
+        CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"  {locale}: {min(i + batch_size, len(paths))}/{len(paths)}", flush=True)
         time.sleep(0.3)
     for p, v in en_flat.items():
@@ -170,7 +171,7 @@ def main():
     en_root = json.loads(EN_PATH.read_text(encoding="utf-8"))
     en = en_root["studentHealth"]
     en_flat = flatten(en)
-    cache = json.loads(CACHE_PATH.read_text()) if CACHE_PATH.exists() else {}
+    cache = json.loads(CACHE_PATH.read_text(encoding="utf-8")) if CACHE_PATH.exists() else {}
     print(f"Translating {len(en_flat)} studentHealth strings", flush=True)
 
     for locale, target in LOCALE_TARGETS.items():
@@ -183,7 +184,7 @@ def main():
         out_path.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"wrote {locale}.json", flush=True)
 
-    CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2))
+    CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":

@@ -10,7 +10,7 @@ import { TRANSLATIONS } from "./i18n-data/student-health-translations.mjs";
 const ROOT_DIR = join(dirname(fileURLToPath(import.meta.url)), "..");
 const MESSAGES_DIR = join(ROOT_DIR, "messages");
 
-const LOCALES = ["en", "sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
+const LOCALES = ["en", "it", "sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
 
 function leafPaths(obj, prefix = "") {
   const paths = [];

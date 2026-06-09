@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 import { TRANSLATIONS } from "./i18n-data/content-pages-translations.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const LOCALES = ["en", "sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
+const LOCALES = ["en", "it", "sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
 const NAMESPACES = ["healthQuiz", "rights", "stories", "challenges", "certificate"];
 
 const patchBody = `/**

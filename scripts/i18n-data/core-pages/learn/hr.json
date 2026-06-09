@@ -1,10 +1,10 @@
 {
-  "progressLabel": "dovršenih modula",
-  "startHere": "Započnite ovdje",
-  "continueLabel": "Nastavi",
+  "progressLabel": "završeni moduli",
+  "startHere": "Počnite ovdje",
+  "continueLabel": "nastavi",
   "allModules": "Svi moduli",
   "prevention": {
-    "description": "U 15 godina rada u romskim naseljima vidio sam obitelji pogođene bolestima koje su jednostavne navike mogle spriječiti. Ovo znanje nije luksuz — preživljavanje je.",
+    "description": "U 15 godina rada u romskim naseljima, vidio sam obitelji razorene bolestima koje su jednostavne navike mogle spriječiti. Ovo znanje nije luksuz - ono je preživljavanje.",
     "handwashing": {
       "title": "Pranje ruku",
       "description": "Vidio sam cijele obitelji u naseljima kako obolijevaju od iste želučane infekcije, prenoseći se iz ruke u ruku. Ispravno pranje ruku jedini je najjeftiniji, najmoćniji lijek kojemu već imate pristup — ne košta ništa i sprječava bolesti koje najčešće viđam u našim zajednicama.",
@@ -18,9 +18,9 @@
     "vaccination": {
       "title": "Cijepljenje",
       "description": "Pratila sam romske majke u domove zdravlja gdje su ih odbijali jer nisu imale dokumente, nisu znale jezik ili im je jednostavno rečeno da dođu kasnije. Cjepiva su zakonsko pravo vaše djece — besplatno, sigurno i najjača zaštita koju roditelj može pružiti. Ovo vam nitko ne može uskratiti.",
-      "tip1": "Svaka država u Europi nudi besplatni raspored cijepljenja od rođenja. Ovo nije milostinja - to je zakonsko pravo vašeg djeteta. Ako zdravstveni radnik odbije, zatražite njegov nadzornik i to jasno navedite",
+      "tip1": "Svaka država u Europi nudi besplatni raspored cijepljenja od rođenja. Ovo nije milostinja - to je zakonsko pravo vašeg djeteta. Ako zdravstveni radnik odbije, zatražite nadzornika i to jasno navedite",
       "tip2": "Iskaznica cijepljenja najvažniji je dokument koji vaše dijete ima nakon rodnog lista. Čuvajte ga, nosite ga na svaki posjet liječniku. U slučaju gubitka, svaki dom zdravlja mora izdati zamjenu - ne prihvaćajte odbijanje",
-      "tip3": "Blaga groznica, bolna točka na ruci, uznemirenost jedan dan — to je normalno i znači da cjepivo djeluje. Uvjerila sam stotine zabrinutih majki u vezi s tim. Prolazi za 24–48 sati",
+      "tip3": "Blaga groznica, bolna točka na ruci, uznemirenost jedan dan — to je normalno i znači da cjepivo djeluje. Uvjerila sam stotine zabrinutih majki o tome. Prolazi za 24–48 sati",
       "tip4": "U većini domova zdravlja za cijepljenje vam nije potrebno zakazivanje. Uđite. Ako romski zdravstveni medijator radi u vašem kraju, zamolite ga da pođe s vama - za to smo obučeni",
       "fact": "U jednom naselju u kojem sam radio, pojavile su se ospice jer je procijepljenost pala na 60%. Troje djece je hospitalizirano. Nakon kampanje cijepljenja u zajednici, dosegli smo 94% — i izbijanja su prestala. Diljem Europe cjepiva sprječavaju 2–3 milijuna smrti svake godine.",
       "action": "Odmah izvadite karticu cijepljenja vašeg djeteta. Provjerite prema rasporedu na zidu vašeg doma zdravlja. Ako vam nedostaje koje cjepivo ili nemate karton, posjetite dom zdravlja ovaj tjedan. Donesite ovu aplikaciju za prikaz rasporeda ako pomaže."
@@ -47,7 +47,7 @@
     }
   },
   "nutrition": {
-    "description": "Godinama rada s romskim obiteljima naučio sam da hrana nije samo prehrana — to je ono što si možete priuštiti, što je dostupno u kvartu i što vaša obitelj zna. Neću vam reći da kupujete quinou. Reći ću vam kako dobro hraniti obitelj onim što imate.",
+    "description": "Tijekom godina rada s romskim obiteljima, naučio sam da hrana nikad nije samo prehrana – već ono što si možete priuštiti, što je dostupno u vašem susjedstvu i što vaša obitelj zna. Neću vam reći da kupite kvinoju. Reći ću ti kako da dobro prehraniš svoju obitelj s onim što imaš.",
     "balancedDiet": {
       "title": "Dobro jesti za svaki budžet",
       "description": "Najveći prehrambeni problem koji vidim u romskim zajednicama nije nedostatak hrane — to je previše jeftinog kruha, mesnih prerađevina i slatkih pića, a premalo povrća, jaja i mahunarki. Ovdje se ne radi o snazi ​​volje. Radi se o onome što je dostupno i pristupačno. Ali mali pomaci čine ogromne razlike u vašem zdravlju i razvoju vaše djece.",
@@ -55,7 +55,7 @@
       "tip2": "Jaja su najpotpunija jeftina hrana koja postoji. Dva jaja dnevno po djetetu osiguravaju gotovo sve što je potrebno rastućem mozgu. U svakom naselju u kojem radim preporučam jaja kao hranu prvog prioriteta za djecu",
       "tip3": "Sezonsko povrće s lokalne tržnice ili iz vašeg vrta košta samo djelić cijena u supermarketu. Kelj, luk, mrkva, krompir, paprika — to je temelj zdrave ishrane i nalazi se u svakoj romskoj kuhinjskoj tradiciji",
       "tip4": "Slatka pića (kola, sok, energetska pića) najštetnija su stavka koju vidim u prehrani romske obitelji. Jedna boca kole ima 10 žličica šećera. Zamijenite vodom ili slabim čajem i uklonit ćete najveći pokretač pretilosti i karijesa koji vidim kod djece",
-      "fact": "U romskim zajednicama s kojima sam radio diljem Rumunjske i Bugarske, vidio sam da se stope dijabetesa mjerljivo smanjuju kada obitelji svakodnevno bijeli kruh i prerađeno meso zamijene grahom, jajima i povrćem — čak i bez promjene količine hrane. Tijelo reagira na kvalitetu, a ne samo na kvantitetu.",
+      "fact": "U romskim zajednicama s kojima sam radio diljem Rumunjske i Bugarske, vidio sam mjerljiv pad stope dijabetesa kada obitelji svakodnevno bijeli kruh i prerađeno meso zamijene grahom, jajima i povrćem — čak i bez promjene količine hrane. Tijelo reagira na kvalitetu, a ne samo na kvantitetu.",
       "action": "Ovaj tjedan jedan obrok kruha i mesnih prerađevina zamijenite loncem graha ili variva od leće s lukom i paprikom. Kuhajte dovoljno za dva dana. Jeftiniji je, dulje vas zasićuje i počinje mijenjati putanju zdravlja vaše obitelji."
     },
     "childNutrition": {
@@ -80,7 +80,7 @@
     }
   },
   "maternal": {
-    "description": "Pratio sam romske žene u bolnice gdje su ih stavljale odvojeno, nepoštivo tretirale ili odbile epidural koji druge žene dobivaju. Vidio sam i žene koje su umrle od komplikacija koje bi jedan prenatalni pregled na vrijeme uhvatio. Vaše tijelo, vaše dijete, vaša prava. Poznajte sva tri.",
+    "description": "Pratila sam Romkinje u bolnice gdje su ih stavljali u odvojene sobe, razgovarali s njima bez poštovanja ili su odbijale epiduralnu analgeziju koju su druge žene primale. Također sam vidio kako žene umiru od komplikacija koje bi uhvatio jedan prenatalni posjet. Vaše tijelo, vaša beba, vaša prava. Znaj sva tri.",
     "prenatalCare": {
       "title": "Prenatalna njega",
       "description": "U 15 godina medijatorskog rada, obrazac koji opetovano vidim je da Romkinje prvi put posjete liječnika kada su već u 6 ili 7 mjesecu trudnoće — često zato što se osjećaju dobro, jer se boje bolnice ili zato što im nitko nije objasnio da je prenatalna njega besplatna i da je njihovo pravo. Do tog trenutka, opasna stanja poput preeklampsije ili gestacijskog dijabetesa možda su se tiho razvijala mjesecima.",
@@ -98,13 +98,13 @@
       "tip2": "Imate zakonsko pravo imati pratitelja (muža, majku, sestru, posrednika) uz sebe tijekom porođaja u gotovo svim europskim zemljama. Ako bolnica kaže ne, navedite zakon o pravima pacijenata vaše zemlje. Mi nosimo te reference i možemo ih pružiti",
       "tip3": "Naučite 5 znakove opasnosti koji znače ODMAH IDITE U BOLNICU, bez obzira koliko je sati: (1) jako krvarenje, (2) jaka glavobolja s otečenim rukama/licem, (3) beba se prestaje kretati, (4) vodenjak prije 37 tjedana, (5) temperatura iznad 38°C. Nemojte čekati jutro. Ne pokušavajte ih riješiti kod kuće",
       "tip4": "Nakon poroda ostanite u bolnici najmanje 24 sati radi praćenja — čak i ako se osjećate dobro. Mnoge po život opasne komplikacije (krvarenje, infekcija) javljaju se u prvih 24 sati. Znam da bolničko okruženje može biti neprijateljsko, ali ti sati praćenja spašavaju živote",
-      "fact": "U regiji u kojoj sam radila 5 godina, smanjili smo hitne slučajeve romskih majki za 60% jednostavno tako što smo osigurali da svaka trudnica ima plan poroda, prijevoz i bolničku torbu spakiranu do 36 tjedna. Nema nove tehnologije - samo priprema i pratnja.",
+      "fact": "U regiji u kojoj sam radila 5 godina, smanjili smo hitne slučajeve romskih majki za 60% jednostavno osiguravajući da svaka trudnica ima plan poroda, prijevoz i bolničku torbu spakiranu do 36 tjedna. Nema nove tehnologije - samo priprema i pratnja.",
       "action": "Ako ste vi ili netko koga poznajete trudni nakon 30 tjedana trudnoće: zapišite naziv bolnice, telefonski broj i rutu na papir. Stavi na zid. Spakirajte torbu s osobnom iskaznicom, karticom cijepljenja, odjećom za bebe i punjačem za telefon. To traje 20 minuta i može spasiti život."
     },
     "breastfeeding": {
       "title": "Dojenje",
       "description": "Dojenje je duboko cijenjeno u romskoj kulturi, ali susrećem mlade majke kojima su dobronamjerni rođaci rekli da prvih dana daju vodu, čaj ili adaptirano mlijeko jer 'mlijeko još nije poteklo'. Kolostrum - to gusto, žućkasto prvo mlijeko - nije znak da nešto nije u redu. To je tekuće zlato, prepuno antitijela koja štite vaše novorođenče upravo od infekcija koje su najopasnije u prvim tjednima života.",
-      "tip1": "Unutar 1 sata od rođenja, stavite bebu kožu na kožu na svoja prsa i pustite ih da pronađu dojku. Ovo prvo hranjenje kolostrumom je najvažnije 'cjepivo' koje će vaša beba primiti - ono oblaže njihova crijeva zaštitom od infekcije. Ne dopustite nikome da vam odvede bebu prije nego što se to dogodi, osim ako nije hitna medicinska pomoć",
+      "tip1": "U roku od 1 sata od rođenja, stavite bebu kožu na kožu na svoja prsa i pustite ih da pronađu dojku. Ovo prvo hranjenje kolostrumom je najvažnije 'cjepivo' koje će vaša beba primiti - ono oblaže njihova crijeva zaštitom od infekcije. Ne dopustite nikome da vam odvede bebu prije nego što se to dogodi, osim ako nije hitna medicinska pomoć",
       "tip2": "Hranite na zahtjev — kad god beba pokaže znakove gladi (okretanje glave, sisanje ruku, nemir). U prvim tjednima to može biti 10–14 puta u 24 sati. To je normalno i uspostavlja vašu opskrbu. Sat vam ne može reći kada je vaša beba gladna - vaša beba kaže vama",
       "tip3": "Bez vode, bez čaja, bez formule 6 mjeseci osim ako to liječnik izričito ne prepiše iz medicinskih razloga. Vaše majčino mlijeko mijenja sastav tijekom dana kako bi zadovoljilo točne potrebe vaše bebe — nijedna tvornica to ne može ponoviti. Vidio sam kako su dobronamjerne bake davale šećernu vodicu koja je izazivala soor i proljev",
       "tip4": "Ako dojenje boli, zasun nije u redu - a ne vaše tijelo. Zamolite primalju ili zdravstvenog radnika da gledaju hranjenje i pomognu vam prilagoditi položaj. Bol je znak za pomoć, a ne znak za odustajanje. Pomogla sam stotinama majki da riješe probleme sa zaključavanjem koji su riješeni u jednoj sesiji",
@@ -123,7 +123,7 @@
     }
   },
   "children": {
-    "description": "Roma djeca su budućnost naših zajednica i zaslužuju svaku prednost. U radu sam vidio djecu koja zaostaju — ne zbog nedostatka sposobnosti, nego jer su im spriječive bolesti, propuštena cijepljenja ili neotkrivena kašnjenja uzeli šanse. Ovo znanje im vraća te šanse.",
+    "description": "Romska djeca su budućnost naših zajednica i zaslužuju svaku prednost. U svom radu vidio sam kako djeca zaostaju - ne zbog sposobnosti, već zato što su im bolesti koje su se mogle spriječiti, propuštena cijepljenja ili neotkriveni zastoji u razvoju ukrali prilike. Ovo znanje vraća te mogućnosti.",
     "growthMilestones": {
       "title": "Rast i razvoj",
       "description": "Svako se dijete razvija vlastitim tempom i nikad ne želim da roditelji paničare zbog normalnih varijacija. No, također sam vidio djecu čiji su zakašnjeli razvoj obitelji odbacivale kao 'nadoknadit će propušteno' kada je rana intervencija mogla napraviti transformativnu razliku. Znati na što paziti nije tjeskoba - to je pozornost.",
@@ -156,7 +156,7 @@
     }
   },
   "chronic": {
-    "description": "Romi u prosjeku umiru 10 godina ranije od europskog prosjeka. Većina te razlike dolazi od kroničnih bolesti — dijabetesa, srčanih i respiratornih bolesti — koje se godinama tiho razvijaju. Kad se pojave simptomi, šteta je već napravljena. Ali većina se može spriječiti i sve se može upravljati ako se rano uhvati.",
+    "description": "Romi umiru 10 godina mlađi od europskog prosjeka. Većina ovog jaza dolazi od kroničnih bolesti - dijabetesa, bolesti srca, bolesti dišnog sustava - koje se godinama razvijaju polako i tiho. Dok se simptomi pojave, šteta je već učinjena. Ali većina se može spriječiti, a sve se može kontrolirati ako se rano otkrije.",
     "diabetes": {
       "title": "Dijabetes: Tiha prijetnja",
       "description": "Dijabetes tip 2 je kronična bolest s kojom se najčešće susrećem u romskim zajednicama. Pojavljuje se u obiteljima, uspijeva na jeftinoj prehrani s visokim udjelom šećera na koju siromaštvo tjera ljude, i oštećuje vaše oči, bubrege, stopala i srce godinama prije nego što osjetite bilo što loše. Vidio sam muškarce u svojim 40 godinama kako gube nožne prste, a žene ostaju slijepe od dijabetesa koji im nikada nije dijagnosticiran jer nikad nisu imale krvni test. Ovo se može spriječiti.",
@@ -165,7 +165,7 @@
       "tip3": "Zatražite testiranje glukoze u krvi natašte u svom domu zdravlja barem jednom godišnje ako imate više od 35, imate prekomjernu težinu ili imate obiteljsku anamnezu. To je jednostavan test ubodom prsta, besplatan je u većini zemalja i traje 5 minuta. Ovaj test može otkriti dijabetes godinama prije pojave simptoma",
       "tip4": "Upoznajte se sa znakovima upozorenja koji upućuju na to da je dijabetes možda već prisutan: stalna žeđ, vrlo često mokrenje (osobito noću), zamagljen vid, rane koje sporo zacjeljuju, neobjašnjiv umor. Ako imate dva ili više od toga, testirajte se ovaj tjedan - ne sljedeći mjesec",
       "fact": "Studije u romskim zajednicama u Slovačkoj i Rumunjskoj otkrile su da je prevalencija dijabetesa 2–3 puta veća od nacionalnog prosjeka, pri čemu većina slučajeva nije dijagnosticirana. U jednom programu u kojem sam sudjelovao, probir u zajednici otkrio je dijabetes kod 18% odraslih osoba starijih od 40 koji se nikad nisu testirali. Gotovo svi nisu imali simptome.",
-      "action": "Ako ste stariji od 35, idite u svoj dom zdravlja i zatražite analizu šećera u krvi. Traje 5 minuta. Ako je rezultat iznad 5.6 mmol/L (100 mg/dL), morate odmah početi unositi promjene. Povedite člana obitelji - ako je vaš rizik visok, vjerojatno je i njihov."
+      "action": "Ako ste stariji od 35, idite u svoj dom zdravlja i zatražite analizu šećera u krvi. Traje 5 minuta. Ako je rezultat iznad 5.6 mmol/L (100 mg/dL), morate odmah početi s promjenama. Povedite člana obitelji - ako je vaš rizik visok, vjerojatno je i njihov."
     },
     "heartHealth": {
       "title": "Tvoje Srce",
@@ -189,13 +189,13 @@
     }
   },
   "mental": {
-    "description": "U 15 godina u romskim zajednicama naučio sam da najteži teret nije fizička bolest — nego težina diskriminacije, siromaštva, straha od iseljenja, brige za budućnost djece i osjećaj da se nitko u sustavu ne brine. Zovemo to stres. Kad traje godinama, postaje nešto drugo. Zaslužuje biti imenovan, shvaćen i liječen — bez srama.",
+    "description": "U 15 godina rada u romskim zajednicama, naučila sam da najteži teret koji ljudi nose nije fizička bolest — to je težina diskriminacije, siromaštva, straha od deložacije, brige za budućnost njihove djece i osjećaja da nikoga u sustavu nije briga. To nazivamo stresom. Kad to traje godinama, postaje nešto više. Zaslužuje biti imenovan, shvaćen i tretiran - bez srama.",
     "stressManagement": {
       "title": "Živjeti sa stresom",
       "description": "Neću se pretvarati da će vježba disanja riješiti vaše probleme. Ako ste zabrinuti da će vaša obitelj biti deložirana, nijedna aplikacija za meditaciju to neće popraviti. Ali radio sam sa stotinama ljudi u našim zajednicama koji su pod ogromnim stresom i vidio sam što se događa kada se tim stresom godinama ne upravlja: srčani udari kod muškaraca u njihovim 40 godinama, žene koje ne mogu jesti ili spavati, djeca koja odrastaju u kućanstvima naelektrizirana napetošću. Ne možemo uvijek promijeniti naše okolnosti, ali možemo promijeniti način na koji ih nosimo.",
       "tip1": "Metoda disanja 4-4-8 djeluje trenutno na vaš živčani sustav. Udahnite kroz nos brojeći 4, zadržite 4, polako izdahnite kroz usta 8. Učinite ovo 5 puta. Puls vam se smanjuje, mišići se opuštaju. Tome podučavam obitelji prije posjeta bolnici, prije sudskih saslušanja, prije bilo kakvog stresnog susreta. To je alat koji uvijek imate sa sobom",
       "tip2": "Hodanje je najpodcijenjeniji lijek za stres. 20 minuta hodanja — ne brzo, samo hodanje — smanjuje hormon stresa kortizol do 30%. Ako ne možete izaći iz kuće, hodajte u krug. Djeluje sam pokret, a ne krajolik",
-      "tip3": "Razgovaraj s nekim. Ne da se riješi problem - samo da se podijeli težina. Vidjela sam kako muškarci u našim zajednicama sve nose sami jer traženje pomoći osjeća se kao slabost. U 15 godina ovog rada, najjači ljudi koje sam upoznao su oni koji su naučili reći 'borim se'",
+      "tip3": "Razgovaraj s nekim. Ne da riješim problem - samo da podijelim težinu. Vidjela sam kako muškarci u našim zajednicama sve nose sami jer traženje pomoći osjeća se kao slabost. U 15 godina ovog rada, najjači ljudi koje sam upoznao su oni koji su naučili reći 'borim se'",
       "tip4": "Budite namjerni o onome što vam pada na pamet. Društveni mediji, vijesti, obiteljske svađe koje se vrte u vašoj glavi — to su izvori stresa koje možete kontrolirati. Ne kažem da zanemarite stvarnost. Kažem da odaberete kada ćete se time baviti i stvorite prostore u svom danu u kojima ste namjerno mirni",
       "fact": "Romske zajednice doživljavaju ono što javno zdravstvo naziva 'manjinski stres' — kronični psihološki danak diskriminacije, isključenosti i siromaštva. Istraživanja pokazuju da to trajno podiže razinu kortizola, ubrzavajući srčane bolesti, dijabetes i mentalne bolesti. Ovo nije slabost. To je biologija koja odgovara na nepravdu.",
       "action": "Večeras prije spavanja stavite telefon u drugu sobu i vježbajte 4-4-8 disanje 5 minuta. Ako imate voljnog partnera ili člana obitelji, učinite to zajedno u tišini. Ovaj mali čin stvara granicu između dnevnog stresa i vašeg sna — a spavanje je kada vaše tijelo popravlja štetu koju je uzrokovao stres."
@@ -222,7 +222,7 @@
     },
     "seekHelp": {
       "title": "Kad je previše",
-      "description": "Postoji točka u kojoj stres, tuga i briga prelaze granicu u nešto što treba stručnu pomoć — a u romskim zajednicama ta granica se gotovo nikad ne prepozna jer smo naučeni izdržati, biti jaki, nositi se s tim unutar obitelji. Vidio sam cijenu ove šutnje: muškarci koji piju da bi se nosili dok im jetra ne otkaže, žene koje prestaju jesti, tinejdžeri koji sami sebi nanose štetu. Traženje pomoći nije izdaja vaše kulture. Štiti vaš život kako biste mogli biti tu za ljude koji vas trebaju.",
+      "description": "Postoji točka u kojoj stres, tuga i zabrinutost prelaze granicu u nešto što treba stručnu pomoć — a u romskim zajednicama ta se granica gotovo nikad ne prepozna jer smo naučeni izdržati, biti jaki, nositi se s tim unutar obitelji. Vidio sam cijenu ove šutnje: muškarci koji piju kako bi se nosili dok im jetra ne otkaže, žene koje prestaju jesti, tinejdžeri koji sami sebi nanose štetu. Traženje pomoći nije izdaja vaše kulture. Štiti vaš život kako biste mogli biti tu za ljude koji vas trebaju.",
       "tip1": "Ako vi ili netko koga poznajete niste mogli normalno funkcionirati više od 2 tjedana - ne možete spavati, ne možete jesti, ne možete brinuti o djeci, neprestano plačete ili nemate energije za bilo što - to je izvan normalnog stresa. Ovo je depresija i to je zdravstveno stanje jednako stvarno kao i dijabetes. Nije slabost i reagira na liječenje",
       "tip2": "Vaš prvi korak je vaš obiteljski liječnik (GP). Recite: 'Osjećam se jako loše više od 2 tjedana i trebam pomoć.' Ne morate sve objašnjavati. Liječnik opće prakse može vas procijeniti i uputiti psihologu ili psihijatru. Ova je usluga besplatna ili jeftina u većini europskih zemalja. Ako vas liječnik opće prakse otpusti, posjetite drugog",
       "tip3": "Ako netko u vašoj obitelji spomene da želi umrijeti, želi nestati ili osjeća da bi svima bilo bolje bez njih — odmah to shvatite ozbiljno. Ostani s njima. Uklonite pristup lijekovima i oštrim predmetima. Nazovite nacionalnu liniju za krizne situacije ili 112. Ne pretjerujete. Ove riječi su vapaj za pomoć na koji se mora odgovoriti",

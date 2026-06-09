@@ -10,10 +10,10 @@ import { TRANSLATIONS } from "./i18n-data/ui-pages-translations.mjs";
 const ROOT_DIR = join(dirname(fileURLToPath(import.meta.url)), "..");
 const MESSAGES_DIR = join(ROOT_DIR, "messages");
 
-const LOCALES = ["en", "sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
+const LOCALES = ["en", "it", "sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
 const EXISTING_UI_PAGE_LOCALES = new Set(["sq", "rom"]);
 const SQ_ROM_EXTRA_NAMESPACES = ["healthQuiz", "rights", "stories", "challenges", "certificate"];
-const NEW_UI_PAGE_LOCALES = ["hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
+const NEW_UI_PAGE_LOCALES = ["it", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
 const NEW_UI_PAGE_NAMESPACES = [
   "explain",
   "symptoms",

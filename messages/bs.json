@@ -883,7 +883,10 @@
         "title": "Data Protection Officer",
         "body": "Email dpo@redi.healthcare with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
       }
-    }
+    },
+    "localExportLabel": "Preuzmite lokalne podatke",
+    "localExportHint": "Sačuvajte svoje dnevnike raspoloženja, praćenje vode i lokalne postavke u JSON fajl.",
+    "guestNote": "Ako koristite aplikaciju kao gost, vaš napredak se pohranjuje samo na ovom uređaju. Kreirajte nalog za sinhronizaciju sa serverom."
   },
   "home": {
     "kicker": "AI-Powered Health Companion",
@@ -950,7 +953,9 @@
       "tools": "Health Tools",
       "learn": "Learn & Grow",
       "professional": "Professional",
-      "account": "Account"
+      "account": "Account",
+      "track": "Track & Family",
+      "trust": "Povjerenje i sigurnost"
     },
     "items": {
       "scanLabel": "Misinformation Scanner",
@@ -982,7 +987,21 @@
       "profileLabel": "Profile",
       "profileDesc": "Language, progress, data",
       "aboutLabel": "About Redi Health",
-      "aboutDesc": "Version, privacy, contact"
+      "aboutDesc": "Version, privacy, contact",
+      "providersLabel": "Pronađite zdravstvenu njegu",
+      "providersDesc": "Klinike i usluge u vašoj blizini",
+      "trackLabel": "Daily Wellbeing",
+      "trackDesc": "Pratite raspoloženje, vodu i aktivnost",
+      "familyLabel": "Zdravlje porodice",
+      "familyDesc": "Zdravstveni kartoni za celu porodicu",
+      "challengesLabel": "Zdravstveni izazovi",
+      "challengesDesc": "Ciljevi i navike zajednice",
+      "methodologyLabel": "Kako to radi",
+      "methodologyDesc": "Naše kliničko upravljanje i sigurnost",
+      "policiesLabel": "Politike platforme",
+      "policiesDesc": "Klinička sigurnost, prava na podatke, jednakost Roma",
+      "impactLabel": "Uticaj na javno zdravlje",
+      "impactDesc": "Dokazi i rezultati programa"
     }
   },
   "sos": {
@@ -1067,7 +1086,11 @@
     "verified": "Verified Roma-Friendly",
     "freeClinic": "Free Services Available",
     "interpreter": "Romani Interpreter",
-    "getDirections": "Get Directions"
+    "getDirections": "Get Directions",
+    "unverifiedWarningTitle": "Ovaj direktorij je u razvoju",
+    "unverifiedWarningBody": "Prikazani oglasi su samo primjeri i nisu provjereni. Nemojte se oslanjati na ove informacije za donošenje medicinskih odluka. Kontaktirajte svog lokalnog pružaoca zdravstvenih usluga, nevladinu organizaciju ili zdravstvenog posrednika da pronađete njegu u vašoj blizini.",
+    "unverifiedBadge": "Još nije potvrđeno",
+    "unverifiedListingNote": "Oglas još nije verifikovan — kontaktirajte direktno provajdera da potvrdite usluge."
   },
   "landing": {
     "eyebrow": "Health literacy for Roma communities",
@@ -1122,7 +1145,8 @@
     "privacy": "Privacy",
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
-    "builtWith": "Built with Roma health mediators across 15 countries."
+    "builtWith": "Built with Roma health mediators across 15 countries.",
+    "policies": "Politike platforme"
   },
   "family": {
     "title": "Zdravlje porodice",
@@ -1503,7 +1527,10 @@
     "imageReadyBody": "Čitamo lijek, dozu i upute i objašnjavamo sve jednostavnim riječima.",
     "imageRemove": "Ukloni sliku",
     "preparingImage": "Pripremam sliku…",
-    "imageFailed": "Nisam mogao pročitati ovu sliku. Probaj drugu."
+    "imageFailed": "Nisam mogao pročitati ovu sliku. Probaj drugu.",
+    "followUpChat": "Pitajte AI savjetnika",
+    "followUpNavigate": "Pronađite doktora",
+    "followUpGlossary": "Medicinski uslovi"
   },
   "symptoms": {
     "heroTitle": "Gdje te boli?",
@@ -1643,7 +1670,23 @@
     "meta": {
       "title": "Zdravstveni navigator — Redi Health",
       "description": "Pripremi se za posjet ljekaru — kartica, šta ponijeti, tvoja prava."
-    }
+    },
+    "systemGuidesTitle": "Vodiči sistema zdravstvene zaštite",
+    "italySsnTitle": "Italija: Vodič za zdravstveni sistem (SSN).",
+    "italyDoctorTitle": "Pedijatar vs. liječnik opće prakse",
+    "italyDoctorDesc": "Djeca do 14 godina moraju biti registrirana kod pedijatra (Pediatra di Base). Odrasle osobe (14 i više) prijavljuju se kod liječnika opće prakse (Medico di Medicina Generale). Obje usluge su besplatne preko Nacionalne zdravstvene službe (SSN).",
+    "italyEnrollTitle": "Kako se registrovati na SSN",
+    "italyEnrollSteps": [
+      "Pronađite najbliži ured ASL (Azienda Sanitaria Locale) u vašem području.",
+      "Ponesite važeći lični dokument, vaš porezni broj (Codice Fiscale) i dokaz adrese.",
+      "Ako nemate redovnu boravišnu dozvolu, zatražite STP kod (Straniero Temporaneamente Presente).",
+      "Odaberite svog doktora ili pedijatra sa dostupne lokalne liste.",
+      "Dobit ćete papirnu karticu (Tessera Sanitaria) za pristup besplatnim posjetama i receptima."
+    ],
+    "italyStpTitle": "Nerezidenti: STP kod",
+    "italyStpDesc": "Ako nemate boravišnu dozvolu ili ste bez dokumenata, i dalje imate zakonsko pravo na hitnu i nužnu medicinsku pomoć. ASL će izdati STP kod (Straniero Temporaneamente Presente). Anonimno je, ne prijavljuje vas imigracijskim vlastima i garantuje pristup vakcinaciji, njezi trudnoće i hitnim posjetama klinici.",
+    "viewGuide": "Pogledajte vodič",
+    "closeGuide": "Zatvori Vodič"
   },
   "about": {
     "brand": "Redi Health",
@@ -1666,7 +1709,8 @@
     "meta": {
       "title": "O nama — Redi Health",
       "description": "O platformi za zdravstvenu pismenost Redi Health"
-    }
+    },
+    "policiesLink": "Politike platforme"
   },
   "theme": {
     "ariaLabel": "Tema",
@@ -1698,12 +1742,12 @@
     "redHospital": "Idi u bolnicu ODMAH"
   },
   "learn": {
-    "progressLabel": "završenih modula",
-    "startHere": "Započnite ovdje",
+    "progressLabel": "moduli završeni",
+    "startHere": "Počnite ovdje",
     "continueLabel": "Nastavi",
     "allModules": "Svi moduli",
     "prevention": {
-      "description": "U 15 godina rada u romskim naseljima vidio sam porodice pogođene bolestima koje su jednostavne navike mogle spriječiti. Ovo znanje nije luksuz — preživljavanje je.",
+      "description": "Za 15 godina rada u romskim naseljima viđao sam porodice razorene bolestima koje su jednostavne navike mogle spriječiti. Ovo znanje nije luksuz – to je preživljavanje.",
       "handwashing": {
         "title": "Pranje ruku",
         "description": "Vidio sam čitave porodice u naseljima kako se razboljevaju od iste stomačne infekcije, prenose se iz ruke u ruku. Pravilno pranje ruku je jedini najjeftiniji, najmoćniji lijek kojem već imate pristup – ne košta ništa i sprječava bolesti koje najčešće viđam u našim zajednicama.",
@@ -1730,14 +1774,14 @@
         "tip1": "Pokrijte svaku posudu u kojoj čuvate vodu. Vidio sam kako muhe, prašina, pa čak i životinjski otpad kontaminiraju nepokrivene kante u roku od nekoliko sati, posebno po toplom vremenu. Jednostavna ploča na vrhu sprječava većinu kontaminacije",
         "tip2": "Ako niste sigurni u svoju vodu, prokuhajte je jednu punu minutu. Ovo ubija 99.9% bakterija, virusa i parazita. Ne košta skoro ništa, a radi — ovo sam učio u desetinama naselja u kojima je izvor vode bio upitan",
         "tip3": "Perite svoje posude za vodu sapunom i čistom vodom najmanje jednom sedmično. Prljava posuda zaprlja čistu vodu. Ovo je jedan od najčešće zanemarenih uzroka ponavljajuće dijareje koje sam vidio kod djece",
-        "tip4": "Potoci, bare i lokve koje stoje nikada nisu bezbedne za piće - čak i ako voda izgleda bistra. Paraziti nevidljivi oku uzrokuju hronična oštećenja crijeva i razvoja djece",
+        "tip4": "Potoci, bare i lokve koje se nalaze nikada nisu bezbedne za piće - čak i ako voda izgleda bistra. Paraziti nevidljivi oku uzrokuju hronična oštećenja crijeva i razvoja djece",
         "fact": "U mnogim romskim naseljima širom Centralne i Istočne Evrope, porodice nemaju pristup bezbednoj vodovodnoj vodi. Evropski centar za prava Roma je dokumentovao da su romska naselja sistematski nedovoljno opskrbljena vodnom infrastrukturom. Prokuhavanje vode nije idealno – to je strategija preživljavanja dok ne ispunite svoje pravo na čistu vodu.",
         "action": "Danas provjerite svaku posudu u kojoj vaša porodica čuva vodu za piće. Pokrijte sve otvorene. Ako ne možete provjeriti je li izvor vode siguran, počnite kuhati svu vodu za piće i kuhanje od večeras."
       },
       "firstAid": {
         "title": "Osnovna prva pomoć",
-        "description": "U udaljenim naseljima i urbanim naseljima gdje hitna pomoć treba duže da stignu – ili ponekad uopće ne stignu – znati šta učiniti u prvim minutima hitne pomoći je razlika između života i smrti. Obučio sam stotine pripadnika romske zajednice osnovnoj prvoj pomoći i vidio sam da ovo znanje spašava živote prije nego što je stigao bilo koji ljekar.",
-        "tip1": "112 radi sa bilo kog telefona u Evropi — čak i bez kredita, čak i bez SIM kartice, čak i sa zaključanog telefona. Naučite svakog člana vaše porodice, uključujući djecu stariju od 7, da biraju 112 i kažu gdje se nalaze. Vežbaj ovo. U hitnim slučajevima panika tjera ljude da zaborave",
+        "description": "U udaljenim naseljima i urbanim naseljima gdje hitna pomoć treba duže da stignu – ili ponekad uopće ne stignu – znati šta učiniti u prvim minutima hitne pomoći je razlika između života i smrti. Obučio sam stotine pripadnika romske zajednice osnovnoj prvoj pomoći i vidio sam da to znanje spašava živote prije nego što je stigao bilo koji ljekar.",
+        "tip1": "112 radi sa bilo kog telefona u Evropi — čak i bez kredita, čak i bez SIM kartice, čak i sa zaključanog telefona. Naučite svakog člana vaše porodice, uključujući djecu stariju od 7, da biraju 112 i kažu gdje se nalaze. Vježbaj ovo. U hitnim slučajevima, panika čini da ljudi zaborave",
         "tip2": "Za jako krvarenje: čvrsto pritisnite najčistijom krpom koju imate — košuljom, maramom, bilo čim — i ne podižite je da provjerite. Pritiskajte dok ne stigne pomoć. Vidio sam ljude kako opasno krvare jer su stalno skidali krpu da pogledaju. Dodajte još krpe na vrh ako krv prođe",
         "tip3": "Opekline: odmah stavite opekotinu pod hladnu tekuću vodu na najmanje 10 minuta. Nikada nemojte nanositi puter, ulje, pastu za zube ili bjelanjak - tradicionalne lijekove koje sam sreo u mnogim porodicama koji zapravo zadržavaju toplinu i uzrokuju još veću štetu i infekciju",
         "tip4": "Ako se neko sruši i ne diše: pozovite 112, a zatim snažno i brzo gurnite u centar svojih grudi — 100 puta u minuti (tempo pjesme 'Stayin' Alive'). Nemojte stati dok ne stigne pomoć. Nesavršen CPR je beskonačno bolji nego bez CPR",
@@ -1746,7 +1790,7 @@
       }
     },
     "nutrition": {
-      "description": "Godinama rada sa romskim porodicama naučio sam da hrana nije samo ishrana — to je ono što si možete priuštiti, što je dostupno u kvartu i što vaša porodica zna. Neću vam reći da kupujete quinou. Reći ću vam kako dobro hraniti porodicu onim što imate.",
+      "description": "Tokom godina rada sa romskim porodicama, naučio sam da hrana nikada nije samo ishrana – već ono što možete priuštiti, šta je dostupno u vašem komšiluku i šta vaša porodica zna. Neću vam reći da kupujete kvinoju. Reći ću ti kako da dobro prehraniš svoju porodicu onim što imaš.",
       "balancedDiet": {
         "title": "Dobro jesti pod bilo kojim budžetom",
         "description": "Najveći problem ishrane koji vidim u romskim zajednicama nije nedostatak hrane – to je previše jeftinog hleba, prerađenog mesa i slatkih pića, a premalo povrća, jaja i mahunarki. Ovdje se ne radi o snazi ​​volje. Radi se o tome šta je dostupno i pristupačno. Ali mali pomaci čine ogromne razlike u vašem zdravlju i razvoju vaše djece.",
@@ -1765,21 +1809,21 @@
         "tip3": "Djeca mlađa od 2 nikada ne bi trebala jesti šećer, med, so, kolu, čips ili slatkiše. Znam da baka i djed ponekad daju čaj sa šećerom da smire bebu - prestanite. Šećer u ovoj dobi programira doživotnu žudnju i oštećuje zube prije nego što u potpunosti izniknu",
         "tip4": "Jaje dnevno za dijete starije od 6 mjeseci je najjednostavnija nadogradnja ishrane koja postoji. Studija u Ekvadoru pokazala je da jaja smanjuju zaostajanje u razvoju za 47%. Ovo navodim u svakom govoru u zajednici jer je to izvodljivo za skoro svaku porodicu",
         "fact": "U zajednicama u kojima sam vodio programe ishrane, djeca koja su svakodnevno primala jaje i porciju povrća tokom 6 mjeseci pokazala su mjerljiva poboljšanja u rastu i kognitivnom razvoju u poređenju s djecom koja nisu. Neuhranjenost se ne odnosi samo na siromaštvo – već na to da znate šta da date prioritetu sa resursima koje imate.",
-        "action": "Od sutra dajte svom djetetu starijem od 6 mjeseci jedno jaje dnevno (pire ili kajganu). Ako je vaše dijete mlađe od 6 mjeseci i dojite, pojedite dodatno jaje – hranjive tvari prolaze kroz vaše mlijeko."
+        "action": "Od sutra dajte svom djetetu preko 6 mjeseci jedno jaje dnevno (pire ili kajganu). Ako je vaše dijete mlađe od 6 mjeseci i dojite, pojedite dodatno jaje – hranjive tvari prolaze kroz vaše mlijeko."
       },
       "foodSafety": {
         "title": "Održavanje sigurnosti hrane",
         "description": "Trovanje hranom jedan je od najčešćih razloga zbog kojih romske porodice posjećuju hitnu pomoć – povraćanje, dijareja, dehidracija, posebno kod djece. U naseljima u kojima je hlađenje nepouzdano, a kuhinje su zajedničke ili vanjske, sigurnost hrane nije tema iz udžbenika – to je svakodnevna vještina preživljavanja.",
-        "tip1": "Po toplom vremenu, kuhana hrana ostavljena duže od 2 sati postaje opasna. Ako ne možete da ga ohladite, kuvajte manje porcije koje završite u jednom obroku. Vidio sam cijele porodice hospitalizirane zbog podgrijanog gulaša ostavljenog preko noći tokom ljeta",
+        "tip1": "Po toplom vremenu, kuhana hrana ostavljena duže od 2 sati postaje opasna. Ako ne možete da ga ohladite, kuvajte manje porcije koje završite u jednom obroku. Vidio sam cijele porodice hospitalizirane zbog podgrijanog gulaša ostavljenog preko noći ljeti",
         "tip2": "Sirova piletina i meso nikada ne smeju dodirivati hleb, povrće ili bilo šta što će se jesti nekuvano. Koristite odvojene površine za rezanje — čak i čista plastična vrećica položena radi. Ova unakrsna kontaminacija je uzrok broj jedan trovanja hranom s kojim se susrećem",
         "tip3": "Ako hrana loše miriše, izgleda pogrešno ili je ljigava - bacite je. Nemojte ga probati da biste provjerili. Znam da je bacanje hrane bolno kada je novca malo, ali jedan napad trovanja hranom košta više u medicini i izgubljenom poslu nego što je hrana vrijedila",
-        "tip4": "Operite svo voće i povrće pod mlazom vode prije jela, čak i ako planirate da ih ogulite. Prljavština sa vanjske strane prelazi u unutrašnjost kada sečete. Ovo je posebno važno za tržišne proizvode kojima su se možda bavili mnogi ljudi",
+        "tip4": "Svo voće i povrće operite pod mlazom vode prije jela, čak i ako planirate da ih ogulite. Prljavština sa vanjske strane prelazi u unutrašnjost kada sečete. Ovo je posebno važno za tržišne proizvode kojima su se možda bavili mnogi ljudi",
         "fact": "WHO procjenjuje da se 600 miliona ljudi svake godine razboli od kontaminirane hrane, a djeca ispod 5 snose 40% tereta. U zajednicama u kojima sam predavao sigurnost hrane, posjete bolnicama zbog gastroenteritisa su značajno opale tokom prvog ljeta.",
         "action": "Provjerite svoju kuhinju odmah: ima li sirovo meso pohranjeno iznad ili dodiruje gotovu hranu? Postoji li kuhana hrana koja stoji vani više od 2 sati? Popravite ove dvije stvari danas - to su najčešće opasnosti koje vidim u kućnim posjetama."
       }
     },
     "maternal": {
-      "description": "Pratio sam romske žene u bolnice gdje su ih stavljale odvojeno, nepoštivo tretirale ili odbile epidural koji druge žene dobijaju. Vidio sam i žene koje su umrle od komplikacija koje bi jedna prenatalna posjeta na vrijeme uhvatila. Vaše tijelo, vaše dijete, vaša prava. Poznajte sva tri.",
+      "description": "Pratila sam Romkinje u bolnice gdje su bile smještene u odvojene sobe, razgovarali s nepoštovanjem ili su odbijali epiduralnu terapiju koju su druge žene primile. Također sam vidjela žene kako umiru od komplikacija koje bi izazvala jedna prenatalna posjeta. Vaše tijelo, vaša beba, vaša prava. Znaj sve tri.",
       "prenatalCare": {
         "title": "Prenatalna njega",
         "description": "U 15 godina rada medijacije, obrazac koji stalno vidim je da Romkinje po prvi put posjete doktora kada su već u 6 ili 7 mjesecu trudnoće - često zato što se osjećaju dobro, jer se boje bolnice, ili zato što niko nije objasnio da je prenatalna skrb besplatna i njihovo pravo. Do tog trenutka, opasna stanja poput preeklampsije ili gestacijskog dijabetesa možda su se tiho razvijala mjesecima.",
@@ -1822,23 +1866,23 @@
       }
     },
     "children": {
-      "description": "Roma djeca su budućnost naših zajednica i zaslužuju svaku prednost. U radu sam vidio djecu koja zaostaju — ne zbog nedostatka sposobnosti, nego jer su im spriječive bolesti, propuštene vakcine ili neotkrivena kašnjenja uzeli šanse. Ovo znanje im vraća te šanse.",
+      "description": "Romska djeca su budućnost naših zajednica i zaslužuju svaku prednost. U svom radu viđao sam da deca zaostaju - ne zbog sposobnosti, već zato što su im bolesti koje se mogu sprečiti, propuštene vakcinacije ili neotkrivena kašnjenja u razvoju ukrali prilike. Ovo znanje vraća te mogućnosti.",
       "growthMilestones": {
         "title": "Rast i razvoj",
         "description": "Svako dijete se razvija svojim tempom i nikada ne želim da roditelji paničare zbog normalnih varijacija. Ali također sam viđao djecu čiji su zakasneli razvoj porodice odbacile jer su 'sustigla' kada je rana intervencija mogla napraviti transformativnu razliku. Znati na šta treba paziti nije anksioznost – to je pažnja.",
         "tip1": "Mjesečno vaganje u prvoj godini je najjednostavniji alat za praćenje. Vaš zdravstveni centar ima grafikone rasta koji pokazuju da li je vaše dijete na pravom putu. Dijete koje prestane dobivati na težini ili iznenada padne na grafikonu treba hitnu istragu - to može biti jednostavno poput prilagođavanja hranjenja ili jednako važno kao i otkrivanje osnovnog stanja",
         "tip2": "Do 6 mjeseca većina beba poseže za predmetima i reagira na njihovo ime. Do 12 mjeseci, većina kaže nekoliko riječi i ustane. Do 24 mjeseca većina dobro hoda i govori kratkim frazama. Ako vaše dijete značajno zaostaje za ovim prekretnicama, zatražite procjenu razvoja - rana pomoć čini najveću razliku",
-        "tip3": "Neprestano razgovarajte sa svojim djetetom — pričajte šta radite, imenujte predmete, pjevajte pjesme. Romske porodice imaju moćnu usmenu tradiciju – iskoristite je. Djeca koja čuju više riječi razvijaju veći vokabular i jače kognitivne vještine. Ovo je besplatno i efikasnije od bilo koje igračke",
+        "tip3": "Neprestano razgovarajte sa svojim djetetom - pričajte šta radite, imenujte predmete, pjevajte pjesme. Romske porodice imaju moćnu usmenu tradiciju – iskoristite je. Djeca koja čuju više riječi razvijaju veći vokabular i jače kognitivne vještine. Ovo je besplatno i efikasnije od bilo koje igračke",
         "tip4": "Zubi: čistite bebino desni vlažnom krpom od rođenja, a od prvog zubića koristite sićušnu mrlju dječije paste za zube. Vidim teški karijes kod romske djece do 3, često iz boca slatkog čaja noću — to uzrokuje bol, infekciju i probleme u ishrani koji utiču na rast",
         "fact": "Istraživanja pokazuju da djeca čija su zaostajanja u razvoju identificirana i riješena prije dobi 3 imaju 5 puta veću vjerovatnoću da će pohađati školu na očekivanom nivou. U naseljima u kojima sam uspostavio mjesečno vaganje i razvojni skrining, stope upućivanja na ranu intervenciju su se utrostručile – što znači da su djeca dobila pomoć koju bi inače propustila.",
-        "action": "Ako je vaše dijete mlađe od 2, odvedite ga na provjeru težine i razvojni skrining u vaš dom zdravlja ovog mjeseca. Ako je vaše dijete starije od 2 i zabrinuti ste oko govora, hodanja ili ponašanja, zatražite uputnicu kod specijaliste. Vaša zabrinutost je opravdana - postupite po njoj."
+        "action": "Ako je vaše dijete mlađe od 2, odvedite ga na provjeru težine i razvojni skrining u svoj zdravstveni centar ovog mjeseca. Ako je vaše dijete starije od 2 i zabrinuti ste oko govora, hodanja ili ponašanja, zatražite uputnicu kod specijaliste. Vaša zabrinutost je opravdana - postupite po njoj."
       },
       "commonIllnesses": {
         "title": "Kada je Vaše dijete bolesno",
-        "description": "U naseljima sa prenaseljenim stambenim prostorima, ograničenim sanitarnim uslovima i hladnim zimama djeca često obolijevaju. Većina ovih bolesti – dijareja, kašalj, groznica – mogu se liječiti kod kuće ako znate šta da radite i kada da eskalirate. Ali također sam vidio roditelje da čekaju predugo, ili žure u hitnu pomoć zbog stanja koje bi jednostavno liječenje kod kuće riješilo. Ovaj modul vas uči razlici.",
-        "tip1": "Temperatura ispod 38.5°C: tijelo vašeg djeteta se bori protiv infekcije — ovo je dobro. Neka budu udobne, lagano odjevene i dajte dosta tekućine. Groznica iznad 38.5°C: dajte djeci paracetamol u odgovarajućoj dozi za njihovu težinu (NE paracetamol za odrasle). Ako temperatura traje duže od 3 dana ili je dijete neobično pospano, potražite medicinsku pomoć",
+        "description": "U naseljima sa prenaseljenim stambenim prostorima, ograničenim sanitarnim uslovima i hladnim zimama djeca često obolijevaju. Većina ovih bolesti – dijareja, kašalj, groznica – mogu se liječiti kod kuće ako znate šta da radite i kada da eskalirate. Ali takođe sam viđao roditelje da čekaju predugo ili žure u hitnu pomoć zbog stanja koje bi jednostavan tretman kod kuće rešio. Ovaj modul vas uči razlici.",
+        "tip1": "Temperatura ispod 38.5°C: tijelo vašeg djeteta se bori protiv infekcije — ovo je dobro. Neka budu udobne, lagano odjevene i dajte dosta tekućine. Groznica iznad 38.5°C: dajte djeci paracetamol u odgovarajućoj dozi za njihovu težinu (NE paracetamol za odrasle). Ako groznica traje duže od 3 dana ili je dijete neobično pospano, potražite medicinsku pomoć",
         "tip2": "Dijareja ubija dehidracijom, a ne samom infekcijom. Onog trenutka kada vaše dijete ima rijetku stolicu, započnite oralnu rehidraciju: 1 litar čiste prokuvane vode + 6 ravne kašičice šećera + pola kašičice soli. Dajte male gutljaje svakih nekoliko minuta. Ovaj recept je spasio više dječjih života širom svijeta nego bilo koji antibiotik",
-        "tip3": "ODMAH VODITE DJETE U BOLNICU ako primijetite: ubrzano ili otežano disanje, povlačenje grudi pri svakom udisanju, nemogućnost da pije ili doji, stalno povraćanje svega, neuobičajenu pospanost ili nebuđenje, konvulzije ili krvavi proljev. Ne čekaj. Ovo su hitni slučajevi",
+        "tip3": "ODMAH VODITE DJETE U BOLNICU ako primijetite: ubrzano ili otežano disanje, povlačenje grudi pri svakom udisanju, nemogućnost da pije ili doji, stalno povraćanje svega, neuobičajenu pospanost ili nebuđenje, konvulzije ili krvavi proljev. Nemojte čekati. Ovo su hitni slučajevi",
         "tip4": "Nemojte davati antibiotike bez lekarskog recepta. Nemojte dijeliti recept drugog djeteta. Nemojte koristiti preostale antibiotike. To stalno vidim u našim zajednicama i stvara bakterije otporne na lijekove koje je mnogo teže liječiti. Antibiotici ne pomažu kod prehlade, gripa ili većine kašlja",
         "fact": "U zajednicama u kojima sam radio, obuka roditelja za pripremu i upotrebu otopine za oralnu rehidraciju smanjila je hospitalizaciju djece zbog dijareje za više od 40% u jednoj godini. Znanje je toliko moćno — a sastojci koštaju manje od autobuske karte do bolnice.",
         "action": "Odmah zapamtite ovaj recept: 1 litar čiste vode + 6 kašičice šećera + pola kašičice soli. Vježbajte da ga napravite jednom. Ako hoćeš, probaj – trebalo bi da ima ukus suze. Ako ovo bude spremno, znači da kada vaše dijete dobije dijareju u 2am, možete odmah djelovati umjesto panike."
@@ -1846,20 +1890,20 @@
       "immunization": {
         "title": "Raspored vakcinacije",
         "description": "Biću direktan: u romskim zajednicama širom Evrope stope vakcinacije su niže od nacionalnog proseka, a to nije zato što romski roditelji ne mare za svoju decu – već zato što zdravstveni sistem nije uspeo da dopre do njih sa poštovanjem, pristupom i informacijama. Dezinformacije se šire i putem društvenih mreža. Držao sam djecu u bolnici sa boginjama koja nikada nisu trebala biti tamo. Svako nevakcinisano dijete je dijete koje je sistem zatajio.",
-        "tip1": "Rođenje do 6 sedmica: BCG (tuberkuloza) i hepatitis B. Daju se u bolnici prije otpusta. Ako je vaša beba rođena kod kuće, odnesite je u Dom zdravlja u toku prve sedmice života radi ovih vakcina. Ne čekaj",
+        "tip1": "Rođenje do 6 sedmica: BCG (tuberkuloza) i hepatitis B. Daju se u bolnici prije otpusta. Ako je vaša beba rođena kod kuće, odnesite je u Dom zdravlja u toku prve sedmice života radi ovih vakcina. Nemojte čekati",
         "tip2": "2, 3, 4 mjeseci: 'velika tri' kruga — DTP (difterija, tetanus, veliki kašalj), dječja paraliza, Hib i hepatitis B. Ovo su najkritičnije vakcine u djetinjstvu. Svaki krug jača imunitet. Nedostatak jednog slabi cijeli lanac",
         "tip3": "12–15 mjeseci: MMR (ospice, zaušnjaci, rubeola). Ne mogu ovo dovoljno naglasiti. Ospice nisu bezopasna dječja bolest – one ubijaju, uzrokuju oštećenje mozga i sljepljuju. 2019 sam vidio izbijanje malih boginja u romskom naselju jer je obuhvat pao ispod 80%. To se moglo spriječiti",
         "tip4": "Vakcine su besplatne u državnim zdravstvenim centrima u svim evropskim zemljama. Ne treba vam osiguranje, ne treba vam boravišna dozvola, ne treba vam zakazivanje u većini centara. Ako vam je usluga odbijena, ovo je nezakonito — obratite se svom zdravstvenom posredniku ili uredu za prava pacijenata",
-        "fact": "Razlika između stopa vakcinacije Roma i neroma u nekim evropskim zemljama prelazi 15 procentnih poena. Ovaj jaz nije uzrokovan vjerovanjem Roma o vakcinama — ankete stalno pokazuju da roditelji Romi žele da njihova djeca budu vakcinisana. Jaz je uzrokovan preprekama u pristupu, diskriminacijom u zdravstvenoj zaštiti i nedostatkom pristupa. Uklanjanje ovog jaza je obaveza države prema članu 11 Evropske socijalne povelje.",
+        "fact": "Razlika između stopa vakcinacije Roma i neroma u nekim evropskim zemljama prelazi 15 procentnih poena. Ovaj jaz nije uzrokovan vjerovanjem Roma o vakcinama — ankete stalno pokazuju da romski roditelji žele da njihova djeca budu vakcinisana. Jaz je uzrokovan preprekama u pristupu, diskriminacijom u zdravstvenoj zaštiti i nedostatkom pristupa. Uklanjanje ovog jaza je obaveza države prema članu 11 Evropske socijalne povelje.",
         "action": "Pronađite kartu za vakcinaciju vašeg djeteta. Ako nedostaje neka vakcina, ili ako nemate karticu, posjetite najbliži zdravstveni centar ove sedmice. Ako se suočite s preprekama — jezikom, dokumentima, odbijanjem — obratite se svom lokalnom zdravstvenom posredniku. Upravo zbog toga smo ovdje."
       }
     },
     "chronic": {
-      "description": "Romi u prosjeku umiru 10 godina ranije od evropskog prosjeka. Većina te razlike dolazi od hroničnih bolesti — dijabetesa, srčanih i respiratornih bolesti — koje se godinama tiho razvijaju. Kad se pojave simptomi, šteta je već napravljena. Ali većina se može spriječiti i sve se može upravljati ako se rano uhvati.",
+      "description": "Romi umiru 10 godina mlađe od evropskog prosjeka. Većina ovog jaza dolazi od hroničnih bolesti – dijabetesa, bolesti srca, respiratornih bolesti – koje se razvijaju polako i tiho godinama. Dok se simptomi pojave, šteta je učinjena. Ali većinu toga se može spriječiti, a sve se može kontrolirati kada se rano uhvati.",
       "diabetes": {
         "title": "Dijabetes: tiha prijetnja",
         "description": "Dijabetes tipa 2 je hronična bolest sa kojom se najčešće susrećem u romskim zajednicama. Proširuje se u porodicama, napreduje na jeftinoj ishrani sa visokim sadržajem šećera na koju siromaštvo tera ljude, i oštećuje vam oči, bubrege, stopala i srce godinama pre nego što osetite nešto loše. Vidio sam muškarce u 40ima kako gube nožne prste, a žene oslijepe, od dijabetesa koji nikada nije dijagnosticiran jer nikada nisu radile krvne pretrage. Ovo se može spriječiti.",
-        "tip1": "Ako neko u vašoj porodici ima dijabetes, vaš rizik je 2–3 puta veći. Ovo nije sudbina – to je signal da se sada djeluje. Smanjite bijeli hljeb, šećer i slatke napitke. Zamijenite pasuljem, sočivom, povrćem i vodom. Vidio sam porodice kako preokrenu preddijabetes u potpunosti kroz ove promjene",
+        "tip1": "Ako neko u vašoj porodici ima dijabetes, vaš rizik je 2–3 puta veći. Ovo nije sudbina – to je signal da se sada reaguje. Smanjite bijeli hljeb, šećer i slatke napitke. Zamijenite pasuljem, sočivom, povrćem i vodom. Vidio sam porodice kako preokrenu preddijabetes u potpunosti kroz ove promjene",
         "tip2": "30 minuta hodanja svaki dan smanjuje rizik od dijabetesa za 58%. Ne trči. Ne teretana. Hodanje. Kažem svakoj osobi preko 35 u zajednicama sa kojima radim: šetnja je lijek. Besplatno je i radi bolje od većine tableta za prevenciju",
         "tip3": "Zatražite test glukoze u krvi natašte u svom domu zdravlja najmanje jednom godišnje ako ste stariji od 35, gojazni ili imate porodičnu istoriju. To je jednostavan test ubodom prsta, besplatan je u većini zemalja i traje 5 minuta. Ovaj test može otkriti dijabetes godinama prije nego što se pojave simptomi",
         "tip4": "Znajte znakove upozorenja koji znače da je dijabetes možda već prisutan: stalna žeđ, vrlo često mokrenje (posebno noću), zamagljivanje vida, rane koje sporo zacjeljuju, neobjašnjiv umor. Ako imate dva ili više njih, testirajte se ove sedmice, a ne sljedećeg mjeseca",
@@ -1888,7 +1932,7 @@
       }
     },
     "mental": {
-      "description": "U 15 godina u romskim zajednicama naučio sam da najteži teret nije fizička bolest — nego težina diskriminacije, siromaštva, straha od deložacije, brige za budućnost djece i osjećaj da se niko u sistemu ne brine. Zovemo to stres. Kad traje godinama, postaje nešto drugo. Zaslužuje biti imenovan, shvaćen i liječen — bez stida.",
+      "description": "Za 15 godina rada u romskim zajednicama, naučio sam da najteži teret koji ljudi nose nije fizička bolest – to je težina diskriminacije, siromaštva, straha od deložacije, brige za budućnost svoje djece i osjećaj da nikoga u sistemu nije briga. Ovo zovemo stres. Kada to traje godinama, postaje nešto više. Zaslužuje da bude imenovan, shvaćen i tretiran - bez srama.",
       "stressManagement": {
         "title": "Živjeti sa stresom",
         "description": "Neću se pretvarati da će vježba disanja riješiti vaše probleme. Ako ste zabrinuti da će vaša porodica biti deložirana, nijedna aplikacija za meditaciju to neće popraviti. Ali radio sam sa stotinama ljudi u našim zajednicama koji su pod velikim stresom, i vidio sam šta se događa kada se taj stres godinama ne kontrolira: srčani udari kod muškaraca u 40ima, žene koje ne mogu jesti ili spavati, djeca koja odrastaju u domaćinstvima koja su naelektrizirana od napetosti. Ne možemo uvijek promijeniti naše okolnosti, ali možemo promijeniti način na koji ih nosimo.",
@@ -1896,7 +1940,7 @@
         "tip2": "Hodanje je najpodcijenjeniji lijek protiv stresa. 20 minuta hodanja — ne brzo, samo hodanje — smanjuje hormon stresa kortizol do 30%. Ako ne možete napustiti kuću, hodajte u krug. Sam pokret je ono što radi, a ne scenografija",
         "tip3": "Razgovaraj s nekim. Ne da riješim problem – samo da podijelim težinu. Vidio sam muškarce u našim zajednicama kako sve nose sami jer traženje pomoći je kao slabost. Za 15 godina ovog rada, najjači ljudi koje sam upoznao su oni koji su naučili reći 'Borim se'",
         "tip4": "Budite namjerni u pogledu onoga što vam pada na pamet. Društveni mediji, vijesti, porodične svađe koje vam se vrte u glavi – to su izvori stresa koje možete kontrolisati. Ne kažem da zanemarite stvarnost. Kažem da birate kada se bavite time i stvorite prostor u svom danu u kojem ste namjerno u miru",
-        "fact": "Romske zajednice doživljavaju ono što javno zdravlje naziva 'manjinskim stresom' — hronični fiziološki danak diskriminacije, isključenosti i siromaštva. Istraživanja pokazuju da ovo trajno podiže nivoe kortizola, ubrzavajući srčana oboljenja, dijabetes i mentalne bolesti. Ovo nije slabost. To je biologija koja odgovara na nepravdu.",
+        "fact": "Romske zajednice doživljavaju ono što javno zdravlje naziva 'manjinskim stresom' — hronični fiziološki danak diskriminacije, isključenosti i siromaštva. Istraživanja pokazuju da ovo trajno podiže nivoe kortizola, ubrzavajući bolesti srca, dijabetes i mentalne bolesti. Ovo nije slabost. To je biologija koja reaguje na nepravdu.",
         "action": "Večeras prije spavanja stavite telefon u drugu sobu i vježbajte 4-4-8 5 minuta. Ako imate partnera ili člana porodice koji je voljan, učinite to zajedno u tišini. Ovaj mali čin stvara granicu između dnevnog stresa i vašeg sna - a san je kada vaše tijelo popravlja štetu koju je stres izazvao."
       },
       "sleep": {
@@ -1911,7 +1955,7 @@
       },
       "communitySupport": {
         "title": "Moć konekcije",
-        "description": "Romska kultura već razumije nešto što zapadna medicina tek sada mjeri: da pripadnost, porodica i zajednica štite vaše zdravlje jednako snažno kao i svaki lijek. Vidio sam ljude kako preživljavaju najteže okolnosti - deložacije, bolest, gubitak - jer ih je držala njihova zajednica. I vidio sam kako se ljudi mnogo manje urušavaju kada su bili izolovani. Nauka sada potvrđuje ono što su naši preci znali: usamljenost ubija, povezanost liječi.",
+        "description": "Romska kultura već razumije nešto što zapadna medicina tek sada mjeri: da pripadnost, porodica i zajednica štite vaše zdravlje jednako snažno kao i svaki lijek. Vidio sam ljude kako preživljavaju najteže okolnosti - deložacije, bolest, gubitak - jer ih je njihova zajednica držala. I vidio sam kako se ljudi mnogo manje urušavaju kada su bili izolovani. Nauka sada potvrđuje ono što su naši preci znali: usamljenost ubija, povezanost liječi.",
         "tip1": "Ako poznajete nekoga u vašoj zajednici ko je nedavno izgubio člana porodice, bio mu je dijagnosticiran bolest, izgubio posao ili prolazi kroz krizu — nemojte čekati da zatraži pomoć. Posjetite ih. Donesi hranu. Sedi sa njima. U romskoj kulturi to je instinkt. U zdravstvenim naukama to se zove 'socijalni recept' — i djeluje bolje od većine tableta",
         "tip2": "Stid je neprijatelj zdravlja. Upoznala sam ljude koji su godinama skrivali dijabetes, depresiju, HIV i nasilje u porodici jer su se bojali šta će zajednica reći. Svaki put kada neko u našoj zajednici otvoreno govori o svojoj borbi, to daje dozvolu drugima. Ne morate sve dijeliti – ali dijeljenje nečega razbija tišinu od koje se ljudi razbole",
         "tip3": "Okupljanja, proslave, muzika, molitva, pričanje priča — to ne ometaju zdravlje. Oni su zdravlje. Studije pokazuju da redovno učešće u kulturnim aktivnostima zajednice smanjuje depresiju i kardiovaskularni rizik. Radost i pripadnost koju stvaraju su mjerljivi lijek",
@@ -2004,14 +2048,130 @@
     "pillarProgress": "Napredak učenja po stubovima",
     "contactSupport": "Kontaktiraj regionalnog koordinatora",
     "resources": "Resursi za medijatora",
-    "downloadGuide": "Preuzmi terenski vodič (PDF)"
+    "downloadGuide": "Preuzmi terenski vodič (PDF)",
+    "ecHint": "Napravljen za zdravstvene medijatore u zajednici u ruralnoj Rumuniji — POIDS / FSE+ integrisani timovi zajednice (ECI).",
+    "tabDashboard": "Pregled",
+    "tabCases": "Slučajevi",
+    "tabSessions": "Sesije",
+    "tabIndicators": "Indikatori",
+    "tabTraining": "Trening",
+    "tabTools": "Field Tools",
+    "openCases": "Aktivni slučajevi",
+    "sessionsThisMonth": "Sesije ovog mjeseca",
+    "newCase": "Novi slučaj",
+    "newSession": "Dnevnik informacija sesija",
+    "casesTitle": "Upravljanje slučajevima",
+    "noCases": "Još nema slučajeva — dodajte porodicu ili osobu koju podržavate.",
+    "caseName": "Korisnik",
+    "caseCategory": "Domain",
+    "caseStatus": "Status",
+    "caseNotes": "Plan intervencije i bilješke",
+    "nextVisit": "Sljedeća posjeta (opciono)",
+    "saveCase": "Sačuvaj slučaj",
+    "caseSaved": "Slučaj je sačuvan",
+    "categoryHealth": "Zdravlje i prevencija",
+    "categorySocial": "Socijalna podrška",
+    "categoryEducation": "Obrazovanje",
+    "categoryRights": "Prava i pristup njezi",
+    "statusIdentified": "Identifikovani",
+    "statusAssessment": "Procjena",
+    "statusPlan": "Plan intervencije",
+    "statusMonitoring": "Monitoring",
+    "statusClosed": "Zatvoreno",
+    "householdSize": "Veličina domaćinstva",
+    "vulnerabilityLabel": "Ranjivosti (ciljna grupa POIDS)",
+    "healthFacilitationLabel": "Zdravstvene olakšice",
+    "sessionsTitle": "Informativne sesije",
+    "noSessions": "Još uvijek nema snimljenih sesija.",
+    "sessionTitle": "Naslov sesije",
+    "sessionTopic": "Slobodna tema",
+    "sessionLocation": "Lokacija (selo, škola, društveni centar)",
+    "sessionAttendees": "Učesnici (približno)",
+    "sessionNotes": "Bilješke i praćenje",
+    "sessionThemeLabel": "Tema javnog zdravlja",
+    "saveSession": "Sačuvaj sesiju",
+    "sessionSaved": "Sesija je sačuvana",
+    "toolsTitle": "Upotreba na terenu sa porodicama",
+    "toolsScan": "Razotkriti zdravstveni mit",
+    "toolsVaccines": "Vodič za vakcinu",
+    "toolsRights": "Znajte svoja prava",
+    "toolsExplain": "Objasnite recept",
+    "toolsChat": "Pitajte zdravstvenog savjetnika",
+    "contactUjssGeneric": "Odaberite županiju za učitavanje UJSS koordinatora.",
+    "countyLabel": "Vaš okrug",
+    "countyPlaceholder": "Odaberite okrug",
+    "syncIdle": "Spreman",
+    "syncSyncing": "Sinhroniziranje...",
+    "syncSynced": "Sinhronizirano",
+    "syncOffline": "Samo uređaj",
+    "exportPrint": "Odštampajte izvještaj (sačuvajte kao PDF)",
+    "exportDownload": "Preuzmite HTML izvještaj",
+    "reportTitle": "Izvještaj o aktivnostima zdravstvenog medijatora",
+    "reportGenerated": "Generirano u",
+    "reportKpiSection": "Ključni indikatori",
+    "indicatorsTitle": "POIDS / SCI 2000 indikatori",
+    "indicatorsHint": "Automatski se izračunava na osnovu vaših slučajeva, posjeta i sesija. Koristi se za UJSS / DSP mjesečno izvještavanje.",
+    "indicatorsCoverage": "Pokrivenost zajednice",
+    "indicatorsActivity": "Terenska aktivnost",
+    "indicatorsHealthFacilitation": "Zdravstvene olakšice (po slučaju)",
+    "indicatorsSessionsByTheme": "Sesije po temama (ove godine)",
+    "indicatorsVulnerability": "Korisnici prema ugroženim grupama",
+    "indicatorsUniquePeople": "Jedinstveni korisnici",
+    "indicatorsHouseholds": "Ljudi u domaćinstvima",
+    "indicatorsClosedCases": "Zatvoreni slučajevi",
+    "indicatorsVisitsThisYear": "Posjete (od godine do danas)",
+    "indicatorsAttendeesThisYear": "Učesnici sesije (godina)",
+    "trainingTitle": "ECI Training",
+    "trainingSubtitle": "Put ulaska medicinskih sestara u zajednici, medijatora i integrisanog tima.",
+    "trainingProgress": "Završeno",
+    "trainingMinutes": "min",
+    "trainingCompleted": "završeno",
+    "trainingMarkComplete": "Označite kao završeno",
+    "trainingMarkIncomplete": "Označite kao nepotpuno",
+    "trainingTierFoundations": "ECI fondacije",
+    "trainingTierHealth": "Javno zdravlje",
+    "trainingTierSocial": "Socijalna i prava",
+    "trainingTierFieldwork": "Terenska aktivnost",
+    "vuln_child": "Djeca (0–18)",
+    "vuln_schoolDropoutRisk": "Rizik od napuštanja škole",
+    "vuln_pregnant": "Trudnice",
+    "vuln_singleParent": "Samohrani roditelji",
+    "vuln_minVeniturGarantat": "Zagarantovan minimalni prihod",
+    "vuln_elderly": "Starije osobe",
+    "vuln_disability": "Osobe sa invaliditetom",
+    "vuln_romaCommunity": "romska zajednica",
+    "vuln_noInsurance": "Nema zdravstvenog osiguranja",
+    "vuln_noDocuments": "Bez ličnih dokumenata",
+    "vuln_domesticViolence": "Preživjele porodičnog nasilja",
+    "facilitation_vaccinationFacilitated": "Vakcinacija olakšana",
+    "facilitation_prenatalFacilitated": "Olakšana prenatalna njega",
+    "facilitation_screeningReferral": "Uputnica za skrining",
+    "facilitation_chronicMonitoring": "Praćenje hronične bolesti",
+    "facilitation_tbCommunicableScreening": "Skrining na TB/zarazne bolesti",
+    "facilitation_gpEnrollment": "Upis lekara opšte prakse",
+    "facilitation_insuranceEnrollment": "Upis zdravstvenog osiguranja (CNAS)",
+    "sessionTheme_vaccination": "Vakcinacija",
+    "sessionTheme_maternalChild": "Zdravlje majke i djeteta",
+    "sessionTheme_nutrition": "Ishrana i dojenje",
+    "sessionTheme_hygiene": "Higijena i sanitacija",
+    "sessionTheme_tbCommunicable": "TB i zarazne bolesti",
+    "sessionTheme_chronicDisease": "Hronične bolesti (HTA, dijabetes)",
+    "sessionTheme_screening": "Skrining (rak, NCD)",
+    "sessionTheme_mentalHealth": "Mentalno zdravlje",
+    "sessionTheme_addiction": "Ovisnosti (alkohol, droge, pušenje)",
+    "sessionTheme_rights": "Prava i pristup njezi",
+    "sessionTheme_prevention": "Opća prevencija",
+    "sessionTheme_other": "Ostalo",
+    "roleBoundaryNotice": "Obaveštenje o granicama uloge: Kao medijator/medicinska sestra u zajednici, podržavate i olakšavate pristup. Nemojte obavljati medicinske radnje, dijagnostiku, niti prepisivati ​​lijekove. Obratite se kliničkim stručnjacima za kliničke odluke.",
+    "dataMinimisationNote": "Obavijest o minimiziranju podataka: Zabilježite samo potrebne detalje za kontinuitet njege ili evaluaciju programa. Nikada nemojte unositi puno ime i adresu zajedno, etničku pripadnost, imigracioni status ili kliničke dijagnoze.",
+    "consentAttestation": "Potvrđujem da je imenovana osoba (ili član porodice ili staratelj u njihovo ime) pristala na snimanje ove posjete."
   },
   "healthQuiz": {
     "meta": {
       "title": "Kviz zdravlja — Redi Health",
       "description": "Testirajte svoje zdravstveno znanje interaktivnim kvizovima"
     },
-    "title": "Zdravstveni kviz",
+    "title": "Health Quiz",
     "subtitle": "Testirajte svoje znanje. Naučite nešto novo.",
     "backToQuizzes": "Nazad na kvizove",
     "seeResults": "Pogledajte rezultate",
@@ -2229,8 +2389,8 @@
       "sayThis": "reci ovo:",
       "thenDo": "Zatim uradite ovo:",
       "patientOmbudsman": "Ombudsman za pacijente",
-      "antiDiscrimination": "Protiv diskriminacije",
-      "romaRightsOrg": "Organizacija za prava Roma"
+      "antiDiscrimination": "Anti-Discrimination",
+      "romaRightsOrg": "Roma Rights Organization"
     },
     "rights": {
       "treatment": {
@@ -2443,7 +2603,7 @@
       "ana-tb": {
         "name": "Ana",
         "age": "31",
-        "country": "Slovačka",
+        "country": "Slovakia",
         "title": "TB nije smrtna kazna — ali morate završiti lijek",
         "story": "Kašljao sam mjesecima. Mislio sam da je samo prehlada. Kada sam konačno otišao kod doktora, rekli su mi da imam tuberkulozu. Bio sam prestravljen — mislio sam da ću umrijeti. Ali doktor je objasnio da se TB može izliječiti uz 6 mjeseci lijeka. Najteže je bilo uzimati tablete svaki dan 6 mjeseci, čak i kada sam se osjećala bolje nakon 2 mjeseca. Ali završio sam. Izliječen sam.",
         "lesson": "Ako kašljete duže od 2 sedmice, posjetite ljekara. TB je izlječiv, ali MORATE završiti sve lijekove."

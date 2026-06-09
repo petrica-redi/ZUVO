@@ -105,7 +105,7 @@
         ]
       },
       "diabetes": {
-        "title": "Cukrovka",
+        "title": "Diabetes",
         "description": "Pochopení léčby diabetu",
         "questions": [
           {
@@ -222,8 +222,8 @@
       "sayThis": "Řekněte toto:",
       "thenDo": "Pak proveďte toto:",
       "patientOmbudsman": "Ombudsman pacientů",
-      "antiDiscrimination": "Proti diskriminaci",
-      "romaRightsOrg": "Organizace za práva Romů"
+      "antiDiscrimination": "Anti-Discrimination",
+      "romaRightsOrg": "Roma Rights Organization"
     },
     "rights": {
       "treatment": {

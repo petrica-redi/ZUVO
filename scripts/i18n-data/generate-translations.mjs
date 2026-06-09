@@ -67,6 +67,7 @@ function explain(t) {
     meta: { title: t[22], description: t[23] },
     takePhoto: t[24], uploadImage: t[25], placeholderWithImage: t[26], imagePreviewAlt: t[27],
     imageReady: t[28], imageReadyBody: t[29], imageRemove: t[30], preparingImage: t[31], imageFailed: t[32],
+    followUpChat: t[33], followUpNavigate: t[34], followUpGlossary: t[35],
   };
 }
 function navigate(t) {
@@ -78,6 +79,16 @@ function navigate(t) {
     generateCard: t[21], startOver: t[22], showDoctor: t[23], generatedBy: t[24], whatToBring: t[25],
     askYourDoctor: t[26], patientRights: t[27], findHospital: t[28], mapHint: t[29],
     meta: { title: t[30], description: t[31] },
+    systemGuidesTitle: t[32],
+    italySsnTitle: t[33],
+    italyDoctorTitle: t[34],
+    italyDoctorDesc: t[35],
+    italyEnrollTitle: t[36],
+    italyEnrollSteps: t[37],
+    italyStpTitle: t[38],
+    italyStpDesc: t[39],
+    viewGuide: t[40],
+    closeGuide: t[41],
   };
 }
 function about(t) {

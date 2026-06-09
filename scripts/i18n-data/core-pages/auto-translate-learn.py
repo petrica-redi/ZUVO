@@ -14,6 +14,7 @@ CACHE_PATH = HERE / "learn-translation-cache.json"
 DELIM = "\n###REDI###\n"
 
 LOCALE_TARGETS = {
+    "it": "it",
     "sq": "sq",
     "ro": "ro",
     "hu": "hu",
@@ -29,7 +30,7 @@ LOCALE_TARGETS = {
     "tr": "tr",
 }
 
-EN_LEARN = json.loads((ROOT / "messages/en.json").read_text())["learn"]
+EN_LEARN = json.loads((ROOT / "messages/en.json").read_text(encoding="utf-8"))["learn"]
 
 
 def flatten(obj, prefix=""):
@@ -140,22 +141,22 @@ def translate_locale(locale, target, en_flat, cache):
         for p, val, k in zip(chunk_paths, translated, cache_keys):
             locale_flat[p] = val
             cache[k] = val
-        CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2))
+        CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
     return locale_flat
 
 
 def main():
     LEARN_DIR.mkdir(parents=True, exist_ok=True)
     en_flat = flatten(EN_LEARN)
-    cache = json.loads(CACHE_PATH.read_text()) if CACHE_PATH.exists() else {}
+    cache = json.loads(CACHE_PATH.read_text(encoding="utf-8")) if CACHE_PATH.exists() else {}
 
     for locale, target in LOCALE_TARGETS.items():
         locale_flat = translate_locale(locale, target, en_flat, cache)
         out = unflatten(locale_flat)
-        (LEARN_DIR / f"{locale}.json").write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n")
+        (LEARN_DIR / f"{locale}.json").write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"wrote {locale}.json", flush=True)
 
-    CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2))
+    CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":

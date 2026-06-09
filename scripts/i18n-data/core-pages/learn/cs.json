@@ -1,10 +1,10 @@
 {
-  "progressLabel": "dokončených modulů",
+  "progressLabel": "moduly dokončeny",
   "startHere": "Začněte zde",
   "continueLabel": "Pokračovat",
   "allModules": "Všechny moduly",
   "prevention": {
-    "description": "Za 15 let práce v romských osadách jsem viděl rodiny zničené nemocemi, kterým by zabránily jednoduché návyky. Tyto znalosti nejsou luxus — jsou přežití.",
+    "description": "Za 15 let práce v romských osadách jsem viděl rodiny zničené nemocemi, kterým by se dalo předejít jednoduchými návyky. Toto poznání není luxus – je to přežití.",
     "handwashing": {
       "title": "Mytí rukou",
       "description": "Viděl jsem celé rodiny v osadách onemocnět stejnou žaludeční infekcí, předávanou z ruky do ruky. Správné mytí rukou je ten jediný nejlevnější a nejúčinnější lék, ke kterému už máte přístup – nic nestojí a zabraňuje nemocem, se kterými se v našich komunitách setkávám nejčastěji.",
@@ -47,7 +47,7 @@
     }
   },
   "nutrition": {
-    "description": "Po letech s romskými rodinami jsem pochopil, že jídlo není jen výživa — je to, co si můžete dovolit, co je v okolí a co vaše rodina zná. Neřeknu vám, abyste kupovali quinou. Řeknu vám, jak dobře nakrmit rodinu z toho, co máte.",
+    "description": "Za léta práce s romskými rodinami jsem se naučil, že jídlo není nikdy jen o výživě – jde o to, co si můžete dovolit, co je dostupné ve vašem okolí a co ví vaše rodina. Nebudu vám říkat, abyste si kupovali quinou. Řeknu vám, jak dobře nakrmit svou rodinu tím, co máte.",
     "balancedDiet": {
       "title": "Dobře se stravujte za jakýkoli rozpočet",
       "description": "Největší problém s výživou, který v romských komunitách vidím, není nedostatek jídla – je to příliš levného chleba, zpracovaného masa a slazených nápojů a příliš málo zeleniny, vajec a luštěnin. Tady nejde o sílu vůle. Jde o to, co je dostupné a cenově dostupné. Ale malé posuny mají obrovský vliv na vaše zdraví a vývoj vašich dětí.",
@@ -66,12 +66,12 @@
       "tip3": "Děti do 2 by nikdy neměly jíst cukr, med, sůl, kolu, hranolky ani sladkosti. Vím, že prarodiče někdy dávají čaj s cukrem, aby uklidnili dítě - prosím, přestaňte. Cukr v tomto věku programuje celoživotní touhu a poškozuje zuby ještě předtím, než se úplně objeví",
       "tip4": "Vajíčko denně pro dítě starší 6 měsíců je nejjednodušším vylepšením výživy, které existuje. Studie v Ekvádoru ukázala, že vejce snížila zakrnění o 47%. Cituji to v každé komunitní řeči, protože je to dosažitelné téměř pro každou rodinu",
       "fact": "V komunitách, kde jsem vedl nutriční programy, vykazovaly děti, které dostávaly vejce a porci zeleniny denně po dobu 6 měsíců, měřitelná zlepšení v růstu a kognitivním vývoji ve srovnání s dětmi, které je nedostaly. Podvýživa není jen o chudobě – jde o to vědět, čemu dát přednost se zdroji, které máte.",
-      "action": "Od zítřka podávejte svému dítěti staršímu než 6 měsíců jedno vejce denně (rozmačkané nebo míchané). Pokud je vašemu dítěti méně než 6 měsíců a vy kojíte, snězte sami jedno vejce navíc – živiny procházejí vaším mlékem."
+      "action": "Od zítřka podávejte svému dítěti staršímu než 6 měsíců jedno vejce denně (rozmačkané nebo míchané). Pokud je vašemu dítěti méně než 6 měsíců a kojíte, snězte sami jedno vejce navíc – živiny procházejí vaším mlékem."
     },
     "foodSafety": {
       "title": "Udržování potravin v bezpečí",
       "description": "Otrava jídlem je jedním z nejčastějších důvodů návštěv romských rodin na pohotovosti — zvracení, průjem, dehydratace, zejména u dětí. V osadách, kde je chlazení nespolehlivé a kuchyně jsou společné nebo venkovní, není bezpečnost potravin učebnicovým tématem – je to každodenní dovednost přežití.",
-      "tip1": "V teplém počasí se vařené jídlo, které bylo ponecháno na více než 2 hodinách, stává nebezpečné. Pokud to nemůžete vychladit, vařte menší porce, které dokončíte v jednom jídle. Viděl jsem celé rodiny hospitalizované z ohřátého guláše, který byl přes noc ponechán v létě",
+      "tip1": "V teplém počasí se vařené jídlo, které bylo ponecháno na více než 2 hodinách, stává nebezpečné. Pokud to nemůžete vychladit, vařte menší porce, které dokončíte v jednom jídle. Viděl jsem celé rodiny hospitalizované z ohřátého dušeného masa, které bylo přes noc ponecháno v létě",
       "tip2": "Syrové kuře a maso se nikdy nesmí dotýkat chleba, zeleniny nebo čehokoli, co se bude jíst tepelně neupravené. Používejte samostatné řezné plochy – funguje i čistý plastový sáček položený naplocho. Tato křížová kontaminace je nejčastější příčinou otravy jídlem, se kterou se setkávám",
       "tip3": "Pokud jídlo špatně zapáchá, vypadá špatně nebo je slizké – vyhoďte ho. Pro kontrolu neochutnávejte. Vím, že vyhazování jídla je bolestivé, když je peněz málo, ale jeden záchvat otravy jídlem stojí víc léků a ztracené práce, než stálo jídlo",
       "tip4": "Veškeré ovoce a zeleninu před konzumací omyjte pod tekoucí vodou, i když je plánujete oloupat. Nečistoty na vnější straně se při řezání přenášejí dovnitř. To je zvláště důležité pro tržní produkty, se kterými může manipulovat mnoho lidí",
@@ -80,7 +80,7 @@
     }
   },
   "maternal": {
-    "description": "Doprovázel jsem romské ženy do nemocnic, kde je dávali odděleně, neuctivě se k nim chovali nebo jim odmítli epidurál, který jiné ženy dostaly. Viděl jsem i ženy, které zemřely na komplikace, jež by jedna prenatální návštěva včas zachytila. Vaše tělo, vaše dítě, vaše práva. Znáte všechny tři.",
+    "description": "Doprovázel jsem romské ženy do nemocnic, kde byly umístěny v oddělených místnostech, mluvilo se s nimi neuctivě nebo odmítaly epidurál, který jiné ženy dostávaly. Viděl jsem také ženy umírat na komplikace, které by zastihla jediná prenatální návštěva. Vaše tělo, vaše dítě, vaše práva. Znát všechny tři.",
     "prenatalCare": {
       "title": "Prenatální péče",
       "description": "Za 15 let mediační práce opakovaně vidím vzorec, kdy romské ženy poprvé navštíví lékaře, když jsou již 6 nebo 7 měsíci těhotenství – často proto, že se cítí dobře, protože se bojí nemocnice nebo protože jim nikdo nevysvětlil, že prenatální péče je bezplatná a mají právo. V tomto okamžiku se nebezpečné stavy, jako je preeklampsie nebo těhotenská cukrovka, mohly tiše vyvíjet celé měsíce.",
@@ -103,7 +103,7 @@
     },
     "breastfeeding": {
       "title": "Kojení",
-      "description": "Kojení je v romské kultuře hluboce ceněno, přesto se setkávám s mladými matkami, kterým příbuzní, kteří to myslí dobře, řekli, aby v prvních dnech podávaly vodu, čaj nebo umělou výživu, protože „ještě nepřišlo mléko“. Kolostrum – to husté, nažloutlé první mléko – není známkou toho, že něco není v pořádku. Je to tekuté zlato, nabité protilátkami, které chrání vaše novorozeně před těmi infekcemi, které jsou nejnebezpečnější v prvních týdnech života.",
+      "description": "Kojení je v romské kultuře hluboce ceněno, přesto se setkávám s mladými matkami, kterým příbuzní, kteří to myslí dobře, řekli, aby v prvních dnech podávaly vodu, čaj nebo umělou výživu, protože „ještě nepřišlo mléko“. Kolostrum – to husté, nažloutlé první mléko – není známkou toho, že něco není v pořádku. Je to tekuté zlato, nabité protilátkami, které ochrání vašeho novorozence právě před těmi infekcemi, které jsou nejnebezpečnější v prvních týdnech života.",
       "tip1": "Do 1 hodiny po porodu přiložte své dítě kůže na kůži na svůj hrudník a nechte je, aby si našlo prso. Toto první krmení mlezivem je nejdůležitější „vakcínou“, kterou vaše dítě dostane – obalí jeho střeva ochranou proti infekci. Nedovolte, aby někdo vzal vaše dítě pryč, než se to stane, pokud nenastane lékařská pohotovost",
       "tip2": "Krmte na požádání — kdykoli dítě projeví známky hladu (otáčení hlavičky, sání ručiček, šťourání). V prvních týdnech to může být 10–14krát za 24 hodin. To je normální a vytváří to vaše zásobování. Hodiny vám neřeknou, kdy má vaše dítě hlad – vaše dítě vám to řekne",
       "tip3": "Žádná voda, žádný čaj, žádná výživa po dobu 6 měsíců, pokud to lékař výslovně nepředepíše ze zdravotních důvodů. Vaše mateřské mléko mění složení během dne tak, aby vyhovovalo přesným potřebám vašeho dítěte – žádná továrna to nedokáže napodobit. Viděl jsem, že babičky, které to myslí dobře, dávají cukrovou vodu, která způsobila drozd a průjem",
@@ -123,13 +123,13 @@
     }
   },
   "children": {
-    "description": "Romské děti jsou budoucnost našich komunit a zaslouží si každou výhodu. Ve své práci jsem viděl děti, které zaostávají — ne kvůli nedostatku schopností, ale protože jim předcházené nemoci, zmeškaná očkování nebo neodhalená zpoždění vzala šance. Tyto znalosti jim tyto šance vrací.",
+    "description": "Romské děti jsou budoucností našich komunit a zaslouží si každou výhodu. Ve své práci jsem viděl, že děti zaostávají – ne kvůli schopnostem, ale proto, že jim nemoci, kterým lze předejít, zameškané očkování nebo nezjištěné vývojové zpoždění, vzaly příležitosti. Toto poznání tyto příležitosti vrací.",
     "growthMilestones": {
       "title": "Růst a rozvoj",
       "description": "Každé dítě se vyvíjí svým vlastním tempem a já nikdy nechci, aby rodiče propadali panice kvůli normálním variacím. Ale také jsem viděl děti, jejichž opožděný vývoj rodiny zavrhly, protože „dohoní všechno“, když včasná intervence mohla přinést transformační změnu. Vědět, na co si dát pozor, není úzkost – je to pozornost.",
       "tip1": "Měsíční vážení v prvním roce je nejjednodušší monitorovací nástroj. Vaše zdravotní středisko má grafy růstu, které ukazují, zda je vaše dítě na správné cestě. Dítě, které přestane přibírat na váze nebo náhle klesne na graf, potřebuje okamžité vyšetření – může to být tak jednoduché jako úprava krmení nebo stejně důležité jako zachycení základního onemocnění.",
       "tip2": "Do 6 měsíců většina dětí sahá po předmětech a reaguje na jejich jméno. Do 12 měsíců většina řekne pár slov a postaví se. Do 24 měsíců většina chodí dobře a mluví v krátkých frázích. Pokud vaše dítě výrazně zaostává za těmito milníky, požádejte o posouzení vývoje – včasná pomoc přináší největší rozdíl",
-      "tip3": "Neustále se svým dítětem mluvte – vyprávějte, co děláte, pojmenovávejte předměty, zpívejte písničky. Romské rodiny mají silnou ústní tradici – využijte ji. Děti, které slyší více slov, rozvíjejí větší slovní zásobu a silnější kognitivní schopnosti. Je to zdarma a efektivnější než jakákoli hračka",
+      "tip3": "Neustále se svým dítětem mluvte – vyprávějte, co děláte, pojmenovávejte předměty, zpívejte písničky. Romské rodiny mají silnou ústní tradici – využijte ji. Děti, které slyší více slov, rozvíjejí větší slovní zásobu a silnější kognitivní schopnosti. Je to zdarma a efektivnější než jakákoliv hračka",
       "tip4": "Zuby: čistěte dásně miminka od narození vlhkým hadříkem a od prvního zoubku použijte malinkou stěrku dětské zubní pasty. Vidím silné zubní kazy u romských dětí ve věku 3, často z lahví sladkého čaje v noci – to způsobuje bolest, infekci a problémy s jídlem, které ovlivňují růst",
       "fact": "Výzkum ukazuje, že děti, jejichž vývojové opoždění jsou identifikovány a řešeny před dosažením věku 3, mají 5krát vyšší pravděpodobnost, že budou chodit do školy na očekávané úrovni. V osadách, kde jsem zavedl měsíční vážení a vývojový screening, se počet doporučení pro včasnou intervenci ztrojnásobil – což znamená, že děti dostaly pomoc, o kterou by jinak přišli.",
       "action": "Pokud je vaše dítě mladší než 2, vezměte ho tento měsíc na kontrolu hmotnosti a vývojový screening ve vašem zdravotním středisku. Pokud je vaše dítě starší 2 a máte obavy z řeči, chůze nebo chování, požádejte o doporučení ke specialistovi. Vaše obavy jsou oprávněné – jednejte podle nich."
@@ -140,8 +140,8 @@
       "tip1": "Horečka pod 38.5°C: tělo vašeho dítěte bojuje s infekcí – to je dobré. Udržujte je pohodlné, lehce oblečené a dávejte jim dostatek tekutin. Horečka nad 38.5°C: podávejte dětem paracetamol v dávce správné pro jejich hmotnost (NE paracetamol pro dospělé). Pokud horečka trvá déle než 3 dnů nebo je dítě neobvykle ospalé, vyhledejte lékařskou pomoc",
       "tip2": "Průjem zabíjí dehydratací, nikoli samotnou infekcí. Ve chvíli, kdy má dítě řídkou stolici, zahajte orální rehydrataci: 1 litr čisté převařené vody + 6 zarovnané lžičky cukru + půl lžičky soli. Podávejte po malých doušcích každých pár minut. Tento recept zachránil více dětských životů na celém světě než jakékoli antibiotikum",
       "tip3": "NEPRODEJTE SVÉ DÍTĚ OKAMŽITĚ DO NEMOCNICE, pokud zaznamenáte: rychlé nebo obtížné dýchání, stahování hrudníku při každém nádechu, neschopnost pít nebo kojit, opakované zvracení všeho možného, ​​neobvyklá ospalost nebo neprobuzení, křeče nebo krvavý průjem. Nečekejte. To jsou mimořádné události",
-      "tip4": "Nepodávejte antibiotika bez lékařského předpisu. Nesdílejte předpis jiného dítěte. Nepoužívejte zbytky antibiotik. Vidím to neustále v našich komunitách a vytváří to bakterie odolné vůči lékům, které se mnohem hůře léčí. Antibiotika nedělají nic proti nachlazení, chřipce nebo většině kašle",
-      "fact": "V komunitách, ve kterých jsem pracoval, školení rodičů v přípravě a používání perorálního rehydratačního roztoku snížilo počet hospitalizací dětí kvůli průjmu o více než 40% za jediný rok. Znalosti jsou tak silné – a ingredience stojí méně než jízdenka na autobus do nemocnice.",
+      "tip4": "Nepodávejte antibiotika bez lékařského předpisu. Nesdílejte recept jiného dítěte. Nepoužívejte zbytky antibiotik. Vidím to neustále v našich komunitách a vytváří to bakterie odolné vůči lékům, které se mnohem hůře léčí. Antibiotika nedělají nic proti nachlazení, chřipce nebo většině kašle",
+      "fact": "V komunitách, ve kterých jsem pracoval, školení rodičů v přípravě a používání perorálního rehydratačního roztoku snížilo počet hospitalizací dětí kvůli průjmu o více než 40% za jediný rok. Vědomí je tak silné – a ingredience stojí méně než jízdenka na autobus do nemocnice.",
       "action": "Právě teď si zapamatujte tento recept: 1 litr čisté vody + 6 lžičky cukru + půl lžičky soli. Procvičte si to jednou. Pokud chcete, ochutnejte – mělo by chutnat jako slzy. Mít toto připravené znamená, že když vaše dítě dostane průjem v 2am, můžete místo paniky okamžitě jednat."
     },
     "immunization": {
@@ -152,11 +152,11 @@
       "tip3": "12–15 měsíců: MMR (spalničky, příušnice, zarděnky). Nemohu to dostatečně zdůraznit. Spalničky nejsou neškodnou dětskou nemocí – zabíjejí, způsobují poškození mozku a oslepují. V 2019 jsem viděl vypuknutí spalniček v romské osadě, protože pokrytí kleslo pod 80%. Dalo se tomu předejít",
       "tip4": "Vakcíny jsou zdarma ve státních zdravotních střediscích ve všech evropských zemích. Nepotřebujete pojištění, nepotřebujete povolení k pobytu, nepotřebujete schůzku ve většině center. Pokud vám bude služba odmítnuta, je to nezákonné – kontaktujte svého zdravotního mediátora nebo kancelář pro práva pacientů",
       "fact": "Rozdíl mezi proočkovaností Romů a neromů v některých evropských zemích přesahuje 15 procentních bodů. Tato mezera není způsobena přesvědčením Romů o vakcínách – průzkumy neustále ukazují, že romští rodiče chtějí své děti očkovat. Rozdíl je způsoben překážkami v přístupu, diskriminací ve zdravotnictví a nedostatečným dosahem. Překonání této mezery je povinností státu podle článku 11 Evropské sociální charty.",
-      "action": "Najděte očkovací průkaz svého dítěte. Pokud nějaká vakcína chybí nebo nemáte kartu, navštivte tento týden nejbližší zdravotní středisko. Pokud narazíte na překážky – jazyk, dokumenty, odmítnutí – kontaktujte svého místního zdravotního mediátora. To je přesně to, kvůli čemu jsme tady."
+      "action": "Najděte očkovací průkaz svého dítěte. Pokud nějaká vakcína chybí nebo nemáte kartu, navštivte tento týden nejbližší zdravotní středisko. Pokud čelíte překážkám – jazyk, dokumenty, odmítnutí – kontaktujte svého místního zdravotního mediátora. To je přesně to, kvůli čemu jsme tady."
     }
   },
   "chronic": {
-    "description": "Romové umírají v průměru o 10 let dříve než evropský průměr. Většina tohoto rozdílu pochází z chronických nemocí — cukrovka, srdeční a dýchací onemocnění — které se roky tiše vyvíjejí. Když se objeví příznaky, poškození je hotové. Většinu lze však předejít a vše zvládnout, pokud se to včas zachytí.",
+    "description": "Romové umírají o 10 let mladší, než je evropský průměr. Většina této mezery pochází z chronických onemocnění – cukrovky, srdečních chorob, onemocnění dýchacích cest – které se v průběhu let vyvíjejí pomalu a tiše. V době, kdy se objeví příznaky, je škoda napáchaná. Ale většině z nich se dá předejít a všechno se dá zvládnout, když se podchytí včas.",
     "diabetes": {
       "title": "Diabetes: Tichá hrozba",
       "description": "Diabetes typu 2 je chronické onemocnění, se kterým se v romských komunitách setkávám nejčastěji. Vyskytuje se v rodinách, prospívá levné stravě s vysokým obsahem cukru, ke které lidi nutí chudoba, a poškozuje vaše oči, ledviny, nohy a srdce roky, než cítíte něco špatného. Viděl jsem muže v jejich 40s, jak ztrácejí prsty na nohou a ženy oslepnou kvůli cukrovce, která nebyla nikdy diagnostikována, protože nikdy neměli krevní test. Tomu lze předejít.",
@@ -171,7 +171,7 @@
       "title": "Vaše srdce",
       "description": "Kardiovaskulární onemocnění jsou v romských komunitách zabijákem číslo jedna – ne kvůli genetice, ale kvůli podmínkám, ve kterých žijeme: chronický stres z chudoby a diskriminace, vysoká míra kouření, diety utvářené tím, co chudoba umožňuje, a téměř žádný přístup k preventivním vyšetřením. Zúčastnil jsem se pohřbů mužů v jejich 50s, kteří zemřeli na infarkt, kterému se dalo zcela předejít. Tento modul existuje, protože se odmítám více účastnit.",
       "tip1": "Kouření je ta nejničivější věc, kterou můžete svému srdci způsobit. Vím, že je to hluboce zakořeněno v naší komunitní kultuře a nejsem zde, abych to soudil – ale dlužím vám upřímnost. Každá cigareta poškozuje vaše cévy. Pokud nemůžete přestat, snižte. Pokud můžete přestat, vaše srdce se začne opravovat během 24 hodin",
-      "tip2": "Vysoký krevní tlak se nazývá tichý zabiják, protože necítíte nic, dokud nedojde k mrtvici nebo infarktu. Nechte si změřit krevní tlak v každé lékárně – je to zdarma. Normální je pod 120/80. Nad 140/90 je nebezpečné a vyžaduje léčbu. Zjistil jsem nebezpečně vysoký krevní tlak u lidí, kteří se cítili naprosto zdraví",
+      "tip2": "Vysoký krevní tlak se nazývá tichý zabiják, protože necítíte nic, dokud nedojde k mrtvici nebo infarktu. Nechte si změřit krevní tlak v každé lékárně – je to zdarma. Normální hodnota je pod 120/80. Nad 140/90 je nebezpečné a vyžaduje léčbu. Zjistil jsem nebezpečně vysoký krevní tlak u lidí, kteří se cítili naprosto zdraví",
       "tip3": "Omezte sůl: Romská kuchyně je chutná a krásná, ale mnoho tradičních jídel je velmi slaných. Místo přidání soli použijte papriku, česnek, cibuli, bylinky a pepř. Vaše chuťové buňky se přizpůsobí během 2 týdnů – jídlo bude chutnat lépe, ne hůře. Jen díky této změně jsem viděl pokles krevního tlaku o 10 bodů",
       "tip4": "Chronický stres z diskriminace, chudoby, hrozeb vystěhování a rodinných konfliktů je přímou příčinou srdečních chorob. To není názor – to je zdokumentovaná medicína. Stresové hormony poškozují vaše krevní cévy v průběhu let. Najít jakýkoli způsob, jak uvolnit stres – chůze, hudba, modlitba, mluvení, komunita – je lékem na srdce",
       "fact": "Romští muži umírají na kardiovaskulární onemocnění v průměru o 10–15 let dříve než běžná populace. Ukazují to vlastní údaje Evropské komise. Ale 80% předčasných infarktů lze předejít změnou životního stylu a včasnou léčbou vysokého krevního tlaku a cholesterolu. Prevence funguje – pokud k ní máte přístup.",
@@ -189,7 +189,7 @@
     }
   },
   "mental": {
-    "description": "Za 15 let v romských komunitách jsem pochopil, že nejtěžší břemeno není fyzická nemoc — je to váha diskriminace, chudoby, strachu z vystěhování, starostí o budoucnost dětí a pocit, že systém se o vás nestará. Říkáme tomu stres. Když trvá roky, stává se něčím jiným. Zaslouží si být pojmenován, pochopen a léčen — bez hanby.",
+    "description": "Za 15 let práce v romských komunitách jsem se naučil, že nejtěžší zátěž, kterou lidé nesou, není fyzická nemoc – je to váha diskriminace, chudoba, strach z vystěhování, obavy o budoucnost svých dětí a pocit, že to nikoho v systému nezajímá. Tomu říkáme stres. Když to trvá roky, stane se z toho něco víc. Zaslouží si být pojmenována, pochopena a ošetřena – bez ostychu.",
     "stressManagement": {
       "title": "Život se stresem",
       "description": "Nebudu předstírat, že dechové cvičení vyřeší vaše problémy. Pokud se obáváte, že bude vaše rodina vystěhována, žádná meditační aplikace to nevyřeší. Ale pracoval jsem se stovkami lidí v našich komunitách, kteří nesou obrovský stres, a viděl jsem, co se stane, když se tento stres roky nezvládá: infarkty u mužů v jejich 40, ženy, které nemohou jíst ani spát, děti, které vyrůstají v domácnostech elektrizovaných napětím. Nemůžeme vždy změnit své okolnosti, ale můžeme změnit způsob, jakým je neseme.",
@@ -197,8 +197,8 @@
       "tip2": "Chůze je nejvíce podceňovaným lékem na stres. 20 minut chůze – ne rychlé, pouze chůze – snižuje stresový hormon kortizol až o 30%. Pokud nemůžete opustit dům, choďte v kruzích. Funguje samotný pohyb, ne scenérie",
       "tip3": "Promluvte si s někým. Ne pro vyřešení problému – jen pro sdílení váhy. Viděl jsem muže v našich komunitách, kteří nosí všechno sami, protože požádat o pomoc je jako slabost. Za 15 let této práce jsou nejsilnější lidé, které jsem potkal, ti, kteří se naučili říkat „Bojuji“",
       "tip4": "Buďte záměrní ohledně toho, co vám přijde na mysl. Sociální média, zprávy, rodinné hádky, které se vám přehrávají v hlavě – to jsou zdroje stresu, které můžete ovládat. Neříkám ignorovat realitu. Říkám, vyberte si, kdy se s tím zapojíte, a vytvořte si ve svém dni prostory, kde budete záměrně v klidu",
-      "fact": "Romské komunity zažívají to, co veřejné zdraví nazývá „menšinovým stresem“ – chronickou fyziologickou daň diskriminace, vyloučení a chudoby. Výzkumy ukazují, že to trvale zvyšuje hladinu kortizolu, což urychluje srdeční choroby, cukrovku a duševní choroby. To není slabost. Je to biologie, která reaguje na nespravedlnost.",
-      "action": "Dnes večer před spaním dejte telefon do jiné místnosti a cvičte 4-4-8 dýchání po dobu 5 minut. Pokud máte ochotu partnera nebo člena rodiny, udělejte to společně v tichosti. Tento malý čin vytváří hranici mezi denním stresem a vaším spánkem – a spánek je okamžikem, kdy vaše tělo napravuje škody, které stres způsobil."
+      "fact": "Romské komunity zažívají to, co veřejné zdraví nazývá „menšinovým stresem“ – chronickou fyziologickou daň diskriminace, vyloučení a chudoby. Výzkumy ukazují, že to trvale zvyšuje hladinu kortizolu, což urychluje srdeční onemocnění, cukrovku a duševní onemocnění. To není slabost. Je to biologie, která reaguje na nespravedlnost.",
+      "action": "Dnes večer před spaním dejte telefon do jiné místnosti a cvičte 4-4-8 dýchání po dobu 5 minut. Pokud máte ochotu partnera nebo člena rodiny, udělejte to společně v tichosti. Tento malý čin vytváří hranici mezi denním stresem a spánkem – a spánek je okamžikem, kdy vaše tělo napravuje škody, které stres způsobil."
     },
     "sleep": {
       "title": "Spánek jako lék",
@@ -228,7 +228,7 @@
       "tip3": "Pokud se někdo z vaší rodiny zmíní o tom, že chce zemřít, chce zmizet nebo má pocit, že bez něj by bylo všem lépe – berte to okamžitě vážně. Zůstaňte s nimi. Odstraňte přístup k lékům a ostrým předmětům. Zavolejte na národní krizovou linku nebo 112. Nereagujete přehnaně. Tato slova jsou voláním o pomoc, na kterou je třeba odpovědět",
       "tip4": "Léky na duševní zdraví nejsou ostudné, návykové ani „pro šílené lidi“. Antidepresiva jsou předepisována milionům lidí po celém světě a zachraňují životy. Nemění to, kým jste – zvedají chemickou mlhu, která vám brání být tím, kým jste. Viděl jsem lidi proměněné zacházením, kterému léta odolávali kvůli stigmatizaci",
       "fact": "Romské komunity zažívají nejvyšší míru deprese a úzkosti v Evropě, což je způsobeno strukturálními faktory, jako je diskriminace, chudoba a nedostatečný přístup ke službám. Přesto je využívání služeb duševního zdraví v romských komunitách mezi nejnižšími. V programech, kde jsem pomáhal spojovat lidi s kulturně citlivou péčí o duševní zdraví, bylo zlepšení kvality života hluboké – nejen pro jednotlivce, ale pro celou jejich rodinu.",
-      "action": "Uložte si toto číslo do svého telefonu hned teď: linka důvěry pro krizi duševního zdraví ve vaší zemi. Pokud jste v krizi, zavolejte. Pokud je někdo, koho znáte, v krizi, zavolejte mu. A pokud máte problémy déle než 2 týdnů, objednejte si tento týden schůzku se svým praktickým lékařem. Zasloužíte si cítit se lépe a pomoc existuje."
+      "action": "Uložte si toto číslo do telefonu hned teď: linka důvěry pro krizi duševního zdraví ve vaší zemi. Pokud jste v krizi, zavolejte. Pokud je někdo, koho znáte, v krizi, zavolejte mu. A pokud máte problémy déle než 2 týdnů, objednejte si tento týden schůzku se svým praktickým lékařem. Zasloužíte si cítit se lépe a pomoc existuje."
     }
   }
 }

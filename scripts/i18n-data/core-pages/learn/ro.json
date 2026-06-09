@@ -1,10 +1,10 @@
 {
-  "progressLabel": "module completate",
-  "startHere": "Începe aici",
+  "progressLabel": "module finalizate",
+  "startHere": "Începeți de aici",
   "continueLabel": "Continuă",
   "allModules": "Toate modulele",
   "prevention": {
-    "description": "În 15 ani de muncă în așezările romă, am văzut familii devastate de boli ce puteau fi prevenite prin obiceiuri simple. Aceste cunoștințe nu sunt un lux — sunt supraviețuire.",
+    "description": "În 15 ani de lucru în așezările de romi, am văzut familii devastate de boli pe care obiceiurile simple le-ar fi putut preveni. Această cunoaștere nu este un lux, ci este supraviețuire.",
     "handwashing": {
       "title": "Spălarea mâinilor",
       "description": "Am văzut familii întregi din așezări îmbolnăvindu-se de aceeași infecție la stomac, transmisă mână în mână. Spălarea corectă a mâinilor este cel mai ieftin și mai puternic medicament la care aveți deja acces - nu costă nimic și previne bolile pe care le văd cel mai des în comunitățile noastre.",
@@ -47,7 +47,7 @@
     }
   },
   "nutrition": {
-    "description": "În anii petrecuți cu familii romă, am învățat că mâncarea nu e doar nutriție — e ce îți permiți, ce găsești în cartier și ce știe familia ta. Nu îți voi spune să cumperi quinoa. Îți voi spune cum să hrănești bine familia cu ce ai.",
+    "description": "În anii în care am lucrat cu familiile de romi, am învățat că mâncarea nu este niciodată doar despre nutriție – este despre ceea ce îți poți permite, ce este disponibil în cartierul tău și ce știe familia ta. Nu vă spun să cumpărați quinoa. Îți voi spune cum să-ți hrănești bine familia cu ceea ce ai.",
     "balancedDiet": {
       "title": "Mănâncă bine cu orice buget",
       "description": "Cea mai mare problemă de nutriție pe care o văd în comunitățile de romi nu este lipsa alimentelor – este prea multă pâine ieftină, carne procesată și băuturi dulci și prea puține legume, ouă și leguminoase. Nu este vorba despre puterea de voință. Este vorba despre ceea ce este disponibil și accesibil. Dar schimbările mici fac diferențe enorme pentru sănătatea dumneavoastră și dezvoltarea copiilor dumneavoastră.",
@@ -80,7 +80,7 @@
     }
   },
   "maternal": {
-    "description": "Am însoțit femei romă la spitale unde au fost izolate, tratate cu lipsă de respect sau li s-au refuzat epidurale pe care alte femei le primeau. Am văzut și femei care au murit din complicații pe care o singură vizită prenatală le-ar fi prins la timp. Corpul tău, copilul tău, drepturile tale. Cunoaște-le pe toate trei.",
+    "description": "Am însoțit femei de etnie romă la spitale unde au fost puse în camere separate, au fost vorbite cu lipsă de respect sau au refuzat epiduralele primite de alte femei. De asemenea, am văzut femei murind din cauza unor complicații pe care le-ar fi surprins o singură vizită prenatală. Corpul tău, copilul tău, drepturile tale. Cunoaște-le pe toate trei.",
     "prenatalCare": {
       "title": "Îngrijire prenatală",
       "description": "În 15 ani de muncă de mediere, tiparul pe care îl văd în mod repetat este femeile rome care vizitează prima dată la medic când sunt deja gravide în 6 sau 7 luni — de multe ori pentru că se simt bine, pentru că le este frică de spital sau pentru că nimeni nu a explicat că îngrijirea prenatală este gratuită și dreptul lor. Până în acel moment, afecțiunile periculoase precum preeclampsia sau diabetul gestațional s-ar fi putut dezvolta în tăcere de luni de zile.",
@@ -89,13 +89,13 @@
       "tip3": "Alimentele bogate în fier previn anemia pe care o văd la aproape jumătate dintre femeile rome însărcinate cu care lucrez: fasole, linte, verdeață închisă cu frunze verzi, ficat, carne roșie. Anemia te epuizează, face nașterea mai periculoasă și afectează dezvoltarea creierului bebelușului tău",
       "tip4": "Aveți dreptul de a primi îngrijiri prenatale în limba dumneavoastră, de a fi tratată cu demnitate și de a avea cineva să vă însoțească la întâlniri. Dacă un medic este disprețuitor sau lipsit de respect, puteți depune o plângere și puteți solicita alt furnizor. Documentați numele, data și ceea ce s-a spus. Ajut familiile să facă acest lucru în mod regulat",
       "fact": "Femeile rome din Europa au de 3 până la 5 ori mai multe șanse de a se confrunta cu complicații ale sarcinii decât populația generală, în mare parte pentru că accesează îngrijirea prenatală mai târziu sau deloc. În comunitățile în care am lucrat pentru a conecta femeile însărcinate la îngrijire în primul trimestru, ratele de complicații au scăzut dramatic.",
-      "action": "Dacă sunteți însărcinată sau cunoașteți o femeie însărcinată din comunitatea dvs. care nu a consultat încă un medic, programați-vă astăzi. Dacă îi este frică sau nu este sigură cum, mergeți cu ea sau contactați-o cu mediatorul local de sănătate. O singură vizită poate schimba totul."
+      "action": "Dacă sunteți însărcinată sau cunoașteți o femeie însărcinată din comunitatea dvs. care nu a consultat încă un medic, programați-vă astăzi. Dacă îi este frică sau nu este sigură cum, mergeți cu ea sau contactați-o cu mediatorul local de sănătate. Acea o singură vizită poate schimba totul."
     },
     "safeDelivery": {
       "title": "Livrare sigură",
       "description": "Am ținut mâna femeilor care nasc în ambulanțe pentru că au plecat prea târziu și m-am așezat pe coridoarele spitalelor, unde femeile rome au fost plasate ultimele la coadă, în timp ce femeile ne-rome mergeau înainte. Ambele situații pot fi prevenite. Planificarea livrării și cunoașterea drepturilor tale transformă această experiență dintr-o criză în ceva pe care îl controlezi.",
       "tip1": "Până săptămâna 34, pregătiți-vă planul de naștere: care spital, cine va merge cu dvs., cum veți ajunge acolo (mai ales noaptea), cine vă va supraveghea pe ceilalți copii. Am văzut prea multe familii care se luptă în ultimul moment – iar stresul afectează nașterea",
-      "tip2": "Aveți dreptul legal de a avea alături un însoțitor (soț, mamă, soră, mediator) în timpul travaliului și al nașterii în aproape toate țările europene. Dacă spitalul spune nu, citați legea privind drepturile pacienților din țara dumneavoastră. Deținem aceste referințe și le putem oferi",
+      "tip2": "Aveți dreptul legal de a avea alături un însoțitor (soț, mamă, soră, mediator) în timpul travaliului și al nașterii în aproape toate țările europene. Dacă spitalul spune nu, citați legea privind drepturile pacienților din țara dumneavoastră. Deținem aceste referințe și le putem furniza",
       "tip3": "Aflați 5 semnele de pericol care înseamnă MERGI LA SPITAL ACUM, indiferent de ora: (1) sângerare abundentă, (2) cefalee severă cu mâinile/fața umflate, (3) bebelușul nu se mai mișcă, (4) apa se întrerupe înainte de PH_6___5_ PH febră ___5 38°C. Nu așteptați până dimineața. Nu încercați să le gestionați acasă",
       "tip4": "După naștere, rămâneți în spital cel puțin 24 ore pentru monitorizare – chiar dacă vă simțiți bine. Multe complicații care pun viața în pericol (hemoragie, infecție) apar în primele 24 ore. Știu că mediul spitalicesc poate fi ostil, dar acele ore de monitorizare salvează vieți",
       "fact": "Într-o regiune în care am lucrat 5 ani, am redus urgențele materne de etnie romă cu 60% pur și simplu asigurându-ne că fiecare femeie însărcinată are un plan de naștere, un aranjament de transport și o geantă de spital împachetată pe săptămână 36. Fără tehnologie nouă - doar pregătire și însoțire.",
@@ -123,7 +123,7 @@
     }
   },
   "children": {
-    "description": "Copiii romă sunt viitorul comunităților noastre și merită fiecare avantaj. În munca mea, am văzut copii care rămân în urmă — nu din lipsă de abilitate, ci pentru că boli prevenibile, vaccinuri ratate sau întârzieri nedetectate le-au furat șansele. Aceste cunoștințe le returnează aceste șanse.",
+    "description": "Copiii romi sunt viitorul comunităților noastre și merită fiecare avantaj. În munca mea, am văzut copii rămase în urmă – nu din cauza abilităților, ci pentru că bolile care se pot preveni, vaccinările ratate sau întârzierile de dezvoltare nedetectate le furau oportunități. Această cunoaștere oferă acele oportunități înapoi.",
     "growthMilestones": {
       "title": "Creștere și dezvoltare",
       "description": "Fiecare copil se dezvoltă în propriul ritm și nu vreau niciodată ca părinții să intre în panică din cauza variațiilor normale. Dar am văzut și copii a căror dezvoltare întârziată a fost respinsă de familii ca „vor prinde din urmă” atunci când intervenția timpurie ar fi putut face o diferență transformatoare. A ști la ce să urmărești nu este anxietate - este atenție.",
@@ -137,10 +137,10 @@
     "commonIllnesses": {
       "title": "Când copilul tău este bolnav",
       "description": "În așezările cu locuințe supraaglomerate, salubritate limitată și ierni reci, copiii se îmbolnăvesc frecvent. Cele mai multe dintre aceste boli - diaree, tuse, febră - pot fi gestionate acasă dacă știi ce să faci și când să escaladezi. Dar am văzut și părinți așteptând prea mult, sau grăbindu-se la camerele de urgență pentru afecțiuni pe care un simplu tratament la domiciliu le-ar fi rezolvat. Acest modul vă învață diferența.",
-      "tip1": "Febră sub 38.5°C: corpul copilului dumneavoastră luptă împotriva infecțiilor – este bine. Păstrați-le confortabil, îmbrăcate ușor și dați multe lichide. Febră peste 38.5°C: administrați copiilor paracetamol în doza corectă pentru greutatea lor (NU paracetamol pentru adulți). Dacă febra durează mai mult de 3 zile sau copilul este neobișnuit de somnolent, solicitați asistență medicală",
+      "tip1": "Febră sub 38.5°C: corpul copilului dumneavoastră luptă împotriva infecțiilor – este bine. Păstrați-le confortabil, îmbrăcați ușor și dați multe lichide. Febră peste 38.5°C: administrați copiilor paracetamol în doza corectă pentru greutatea lor (NU paracetamol pentru adulți). Dacă febra durează mai mult de 3 zile sau copilul este neobișnuit de somnolent, solicitați asistență medicală",
       "tip2": "Diareea ucide prin deshidratare, nu prin infecția în sine. În momentul în care copilul dumneavoastră are scaune moale, începeți rehidratarea orală: 1 litru de apă curată fiartă + 6 lingurițe nivele de zahăr + jumătate de linguriță de sare. Dați înghițituri mici la fiecare câteva minute. Această rețetă a salvat mai mulți copii din întreaga lume decât orice antibiotic",
       "tip3": "DUȚI COPILUL LA SPITAL dacă observați: respirație rapidă sau dificilă, pieptul trăgând la fiecare respirație, imposibilitatea de a bea sau de alăptat, vărsături repetate, somnolență neobișnuită sau netrezire, convulsii sau diaree cu sânge. Nu așteptați. Acestea sunt urgențe",
-      "tip4": "Nu administrați antibiotice fără prescripția medicului. Nu împărtășiți rețeta altui copil. Nu utilizați antibiotice rămase. Văd asta în mod constant în comunitățile noastre și creează bacterii rezistente la medicamente, care sunt mult mai greu de tratat. Antibioticele nu fac nimic pentru răceli, gripă sau majoritatea tusei",
+      "tip4": "Nu administrați antibiotice fără prescripția medicului. Nu împărtășiți rețeta altui copil. Nu utilizați antibiotice rămase. Văd acest lucru în mod constant în comunitățile noastre și creează bacterii rezistente la medicamente, care sunt mult mai greu de tratat. Antibioticele nu fac nimic pentru răceli, gripă sau majoritatea tusei",
       "fact": "În comunitățile în care am lucrat, instruirea părinților să pregătească și să utilizeze soluția de rehidratare orală a redus spitalizările copiilor pentru diaree cu peste 40% într-un singur an. Cunoștințele sunt atât de puternice - iar ingredientele costă mai puțin decât un bilet de autobuz către spital.",
       "action": "Chiar acum, memorează această rețetă: 1 litru apă curată + 6 lingurițe zahăr + jumătate linguriță sare. Exersați să o faceți o dată. Dacă doriți, gustați - ar trebui să aibă gust de lacrimi. Să ai acest lucru gata înseamnă că atunci când copilul tău are diaree la 2am, poți acționa imediat în loc să intri în panică."
     },
@@ -156,7 +156,7 @@
     }
   },
   "chronic": {
-    "description": "Romii mor cu 10 ani mai devreme decât media europeană. Cea mai mare parte a acestui decalaj vine din bolile cronice — diabet, boli de inimă, boli respiratorii — care se dezvoltă încet și tăcut ani de zile. Când apar simptomele, daunele sunt deja făcute. Dar cea mai mare parte e prevenibilă și totul e gestionabil dacă e prins la timp.",
+    "description": "Romii mor cu 10 ani mai tineri decât media europeană. Cea mai mare parte a acestui decalaj provine din bolile cronice - diabet, boli de inimă, boli respiratorii - care se dezvoltă lent și tăcut de-a lungul anilor. Până la apariția simptomelor, deteriorarea a fost făcută. Dar cea mai mare parte poate fi prevenită și totul este gestionabil atunci când este prins devreme.",
     "diabetes": {
       "title": "Diabetul: amenințarea tăcută",
       "description": "Diabetul de tip 2 este boala cronică pe care o întâlnesc cel mai frecvent în comunitățile de romi. Funcționează în familii, se dezvoltă cu dieta ieftină, bogată în zahăr, la care sărăcia îi obligă pe oameni și vă dăunează ochii, rinichii, picioarele și inima ani de zile înainte de a simți ceva rău. Am văzut bărbați cu 40 pierzând degetele de la picioare, iar femeile orbesc, din cauza diabetului care nu a fost niciodată diagnosticat pentru că nu au făcut niciodată un test de sânge. Acest lucru poate fi prevenit.",
@@ -178,7 +178,7 @@
       "action": "Săptămâna aceasta, faceți două lucruri: (1) Mergeți la o farmacie și verificați-vă tensiunea arterială - notați numerele. (2) Numărați câte țigări fumați pe zi și încercați să reduceți cu 3 pe zi. Aceste două acțiuni sunt cele mai puternice măsuri de prevenire a inimii pe care o poate lua orice individ."
     },
     "respiratory": {
-      "title": "Plămânii și respirația",
+      "title": "Plămâni și respirație",
       "description": "Am lucrat în așezări în care familiile ard lemne, cărbune sau chiar plastic și cauciuc pentru încălzire iarna. Unde 8 persoane dorm în două camere fără ventilație. Unde umezeala curge pe pereți și mucegaiul negru crește în fiecare colț. Boala respiratorie în aceste condiții nu este surprinzătoare – este rezultatul previzibil al locuinței în care nimeni nu ar trebui să locuiască. În timp ce luptăm pentru o locuință mai bună, trebuie să protejăm și plămânii pe care îi avem.",
       "tip1": "Fumul din interior este cel mai imediat pericol respirator pe care îl văd. Dacă încălziți cu combustibil solid, asigurați-vă ventilația - chiar și crăparea unei ferestre ajută. Nu arde niciodată plastic, cauciuc sau lemn vopsit - fumul conțin substanțe chimice care provoacă leziuni pulmonare permanente, în special la copiii ai căror plămâni sunt încă în curs de dezvoltare",
       "tip2": "Umezeala și mucegaiul provoacă astm bronșic, bronșită cronică și agravează orice infecție respiratorie. Ștergeți mucegaiul vizibil cu un amestec de apă și oțet sau înălbitor. Deschideți ferestrele cel puțin 15 minute zilnic, chiar și iarna. Agățați rufele umede afară atunci când este posibil - uscarea rufelor în interior adaugă cantități enorme de umiditate aerului",
@@ -189,9 +189,9 @@
     }
   },
   "mental": {
-    "description": "În 15 ani în comunități romă, am învățat că cea mai grea povară nu e boala fizică — e greutatea discriminării, sărăciei, fricii de evacuare, grijii pentru viitorul copiilor și sentimentul că nimeni din sistem nu îți pasă. O numim stres. Când durează ani, devine altceva. Merită numită, înțeleasă și tratată — fără rușine.",
+    "description": "În 15 ani de muncă în comunitățile de romi, am învățat că cea mai grea povară pe care o poartă oamenii nu este boala fizică - este greutatea discriminării, a sărăciei, a fricii de evacuare, a îngrijorării cu privire la viitorul copiilor lor și a sentimentului că nimănui din sistem nu-i pasă. Numim asta stres. Când durează ani de zile, devine ceva mai mult. Merită să fie numit, înțeles și tratat - fără rușine.",
     "stressManagement": {
-      "title": "Trăiește cu Stres",
+      "title": "Traieste cu Stres",
       "description": "Nu voi pretinde că un exercițiu de respirație vă va rezolva problemele. Dacă ești îngrijorat că familia ta va fi evacuată, nicio aplicație de meditație nu va rezolva asta. Dar am lucrat cu sute de oameni din comunitățile noastre care suferă de stres enorm și am văzut ce se întâmplă atunci când stresul nu este gestionat de ani de zile: atacuri de cord la bărbați în 40, femei care nu pot mânca sau dormi, copii care cresc în gospodării electrizate de tensiune. Nu ne putem schimba întotdeauna circumstanțele, dar putem schimba modul în care le purtăm.",
       "tip1": "Metoda de respirație 4-4-8 acţionează imediat asupra sistemului dumneavoastră nervos. Inspirați pe nas pentru 4 numără, țineți apăsat pentru 4, expirați încet pe gură pentru 8. Faceți acest lucru de 5 ori. Pulsul scade, mușchii se relaxează. Învăț acest lucru familiilor înainte de vizitele la spital, înainte de ședințele de judecată, înainte de orice întâlnire stresantă. Este un instrument pe care îl ai mereu cu tine",
       "tip2": "Mersul pe jos este cel mai subestimat medicament pentru stres. 20 minute de mers pe jos — nu rapid, doar mers pe jos — reduc cortizolul, hormonul stresului, cu până la 30%. Dacă nu puteți ieși din casă, mergeți în cerc. Mișcarea în sine este cea care funcționează, nu peisajul",

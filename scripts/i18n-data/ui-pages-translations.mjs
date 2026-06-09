@@ -38,7 +38,10 @@ export const TRANSLATIONS = {
       "imageReadyBody": "Elolvassuk a gyógyszert, adagot és utasításokat, és mindent egyszerűen elmagyarázunk.",
       "imageRemove": "Fénykép eltávolítása",
       "preparingImage": "Fénykép előkészítése…",
-      "imageFailed": "Nem sikerült olvasni ezt a fényképet. Próbálj másikat."
+      "imageFailed": "Nem sikerült olvasni ezt a fényképet. Próbálj másikat.",
+      "followUpChat": "Kérdezze meg az AI tanácsadót",
+      "followUpNavigate": "Keressen egy orvost",
+      "followUpGlossary": "Orvosi feltételek"
     },
     "symptoms": {
       "heroTitle": "Hol fáj?",
@@ -178,7 +181,23 @@ export const TRANSLATIONS = {
       "meta": {
         "title": "Egészségügyi navigátor — Redi Health",
         "description": "Készülj fel az orvosi látogatásra — látogatási kártya, mit vigyél, jogaid."
-      }
+      },
+      "systemGuidesTitle": "Útmutató az egészségügyi rendszerhez",
+      "italySsnTitle": "Olaszország: Egészségügyi rendszer (SSN) útmutató",
+      "italyDoctorTitle": "Gyermekorvos kontra háziorvos (háziorvos)",
+      "italyDoctorDesc": "A 14 év alatti gyermekeket gyermekorvosnál kell regisztrálni (Pediatra di Base). Felnőttek (14 és idősebbek) regisztrálnak egy háziorvosnál (Medico di Medicina Generale). Mindkét szolgáltatás ingyenes az Országos Egészségügyi Szolgálat (SSN) révén.",
+      "italyEnrollTitle": "Hogyan kell regisztrálni az SSN-hez",
+      "italyEnrollSteps": [
+        "Keresse meg a legközelebbi ASL (Azienda Sanitaria Locale) irodát a környéken.",
+        "Vigyen magával érvényes személyazonosító okmányt, adószámát (Codice Fiscale) és lakcímet igazoló dokumentumot.",
+        "Ha nem rendelkezik rendszeres tartózkodási engedéllyel, kérjen STP kódot (Straniero Temporaneamente Presente).",
+        "Válassza ki orvosát vagy gyermekorvosát a rendelkezésre álló helyi listáról.",
+        "Kap egy papírkártyát (Tessera Sanitaria), amellyel ingyenes látogatásokat és recepteket kaphat."
+      ],
+      "italyStpTitle": "Nem rezidensek: Az STP kódex",
+      "italyStpDesc": "Ha nem rendelkezik tartózkodási engedéllyel vagy okmányokkal nem rendelkezik, továbbra is joga van sürgős és elengedhetetlen orvosi ellátáshoz. Az ASL kiad egy STP kódot (Straniero Temporaneamente Presente). Névtelen, nem jelenti be a bevándorlási hatóságoknál, és garantálja az oltásokhoz, a terhességi ellátáshoz és a sürgős klinikai látogatásokhoz való hozzáférést.",
+      "viewGuide": "Útmutató megtekintése",
+      "closeGuide": "Útmutató bezárása"
     },
     "about": {
       "brand": "Redi Health",
@@ -271,7 +290,10 @@ export const TRANSLATIONS = {
       "imageReadyBody": "Prečítame liek, dávku a pokyny a všetko vysvetlíme jednoduchými slovami.",
       "imageRemove": "Odstrániť fotku",
       "preparingImage": "Pripravujem fotku…",
-      "imageFailed": "Nepodarilo sa prečítať túto fotku. Skúste inú."
+      "imageFailed": "Nepodarilo sa prečítať túto fotku. Skúste inú.",
+      "followUpChat": "Opýtajte sa poradcu AI",
+      "followUpNavigate": "Nájdite lekára",
+      "followUpGlossary": "Lekárske podmienky"
     },
     "symptoms": {
       "heroTitle": "Kde vás bolí?",
@@ -411,7 +433,23 @@ export const TRANSLATIONS = {
       "meta": {
         "title": "Navigátor zdravotnej starostlivosti — Redi Health",
         "description": "Pripravte sa na návštevu lekára — karta, čo vziať, vaše práva."
-      }
+      },
+      "systemGuidesTitle": "Sprievodcovia systémom zdravotnej starostlivosti",
+      "italySsnTitle": "Taliansko: Sprievodca systémom zdravotnej starostlivosti (SSN).",
+      "italyDoctorTitle": "Pediater vs. praktický lekár (GP)",
+      "italyDoctorDesc": "Deti do 14 rokov musia byť registrované u pediatra (Pediatra di Base). Dospelí (14 a starší) sa registrujú u všeobecného lekára (Medico di Medicina Generale). Obe služby sú bezplatné prostredníctvom Národnej zdravotnej služby (SSN).",
+      "italyEnrollTitle": "Ako sa zaregistrovať v SSN",
+      "italyEnrollSteps": [
+        "Nájdite najbližšiu kanceláriu ASL (Azienda Sanitaria Locale) vo vašej oblasti.",
+        "Prineste si platný doklad totožnosti, daňový kód (Codice Fiscale) a doklad o adrese.",
+        "Ak nemáte povolenie na pravidelný pobyt, požiadajte o kód STP (Straniero Temporaneamente Presente).",
+        "Vyberte si svojho lekára alebo pediatra z dostupného miestneho zoznamu.",
+        "Dostanete papierovú kartu (Tessera Sanitaria), aby ste mali prístup k bezplatným návštevám a predpisom."
+      ],
+      "italyStpTitle": "Nerezidenti: Kód STP",
+      "italyStpDesc": "Ak nemáte povolenie na pobyt alebo ste bez dokladov, stále máte zákonné právo na neodkladnú a nevyhnutnú zdravotnú starostlivosť. ASL vydá STP kód (Straniero Temporaneamente Presente). Je anonymný, nenahlási vás imigračným úradom a zaručuje prístup k očkovaniu, tehotenskej starostlivosti a urgentným návštevám ambulancie.",
+      "viewGuide": "Zobraziť sprievodcu",
+      "closeGuide": "Zavrieť sprievodcu"
     },
     "about": {
       "brand": "Redi Health",
@@ -504,7 +542,10 @@ export const TRANSLATIONS = {
       "imageReadyBody": "Přečteme lék, dávku a pokyny a vše vysvětlíme jednoduchými slovy.",
       "imageRemove": "Odstranit fotku",
       "preparingImage": "Připravuji fotku…",
-      "imageFailed": "Nepodařilo se přečíst tuto fotku. Zkuste jinou."
+      "imageFailed": "Nepodařilo se přečíst tuto fotku. Zkuste jinou.",
+      "followUpChat": "Zeptejte se poradce AI",
+      "followUpNavigate": "Najděte si lékaře",
+      "followUpGlossary": "Lékařské termíny"
     },
     "symptoms": {
       "heroTitle": "Kde vás bolí?",
@@ -644,7 +685,23 @@ export const TRANSLATIONS = {
       "meta": {
         "title": "Navigátor zdravotní péče — Redi Health",
         "description": "Připravte se na návštěvu lékaře — karta, co vzít, vaše práva."
-      }
+      },
+      "systemGuidesTitle": "Průvodce zdravotnickým systémem",
+      "italySsnTitle": "Itálie: Průvodce systémem zdravotní péče (SSN).",
+      "italyDoctorTitle": "Pediatr vs. praktický lékař (GP)",
+      "italyDoctorDesc": "Děti do 14 let musí být registrovány u pediatra (Pediatra di Base). Dospělí (14 a starší) se registrují u praktického lékaře (Medico di Medicina Generale). Obě služby jsou bezplatné prostřednictvím National Health Service (SSN).",
+      "italyEnrollTitle": "Jak se zaregistrovat u SSN",
+      "italyEnrollSteps": [
+        "Najděte nejbližší kancelář ASL (Azienda Sanitaria Locale) ve vaší oblasti.",
+        "Přineste platný doklad totožnosti, daňový kód (Codice Fiscale) a doklad o adrese.",
+        "Pokud nemáte povolení k běžnému pobytu, vyžádejte si kód STP (Straniero Temporaneamente Presente).",
+        "Vyberte si svého lékaře nebo pediatra z dostupného místního seznamu.",
+        "Obdržíte papírovou kartu (Tessera Sanitaria) pro přístup k bezplatným návštěvám a receptům."
+      ],
+      "italyStpTitle": "Nerezidenti: Kód STP",
+      "italyStpDesc": "Pokud nemáte povolení k pobytu nebo jste bez dokladů, stále máte zákonný nárok na neodkladnou a nezbytnou lékařskou péči. ASL vydá STP kód (Straniero Temporaneamente Presente). Je anonymní, nehlásí vás imigračním úřadům a zaručuje přístup k očkování, péči o těhotenství a urgentním návštěvám kliniky.",
+      "viewGuide": "Zobrazit průvodce",
+      "closeGuide": "Zavřít průvodce"
     },
     "about": {
       "brand": "Redi Health",
@@ -699,6 +756,258 @@ export const TRANSLATIONS = {
       "redHospital": "Jděte TEĎ do nemocnice"
     }
   },
+  "it": {
+    "explain": {
+      "heroTitle": "Comprendi la tua prescrizione",
+      "heroSubtitle": "Digita la diagnosi o il nome del farmaco. Lo spieghiamo in parole semplici.",
+      "heroArtAlt": "Illustrazione del supporto in stile farmacista che aiuta a decodificare una prescrizione.",
+      "placeholder": "Digita la tua diagnosi, il nome del farmaco o incolla la tua prescrizione...\n\nEsempio: \"Ipertensione\" o \"Metformina 500 mg\"",
+      "inputAria": "Inserisci la tua diagnosi o il nome del farmaco",
+      "cta": "Spiega questo",
+      "ctaAnalyzing": "Analizzando...",
+      "examplesHeading": "Esempi comuni",
+      "loading": "Leggendo la tua prescrizione...",
+      "sections": {
+        "whatThisMeans": "Cosa significa?",
+        "whyItMatters": "Perché è importante",
+        "ifIgnored": "Se lo ignori",
+        "medicationsTitle": "I tuoi farmaci",
+        "howToTake": "Come prendere",
+        "sideEffects": "Effetti collaterali",
+        "neverDo": "Non farlo mai",
+        "questionsTitle": "Chiedi al tuo medico la prossima volta",
+        "tipsTitle": "Cosa puoi fare oggi",
+        "emergencyTitle": "Vai in ospedale se"
+      },
+      "anotherCta": "Spiega un'altra prescrizione",
+      "disclaimerBold": "Non un consiglio medico.",
+      "disclaimerBody": "Questo strumento spiega i termini medici in un linguaggio semplice. Segua sempre le istruzioni del medico.",
+      "meta": {
+        "title": "Comprendi la tua prescrizione - Redi Health",
+        "description": "Ottieni la tua diagnosi e i tuoi farmaci spiegati in parole semplici"
+      },
+      "takePhoto": "Scatta una foto",
+      "uploadImage": "Carica immagine",
+      "placeholderWithImage": "(Facoltativo) Aggiungi ulteriore contesto sulla prescrizione: la tua età, come la prendi, di cosa sei preoccupato...",
+      "imagePreviewAlt": "Anteprima della foto della prescrizione",
+      "imageReady": "Foto pronta",
+      "imageReadyBody": "Leggeremo il farmaco, la dose e le istruzioni e spiegheremo tutto in parole semplici.",
+      "imageRemove": "Rimuovi foto",
+      "preparingImage": "Preparazione foto...",
+      "imageFailed": "Impossibile leggere questa foto. Provane un altro.",
+      "followUpChat": "Chiedi all'assistente AI",
+      "followUpNavigate": "Trova un medico",
+      "followUpGlossary": "Termini medici"
+    },
+    "symptoms": {
+      "heroTitle": "Dove ti fa male?",
+      "heroSubtitle": "Tocca la zona del corpo che ti dà fastidio",
+      "heroArtAlt": "Illustrazione di persone che ricevono una gentile guida multilingue sui sintomi quotidiani.",
+      "backToMap": "Torniamo alla mappa del corpo",
+      "checkAnother": "Controlla un'altra area",
+      "selectSymptoms": "Seleziona tutti i sintomi applicabili",
+      "extraPlaceholder": "Qualunque altra cosa? (per quanto tempo, quanto male...)",
+      "extraAria": "Ulteriori dettagli sui sintomi",
+      "analyzing": "Analizzare i sintomi...",
+      "checkCta": "Controlla i sintomi",
+      "whatToDoNow": "Cosa fare adesso",
+      "homeCare": "Assistenza domiciliare",
+      "escalateTitle": "Vai in ospedale se",
+      "commonCauses": "Cause comuni",
+      "regions": {
+        "head": "Testa",
+        "chest": "Petto",
+        "abdomen": "Addome",
+        "leftArm": "Braccio sinistro",
+        "rightArm": "Braccio destro",
+        "pelvis": "Bacino",
+        "leftLeg": "Gamba sinistra",
+        "rightLeg": "Gamba destra"
+      },
+      "headSymptoms": [
+        "Mal di testa",
+        "Vertigini",
+        "Visione offuscata",
+        "Mal d'orecchio",
+        "Mal di gola"
+      ],
+      "chestSymptoms": [
+        "Dolore al petto",
+        "Mancanza di respiro",
+        "Tosse",
+        "Battito cardiaco accelerato",
+        "Oppressione"
+      ],
+      "abdomenSymptoms": [
+        "Mal di stomaco",
+        "Nausea / vomito",
+        "Diarrea",
+        "Stomaco gonfio",
+        "Mancanza di appetito"
+      ],
+      "armSymptoms": [
+        "Dolore",
+        "Intorpidimento",
+        "Gonfiore",
+        "Impossibile muoverlo",
+        "Formicolio"
+      ],
+      "pelvisSymptoms": [
+        "Dolore durante la minzione",
+        "Mal di schiena",
+        "Problemi mestruali",
+        "Dolore all'inguine"
+      ],
+      "legSymptoms": [
+        "Dolore alla gamba",
+        "Gonfiore",
+        "Impossibile camminare",
+        "Dolore al ginocchio",
+        "Formicolio"
+      ],
+      "meta": {
+        "title": "Controllo dei sintomi – Redi Health",
+        "description": "Tocca dove fa male. Ottieni indicazioni su cosa fare."
+      }
+    },
+    "consult": {
+      "heroTitle": "Consultazione sanitaria",
+      "heroSubtitle": "Dimmi cosa ti preoccupa. Ti farò alcune domande e ti aiuterò a decidere cosa fare.",
+      "prompt": "Cosa ti porta qui oggi?",
+      "orFreeform": "oppure descrivilo con parole tue",
+      "freeformPlaceholder": "è da ieri che ho mal di testa...",
+      "freeformAria": "Descrivi il tuo problema di salute",
+      "chatHeader": "Consultazione sanitaria",
+      "chatSubtitle": "Rispondere ad alcune domande mi aiuta ad aiutarti meglio",
+      "answerAria": "La tua risposta",
+      "answerPlaceholder": "Digita la tua risposta...",
+      "newSession": "Nuova consultazione",
+      "assessment": "Valutazione",
+      "whatToDo": "Cosa fare",
+      "homeCare": "Assistenza domiciliare",
+      "watchFor": "Fai attenzione a questi segnali",
+      "showVisitCard": "Mostrare la tessera della visita medica",
+      "hideVisitCard": "Nascondi la scheda visita medica",
+      "visitCardTitle": "Riepilogo del paziente - Per il medico",
+      "visitCardDisclaimer": "Generato da Redi Health Advisor. Questa non è una diagnosi medica.",
+      "concerns": {
+        "fever": "Febbre/Temperatura alta",
+        "pain": "Dolore da qualche parte",
+        "breathing": "Problemi respiratori",
+        "skin": "Problema cutaneo/eruzione cutanea",
+        "pregnancy": "Preoccupazione per la gravidanza",
+        "child": "Mio figlio è malato",
+        "mental": "Stress/Ansia/Tristezza",
+        "heart": "Problema al cuore/torace"
+      }
+    },
+    "navigate": {
+      "heroTitle": "Ho bisogno di vedere un dottore",
+      "heroSubtitle": "Ti aiuteremo a prepararti: cosa portare, cosa dire, i tuoi diritti.",
+      "issuePrompt": "Qual è il problema?",
+      "issues": {
+        "fever": "Febbre/Infezione",
+        "pain": "Dolore/lesione",
+        "pregnancy": "Gravidanza",
+        "chronic": "Condizione cronica",
+        "mental": "Salute mentale",
+        "skin": "Pelle/Occhi/Orecchie",
+        "child": "Bambino malato",
+        "other": "Qualsom'altro"
+      },
+      "tellMore": "Dicci di più",
+      "detailPlaceholder": "Descrivi cosa sta succedendo... Quanto tempo è passato? Quanto è grave?",
+      "detailAria": "Descrivi il tuo problema di salute",
+      "insuranceTitle": "Hai un'assicurazione sanitaria?",
+      "insuranceSubtitle": "Questo ci aiuta a dirti cosa portare",
+      "insuranceYes": "Sì, ho la tessera sanitaria",
+      "insuranceNo": "No, non ho l'assicurazione",
+      "insuranceUnknown": "Non sono sicuro",
+      "countryTitle": "In quale paese ti trovi?",
+      "generating": "Preparare il tuo biglietto da visita...",
+      "generateCard": "Genera la scheda visita medica",
+      "startOver": "Ricominciare",
+      "showDoctor": "Mostralo al tuo medico",
+      "generatedBy": "Generato da Redi Health Advisor",
+      "whatToBring": "Cosa portare",
+      "askYourDoctor": "Chiedi al tuo medico",
+      "patientRights": "I tuoi diritti come paziente",
+      "findHospital": "Trova l'ospedale più vicino",
+      "mapHint": "Apre la mappa con le indicazioni stradali",
+      "meta": {
+        "title": "Navigatore sanitario – Redi Health",
+        "description": "Preparati per la visita dal medico: biglietto da visita, cosa portare, i tuoi diritti."
+      },
+      "systemGuidesTitle": "Guide ai Sistemi Sanitari Nazionali",
+      "italySsnTitle": "Italia: Guida al Servizio Sanitario (SSN)",
+      "italyDoctorTitle": "Pediatra di Base vs. Medico di Medicina Generale (GP)",
+      "italyDoctorDesc": "I bambini fino a 14 anni devono essere iscritti con un pediatra di base. Gli adulti (dai 14 anni in su) si iscrivono con un medico di medicina generale. Entrambi i servizi sono gratuiti tramite il Servizio Sanitario Nazionale (SSN).",
+      "italyEnrollTitle": "Come iscriversi al SSN",
+      "italyEnrollSteps": [
+        "Trova l'ufficio ASL (Azienda Sanitaria Locale) più vicino alla tua zona.",
+        "Porta un documento d'identità valido, il tuo Codice Fiscale e una prova di domicilio.",
+        "Se non hai un permesso di soggiorno regolare, richiedi il codice STP (Straniero Temporaneamente Presente).",
+        "Scegli il tuo medico o pediatra dall'elenco locale dei medici disponibili.",
+        "Riceverai una tessera sanitaria cartacea per accedere gratuitamente a visite e ricette."
+      ],
+      "italyStpTitle": "Non Residenti: Il Codice STP",
+      "italyStpDesc": "Se non hai un permesso di soggiorno o sei privo di documenti, hai comunque il diritto legale a cure mediche urgenti ed essenziali. L'ASL ti rilascerà un codice STP (Straniero Temporaneamente Presente). È completamente anonimo, non comporta segnalazioni alle autorità di immigrazione e garantisce l'accesso a vaccinazioni, cure per la gravidanza e visite urgenti.",
+      "viewGuide": "Visualizza Guida",
+      "closeGuide": "Chiudi Guida"
+    },
+    "about": {
+      "brand": "Redi Salute",
+      "tagline": "Alfabetizzazione sanitaria per le comunità rurali ed escluse",
+      "version": "Versione 1.0.0",
+      "missionBody": "Redi Health è un compagno di intelligenza artificiale co-progettato con mediatori sul campo e medici per i quartieri che i sistemi sanitari ufficiali abitualmente non riescono a servire – dai comuni rurali agli insediamenti informali – con profonda attenzione alle comunità rom. Colmiamo il divario di alfabetizzazione in cui la distanza, la discrepanza linguistica, l’esclusione digitale o i pregiudizi bloccano l’accesso.",
+      "values": {
+        "careLabel": "Costruito con cura",
+        "careDesc": "Dai mediatori sanitari",
+        "languagesLabel": "16 lingue",
+        "languagesDesc": "In tutta Europa",
+        "evidenceLabel": "Basato sull'evidenza",
+        "evidenceDesc": "Linee guida dell'OMS",
+        "communityLabel": "Prima la comunità",
+        "communityDesc": "Nessun giudizio"
+      },
+      "privacyLink": "politica sulla riservatezza",
+      "termsLink": "Termini di servizio",
+      "disclaimer": "Redi Health non è un dispositivo medico. Tutte le informazioni sono solo a scopo didattico. Consultare sempre un operatore sanitario qualificato per decisioni mediche.",
+      "meta": {
+        "title": "Informazioni su Redi Salute",
+        "description": "Informazioni sulla piattaforma di alfabetizzazione sanitaria Redi"
+      }
+    },
+    "theme": {
+      "ariaLabel": "Tema",
+      "light": "Tema leggero",
+      "dark": "Tema oscuro",
+      "system": "Tema del sistema",
+      "switchTo": "Cambia tema: attualmente {label}"
+    },
+    "emergency": {
+      "call112": "Chiama ORA il 112",
+      "banner": "Emergenza? Chiama il 112",
+      "emergencyLabel": "Emergenza",
+      "ambulanceLabel": "Ambulanza"
+    },
+    "voice": {
+      "start": "Inizia a parlare",
+      "stop": "Smetti di ascoltare",
+      "readAloud": "Leggi ad alta voce",
+      "readMessageAloud": "Leggi il messaggio ad alta voce",
+      "readExplanationAloud": "Leggi la spiegazione ad alta voce",
+      "micDeepgram": "Tocca per parlare: voce multilingue (Deepgram)",
+      "micError": "Impossibile accedere al microfono.",
+      "detected": "Lingua rilevata: {lang}"
+    },
+    "severity": {
+      "green": "Gestiscilo a casa",
+      "amber": "Consulta presto un medico",
+      "red": "Emergenza: vai ORA",
+      "redHospital": "Vai in ospedale ORA"
+    }
+  },
   "bg": {
     "explain": {
       "heroTitle": "Разбери рецептата си",
@@ -737,7 +1046,10 @@ export const TRANSLATIONS = {
       "imageReadyBody": "Четем лекарството, дозата и указанията и обясняваме всичко с прости думи.",
       "imageRemove": "Премахни снимката",
       "preparingImage": "Подготвям снимката…",
-      "imageFailed": "Не успях да прочета тази снимка. Опитай друга."
+      "imageFailed": "Не успях да прочета тази снимка. Опитай друга.",
+      "followUpChat": "Попитайте AI Advisor",
+      "followUpNavigate": "Намерете лекар",
+      "followUpGlossary": "Медицински термини"
     },
     "symptoms": {
       "heroTitle": "Къде те боли?",
@@ -877,7 +1189,23 @@ export const TRANSLATIONS = {
       "meta": {
         "title": "Здравен навигатор — Redi Health",
         "description": "Подготви се за посещение при лекар — карта, какво да носиш, правата ти."
-      }
+      },
+      "systemGuidesTitle": "Ръководства за здравната система",
+      "italySsnTitle": "Италия: Ръководство за здравната система (SSN).",
+      "italyDoctorTitle": "Педиатър срещу общопрактикуващ лекар (GP)",
+      "italyDoctorDesc": "Деца до 14 години трябва да бъдат регистрирани при педиатър (Pediatra di Base). Възрастни (14 и повече години) се регистрират при общопрактикуващ лекар (Medico di Medicina Generale). И двете услуги са безплатни чрез Националната здравна служба (SSN).",
+      "italyEnrollTitle": "Как да се регистрирате в SSN",
+      "italyEnrollSteps": [
+        "Намерете най-близкия офис на ASL (Azienda Sanitaria Locale) във вашия район.",
+        "Носете валиден документ за самоличност, вашия данъчен код (Codice Fiscale) и доказателство за адрес.",
+        "Ако нямате редовно разрешение за пребиваване, поискайте STP код (Straniero Temporaneamente Presente).",
+        "Изберете вашия лекар или педиатър от наличния местен списък.",
+        "Ще получите хартиена карта (Tessera Sanitaria) за достъп до безплатни посещения и рецепти."
+      ],
+      "italyStpTitle": "Нерезиденти: STP кодът",
+      "italyStpDesc": "Ако нямате разрешение за пребиваване или нямате документи, все още имате законно право на спешна и основна медицинска помощ. ASL ще издаде STP код (Straniero Temporaneamente Presente). Той е анонимен, не ви докладва на имиграционните власти и гарантира достъп до ваксинации, грижи за бременност и спешни посещения в клиника.",
+      "viewGuide": "Вижте ръководството",
+      "closeGuide": "Затворете ръководството"
     },
     "about": {
       "brand": "Redi Health",
@@ -970,7 +1298,10 @@ export const TRANSLATIONS = {
       "imageReadyBody": "Читамо лек, дозу и упутства и објашњавамо све једноставним речима.",
       "imageRemove": "Уклони слику",
       "preparingImage": "Припремам слику…",
-      "imageFailed": "Нисам могао да прочитам ову слику. Пробај другу."
+      "imageFailed": "Нисам могао да прочитам ову слику. Пробај другу.",
+      "followUpChat": "Питајте АИ саветника",
+      "followUpNavigate": "Пронађите доктора",
+      "followUpGlossary": "Медицински услови"
     },
     "symptoms": {
       "heroTitle": "Где те боли?",
@@ -1110,7 +1441,23 @@ export const TRANSLATIONS = {
       "meta": {
         "title": "Здравствени навигатор — Redi Health",
         "description": "Припреми се за посету лекару — картица, шта понети, твоја права."
-      }
+      },
+      "systemGuidesTitle": "Водичи система здравствене заштите",
+      "italySsnTitle": "Италија: Водич за здравствени систем (ССН).",
+      "italyDoctorTitle": "Педијатар против лекара опште праксе",
+      "italyDoctorDesc": "Деца до 14 година морају бити регистрована код педијатра (Педиатра ди Басе). Одрасли (14 и старији) се региструју код лекара опште праксе (Медицо ди Медицина Генерале). Обе услуге су бесплатне преко Националне здравствене службе (ССН).",
+      "italyEnrollTitle": "Како се регистровати код ССН",
+      "italyEnrollSteps": [
+        "Пронађите најближу канцеларију АСЛ (Азиенда Санитариа Лоцале) у вашој области.",
+        "Понесите важећи лични документ, ваш порески број (Цодице Фисцале) и доказ адресе.",
+        "Ако немате редовну боравишну дозволу, затражите СТП код (Страниеро Темпоранеаменте Пресенте).",
+        "Изаберите свог лекара или педијатра са доступне локалне листе.",
+        "Добићете папирну картицу (Тессера Санитариа) за приступ бесплатним посетама и рецептима."
+      ],
+      "italyStpTitle": "Нерезиденти: СТП код",
+      "italyStpDesc": "Ако немате боравишну дозволу или сте без докумената, и даље имате законско право на хитну и неопходну медицинску негу. АСЛ ће издати СТП код (Страниеро Темпоранеаменте Пресенте). Она је анонимна, не пријављује вас имиграционим властима и гарантује приступ вакцинацији, нези трудноће и хитним посетама клиници.",
+      "viewGuide": "Погледајте водич",
+      "closeGuide": "Затвори водич"
     },
     "about": {
       "brand": "Redi Health",
@@ -1203,7 +1550,10 @@ export const TRANSLATIONS = {
       "imageReadyBody": "Čitamo lijek, dozu i upute i objašnjavamo sve jednostavnim riječima.",
       "imageRemove": "Ukloni sliku",
       "preparingImage": "Pripremam sliku…",
-      "imageFailed": "Nisam mogao pročitati ovu sliku. Probaj drugu."
+      "imageFailed": "Nisam mogao pročitati ovu sliku. Probaj drugu.",
+      "followUpChat": "Pitajte AI savjetnika",
+      "followUpNavigate": "Pronađite liječnika",
+      "followUpGlossary": "Medicinski pojmovi"
     },
     "symptoms": {
       "heroTitle": "Gdje te boli?",
@@ -1343,7 +1693,23 @@ export const TRANSLATIONS = {
       "meta": {
         "title": "Zdravstveni navigator — Redi Health",
         "description": "Pripremi se za posjet liječniku — kartica, što ponijeti, tvoja prava."
-      }
+      },
+      "systemGuidesTitle": "Vodiči za zdravstveni sustav",
+      "italySsnTitle": "Italija: Vodič za zdravstveni sustav (SSN).",
+      "italyDoctorTitle": "Pedijatar protiv liječnika opće prakse",
+      "italyDoctorDesc": "Djeca do 14 godina moraju biti prijavljena kod pedijatra (Pediatra di Base). Odrasle osobe (14 i više godina) prijavljuju se kod liječnika opće prakse (Medico di Medicina Generale). Obje su usluge besplatne putem Nacionalne zdravstvene službe (SSN).",
+      "italyEnrollTitle": "Kako se prijaviti na SSN",
+      "italyEnrollSteps": [
+        "Pronađite najbliži ASL (Azienda Sanitaria Locale) ured u vašem području.",
+        "Ponesite važeći identifikacijski dokument, svoj porezni broj (Codice Fiscale) i dokaz o adresi.",
+        "Ako nemate redovitu boravišnu dozvolu, zatražite STP kod (Straniero Temporaneamente Presente).",
+        "Odaberite svog liječnika ili pedijatra s dostupnog lokalnog popisa.",
+        "Dobit ćete papirnatu karticu (Tessera Sanitaria) za pristup besplatnim posjetima i receptima."
+      ],
+      "italyStpTitle": "Nerezidenti: STP kod",
+      "italyStpDesc": "Ako nemate dozvolu boravka ili nemate dokumente, i dalje imate zakonsko pravo na hitnu i osnovnu medicinsku skrb. ASL će izdati STP kod (Straniero Temporaneamente Presente). Anoniman je, ne prijavljuje vas imigracijskim vlastima i jamči pristup cijepljenju, njezi u trudnoći i hitnim posjetima klinici.",
+      "viewGuide": "Pogledajte vodič",
+      "closeGuide": "Zatvori vodič"
     },
     "about": {
       "brand": "Redi Health",
@@ -1436,7 +1802,10 @@ export const TRANSLATIONS = {
       "imageReadyBody": "Čitamo lijek, dozu i upute i objašnjavamo sve jednostavnim riječima.",
       "imageRemove": "Ukloni sliku",
       "preparingImage": "Pripremam sliku…",
-      "imageFailed": "Nisam mogao pročitati ovu sliku. Probaj drugu."
+      "imageFailed": "Nisam mogao pročitati ovu sliku. Probaj drugu.",
+      "followUpChat": "Pitajte AI savjetnika",
+      "followUpNavigate": "Pronađite doktora",
+      "followUpGlossary": "Medicinski uslovi"
     },
     "symptoms": {
       "heroTitle": "Gdje te boli?",
@@ -1576,7 +1945,23 @@ export const TRANSLATIONS = {
       "meta": {
         "title": "Zdravstveni navigator — Redi Health",
         "description": "Pripremi se za posjet ljekaru — kartica, šta ponijeti, tvoja prava."
-      }
+      },
+      "systemGuidesTitle": "Vodiči sistema zdravstvene zaštite",
+      "italySsnTitle": "Italija: Vodič za zdravstveni sistem (SSN).",
+      "italyDoctorTitle": "Pedijatar vs. liječnik opće prakse",
+      "italyDoctorDesc": "Djeca do 14 godina moraju biti registrirana kod pedijatra (Pediatra di Base). Odrasle osobe (14 i više) prijavljuju se kod liječnika opće prakse (Medico di Medicina Generale). Obje usluge su besplatne preko Nacionalne zdravstvene službe (SSN).",
+      "italyEnrollTitle": "Kako se registrovati na SSN",
+      "italyEnrollSteps": [
+        "Pronađite najbliži ured ASL (Azienda Sanitaria Locale) u vašem području.",
+        "Ponesite važeći lični dokument, vaš porezni broj (Codice Fiscale) i dokaz adrese.",
+        "Ako nemate redovnu boravišnu dozvolu, zatražite STP kod (Straniero Temporaneamente Presente).",
+        "Odaberite svog doktora ili pedijatra sa dostupne lokalne liste.",
+        "Dobit ćete papirnu karticu (Tessera Sanitaria) za pristup besplatnim posjetama i receptima."
+      ],
+      "italyStpTitle": "Nerezidenti: STP kod",
+      "italyStpDesc": "Ako nemate boravišnu dozvolu ili ste bez dokumenata, i dalje imate zakonsko pravo na hitnu i nužnu medicinsku pomoć. ASL će izdati STP kod (Straniero Temporaneamente Presente). Anonimno je, ne prijavljuje vas imigracijskim vlastima i garantuje pristup vakcinaciji, njezi trudnoće i hitnim posjetama klinici.",
+      "viewGuide": "Pogledajte vodič",
+      "closeGuide": "Zatvori Vodič"
     },
     "about": {
       "brand": "Redi Health",
@@ -1669,7 +2054,10 @@ export const TRANSLATIONS = {
       "imageReadyBody": "Ги читаме лекот, дозата и упатствата и објаснуваме сè со едноставни зборови.",
       "imageRemove": "Отстрани слика",
       "preparingImage": "Ја подготвувам сликата…",
-      "imageFailed": "Не можев да ја прочитам оваа слика. Пробај друга."
+      "imageFailed": "Не можев да ја прочитам оваа слика. Пробај друга.",
+      "followUpChat": "Прашајте го советникот за вештачка интелигенција",
+      "followUpNavigate": "Најди доктор",
+      "followUpGlossary": "Медицински термини"
     },
     "symptoms": {
       "heroTitle": "Каде те боли?",
@@ -1809,7 +2197,23 @@ export const TRANSLATIONS = {
       "meta": {
         "title": "Здравствен навигатор — Redi Health",
         "description": "Подготви се за посета кај лекар — картичка, што да понесеш, твоите права."
-      }
+      },
+      "systemGuidesTitle": "Водичи за здравствениот систем",
+      "italySsnTitle": "Италија: Водич за здравствен систем (SSN).",
+      "italyDoctorTitle": "Педијатар наспроти општ лекар (GP)",
+      "italyDoctorDesc": "Децата до 14 години мора да бидат регистрирани кај педијатар (Pediatra di Base). Возрасни (14 и постари) се регистрираат кај општ лекар (Medico di Medicina Generale). Двете услуги се бесплатни преку Националната здравствена служба (SSN).",
+      "italyEnrollTitle": "Како да се регистрирате во SSN",
+      "italyEnrollSteps": [
+        "Најдете ја најблиската канцеларија на ASL (Azienda Sanitaria Locale) во вашата област.",
+        "Понесете важечки документ за лична идентификација, даночен код (Codice Fiscale) и доказ за адреса.",
+        "Ако немате редовна дозвола за престој, побарајте STP код (Straniero Temporaneamente Presente).",
+        "Изберете го вашиот лекар или педијатар од достапната локална листа.",
+        "Ќе добиете хартиена картичка (Tessera Sanitaria) за пристап до бесплатни посети и рецепти."
+      ],
+      "italyStpTitle": "Нерезиденти: STP код",
+      "italyStpDesc": "Ако немате дозвола за престој или немате документи, сè уште имате законско право на итна и основна медицинска нега. ASL ќе издаде STP код (Straniero Temporaneamente Presente). Тој е анонимен, не ве пријавува кај имиграциските власти и гарантира пристап до вакцинации, грижа за бременост и итни посети на клиники.",
+      "viewGuide": "Погледнете го Водичот",
+      "closeGuide": "Затвори Водич"
     },
     "about": {
       "brand": "Redi Health",
@@ -1902,7 +2306,10 @@ export const TRANSLATIONS = {
       "imageReadyBody": "Preberemo zdravilo, odmerjanje in navodila ter vse razložimo z enostavnimi besedami.",
       "imageRemove": "Odstrani sliko",
       "preparingImage": "Pripravljam sliko…",
-      "imageFailed": "Te slike nisem mogel prebrati. Poskusi drugo."
+      "imageFailed": "Te slike nisem mogel prebrati. Poskusi drugo.",
+      "followUpChat": "Vprašajte svetovalca za AI",
+      "followUpNavigate": "Poiščite zdravnika",
+      "followUpGlossary": "Medicinski izrazi"
     },
     "symptoms": {
       "heroTitle": "Kje te boli?",
@@ -2042,7 +2449,23 @@ export const TRANSLATIONS = {
       "meta": {
         "title": "Zdravstveni navigator — Redi Health",
         "description": "Pripravi se na obisk zdravnika — kartica, kaj vzeti, tvoje pravice."
-      }
+      },
+      "systemGuidesTitle": "Vodniki po sistemu zdravstvenega varstva",
+      "italySsnTitle": "Italija: Vodnik po sistemu zdravstvenega varstva (SSN).",
+      "italyDoctorTitle": "Pediater proti splošnemu zdravniku (GP)",
+      "italyDoctorDesc": "Otroci do 14. leta morajo biti prijavljeni pri pediatru (Pediatra di Base). Odrasli (14 let in več) se prijavijo pri splošnem zdravniku (Medico di Medicina Generale). Obe storitvi sta brezplačni prek nacionalne zdravstvene službe (SSN).",
+      "italyEnrollTitle": "Kako se registrirati pri SSN",
+      "italyEnrollSteps": [
+        "Poiščite najbližjo pisarno ASL (Azienda Sanitaria Locale) na vašem območju.",
+        "S seboj prinesite veljaven osebni dokument, svojo davčno številko (Codice Fiscale) in dokazilo o naslovu.",
+        "Če nimate rednega dovoljenja za prebivanje, zahtevajte kodo STP (Straniero Temporaneamente Presente).",
+        "Izberite svojega zdravnika ali pediatra z razpoložljivega lokalnega seznama.",
+        "Prejeli boste papirnato kartico (Tessera Sanitaria) za dostop do brezplačnih obiskov in receptov."
+      ],
+      "italyStpTitle": "Nerezidenti: Koda STP",
+      "italyStpDesc": "Če nimate dovoljenja za prebivanje ali nimate dokumentov, imate še vedno zakonsko pravico do nujne in osnovne zdravstvene oskrbe. ASL bo izdal kodo STP (Straniero Temporaneamente Presente). Je anonimen, vas ne prijavi imigracijskim oblastem in zagotavlja dostop do cepljenja, nosečniške nege in nujnih obiskov klinike.",
+      "viewGuide": "Oglejte si vodnik",
+      "closeGuide": "Zapri vodnik"
     },
     "about": {
       "brand": "Redi Health",
@@ -2135,7 +2558,10 @@ export const TRANSLATIONS = {
       "imageReadyBody": "Διαβάζουμε το φάρμακο, τη δόση και τις οδηγίες και τα εξηγούμε όλα με απλά λόγια.",
       "imageRemove": "Αφαίρεση φωτογραφίας",
       "preparingImage": "Προετοιμάζω φωτογραφία…",
-      "imageFailed": "Δεν μπόρεσα να διαβάσω αυτή τη φωτογραφία. Δοκίμασε άλλη."
+      "imageFailed": "Δεν μπόρεσα να διαβάσω αυτή τη φωτογραφία. Δοκίμασε άλλη.",
+      "followUpChat": "Ρωτήστε τον Σύμβουλο AI",
+      "followUpNavigate": "Βρείτε έναν γιατρό",
+      "followUpGlossary": "Ιατρικοί Όροι"
     },
     "symptoms": {
       "heroTitle": "Πού πονάς;",
@@ -2275,7 +2701,23 @@ export const TRANSLATIONS = {
       "meta": {
         "title": "Πλοηγός υγείας — Redi Health",
         "description": "Ετοιμάσου για επίσκεψη στον γιατρό — κάρτα, τι να πάρεις, τα δικαιώματά σου."
-      }
+      },
+      "systemGuidesTitle": "Οδηγοί Συστημάτων Υγείας",
+      "italySsnTitle": "Ιταλία: Οδηγός Συστήματος Υγείας (SSN).",
+      "italyDoctorTitle": "Παιδίατρος εναντίον Γενικού Ιατρού (GP)",
+      "italyDoctorDesc": "Τα παιδιά έως 14 ετών πρέπει να εγγραφούν σε Παιδίατρο (Pediatra di Base). Ενήλικες (14 και άνω) εγγράφονται σε Γενικό Ιατρό (Medico di Medicina Generale). Και οι δύο υπηρεσίες είναι δωρεάν μέσω της Εθνικής Υπηρεσίας Υγείας (SSN).",
+      "italyEnrollTitle": "Πώς να εγγραφείτε στο SSN",
+      "italyEnrollSteps": [
+        "Βρείτε το πλησιέστερο γραφείο ASL (Azienda Sanitaria Locale) στην περιοχή σας.",
+        "Φέρτε ένα έγκυρο έγγραφο ταυτότητας, τον φορολογικό σας κωδικό (Codice Fiscale) και αποδεικτικό διεύθυνσης.",
+        "Εάν δεν έχετε κανονική άδεια διαμονής, ζητήστε κωδικό STP (Straniero Temporaneamente Presente).",
+        "Επιλέξτε τον γιατρό ή τον παιδίατρό σας από τη διαθέσιμη τοπική λίστα.",
+        "Θα λάβετε μια χάρτινη κάρτα (Tessera Sanitaria) για πρόσβαση σε δωρεάν επισκέψεις και συνταγές."
+      ],
+      "italyStpTitle": "Μη κάτοικοι: Ο Κωδικός STP",
+      "italyStpDesc": "Εάν δεν έχετε άδεια διαμονής ή δεν έχετε έγγραφα, εξακολουθείτε να έχετε νόμιμο δικαίωμα για επείγουσα και βασική ιατρική περίθαλψη. Η ASL θα εκδώσει έναν Κωδικό STP (Straniero Temporaneamente Presente). Είναι ανώνυμο, δεν σας αναφέρει στις αρχές μετανάστευσης και εγγυάται την πρόσβαση σε εμβολιασμούς, φροντίδα εγκυμοσύνης και επείγουσες επισκέψεις σε κλινική.",
+      "viewGuide": "Προβολή Οδηγού",
+      "closeGuide": "Κλείσιμο Οδηγού"
     },
     "about": {
       "brand": "Redi Health",
@@ -2368,7 +2810,10 @@ export const TRANSLATIONS = {
       "imageReadyBody": "İlacı, dozu ve talimatları okuyup her şeyi basit kelimelerle açıklıyoruz.",
       "imageRemove": "Fotoğrafı kaldır",
       "preparingImage": "Fotoğraf hazırlanıyor…",
-      "imageFailed": "Bu fotoğraf okunamadı. Başka birini dene."
+      "imageFailed": "Bu fotoğraf okunamadı. Başka birini dene.",
+      "followUpChat": "Yapay Zeka Danışmanına Sorun",
+      "followUpNavigate": "Doktor Bul",
+      "followUpGlossary": "Tıbbi Terimler"
     },
     "symptoms": {
       "heroTitle": "Neresi ağrıyor?",
@@ -2508,7 +2953,23 @@ export const TRANSLATIONS = {
       "meta": {
         "title": "Sağlık navigatörü — Redi Health",
         "description": "Doktor ziyaretine hazırlan — kart, ne götüreceğin, hakların."
-      }
+      },
+      "systemGuidesTitle": "Sağlık Sistemi Kılavuzları",
+      "italySsnTitle": "İtalya: Sağlık Sistemi (SSN) Kılavuzu",
+      "italyDoctorTitle": "Çocuk Doktoru ve Pratisyen Hekim (GP)",
+      "italyDoctorDesc": "14 yaşına kadar olan çocukların bir Çocuk Doktoruna (Pediatra di Base) kayıtlı olması gerekmektedir. Yetişkinler (14 ve daha büyük) bir Pratisyen Hekime (Medico di Medicina Generale) kaydolurlar. Her iki hizmet de Ulusal Sağlık Hizmeti (SSN) aracılığıyla ücretsizdir.",
+      "italyEnrollTitle": "SSN'ye nasıl kayıt olunur?",
+      "italyEnrollSteps": [
+        "Bölgenizdeki en yakın ASL (Azienda Sanitaria Locale) ofisini bulun.",
+        "Geçerli bir kimlik belgesi, Vergi Kodunuz (Codice Fiscale) ve adres kanıtı getirin.",
+        "Düzenli oturma izniniz yoksa STP Kodu (Straniero Temporaneamente Presente) isteyin.",
+        "Mevcut yerel listeden doktorunuzu veya çocuk doktorunuzu seçin.",
+        "Ücretsiz ziyaretlere ve reçetelere erişebilmeniz için size bir kağıt kart (Tessera Sanitaria) verilecektir."
+      ],
+      "italyStpTitle": "Yerleşik Olmayanlar: STP Kodu",
+      "italyStpDesc": "Oturma izniniz yoksa veya belgesizseniz, acil ve temel tıbbi bakım için yasal hakkınız hâlâ vardır. ASL bir STP Kodu (Straniero Temporaneamente Presente) yayınlayacaktır. Anonimdir, sizi göçmenlik makamlarına bildirmez ve aşılara, hamilelik bakımına ve acil klinik ziyaretlerine erişiminizi garanti eder.",
+      "viewGuide": "Kılavuzu Görüntüle",
+      "closeGuide": "Kılavuzu Kapat"
     },
     "about": {
       "brand": "Redi Health",
@@ -2824,7 +3285,49 @@ export const TRANSLATIONS = {
           "description": "If you feel mistreated or discriminated against, you can file a complaint. Every hospital has a complaints procedure. You can also contact the patient ombudsman in your country."
         }
       },
-      "scenarios": {},
+      "scenarios": {
+        "refused-treatment": {
+          "situation": "The hospital refuses to treat you",
+          "whatToSay": "\"I have the right to emergency treatment under EU law. Please write down your name and the reason you are refusing.\"",
+          "whatToDo": [
+            "Stay calm but firm",
+            "Ask for the doctor's full name",
+            "Ask for the refusal in writing",
+            "Call the patient ombudsman",
+            "Contact a Roma rights organization"
+          ]
+        },
+        "rude-staff": {
+          "situation": "Hospital staff are rude or dismissive because of your ethnicity",
+          "whatToSay": "\"I am here for medical help. I expect to be treated with the same respect as every other patient.\"",
+          "whatToDo": [
+            "Ask to speak with the head nurse or department chief",
+            "Note the date, time, and names",
+            "File a written complaint at the hospital",
+            "Report to the national anti-discrimination body"
+          ]
+        },
+        "no-insurance": {
+          "situation": "You don't have health insurance",
+          "whatToSay": "\"I need medical help. What are my options for uninsured patients?\"",
+          "whatToDo": [
+            "Emergency care is always free — insist on it",
+            "Ask about social assistance programs",
+            "Contact a health mediator in your area",
+            "Many NGOs provide free clinics — ask at the hospital"
+          ]
+        },
+        "language-barrier": {
+          "situation": "You can't communicate with the doctor",
+          "whatToSay": "\"I need help understanding. Can you provide an interpreter or speak more slowly?\"",
+          "whatToDo": [
+            "Use this app to translate key phrases",
+            "Bring a trusted person who speaks the language",
+            "Ask for written instructions you can translate later",
+            "Use your phone's camera to translate documents"
+          ]
+        }
+      },
       "contacts": {
         "romania": {
           "country": "Romania",
@@ -2923,7 +3426,56 @@ export const TRANSLATIONS = {
         "checkSymptoms": "Kontrollo simptomat",
         "learnMentalHealth": "Mëso për shëndetin mendor"
       },
-      "entries": {}
+      "entries": {
+        "maria-vaccines": {
+          "name": "Maria",
+          "age": 28,
+          "country": "Romania",
+          "title": "I almost didn't vaccinate my daughter",
+          "story": "My mother-in-law told me vaccines are poison. Everyone in the settlement said the same thing. When my daughter was born, I was scared. But the health mediator came to our home and explained everything — how vaccines work, what the side effects really are. She showed me photos of children with measles. I was more scared of the disease than the vaccine. My daughter got all her vaccines. She is healthy and strong.",
+          "lesson": "Talk to a health mediator or doctor before making decisions based on what others say. Vaccines save lives."
+        },
+        "stefan-diabetes": {
+          "name": "Stefan",
+          "age": 52,
+          "country": "Bulgaria",
+          "title": "I stopped my diabetes medicine and almost died",
+          "story": "I was diagnosed with Type 2 diabetes at 45. The medicine made my stomach hurt, so I stopped taking it. My neighbor said cinnamon tea would cure me. For 2 years I drank cinnamon tea instead. Then one day I collapsed. My blood sugar was over 500. The doctors said my kidneys were damaged. Now I take my medicine every day. I wish I had never stopped.",
+          "lesson": "Never stop your medicine without talking to your doctor. Natural remedies cannot replace diabetes medication."
+        },
+        "elena-pregnancy": {
+          "name": "Elena",
+          "age": 22,
+          "country": "Serbia",
+          "title": "My first pregnancy — I didn't know I could see a doctor for free",
+          "story": "When I got pregnant at 19, I didn't go to a doctor for 6 months. I didn't have insurance and I thought it would cost too much. A health mediator told me that prenatal care is free for all pregnant women in Serbia. She helped me register. The doctor found that I had anemia and high blood pressure. If I hadn't gone, my baby could have been in danger.",
+          "lesson": "Prenatal care is free in most European countries. Ask a health mediator to help you register."
+        },
+        "janos-discrimination": {
+          "name": "János",
+          "age": 35,
+          "country": "Hungary",
+          "title": "The hospital tried to send me away",
+          "story": "I went to the emergency room with chest pain. The nurse looked at me and said 'We're full, go to another hospital.' I knew this wasn't right. I said: 'I have chest pain. You must examine me. Please give me your name.' Her attitude changed immediately. They examined me and found I had a heart problem that needed treatment. If I had left, I could have had a heart attack.",
+          "lesson": "You have the right to emergency treatment. If someone tries to turn you away, ask for their name and say you know your rights."
+        },
+        "ana-tb": {
+          "name": "Ana",
+          "age": 31,
+          "country": "Slovakia",
+          "title": "TB is not a death sentence — but you must finish the medicine",
+          "story": "I was coughing for months. I thought it was just a cold. When I finally went to the doctor, they said I had tuberculosis. I was terrified — I thought I would die. But the doctor explained that TB can be cured with 6 months of medicine. The hardest part was taking pills every day for 6 months, even when I felt better after 2 months. But I finished. I am cured.",
+          "lesson": "If you cough for more than 2 weeks, see a doctor. TB is curable, but you MUST finish all the medicine."
+        },
+        "mirela-depression": {
+          "name": "Mirela",
+          "age": 40,
+          "country": "North Macedonia",
+          "title": "Depression is not weakness — it's an illness",
+          "story": "After my husband died, I couldn't get out of bed for months. My family said I was lazy. They said 'just be strong.' But I couldn't. A health mediator noticed something was wrong and took me to a doctor. The doctor said I had depression — a real medical condition. I started medicine and talking to a counselor. Slowly, I got better. I am not weak. I was sick.",
+          "lesson": "Depression is a medical condition, not a character flaw. Medicine and counseling can help. Please ask for help."
+        }
+      }
     },
     "challenges": {
       "meta": {
@@ -3230,7 +3782,49 @@ export const TRANSLATIONS = {
           "description": "If you feel mistreated or discriminated against, you can file a complaint. Every hospital has a complaints procedure. You can also contact the patient ombudsman in your country."
         }
       },
-      "scenarios": {},
+      "scenarios": {
+        "refused-treatment": {
+          "situation": "The hospital refuses to treat you",
+          "whatToSay": "\"I have the right to emergency treatment under EU law. Please write down your name and the reason you are refusing.\"",
+          "whatToDo": [
+            "Stay calm but firm",
+            "Ask for the doctor's full name",
+            "Ask for the refusal in writing",
+            "Call the patient ombudsman",
+            "Contact a Roma rights organization"
+          ]
+        },
+        "rude-staff": {
+          "situation": "Hospital staff are rude or dismissive because of your ethnicity",
+          "whatToSay": "\"I am here for medical help. I expect to be treated with the same respect as every other patient.\"",
+          "whatToDo": [
+            "Ask to speak with the head nurse or department chief",
+            "Note the date, time, and names",
+            "File a written complaint at the hospital",
+            "Report to the national anti-discrimination body"
+          ]
+        },
+        "no-insurance": {
+          "situation": "You don't have health insurance",
+          "whatToSay": "\"I need medical help. What are my options for uninsured patients?\"",
+          "whatToDo": [
+            "Emergency care is always free — insist on it",
+            "Ask about social assistance programs",
+            "Contact a health mediator in your area",
+            "Many NGOs provide free clinics — ask at the hospital"
+          ]
+        },
+        "language-barrier": {
+          "situation": "You can't communicate with the doctor",
+          "whatToSay": "\"I need help understanding. Can you provide an interpreter or speak more slowly?\"",
+          "whatToDo": [
+            "Use this app to translate key phrases",
+            "Bring a trusted person who speaks the language",
+            "Ask for written instructions you can translate later",
+            "Use your phone's camera to translate documents"
+          ]
+        }
+      },
       "contacts": {
         "romania": {
           "country": "Romania",
@@ -3329,7 +3923,56 @@ export const TRANSLATIONS = {
         "checkSymptoms": "Dikh symptomura",
         "learnMentalHealth": "Sikhljol pa goďengo sastipe"
       },
-      "entries": {}
+      "entries": {
+        "maria-vaccines": {
+          "name": "Maria",
+          "age": 28,
+          "country": "Romania",
+          "title": "I almost didn't vaccinate my daughter",
+          "story": "My mother-in-law told me vaccines are poison. Everyone in the settlement said the same thing. When my daughter was born, I was scared. But the health mediator came to our home and explained everything — how vaccines work, what the side effects really are. She showed me photos of children with measles. I was more scared of the disease than the vaccine. My daughter got all her vaccines. She is healthy and strong.",
+          "lesson": "Talk to a health mediator or doctor before making decisions based on what others say. Vaccines save lives."
+        },
+        "stefan-diabetes": {
+          "name": "Stefan",
+          "age": 52,
+          "country": "Bulgaria",
+          "title": "I stopped my diabetes medicine and almost died",
+          "story": "I was diagnosed with Type 2 diabetes at 45. The medicine made my stomach hurt, so I stopped taking it. My neighbor said cinnamon tea would cure me. For 2 years I drank cinnamon tea instead. Then one day I collapsed. My blood sugar was over 500. The doctors said my kidneys were damaged. Now I take my medicine every day. I wish I had never stopped.",
+          "lesson": "Never stop your medicine without talking to your doctor. Natural remedies cannot replace diabetes medication."
+        },
+        "elena-pregnancy": {
+          "name": "Elena",
+          "age": 22,
+          "country": "Serbia",
+          "title": "My first pregnancy — I didn't know I could see a doctor for free",
+          "story": "When I got pregnant at 19, I didn't go to a doctor for 6 months. I didn't have insurance and I thought it would cost too much. A health mediator told me that prenatal care is free for all pregnant women in Serbia. She helped me register. The doctor found that I had anemia and high blood pressure. If I hadn't gone, my baby could have been in danger.",
+          "lesson": "Prenatal care is free in most European countries. Ask a health mediator to help you register."
+        },
+        "janos-discrimination": {
+          "name": "János",
+          "age": 35,
+          "country": "Hungary",
+          "title": "The hospital tried to send me away",
+          "story": "I went to the emergency room with chest pain. The nurse looked at me and said 'We're full, go to another hospital.' I knew this wasn't right. I said: 'I have chest pain. You must examine me. Please give me your name.' Her attitude changed immediately. They examined me and found I had a heart problem that needed treatment. If I had left, I could have had a heart attack.",
+          "lesson": "You have the right to emergency treatment. If someone tries to turn you away, ask for their name and say you know your rights."
+        },
+        "ana-tb": {
+          "name": "Ana",
+          "age": 31,
+          "country": "Slovakia",
+          "title": "TB is not a death sentence — but you must finish the medicine",
+          "story": "I was coughing for months. I thought it was just a cold. When I finally went to the doctor, they said I had tuberculosis. I was terrified — I thought I would die. But the doctor explained that TB can be cured with 6 months of medicine. The hardest part was taking pills every day for 6 months, even when I felt better after 2 months. But I finished. I am cured.",
+          "lesson": "If you cough for more than 2 weeks, see a doctor. TB is curable, but you MUST finish all the medicine."
+        },
+        "mirela-depression": {
+          "name": "Mirela",
+          "age": 40,
+          "country": "North Macedonia",
+          "title": "Depression is not weakness — it's an illness",
+          "story": "After my husband died, I couldn't get out of bed for months. My family said I was lazy. They said 'just be strong.' But I couldn't. A health mediator noticed something was wrong and took me to a doctor. The doctor said I had depression — a real medical condition. I started medicine and talking to a counselor. Slowly, I got better. I am not weak. I was sick.",
+          "lesson": "Depression is a medical condition, not a character flaw. Medicine and counseling can help. Please ask for help."
+        }
+      }
     },
     "challenges": {
       "meta": {

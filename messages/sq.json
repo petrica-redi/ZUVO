@@ -913,7 +913,10 @@
         "title": "Data Protection Officer",
         "body": "Email dpo@redi.healthcare with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
       }
-    }
+    },
+    "localExportLabel": "Shkarkoni të dhënat lokale",
+    "localExportHint": "Ruani regjistrat e humorit, gjurmimin e ujit dhe cilësimet lokale në një skedar JSON.",
+    "guestNote": "Nëse e përdorni aplikacionin si mysafir, përparimi juaj ruhet vetëm në këtë pajisje. Krijo një llogari për t'u sinkronizuar me serverin."
   },
   "home": {
     "kicker": "Shoqërues Shëndetësor i Mbështetur nga AI",
@@ -980,7 +983,9 @@
       "tools": "Mjete shëndetësore",
       "learn": "Mëso & Rritu",
       "professional": "Profesional",
-      "account": "Llogaria"
+      "account": "Llogaria",
+      "track": "Gjurmët dhe Familja",
+      "trust": "Besimi dhe Siguria"
     },
     "items": {
       "scanLabel": "Skaner i Dezinformatës",
@@ -1012,7 +1017,21 @@
       "profileLabel": "Profili",
       "profileDesc": "Gjuha, përparimi, të dhënat",
       "aboutLabel": "Rreth Redi Health",
-      "aboutDesc": "Versioni, privatësia, kontakti"
+      "aboutDesc": "Versioni, privatësia, kontakti",
+      "providersLabel": "Gjeni kujdesin shëndetësor",
+      "providersDesc": "Klinika dhe sherbime prane jush",
+      "trackLabel": "Mirëqenia ditore",
+      "trackDesc": "Monitoroni gjendjen shpirtërore, ujin dhe aktivitetin",
+      "familyLabel": "Shëndeti familjar",
+      "familyDesc": "Të dhëna shëndetësore për të gjithë familjen",
+      "challengesLabel": "Sfidat shëndetësore",
+      "challengesDesc": "Qëllimet dhe zakonet e komunitetit",
+      "methodologyLabel": "Si funksionon",
+      "methodologyDesc": "Qeverisja dhe siguria jonë klinike",
+      "policiesLabel": "Politikat e platformës",
+      "policiesDesc": "Siguria klinike, të drejtat e të dhënave, barazia rome",
+      "impactLabel": "Ndikimi në shëndetin publik",
+      "impactDesc": "Evidenca dhe rezultatet e programit"
     }
   },
   "sos": {
@@ -1133,7 +1152,11 @@
     "verified": "Verifikuar si miqësore me romët",
     "freeClinic": "Shërbime falas",
     "interpreter": "Përkthyes romanisht",
-    "getDirections": "Shih rrugën"
+    "getDirections": "Shih rrugën",
+    "unverifiedWarningTitle": "Kjo direktori është në zhvillim e sipër",
+    "unverifiedWarningBody": "Listimet e paraqitura janë vetëm shembuj dhe nuk janë verifikuar. Mos u mbështetni në këtë informacion për të marrë vendime mjekësore. Kontaktoni ofruesin tuaj të kujdesit shëndetësor, OJQ-në ose ndërmjetësin shëndetësor për të gjetur kujdes pranë jush.",
+    "unverifiedBadge": "Ende nuk është verifikuar",
+    "unverifiedListingNote": "Listimi i pa verifikuar ende — kontaktoni drejtpërdrejt me ofruesin për të konfirmuar shërbimet."
   },
   "landing": {
     "eyebrow": "Njohuri për shëndetin kur shërbimet mbërrijnë së fundmi",
@@ -1248,7 +1271,8 @@
     "contact": "Kontakt",
     "rights": "© 2026 Redi Health. Të gjitha të drejtat të rezervuara.",
     "builtWith": "Ndërtuar me ndërmjetës shëndetësorë romë në 15 vende.",
-    "systemsOperational": "Të gjitha sistemet po funksionojnë"
+    "systemsOperational": "Të gjitha sistemet po funksionojnë",
+    "policies": "Politikat e platformës"
   },
   "theme": {
     "ariaLabel": "Tema",
@@ -1594,7 +1618,10 @@
     "imageReadyBody": "Lexojmë ilaçin, dozën dhe udhëzimet dhe i shpjegojmë me fjalë të thjeshta.",
     "imageRemove": "Hiq foton",
     "preparingImage": "Po përgatis foton…",
-    "imageFailed": "Nuk arrita ta lexoj këtë foto. Provo një tjetër."
+    "imageFailed": "Nuk arrita ta lexoj këtë foto. Provo një tjetër.",
+    "followUpChat": "Pyetni këshilltarin e AI",
+    "followUpNavigate": "Gjeni një Mjek",
+    "followUpGlossary": "Kushtet mjekësore"
   },
   "navigate": {
     "heroTitle": "Më duhet të shoh një mjek",
@@ -1632,7 +1659,23 @@
     "meta": {
       "title": "Navigatori shëndetësor — Redi Health",
       "description": "Përgatitu për vizitën te mjeku — karta e vizitës, çfarë të marrësh, të drejtat e tua."
-    }
+    },
+    "systemGuidesTitle": "Udhëzues për sistemin e kujdesit shëndetësor",
+    "italySsnTitle": "Itali: Udhëzues për Sistemin e Kujdesit Shëndetësor (SSN).",
+    "italyDoctorTitle": "Pediatri kundër Mjekut të Përgjithshëm (GP)",
+    "italyDoctorDesc": "Fëmijët deri në 14 vjeç duhet të regjistrohen te një pediatër (Pediatra di Base). Të rriturit (14 e lart) regjistrohen te një mjek i përgjithshëm (Medico di Medicina Generale). Të dyja shërbimet janë falas përmes Shërbimit Shëndetësor Kombëtar (SSN).",
+    "italyEnrollTitle": "Si të regjistroheni në SSN",
+    "italyEnrollSteps": [
+      "Gjeni zyrën më të afërt të ASL (Azienda Sanitaria Locale) në zonën tuaj.",
+      "Sillni një dokument të vlefshëm ID, Kodin tuaj Tatimor (Codice Fiscale) dhe dëshminë e adresës.",
+      "Nëse nuk keni një leje qëndrimi të rregullt, kërkoni një kod STP (Straniero Temporaneamente Presente).",
+      "Zgjidhni mjekun ose pediatrin tuaj nga lista lokale e disponueshme.",
+      "Ju do të merrni një kartë letre (Tessera Sanitaria) për të aksesuar vizitat dhe recetat falas."
+    ],
+    "italyStpTitle": "Jorezidentët: Kodi STP",
+    "italyStpDesc": "Nëse nuk keni leje qëndrimi ose jeni pa dokumente, ju keni ende të drejtën ligjore për kujdes urgjent dhe thelbësor mjekësor. ASL do të lëshojë një kod STP (Straniero Temporaneamente Presente). Është anonim, nuk ju raporton tek autoritetet e imigracionit dhe garanton akses në vaksinime, kujdes për shtatzëninë dhe vizita urgjente në klinikë.",
+    "viewGuide": "Shiko Udhëzuesin",
+    "closeGuide": "Mbyll Udhëzuesin"
   },
   "about": {
     "brand": "Redi Health",
@@ -1655,7 +1698,8 @@
     "meta": {
       "title": "Rreth nesh — Redi Health",
       "description": "Rreth platformës së edukimit shëndetësor Redi Health"
-    }
+    },
+    "policiesLink": "Politikat e platformës"
   },
   "family": {
     "title": "Shëndeti i familjes",
@@ -2046,8 +2090,8 @@
       "sayThis": "Thuaj këtë:",
       "thenDo": "Pastaj bëni këtë:",
       "patientOmbudsman": "Avokati i Popullit për pacientët",
-      "antiDiscrimination": "Kundër diskriminimit",
-      "romaRightsOrg": "Organizatë për të drejtat e romëve"
+      "antiDiscrimination": "Anti-Discrimination",
+      "romaRightsOrg": "Roma Rights Organization"
     },
     "rights": {
       "treatment": {
@@ -2319,12 +2363,12 @@
     }
   },
   "learn": {
-    "progressLabel": "module të përfunduara",
-    "startHere": "Fillo këtu",
-    "continueLabel": "Vazhdo",
+    "progressLabel": "modulet e përfunduara",
+    "startHere": "Filloni këtu",
+    "continueLabel": "Vazhdoni",
     "allModules": "Të gjitha modulet",
     "prevention": {
-      "description": "Në 15 vite pune në vendbanimet romë, kam parë familje të shkatërruara nga sëmundje që mund të ishin parandaluar me zakone të thjeshta. Ky dije nuk është luks — është mbijetim.",
+      "description": "Në 15 vjet duke punuar në vendbanimet rome, kam parë familje të shkatërruara nga sëmundjet që zakonet e thjeshta mund t'i kishin parandaluar. Kjo njohuri nuk është luks - është mbijetesë.",
       "handwashing": {
         "title": "Larja e duarve",
         "description": "Kam parë familje të tëra nëpër vendbanime të sëmuren nga i njëjti infeksion stomaku, të kaluar dorë më dorë. Larja e duhur e duarve është ilaçi i vetëm më i lirë dhe më i fuqishëm tek i cili tashmë keni akses – nuk kushton asgjë dhe parandalon sëmundjet që shoh më shpesh në komunitetet tona.",
@@ -2367,7 +2411,7 @@
       }
     },
     "nutrition": {
-      "description": "Në vitet me familjet romë, mësova se ushqimi nuk është vetëm ushqyerje — është çfarë mund të përballosh, çfarë ke në lagje dhe çfarë di familja jote. Nuk do të të them të blesh quinoa. Do të të tregoj si ta ushqesh mirë familjen me atë që ke.",
+      "description": "Në vitet e mia të punës me familjet rome, kam mësuar se ushqimi nuk ka të bëjë kurrë vetëm me ushqimin – ka të bëjë me atë që mund të përballosh, çfarë është në dispozicion në lagjen tuaj dhe çfarë di familja juaj. Unë nuk do t'ju them të blini quinoa. Unë do t'ju tregoj se si ta ushqeni mirë familjen tuaj me atë që keni.",
       "balancedDiet": {
         "title": "Ushqimi i mirë me çdo buxhet",
         "description": "Problemi më i madh ushqimor që shoh në komunitetet rome nuk është mungesa e ushqimit – është bukë shumë e lirë, mish i përpunuar dhe pije me sheqer, dhe shumë pak perime, vezë dhe bishtajore. Kjo nuk ka të bëjë me vullnetin. Bëhet fjalë për atë që është e disponueshme dhe e përballueshme. Por ndërrimet e vogla bëjnë ndryshime të mëdha në shëndetin tuaj dhe zhvillimin e fëmijëve tuaj.",
@@ -2400,7 +2444,7 @@
       }
     },
     "maternal": {
-      "description": "Kam shoqëruar gra romë në spitale ku u vendosën veçmas, u trajtuan pa respekt ose u refuzuan epidurale që gratë e tjera merrnin. Kam parë edhe gra që vdiqën nga komplikime që një vizitë prenatale do t'i kapipte në kohë. Trupi yt, fëmija yt, të drejtat e tua. Njih të treja.",
+      "description": "Unë i kam shoqëruar gratë rome në spitale, ku ato vendoseshin në dhoma të veçanta, u flisnin me mungesë respekti ose refuzonin epidurale që merrnin gratë e tjera. Kam parë gjithashtu gra që vdesin nga komplikimet që do të kishte kapur një vizitë e vetme para lindjes. Trupi juaj, fëmija juaj, të drejtat tuaja. Njihuni të tre.",
       "prenatalCare": {
         "title": "Kujdesi Prenatal",
         "description": "Në 15 vjet punë ndërmjetësimi, modeli që shoh vazhdimisht është se gratë rome vizitojnë mjekun për herë të parë kur ato janë tashmë 6 ose 7 muajshe shtatzënë — shpesh sepse ndihen mirë, sepse kanë frikë nga spitali ose sepse askush nuk shpjegoi se kujdesi prenatal është falas dhe e drejta e tyre. Deri në atë pikë, kushtet e rrezikshme si pre-eklampsia ose diabeti gestacional mund të jenë zhvilluar në heshtje për muaj të tërë.",
@@ -2419,7 +2463,7 @@
         "tip3": "Mësoni 5 shenjat e rrezikut që do të thotë SHKO NË SPITALI TANI, pavarësisht se sa është ora: (1) gjakderdhje e rëndë, (2) dhimbje koke e fortë me duar/fytyrë të fryrë, (3) foshnja ndalon së lëvizuri, (4) ethe uji PH_6 më shumë se ___PH 38°C. Mos prisni deri në mëngjes. Mos u përpiqni t'i menaxhoni këto në shtëpi",
         "tip4": "Pas lindjes, qëndroni në spital të paktën 24 orë për monitorim - edhe nëse ndiheni mirë. Shumë komplikime kërcënuese për jetën (hemorragji, infeksion) shfaqen në 24 orët e para. E di që mjedisi spitalor mund të jetë armiqësor, por ato orë monitorimi shpëtojnë jetë",
         "fact": "Në një rajon ku kam punuar për 5 vjet, ne reduktuam urgjencat e nënave rome me 60% thjesht duke u siguruar që çdo grua shtatzënë të kishte një plan lindjeje, një rregullim transporti dhe një çantë spitalore të paketuar sipas javës 36. Asnjë teknologji e re - vetëm përgatitje dhe shoqërim.",
-        "action": "Nëse ju ose dikush që njihni ka kaluar 30 javën e shtatzënisë: shkruani emrin e spitalit, numrin e telefonit dhe rrugën në letër. Vendoseni në mur. Paketoni një çantë me ID, kartën e vaksinimit, rroba për fëmijë dhe karikues telefoni. Kjo kërkon 20 minuta dhe mund të shpëtojë një jetë."
+        "action": "Nëse ju ose dikush që njihni ka kaluar javën e 30 shtatzënë: shkruani emrin e spitalit, numrin e telefonit dhe rrugën në letër. Vendoseni në mur. Paketoni një çantë me ID, kartën e vaksinimit, rrobat e bebeve dhe karikuesin e telefonit. Kjo kërkon 20 minuta dhe mund të shpëtojë një jetë."
       },
       "breastfeeding": {
         "title": "Ushqyerja me gji",
@@ -2443,7 +2487,7 @@
       }
     },
     "children": {
-      "description": "Fëmijët romë janë e ardhmja e komuniteteve tona dhe meritojnë çdo avantazh. Në punën time kam parë fëmijë që mbeten prapa — jo për mungesë aftësie, por sepse sëmundje të parandalueshme, vaksina të humbura ose vonesa të padetectuara u morën shanset. Ky dije ua kthen ato shanse.",
+      "description": "Fëmijët romë janë e ardhmja e komuniteteve tona dhe ata meritojnë çdo avantazh. Në punën time, kam parë fëmijët të mbeten prapa - jo për shkak të aftësisë, por për shkak se sëmundjet e parandalueshme, vaksinimet e humbura ose vonesat e pazbuluara të zhvillimit ua vodhën mundësitë. Kjo njohuri i kthen ato mundësi.",
       "growthMilestones": {
         "title": "Rritja dhe Zhvillimi",
         "description": "Çdo fëmijë zhvillohet me ritmin e vet dhe unë kurrë nuk dua që prindërit të kenë panik për ndryshimin normal. Por kam parë gjithashtu fëmijë, zhvillimi i vonuar i të cilëve u hodh poshtë nga familjet duke thënë se 'do ta arrijnë' kur ndërhyrja e hershme mund të kishte bërë një ndryshim transformues. Të dish se çfarë të shikosh nuk është ankth - është vëmendje.",
@@ -2476,7 +2520,7 @@
       }
     },
     "chronic": {
-      "description": "Romët vdesin 10 vjet më herët se mesatarja evropiane. Pjesa më e madhe e këtij hendeku vjen nga sëmundjet kronike — diabeti, sëmundjet e zemrës, sëmundjet respiratore — që zhvillohen ngadalë dhe në heshtje. Kur shfaqen simptomat, dëmtimi është bërë. Por shumica parandalohet dhe gjithçka menaxhohet nëse kapet herët.",
+      "description": "Romët vdesin 10 vjet më të rinj se mesatarja evropiane. Shumica e këtij hendeku vjen nga sëmundjet kronike - diabeti, sëmundjet e zemrës, sëmundjet e frymëmarrjes - që zhvillohen ngadalë dhe në heshtje gjatë viteve. Në kohën kur shfaqen simptomat, dëmi është bërë. Por pjesa më e madhe e tij është e parandalueshme dhe e gjitha është e menaxhueshme kur kapet herët.",
       "diabetes": {
         "title": "Diabeti: Kërcënimi i heshtur",
         "description": "Diabeti i tipit 2 është sëmundja kronike që e ndesh më shpesh në komunitetet rome. Ajo funksionon në familje, lulëzon me dietën e lirë me sheqer të lartë që varfëria i detyron njerëzit, dhe ju dëmton sytë, veshkat, këmbët dhe zemrën për vite me radhë përpara se të ndjeni ndonjë gjë të gabuar. Unë kam parë burra në 40s të humbasin gishtat e këmbëve dhe gratë verbërohen, nga diabeti që nuk u diagnostikua kurrë, sepse ata nuk kishin bërë kurrë një test gjaku. Kjo është e parandalueshme.",
@@ -2509,7 +2553,7 @@
       }
     },
     "mental": {
-      "description": "Në 15 vite në komunitetet romë, mësova se barrë më e rëndë nuk është sëmundja fizike — është pesha e diskriminimit, varfërisë, frikës nga dëbimi, shqetësimit për të ardhmen e fëmijëve dhe ndjesia se askush në sistem nuk kujdeset. E quajmë stres. Kur zgjat vite, bëhet diçka tjetër. Meriton të emërohet, kuptohet dhe trajtohet — pa turp.",
+      "description": "Në 15 vitet e punës në komunitetet rome, kam mësuar se barra më e rëndë që mbajnë njerëzit nuk është sëmundja fizike – është pesha e diskriminimit, varfërisë, frikës nga dëbimi, shqetësimit për të ardhmen e fëmijëve të tyre dhe ndjenjës se askush në sistem nuk kujdeset. Ne e quajmë këtë stres. Kur zgjat me vite, bëhet diçka më shumë. Ajo meriton të emërtohet, kuptohet dhe trajtohet - pa turp.",
       "stressManagement": {
         "title": "Të jetosh me stresin",
         "description": "Nuk do të pretendoj se një ushtrim i frymëmarrjes do të zgjidhë problemet tuaja. Nëse jeni të shqetësuar për dëbimin e familjes suaj, asnjë aplikacion meditimi nuk do ta rregullojë këtë. Por unë kam punuar me qindra njerëz në komunitetet tona që mbartin stres të jashtëzakonshëm dhe kam parë se çfarë ndodh kur ky stres mbetet i pamenaxhuar për vite me rradhë: sulme në zemër te burrat në moshën 40s, gra që nuk mund të hanë apo flenë, fëmijë që rriten në familje të elektrizuara nga tensioni. Ne nuk mund t'i ndryshojmë gjithmonë rrethanat tona, por mund të ndryshojmë mënyrën se si i mbajmë ato.",
@@ -2625,7 +2669,123 @@
     "pillarProgress": "Progresi i të mësuarit sipas shtyllave",
     "contactSupport": "Kontakto koordinatorin rajonal",
     "resources": "Burime për mediatorin",
-    "downloadGuide": "Shkarko udhëzuesin e fushës (PDF)"
+    "downloadGuide": "Shkarko udhëzuesin e fushës (PDF)",
+    "ecHint": "Ndërtuar për ndërmjetësuesit e shëndetit në komunitet në Rumaninë rurale — Ekipet e integruara të komunitetit POIDS / FSE+ (ECI).",
+    "tabDashboard": "Vështrim i përgjithshëm",
+    "tabCases": "Rastet",
+    "tabSessions": "Sesionet",
+    "tabIndicators": "Treguesit",
+    "tabTraining": "Trajnimi",
+    "tabTools": "Mjetet e terrenit",
+    "openCases": "Rastet aktive",
+    "sessionsThisMonth": "Seancat e këtij muaji",
+    "newCase": "Rast i ri",
+    "newSession": "Sesioni i informacionit të regjistrit",
+    "casesTitle": "Menaxhimi i rasteve",
+    "noCases": "Ende nuk ka raste - shtoni një familje ose person që mbështesni.",
+    "caseName": "Përfituesi",
+    "caseCategory": "Domeni",
+    "caseStatus": "Statusi",
+    "caseNotes": "Plani i ndërhyrjes dhe shënimet",
+    "nextVisit": "Vizita tjetër (opsionale)",
+    "saveCase": "Ruaj rastin",
+    "caseSaved": "Rasti u ruajt",
+    "categoryHealth": "Shëndeti dhe parandalimi",
+    "categorySocial": "Mbështetja sociale",
+    "categoryEducation": "Arsimi",
+    "categoryRights": "Të drejtat dhe aksesi në kujdes",
+    "statusIdentified": "I identifikuar",
+    "statusAssessment": "Vlerësimi",
+    "statusPlan": "Plani i ndërhyrjes",
+    "statusMonitoring": "Monitorimi",
+    "statusClosed": "Mbyllur",
+    "householdSize": "Madhësia e shtëpisë",
+    "vulnerabilityLabel": "Dobësitë (grupi i synuar i POIDS)",
+    "healthFacilitationLabel": "Lehtësimet shëndetësore",
+    "sessionsTitle": "Sesionet e Informacionit",
+    "noSessions": "Nuk është regjistruar ende asnjë seancë.",
+    "sessionTitle": "Titulli i seancës",
+    "sessionTopic": "Tema falas",
+    "sessionLocation": "Vendndodhja (fshati, shkolla, qendra komunitare)",
+    "sessionAttendees": "Të pranishmit (përafërsisht)",
+    "sessionNotes": "Shënime dhe vazhdimësi",
+    "sessionThemeLabel": "Tema e shëndetit publik",
+    "saveSession": "Ruaj seancën",
+    "sessionSaved": "Sesioni u ruajt",
+    "toolsTitle": "Përdorimi në terren me familjet",
+    "toolsScan": "Hidhni poshtë një mit shëndetësor",
+    "toolsVaccines": "Udhëzues për vaksinat",
+    "toolsRights": "Njihni të drejtat tuaja",
+    "toolsExplain": "Shpjegoni një recetë",
+    "toolsChat": "Pyesni këshilltarin shëndetësor",
+    "contactUjssGeneric": "Zgjidhni qarkun për të ngarkuar koordinatorin UJSS.",
+    "countyLabel": "Qarku juaj",
+    "countyPlaceholder": "Zgjidhni qarkun",
+    "syncIdle": "Gati",
+    "syncSyncing": "Po sinkronizohet...",
+    "syncSynced": "Sinkronizuar",
+    "syncOffline": "Vetëm pajisje",
+    "exportPrint": "Printo raportin (ruaje si PDF)",
+    "exportDownload": "Shkarkoni raportin HTML",
+    "reportTitle": "Raporti i aktivitetit të ndërmjetësuesit shëndetësor",
+    "reportGenerated": "Gjeneruar në",
+    "reportKpiSection": "Treguesit kryesorë",
+    "indicatorsTitle": "Treguesit POIDS / SCI 2000",
+    "indicatorsHint": "Llogaritur automatikisht nga rastet, vizitat dhe seancat tuaja. Përdorni për raportimin mujor të UJSS / DSP.",
+    "indicatorsCoverage": "Mbulimi i komunitetit",
+    "indicatorsActivity": "Aktiviteti në terren",
+    "indicatorsHealthFacilitation": "Lehtësimet shëndetësore (për rast)",
+    "indicatorsSessionsByTheme": "Sesionet sipas temës (këtë vit)",
+    "indicatorsVulnerability": "Përfituesit sipas grupit vulnerabël",
+    "indicatorsUniquePeople": "Përfitues unikë",
+    "indicatorsHouseholds": "Njerëzit në familje",
+    "indicatorsClosedCases": "Rastet e mbyllura",
+    "indicatorsVisitsThisYear": "Vizitat (nga viti deri më sot)",
+    "indicatorsAttendeesThisYear": "Pjesëmarrësit e sesionit (viti)",
+    "trainingTitle": "Trajnim ECI",
+    "trainingSubtitle": "Rruga hyrëse për infermierët e komunitetit, ndërmjetësit dhe ekipin e integruar.",
+    "trainingProgress": "E përfunduar",
+    "trainingMinutes": "min",
+    "trainingCompleted": "përfunduar",
+    "trainingMarkComplete": "Shëno si të përfunduar",
+    "trainingMarkIncomplete": "Shëno si të paplotë",
+    "trainingTierFoundations": "Fondacionet ECI",
+    "trainingTierHealth": "Shëndeti publik",
+    "trainingTierSocial": "Sociale dhe të drejtat",
+    "trainingTierFieldwork": "Aktiviteti në terren",
+    "vuln_child": "Fëmijët (0–18)",
+    "vuln_schoolDropoutRisk": "Rreziku i braktisjes së shkollës",
+    "vuln_pregnant": "Gratë shtatzëna",
+    "vuln_singleParent": "Prindër të vetëm",
+    "vuln_minVeniturGarantat": "Të ardhura minimale të garantuara",
+    "vuln_elderly": "Të moshuarit",
+    "vuln_disability": "Personat me aftësi të kufizuara",
+    "vuln_romaCommunity": "Komuniteti Rom",
+    "vuln_noInsurance": "Asnjë sigurim shëndetësor",
+    "vuln_noDocuments": "Nuk ka dokumente identiteti",
+    "vuln_domesticViolence": "Të mbijetuarit e dhunës në familje",
+    "facilitation_vaccinationFacilitated": "Vaksinimi u lehtësua",
+    "facilitation_prenatalFacilitated": "Kujdesi prenatal i lehtësuar",
+    "facilitation_screeningReferral": "Referimi i shqyrtimit",
+    "facilitation_chronicMonitoring": "Monitorimi i sëmundjeve kronike",
+    "facilitation_tbCommunicableScreening": "Ekzaminimi i TB/sëmundjeve ngjitëse",
+    "facilitation_gpEnrollment": "Regjistrimi i mjekut të përgjithshëm",
+    "facilitation_insuranceEnrollment": "Regjistrimi i sigurimit shëndetësor (CNAS)",
+    "sessionTheme_vaccination": "Vaksinimi",
+    "sessionTheme_maternalChild": "Shëndeti i nënës dhe fëmijës",
+    "sessionTheme_nutrition": "Të ushqyerit dhe ushqyerja me gji",
+    "sessionTheme_hygiene": "Higjiena dhe higjiena",
+    "sessionTheme_tbCommunicable": "TB dhe sëmundjet ngjitëse",
+    "sessionTheme_chronicDisease": "Sëmundjet kronike (HTA, diabeti)",
+    "sessionTheme_screening": "Depistimi (kanceri, NCD)",
+    "sessionTheme_mentalHealth": "Shëndeti mendor",
+    "sessionTheme_addiction": "Varësitë (alkooli, droga, duhani)",
+    "sessionTheme_rights": "Të drejtat dhe aksesi në kujdes",
+    "sessionTheme_prevention": "Parandalimi i përgjithshëm",
+    "sessionTheme_other": "Të tjera",
+    "roleBoundaryNotice": "Njoftimi për kufirin e rolit: Si ndërmjetës/infermier në komunitet, ju mbështetni dhe lehtësoni aksesin. Mos kryeni akte mjekësore, diagnostifikoni ose përshkruani medikamente. Referojuni profesionistëve klinikë për vendime klinike.",
+    "dataMinimisationNote": "Njoftim për minimizimin e të dhënave: Regjistroni vetëm detajet e nevojshme për vazhdimësinë e kujdesit ose vlerësimin e programit. Asnjëherë mos shkruani emrin dhe adresën e plotë të kombinuar, përkatësinë etnike, statusin e imigrimit ose diagnozat klinike.",
+    "consentAttestation": "Konfirmoj që personi i përmendur (ose anëtari i familjes ose kujdestari në emër të tyre) ka pranuar që kjo vizitë të regjistrohet."
   },
   "policies": {
     "title": "Platform Policies",

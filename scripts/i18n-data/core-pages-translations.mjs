@@ -2,15 +2,15 @@
 export const TRANSLATIONS = {
   "bg": {
     "learn": {
-      "progressLabel": "завършени модула",
+      "progressLabel": "завършени модули",
       "startHere": "Започнете тук",
       "continueLabel": "Продължи",
       "allModules": "Всички модули",
       "prevention": {
-        "description": "За 15 години работа в ромски поселения съм виждал семейства, опустошени от болести, които простите навици можеха да предотвратят. Това знание не е лукс — то е оцеляване.",
+        "description": "През 15 години, работейки в ромски селища, съм виждал семейства, съсипани от болести, които простите навици биха могли да предотвратят. Това знание не е лукс - то е оцеляване.",
         "handwashing": {
           "title": "Измиване на ръцете",
-          "description": "Виждал съм цели семейства в населени места да се разболяват от една и съща стомашна инфекция, предавана от ръка на ръка. Правилното миене на ръцете е единственото най-евтино и най-мощно лекарство, до което вече имате достъп – то не струва нищо и предотвратява болестите, които виждам най-често в нашите общности.",
+          "description": "Виждал съм цели семейства в населени места да се разболяват от една и съща стомашна инфекция, предавана от ръка на ръка. Правилното измиване на ръцете е единственото най-евтино и най-мощно лекарство, до което вече имате достъп – не струва нищо и предотвратява болестите, които виждам най-често в нашите общности.",
           "tip1": "Преди да докоснете храна, преди да нахраните дете и след всяко посещение на тоалетната - измийте. Виждал съм една неизмита ръка да причинява седмица на диария за цяло домакинство",
           "tip2": "Бройте бавно до 20 или си тананикайте куплет от песен. Повечето хора се мият за 5 секунди — това не премахва почти нищо. Триенето между ръцете ви убива микробите",
           "tip3": "Без сапун? Работил съм в населени места без течаща вода. Пепелта работи. Пясъчни работи. Само водата с търкане работи по-добре от нищо. Не позволявайте на перфектното да попречи на доброто",
@@ -30,7 +30,7 @@ export const TRANSLATIONS = {
         },
         "cleanWater": {
           "title": "Чиста вода",
-          "description": "Работил съм в населени места, където семействата споделят една точка с вода, която тече два часа на ден, и в квартали, където чешмяната вода изглежда бистра, но носи бактерии, които причиняват хронични стомашни проблеми при децата. Качеството на водата не винаги е видимо — а в ромските общности рядко се наблюдава от властите. Вие трябва да сте инспекторът по водите на вашето семейство.",
+          "description": "Работил съм в населени места, където семействата споделят един водопровод, който тече два часа на ден, и в квартали, където чешмяната вода изглежда бистра, но носи бактерии, които причиняват хронични стомашни проблеми при децата. Качеството на водата не винаги е видимо — а в ромските общности рядко се наблюдава от властите. Вие трябва да сте инспекторът по водите на вашето семейство.",
           "tip1": "Покрийте всеки съд, в който съхранявате вода. Виждал съм мухи, прах и дори животински отпадъци да замърсяват непокрити кофи в рамките на часове, особено при топло време. Проста чиния отгоре предотвратява повечето замърсявания",
           "tip2": "Ако не сте сигурни за вашата вода, сварете я на кипене за една пълна минута. Това убива 99.9% от бактериите, вирусите и паразитите. Не струва почти нищо и работи - това съм го учил в десетки населени места, където водоизточникът беше съмнителен",
           "tip3": "Измивайте вашите контейнери за вода със сапун и чиста вода поне веднъж седмично. Мръсният съд прави чистата вода мръсна. Това е една от най-пренебрегваните причини за повтаряща се диария, която съм виждал при деца",
@@ -42,7 +42,7 @@ export const TRANSLATIONS = {
           "title": "Основна първа помощ",
           "description": "В отдалечени населени места и градски квартали, където линейките отнемат повече време, за да пристигнат - или понякога изобщо не идват - да знаете какво да правите в първите минути на спешен случай е разликата между живота и смъртта. Обучил съм стотици членове на ромската общност на основна първа помощ и съм виждал как това знание спасява животи, преди да пристигне някой лекар.",
           "tip1": "112 работи от всеки телефон в Европа — дори без кредит, дори без SIM карта, дори от заключен телефон. Научете всеки член на вашето семейство, включително деца над 7, да набират 112 и да казват къде се намират. Практикувайте това. При спешни случаи паниката кара хората да забравят",
-          "tip2": "При силно кървене: натиснете здраво с най-чистата кърпа, която имате – риза, забрадка, каквото и да било – и не я повдигайте, за да проверите. Продължете да натискате, докато пристигне помощ. Виждал съм хора да кървят опасно, защото непрекъснато сваляха кърпата, за да гледат. Добавете още плат отгоре, ако кръвта пропие",
+          "tip2": "При силно кървене: натиснете здраво с най-чистата кърпа, която имате – риза, забрадка, каквото и да е – и не я повдигайте, за да проверите. Продължете да натискате, докато пристигне помощ. Виждал съм хора да кървят опасно, защото непрекъснато сваляха кърпата, за да гледат. Добавете още плат отгоре, ако кръвта пропие",
           "tip3": "Изгаряния: незабавно поставете изгореното под студена течаща вода за най-малко 10 минути. Никога не нанасяйте масло, олио, паста за зъби или яйчен белтък – традиционни средства, които съм срещал в много семейства, които всъщност улавят топлината и причиняват по-големи щети и инфекции",
           "tip4": "Ако някой колабира и не диша: обадете се на 112, след това натиснете силно и бързо в центъра на гърдите му — 100 пъти в минута (темпото на песента „Stayin' Alive“). Не спирайте, докато не пристигне помощ. Несъвършеният CPR е безкрайно по-добър от липсата на CPR",
           "fact": "Проучванията показват, че в общности, където основното обучение за първа помощ е широко разпространено, оцеляването след сърдечен арест се удвоява. В много ромски общности времето за реагиране на линейката е значително по-дълго, отколкото в неромските райони - което прави първата помощ на минувачите още по-важна.",
@@ -50,7 +50,7 @@ export const TRANSLATIONS = {
         }
       },
       "nutrition": {
-        "description": "С годините с ромски семейства научих, че храната не е само хранене — тя е това, което можете да си позволите, какво има в квартала и какво знае семейството ви. Няма да ви кажа да купувате киноа. Ще ви кажа как да храните добре семейството с това, което имате.",
+        "description": "През годините, в които работех с ромски семейства, научих, че храната никога не е само хранене – става дума за това какво можете да си позволите, какво е налично във вашия квартал и какво семейството ви знае. Няма да ви казвам да си купите киноа. Ще ви кажа как да нахраните добре семейството си с това, което имате.",
         "balancedDiet": {
           "title": "Хранене добре с всеки бюджет",
           "description": "Най-големият проблем с храненето, който виждам в ромските общности, не е липсата на храна - това е твърде много евтин хляб, преработено месо и сладки напитки и твърде малко зеленчуци, яйца и бобови растения. Тук не става въпрос за воля. Става въпрос за това, което е налично и достъпно. Но малките промени правят огромни разлики за вашето здраве и развитието на вашите деца.",
@@ -83,7 +83,7 @@ export const TRANSLATIONS = {
         }
       },
       "maternal": {
-        "description": "Придружавал съм ромски жени в болници, където са ги слагали отделно, третирали ги с неуважение или отказвали епидурал, който други жени получават. Виждал съм и жени, починали от усложнения, които един пренатален преглед би хванал навреме. Тялото ви, бебето ви, правата ви. Познайте и трите.",
+        "description": "Придружавал съм ромски жени до болници, където са били поставяни в отделни стаи, говорено им е неуважително или са им отказвани епидурални упойки, които са получавали други жени. Виждал съм също така жени да умират от усложнения, които едно-единствено пренатално посещение би уловило. Вашето тяло, вашето бебе, вашите права. Познайте и трите.",
         "prenatalCare": {
           "title": "Пренатална грижа",
           "description": "През 15 години работа по медиация, моделът, който виждам многократно, е, че ромски жени посещават лекар за първи път, когато вече са бременни в 6 или 7 месеца — често защото се чувстват добре, защото се страхуват от болницата или защото никой не им е обяснил, че пренаталните грижи са безплатни и тяхно право. До този момент опасни състояния като прееклампсия или гестационен диабет може да са се развивали тихо в продължение на месеци.",
@@ -126,7 +126,7 @@ export const TRANSLATIONS = {
         }
       },
       "children": {
-        "description": "Ромските деца са бъдещето на нашите общности и заслужават всяко предимство. В работата си съм виждал деца, изостанали — не заради липса на способности, а защото предотвратими болести, пропуснати ваксини или неоткрити закъснения са им отнели шансовете. Това знание им връща тези шансове.",
+        "description": "Ромските деца са бъдещето на нашите общности и заслужават всички предимства. В моята работа съм виждал деца да изостават - не поради способности, а защото предотвратими болести, пропуснати ваксинации или незабелязани забавяния в развитието са откраднали възможности от тях. Това знание връща тези възможности.",
         "growthMilestones": {
           "title": "Растеж и развитие",
           "description": "Всяко дете се развива със собствено темпо и никога не искам родителите да се паникьосват от нормалните вариации. Но също така съм виждал деца, чието забавено развитие беше отхвърлено от семействата като „те ще наваксат“, когато ранната намеса можеше да направи трансформираща разлика. Да знаеш за какво да следиш не е безпокойство - това е внимание.",
@@ -134,7 +134,7 @@ export const TRANSLATIONS = {
           "tip2": "До 6 месеца повечето бебета посягат към предмети и отговарят на името им. До 12 месеца повечето казват няколко думи и се изправят. До 24 месеца повечето ходят добре и говорят с кратки фрази. Ако детето ви изостава значително от тези етапи, поискайте оценка на развитието – ранната помощ прави най-голямата разлика",
           "tip3": "Говорете постоянно с детето си - разказвайте какво правите, назовавайте предмети, пейте песни. Ромските семейства имат мощна устна традиция – използвайте я. Децата, които чуват повече думи, развиват по-голям речников запас и по-силни когнитивни умения. Това е безплатно и по-ефективно от всяка играчка",
           "tip4": "Зъбки: почиствайте венците на вашето бебе с влажна кърпа от раждането и използвайте мъничко петно от детска паста за зъби от първото зъбче. Виждам тежък кариес при ромски деца на възраст 3, често от бутилки сладък чай през нощта — това причинява болка, инфекция и проблеми с храненето, които засягат растежа",
-          "fact": "Изследванията показват, че децата, чиито забавяния в развитието са идентифицирани и адресирани преди възраст 3, са 5 пъти по-склонни да посещават училище на очакваното ниво. В населените места, където съм създал месечно претегляне и скрининг на развитието, процентите на насочване за ранна интервенция се утроиха — което означава, че децата получават помощ, която иначе биха пропуснали.",
+          "fact": "Изследванията показват, че децата, чиито забавяния в развитието са идентифицирани и адресирани преди възраст 3, са 5 пъти по-склонни да посещават училище на очакваното ниво. В населени места, където съм създал месечно претегляне и скрининг на развитието, процентите на насочване за ранна интервенция се утроиха - което означава, че децата получават помощ, която иначе биха пропуснали.",
           "action": "Ако детето ви е под 2, заведете го на проверка на теглото и скрининг на развитието във вашия здравен център този месец. Ако детето ви е над 2 и имате притеснения относно говора, ходенето или поведението, поискайте направление за специалист. Вашето безпокойство е основателно - действайте според него."
         },
         "commonIllnesses": {
@@ -159,7 +159,7 @@ export const TRANSLATIONS = {
         }
       },
       "chronic": {
-        "description": "Ромите умират с 10 години по-рано от европейската средна стойност. По-голямата част от тази разлика идва от хронични болести — диабет, сърдечни и дихателни заболявания — които се развиват бавно и тихо години наред. Когато се появят симптомите, вредата е нанесена. Но повечето е предотвратимо и всичко се управлява, ако се хване навреме.",
+        "description": "Ромите умират 10 години по-млади от средното за Европа. По-голямата част от тази празнина идва от хронични заболявания - диабет, сърдечни заболявания, респираторни заболявания - които се развиват бавно и тихо в продължение на години. Докато се появят симптомите, щетите са нанесени. Но повечето от тях могат да бъдат предотвратени и всичко е управляемо, когато бъде уловено рано.",
         "diabetes": {
           "title": "Диабет: тихата заплаха",
           "description": "Диабет тип 2 е хроничното заболяване, което най-често срещам в ромските общности. Той протича в семейства, процъфтява на евтината диета с високо съдържание на захар, към която бедността принуждава хората, и уврежда очите, бъбреците, краката и сърцето ви години наред, преди да почувствате нещо нередно. Виждал съм мъже на 40 години да губят пръстите на краката си, а жени да ослепяват от диабет, който никога не е бил диагностициран, защото никога не са имали кръвен тест. Това е предотвратимо.",
@@ -192,11 +192,11 @@ export const TRANSLATIONS = {
         }
       },
       "mental": {
-        "description": "За 15 години в ромски общности научих, че най-тежкото бреме не е физическата болест — а тежестта на дискриминацията, бедността, страха от изселване, грижата за бъдещето на децата и усещането, че никой в системата не се грижи. Наричаме го стрес. Когато трае години, става нещо друго. Заслужава да бъде назовано, разбрано и лекувано — без срам.",
+        "description": "През 15 години работа в ромски общности научих, че най-тежкото бреме, което хората носят, не е физическото заболяване — това е тежестта на дискриминацията, бедността, страхът от изгонване, тревогата за бъдещето на децата им и усещането, че никой в системата не го е грижа. Ние наричаме това стрес. Когато продължи с години, става нещо повече. Заслужава да бъде назовано, разбрано и третирано - без срам.",
         "stressManagement": {
           "title": "Живот със стрес",
           "description": "Няма да се преструвам, че едно дихателно упражнение ще реши проблемите ви. Ако се притеснявате, че семейството ви ще бъде изгонено, никое приложение за медитация няма да поправи това. Но аз съм работил със стотици хора в нашите общности, които са подложени на огромен стрес, и съм виждал какво се случва, когато този стрес остане неконтролиран в продължение на години: инфаркти при мъже в техните 40 години, жени, които не могат да ядат или спят, деца, които растат в домакинства, наелектризирани от напрежение. Не винаги можем да променим обстоятелствата си, но можем да променим начина, по който ги понасяме.",
-          "tip1": "Дихателният метод 4-4-8 действа незабавно върху нервната ви система. Вдишайте през носа за 4 брои, задръжте за 4, издишайте бавно през устата за 8. Направете това 5 пъти. Пулсът ви намалява, мускулите ви се отпускат. Уча това на семействата преди посещения в болница, преди съдебни заседания, преди всяка стресираща среща. Това е инструмент, който винаги имате със себе си",
+          "tip1": "Дихателният метод 4-4-8 действа незабавно върху нервната ви система. Вдишайте през носа за 4 брои, задръжте за 4, издишайте бавно през устата за 8. Направете това 5 пъти. Пулсът ви спада, мускулите ви се отпускат. Уча това на семействата преди посещения в болница, преди съдебни заседания, преди всяка стресираща среща. Това е инструмент, който винаги имате със себе си",
           "tip2": "Ходенето е най-подценяваното лекарство срещу стреса. 20 минути ходене — не бързо, просто ходене — намалява хормона на стреса кортизол с до 30%. Ако не можете да напуснете къщата, вървете в кръг. Самото движение е това, което работи, а не пейзажът",
           "tip3": "Говорете с някого. Не за решаване на проблема - просто за споделяне на теглото. Виждал съм мъже в нашите общности да носят всичко сами, защото молбата за помощ се чувства като слабост. За 15 години от тази работа най-силните хора, които съм срещал, са тези, които се научиха да казват „боря се“",
           "tip4": "Бъдете съзнателни относно това, което влиза в ума ви. Социални медии, новини, семейни спорове, които се повтарят в главата ви - това са източници на стрес, които можете да контролирате. Не казвам да игнорирате реалността. Казвам, че избирайте кога да се занимавате с него и създавайте пространства през деня си, където съзнателно сте спокойни",
@@ -313,12 +313,12 @@ export const TRANSLATIONS = {
   },
   "bs": {
     "learn": {
-      "progressLabel": "završenih modula",
-      "startHere": "Započnite ovdje",
+      "progressLabel": "moduli završeni",
+      "startHere": "Počnite ovdje",
       "continueLabel": "Nastavi",
       "allModules": "Svi moduli",
       "prevention": {
-        "description": "U 15 godina rada u romskim naseljima vidio sam porodice pogođene bolestima koje su jednostavne navike mogle spriječiti. Ovo znanje nije luksuz — preživljavanje je.",
+        "description": "Za 15 godina rada u romskim naseljima viđao sam porodice razorene bolestima koje su jednostavne navike mogle spriječiti. Ovo znanje nije luksuz – to je preživljavanje.",
         "handwashing": {
           "title": "Pranje ruku",
           "description": "Vidio sam čitave porodice u naseljima kako se razboljevaju od iste stomačne infekcije, prenose se iz ruke u ruku. Pravilno pranje ruku je jedini najjeftiniji, najmoćniji lijek kojem već imate pristup – ne košta ništa i sprječava bolesti koje najčešće viđam u našim zajednicama.",
@@ -345,14 +345,14 @@ export const TRANSLATIONS = {
           "tip1": "Pokrijte svaku posudu u kojoj čuvate vodu. Vidio sam kako muhe, prašina, pa čak i životinjski otpad kontaminiraju nepokrivene kante u roku od nekoliko sati, posebno po toplom vremenu. Jednostavna ploča na vrhu sprječava većinu kontaminacije",
           "tip2": "Ako niste sigurni u svoju vodu, prokuhajte je jednu punu minutu. Ovo ubija 99.9% bakterija, virusa i parazita. Ne košta skoro ništa, a radi — ovo sam učio u desetinama naselja u kojima je izvor vode bio upitan",
           "tip3": "Perite svoje posude za vodu sapunom i čistom vodom najmanje jednom sedmično. Prljava posuda zaprlja čistu vodu. Ovo je jedan od najčešće zanemarenih uzroka ponavljajuće dijareje koje sam vidio kod djece",
-          "tip4": "Potoci, bare i lokve koje stoje nikada nisu bezbedne za piće - čak i ako voda izgleda bistra. Paraziti nevidljivi oku uzrokuju hronična oštećenja crijeva i razvoja djece",
+          "tip4": "Potoci, bare i lokve koje se nalaze nikada nisu bezbedne za piće - čak i ako voda izgleda bistra. Paraziti nevidljivi oku uzrokuju hronična oštećenja crijeva i razvoja djece",
           "fact": "U mnogim romskim naseljima širom Centralne i Istočne Evrope, porodice nemaju pristup bezbednoj vodovodnoj vodi. Evropski centar za prava Roma je dokumentovao da su romska naselja sistematski nedovoljno opskrbljena vodnom infrastrukturom. Prokuhavanje vode nije idealno – to je strategija preživljavanja dok ne ispunite svoje pravo na čistu vodu.",
           "action": "Danas provjerite svaku posudu u kojoj vaša porodica čuva vodu za piće. Pokrijte sve otvorene. Ako ne možete provjeriti je li izvor vode siguran, počnite kuhati svu vodu za piće i kuhanje od večeras."
         },
         "firstAid": {
           "title": "Osnovna prva pomoć",
-          "description": "U udaljenim naseljima i urbanim naseljima gdje hitna pomoć treba duže da stignu – ili ponekad uopće ne stignu – znati šta učiniti u prvim minutima hitne pomoći je razlika između života i smrti. Obučio sam stotine pripadnika romske zajednice osnovnoj prvoj pomoći i vidio sam da ovo znanje spašava živote prije nego što je stigao bilo koji ljekar.",
-          "tip1": "112 radi sa bilo kog telefona u Evropi — čak i bez kredita, čak i bez SIM kartice, čak i sa zaključanog telefona. Naučite svakog člana vaše porodice, uključujući djecu stariju od 7, da biraju 112 i kažu gdje se nalaze. Vežbaj ovo. U hitnim slučajevima panika tjera ljude da zaborave",
+          "description": "U udaljenim naseljima i urbanim naseljima gdje hitna pomoć treba duže da stignu – ili ponekad uopće ne stignu – znati šta učiniti u prvim minutima hitne pomoći je razlika između života i smrti. Obučio sam stotine pripadnika romske zajednice osnovnoj prvoj pomoći i vidio sam da to znanje spašava živote prije nego što je stigao bilo koji ljekar.",
+          "tip1": "112 radi sa bilo kog telefona u Evropi — čak i bez kredita, čak i bez SIM kartice, čak i sa zaključanog telefona. Naučite svakog člana vaše porodice, uključujući djecu stariju od 7, da biraju 112 i kažu gdje se nalaze. Vježbaj ovo. U hitnim slučajevima, panika čini da ljudi zaborave",
           "tip2": "Za jako krvarenje: čvrsto pritisnite najčistijom krpom koju imate — košuljom, maramom, bilo čim — i ne podižite je da provjerite. Pritiskajte dok ne stigne pomoć. Vidio sam ljude kako opasno krvare jer su stalno skidali krpu da pogledaju. Dodajte još krpe na vrh ako krv prođe",
           "tip3": "Opekline: odmah stavite opekotinu pod hladnu tekuću vodu na najmanje 10 minuta. Nikada nemojte nanositi puter, ulje, pastu za zube ili bjelanjak - tradicionalne lijekove koje sam sreo u mnogim porodicama koji zapravo zadržavaju toplinu i uzrokuju još veću štetu i infekciju",
           "tip4": "Ako se neko sruši i ne diše: pozovite 112, a zatim snažno i brzo gurnite u centar svojih grudi — 100 puta u minuti (tempo pjesme 'Stayin' Alive'). Nemojte stati dok ne stigne pomoć. Nesavršen CPR je beskonačno bolji nego bez CPR",
@@ -361,7 +361,7 @@ export const TRANSLATIONS = {
         }
       },
       "nutrition": {
-        "description": "Godinama rada sa romskim porodicama naučio sam da hrana nije samo ishrana — to je ono što si možete priuštiti, što je dostupno u kvartu i što vaša porodica zna. Neću vam reći da kupujete quinou. Reći ću vam kako dobro hraniti porodicu onim što imate.",
+        "description": "Tokom godina rada sa romskim porodicama, naučio sam da hrana nikada nije samo ishrana – već ono što možete priuštiti, šta je dostupno u vašem komšiluku i šta vaša porodica zna. Neću vam reći da kupujete kvinoju. Reći ću ti kako da dobro prehraniš svoju porodicu onim što imaš.",
         "balancedDiet": {
           "title": "Dobro jesti pod bilo kojim budžetom",
           "description": "Najveći problem ishrane koji vidim u romskim zajednicama nije nedostatak hrane – to je previše jeftinog hleba, prerađenog mesa i slatkih pića, a premalo povrća, jaja i mahunarki. Ovdje se ne radi o snazi ​​volje. Radi se o tome šta je dostupno i pristupačno. Ali mali pomaci čine ogromne razlike u vašem zdravlju i razvoju vaše djece.",
@@ -380,21 +380,21 @@ export const TRANSLATIONS = {
           "tip3": "Djeca mlađa od 2 nikada ne bi trebala jesti šećer, med, so, kolu, čips ili slatkiše. Znam da baka i djed ponekad daju čaj sa šećerom da smire bebu - prestanite. Šećer u ovoj dobi programira doživotnu žudnju i oštećuje zube prije nego što u potpunosti izniknu",
           "tip4": "Jaje dnevno za dijete starije od 6 mjeseci je najjednostavnija nadogradnja ishrane koja postoji. Studija u Ekvadoru pokazala je da jaja smanjuju zaostajanje u razvoju za 47%. Ovo navodim u svakom govoru u zajednici jer je to izvodljivo za skoro svaku porodicu",
           "fact": "U zajednicama u kojima sam vodio programe ishrane, djeca koja su svakodnevno primala jaje i porciju povrća tokom 6 mjeseci pokazala su mjerljiva poboljšanja u rastu i kognitivnom razvoju u poređenju s djecom koja nisu. Neuhranjenost se ne odnosi samo na siromaštvo – već na to da znate šta da date prioritetu sa resursima koje imate.",
-          "action": "Od sutra dajte svom djetetu starijem od 6 mjeseci jedno jaje dnevno (pire ili kajganu). Ako je vaše dijete mlađe od 6 mjeseci i dojite, pojedite dodatno jaje – hranjive tvari prolaze kroz vaše mlijeko."
+          "action": "Od sutra dajte svom djetetu preko 6 mjeseci jedno jaje dnevno (pire ili kajganu). Ako je vaše dijete mlađe od 6 mjeseci i dojite, pojedite dodatno jaje – hranjive tvari prolaze kroz vaše mlijeko."
         },
         "foodSafety": {
           "title": "Održavanje sigurnosti hrane",
           "description": "Trovanje hranom jedan je od najčešćih razloga zbog kojih romske porodice posjećuju hitnu pomoć – povraćanje, dijareja, dehidracija, posebno kod djece. U naseljima u kojima je hlađenje nepouzdano, a kuhinje su zajedničke ili vanjske, sigurnost hrane nije tema iz udžbenika – to je svakodnevna vještina preživljavanja.",
-          "tip1": "Po toplom vremenu, kuhana hrana ostavljena duže od 2 sati postaje opasna. Ako ne možete da ga ohladite, kuvajte manje porcije koje završite u jednom obroku. Vidio sam cijele porodice hospitalizirane zbog podgrijanog gulaša ostavljenog preko noći tokom ljeta",
+          "tip1": "Po toplom vremenu, kuhana hrana ostavljena duže od 2 sati postaje opasna. Ako ne možete da ga ohladite, kuvajte manje porcije koje završite u jednom obroku. Vidio sam cijele porodice hospitalizirane zbog podgrijanog gulaša ostavljenog preko noći ljeti",
           "tip2": "Sirova piletina i meso nikada ne smeju dodirivati hleb, povrće ili bilo šta što će se jesti nekuvano. Koristite odvojene površine za rezanje — čak i čista plastična vrećica položena radi. Ova unakrsna kontaminacija je uzrok broj jedan trovanja hranom s kojim se susrećem",
           "tip3": "Ako hrana loše miriše, izgleda pogrešno ili je ljigava - bacite je. Nemojte ga probati da biste provjerili. Znam da je bacanje hrane bolno kada je novca malo, ali jedan napad trovanja hranom košta više u medicini i izgubljenom poslu nego što je hrana vrijedila",
-          "tip4": "Operite svo voće i povrće pod mlazom vode prije jela, čak i ako planirate da ih ogulite. Prljavština sa vanjske strane prelazi u unutrašnjost kada sečete. Ovo je posebno važno za tržišne proizvode kojima su se možda bavili mnogi ljudi",
+          "tip4": "Svo voće i povrće operite pod mlazom vode prije jela, čak i ako planirate da ih ogulite. Prljavština sa vanjske strane prelazi u unutrašnjost kada sečete. Ovo je posebno važno za tržišne proizvode kojima su se možda bavili mnogi ljudi",
           "fact": "WHO procjenjuje da se 600 miliona ljudi svake godine razboli od kontaminirane hrane, a djeca ispod 5 snose 40% tereta. U zajednicama u kojima sam predavao sigurnost hrane, posjete bolnicama zbog gastroenteritisa su značajno opale tokom prvog ljeta.",
           "action": "Provjerite svoju kuhinju odmah: ima li sirovo meso pohranjeno iznad ili dodiruje gotovu hranu? Postoji li kuhana hrana koja stoji vani više od 2 sati? Popravite ove dvije stvari danas - to su najčešće opasnosti koje vidim u kućnim posjetama."
         }
       },
       "maternal": {
-        "description": "Pratio sam romske žene u bolnice gdje su ih stavljale odvojeno, nepoštivo tretirale ili odbile epidural koji druge žene dobijaju. Vidio sam i žene koje su umrle od komplikacija koje bi jedna prenatalna posjeta na vrijeme uhvatila. Vaše tijelo, vaše dijete, vaša prava. Poznajte sva tri.",
+        "description": "Pratila sam Romkinje u bolnice gdje su bile smještene u odvojene sobe, razgovarali s nepoštovanjem ili su odbijali epiduralnu terapiju koju su druge žene primile. Također sam vidjela žene kako umiru od komplikacija koje bi izazvala jedna prenatalna posjeta. Vaše tijelo, vaša beba, vaša prava. Znaj sve tri.",
         "prenatalCare": {
           "title": "Prenatalna njega",
           "description": "U 15 godina rada medijacije, obrazac koji stalno vidim je da Romkinje po prvi put posjete doktora kada su već u 6 ili 7 mjesecu trudnoće - često zato što se osjećaju dobro, jer se boje bolnice, ili zato što niko nije objasnio da je prenatalna skrb besplatna i njihovo pravo. Do tog trenutka, opasna stanja poput preeklampsije ili gestacijskog dijabetesa možda su se tiho razvijala mjesecima.",
@@ -437,23 +437,23 @@ export const TRANSLATIONS = {
         }
       },
       "children": {
-        "description": "Roma djeca su budućnost naših zajednica i zaslužuju svaku prednost. U radu sam vidio djecu koja zaostaju — ne zbog nedostatka sposobnosti, nego jer su im spriječive bolesti, propuštene vakcine ili neotkrivena kašnjenja uzeli šanse. Ovo znanje im vraća te šanse.",
+        "description": "Romska djeca su budućnost naših zajednica i zaslužuju svaku prednost. U svom radu viđao sam da deca zaostaju - ne zbog sposobnosti, već zato što su im bolesti koje se mogu sprečiti, propuštene vakcinacije ili neotkrivena kašnjenja u razvoju ukrali prilike. Ovo znanje vraća te mogućnosti.",
         "growthMilestones": {
           "title": "Rast i razvoj",
           "description": "Svako dijete se razvija svojim tempom i nikada ne želim da roditelji paničare zbog normalnih varijacija. Ali također sam viđao djecu čiji su zakasneli razvoj porodice odbacile jer su 'sustigla' kada je rana intervencija mogla napraviti transformativnu razliku. Znati na šta treba paziti nije anksioznost – to je pažnja.",
           "tip1": "Mjesečno vaganje u prvoj godini je najjednostavniji alat za praćenje. Vaš zdravstveni centar ima grafikone rasta koji pokazuju da li je vaše dijete na pravom putu. Dijete koje prestane dobivati na težini ili iznenada padne na grafikonu treba hitnu istragu - to može biti jednostavno poput prilagođavanja hranjenja ili jednako važno kao i otkrivanje osnovnog stanja",
           "tip2": "Do 6 mjeseca većina beba poseže za predmetima i reagira na njihovo ime. Do 12 mjeseci, većina kaže nekoliko riječi i ustane. Do 24 mjeseca većina dobro hoda i govori kratkim frazama. Ako vaše dijete značajno zaostaje za ovim prekretnicama, zatražite procjenu razvoja - rana pomoć čini najveću razliku",
-          "tip3": "Neprestano razgovarajte sa svojim djetetom — pričajte šta radite, imenujte predmete, pjevajte pjesme. Romske porodice imaju moćnu usmenu tradiciju – iskoristite je. Djeca koja čuju više riječi razvijaju veći vokabular i jače kognitivne vještine. Ovo je besplatno i efikasnije od bilo koje igračke",
+          "tip3": "Neprestano razgovarajte sa svojim djetetom - pričajte šta radite, imenujte predmete, pjevajte pjesme. Romske porodice imaju moćnu usmenu tradiciju – iskoristite je. Djeca koja čuju više riječi razvijaju veći vokabular i jače kognitivne vještine. Ovo je besplatno i efikasnije od bilo koje igračke",
           "tip4": "Zubi: čistite bebino desni vlažnom krpom od rođenja, a od prvog zubića koristite sićušnu mrlju dječije paste za zube. Vidim teški karijes kod romske djece do 3, često iz boca slatkog čaja noću — to uzrokuje bol, infekciju i probleme u ishrani koji utiču na rast",
           "fact": "Istraživanja pokazuju da djeca čija su zaostajanja u razvoju identificirana i riješena prije dobi 3 imaju 5 puta veću vjerovatnoću da će pohađati školu na očekivanom nivou. U naseljima u kojima sam uspostavio mjesečno vaganje i razvojni skrining, stope upućivanja na ranu intervenciju su se utrostručile – što znači da su djeca dobila pomoć koju bi inače propustila.",
-          "action": "Ako je vaše dijete mlađe od 2, odvedite ga na provjeru težine i razvojni skrining u vaš dom zdravlja ovog mjeseca. Ako je vaše dijete starije od 2 i zabrinuti ste oko govora, hodanja ili ponašanja, zatražite uputnicu kod specijaliste. Vaša zabrinutost je opravdana - postupite po njoj."
+          "action": "Ako je vaše dijete mlađe od 2, odvedite ga na provjeru težine i razvojni skrining u svoj zdravstveni centar ovog mjeseca. Ako je vaše dijete starije od 2 i zabrinuti ste oko govora, hodanja ili ponašanja, zatražite uputnicu kod specijaliste. Vaša zabrinutost je opravdana - postupite po njoj."
         },
         "commonIllnesses": {
           "title": "Kada je Vaše dijete bolesno",
-          "description": "U naseljima sa prenaseljenim stambenim prostorima, ograničenim sanitarnim uslovima i hladnim zimama djeca često obolijevaju. Većina ovih bolesti – dijareja, kašalj, groznica – mogu se liječiti kod kuće ako znate šta da radite i kada da eskalirate. Ali također sam vidio roditelje da čekaju predugo, ili žure u hitnu pomoć zbog stanja koje bi jednostavno liječenje kod kuće riješilo. Ovaj modul vas uči razlici.",
-          "tip1": "Temperatura ispod 38.5°C: tijelo vašeg djeteta se bori protiv infekcije — ovo je dobro. Neka budu udobne, lagano odjevene i dajte dosta tekućine. Groznica iznad 38.5°C: dajte djeci paracetamol u odgovarajućoj dozi za njihovu težinu (NE paracetamol za odrasle). Ako temperatura traje duže od 3 dana ili je dijete neobično pospano, potražite medicinsku pomoć",
+          "description": "U naseljima sa prenaseljenim stambenim prostorima, ograničenim sanitarnim uslovima i hladnim zimama djeca često obolijevaju. Većina ovih bolesti – dijareja, kašalj, groznica – mogu se liječiti kod kuće ako znate šta da radite i kada da eskalirate. Ali takođe sam viđao roditelje da čekaju predugo ili žure u hitnu pomoć zbog stanja koje bi jednostavan tretman kod kuće rešio. Ovaj modul vas uči razlici.",
+          "tip1": "Temperatura ispod 38.5°C: tijelo vašeg djeteta se bori protiv infekcije — ovo je dobro. Neka budu udobne, lagano odjevene i dajte dosta tekućine. Groznica iznad 38.5°C: dajte djeci paracetamol u odgovarajućoj dozi za njihovu težinu (NE paracetamol za odrasle). Ako groznica traje duže od 3 dana ili je dijete neobično pospano, potražite medicinsku pomoć",
           "tip2": "Dijareja ubija dehidracijom, a ne samom infekcijom. Onog trenutka kada vaše dijete ima rijetku stolicu, započnite oralnu rehidraciju: 1 litar čiste prokuvane vode + 6 ravne kašičice šećera + pola kašičice soli. Dajte male gutljaje svakih nekoliko minuta. Ovaj recept je spasio više dječjih života širom svijeta nego bilo koji antibiotik",
-          "tip3": "ODMAH VODITE DJETE U BOLNICU ako primijetite: ubrzano ili otežano disanje, povlačenje grudi pri svakom udisanju, nemogućnost da pije ili doji, stalno povraćanje svega, neuobičajenu pospanost ili nebuđenje, konvulzije ili krvavi proljev. Ne čekaj. Ovo su hitni slučajevi",
+          "tip3": "ODMAH VODITE DJETE U BOLNICU ako primijetite: ubrzano ili otežano disanje, povlačenje grudi pri svakom udisanju, nemogućnost da pije ili doji, stalno povraćanje svega, neuobičajenu pospanost ili nebuđenje, konvulzije ili krvavi proljev. Nemojte čekati. Ovo su hitni slučajevi",
           "tip4": "Nemojte davati antibiotike bez lekarskog recepta. Nemojte dijeliti recept drugog djeteta. Nemojte koristiti preostale antibiotike. To stalno vidim u našim zajednicama i stvara bakterije otporne na lijekove koje je mnogo teže liječiti. Antibiotici ne pomažu kod prehlade, gripa ili većine kašlja",
           "fact": "U zajednicama u kojima sam radio, obuka roditelja za pripremu i upotrebu otopine za oralnu rehidraciju smanjila je hospitalizaciju djece zbog dijareje za više od 40% u jednoj godini. Znanje je toliko moćno — a sastojci koštaju manje od autobuske karte do bolnice.",
           "action": "Odmah zapamtite ovaj recept: 1 litar čiste vode + 6 kašičice šećera + pola kašičice soli. Vježbajte da ga napravite jednom. Ako hoćeš, probaj – trebalo bi da ima ukus suze. Ako ovo bude spremno, znači da kada vaše dijete dobije dijareju u 2am, možete odmah djelovati umjesto panike."
@@ -461,20 +461,20 @@ export const TRANSLATIONS = {
         "immunization": {
           "title": "Raspored vakcinacije",
           "description": "Biću direktan: u romskim zajednicama širom Evrope stope vakcinacije su niže od nacionalnog proseka, a to nije zato što romski roditelji ne mare za svoju decu – već zato što zdravstveni sistem nije uspeo da dopre do njih sa poštovanjem, pristupom i informacijama. Dezinformacije se šire i putem društvenih mreža. Držao sam djecu u bolnici sa boginjama koja nikada nisu trebala biti tamo. Svako nevakcinisano dijete je dijete koje je sistem zatajio.",
-          "tip1": "Rođenje do 6 sedmica: BCG (tuberkuloza) i hepatitis B. Daju se u bolnici prije otpusta. Ako je vaša beba rođena kod kuće, odnesite je u Dom zdravlja u toku prve sedmice života radi ovih vakcina. Ne čekaj",
+          "tip1": "Rođenje do 6 sedmica: BCG (tuberkuloza) i hepatitis B. Daju se u bolnici prije otpusta. Ako je vaša beba rođena kod kuće, odnesite je u Dom zdravlja u toku prve sedmice života radi ovih vakcina. Nemojte čekati",
           "tip2": "2, 3, 4 mjeseci: 'velika tri' kruga — DTP (difterija, tetanus, veliki kašalj), dječja paraliza, Hib i hepatitis B. Ovo su najkritičnije vakcine u djetinjstvu. Svaki krug jača imunitet. Nedostatak jednog slabi cijeli lanac",
           "tip3": "12–15 mjeseci: MMR (ospice, zaušnjaci, rubeola). Ne mogu ovo dovoljno naglasiti. Ospice nisu bezopasna dječja bolest – one ubijaju, uzrokuju oštećenje mozga i sljepljuju. 2019 sam vidio izbijanje malih boginja u romskom naselju jer je obuhvat pao ispod 80%. To se moglo spriječiti",
           "tip4": "Vakcine su besplatne u državnim zdravstvenim centrima u svim evropskim zemljama. Ne treba vam osiguranje, ne treba vam boravišna dozvola, ne treba vam zakazivanje u većini centara. Ako vam je usluga odbijena, ovo je nezakonito — obratite se svom zdravstvenom posredniku ili uredu za prava pacijenata",
-          "fact": "Razlika između stopa vakcinacije Roma i neroma u nekim evropskim zemljama prelazi 15 procentnih poena. Ovaj jaz nije uzrokovan vjerovanjem Roma o vakcinama — ankete stalno pokazuju da roditelji Romi žele da njihova djeca budu vakcinisana. Jaz je uzrokovan preprekama u pristupu, diskriminacijom u zdravstvenoj zaštiti i nedostatkom pristupa. Uklanjanje ovog jaza je obaveza države prema članu 11 Evropske socijalne povelje.",
+          "fact": "Razlika između stopa vakcinacije Roma i neroma u nekim evropskim zemljama prelazi 15 procentnih poena. Ovaj jaz nije uzrokovan vjerovanjem Roma o vakcinama — ankete stalno pokazuju da romski roditelji žele da njihova djeca budu vakcinisana. Jaz je uzrokovan preprekama u pristupu, diskriminacijom u zdravstvenoj zaštiti i nedostatkom pristupa. Uklanjanje ovog jaza je obaveza države prema članu 11 Evropske socijalne povelje.",
           "action": "Pronađite kartu za vakcinaciju vašeg djeteta. Ako nedostaje neka vakcina, ili ako nemate karticu, posjetite najbliži zdravstveni centar ove sedmice. Ako se suočite s preprekama — jezikom, dokumentima, odbijanjem — obratite se svom lokalnom zdravstvenom posredniku. Upravo zbog toga smo ovdje."
         }
       },
       "chronic": {
-        "description": "Romi u prosjeku umiru 10 godina ranije od evropskog prosjeka. Većina te razlike dolazi od hroničnih bolesti — dijabetesa, srčanih i respiratornih bolesti — koje se godinama tiho razvijaju. Kad se pojave simptomi, šteta je već napravljena. Ali većina se može spriječiti i sve se može upravljati ako se rano uhvati.",
+        "description": "Romi umiru 10 godina mlađe od evropskog prosjeka. Većina ovog jaza dolazi od hroničnih bolesti – dijabetesa, bolesti srca, respiratornih bolesti – koje se razvijaju polako i tiho godinama. Dok se simptomi pojave, šteta je učinjena. Ali većinu toga se može spriječiti, a sve se može kontrolirati kada se rano uhvati.",
         "diabetes": {
           "title": "Dijabetes: tiha prijetnja",
           "description": "Dijabetes tipa 2 je hronična bolest sa kojom se najčešće susrećem u romskim zajednicama. Proširuje se u porodicama, napreduje na jeftinoj ishrani sa visokim sadržajem šećera na koju siromaštvo tera ljude, i oštećuje vam oči, bubrege, stopala i srce godinama pre nego što osetite nešto loše. Vidio sam muškarce u 40ima kako gube nožne prste, a žene oslijepe, od dijabetesa koji nikada nije dijagnosticiran jer nikada nisu radile krvne pretrage. Ovo se može spriječiti.",
-          "tip1": "Ako neko u vašoj porodici ima dijabetes, vaš rizik je 2–3 puta veći. Ovo nije sudbina – to je signal da se sada djeluje. Smanjite bijeli hljeb, šećer i slatke napitke. Zamijenite pasuljem, sočivom, povrćem i vodom. Vidio sam porodice kako preokrenu preddijabetes u potpunosti kroz ove promjene",
+          "tip1": "Ako neko u vašoj porodici ima dijabetes, vaš rizik je 2–3 puta veći. Ovo nije sudbina – to je signal da se sada reaguje. Smanjite bijeli hljeb, šećer i slatke napitke. Zamijenite pasuljem, sočivom, povrćem i vodom. Vidio sam porodice kako preokrenu preddijabetes u potpunosti kroz ove promjene",
           "tip2": "30 minuta hodanja svaki dan smanjuje rizik od dijabetesa za 58%. Ne trči. Ne teretana. Hodanje. Kažem svakoj osobi preko 35 u zajednicama sa kojima radim: šetnja je lijek. Besplatno je i radi bolje od većine tableta za prevenciju",
           "tip3": "Zatražite test glukoze u krvi natašte u svom domu zdravlja najmanje jednom godišnje ako ste stariji od 35, gojazni ili imate porodičnu istoriju. To je jednostavan test ubodom prsta, besplatan je u većini zemalja i traje 5 minuta. Ovaj test može otkriti dijabetes godinama prije nego što se pojave simptomi",
           "tip4": "Znajte znakove upozorenja koji znače da je dijabetes možda već prisutan: stalna žeđ, vrlo često mokrenje (posebno noću), zamagljivanje vida, rane koje sporo zacjeljuju, neobjašnjiv umor. Ako imate dva ili više njih, testirajte se ove sedmice, a ne sljedećeg mjeseca",
@@ -503,7 +503,7 @@ export const TRANSLATIONS = {
         }
       },
       "mental": {
-        "description": "U 15 godina u romskim zajednicama naučio sam da najteži teret nije fizička bolest — nego težina diskriminacije, siromaštva, straha od deložacije, brige za budućnost djece i osjećaj da se niko u sistemu ne brine. Zovemo to stres. Kad traje godinama, postaje nešto drugo. Zaslužuje biti imenovan, shvaćen i liječen — bez stida.",
+        "description": "Za 15 godina rada u romskim zajednicama, naučio sam da najteži teret koji ljudi nose nije fizička bolest – to je težina diskriminacije, siromaštva, straha od deložacije, brige za budućnost svoje djece i osjećaj da nikoga u sistemu nije briga. Ovo zovemo stres. Kada to traje godinama, postaje nešto više. Zaslužuje da bude imenovan, shvaćen i tretiran - bez srama.",
         "stressManagement": {
           "title": "Živjeti sa stresom",
           "description": "Neću se pretvarati da će vježba disanja riješiti vaše probleme. Ako ste zabrinuti da će vaša porodica biti deložirana, nijedna aplikacija za meditaciju to neće popraviti. Ali radio sam sa stotinama ljudi u našim zajednicama koji su pod velikim stresom, i vidio sam šta se događa kada se taj stres godinama ne kontrolira: srčani udari kod muškaraca u 40ima, žene koje ne mogu jesti ili spavati, djeca koja odrastaju u domaćinstvima koja su naelektrizirana od napetosti. Ne možemo uvijek promijeniti naše okolnosti, ali možemo promijeniti način na koji ih nosimo.",
@@ -511,7 +511,7 @@ export const TRANSLATIONS = {
           "tip2": "Hodanje je najpodcijenjeniji lijek protiv stresa. 20 minuta hodanja — ne brzo, samo hodanje — smanjuje hormon stresa kortizol do 30%. Ako ne možete napustiti kuću, hodajte u krug. Sam pokret je ono što radi, a ne scenografija",
           "tip3": "Razgovaraj s nekim. Ne da riješim problem – samo da podijelim težinu. Vidio sam muškarce u našim zajednicama kako sve nose sami jer traženje pomoći je kao slabost. Za 15 godina ovog rada, najjači ljudi koje sam upoznao su oni koji su naučili reći 'Borim se'",
           "tip4": "Budite namjerni u pogledu onoga što vam pada na pamet. Društveni mediji, vijesti, porodične svađe koje vam se vrte u glavi – to su izvori stresa koje možete kontrolisati. Ne kažem da zanemarite stvarnost. Kažem da birate kada se bavite time i stvorite prostor u svom danu u kojem ste namjerno u miru",
-          "fact": "Romske zajednice doživljavaju ono što javno zdravlje naziva 'manjinskim stresom' — hronični fiziološki danak diskriminacije, isključenosti i siromaštva. Istraživanja pokazuju da ovo trajno podiže nivoe kortizola, ubrzavajući srčana oboljenja, dijabetes i mentalne bolesti. Ovo nije slabost. To je biologija koja odgovara na nepravdu.",
+          "fact": "Romske zajednice doživljavaju ono što javno zdravlje naziva 'manjinskim stresom' — hronični fiziološki danak diskriminacije, isključenosti i siromaštva. Istraživanja pokazuju da ovo trajno podiže nivoe kortizola, ubrzavajući bolesti srca, dijabetes i mentalne bolesti. Ovo nije slabost. To je biologija koja reaguje na nepravdu.",
           "action": "Večeras prije spavanja stavite telefon u drugu sobu i vježbajte 4-4-8 5 minuta. Ako imate partnera ili člana porodice koji je voljan, učinite to zajedno u tišini. Ovaj mali čin stvara granicu između dnevnog stresa i vašeg sna - a san je kada vaše tijelo popravlja štetu koju je stres izazvao."
         },
         "sleep": {
@@ -526,7 +526,7 @@ export const TRANSLATIONS = {
         },
         "communitySupport": {
           "title": "Moć konekcije",
-          "description": "Romska kultura već razumije nešto što zapadna medicina tek sada mjeri: da pripadnost, porodica i zajednica štite vaše zdravlje jednako snažno kao i svaki lijek. Vidio sam ljude kako preživljavaju najteže okolnosti - deložacije, bolest, gubitak - jer ih je držala njihova zajednica. I vidio sam kako se ljudi mnogo manje urušavaju kada su bili izolovani. Nauka sada potvrđuje ono što su naši preci znali: usamljenost ubija, povezanost liječi.",
+          "description": "Romska kultura već razumije nešto što zapadna medicina tek sada mjeri: da pripadnost, porodica i zajednica štite vaše zdravlje jednako snažno kao i svaki lijek. Vidio sam ljude kako preživljavaju najteže okolnosti - deložacije, bolest, gubitak - jer ih je njihova zajednica držala. I vidio sam kako se ljudi mnogo manje urušavaju kada su bili izolovani. Nauka sada potvrđuje ono što su naši preci znali: usamljenost ubija, povezanost liječi.",
           "tip1": "Ako poznajete nekoga u vašoj zajednici ko je nedavno izgubio člana porodice, bio mu je dijagnosticiran bolest, izgubio posao ili prolazi kroz krizu — nemojte čekati da zatraži pomoć. Posjetite ih. Donesi hranu. Sedi sa njima. U romskoj kulturi to je instinkt. U zdravstvenim naukama to se zove 'socijalni recept' — i djeluje bolje od većine tableta",
           "tip2": "Stid je neprijatelj zdravlja. Upoznala sam ljude koji su godinama skrivali dijabetes, depresiju, HIV i nasilje u porodici jer su se bojali šta će zajednica reći. Svaki put kada neko u našoj zajednici otvoreno govori o svojoj borbi, to daje dozvolu drugima. Ne morate sve dijeliti – ali dijeljenje nečega razbija tišinu od koje se ljudi razbole",
           "tip3": "Okupljanja, proslave, muzika, molitva, pričanje priča — to ne ometaju zdravlje. Oni su zdravlje. Studije pokazuju da redovno učešće u kulturnim aktivnostima zajednice smanjuje depresiju i kardiovaskularni rizik. Radost i pripadnost koju stvaraju su mjerljivi lijek",
@@ -624,12 +624,12 @@ export const TRANSLATIONS = {
   },
   "cs": {
     "learn": {
-      "progressLabel": "dokončených modulů",
+      "progressLabel": "moduly dokončeny",
       "startHere": "Začněte zde",
       "continueLabel": "Pokračovat",
       "allModules": "Všechny moduly",
       "prevention": {
-        "description": "Za 15 let práce v romských osadách jsem viděl rodiny zničené nemocemi, kterým by zabránily jednoduché návyky. Tyto znalosti nejsou luxus — jsou přežití.",
+        "description": "Za 15 let práce v romských osadách jsem viděl rodiny zničené nemocemi, kterým by se dalo předejít jednoduchými návyky. Toto poznání není luxus – je to přežití.",
         "handwashing": {
           "title": "Mytí rukou",
           "description": "Viděl jsem celé rodiny v osadách onemocnět stejnou žaludeční infekcí, předávanou z ruky do ruky. Správné mytí rukou je ten jediný nejlevnější a nejúčinnější lék, ke kterému už máte přístup – nic nestojí a zabraňuje nemocem, se kterými se v našich komunitách setkávám nejčastěji.",
@@ -672,7 +672,7 @@ export const TRANSLATIONS = {
         }
       },
       "nutrition": {
-        "description": "Po letech s romskými rodinami jsem pochopil, že jídlo není jen výživa — je to, co si můžete dovolit, co je v okolí a co vaše rodina zná. Neřeknu vám, abyste kupovali quinou. Řeknu vám, jak dobře nakrmit rodinu z toho, co máte.",
+        "description": "Za léta práce s romskými rodinami jsem se naučil, že jídlo není nikdy jen o výživě – jde o to, co si můžete dovolit, co je dostupné ve vašem okolí a co ví vaše rodina. Nebudu vám říkat, abyste si kupovali quinou. Řeknu vám, jak dobře nakrmit svou rodinu tím, co máte.",
         "balancedDiet": {
           "title": "Dobře se stravujte za jakýkoli rozpočet",
           "description": "Největší problém s výživou, který v romských komunitách vidím, není nedostatek jídla – je to příliš levného chleba, zpracovaného masa a slazených nápojů a příliš málo zeleniny, vajec a luštěnin. Tady nejde o sílu vůle. Jde o to, co je dostupné a cenově dostupné. Ale malé posuny mají obrovský vliv na vaše zdraví a vývoj vašich dětí.",
@@ -691,12 +691,12 @@ export const TRANSLATIONS = {
           "tip3": "Děti do 2 by nikdy neměly jíst cukr, med, sůl, kolu, hranolky ani sladkosti. Vím, že prarodiče někdy dávají čaj s cukrem, aby uklidnili dítě - prosím, přestaňte. Cukr v tomto věku programuje celoživotní touhu a poškozuje zuby ještě předtím, než se úplně objeví",
           "tip4": "Vajíčko denně pro dítě starší 6 měsíců je nejjednodušším vylepšením výživy, které existuje. Studie v Ekvádoru ukázala, že vejce snížila zakrnění o 47%. Cituji to v každé komunitní řeči, protože je to dosažitelné téměř pro každou rodinu",
           "fact": "V komunitách, kde jsem vedl nutriční programy, vykazovaly děti, které dostávaly vejce a porci zeleniny denně po dobu 6 měsíců, měřitelná zlepšení v růstu a kognitivním vývoji ve srovnání s dětmi, které je nedostaly. Podvýživa není jen o chudobě – jde o to vědět, čemu dát přednost se zdroji, které máte.",
-          "action": "Od zítřka podávejte svému dítěti staršímu než 6 měsíců jedno vejce denně (rozmačkané nebo míchané). Pokud je vašemu dítěti méně než 6 měsíců a vy kojíte, snězte sami jedno vejce navíc – živiny procházejí vaším mlékem."
+          "action": "Od zítřka podávejte svému dítěti staršímu než 6 měsíců jedno vejce denně (rozmačkané nebo míchané). Pokud je vašemu dítěti méně než 6 měsíců a kojíte, snězte sami jedno vejce navíc – živiny procházejí vaším mlékem."
         },
         "foodSafety": {
           "title": "Udržování potravin v bezpečí",
           "description": "Otrava jídlem je jedním z nejčastějších důvodů návštěv romských rodin na pohotovosti — zvracení, průjem, dehydratace, zejména u dětí. V osadách, kde je chlazení nespolehlivé a kuchyně jsou společné nebo venkovní, není bezpečnost potravin učebnicovým tématem – je to každodenní dovednost přežití.",
-          "tip1": "V teplém počasí se vařené jídlo, které bylo ponecháno na více než 2 hodinách, stává nebezpečné. Pokud to nemůžete vychladit, vařte menší porce, které dokončíte v jednom jídle. Viděl jsem celé rodiny hospitalizované z ohřátého guláše, který byl přes noc ponechán v létě",
+          "tip1": "V teplém počasí se vařené jídlo, které bylo ponecháno na více než 2 hodinách, stává nebezpečné. Pokud to nemůžete vychladit, vařte menší porce, které dokončíte v jednom jídle. Viděl jsem celé rodiny hospitalizované z ohřátého dušeného masa, které bylo přes noc ponecháno v létě",
           "tip2": "Syrové kuře a maso se nikdy nesmí dotýkat chleba, zeleniny nebo čehokoli, co se bude jíst tepelně neupravené. Používejte samostatné řezné plochy – funguje i čistý plastový sáček položený naplocho. Tato křížová kontaminace je nejčastější příčinou otravy jídlem, se kterou se setkávám",
           "tip3": "Pokud jídlo špatně zapáchá, vypadá špatně nebo je slizké – vyhoďte ho. Pro kontrolu neochutnávejte. Vím, že vyhazování jídla je bolestivé, když je peněz málo, ale jeden záchvat otravy jídlem stojí víc léků a ztracené práce, než stálo jídlo",
           "tip4": "Veškeré ovoce a zeleninu před konzumací omyjte pod tekoucí vodou, i když je plánujete oloupat. Nečistoty na vnější straně se při řezání přenášejí dovnitř. To je zvláště důležité pro tržní produkty, se kterými může manipulovat mnoho lidí",
@@ -705,7 +705,7 @@ export const TRANSLATIONS = {
         }
       },
       "maternal": {
-        "description": "Doprovázel jsem romské ženy do nemocnic, kde je dávali odděleně, neuctivě se k nim chovali nebo jim odmítli epidurál, který jiné ženy dostaly. Viděl jsem i ženy, které zemřely na komplikace, jež by jedna prenatální návštěva včas zachytila. Vaše tělo, vaše dítě, vaše práva. Znáte všechny tři.",
+        "description": "Doprovázel jsem romské ženy do nemocnic, kde byly umístěny v oddělených místnostech, mluvilo se s nimi neuctivě nebo odmítaly epidurál, který jiné ženy dostávaly. Viděl jsem také ženy umírat na komplikace, které by zastihla jediná prenatální návštěva. Vaše tělo, vaše dítě, vaše práva. Znát všechny tři.",
         "prenatalCare": {
           "title": "Prenatální péče",
           "description": "Za 15 let mediační práce opakovaně vidím vzorec, kdy romské ženy poprvé navštíví lékaře, když jsou již 6 nebo 7 měsíci těhotenství – často proto, že se cítí dobře, protože se bojí nemocnice nebo protože jim nikdo nevysvětlil, že prenatální péče je bezplatná a mají právo. V tomto okamžiku se nebezpečné stavy, jako je preeklampsie nebo těhotenská cukrovka, mohly tiše vyvíjet celé měsíce.",
@@ -728,7 +728,7 @@ export const TRANSLATIONS = {
         },
         "breastfeeding": {
           "title": "Kojení",
-          "description": "Kojení je v romské kultuře hluboce ceněno, přesto se setkávám s mladými matkami, kterým příbuzní, kteří to myslí dobře, řekli, aby v prvních dnech podávaly vodu, čaj nebo umělou výživu, protože „ještě nepřišlo mléko“. Kolostrum – to husté, nažloutlé první mléko – není známkou toho, že něco není v pořádku. Je to tekuté zlato, nabité protilátkami, které chrání vaše novorozeně před těmi infekcemi, které jsou nejnebezpečnější v prvních týdnech života.",
+          "description": "Kojení je v romské kultuře hluboce ceněno, přesto se setkávám s mladými matkami, kterým příbuzní, kteří to myslí dobře, řekli, aby v prvních dnech podávaly vodu, čaj nebo umělou výživu, protože „ještě nepřišlo mléko“. Kolostrum – to husté, nažloutlé první mléko – není známkou toho, že něco není v pořádku. Je to tekuté zlato, nabité protilátkami, které ochrání vašeho novorozence právě před těmi infekcemi, které jsou nejnebezpečnější v prvních týdnech života.",
           "tip1": "Do 1 hodiny po porodu přiložte své dítě kůže na kůži na svůj hrudník a nechte je, aby si našlo prso. Toto první krmení mlezivem je nejdůležitější „vakcínou“, kterou vaše dítě dostane – obalí jeho střeva ochranou proti infekci. Nedovolte, aby někdo vzal vaše dítě pryč, než se to stane, pokud nenastane lékařská pohotovost",
           "tip2": "Krmte na požádání — kdykoli dítě projeví známky hladu (otáčení hlavičky, sání ručiček, šťourání). V prvních týdnech to může být 10–14krát za 24 hodin. To je normální a vytváří to vaše zásobování. Hodiny vám neřeknou, kdy má vaše dítě hlad – vaše dítě vám to řekne",
           "tip3": "Žádná voda, žádný čaj, žádná výživa po dobu 6 měsíců, pokud to lékař výslovně nepředepíše ze zdravotních důvodů. Vaše mateřské mléko mění složení během dne tak, aby vyhovovalo přesným potřebám vašeho dítěte – žádná továrna to nedokáže napodobit. Viděl jsem, že babičky, které to myslí dobře, dávají cukrovou vodu, která způsobila drozd a průjem",
@@ -748,13 +748,13 @@ export const TRANSLATIONS = {
         }
       },
       "children": {
-        "description": "Romské děti jsou budoucnost našich komunit a zaslouží si každou výhodu. Ve své práci jsem viděl děti, které zaostávají — ne kvůli nedostatku schopností, ale protože jim předcházené nemoci, zmeškaná očkování nebo neodhalená zpoždění vzala šance. Tyto znalosti jim tyto šance vrací.",
+        "description": "Romské děti jsou budoucností našich komunit a zaslouží si každou výhodu. Ve své práci jsem viděl, že děti zaostávají – ne kvůli schopnostem, ale proto, že jim nemoci, kterým lze předejít, zameškané očkování nebo nezjištěné vývojové zpoždění, vzaly příležitosti. Toto poznání tyto příležitosti vrací.",
         "growthMilestones": {
           "title": "Růst a rozvoj",
           "description": "Každé dítě se vyvíjí svým vlastním tempem a já nikdy nechci, aby rodiče propadali panice kvůli normálním variacím. Ale také jsem viděl děti, jejichž opožděný vývoj rodiny zavrhly, protože „dohoní všechno“, když včasná intervence mohla přinést transformační změnu. Vědět, na co si dát pozor, není úzkost – je to pozornost.",
           "tip1": "Měsíční vážení v prvním roce je nejjednodušší monitorovací nástroj. Vaše zdravotní středisko má grafy růstu, které ukazují, zda je vaše dítě na správné cestě. Dítě, které přestane přibírat na váze nebo náhle klesne na graf, potřebuje okamžité vyšetření – může to být tak jednoduché jako úprava krmení nebo stejně důležité jako zachycení základního onemocnění.",
           "tip2": "Do 6 měsíců většina dětí sahá po předmětech a reaguje na jejich jméno. Do 12 měsíců většina řekne pár slov a postaví se. Do 24 měsíců většina chodí dobře a mluví v krátkých frázích. Pokud vaše dítě výrazně zaostává za těmito milníky, požádejte o posouzení vývoje – včasná pomoc přináší největší rozdíl",
-          "tip3": "Neustále se svým dítětem mluvte – vyprávějte, co děláte, pojmenovávejte předměty, zpívejte písničky. Romské rodiny mají silnou ústní tradici – využijte ji. Děti, které slyší více slov, rozvíjejí větší slovní zásobu a silnější kognitivní schopnosti. Je to zdarma a efektivnější než jakákoli hračka",
+          "tip3": "Neustále se svým dítětem mluvte – vyprávějte, co děláte, pojmenovávejte předměty, zpívejte písničky. Romské rodiny mají silnou ústní tradici – využijte ji. Děti, které slyší více slov, rozvíjejí větší slovní zásobu a silnější kognitivní schopnosti. Je to zdarma a efektivnější než jakákoliv hračka",
           "tip4": "Zuby: čistěte dásně miminka od narození vlhkým hadříkem a od prvního zoubku použijte malinkou stěrku dětské zubní pasty. Vidím silné zubní kazy u romských dětí ve věku 3, často z lahví sladkého čaje v noci – to způsobuje bolest, infekci a problémy s jídlem, které ovlivňují růst",
           "fact": "Výzkum ukazuje, že děti, jejichž vývojové opoždění jsou identifikovány a řešeny před dosažením věku 3, mají 5krát vyšší pravděpodobnost, že budou chodit do školy na očekávané úrovni. V osadách, kde jsem zavedl měsíční vážení a vývojový screening, se počet doporučení pro včasnou intervenci ztrojnásobil – což znamená, že děti dostaly pomoc, o kterou by jinak přišli.",
           "action": "Pokud je vaše dítě mladší než 2, vezměte ho tento měsíc na kontrolu hmotnosti a vývojový screening ve vašem zdravotním středisku. Pokud je vaše dítě starší 2 a máte obavy z řeči, chůze nebo chování, požádejte o doporučení ke specialistovi. Vaše obavy jsou oprávněné – jednejte podle nich."
@@ -765,8 +765,8 @@ export const TRANSLATIONS = {
           "tip1": "Horečka pod 38.5°C: tělo vašeho dítěte bojuje s infekcí – to je dobré. Udržujte je pohodlné, lehce oblečené a dávejte jim dostatek tekutin. Horečka nad 38.5°C: podávejte dětem paracetamol v dávce správné pro jejich hmotnost (NE paracetamol pro dospělé). Pokud horečka trvá déle než 3 dnů nebo je dítě neobvykle ospalé, vyhledejte lékařskou pomoc",
           "tip2": "Průjem zabíjí dehydratací, nikoli samotnou infekcí. Ve chvíli, kdy má dítě řídkou stolici, zahajte orální rehydrataci: 1 litr čisté převařené vody + 6 zarovnané lžičky cukru + půl lžičky soli. Podávejte po malých doušcích každých pár minut. Tento recept zachránil více dětských životů na celém světě než jakékoli antibiotikum",
           "tip3": "NEPRODEJTE SVÉ DÍTĚ OKAMŽITĚ DO NEMOCNICE, pokud zaznamenáte: rychlé nebo obtížné dýchání, stahování hrudníku při každém nádechu, neschopnost pít nebo kojit, opakované zvracení všeho možného, ​​neobvyklá ospalost nebo neprobuzení, křeče nebo krvavý průjem. Nečekejte. To jsou mimořádné události",
-          "tip4": "Nepodávejte antibiotika bez lékařského předpisu. Nesdílejte předpis jiného dítěte. Nepoužívejte zbytky antibiotik. Vidím to neustále v našich komunitách a vytváří to bakterie odolné vůči lékům, které se mnohem hůře léčí. Antibiotika nedělají nic proti nachlazení, chřipce nebo většině kašle",
-          "fact": "V komunitách, ve kterých jsem pracoval, školení rodičů v přípravě a používání perorálního rehydratačního roztoku snížilo počet hospitalizací dětí kvůli průjmu o více než 40% za jediný rok. Znalosti jsou tak silné – a ingredience stojí méně než jízdenka na autobus do nemocnice.",
+          "tip4": "Nepodávejte antibiotika bez lékařského předpisu. Nesdílejte recept jiného dítěte. Nepoužívejte zbytky antibiotik. Vidím to neustále v našich komunitách a vytváří to bakterie odolné vůči lékům, které se mnohem hůře léčí. Antibiotika nedělají nic proti nachlazení, chřipce nebo většině kašle",
+          "fact": "V komunitách, ve kterých jsem pracoval, školení rodičů v přípravě a používání perorálního rehydratačního roztoku snížilo počet hospitalizací dětí kvůli průjmu o více než 40% za jediný rok. Vědomí je tak silné – a ingredience stojí méně než jízdenka na autobus do nemocnice.",
           "action": "Právě teď si zapamatujte tento recept: 1 litr čisté vody + 6 lžičky cukru + půl lžičky soli. Procvičte si to jednou. Pokud chcete, ochutnejte – mělo by chutnat jako slzy. Mít toto připravené znamená, že když vaše dítě dostane průjem v 2am, můžete místo paniky okamžitě jednat."
         },
         "immunization": {
@@ -777,11 +777,11 @@ export const TRANSLATIONS = {
           "tip3": "12–15 měsíců: MMR (spalničky, příušnice, zarděnky). Nemohu to dostatečně zdůraznit. Spalničky nejsou neškodnou dětskou nemocí – zabíjejí, způsobují poškození mozku a oslepují. V 2019 jsem viděl vypuknutí spalniček v romské osadě, protože pokrytí kleslo pod 80%. Dalo se tomu předejít",
           "tip4": "Vakcíny jsou zdarma ve státních zdravotních střediscích ve všech evropských zemích. Nepotřebujete pojištění, nepotřebujete povolení k pobytu, nepotřebujete schůzku ve většině center. Pokud vám bude služba odmítnuta, je to nezákonné – kontaktujte svého zdravotního mediátora nebo kancelář pro práva pacientů",
           "fact": "Rozdíl mezi proočkovaností Romů a neromů v některých evropských zemích přesahuje 15 procentních bodů. Tato mezera není způsobena přesvědčením Romů o vakcínách – průzkumy neustále ukazují, že romští rodiče chtějí své děti očkovat. Rozdíl je způsoben překážkami v přístupu, diskriminací ve zdravotnictví a nedostatečným dosahem. Překonání této mezery je povinností státu podle článku 11 Evropské sociální charty.",
-          "action": "Najděte očkovací průkaz svého dítěte. Pokud nějaká vakcína chybí nebo nemáte kartu, navštivte tento týden nejbližší zdravotní středisko. Pokud narazíte na překážky – jazyk, dokumenty, odmítnutí – kontaktujte svého místního zdravotního mediátora. To je přesně to, kvůli čemu jsme tady."
+          "action": "Najděte očkovací průkaz svého dítěte. Pokud nějaká vakcína chybí nebo nemáte kartu, navštivte tento týden nejbližší zdravotní středisko. Pokud čelíte překážkám – jazyk, dokumenty, odmítnutí – kontaktujte svého místního zdravotního mediátora. To je přesně to, kvůli čemu jsme tady."
         }
       },
       "chronic": {
-        "description": "Romové umírají v průměru o 10 let dříve než evropský průměr. Většina tohoto rozdílu pochází z chronických nemocí — cukrovka, srdeční a dýchací onemocnění — které se roky tiše vyvíjejí. Když se objeví příznaky, poškození je hotové. Většinu lze však předejít a vše zvládnout, pokud se to včas zachytí.",
+        "description": "Romové umírají o 10 let mladší, než je evropský průměr. Většina této mezery pochází z chronických onemocnění – cukrovky, srdečních chorob, onemocnění dýchacích cest – které se v průběhu let vyvíjejí pomalu a tiše. V době, kdy se objeví příznaky, je škoda napáchaná. Ale většině z nich se dá předejít a všechno se dá zvládnout, když se podchytí včas.",
         "diabetes": {
           "title": "Diabetes: Tichá hrozba",
           "description": "Diabetes typu 2 je chronické onemocnění, se kterým se v romských komunitách setkávám nejčastěji. Vyskytuje se v rodinách, prospívá levné stravě s vysokým obsahem cukru, ke které lidi nutí chudoba, a poškozuje vaše oči, ledviny, nohy a srdce roky, než cítíte něco špatného. Viděl jsem muže v jejich 40s, jak ztrácejí prsty na nohou a ženy oslepnou kvůli cukrovce, která nebyla nikdy diagnostikována, protože nikdy neměli krevní test. Tomu lze předejít.",
@@ -796,7 +796,7 @@ export const TRANSLATIONS = {
           "title": "Vaše srdce",
           "description": "Kardiovaskulární onemocnění jsou v romských komunitách zabijákem číslo jedna – ne kvůli genetice, ale kvůli podmínkám, ve kterých žijeme: chronický stres z chudoby a diskriminace, vysoká míra kouření, diety utvářené tím, co chudoba umožňuje, a téměř žádný přístup k preventivním vyšetřením. Zúčastnil jsem se pohřbů mužů v jejich 50s, kteří zemřeli na infarkt, kterému se dalo zcela předejít. Tento modul existuje, protože se odmítám více účastnit.",
           "tip1": "Kouření je ta nejničivější věc, kterou můžete svému srdci způsobit. Vím, že je to hluboce zakořeněno v naší komunitní kultuře a nejsem zde, abych to soudil – ale dlužím vám upřímnost. Každá cigareta poškozuje vaše cévy. Pokud nemůžete přestat, snižte. Pokud můžete přestat, vaše srdce se začne opravovat během 24 hodin",
-          "tip2": "Vysoký krevní tlak se nazývá tichý zabiják, protože necítíte nic, dokud nedojde k mrtvici nebo infarktu. Nechte si změřit krevní tlak v každé lékárně – je to zdarma. Normální je pod 120/80. Nad 140/90 je nebezpečné a vyžaduje léčbu. Zjistil jsem nebezpečně vysoký krevní tlak u lidí, kteří se cítili naprosto zdraví",
+          "tip2": "Vysoký krevní tlak se nazývá tichý zabiják, protože necítíte nic, dokud nedojde k mrtvici nebo infarktu. Nechte si změřit krevní tlak v každé lékárně – je to zdarma. Normální hodnota je pod 120/80. Nad 140/90 je nebezpečné a vyžaduje léčbu. Zjistil jsem nebezpečně vysoký krevní tlak u lidí, kteří se cítili naprosto zdraví",
           "tip3": "Omezte sůl: Romská kuchyně je chutná a krásná, ale mnoho tradičních jídel je velmi slaných. Místo přidání soli použijte papriku, česnek, cibuli, bylinky a pepř. Vaše chuťové buňky se přizpůsobí během 2 týdnů – jídlo bude chutnat lépe, ne hůře. Jen díky této změně jsem viděl pokles krevního tlaku o 10 bodů",
           "tip4": "Chronický stres z diskriminace, chudoby, hrozeb vystěhování a rodinných konfliktů je přímou příčinou srdečních chorob. To není názor – to je zdokumentovaná medicína. Stresové hormony poškozují vaše krevní cévy v průběhu let. Najít jakýkoli způsob, jak uvolnit stres – chůze, hudba, modlitba, mluvení, komunita – je lékem na srdce",
           "fact": "Romští muži umírají na kardiovaskulární onemocnění v průměru o 10–15 let dříve než běžná populace. Ukazují to vlastní údaje Evropské komise. Ale 80% předčasných infarktů lze předejít změnou životního stylu a včasnou léčbou vysokého krevního tlaku a cholesterolu. Prevence funguje – pokud k ní máte přístup.",
@@ -814,7 +814,7 @@ export const TRANSLATIONS = {
         }
       },
       "mental": {
-        "description": "Za 15 let v romských komunitách jsem pochopil, že nejtěžší břemeno není fyzická nemoc — je to váha diskriminace, chudoby, strachu z vystěhování, starostí o budoucnost dětí a pocit, že systém se o vás nestará. Říkáme tomu stres. Když trvá roky, stává se něčím jiným. Zaslouží si být pojmenován, pochopen a léčen — bez hanby.",
+        "description": "Za 15 let práce v romských komunitách jsem se naučil, že nejtěžší zátěž, kterou lidé nesou, není fyzická nemoc – je to váha diskriminace, chudoba, strach z vystěhování, obavy o budoucnost svých dětí a pocit, že to nikoho v systému nezajímá. Tomu říkáme stres. Když to trvá roky, stane se z toho něco víc. Zaslouží si být pojmenována, pochopena a ošetřena – bez ostychu.",
         "stressManagement": {
           "title": "Život se stresem",
           "description": "Nebudu předstírat, že dechové cvičení vyřeší vaše problémy. Pokud se obáváte, že bude vaše rodina vystěhována, žádná meditační aplikace to nevyřeší. Ale pracoval jsem se stovkami lidí v našich komunitách, kteří nesou obrovský stres, a viděl jsem, co se stane, když se tento stres roky nezvládá: infarkty u mužů v jejich 40, ženy, které nemohou jíst ani spát, děti, které vyrůstají v domácnostech elektrizovaných napětím. Nemůžeme vždy změnit své okolnosti, ale můžeme změnit způsob, jakým je neseme.",
@@ -822,8 +822,8 @@ export const TRANSLATIONS = {
           "tip2": "Chůze je nejvíce podceňovaným lékem na stres. 20 minut chůze – ne rychlé, pouze chůze – snižuje stresový hormon kortizol až o 30%. Pokud nemůžete opustit dům, choďte v kruzích. Funguje samotný pohyb, ne scenérie",
           "tip3": "Promluvte si s někým. Ne pro vyřešení problému – jen pro sdílení váhy. Viděl jsem muže v našich komunitách, kteří nosí všechno sami, protože požádat o pomoc je jako slabost. Za 15 let této práce jsou nejsilnější lidé, které jsem potkal, ti, kteří se naučili říkat „Bojuji“",
           "tip4": "Buďte záměrní ohledně toho, co vám přijde na mysl. Sociální média, zprávy, rodinné hádky, které se vám přehrávají v hlavě – to jsou zdroje stresu, které můžete ovládat. Neříkám ignorovat realitu. Říkám, vyberte si, kdy se s tím zapojíte, a vytvořte si ve svém dni prostory, kde budete záměrně v klidu",
-          "fact": "Romské komunity zažívají to, co veřejné zdraví nazývá „menšinovým stresem“ – chronickou fyziologickou daň diskriminace, vyloučení a chudoby. Výzkumy ukazují, že to trvale zvyšuje hladinu kortizolu, což urychluje srdeční choroby, cukrovku a duševní choroby. To není slabost. Je to biologie, která reaguje na nespravedlnost.",
-          "action": "Dnes večer před spaním dejte telefon do jiné místnosti a cvičte 4-4-8 dýchání po dobu 5 minut. Pokud máte ochotu partnera nebo člena rodiny, udělejte to společně v tichosti. Tento malý čin vytváří hranici mezi denním stresem a vaším spánkem – a spánek je okamžikem, kdy vaše tělo napravuje škody, které stres způsobil."
+          "fact": "Romské komunity zažívají to, co veřejné zdraví nazývá „menšinovým stresem“ – chronickou fyziologickou daň diskriminace, vyloučení a chudoby. Výzkumy ukazují, že to trvale zvyšuje hladinu kortizolu, což urychluje srdeční onemocnění, cukrovku a duševní onemocnění. To není slabost. Je to biologie, která reaguje na nespravedlnost.",
+          "action": "Dnes večer před spaním dejte telefon do jiné místnosti a cvičte 4-4-8 dýchání po dobu 5 minut. Pokud máte ochotu partnera nebo člena rodiny, udělejte to společně v tichosti. Tento malý čin vytváří hranici mezi denním stresem a spánkem – a spánek je okamžikem, kdy vaše tělo napravuje škody, které stres způsobil."
         },
         "sleep": {
           "title": "Spánek jako lék",
@@ -853,7 +853,7 @@ export const TRANSLATIONS = {
           "tip3": "Pokud se někdo z vaší rodiny zmíní o tom, že chce zemřít, chce zmizet nebo má pocit, že bez něj by bylo všem lépe – berte to okamžitě vážně. Zůstaňte s nimi. Odstraňte přístup k lékům a ostrým předmětům. Zavolejte na národní krizovou linku nebo 112. Nereagujete přehnaně. Tato slova jsou voláním o pomoc, na kterou je třeba odpovědět",
           "tip4": "Léky na duševní zdraví nejsou ostudné, návykové ani „pro šílené lidi“. Antidepresiva jsou předepisována milionům lidí po celém světě a zachraňují životy. Nemění to, kým jste – zvedají chemickou mlhu, která vám brání být tím, kým jste. Viděl jsem lidi proměněné zacházením, kterému léta odolávali kvůli stigmatizaci",
           "fact": "Romské komunity zažívají nejvyšší míru deprese a úzkosti v Evropě, což je způsobeno strukturálními faktory, jako je diskriminace, chudoba a nedostatečný přístup ke službám. Přesto je využívání služeb duševního zdraví v romských komunitách mezi nejnižšími. V programech, kde jsem pomáhal spojovat lidi s kulturně citlivou péčí o duševní zdraví, bylo zlepšení kvality života hluboké – nejen pro jednotlivce, ale pro celou jejich rodinu.",
-          "action": "Uložte si toto číslo do svého telefonu hned teď: linka důvěry pro krizi duševního zdraví ve vaší zemi. Pokud jste v krizi, zavolejte. Pokud je někdo, koho znáte, v krizi, zavolejte mu. A pokud máte problémy déle než 2 týdnů, objednejte si tento týden schůzku se svým praktickým lékařem. Zasloužíte si cítit se lépe a pomoc existuje."
+          "action": "Uložte si toto číslo do telefonu hned teď: linka důvěry pro krizi duševního zdraví ve vaší zemi. Pokud jste v krizi, zavolejte. Pokud je někdo, koho znáte, v krizi, zavolejte mu. A pokud máte problémy déle než 2 týdnů, objednejte si tento týden schůzku se svým praktickým lékařem. Zasloužíte si cítit se lépe a pomoc existuje."
         }
       }
     },
@@ -940,7 +940,7 @@ export const TRANSLATIONS = {
       "continueLabel": "Συνέχεια",
       "allModules": "Όλες οι ενότητες",
       "prevention": {
-        "description": "Σε 15 χρόνια εργασίας σε ρομά οικισμούς, είδα οικογένειες να καταστρέφονται από ασθένειες που απλές συνήθειες θα μπορούσαν να αποτρέψουν. Αυτή η γνώση δεν είναι πολυτέλεια — είναι επιβίωση.",
+        "description": "Στα 15 χρόνια που εργάζομαι σε καταυλισμούς Ρομά, έχω δει οικογένειες να καταστρέφονται από ασθένειες που απλές συνήθειες θα μπορούσαν να είχαν αποτρέψει. Αυτή η γνώση δεν είναι πολυτέλεια - είναι επιβίωση.",
         "handwashing": {
           "title": "Πλύσιμο χεριών",
           "description": "Έχω δει ολόκληρες οικογένειες σε οικισμούς να αρρωσταίνουν από την ίδια στομαχική λοίμωξη, περασμένες χέρι με χέρι. Το σωστό πλύσιμο των χεριών είναι το μόνο φθηνότερο, πιο ισχυρό φάρμακο στο οποίο έχετε ήδη πρόσβαση — δεν κοστίζει τίποτα και προλαμβάνει τις ασθένειες που βλέπω πιο συχνά στις κοινότητές μας.",
@@ -967,7 +967,7 @@ export const TRANSLATIONS = {
           "tip1": "Καλύψτε κάθε δοχείο όπου αποθηκεύετε νερό. Έχω δει μύγες, σκόνη, ακόμη και ζωικά απορρίμματα να μολύνουν ακάλυπτους κάδους μέσα σε λίγες ώρες, ειδικά σε ζεστό καιρό. Ένα απλό πιάτο από πάνω αποτρέπει την περισσότερη μόλυνση",
           "tip2": "Εάν δεν είστε σίγουροι για το νερό σας, βράστε το σε κυλιόμενο βράσιμο για ένα ολόκληρο λεπτό. Αυτό σκοτώνει 99.9% των βακτηρίων, των ιών και των παρασίτων. Δεν κοστίζει σχεδόν τίποτα και λειτουργεί — το έχω διδάξει σε δεκάδες οικισμούς όπου η πηγή νερού ήταν αμφισβητήσιμη",
           "tip3": "Πλένετε τα δοχεία με νερό με σαπούνι και καθαρό νερό τουλάχιστον μία φορά την εβδομάδα. Ένα βρώμικο δοχείο κάνει το καθαρό νερό βρώμικο. Αυτή είναι μια από τις πιο παραμελημένες αιτίες επαναλαμβανόμενης διάρροιας που έχω δει σε παιδιά",
-          "tip4": "Τα ρυάκια, οι λιμνούλες και οι όρθιες λακκούβες δεν είναι ποτέ ασφαλή για πόση — ακόμα κι αν το νερό φαίνεται καθαρό. Παράσιτα αόρατα στο μάτι προκαλούν χρόνιες βλάβες στα έντερα και την ανάπτυξη των παιδιών",
+          "tip4": "Τα ρυάκια, οι λιμνούλες και οι όρθιες λακκούβες δεν είναι ποτέ ασφαλή για κατανάλωση — ακόμα κι αν το νερό φαίνεται καθαρό. Παράσιτα αόρατα στο μάτι προκαλούν χρόνιες βλάβες στα έντερα και την ανάπτυξη των παιδιών",
           "fact": "Σε πολλούς καταυλισμούς Ρομά στην Κεντρική και Ανατολική Ευρώπη, οι οικογένειες δεν έχουν πρόσβαση σε ασφαλές νερό με σωλήνες. Το Ευρωπαϊκό Κέντρο Δικαιωμάτων των Ρομά έχει τεκμηριώσει ότι οι γειτονιές των Ρομά υποεξυπηρετούνται συστηματικά από υποδομές νερού. Το βραστό νερό δεν είναι ιδανικό — είναι μια στρατηγική επιβίωσης μέχρι να εκπληρωθεί το δικαίωμά σας σε καθαρό νερό.",
           "action": "Σήμερα, ελέγξτε κάθε δοχείο όπου η οικογένειά σας αποθηκεύει πόσιμο νερό. Καλύψτε ό,τι είναι ανοιχτό. Εάν δεν μπορείτε να επαληθεύσετε ότι η πηγή νερού είναι ασφαλής, ξεκινήστε να βράζετε όλο το πόσιμο και το μαγείρεμα του νερού από απόψε."
         },
@@ -983,7 +983,7 @@ export const TRANSLATIONS = {
         }
       },
       "nutrition": {
-        "description": "Μετά από χρόνια με ρομά οικογένειες, έμαθα ότι το φαγητό δεν είναι μόνο διατροφή — είναι αυτό που μπορείτε να αντέξετε, τι υπάρχει στη γειτονιά και τι ξέρει η οικογένειά σας. Δεν θα σας πω να αγοράσετε κινόα. Θα σας πω πώς να ταΐσετε καλά την οικογένεια με ό,τι έχετε.",
+        "description": "Στα χρόνια που δούλευα με οικογένειες Ρομά, έμαθα ότι το φαγητό δεν έχει να κάνει μόνο με τη διατροφή — έχει να κάνει με το τι μπορείτε να αντέξετε οικονομικά, τι είναι διαθέσιμο στη γειτονιά σας και τι γνωρίζει η οικογένειά σας. Δεν θα σου πω να αγοράσεις κινόα. Θα σου πω πώς να ταΐσεις καλά την οικογένειά σου με αυτά που έχεις.",
         "balancedDiet": {
           "title": "Καλή διατροφή με οποιονδήποτε προϋπολογισμό",
           "description": "Το μεγαλύτερο διατροφικό πρόβλημα που βλέπω στις κοινότητες των Ρομά δεν είναι η έλλειψη τροφής — είναι πολύ φτηνό ψωμί, επεξεργασμένο κρέας και ποτά με ζάχαρη και πολύ λίγα λαχανικά, αυγά και όσπρια. Δεν πρόκειται για δύναμη θέλησης. Πρόκειται για το τι είναι διαθέσιμο και προσιτό. Αλλά μικρές αλλαγές κάνουν τεράστιες διαφορές στην υγεία σας και στην ανάπτυξη των παιδιών σας.",
@@ -1016,7 +1016,7 @@ export const TRANSLATIONS = {
         }
       },
       "maternal": {
-        "description": "Συνόδευσα γυναίκες ρομά σε νοσοκομεία όπου τις έβαζαν χωριστά, τις αντιμετώπιζαν χωρίς σεβασμό ή τους αρνούνταν επισκληρίδιο που έπαιρναν άλλες γυναίκες. Είδα και γυναίκες που πέθαναν από επιπλοκές που θα έπιανε ένας προγεννητικός έλεγχος έγκαιρα. Το σώμα σας, το παιδί σας, τα δικαιώματά σας. Γνωρίστε και τα τρία.",
+        "description": "Έχω συνοδεύσει γυναίκες Ρομά σε νοσοκομεία όπου τις έβαλαν σε ξεχωριστά δωμάτια, τους μιλούσαν με ασέβεια ή τους αρνήθηκαν επισκληρίδια που έλαβαν άλλες γυναίκες. Έχω δει επίσης γυναίκες να πεθαίνουν από επιπλοκές που θα έπιανε μια μόνο προγεννητική επίσκεψη. Το σώμα σας, το μωρό σας, τα δικαιώματά σας. Γνωρίστε και τα τρία.",
         "prenatalCare": {
           "title": "Προγεννητική Φροντίδα",
           "description": "Στα 15 χρόνια εργασίας διαμεσολάβησης, το πρότυπο που βλέπω επανειλημμένα είναι ότι γυναίκες Ρομά επισκέπτονται γιατρό για πρώτη φορά όταν είναι ήδη 6 ή 7 μηνών έγκυος — συχνά επειδή αισθάνονται καλά, επειδή φοβούνται το νοσοκομείο ή επειδή κανείς δεν εξήγησε ότι η προγεννητική φροντίδα είναι δωρεάν και το δικαίωμά τους. Μέχρι εκείνο το σημείο, επικίνδυνες καταστάσεις όπως η προεκλαμψία ή ο διαβήτης κύησης μπορεί να έχουν αναπτυχθεί σιωπηλά εδώ και μήνες.",
@@ -1059,7 +1059,7 @@ export const TRANSLATIONS = {
         }
       },
       "children": {
-        "description": "Τα ρομά παιδιά είναι το μέλλον των κοινοτήτων μας και αξίζουν κάθε πλεονέκτημα. Στη δουλειά μου είδα παιδιά να μένουν πίσω — όχι λόγω έλλειψης ικανότητας, αλλά επειδή προληπτικές ασθένειες, χαμένα εμβόλια ή αδιάγνωστες καθυστερήσεις τους πήραν τις ευκαιρίες. Αυτή η γνώση τους επιστρέφει αυτές τις ευκαιρίες.",
+        "description": "Τα παιδιά Ρομά είναι το μέλλον των κοινοτήτων μας και τους αξίζει κάθε πλεονέκτημα. Στη δουλειά μου, έχω δει παιδιά να μένουν πίσω — όχι λόγω ικανότητας, αλλά επειδή οι ασθένειες που μπορούσαν να προληφθούν, οι χαμένοι εμβολιασμοί ή οι μη εντοπισμένες αναπτυξιακές καθυστερήσεις τους έκλεψαν ευκαιρίες. Αυτή η γνώση δίνει αυτές τις ευκαιρίες πίσω.",
         "growthMilestones": {
           "title": "Ανάπτυξη & Ανάπτυξη",
           "description": "Κάθε παιδί αναπτύσσεται με τον δικό του ρυθμό και ποτέ δεν θέλω οι γονείς να πανικοβληθούν για την κανονική παραλλαγή. Αλλά έχω δει επίσης παιδιά των οποίων η καθυστερημένη ανάπτυξη απορρίφθηκε από τις οικογένειες ως «θα προλάβουν» όταν η έγκαιρη παρέμβαση θα μπορούσε να κάνει μια μεταμορφωτική διαφορά. Το να ξέρεις τι να προσέχεις δεν είναι άγχος - είναι προσοχή.",
@@ -1092,7 +1092,7 @@ export const TRANSLATIONS = {
         }
       },
       "chronic": {
-        "description": "Οι ρομά πεθαίνουν κατά μέσο όρο 10 χρόνια νωρίτερα από τον ευρωπαϊκό μέσο όρο. Το μεγαλύτερο μέρος αυτής της διαφοράς προέρχεται από χρόνιες ασθένειες — διαβήτη, καρδιακές και αναπνευστικές παθήσεις — που αναπτύσσονται αργά και σιωπηλά για χρόνια. Όταν εμφανίζονται τα συμπτώματα, η ζημιά έχει γίνει. Αλλά το μεγαλύτερο μέρος προλαμβάνεται και όλα διαχειρίζονται αν εντοπιστούν έγκαιρα.",
+        "description": "Οι Ρομά πεθαίνουν 10 χρόνια νεότεροι από τον ευρωπαϊκό μέσο όρο. Το μεγαλύτερο μέρος αυτού του κενού προέρχεται από χρόνιες ασθένειες - διαβήτης, καρδιακές παθήσεις, αναπνευστικές ασθένειες - που αναπτύσσονται αργά και σιωπηλά με τα χρόνια. Μέχρι να εμφανιστούν τα συμπτώματα, έχει γίνει ζημιά. Αλλά τα περισσότερα από αυτά μπορούν να προληφθούν και όλα είναι διαχειρίσιμα όταν συλληφθούν νωρίς.",
         "diabetes": {
           "title": "Διαβήτης: Η σιωπηλή απειλή",
           "description": "Ο διαβήτης τύπου 2 είναι η χρόνια ασθένεια που αντιμετωπίζω πιο συχνά στις κοινότητες των Ρομά. Λειτουργεί σε οικογένειες, ευδοκιμεί με τη φθηνή δίαιτα με υψηλή περιεκτικότητα σε ζάχαρη στην οποία η φτώχεια αναγκάζει τους ανθρώπους και βλάπτει τα μάτια, τα νεφρά, τα πόδια και την καρδιά σας για χρόνια πριν νιώσετε κάτι κακό. Έχω δει άνδρες στα 40s τους να χάνουν τα δάχτυλα των ποδιών τους και γυναίκες να τυφλώνονται, από διαβήτη που δεν διαγνώστηκε ποτέ επειδή δεν έκαναν ποτέ εξέταση αίματος. Αυτό μπορεί να προληφθεί.",
@@ -1125,11 +1125,11 @@ export const TRANSLATIONS = {
         }
       },
       "mental": {
-        "description": "Σε 15 χρόνια σε ρομά κοινότητες έμαθα ότι το βαρύτερο βάρος δεν είναι η σωματική ασθένεια — είναι το βάρος της διάκρισης, της φτώχειας, του φόβου εξώθησης, της ανησυχίας για το μέλλον των παιδιών και το αίσθημα ότι κανείς στο σύστημα δεν νοιάζεται. Το λέμε στρες. Όταν διαρκεί χρόνια, γίνεται κάτι άλλο. Αξίζει να ονομαστεί, να κατανοηθεί και να αντιμετωπιστεί — χωρίς ντροπή.",
+        "description": "Στα 15 χρόνια εργασίας σε κοινότητες Ρομά, έμαθα ότι το βαρύτερο βάρος που φέρουν οι άνθρωποι δεν είναι η σωματική ασθένεια — είναι το βάρος των διακρίσεων, της φτώχειας, του φόβου της έξωσης, της ανησυχίας για το μέλλον των παιδιών τους και της αίσθησης ότι κανείς στο σύστημα δεν ενδιαφέρεται. Αυτό το ονομάζουμε άγχος. Όταν κρατάει χρόνια γίνεται κάτι παραπάνω. Αξίζει να ονομαστεί, να γίνει κατανοητό και να αντιμετωπιστεί — χωρίς ντροπή.",
         "stressManagement": {
           "title": "Ζώντας με το άγχος",
           "description": "Δεν θα προσποιηθώ ότι μια άσκηση αναπνοής θα λύσει τα προβλήματά σας. Εάν ανησυχείτε για την έξωση της οικογένειάς σας, καμία εφαρμογή διαλογισμού δεν θα το διορθώσει. Αλλά έχω δουλέψει με εκατοντάδες ανθρώπους στις κοινότητές μας που κουβαλούν τεράστιο άγχος και έχω δει τι συμβαίνει όταν αυτό το άγχος παραμένει ανεξέλεγκτο για χρόνια: καρδιακά επεισόδια σε άνδρες ηλικίας 40, γυναίκες που δεν μπορούν να φάνε ή να κοιμηθούν, παιδιά που μεγαλώνουν σε νοικοκυριά ηλεκτρισμένα από ένταση. Δεν μπορούμε πάντα να αλλάζουμε τις περιστάσεις μας, αλλά μπορούμε να αλλάξουμε τον τρόπο που τις μεταφέρουμε.",
-          "tip1": "Η μέθοδος αναπνοής 4-4-8 λειτουργεί άμεσα στο νευρικό σας σύστημα. Εισπνεύστε από τη μύτη σας για 4 μετρήσεις, κρατήστε το για 4, εκπνεύστε αργά από το στόμα σας για 8. Κάντε αυτό 5 φορές. Ο καρδιακός σου ρυθμός πέφτει, οι μύες σου χαλαρώνουν. Αυτό το διδάσκω στις οικογένειες πριν από τις επισκέψεις στο νοσοκομείο, πριν από τις ακροάσεις του δικαστηρίου, πριν από οποιαδήποτε αγχωτική συνάντηση. Είναι ένα εργαλείο που έχεις πάντα μαζί σου",
+          "tip1": "Η μέθοδος αναπνοής 4-4-8 λειτουργεί άμεσα στο νευρικό σας σύστημα. Εισπνεύστε από τη μύτη σας για 4 μετρήσεις, κρατήστε το για 4, εκπνεύστε αργά από το στόμα σας για 8. Κάντε αυτό 5 φορές. Ο καρδιακός σου ρυθμός πέφτει, οι μύες σου χαλαρώνουν. Αυτό το διδάσκω στις οικογένειες πριν από τις επισκέψεις στο νοσοκομείο, πριν από τις ακροάσεις του δικαστηρίου, πριν από οποιαδήποτε αγχωτική συνάντηση. Είναι ένα εργαλείο που έχετε πάντα μαζί σας",
           "tip2": "Το περπάτημα είναι το πιο υποτιμημένο φάρμακο για το στρες. 20 λεπτά περπάτημα — όχι γρήγορο, απλώς περπάτημα — μειώνει την ορμόνη του στρες κορτιζόλη έως και 30%. Εάν δεν μπορείτε να βγείτε από το σπίτι, περπατήστε σε κύκλους. Η ίδια η κίνηση είναι αυτό που λειτουργεί, όχι το σκηνικό",
           "tip3": "Μίλα σε κάποιον. Όχι για να διορθώσετε το πρόβλημα - απλώς για να μοιραστείτε το βάρος. Έχω δει άντρες στις κοινότητές μας να κουβαλούν τα πάντα μόνοι τους γιατί το να ζητάς βοήθεια μοιάζει με αδυναμία. Στα 15 χρόνια αυτής της δουλειάς, οι πιο δυνατοί άνθρωποι που έχω γνωρίσει είναι αυτοί που έμαθαν να λένε «αγωνίζομαι»",
           "tip4": "Να είστε σκόπιμοι για αυτό που μπαίνει στο μυαλό σας. Μέσα κοινωνικής δικτύωσης, ειδήσεις, οικογενειακές διαμάχες που επαναλαμβάνονται στο μυαλό σας — αυτές είναι πηγές άγχους που μπορείτε να ελέγξετε. Δεν λέω να αγνοήσω την πραγματικότητα. Λέω να επιλέγεις πότε ασχολείσαι με αυτό και να δημιουργήσεις χώρους στη μέρα σου όπου σκόπιμα είσαι ήρεμος",
@@ -1164,7 +1164,7 @@ export const TRANSLATIONS = {
           "tip3": "Εάν κάποιος στην οικογένειά σας αναφέρει ότι θέλει να πεθάνει, θέλει να εξαφανιστεί ή νιώθει ότι όλοι θα ήταν καλύτερα χωρίς αυτούς — πάρτε το αμέσως στα σοβαρά. Μείνε μαζί τους. Αφαιρέστε την πρόσβαση σε φάρμακα και αιχμηρά αντικείμενα. Καλέστε την εθνική γραμμή κρίσης ή 112. Δεν αντιδράς υπερβολικά. Αυτά τα λόγια είναι μια κραυγή για βοήθεια που πρέπει να απαντηθεί",
           "tip4": "Η φαρμακευτική αγωγή ψυχικής υγείας δεν είναι επαίσχυντη, εθιστική ή «για τρελούς». Τα αντικαταθλιπτικά συνταγογραφούνται σε εκατομμύρια ανθρώπους σε όλο τον κόσμο και σώζουν ζωές. Δεν αλλάζουν αυτό που είσαι — σηκώνουν τη χημική ομίχλη που σε εμποδίζει να είσαι αυτός που είσαι. Έχω δει ανθρώπους να μεταμορφώνονται από τη μεταχείριση που αντιστέκονταν για χρόνια λόγω του στίγματος",
           "fact": "Οι κοινότητες των Ρομά βιώνουν ένα από τα υψηλότερα ποσοστά κατάθλιψης και άγχους στην Ευρώπη, λόγω δομικών παραγόντων όπως οι διακρίσεις, η φτώχεια και η έλλειψη πρόσβασης σε υπηρεσίες. Ωστόσο, η χρήση υπηρεσιών ψυχικής υγείας στις κοινότητες των Ρομά είναι από τις χαμηλότερες. Σε προγράμματα όπου βοήθησα στη σύνδεση ανθρώπων με πολιτιστικά ευαίσθητη φροντίδα ψυχικής υγείας, η βελτίωση της ποιότητας ζωής ήταν βαθιά — όχι μόνο για το άτομο, αλλά για ολόκληρη την οικογένειά του.",
-          "action": "Αποθηκεύστε αυτόν τον αριθμό στο τηλέφωνό σας τώρα: τη γραμμή βοήθειας για την κρίση ψυχικής υγείας της χώρας σας. Αν είσαι σε κρίση, πάρε το τηλέφωνο. Εάν κάποιος που γνωρίζετε είναι σε κρίση, καλέστε το μαζί του. Και αν δυσκολεύεστε για περισσότερες από 2 εβδομάδες, κλείστε ένα ραντεβού με τον γιατρό σας αυτήν την εβδομάδα. Αξίζεις να νιώθεις καλύτερα, και βοήθεια υπάρχει."
+          "action": "Αποθηκεύστε αυτόν τον αριθμό στο τηλέφωνό σας τώρα: τη γραμμή βοήθειας για την κρίση ψυχικής υγείας της χώρας σας. Αν είσαι σε κρίση, πάρε το τηλέφωνο. Εάν κάποιος που γνωρίζετε είναι σε κρίση, καλέστε το μαζί του. Και αν δυσκολεύεστε για περισσότερες από 2 εβδομάδες, κλείστε ένα ραντεβού με τον γιατρό σας αυτήν την εβδομάδα. Αξίζεις να νιώθεις καλύτερα και η βοήθεια υπάρχει."
         }
       }
     },
@@ -1246,12 +1246,12 @@ export const TRANSLATIONS = {
   },
   "hr": {
     "learn": {
-      "progressLabel": "dovršenih modula",
-      "startHere": "Započnite ovdje",
-      "continueLabel": "Nastavi",
+      "progressLabel": "završeni moduli",
+      "startHere": "Počnite ovdje",
+      "continueLabel": "nastavi",
       "allModules": "Svi moduli",
       "prevention": {
-        "description": "U 15 godina rada u romskim naseljima vidio sam obitelji pogođene bolestima koje su jednostavne navike mogle spriječiti. Ovo znanje nije luksuz — preživljavanje je.",
+        "description": "U 15 godina rada u romskim naseljima, vidio sam obitelji razorene bolestima koje su jednostavne navike mogle spriječiti. Ovo znanje nije luksuz - ono je preživljavanje.",
         "handwashing": {
           "title": "Pranje ruku",
           "description": "Vidio sam cijele obitelji u naseljima kako obolijevaju od iste želučane infekcije, prenoseći se iz ruke u ruku. Ispravno pranje ruku jedini je najjeftiniji, najmoćniji lijek kojemu već imate pristup — ne košta ništa i sprječava bolesti koje najčešće viđam u našim zajednicama.",
@@ -1265,9 +1265,9 @@ export const TRANSLATIONS = {
         "vaccination": {
           "title": "Cijepljenje",
           "description": "Pratila sam romske majke u domove zdravlja gdje su ih odbijali jer nisu imale dokumente, nisu znale jezik ili im je jednostavno rečeno da dođu kasnije. Cjepiva su zakonsko pravo vaše djece — besplatno, sigurno i najjača zaštita koju roditelj može pružiti. Ovo vam nitko ne može uskratiti.",
-          "tip1": "Svaka država u Europi nudi besplatni raspored cijepljenja od rođenja. Ovo nije milostinja - to je zakonsko pravo vašeg djeteta. Ako zdravstveni radnik odbije, zatražite njegov nadzornik i to jasno navedite",
+          "tip1": "Svaka država u Europi nudi besplatni raspored cijepljenja od rođenja. Ovo nije milostinja - to je zakonsko pravo vašeg djeteta. Ako zdravstveni radnik odbije, zatražite nadzornika i to jasno navedite",
           "tip2": "Iskaznica cijepljenja najvažniji je dokument koji vaše dijete ima nakon rodnog lista. Čuvajte ga, nosite ga na svaki posjet liječniku. U slučaju gubitka, svaki dom zdravlja mora izdati zamjenu - ne prihvaćajte odbijanje",
-          "tip3": "Blaga groznica, bolna točka na ruci, uznemirenost jedan dan — to je normalno i znači da cjepivo djeluje. Uvjerila sam stotine zabrinutih majki u vezi s tim. Prolazi za 24–48 sati",
+          "tip3": "Blaga groznica, bolna točka na ruci, uznemirenost jedan dan — to je normalno i znači da cjepivo djeluje. Uvjerila sam stotine zabrinutih majki o tome. Prolazi za 24–48 sati",
           "tip4": "U većini domova zdravlja za cijepljenje vam nije potrebno zakazivanje. Uđite. Ako romski zdravstveni medijator radi u vašem kraju, zamolite ga da pođe s vama - za to smo obučeni",
           "fact": "U jednom naselju u kojem sam radio, pojavile su se ospice jer je procijepljenost pala na 60%. Troje djece je hospitalizirano. Nakon kampanje cijepljenja u zajednici, dosegli smo 94% — i izbijanja su prestala. Diljem Europe cjepiva sprječavaju 2–3 milijuna smrti svake godine.",
           "action": "Odmah izvadite karticu cijepljenja vašeg djeteta. Provjerite prema rasporedu na zidu vašeg doma zdravlja. Ako vam nedostaje koje cjepivo ili nemate karton, posjetite dom zdravlja ovaj tjedan. Donesite ovu aplikaciju za prikaz rasporeda ako pomaže."
@@ -1294,7 +1294,7 @@ export const TRANSLATIONS = {
         }
       },
       "nutrition": {
-        "description": "Godinama rada s romskim obiteljima naučio sam da hrana nije samo prehrana — to je ono što si možete priuštiti, što je dostupno u kvartu i što vaša obitelj zna. Neću vam reći da kupujete quinou. Reći ću vam kako dobro hraniti obitelj onim što imate.",
+        "description": "Tijekom godina rada s romskim obiteljima, naučio sam da hrana nikad nije samo prehrana – već ono što si možete priuštiti, što je dostupno u vašem susjedstvu i što vaša obitelj zna. Neću vam reći da kupite kvinoju. Reći ću ti kako da dobro prehraniš svoju obitelj s onim što imaš.",
         "balancedDiet": {
           "title": "Dobro jesti za svaki budžet",
           "description": "Najveći prehrambeni problem koji vidim u romskim zajednicama nije nedostatak hrane — to je previše jeftinog kruha, mesnih prerađevina i slatkih pića, a premalo povrća, jaja i mahunarki. Ovdje se ne radi o snazi ​​volje. Radi se o onome što je dostupno i pristupačno. Ali mali pomaci čine ogromne razlike u vašem zdravlju i razvoju vaše djece.",
@@ -1302,7 +1302,7 @@ export const TRANSLATIONS = {
           "tip2": "Jaja su najpotpunija jeftina hrana koja postoji. Dva jaja dnevno po djetetu osiguravaju gotovo sve što je potrebno rastućem mozgu. U svakom naselju u kojem radim preporučam jaja kao hranu prvog prioriteta za djecu",
           "tip3": "Sezonsko povrće s lokalne tržnice ili iz vašeg vrta košta samo djelić cijena u supermarketu. Kelj, luk, mrkva, krompir, paprika — to je temelj zdrave ishrane i nalazi se u svakoj romskoj kuhinjskoj tradiciji",
           "tip4": "Slatka pića (kola, sok, energetska pića) najštetnija su stavka koju vidim u prehrani romske obitelji. Jedna boca kole ima 10 žličica šećera. Zamijenite vodom ili slabim čajem i uklonit ćete najveći pokretač pretilosti i karijesa koji vidim kod djece",
-          "fact": "U romskim zajednicama s kojima sam radio diljem Rumunjske i Bugarske, vidio sam da se stope dijabetesa mjerljivo smanjuju kada obitelji svakodnevno bijeli kruh i prerađeno meso zamijene grahom, jajima i povrćem — čak i bez promjene količine hrane. Tijelo reagira na kvalitetu, a ne samo na kvantitetu.",
+          "fact": "U romskim zajednicama s kojima sam radio diljem Rumunjske i Bugarske, vidio sam mjerljiv pad stope dijabetesa kada obitelji svakodnevno bijeli kruh i prerađeno meso zamijene grahom, jajima i povrćem — čak i bez promjene količine hrane. Tijelo reagira na kvalitetu, a ne samo na kvantitetu.",
           "action": "Ovaj tjedan jedan obrok kruha i mesnih prerađevina zamijenite loncem graha ili variva od leće s lukom i paprikom. Kuhajte dovoljno za dva dana. Jeftiniji je, dulje vas zasićuje i počinje mijenjati putanju zdravlja vaše obitelji."
         },
         "childNutrition": {
@@ -1327,7 +1327,7 @@ export const TRANSLATIONS = {
         }
       },
       "maternal": {
-        "description": "Pratio sam romske žene u bolnice gdje su ih stavljale odvojeno, nepoštivo tretirale ili odbile epidural koji druge žene dobivaju. Vidio sam i žene koje su umrle od komplikacija koje bi jedan prenatalni pregled na vrijeme uhvatio. Vaše tijelo, vaše dijete, vaša prava. Poznajte sva tri.",
+        "description": "Pratila sam Romkinje u bolnice gdje su ih stavljali u odvojene sobe, razgovarali s njima bez poštovanja ili su odbijale epiduralnu analgeziju koju su druge žene primale. Također sam vidio kako žene umiru od komplikacija koje bi uhvatio jedan prenatalni posjet. Vaše tijelo, vaša beba, vaša prava. Znaj sva tri.",
         "prenatalCare": {
           "title": "Prenatalna njega",
           "description": "U 15 godina medijatorskog rada, obrazac koji opetovano vidim je da Romkinje prvi put posjete liječnika kada su već u 6 ili 7 mjesecu trudnoće — često zato što se osjećaju dobro, jer se boje bolnice ili zato što im nitko nije objasnio da je prenatalna njega besplatna i da je njihovo pravo. Do tog trenutka, opasna stanja poput preeklampsije ili gestacijskog dijabetesa možda su se tiho razvijala mjesecima.",
@@ -1345,13 +1345,13 @@ export const TRANSLATIONS = {
           "tip2": "Imate zakonsko pravo imati pratitelja (muža, majku, sestru, posrednika) uz sebe tijekom porođaja u gotovo svim europskim zemljama. Ako bolnica kaže ne, navedite zakon o pravima pacijenata vaše zemlje. Mi nosimo te reference i možemo ih pružiti",
           "tip3": "Naučite 5 znakove opasnosti koji znače ODMAH IDITE U BOLNICU, bez obzira koliko je sati: (1) jako krvarenje, (2) jaka glavobolja s otečenim rukama/licem, (3) beba se prestaje kretati, (4) vodenjak prije 37 tjedana, (5) temperatura iznad 38°C. Nemojte čekati jutro. Ne pokušavajte ih riješiti kod kuće",
           "tip4": "Nakon poroda ostanite u bolnici najmanje 24 sati radi praćenja — čak i ako se osjećate dobro. Mnoge po život opasne komplikacije (krvarenje, infekcija) javljaju se u prvih 24 sati. Znam da bolničko okruženje može biti neprijateljsko, ali ti sati praćenja spašavaju živote",
-          "fact": "U regiji u kojoj sam radila 5 godina, smanjili smo hitne slučajeve romskih majki za 60% jednostavno tako što smo osigurali da svaka trudnica ima plan poroda, prijevoz i bolničku torbu spakiranu do 36 tjedna. Nema nove tehnologije - samo priprema i pratnja.",
+          "fact": "U regiji u kojoj sam radila 5 godina, smanjili smo hitne slučajeve romskih majki za 60% jednostavno osiguravajući da svaka trudnica ima plan poroda, prijevoz i bolničku torbu spakiranu do 36 tjedna. Nema nove tehnologije - samo priprema i pratnja.",
           "action": "Ako ste vi ili netko koga poznajete trudni nakon 30 tjedana trudnoće: zapišite naziv bolnice, telefonski broj i rutu na papir. Stavi na zid. Spakirajte torbu s osobnom iskaznicom, karticom cijepljenja, odjećom za bebe i punjačem za telefon. To traje 20 minuta i može spasiti život."
         },
         "breastfeeding": {
           "title": "Dojenje",
           "description": "Dojenje je duboko cijenjeno u romskoj kulturi, ali susrećem mlade majke kojima su dobronamjerni rođaci rekli da prvih dana daju vodu, čaj ili adaptirano mlijeko jer 'mlijeko još nije poteklo'. Kolostrum - to gusto, žućkasto prvo mlijeko - nije znak da nešto nije u redu. To je tekuće zlato, prepuno antitijela koja štite vaše novorođenče upravo od infekcija koje su najopasnije u prvim tjednima života.",
-          "tip1": "Unutar 1 sata od rođenja, stavite bebu kožu na kožu na svoja prsa i pustite ih da pronađu dojku. Ovo prvo hranjenje kolostrumom je najvažnije 'cjepivo' koje će vaša beba primiti - ono oblaže njihova crijeva zaštitom od infekcije. Ne dopustite nikome da vam odvede bebu prije nego što se to dogodi, osim ako nije hitna medicinska pomoć",
+          "tip1": "U roku od 1 sata od rođenja, stavite bebu kožu na kožu na svoja prsa i pustite ih da pronađu dojku. Ovo prvo hranjenje kolostrumom je najvažnije 'cjepivo' koje će vaša beba primiti - ono oblaže njihova crijeva zaštitom od infekcije. Ne dopustite nikome da vam odvede bebu prije nego što se to dogodi, osim ako nije hitna medicinska pomoć",
           "tip2": "Hranite na zahtjev — kad god beba pokaže znakove gladi (okretanje glave, sisanje ruku, nemir). U prvim tjednima to može biti 10–14 puta u 24 sati. To je normalno i uspostavlja vašu opskrbu. Sat vam ne može reći kada je vaša beba gladna - vaša beba kaže vama",
           "tip3": "Bez vode, bez čaja, bez formule 6 mjeseci osim ako to liječnik izričito ne prepiše iz medicinskih razloga. Vaše majčino mlijeko mijenja sastav tijekom dana kako bi zadovoljilo točne potrebe vaše bebe — nijedna tvornica to ne može ponoviti. Vidio sam kako su dobronamjerne bake davale šećernu vodicu koja je izazivala soor i proljev",
           "tip4": "Ako dojenje boli, zasun nije u redu - a ne vaše tijelo. Zamolite primalju ili zdravstvenog radnika da gledaju hranjenje i pomognu vam prilagoditi položaj. Bol je znak za pomoć, a ne znak za odustajanje. Pomogla sam stotinama majki da riješe probleme sa zaključavanjem koji su riješeni u jednoj sesiji",
@@ -1370,7 +1370,7 @@ export const TRANSLATIONS = {
         }
       },
       "children": {
-        "description": "Roma djeca su budućnost naših zajednica i zaslužuju svaku prednost. U radu sam vidio djecu koja zaostaju — ne zbog nedostatka sposobnosti, nego jer su im spriječive bolesti, propuštena cijepljenja ili neotkrivena kašnjenja uzeli šanse. Ovo znanje im vraća te šanse.",
+        "description": "Romska djeca su budućnost naših zajednica i zaslužuju svaku prednost. U svom radu vidio sam kako djeca zaostaju - ne zbog sposobnosti, već zato što su im bolesti koje su se mogle spriječiti, propuštena cijepljenja ili neotkriveni zastoji u razvoju ukrali prilike. Ovo znanje vraća te mogućnosti.",
         "growthMilestones": {
           "title": "Rast i razvoj",
           "description": "Svako se dijete razvija vlastitim tempom i nikad ne želim da roditelji paničare zbog normalnih varijacija. No, također sam vidio djecu čiji su zakašnjeli razvoj obitelji odbacivale kao 'nadoknadit će propušteno' kada je rana intervencija mogla napraviti transformativnu razliku. Znati na što paziti nije tjeskoba - to je pozornost.",
@@ -1403,7 +1403,7 @@ export const TRANSLATIONS = {
         }
       },
       "chronic": {
-        "description": "Romi u prosjeku umiru 10 godina ranije od europskog prosjeka. Većina te razlike dolazi od kroničnih bolesti — dijabetesa, srčanih i respiratornih bolesti — koje se godinama tiho razvijaju. Kad se pojave simptomi, šteta je već napravljena. Ali većina se može spriječiti i sve se može upravljati ako se rano uhvati.",
+        "description": "Romi umiru 10 godina mlađi od europskog prosjeka. Većina ovog jaza dolazi od kroničnih bolesti - dijabetesa, bolesti srca, bolesti dišnog sustava - koje se godinama razvijaju polako i tiho. Dok se simptomi pojave, šteta je već učinjena. Ali većina se može spriječiti, a sve se može kontrolirati ako se rano otkrije.",
         "diabetes": {
           "title": "Dijabetes: Tiha prijetnja",
           "description": "Dijabetes tip 2 je kronična bolest s kojom se najčešće susrećem u romskim zajednicama. Pojavljuje se u obiteljima, uspijeva na jeftinoj prehrani s visokim udjelom šećera na koju siromaštvo tjera ljude, i oštećuje vaše oči, bubrege, stopala i srce godinama prije nego što osjetite bilo što loše. Vidio sam muškarce u svojim 40 godinama kako gube nožne prste, a žene ostaju slijepe od dijabetesa koji im nikada nije dijagnosticiran jer nikad nisu imale krvni test. Ovo se može spriječiti.",
@@ -1412,7 +1412,7 @@ export const TRANSLATIONS = {
           "tip3": "Zatražite testiranje glukoze u krvi natašte u svom domu zdravlja barem jednom godišnje ako imate više od 35, imate prekomjernu težinu ili imate obiteljsku anamnezu. To je jednostavan test ubodom prsta, besplatan je u većini zemalja i traje 5 minuta. Ovaj test može otkriti dijabetes godinama prije pojave simptoma",
           "tip4": "Upoznajte se sa znakovima upozorenja koji upućuju na to da je dijabetes možda već prisutan: stalna žeđ, vrlo često mokrenje (osobito noću), zamagljen vid, rane koje sporo zacjeljuju, neobjašnjiv umor. Ako imate dva ili više od toga, testirajte se ovaj tjedan - ne sljedeći mjesec",
           "fact": "Studije u romskim zajednicama u Slovačkoj i Rumunjskoj otkrile su da je prevalencija dijabetesa 2–3 puta veća od nacionalnog prosjeka, pri čemu većina slučajeva nije dijagnosticirana. U jednom programu u kojem sam sudjelovao, probir u zajednici otkrio je dijabetes kod 18% odraslih osoba starijih od 40 koji se nikad nisu testirali. Gotovo svi nisu imali simptome.",
-          "action": "Ako ste stariji od 35, idite u svoj dom zdravlja i zatražite analizu šećera u krvi. Traje 5 minuta. Ako je rezultat iznad 5.6 mmol/L (100 mg/dL), morate odmah početi unositi promjene. Povedite člana obitelji - ako je vaš rizik visok, vjerojatno je i njihov."
+          "action": "Ako ste stariji od 35, idite u svoj dom zdravlja i zatražite analizu šećera u krvi. Traje 5 minuta. Ako je rezultat iznad 5.6 mmol/L (100 mg/dL), morate odmah početi s promjenama. Povedite člana obitelji - ako je vaš rizik visok, vjerojatno je i njihov."
         },
         "heartHealth": {
           "title": "Tvoje Srce",
@@ -1436,13 +1436,13 @@ export const TRANSLATIONS = {
         }
       },
       "mental": {
-        "description": "U 15 godina u romskim zajednicama naučio sam da najteži teret nije fizička bolest — nego težina diskriminacije, siromaštva, straha od iseljenja, brige za budućnost djece i osjećaj da se nitko u sustavu ne brine. Zovemo to stres. Kad traje godinama, postaje nešto drugo. Zaslužuje biti imenovan, shvaćen i liječen — bez srama.",
+        "description": "U 15 godina rada u romskim zajednicama, naučila sam da najteži teret koji ljudi nose nije fizička bolest — to je težina diskriminacije, siromaštva, straha od deložacije, brige za budućnost njihove djece i osjećaja da nikoga u sustavu nije briga. To nazivamo stresom. Kad to traje godinama, postaje nešto više. Zaslužuje biti imenovan, shvaćen i tretiran - bez srama.",
         "stressManagement": {
           "title": "Živjeti sa stresom",
           "description": "Neću se pretvarati da će vježba disanja riješiti vaše probleme. Ako ste zabrinuti da će vaša obitelj biti deložirana, nijedna aplikacija za meditaciju to neće popraviti. Ali radio sam sa stotinama ljudi u našim zajednicama koji su pod ogromnim stresom i vidio sam što se događa kada se tim stresom godinama ne upravlja: srčani udari kod muškaraca u njihovim 40 godinama, žene koje ne mogu jesti ili spavati, djeca koja odrastaju u kućanstvima naelektrizirana napetošću. Ne možemo uvijek promijeniti naše okolnosti, ali možemo promijeniti način na koji ih nosimo.",
           "tip1": "Metoda disanja 4-4-8 djeluje trenutno na vaš živčani sustav. Udahnite kroz nos brojeći 4, zadržite 4, polako izdahnite kroz usta 8. Učinite ovo 5 puta. Puls vam se smanjuje, mišići se opuštaju. Tome podučavam obitelji prije posjeta bolnici, prije sudskih saslušanja, prije bilo kakvog stresnog susreta. To je alat koji uvijek imate sa sobom",
           "tip2": "Hodanje je najpodcijenjeniji lijek za stres. 20 minuta hodanja — ne brzo, samo hodanje — smanjuje hormon stresa kortizol do 30%. Ako ne možete izaći iz kuće, hodajte u krug. Djeluje sam pokret, a ne krajolik",
-          "tip3": "Razgovaraj s nekim. Ne da se riješi problem - samo da se podijeli težina. Vidjela sam kako muškarci u našim zajednicama sve nose sami jer traženje pomoći osjeća se kao slabost. U 15 godina ovog rada, najjači ljudi koje sam upoznao su oni koji su naučili reći 'borim se'",
+          "tip3": "Razgovaraj s nekim. Ne da riješim problem - samo da podijelim težinu. Vidjela sam kako muškarci u našim zajednicama sve nose sami jer traženje pomoći osjeća se kao slabost. U 15 godina ovog rada, najjači ljudi koje sam upoznao su oni koji su naučili reći 'borim se'",
           "tip4": "Budite namjerni o onome što vam pada na pamet. Društveni mediji, vijesti, obiteljske svađe koje se vrte u vašoj glavi — to su izvori stresa koje možete kontrolirati. Ne kažem da zanemarite stvarnost. Kažem da odaberete kada ćete se time baviti i stvorite prostore u svom danu u kojima ste namjerno mirni",
           "fact": "Romske zajednice doživljavaju ono što javno zdravstvo naziva 'manjinski stres' — kronični psihološki danak diskriminacije, isključenosti i siromaštva. Istraživanja pokazuju da to trajno podiže razinu kortizola, ubrzavajući srčane bolesti, dijabetes i mentalne bolesti. Ovo nije slabost. To je biologija koja odgovara na nepravdu.",
           "action": "Večeras prije spavanja stavite telefon u drugu sobu i vježbajte 4-4-8 disanje 5 minuta. Ako imate voljnog partnera ili člana obitelji, učinite to zajedno u tišini. Ovaj mali čin stvara granicu između dnevnog stresa i vašeg sna — a spavanje je kada vaše tijelo popravlja štetu koju je uzrokovao stres."
@@ -1469,7 +1469,7 @@ export const TRANSLATIONS = {
         },
         "seekHelp": {
           "title": "Kad je previše",
-          "description": "Postoji točka u kojoj stres, tuga i briga prelaze granicu u nešto što treba stručnu pomoć — a u romskim zajednicama ta granica se gotovo nikad ne prepozna jer smo naučeni izdržati, biti jaki, nositi se s tim unutar obitelji. Vidio sam cijenu ove šutnje: muškarci koji piju da bi se nosili dok im jetra ne otkaže, žene koje prestaju jesti, tinejdžeri koji sami sebi nanose štetu. Traženje pomoći nije izdaja vaše kulture. Štiti vaš život kako biste mogli biti tu za ljude koji vas trebaju.",
+          "description": "Postoji točka u kojoj stres, tuga i zabrinutost prelaze granicu u nešto što treba stručnu pomoć — a u romskim zajednicama ta se granica gotovo nikad ne prepozna jer smo naučeni izdržati, biti jaki, nositi se s tim unutar obitelji. Vidio sam cijenu ove šutnje: muškarci koji piju kako bi se nosili dok im jetra ne otkaže, žene koje prestaju jesti, tinejdžeri koji sami sebi nanose štetu. Traženje pomoći nije izdaja vaše kulture. Štiti vaš život kako biste mogli biti tu za ljude koji vas trebaju.",
           "tip1": "Ako vi ili netko koga poznajete niste mogli normalno funkcionirati više od 2 tjedana - ne možete spavati, ne možete jesti, ne možete brinuti o djeci, neprestano plačete ili nemate energije za bilo što - to je izvan normalnog stresa. Ovo je depresija i to je zdravstveno stanje jednako stvarno kao i dijabetes. Nije slabost i reagira na liječenje",
           "tip2": "Vaš prvi korak je vaš obiteljski liječnik (GP). Recite: 'Osjećam se jako loše više od 2 tjedana i trebam pomoć.' Ne morate sve objašnjavati. Liječnik opće prakse može vas procijeniti i uputiti psihologu ili psihijatru. Ova je usluga besplatna ili jeftina u većini europskih zemalja. Ako vas liječnik opće prakse otpusti, posjetite drugog",
           "tip3": "Ako netko u vašoj obitelji spomene da želi umrijeti, želi nestati ili osjeća da bi svima bilo bolje bez njih — odmah to shvatite ozbiljno. Ostani s njima. Uklonite pristup lijekovima i oštrim predmetima. Nazovite nacionalnu liniju za krizne situacije ili 112. Ne pretjerujete. Ove riječi su vapaj za pomoć na koji se mora odgovoriti",
@@ -1557,37 +1557,37 @@ export const TRANSLATIONS = {
   },
   "hu": {
     "learn": {
-      "progressLabel": "abgeschlossene Module",
-      "startHere": "Kezdd itt",
+      "progressLabel": "modulok elkészültek",
+      "startHere": "Kezdje itt",
       "continueLabel": "Folytatás",
-      "allModules": "Összes modul",
+      "allModules": "Minden modul",
       "prevention": {
-        "description": "15 év roma telepeken végzett munkám során olyan családokat láttam, akiket egyszerű szokások megelőzhetett volna betegségekben. Ez a tudás nem luxus — túlélés.",
+        "description": "15 év alatt roma telepeken dolgozva láttam olyan családokat, amelyeket olyan betegségek pusztítottak el, amelyeket egyszerű szokásokkal meg lehetett volna előzni. Ez a tudás nem luxus – ez a túlélés.",
         "handwashing": {
           "title": "Kézmosás",
-          "description": "Településeken láttam, hogy egész családok betegedtek meg ugyanattól a gyomorfertőzéstől, kézről kézre adva. A megfelelő kézmosás az egyetlen legolcsóbb, legerősebb gyógyszer, amelyhez már hozzáférhet – nem kerül semmibe, és megelőzi azokat a betegségeket, amelyeket a közösségeinkben leggyakrabban tapasztalok.",
+          "description": "Településeken láttam, hogy egész családok betegedtek meg ugyanattól a gyomorfertőzéstől, kézről kézre adva. A megfelelő kézmosás az egyetlen legolcsóbb, legerősebb gyógyszer, amelyhez már hozzáfér – nem kerül semmibe, és megelőzi azokat a betegségeket, amelyeket a közösségeinkben leggyakrabban tapasztalok.",
           "tip1": "Mielőtt hozzáérne az ételhez, mielőtt etetne egy gyermeket, és minden WC-látogatás után mosakodjon meg. Láttam, hogy egy mosatlan kéz egy hétig tartó hasmenést okozott egy egész háztartásban",
-          "tip2": "Lassan számolj 20-ig, vagy dúdolj egy dalt. A legtöbben 5 másodpercig mosnak – ez szinte semmit sem távolít el. A kezei közötti súrlódás az, ami elpusztítja a baktériumokat",
+          "tip2": "Számolj lassan 20-ig, vagy dúdolj egy dalt. A legtöbben 5 másodpercig mosnak – ez szinte semmit sem távolít el. A kezei közötti súrlódás az, ami elpusztítja a baktériumokat",
           "tip3": "Nincs szappan? Dolgoztam olyan településeken, ahol nincs vezetékes víz. Ash működik. A homok működik. A víz önmagában súrolással jobban működik, mint a semmi. Ne hagyd, hogy a tökéletes megakadályozza a jót",
           "tip4": "Levegőn szárítsa meg a kezét, vagy használjon tiszta ruhát, amelyet naponta cserél. A mindenki által megosztott piszkos törölköző újra beszennyezi a tiszta kezet – ezt minden otthonlátogatás alkalmával elmagyarázom",
           "fact": "Azokban a közösségekben, amelyekkel együtt dolgoztam, a kézmosási kampányok három hónapon belül közel felére csökkentették a gyermekek hasmenéses eseteit. A WHO megerősíti: a kézmosás 40%-kal csökkenti a hasmenést és akár 21%-kal a légúti fertőzéseket.",
           "action": "Ma este álljatok gyermekeitekkel a vízforráshoz, és mossatok kezet együtt. Tedd családi szokássá minden étkezés előtt. A gyerekek, akik úgy tanulnak, hogy a szüleiket figyelik, ezt egy életen át viselik."
         },
         "vaccination": {
-          "title": "Oltás",
+          "title": "Védőoltás",
           "description": "Elkísértem roma anyákat egészségügyi központokba, ahol visszautasították őket, mert nem voltak okmányaik, nem beszélték a nyelvet, vagy egyszerűen csak azt mondták nekik, hogy jöjjenek vissza később. A védőoltások gyermekei törvényes joga – ingyenes, biztonságos és a leghatékonyabb védelem, amelyet egy szülő adhat. Ezt senki sem tagadhatja meg tőled.",
-          "tip1": "Európa minden országa születéstől kezdve ingyenes oltási ütemtervet biztosít. Ez nem jótékonyság – ez a gyermeked törvényes jogosultsága. Ha egy egészségügyi dolgozó megtagadja, kérje ki a felettesét, és ezt egyértelműen jelezze",
+          "tip1": "Európa minden országa születéstől kezdve ingyenes oltási ütemtervet biztosít. Ez nem jótékonyság – ez a gyermeke törvényes jogosultsága. Ha egy egészségügyi dolgozó megtagadja, kérje ki a felettesét, és ezt világosan jelezze",
           "tip2": "Az oltási kártya a legfontosabb dokumentum, amellyel gyermeke születési anyakönyvi kivonatát követően rendelkezik. Tartsa biztonságban, vigye magával minden orvosi látogatásra. Ha elveszett, bármelyik egészségügyi központnak ki kell adnia a pótlást – ne fogadja el az elutasítást",
-          "tip3": "Enyhe láz, fájó folt a karon, egy napig tartó nyűg – ez normális, és azt jelenti, hogy az oltóanyag működik. Több száz aggódó anyát nyugtattam meg ezzel kapcsolatban. 24-48 óra alatt elmúlik",
+          "tip3": "Enyhe láz, fájó folt a karon, egy napig tartó nyűg – ez normális, és azt jelenti, hogy az oltóanyag működik. Több száz aggódó anyát nyugtattam meg ezzel kapcsolatban. 24–48 óra alatt elmúlik",
           "tip4": "A legtöbb közegészségügyi központban nem kell időpontot kérnie az oltásokhoz. Lépjen be. Ha roma egészségügyi közvetítő dolgozik az Ön területén, kérje meg, hogy kísérje el Önt – erre vagyunk kiképezve",
-          "fact": "Egy településen, ahol dolgoztam, beütött a kanyaró, mert az átoltottság 60%-ra csökkent. Három gyermek került kórházba. Egy közösségi oltási kampány után elértük a 94%-ot – és a járványok megszűntek. Európa-szerte a vakcinák évente 2-3 millió ember halálát akadályozzák meg.",
-          "action": "Azonnal vegye ki gyermeke oltási kártyáját. Ellenőrizze az egészségügyi központ falán található ütemterv alapján. Ha valamelyik vakcina hiányzik, vagy nincs kártyája, ezen a héten keresse fel az egészségügyi központot. Hozd ezt az alkalmazást az ütemterv megjelenítéséhez, ha segít."
+          "fact": "Az egyik településen, ahol dolgoztam, beütött a kanyaró, mert az oltottság 60%-ra csökkent. Három gyermek került kórházba. Egy közösségi oltási kampány után elértük a 94%-ot – és a járványok megszűntek. Európa-szerte a vakcinák évente 2–3 millió halálesetet akadályoznak meg.",
+          "action": "Azonnal vegye ki gyermeke oltási kártyáját. Ellenőrizze az egészségügyi központ falán található ütemterv alapján. Ha valamelyik vakcina hiányzik, vagy nincs kártyája, keresse fel az egészségügyi központot ezen a héten. Hozd ezt az alkalmazást az ütemterv megjelenítéséhez, ha segít."
         },
         "cleanWater": {
           "title": "Tiszta Víz",
           "description": "Dolgoztam olyan településeken, ahol a családoknak közös vízpontja van, amely napi két órát üzemel, és olyan környékeken, ahol a csapvíz tisztának tűnik, de olyan baktériumokat hordoz, amelyek krónikus gyomorpanaszokat okoznak a gyermekeknél. A víz minősége nem mindig látható – a roma közösségekben pedig ritkán figyelik a hatóságok. Biztosan te vagy a családod vízügyi felügyelője.",
           "tip1": "Fedezzen le minden edényt, ahol vizet tárol. Láttam, hogy legyek, por, sőt állati eredetű hulladékok órákon belül beszennyezik a fedetlen vödröket, főleg meleg időben. Egy egyszerű lap a tetején megakadályozza a legtöbb szennyeződést",
-          "tip2": "Ha nem biztos a vízben, forralja fel egy teljes percig gördülő forrásban. Ez elpusztítja a baktériumok, vírusok és paraziták 99,9%-át. Szinte semmibe nem kerül, és működik – több tucat településen tanítottam ezt, ahol kérdéses volt a vízforrás",
+          "tip2": "Ha nem biztos a vízben, forralja fel egy teljes percig gördülő forrásban. Ez elpusztítja a baktériumok, vírusok és paraziták 99.9%-át. Szinte semmibe nem kerül, és működik – több tucat településen tanítottam ezt, ahol kérdéses volt a vízforrás",
           "tip3": "Mossa ki a víztartályokat szappannal és tiszta vízzel legalább hetente egyszer. A piszkos tartály a tiszta vizet piszkossá teszi. Ez az egyik leginkább figyelmen kívül hagyott oka az ismétlődő hasmenésnek, amelyet gyermekeknél láttam",
           "tip4": "A patakok, tavak és állótócsák soha nem ihatóak – még akkor sem, ha a víz tisztanak tűnik. A szem számára láthatatlan paraziták krónikus károsodást okoznak a gyermekek bélrendszerében és fejlődésében",
           "fact": "Közép- és Kelet-Európa számos roma településén a családok nem jutnak biztonságos vezetékes vízhez. Az Európai Roma Jogok Központja dokumentálta, hogy a roma negyedekben rendszeresen alul van ellátva a vízi infrastruktúra. A forrásban lévő víz nem ideális – ez egy túlélési stratégia, amíg a tiszta vízhez való joga nem teljesül.",
@@ -1595,17 +1595,17 @@ export const TRANSLATIONS = {
         },
         "firstAid": {
           "title": "Alapvető elsősegélynyújtás",
-          "description": "A távoli településeken és városi negyedekben, ahol hosszabb ideig tart a mentők megérkezése – vagy néha egyáltalán nem jönnek –, az élet és a halál közötti különbség az, hogy a vészhelyzet első perceiben tudják, mit kell tenni. Több száz roma közösség tagját képeztem ki az alapvető elsősegélynyújtásra, és láttam, hogy ez a tudás életeket mentett meg, mielőtt bármelyik orvos megérkezett volna.",
-          "tip1": "A 112 bármely európai telefonról működik – hitel nélkül, SIM-kártya nélkül is, még zárolt telefonról is. Tanítsd meg családod minden tagját, beleértve a 7 év feletti gyerekeket is, hogy tárcsázzák a 112-t, és mondják meg, hol vannak. Gyakorold ezt. Vészhelyzetben a pánik feledteti az embereket",
-          "tip2": "Erős vérzés esetén: nyomja meg erősen a lehető legtisztább ruhával – ing, fejkendő, bármi –, és ne emelje fel, hogy ellenőrizze. Tartsa nyomva, amíg a segítség meg nem érkezik. Láttam embereket veszélyesen vérezni, mert folyamatosan levették a ruhát, hogy megnézzék. Ha a vér átitatja, adjon hozzá további ruhát a tetejére",
+          "description": "A távoli településeken és városi negyedekben, ahol hosszabb ideig tart a mentők megérkezése – vagy néha egyáltalán nem jönnek –, az élet és a halál közötti különbség az, hogy a vészhelyzet első perceiben tudják, mit kell tenni. Több száz roma közösség tagját képeztem ki az alapvető elsősegélynyújtásra, és láttam, hogy ez a tudás életeket ment meg, mielőtt bármelyik orvos megérkezett volna.",
+          "tip1": "A 112 bármely európai telefonról működik – hitel nélkül, SIM-kártya nélkül is, még zárolt telefonról is. Tanítsd meg családod minden tagját, beleértve a 7 év feletti gyerekeket is, hogy tárcsázzák a 112 számot, és mondják meg, hol vannak. Gyakorold ezt. Vészhelyzetben a pánik feledteti az embereket",
+          "tip2": "Erős vérzés esetén: nyomja meg erősen a lehető legtisztább ruhával – ing, fejkendő, bármi –, és ne emelje fel, hogy ellenőrizze. Tartsa nyomva, amíg a segítség meg nem érkezik. Láttam embereket veszélyesen vérezni, mert folyamatosan levették a ruhát, hogy megnézzék. Ha a vér átázik, adjon hozzá további ruhát a tetejére",
           "tip3": "Égési sérülések: azonnal helyezze az égési sérülést hideg folyóvíz alá legalább 10 percre. Soha ne kenj fel vajat, olajat, fogkrémet vagy tojásfehérjét – olyan hagyományos gyógymódokkal, amelyekkel sok családban találkoztam, amelyek ténylegesen felfogják a hőt, és súlyosabb károkat és fertőzéseket okoznak.",
-          "tip4": "Ha valaki összeesik és nem lélegzik: hívja a 112-t, majd nyomja erősen és gyorsan a mellkasa közepét – percenként 100-szor (a „Stayin' Alive” dal tempója). Ne álljon meg, amíg a segítség meg nem érkezik. A tökéletlen CPR végtelenül jobb, mint a nem CPR",
+          "tip4": "Ha valaki összeesik és nem lélegzik: hívja a 112 számot, majd nyomja erősen és gyorsan a mellkasa közepén – percenként 100-szor (a 'Stayin' Alive' dal tempója). Ne álljon meg, amíg a segítség meg nem érkezik. A tökéletlen CPR végtelenül jobb, mint a nem CPR",
           "fact": "Tanulmányok azt mutatják, hogy azokban a közösségekben, ahol széles körben elterjedt az alapvető elsősegélynyújtási képzés, a szívmegállás utáni túlélés megduplázódik. Sok roma közösségben a mentőautók válaszideje lényegesen hosszabb, mint a nem roma területeken, ami még kritikusabbá teszi a kívülállók elsősegélynyújtását.",
-          "action": "Most azonnal kérdezze meg minden családtagot: tudja, hogyan kell hívni a 112-t? Tudja elég jól a lakcímünket ahhoz, hogy elmondja a diszpécsernek? Írja fel a teljes címét egy papírra, és tegye a telefon közelébe. Tanítsa meg gyermekeit ma."
+          "action": "Most azonnal kérdezze meg minden családtagot: tudja, hogyan kell hívni a 112 számot? Tudja elég jól a lakcímünket ahhoz, hogy elmondja a diszpécsernek? Írja fel a teljes címét egy papírra, és tegye a telefon közelébe. Tanítsa meg gyermekeit ma."
         }
       },
       "nutrition": {
-        "description": "Az évek során roma családokkal azt tanultam, hogy az étel nem csak táplálkozás — hanem az, amit megengedhetsz magadnak, ami elérhető a környékeden és amit a családod tud. Nem azt mondom, vedd meg a quinoát. Azt mondom, hogyan tápláld jól a családodat abból, amid van.",
+        "description": "A roma családoknál eltöltött éveim során megtanultam, hogy az étkezés soha nem csak a táplálkozásról szól – arról van szó, hogy mit engedhet meg magának, mi kapható a környéken, és mit tud a családja. Nem mondom, hogy vegyél quinoát. Elmondom, hogyan tápláld jól a családod abból, ami van.",
         "balancedDiet": {
           "title": "Jól étkezni bármilyen költségvetés mellett",
           "description": "A legnagyobb táplálkozási problémát a roma közösségekben nem az élelmiszerhiányban látom – ez túl sok az olcsó kenyér, a feldolgozott hús és a cukros italok, és túl kevés a zöldség, a tojás és a hüvelyesek. Ez nem akaraterőről szól. Arról szól, ami elérhető és megfizethető. A kis elmozdulások azonban óriási változásokat okoznak az Ön egészsége és gyermekei fejlődése szempontjából.",
@@ -1618,13 +1618,13 @@ export const TRANSLATIONS = {
         },
         "childNutrition": {
           "title": "Gyermekek táplálása az erős kezdéshez",
-          "description": "Az első 1000 nap – terhességtől 2 éves korig – alakítja a gyermek teljes jövőjét: agyát, immunrendszerét, tanulási képességét. Láttam, ahogy az alultáplált gyerekek a településeken nem a genetika miatt maradnak le társaiktól, hanem attól, amit a kritikus korai hónapokban ettek. Amit most etetsz a gyermekednek, az a legerőteljesebb befektetés, amit az életébe tehetsz.",
+          "description": "Az első 1,000 nap – terhességtől 2 életkorig – alakítja a gyermek teljes jövőjét: agyát, immunrendszerét, tanulási képességét. Láttam, ahogy az alultáplált gyerekek a településeken nem a genetika miatt maradnak le társaiktól, hanem attól, amit a kritikus korai hónapokban ettek. Amit most etetsz a gyermekednek, az a legerőteljesebb befektetés, amit az életébe tehetsz.",
           "tip1": "Az anyatej önmagában 6 hónapig az aranystandard – ingyenes, mindig elérhető, tökéletesen tápláló, és minden gyógyszernél jobban véd a fertőzések ellen. Dolgoztam olyan anyákkal, akik úgy gondolták, hogy a tápszer „modern” és jobb. Nem az. Az anyatej a technológiai evolúció tökéletesítése",
-          "tip2": "6 hónapos korban kezdje el a lágy ételek fogyasztását a szoptatás mellett: burgonyapüré, sárgarépa, banán, főtt tojássárgája. 3 naponta vezessen be egy új ételt, hogy figyelje a reakciókat. Sok anyával dolgozom túl későn (8-9 hónap) – ez késlelteti a fejlődést",
-          "tip3": "2 éven aluli gyermekek soha nem ihatnak cukrot, mézet, sót, kólát, chipset vagy édességet. Tudom, hogy a nagyszülők néha cukorral teát adnak, hogy megnyugtassák a babát – kérem, hagyja abba. A cukor ebben a korban élethosszig tartó sóvárgást programoz, és még azelőtt károsítja a fogakat, hogy azok teljesen kibújnának",
-          "tip4": "Napi egy tojás egy 6 hónaposnál idősebb gyermek számára a létező legegyszerűbb táplálkozási frissítés. Egy ecuadori tanulmány kimutatta, hogy a tojás 47%-kal csökkentette a növekedési ütemet. Ezt minden közösségi előadásban idézem, mert szinte minden család számára elérhető",
+          "tip2": "6 hónapos korában kezdje el a lágy ételek fogyasztását a szoptatás mellett: burgonyapüré, sárgarépa, banán, főtt tojássárgája. Vezessen be egy új ételt 3 naponta, hogy figyelje a reakciókat. Sok anyával dolgozom túl későn (8–9 hónap) – ez késlelteti a fejlődést",
+          "tip3": "A 2 év alatti gyermekek soha nem fogyaszthatnak cukrot, mézet, sót, kólát, chipset vagy édességet. Tudom, hogy a nagyszülők néha cukorral teát adnak, hogy megnyugtassák a babát – kérem, hagyja abba. A cukor ebben a korban élethosszig tartó sóvárgást programoz, és még azelőtt károsítja a fogakat, hogy azok teljesen kibújnának",
+          "tip4": "Napi egy tojás egy 6 hónaposnál idősebb gyermek számára a létező legegyszerűbb táplálkozási frissítés. Egy ecuadori tanulmány kimutatta, hogy a tojás 47%-kal csökkentette a satnyaságot. Ezt minden közösségi előadásban idézem, mert szinte minden család számára elérhető",
           "fact": "Azokban a közösségekben, ahol táplálkozási programokat vezettem, azok a gyerekek, akik 6 hónapon keresztül naponta kaptak egy tojást és egy adag zöldséget, mérhető javulást mutattak a növekedésben és a kognitív fejlődésben azokhoz képest, akik nem. Az alultápláltság nem pusztán a szegénységről szól – hanem arról, hogy tudjuk, mit kell előnyben részesíteni a rendelkezésünkre álló erőforrásokkal.",
-          "action": "Holnaptól adjon 6 hónaposnál idősebb gyermekének napi egy tojást (pépesített vagy rántottát). Ha gyermeke még 6 hónaposnál fiatalabb, és szoptat, fogyasszon egy további tojást – a tápanyagok átjutnak a tején."
+          "action": "Holnaptól adjon gyermekének 6 hónapon túl naponta egy tojást (pépesített vagy rántottát). Ha gyermeke még 6 hónaposnál fiatalabb, és Ön szoptat, fogyasszon egy további tojást – a tápanyagok átjutnak a tején."
         },
         "foodSafety": {
           "title": "Az élelmiszerek biztonságban tartása",
@@ -1633,160 +1633,160 @@ export const TRANSLATIONS = {
           "tip2": "A nyers csirke és hús soha nem érhet kenyeret, zöldséget vagy bármit, amit nyersen fogyasztanak el. Használjon külön vágófelületeket – még egy tiszta műanyag zacskó is működik. Ez a keresztszennyeződés az ételmérgezés első számú oka, amellyel találkozom",
           "tip3": "Ha az étel rossz szagú, rosszul néz ki vagy nyálkásnak érzi magát, dobja ki. Ne kóstolja meg, hogy ellenőrizze. Tudom, hogy az étel kidobása fájdalmas, ha szűkös a pénz, de egy ételmérgezés többe kerül a gyógyszerben és az elvesztett munkában, mint amennyit az étel ért.",
           "tip4": "Mossa meg az összes gyümölcsöt és zöldséget folyó víz alatt evés előtt, még akkor is, ha a héját tervezi. Vágáskor a külső felületen lévő szennyeződés átkerül a belsejébe. Ez különösen fontos a piaci termékek esetében, amelyeket esetleg sokan kezeltek",
-          "fact": "A WHO becslései szerint évente 600 millió ember betegszik meg szennyezett élelmiszertől, és a teher 40%-át 5 év alatti gyermekek viselik. Azokban a közösségekben, ahol élelmiszerbiztonságot tanítottam, az első nyáron jelentősen csökkent a gyomor-bélhurut miatti kórházi látogatások száma.",
-          "action": "Nézze meg most a konyháját: van-e nyers hús fent, vagy hozzáér a fogyasztásra kész ételhez? Van olyan főtt étel, amely több mint 2 órája ült ki? Javítsa meg ezt a két dolgot még ma – ezek a leggyakoribb veszélyek, amelyeket otthonlátogatások során látok."
+          "fact": "A WHO becslése szerint évente 600 millió ember betegszik meg szennyezett élelmiszertől, a 5 év alatti gyermekek pedig a teher 40%-át viselik. Azokban a közösségekben, ahol élelmiszerbiztonságot tanítottam, az első nyáron jelentősen csökkent a gyomor-bélhurut miatti kórházi látogatások száma.",
+          "action": "Nézze meg most a konyháját: van-e nyers hús fent, vagy hozzáér a fogyasztásra kész ételhez? Van olyan főtt étel, amely több mint 2 órán át áll a levegőn? Javítsa meg ezt a két dolgot még ma – ezek a leggyakoribb veszélyek, amelyeket otthonlátogatások során látok."
         }
       },
       "maternal": {
-        "description": "Roma nőket kísértem kórházakba, ahol külön szobába tették, tiszteletlenül bántak velük vagy megtagadták az epidurált, amit más nők kaptak. Láttam nőket is, akik olyan szövődményekben haltak meg, amit egyetlen szűréses vizit elkapott volna. A tested, a gyermeked, a jogaid. Ismerd mindhármat.",
+        "description": "Elkísértem roma nőket olyan kórházakba, ahol külön szobákba helyezték őket, tiszteletlenül beszéltek velük, vagy megtagadták az epidurális kezelést, amit más nők kaptak. Láttam olyan nőket is meghalni olyan szövődmények miatt, amelyeket egyetlen prenatális vizit is elkapott volna. A tested, a babád, a jogaid. Ismerd meg mind a hármat.",
         "prenatalCare": {
           "title": "Terhesgondozás",
-          "description": "A 15 éves közvetítői munka során többször is azt tapasztalom, hogy a roma nők már 6-7 hónapos terhesként mennek először orvoshoz – gyakran azért, mert jól érzik magukat, mert félnek a kórháztól, vagy mert senki sem magyarázta el, hogy a terhesgondozás ingyenes és joguk van. Ekkorra már hónapokig csendben kialakulhatnak olyan veszélyes állapotok, mint a pre-eclampsia vagy a terhességi cukorbetegség.",
+          "description": "A 15 éves közvetítői munka során ismételten azt a mintát látom, hogy a roma nők akkor mennek először orvoshoz, amikor már 6 vagy 7 hónapos terhesek – gyakran azért, mert jól érzik magukat, mert félnek a kórháztól, vagy mert senki sem magyarázta el, hogy a terhesgondozás ingyenes és joguk van. Ekkorra már hónapokig csendben kialakulhatnak olyan veszélyes állapotok, mint a pre-eclampsia vagy a terhességi cukorbetegség.",
           "tip1": "Keresse fel háziorvosát vagy szülésznőjét abban a pillanatban, amikor kimarad a menstruációja, és terhességre gyanakszik. Az első trimeszterben a folsav megakadályozza a baba agy- és gerinchibáit. A várakozás a legkritikusabb ablakba kerül. Ha nincs háziorvosa, egészségügyi közvetítője segíthet a regisztrációban – ez tevékenységünk alapvető része",
-          "tip2": "A napi 400 mikrogramm folsav szedését akkor kell elkezdeni, amikor teherbe akar esni, vagy amint megtudja, hogy teherbe esik. Ingyenes vagy nagyon olcsó bármelyik gyógyszertárban. Csomagokat viszek magammal otthoni látogatásra, mert ez az egyszerű tabletta megelőzi a pusztító születési rendellenességeket",
+          "tip2": "A napi 400mcg folsav adagolását akkor kell elkezdeni, amikor megpróbál teherbe esni, vagy amint megtudja, hogy teherbe esik. Ingyenes vagy nagyon olcsó bármelyik gyógyszertárban. Csomagokat viszek magammal otthoni látogatásra, mert ez az egyszerű tabletta megelőzi a pusztító születési rendellenességeket",
           "tip3": "A vasban gazdag élelmiszerek megakadályozzák a vérszegénységet, amelyet a terhes roma nők közel felénél tapasztalok: bab, lencse, sötét levelű zöldek, máj, vörös hús. A vérszegénység kimerít, veszélyesebbé teszi a szülést, és befolyásolja a baba agyfejlődését",
           "tip4": "Joga van ahhoz, hogy az Ön nyelvén várandós ellátásban részesüljön, méltó bánásmódban részesüljön, és hogy valaki elkísérje Önt a találkozókra. Ha egy orvos elutasító vagy tiszteletlen, panaszt tehet, és másik szolgáltatót kérhet. Dokumentálja a nevet, dátumot és az elhangzottakat. Ebben rendszeresen segítek a családoknak",
-          "fact": "Európában a roma nők 3-5-ször nagyobb valószínűséggel tapasztalnak terhességi szövődményeket, mint az átlagpopulációban, főként azért, mert később vagy egyáltalán nem jutnak terhesgondozáshoz. Azokban a közösségekben, ahol az első trimeszterben a terhes nők ellátásához való kapcsolódásán dolgoztam, a szövődmények aránya drámaian csökkent.",
+          "fact": "Európában a roma nők 3–5-szor nagyobb valószínűséggel tapasztalnak terhességi szövődményeket, mint az általános népesség körében, főként azért, mert később vagy egyáltalán nem jutnak hozzá a terhesgondozáshoz. Azokban a közösségekben, ahol az első trimeszterben a terhes nők ellátásához való kapcsolódásán dolgoztam, a szövődmények aránya drámaian csökkent.",
           "action": "Ha Ön terhes, vagy ismer olyan terhes nőt a közösségében, aki még nem járt orvosnál, kérjen időpontot még ma. Ha fél, vagy nem tudja, hogyan, menjen vele, vagy csatlakoztassa a helyi egészségügyi közvetítőhöz. Egy látogatás mindent megváltoztathat."
         },
         "safeDelivery": {
           "title": "Biztonságos szállítás",
           "description": "Megfogtam a mentőautókban szülő nők kezét, mert túl későn hagyták el, és ültem a kórházi folyosókon, ahol a roma nők a sorban utolsóként kerültek, míg a nem roma nők mentek előre. Mindkét helyzet megelőzhető. A szállítás megtervezése és a jogainak ismerete ezt a tapasztalatot válságból olyanná változtatja, amit Ön irányít.",
-          "tip1": "A 34. hétre készítsd el a szüléstervet: melyik kórházba, ki megy veled, hogyan érsz oda (főleg éjszaka), ki vigyáz a többi gyerekedre. Túl sok családot láttam az utolsó pillanatban tülekedni – és a stressz kihat a szülésre",
+          "tip1": "A 34. hétig készítsd el a szülési tervet: melyik kórházba, ki megy veled, hogyan érsz oda (főleg éjszaka), ki vigyáz a többi gyerekedre. Túl sok családot láttam az utolsó pillanatban tülekedni – és a stressz kihat a szülésre",
           "tip2": "Szinte minden európai országban joga van ahhoz, hogy kísérője (férj, anya, nővér, közvetítő) legyen veled a szülés és a szülés során. Ha a kórház nemet mond, hivatkozzon országa betegjogi törvényére. Ezeket a referenciákat hordozzuk és biztosítani tudjuk",
-          "tip3": "Ismerje meg az 5 veszélyjelet, ami azt jelenti, MENJ KÓRHÁZBA MOST, függetlenül attól, hogy hány óra van: (1) erős vérzés, (2) erős fejfájás duzzadt kezekkel/arccal, (3) a baba nem mozog, (4) vízszünet 37 hét előtt, (5) 38 °C feletti láz. Ne várjon reggelig. Ne próbálja ezeket otthon kezelni",
+          "tip3": "Ismerje meg a 5 veszélyjeleket, amelyek azt jelentik, MENJ KÓRHÁZBA MOST, függetlenül attól, hogy hány óra van: (1) erős vérzés, (2) erős fejfájás duzzadt kéz/arc mellett, (3) a baba mozgása leáll, (4) vízszünet a __PH__PH6 hét előtt, (__PH37_ hét előtt) 38°C. Ne várjon reggelig. Ne próbálja ezeket otthon kezelni",
           "tip4": "Szülés után legalább 24 órát maradjon kórházban megfigyelés céljából – még akkor is, ha jól érzi magát. Számos életveszélyes szövődmény (vérzés, fertőzés) jelentkezik az első 24 órában. Tudom, hogy a kórházi környezet ellenséges lehet, de az órákig tartó megfigyelés életeket menthet meg",
-          "fact": "Egy olyan régióban, ahol 5 évig dolgoztam, 60%-kal csökkentettük a roma anyák sürgősségi számát azzal, hogy minden várandós nőnek biztosítottuk a szülési tervet, a szállítási megállapodást és a kórházi táskát a 36. hétig. Nincs új technológia – csak az előkészítés és a kíséret.",
-          "action": "Ha Ön vagy valaki, akit ismer, elmúlt 30 hetes terhes: írja fel papírra a kórház nevét, telefonszámát és útvonalát. Tedd a falra. Csomagolj be egy táskát személyi igazolvánnyal, oltási kártyával, babaruhákkal és telefontöltővel. Ez 20 percet vesz igénybe, és életet menthet."
+          "fact": "Egy olyan régióban, ahol 5 évig dolgoztam, 60%-kal csökkentettük a roma anyák sürgősségi számát egyszerűen azzal, hogy minden várandós nőnek biztosítottuk a szülési tervet, a szállítási megállapodást és a 36. hétre becsomagolt kórházi táskát. Nincs új technológia – csak előkészítés és kíséret.",
+          "action": "Ha Ön vagy valaki, akit ismer, már elmúlt 30 hetes terhes: írja fel papírra a kórház nevét, telefonszámát és útvonalát. Tedd a falra. Csomagolj be egy táskát személyi igazolvánnyal, oltási kártyával, babaruhákkal és telefontöltővel. Ez 20 percet vesz igénybe, és életet menthet."
         },
         "breastfeeding": {
           "title": "Szoptatás",
           "description": "A roma kultúrában nagyra értékelik a szoptatást, mégis találkozom fiatal anyákkal, akiknek azt mondták a jó szándékú rokonok, hogy az első napokban adjanak vizet, teát vagy tápszert, mert „még nem jött meg a tej”. A kolosztrum – az a sűrű, sárgás első tej – nem annak a jele, hogy valami nincs rendben. Folyékony arany, tele antitestekkel, amelyek megvédik az újszülöttet azoktól a fertőzésektől, amelyek élete első heteiben a legveszélyesebbek.",
           "tip1": "A születést követő 1 órán belül helyezze a babát bőrrel a mellkasára, és hagyja, hogy megtalálja a mellét. Ez az első kolosztrum etetés a legfontosabb „vakcina”, amelyet a baba kap – ez védi a bélrendszert a fertőzésekkel szemben. Ne engedje, hogy bárki elvigye gyermekét, mielőtt ez megtörténik, kivéve, ha orvosi vészhelyzet áll fenn",
-          "tip2": "Igény szerint táplálkozzon – amikor a babán éhség jelei vannak (fejfordítás, kezek szopása, nyüzsgés). Az első hetekben ez 24 órán belül 10-14 alkalom lehet. Ez normális, és meghatározza az ellátást. Az óra nem tudja megmondani, hogy mikor éhes a babája – a baba elmondja",
-          "tip3": "Semmi vizet, teát, tápszert 6 hónapig, hacsak az orvos kifejezetten nem írja fel orvosi okból. Az anyatej összetétele a nap folyamán változik, hogy megfeleljen a baba pontos szükségleteinek – ezt egyetlen gyár sem tudja megismételni. Láttam, hogy jó szándékú nagymamák cukros vizet adtak, ami rigót és hasmenést okozott",
+          "tip2": "Igény szerint táplálkozzon – amikor a babán éhség jelei vannak (fejfordítás, kezek szopása, nyüzsgés). Az első hetekben ez 10–14 alkalommal fordulhat elő 24 órán belül. Ez normális, és meghatározza az ellátást. Az óra nem tudja megmondani, hogy mikor éhes a babája – a baba elmondja",
+          "tip3": "Nincs víz, nincs tea, nincs tápszer 6 hónapig, hacsak az orvos kifejezetten nem írja fel orvosi okból. Az anyatej összetétele a nap folyamán változik, hogy megfeleljen a baba pontos szükségleteinek – ezt egyetlen gyár sem tudja megismételni. Láttam, hogy jó szándékú nagymamák cukros vizet adtak, ami rigót és hasmenést okozott",
           "tip4": "Ha a szoptatás fáj, akkor a retesz rossz – nem a tested. Kérjen meg egy szülésznőt vagy egészségügyi dolgozót, hogy figyeljen egy táplálékot, és segítsen beállítani a pozíciót. A fájdalom a segítség jelzése, nem pedig a feladás jele. Anyák százainak segítettem megoldani azokat a reteszelési problémákat, amelyek egy munkamenet során megoldódtak",
           "fact": "Azokban a roma közösségekben, ahol léteznek szoptatást támogató programok, a 6 hónapig tartó kizárólagos szoptatás több mint 60%-kal csökkenti a csecsemők kórházi kezelését. Az anyatej szó szerint alkalmazkodik a környezetében keringő fertőzések elleni küzdelemhez – ez egy személyre szabott gyógyszer, amelyet szervezete ingyen állít elő.",
-          "action": "Ha Ön újdonsült anya vagy várandós: mondja el családjának most, hogy 6 hónapig kizárólag szoptatást tervez, és a támogatásukra van szüksége, nem pedig tanácsra más élelmiszerek hozzáadásával kapcsolatban. Ha a szoptatás fájdalmas, lépjen kapcsolatba szülésznőjével vagy egészségügyi közvetítőjével, mielőtt abbahagyja – a megoldás általában egyszerű."
+          "action": "Ha Ön újdonsült anya vagy várandós: mondja el családjának most, hogy 6 hónapig kizárólag szoptatást tervez, és az ő támogatásukra van szüksége, nem pedig tanácsra más élelmiszerek hozzáadásával kapcsolatban. Ha a szoptatás fájdalmas, lépjen kapcsolatba szülésznőjével vagy egészségügyi közvetítőjével, mielőtt abbahagyja – a megoldás általában egyszerű."
         },
         "postpartum": {
           "title": "Szülés utáni gondozás",
           "description": "A roma kultúrában a születés utáni hetek olyan időszakok, amikor a család az anya köré gyűlik, és ez gyönyörű. De láttam egy árnyoldalt is: az anyákat, akik minden nap sírnak, és azt mondják nekik, ez normális. Anyák, akik erősen véreznek, és túl sokáig várnak, hogy segítséget kérjenek. Anyák, akiknek fájdalmát elengedik, mert „a nők ezen mennek keresztül”. Az Ön felépülése ugyanolyan fontos, mint a baba egészsége – mert a babának szüksége van rád élve és egészségesen.",
-          "tip1": "A szervezetnek legalább 6 hétre van szüksége a gyógyuláshoz. A születés utáni vérzés (lochia) 2-4 hétig normális, de ha hirtelen megnövekszik, nagy vérrögöket tartalmaz, vagy rossz szagú, azonnal menjen kórházba. Láttam, hogy anyák veszítenek veszélyes mennyiségű vért, mert azt mondták nekik, hogy az erős vérzés normális. Nem az",
+          "tip1": "Testének legalább 6 hétre van szüksége a gyógyuláshoz. A születés utáni vérzés (lochia) normális 2–4 hétig, de ha hirtelen megnövekszik, nagy vérrögöket tartalmaz, vagy rossz szagú, azonnal menjen kórházba. Láttam, hogy anyák veszítenek veszélyes mennyiségű vért, mert azt mondták nekik, hogy az erős vérzés normális. Nem az",
           "tip2": "Ha tartósan szomorúnak, üresnek érzi magát, nem tud kapcsolatot teremteni a babájával, vagy arra gondol, hogy önmagának vagy babájának kárt okoz – nem vagy gyenge, nem vagy rossz anya, olyan egészségügyi állapotod van, amely reagál a kezelésre. Ezt minden otthonlátogatás alkalmával mondom, mert a közösségeinkben a szülés utáni depresszió körüli megbélyegzés életekbe kerül",
-          "tip3": "A 6 hetes szülés utáni szűrés nem kötelező – ellenőrzi a fertőzést, a gyógyulást, a vérnyomást és a mentális egészséget. Tapasztalataim szerint a roma nők kevesebb mint 30%-a vesz részt ezen a látogatáson. Kérem, legyen ebben a 30%-ban. Vigyél magaddal valakit, ha ez segít",
+          "tip3": "A 6 hetes szülés utáni kivizsgálás nem kötelező – ellenőrzi a fertőzést, a gyógyulást, a vérnyomást és a mentális egészséget. Tapasztalataim szerint a roma nők kevesebb mint 30%-a vesz részt ezen a látogatáson. Kérjük, legyen ebben a 30%-ban. Vigyél magaddal valakit, ha ez segít",
           "tip4": "Fogadja el a család minden segítségét a főzéssel, takarítással és gyermekgondozással kapcsolatban. Aludj, amikor a baba alszik. Az egyetlen feladatod a baba táplálása és a gyógyulás. Minden más várhat. Az általam ismert legerősebb anyák azok, akik elfogadták a segítséget",
-          "fact": "A szülés utáni depresszió minden ötödik nőt érint világszerte, de a becslések szerint a roma közösségekben még gyakoribb a szegénység, a diszkrimináció és az elszigeteltség miatt. Minden közösségben, ahol kortárssegítő csoportokat hoztam létre újdonsült anyák számára, csökkent a depresszió és nőtt a szoptatás aránya – mert a kapcsolat gyógyít.",
+          "fact": "A szülés utáni depresszió 1 5 nőt érint világszerte, de a becslések szerint még gyakrabban fordul elő a roma közösségekben a szegénység, a diszkrimináció és az elszigeteltség miatt. Minden közösségben, ahol kortárssegítő csoportokat hoztam létre újdonsült anyák számára, csökkent a depresszió és nőtt a szoptatás aránya – mert a kapcsolat gyógyít.",
           "action": "Ha az elmúlt 6 hétben szült, és nem volt szülés utáni szűrésen, hívja fel egészségügyi központját még ma. Ha tartósan szomorúnak vagy levertnek érzi magát, szóljon egy megbízható személynek – édesanyjának, egészségügyi közvetítőjének, bárkinek. Ez az első beszélgetés a legnehezebb lépés és a legfontosabb."
         }
       },
       "children": {
-        "description": "A roma gyerekek közösségeink jövője, és minden előnyt megérdemelnek. Munkám során láttam lemaradó gyerekeket — nem képességhiány miatt, hanem mert megelőzhető betegségek, elmulasztott oltások vagy észrevétlen késések elvették az esélyeiket. Ez a tudás visszaadja ezeket az esélyeket.",
+        "description": "A roma gyerekek jelentik közösségeink jövőjét, és minden előnyt megérdemelnek. Munkám során azt tapasztaltam, hogy a gyerekek lemaradnak – nem képességeik miatt, hanem azért, mert megelőzhető betegségek, kihagyott oltások vagy észrevétlen fejlődési lemaradások ellopták tőlük a lehetőségeket. Ez a tudás visszaadja ezeket a lehetőségeket.",
         "growthMilestones": {
           "title": "Növekedés és Fejlődés",
           "description": "Minden gyerek a saját tempójában fejlődik, és soha nem akarom, hogy a szülők pánikba eszenek a normális változás miatt. De láttam olyan gyerekeket is, akiknek a késleltetett fejlődését a családok úgy utasították el, hogy „utolérik”, amikor a korai beavatkozás változást hozhatott volna. Az, hogy tudjuk, mire kell figyelni, nem szorongás, hanem figyelem.",
           "tip1": "A havi mérés az első évben a legegyszerűbb megfigyelési eszköz. Egészségügyi központjában vannak növekedési diagramok, amelyek megmutatják, hogy gyermeke jó úton halad-e. Azonnal ki kell vizsgálni azt a gyermeket, aki abbahagyja a súlygyarapodást vagy hirtelen leesik a táblázatról – ez lehet olyan egyszerű, mint az etetés módosítása, vagy olyan fontos, mint egy alapbetegség elkapása.",
-          "tip2": "6 hónapos korára a legtöbb baba tárgyak után nyúl, és válaszol a nevére. 12 hónapra a legtöbben kimondanak néhány szót, és felállnak. 24 hónapos korára a legtöbben jól járnak, és rövid frázisokban beszélnek. Ha gyermeke jelentősen le van maradva ezektől a mérföldkövektől, kérjen fejlődési értékelést – a korai segítség jelenti a legnagyobb különbséget",
+          "tip2": "6 hónapos korára a legtöbb baba tárgyak után nyúl, és válaszol a nevére. 12 hónapig a legtöbben szólnak néhány szót, és felállnak. 24 hónapos korára a legtöbb jól jár, és rövid frázisokban beszél. Ha gyermeke jelentősen le van maradva ezektől a mérföldkövektől, kérjen fejlődési értékelést – a korai segítség jelenti a legnagyobb különbséget",
           "tip3": "Állandóan beszéljen gyermekével – mesélje el, mit csinál, nevezzen el tárgyakat, énekeljen dalokat. A roma családoknak erős szájhagyományuk van – használja ki. Azok a gyerekek, akik több szót hallanak, nagyobb szókinccsel és erősebb kognitív készségekkel rendelkeznek. Ez ingyenes és hatékonyabb minden játéknál",
-          "tip4": "Fogak: a baba ínyét születésétől kezdve nedves ruhával tisztítsa meg, és az első fogtól kezdve használjon egy pici kenetet a gyermek fogkrémből. Súlyos fogszuvasodást tapasztalok roma gyerekeknél 3 éves korukig, gyakran az éjszakai üveg édes teától – ez fájdalmat, fertőzést és étkezési problémákat okoz, amelyek befolyásolják a növekedést.",
-          "fact": "A kutatások azt mutatják, hogy azok a gyerekek, akiknek a fejlődési késleltetését 3 éves koruk előtt azonosítják és kezelik, ötször nagyobb valószínűséggel járnak iskolába az elvárt szinten. Azokon a településeken, ahol havi mérést és fejlődési szűrést állítottam be, háromszorosára nőtt a korai beavatkozásra utalók aránya – vagyis olyan segítséget kaptak a gyerekek, akikről egyébként hiányoztak volna.",
-          "action": "Ha gyermeke 2 éven aluli, vigye el testsúly-ellenőrzésre és fejlődési szűrésre az egészségügyi központjában ebben a hónapban. Ha gyermeke elmúlt 2 éves, és aggályai vannak a beszéddel, járással vagy viselkedéssel kapcsolatban, kérjen beutalót szakemberhez. Aggodalma jogos – cselekedjen vele."
+          "tip4": "Fogak: a baba ínyét születésétől kezdve nedves ruhával tisztítsa meg, és az első fogtól kezdve használjon egy pici kenetet a gyermek fogkrémből. Súlyos fogszuvasodást tapasztalok roma gyerekeknél 3 éves koruk szerint, gyakran éjszaka édes teásüvegek miatt – ez fájdalmat, fertőzést és étkezési problémákat okoz, amelyek befolyásolják a növekedést.",
+          "fact": "A kutatások azt mutatják, hogy azok a gyerekek, akiknek fejlődési késéseit 3 koruk előtt azonosítják és kezelik, 5-szor nagyobb valószínűséggel járnak iskolába az elvárt szinten. Azokon a településeken, ahol havi mérést és fejlődési szűrést állítottam be, háromszorosára nőtt a korai beavatkozásra utalók aránya – vagyis olyan segítséget kaptak a gyerekek, akikről egyébként hiányoztak volna.",
+          "action": "Ha gyermeke 2 év alatti, vigye el testsúly-ellenőrzésre és fejlődési szűrésre az egészségügyi központjában ebben a hónapban. Ha gyermeke elmúlt 2, és aggályai vannak a beszéddel, járással vagy viselkedéssel kapcsolatban, kérjen beutalót szakemberhez. Aggodalma jogos – cselekedjen vele."
         },
         "commonIllnesses": {
           "title": "Amikor gyermeke beteg",
           "description": "A túlzsúfolt lakásokkal, korlátozott higiéniával és hideg telekkel rendelkező településeken a gyerekek gyakran megbetegednek. A legtöbb ilyen betegség – hasmenés, köhögés, láz – otthon is kezelhető, ha tudja, mit kell tennie, és mikor kell fokoznia. De azt is láttam, hogy a szülők túl sokáig várnak, vagy rohannak a sürgősségi osztályokra olyan állapotok miatt, amelyeket egy egyszerű otthoni kezelés megoldott volna. Ez a modul megtanítja Önnek a különbséget.",
-          "tip1": "38,5°C alatti láz: gyermeke szervezete küzd a fertőzésekkel – ez jó. Tartsa őket kényelmesen, enyhén ruházza fel, és adjon sok folyadékot. 38,5°C feletti láz: gyermekeknek adjon paracetamolt a testsúlyuknak megfelelő adagban (NEM felnőtt paracetamolt). Ha a láz több mint 3 napig tart, vagy a gyermek szokatlanul álmos, forduljon orvoshoz",
-          "tip2": "A hasmenés a kiszáradás révén öl meg, nem maga a fertőzés. Abban a pillanatban, amikor a gyermeknek laza a széklete, kezdje el az orális folyadékpótlást: 1 liter tiszta forralt víz + 6 evőkanál cukor + fél teáskanál só. Néhány percenként igyon kis kortyokat. Ez a recept több gyermek életét mentette meg világszerte, mint bármely antibiotikum",
+          "tip1": "Láz 38.5°C alatt: gyermeke szervezete küzd a fertőzésekkel – ez jó. Tartsa őket kényelmesen, enyhén ruházza fel, és adjon sok folyadékot. 38.5°C feletti láz: gyermekeknek adjon paracetamolt a testsúlyuknak megfelelő adagban (NEM felnőtt paracetamolt). Ha a láz több mint 3 napig tart, vagy a gyermek szokatlanul álmos, forduljon orvoshoz",
+          "tip2": "A hasmenés a kiszáradás révén öl meg, nem maga a fertőzés. Abban a pillanatban, amikor a gyermeknek híg a széklete, kezdje el a szájüregi rehidratálást: 1 liter tiszta forralt víz + 6 szintû teáskanál cukor + fél teáskanál só. Néhány percenként igyon kis kortyokat. Ez a recept több gyermek életét mentette meg világszerte, mint bármely antibiotikum",
           "tip3": "AZONNAL VIGYE GYERMEKÉT KÓRHÁZBA, ha azt tapasztalja, hogy: gyors vagy nehéz légzés, mellkasi behúzás minden lélegzetvételnél, nem tud inni vagy szoptatni, ismételt hányás, szokatlan álmosság vagy nem ébred, görcsök vagy véres hasmenés. Ne várj. Ezek vészhelyzetek",
           "tip4": "Ne adjon antibiotikumot orvos felírása nélkül. Ne adjon ki más gyermek által felírt receptet. Ne használjon maradék antibiotikumot. Ezt folyamatosan látom a közösségeinkben, és ez olyan gyógyszerrezisztens baktériumokat hoz létre, amelyeket sokkal nehezebb kezelni. Az antibiotikumok nem segítenek a megfázás, az influenza vagy a legtöbb köhögés esetén",
           "fact": "Azokban a közösségekben, ahol dolgoztam, a szülők képzése az orális rehidratáló oldat elkészítésére és használatára több mint 40%-kal csökkentette a gyermekek hasmenéses kórházi kezelését egyetlen év alatt. A tudás ilyen erős – és az összetevők kevesebbe kerülnek, mint egy buszjegy a kórházba.",
-          "action": "Most jegyezze meg ezt a receptet: 1 liter tiszta víz + 6 teáskanál cukor + fél teáskanál só. Gyakorold egyszer az elkészítést. Ha akarja, kóstolja meg – olyan ízűnek kell lennie, mint a könny. Ennek készenléte azt jelenti, hogy ha gyermeke hajnali 2-kor hasmenést kap, azonnal intézkedhet a pánik helyett."
+          "action": "Most jegyezze meg ezt a receptet: 1 liter tiszta víz + 6 teáskanál cukor + fél teáskanál só. Gyakorold egyszer az elkészítést. Ha akarja, kóstolja meg – olyan ízűnek kell lennie, mint a könny. Ennek készenléte azt jelenti, hogy amikor gyermeke 2kor hasmenést kap, Ön azonnal intézkedhet a pánik helyett."
         },
         "immunization": {
           "title": "Oltási ütemterv",
           "description": "Közvetlen leszek: Európa-szerte a roma közösségekben az átoltottság alacsonyabb az országos átlagnál, és ez nem azért van, mert a roma szülők nem törődnek gyermekeikkel, hanem azért, mert az egészségügyi rendszer nem érte el őket tisztelettel, hozzáféréssel és információval. A félretájékoztatás a közösségi médián keresztül is terjed. Kanyarós gyerekeket tartottam kórházban, akiknek soha nem lett volna szabad ott lenniük. Minden be nem oltott gyerek olyan gyerek, amelyet a rendszer megbukott.",
-          "tip1": "Születéstől 6 hétig: BCG (tuberkulózis) és hepatitis B. Ezeket a kórházban adják be a hazabocsátás előtt. Ha gyermeke otthon született, élete első hetében vigye el az egészségügyi központba ezeknek az oltóanyagoknak a beadásáért. Ne várj",
-          "tip2": "2, 3, 4 hónapos: a „nagy három” kör – DTP (diftéria, tetanusz, szamárköhögés), gyermekbénulás, hib és hepatitis B. Ezek a csecsemőkori legkritikusabb vakcinák. Minden kör erősíti az immunitást. Az egyik hiánya az egész láncot gyengíti",
-          "tip3": "12-15 hónapos: MMR (kanyaró, mumpsz, rubeola). Nem tudom ezt eléggé hangsúlyozni. A kanyaró nem ártalmatlan gyermekkori betegség – öl, agykárosodást okoz, és elvakít. 2019-ben kanyarójárványt láttam egy romatelepen, mert a lefedettség 80% alá esett. Megelőzhető volt",
+          "tip1": "Születés 6 hétig: BCG (tuberkulózis) és hepatitis B. Ezeket a kórházban adják be a hazabocsátás előtt. Ha gyermeke otthon született, élete első hetében vigye el az egészségügyi központba ezeknek az oltóanyagoknak a beadásáért. Ne várj",
+          "tip2": "2, 3, 4 hónap: a „három nagy” kör – DTP (diftéria, tetanusz, szamárköhögés), gyermekbénulás, Hib és hepatitis B. Ezek a legkritikusabb csecsemőkori vakcinák. Minden kör erősíti az immunitást. Az egyik hiánya az egész láncot gyengíti",
+          "tip3": "12–15 hónap: MMR (kanyaró, mumpsz, rubeola). Nem tudom ezt eléggé hangsúlyozni. A kanyaró nem ártalmatlan gyermekkori betegség – öl, agykárosodást okoz, és elvakít. 2019-ban kanyarójárványt láttam egy roma településen, mert a lefedettség 80% alá esett. Megelőzhető volt",
           "tip4": "A védőoltások minden európai országban ingyenesek a kormányzati egészségügyi központokban. Nem kell biztosítás, nem kell tartózkodási engedély, nem kell időpont a legtöbb központban. Ha megtagadják a szolgáltatást, ez illegális – forduljon egészségügyi közvetítőjéhez vagy a betegjogi hivatalhoz",
-          "fact": "A romák és a nem romák oltási aránya közötti különbség egyes európai országokban meghaladja a 15 százalékpontot. Ezt a szakadékot nem a romák oltásokkal kapcsolatos hiedelmei okozzák – a felmérések folyamatosan azt mutatják, hogy a roma szülők azt szeretnék, ha gyermekeiket beoltatnák. A szakadékot a hozzáférési akadályok, az egészségügyben tapasztalható diszkrimináció és a tájékoztatás hiánya okozzák. Ennek a hiánynak a megszüntetése az Európai Szociális Charta 11. cikke értelmében állami kötelezettség.",
+          "fact": "A romák és a nem romák oltási aránya közötti különbség néhány európai országban meghaladja a 15 százalékpontot. Ezt a szakadékot nem a romák oltásokkal kapcsolatos hiedelmei okozzák – a felmérések folyamatosan azt mutatják, hogy a roma szülők azt szeretnék, ha gyermekeiket beoltatnák. A szakadékot a hozzáférési akadályok, az egészségügyben tapasztalható diszkrimináció és a tájékoztatás hiánya okozzák. Ennek a hiánynak a megszüntetése az Európai Szociális Charta 11. cikke értelmében állami kötelezettség.",
           "action": "Keresse meg gyermeke oltási kártyáját. Ha valamelyik védőoltás hiányzik, vagy ha nincs kártyája, keresse fel a legközelebbi egészségügyi központot ezen a héten. Ha akadályokba ütközik – nyelv, dokumentumok, elutasítás –, forduljon a helyi egészségügyi közvetítőhöz. Pontosan ezért vagyunk itt."
         }
       },
       "chronic": {
-        "description": "A romák átlagosan 10 évvel korábban halnak meg, mint az európai átlag. A különbség nagy része krónikus betegségekből — cukorbetegség, szívbetegség, légzőszervi betegség — jön, amelyek évekig csendben fejlődnek. Amikor megjelennek a tünetek, a kár már megtörtént. De a legtöbb megelőzhető és kezelhető, ha időben észreveszik.",
+        "description": "A romák az európai átlagnál 10 évvel fiatalabban halnak meg. Ennek a szakadéknak a nagy része krónikus betegségekből – cukorbetegség, szívbetegség, légúti betegségek – származik, amelyek lassan és csendesen alakulnak ki évek alatt. Mire a tünetek megjelennek, már károsodott. De a legtöbb megelőzhető, és minden kezelhető, ha korán elkapják.",
         "diabetes": {
           "title": "Cukorbetegség: A néma fenyegetés",
-          "description": "A 2-es típusú cukorbetegség az a krónikus betegség, amellyel leggyakrabban találkozom a roma közösségekben. Családokban fut, virágzik az olcsó, magas cukortartalmú étrenden, amelyre a szegénység rákényszeríti az embereket, és évekig károsítja a szemet, a vesét, a lábat és a szívet, mielőtt bármi rosszat érezne. Láttam, hogy a 40-es éveiben járó férfiak elveszítik lábujjaikat, nők pedig megvakulnak a cukorbetegség miatt, amelyet soha nem diagnosztizáltak, mert soha nem végeztek vérvizsgálatot. Ez megelőzhető.",
-          "tip1": "Ha a családjában valaki cukorbeteg, annak kockázata 2-3-szor nagyobb. Ez nem a sors – ez egy jelzés, hogy most cselekedjünk. Csökkentse a fehér kenyér, a cukor és a cukros italok fogyasztását. Cserélje babbal, lencsével, zöldségekkel és vízzel. Láttam, hogy a családok ezeken a változásokon keresztül teljesen visszafordították a cukorbetegség előtti állapotot",
-          "tip2": "Naponta 30 perc séta 58%-kal csökkenti a cukorbetegség kockázatát. Nem fut. Nem edzőterem. Séta. A közösségekben, akikkel együtt dolgozom, minden 35 év feletti embernek azt mondom: a séta a gyógyszer. Ingyenes, és jobban működik, mint a legtöbb tabletta a megelőzés érdekében",
-          "tip3": "Évente legalább egyszer kérjen éhgyomri vércukorszint-vizsgálatot egészségügyi központjában, ha Ön 35 év feletti, túlsúlyos, vagy ha van családja. Ez egy egyszerű ujjszúrási teszt, a legtöbb országban ingyenes, és 5 percet vesz igénybe. Ez az egy teszt évekkel a tünetek megjelenése előtt képes elkapni a cukorbetegséget",
+          "description": "A 2 típusú cukorbetegség az a krónikus betegség, amellyel leggyakrabban találkozom a roma közösségekben. Családokban fut, virágzik az olcsó, magas cukortartalmú étrenden, amelyre a szegénység rákényszeríti az embereket, és évekig károsítja a szemet, a vesét, a lábat és a szívet, mielőtt bármi rosszat érezne. Láttam, hogy a 40 éves férfiak elveszítik lábujjaikat, nők pedig megvakulnak a cukorbetegség miatt, amelyet soha nem diagnosztizáltak, mert soha nem végeztek vérvizsgálatot. Ez megelőzhető.",
+          "tip1": "Ha a családjában bárki cukorbeteg, a kockázata 2–3-szor nagyobb. Ez nem a sors – ez egy jelzés, hogy most cselekedjünk. Csökkentse a fehér kenyér, a cukor és a cukros italok fogyasztását. Cserélje babbal, lencsével, zöldségekkel és vízzel. Láttam, hogy a családok ezeken a változásokon keresztül teljesen visszafordították a cukorbetegség előtti állapotot",
+          "tip2": "Minden egyes napi 30 perces séta 58%-kal csökkenti a cukorbetegség kockázatát. Nem fut. Nem edzőterem. Séta. Minden 35 feletti embernek mondom a közösségekben, akikkel együtt dolgozom: a séta a gyógyszer. Ingyenes, és jobban működik, mint a legtöbb tabletta a megelőzés érdekében",
+          "tip3": "Évente legalább egyszer kérjen éhgyomri vércukorszint-vizsgálatot egészségügyi központjában, ha Ön 35 feletti, túlsúlyos, vagy ha van családja. Ez egy egyszerű ujjszúrási teszt, a legtöbb országban ingyenes, és 5 percet vesz igénybe. Ez az egy teszt évekkel a tünetek megjelenése előtt képes elkapni a cukorbetegséget",
           "tip4": "Ismerje meg azokat a figyelmeztető jeleket, amelyek arra utalnak, hogy a cukorbetegség már jelen van: állandó szomjúságérzet, nagyon gyakori vizelés (főleg éjszaka), homályos látás, lassan gyógyuló sebek, megmagyarázhatatlan fáradtság. Ha ezek közül kettő vagy több van, végezzen vizsgálatot ezen a héten – ne a következő hónapban",
-          "fact": "A szlovákiai és romániai roma közösségekben végzett vizsgálatok az országos átlag 2-3-szorosát mutatták ki, és az esetek többségét nem diagnosztizálták. Az egyik programban, amelyben részt vettem, a közösségi alapú szűrés a 40 év feletti, soha nem tesztelt felnőttek 18%-ánál mutatta ki a cukorbetegséget. Szinte mindegyiknek nem volt tünete.",
-          "action": "Ha elmúlt 35 éves, keresse fel egészségügyi központját és kérjen vércukorszint-vizsgálatot. 5 percet vesz igénybe. Ha az eredmény 5,6 mmol/L (100 mg/dL) felett van, azonnal el kell kezdenie a változtatásokat. Hozz magaddal egy családtagot – ha nagy a kockázatod, valószínűleg az övékét is."
+          "fact": "A szlovákiai és romániai roma közösségekben végzett vizsgálatok az országos átlag 2–3-szeresét mutatták ki, és az esetek többségét nem diagnosztizálták. Az egyik programban, amelyben részt vettem, a közösségi alapú szűrés a 40 év feletti, soha nem tesztelt felnőttek 18%-ánál mutatta ki a cukorbetegséget. Szinte mindegyiknek nem volt tünete.",
+          "action": "Ha elmúlt 35, keresse fel egészségügyi központját és kérjen vércukorszint-vizsgálatot. 5 percet vesz igénybe. Ha az eredmény 5.6 mmol/L (100 mg/dL) felett van, akkor most el kell kezdenie a módosításokat. Hozz magaddal egy családtagot – ha nagy a kockázatod, valószínűleg az övékét is."
         },
         "heartHealth": {
           "title": "A szíved",
-          "description": "A szív- és érrendszeri betegségek az első számú gyilkosok a roma közösségekben – nem a genetika miatt, hanem a körülmények miatt, amelyekben élünk: a szegénységből és a diszkriminációból eredő krónikus stressz, a magas dohányzási ráta, a szegénység által megengedhető étrend és a megelőző szűrések szinte hiánya. Részt vettem olyan 50-es éveikben járó férfiak temetésén, akik teljesen megelőzhető szívrohamban haltak meg. Ez a modul azért létezik, mert nem vagyok hajlandó többet részt venni.",
-          "tip1": "A dohányzás a legpusztítóbb dolog, amit a szívével tehet. Tudom, hogy ez mélyen beágyazódott közösségi kultúránkba, és nem azért vagyok itt, hogy ítélkezzek – de őszinteséggel tartozom. Minden cigaretta károsítja az ereket. Ha nem tudja abbahagyni, csökkentse. Ha képes leszokni, szíve 24 órán belül elkezdi helyreállítani magát",
-          "tip2": "A magas vérnyomást csendes gyilkosnak nevezik, mert addig nem érzel semmit, amíg el nem támad egy stroke vagy szívroham. Mérje meg vérnyomását bármelyik gyógyszertárban – ingyenes. A normál érték 120/80 alatt van. 140/90 felett veszélyes és kezelésre szorul. Veszélyesen magas vérnyomást tapasztaltam olyan embereknél, akik teljesen egészségesnek érezték magukat",
-          "tip3": "Csökkentse a sófogyasztást: A roma konyha ízletes és gyönyörű, de sok hagyományos étel nagyon sós. Só hozzáadása helyett használjon paprikát, fokhagymát, hagymát, fűszernövényeket és borsot. Ízlelőbimbói 2 héten belül alkalmazkodnak – az ételek íze jobb lesz, nem pedig rosszabb. Csak ettől a változástól 10 ponttal csökkent a vérnyomásom",
+          "description": "A szív- és érrendszeri betegségek az első számú gyilkosok a roma közösségekben – nem a genetika miatt, hanem a körülmények miatt, amelyekben élünk: a szegénységből és a diszkriminációból eredő krónikus stressz, a magas dohányzási ráta, a szegénység által megengedhető étrend és a megelőző szűrések szinte hiánya. Részt vettem olyan férfiak temetésén a 50-ban, akik szívrohamban haltak meg, ami teljesen megelőzhető volt. Ez a modul azért létezik, mert nem vagyok hajlandó többet részt venni.",
+          "tip1": "A dohányzás a legpusztítóbb dolog, amit a szívével tehet. Tudom, hogy ez mélyen beágyazódott közösségi kultúránkba, és nem azért vagyok itt, hogy ítélkezzek – de őszinteséggel tartozom. Minden cigaretta károsítja az ereket. Ha nem tudja abbahagyni, csökkentse. Ha fel tud lépni, szíve 24 órán belül helyreáll",
+          "tip2": "A magas vérnyomást csendes gyilkosnak nevezik, mert addig nem érzel semmit, amíg el nem támad egy stroke vagy szívroham. Mérje meg vérnyomását bármelyik gyógyszertárban – ingyenes. A normál érték 120/80 alatt van. A 140/90 feletti érték veszélyes és kezelést igényel. Veszélyesen magas vérnyomást tapasztaltam olyan embereknél, akik teljesen egészségesnek érezték magukat",
+          "tip3": "Csökkentse a sófogyasztást: A roma konyha ízletes és gyönyörű, de sok hagyományos étel nagyon sós. Só hozzáadása helyett használjon paprikát, fokhagymát, hagymát, fűszernövényeket és borsot. Ízlelőbimbói 2 héten belül alkalmazkodnak – az ételek jobb ízűek lesznek, nem pedig rosszabbak. Csak ettől a változástól 10 ponttal csökkent a vérnyomásom",
           "tip4": "A diszkriminációból, a szegénységből, a kilakoltatási fenyegetésekből és a családi konfliktusokból eredő krónikus stressz a szívbetegségek közvetlen oka. Ez nem vélemény, hanem dokumentált gyógyszer. A stresszhormonok éveken keresztül károsítják az ereket. Bármilyen módszer megtalálása a stressz oldására – séta, zene, ima, beszélgetés, közösség – szívgyógyszer",
-          "fact": "A roma férfiak átlagosan 10-15 évvel korábban halnak meg szív- és érrendszeri betegségekben, mint az általános népesség. Az Európai Bizottság saját adatai ezt mutatják. De a korai szívrohamok 80%-a megelőzhető életmódváltással, valamint a magas vérnyomás és a koleszterin korai kezelésével. A megelőzés működik – ha van hozzáférése.",
-          "action": "Ezen a héten két dolgot tegyél: (1) Menj el egy gyógyszertárba, és ellenőrizd a vérnyomásodat – írd le a számokat. (2) Számolja meg, hány cigarettát szív el naponta, és próbálja meg napi 3-mal csökkenteni. Ez a két intézkedés a leghatékonyabb szívmegelőző lépés, amelyet bármely egyén megtehet."
+          "fact": "A roma férfiak átlagosan 10–15 évvel korábban halnak meg szív- és érrendszeri betegségekben, mint az általános népesség. Az Európai Bizottság saját adatai ezt mutatják. De a korai szívrohamok 80%-a megelőzhető életmódváltással, valamint a magas vérnyomás és a koleszterin korai kezelésével. A megelőzés működik – ha van hozzáférése.",
+          "action": "Ezen a héten két dolgot csinálj: (1) Menj el egy gyógyszertárba, és ellenőrizd a vérnyomásodat – írd le a számokat. (2) Számolja meg, hány cigarettát szív el naponta, és próbálja meg napi 3-al csökkenteni. Ez a két intézkedés a leghatékonyabb szívmegelőző lépés, amelyet bármely egyén megtehet."
         },
         "respiratory": {
           "title": "Tüdő és légzés",
           "description": "Dolgoztam olyan településeken, ahol a családok fát, szenet, vagy akár műanyagot, gumit égetnek fűtésre télen. Ahol 8 ember alszik két szellőzés nélküli szobában. Ahol a nedvesség lefolyik a falakon, és minden sarokban fekete penész nő. A légúti megbetegedések ilyen körülmények között nem meglepőek – ez annak a lakásnak a megjósolható eredménye, amelyben senkinek sem kellene laknia. Miközben a jobb lakhatásért küzdünk, meg kell védenünk a tüdőnket is.",
           "tip1": "A beltéri füst a legközvetlenebb légúti veszély, amit látok. Ha szilárd tüzelőanyaggal fűt, gondoskodjon a szellőzésről – még az ablak megrepedése is segít. Soha ne égessen el műanyagot, gumit vagy festett fát – a gőzök olyan vegyi anyagokat tartalmaznak, amelyek maradandó tüdőkárosodást okoznak, különösen olyan gyermekeknél, akiknek a tüdeje még fejlődik.",
           "tip2": "A nedvesség és a penész asztmát, krónikus hörghurutot okoz, és minden légúti fertőzést súlyosbít. Törölje le a látható penészt víz és ecet vagy fehérítő keverékével. Nyissa ki az ablakokat naponta legalább 15 percre még télen is. Ha lehetséges, akaszd ki a nedves ruhaneműt a szabadba – a benti ruhák szárítása hatalmas mennyiségű nedvességet ad a levegőbe",
-          "tip3": "A 3 hétnél tovább tartó köhögést, különösen fogyással, éjszakai izzadásokkal vagy vérrel a köpetben, ki kell vizsgálni tuberkulózisra. A tbc ingyenes kezeléssel gyógyítható, de nagyon fertőző is. A roma közösségekben a tuberkulózis aránya több európai ország országos átlagának 3-5-szöröse. A korai tesztelés megvédi az egész családot",
-          "tip4": "A füstös vagy penészes környezetben felnövő gyermekek tüdőkapacitása tartósan csökkent – ​​egész életükben kevésbé egészséges tüdőt fognak hordozni. Még ha nem is tud azonnal változtatni lakáshelyzetén, a füstexpozíció csökkentése és a lehető legnagyobb szellőztetés védi a fejlődő tüdejét",
-          "fact": "A WHO a háztartások légszennyezettségét a negyedik legnagyobb globális egészségügyi kockázatként azonosítja. Azokon a roma telepeken, ahol dolgoztam, a gyerekek több mint 60%-ának volt visszatérő légúti fertőzése – ez az arány jelentősen csökkent, amikor a családok javították a szellőzést és csökkentették a hulladékok beltéri elégetését. A lakhatási körülmények nem a családok hibái, de az alkalmazkodási stratégiák életeket mentenek, miközben a rendszerszintű változásért küzdenek.",
-          "action": "Ma: ellenőrizze, nincs-e látható penész az otthonában, és tisztítsa meg hígított fehérítővel vagy ecettel. Nyisson ki legalább egy ablakot 15 percre. Ha valaki a háztartásában 3 hétnél tovább köhög, menjen el az egészségügyi központba tbc-szűrésre – az ingyenes és 15 percet vesz igénybe."
+          "tip3": "A 3 hétnél tovább tartó köhögést, különösen fogyással, éjszakai izzadásokkal vagy vérrel a köpetben, ki kell vizsgálni tuberkulózisra. A TB ingyenes kezeléssel gyógyítható, de nagyon fertőző is. A roma közösségekben a TB arány 3–5-szorosa több európai ország országos átlagának. A korai tesztelés megvédi az egész családot",
+          "tip4": "A füstös vagy penészes környezetben felnövő gyermekek tüdőkapacitása tartósan csökkent – egész életükben kevésbé egészséges tüdőt fognak hordozni. Még ha nem is tud azonnal változtatni lakáshelyzetén, a füstexpozíció csökkentése és a lehető legnagyobb szellőztetés védi a fejlődő tüdejét",
+          "fact": "A WHO a háztartások légszennyezését a negyedik legnagyobb globális egészségügyi kockázatként azonosítja. Azokon a roma telepeken, ahol dolgoztam, a gyerekek több mint 60%-ának volt visszatérő légúti fertőzése – ez az arány jelentősen csökkent, amikor a családok javították a szellőzést és csökkentették a hulladékok beltéri elégetését. A lakhatási körülmények nem a családok hibái, de az alkalmazkodási stratégiák életeket mentenek, miközben a rendszerszintű változásért küzdenek.",
+          "action": "Ma: ellenőrizze, nincs-e látható penész az otthonában, és tisztítsa meg hígított fehérítővel vagy ecettel. Nyisson meg legalább egy ablakot 15 percre. Ha valakinek a háztartásában több mint 3 hétig köhög, menjen el az egészségügyi központba egy TB szűrésre – ez ingyenes, és 15 percig tart."
         }
       },
       "mental": {
-        "description": "15 év roma közösségekben megtanultam, hogy a legnehezebb teher nem a testi betegség — hanem a diszkrimináció, a szegénység, a kilakoltatástól való félelem, a gyerekek jövője miatti aggodalom és az érzés, hogy a rendszerben senki sem törődik veled. Stressznek hívjuk. Ha évekig tart, mássá válik. Megérdemli, hogy elnevezzük, megértsük és kezeljük — szégyen nélkül.",
+        "description": "A roma közösségekben eltöltött 15 éves munka során megtanultam, hogy az embereket nem a testi betegség a legsúlyosabb teher, hanem a diszkrimináció, a szegénység, a kilakoltatástól való félelem, a gyermekeik jövője miatti aggódás és az az érzés, hogy a rendszerben senkit sem érdekel. Ezt nevezzük stressznek. Ha évekig tart, valami több lesz belőle. Megérdemli, hogy megnevezzék, megértsék és kezeljék – szégyen nélkül.",
         "stressManagement": {
           "title": "Stresszel élni",
-          "description": "Nem fogok úgy tenni, mintha egy légzőgyakorlat megoldaná a problémáit. Ha attól tart, hogy családját kilakoltatják, egyetlen meditációs alkalmazás sem fogja megoldani. De több száz emberrel dolgoztam együtt közösségeinkben, akik óriási stresszt hordoznak magukban, és láttam, mi történik, ha ez a stressz évekig nem kezelhető: szívrohamok a 40-es éveikben járó férfiaknál, nők, akik nem tudnak enni vagy aludni, gyerekek, akik feszültségtől felvillanyozó háztartásban nőnek fel. Nem tudjuk mindig megváltoztatni a körülményeinket, de megváltoztathatjuk, hogyan viseljük azokat.",
-          "tip1": "A 4-4-8 légzési módszer azonnal hat az idegrendszerére. Lélegezz be az orrán keresztül 4-ig, tartsd 4-ig, és lassan lélegezz ki a szádon keresztül 8-ig. Ezt 5-ször végezd. Leesik a pulzusod, ellazulnak az izmaid. Ezt tanítom a családoknak kórházi látogatások előtt, bírósági tárgyalások előtt, minden stresszes találkozás előtt. Ez egy olyan eszköz, amely mindig nálad van",
-          "tip2": "A gyaloglás a leginkább alábecsült gyógyszer a stresszre. 20 perc gyaloglás – nem gyors, csak gyaloglás – akár 30%-kal csökkenti a kortizol stresszhormon szintjét. Ha nem tudja elhagyni a házat, járjon körbe. Maga a mozgás az, ami működik, nem a díszlet",
+          "description": "Nem fogok úgy tenni, mintha egy légzőgyakorlat megoldaná a problémáit. Ha attól tart, hogy családját kilakoltatják, egyetlen meditációs alkalmazás sem fogja megoldani. De több száz emberrel dolgoztam együtt közösségeinkben, akik hatalmas stresszt hordoznak magukban, és láttam, mi történik, ha ez a stressz évekig nem kezelhető: szívrohamot kapnak férfiak 40korukban, nők, akik nem tudnak enni vagy aludni, gyerekek, akik feszültségtől felvillanyozó háztartásban nőnek fel. Nem tudjuk mindig megváltoztatni a körülményeinket, de megváltoztathatjuk, hogyan viseljük azokat.",
+          "tip1": "A 4-4-8 légzési módszer azonnal hat az idegrendszerére. Lélegezz be az orrán keresztül 4 számlálásig, tartsd le 4, és lassan lélegezz ki a szádon 8 ideig. Csináld ezt 5 alkalommal. Leesik a pulzusod, ellazulnak az izmaid. Ezt tanítom a családoknak kórházi látogatások előtt, bírósági tárgyalások előtt, minden stresszes találkozás előtt. Ez egy olyan eszköz, amely mindig nálad van",
+          "tip2": "A gyaloglás a leginkább alábecsült gyógyszer a stresszre. 20 perc séta – nem gyors, csak gyaloglás – akár 30%-kal csökkenti a kortizol stresszhormon szintjét. Ha nem tudja elhagyni a házat, járjon körbe. Maga a mozgás az, ami működik, nem a díszlet",
           "tip3": "Beszélj valakivel. Nem a probléma megoldása érdekében, csak azért, hogy megosszuk a súlyt. Láttam, hogy a férfiak a közösségeinkben mindent egyedül hordoznak, mert a segítségkérés gyengeségnek tűnik. A munka 15 éve alatt a legerősebb emberek, akikkel találkoztam, azok, akik megtanulták azt mondani, hogy „küzdök”",
           "tip4": "Légy tudatos azzal kapcsolatban, hogy mi jut eszedbe. A közösségi média, a hírek, a családi viták, amelyek újra visszajátszanak a fejedben – ezek olyan stresszforrások, amelyeket kontrollálhatsz. Nem azt mondom, hogy hagyd figyelmen kívül a valóságot. Azt mondom, válassza ki, mikor foglalkozik vele, és hozzon létre olyan tereket a napjában, ahol szándékosan megnyugszik",
           "fact": "A roma közösségek megtapasztalják az úgynevezett „kisebbségi stresszt” – a diszkrimináció, a kirekesztés és a szegénység krónikus élettani következményeit. A kutatások azt mutatják, hogy ez tartósan megemeli a kortizolszintet, felgyorsítva a szívbetegségek, a cukorbetegség és a mentális betegségek kialakulását. Ez nem gyengeség. A biológia az igazságtalanságra reagál.",
-          "action": "Ma este lefekvés előtt helyezze a telefont egy másik szobába, és gyakoroljon 4-4-8 légzést 5 percig. Ha van egy partner vagy családtag, aki hajlandó, tegyétek ezt együtt csendben. Ez az apró cselekedet határt szab a napi stressz és az alvás között – az alvás pedig az, amikor a szervezet helyreállítja a stressz által okozott károkat."
+          "action": "Ma este lefekvés előtt tegye a telefont egy másik szobába, és gyakoroljon 4-4-8 légzést 5 percig. Ha van egy partner vagy családtag, aki hajlandó, tegyétek ezt együtt csendben. Ez az apró cselekedet határvonalat hoz létre a napi stressz és az alvás között – az alvás pedig az, amikor a szervezet helyreállítja a stressz által okozott károkat."
         },
         "sleep": {
           "title": "Aludj orvosként",
           "description": "Túlzsúfolt otthonokban, ahol a tévé mindig be van kapcsolva, ahol a gyerekek a szülőkkel osztoznak ágyon, ahol a szomszédok vagy az utca zaja soha nem szűnik meg – az alvás nem adott. Ez olyasvalami, amiért meg kell küzdeni. És mégis, az alvás az, amikor a tested helyreállítja magát, amikor az agyad feldolgozza a napi stresszt, és amikor az immunrendszered újjáépül. A krónikus alváshiány ugyanolyan veszélyes, mint a dohányzás – és közösségeinkben szinte általános jelenség.",
-          "tip1": "Próbáljon meg minden nap nagyjából ugyanabban az időben aludni és ébredni, beleértve a hétvégéket is. Tudom, hogy ez nehéz műszakos munka, kisgyerekek vagy zajos környezet esetén – de még egy állandó 6 órás időtartam is helyreállítóbb, mint a véletlenszerű 8 órás blokkok. A tested ritmusra vágyik",
-          "tip2": "Az alvás előtti telefonok és képernyők az egyik legrosszabb modern alvásromboló. A kék fény jelzi az agyának, hogy nappal van. Ha használnia kell a telefont, állítsa éjszakai üzemmódba este 21 óra után. Még jobb, ha egy másik szobában töltse fel – azt tapasztaltam, hogy az alvás minősége drámaian javult ettől az egyetlen változtatástól",
-          "tip3": "A koffein 8 órán keresztül marad a szervezetben. Aznap délután 16 órakor a török ​​kávé vagy tea éjfélkor még aktív a véráramban. Ebéd után váltson gyógyteára (kamilla, hársfa). Ez az egyik legegyszerűbb fejlesztés, amit javaslok, és az emberek mindig meglepődnek, mennyit segít",
+          "tip1": "Próbáljon meg minden nap nagyjából ugyanabban az időben aludni és ébredni, beleértve a hétvégéket is. Tudom, hogy ez nehéz műszakos munka, kisgyermekek vagy zajos környezet esetén – de még egy 6 órás állandó ablak is helyreállítóbb, mint a véletlenszerű 8 órás blokkok. A tested ritmusra vágyik",
+          "tip2": "Az alvás előtti telefonok és képernyők az egyik legrosszabb modern alvásromboló. A kék fény jelzi az agyának, hogy nappal van. Ha használnia kell telefonját, állítsa éjszakai üzemmódba délután 9 után. Még jobb, ha egy másik szobában töltse fel – azt tapasztaltam, hogy az alvás minősége drámaian javult ettől az egyetlen változtatástól",
+          "tip3": "A koffein 8 óráig marad a rendszerben. Aznap délután a 4órás török ​​kávé vagy tea éjfélkor is aktív a véráramban. Ebéd után váltson gyógyteára (kamilla, hársfa). Ez az egyik legegyszerűbb fejlesztés, amit javaslok, és az emberek mindig meglepődnek, mennyit segít",
           "tip4": "Ha gyerekekkel vagy családtagokkal osztozik egy szobán, az apró változtatások segítenek: a folyamatos „világítási idő”, a zaj fokozatos csökkentése, függöny használata az alvás vizuális határának kialakítására. Tanítsd meg a gyerekeknek, hogy az alvás ideje a családi idő – amikor a háztartás együtt csendben van, mindenki jobban alszik",
-          "fact": "A marginalizált közösségekben végzett alvással kapcsolatos kutatások azt mutatják, hogy a túlzsúfoltság, a zaj és a stressz okozta krónikus alváshiány jelentősen hozzájárul az egészségügyi szakadékhoz. Azok az emberek, akik folyamatosan 6 óránál kevesebbet alszanak, négyszer nagyobb kockázatot kapnak a fertőzések elkapására, és kétszer nagyobb a szívbetegségek kockázata. Az alvás nem luxus, hanem a túlélés alapja.",
-          "action": "Ma este: állítson be lefekvés előtti ébresztőt a telefonján 30 percre, mielőtt lefekszik. Amikor megszólal, kapcsold ki a TV-t, tedd el a telefont, és feküdj a sötétben 4-4-8 légzéssel, amíg el nem alszol. Csináld ezt 7 éjszakán keresztül, és vedd észre a különbséget."
+          "fact": "A marginalizált közösségekben végzett alvással kapcsolatos kutatások azt mutatják, hogy a túlzsúfoltság, a zaj és a stressz okozta krónikus alváshiány jelentősen hozzájárul az egészségügyi szakadékhoz. Azoknál az embereknél, akik folyamatosan 6 óránál kevesebbet alszanak, 4-szor nagyobb a fertőzések elkapásának és 2x-szer nagyobb a szívbetegség kockázata. Az alvás nem luxus, hanem a túlélés alapja.",
+          "action": "Ma este: állítson be lefekvés előtti ébresztőt a telefonján 30 percre, mielőtt elaludna. Amikor csörög, kapcsolja ki a TV-t, tegye el a telefont, és feküdjön a sötétben, miközben 4-4-8 lélegzik, amíg el nem alszik. Tegye ezt 7 éjszakán keresztül, és vegye észre a különbséget."
         },
         "communitySupport": {
           "title": "A kapcsolat ereje",
           "description": "A roma kultúra már megért valamit, amit a nyugati orvoslás csak most mér: hogy az összetartozás, a család és a közösség olyan erősen védi az egészséget, mint bármely gyógyszer. Láttam, hogy emberek túlélték a legnehezebb körülményeket – kilakoltatást, betegséget, veszteséget –, mert a közösségük tartotta őket. És láttam, hogy az emberek sokkal kevesebb alatt esnek össze, amikor elszigeteltek voltak. A tudomány most megerősíti azt, amit őseink tudtak: a magány megöl, a kapcsolat gyógyít.",
           "tip1": "Ha ismer valakit a közösségében, aki a közelmúltban veszített el egy családtagját, betegséget diagnosztizáltak nála, elvesztette a munkáját vagy válságon megy keresztül – ne várja meg, hogy segítséget kérjen. Látogassa meg őket. Hozz ételt. Ülj le velük. A roma kultúrában ez az ösztön. Az egészségtudományban ezt „szociális receptnek” nevezik – és jobban működik, mint a legtöbb tabletta",
-          "tip2": "A szégyen az egészség ellensége. Találkoztam olyan emberekkel, akik évekig titkolták a cukorbetegséget, a depressziót, a HIV-vírust és a családon belüli erőszakot, mert féltek, mit mond majd a közösség. Valahányszor közösségünkben valaki nyíltan beszél a küzdelméről, az engedélyt ad másoknak. Nem kell mindent megosztanod – de valami megosztása megtöri a csendet, amitől az emberek betegek",
+          "tip2": "A szégyen az egészség ellensége. Találkoztam olyan emberekkel, akik évekig titkolták a cukorbetegséget, a depressziót, a HIV és a családon belüli erőszakot, mert féltek, mit mond majd a közösség. Valahányszor közösségünkben valaki nyíltan beszél a küzdelméről, az engedélyt ad másoknak. Nem kell mindent megosztanod – de valami megosztása megtöri a csendet, amitől az emberek betegek",
           "tip3": "Összejövetelek, ünnepségek, zene, ima, mesemondás – ezek nem vonják el a figyelmet az egészségről. Egészségesek. A tanulmányok azt mutatják, hogy a közösségi kulturális tevékenységekben való rendszeres részvétel csökkenti a depressziót és a szív- és érrendszeri kockázatot. Az általuk teremtett öröm és összetartozás mérhető gyógyszer",
           "tip4": "Nézze meg a közösségében élő időseket és elszigetelt embereket. Az egyedül élő ember, a nagymama, akinek a gyerekei elköltöztek, a férfi, aki nem járt összejövetelekre. Egy 10 perces látogatás vagy telefonhívás lehet az egyetlen emberi kapcsolatuk aznap – és ez lehet az, ami életben tartja őket",
-          "fact": "A Harvard 85 éves, a felnőttek egészségével foglalkozó tanulmánya arra a következtetésre jutott, hogy az egészség és a hosszú élettartam legerősebb előrejelzője a kapcsolatok minősége – nem az étrend, a testmozgás vagy a genetika. A magány 26%-kal növeli a halálozási kockázatot, ami napi 15 cigaretta elszívásának felel meg. A roma közösségek kulturális gazdagsággal rendelkeznek a társadalmi kapcsolatokban, amely valódi egészségügyi érték – védje meg.",
+          "fact": "A Harvard 85 éves, a felnőttek egészségével foglalkozó tanulmánya arra a következtetésre jutott, hogy az egészség és a hosszú élettartam legerősebb előrejelzője a kapcsolatok minősége – nem az étrend, a testmozgás vagy a genetika. A magány 26%-kal növeli a halálozási kockázatot, ami megfelel napi 15 cigaretta elszívásának. A roma közösségek kulturális gazdagsággal rendelkeznek a társadalmi kapcsolatokban, amely valódi egészségügyi érték – védje meg.",
           "action": "Ezen a héten lépj kapcsolatba egy olyan személlyel a közösségedben, akivel mostanában nem beszéltél. Nem szövegesen – hanggal vagy személyesen. Kérdezd meg, hogy vannak, és hallgasd meg. Ez a kapcsolati aktus az egészségfejlesztés a legtisztább formájában."
         },
         "seekHelp": {
           "title": "Amikor túl sok",
           "description": "Van egy pont, ahol a stressz, a szomorúság és az aggodalom átlép egy határvonalat, és valami szakszerű segítségre szorul – és a roma közösségekben ezt a határvonalat szinte soha nem ismerik fel, mert megtanítják elviselni, erősnek lenni, kezelni a családon belül. Láttam ennek a hallgatásnak az árát: férfiak, akik isznak, hogy megbirkózzanak, amíg a májuk elromlik, a nők, akik abbahagyják az evést, a tizenévesek, akik ártanak maguknak. A segítségkérés nem árulja el a kultúráját. Megvédi az életedet, hogy ott lehess azoknak, akiknek szükségük van rád.",
           "tip1": "Ha Ön vagy valaki, akit ismer, több mint 2 hétig nem tud normálisan működni – nem tud aludni, nem tud enni, nem tud gondoskodni a gyerekekről, folyton sír, vagy nincs energiája semmire – ez meghaladja a normál stresszt. Ez a depresszió, és olyan valóságos egészségügyi állapot, mint a cukorbetegség. Ez nem gyengeség, és reagál a kezelésre",
-          "tip2": "Az első lépés a háziorvosa. Mondja: \"Több mint 2 hete nagyon rosszul érzem magam, és segítségre van szükségem.\" Nem kell mindent megmagyaráznod. A háziorvos felmérheti Önt, és pszichológushoz vagy pszichiáterhez irányíthatja. Ez a szolgáltatás a legtöbb európai országban ingyenes vagy alacsony költségű. Ha a háziorvos elbocsát, keressen fel egy másikat",
-          "tip3": "Ha valaki a családjában megemlíti, hogy meg akar halni, el akar tűnni, vagy úgy érzi, hogy mindenkinek jobban járna nélküle – ezt azonnal vegye komolyan. Maradj velük. Távolítsa el a gyógyszerekhez és éles tárgyakhoz való hozzáférést. Hívja az országos krízisvonalat vagy a 112-t. Nem reagálja túl. Ezek a szavak segélykiáltások, amelyekre válaszolni kell",
-          "tip4": "A mentális egészségügyi gyógyszerek nem szégyenletesek, nem okoznak függőséget, és nem „őrültek számára”. Világszerte emberek millióinak írnak fel antidepresszánsokat, amelyek életeket menthetnek meg. Nem változtatják meg azt, aki vagy – feloldják a kémiai ködöt, amely megakadályoz abban, hogy az legyél, aki vagy. Láttam embereket, akik átalakultak a kezelés hatására, és évekig ellenálltak a megbélyegzés miatt",
+          "tip2": "Az első lépés a háziorvosa. Mondja: \"Több mint 2 hete nagyon rosszul érzem magam, és segítségre van szükségem.\" Nem kell mindent megmagyaráznod. A háziorvos felmérheti Önt, és pszichológushoz vagy pszichiáterhez irányíthatja. Ez a szolgáltatás a legtöbb európai országban ingyenes vagy alacsony költségű. Ha a háziorvosa elbocsát, keressen fel egy másikat",
+          "tip3": "Ha valaki a családjában megemlíti, hogy meg akar halni, el akar tűnni, vagy úgy érzi, hogy mindenkinek jobban járna nélküle – ezt azonnal vegye komolyan. Maradj velük. Távolítsa el a gyógyszerekhez és éles tárgyakhoz való hozzáférést. Hívja az országos krízisvonalat vagy a 112 telefonszámot. Nem reagálod túl. Ezek a szavak segélykiáltások, amelyekre válaszolni kell",
+          "tip4": "A mentális egészségügyi gyógyszerek nem szégyenletesek, nem okoznak függőséget, és nem „őrültek számára”. Világszerte emberek millióinak írnak fel antidepresszánsokat, és életeket menthetnek meg. Nem változtatják meg azt, aki vagy – feloldják a kémiai ködöt, amely megakadályoz abban, hogy az legyél, aki vagy. Láttam embereket, akik átalakultak a kezelés hatására, és évekig ellenálltak a megbélyegzés miatt",
           "fact": "A roma közösségekben a legmagasabb a depresszió és a szorongás aránya Európában, olyan strukturális tényezők miatt, mint a diszkrimináció, a szegénység és a szolgáltatásokhoz való hozzáférés hiánya. Ennek ellenére a roma közösségekben a mentálhigiénés szolgáltatások igénybevétele a legalacsonyabbak közé tartozik. Azokban a programokban, ahol segítettem az embereket a kulturálisan érzékeny mentális egészségügyi ellátáshoz kapcsolódni, az életminőség jelentős javulása volt – nemcsak az egyén, hanem az egész családja számára.",
-          "action": "Mentse el ezt a számot most azonnal a telefonjába: hazája mentális egészségügyi segélyvonala. Ha válságban vagy, hívd fel. Ha valaki, akit ismer, válságban van, hívja fel vele. Ha pedig több mint 2 hete küszködik, kérjen időpontot háziorvosához ezen a héten. Megérdemled, hogy jobban érezd magad, és van segítség."
+          "action": "Mentse el ezt a számot most azonnal a telefonjába: hazája mentális egészségügyi segélyvonala. Ha válságban vagy, hívd fel. Ha valaki, akit ismer, válságban van, hívja fel vele. Ha pedig több mint 2 hete küzd, foglaljon időpontot háziorvosához ezen a héten. Megérdemled, hogy jobban érezd magad, és van segítség."
         }
       }
     },
@@ -1866,14 +1866,325 @@ export const TRANSLATIONS = {
       "downloadGuide": "Terepi útmutató letöltése (PDF)"
     }
   },
+  "it": {
+    "learn": {
+      "progressLabel": "moduli completati",
+      "startHere": "Inizia qui",
+      "continueLabel": "Continua",
+      "allModules": "Tutti i moduli",
+      "prevention": {
+        "description": "Negli 15 anni di lavoro negli insediamenti rom, ho visto famiglie devastate da malattie che semplici abitudini avrebbero potuto prevenire. Questa conoscenza non è un lusso: è sopravvivenza.",
+        "handwashing": {
+          "title": "Lavarsi le mani",
+          "description": "Ho visto intere famiglie negli insediamenti ammalarsi della stessa infezione allo stomaco, trasmessa di mano in mano. Il corretto lavaggio delle mani è la medicina più economica ed efficace a cui hai già accesso: non costa nulla e previene le malattie che vedo più spesso nelle nostre comunità.",
+          "tip1": "Prima di toccare il cibo, prima di dare da mangiare a un bambino e dopo ogni utilizzo del bagno, lavati. Ho visto una mano non lavata causare una settimana di diarrea a un'intera famiglia",
+          "tip2": "Conta lentamente fino a 20 o canticchia una strofa di una canzone. La maggior parte delle persone si lava per 5 secondi: ciò non rimuove quasi nulla. L'attrito tra le mani è ciò che uccide i germi",
+          "tip3": "Niente sapone? Ho lavorato in insediamenti senza acqua corrente. La cenere funziona. Lavori con la sabbia. L'acqua da sola con il lavaggio funziona meglio di niente. Non lasciare che la perfezione impedisca il bene",
+          "tip4": "Asciuga le mani all'aria o usa un panno pulito che cambi ogni giorno. Un asciugamano sporco condiviso da tutti ricontamina le mani pulite: qualcosa che spiego ad ogni visita a domicilio",
+          "fact": "Nelle comunità con cui ho lavorato, le campagne per il lavaggio delle mani hanno ridotto i casi di diarrea infantile di quasi la metà in tre mesi. Il WHO conferma: il lavaggio delle mani riduce la diarrea del 40% e le infezioni respiratorie fino al 21%.",
+          "action": "Stasera, state con i vostri figli alla fonte d'acqua e lavatevi le mani insieme. Rendilo un'abitudine di famiglia prima di ogni pasto. I bambini che imparano guardando i loro genitori porteranno con sé questo pensiero per tutta la vita."
+        },
+        "vaccination": {
+          "title": "Vaccinazione",
+          "description": "Ho accompagnato madri rom nei centri sanitari dove venivano respinte perché prive di documenti, non parlavano la lingua o semplicemente perché veniva loro detto di tornare più tardi. I vaccini sono un diritto legale dei tuoi figli: gratuiti, sicuri e la protezione più potente che un genitore può offrire. Nessuno può negarti questo.",
+          "tip1": "Ogni paese in Europa prevede un programma di vaccinazione gratuito fin dalla nascita. Questa non è un'opera di beneficenza: è un diritto legale di tuo figlio. Se un operatore sanitario rifiuta, chiedi del suo supervisore e dichiaralo chiaramente",
+          "tip2": "La tessera vaccinale è il documento più importante che ha tuo figlio dopo il certificato di nascita. Tienilo al sicuro, portalo con te ad ogni visita dal medico. In caso di smarrimento, qualsiasi centro sanitario deve emettere un sostituto: non accettare il rifiuto",
+          "tip3": "Lieve febbre, un punto dolorante sul braccio, agitazione per un giorno: questo è normale e significa che il vaccino sta funzionando. Ho rassicurato centinaia di mamme preoccupate su questo. Passa tra 24–48 ore",
+          "tip4": "Per effettuare le vaccinazioni non è necessario recarsi presso la maggior parte dei centri sanitari pubblici. Entra. Se un mediatore sanitario rom lavora nella tua zona, chiedigli di accompagnarti: questo è ciò per cui siamo formati",
+          "fact": "In un insediamento in cui ho lavorato, il morbillo ha colpito perché la copertura vaccinale era scesa al 60%. Tre bambini sono stati ricoverati in ospedale. Dopo una campagna di vaccinazione comunitaria, abbiamo raggiunto il 94% e le epidemie si sono fermate. In tutta Europa, i vaccini prevengono 2–3 milioni di morti ogni anno.",
+          "action": "Ritira subito la tessera di vaccinazione di tuo figlio. Controllalo rispetto al programma sul muro del tuo centro sanitario. Se manca qualche vaccino o non hai la tessera, visita il centro sanitario questa settimana. Porta questa app per mostrare il programma se aiuta."
+        },
+        "cleanWater": {
+          "title": "Acqua pulita",
+          "description": "Ho lavorato in insediamenti in cui le famiglie condividono un unico punto d’acqua che funziona per due ore al giorno, e in quartieri dove l’acqua del rubinetto sembra limpida ma trasporta batteri che causano problemi cronici allo stomaco nei bambini. La qualità dell’acqua non è sempre visibile e nelle comunità rom viene raramente monitorata dalle autorità. Devi essere l'ispettore dell'acqua della tua famiglia.",
+          "tip1": "Copri ogni contenitore in cui conservi l'acqua. Ho visto mosche, polvere e persino escrementi animali contaminare secchi scoperti nel giro di poche ore, soprattutto nella stagione calda. Un semplice piatto sopra impedisce la maggior parte della contaminazione",
+          "tip2": "Se non sei sicuro dell'acqua, falla bollire a ebollizione continua per un minuto intero. Questo uccide il 99.9% di batteri, virus e parassiti. Non costa quasi nulla e funziona: l’ho insegnato in dozzine di insediamenti dove la fonte d’acqua era discutibile",
+          "tip3": "Lavare i contenitori dell'acqua con acqua pulita e sapone almeno una volta alla settimana. Un contenitore sporco rende sporca l’acqua pulita. Questa è una delle cause più trascurate di diarrea ricorrente che ho riscontrato nei bambini",
+          "tip4": "Ruscelli, stagni e pozzanghere stagnanti non sono mai sicuri da bere, anche se l'acqua sembra limpida. I parassiti invisibili agli occhi causano danni cronici all’intestino e allo sviluppo dei bambini",
+          "fact": "In molti insediamenti rom dell’Europa centrale e orientale, le famiglie non hanno accesso ad acqua potabile sicura. Il Centro europeo per i diritti dei rom ha documentato che i quartieri rom sono sistematicamente sottoserviti dalle infrastrutture idriche. Far bollire l’acqua non è l’ideale: è una strategia di sopravvivenza finché non viene rispettato il diritto all’acqua pulita.",
+          "action": "Oggi controlla ogni contenitore in cui la tua famiglia immagazzina acqua potabile. Copri quelli aperti. Se non riesci a verificare che la fonte d'acqua sia sicura, inizia a far bollire tutta l'acqua potabile e quella per cucinare a partire da stasera."
+        },
+        "firstAid": {
+          "title": "Primo soccorso di base",
+          "description": "Negli insediamenti remoti e nei quartieri urbani dove le ambulanze impiegano più tempo ad arrivare – o talvolta non arrivano affatto – sapere cosa fare nei primi minuti di un’emergenza fa la differenza tra la vita e la morte. Ho formato centinaia di membri della comunità rom al primo soccorso di base e ho visto questa conoscenza salvare vite umane prima che arrivasse qualsiasi medico.",
+          "tip1": "112 funziona da qualsiasi telefono in Europa, anche senza credito, anche senza scheda SIM, anche da un telefono bloccato. Insegna a ogni membro della tua famiglia, compresi i bambini sopra 7, a comporre 112 e dire dove si trova. Esercitati in questo. In caso di emergenza, il panico fa dimenticare",
+          "tip2": "In caso di sanguinamento abbondante: premi con forza con il panno più pulito che hai (una maglietta, un foulard, qualsiasi cosa) e non sollevarlo per controllare. Continua a premere finché non arrivano i soccorsi. Ho visto persone sanguinare pericolosamente perché continuavano a togliere il tessuto per guardare. Aggiungi altro panno sopra se il sangue penetra",
+          "tip3": "Ustioni: posizionare immediatamente l'ustione sotto l'acqua corrente fredda per almeno 10 minuti. Non applicare mai burro, olio, dentifricio o albume: rimedi tradizionali che ho riscontrato in molte famiglie che intrappolano il calore e causano danni e infezioni peggiori",
+          "tip4": "Se qualcuno crolla e non respira: chiama 112, quindi spingi forte e veloce al centro del petto - 100 volte al minuto (il tempo della canzone 'Stayin' Alive'). Non fermarti finché non arrivano i soccorsi. Una RCP imperfetta è infinitamente migliore di nessuna RCP",
+          "fact": "Gli studi dimostrano che nelle comunità in cui è diffusa la formazione di base sul pronto soccorso, la sopravvivenza in caso di arresto cardiaco raddoppia. In molte comunità rom, i tempi di risposta delle ambulanze sono significativamente più lunghi rispetto alle aree non rom, rendendo il pronto soccorso degli astanti ancora più critico.",
+          "action": "In questo momento, chiedi a ciascun membro della famiglia: sai come chiamare 112? Conosci il nostro indirizzo di casa abbastanza bene da dirlo al centralinista? Scrivi il tuo indirizzo completo su un pezzo di carta e mettilo vicino al telefono. Insegna ai tuoi figli oggi."
+        }
+      },
+      "nutrition": {
+        "description": "Nei miei anni di lavoro con le famiglie rom, ho imparato che il cibo non è mai solo una questione nutrizionale: riguarda ciò che puoi permetterti, ciò che è disponibile nel tuo quartiere e ciò che la tua famiglia sa. Non ti dirò di comprare la quinoa. Ti dirò come nutrire bene la tua famiglia con quello che hai.",
+        "balancedDiet": {
+          "title": "Mangiare bene con qualsiasi budget",
+          "description": "Il più grande problema nutrizionale che vedo nelle comunità rom non è la mancanza di cibo: si tratta di troppo pane a buon mercato, carne lavorata e bevande zuccherate, e troppo poche verdure, uova e legumi. Non si tratta di forza di volontà. Si tratta di ciò che è disponibile e conveniente. Ma piccoli cambiamenti apportano enormi differenze alla tua salute e allo sviluppo dei tuoi figli.",
+          "tip1": "Fagioli, lenticchie e ceci sono le proteine più economiche sul mercato: più economiche della carne, più durature e prevengono il diabete e le malattie cardiache. Una pentola di stufato di fagioli sfama una famiglia per meno di un pacchetto di salsicce lavorate ed è molto più nutriente",
+          "tip2": "Le uova sono l’alimento più completo ed economico che esista. Due uova al giorno per bambino forniscono quasi tutto ciò di cui un cervello in crescita ha bisogno. In ogni insediamento in cui lavoro, consiglio le uova come alimento prioritario per i bambini",
+          "tip3": "Le verdure di stagione del mercato locale o del tuo orto costano una frazione dei prezzi del supermercato. Cavoli, cipolle, carote, patate, peperoni: questi sono il fondamento di una dieta sana e sono presenti in ogni tradizione culinaria rom",
+          "tip4": "Le bevande zuccherate (cola, succhi di frutta, bevande energetiche) sono l'elemento più dannoso che vedo nella dieta delle famiglie rom. Una bottiglia di cola contiene 10 cucchiaini di zucchero. Sostituiscilo con acqua o tè leggero ed eliminerai il principale fattore di obesità e carie che vedo nei bambini",
+          "fact": "Nelle comunità rom con cui ho lavorato in Romania e Bulgaria, ho visto i tassi di diabete diminuire sensibilmente quando le famiglie sostituiscono quotidianamente il pane bianco e la carne lavorata con fagioli, uova e verdure, anche senza cambiare quanto mangiano. Il corpo risponde alla qualità, non solo alla quantità.",
+          "action": "Questa settimana, sostituisci un pasto a base di pane e carne lavorata con una pentola di stufato di fagioli o lenticchie con cipolle e peperoni. Cuocere abbastanza per due giorni. È più economico, ti sazia più a lungo e inizia a spostare la traiettoria di salute della tua famiglia."
+        },
+        "childNutrition": {
+          "title": "Nutrire i bambini per iniziare bene",
+          "description": "I primi 1,000 giorni – dalla gravidanza all'età 2 – modellano l'intero futuro di un bambino: il suo cervello, il suo sistema immunitario, la sua capacità di apprendere. Ho visto bambini malnutriti negli insediamenti rimanere indietro rispetto ai loro coetanei non per motivi genetici ma a causa di ciò che mangiavano in quei primi mesi critici. Ciò che dai da mangiare a tuo figlio adesso è l’investimento più potente che puoi fare nella sua vita.",
+          "tip1": "Il solo latte materno per 6 mesi è il gold standard: è gratuito, sempre disponibile, perfettamente nutriente e protegge dalle infezioni meglio di qualsiasi medicinale. Ho lavorato con madri che pensavano che il latte artificiale fosse \"moderno\" e migliore. Non lo è. Il latte materno è l'evoluzione tecnologica perfezionata",
+          "tip2": "A 6 mesi, inizia a mangiare cibi morbidi insieme all'allattamento al seno: purè di patate, carote, banane, tuorlo d'uovo cotto. Introduci un nuovo alimento ogni 3 giorni per osservare le reazioni. Molte madri con cui lavoro iniziano i solidi troppo tardi (8–9 mesi): questo ritarda lo sviluppo",
+          "tip3": "I bambini di età inferiore a 2 non dovrebbero mai mangiare zucchero, miele, sale, cola, patatine o dolci. So che a volte i nonni danno il tè con lo zucchero per calmare un bambino: per favore, smettila. Lo zucchero a questa età programma un desiderio permanente e danneggia i denti prima ancora che emergano completamente",
+          "tip4": "Un uovo al giorno per un bambino di età superiore a 6 mesi è l'aggiornamento nutrizionale più semplice che esista. Uno studio condotto in Ecuador ha dimostrato che le uova riducono l’arresto della crescita del 47%. Cito questo in ogni discorso comunitario perché è realizzabile per quasi ogni famiglia",
+          "fact": "Nelle comunità in cui ho gestito programmi nutrizionali, i bambini che hanno ricevuto un uovo e una porzione di verdura al giorno per 6 mesi hanno mostrato miglioramenti misurabili nella crescita e nello sviluppo cognitivo rispetto ai bambini che non lo hanno fatto. La malnutrizione non riguarda solo la povertà: riguarda anche sapere a cosa dare la priorità con le risorse di cui disponiamo.",
+          "action": "A partire da domani, dai a tuo figlio di età superiore ai 6 mesi un uovo al giorno (purè o strapazzato). Se tuo figlio ha meno di 6 mesi e lo stai allattando, mangia tu stesso un uovo in più: i nutrienti passano attraverso il latte."
+        },
+        "foodSafety": {
+          "title": "Mantenere il cibo sicuro",
+          "description": "L'intossicazione alimentare è uno dei motivi più comuni per cui le famiglie rom si recano al pronto soccorso: vomito, diarrea, disidratazione, soprattutto nei bambini. Negli insediamenti in cui la refrigerazione è inaffidabile e le cucine sono condivise o all’aperto, la sicurezza alimentare non è un argomento da manuale: è un’abilità di sopravvivenza quotidiana.",
+          "tip1": "Nella stagione calda, il cibo cotto lasciato fuori per più di 2 ore diventa pericoloso. Se non puoi refrigerarlo, cucina porzioni più piccole da finire in un unico pasto. Ho visto intere famiglie ricoverate in ospedale a causa dello stufato riscaldato lasciato fuori durante la notte d'estate",
+          "tip2": "Il pollo e la carne crudi non devono mai toccare pane, verdure o qualsiasi cosa venga consumata cruda. Utilizza superfici di taglio separate: funziona anche un sacchetto di plastica pulito steso in piano. Questa contaminazione incrociata è la causa numero uno di intossicazione alimentare che incontro",
+          "tip3": "Se il cibo ha un cattivo odore, un aspetto sgradevole o una sensazione viscida, buttalo via. Non assaggiarlo per controllare. So che buttare via il cibo è doloroso quando i soldi scarseggiano, ma un attacco di intossicazione alimentare costa più in medicine e lavoro perso di quanto valesse il cibo",
+          "tip4": "Lava tutta la frutta e la verdura sotto l'acqua corrente prima di mangiarla, anche se intendi sbucciarla. Lo sporco dall'esterno si trasferisce all'interno durante il taglio. Ciò è particolarmente importante per i prodotti del mercato che potrebbero essere stati maneggiati da molte persone",
+          "fact": "Il WHO stima che 600 milioni di persone si ammalano ogni anno a causa di cibo contaminato, e che i bambini sotto il 5 sopportano il 40% del peso. Nelle comunità in cui ho insegnato sicurezza alimentare, le visite ospedaliere per gastroenterite sono diminuite significativamente entro la prima estate.",
+          "action": "Controlla subito la tua cucina: c'è della carne cruda conservata sopra o a contatto con cibi pronti? C'è del cibo cotto che è rimasto fuori per più di 2 ore? Risolvi queste due cose oggi: sono i pericoli più comuni che vedo durante le visite a domicilio."
+        }
+      },
+      "maternal": {
+        "description": "Ho accompagnato donne rom negli ospedali dove sono state messe in stanze separate, dove sono state trattate in modo irrispettoso o hanno rifiutato l'epidurale che ricevevano altre donne. Ho anche visto donne morire per complicazioni che una singola visita prenatale avrebbe potuto rilevare. Il tuo corpo, il tuo bambino, i tuoi diritti. Conoscili tutti e tre.",
+        "prenatalCare": {
+          "title": "Assistenza prenatale",
+          "description": "In 15 anni di lavoro di mediazione, lo schema che vedo ripetutamente è quello delle donne rom che visitano un medico per la prima volta quando sono già incinte da 6 o 7 mese – spesso perché si sentono bene, perché temono l'ospedale, o perché nessuno ha spiegato che le cure prenatali sono gratuite e un loro diritto. A quel punto, condizioni pericolose come la preeclampsia o il diabete gestazionale potrebbero essersi sviluppate silenziosamente per mesi.",
+          "tip1": "Vai dal tuo medico di famiglia o dall'ostetrica nel momento in cui ti mancano le mestruazioni e sospetti una gravidanza. Il primo trimestre è il periodo in cui l'acido folico previene i difetti del cervello e della colonna vertebrale nel bambino. L'attesa ti costa la finestra più critica. Se non hai un medico di famiglia, il tuo mediatore sanitario può aiutarti a registrarti: questa è una parte fondamentale di ciò che facciamo",
+          "tip2": "L'assunzione di 400mcg di acido folico al giorno dovrebbe iniziare quando stai cercando di rimanere incinta o non appena scopri di esserlo. È gratuito o molto economico in qualsiasi farmacia. Porto con me i pacchetti durante le visite a domicilio perché questa semplice pillola previene devastanti difetti congeniti",
+          "tip3": "Gli alimenti ricchi di ferro prevengono l'anemia che vedo in quasi la metà delle donne rom incinte con cui lavoro: fagioli, lenticchie, verdure a foglia scura, fegato, carne rossa. L'anemia ti rende esausto, rende il parto più pericoloso e influisce sullo sviluppo del cervello del tuo bambino",
+          "tip4": "Hai il diritto di ricevere cure prenatali nella tua lingua, di essere trattata con dignità e di avere qualcuno che ti accompagni agli appuntamenti. Se un medico è sprezzante o irrispettoso, puoi presentare un reclamo e richiedere un altro fornitore. Documenta il nome, la data e ciò che è stato detto. Aiuto le famiglie a farlo regolarmente",
+          "fact": "Le donne rom in Europa hanno da 3 a 5 volte più probabilità di avere complicazioni durante la gravidanza rispetto alla popolazione generale, in gran parte perché accedono alle cure prenatali più tardi o non accedono affatto. Nelle comunità in cui ho lavorato per collegare le donne incinte all’assistenza nel primo trimestre, i tassi di complicanze sono diminuiti drasticamente.",
+          "action": "Se sei incinta o conosci una donna incinta nella tua comunità che non ha ancora visto un medico, fissa l'appuntamento oggi stesso. Se ha paura o non sa come fare, accompagnala o mettila in contatto con il mediatore sanitario locale. Quella visita può cambiare tutto."
+        },
+        "safeDelivery": {
+          "title": "Consegna sicura",
+          "description": "Ho tenuto per mano le donne che partorivano nelle ambulanze perché se ne andavano troppo tardi, e mi sono seduta nei corridoi degli ospedali dove le donne rom venivano messe per ultime nella fila mentre le donne non rom andavano avanti. Entrambe queste situazioni sono prevenibili. Pianificare la tua consegna e conoscere i tuoi diritti trasforma questa esperienza da una crisi in qualcosa che controlli.",
+          "tip1": "Entro la settimana 34, prepara il tuo piano di nascita: quale ospedale, chi verrà con te, come ci arriverai (soprattutto di notte), chi si occuperà degli altri tuoi bambini. Ho visto troppe famiglie affrettarsi all'ultimo minuto e lo stress influisce sul parto",
+          "tip2": "Hai il diritto legale di avere un accompagnatore (marito, madre, sorella, mediatore) con te durante il travaglio e il parto praticamente in tutti i paesi europei. Se l'ospedale dice di no, cita la legge sui diritti dei pazienti del tuo paese. Portiamo questi riferimenti e possiamo fornirli",
+          "tip3": "Impara i 5 segnali di pericolo che indicano VAI IN OSPEDALE ORA, non importa che ora sia: (1) forte sanguinamento, (2) forte mal di testa con mani/viso gonfi, (3) il bambino smette di muoversi, (4) si rompono le acque prima delle 37 settimane, (5) febbre superiore a 38°C. Non aspettare fino al mattino. Non cercare di gestirli a casa",
+          "tip4": "Dopo il parto, rimani in ospedale almeno 24 ore per il monitoraggio, anche se ti senti bene. Molte complicazioni potenzialmente letali (emorragia, infezione) compaiono nelle prime 24 ore. So che l'ambiente ospedaliero può essere ostile, ma quelle ore di monitoraggio salvano vite umane",
+          "fact": "In una regione in cui ho lavorato per 5 anni, abbiamo ridotto le emergenze materne rom del 60% semplicemente garantendo che ogni donna incinta avesse un piano di nascita, un sistema di trasporto e una borsa ospedaliera preparata entro la settimana 36. Nessuna nuova tecnologia: solo preparazione e accompagnamento.",
+          "action": "Se tu o qualcuno che conosci siete incinta da oltre 30 settimane: annota su carta il nome dell'ospedale, il numero di telefono e il percorso. Mettilo sul muro. Prepara una borsa con carta d'identità, tessera di vaccinazione, vestiti per bambini e caricabatterie del telefono. L'operazione richiede 20 minuti e può salvare una vita."
+        },
+        "breastfeeding": {
+          "title": "Allattamento al seno",
+          "description": "L'allattamento al seno è profondamente apprezzato nella cultura rom, eppure incontro giovani madri a cui parenti ben intenzionati è stato detto di dare acqua, tè o latte artificiale nei primi giorni perché \"il latte non è ancora arrivato\". Il colostro – quel primo latte denso e giallastro – non è un segno che qualcosa non va. È oro liquido, ricco di anticorpi che proteggono il tuo neonato proprio dalle infezioni più pericolose nelle prime settimane di vita.",
+          "tip1": "Entro 1 ora dalla nascita, metti il tuo bambino pelle a pelle sul tuo petto e lascia che trovi il seno. Questa prima poppata di colostro è il \"vaccino\" più importante che il tuo bambino riceverà: riveste il suo intestino proteggendolo dalle infezioni. Non permettere a nessuno di portare via il tuo bambino prima che ciò accada, a meno che non ci sia un'emergenza medica",
+          "tip2": "Allattare a richiesta - ogni volta che il bambino mostra segni di fame (girare la testa, succhiare le mani, agitarsi). Nelle prime settimane, potrebbero essere 10–14 volte in 24 ore. Questo è normale e stabilisce la tua fornitura. Un orologio non può dirti quando il tuo bambino ha fame: te lo dice il tuo bambino",
+          "tip3": "Niente acqua, niente tè, niente formula per 6 mesi a meno che un medico non lo prescriva specificamente per un motivo medico. Il tuo latte materno cambia composizione durante il giorno per soddisfare le precise esigenze del tuo bambino: nessuna fabbrica può replicare questo fenomeno. Ho visto nonne ben intenzionate dare acqua zuccherata che causava mughetto e diarrea",
+          "tip4": "Se l’allattamento al seno fa male, è l’attacco che è sbagliato, non il tuo corpo. Chiedi a un'ostetrica o a un operatore sanitario di guardare una poppata e di aiutarti a regolare la posizione. Il dolore è un segnale per chiedere aiuto, non un segno per arrendersi. Ho aiutato centinaia di madri a risolvere problemi di attaccamento che sono stati risolti in una sola sessione",
+          "fact": "Nelle comunità rom in cui esistono programmi di sostegno all'allattamento al seno, l'allattamento esclusivo al seno per 6 mesi riduce i ricoveri infantili di oltre il 60%. Il latte materno si adatta letteralmente per combattere le infezioni specifiche che circolano nel tuo ambiente: è una medicina personalizzata che il tuo corpo produce gratuitamente.",
+          "action": "Se sei una neo mamma o sei in attesa: dì subito alla tua famiglia che intendi allattare esclusivamente al seno per 6 mesi e che hai bisogno del loro sostegno, non di consigli per aggiungere altri alimenti. Se l’allattamento al seno è doloroso, contatta la tua ostetrica o un mediatore sanitario prima di interromperlo: la soluzione è solitamente semplice."
+        },
+        "postpartum": {
+          "title": "Assistenza postpartum",
+          "description": "Nella cultura rom, le settimane successive alla nascita sono un momento in cui la famiglia si riunisce attorno alla madre, e questo è bellissimo. Ma ho visto anche un lato oscuro: le mamme che piangono ogni giorno e si sentono dire che è normale. Madri che sanguinano copiosamente e aspettano troppo a lungo per chiedere aiuto. Madri il cui dolore viene ignorato perché \"questo è ciò che attraversano le donne\". La tua guarigione è importante tanto quanto la salute del tuo bambino, perché il tuo bambino ha bisogno di te vivo e vegeto.",
+          "tip1": "Il tuo corpo ha bisogno di almeno 6 settimane per guarire. Il sanguinamento (lochia) dopo la nascita è normale per 2–4 settimane, ma se aumenta improvvisamente, contiene grossi coaguli o ha un cattivo odore, vai immediatamente in ospedale. Ho visto madri perdere quantità pericolose di sangue perché era stato detto loro che un forte sanguinamento era normale. Non lo è",
+          "tip2": "Se ti senti costantemente triste, vuoto, incapace di connetterti con il tuo bambino o hai pensieri di fare del male a te stesso o al tuo bambino, non sei debole, non sei una cattiva madre, hai una condizione medica che risponde al trattamento. Lo dico in ogni visita a domicilio perché lo stigma nelle nostre comunità riguardo alla depressione postpartum costa vite umane",
+          "tip3": "Il tuo controllo postnatale della 6 settimana non è facoltativo: controlla l'infezione, la guarigione, la pressione sanguigna e la salute mentale. Secondo la mia esperienza, meno del 30% delle donne rom partecipa a questa visita. Per favore, rimani in quel 30%. Porta qualcuno con te se può aiutarti",
+          "tip4": "Accetta ogni offerta di aiuto da parte della famiglia per cucinare, pulire e prendersi cura dei bambini. Dormi quando il bambino dorme. I tuoi unici compiti sono nutrire il bambino e riprenderti. Tutto il resto può aspettare. Le madri più forti che conosco sono quelle che hanno accettato l'aiuto",
+          "fact": "La depressione postpartum colpisce 1 nelle donne 5 in tutto il mondo, ma si stima che sia ancora più elevata nelle comunità rom a causa dello stress da povertà, della discriminazione e dell'isolamento. In ogni comunità in cui ho creato gruppi di sostegno tra pari per le neo mamme, i tassi di depressione sono diminuiti e i tassi di allattamento al seno sono aumentati, perché la connessione guarisce.",
+          "action": "Se hai partorito nelle ultime 6 settimane e non hai effettuato un controllo postnatale, chiama il tuo centro sanitario oggi stesso. Se ti senti persistentemente triste o sopraffatto, dillo a una persona di cui ti fidi: tua madre, il tuo mediatore sanitario, chiunque altro. Quella prima conversazione è il passo più difficile e quello più importante."
+        }
+      },
+      "children": {
+        "description": "I bambini rom sono il futuro delle nostre comunità e meritano ogni vantaggio. Nel mio lavoro, ho visto bambini rimanere indietro, non a causa delle loro capacità, ma perché malattie prevenibili, vaccinazioni mancate o ritardi dello sviluppo non rilevati hanno rubato loro opportunità. Questa conoscenza restituisce quelle opportunità.",
+        "growthMilestones": {
+          "title": "Crescita e sviluppo",
+          "description": "Ogni bambino si sviluppa al proprio ritmo e non voglio mai che i genitori si facciano prendere dal panico per le normali variazioni. Ma ho anche visto bambini il cui sviluppo ritardato veniva liquidato dalle famiglie come \"recupereranno\" quando un intervento precoce avrebbe potuto fare una differenza trasformativa. Sapere cosa guardare non è ansia: è attenzione.",
+          "tip1": "La pesatura mensile nel primo anno è lo strumento di monitoraggio più semplice. Il tuo centro sanitario dispone di grafici di crescita che mostrano se tuo figlio è sulla buona strada. Un bambino che smette di ingrassare o scende improvvisamente nella tabella necessita di un'indagine immediata: può essere semplice come un aggiustamento dell'alimentazione o importante come individuare una condizione di base",
+          "tip2": "Entro 6 mesi, la maggior parte dei bambini prende gli oggetti e risponde al loro nome. Entro 12 mesi, la maggior parte dice qualche parola e si alza in piedi. Entro 24 mesi, la maggior parte cammina bene e parla con frasi brevi. Se tuo figlio è molto indietro rispetto a questi traguardi, chiedi una valutazione dello sviluppo: un aiuto tempestivo fa la differenza più grande",
+          "tip3": "Parla costantemente con tuo figlio: racconta cosa stai facendo, dai un nome agli oggetti, canta canzoni. Le famiglie rom hanno una potente tradizione orale: usatela. I bambini che ascoltano più parole sviluppano un vocabolario più ampio e capacità cognitive più forti. Questo è gratuito e più efficace di qualsiasi giocattolo",
+          "tip4": "Denti: pulisci le gengive del tuo bambino con un panno umido fin dalla nascita, e usa una piccola quantità di dentifricio per bambini fin dal primo dentino. Vedo una grave carie nei bambini rom di età 3, spesso causata da bottiglie di tè dolce durante la notte: questo causa dolore, infezioni e problemi alimentari che influiscono sulla crescita",
+          "fact": "La ricerca mostra che i bambini i cui ritardi nello sviluppo vengono identificati e affrontati prima del 3 età hanno 5 volte più probabilità di frequentare la scuola al livello previsto. Negli insediamenti in cui ho organizzato la pesatura mensile e lo screening dello sviluppo, i tassi di riferimento per l’intervento precoce sono triplicati, il che significa che i bambini hanno ricevuto un aiuto che altrimenti avrebbero perso.",
+          "action": "Se tuo figlio ha meno di 2, portalo a fare un controllo del peso e uno screening dello sviluppo presso il tuo centro sanitario questo mese. Se tuo figlio ha superato 2 e hai dubbi riguardo al linguaggio, alla camminata o al comportamento, chiedi di essere indirizzato a uno specialista. La tua preoccupazione è fondata: agisci di conseguenza."
+        },
+        "commonIllnesses": {
+          "title": "Quando tuo figlio è malato",
+          "description": "Negli insediamenti con alloggi sovraffollati, servizi igienici limitati e inverni freddi, i bambini si ammalano frequentemente. La maggior parte di queste malattie – diarrea, tosse, febbre – sono gestibili a casa se sai cosa fare e quando aggravarsi. Ma ho anche visto genitori aspettare troppo a lungo, o correre al pronto soccorso per condizioni che un semplice trattamento a casa avrebbe risolto. Questo modulo ti insegna la differenza.",
+          "tip1": "Febbre inferiore a 38.5°C: il corpo di tuo figlio sta combattendo le infezioni: questo è un bene. Teneteli comodi, vestiti leggermente e somministrate molti liquidi. Febbre superiore a 38.5°C: somministrare paracetamolo ai bambini alla dose corretta per il loro peso (NON paracetamolo per adulti). Se la febbre dura più di 3 giorni o il bambino è insolitamente sonnolento, consultare un medico",
+          "tip2": "La diarrea uccide attraverso la disidratazione, non l’infezione stessa. Nel momento in cui tuo figlio ha feci molli, inizia la reidratazione orale: 1 litro di acqua bollita pulita + 6 cucchiaini rasi di zucchero + mezzo cucchiaino di sale. Dare piccoli sorsi ogni pochi minuti. Questa ricetta ha salvato più vite di bambini in tutto il mondo di qualsiasi antibiotico",
+          "tip3": "PORTARE IMMEDIATAMENTE IL VOSTRO BAMBINO IN OSPEDALE se vedete: respiro veloce o difficile, petto che si contrae ad ogni respiro, incapacità di bere o allattare, vomito ripetuto di tutto, sonnolenza insolita o mancato risveglio, convulsioni o diarrea con sangue. Non aspettare. Queste sono emergenze",
+          "tip4": "Non somministrare antibiotici senza prescrizione medica. Non condividere la prescrizione di un altro bambino. Non utilizzare gli antibiotici avanzati. Lo vedo costantemente nelle nostre comunità e crea batteri resistenti ai farmaci che sono molto più difficili da trattare. Gli antibiotici non fanno nulla contro il raffreddore, l’influenza o la maggior parte della tosse",
+          "fact": "Nelle comunità in cui ho lavorato, la formazione dei genitori sulla preparazione e l'utilizzo della soluzione di reidratazione orale ha ridotto i ricoveri infantili per diarrea di oltre il 40% in un solo anno. La conoscenza è davvero potente e gli ingredienti costano meno di un biglietto dell’autobus per l’ospedale.",
+          "action": "Adesso memorizza questa ricetta: 1 litro di acqua pulita + 6 cucchiaini di zucchero + mezzo cucchiaino di sale. Esercitati a farlo una volta. Se vuoi, assaggialo: dovrebbe sapere di lacrime. Avere questo pronto significa che quando tuo figlio avrà la diarrea alle 2am, puoi agire immediatamente invece di farti prendere dal panico."
+        },
+        "immunization": {
+          "title": "Programma di vaccinazione",
+          "description": "Sarò diretto: nelle comunità rom di tutta Europa, i tassi di vaccinazione sono inferiori alla media nazionale, e questo non perché i genitori rom non si preoccupino dei loro figli, ma perché il sistema sanitario non è riuscito a raggiungerli con rispetto, accesso e informazione. La disinformazione si diffonde anche attraverso i social media. Ho tenuto in ospedale bambini affetti da morbillo che non avrebbero mai dovuto essere lì. Ogni bambino non vaccinato è un bambino che il sistema ha fallito.",
+          "tip1": "Dalla nascita alle 6 settimane: BCG (tubercolosi) ed epatite B. Questi vengono somministrati in ospedale prima della dimissione. Se il tuo bambino è nato in casa, portalo al centro sanitario entro la prima settimana di vita per questi vaccini. Non aspettare",
+          "tip2": "2, 3, 4 mesi: i \"tre grandi\" cicli: DTP (difterite, tetano, pertosse), poliomielite, Hib ed epatite B. Questi sono i vaccini più critici dell'infanzia. Ogni round rafforza l'immunità. Mancarne uno indebolisce l'intera catena",
+          "tip3": "12–15 mesi: MMR (morbillo, parotite, rosolia). Non posso sottolinearlo abbastanza. Il morbillo non è una malattia infantile innocua: uccide, provoca danni al cervello e acceca. Nel 2019 ho assistito a un'epidemia di morbillo in un insediamento rom perché la copertura era scesa al di sotto del 80%. Era prevenibile",
+          "tip4": "I vaccini sono gratuiti nei centri sanitari governativi di tutti i paesi europei. Non serve un'assicurazione, non serve il permesso di soggiorno, non serve l'appuntamento nella maggior parte dei centri. Se ti viene rifiutato il servizio, questo è illegale: contatta il tuo mediatore sanitario o l’ufficio per i diritti dei pazienti",
+          "fact": "Il divario tra i tassi di vaccinazione dei rom e dei non rom in alcuni paesi europei supera i 15 punti percentuali. Questo divario non è causato dalle convinzioni dei rom sui vaccini: i sondaggi mostrano costantemente che i genitori rom vogliono che i loro figli siano vaccinati. Il divario è causato dalle barriere di accesso, dalla discriminazione nel settore sanitario e dalla mancanza di sensibilizzazione. Colmare questo divario è un obbligo dello Stato ai sensi dell’articolo 11 della Carta sociale europea.",
+          "action": "Trova la tessera vaccinale di tuo figlio. Se mancano dei vaccini o se non hai la tessera, visita il centro sanitario più vicino questa settimana. Se incontri ostacoli – lingua, documenti, rifiuto – contatta il tuo mediatore sanitario locale. Questo è esattamente il motivo per cui siamo qui."
+        }
+      },
+      "chronic": {
+        "description": "I rom muoiono 10 anni più giovani della media europea. La maggior parte di questo divario deriva da malattie croniche – diabete, malattie cardiache, malattie respiratorie – che si sviluppano lentamente e silenziosamente nel corso degli anni. Quando compaiono i sintomi, il danno è già stato fatto. Ma la maggior parte di essi è prevenibile e gestibile se presa in tempo.",
+        "diabetes": {
+          "title": "Diabete: la minaccia silenziosa",
+          "description": "Il diabete di tipo 2 è la malattia cronica che incontro più frequentemente nelle comunità rom. È diffuso nelle famiglie, prospera con la dieta economica e ricca di zuccheri a cui la povertà costringe le persone, e danneggia gli occhi, i reni, i piedi e il cuore per anni prima che tu senta qualcosa di sbagliato. Ho visto uomini con 40 perdere le dita dei piedi e donne diventare cieche, a causa del diabete che non è mai stato diagnosticato perché non avevano mai fatto un esame del sangue. Questo è prevenibile.",
+          "tip1": "Se qualcuno nella tua famiglia ha il diabete, il rischio è 2–3 volte più alto. Questo non è il destino: è un segnale per agire ora. Riduci il pane bianco, lo zucchero e le bevande zuccherate. Sostituire con fagioli, lenticchie, verdure e acqua. Ho visto famiglie invertire completamente il pre-diabete attraverso questi cambiamenti",
+          "tip2": "30 minuti di cammino ogni giorno riducono il rischio di diabete del 58%. Non correre. Non palestra. A piedi. Lo dico a tutte le persone 35 nelle comunità con cui lavoro: la camminata è la medicina. È gratuito e funziona meglio della maggior parte delle pillole per la prevenzione",
+          "tip3": "Richiedi un test della glicemia a digiuno presso il tuo centro sanitario almeno una volta all'anno se hai più di 35, sei in sovrappeso o hai precedenti familiari. È un semplice test tramite puntura del dito, è gratuito nella maggior parte dei paesi e richiede 5 minuti. Questo test può individuare il diabete anni prima che compaiano i sintomi",
+          "tip4": "Conoscere i segnali d'allarme che indicano che il diabete potrebbe già essere presente: sete costante, minzione molto frequente (soprattutto di notte), visione offuscata, ferite che guariscono lentamente, stanchezza inspiegabile. Se ne hai due o più, fai il test questa settimana, non il mese prossimo",
+          "fact": "Studi condotti nelle comunità rom in Slovacchia e Romania hanno rilevato una prevalenza del diabete 2–3 volte superiore alla media nazionale, con la maggior parte dei casi non diagnosticati. In un programma a cui ho partecipato, lo screening comunitario ha rilevato il diabete nel 18% degli adulti sopra il 40 che non erano mai stati sottoposti al test. Quasi tutti non presentavano sintomi.",
+          "action": "Se hai più di 35, vai al tuo centro sanitario e chiedi un test della glicemia. Ci vogliono 5 minuti. Se il risultato è superiore a 5.6 mmol/L (100 mg/dL), devi iniziare ad apportare modifiche adesso. Porta con te un membro della famiglia: se il tuo rischio è alto, è probabile che lo sia anche il suo."
+        },
+        "heartHealth": {
+          "title": "Il tuo cuore",
+          "description": "Le malattie cardiovascolari sono il killer numero uno nelle comunità rom, non a causa della genetica, ma a causa delle condizioni in cui viviamo: stress cronico derivante dalla povertà e dalla discriminazione, alti tassi di fumo, diete modellate su ciò che la povertà consente e quasi nessun accesso allo screening preventivo. Ho partecipato ai funerali di uomini nelle loro 50 morti per attacchi di cuore che erano del tutto prevenibili. Questo modulo esiste perché mi rifiuto di frequentarne altri.",
+          "tip1": "Fumare è la cosa più distruttiva che puoi fare al tuo cuore. So che è profondamente radicato nella cultura della nostra comunità e non sono qui per giudicare, ma ti devo onestà. Ogni sigaretta danneggia i vasi sanguigni. Se non puoi smettere, riduci. Se riesci a smettere, il tuo cuore inizierà a ripararsi entro 24 ore",
+          "tip2": "L'alta pressione sanguigna è chiamata il killer silenzioso perché non senti nulla finché non arriva un ictus o un infarto. Fatti controllare la pressione sanguigna in qualsiasi farmacia: è gratis. Il valore normale è inferiore a 120/80. Sopra 140/90 è pericoloso e necessita di cure. Ho riscontrato una pressione sanguigna pericolosamente alta in persone che si sentivano perfettamente in salute",
+          "tip3": "Riduci il sale: la cucina rom è saporita e bella, ma molti piatti tradizionali sono molto salati. Usa paprika, aglio, cipolla, erbe aromatiche e pepe invece di aggiungere sale extra. Le tue papille gustative si adattano entro 2 settimane: il cibo avrà un sapore migliore, non peggiore. Ho visto la pressione sanguigna scendere di 10 punti solo a causa di questo cambiamento",
+          "tip4": "Lo stress cronico derivante dalla discriminazione, dalla povertà, dalle minacce di sfratto e dai conflitti familiari è una causa diretta di malattie cardiache. Questa non è un’opinione: è medicina documentata. Gli ormoni dello stress danneggiano i vasi sanguigni nel corso degli anni. Trovare un modo per alleviare lo stress – camminare, ascoltare musica, pregare, parlare, stare in comunità – è una medicina per il cuore",
+          "fact": "Gli uomini rom muoiono di malattie cardiovascolari in media 10–15 anni prima rispetto alla popolazione generale. Lo dimostrano i dati stessi della Commissione europea. Ma il 80% degli attacchi cardiaci prematuri è prevenibile attraverso cambiamenti nello stile di vita e un trattamento precoce dell'ipertensione e del colesterolo. La prevenzione funziona, se puoi accedervi.",
+          "action": "Questa settimana, fai due cose: (1) Vai in farmacia e controlla la pressione sanguigna: annota i numeri. (2) Conta quante sigarette fumi al giorno e prova a ridurle di 3 al giorno. Queste due azioni sono le misure di prevenzione cardiaca più potenti che qualsiasi individuo possa intraprendere."
+        },
+        "respiratory": {
+          "title": "Polmoni e respirazione",
+          "description": "Ho lavorato in insediamenti dove le famiglie bruciano legna, carbone o anche plastica e gomma per riscaldarsi in inverno. Dove 8 le persone dormono in due stanze senza ventilazione. Dove l'umidità scorre lungo i muri e la muffa nera cresce in ogni angolo. Le malattie respiratorie in queste condizioni non sono sorprendenti: sono il risultato prevedibile di alloggi in cui nessuno dovrebbe vivere. Mentre lottiamo per alloggi migliori, dobbiamo anche proteggere i polmoni di cui disponiamo.",
+          "tip1": "Il fumo indoor è il pericolo respiratorio più immediato che vedo. Se riscaldi con combustibile solido, assicurati la ventilazione: anche rompere una finestra aiuta. Non bruciare mai plastica, gomma o legno dipinto: i fumi contengono sostanze chimiche che causano danni permanenti ai polmoni, soprattutto nei bambini i cui polmoni sono ancora in via di sviluppo",
+          "tip2": "L'umidità e la muffa causano asma, bronchite cronica e peggiorano ogni infezione respiratoria. Pulisci la muffa visibile con una miscela di acqua e aceto o candeggina. Apri le finestre per almeno 15 minuti al giorno anche in inverno. Stendi la biancheria bagnata all'esterno quando possibile: asciugare i vestiti in casa aggiunge enormi quantità di umidità all'aria",
+          "tip3": "Una tosse che dura più di 3 settimane, soprattutto con perdita di peso, sudorazione notturna o sangue nello sputo, deve essere indagata per la tubercolosi. TB è curabile con cure gratuite, ma è anche altamente contagioso. Nelle comunità rom, i tassi di TB sono 3–5 volte la media nazionale in diversi paesi europei. Il test precoce protegge tutta la tua famiglia",
+          "tip4": "I bambini che crescono in ambienti fumosi o ammuffiti hanno una capacità polmonare permanentemente ridotta: avranno polmoni meno sani per tutta la vita. Anche se non è possibile modificare immediatamente la situazione abitativa, ridurre il più possibile l’esposizione al fumo e ventilare protegge i polmoni in via di sviluppo",
+          "fact": "Il WHO identifica l'inquinamento atmosferico domestico come il quarto più grande rischio per la salute globale. Negli insediamenti rom in cui ho lavorato, oltre il 60% dei bambini aveva infezioni respiratorie ricorrenti, tassi che sono diminuiti significativamente quando le famiglie hanno migliorato la ventilazione e ridotto la combustione interna dei materiali di scarto. Le condizioni abitative non sono colpa delle famiglie, ma le strategie di adattamento salvano vite umane mentre si lotta per il cambiamento sistemico.",
+          "action": "Oggi: verifica la presenza di muffe visibili nella tua casa e puliscila con candeggina o aceto diluiti. Apri almeno una finestra per 15 minuti. Se qualcuno nella tua famiglia ha la tosse da più di 3 settimane, vai al centro sanitario per uno screening TB: è gratuito e richiede 15 minuti."
+        }
+      },
+      "mental": {
+        "description": "In 15 anni di lavoro nelle comunità rom, ho imparato che il fardello più pesante che le persone portano non è la malattia fisica: è il peso della discriminazione, della povertà, della paura dello sfratto, della preoccupazione per il futuro dei propri figli e della sensazione che a nessuno nel sistema importi. Chiamiamo questo stress. Quando dura per anni, diventa qualcosa di più. Merita di essere nominato, compreso e trattato, senza vergogna.",
+        "stressManagement": {
+          "title": "Convivere con lo stress",
+          "description": "Non pretenderò che un esercizio di respirazione risolva i tuoi problemi. Se temi che la tua famiglia venga sfrattata, nessuna app di meditazione risolverà il problema. Ma ho lavorato con centinaia di persone nelle nostre comunità che sopportano uno stress enorme, e ho visto cosa succede quando lo stress non viene gestito per anni: attacchi di cuore negli uomini nei loro 40, donne che non possono mangiare o dormire, bambini che crescono in famiglie elettrizzate dalla tensione. Non possiamo sempre cambiare le nostre circostanze, ma possiamo cambiare il modo in cui le affrontiamo.",
+          "tip1": "Il metodo di respirazione 4-4-8 agisce immediatamente sul tuo sistema nervoso. Inspira attraverso il naso per 4 conteggi, trattieni per 4, espira lentamente attraverso la bocca per 8. Fallo 5 volte. La frequenza cardiaca diminuisce, i muscoli si rilassano. Lo insegno alle famiglie prima delle visite in ospedale, prima delle udienze in tribunale, prima di qualsiasi incontro stressante. È uno strumento che hai sempre con te",
+          "tip2": "Camminare è la medicina più sottovalutata contro lo stress. 20 minuti di camminata (non veloce, semplicemente camminando) riducono l'ormone dello stress cortisolo fino al 30%. Se non puoi uscire di casa, cammina in tondo. Ciò che funziona è il movimento in sé, non lo scenario",
+          "tip3": "Parla con qualcuno. Non per risolvere il problema, solo per condividere il peso. Ho visto uomini nelle nostre comunità portare tutto da soli perché chiedere aiuto sembra una debolezza. In 15 anni di questo lavoro, le persone più forti che ho incontrato sono quelle che hanno imparato a dire \"sto lottando\"",
+          "tip4": "Sii intenzionale riguardo a ciò che ti passa per la mente. Social media, notizie, discussioni familiari che ti risuonano in testa: queste sono fonti di stress che puoi controllare. Non sto dicendo di ignorare la realtà. Sto dicendo di scegliere quando impegnarti in esso e di creare spazi nella tua giornata in cui sei deliberatamente in pace",
+          "fact": "Le comunità rom sperimentano quello che la sanità pubblica chiama “stress delle minoranze”: il costo fisiologico cronico della discriminazione, dell’esclusione e della povertà. La ricerca mostra che ciò aumenta i livelli di cortisolo in modo permanente, accelerando le malattie cardiache, il diabete e le malattie mentali. Questa non è debolezza. È la biologia che risponde all’ingiustizia.",
+          "action": "Stasera, prima di andare a dormire, metti il telefono in un'altra stanza ed esercitati a 4-4-8 respirando per 5 minuti. Se avete un partner o un familiare disposto, fatelo insieme in silenzio. Questo piccolo atto crea un confine tra lo stress della giornata e il sonno, e il sonno è il momento in cui il corpo ripara i danni causati dallo stress."
+        },
+        "sleep": {
+          "title": "Il sonno come medicina",
+          "description": "Nelle case sovraffollate dove la TV è sempre accesa, dove i bambini condividono il letto con i genitori, dove il rumore dei vicini o della strada non si ferma mai, il sonno non è scontato. È qualcosa per cui devi lottare. Eppure, il sonno è il momento in cui il tuo corpo si ripara, il tuo cervello elabora lo stress della giornata e il tuo sistema immunitario si ricostruisce. La privazione cronica del sonno è pericolosa quanto il fumo e, nelle nostre comunità, è quasi universale.",
+          "tip1": "Cerca di dormire e svegliarti più o meno alla stessa ora tutti i giorni, compresi i fine settimana. So che è difficile con il lavoro a turni, i bambini piccoli o gli ambienti rumorosi, ma anche una finestra coerente di 6 ore è più rigenerante rispetto a blocchi casuali di 8 ore. Il tuo corpo ha bisogno di ritmo",
+          "tip2": "I telefoni e gli schermi prima di andare a letto sono uno dei peggiori distruttori del sonno moderno. La luce blu dice al tuo cervello che è giorno. Se devi utilizzare il telefono, impostalo sulla modalità notturna dopo le 9pm. Meglio ancora, caricalo in un'altra stanza: ho visto la qualità del sonno migliorare notevolmente da questo singolo cambiamento",
+          "tip3": "La caffeina rimane nel tuo sistema per 8 ore. Quel pomeriggio il caffè o il tè turco alle 4pm è ancora attivo nel tuo flusso sanguigno a mezzanotte. Passare alle tisane (camomilla, tiglio) dopo pranzo. Questo è uno dei miglioramenti più semplici che consiglio e le persone sono sempre sorprese di quanto sia d'aiuto",
+          "tip4": "Se condividi una stanza con bambini o familiari, piccoli cambiamenti aiutano: un orario di spegnimento costante delle luci, una riduzione graduale del rumore, l'uso di una tenda per creare un confine visivo del sonno. Insegna ai bambini che il momento del sonno è tempo della famiglia: quando in famiglia si fa silenzio, tutti dormono meglio",
+          "fact": "La ricerca sul sonno nelle comunità emarginate mostra che la privazione cronica del sonno causata dal sovraffollamento, dal rumore e dallo stress contribuisce in modo significativo al divario sanitario. Le persone che dormono costantemente meno di 6 ore hanno un rischio 4x maggiore di contrarre infezioni e un rischio 2x più alto di malattie cardiache. Il sonno non è un lusso: è il fondamento della sopravvivenza.",
+          "action": "Stasera: imposta una sveglia prima di andare a dormire sul telefono per 30 minuti prima di andare a dormire. Quando squilla, spegni la TV, metti via il telefono e stenditi al buio facendo 4-4-8 respirando finché non ti addormenti. Fallo per 7 notti e nota la differenza."
+        },
+        "communitySupport": {
+          "title": "Il potere della connessione",
+          "description": "La cultura rom comprende già qualcosa che la medicina occidentale sta misurando solo ora: che l’appartenenza, la famiglia e la comunità proteggono la tua salute con la stessa forza di qualsiasi medicina. Ho visto persone sopravvivere alle circostanze più difficili – sfratti, malattie, perdite – perché la loro comunità le ha trattenute. E ho visto persone crollare molto meno quando erano isolate. La scienza ora conferma ciò che sapevano i nostri antenati: la solitudine uccide, la connessione guarisce.",
+          "tip1": "Se conosci qualcuno nella tua comunità che ha recentemente perso un membro della famiglia, gli è stata diagnosticata una malattia, ha perso il lavoro o sta attraversando una crisi, non aspettare che chieda aiuto. Visitateli. Porta del cibo. Siediti con loro. Nella cultura rom, questo è istinto. Nella scienza della salute, questa si chiama “prescrizione sociale” e funziona meglio della maggior parte delle pillole",
+          "tip2": "La vergogna è nemica della salute. Ho incontrato persone che per anni hanno nascosto il diabete, la depressione, il HIV e la violenza domestica perché temevano ciò che avrebbe detto la comunità. Ogni volta che qualcuno nella nostra comunità parla apertamente della propria lotta, dà il permesso agli altri. Non è necessario condividere tutto, ma condividere qualcosa rompe il silenzio che fa ammalare le persone",
+          "tip3": "Riunioni, celebrazioni, musica, preghiera, narrazione: queste non sono distrazioni dalla salute. Sono salute. Gli studi dimostrano che la partecipazione regolare alle attività culturali della comunità riduce la depressione e il rischio cardiovascolare. La gioia e l’appartenenza che creano sono una medicina misurabile",
+          "tip4": "Controlla gli anziani e le persone isolate nella tua comunità. La persona che vive sola, la nonna i cui figli si sono allontanati, l'uomo che ha smesso di venire alle riunioni. Una visita o una telefonata di 10 minuti potrebbe essere l'unico legame umano che hanno quel giorno e potrebbe essere ciò che li tiene in vita",
+          "fact": "Uno studio di 85 di Harvard sulla salute degli adulti ha concluso che il singolo più forte indicatore di salute e longevità è la qualità delle relazioni, non la dieta, l'esercizio fisico o la genetica. La solitudine aumenta il rischio di mortalità del 26%, equivalente a fumare 15 sigarette al giorno. Le comunità rom hanno una ricchezza culturale nella connessione sociale che è una vera risorsa sanitaria: proteggila.",
+          "action": "Questa settimana, contatta una persona nella tua comunità con cui non hai parlato di recente. Non tramite SMS, a voce o di persona. Chiedi come stanno e ascolta. Questo atto di connessione è la promozione della salute nella sua forma più pura."
+        },
+        "seekHelp": {
+          "title": "Quando è troppo",
+          "description": "C’è un punto in cui stress, tristezza e preoccupazione attraversano il confine con qualcosa che necessita di aiuto professionale – e nelle comunità rom, quel confine non viene quasi mai riconosciuto perché ci viene insegnato a resistere, a essere forti, a gestire la situazione all’interno della famiglia. Ho visto il costo di questo silenzio: uomini che bevono per far fronte fino a quando il loro fegato non ce la fa, donne che smettono di mangiare, adolescenti che si fanno del male. Chiedere aiuto non significa tradire la tua cultura. È proteggere la tua vita in modo che tu possa essere lì per le persone che hanno bisogno di te.",
+          "tip1": "Se tu o qualcuno che conosci non siete stati in grado di funzionare normalmente per più di 2 settimane (non potete dormire, non potete mangiare, non potete prendervi cura dei bambini, piangete costantemente o non avete energia per qualsiasi cosa), questo va oltre il normale stress. Questa è depressione ed è una condizione medica reale quanto il diabete. Non è debolezza e risponde al trattamento",
+          "tip2": "Il tuo primo passo è il tuo medico di famiglia (GP). Di': \"Mi sento molto male da più di 2 settimane e ho bisogno di aiuto\". Non è necessario spiegare tutto. Il medico di famiglia può valutarti e indirizzarti a uno psicologo o psichiatra. Questo servizio è gratuito o a basso costo nella maggior parte dei paesi europei. Se il tuo medico di famiglia ti licenzia, consulta un altro",
+          "tip3": "Se qualcuno nella tua famiglia menziona il desiderio di morire, il desiderio di scomparire o la sensazione che tutti starebbero meglio senza di lui, prendilo immediatamente sul serio. Resta con loro. Rimuovere l'accesso a medicinali e oggetti appuntiti. Chiama la linea di crisi nazionale o 112. Non stai reagendo in modo eccessivo. Queste parole sono un grido di aiuto a cui bisogna rispondere",
+          "tip4": "I farmaci per la salute mentale non sono vergognosi, non creano dipendenza o sono \"per pazzi\". Gli antidepressivi vengono prescritti a milioni di persone in tutto il mondo e salvano vite umane. Non cambiano chi sei: sollevano la nebbia chimica che ti impedisce di essere chi sei. Ho visto persone trasformarsi grazie a trattamenti a cui hanno resistito per anni a causa dello stigma",
+          "fact": "Le comunità rom sperimentano tassi di depressione e ansia tra i più alti in Europa, guidati da fattori strutturali come discriminazione, povertà e mancanza di accesso ai servizi. Tuttavia, l’utilizzo dei servizi di salute mentale nelle comunità rom è tra i più bassi. Nei programmi in cui ho contribuito a mettere in contatto le persone con cure di salute mentale culturalmente sensibili, il miglioramento della qualità della vita è stato profondo, non solo per il singolo individuo, ma per l’intera famiglia.",
+          "action": "Salva subito questo numero sul tuo telefono: il numero di assistenza per le crisi di salute mentale del tuo Paese. Se sei in crisi, chiamala. Se qualcuno che conosci è in crisi, chiamalo con lui. E se soffri di problemi da più di 2 settimane, prenota un appuntamento con il tuo medico di famiglia questa settimana. Meriti di sentirti meglio e l'aiuto esiste."
+        }
+      }
+    },
+    "track": {
+      "title": "Check-in giornaliero della salute",
+      "subtitle": "Come ti senti oggi?",
+      "moodTitle": "Umore",
+      "moodGreat": "Eccellente",
+      "moodGood": "Bene",
+      "moodOkay": "Accettabile",
+      "moodLow": "Non molto bene",
+      "moodBad": "Molto male",
+      "waterTitle": "Consumo di acqua",
+      "waterSubtitle": "Tocca ogni bicchiere quando bevi",
+      "waterGoal": "Obiettivo: 8 bicchieri",
+      "activityTitle": "Attività oggi",
+      "activityWalk": "Ho camminato",
+      "activityExercise": "Ho fatto esercizio",
+      "activityRest": "Ho riposato",
+      "saveCheckin": "Salva il check-in di oggi",
+      "savedSuccess": "Check-in salvato!",
+      "weeklyTitle": "Questa settimana",
+      "streakDays": "giorni consecutivi",
+      "loggedToday": "Registrato oggi",
+      "noLogsYet": "Inizia il tuo primo check-in qui sotto",
+      "historyTitle": "Cronologia recente"
+    },
+    "profile": {
+      "title": "Profilo",
+      "guestUser": "Ospite",
+      "guestSubtitle": "Stai imparando in modo anonimo",
+      "languagePreference": "Preferenza di lingua",
+      "changeLanguage": "Cambia lingua",
+      "learningProgress": "Progressi di apprendimento",
+      "pillarsStarted": "Pilastri iniziati",
+      "modulesCompleted": "Moduli completati",
+      "trackingStreak": "Serie di tracciamento",
+      "days": "giorni",
+      "exportData": "Esporta i miei dati (GDPR)",
+      "exportDescription": "Scarica tutti i dati di tracciamento della salute come file CSV.",
+      "clearData": "Cancella tutti i dati",
+      "clearDataConfirm": "Sei sicuro? Questa azione non può essere annullata.",
+      "aboutTitle": "Informazioni su Redi Health",
+      "aboutText": "Redi Health è un compagno gratuito e multilingue per l'alfabetizzazione sanitaria in aree svantaggiate — villaggi, periferie, insediamenti, quartieri rom, regioni rurali d'Europa — dove i medici scarseggiano, le distanze per ricevere cure sono lunghe e le comunicazioni ufficiali spesso non arrivano nella lingua della gente.",
+      "privacyPolicy": "Informativa sulla privacy",
+      "contactUs": "Contattaci",
+      "progressNone": "Non hai ancora iniziato a imparare.",
+      "progressStart": "Vai a Impara per iniziare.",
+      "version": "Versione"
+    },
+    "mediator": {
+      "title": "Pannello del mediatore",
+      "subtitle": "Supporta la salute della tua comunità",
+      "accessCode": "Inserisci il codice di accesso",
+      "accessCodePlaceholder": "Codice a 4 cifre",
+      "accessCodeHint": "Chiedi al coordinatore il codice di accesso",
+      "accessCodeError": "Codice errato. Riprova.",
+      "accessCodeSubmit": "Accedi al pannello",
+      "communityMembers": "Membri della comunità",
+      "logsThisMonth": "Registrazioni sanitarie questo mese",
+      "alertsActive": "Allarmi attivi",
+      "quickActions": "Azioni rapide",
+      "logVisit": "Registra una visita",
+      "recordHealth": "Registra dati sanitari",
+      "viewReports": "Visualizza rapporti",
+      "recentActivity": "Attività recente",
+      "noActivity": "Nessuna attività recente",
+      "memberName": "Nome del membro",
+      "visitDate": "Data della visita",
+      "notes": "Note",
+      "saveVisit": "Salva visita",
+      "visitSaved": "Visita salvata con successo",
+      "healthSummary": "Riepilogo della salute della comunità",
+      "pillarProgress": "Progressi di apprendimento per pilastro",
+      "contactSupport": "Contatta il coordinatore regionale",
+      "resources": "Risorse per il mediatore",
+      "downloadGuide": "Scarica la guida sul campo (PDF)"
+    }
+  },
   "mk": {
     "learn": {
       "progressLabel": "завршени модули",
-      "startHere": "Започнете тука",
+      "startHere": "Започнете овде",
       "continueLabel": "Продолжи",
       "allModules": "Сите модули",
       "prevention": {
-        "description": "За 15 години работа во ромски населби видов семејства опустошени од болести што едноставните навики можеа да ги спречат. Ова знаење не е луксуз — тоа е опстанок.",
+        "description": "За 15 години работејќи во ромските населби, видов семејства уништени од болести кои едноставните навики можеле да ги спречат. Ова знаење не е луксуз - тоа е опстанок.",
         "handwashing": {
           "title": "Миење раце",
           "description": "Сум видел цели семејства во населени места како се разболуваат од истата стомачна инфекција, од рака на рака. Правилното миење раце е единствениот најевтин, најмоќен лек до кој веќе имате пристап - не чини ништо и ги спречува болестите што најчесто ги гледам во нашите заедници.",
@@ -1916,7 +2227,7 @@ export const TRANSLATIONS = {
         }
       },
       "nutrition": {
-        "description": "Со години работа со ромски семејства научив дека храната не е само исхрана — туку она што можете да си дозволите, што е достапно во населбата и што вашето семејство го знае. Нема да ви кажам да купувате киноа. Ќе ви кажам како добро да го храните семејството со она што го имате.",
+        "description": "Во моите години работа со ромски семејства, научив дека храната никогаш не е само за исхрана - се работи за тоа што можете да си дозволите, што е достапно во вашето соседство и што знае вашето семејство. Нема да ви кажам да купувате киноа. Ќе ти кажам како добро да го нахраниш семејството со тоа што го имаш.",
         "balancedDiet": {
           "title": "Јадете добро со кој било буџет",
           "description": "Најголемиот проблем со исхраната што го гледам во ромските заедници не е недостатокот на храна - тоа е премногу евтин леб, преработено месо и засладени пијалоци и премалку зеленчук, јајца и мешунки. Не се работи за волја. Станува збор за она што е достапно и достапно. Но, малите промени прават огромни разлики за вашето здравје и развојот на вашите деца.",
@@ -1949,7 +2260,7 @@ export const TRANSLATIONS = {
         }
       },
       "maternal": {
-        "description": "Придружував ромски жени во болници каде што ги ставаа одделно, непочитливо се однесуваа или им одбија епидурал што други жени го добиваат. Видов и жени што починаа од компликации што еден пренатален преглед би ги фатил навреме. Вашето тело, вашето дете, вашите права. Познајте ги сите три.",
+        "description": "Ги придружував Ромките во болниците каде што беа сместени во посебни соби, зборуваа со непочитување или одбиваа епидурали што ги добиваа другите жени. Сум видел и жени како умираат од компликации кои би ги забележала само една пренатална посета. Вашето тело, вашето бебе, вашите права. Знајте ги сите три.",
         "prenatalCare": {
           "title": "Пренатална нега",
           "description": "Во 15 години работа на медијација, шаблонот што постојано го гледам е дека жените Ромки првпат посетуваат лекар кога се веќе 6 или 7 месец бремени - често затоа што се чувствуваат добро, затоа што се плашат од болницата или затоа што никој не објасни дека пренаталната нега е бесплатна и нивно право. До тој момент, опасните состојби како прееклампсија или гестациски дијабетес можеби тивко се развиваат со месеци.",
@@ -1992,7 +2303,7 @@ export const TRANSLATIONS = {
         }
       },
       "children": {
-        "description": "Ромските деца се иднината на нашите заедници и заслужуваат секое предимство. Во мојата работа видов деца што заостануваат — не поради недостаток на способности, туку затоа што им спречливи болести, пропуштени вакцини или неоткриени задоцнувања им ги одзедоа шансите. Ова знаење им ги враќа тие шанси.",
+        "description": "Децата Роми се иднината на нашите заедници и тие ја заслужуваат секоја предност. Во мојата работа, видов дека децата заостануваат - не поради способноста, туку затоа што болестите што може да се спречат, пропуштените вакцини или неоткриените доцнења во развојот им ги украдоа можностите. Ова знаење ги враќа тие можности.",
         "growthMilestones": {
           "title": "Раст и развој",
           "description": "Секое дете се развива со свое темпо и никогаш не сакам родителите да паничат поради нормалната варијација. Но, видов и деца чиј задоцнет развој беше отфрлен од семејствата како „ќе стигнат“ кога раната интервенција можеше да направи трансформативна разлика. Да знаете што да внимавате не е анксиозност - тоа е внимание.",
@@ -2025,7 +2336,7 @@ export const TRANSLATIONS = {
         }
       },
       "chronic": {
-        "description": "Ромите умираат во просек 10 години порано од европскиот просек. Најголемиот дел од оваа разлика доаѓа од хронични болести — дијабетес, срцеви и респираторни болести — што се развиваат бавно и тивко години наназад. Кога ќе се појават симптомите, штетата е веќе направена. Но повеќето може да се спречи и сè може да се управува ако се фати навреме.",
+        "description": "Ромите умираат 10 години помлади од европскиот просек. Поголемиот дел од овој јаз доаѓа од хронични болести - дијабетес, срцеви заболувања, респираторни заболувања - кои се развиваат бавно и тивко со години. До моментот кога ќе се појават симптомите, штетата е направена. Но, повеќето од нив може да се спречат, а сето тоа може да се управува кога ќе се фатат рано.",
         "diabetes": {
           "title": "Дијабетес: Тивка закана",
           "description": "Дијабетес тип 2 е хронично заболување со кое најчесто се среќавам во ромските заедници. Работи во семејства, напредува на евтината диета богата со шеќер на која сиромаштијата ги тера луѓето, и ги оштетува вашите очи, бубрези, стапала и срце со години пред да почувствувате нешто погрешно. Сум видел мажи во нивните 40 губат прсти на нозете, а жените ослепуваат, од дијабетес кој никогаш не бил дијагностициран бидејќи никогаш не направиле тест на крвта. Ова може да се спречи.",
@@ -2058,7 +2369,7 @@ export const TRANSLATIONS = {
         }
       },
       "mental": {
-        "description": "За 15 години во ромски заедници научив дека најтешкиот товар не е физичката болест — туку тежината на дискриминацијата, сиромаштијата, стравот од иселување, грижата за иднината на децата и чувството дека никој во системот не се грижи. Викаме стрес. Кога трае години, станува нешто друго. Заслужува да се именува, разбере и лечи — без срам.",
+        "description": "Во 15 години работа во ромските заедници, научив дека најтешкиот товар што го носат луѓето не е физичката болест - тоа е тежината на дискриминацијата, сиромаштијата, стравот од иселување, грижата за иднината на нивните деца и чувството дека никој во системот не се грижи. Ова го нарекуваме стрес. Кога трае со години, станува нешто повеќе. Таа заслужува да биде именувана, разбрана и третирана - без срам.",
         "stressManagement": {
           "title": "Живеење со стрес",
           "description": "Нема да се преправам дека вежбата за дишење ќе ви ги реши проблемите. Ако сте загрижени дали вашето семејство ќе биде иселено, ниту една апликација за медитација нема да го поправи тоа. Но, работев со стотици луѓе во нашите заедници кои носат огромен стрес и видов што се случува кога тој стрес не се контролира со години: срцеви удари кај мажи во нивните 40s, жени кои не можат да јадат или спијат, деца кои растат во домаќинства наелектризирани од напнатост. Не можеме секогаш да ги менуваме нашите околности, но можеме да го промениме начинот на кој ги носиме.",
@@ -2094,7 +2405,7 @@ export const TRANSLATIONS = {
           "description": "Има момент кога стресот, тагата и грижата ја преминуваат границата во нешто на кое му е потребна стручна помош - а во ромските заедници таа линија речиси никогаш не се препознава затоа што сме научени да издржиме, да бидеме силни, да се справиме со тоа во семејството. Ја видов цената на оваа тишина: мажи кои пијат за да се справат додека не им попушти црниот дроб, жени кои престануваат да јадат, тинејџери кои си нанесуваат штета. Барањето помош не е предавство на вашата култура. Тоа го штити вашиот живот за да можете да бидете тука за луѓето на кои им требате.",
           "tip1": "Ако вие или некој што го познавате не можел да функционира нормално повеќе од 2 недели - не може да спие, не може да јаде, не може да се грижи за деца, постојано плаче или нема енергија за ништо - ова е надвор од нормалниот стрес. Ова е депресија и е медицинска состојба реална како дијабетес. Тоа не е слабост и реагира на лекување",
           "tip2": "Вашиот прв чекор е вашиот матичен лекар (GP). Кажи: 'Се чувствувам многу лошо повеќе од 2 недели и ми треба помош.' Не треба се да објаснувате. Општиот лекар може да ве процени и да ве упати кај психолог или психијатар. Оваа услуга е бесплатна или ефтина во повеќето европски земји. Ако вашиот општ лекар ве отпушти, видете друг",
-          "tip3": "Ако некој од вашето семејство спомне дека сака да умре, сака да исчезне или чувствува дека на сите би им било подобро без нив - веднаш сфатете го ова сериозно. Останете со нив. Отстранете го пристапот до лекови и остри предмети. Јавете се на националната кризна линија или 112. Не претерувате. Овие зборови се крик за помош на кој мора да се одговори",
+          "tip3": "Ако некој од вашето семејство спомне дека сака да умре, сака да исчезне или чувствува дека на сите би им било подобро без нив - веднаш сфатете го ова сериозно. Останете со нив. Отстранете го пристапот до лекови и остри предмети. Јавете се на националната кризна линија или 112. Вие не претерувате. Овие зборови се крик за помош на кој мора да се одговори",
           "tip4": "Лековите за ментално здравје не се срамни, зависни или „за луди луѓе“. Антидепресивите се препишуваат на милиони луѓе ширум светот и тие спасуваат животи. Тие не го менуваат тоа што сте - тие ја креваат хемиската магла што ве спречува да бидете тоа што сте. Сум видел луѓе трансформирани со третман на кој се спротивставувале со години поради стигмата",
           "fact": "Ромските заедници се меѓу највисоките стапки на депресија и анксиозност во Европа, поттикнати од структурни фактори како дискриминација, сиромаштија и недостаток на пристап до услуги. Сепак, користењето на услугите за ментално здравје во ромските заедници е меѓу најниските. Во програмите каде што помогнав да се поврзат луѓето со културно чувствителна грижа за менталното здравје, подобрувањето на квалитетот на животот беше длабоко - не само за поединецот, туку и за целото нивно семејство.",
           "action": "Зачувајте го овој број во вашиот телефон во моментов: телефонска линија за помош за ментално здравје во вашата земја. Ако сте во криза, јавете се. Ако некој што го познавате е во криза, јавете се со него. И ако се мачите повеќе од 2 недели, закажете состанок со вашиот општ лекар оваа недела. Вие заслужувате да се чувствувате подобро, а помошта постои."
@@ -2179,12 +2490,12 @@ export const TRANSLATIONS = {
   },
   "ro": {
     "learn": {
-      "progressLabel": "module completate",
-      "startHere": "Începe aici",
+      "progressLabel": "module finalizate",
+      "startHere": "Începeți de aici",
       "continueLabel": "Continuă",
       "allModules": "Toate modulele",
       "prevention": {
-        "description": "În 15 ani de muncă în așezările romă, am văzut familii devastate de boli ce puteau fi prevenite prin obiceiuri simple. Aceste cunoștințe nu sunt un lux — sunt supraviețuire.",
+        "description": "În 15 ani de lucru în așezările de romi, am văzut familii devastate de boli pe care obiceiurile simple le-ar fi putut preveni. Această cunoaștere nu este un lux, ci este supraviețuire.",
         "handwashing": {
           "title": "Spălarea mâinilor",
           "description": "Am văzut familii întregi din așezări îmbolnăvindu-se de aceeași infecție la stomac, transmisă mână în mână. Spălarea corectă a mâinilor este cel mai ieftin și mai puternic medicament la care aveți deja acces - nu costă nimic și previne bolile pe care le văd cel mai des în comunitățile noastre.",
@@ -2227,7 +2538,7 @@ export const TRANSLATIONS = {
         }
       },
       "nutrition": {
-        "description": "În anii petrecuți cu familii romă, am învățat că mâncarea nu e doar nutriție — e ce îți permiți, ce găsești în cartier și ce știe familia ta. Nu îți voi spune să cumperi quinoa. Îți voi spune cum să hrănești bine familia cu ce ai.",
+        "description": "În anii în care am lucrat cu familiile de romi, am învățat că mâncarea nu este niciodată doar despre nutriție – este despre ceea ce îți poți permite, ce este disponibil în cartierul tău și ce știe familia ta. Nu vă spun să cumpărați quinoa. Îți voi spune cum să-ți hrănești bine familia cu ceea ce ai.",
         "balancedDiet": {
           "title": "Mănâncă bine cu orice buget",
           "description": "Cea mai mare problemă de nutriție pe care o văd în comunitățile de romi nu este lipsa alimentelor – este prea multă pâine ieftină, carne procesată și băuturi dulci și prea puține legume, ouă și leguminoase. Nu este vorba despre puterea de voință. Este vorba despre ceea ce este disponibil și accesibil. Dar schimbările mici fac diferențe enorme pentru sănătatea dumneavoastră și dezvoltarea copiilor dumneavoastră.",
@@ -2260,7 +2571,7 @@ export const TRANSLATIONS = {
         }
       },
       "maternal": {
-        "description": "Am însoțit femei romă la spitale unde au fost izolate, tratate cu lipsă de respect sau li s-au refuzat epidurale pe care alte femei le primeau. Am văzut și femei care au murit din complicații pe care o singură vizită prenatală le-ar fi prins la timp. Corpul tău, copilul tău, drepturile tale. Cunoaște-le pe toate trei.",
+        "description": "Am însoțit femei de etnie romă la spitale unde au fost puse în camere separate, au fost vorbite cu lipsă de respect sau au refuzat epiduralele primite de alte femei. De asemenea, am văzut femei murind din cauza unor complicații pe care le-ar fi surprins o singură vizită prenatală. Corpul tău, copilul tău, drepturile tale. Cunoaște-le pe toate trei.",
         "prenatalCare": {
           "title": "Îngrijire prenatală",
           "description": "În 15 ani de muncă de mediere, tiparul pe care îl văd în mod repetat este femeile rome care vizitează prima dată la medic când sunt deja gravide în 6 sau 7 luni — de multe ori pentru că se simt bine, pentru că le este frică de spital sau pentru că nimeni nu a explicat că îngrijirea prenatală este gratuită și dreptul lor. Până în acel moment, afecțiunile periculoase precum preeclampsia sau diabetul gestațional s-ar fi putut dezvolta în tăcere de luni de zile.",
@@ -2269,13 +2580,13 @@ export const TRANSLATIONS = {
           "tip3": "Alimentele bogate în fier previn anemia pe care o văd la aproape jumătate dintre femeile rome însărcinate cu care lucrez: fasole, linte, verdeață închisă cu frunze verzi, ficat, carne roșie. Anemia te epuizează, face nașterea mai periculoasă și afectează dezvoltarea creierului bebelușului tău",
           "tip4": "Aveți dreptul de a primi îngrijiri prenatale în limba dumneavoastră, de a fi tratată cu demnitate și de a avea cineva să vă însoțească la întâlniri. Dacă un medic este disprețuitor sau lipsit de respect, puteți depune o plângere și puteți solicita alt furnizor. Documentați numele, data și ceea ce s-a spus. Ajut familiile să facă acest lucru în mod regulat",
           "fact": "Femeile rome din Europa au de 3 până la 5 ori mai multe șanse de a se confrunta cu complicații ale sarcinii decât populația generală, în mare parte pentru că accesează îngrijirea prenatală mai târziu sau deloc. În comunitățile în care am lucrat pentru a conecta femeile însărcinate la îngrijire în primul trimestru, ratele de complicații au scăzut dramatic.",
-          "action": "Dacă sunteți însărcinată sau cunoașteți o femeie însărcinată din comunitatea dvs. care nu a consultat încă un medic, programați-vă astăzi. Dacă îi este frică sau nu este sigură cum, mergeți cu ea sau contactați-o cu mediatorul local de sănătate. O singură vizită poate schimba totul."
+          "action": "Dacă sunteți însărcinată sau cunoașteți o femeie însărcinată din comunitatea dvs. care nu a consultat încă un medic, programați-vă astăzi. Dacă îi este frică sau nu este sigură cum, mergeți cu ea sau contactați-o cu mediatorul local de sănătate. Acea o singură vizită poate schimba totul."
         },
         "safeDelivery": {
           "title": "Livrare sigură",
           "description": "Am ținut mâna femeilor care nasc în ambulanțe pentru că au plecat prea târziu și m-am așezat pe coridoarele spitalelor, unde femeile rome au fost plasate ultimele la coadă, în timp ce femeile ne-rome mergeau înainte. Ambele situații pot fi prevenite. Planificarea livrării și cunoașterea drepturilor tale transformă această experiență dintr-o criză în ceva pe care îl controlezi.",
           "tip1": "Până săptămâna 34, pregătiți-vă planul de naștere: care spital, cine va merge cu dvs., cum veți ajunge acolo (mai ales noaptea), cine vă va supraveghea pe ceilalți copii. Am văzut prea multe familii care se luptă în ultimul moment – iar stresul afectează nașterea",
-          "tip2": "Aveți dreptul legal de a avea alături un însoțitor (soț, mamă, soră, mediator) în timpul travaliului și al nașterii în aproape toate țările europene. Dacă spitalul spune nu, citați legea privind drepturile pacienților din țara dumneavoastră. Deținem aceste referințe și le putem oferi",
+          "tip2": "Aveți dreptul legal de a avea alături un însoțitor (soț, mamă, soră, mediator) în timpul travaliului și al nașterii în aproape toate țările europene. Dacă spitalul spune nu, citați legea privind drepturile pacienților din țara dumneavoastră. Deținem aceste referințe și le putem furniza",
           "tip3": "Aflați 5 semnele de pericol care înseamnă MERGI LA SPITAL ACUM, indiferent de ora: (1) sângerare abundentă, (2) cefalee severă cu mâinile/fața umflate, (3) bebelușul nu se mai mișcă, (4) apa se întrerupe înainte de PH_6___5_ PH febră ___5 38°C. Nu așteptați până dimineața. Nu încercați să le gestionați acasă",
           "tip4": "După naștere, rămâneți în spital cel puțin 24 ore pentru monitorizare – chiar dacă vă simțiți bine. Multe complicații care pun viața în pericol (hemoragie, infecție) apar în primele 24 ore. Știu că mediul spitalicesc poate fi ostil, dar acele ore de monitorizare salvează vieți",
           "fact": "Într-o regiune în care am lucrat 5 ani, am redus urgențele materne de etnie romă cu 60% pur și simplu asigurându-ne că fiecare femeie însărcinată are un plan de naștere, un aranjament de transport și o geantă de spital împachetată pe săptămână 36. Fără tehnologie nouă - doar pregătire și însoțire.",
@@ -2303,7 +2614,7 @@ export const TRANSLATIONS = {
         }
       },
       "children": {
-        "description": "Copiii romă sunt viitorul comunităților noastre și merită fiecare avantaj. În munca mea, am văzut copii care rămân în urmă — nu din lipsă de abilitate, ci pentru că boli prevenibile, vaccinuri ratate sau întârzieri nedetectate le-au furat șansele. Aceste cunoștințe le returnează aceste șanse.",
+        "description": "Copiii romi sunt viitorul comunităților noastre și merită fiecare avantaj. În munca mea, am văzut copii rămase în urmă – nu din cauza abilităților, ci pentru că bolile care se pot preveni, vaccinările ratate sau întârzierile de dezvoltare nedetectate le furau oportunități. Această cunoaștere oferă acele oportunități înapoi.",
         "growthMilestones": {
           "title": "Creștere și dezvoltare",
           "description": "Fiecare copil se dezvoltă în propriul ritm și nu vreau niciodată ca părinții să intre în panică din cauza variațiilor normale. Dar am văzut și copii a căror dezvoltare întârziată a fost respinsă de familii ca „vor prinde din urmă” atunci când intervenția timpurie ar fi putut face o diferență transformatoare. A ști la ce să urmărești nu este anxietate - este atenție.",
@@ -2317,10 +2628,10 @@ export const TRANSLATIONS = {
         "commonIllnesses": {
           "title": "Când copilul tău este bolnav",
           "description": "În așezările cu locuințe supraaglomerate, salubritate limitată și ierni reci, copiii se îmbolnăvesc frecvent. Cele mai multe dintre aceste boli - diaree, tuse, febră - pot fi gestionate acasă dacă știi ce să faci și când să escaladezi. Dar am văzut și părinți așteptând prea mult, sau grăbindu-se la camerele de urgență pentru afecțiuni pe care un simplu tratament la domiciliu le-ar fi rezolvat. Acest modul vă învață diferența.",
-          "tip1": "Febră sub 38.5°C: corpul copilului dumneavoastră luptă împotriva infecțiilor – este bine. Păstrați-le confortabil, îmbrăcate ușor și dați multe lichide. Febră peste 38.5°C: administrați copiilor paracetamol în doza corectă pentru greutatea lor (NU paracetamol pentru adulți). Dacă febra durează mai mult de 3 zile sau copilul este neobișnuit de somnolent, solicitați asistență medicală",
+          "tip1": "Febră sub 38.5°C: corpul copilului dumneavoastră luptă împotriva infecțiilor – este bine. Păstrați-le confortabil, îmbrăcați ușor și dați multe lichide. Febră peste 38.5°C: administrați copiilor paracetamol în doza corectă pentru greutatea lor (NU paracetamol pentru adulți). Dacă febra durează mai mult de 3 zile sau copilul este neobișnuit de somnolent, solicitați asistență medicală",
           "tip2": "Diareea ucide prin deshidratare, nu prin infecția în sine. În momentul în care copilul dumneavoastră are scaune moale, începeți rehidratarea orală: 1 litru de apă curată fiartă + 6 lingurițe nivele de zahăr + jumătate de linguriță de sare. Dați înghițituri mici la fiecare câteva minute. Această rețetă a salvat mai mulți copii din întreaga lume decât orice antibiotic",
           "tip3": "DUȚI COPILUL LA SPITAL dacă observați: respirație rapidă sau dificilă, pieptul trăgând la fiecare respirație, imposibilitatea de a bea sau de alăptat, vărsături repetate, somnolență neobișnuită sau netrezire, convulsii sau diaree cu sânge. Nu așteptați. Acestea sunt urgențe",
-          "tip4": "Nu administrați antibiotice fără prescripția medicului. Nu împărtășiți rețeta altui copil. Nu utilizați antibiotice rămase. Văd asta în mod constant în comunitățile noastre și creează bacterii rezistente la medicamente, care sunt mult mai greu de tratat. Antibioticele nu fac nimic pentru răceli, gripă sau majoritatea tusei",
+          "tip4": "Nu administrați antibiotice fără prescripția medicului. Nu împărtășiți rețeta altui copil. Nu utilizați antibiotice rămase. Văd acest lucru în mod constant în comunitățile noastre și creează bacterii rezistente la medicamente, care sunt mult mai greu de tratat. Antibioticele nu fac nimic pentru răceli, gripă sau majoritatea tusei",
           "fact": "În comunitățile în care am lucrat, instruirea părinților să pregătească și să utilizeze soluția de rehidratare orală a redus spitalizările copiilor pentru diaree cu peste 40% într-un singur an. Cunoștințele sunt atât de puternice - iar ingredientele costă mai puțin decât un bilet de autobuz către spital.",
           "action": "Chiar acum, memorează această rețetă: 1 litru apă curată + 6 lingurițe zahăr + jumătate linguriță sare. Exersați să o faceți o dată. Dacă doriți, gustați - ar trebui să aibă gust de lacrimi. Să ai acest lucru gata înseamnă că atunci când copilul tău are diaree la 2am, poți acționa imediat în loc să intri în panică."
         },
@@ -2336,7 +2647,7 @@ export const TRANSLATIONS = {
         }
       },
       "chronic": {
-        "description": "Romii mor cu 10 ani mai devreme decât media europeană. Cea mai mare parte a acestui decalaj vine din bolile cronice — diabet, boli de inimă, boli respiratorii — care se dezvoltă încet și tăcut ani de zile. Când apar simptomele, daunele sunt deja făcute. Dar cea mai mare parte e prevenibilă și totul e gestionabil dacă e prins la timp.",
+        "description": "Romii mor cu 10 ani mai tineri decât media europeană. Cea mai mare parte a acestui decalaj provine din bolile cronice - diabet, boli de inimă, boli respiratorii - care se dezvoltă lent și tăcut de-a lungul anilor. Până la apariția simptomelor, deteriorarea a fost făcută. Dar cea mai mare parte poate fi prevenită și totul este gestionabil atunci când este prins devreme.",
         "diabetes": {
           "title": "Diabetul: amenințarea tăcută",
           "description": "Diabetul de tip 2 este boala cronică pe care o întâlnesc cel mai frecvent în comunitățile de romi. Funcționează în familii, se dezvoltă cu dieta ieftină, bogată în zahăr, la care sărăcia îi obligă pe oameni și vă dăunează ochii, rinichii, picioarele și inima ani de zile înainte de a simți ceva rău. Am văzut bărbați cu 40 pierzând degetele de la picioare, iar femeile orbesc, din cauza diabetului care nu a fost niciodată diagnosticat pentru că nu au făcut niciodată un test de sânge. Acest lucru poate fi prevenit.",
@@ -2358,7 +2669,7 @@ export const TRANSLATIONS = {
           "action": "Săptămâna aceasta, faceți două lucruri: (1) Mergeți la o farmacie și verificați-vă tensiunea arterială - notați numerele. (2) Numărați câte țigări fumați pe zi și încercați să reduceți cu 3 pe zi. Aceste două acțiuni sunt cele mai puternice măsuri de prevenire a inimii pe care o poate lua orice individ."
         },
         "respiratory": {
-          "title": "Plămânii și respirația",
+          "title": "Plămâni și respirație",
           "description": "Am lucrat în așezări în care familiile ard lemne, cărbune sau chiar plastic și cauciuc pentru încălzire iarna. Unde 8 persoane dorm în două camere fără ventilație. Unde umezeala curge pe pereți și mucegaiul negru crește în fiecare colț. Boala respiratorie în aceste condiții nu este surprinzătoare – este rezultatul previzibil al locuinței în care nimeni nu ar trebui să locuiască. În timp ce luptăm pentru o locuință mai bună, trebuie să protejăm și plămânii pe care îi avem.",
           "tip1": "Fumul din interior este cel mai imediat pericol respirator pe care îl văd. Dacă încălziți cu combustibil solid, asigurați-vă ventilația - chiar și crăparea unei ferestre ajută. Nu arde niciodată plastic, cauciuc sau lemn vopsit - fumul conțin substanțe chimice care provoacă leziuni pulmonare permanente, în special la copiii ai căror plămâni sunt încă în curs de dezvoltare",
           "tip2": "Umezeala și mucegaiul provoacă astm bronșic, bronșită cronică și agravează orice infecție respiratorie. Ștergeți mucegaiul vizibil cu un amestec de apă și oțet sau înălbitor. Deschideți ferestrele cel puțin 15 minute zilnic, chiar și iarna. Agățați rufele umede afară atunci când este posibil - uscarea rufelor în interior adaugă cantități enorme de umiditate aerului",
@@ -2369,9 +2680,9 @@ export const TRANSLATIONS = {
         }
       },
       "mental": {
-        "description": "În 15 ani în comunități romă, am învățat că cea mai grea povară nu e boala fizică — e greutatea discriminării, sărăciei, fricii de evacuare, grijii pentru viitorul copiilor și sentimentul că nimeni din sistem nu îți pasă. O numim stres. Când durează ani, devine altceva. Merită numită, înțeleasă și tratată — fără rușine.",
+        "description": "În 15 ani de muncă în comunitățile de romi, am învățat că cea mai grea povară pe care o poartă oamenii nu este boala fizică - este greutatea discriminării, a sărăciei, a fricii de evacuare, a îngrijorării cu privire la viitorul copiilor lor și a sentimentului că nimănui din sistem nu-i pasă. Numim asta stres. Când durează ani de zile, devine ceva mai mult. Merită să fie numit, înțeles și tratat - fără rușine.",
         "stressManagement": {
-          "title": "Trăiește cu Stres",
+          "title": "Traieste cu Stres",
           "description": "Nu voi pretinde că un exercițiu de respirație vă va rezolva problemele. Dacă ești îngrijorat că familia ta va fi evacuată, nicio aplicație de meditație nu va rezolva asta. Dar am lucrat cu sute de oameni din comunitățile noastre care suferă de stres enorm și am văzut ce se întâmplă atunci când stresul nu este gestionat de ani de zile: atacuri de cord la bărbați în 40, femei care nu pot mânca sau dormi, copii care cresc în gospodării electrizate de tensiune. Nu ne putem schimba întotdeauna circumstanțele, dar putem schimba modul în care le purtăm.",
           "tip1": "Metoda de respirație 4-4-8 acţionează imediat asupra sistemului dumneavoastră nervos. Inspirați pe nas pentru 4 numără, țineți apăsat pentru 4, expirați încet pe gură pentru 8. Faceți acest lucru de 5 ori. Pulsul scade, mușchii se relaxează. Învăț acest lucru familiilor înainte de vizitele la spital, înainte de ședințele de judecată, înainte de orice întâlnire stresantă. Este un instrument pe care îl ai mereu cu tine",
           "tip2": "Mersul pe jos este cel mai subestimat medicament pentru stres. 20 minute de mers pe jos — nu rapid, doar mers pe jos — reduc cortizolul, hormonul stresului, cu până la 30%. Dacă nu puteți ieși din casă, mergeți în cerc. Mișcarea în sine este cea care funcționează, nu peisajul",
@@ -2801,12 +3112,12 @@ export const TRANSLATIONS = {
   },
   "sk": {
     "learn": {
-      "progressLabel": "dokončených modulov",
+      "progressLabel": "moduly dokončené",
       "startHere": "Začnite tu",
       "continueLabel": "Pokračovať",
       "allModules": "Všetky moduly",
       "prevention": {
-        "description": "Za 15 rokov práce v rómskych osadách som videl rodiny zničené chorobami, ktorým by jednoduché návyky zabránili. Tieto vedomosti nie sú luxus — sú prežitie.",
+        "description": "Za 15 rokov práce v rómskych osadách som videl rodiny zničené chorobami, ktorým sa dalo predísť jednoduchými návykmi. Toto poznanie nie je luxus – je to prežitie.",
         "handwashing": {
           "title": "Umývanie rúk",
           "description": "Videl som, ako celé rodiny v osadách ochoreli na tú istú žalúdočnú infekciu, ktorá sa podávala z ruky do ruky. Správne umývanie rúk je jediný najlacnejší a najsilnejší liek, ku ktorému už máte prístup – nič nestojí a predchádza chorobám, s ktorými sa v našich komunitách stretávam najčastejšie.",
@@ -2821,15 +3132,15 @@ export const TRANSLATIONS = {
           "title": "Očkovanie",
           "description": "Sprevádzal som rómske matky do zdravotných stredísk, kde ich odmietli, pretože im chýbali doklady, neovládali jazyk alebo im jednoducho povedali, aby sa vrátili neskôr. Vakcíny sú zákonným právom vašich detí – bezplatné, bezpečné a najsilnejšia ochrana, akú môže rodič poskytnúť. Toto ti nikto nemôže odoprieť.",
           "tip1": "Každá krajina v Európe poskytuje bezplatný očkovací kalendár od narodenia. Toto nie je charita – je to zákonný nárok vášho dieťaťa. Ak zdravotnícky pracovník odmietne, požiadajte jeho nadriadeného a jasne to uveďte",
-          "tip2": "Očkovací preukaz je najdôležitejším dokladom, ktorý má vaše dieťa po rodnom liste. Uschovajte si ho, noste ho pri každej návšteve lekára. Ak dôjde k strate, ktorékoľvek zdravotné stredisko musí vydať náhradu – neakceptujte odmietnutie",
+          "tip2": "Očkovací preukaz je najdôležitejším dokladom, ktorý má vaše dieťa po rodnom liste. Uschovajte si ho, noste ho pri každej návšteve lekára. V prípade straty, ktorékoľvek zdravotné stredisko musí vydať náhradu – neakceptujte odmietnutie",
           "tip3": "Mierna horúčka, boľavé miesto na ruke, nepokoj na jeden deň – to je normálne a znamená to, že vakcína funguje. Ubezpečil som o tom stovky znepokojených matiek. Prejde za 24–48 hodín",
           "tip4": "Na očkovanie nepotrebujete stretnutie vo väčšine verejných zdravotných stredísk. Vstúpte. Ak vo vašej oblasti pracuje rómsky zdravotnícky mediátor, požiadajte ho, aby vás sprevádzal – na to sme vyškolení",
-          "fact": "V jednej osade, v ktorej som pracoval, zasiahli osýpky, pretože zaočkovanosť klesla na 60%. Tri deti boli hospitalizované. Po komunitnej očkovacej kampani sme dosiahli 94% — a epidémie sa zastavili. V celej Európe zabránia vakcíny každoročne 2–3 miliónom úmrtí.",
+          "fact": "V jednej osade, v ktorej som pracoval, zasiahli osýpky, pretože zaočkovanosť klesla na 60%. Tri deti boli hospitalizované. Po komunitnej očkovacej kampani sme dosiahli 94% — a epidémie sa zastavili. V celej Európe vakcíny zabránia 2–3 miliónom úmrtí ročne.",
           "action": "Vytiahnite očkovací preukaz svojho dieťaťa hneď teraz. Porovnajte to s rozvrhom na stene vášho zdravotného strediska. Ak niektorá vakcína chýba alebo nemáte preukaz, navštívte tento týždeň zdravotné stredisko. Prineste si túto aplikáciu a zobrazte plán, ak vám to pomôže."
         },
         "cleanWater": {
           "title": "Čistá voda",
-          "description": "Pracoval som v osadách, kde rodiny zdieľajú jeden vodovodný bod, ktorý beží dve hodiny denne, a v štvrtiach, kde voda z vodovodu vyzerá čisto, ale obsahuje baktérie, ktoré u detí spôsobujú chronické žalúdočné problémy. Kvalita vody nie je vždy viditeľná – av rómskych komunitách ju úrady len zriedka monitorujú. Musíte byť vodným inšpektorom svojej rodiny.",
+          "description": "Pracoval som v osadách, kde rodiny zdieľajú jeden vodovodný bod, ktorý beží dve hodiny denne, a v štvrtiach, kde voda z vodovodu vyzerá čisto, ale obsahuje baktérie, ktoré deťom spôsobujú chronické žalúdočné problémy. Kvalita vody nie je vždy viditeľná – av rómskych komunitách ju úrady len zriedka monitorujú. Musíte byť vodným inšpektorom svojej rodiny.",
           "tip1": "Zakryte každú nádobu, kde skladujete vodu. Videl som muchy, prach a dokonca aj živočíšny odpad kontaminovať nezakryté vedrá v priebehu niekoľkých hodín, najmä v teplom počasí. Jednoduchá doska na vrchu zabraňuje väčšine kontaminácie",
           "tip2": "Ak si nie ste istí vašou vodou, varte ju za stáleho varu jednu celú minútu. To zabije 99.9% baktérií, vírusov a parazitov. Nestojí to takmer nič a funguje to — učil som to v desiatkach osád, kde bol zdroj vody otázny",
           "tip3": "Nádoby na vodu umyte mydlom a čistou vodou aspoň raz týždenne. Znečistená nádoba zašpiní čistú vodu. Toto je jedna z najviac prehliadaných príčin opakujúcej sa hnačky, ktorú som videl u detí",
@@ -2849,7 +3160,7 @@ export const TRANSLATIONS = {
         }
       },
       "nutrition": {
-        "description": "Po rokoch s rómskymi rodinami som sa naučil, že jedlo nie je len výživa — je to, čo si môžete dovoliť, čo je v okolí a čo vaša rodina pozná. Nepoviem vám, aby ste kupovali quinou. Poviem vám, ako dobre nakŕmiť rodinu z toho, čo máte.",
+        "description": "Za roky práce s rómskymi rodinami som sa naučil, že jedlo nie je nikdy len o výžive – ide o to, čo si môžete dovoliť, čo je dostupné vo vašom okolí a čo vie vaša rodina. Nepoviem vám, aby ste si kúpili quinou. Poviem vám, ako dobre nakŕmiť svoju rodinu tým, čo máte.",
         "balancedDiet": {
           "title": "Dobre sa stravujte za každý rozpočet",
           "description": "Najväčší problém s výživou, ktorý vidím v rómskych komunitách, nie je nedostatok jedla – je to priveľa lacného chleba, spracovaného mäsa a sladených nápojov, málo zeleniny, vajec a strukovín. Toto nie je o sile vôle. Ide o to, čo je dostupné a cenovo dostupné. Ale malé zmeny spôsobujú obrovské rozdiely vo vašom zdraví a vývoji vašich detí.",
@@ -2882,12 +3193,12 @@ export const TRANSLATIONS = {
         }
       },
       "maternal": {
-        "description": "Sprevádzal som rómske ženy do nemocníc, kde ich dávali oddelene, neuctivo sa k nim správali alebo im odmietli epidurál, ktorý iné ženy dostali. Videl som aj ženy, ktoré zomreli na komplikácie, ktoré by jedna tehotenská kontrola včas zachytila. Vaše telo, vaše dieťa, vaše práva. Poznajte všetky tri.",
+        "description": "Sprevádzal som rómske ženy do nemocníc, kde ich umiestnili do oddelených miestností, hovorili s nimi neúctivo alebo odmietli epidurálku, ktorú dostali iné ženy. Videl som aj ženy umierať na komplikácie, ktoré by zachytila ​​jediná prenatálna návšteva. Vaše telo, vaše dieťa, vaše práva. Poznať všetky tri.",
         "prenatalCare": {
           "title": "Prenatálna starostlivosť",
           "description": "Za 15 rokov mediátorskej práce opakovane vidím vzorec, keď rómske ženy prvýkrát navštívia lekára, keď sú už v 6 alebo 7 mesiaci tehotenstva – často preto, že sa cítia dobre, pretože sa boja nemocnice alebo pretože nikto nevysvetlil, že prenatálna starostlivosť je bezplatná a má právo. V tom čase sa nebezpečné stavy, ako je preeklampsia alebo gestačný diabetes, mohli ticho rozvíjať už niekoľko mesiacov.",
           "tip1": "Navštívte svojho praktického lekára alebo pôrodnú asistentku v momente, keď vám vynechá menštruácia a máte podozrenie na tehotenstvo. Prvý trimester je, keď kyselina listová zabraňuje defektom mozgu a chrbtice vášho dieťaťa. Čakanie vás stojí najkritickejšie okno. Ak nemáte praktického lekára, váš zdravotný mediátor vám môže pomôcť zaregistrovať sa – toto je základná časť toho, čo robíme",
-          "tip2": "Kyselina listová 400mcg denne by mala začať, keď sa pokúšate otehotnieť, alebo hneď, ako sa dozviete, že ste. Je zadarmo alebo veľmi lacno v každej lekárni. Na domáce návštevy nosím so sebou balíčky, pretože táto jednoduchá tabletka zabraňuje ničivým vrodeným chybám",
+          "tip2": "Kyselina listová 400mcg denne by mala začať, keď sa pokúšate otehotnieť, alebo hneď, ako sa dozviete, že ste. V každej lekárni je zadarmo alebo veľmi lacno. Na domáce návštevy nosím so sebou balíčky, pretože táto jednoduchá tabletka zabraňuje ničivým vrodeným chybám",
           "tip3": "Potraviny bohaté na železo zabraňujú anémii, ktorú vidím u takmer polovice tehotných rómskych žien, s ktorými pracujem: fazuľa, šošovica, tmavá listová zelenina, pečeň, červené mäso. Anémia vás vyčerpáva, pôrod je nebezpečnejší a ovplyvňuje vývoj mozgu vášho dieťaťa",
           "tip4": "Máte právo na prenatálnu starostlivosť vo svojom jazyku, na dôstojné zaobchádzanie a na to, aby vás niekto sprevádzal na stretnutia. Ak je lekár odmietavý alebo neúctivý, môžete podať sťažnosť a požiadať iného poskytovateľa. Zdokumentujte meno, dátum a to, čo bolo povedané. Pomáham rodinám robiť to pravidelne",
           "fact": "Rómske ženy v Európe majú 3 až 5 krát vyššiu pravdepodobnosť komplikácií tehotenstva ako všeobecná populácia, najmä preto, že k prenatálnej starostlivosti sa dostanú neskôr alebo vôbec. V komunitách, kde som pracovala na pripojení tehotných žien k starostlivosti v prvom trimestri, miera komplikácií dramaticky klesla.",
@@ -2906,7 +3217,7 @@ export const TRANSLATIONS = {
         "breastfeeding": {
           "title": "Dojčenie",
           "description": "Dojčenie je v rómskej kultúre vysoko cenené, no stretávam sa s mladými matkami, ktorým príbuzní v dobrom úmysle povedali, aby v prvých dňoch podávali vodu, čaj alebo umelú výživu, pretože „mlieko ešte neprišlo“. Kolostrum – to husté, žltkasté prvé mlieko – nie je znakom toho, že niečo nie je v poriadku. Je to tekuté zlato, nabité protilátkami, ktoré chránia vášho novorodenca práve pred infekciami, ktoré sú najnebezpečnejšie v prvých týždňoch života.",
-          "tip1": "Do 1 hodiny od narodenia si priložte svoje dieťa koža na kožu na hruď a nechajte ho, aby si prsník našiel. Toto prvé kŕmenie mledzivom je najdôležitejšou „vakcínou“, ktorú vaše dieťa dostane – obalí jeho črevá ochranou pred infekciou. Nedovoľte, aby niekto vzal vaše dieťa preč, kým sa to nestane, pokiaľ nenastane lekárska pohotovosť",
+          "tip1": "Do 1 hodiny od narodenia si priložte svoje dieťa koža na kožu na hruď a nechajte ho, aby si prsník našiel. Toto prvé kŕmenie mledzivom je najdôležitejšou „vakcínou“, ktorú vaše dieťa dostane – obalí jeho črevá ochranou pred infekciou. Nedovoľte, aby niekto vzal vaše dieťa preč, kým sa to nestane, pokiaľ nejde o lekársku pohotovosť",
           "tip2": "Kŕmte na požiadanie — vždy, keď dieťa prejaví známky hladu (otáčanie hlavičky, satie ručičiek, šklbanie). V prvých týždňoch to môže byť 10–14-krát za 24 hodín. Je to normálne a vytvára to vašu zásobu. Hodiny vám nedokážu povedať, kedy je vaše dieťa hladné – vaše dieťa vám to povie",
           "tip3": "Žiadna voda, žiadny čaj, žiadna výživa počas 6 mesiacov, pokiaľ to lekár výslovne nepredpíše zo zdravotných dôvodov. Vaše materské mlieko mení zloženie počas dňa, aby vyhovovalo presným potrebám vášho dieťaťa – žiadna továreň to nedokáže napodobniť. Videl som, že babičky, ktoré to mysleli dobre, dávali cukrovú vodu, ktorá spôsobila drozd a hnačku",
           "tip4": "Ak dojčenie bolí, prisatie je nesprávne – nie vaše telo. Požiadajte pôrodnú asistentku alebo zdravotníckeho pracovníka, aby sledoval kŕmenie a pomohol vám upraviť polohu. Bolesť je signálom na získanie pomoci, nie znamením vzdať sa. Pomohol som stovkám matiek vyriešiť problémy s prisatím, ktoré sa vyriešili počas jedného sedenia",
@@ -2925,7 +3236,7 @@ export const TRANSLATIONS = {
         }
       },
       "children": {
-        "description": "Rómske deti sú budúcnosť našich komunít a zaslúžia si každú výhodu. Vo svojej práci som videl deti, ktoré zaostávajú — nie pre nedostatok schopností, ale pretože im predchádzateľné choroby, zmeškané očkovania alebo neodhalené oneskorenia vzali šance. Tieto vedomosti im tieto šance vracajú.",
+        "description": "Rómske deti sú budúcnosťou našich komunít a zaslúžia si všetky výhody. Vo svojej práci som videl, že deti zaostávajú – nie kvôli schopnostiam, ale preto, že choroby, ktorým sa dalo predísť, vynechané očkovania alebo nezistené vývojové oneskorenia im ukradli príležitosti. Toto poznanie vracia tieto príležitosti späť.",
         "growthMilestones": {
           "title": "Rast a rozvoj",
           "description": "Každé dieťa sa vyvíja vlastným tempom a ja nikdy nechcem, aby rodičia prepadli panike z bežných variácií. Videl som však aj deti, ktorých oneskorený vývoj rodiny odmietli, pretože „dobehnú zameškané“, keď včasná intervencia mohla priniesť transformačný rozdiel. Vedieť, na čo si dávať pozor, nie je úzkosť – je to pozornosť.",
@@ -2938,8 +3249,8 @@ export const TRANSLATIONS = {
         },
         "commonIllnesses": {
           "title": "Keď je vaše dieťa choré",
-          "description": "V osadách s preplnenými bytmi, obmedzenou hygienou a chladnými zimami deti často ochorejú. Väčšina týchto ochorení – hnačka, kašeľ, horúčka – sa dá zvládnuť doma, ak viete, čo máte robiť a kedy sa máte stupňovať. Ale tiež som videl, ako rodičia príliš dlho čakali alebo sa ponáhľali na pohotovosť pre stavy, ktoré by vyriešila jednoduchá liečba doma. Tento modul vás naučí rozdiel.",
-          "tip1": "Horúčka pod 38.5°C: telo vášho dieťaťa bojuje s infekciou – to je dobré. Udržujte ich pohodlne, ľahko oblečené a doprajte im dostatok tekutín. Horúčka nad 38.5°C: podávajte deťom paracetamol v dávke správnej pre ich hmotnosť (NIE paracetamol pre dospelých). Ak horúčka trvá viac ako 3 dní alebo je dieťa nezvyčajne ospalé, vyhľadajte lekársku pomoc",
+          "description": "V osadách s preplnenými bytmi, obmedzenou hygienou a chladnými zimami deti často ochorejú. Väčšina týchto ochorení – hnačka, kašeľ, horúčka – sa dá zvládnuť doma, ak viete, čo máte robiť a kedy sa vystupňovať. Ale tiež som videl, ako rodičia príliš dlho čakali alebo sa ponáhľali na pohotovosť pre stavy, ktoré by vyriešila jednoduchá liečba doma. Tento modul vás naučí rozdiel.",
+          "tip1": "Horúčka pod 38.5°C: telo vášho dieťaťa bojuje s infekciou – to je dobré. Udržujte ich pohodlne, ľahko oblečené a doprajte im veľa tekutín. Horúčka nad 38.5°C: podávajte deťom paracetamol v dávke správnej pre ich hmotnosť (NIE paracetamol pre dospelých). Ak horúčka trvá viac ako 3 dní alebo je dieťa nezvyčajne ospalé, vyhľadajte lekársku pomoc",
           "tip2": "Hnačka zabíja dehydratáciou, nie samotnou infekciou. Vo chvíli, keď má vaše dieťa riedku stolicu, začnite perorálnu rehydratáciu: 1 liter čistej prevarenej vody + 6 zarovnané lyžičky cukru + pol lyžičky soli. Podávajte malé dúšky každých pár minút. Tento recept zachránil viac detských životov na celom svete ako akékoľvek antibiotikum",
           "tip3": "OKAMŽITE vezmite DIEŤA DO NEMOCNICE, ak spozorujete: rýchle alebo ťažké dýchanie, sťahovanie hrudníka pri každom nádychu, nemožnosť piť alebo dojčiť, opakované vracanie všetkého možného, ​​nezvyčajnú ospalosť alebo nebudenie, kŕče alebo krvavú hnačku. Nečakajte. Toto sú núdzové situácie",
           "tip4": "Nepodávajte antibiotiká bez lekárskeho predpisu. Nezdieľajte recept iného dieťaťa. Neužívajte zvyšky antibiotík. Neustále to vidím v našich komunitách a vytvára to baktérie odolné voči liekom, ktoré sa liečia oveľa ťažšie. Antibiotiká nerobia nič pri prechladnutí, chrípke alebo väčšine kašľa",
@@ -2953,16 +3264,16 @@ export const TRANSLATIONS = {
           "tip2": "2, 3, 4 mesiacov: kolá „veľkej trojky“ — DTP (záškrt, tetanus, čierny kašeľ), detská obrna, Hib a hepatitída B. Toto sú najdôležitejšie vakcíny v detstve. Každé kolo posilňuje imunitu. Chýbajúca jedna oslabuje celý reťazec",
           "tip3": "12–15 mesiacov: MMR (osýpky, mumps, ružienka). Nemôžem to dostatočne zdôrazniť. Osýpky nie sú neškodné detské ochorenie – zabíja, spôsobuje poškodenie mozgu a oslepuje. V 2019 som videl vypuknutie osýpok v rómskej osade, pretože pokrytie kleslo pod 80%. Dalo sa tomu predísť",
           "tip4": "Vakcíny sú zadarmo vo vládnych zdravotných strediskách v každej európskej krajine. Nepotrebujete poistenie, nepotrebujete povolenie na pobyt, nepotrebujete termín vo väčšine centier. Ak vám odmietnu službu, je to nezákonné – obráťte sa na svojho zdravotného sprostredkovateľa alebo kanceláriu pre práva pacientov",
-          "fact": "Rozdiel medzi zaočkovanosťou Rómov a Nerómov v niektorých európskych krajinách presahuje 15 percentuálnych bodov. Táto priepasť nie je spôsobená presvedčením Rómov o vakcínach – prieskumy neustále ukazujú, že rómski rodičia chcú svoje deti zaočkovať. Rozdiel je spôsobený prekážkami prístupu, diskrimináciou v zdravotníctve a nedostatočným dosahom. Odstránenie tejto medzery je povinnosťou štátu podľa článku 11 Európskej sociálnej charty.",
+          "fact": "Rozdiel medzi zaočkovanosťou Rómov a Nerómov v niektorých európskych krajinách presahuje 15 percentuálnych bodov. Táto priepasť nie je spôsobená presvedčením Rómov o vakcínach – prieskumy neustále ukazujú, že rómski rodičia chcú svoje deti zaočkovať. Rozdiel je spôsobený prekážkami v prístupe, diskrimináciou v zdravotníctve a nedostatkom dosahu. Odstránenie tejto medzery je povinnosťou štátu podľa článku 11 Európskej sociálnej charty.",
           "action": "Nájdite očkovací preukaz svojho dieťaťa. Ak nejaké vakcíny chýbajú alebo nemáte preukaz, navštívte tento týždeň najbližšie zdravotné stredisko. Ak čelíte prekážkam – jazyk, dokumenty, odmietnutie – kontaktujte svojho miestneho zdravotného mediátora. Presne na to sme tu."
         }
       },
       "chronic": {
-        "description": "Rómovia zomierajú v priemere o 10 rokov skôr ako európsky priemer. Väčšina tohto rozdielu pochádza z chronických chorôb — cukrovka, srdcové a dýchacie choroby — ktoré sa roky potichu vyvíjajú. Keď sa objavia príznaky, škoda je už hotová. Väčšina sa však dá predísť a všetko sa dá zvládnuť, ak sa to zachytí včas.",
+        "description": "Rómovia zomierajú o 10 rokov mladší ako je európsky priemer. Väčšina tejto medzery pochádza z chronických chorôb – cukrovka, srdcové choroby, choroby dýchacích ciest – ktoré sa pomaly a potichu vyvíjajú v priebehu rokov. V čase, keď sa objavia príznaky, došlo k poškodeniu. Väčšine z toho sa však dá predísť a všetko sa dá zvládnuť, keď sa podchytí včas.",
         "diabetes": {
           "title": "Diabetes: Tichá hrozba",
           "description": "Diabetes typu 2 je chronické ochorenie, s ktorým sa v rómskych komunitách stretávam najčastejšie. Vyskytuje sa v rodinách, darí sa jej lacnej strave s vysokým obsahom cukru, ku ktorej ľudí núti chudoba, a poškodzuje vaše oči, obličky, nohy a srdce roky predtým, než pocítite niečo zlé. Videl som mužov vo veku 40, ako strácajú prsty na nohách a ženy oslepnú kvôli cukrovke, ktorá nebola nikdy diagnostikovaná, pretože im nikdy nerobili krvný test. Tomu sa dá predísť.",
-          "tip1": "Ak má niekto vo vašej rodine cukrovku, vaše riziko je 2–3-krát vyššie. Toto nie je osud – je to signál konať hneď. Obmedzte biely chlieb, cukor a sladené nápoje. Nahraďte fazuľou, šošovicou, zeleninou a vodou. Videl som rodiny úplne zvrátiť prediabetes prostredníctvom týchto zmien",
+          "tip1": "Ak má niekto vo vašej rodine cukrovku, vaše riziko je 2–3-krát vyššie. Toto nie je osud – je to signál konať hneď. Obmedzte biele pečivo, cukor a sladené nápoje. Nahraďte fazuľou, šošovicou, zeleninou a vodou. Videl som rodiny úplne zvrátiť prediabetes prostredníctvom týchto zmien",
           "tip2": "30 minút chôdze každý jeden deň znižuje riziko cukrovky o 58%. Nebehám. Nie telocvičňa. Chôdza. Každému človeku nad 35 v komunitách, s ktorými pracujem, hovorím: prechádzka je liek. Je zadarmo a na prevenciu funguje lepšie ako väčšina tabletiek",
           "tip3": "Ak máte viac ako 35, nadváhu alebo rodinnú anamnézu, požiadajte o test glukózy v krvi nalačno vo svojom zdravotnom stredisku aspoň raz za rok. Ide o jednoduchý test pichnutím prstom, vo väčšine krajín je bezplatný a trvá 5 minút. Tento jeden test môže zachytiť cukrovku roky predtým, ako sa objavia príznaky",
           "tip4": "Poznajte varovné signály, ktoré naznačujú, že cukrovka už môže byť prítomná: neustály smäd, veľmi časté močenie (najmä v noci), rozmazané videnie, pomaly sa hojajúce rany, nevysvetliteľná únava. Ak ich máte dve alebo viac, otestujte sa tento týždeň – nie budúci mesiac",
@@ -2991,13 +3302,13 @@ export const TRANSLATIONS = {
         }
       },
       "mental": {
-        "description": "Za 15 rokov v rómskych komunitách som sa naučil, že najťažšie bremeno nie je fyzická choroba — je to váha diskriminácie, chudoby, strachu z vysťahovania, starostí o budúcnosť detí a pocit, že systém sa o vás nestará. Hovoríme tomu stres. Keď trvá roky, stáva sa niečím iným. Zaslúži si byť pomenovaný, pochopený a liečený — bez hanby.",
+        "description": "Za 15 rokov práce v rómskych komunitách som sa naučil, že najťažšie bremeno, ktoré ľudia nesú, nie je fyzická choroba – je to váha diskriminácie, chudoba, strach z vysťahovania, obavy o budúcnosť svojich detí a pocit, že nikoho v systéme nezaujíma. Hovoríme tomu stres. Keď to trvá roky, stáva sa z toho niečo viac. Zaslúži si byť pomenovaná, pochopená a liečená – bez hanby.",
         "stressManagement": {
           "title": "Život so stresom",
           "description": "Nebudem predstierať, že dýchacie cvičenie vyrieši vaše problémy. Ak máte obavy z vysťahovania vašej rodiny, žiadna meditačná aplikácia to nevyrieši. Ale pracoval som so stovkami ľudí v našich komunitách, ktorí nesú obrovský stres, a videl som, čo sa stane, keď sa tento stres celé roky nezvládne: infarkty u mužov v ich 40, ženy, ktoré nemôžu jesť ani spať, deti, ktoré vyrastajú v domácnostiach nabitých napätím. Nemôžeme vždy zmeniť svoje okolnosti, ale môžeme zmeniť spôsob, akým ich nesieme.",
           "tip1": "Metóda dýchania 4-4-8 okamžite pôsobí na váš nervový systém. Nadýchnite sa nosom na 4, zadržte na 4, pomaly vydýchnite ústami na 8. Urobte to 5-krát. Srdcová frekvencia klesá, svaly sa uvoľňujú. Učím to rodiny pred návštevou nemocnice, pred súdnym pojednávaním, pred akýmkoľvek stresujúcim stretnutím. Je to nástroj, ktorý máte vždy so sebou",
           "tip2": "Chôdza je najviac podceňovaný liek na stres. 20 minút chôdze – nie rýchlej, len chôdze – znižuje stresový hormón kortizol až o 30%. Ak nemôžete opustiť dom, choďte v kruhoch. Funguje samotný pohyb, nie scenéria",
-          "tip3": "Porozprávaj sa s niekým. Nie na vyriešenie problému - len na zdieľanie hmotnosti. Videl som mužov v našich komunitách, ktorí nosia všetko sami, pretože požiadať o pomoc je ako slabosť. Za 15 rokov tejto práce som stretol najsilnejších ľudí, ktorí sa naučili povedať „Bojujem“",
+          "tip3": "Porozprávaj sa s niekým. Nie na vyriešenie problému - len na zdieľanie hmotnosti. Videl som mužov v našich komunitách, ktorí nosia všetko sami, pretože požiadať o pomoc je ako slabosť. Za 15 rokov tejto práce, najsilnejších ľudí, ktorých som stretol, sú tí, ktorí sa naučili povedať „Bojím sa“",
           "tip4": "Zamerajte sa na to, čo vám príde na myseľ. Sociálne médiá, správy, rodinné hádky, ktoré sa vám prehrávajú v hlave – to sú zdroje stresu, ktoré môžete ovládať. Nehovorím ignorovať realitu. Hovorím, vyberte si, kedy sa do toho zapojíte, a vytvorte si počas dňa priestory, v ktorých budete zámerne v pokoji",
           "fact": "Rómske komunity zažívajú to, čo verejné zdravie nazýva „menšinový stres“ – chronickú fyziologickú daň diskriminácie, vylúčenia a chudoby. Výskum ukazuje, že to natrvalo zvyšuje hladiny kortizolu, čo urýchľuje srdcové choroby, cukrovku a duševné choroby. Toto nie je slabosť. Je to biológia reagujúca na nespravodlivosť.",
           "action": "Dnes večer pred spaním položte telefón do inej miestnosti a cvičte 4-4-8 dýchanie 5 minút. Ak máte ochotu partnera alebo člena rodiny, urobte to spolu v tichosti. Tento malý čin vytvára hranicu medzi denným stresom a vaším spánkom – a spánok je vtedy, keď vaše telo opravuje škody, ktoré stres spôsobil."
@@ -3113,11 +3424,11 @@ export const TRANSLATIONS = {
   "sl": {
     "learn": {
       "progressLabel": "dokončanih modulov",
-      "startHere": "Začnite tukaj",
+      "startHere": "Začni tukaj",
       "continueLabel": "Nadaljuj",
       "allModules": "Vsi moduli",
       "prevention": {
-        "description": "V 15 letih dela v romskih naseljih sem videl družine, opustošene z boleznimi, ki bi jih preprečile preprote navade. To znanje ni luksuz — je preživetje.",
+        "description": "V 15 letih dela v romskih naseljih sem videl družine, ki so jih uničile bolezni, ki bi jih preproste navade lahko preprečile. To znanje ni razkošje - je preživetje.",
         "handwashing": {
           "title": "Umivanje rok",
           "description": "Videl sem cele družine v naseljih, ki so zbolele za isto želodčno okužbo, ki se je prenašala iz roke v roko. Pravilno umivanje rok je edino najcenejše in najmočnejše zdravilo, do katerega že imate dostop – ne stane nič in preprečuje bolezni, ki jih najpogosteje srečujem v naših skupnostih.",
@@ -3126,33 +3437,33 @@ export const TRANSLATIONS = {
           "tip3": "Brez mila? Delal sem v naseljih brez tekoče vode. Ash deluje. Peščena dela. Sama voda s čiščenjem deluje bolje kot nič. Ne dovolite, da popolno prepreči dobro",
           "tip4": "Roke posušite na zraku ali uporabite čisto krpo, ki jo menjate vsak dan. Umazana brisača, ki si jo delijo vsi, ponovno onesnaži čiste roke – to razložim ob vsakem obisku na domu",
           "fact": "V skupnostih, s katerimi sem delal, so kampanje za umivanje rok zmanjšale primere driske pri otrocih za skoraj polovico v treh mesecih. WHO potrjuje: umivanje rok zmanjša drisko za 40 % in okužbe dihal za do 21 %.",
-          "action": "Nocoj stopite s svojimi otroki pri izviru vode in si skupaj umijte roke. Naj vam to postane družinska navada pred vsakim obrokom. Otroci, ki se učijo tako, da opazujejo svoje starše, bodo to nosili vse življenje."
+          "action": "Nocoj stopite s svojimi otroki pri izviru vode in si skupaj umijte roke. Make it a family habit before every meal. Otroci, ki se učijo tako, da opazujejo svoje starše, bodo to nosili vse življenje."
         },
         "vaccination": {
           "title": "Cepljenje",
-          "description": "Spremljala sem romske matere v zdravstvene domove, kjer so jih zavrnili, ker niso imele dokumentov, niso znale jezika ali pa so jim preprosto rekli, naj se vrnejo pozneje. Cepiva so zakonska pravica vaših otrok – brezplačna, varna in najmočnejša zaščita, ki jo lahko zagotovi starš. Nihče vam tega ne more odreči.",
+          "description": "Spremljala sem romske matere v zdravstvene domove, kjer so jih zavrnili, ker niso imele dokumentov, niso znale jezika ali pa so jim preprosto rekli, naj se vrnejo pozneje. Cepiva so zakonska pravica vaših otrok – brezplačna, varna in najmočnejša zaščita, ki jo lahko zagotovi starš. No one can deny you this.",
           "tip1": "Vsaka država v Evropi nudi brezplačen program cepljenja od rojstva. To ni dobrodelnost – to je zakonska pravica vašega otroka. Če zdravstveni delavec zavrne, prosite njegovega nadzornika in to jasno povejte",
           "tip2": "Cepilni karton je za rojstnim listom najpomembnejši dokument, ki ga ima vaš otrok. Hranite ga na varnem, nosite ga ob vsakem obisku zdravnika. V primeru izgube mora kateri koli zdravstveni dom izdati zamenjavo - ne sprejmite zavrnitve",
           "tip3": "Blaga vročina, boleče mesto na roki, sitnost za en dan – to je normalno in pomeni, da cepivo deluje. O tem sem pomirila na stotine zaskrbljenih mater. Mine v 24–48 urah",
           "tip4": "Za cepljenje se v večini zdravstvenih domov ne potrebujete naročanja. Vstopite. Če romski zdravstveni mediator dela na vašem območju, ga prosite, naj vas spremlja – za to smo usposobljeni",
-          "fact": "V enem naselju, v katerem sem delal, so se pojavile ošpice, ker je precepljenost padla na 60%. Trije otroci so bili hospitalizirani. Po kampanji cepljenja v skupnosti smo dosegli 94 % — in izbruhi so se ustavili. Po vsej Evropi cepiva vsako leto preprečijo 2–3 milijonov smrti.",
-          "action": "Takoj vzemite otrokovo kartico cepljenja. Preverite glede na urnik na steni vašega zdravstvenega doma. Če kakšno cepivo manjka ali nimate kartona, obiščite zdravstveni dom ta teden. Prinesite to aplikacijo za prikaz urnika, če pomaga."
+          "fact": "V enem naselju, v katerem sem delal, so se pojavile ošpice, ker je precepljenost padla na 60%. Three children were hospitalized. Po kampanji cepljenja v skupnosti smo dosegli 94 % — in izbruhi so se ustavili. Po vsej Evropi cepiva vsako leto preprečijo 2–3 milijonov smrti.",
+          "action": "Takoj vzemite otrokovo kartico cepljenja. Preverite glede na urnik na steni vašega zdravstvenega doma. Če kakšno cepivo manjka ali nimate kartona, obiščite zdravstveni dom ta teden. Bring this app to show the schedule if it helps."
         },
         "cleanWater": {
           "title": "Čista voda",
-          "description": "Delal sem v naseljih, kjer si družine delijo eno pipo, ki teče dve uri na dan, in v soseskah, kjer je voda iz pipe videti bistra, vendar prenaša bakterije, ki povzročajo kronične želodčne težave pri otrocih. Kakovost vode ni vedno vidna, v romskih skupnostih pa jo organi redko nadzirajo. Morate biti vodni inšpektor svoje družine.",
-          "tip1": "Pokrijte vsako posodo, v kateri shranjujete vodo. Videl sem, kako so muhe, prah in celo živalski iztrebki v nekaj urah onesnažili nepokrita vedra, zlasti v toplem vremenu. Preprosta plošča na vrhu prepreči večino kontaminacije",
+          "description": "Delal sem v naseljih, kjer si družine delijo eno pipo, ki teče dve uri na dan, in v soseskah, kjer je voda iz pipe videti bistra, vendar prenaša bakterije, ki povzročajo kronične želodčne težave pri otrocih. Kakovost vode ni vedno vidna – v romskih skupnostih pa jo organi redko nadzirajo. You must be your family's water inspector.",
+          "tip1": "Cover every container where you store water. Videl sem, kako so muhe, prah in celo živalski iztrebki v nekaj urah onesnažili nepokrita vedra, zlasti v toplem vremenu. Preprosta plošča na vrhu prepreči večino kontaminacije",
           "tip2": "Če niste prepričani glede svoje vode, jo kuhajte eno polno minuto pri nizkem vrenju. To uniči 99.9 % bakterij, virusov in parazitov. Skoraj nič ne stane in deluje — tega sem učil v desetinah naselij, kjer je bil vodni vir vprašljiv",
           "tip3": "Vsaj enkrat na teden operite svoje posode z vodo z milom in čisto vodo. Umazana posoda naredi čisto vodo umazano. To je eden najbolj spregledanih vzrokov za ponavljajočo se drisko, ki sem jih opazil pri otrocih",
           "tip4": "Potoki, ribniki in stoječe mlake nikoli niso varni za pitje – tudi če je voda videti bistra. Očesu nevidni paraziti povzročajo kronične poškodbe otrokovega črevesja in razvoja",
           "fact": "V številnih romskih naseljih po srednji in vzhodni Evropi družine nimajo dostopa do varne vodovodne napeljave. Evropski center za pravice Romov je dokumentiral, da so romske soseske sistematično premalo opremljene z vodno infrastrukturo. Prekuhavanje vode ni idealno – je strategija preživetja, dokler vaša pravica do čiste vode ni izpolnjena.",
-          "action": "Danes preverite vsako posodo, v kateri vaša družina shranjuje pitno vodo. Pokrijte vse odprte. Če ne morete preveriti, ali je vodni vir varen, začnite z današnjim večerom kuhati vso vodo za pitje in kuhanje."
+          "action": "Danes preverite vsako posodo, v kateri vaša družina shranjuje pitno vodo. Pokrijte vse odprte. Če ne morete preveriti, ali je vir vode varen, začnite z današnjim večerom kuhati vso vodo za pitje in kuhanje."
         },
         "firstAid": {
           "title": "Osnovna prva pomoč",
           "description": "V oddaljenih naseljih in mestnih soseskah, kjer reševalna vozila potrebujejo dlje časa, da pridejo – ali včasih sploh ne pridejo – je vedeti, kaj storiti v prvih minutah nujnega primera, razlika med življenjem in smrtjo. Na stotine članov romske skupnosti sem usposobil za osnovno prvo pomoč in videl sem, da je to znanje rešilo življenja, preden je prišel kateri koli zdravnik.",
           "tip1": "112 deluje s katerim koli telefonom v Evropi — tudi brez kredita, tudi brez kartice SIM, tudi z zaklenjenega telefona. Naučite vsakega člana svoje družine, vključno z otroki nad 7, da pokličejo 112 in povedo, kje so. Vadite to. V sili zaradi panike ljudje pozabijo",
-          "tip2": "Pri močni krvavitvi: močno pritisnite z najčistejšo krpo, ki jo imate – srajco, naglavno ruto, karkoli – in je ne dvigujte, da bi preverili. Pritiskajte, dokler ne prispe pomoč. Videl sem ljudi, ki so nevarno krvaveli, ker so ves čas odstranjevali krpo, da bi pogledali. Dodajte več krpe na vrh, če se kri prepoji",
+          "tip2": "Pri močni krvavitvi: močno pritisnite z najčistejšo krpo, ki jo imate – srajco, naglavno ruto, karkoli – in je ne dvigujte, da bi preverili. Pritiskajte, dokler ne prispe pomoč. Videl sem ljudi, ki so nevarno krvaveli, ker so kar naprej odstranjevali krpo, da bi pogledali. Dodajte več krpe na vrh, če se kri prepoji",
           "tip3": "Opekline: opeklino takoj postavite pod hladno tekočo vodo za vsaj 10 minut. Nikoli ne nanašajte masla, olja, zobne paste ali jajčnega beljaka – tradicionalnih zdravil, ki sem jih srečal v mnogih družinah, dejansko zadržijo vročino in povzročijo hujšo škodo in okužbo",
           "tip4": "Če se nekdo zgrudi in ne diha: pokličite 112, nato močno in hitro potisnite na sredino njegovih prsi — 100-krat na minuto (tempo pesmi 'Stayin' Alive'). Ne ustavljajte se, dokler ne prispe pomoč. Nepopolno oživljanje je neskončno boljše od brez oživljanja",
           "fact": "Študije kažejo, da se v skupnostih, kjer je osnovno usposabljanje prve pomoči razširjeno, preživetje po srčnem zastoju podvoji. V mnogih romskih skupnostih so odzivni časi reševalnih vozil bistveno daljši kot v neromskih območjih, zaradi česar je prva pomoč navzočim še bolj kritična.",
@@ -3160,7 +3471,7 @@ export const TRANSLATIONS = {
         }
       },
       "nutrition": {
-        "description": "Po letih z romskimi družinami sem spoznal, da hrana ni le prehrana — je to, kar si lahko privoščite, kar je na voljo v soseski in kar vaša družina pozna. Ne bom rekel, naj kupite quinoo. Povedal vam bom, kako dobro nahraniti družino s tem, kar imate.",
+        "description": "V letih dela z romskimi družinami sem se naučil, da pri hrani nikoli ne gre samo za prehrano – gre za to, kaj si lahko privoščite, kaj je na voljo v vaši soseščini in kaj vaša družina pozna. Ne bom vam rekel, da kupite kvinojo. Povedal vam bom, kako dobro nahraniti družino s tem, kar imate.",
         "balancedDiet": {
           "title": "Dobro prehranjevanje za vsak proračun",
           "description": "Največji prehranski problem, ki ga vidim v romskih skupnostih, ni pomanjkanje hrane – gre za preveč poceni kruha, predelanega mesa in sladkih pijač ter premalo zelenjave, jajc in stročnic. Tu ne gre za moč volje. Gre za to, kar je na voljo in cenovno ugodno. Toda majhni premiki močno vplivajo na vaše zdravje in razvoj vaših otrok.",
@@ -3193,7 +3504,7 @@ export const TRANSLATIONS = {
         }
       },
       "maternal": {
-        "description": "Spremljal sem romske ženske v bolnišnice, kjer so jih dajali ločeno, se do njih niso spoštljivo obnašali ali so jim zavrnili epidural, ki so ga dobile druge ženske. Videl sem tudi ženske, ki so umrle zaradi zapletov, ki bi jih ena prenatalna obisk pravočasno ujel. Vaše telo, vaš otrok, vaše pravice. Poznajte vse tri.",
+        "description": "Romke sem spremljala v bolnišnice, kjer so jih dajali v ločene sobe, z njimi govorili nespoštljivo ali zavračali epiduralno, ki so jo prejemale druge ženske. Videl sem tudi, kako so ženske umirale zaradi zapletov, ki bi jih odkril en sam predporodni obisk. Vaše telo, vaš otrok, vaše pravice. Spoznajte vse tri.",
         "prenatalCare": {
           "title": "Predporodna nega",
           "description": "V 15 letih mediacijskega dela vedno znova opažam, da Romke prvič obiščejo zdravnika, ko so že 6 ali 7 meseca noseče — pogosto zato, ker se dobro počutijo, ker se bojijo bolnišnice ali ker nihče ni pojasnil, da je predporodna oskrba brezplačna in njihova pravica. Do takrat so se lahko nevarna stanja, kot sta preeklampsija ali gestacijski diabetes, tiho razvijala več mesecev.",
@@ -3236,7 +3547,7 @@ export const TRANSLATIONS = {
         }
       },
       "children": {
-        "description": "Romske otroke so prihodnost naših skupnosti in si zaslužijo vsako prednost. Pri delu sem videl otroke, ki zaostajajo — ne zaradi pomanjkanja sposobnosti, temveč ker so jim preprečljive bolezni, zamujena cepljenja ali neodkrite zamude vzele priložnosti. To znanje jim te priložnosti vrne.",
+        "description": "Romski otroci so prihodnost naših skupnosti in si zaslužijo vse prednosti. Pri svojem delu sem videl, da otroci zaostajajo – ne zaradi sposobnosti, temveč zato, ker so jim bolezni, ki bi jih bilo mogoče preprečiti, izostala cepljenja ali neopaženi zaostanki v razvoju, ukradli priložnosti. To znanje vrača te priložnosti.",
         "growthMilestones": {
           "title": "Rast in razvoj",
           "description": "Vsak otrok se razvija s svojim tempom in nikoli ne želim, da bi starši delali paniko zaradi običajnih variacij. Videla pa sem tudi otroke, katerih zapozneli razvoj so družine zavrnile kot \"bodo nadoknadili zamujeno\", ko bi zgodnja intervencija lahko naredila transformativno razliko. Vedeti, na kaj morate biti pozorni, ni tesnoba - je pozornost.",
@@ -3269,7 +3580,7 @@ export const TRANSLATIONS = {
         }
       },
       "chronic": {
-        "description": "Romi v povprečju umrejo 10 let prej kot evropsko povprečje. Večina te razlike izhaja iz kroničnih bolezni — sladkorne bolezni, srčnih in dihalnih bolezni — ki se leta tiho razvijajo. Ko se pojavijo simptomi, je škoda že narejena. Večino pa je mogoče preprečiti in vse obvladati, če se zgodaj ujame.",
+        "description": "Romi umirajo 10 let mlajši od evropskega povprečja. Večino te vrzeli povzročajo kronične bolezni – sladkorna bolezen, bolezni srca, bolezni dihal – ki se z leti razvijajo počasi in tiho. Ko se pojavijo simptomi, je škoda že storjena. Toda večino jih je mogoče preprečiti in vse je obvladljivo, če jih odkrijemo zgodaj.",
         "diabetes": {
           "title": "Sladkorna bolezen: tiha grožnja",
           "description": "Sladkorna bolezen tipa 2 je kronična bolezen, s katero se najpogosteje srečujem v romskih skupnostih. Pojavlja se v družinah, uspeva na poceni dieti z visoko vsebnostjo sladkorja, h kateri ljudi sili revščina, in škoduje vašim očem, ledvicam, stopalom in srcu leta, preden se počutite kaj narobe. Videl sem, kako moški v svojih 40 letih izgubljajo prste na nogah, ženske pa oslepijo zaradi sladkorne bolezni, ki jim nikoli niso diagnosticirali, ker niso nikoli opravili krvnega testa. To je mogoče preprečiti.",
@@ -3302,7 +3613,7 @@ export const TRANSLATIONS = {
         }
       },
       "mental": {
-        "description": "V 15 letih v romskih skupnostih sem spoznal, da najtežje breme ni fizična bolezen — temveč teža diskriminacije, revščine, strahu pred izselitvijo, skrbi za prihodnost otrok in občutka, da se nihče v sistemu ne zanima. Temu rečemo stres. Ko traja leta, postane nekaj drugega. Zaslužuje si, da se poimenuje, razume in zdravi — brez sramu.",
+        "description": "V 15 letih dela v romskih skupnostih sem se naučil, da najtežje breme, ki ga ljudje nosijo, ni telesna bolezen — to je teža diskriminacije, revščine, strahu pred deložacijo, skrbi za prihodnost otrok in občutek, da nikomur v sistemu ni vseeno. Temu pravimo stres. Ko traja leta, postane nekaj več. Zasluži si, da ga imenujemo, razumemo in obravnavamo – brez sramu.",
         "stressManagement": {
           "title": "Življenje s stresom",
           "description": "Ne bom se pretvarjal, da bo dihalna vaja rešila vaše težave. Če vas skrbi, da bodo vašo družino izselili, tega ne bo rešila nobena aplikacija za meditacijo. Vendar sem delal s stotinami ljudi v naših skupnostih, ki so pod ogromnim stresom, in videl sem, kaj se zgodi, ko tega stresa več let ne obvladamo: srčni napadi pri moških v 40 letih, ženske, ki ne morejo jesti ali spati, otroci, ki odraščajo v gospodinjstvih, naelektrenih z napetostjo. Svojih okoliščin ne moremo vedno spremeniti, lahko pa spremenimo, kako jih prenašamo.",
@@ -3337,7 +3648,7 @@ export const TRANSLATIONS = {
           "title": "Ko je preveč",
           "description": "Obstaja točka, kjer stres, žalost in zaskrbljenost prestopijo mejo v nekaj, kar potrebuje strokovno pomoč - in v romskih skupnostih te meje skoraj nikoli ne prepoznamo, ker smo naučeni vzdržati, biti močni, ravnati s tem v družini. Videl sem ceno te tišine: moški, ki pijejo, da bi se spopadli, dokler jim jetra ne odpovedo, ženske, ki nehajo jesti, najstniki, ki si škodijo. Prošnja za pomoč ni izdaja vaše kulture. Varuje vaše življenje, da ste lahko tam za ljudi, ki vas potrebujejo.",
           "tip1": "Če vi ali nekdo, ki ga poznate, ne morete normalno delovati več kot 2 tednov – ne morete spati, ne morete jesti, ne morete skrbeti za otroke, neprestano jokate ali nimate energije za karkoli – to presega običajen stres. To je depresija in je tako resnično zdravstveno stanje kot sladkorna bolezen. To ni slabost in se odziva na zdravljenje",
-          "tip2": "Vaš prvi korak je vaš družinski zdravnik (GP). Recite: 'Že več kot 2 tednov se počutim zelo slabo in potrebujem pomoč.' Ni vam treba vsega razlagati. Splošni zdravnik vas lahko oceni in napoti k psihologu ali psihiatru. Ta storitev je v večini evropskih držav brezplačna ali poceni. Če vas osebni zdravnik odpusti, obiščite drugega",
+          "tip2": "Vaš prvi korak je vaš družinski zdravnik (GP). Recite: 'Več kot 2 tednov se počutim zelo slabo in potrebujem pomoč.' Ni vam treba vsega razlagati. Splošni zdravnik vas lahko oceni in napoti k psihologu ali psihiatru. Ta storitev je v večini evropskih držav brezplačna ali poceni. Če vas splošni zdravnik odpusti, obiščite drugega",
           "tip3": "Če nekdo v vaši družini omeni, da želi umreti, želi izginiti ali čuti, da bi bilo vsem bolje brez njega - to takoj vzemite resno. Ostani z njimi. Odstranite dostop do zdravil in ostrih predmetov. Pokličite nacionalno krizno linijo ali 112. Ne pretiravaš. Te besede so klic na pomoč, na katerega je treba odgovoriti",
           "tip4": "Zdravila za duševno zdravje niso sramotna, zasvojljiva ali \"za norce\". Antidepresive predpisujejo milijonom ljudi po vsem svetu in rešujejo življenja. Ne spremenijo vas - dvignejo kemično meglo, ki vam preprečuje, da bi bili to, kar ste. Videl sem ljudi, ki so se spremenili zaradi zdravljenja, ki so se mu leta upirali zaradi stigme",
           "fact": "Romske skupnosti doživljajo eno najvišjih stopenj depresije in anksioznosti v Evropi, ki jih poganjajo strukturni dejavniki, kot so diskriminacija, revščina in pomanjkanje dostopa do storitev. Kljub temu je uporaba storitev duševnega zdravja v romskih skupnostih med najnižjimi. V programih, kjer sem ljudem pomagal pri povezovanju s kulturno občutljivo oskrbo duševnega zdravja, je bilo izboljšanje kakovosti življenja globoko – ne samo za posameznika, ampak za celotno družino.",
@@ -3423,12 +3734,12 @@ export const TRANSLATIONS = {
   },
   "sq": {
     "learn": {
-      "progressLabel": "module të përfunduara",
-      "startHere": "Fillo këtu",
-      "continueLabel": "Vazhdo",
+      "progressLabel": "modulet e përfunduara",
+      "startHere": "Filloni këtu",
+      "continueLabel": "Vazhdoni",
       "allModules": "Të gjitha modulet",
       "prevention": {
-        "description": "Në 15 vite pune në vendbanimet romë, kam parë familje të shkatërruara nga sëmundje që mund të ishin parandaluar me zakone të thjeshta. Ky dije nuk është luks — është mbijetim.",
+        "description": "Në 15 vjet duke punuar në vendbanimet rome, kam parë familje të shkatërruara nga sëmundjet që zakonet e thjeshta mund t'i kishin parandaluar. Kjo njohuri nuk është luks - është mbijetesë.",
         "handwashing": {
           "title": "Larja e duarve",
           "description": "Kam parë familje të tëra nëpër vendbanime të sëmuren nga i njëjti infeksion stomaku, të kaluar dorë më dorë. Larja e duhur e duarve është ilaçi i vetëm më i lirë dhe më i fuqishëm tek i cili tashmë keni akses – nuk kushton asgjë dhe parandalon sëmundjet që shoh më shpesh në komunitetet tona.",
@@ -3471,7 +3782,7 @@ export const TRANSLATIONS = {
         }
       },
       "nutrition": {
-        "description": "Në vitet me familjet romë, mësova se ushqimi nuk është vetëm ushqyerje — është çfarë mund të përballosh, çfarë ke në lagje dhe çfarë di familja jote. Nuk do të të them të blesh quinoa. Do të të tregoj si ta ushqesh mirë familjen me atë që ke.",
+        "description": "Në vitet e mia të punës me familjet rome, kam mësuar se ushqimi nuk ka të bëjë kurrë vetëm me ushqimin – ka të bëjë me atë që mund të përballosh, çfarë është në dispozicion në lagjen tuaj dhe çfarë di familja juaj. Unë nuk do t'ju them të blini quinoa. Unë do t'ju tregoj se si ta ushqeni mirë familjen tuaj me atë që keni.",
         "balancedDiet": {
           "title": "Ushqimi i mirë me çdo buxhet",
           "description": "Problemi më i madh ushqimor që shoh në komunitetet rome nuk është mungesa e ushqimit – është bukë shumë e lirë, mish i përpunuar dhe pije me sheqer, dhe shumë pak perime, vezë dhe bishtajore. Kjo nuk ka të bëjë me vullnetin. Bëhet fjalë për atë që është e disponueshme dhe e përballueshme. Por ndërrimet e vogla bëjnë ndryshime të mëdha në shëndetin tuaj dhe zhvillimin e fëmijëve tuaj.",
@@ -3504,7 +3815,7 @@ export const TRANSLATIONS = {
         }
       },
       "maternal": {
-        "description": "Kam shoqëruar gra romë në spitale ku u vendosën veçmas, u trajtuan pa respekt ose u refuzuan epidurale që gratë e tjera merrnin. Kam parë edhe gra që vdiqën nga komplikime që një vizitë prenatale do t'i kapipte në kohë. Trupi yt, fëmija yt, të drejtat e tua. Njih të treja.",
+        "description": "Unë i kam shoqëruar gratë rome në spitale, ku ato vendoseshin në dhoma të veçanta, u flisnin me mungesë respekti ose refuzonin epidurale që merrnin gratë e tjera. Kam parë gjithashtu gra që vdesin nga komplikimet që do të kishte kapur një vizitë e vetme para lindjes. Trupi juaj, fëmija juaj, të drejtat tuaja. Njihuni të tre.",
         "prenatalCare": {
           "title": "Kujdesi Prenatal",
           "description": "Në 15 vjet punë ndërmjetësimi, modeli që shoh vazhdimisht është se gratë rome vizitojnë mjekun për herë të parë kur ato janë tashmë 6 ose 7 muajshe shtatzënë — shpesh sepse ndihen mirë, sepse kanë frikë nga spitali ose sepse askush nuk shpjegoi se kujdesi prenatal është falas dhe e drejta e tyre. Deri në atë pikë, kushtet e rrezikshme si pre-eklampsia ose diabeti gestacional mund të jenë zhvilluar në heshtje për muaj të tërë.",
@@ -3523,7 +3834,7 @@ export const TRANSLATIONS = {
           "tip3": "Mësoni 5 shenjat e rrezikut që do të thotë SHKO NË SPITALI TANI, pavarësisht se sa është ora: (1) gjakderdhje e rëndë, (2) dhimbje koke e fortë me duar/fytyrë të fryrë, (3) foshnja ndalon së lëvizuri, (4) ethe uji PH_6 më shumë se ___PH 38°C. Mos prisni deri në mëngjes. Mos u përpiqni t'i menaxhoni këto në shtëpi",
           "tip4": "Pas lindjes, qëndroni në spital të paktën 24 orë për monitorim - edhe nëse ndiheni mirë. Shumë komplikime kërcënuese për jetën (hemorragji, infeksion) shfaqen në 24 orët e para. E di që mjedisi spitalor mund të jetë armiqësor, por ato orë monitorimi shpëtojnë jetë",
           "fact": "Në një rajon ku kam punuar për 5 vjet, ne reduktuam urgjencat e nënave rome me 60% thjesht duke u siguruar që çdo grua shtatzënë të kishte një plan lindjeje, një rregullim transporti dhe një çantë spitalore të paketuar sipas javës 36. Asnjë teknologji e re - vetëm përgatitje dhe shoqërim.",
-          "action": "Nëse ju ose dikush që njihni ka kaluar 30 javën e shtatzënisë: shkruani emrin e spitalit, numrin e telefonit dhe rrugën në letër. Vendoseni në mur. Paketoni një çantë me ID, kartën e vaksinimit, rroba për fëmijë dhe karikues telefoni. Kjo kërkon 20 minuta dhe mund të shpëtojë një jetë."
+          "action": "Nëse ju ose dikush që njihni ka kaluar javën e 30 shtatzënë: shkruani emrin e spitalit, numrin e telefonit dhe rrugën në letër. Vendoseni në mur. Paketoni një çantë me ID, kartën e vaksinimit, rrobat e bebeve dhe karikuesin e telefonit. Kjo kërkon 20 minuta dhe mund të shpëtojë një jetë."
         },
         "breastfeeding": {
           "title": "Ushqyerja me gji",
@@ -3547,7 +3858,7 @@ export const TRANSLATIONS = {
         }
       },
       "children": {
-        "description": "Fëmijët romë janë e ardhmja e komuniteteve tona dhe meritojnë çdo avantazh. Në punën time kam parë fëmijë që mbeten prapa — jo për mungesë aftësie, por sepse sëmundje të parandalueshme, vaksina të humbura ose vonesa të padetectuara u morën shanset. Ky dije ua kthen ato shanse.",
+        "description": "Fëmijët romë janë e ardhmja e komuniteteve tona dhe ata meritojnë çdo avantazh. Në punën time, kam parë fëmijët të mbeten prapa - jo për shkak të aftësisë, por për shkak se sëmundjet e parandalueshme, vaksinimet e humbura ose vonesat e pazbuluara të zhvillimit ua vodhën mundësitë. Kjo njohuri i kthen ato mundësi.",
         "growthMilestones": {
           "title": "Rritja dhe Zhvillimi",
           "description": "Çdo fëmijë zhvillohet me ritmin e vet dhe unë kurrë nuk dua që prindërit të kenë panik për ndryshimin normal. Por kam parë gjithashtu fëmijë, zhvillimi i vonuar i të cilëve u hodh poshtë nga familjet duke thënë se 'do ta arrijnë' kur ndërhyrja e hershme mund të kishte bërë një ndryshim transformues. Të dish se çfarë të shikosh nuk është ankth - është vëmendje.",
@@ -3580,7 +3891,7 @@ export const TRANSLATIONS = {
         }
       },
       "chronic": {
-        "description": "Romët vdesin 10 vjet më herët se mesatarja evropiane. Pjesa më e madhe e këtij hendeku vjen nga sëmundjet kronike — diabeti, sëmundjet e zemrës, sëmundjet respiratore — që zhvillohen ngadalë dhe në heshtje. Kur shfaqen simptomat, dëmtimi është bërë. Por shumica parandalohet dhe gjithçka menaxhohet nëse kapet herët.",
+        "description": "Romët vdesin 10 vjet më të rinj se mesatarja evropiane. Shumica e këtij hendeku vjen nga sëmundjet kronike - diabeti, sëmundjet e zemrës, sëmundjet e frymëmarrjes - që zhvillohen ngadalë dhe në heshtje gjatë viteve. Në kohën kur shfaqen simptomat, dëmi është bërë. Por pjesa më e madhe e tij është e parandalueshme dhe e gjitha është e menaxhueshme kur kapet herët.",
         "diabetes": {
           "title": "Diabeti: Kërcënimi i heshtur",
           "description": "Diabeti i tipit 2 është sëmundja kronike që e ndesh më shpesh në komunitetet rome. Ajo funksionon në familje, lulëzon me dietën e lirë me sheqer të lartë që varfëria i detyron njerëzit, dhe ju dëmton sytë, veshkat, këmbët dhe zemrën për vite me radhë përpara se të ndjeni ndonjë gjë të gabuar. Unë kam parë burra në 40s të humbasin gishtat e këmbëve dhe gratë verbërohen, nga diabeti që nuk u diagnostikua kurrë, sepse ata nuk kishin bërë kurrë një test gjaku. Kjo është e parandalueshme.",
@@ -3613,7 +3924,7 @@ export const TRANSLATIONS = {
         }
       },
       "mental": {
-        "description": "Në 15 vite në komunitetet romë, mësova se barrë më e rëndë nuk është sëmundja fizike — është pesha e diskriminimit, varfërisë, frikës nga dëbimi, shqetësimit për të ardhmen e fëmijëve dhe ndjesia se askush në sistem nuk kujdeset. E quajmë stres. Kur zgjat vite, bëhet diçka tjetër. Meriton të emërohet, kuptohet dhe trajtohet — pa turp.",
+        "description": "Në 15 vitet e punës në komunitetet rome, kam mësuar se barra më e rëndë që mbajnë njerëzit nuk është sëmundja fizike – është pesha e diskriminimit, varfërisë, frikës nga dëbimi, shqetësimit për të ardhmen e fëmijëve të tyre dhe ndjenjës se askush në sistem nuk kujdeset. Ne e quajmë këtë stres. Kur zgjat me vite, bëhet diçka më shumë. Ajo meriton të emërtohet, kuptohet dhe trajtohet - pa turp.",
         "stressManagement": {
           "title": "Të jetosh me stresin",
           "description": "Nuk do të pretendoj se një ushtrim i frymëmarrjes do të zgjidhë problemet tuaja. Nëse jeni të shqetësuar për dëbimin e familjes suaj, asnjë aplikacion meditimi nuk do ta rregullojë këtë. Por unë kam punuar me qindra njerëz në komunitetet tona që mbartin stres të jashtëzakonshëm dhe kam parë se çfarë ndodh kur ky stres mbetet i pamenaxhuar për vite me rradhë: sulme në zemër te burrat në moshën 40s, gra që nuk mund të hanë apo flenë, fëmijë që rriten në familje të elektrizuara nga tensioni. Ne nuk mund t'i ndryshojmë gjithmonë rrethanat tona, por mund të ndryshojmë mënyrën se si i mbajmë ato.",
@@ -3734,12 +4045,12 @@ export const TRANSLATIONS = {
   },
   "sr": {
     "learn": {
-      "progressLabel": "завршених модула",
+      "progressLabel": "модули завршени",
       "startHere": "Почните овде",
       "continueLabel": "Настави",
       "allModules": "Сви модули",
       "prevention": {
-        "description": "У 15 година рада у ромским насељима видео сам породице разорене болестима које су једноставне навике могле спречити. Ово знање није луксуз — то је опстанак.",
+        "description": "За 15 година рада у ромским насељима видео сам породице разорене болестима које су једноставне навике могле да спрече. Ово знање није луксуз - то је преживљавање.",
         "handwashing": {
           "title": "Прање руку",
           "description": "Видео сам читаве породице у насељима како су се разболеле од исте стомачне инфекције, преносе се из руке у руку. Правилно прање руку је једини најјефтинији, најмоћнији лек којем већ имате приступ — не кошта ништа и спречава болести које најчешће виђам у нашим заједницама.",
@@ -3753,8 +4064,8 @@ export const TRANSLATIONS = {
         "vaccination": {
           "title": "Вакцинација",
           "description": "Пратила сам мајке Ромкиње у домове здравља где су биле одбијене јер су им недостајала документа, не говоре језик или им је једноставно речено да се врате касније. Вакцине су законско право ваше деце — бесплатна, безбедна и најмоћнија заштита коју родитељ може да пружи. То вам нико не може порећи.",
-          "tip1": "Свака држава у Европи нуди бесплатан распоред вакцинације од рођења. Ово није добротворна акција – то је законско право вашег детета. Ако здравствени радник одбије, затражите његовог супервизора и то јасно наведите",
-          "tip2": "Картица о вакцинацији је најважнији документ који ваше дете има након извода из матичне књиге рођених. Чувајте га, носите га на сваку посету лекару. Ако се изгуби, сваки здравствени центар мора издати замену — не прихватајте одбијање",
+          "tip1": "Свака држава у Европи нуди бесплатан распоред вакцинације од рођења. Ово није доброчинство – то је законско право вашег детета. Ако здравствени радник одбије, затражите његовог супервизора и то јасно наведите",
+          "tip2": "Картица о вакцинацији је најважнији документ који ваше дете има након извода из матичне књиге рођених. Чувајте га, носите га на сваку посету лекару. Ако се изгуби, сваки здравствени центар мора да изда замену — не прихватајте одбијање",
           "tip3": "Блага температура, болна тачка на руци, нервоза током једног дана — то је нормално и значи да вакцина делује. Уверила сам стотине забринутих мајки у ово. Пролази за 24-48 сати",
           "tip4": "За вакцинацију вам није потребан термин у већини домова здравља. Уђите. Ако ромски здравствени медијатор ради у вашем крају, замолите га да вас прати — за то смо обучени",
           "fact": "У једном насељу у којем сам радио, богиње су погодиле јер је покривеност вакцинацијом пала на 60%. Троје деце је хоспитализовано. Након кампање вакцинације у заједници, достигли смо 94% - и епидемије су престале. Широм Европе, вакцине спречавају 2-3 милиона смрти сваке године.",
@@ -3774,18 +4085,18 @@ export const TRANSLATIONS = {
           "title": "Основна прва помоћ",
           "description": "У удаљеним насељима и урбаним насељима где хитна помоћ треба дуже да стигну – или понекад уопште не стигну – знати шта треба да се ради у првим минутима ванредне ситуације је разлика између живота и смрти. Обучио сам стотине припадника ромске заједнице основној првој помоћи и видео сам да ово знање спасава животе пре него што је стигао било који лекар.",
           "tip1": "112 ради са било ког телефона у Европи — чак и без кредита, чак и без СИМ картице, чак и са закључаног телефона. Научите сваког члана ваше породице, укључујући децу старију од 7 година, да позову 112 и кажу где су. Вежбај ово. У хитним случајевима, паника тера људе да забораве",
-          "tip2": "За јако крварење: чврсто притисните најчистијом крпом коју имате — кошуљом, марамом, било чим — и не подижите је да бисте проверили. Наставите да притискате док не стигне помоћ. Видео сам људе како опасно крваре јер су стално скидали крпу да би погледали. Додајте још крпе на врх ако крв прође",
-          "tip3": "Опекотине: одмах ставите опекотину под хладну текућу воду најмање 10 минута. Никада немојте наносити путер, уље, пасту за зубе или беланца - традиционалне лекове које сам срео у многим породицама који заправо задржавају топлоту и изазивају још већу штету и инфекцију",
+          "tip2": "За јако крварење: чврсто притисните најчистијом крпом коју имате — кошуљом, марамом, било чим — и не подижите је да бисте проверили. Наставите да притискате док помоћ не стигне. Видео сам људе како опасно крваре јер су стално скидали крпу да би погледали. Додајте још крпе на врх ако крв прође",
+          "tip3": "Опекотине: опекотину одмах ставите под хладну текућу воду најмање 10 минута. Никада немојте наносити путер, уље, пасту за зубе или беланца - традиционалне лекове које сам срео у многим породицама који заправо задржавају топлоту и изазивају још већу штету и инфекцију",
           "tip4": "Ако се неко сруши и не дише: позовите 112, па снажно и брзо гурните у центар груди — 100 пута у минути (темпо песме „Стаиин’ Аливе“). Не заустављајте се док не стигне помоћ. Несавршен ЦПР је бесконачно бољи него без ЦПР",
           "fact": "Студије показују да се у заједницама у којима је основна обука прве помоћи широко распрострањена, преживљавање од срчаног застоја удвостручује. У многим ромским заједницама, време реаговања хитне помоћи је знатно дуже него у неромским срединама, што чини прву помоћ случајним пролазницима још важнијом.",
           "action": "Одмах питајте сваког члана породице: да ли знате да позовете 112? Да ли знате нашу кућну адресу довољно добро да кажете диспечеру? Напишите своју пуну адресу на парчету папира и ставите је близу телефона. Научите своју децу данас."
         }
       },
       "nutrition": {
-        "description": "Годинама рада са ромским породицама научио сам да храна није само исхрана — већ оно што можете приуштити, шта је доступно у насељу и шта ваша породица зна. Нећу вам рећи да купујете киноу. Рећи ћу вам како добро хранити породицу оним што имате.",
+        "description": "Током година рада са ромским породицама, научио сам да се храна никада не своди само на исхрану – већ о томе шта можете да приуштите, шта је доступно у вашем комшилуку и шта ваша породица зна. Нећу вам рећи да купујете квиноју. Рећи ћу ти како да добро прехраниш своју породицу оним што имаш.",
         "balancedDiet": {
           "title": "Добро јести под било којим буџетом",
-          "description": "Највећи проблем исхране који видим у ромским заједницама није недостатак хране – то је превише јефтиног хлеба, прерађеног меса и слатких пића, а премало поврћа, јаја и махунарки. Овде се не ради о снази воље. Ради се о томе шта је доступно и приступачно. Али мали помаци чине огромне разлике у вашем здрављу и развоју ваше деце.",
+          "description": "Највећи проблем исхране који видим у ромским заједницама није недостатак хране – то је превише јефтиног хлеба, прерађеног меса и слатких пића, а премало поврћа, јаја и махунарки. Овде се не ради о снази воље. Реч је о томе шта је доступно и приступачно. Али мали помаци чине огромне разлике у вашем здрављу и развоју ваше деце.",
           "tip1": "Пасуљ, сочиво и сланутак су најјефтинији протеин на било ком тржишту - јефтинији од меса, дуготрајнији и спречавају дијабетес и срчана обољења. Лонац пасуља храни породицу за мање од паковања прерађених кобасица и далеко је хранљивији",
           "tip2": "Јаја су најкомплетнија јефтина храна која постоји. Два јајета дневно по детету обезбеђују скоро све што је растућем мозгу потребно. У сваком насељу у којем радим препоручујем јаја као прву приоритетну храну за децу",
           "tip3": "Сезонско поврће са локалног тржишта или ваше баште кошта само делић цена у супермаркетима. Купус, лук, шаргарепа, кромпир, паприка — то су основа здраве исхране и налазе се у традицији сваке ромске кухиње",
@@ -3798,7 +4109,7 @@ export const TRANSLATIONS = {
           "description": "Првих 1000 дана — од трудноће до друге године — обликује целокупну будућност детета: његов мозак, имуни систем, способност учења. Гледао сам како неухрањена деца у насељима заостају за својим вршњацима не због генетике, већ због онога што су јели у тим критичним раним месецима. Оно што сада храните своје дете је најмоћнија инвестиција коју можете да уложите у његовом животу.",
           "tip1": "Само мајчино млеко током 6 месеци је златни стандард — бесплатно је, увек доступно, савршено хранљиво и штити од инфекција боље од било ког лека. Радила сам са мајкама које су мислиле да је формула 'модерна' и боља. Није. Мајчино млеко је усавршена еволуција технологије",
           "tip2": "Са 6 месеци уз дојење почните са меком храном: пире кромпир, шаргарепа, банана, кувано жуманце. Уведите једну нову храну свака 3 дана да бисте пратили реакције. Многе мајке са којима радим почињу да узимају чврсту храну прекасно (8–9 месеци) — то одлаже развој",
-          "tip3": "Деца млађа од 2 године никада не би требало да имају шећер, мед, со, колу, чипс или слаткише. Знам да бака и деда понекад дају чај са шећером да смире бебу - молим вас престаните. Шећер у овом узрасту програмира доживотну жудњу и оштећује зубе пре него што у потпуности изникну",
+          "tip3": "Деца млађа од 2 године никада не би требало да једу шећер, мед, со, колу, чипс или слаткише. Знам да бака и деда понекад дају чај са шећером да смире бебу - молим вас престаните. Шећер у овом узрасту програмира доживотну жудњу и оштећује зубе пре него што у потпуности изникну",
           "tip4": "Јаје дневно за дете старије од 6 месеци је најједноставнија надоградња исхране која постоји. Студија у Еквадору показала је да јаја смањују заостајање у развоју за 47%. Ово наводим у сваком говору у заједници јер је то достижно за скоро сваку породицу",
           "fact": "У заједницама у којима сам водио програме исхране, деца која су свакодневно добијала јаје и порцију поврћа током 6 месеци показала су мерљива побољшања у расту и когнитивном развоју у поређењу са децом која нису. Неухрањеност се не односи само на сиромаштво – већ на то да знате шта да дате приоритет у односу на ресурсе које имате.",
           "action": "Од сутра дајте детету старијем од 6 месеци једно јаје дневно (пире или умућено). Ако је ваше дете млађе од 6 месеци и дојите, поједите додатно јаје – хранљиве материје пролазе кроз ваше млеко."
@@ -3806,16 +4117,16 @@ export const TRANSLATIONS = {
         "foodSafety": {
           "title": "Одржавање безбедне хране",
           "description": "Тровање храном је један од најчешћих разлога због којих ромске породице посећују хитну помоћ — повраћање, дијареја, дехидрација, посебно код деце. У насељима у којима је хлађење непоуздано, а кухиње су заједничке или на отвореном, безбедност хране није тема из уџбеника – то је свакодневна вештина преживљавања.",
-          "tip1": "По топлом времену, кувана храна остављена дуже од 2 сата постаје опасна. Ако не можете да га охладите, кувајте мање порције које завршите у једном оброку. Видео сам целе породице хоспитализоване због подгрејаног паприкаша остављеног преко ноћи током лета",
+          "tip1": "У топлом времену, кувана храна остављена дуже од 2 сата постаје опасна. Ако не можете да га охладите, кувајте мање порције које завршите у једном оброку. Видео сам читаве породице хоспитализоване због подгрејаног паприкаша остављеног преко ноћи током лета",
           "tip2": "Сирова пилетина и месо никада не смеју да додирују хлеб, поврће или било шта што ће се јести некувано. Користите одвојене површине за сечење — чак и чиста пластична кеса положена ради. Ова унакрсна контаминација је узрок број један тровања храном са којим се сусрећем",
           "tip3": "Ако храна лоше мирише, изгледа погрешно или је љигава - баците је. Немојте га пробати да бисте проверили. Знам да је бацање хране болно када је новца мало, али један напад тровања храном кошта више у медицини и изгубљеном послу него што је храна вредела",
           "tip4": "Све воће и поврће оперите под млазом воде пре јела, чак и ако планирате да их огулите. Прљавштина са спољашње стране прелази у унутрашњост када сечете. Ово је посебно важно за тржишне производе којима су можда радили многи људи",
-          "fact": "СЗО процењује да се 600 милиона људи сваке године разболи од контаминиране хране, а деца млађа од 5 година сносе 40% терета. У заједницама у којима сам предавао о безбедности хране, посете болницама због гастроентеритиса су значајно опале током првог лета.",
+          "fact": "СЗО процењује да се 600 милиона људи сваке године разболи од контаминиране хране, а деца млађа од 5 година сносе 40% терета. У заједницама у којима сам предавао безбедност хране, посете болницама због гастроентеритиса су значајно опале током првог лета.",
           "action": "Проверите своју кухињу одмах: да ли је било какво сирово месо ускладиштено изнад или додирује храну која је спремна за јело? Да ли постоји кувана храна која стоји напољу више од 2 сата? Поправите ове две ствари данас — то су најчешће опасности које видим у кућним посетама."
         }
       },
       "maternal": {
-        "description": "Пратио сам ромске жене у болнице где су их стављале одвојено, непоштиво третирали или одбили епидурал који друге жене добијају. Видео сам и жене које су умреле од компликација које би једна пренатална посета ухватила на време. Ваше тело, ваше дете, ваша права. Познајте сва три.",
+        "description": "Пратила сам Ромкиње у болнице где су биле смештене у одвојене собе, разговарали са непоштовањем или су одбијали епидуралну терапију коју су друге жене примиле. Такође сам видео како жене умиру од компликација које би изазвала једна пренатална посета. Ваше тело, ваша беба, ваша права. Знај све три.",
         "prenatalCare": {
           "title": "Пренатална њега",
           "description": "У 15 година рада на медијацији, образац који стално видим је да Ромкиње посећују лекара први пут када су већ у 6 или 7 месеци трудноће — често зато што се осећају добро, јер се плаше болнице или зато што нико није објаснио да је пренатална нега бесплатна и њихово право. До тог тренутка, опасна стања попут прееклампсије или гестационог дијабетеса можда су се тихо развијала месецима.",
@@ -3823,7 +4134,7 @@ export const TRANSLATIONS = {
           "tip2": "Фолна киселина 400 мцг дневно треба да почне када покушавате да затрудните или чим сазнате да јесте. Бесплатно је или врло јефтино у било којој апотеци. Носим пакете са собом у кућне посете јер ова једноставна пилула спречава разорне урођене мане",
           "tip3": "Храна богата гвожђем спречава анемију коју виђам код скоро половине трудница Ромкиња са којима радим: пасуљ, сочиво, тамно лиснато поврће, џигерица, црвено месо. Анемија вас исцрпљује, чини порођај опаснијим и утиче на развој мозга ваше бебе",
           "tip4": "Имате право да добијете пренаталну негу на свом језику, да се према вама поступа достојанствено и да вас неко прати на заказане састанке. Ако је лекар презиран или непоштован, можете поднети жалбу и затражити другог провајдера. Документујте име, датум и шта је речено. Помажем породицама да то редовно раде",
-          "fact": "Ромкиње у Европи имају 3 до 5 пута веће шансе да доживе компликације у трудноћи у односу на општу популацију, углавном због тога што пренаталној нези приступају касније или уопште не приступају. У заједницама у којима сам радио на повезивању трудница са негом у првом тромесечју, стопа компликација је драматично опала.",
+          "fact": "Ромкиње у Европи имају 3 до 5 пута веће шансе да доживе компликације у трудноћи него општа популација, углавном због тога што пренаталној нези приступају касније или уопште не приступају. У заједницама у којима сам радио на повезивању трудница са негом у првом тромесечју, стопа компликација је драматично опала.",
           "action": "Ако сте трудни или познајете трудницу у вашој заједници која још није била код доктора, закажите тај термин данас. Ако се плаши или не зна како, пођите са њом или је повежите са локалним здравственим посредником. Та једна посета може променити све."
         },
         "safeDelivery": {
@@ -3833,13 +4144,13 @@ export const TRANSLATIONS = {
           "tip2": "Имате законско право да имате пратиоца (мужа, мајку, сестру, посредника) са собом током порођаја у практично свим европским земљама. Ако болница каже не, наведите закон о правима пацијената у вашој земљи. Ми носимо ове референце и можемо их обезбедити",
           "tip3": "Научите 5 знакова опасности који значе ОДМАХ ИДЕТЕ У БОЛНИЦУ, без обзира на то колико је сати: (1) јако крварење, (2) јака главобоља са отеченим рукама/лицу, (3) беба престаје да се креће, (4) цурење воде пре 37. недеље, (5) температура изнад 38°Ц. Не чекајте до јутра. Не покушавајте да управљате њима код куће",
           "tip4": "Након порођаја, останите у болници најмање 24 сата ради праћења - чак и ако се осећате добро. Многе компликације опасне по живот (хеморагија, инфекција) јављају се у прва 24 сата. Знам да болничко окружење може бити непријатељско, али ти сати праћења спашавају животе",
-          "fact": "У региону у коме сам радила 5 година, смањили смо хитне случајеве код ромске мајке за 60% једноставно тако што смо обезбедили да свака трудница има план порођаја, превоз и болничку торбу спаковану до 36. недеље. Нема нове технологије – само припрема и пратња.",
+          "fact": "У региону у коме сам радила 5 година, смањили смо хитне случајеве код мајке Ромкиње за 60% једноставно тако што смо обезбедили да свака трудница има план порођаја, превоз и болничку торбу спаковану до 36. недеље. Нема нове технологије – само припрема и пратња.",
           "action": "Ако сте ви или неко кога познајете трудни после 30 недеља: запишите име болнице, број телефона и руту на папиру. Стави на зид. Спакујте торбу са личном картом, картицом за вакцинацију, одећом за бебе и пуњачем за телефон. Ово траје 20 минута и може спасити живот."
         },
         "breastfeeding": {
           "title": "Дојење",
           "description": "Дојење је дубоко цењено у ромској култури, али срећем младе мајке којима су добронамерни рођаци рекли да првих дана дају воду, чај или адаптирано млеко јер „млеко још није стигло“. Колострум — то густо, жућкасто прво млеко — није знак да нешто није у реду. То је течно злато, препуно антитела која штите ваше новорођенче од самих инфекција које су најопасније у првим недељама живота.",
-          "tip1": "У року од 1 сата од рођења, ставите бебу кожа на кожу на груди и пустите је да пронађе дојку. Ово прво храњење колострума је најважнија 'вакцина' коју ће ваша беба примити - она ​​прекрива њена црева заштитом од инфекције. Не дозволите никоме да вам однесе бебу пре него што се то деси осим ако не постоји хитна медицинска помоћ",
+          "tip1": "У року од 1 сата од рођења, ставите бебу кожу на кожу на груди и пустите је да пронађе дојку. Ово прво храњење колострума је најважнија 'вакцина' коју ће ваша беба примити - она ​​прекрива њена црева заштитом од инфекције. Не дозволите никоме да вам однесе бебу пре него што се то деси осим ако не постоји хитна медицинска помоћ",
           "tip2": "Храни се на захтев — кад год беба покаже знаке глади (окретање главе, сисање руку, нервирање). У првим недељама, то може бити 10-14 пута у току 24 сата. Ово је нормално и успоставља ваше снабдевање. Сат вам не може рећи када је ваша беба гладна - ваша беба вам каже",
           "tip3": "Без воде, без чаја, без формуле током 6 месеци, осим ако то лекар изричито не препише из медицинских разлога. Ваше мајчино млеко мења састав током дана како би задовољило тачне потребе ваше бебе — ниједна фабрика то не може поновити. Видео сам добронамерне баке како дају шећерну воду која је изазвала дрозд и дијареју",
           "tip4": "Ако дојење боли, засун је погрешан - не ваше тело. Замолите бабицу или здравственог радника да гледа храну и помогне вам да прилагодите положај. Бол је сигнал да се добије помоћ, а не знак да се одустане. Помогао сам стотинама мајки да реше проблеме са забрављивањем који су решени у једној сесији",
@@ -3854,16 +4165,16 @@ export const TRANSLATIONS = {
           "tip3": "Ваш 6-недељни постнатални преглед није опционалан – он проверава инфекцију, зарастање, крвни притисак и ментално здравље. Према мом искуству, овој посети присуствује мање од 30% Ромкиња. Молимо вас да будете у тих 30%. Поведите некога са собом ако вам то помаже",
           "tip4": "Прихватите сваку понуду помоћи породице око кувања, чишћења и чувања деце. Спавајте када беба спава. Ваш једини посао је храњење бебе и опоравак. Све остало може да сачека. Најјаче мајке које познајем су оне које су прихватиле помоћ",
           "fact": "Постпорођајна депресија погађа 1 од 5 жена широм света, али се процењује да је чак и виша у ромским заједницама због стреса због сиромаштва, дискриминације и изолације. У свакој заједници у којој сам основао групе за подршку вршњацима за нове мајке, стопа депресије је опала, а стопа дојења порасла - јер веза лечи.",
-          "action": "Ако сте се породили у последњих 6 недеља, а нисте били на постпорођајном прегледу, позовите свој здравствени центар данас. Ако се осећате упорно тужно или преплављено, реците једној особи од поверења — својој мајци, свом здравственом посреднику, било коме. Тај први разговор је најтежи и најважнији корак."
+          "action": "Ако сте се породили у последњих 6 недеља и нисте били на постнаталним прегледима, позовите свој здравствени центар данас. Ако се осећате упорно тужно или преплављено, реците једној особи од поверења — својој мајци, свом здравственом посреднику, било коме. Тај први разговор је најтежи и најважнији корак."
         }
       },
       "children": {
-        "description": "Ромска деца су будућност наших заједница и заслужују сваку предност. У раду сам видео децу која заостају — не због недостатка способности, већ јер су им спречиве болести, пропуштене вакцине или неоткрена кашњења узела шансе. Ово знање им враћа те шансе.",
+        "description": "Ромска деца су будућност наших заједница и заслужују сваку предност. У свом раду, видео сам да деца заостају - не због способности, већ зато што су им болести које се могу спречити, пропуштене вакцинације или неоткривена кашњења у развоју украли могућности. Ово знање враћа те могућности.",
         "growthMilestones": {
           "title": "Раст и развој",
           "description": "Свако дете се развија сопственим темпом и никада не желим да родитељи паниче због нормалних варијација. Али такође сам видео децу чији су закаснели развој породице одбациле јер ће „сустићи“ када је рана интервенција могла да направи трансформативну разлику. Знати на шта треба пазити није анксиозност – то је пажња.",
           "tip1": "Месечно вагање у првој години је најједноставнији алат за праћење. Ваш здравствени центар има графиконе раста који показују да ли је ваше дете на правом путу. Дете које престане да добија на тежини или изненада падне на табели треба хитну истрагу - то може бити једноставно као прилагођавање исхране или важно као и откривање основног стања",
-          "tip2": "До шестог месеца, већина беба посеже за предметима и реагује на њихово име. До 12 месеци, већина каже неколико речи и привуче се да устане. До 24 месеца, већина добро хода и говори кратким фразама. Ако ваше дете значајно заостаје за овим прекретницама, затражите процену развоја - рана помоћ чини највећу разлику",
+          "tip2": "До 6 месеци, већина беба посеже за предметима и реагује на њихово име. До 12 месеци, већина каже неколико речи и привуче се да устане. До 24 месеца, већина добро хода и говори кратким фразама. Ако ваше дете значајно заостаје за овим прекретницама, затражите процену развоја - рана помоћ чини највећу разлику",
           "tip3": "Непрестано разговарајте са дететом — причајте шта радите, именујте предмете, певајте песме. Ромске породице имају моћну усмену традицију — искористите је. Деца која чују више речи развијају већи вокабулар и јаче когнитивне вештине. Ово је бесплатно и ефикасније од било које играчке",
           "tip4": "Зуби: чистите бебино десни влажном крпом од рођења, а од првог зуба користите сићушну мрљу дечје пасте за зубе. Видим тешки каријес код ромске деце до 3 године, често из флаше слатког чаја ноћу — то изазива бол, инфекцију и проблеме у исхрани који утичу на раст",
           "fact": "Истраживања показују да деца чија су заостајања у развоју идентификована и решена пре 3 године имају 5 пута веће шансе да похађају школу на очекиваном нивоу. У насељима у којима сам успоставио месечно мерење и развојни скрининг, стопе упућивања за рану интервенцију су се утростручиле – што значи да су деца добила помоћ коју би иначе пропустила.",
@@ -3884,18 +4195,18 @@ export const TRANSLATIONS = {
           "description": "Бићу директан: у ромским заједницама широм Европе, стопе вакцинације су ниже од националног просека, а то није зато што родитељи ромске националности не брину о својој деци – већ зато што здравствени систем није успео да допре до њих са поштовањем, приступом и информацијама. Дезинформације се шире и путем друштвених медија. Држао сам децу са богињама у болници која никада нису смела да буду тамо. Свако невакцинисано дете је дете које је систем заказао.",
           "tip1": "Од рођења до 6 недеља: БЦГ (туберкулоза) и хепатитис Б. Дају се у болници пре отпуста. Ако је ваша беба рођена код куће, однесите је у здравствени центар у току прве недеље живота ради ових вакцина. Не чекај",
           "tip2": "2, 3, 4 месеца: 'велике три' рунде — ДТП (дифтерија, тетанус, велики кашаљ), дечија парализа, Хиб и хепатитис Б. Ово су најкритичније вакцине у детињству. Сваки круг јача имунитет. Недостатак једног слаби цео ланац",
-          "tip3": "12–15 месеци: ММР (морбили, заушки, рубеола). Не могу ово довољно нагласити. Морбиле нису безопасна дечја болест – оне убијају, изазивају оштећење мозга и слепе. 2019. године видео сам избијање морбила у ромском насељу јер је обухват пао испод 80%. То се могло спречити",
+          "tip3": "12–15 месеци: ММР (морбили, заушки, рубеола). Не могу ово довољно нагласити. Морбиле нису безопасна дечја болест – оне убијају, изазивају оштећење мозга и слепе. 2019. године сам видео појаву морбила у ромском насељу јер је обухват пао испод 80%. То се могло спречити",
           "tip4": "Вакцине су бесплатне у државним здравственим центрима у свакој европској земљи. Не треба вам осигурање, не треба вам боравишна дозвола, не треба вам заказивање у већини центара. Ако вам је услуга одбијена, ово је незаконито — обратите се свом здравственом посреднику или канцеларији за права пацијената",
-          "fact": "Јаз између стопа вакцинације Рома и нерома у неким европским земљама прелази 15 процентних поена. Овај јаз није узрокован веровањима Рома о вакцинама — анкете доследно показују да родитељи Роми желе да њихова деца буду вакцинисана. Јаз је узрокован препрекама у приступу, дискриминацијом у здравственој заштити и недостатком приступа. Уклањање овог јаза је обавеза државе према члану 11. Европске социјалне повеље.",
+          "fact": "Разлика између стопа вакцинације Рома и нерома у неким европским земљама прелази 15 процентних поена. Овај јаз није узрокован веровањима Рома о вакцинама — анкете доследно показују да родитељи Роми желе да њихова деца буду вакцинисана. Јаз је узрокован препрекама у приступу, дискриминацијом у здравственој заштити и недостатком приступа. Уклањање овог јаза је обавеза државе према члану 11. Европске социјалне повеље.",
           "action": "Пронађите картицу за вакцинацију вашег детета. Ако неке вакцине недостају, или ако немате картицу, посетите најближи здравствени центар ове недеље. Ако се суочите са препрекама — језиком, документима, одбијањем — обратите се локалном здравственом посреднику. Управо због тога смо овде."
         }
       },
       "chronic": {
-        "description": "Роми умиру у просеку 10 година раније од европског просека. Већина ове разлике долази од хроничних болести — дијабетеса, срчаних и респираторних обољења — које се годинама тихо развијају. Када се појаве симптоми, штета је већ нанета. Али већина се може спречити и све се може контролисати ако се рано ухвати.",
+        "description": "Роми умиру 10 година млађи од европског просека. Већина овог јаза долази од хроничних болести — дијабетеса, болести срца, респираторних болести — које се годинама развијају полако и тихо. Док се симптоми појаве, штета је учињена. Али већина тога се може спречити, а све се може управљати када се рано ухвати.",
         "diabetes": {
           "title": "Дијабетес: тиха претња",
           "description": "Дијабетес типа 2 је хронична болест са којом се најчешће сусрећем у ромским заједницама. Појављује се у породицама, напредује на јефтиној исхрани са високим садржајем шећера на коју људе тера сиромаштво, и оштећује ваше очи, бубреге, стопала и срце годинама пре него што осетите било шта лоше. Видео сам мушкарце у 40-им годинама како губе прсте на ногама, а жене ослепе, од дијабетеса који никада није дијагностикован јер никада нису урадили тест крви. Ово се може спречити.",
-          "tip1": "Ако неко у вашој породици има дијабетес, ваш ризик је 2-3 пута већи. Ово није судбина - то је сигнал да се сада делује. Смањите бели хлеб, шећер и слатка пића. Замените пасуљем, сочивом, поврћем и водом. Видео сам породице како преокрену преддијабетес у потпуности кроз ове промене",
+          "tip1": "Ако неко у вашој породици има дијабетес, ризик је 2-3 пута већи. Ово није судбина - то је сигнал да се сада делује. Смањите бели хлеб, шећер и слатка пића. Замените пасуљем, сочивом, поврћем и водом. Видео сам породице како преокрену преддијабетес у потпуности кроз ове промене",
           "tip2": "30 минута ходања сваког дана смањује ризик од дијабетеса за 58%. Не трчи. Не теретана. ходање. Свакој особи старијој од 35 година у заједницама са којима радим кажем: шетња је лек. Бесплатно је и ради боље од већине пилула за превенцију",
           "tip3": "Затражите тест глукозе у крви наташте у свом здравственом центру најмање једном годишње ако сте старији од 35 година, гојазни или имате породичну историју. То је једноставан тест убодом прста, бесплатан је у већини земаља и траје 5 минута. Овај тест може открити дијабетес годинама пре него што се појаве симптоми",
           "tip4": "Знајте знакове упозорења који значе да је дијабетес можда већ присутан: стална жеђ, врло често мокрење (нарочито ноћу), замагљивање вида, ране које споро зарастају, необјашњив умор. Ако имате два или више њих, тестирајте се ове недеље, а не следећег месеца",
@@ -3919,15 +4230,15 @@ export const TRANSLATIONS = {
           "tip2": "Влага и буђ изазивају астму, хронични бронхитис и погоршавају сваку респираторну инфекцију. Обришите видљиве калупе мешавином воде и сирћета или избељивача. Отворите прозоре најмање 15 минута дневно чак и зими. Окачите мокри веш напољу када је то могуће — сушење одеће у затвореном простору додаје огромну количину влаге у ваздух",
           "tip3": "Кашаљ који траје више од 3 недеље, посебно са губитком тежине, ноћним знојењем или крвљу у пљувачу, мора се испитати на туберкулозу. ТБ је излечива бесплатним лечењем, али је такође веома заразна. У ромским заједницама стопа ТБ је 3-5 пута већа од националног просека у неколико европских земаља. Рано тестирање штити целу породицу",
           "tip4": "Деца која одрастају у задимљеном или буђавом окружењу имају трајно смањен капацитет плућа - носиће мање здрава плућа цео живот. Чак и ако не можете одмах да промените своју стамбену ситуацију, смањење изложености диму и вентилација што је више могуће штити њихова плућа у развоју",
-          "fact": "СЗО идентификује загађење ваздуха у домаћинствима као четврти највећи глобални здравствени ризик. У ромским насељима у којима сам радио, преко 60% деце је имало понављајуће респираторне инфекције — стопе су значајно опале када су породице побољшале вентилацију и смањиле сагоревање отпадног материјала у затвореном простору. Услови становања нису кривица породице, али стратегије адаптације спасавају животе док се бори за системске промене.",
-          "action": "Данас: проверите да ли је у вашем дому видљива буђ и очистите је разблаженим избељивачем или сирћетом. Отворите најмање један прозор на 15 минута. Ако неко у вашем домаћинству има кашаљ дуже од 3 недеље, идите у здравствени центар на скрининг на туберкулозу — бесплатан је и траје 15 минута."
+          "fact": "СЗО идентификује загађење ваздуха у домаћинствима као четврти највећи глобални здравствени ризик. У ромским насељима у којима сам радио, преко 60% деце је имало понављајуће респираторне инфекције — стопе које су значајно опали када су породице побољшале вентилацију и смањиле сагоревање отпадног материјала у затвореном простору. Услови становања нису кривица породице, али стратегије адаптације спасавају животе док се бори за системске промене.",
+          "action": "Данас: проверите да ли је у вашем дому видљива буђ и очистите је разблаженим избељивачем или сирћетом. Отворите најмање један прозор на 15 минута. Ако је неко у вашем домаћинству имао кашаљ дуже од 3 недеље, идите у здравствени центар на преглед туберкулозе — бесплатан је и траје 15 минута."
         }
       },
       "mental": {
-        "description": "У 15 година у ромским заједницама научио сам да најтежи терет није физичка болест — већ тежина дискриминације, сиромаштва, страха од исељења, бриге за будућност деце и осећаја да се нико у систему не брине. Зовемо то стрес. Када траје годинама, постаје нешто друго. Заслужује да се именује, разуме и лечи — без стида.",
+        "description": "За 15 година рада у ромским заједницама, научио сам да најтежи терет који људи носе није физичка болест – то је тежина дискриминације, сиромаштва, страха од деложације, бриге за будућност своје деце и осећаја да никог у систему није брига. Ово називамо стресом. Када траје годинама, постаје нешто више. Заслужује да буде именован, схваћен и третиран - без стида.",
         "stressManagement": {
           "title": "Живети са стресом",
-          "description": "Нећу се претварати да ће вежба дисања решити ваше проблеме. Ако сте забринути да ће ваша породица бити исељена, ниједна апликација за медитацију то неће поправити. Али радио сам са стотинама људи у нашим заједницама који носе огроман стрес, и видео сам шта се дешава када се тај стрес годинама не контролише: срчани удари код мушкараца у 40-им годинама, жене које не могу да једу или спавају, деца која одрастају у домаћинствима која су наелектрисана од напетости. Не можемо увек променити наше околности, али можемо променити начин на који их носимо.",
+          "description": "Нећу се претварати да ће вежба дисања решити ваше проблеме. Ако сте забринути да ће ваша породица бити исељена, ниједна апликација за медитацију то неће поправити. Али радио сам са стотинама људи у нашим заједницама који носе огроман стрес, и видео сам шта се дешава када се тај стрес годинама не контролише: срчани удари код мушкараца у 40-им годинама, жене које не могу да једу или спавају, деца која одрастају у домаћинствима која су наелектрисана напетошћу. Не можемо увек променити наше околности, али можемо променити начин на који их носимо.",
           "tip1": "Метода дисања 4-4-8 делује одмах на ваш нервни систем. Удахните кроз нос 4 бројања, задржите 4, издахните полако кроз уста 8. Урадите ово 5 пута. Откуцаји срца вам опадају, мишићи се опуштају. Овом подучавам породице пре посета болници, пре судских саслушања, пре било каквог стресног сусрета. То је алат који увек имате са собом",
           "tip2": "Ходање је најпотцењенији лек за стрес. 20 минута ходања - не брзо, само ходање - смањује хормон стреса кортизол до 30%. Ако не можете да изађете из куће, ходајте у круг. Сам покрет је оно што функционише, а не сценографија",
           "tip3": "Разговарај са неким. Не да решим проблем - само да поделимо тежину. Видео сам мушкарце у нашим заједницама како све носе сами јер тражење помоћи је као слабост. За 15 година овог рада, најјачи људи које сам срео су они који су научили да кажу 'борим се'",
@@ -3938,17 +4249,17 @@ export const TRANSLATIONS = {
         "sleep": {
           "title": "Спавање као лек",
           "description": "У пренасељеним кућама у којима је ТВ увек укључен, где деца деле кревете са родитељима, где бука комшија или улица никада не престаје — сан није дат. То је нешто за шта се морате борити. Па ипак, сан је када се ваше тело поправља, када ваш мозак обрађује дневни стрес и када се ваш имуни систем обнавља. Хронична депривација сна је опасна као и пушење - а у нашим заједницама је скоро универзална.",
-          "tip1": "Покушајте да спавате и будите се у отприлике исто време сваког дана, укључујући и викенде. Знам да је ово тешко са радом у сменама, малом децом или бучним окружењима - али чак и доследан прозор од 6 сати је регенеративнији од насумичних 8-часовних блокова. Ваше тело жуди за ритмом",
+          "tip1": "Покушајте да спавате и будите се у отприлике исто време сваког дана, укључујући и викенде. Знам да је ово тешко са радом у сменама, малом децом или бучним окружењем - али чак и доследан прозор од 6 сати је ресторативнији од насумичних 8-часовних блокова. Ваше тело жуди за ритмом",
           "tip2": "Телефони и екрани пре спавања су један од најгорих модерних разарача сна. Плаво светло говори вашем мозгу да је дан. Ако морате да користите телефон, подесите га на ноћни режим после 21:00. Још боље, пуните га у другој просторији — видео сам да се квалитет сна драматично поправља од ове промене",
           "tip3": "Кофеин остаје у вашем систему 8 сати. Тог поподнева турска кафа или чај у 16 ​​часова и даље су активни у вашем крвотоку у поноћ. После ручка пређите на биљни чај (камилица, липа). Ово је једно од најједноставнијих побољшања које препоручујем и људи су увек изненађени колико помаже",
           "tip4": "Ако делите собу са децом или члановима породице, мале промене помажу: доследно време „гашења“ светла, постепено смањење буке, коришћење завесе за стварање визуелне границе сна. Научите децу да је време за спавање време за породицу - када се домаћинство смири заједно, сви боље спавају",
-          "fact": "Истраживања о спавању у маргинализованим заједницама показују да хронична депривација сна узрокована пренатрпаношћу, буком и стресом значајно доприноси здравственом јазу. Људи који стално спавају мање од 6 сати имају 4 пута већи ризик од добијања инфекција и 2 пута већи ризик од срчаних болести. Спавање није луксуз - то је темељ преживљавања.",
+          "fact": "Истраживања о спавању у маргинализованим заједницама показују да хронична депривација сна узрокована пренатрпаношћу, буком и стресом значајно доприноси здравственом јазу. Људи који стално спавају мање од 6 сати имају 4к већи ризик од инфекције и 2к већи ризик од срчаних болести. Спавање није луксуз - то је темељ преживљавања.",
           "action": "Вечерас: поставите аларм за спавање на телефону 30 минута пре него што пожелите да спавате. Када зазвони, искључите ТВ, одложите телефон и лезите у мраку и дишете 4-4-8 док не заспите. Урадите ово 7 ноћи и приметите разлику."
         },
         "communitySupport": {
           "title": "Моћ везе",
           "description": "Ромска култура већ разуме нешто што западна медицина тек сада мери: да припадност, породица и заједница штите ваше здравље једнако снажно као и сваки лек. Видео сам људе како преживљавају најтеже околности — деложације, болест, губитак — јер их је њихова заједница држала. И видео сам како људи много мање пропадају када су били изоловани. Наука сада потврђује оно што су наши преци знали: усамљеност убија, повезаност лечи.",
-          "tip1": "Ако познајете некога у вашој заједници ко је недавно изгубио члана породице, био му је дијагностициран болест, изгубио посао или пролази кроз кризу — немојте чекати да затражи помоћ. Посетите их. Донеси храну. Седи са њима. У ромској култури то је инстинкт. У здравственим наукама, ово се зове 'социјални рецепт' - и делује боље од већине пилула",
+          "tip1": "Ако познајете некога у вашој заједници ко је недавно изгубио члана породице, био му је дијагностициран болест, изгубио посао или пролази кроз кризу — немојте чекати да затражи помоћ. Посетите их. Донесите храну. Седи са њима. У ромској култури то је инстинкт. У здравственим наукама, ово се зове 'социјални рецепт' - и делује боље од већине пилула",
           "tip2": "Стид је непријатељ здравља. Упознао сам људе који су годинама скривали дијабетес, депресију, ХИВ и насиље у породици јер су се плашили шта ће заједница рећи. Сваки пут када неко у нашој заједници отворено говори о својој борби, то даје дозволу другима. Не морате све да делите — али дељење нечега разбија тишину од које се људи разболе",
           "tip3": "Окупљања, прославе, музика, молитва, причање прича — то не одвраћају пажњу од здравља. Здравље су. Студије показују да редовно учешће у културним активностима заједнице смањује депресију и кардиоваскуларни ризик. Радост и припадност коју стварају су мерљиви лек",
           "tip4": "Проверите старије и изоловане људе у вашој заједници. Особа која живи сама, бака чија су се деца одселила, човек који је престао да долази на окупљања. Посета од 10 минута или телефонски позив могу бити једина људска веза коју имају тог дана - и то би могло бити оно што их одржава у животу",
@@ -4045,12 +4356,12 @@ export const TRANSLATIONS = {
   },
   "tr": {
     "learn": {
-      "progressLabel": "tamamlanan modül",
+      "progressLabel": "tamamlanan modüller",
       "startHere": "Buradan başlayın",
       "continueLabel": "Devam et",
       "allModules": "Tüm modüller",
       "prevention": {
-        "description": "15 yıldır Roman yerleşimlerinde çalışırken, basit alışkanlıklarla önlenebilecek hastalıklarla yıkılan aileler gördüm. Bu bilgi lüks değil — hayatta kalmaktır.",
+        "description": "15 yıllarında Roman yerleşimlerinde çalışırken, ailelerin basit alışkanlıkların önleyebileceği hastalıklar nedeniyle perişan olduğunu gördüm. Bu bilgi lüks değil, hayatta kalmadır.",
         "handwashing": {
           "title": "El yıkama",
           "description": "Yerleşimlerdeki bütün ailelerin elden ele geçen aynı mide enfeksiyonundan hastalandığını gördüm. Doğru el yıkama, halihazırda erişebildiğiniz en ucuz ve en güçlü ilaçtır; hiçbir maliyeti yoktur ve topluluklarımızda en sık gördüğüm hastalıkları önler.",
@@ -4073,7 +4384,7 @@ export const TRANSLATIONS = {
         },
         "cleanWater": {
           "title": "Temiz Su",
-          "description": "Ailelerin günde iki saat akan tek bir su noktasını paylaştığı yerleşim yerlerinde, musluk suyunun berrak göründüğü halde çocuklarda kronik mide sorunlarına neden olan bakterileri taşıdığı mahallelerde çalıştım. Su kalitesi her zaman gözle görülemiyor ve Roman topluluklarında yetkililer tarafından nadiren izleniyor. Ailenizin su müfettişi olmalısınız.",
+          "description": "Ailelerin günde iki saat akan tek su noktasını paylaştığı yerleşim yerlerinde, musluk suyunun berrak göründüğü halde çocuklarda kronik mide sorunlarına neden olan bakterileri taşıdığı mahallelerde çalıştım. Su kalitesi her zaman gözle görülemiyor ve Roman topluluklarında yetkililer tarafından nadiren izleniyor. Ailenizin su müfettişi olmalısınız.",
           "tip1": "Suyu depoladığınız her kabın üzerini kapatın. Özellikle sıcak havalarda sineklerin, tozun ve hatta hayvan atıklarının üstü açık kovaları saatler içinde kirlettiğini gördüm. Üst kısımdaki basit bir plaka çoğu kirlenmeyi önler",
           "tip2": "Suyunuzdan emin değilseniz, tam bir dakika boyunca kaynayan ateşte kaynatın. Bu bakteri, virüs ve parazitlerin %99.9 kadarını öldürür. Neredeyse hiçbir maliyeti yok ve işe yarıyor. Bunu su kaynağının şüpheli olduğu düzinelerce yerleşim yerinde öğrettim.",
           "tip3": "Su kaplarınızı haftada en az bir kez sabun ve temiz suyla yıkayın. Kirli bir kap temiz suyu kirletir. Bu, çocuklarda gördüğüm tekrarlayan ishalin en çok gözden kaçan nedenlerinden biridir.",
@@ -4087,13 +4398,13 @@ export const TRANSLATIONS = {
           "tip1": "112 Avrupa'daki herhangi bir telefondan çalışır; hatta kredisiz, SIM kartsız, hatta kilitli bir telefondan bile. 7 üzeri çocuklar da dahil olmak üzere ailenizin her üyesine 112 numarasını tuşlamayı ve nerede olduklarını söylemeyi öğretin. Bunu uygulayın. Acil bir durumda panik insanlara unutturur",
           "tip2": "Ağır kanama için: Elinizdeki en temiz bezle (gömlek, başörtüsü, herhangi bir şey) sıkıca bastırın ve kontrol etmek için kaldırmayın. Yardım gelene kadar basmaya devam edin. Bakmak için kumaşı çıkarmaya devam ettikleri için tehlikeli derecede kanayan insanlar gördüm. Kan emilirse üstüne daha fazla bez ekleyin",
           "tip3": "Yanıklar: yanığı derhal en az 10 dakika boyunca soğuk akan suyun altına tutun. Asla tereyağı, sıvı yağ, diş macunu veya yumurta beyazı kullanmayın; birçok ailede karşılaştığım, aslında ısıyı hapseden ve daha kötü hasara ve enfeksiyona neden olan geleneksel ilaçlardır.",
-          "tip4": "Birisi yere yığılırsa ve nefes almıyorsa: 112'ı arayın, ardından göğsünün ortasını sert ve hızlı bir şekilde itin - dakikada 100 kez ('Stayin' Alive' şarkısının temposu). Yardım gelene kadar durmayın. Kusurlu CPR, CPR olmamasından sonsuz derecede daha iyidir",
+          "tip4": "Birisi bayılırsa ve nefes almıyorsa: 112'ı arayın, ardından göğsünün ortasını sert ve hızlı bir şekilde itin - dakikada 100 kez ('Stayin' Alive' şarkısının temposu). Yardım gelene kadar durmayın. Kusurlu CPR, CPR olmamasından sonsuz derecede daha iyidir",
           "fact": "Araştırmalar, temel ilk yardım eğitiminin yaygın olduğu toplumlarda kalp krizinden kurtulma oranının iki katına çıktığını gösteriyor. Pek çok Roman topluluğunda, ambulans müdahale süreleri Roman olmayan bölgelere göre önemli ölçüde daha uzundur; bu da olay yerinde bulunan kişilere yapılan ilk yardımı daha da kritik hale getirmektedir.",
           "action": "Şu anda her aile üyesine şunu sorun: 112'ı nasıl arayacağınızı biliyor musunuz? Ev adresimizi sevk görevlisine söyleyecek kadar iyi biliyor musun? Tam adresinizi bir kağıda yazın ve telefonun yanına koyun. Bugün çocuklarınıza öğretin."
         }
       },
       "nutrition": {
-        "description": "Roma aileleriyle geçen yıllarda yemeğin sadece beslenme olmadığını — neye gücünüzün yettiği, mahallenizde ne bulunduğu ve ailenizin ne bildiği olduğunu öğrendim. Kinoa al demeyeceğim. Elinizdekilerle ailenizi nasıl iyi besleyeceğinizi anlatacağım.",
+        "description": "Roman ailelerle çalıştığım yıllar boyunca, yemeğin asla sadece beslenmeyle ilgili olmadığını öğrendim; önemli olan, paranızın yettiği kadar, mahallenizde neyin mevcut olduğu ve ailenizin ne bildiği ile ilgili. Sana kinoa al demeyeceğim. Ailenizi sahip olduklarınızla nasıl iyi besleyeceğinizi size anlatacağım.",
         "balancedDiet": {
           "title": "Her Bütçede İyi Beslenmek",
           "description": "Roman topluluklarında gördüğüm en büyük beslenme sorunu yiyecek eksikliği değil; çok fazla ucuz ekmek, işlenmiş et ve şekerli içecekler, çok az sebze, yumurta ve baklagiller. Bu iradeyle alakalı değil. Bu neyin mevcut ve uygun fiyatlı olduğuyla ilgilidir. Ancak küçük değişiklikler sizin sağlığınız ve çocuklarınızın gelişimi üzerinde çok büyük farklar yaratır.",
@@ -4115,18 +4426,18 @@ export const TRANSLATIONS = {
           "action": "Yarından itibaren, 6 aydan büyük çocuğunuza günde bir yumurta (püre veya çırpılmış) verin. Çocuğunuz 6 ayın altındaysa ve emziriyorsanız kendiniz fazladan bir yumurta yiyin; besinler sütünüze geçer."
         },
         "foodSafety": {
-          "title": "Yiyecekleri Güvende Tutmak",
+          "title": "Yiyecekleri Güvenli Tutmak",
           "description": "Gıda zehirlenmesi, Roman ailelerin acil servislere gitmesinin en yaygın nedenlerinden biri; özellikle çocuklarda kusma, ishal ve dehidrasyon. Soğutmanın güvenilmez olduğu ve mutfakların ortak veya açık havada kullanıldığı yerleşim yerlerinde gıda güvenliği bir ders kitabı konusu değil, günlük bir hayatta kalma becerisidir.",
           "tip1": "Sıcak havalarda, pişmiş yiyeceklerin 2 saatten fazla dışarıda bırakılması tehlikeli hale gelir. Buzdolabına koyamıyorsanız, tek öğünde bitireceğiniz daha küçük porsiyonları pişirin. Yaz aylarında bir gecede dışarıda bırakılan yeniden ısıtılmış güveç nedeniyle tüm ailelerin hastaneye kaldırıldığını gördüm",
           "tip2": "Çiğ tavuk ve et asla ekmeğe, sebzeye veya pişmeden yenecek hiçbir şeye temas etmemelidir. Ayrı kesme yüzeyleri kullanın; düz bir şekilde yerleştirilmiş temiz bir plastik torba bile işe yarar. Bu çapraz bulaşma, karşılaştığım gıda zehirlenmesinin bir numaralı nedenidir",
-          "tip3": "Yiyecekler yanlış kokuyorsa, yanlış görünüyorsa veya sümüksü bir his veriyorsa, onu atın. Kontrol etmek için tadına bakmayın. Para kısıtlı olduğunda yiyecekleri atmanın acı verici olduğunu biliyorum, ancak bir gıda zehirlenmesi nöbeti ilaçta ve iş kaybında yiyeceğin değerinden daha pahalıya mal olur.",
+          "tip3": "Yiyecekler yanlış kokuyorsa, yanlış görünüyorsa veya sümüksü bir his veriyorsa, onu atın. Kontrol etmek için tadına bakmayın. Para kısıtlı olduğunda yiyecekleri çöpe atmanın acı verici olduğunu biliyorum, ancak bir gıda zehirlenmesi nöbeti tıpta yiyeceğin değerinden daha pahalıya mal olur ve iş kaybı olur.",
           "tip4": "Soymayı planlıyor olsanız bile, yemeden önce tüm meyve ve sebzeleri akan su altında yıkayın. Kestiğinizde dışarıdaki kir içeriye geçer. Bu, özellikle birçok kişi tarafından işlenmiş olabilecek pazar ürünleri için önemlidir.",
-          "fact": "WHO, her yıl 600 milyon insanın kontamine gıdalardan dolayı hastalandığını ve bu yükün %40'sini 5 yaşının altındaki çocukların taşıdığını tahmin ediyor. Gıda güvenliğini öğrettiğim topluluklarda gastroenterit nedeniyle hastane ziyaretleri ilk yazda önemli ölçüde azaldı.",
+          "fact": "WHO, her yıl 600 milyon kişinin kontamine gıdalardan dolayı hastalandığını ve bu yükün %40'sini 5 yaşının altındaki çocukların taşıdığını tahmin ediyor. Gıda güvenliğini öğrettiğim topluluklarda gastroenterit nedeniyle hastane ziyaretleri ilk yazda önemli ölçüde azaldı.",
           "action": "Hemen mutfağınızı kontrol edin: Yukarıda saklanan veya yemeye hazır yiyeceklere temas eden çiğ et var mı? 2 saatten uzun süredir dışarıda bekleyen pişmiş yiyecek var mı? Bugün bu iki şeyi düzeltin; bunlar ev ziyaretlerinde gördüğüm en yaygın tehlikeler."
         }
       },
       "maternal": {
-        "description": "Roma kadınları ayrı odalara alındıkları, saygısız muamele gördükleri veya diğer kadınların aldığı epiduralın reddedildiği hastanelere eşlik ettim. Tek bir doğum öncesi ziyaretle yakalanabilecek komplikasyonlardan ölen kadınlar da gördüm. Bedeniniz, bebeğiniz, haklarınız. Üçünü de bilin.",
+        "description": "Roman kadınlara, ayrı odalara yerleştirildikleri, saygısızca konuştukları veya diğer kadınların epidural ameliyatlarını reddettikleri hastanelere kadar eşlik ettim. Kadınların tek bir doğum öncesi ziyaretin bile yakalayabileceği komplikasyonlardan öldüğünü de gördüm. Vücudunuz, bebeğiniz, haklarınız. Üçünü de tanıyın.",
         "prenatalCare": {
           "title": "Doğum Öncesi Bakım",
           "description": "15 yıllarındaki arabuluculuk çalışmalarında, tekrar tekrar gördüğüm kalıp, Roman kadınların 6 veya 7 aylık hamile olduklarında ilk kez doktora gitmeleridir; çoğunlukla kendilerini iyi hissettikleri, hastaneden korktukları için veya hiç kimse doğum öncesi bakımın ücretsiz ve hakları olduğunu açıklamadığı için. Bu noktada, preeklampsi veya gebelik diyabeti gibi tehlikeli durumlar aylardır sessizce gelişiyor olabilir.",
@@ -4148,7 +4459,7 @@ export const TRANSLATIONS = {
           "action": "Siz veya tanıdığınız biri 30 haftayı geçmişse: hastanenin adını, telefon numarasını ve güzergahını bir kağıda yazın. Duvara koy. Kimlik, aşı kartı, bebek kıyafetleri ve telefon şarj cihazının bulunduğu bir çanta hazırlayın. Bu 20 dakika sürer ve bir hayat kurtarabilir."
         },
         "breastfeeding": {
-          "title": "Emzirme",
+          "title": "emzirme",
           "description": "Roman kültüründe emzirmeye çok değer veriliyor, ancak iyi niyetli akrabaları tarafından 'süt henüz gelmediği' gerekçesiyle ilk günlerde su, çay veya mama vermeleri söylenen genç annelerle karşılaşıyorum. Kolostrum (koyu, sarımsı ilk süt) bir şeylerin ters gittiğine dair bir işaret değildir. Yeni doğmuş bebeğinizi, yaşamının ilk haftalarında en tehlikeli enfeksiyonlardan koruyan antikorlarla dolu sıvı altındır.",
           "tip1": "Doğumdan sonraki 1 saat içinde bebeğinizi ten tene temas ettirin ve memeyi bulmasına izin verin. Bu ilk kolostrum beslemesi bebeğinizin alacağı en önemli 'aşı'dır; bağırsaklarını enfeksiyona karşı korumayla kaplar. Tıbbi bir acil durum olmadıkça, bu durum gerçekleşmeden kimsenin bebeğinizi almasına izin vermeyin.",
           "tip2": "Talep üzerine besleyin: Bebek açlık belirtileri gösterdiğinde (başını çevirmek, ellerini emmek, telaşlanmak). İlk haftalarda bu, 24 saatte 10–14 kez olabilir. Bu normaldir ve arzınızı belirler. Saat size bebeğinizin ne zaman aç olduğunu söyleyemez; bebeğiniz size söyler",
@@ -4169,11 +4480,11 @@ export const TRANSLATIONS = {
         }
       },
       "children": {
-        "description": "Roma çocukları topluluklarımızın geleceğidir ve her avantajı hak eder. Çalışmamda geride kalan çocuklar gördüm — yetenek eksikliğinden değil, önlenebilir hastalıklar, kaçırılan aşılar veya fark edilmeyen gecikmeler şanslarını çaldığı için. Bu bilgi o şansları geri verir.",
+        "description": "Roman çocuklar toplumlarımızın geleceğidir ve her türlü avantajı hak ediyorlar. Çalışmalarımda çocukların geride kaldıklarını gördüm; yetenekleri nedeniyle değil, önlenebilir hastalıklar, kaçırılan aşılar veya tespit edilemeyen gelişimsel gecikmeler onlardan fırsatları çaldığı için. Bu bilgi bu fırsatları geri verir.",
         "growthMilestones": {
           "title": "Büyüme ve Gelişme",
           "description": "Her çocuk kendi hızında gelişir ve ebeveynlerin normal farklılıklar konusunda paniğe kapılmalarını asla istemem. Ancak erken müdahalenin dönüştürücü bir fark yaratabileceği durumlarda, gelişimi geciken, aileleri tarafından 'yetişecekler' diyerek göz ardı edilen çocuklar da gördüm. Neye dikkat edilmesi gerektiğini bilmek kaygı değil, dikkattir.",
-          "tip1": "İlk yıl aylık tartım en basit izleme aracıdır. Sağlık merkezinizde çocuğunuzun yolunda olup olmadığını gösteren büyüme çizelgeleri vardır. Kilo almayı bırakan veya aniden kilo kaybı yaşayan bir çocuğun derhal araştırılması gerekir; bu, beslenme ayarlaması kadar basit veya altta yatan bir hastalığın yakalanması kadar önemli olabilir.",
+          "tip1": "İlk yıl aylık tartım en basit izleme aracıdır. Sağlık merkezinizde çocuğunuzun yolunda olup olmadığını gösteren büyüme çizelgeleri vardır. Kilo almayı bırakan veya aniden kilo kaybı yaşayan bir çocuğun acilen araştırılması gerekir; bu, beslenme ayarlaması kadar basit veya altta yatan bir hastalığın yakalanması kadar önemli olabilir.",
           "tip2": "6 aya gelindiğinde çoğu bebek nesnelere uzanır ve isimlerine yanıt verir. 12 aya gelindiğinde çoğu kişi birkaç kelime söyler ve kendini ayağa kaldırır. 24 aya gelindiğinde çoğu kişi iyi yürür ve kısa cümlelerle konuşur. Çocuğunuz bu dönüm noktalarının önemli ölçüde gerisindeyse, gelişimsel bir değerlendirme isteyin; erken yardım en büyük farkı yaratır",
           "tip3": "Çocuğunuzla sürekli konuşun; ne yaptığınızı anlatın, nesnelere isim verin, şarkı söyleyin. Roman ailelerin güçlü bir sözlü geleneği var; bunu kullanın. Daha fazla kelime duyan çocuklar daha geniş kelime dağarcığına ve daha güçlü bilişsel becerilere sahip olurlar. Bu ücretsizdir ve herhangi bir oyuncaktan daha etkilidir",
           "tip4": "Dişler: Doğumdan itibaren bebeğinizin diş etlerini nemli bir bezle temizleyin ve ilk dişinden itibaren küçük bir miktar çocuk diş macunu sürün. 3 yaşına kadar Roman çocuklarda, çoğunlukla geceleri içilen tatlı çay şişelerinden dolayı şiddetli diş çürüğü görüyorum; bu, ağrıya, enfeksiyona ve büyümeyi etkileyen yeme sorunlarına neden oluyor",
@@ -4202,7 +4513,7 @@ export const TRANSLATIONS = {
         }
       },
       "chronic": {
-        "description": "Romalar Avrupa ortalamasından ortalama 10 yıl daha erken ölüyor. Bu farkın büyük kısmı — diyabet, kalp ve solunum hastalıkları gibi — yıllarca sessizce gelişen kronik hastalıklardan geliyor. Belirtiler göründüğünde hasar çoktan olmuş oluyor. Ama çoğu önlenebilir ve erken yakalanırsa yönetilebilir.",
+        "description": "Romanlar Avrupa ortalamasından 10 yıl daha genç ölüyor. Bu açığın çoğu, yıllar içinde yavaş yavaş ve sessizce gelişen diyabet, kalp hastalığı, solunum yolu hastalıkları gibi kronik hastalıklardan kaynaklanıyor. Semptomlar ortaya çıktığında hasar oluşmuş demektir. Ancak çoğu önlenebilir ve erken yakalandığında tamamı yönetilebilir.",
         "diabetes": {
           "title": "Diyabet: Sessiz Tehdit",
           "description": "Tip 2 diyabet, Roman topluluklarında en sık karşılaştığım kronik hastalıktır. Ailelerden geçiyor, yoksulluğun insanları zorladığı ucuz, yüksek şekerli beslenmeyle gelişiyor ve siz bir sorun hissetmeden yıllar önce gözlerinize, böbreklerinize, ayaklarınıza ve kalbinize zarar veriyor. 40'li erkeklerin ayak parmaklarını kaybettiğini ve kadınların, hiç kan testi yaptırmadıkları için teşhis edilemeyen diyabet nedeniyle kör olduklarını gördüm. Bu önlenebilir.",
@@ -4225,17 +4536,17 @@ export const TRANSLATIONS = {
         },
         "respiratory": {
           "title": "Akciğerler ve Solunum",
-          "description": "Ailelerin kışın ısınmak için odun, kömür, hatta plastik ve kauçuk yaktığı yerleşim yerlerinde çalıştım. 8 kişinin havalandırması olmayan iki odada uyuduğu yer. Duvarlardan nemin aktığı ve her köşede siyah küfün oluştuğu yer. Bu koşullarda solunum yolu hastalıkları şaşırtıcı değil; bu, hiç kimsenin yaşamak zorunda kalmaması gereken barınmaların öngörülebilir sonucudur. Daha iyi barınma için mücadele ederken aynı zamanda sahip olduğumuz akciğerleri de korumalıyız.",
+          "description": "Ailelerin kışın ısınmak için odun, kömür, hatta plastik ve kauçuk yaktığı yerleşim yerlerinde çalıştım. 8 kişinin havalandırması olmayan iki odada uyuduğu yer. Duvarlardan nemin aktığı ve her köşede siyah küfün oluştuğu yer. Bu koşullarda solunum yolu hastalıkları şaşırtıcı değil; bu, kimsenin yaşamak zorunda kalmaması gereken barınmaların öngörülebilir sonucudur. Daha iyi barınma için mücadele ederken aynı zamanda sahip olduğumuz akciğerleri de korumalıyız.",
           "tip1": "Kapalı mekan dumanı gördüğüm en acil solunum tehlikesidir. Katı yakıtla ısıtıyorsanız havalandırmayı sağlayın; pencereyi kırmak bile işe yarayabilir. Asla plastik, kauçuk veya boyalı ahşabı yakmayın; dumanlar, özellikle akciğerleri hala gelişmekte olan çocuklarda kalıcı akciğer hasarına neden olan kimyasallar içerir.",
           "tip2": "Nem ve küf astıma, kronik bronşite neden olur ve her türlü solunum yolu enfeksiyonunu daha da kötüleştirir. Görünür küfü su, sirke veya çamaşır suyu karışımıyla silin. Kışın bile pencereleri günde en az 15 dakika açın. Mümkünse ıslak çamaşırları dışarıya asın; çamaşırları iç mekanda kurutmak havaya çok büyük miktarda nem katar.",
           "tip3": "3 haftadan uzun süren, özellikle kilo kaybı, gece terlemesi veya tükürükte kanın eşlik ettiği öksürüklerde tüberküloz açısından araştırılmalıdır. TB ücretsiz tedaviyle tedavi edilebilir, ancak aynı zamanda oldukça bulaşıcıdır. Roman topluluklarında TB oranları, birçok Avrupa ülkesindeki ulusal ortalamanın 3–5 katıdır. Erken test tüm ailenizi korur",
           "tip4": "Dumanlı veya küflü ortamlarda büyüyen çocukların akciğer kapasitesi kalıcı olarak azalmıştır; hayatları boyunca daha az sağlıklı akciğerler taşıyacaklardır. Barınma durumunuzu hemen değiştiremeseniz bile, duman maruziyetini azaltmak ve mümkün olduğunca havalandırmak gelişmekte olan akciğerlerini korur.",
-          "fact": "WHO, evdeki hava kirliliğini dördüncü en büyük küresel sağlık riski olarak tanımlıyor. Çalıştığım Roman yerleşimlerinde çocukların %60'dan fazlası tekrarlayan solunum yolu enfeksiyonlarına sahipti; ailelerin havalandırmayı iyileştirmesi ve atık malzemelerin kapalı mekanda yakılmasının azaltılmasıyla bu oranlar önemli ölçüde düştü. Barınma koşulları ailelerin hatası değil ama sistemik değişim için mücadele edilirken uyum stratejileri hayat kurtarıyor.",
+          "fact": "WHO, evdeki hava kirliliğini dördüncü en büyük küresel sağlık riski olarak tanımlıyor. Çalıştığım Roman yerleşimlerinde çocukların %60'den fazlasında tekrarlayan solunum yolu enfeksiyonları görülüyordu; ailelerin havalandırmayı iyileştirmesi ve atık malzemelerin kapalı mekanda yakılmasının azaltılmasıyla bu oranlar önemli ölçüde düştü. Barınma koşulları ailelerin hatası değil ama sistemik değişim için mücadele edilirken uyum stratejileri hayat kurtarıyor.",
           "action": "Bugün: Evinizde görünür küf olup olmadığını kontrol edin ve seyreltilmiş çamaşır suyu veya sirke ile temizleyin. 15 dakika boyunca en az bir pencere açın. Evinizde 3 haftadan uzun süredir öksürüğü olan herhangi biri varsa, TB taraması için sağlık merkezine gidin; bu ücretsizdir ve 15 dakika sürer."
         }
       },
       "mental": {
-        "description": "15 yıldır Roman topluluklarında en ağır yükün fiziksel hastalık değil — ayrımcılık, yoksulluk, tahliye korkusu, çocukların geleceği kaygısı ve sistemde kimsenin umursamadığı hissi olduğunu öğrendim. Buna stres diyoruz. Yıllarca sürünce başka bir şeye dönüşür. Utanmadan adlandırılmayı, anlaşılmayı ve tedavi edilmeyi hak eder.",
+        "description": "15 yıllarında Roman topluluklarında çalıştığım süre boyunca, insanların taşıdığı en ağır yükün fiziksel hastalık olmadığını öğrendim; bu yük, ayrımcılığın, yoksulluğun, tahliye korkusunun, çocuklarının geleceğiyle ilgili endişelerin ve sistemdeki kimsenin umursamadığı duygusunun ağırlığıdır. Biz buna stres diyoruz. Yıllarca sürdüğünde daha fazlası oluyor. Utanmadan adlandırılmayı, anlaşılmayı ve tedavi edilmeyi hak ediyor.",
         "stressManagement": {
           "title": "Stresle Yaşamak",
           "description": "Nefes egzersizinin sorunlarınızı çözeceğini iddia etmeyeceğim. Ailenizin tahliye edilmesinden endişeleniyorsanız hiçbir meditasyon uygulaması bunu düzeltemez. Ancak toplumlarımızda çok büyük stres taşıyan yüzlerce insanla çalıştım ve bu stres yıllarca yönetilmediğinde neler olduğunu gördüm: 40'lı erkeklerde kalp krizleri, yemek yiyemeyen ve uyuyamayan kadınlar, gerilimden elektriklenen evlerde büyüyen çocuklar. Koşullarımızı her zaman değiştiremeyiz ama onları nasıl taşıdığımızı değiştirebiliriz.",
@@ -4263,7 +4574,7 @@ export const TRANSLATIONS = {
           "tip2": "Utanç sağlığın düşmanıdır. Toplumun ne söyleyeceğinden korktukları için diyabeti, depresyonu, HIV ve aile içi şiddeti yıllarca saklayan insanlarla tanıştım. Topluluğumuzdaki birisi mücadelesi hakkında açıkça konuştuğunda, bu başkalarına da izin vermiş olur. Her şeyi paylaşmanıza gerek yok; ancak bir şeyi paylaşmak, insanları hasta eden sessizliği bozar",
           "tip3": "Toplantılar, kutlamalar, müzik, dua, hikaye anlatımı; bunlar sağlığınızı bozacak şeyler değil. Onlar sağlıktır. Çalışmalar, toplumsal kültürel faaliyetlere düzenli katılımın depresyon ve kardiyovasküler riski azalttığını göstermektedir. Yarattıkları neşe ve aidiyet ölçülebilir bir ilaçtır",
           "tip4": "Toplumunuzdaki yaşlıları ve izole insanları kontrol edin. Yalnız yaşayan kişi, çocukları taşınan büyükanne, toplantılara gelmeyi bırakan adam. 10 dakikalık bir ziyaret veya telefon görüşmesi, o gün sahip oldukları tek insani bağlantı olabilir ve onları hayatta tutan da bu olabilir.",
-          "fact": "Harvard'ın yetişkin sağlığı üzerine 85 yıllık araştırması, sağlık ve uzun ömürlülüğün en güçlü tek belirleyicisinin diyet, egzersiz veya genetik değil, ilişkilerinizin kalitesi olduğu sonucuna vardı. Yalnızlık ölüm riskini %26 artırır; bu da her gün 15 sigara içmeye eşdeğerdir. Roman toplulukları sosyal bağlantı açısından gerçek bir sağlık varlığı olan kültürel bir zenginliğe sahiptir; onu koruyun.",
+          "fact": "Harvard'ın yetişkin sağlığı üzerine 85 yıllık araştırması, sağlık ve uzun ömürlülüğün en güçlü tek belirleyicisinin diyet, egzersiz veya genetik değil, ilişkilerinizin kalitesi olduğu sonucuna vardı. Yalnızlık, ölüm riskini %26 artırır; bu, günde 15 sigara içmeye eşdeğerdir. Roman toplulukları sosyal bağlantı açısından gerçek bir sağlık varlığı olan kültürel bir zenginliğe sahiptir; onu koruyun.",
           "action": "Bu hafta topluluğunuzda yakın zamanda konuşmadığınız bir kişiye ulaşın. Mesajla değil, sesle veya şahsen. Nasıl olduklarını sorun ve dinleyin. Bu bağlantı eylemi, en saf haliyle sağlığın teşviki ve geliştirilmesidir."
         },
         "seekHelp": {

@@ -1,10 +1,10 @@
 {
   "progressLabel": "dokončanih modulov",
-  "startHere": "Začnite tukaj",
+  "startHere": "Začni tukaj",
   "continueLabel": "Nadaljuj",
   "allModules": "Vsi moduli",
   "prevention": {
-    "description": "V 15 letih dela v romskih naseljih sem videl družine, opustošene z boleznimi, ki bi jih preprečile preprote navade. To znanje ni luksuz — je preživetje.",
+    "description": "V 15 letih dela v romskih naseljih sem videl družine, ki so jih uničile bolezni, ki bi jih preproste navade lahko preprečile. To znanje ni razkošje - je preživetje.",
     "handwashing": {
       "title": "Umivanje rok",
       "description": "Videl sem cele družine v naseljih, ki so zbolele za isto želodčno okužbo, ki se je prenašala iz roke v roko. Pravilno umivanje rok je edino najcenejše in najmočnejše zdravilo, do katerega že imate dostop – ne stane nič in preprečuje bolezni, ki jih najpogosteje srečujem v naših skupnostih.",
@@ -13,33 +13,33 @@
       "tip3": "Brez mila? Delal sem v naseljih brez tekoče vode. Ash deluje. Peščena dela. Sama voda s čiščenjem deluje bolje kot nič. Ne dovolite, da popolno prepreči dobro",
       "tip4": "Roke posušite na zraku ali uporabite čisto krpo, ki jo menjate vsak dan. Umazana brisača, ki si jo delijo vsi, ponovno onesnaži čiste roke – to razložim ob vsakem obisku na domu",
       "fact": "V skupnostih, s katerimi sem delal, so kampanje za umivanje rok zmanjšale primere driske pri otrocih za skoraj polovico v treh mesecih. WHO potrjuje: umivanje rok zmanjša drisko za 40 % in okužbe dihal za do 21 %.",
-      "action": "Nocoj stopite s svojimi otroki pri izviru vode in si skupaj umijte roke. Naj vam to postane družinska navada pred vsakim obrokom. Otroci, ki se učijo tako, da opazujejo svoje starše, bodo to nosili vse življenje."
+      "action": "Nocoj stopite s svojimi otroki pri izviru vode in si skupaj umijte roke. Make it a family habit before every meal. Otroci, ki se učijo tako, da opazujejo svoje starše, bodo to nosili vse življenje."
     },
     "vaccination": {
       "title": "Cepljenje",
-      "description": "Spremljala sem romske matere v zdravstvene domove, kjer so jih zavrnili, ker niso imele dokumentov, niso znale jezika ali pa so jim preprosto rekli, naj se vrnejo pozneje. Cepiva so zakonska pravica vaših otrok – brezplačna, varna in najmočnejša zaščita, ki jo lahko zagotovi starš. Nihče vam tega ne more odreči.",
+      "description": "Spremljala sem romske matere v zdravstvene domove, kjer so jih zavrnili, ker niso imele dokumentov, niso znale jezika ali pa so jim preprosto rekli, naj se vrnejo pozneje. Cepiva so zakonska pravica vaših otrok – brezplačna, varna in najmočnejša zaščita, ki jo lahko zagotovi starš. No one can deny you this.",
       "tip1": "Vsaka država v Evropi nudi brezplačen program cepljenja od rojstva. To ni dobrodelnost – to je zakonska pravica vašega otroka. Če zdravstveni delavec zavrne, prosite njegovega nadzornika in to jasno povejte",
       "tip2": "Cepilni karton je za rojstnim listom najpomembnejši dokument, ki ga ima vaš otrok. Hranite ga na varnem, nosite ga ob vsakem obisku zdravnika. V primeru izgube mora kateri koli zdravstveni dom izdati zamenjavo - ne sprejmite zavrnitve",
       "tip3": "Blaga vročina, boleče mesto na roki, sitnost za en dan – to je normalno in pomeni, da cepivo deluje. O tem sem pomirila na stotine zaskrbljenih mater. Mine v 24–48 urah",
       "tip4": "Za cepljenje se v večini zdravstvenih domov ne potrebujete naročanja. Vstopite. Če romski zdravstveni mediator dela na vašem območju, ga prosite, naj vas spremlja – za to smo usposobljeni",
-      "fact": "V enem naselju, v katerem sem delal, so se pojavile ošpice, ker je precepljenost padla na 60%. Trije otroci so bili hospitalizirani. Po kampanji cepljenja v skupnosti smo dosegli 94 % — in izbruhi so se ustavili. Po vsej Evropi cepiva vsako leto preprečijo 2–3 milijonov smrti.",
-      "action": "Takoj vzemite otrokovo kartico cepljenja. Preverite glede na urnik na steni vašega zdravstvenega doma. Če kakšno cepivo manjka ali nimate kartona, obiščite zdravstveni dom ta teden. Prinesite to aplikacijo za prikaz urnika, če pomaga."
+      "fact": "V enem naselju, v katerem sem delal, so se pojavile ošpice, ker je precepljenost padla na 60%. Three children were hospitalized. Po kampanji cepljenja v skupnosti smo dosegli 94 % — in izbruhi so se ustavili. Po vsej Evropi cepiva vsako leto preprečijo 2–3 milijonov smrti.",
+      "action": "Takoj vzemite otrokovo kartico cepljenja. Preverite glede na urnik na steni vašega zdravstvenega doma. Če kakšno cepivo manjka ali nimate kartona, obiščite zdravstveni dom ta teden. Bring this app to show the schedule if it helps."
     },
     "cleanWater": {
       "title": "Čista voda",
-      "description": "Delal sem v naseljih, kjer si družine delijo eno pipo, ki teče dve uri na dan, in v soseskah, kjer je voda iz pipe videti bistra, vendar prenaša bakterije, ki povzročajo kronične želodčne težave pri otrocih. Kakovost vode ni vedno vidna, v romskih skupnostih pa jo organi redko nadzirajo. Morate biti vodni inšpektor svoje družine.",
-      "tip1": "Pokrijte vsako posodo, v kateri shranjujete vodo. Videl sem, kako so muhe, prah in celo živalski iztrebki v nekaj urah onesnažili nepokrita vedra, zlasti v toplem vremenu. Preprosta plošča na vrhu prepreči večino kontaminacije",
+      "description": "Delal sem v naseljih, kjer si družine delijo eno pipo, ki teče dve uri na dan, in v soseskah, kjer je voda iz pipe videti bistra, vendar prenaša bakterije, ki povzročajo kronične želodčne težave pri otrocih. Kakovost vode ni vedno vidna – v romskih skupnostih pa jo organi redko nadzirajo. You must be your family's water inspector.",
+      "tip1": "Cover every container where you store water. Videl sem, kako so muhe, prah in celo živalski iztrebki v nekaj urah onesnažili nepokrita vedra, zlasti v toplem vremenu. Preprosta plošča na vrhu prepreči večino kontaminacije",
       "tip2": "Če niste prepričani glede svoje vode, jo kuhajte eno polno minuto pri nizkem vrenju. To uniči 99.9 % bakterij, virusov in parazitov. Skoraj nič ne stane in deluje — tega sem učil v desetinah naselij, kjer je bil vodni vir vprašljiv",
       "tip3": "Vsaj enkrat na teden operite svoje posode z vodo z milom in čisto vodo. Umazana posoda naredi čisto vodo umazano. To je eden najbolj spregledanih vzrokov za ponavljajočo se drisko, ki sem jih opazil pri otrocih",
       "tip4": "Potoki, ribniki in stoječe mlake nikoli niso varni za pitje – tudi če je voda videti bistra. Očesu nevidni paraziti povzročajo kronične poškodbe otrokovega črevesja in razvoja",
       "fact": "V številnih romskih naseljih po srednji in vzhodni Evropi družine nimajo dostopa do varne vodovodne napeljave. Evropski center za pravice Romov je dokumentiral, da so romske soseske sistematično premalo opremljene z vodno infrastrukturo. Prekuhavanje vode ni idealno – je strategija preživetja, dokler vaša pravica do čiste vode ni izpolnjena.",
-      "action": "Danes preverite vsako posodo, v kateri vaša družina shranjuje pitno vodo. Pokrijte vse odprte. Če ne morete preveriti, ali je vodni vir varen, začnite z današnjim večerom kuhati vso vodo za pitje in kuhanje."
+      "action": "Danes preverite vsako posodo, v kateri vaša družina shranjuje pitno vodo. Pokrijte vse odprte. Če ne morete preveriti, ali je vir vode varen, začnite z današnjim večerom kuhati vso vodo za pitje in kuhanje."
     },
     "firstAid": {
       "title": "Osnovna prva pomoč",
       "description": "V oddaljenih naseljih in mestnih soseskah, kjer reševalna vozila potrebujejo dlje časa, da pridejo – ali včasih sploh ne pridejo – je vedeti, kaj storiti v prvih minutah nujnega primera, razlika med življenjem in smrtjo. Na stotine članov romske skupnosti sem usposobil za osnovno prvo pomoč in videl sem, da je to znanje rešilo življenja, preden je prišel kateri koli zdravnik.",
       "tip1": "112 deluje s katerim koli telefonom v Evropi — tudi brez kredita, tudi brez kartice SIM, tudi z zaklenjenega telefona. Naučite vsakega člana svoje družine, vključno z otroki nad 7, da pokličejo 112 in povedo, kje so. Vadite to. V sili zaradi panike ljudje pozabijo",
-      "tip2": "Pri močni krvavitvi: močno pritisnite z najčistejšo krpo, ki jo imate – srajco, naglavno ruto, karkoli – in je ne dvigujte, da bi preverili. Pritiskajte, dokler ne prispe pomoč. Videl sem ljudi, ki so nevarno krvaveli, ker so ves čas odstranjevali krpo, da bi pogledali. Dodajte več krpe na vrh, če se kri prepoji",
+      "tip2": "Pri močni krvavitvi: močno pritisnite z najčistejšo krpo, ki jo imate – srajco, naglavno ruto, karkoli – in je ne dvigujte, da bi preverili. Pritiskajte, dokler ne prispe pomoč. Videl sem ljudi, ki so nevarno krvaveli, ker so kar naprej odstranjevali krpo, da bi pogledali. Dodajte več krpe na vrh, če se kri prepoji",
       "tip3": "Opekline: opeklino takoj postavite pod hladno tekočo vodo za vsaj 10 minut. Nikoli ne nanašajte masla, olja, zobne paste ali jajčnega beljaka – tradicionalnih zdravil, ki sem jih srečal v mnogih družinah, dejansko zadržijo vročino in povzročijo hujšo škodo in okužbo",
       "tip4": "Če se nekdo zgrudi in ne diha: pokličite 112, nato močno in hitro potisnite na sredino njegovih prsi — 100-krat na minuto (tempo pesmi 'Stayin' Alive'). Ne ustavljajte se, dokler ne prispe pomoč. Nepopolno oživljanje je neskončno boljše od brez oživljanja",
       "fact": "Študije kažejo, da se v skupnostih, kjer je osnovno usposabljanje prve pomoči razširjeno, preživetje po srčnem zastoju podvoji. V mnogih romskih skupnostih so odzivni časi reševalnih vozil bistveno daljši kot v neromskih območjih, zaradi česar je prva pomoč navzočim še bolj kritična.",
@@ -47,7 +47,7 @@
     }
   },
   "nutrition": {
-    "description": "Po letih z romskimi družinami sem spoznal, da hrana ni le prehrana — je to, kar si lahko privoščite, kar je na voljo v soseski in kar vaša družina pozna. Ne bom rekel, naj kupite quinoo. Povedal vam bom, kako dobro nahraniti družino s tem, kar imate.",
+    "description": "V letih dela z romskimi družinami sem se naučil, da pri hrani nikoli ne gre samo za prehrano – gre za to, kaj si lahko privoščite, kaj je na voljo v vaši soseščini in kaj vaša družina pozna. Ne bom vam rekel, da kupite kvinojo. Povedal vam bom, kako dobro nahraniti družino s tem, kar imate.",
     "balancedDiet": {
       "title": "Dobro prehranjevanje za vsak proračun",
       "description": "Največji prehranski problem, ki ga vidim v romskih skupnostih, ni pomanjkanje hrane – gre za preveč poceni kruha, predelanega mesa in sladkih pijač ter premalo zelenjave, jajc in stročnic. Tu ne gre za moč volje. Gre za to, kar je na voljo in cenovno ugodno. Toda majhni premiki močno vplivajo na vaše zdravje in razvoj vaših otrok.",
@@ -80,7 +80,7 @@
     }
   },
   "maternal": {
-    "description": "Spremljal sem romske ženske v bolnišnice, kjer so jih dajali ločeno, se do njih niso spoštljivo obnašali ali so jim zavrnili epidural, ki so ga dobile druge ženske. Videl sem tudi ženske, ki so umrle zaradi zapletov, ki bi jih ena prenatalna obisk pravočasno ujel. Vaše telo, vaš otrok, vaše pravice. Poznajte vse tri.",
+    "description": "Romke sem spremljala v bolnišnice, kjer so jih dajali v ločene sobe, z njimi govorili nespoštljivo ali zavračali epiduralno, ki so jo prejemale druge ženske. Videl sem tudi, kako so ženske umirale zaradi zapletov, ki bi jih odkril en sam predporodni obisk. Vaše telo, vaš otrok, vaše pravice. Spoznajte vse tri.",
     "prenatalCare": {
       "title": "Predporodna nega",
       "description": "V 15 letih mediacijskega dela vedno znova opažam, da Romke prvič obiščejo zdravnika, ko so že 6 ali 7 meseca noseče — pogosto zato, ker se dobro počutijo, ker se bojijo bolnišnice ali ker nihče ni pojasnil, da je predporodna oskrba brezplačna in njihova pravica. Do takrat so se lahko nevarna stanja, kot sta preeklampsija ali gestacijski diabetes, tiho razvijala več mesecev.",
@@ -123,7 +123,7 @@
     }
   },
   "children": {
-    "description": "Romske otroke so prihodnost naših skupnosti in si zaslužijo vsako prednost. Pri delu sem videl otroke, ki zaostajajo — ne zaradi pomanjkanja sposobnosti, temveč ker so jim preprečljive bolezni, zamujena cepljenja ali neodkrite zamude vzele priložnosti. To znanje jim te priložnosti vrne.",
+    "description": "Romski otroci so prihodnost naših skupnosti in si zaslužijo vse prednosti. Pri svojem delu sem videl, da otroci zaostajajo – ne zaradi sposobnosti, temveč zato, ker so jim bolezni, ki bi jih bilo mogoče preprečiti, izostala cepljenja ali neopaženi zaostanki v razvoju, ukradli priložnosti. To znanje vrača te priložnosti.",
     "growthMilestones": {
       "title": "Rast in razvoj",
       "description": "Vsak otrok se razvija s svojim tempom in nikoli ne želim, da bi starši delali paniko zaradi običajnih variacij. Videla pa sem tudi otroke, katerih zapozneli razvoj so družine zavrnile kot \"bodo nadoknadili zamujeno\", ko bi zgodnja intervencija lahko naredila transformativno razliko. Vedeti, na kaj morate biti pozorni, ni tesnoba - je pozornost.",
@@ -156,7 +156,7 @@
     }
   },
   "chronic": {
-    "description": "Romi v povprečju umrejo 10 let prej kot evropsko povprečje. Večina te razlike izhaja iz kroničnih bolezni — sladkorne bolezni, srčnih in dihalnih bolezni — ki se leta tiho razvijajo. Ko se pojavijo simptomi, je škoda že narejena. Večino pa je mogoče preprečiti in vse obvladati, če se zgodaj ujame.",
+    "description": "Romi umirajo 10 let mlajši od evropskega povprečja. Večino te vrzeli povzročajo kronične bolezni – sladkorna bolezen, bolezni srca, bolezni dihal – ki se z leti razvijajo počasi in tiho. Ko se pojavijo simptomi, je škoda že storjena. Toda večino jih je mogoče preprečiti in vse je obvladljivo, če jih odkrijemo zgodaj.",
     "diabetes": {
       "title": "Sladkorna bolezen: tiha grožnja",
       "description": "Sladkorna bolezen tipa 2 je kronična bolezen, s katero se najpogosteje srečujem v romskih skupnostih. Pojavlja se v družinah, uspeva na poceni dieti z visoko vsebnostjo sladkorja, h kateri ljudi sili revščina, in škoduje vašim očem, ledvicam, stopalom in srcu leta, preden se počutite kaj narobe. Videl sem, kako moški v svojih 40 letih izgubljajo prste na nogah, ženske pa oslepijo zaradi sladkorne bolezni, ki jim nikoli niso diagnosticirali, ker niso nikoli opravili krvnega testa. To je mogoče preprečiti.",
@@ -189,7 +189,7 @@
     }
   },
   "mental": {
-    "description": "V 15 letih v romskih skupnostih sem spoznal, da najtežje breme ni fizična bolezen — temveč teža diskriminacije, revščine, strahu pred izselitvijo, skrbi za prihodnost otrok in občutka, da se nihče v sistemu ne zanima. Temu rečemo stres. Ko traja leta, postane nekaj drugega. Zaslužuje si, da se poimenuje, razume in zdravi — brez sramu.",
+    "description": "V 15 letih dela v romskih skupnostih sem se naučil, da najtežje breme, ki ga ljudje nosijo, ni telesna bolezen — to je teža diskriminacije, revščine, strahu pred deložacijo, skrbi za prihodnost otrok in občutek, da nikomur v sistemu ni vseeno. Temu pravimo stres. Ko traja leta, postane nekaj več. Zasluži si, da ga imenujemo, razumemo in obravnavamo – brez sramu.",
     "stressManagement": {
       "title": "Življenje s stresom",
       "description": "Ne bom se pretvarjal, da bo dihalna vaja rešila vaše težave. Če vas skrbi, da bodo vašo družino izselili, tega ne bo rešila nobena aplikacija za meditacijo. Vendar sem delal s stotinami ljudi v naših skupnostih, ki so pod ogromnim stresom, in videl sem, kaj se zgodi, ko tega stresa več let ne obvladamo: srčni napadi pri moških v 40 letih, ženske, ki ne morejo jesti ali spati, otroci, ki odraščajo v gospodinjstvih, naelektrenih z napetostjo. Svojih okoliščin ne moremo vedno spremeniti, lahko pa spremenimo, kako jih prenašamo.",
@@ -224,7 +224,7 @@
       "title": "Ko je preveč",
       "description": "Obstaja točka, kjer stres, žalost in zaskrbljenost prestopijo mejo v nekaj, kar potrebuje strokovno pomoč - in v romskih skupnostih te meje skoraj nikoli ne prepoznamo, ker smo naučeni vzdržati, biti močni, ravnati s tem v družini. Videl sem ceno te tišine: moški, ki pijejo, da bi se spopadli, dokler jim jetra ne odpovedo, ženske, ki nehajo jesti, najstniki, ki si škodijo. Prošnja za pomoč ni izdaja vaše kulture. Varuje vaše življenje, da ste lahko tam za ljudi, ki vas potrebujejo.",
       "tip1": "Če vi ali nekdo, ki ga poznate, ne morete normalno delovati več kot 2 tednov – ne morete spati, ne morete jesti, ne morete skrbeti za otroke, neprestano jokate ali nimate energije za karkoli – to presega običajen stres. To je depresija in je tako resnično zdravstveno stanje kot sladkorna bolezen. To ni slabost in se odziva na zdravljenje",
-      "tip2": "Vaš prvi korak je vaš družinski zdravnik (GP). Recite: 'Že več kot 2 tednov se počutim zelo slabo in potrebujem pomoč.' Ni vam treba vsega razlagati. Splošni zdravnik vas lahko oceni in napoti k psihologu ali psihiatru. Ta storitev je v večini evropskih držav brezplačna ali poceni. Če vas osebni zdravnik odpusti, obiščite drugega",
+      "tip2": "Vaš prvi korak je vaš družinski zdravnik (GP). Recite: 'Več kot 2 tednov se počutim zelo slabo in potrebujem pomoč.' Ni vam treba vsega razlagati. Splošni zdravnik vas lahko oceni in napoti k psihologu ali psihiatru. Ta storitev je v večini evropskih držav brezplačna ali poceni. Če vas splošni zdravnik odpusti, obiščite drugega",
       "tip3": "Če nekdo v vaši družini omeni, da želi umreti, želi izginiti ali čuti, da bi bilo vsem bolje brez njega - to takoj vzemite resno. Ostani z njimi. Odstranite dostop do zdravil in ostrih predmetov. Pokličite nacionalno krizno linijo ali 112. Ne pretiravaš. Te besede so klic na pomoč, na katerega je treba odgovoriti",
       "tip4": "Zdravila za duševno zdravje niso sramotna, zasvojljiva ali \"za norce\". Antidepresive predpisujejo milijonom ljudi po vsem svetu in rešujejo življenja. Ne spremenijo vas - dvignejo kemično meglo, ki vam preprečuje, da bi bili to, kar ste. Videl sem ljudi, ki so se spremenili zaradi zdravljenja, ki so se mu leta upirali zaradi stigme",
       "fact": "Romske skupnosti doživljajo eno najvišjih stopenj depresije in anksioznosti v Evropi, ki jih poganjajo strukturni dejavniki, kot so diskriminacija, revščina in pomanjkanje dostopa do storitev. Kljub temu je uporaba storitev duševnega zdravja v romskih skupnostih med najnižjimi. V programih, kjer sem ljudem pomagal pri povezovanju s kulturno občutljivo oskrbo duševnega zdravja, je bilo izboljšanje kakovosti življenja globoko – ne samo za posameznika, ampak za celotno družino.",

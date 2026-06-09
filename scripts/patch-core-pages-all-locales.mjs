@@ -13,8 +13,8 @@ import { TRANSLATIONS } from "./i18n-data/core-pages-translations.mjs";
 
 const ROOT_DIR = join(dirname(fileURLToPath(import.meta.url)), "..");
 const MESSAGES_DIR = join(ROOT_DIR, "messages");
-const NAMESPACES = ["learn", "track", "profile", "mediator"];
-const NON_EN_LOCALES = ["sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
+const NAMESPACES = ["learn", "track", "profile"];
+const NON_EN_LOCALES = ["it", "sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
 
 function leafPaths(obj, prefix = "") {
   const paths = [];

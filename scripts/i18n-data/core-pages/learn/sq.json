@@ -1,10 +1,10 @@
 {
-  "progressLabel": "module të përfunduara",
-  "startHere": "Fillo këtu",
-  "continueLabel": "Vazhdo",
+  "progressLabel": "modulet e përfunduara",
+  "startHere": "Filloni këtu",
+  "continueLabel": "Vazhdoni",
   "allModules": "Të gjitha modulet",
   "prevention": {
-    "description": "Në 15 vite pune në vendbanimet romë, kam parë familje të shkatërruara nga sëmundje që mund të ishin parandaluar me zakone të thjeshta. Ky dije nuk është luks — është mbijetim.",
+    "description": "Në 15 vjet duke punuar në vendbanimet rome, kam parë familje të shkatërruara nga sëmundjet që zakonet e thjeshta mund t'i kishin parandaluar. Kjo njohuri nuk është luks - është mbijetesë.",
     "handwashing": {
       "title": "Larja e duarve",
       "description": "Kam parë familje të tëra nëpër vendbanime të sëmuren nga i njëjti infeksion stomaku, të kaluar dorë më dorë. Larja e duhur e duarve është ilaçi i vetëm më i lirë dhe më i fuqishëm tek i cili tashmë keni akses – nuk kushton asgjë dhe parandalon sëmundjet që shoh më shpesh në komunitetet tona.",
@@ -47,7 +47,7 @@
     }
   },
   "nutrition": {
-    "description": "Në vitet me familjet romë, mësova se ushqimi nuk është vetëm ushqyerje — është çfarë mund të përballosh, çfarë ke në lagje dhe çfarë di familja jote. Nuk do të të them të blesh quinoa. Do të të tregoj si ta ushqesh mirë familjen me atë që ke.",
+    "description": "Në vitet e mia të punës me familjet rome, kam mësuar se ushqimi nuk ka të bëjë kurrë vetëm me ushqimin – ka të bëjë me atë që mund të përballosh, çfarë është në dispozicion në lagjen tuaj dhe çfarë di familja juaj. Unë nuk do t'ju them të blini quinoa. Unë do t'ju tregoj se si ta ushqeni mirë familjen tuaj me atë që keni.",
     "balancedDiet": {
       "title": "Ushqimi i mirë me çdo buxhet",
       "description": "Problemi më i madh ushqimor që shoh në komunitetet rome nuk është mungesa e ushqimit – është bukë shumë e lirë, mish i përpunuar dhe pije me sheqer, dhe shumë pak perime, vezë dhe bishtajore. Kjo nuk ka të bëjë me vullnetin. Bëhet fjalë për atë që është e disponueshme dhe e përballueshme. Por ndërrimet e vogla bëjnë ndryshime të mëdha në shëndetin tuaj dhe zhvillimin e fëmijëve tuaj.",
@@ -80,7 +80,7 @@
     }
   },
   "maternal": {
-    "description": "Kam shoqëruar gra romë në spitale ku u vendosën veçmas, u trajtuan pa respekt ose u refuzuan epidurale që gratë e tjera merrnin. Kam parë edhe gra që vdiqën nga komplikime që një vizitë prenatale do t'i kapipte në kohë. Trupi yt, fëmija yt, të drejtat e tua. Njih të treja.",
+    "description": "Unë i kam shoqëruar gratë rome në spitale, ku ato vendoseshin në dhoma të veçanta, u flisnin me mungesë respekti ose refuzonin epidurale që merrnin gratë e tjera. Kam parë gjithashtu gra që vdesin nga komplikimet që do të kishte kapur një vizitë e vetme para lindjes. Trupi juaj, fëmija juaj, të drejtat tuaja. Njihuni të tre.",
     "prenatalCare": {
       "title": "Kujdesi Prenatal",
       "description": "Në 15 vjet punë ndërmjetësimi, modeli që shoh vazhdimisht është se gratë rome vizitojnë mjekun për herë të parë kur ato janë tashmë 6 ose 7 muajshe shtatzënë — shpesh sepse ndihen mirë, sepse kanë frikë nga spitali ose sepse askush nuk shpjegoi se kujdesi prenatal është falas dhe e drejta e tyre. Deri në atë pikë, kushtet e rrezikshme si pre-eklampsia ose diabeti gestacional mund të jenë zhvilluar në heshtje për muaj të tërë.",
@@ -99,7 +99,7 @@
       "tip3": "Mësoni 5 shenjat e rrezikut që do të thotë SHKO NË SPITALI TANI, pavarësisht se sa është ora: (1) gjakderdhje e rëndë, (2) dhimbje koke e fortë me duar/fytyrë të fryrë, (3) foshnja ndalon së lëvizuri, (4) ethe uji PH_6 më shumë se ___PH 38°C. Mos prisni deri në mëngjes. Mos u përpiqni t'i menaxhoni këto në shtëpi",
       "tip4": "Pas lindjes, qëndroni në spital të paktën 24 orë për monitorim - edhe nëse ndiheni mirë. Shumë komplikime kërcënuese për jetën (hemorragji, infeksion) shfaqen në 24 orët e para. E di që mjedisi spitalor mund të jetë armiqësor, por ato orë monitorimi shpëtojnë jetë",
       "fact": "Në një rajon ku kam punuar për 5 vjet, ne reduktuam urgjencat e nënave rome me 60% thjesht duke u siguruar që çdo grua shtatzënë të kishte një plan lindjeje, një rregullim transporti dhe një çantë spitalore të paketuar sipas javës 36. Asnjë teknologji e re - vetëm përgatitje dhe shoqërim.",
-      "action": "Nëse ju ose dikush që njihni ka kaluar 30 javën e shtatzënisë: shkruani emrin e spitalit, numrin e telefonit dhe rrugën në letër. Vendoseni në mur. Paketoni një çantë me ID, kartën e vaksinimit, rroba për fëmijë dhe karikues telefoni. Kjo kërkon 20 minuta dhe mund të shpëtojë një jetë."
+      "action": "Nëse ju ose dikush që njihni ka kaluar javën e 30 shtatzënë: shkruani emrin e spitalit, numrin e telefonit dhe rrugën në letër. Vendoseni në mur. Paketoni një çantë me ID, kartën e vaksinimit, rrobat e bebeve dhe karikuesin e telefonit. Kjo kërkon 20 minuta dhe mund të shpëtojë një jetë."
     },
     "breastfeeding": {
       "title": "Ushqyerja me gji",
@@ -123,7 +123,7 @@
     }
   },
   "children": {
-    "description": "Fëmijët romë janë e ardhmja e komuniteteve tona dhe meritojnë çdo avantazh. Në punën time kam parë fëmijë që mbeten prapa — jo për mungesë aftësie, por sepse sëmundje të parandalueshme, vaksina të humbura ose vonesa të padetectuara u morën shanset. Ky dije ua kthen ato shanse.",
+    "description": "Fëmijët romë janë e ardhmja e komuniteteve tona dhe ata meritojnë çdo avantazh. Në punën time, kam parë fëmijët të mbeten prapa - jo për shkak të aftësisë, por për shkak se sëmundjet e parandalueshme, vaksinimet e humbura ose vonesat e pazbuluara të zhvillimit ua vodhën mundësitë. Kjo njohuri i kthen ato mundësi.",
     "growthMilestones": {
       "title": "Rritja dhe Zhvillimi",
       "description": "Çdo fëmijë zhvillohet me ritmin e vet dhe unë kurrë nuk dua që prindërit të kenë panik për ndryshimin normal. Por kam parë gjithashtu fëmijë, zhvillimi i vonuar i të cilëve u hodh poshtë nga familjet duke thënë se 'do ta arrijnë' kur ndërhyrja e hershme mund të kishte bërë një ndryshim transformues. Të dish se çfarë të shikosh nuk është ankth - është vëmendje.",
@@ -156,7 +156,7 @@
     }
   },
   "chronic": {
-    "description": "Romët vdesin 10 vjet më herët se mesatarja evropiane. Pjesa më e madhe e këtij hendeku vjen nga sëmundjet kronike — diabeti, sëmundjet e zemrës, sëmundjet respiratore — që zhvillohen ngadalë dhe në heshtje. Kur shfaqen simptomat, dëmtimi është bërë. Por shumica parandalohet dhe gjithçka menaxhohet nëse kapet herët.",
+    "description": "Romët vdesin 10 vjet më të rinj se mesatarja evropiane. Shumica e këtij hendeku vjen nga sëmundjet kronike - diabeti, sëmundjet e zemrës, sëmundjet e frymëmarrjes - që zhvillohen ngadalë dhe në heshtje gjatë viteve. Në kohën kur shfaqen simptomat, dëmi është bërë. Por pjesa më e madhe e tij është e parandalueshme dhe e gjitha është e menaxhueshme kur kapet herët.",
     "diabetes": {
       "title": "Diabeti: Kërcënimi i heshtur",
       "description": "Diabeti i tipit 2 është sëmundja kronike që e ndesh më shpesh në komunitetet rome. Ajo funksionon në familje, lulëzon me dietën e lirë me sheqer të lartë që varfëria i detyron njerëzit, dhe ju dëmton sytë, veshkat, këmbët dhe zemrën për vite me radhë përpara se të ndjeni ndonjë gjë të gabuar. Unë kam parë burra në 40s të humbasin gishtat e këmbëve dhe gratë verbërohen, nga diabeti që nuk u diagnostikua kurrë, sepse ata nuk kishin bërë kurrë një test gjaku. Kjo është e parandalueshme.",
@@ -189,7 +189,7 @@
     }
   },
   "mental": {
-    "description": "Në 15 vite në komunitetet romë, mësova se barrë më e rëndë nuk është sëmundja fizike — është pesha e diskriminimit, varfërisë, frikës nga dëbimi, shqetësimit për të ardhmen e fëmijëve dhe ndjesia se askush në sistem nuk kujdeset. E quajmë stres. Kur zgjat vite, bëhet diçka tjetër. Meriton të emërohet, kuptohet dhe trajtohet — pa turp.",
+    "description": "Në 15 vitet e punës në komunitetet rome, kam mësuar se barra më e rëndë që mbajnë njerëzit nuk është sëmundja fizike – është pesha e diskriminimit, varfërisë, frikës nga dëbimi, shqetësimit për të ardhmen e fëmijëve të tyre dhe ndjenjës se askush në sistem nuk kujdeset. Ne e quajmë këtë stres. Kur zgjat me vite, bëhet diçka më shumë. Ajo meriton të emërtohet, kuptohet dhe trajtohet - pa turp.",
     "stressManagement": {
       "title": "Të jetosh me stresin",
       "description": "Nuk do të pretendoj se një ushtrim i frymëmarrjes do të zgjidhë problemet tuaja. Nëse jeni të shqetësuar për dëbimin e familjes suaj, asnjë aplikacion meditimi nuk do ta rregullojë këtë. Por unë kam punuar me qindra njerëz në komunitetet tona që mbartin stres të jashtëzakonshëm dhe kam parë se çfarë ndodh kur ky stres mbetet i pamenaxhuar për vite me rradhë: sulme në zemër te burrat në moshën 40s, gra që nuk mund të hanë apo flenë, fëmijë që rriten në familje të elektrizuara nga tensioni. Ne nuk mund t'i ndryshojmë gjithmonë rrethanat tona, por mund të ndryshojmë mënyrën se si i mbajmë ato.",

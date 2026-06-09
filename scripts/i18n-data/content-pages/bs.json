@@ -4,7 +4,7 @@
       "title": "Kviz zdravlja — Redi Health",
       "description": "Testirajte svoje zdravstveno znanje interaktivnim kvizovima"
     },
-    "title": "Zdravstveni kviz",
+    "title": "Health Quiz",
     "subtitle": "Testirajte svoje znanje. Naučite nešto novo.",
     "backToQuizzes": "Nazad na kvizove",
     "seeResults": "Pogledajte rezultate",
@@ -222,8 +222,8 @@
       "sayThis": "reci ovo:",
       "thenDo": "Zatim uradite ovo:",
       "patientOmbudsman": "Ombudsman za pacijente",
-      "antiDiscrimination": "Protiv diskriminacije",
-      "romaRightsOrg": "Organizacija za prava Roma"
+      "antiDiscrimination": "Anti-Discrimination",
+      "romaRightsOrg": "Roma Rights Organization"
     },
     "rights": {
       "treatment": {
@@ -436,7 +436,7 @@
       "ana-tb": {
         "name": "Ana",
         "age": "31",
-        "country": "Slovačka",
+        "country": "Slovakia",
         "title": "TB nije smrtna kazna — ali morate završiti lijek",
         "story": "Kašljao sam mjesecima. Mislio sam da je samo prehlada. Kada sam konačno otišao kod doktora, rekli su mi da imam tuberkulozu. Bio sam prestravljen — mislio sam da ću umrijeti. Ali doktor je objasnio da se TB može izliječiti uz 6 mjeseci lijeka. Najteže je bilo uzimati tablete svaki dan 6 mjeseci, čak i kada sam se osjećala bolje nakon 2 mjeseca. Ali završio sam. Izliječen sam.",
         "lesson": "Ako kašljete duže od 2 sedmice, posjetite ljekara. TB je izlječiv, ali MORATE završiti sve lijekove."

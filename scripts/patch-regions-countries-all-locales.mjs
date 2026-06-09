@@ -11,7 +11,7 @@ const ROOT_DIR = join(dirname(fileURLToPath(import.meta.url)), "..");
 const MESSAGES_DIR = join(ROOT_DIR, "messages");
 const LOCALES_DIR = join(ROOT_DIR, "scripts/i18n-data/regions-countries/locales");
 
-const LOCALES = ["en", "sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
+const LOCALES = ["en", "it", "sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
 
 function deepClone(value) {
   return JSON.parse(JSON.stringify(value));

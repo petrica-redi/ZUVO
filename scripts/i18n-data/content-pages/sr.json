@@ -9,13 +9,13 @@
     "backToQuizzes": "Назад на квизове",
     "seeResults": "Погледајте резултате",
     "nextQuestion": "Следеће питање",
-    "questionsCount": "{цоунт} питања",
+    "questionsCount": "{count} питања",
     "results": {
       "perfect": "Савршен резултат!",
       "great": "Одличан посао!",
       "good": "Добар труд!",
       "keepLearning": "Наставите са учењем!",
-      "score": "Добили сте {сцоре} од {тотал} тачних",
+      "score": "Добили сте {score} од {total} тачних",
       "tryAgain": "Покушајте поново",
       "moreQuizzes": "Још квизова"
     },
@@ -222,8 +222,8 @@
       "sayThis": "реци ово:",
       "thenDo": "Затим урадите ово:",
       "patientOmbudsman": "Омбудсман за пацијенте",
-      "antiDiscrimination": "Против дискриминације",
-      "romaRightsOrg": "Организација за права Рома"
+      "antiDiscrimination": "Anti-Discrimination",
+      "romaRightsOrg": "Roma Rights Organization"
     },
     "rights": {
       "treatment": {
@@ -462,7 +462,7 @@
       "community": "заједница",
       "personal": "лични"
     },
-    "daysLeft": "Преостало је {цоунт} дана",
+    "daysLeft": "Преостало је {count} дана",
     "viewLeaderboard": "Прикажи ранг листу",
     "items": {
       "c1": {

@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 const ROOT_DIR = join(dirname(fileURLToPath(import.meta.url)), "..");
 const MESSAGES_DIR = join(ROOT_DIR, "messages");
 
-const LOCALES = ["en","sq","rom","ro","hu","sk","cs","bg","sr","hr","bs","mk","sl","el","tr"];
+const LOCALES = ["en","it","sq","rom","ro","hu","sk","cs","bg","sr","hr","bs","mk","sl","el","tr"];
 const NAMESPACES = ["healthQuiz","rights","stories","challenges","certificate"];
 
 const TRANSLATIONS = {
@@ -734,8 +734,8 @@ const TRANSLATIONS = {
         "sayThis": "кажи това:",
         "thenDo": "След това направете това:",
         "patientOmbudsman": "Пациентски омбудсман",
-        "antiDiscrimination": "Против дискриминация",
-        "romaRightsOrg": "Организация за правата на ромите"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {
@@ -1013,7 +1013,7 @@ const TRANSLATIONS = {
         "title": "Kviz zdravlja — Redi Health",
         "description": "Testirajte svoje zdravstveno znanje interaktivnim kvizovima"
       },
-      "title": "Zdravstveni kviz",
+      "title": "Health Quiz",
       "subtitle": "Testirajte svoje znanje. Naučite nešto novo.",
       "backToQuizzes": "Nazad na kvizove",
       "seeResults": "Pogledajte rezultate",
@@ -1231,8 +1231,8 @@ const TRANSLATIONS = {
         "sayThis": "reci ovo:",
         "thenDo": "Zatim uradite ovo:",
         "patientOmbudsman": "Ombudsman za pacijente",
-        "antiDiscrimination": "Protiv diskriminacije",
-        "romaRightsOrg": "Organizacija za prava Roma"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {
@@ -1445,7 +1445,7 @@ const TRANSLATIONS = {
         "ana-tb": {
           "name": "Ana",
           "age": "31",
-          "country": "Slovačka",
+          "country": "Slovakia",
           "title": "TB nije smrtna kazna — ali morate završiti lijek",
           "story": "Kašljao sam mjesecima. Mislio sam da je samo prehlada. Kada sam konačno otišao kod doktora, rekli su mi da imam tuberkulozu. Bio sam prestravljen — mislio sam da ću umrijeti. Ali doktor je objasnio da se TB može izliječiti uz 6 mjeseci lijeka. Najteže je bilo uzimati tablete svaki dan 6 mjeseci, čak i kada sam se osjećala bolje nakon 2 mjeseca. Ali završio sam. Izliječen sam.",
           "lesson": "Ako kašljete duže od 2 sedmice, posjetite ljekara. TB je izlječiv, ali MORATE završiti sve lijekove."
@@ -1611,7 +1611,7 @@ const TRANSLATIONS = {
           ]
         },
         "diabetes": {
-          "title": "Cukrovka",
+          "title": "Diabetes",
           "description": "Pochopení léčby diabetu",
           "questions": [
             {
@@ -1728,8 +1728,8 @@ const TRANSLATIONS = {
         "sayThis": "Řekněte toto:",
         "thenDo": "Pak proveďte toto:",
         "patientOmbudsman": "Ombudsman pacientů",
-        "antiDiscrimination": "Proti diskriminaci",
-        "romaRightsOrg": "Organizace za práva Romů"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {
@@ -2225,8 +2225,8 @@ const TRANSLATIONS = {
         "sayThis": "Πες αυτό:",
         "thenDo": "Στη συνέχεια κάντε αυτό:",
         "patientOmbudsman": "Συνήγορος του Ασθενούς",
-        "antiDiscrimination": "Κατά των διακρίσεων",
-        "romaRightsOrg": "Οργάνωση για τα δικαιώματα των Ρομά"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {
@@ -3219,8 +3219,8 @@ const TRANSLATIONS = {
         "sayThis": "Mondd ezt:",
         "thenDo": "Ezután tegye ezt:",
         "patientOmbudsman": "Betegombudsman",
-        "antiDiscrimination": "Diszkrimináció elleni védelem",
-        "romaRightsOrg": "Roma jogvédő szervezet"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {
@@ -3492,6 +3492,503 @@ const TRANSLATIONS = {
       }
     }
   },
+  "it": {
+    "healthQuiz": {
+      "meta": {
+        "title": "Quiz sulla salute — Redi Salute",
+        "description": "Metti alla prova le tue conoscenze sulla salute con quiz interattivi"
+      },
+      "title": "Quiz sulla salute",
+      "subtitle": "Metti alla prova le tue conoscenze. Impara qualcosa di nuovo.",
+      "backToQuizzes": "Torniamo ai quiz",
+      "seeResults": "Vedi i risultati",
+      "nextQuestion": "Prossima domanda",
+      "questionsCount": "{count} domande",
+      "results": {
+        "perfect": "Punteggio perfetto!",
+        "great": "Ottimo lavoro!",
+        "good": "Buono sforzo!",
+        "keepLearning": "Continua a imparare!",
+        "score": "Hai ottenuto {score} su {total} corretto",
+        "tryAgain": "Riprova",
+        "moreQuizzes": "Altri quiz"
+      },
+      "quizzes": {
+        "antibiotics": {
+          "title": "Antibiotici",
+          "description": "Sai quando usare gli antibiotici?",
+          "questions": [
+            {
+              "question": "Gli antibiotici possono curare l’influenza?",
+              "options": [
+                "Sì",
+                "No",
+                "A volte"
+              ],
+              "explanation": "L'influenza è causata da un virus. Gli antibiotici uccidono solo i batteri. L’assunzione di antibiotici per l’influenza non fa nulla e può rendere più difficili da trattare future infezioni."
+            },
+            {
+              "question": "Ti senti meglio dopo 3 giorni di antibiotici. Dovresti fermarti?",
+              "options": [
+                "Sì, sei guarito",
+                "No, finisci il corso completo",
+                "Prendi la metà delle pillole rimanenti"
+              ],
+              "explanation": "Termina SEMPRE l'intero corso. Se ti fermi presto, alcuni batteri sopravvivono e diventano resistenti. La prossima volta lo stesso antibiotico non funzionerà."
+            },
+            {
+              "question": "Puoi condividere gli antibiotici con un membro della famiglia che presenta sintomi simili?",
+              "options": [
+                "Sì, fa risparmiare denaro",
+                "No, mai",
+                "Solo se si tratta della stessa malattia"
+              ],
+              "explanation": "Non condividere mai gli antibiotici. Infezioni diverse necessitano di farmaci diversi. L'antibiotico sbagliato può essere pericoloso e non aiuta."
+            },
+            {
+              "question": "Cosa succede se prendi gli antibiotici troppo spesso?",
+              "options": [
+                "Niente di male",
+                "Il tuo corpo diventa immune alle malattie",
+                "I batteri diventano resistenti e più difficili da uccidere"
+              ],
+              "explanation": "La resistenza agli antibiotici è una crisi globale. Quando i batteri diventano resistenti, le infezioni semplici possono diventare mortali. Prendi gli antibiotici solo quando il medico li prescrive."
+            }
+          ]
+        },
+        "vaccines": {
+          "title": "Vaccini",
+          "description": "Separare i fatti dai miti",
+          "questions": [
+            {
+              "question": "I vaccini causano l’autismo?",
+              "options": [
+                "Sì",
+                "No",
+                "Non lo sappiamo"
+              ],
+              "explanation": "NO. Questo mito è nato da uno studio fraudolento che è stato poi ritirato. Il medico che lo ha pubblicato ha perso la licenza medica. Decine di studi con milioni di bambini dimostrano che i vaccini NON causano l’autismo."
+            },
+            {
+              "question": "È sicuro somministrare a un bambino più vaccini contemporaneamente?",
+              "options": [
+                "No, è troppo",
+                "Sì, è sicuro e testato",
+                "Solo uno alla volta"
+              ],
+              "explanation": "Il sistema immunitario dei bambini gestisce migliaia di germi ogni giorno. I vaccini combinati sono accuratamente testati e sicuri. Ritardare la vaccinazione lascia il tuo bambino non protetto."
+            },
+            {
+              "question": "Mio figlio ha un lieve raffreddore. Possono ancora vaccinarsi?",
+              "options": [
+                "No, aspetta fino alla piena salute",
+                "Sì, un lieve raffreddore va bene",
+                "Solo con il permesso del medico"
+              ],
+              "explanation": "Un lieve raffreddore, febbre bassa o naso che cola NON è un motivo per ritardare la vaccinazione. Solo una malattia grave richiede un rinvio. Chiedi al tuo medico se non sei sicuro."
+            },
+            {
+              "question": "I vaccini contengono sostanze chimiche pericolose?",
+              "options": [
+                "Sì, sono pieni di tossine",
+                "No, tutti gli ingredienti sono sicuri nelle piccole quantità utilizzate",
+                "Alcuni lo fanno, altri no"
+              ],
+              "explanation": "Gli ingredienti del vaccino sono presenti in quantità piccole e sicure. Si ottiene più alluminio dal latte materno che da un vaccino. Ogni ingrediente è stato testato per la sicurezza."
+            }
+          ]
+        },
+        "diabetes": {
+          "title": "Diabete",
+          "description": "Comprendere la gestione del diabete",
+          "questions": [
+            {
+              "question": "Il diabete è causato dal consumo eccessivo di zucchero?",
+              "options": [
+                "Sì",
+                "No, è più complesso",
+                "Solo tipo 2"
+              ],
+              "explanation": "Il diabete è causato dalla genetica, dallo stile di vita e dal modo in cui il corpo elabora l’insulina. Il consumo di zucchero non ne è la causa diretta, ma una dieta malsana e l’obesità aumentano il rischio."
+            },
+            {
+              "question": "Il diabete può essere curato con rimedi naturali come la cannella?",
+              "options": [
+                "Sì, la cannella lo cura",
+                "No, non esiste una cura ma può essere gestita",
+                "Sì, con abbastanza aglio ed erbe aromatiche"
+              ],
+              "explanation": "NON esiste una cura per il diabete. Può essere GESTITO con medicine, cibo sano ed esercizio fisico. La cannella può avere piccoli benefici ma NON PUÒ sostituire i farmaci. Le persone che interrompono la terapia finiscono in ospedale."
+            },
+            {
+              "question": "Una persona diabetica si sente stordita e sudata. Cosa dovresti fare?",
+              "options": [
+                "Date loro l'insulina",
+                "Date loro subito qualcosa di dolce",
+                "Digli di riposare"
+              ],
+              "explanation": "Questi sono segni di BASSO zucchero nel sangue (ipoglicemia). Date loro immediatamente succo, caramelle o acqua zuccherata. Questo può essere pericoloso per la vita. Dopo che si saranno sentiti meglio, dovrebbero consumare un pasto adeguato."
+            },
+            {
+              "question": "Con quale frequenza una persona diabetica dovrebbe controllare i propri piedi?",
+              "options": [
+                "Mai, i piedi stanno bene",
+                "Ogni giorno",
+                "Una volta all'anno"
+              ],
+              "explanation": "Il diabete può danneggiare i nervi dei piedi. Potresti non sentire tagli o ferite. Controlla i tuoi piedi OGNI GIORNO per tagli, vesciche o cambiamenti di colore. Piccole ferite possono diventare infezioni gravi."
+            }
+          ]
+        },
+        "hygiene": {
+          "title": "Igiene e prevenzione",
+          "description": "Abitudini sanitarie di base che salvano vite umane",
+          "questions": [
+            {
+              "question": "Per quanto tempo dovresti lavarti le mani con il sapone?",
+              "options": [
+                "5 secondi",
+                "Almeno 20 secondi",
+                "1 minuto"
+              ],
+              "explanation": "Lavati per almeno 20 secondi, più o meno il tempo necessario per cantare \"Happy Birthday\" due volte. Questo rimuove la maggior parte dei germi. I risciacqui rapidi non funzionano."
+            },
+            {
+              "question": "È sicuro bere l'acqua di un fiume o di un ruscello?",
+              "options": [
+                "Sì, l'acqua naturale è pulita",
+                "No, fallo sempre bollire o filtralo prima",
+                "Solo se sembra chiaro"
+              ],
+              "explanation": "Anche l’acqua limpida può contenere batteri e parassiti pericolosi. Far bollire sempre l'acqua per almeno 1 minuto o utilizzare un filtro. L’acqua sporca provoca diarrea, colera e tifo."
+            },
+            {
+              "question": "Tuo figlio ha la diarrea. Qual è la cosa più importante?",
+              "options": [
+                "Interrompi tutto il cibo",
+                "Dare molti liquidi (acqua, ORS)",
+                "Somministra antibiotici"
+              ],
+              "explanation": "La disidratazione causata dalla diarrea uccide più bambini della diarrea stessa. Somministrare una soluzione reidratante orale (ORS) o acqua pulita con un pizzico di sale e zucchero. Continua ad allattare i bambini."
+            },
+            {
+              "question": "Quando dovresti lavarti le mani?",
+              "options": [
+                "Solo prima di mangiare",
+                "Prima di mangiare, dopo la toilette, dopo aver toccato animali, dopo aver tossito",
+                "Solo quando sembrano sporchi"
+              ],
+              "explanation": "I germi sono invisibili. Lavarsi le mani: prima di mangiare/cucinare, dopo aver usato il bagno, dopo aver cambiato i pannolini, dopo aver toccato animali, dopo aver tossito/starnutito e dopo aver toccato persone malate."
+            }
+          ]
+        }
+      }
+    },
+    "rights": {
+      "meta": {
+        "title": "Conosci i tuoi diritti – Redi Health",
+        "description": "Diritti dei pazienti, aiuto alla discriminazione e contatti legali per le comunità rom"
+      },
+      "title": "Conosci i tuoi diritti",
+      "subtitle": "Hai dei diritti come paziente. Imparateli. Usali.",
+      "back": "Indietro",
+      "menu": {
+        "patientRights": {
+          "title": "Diritti dei pazienti",
+          "desc": "8 diritti che ogni paziente ha"
+        },
+        "discrimination": {
+          "title": "Di fronte alla discriminazione?",
+          "desc": "Cosa dire e fare – passo dopo passo"
+        },
+        "contacts": {
+          "title": "Assistenza legale per Paese",
+          "desc": "Difensore civico, antidiscriminazione, organizzazioni rom"
+        }
+      },
+      "views": {
+        "patientRights": "I tuoi diritti del paziente",
+        "discrimination": "Se devi affrontare una discriminazione",
+        "discriminationDesc": "Situazioni reali ed esattamente cosa dire e fare.",
+        "contacts": "Assistenza legale per Paese"
+      },
+      "labels": {
+        "sayThis": "Di' questo:",
+        "thenDo": "Quindi fai questo:",
+        "patientOmbudsman": "Difensore civico dei pazienti",
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
+      },
+      "rights": {
+        "treatment": {
+          "title": "Diritto alle cure d'urgenza",
+          "description": "Ogni ospedale DEVE curarti in caso di emergenza, anche senza assicurazione o documenti. Questa è la legge in ogni EU paese. Se rifiutano, chiedi il nome del medico e segnalalo."
+        },
+        "information": {
+          "title": "Diritto di comprendere la tua diagnosi",
+          "description": "Il tuo medico deve spiegare la tua condizione con parole che capisci. Se non capisci, di': 'Puoi spiegarlo più semplicemente?' Puoi anche chiedere un riassunto scritto."
+        },
+        "consent": {
+          "title": "Diritto di dire di no",
+          "description": "Nessuno può obbligarti a curarti. Prima di qualsiasi procedura, il medico deve spiegare cosa farà e tu devi essere d'accordo. Puoi sempre dire \"Ho bisogno di tempo per pensare\"."
+        },
+        "privacy": {
+          "title": "Diritto alla privacy",
+          "description": "Le tue informazioni mediche sono private. I medici non possono condividerli con il tuo datore di lavoro, la tua famiglia o chiunque altro senza il tuo permesso. Ciò include il tuo stato HIV, la gravidanza o la salute mentale."
+        },
+        "interpreter": {
+          "title": "Diritto ad un interprete",
+          "description": "Se non parli bene la lingua locale, puoi richiedere un interprete. Molti ospedali offrono questo servizio. In caso contrario, puoi portare qualcuno di cui ti fidi per tradurre."
+        },
+        "second-opinion": {
+          "title": "Diritto ad una seconda opinione",
+          "description": "Se non sei d'accordo con una diagnosi, puoi consultare un altro medico. Questo è un tuo diritto. Non è necessario spiegare il motivo."
+        },
+        "records": {
+          "title": "Direttamente sulla tua cartella clinica",
+          "description": "Puoi richiedere in qualsiasi momento copia di tutta la tua cartella clinica. L'ospedale deve fornirli. Questo è utile quando si cambia medico o ci si trasferisce in un'altra città."
+        },
+        "complaint": {
+          "title": "Diritto di lamentarsi",
+          "description": "Se ti senti maltrattato o discriminato puoi sporgere denuncia. Ogni ospedale ha una procedura di reclamo. Puoi anche contattare il difensore civico dei pazienti nel tuo paese."
+        }
+      },
+      "scenarios": {
+        "refused-treatment": {
+          "situation": "L'ospedale si rifiuta di curarti",
+          "whatToSay": "\"Ho diritto a cure di emergenza secondo la legge EU. Per favore, scrivi il tuo nome e il motivo per cui rifiuti.\"",
+          "whatToDo": [
+            "Rimani calmo ma fermo",
+            "Chiedi il nome completo del medico",
+            "Chiedere il rifiuto per iscritto",
+            "Chiama il difensore civico dei pazienti",
+            "Contatta un'organizzazione per i diritti dei rom"
+          ]
+        },
+        "rude-staff": {
+          "situation": "Il personale ospedaliero è scortese o sprezzante a causa della tua etnia",
+          "whatToSay": "\"Sono qui per assistenza medica. Mi aspetto di essere trattato con lo stesso rispetto di ogni altro paziente.\"",
+          "whatToDo": [
+            "Chiedere di parlare con la caposala o il capo reparto",
+            "Annotare la data, l'ora e i nomi",
+            "Presentare un reclamo scritto all'ospedale",
+            "Segnalazione all'organismo nazionale antidiscriminazione"
+          ]
+        },
+        "no-insurance": {
+          "situation": "Non hai l'assicurazione sanitaria",
+          "whatToSay": "\"Ho bisogno di aiuto medico. Quali sono le mie opzioni per i pazienti non assicurati?\"",
+          "whatToDo": [
+            "Le cure di emergenza sono sempre gratuite: insisti su questo",
+            "Chiedi informazioni sui programmi di assistenza sociale",
+            "Rivolgiti ad un mediatore sanitario della tua zona",
+            "Molte ONG forniscono cliniche gratuite: chiedi in ospedale"
+          ]
+        },
+        "language-barrier": {
+          "situation": "Non puoi comunicare con il dottore",
+          "whatToSay": "\"Ho bisogno di aiuto per capire. Potete fornirmi un interprete o parlare più lentamente?\"",
+          "whatToDo": [
+            "Utilizza questa app per tradurre frasi chiave",
+            "Porta una persona fidata che parli la lingua",
+            "Richiedi istruzioni scritte che potrai tradurre in seguito",
+            "Utilizza la fotocamera del tuo telefono per tradurre documenti"
+          ]
+        }
+      },
+      "contacts": {
+        "romania": {
+          "country": "Romania",
+          "ombudsman": "Avocatul Poporului",
+          "antiDiscrimination": "CNCD",
+          "ombudsmanPhone": "021 312 7134",
+          "antiDiscriminationPhone": "021 312 6578",
+          "romaRightsOrg": "Romani CRISS"
+        },
+        "bulgaria": {
+          "country": "Bulgaria",
+          "ombudsman": "Ombudsman of Bulgaria",
+          "antiDiscrimination": "Commission for Protection against Discrimination",
+          "ombudsmanPhone": "02 810 6955",
+          "romaRightsOrg": "Amalipe Center"
+        },
+        "hungary": {
+          "country": "Hungary",
+          "ombudsman": "Commissioner for Fundamental Rights",
+          "antiDiscrimination": "Equal Treatment Authority",
+          "ombudsmanPhone": "06 1 475 7100",
+          "romaRightsOrg": "Romaversitas Foundation"
+        },
+        "slovakia": {
+          "country": "Slovakia",
+          "ombudsman": "Public Defender of Rights",
+          "antiDiscrimination": "Slovak National Centre for Human Rights",
+          "ombudsmanPhone": "02 4828 7401",
+          "romaRightsOrg": "ETP Slovakia"
+        },
+        "czech-republic": {
+          "country": "Czech Republic",
+          "ombudsman": "Public Defender of Rights",
+          "antiDiscrimination": "Office of the Public Defender",
+          "ombudsmanPhone": "542 542 888",
+          "romaRightsOrg": "Romea.cz"
+        },
+        "serbia": {
+          "country": "Serbia",
+          "ombudsman": "Protector of Citizens",
+          "antiDiscrimination": "Commissioner for Equality",
+          "ombudsmanPhone": "011 206 8100",
+          "romaRightsOrg": "Praxis"
+        },
+        "albania": {
+          "country": "Albania",
+          "ombudsman": "People's Advocate",
+          "antiDiscrimination": "Commissioner for Protection from Discrimination",
+          "ombudsmanPhone": "042 380 300"
+        },
+        "north-macedonia": {
+          "country": "North Macedonia",
+          "ombudsman": "Ombudsman",
+          "antiDiscrimination": "Commission for Prevention and Protection against Discrimination",
+          "ombudsmanPhone": "02 3129 335"
+        },
+        "greece": {
+          "country": "Greece",
+          "ombudsman": "Greek Ombudsman",
+          "antiDiscrimination": "Greek Ombudsman (Equal Treatment)",
+          "ombudsmanPhone": "213 130 6600"
+        },
+        "croatia": {
+          "country": "Croatia",
+          "ombudsman": "Ombudswoman",
+          "antiDiscrimination": "Ombudswoman",
+          "ombudsmanPhone": "01 4851 855"
+        }
+      }
+    },
+    "stories": {
+      "meta": {
+        "title": "Storie della comunità — Redi Salute",
+        "description": "Esperienze di salute reali dalle comunità rom in tutta Europa"
+      },
+      "title": "Storie di comunità",
+      "subtitle": "Esperienze reali dalle comunità rom. Impara dagli altri.",
+      "backToStories": "Torniamo alle storie",
+      "lessonLearned": "Lezione appresa",
+      "whatToDoNext": "Cosa fare dopo",
+      "categories": {
+        "vaccines": "Vaccini",
+        "chronic": "Malattia cronica",
+        "maternal": "Gravidanza",
+        "discrimination": "Diritti",
+        "prevention": "Prevenzione",
+        "mental": "Salute mentale"
+      },
+      "nextSteps": {
+        "vaccineGuide": "Guida ai vaccini",
+        "askZuvo": "Chiedi a Zuvo",
+        "explainPrescription": "Spiegare la prescrizione",
+        "navigateToCare": "Naviga verso la cura",
+        "knowYourRights": "Conosci i tuoi diritti",
+        "learnPrevention": "Impara la prevenzione",
+        "checkSymptoms": "Controlla i sintomi",
+        "learnMentalHealth": "Ulteriori informazioni sulla salute mentale"
+      },
+      "entries": {
+        "maria-vaccines": {
+          "name": "Maria",
+          "age": "28",
+          "country": "Romania",
+          "title": "Quasi non ho vaccinato mia figlia",
+          "story": "Mia suocera mi ha detto che i vaccini sono velenosi. Tutti nell'insediamento hanno detto la stessa cosa. Quando è nata mia figlia, ho avuto paura. Ma il mediatore sanitario è venuto a casa nostra e ci ha spiegato tutto: come funzionano i vaccini, quali sono realmente gli effetti collaterali. Mi ha mostrato foto di bambini con il morbillo. Avevo più paura della malattia che del vaccino. Mia figlia ha fatto tutti i vaccini. È sana e forte.",
+          "lesson": "Parla con un mediatore sanitario o un medico prima di prendere decisioni basate su ciò che dicono gli altri. I vaccini salvano vite."
+        },
+        "stefan-diabetes": {
+          "name": "Stefan",
+          "age": "52",
+          "country": "Bulgaria",
+          "title": "Ho interrotto la terapia per il diabete e sono quasi morto",
+          "story": "Mi è stato diagnosticato il diabete di tipo 2 alle 45. La medicina mi ha fatto male allo stomaco, quindi ho smesso di prenderla. Il mio vicino ha detto che il tè alla cannella mi avrebbe guarito. Per 2 anni ho invece bevuto il tè alla cannella. Poi un giorno sono crollato. Il mio livello di zucchero nel sangue era superiore a 500. I medici hanno detto che i miei reni erano danneggiati. Adesso prendo la mia medicina ogni giorno. Vorrei non aver mai smesso.",
+          "lesson": "Non interrompere mai l'assunzione del medicinale senza parlare con il medico. I rimedi naturali non possono sostituire i farmaci per il diabete."
+        },
+        "elena-pregnancy": {
+          "name": "Elena",
+          "age": "22",
+          "country": "Serbia",
+          "title": "La mia prima gravidanza: non sapevo di poter vedere un medico gratuitamente",
+          "story": "Quando sono rimasta incinta a 19, non sono andata dal medico per 6 mesi. Non avevo l'assicurazione e pensavo che sarebbe costata troppo. Un mediatore sanitario mi ha detto che le cure prenatali sono gratuite per tutte le donne incinte in Serbia. Mi ha aiutato a registrarmi. Il medico ha scoperto che avevo anemia e pressione alta. Se non fossi andata, il mio bambino avrebbe potuto essere in pericolo.",
+          "lesson": "L’assistenza prenatale è gratuita nella maggior parte dei paesi europei. Chiedi a un mediatore sanitario di aiutarti a registrarti."
+        },
+        "janos-discrimination": {
+          "name": "János",
+          "age": "35",
+          "country": "Ungheria",
+          "title": "L'ospedale ha provato a mandarmi via",
+          "story": "Sono andato al pronto soccorso con dolore al petto. L'infermiera mi guardò e disse: \"Siamo pieni, vai in un altro ospedale\". Sapevo che non era giusto. Ho detto: 'Ho dolore al petto. Devi esaminarmi. Per favore, dammi il tuo nome.\" Il suo atteggiamento cambiò immediatamente. Mi hanno esaminato e hanno scoperto che avevo un problema cardiaco che necessitava di cure. Se fossi andato via, avrei potuto avere un infarto.",
+          "lesson": "Hai diritto a cure d'emergenza. Se qualcuno cerca di allontanarti, chiedi il suo nome e digli che conosci i tuoi diritti."
+        },
+        "ana-tb": {
+          "name": "Ana",
+          "age": "31",
+          "country": "Slovacchia",
+          "title": "TB non è una condanna a morte, ma devi finire la medicina",
+          "story": "Ho tossito per mesi. Pensavo fosse solo un raffreddore. Quando finalmente andai dal dottore, mi dissero che avevo la tubercolosi. Ero terrorizzato: pensavo di morire. Ma il medico ha spiegato che TB può essere curato con 6 mesi di medicine. La parte più difficile è stata prendere le pillole ogni giorno per 6 mesi, anche quando mi sentivo meglio dopo 2 mesi. Ma ho finito. Sono guarito.",
+          "lesson": "Se tossisci per più di 2 settimane, consulta un medico. TB è curabile, ma DEVI finire tutte le medicine."
+        },
+        "mirela-depression": {
+          "name": "Mirela",
+          "age": "40",
+          "country": "Macedonia del Nord",
+          "title": "La depressione non è debolezza: è una malattia",
+          "story": "Dopo la morte di mio marito, non sono riuscita ad alzarmi dal letto per mesi. La mia famiglia diceva che ero pigro. Hanno detto 'sii forte'. Ma non potevo. Un mediatore sanitario ha notato che qualcosa non andava e mi ha portato da un medico. Il medico ha detto che soffrivo di depressione, una vera condizione medica. Ho iniziato la medicina e ho parlato con un consulente. Lentamente, sono migliorato. Non sono debole. Ero malato.",
+          "lesson": "La depressione è una condizione medica, non un difetto caratteriale. La medicina e la consulenza possono aiutare. Per favore chiedi aiuto."
+        }
+      }
+    },
+    "challenges": {
+      "meta": {
+        "title": "Sfide — Redi Salute",
+        "description": "Sfide comunitarie"
+      },
+      "title": "Sfide attive",
+      "subtitle": "Partecipa agli obiettivi della community e alle sfide personali per guadagnare XP e badge bonus.",
+      "types": {
+        "community": "comunità",
+        "personal": "personale"
+      },
+      "daysLeft": "{count} giorni rimasti",
+      "viewLeaderboard": "Visualizza la classifica",
+      "items": {
+        "c1": {
+          "title": "Campione della conoscenza dei vaccini",
+          "description": "Chiedi agli studenti 50 della tua zona di superare il modulo sui vaccini questa settimana."
+        },
+        "c2": {
+          "title": "Serie di salute di 7 giorni",
+          "description": "Registra il tuo umore e l'assunzione di acqua per 7 giorni consecutivi."
+        }
+      }
+    },
+    "certificate": {
+      "meta": {
+        "title": "Certificato — Redi Sanità",
+        "description": "Certificato nazionale di alfabetizzazione sanitaria"
+      },
+      "title": "Il tuo certificato",
+      "subtitle": "Hai completato la fase nazionale della Student Health Academy.",
+      "ofCompletion": "Certificato di completamento",
+      "diplomaTitle": "Alfabetizzazione sanitaria nazionale",
+      "awardedFor": "Premiato per aver completato il curriculum della Redi Health Student Academy.",
+      "date": "Data",
+      "downloadPdf": "Scarica PDF",
+      "share": "Condividi",
+      "gate": {
+        "title": "Completa prima l'Accademia",
+        "description": "Per ottenere il certificato di Health Literacy, devi completare tutte le lezioni e superare il quiz nella fase nazionale della Student Health Academy.",
+        "cta": "Vai all'Accademia"
+      }
+    }
+  },
   "mk": {
     "healthQuiz": {
       "meta": {
@@ -3716,8 +4213,8 @@ const TRANSLATIONS = {
         "sayThis": "Кажи го ова:",
         "thenDo": "Потоа направете го ова:",
         "patientOmbudsman": "Народен правобранител за пациенти",
-        "antiDiscrimination": "Против дискриминација",
-        "romaRightsOrg": "Организација за правата на Ромите"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {
@@ -4213,8 +4710,8 @@ const TRANSLATIONS = {
         "sayThis": "Spune asta:",
         "thenDo": "Atunci fă asta:",
         "patientOmbudsman": "Avocatul Pacienților",
-        "antiDiscrimination": "Anti-discriminare",
-        "romaRightsOrg": "Organizație pentru drepturile romilor"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {
@@ -5090,7 +5587,7 @@ const TRANSLATIONS = {
           ]
         },
         "diabetes": {
-          "title": "Cukrovka",
+          "title": "Diabetes",
           "description": "Pochopenie liečby cukrovky",
           "questions": [
             {
@@ -5207,8 +5704,8 @@ const TRANSLATIONS = {
         "sayThis": "Povedz toto:",
         "thenDo": "Potom urob toto:",
         "patientOmbudsman": "Ombudsman pre pacientov",
-        "antiDiscrimination": "Proti diskriminácii",
-        "romaRightsOrg": "Organizácia za práva Rómov"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {
@@ -5704,8 +6201,8 @@ const TRANSLATIONS = {
         "sayThis": "Povej tole:",
         "thenDo": "Nato naredite to:",
         "patientOmbudsman": "Varuh bolnikovih pravic",
-        "antiDiscrimination": "Proti diskriminaciji",
-        "romaRightsOrg": "Organizacija za pravice Romov"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {
@@ -6201,8 +6698,8 @@ const TRANSLATIONS = {
         "sayThis": "Thuaj këtë:",
         "thenDo": "Pastaj bëni këtë:",
         "patientOmbudsman": "Avokati i Popullit për pacientët",
-        "antiDiscrimination": "Kundër diskriminimit",
-        "romaRightsOrg": "Organizatë për të drejtat e romëve"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {
@@ -6698,8 +7195,8 @@ const TRANSLATIONS = {
         "sayThis": "реци ово:",
         "thenDo": "Затим урадите ово:",
         "patientOmbudsman": "Омбудсман за пацијенте",
-        "antiDiscrimination": "Против дискриминације",
-        "romaRightsOrg": "Организација за права Рома"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {
@@ -7195,8 +7692,8 @@ const TRANSLATIONS = {
         "sayThis": "Şunu söyle:",
         "thenDo": "Sonra şunu yapın:",
         "patientOmbudsman": "Hasta Ombudsmanı",
-        "antiDiscrimination": "Ayrımcılığa karşı",
-        "romaRightsOrg": "Roma hakları örgütü"
+        "antiDiscrimination": "Anti-Discrimination",
+        "romaRightsOrg": "Roma Rights Organization"
       },
       "rights": {
         "treatment": {

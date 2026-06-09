@@ -883,7 +883,10 @@
         "title": "Data Protection Officer",
         "body": "Email dpo@redi.healthcare with any questions or formal requests. We acknowledge within 72 hours and resolve within 30 days, as required by GDPR."
       }
-    }
+    },
+    "localExportLabel": "Helyi adatok letöltése",
+    "localExportHint": "Mentse hangulatnaplóit, vízkövetését és helyi beállításait JSON-fájlba.",
+    "guestNote": "Ha vendégként használja az alkalmazást, az előrehaladást csak erre az eszközre menti a rendszer. Hozzon létre egy fiókot a szerverrel való szinkronizáláshoz."
   },
   "home": {
     "kicker": "AI-Powered Health Companion",
@@ -950,7 +953,9 @@
       "tools": "Health Tools",
       "learn": "Learn & Grow",
       "professional": "Professional",
-      "account": "Account"
+      "account": "Account",
+      "track": "Track & Family",
+      "trust": "Bizalom és biztonság"
     },
     "items": {
       "scanLabel": "Misinformation Scanner",
@@ -982,7 +987,21 @@
       "profileLabel": "Profile",
       "profileDesc": "Language, progress, data",
       "aboutLabel": "About Redi Health",
-      "aboutDesc": "Version, privacy, contact"
+      "aboutDesc": "Version, privacy, contact",
+      "providersLabel": "Keresse meg az Egészségügyet",
+      "providersDesc": "Klinikák és szolgáltatások az Ön közelében",
+      "trackLabel": "Napi jólét",
+      "trackDesc": "Kövesse nyomon a hangulatot, a vizet és az aktivitást",
+      "familyLabel": "Családi egészség",
+      "familyDesc": "Egészségügyi nyilvántartás az egész család számára",
+      "challengesLabel": "Egészségügyi kihívások",
+      "challengesDesc": "Közösségi célok és szokások",
+      "methodologyLabel": "Hogyan működik",
+      "methodologyDesc": "Klinikai irányításunk és biztonságunk",
+      "policiesLabel": "Platformszabályzatok",
+      "policiesDesc": "Klinikai biztonság, adatjogok, roma méltányosság",
+      "impactLabel": "Közegészségügyi hatás",
+      "impactDesc": "A program bizonyítékai és eredményei"
     }
   },
   "sos": {
@@ -1067,7 +1086,11 @@
     "verified": "Verified Roma-Friendly",
     "freeClinic": "Free Services Available",
     "interpreter": "Romani Interpreter",
-    "getDirections": "Get Directions"
+    "getDirections": "Get Directions",
+    "unverifiedWarningTitle": "Ez a könyvtár fejlesztés alatt áll",
+    "unverifiedWarningBody": "A megjelenített listák csak példák, nem ellenőrizték őket. Ne hagyatkozzon ezekre az információkra az orvosi döntések meghozatalakor. Lépjen kapcsolatba a helyi egészségügyi szolgáltatóval, civil szervezettel vagy egészségügyi közvetítővel, hogy megtalálja az Ön közelében lévő ellátást.",
+    "unverifiedBadge": "Még nincs ellenőrizve",
+    "unverifiedListingNote": "Az adatlap még nem ellenőrizve – a szolgáltatások megerősítéséhez forduljon közvetlenül a szolgáltatóhoz."
   },
   "landing": {
     "eyebrow": "Health literacy for Roma communities",
@@ -1122,7 +1145,8 @@
     "privacy": "Privacy",
     "contact": "Contact",
     "rights": "© 2026 Redi Health. All rights reserved.",
-    "builtWith": "Built with Roma health mediators across 15 countries."
+    "builtWith": "Built with Roma health mediators across 15 countries.",
+    "policies": "Platformszabályzatok"
   },
   "family": {
     "title": "Családi egészség",
@@ -1503,7 +1527,10 @@
     "imageReadyBody": "Elolvassuk a gyógyszert, adagot és utasításokat, és mindent egyszerűen elmagyarázunk.",
     "imageRemove": "Fénykép eltávolítása",
     "preparingImage": "Fénykép előkészítése…",
-    "imageFailed": "Nem sikerült olvasni ezt a fényképet. Próbálj másikat."
+    "imageFailed": "Nem sikerült olvasni ezt a fényképet. Próbálj másikat.",
+    "followUpChat": "Kérdezze meg az AI tanácsadót",
+    "followUpNavigate": "Keressen egy orvost",
+    "followUpGlossary": "Orvosi feltételek"
   },
   "symptoms": {
     "heroTitle": "Hol fáj?",
@@ -1643,7 +1670,23 @@
     "meta": {
       "title": "Egészségügyi navigátor — Redi Health",
       "description": "Készülj fel az orvosi látogatásra — látogatási kártya, mit vigyél, jogaid."
-    }
+    },
+    "systemGuidesTitle": "Útmutató az egészségügyi rendszerhez",
+    "italySsnTitle": "Olaszország: Egészségügyi rendszer (SSN) útmutató",
+    "italyDoctorTitle": "Gyermekorvos kontra háziorvos (háziorvos)",
+    "italyDoctorDesc": "A 14 év alatti gyermekeket gyermekorvosnál kell regisztrálni (Pediatra di Base). Felnőttek (14 és idősebbek) regisztrálnak egy háziorvosnál (Medico di Medicina Generale). Mindkét szolgáltatás ingyenes az Országos Egészségügyi Szolgálat (SSN) révén.",
+    "italyEnrollTitle": "Hogyan kell regisztrálni az SSN-hez",
+    "italyEnrollSteps": [
+      "Keresse meg a legközelebbi ASL (Azienda Sanitaria Locale) irodát a környéken.",
+      "Vigyen magával érvényes személyazonosító okmányt, adószámát (Codice Fiscale) és lakcímet igazoló dokumentumot.",
+      "Ha nem rendelkezik rendszeres tartózkodási engedéllyel, kérjen STP kódot (Straniero Temporaneamente Presente).",
+      "Válassza ki orvosát vagy gyermekorvosát a rendelkezésre álló helyi listáról.",
+      "Kap egy papírkártyát (Tessera Sanitaria), amellyel ingyenes látogatásokat és recepteket kaphat."
+    ],
+    "italyStpTitle": "Nem rezidensek: Az STP kódex",
+    "italyStpDesc": "Ha nem rendelkezik tartózkodási engedéllyel vagy okmányokkal nem rendelkezik, továbbra is joga van sürgős és elengedhetetlen orvosi ellátáshoz. Az ASL kiad egy STP kódot (Straniero Temporaneamente Presente). Névtelen, nem jelenti be a bevándorlási hatóságoknál, és garantálja az oltásokhoz, a terhességi ellátáshoz és a sürgős klinikai látogatásokhoz való hozzáférést.",
+    "viewGuide": "Útmutató megtekintése",
+    "closeGuide": "Útmutató bezárása"
   },
   "about": {
     "brand": "Redi Health",
@@ -1666,7 +1709,8 @@
     "meta": {
       "title": "Rólunk — Redi Health",
       "description": "A Redi Health egészségügyi műveltségi platformjáról"
-    }
+    },
+    "policiesLink": "Platformszabályzatok"
   },
   "theme": {
     "ariaLabel": "Téma",
@@ -1698,37 +1742,37 @@
     "redHospital": "Menj AZONNAL a kórházba"
   },
   "learn": {
-    "progressLabel": "abgeschlossene Module",
-    "startHere": "Kezdd itt",
+    "progressLabel": "modulok elkészültek",
+    "startHere": "Kezdje itt",
     "continueLabel": "Folytatás",
-    "allModules": "Összes modul",
+    "allModules": "Minden modul",
     "prevention": {
-      "description": "15 év roma telepeken végzett munkám során olyan családokat láttam, akiket egyszerű szokások megelőzhetett volna betegségekben. Ez a tudás nem luxus — túlélés.",
+      "description": "15 év alatt roma telepeken dolgozva láttam olyan családokat, amelyeket olyan betegségek pusztítottak el, amelyeket egyszerű szokásokkal meg lehetett volna előzni. Ez a tudás nem luxus – ez a túlélés.",
       "handwashing": {
         "title": "Kézmosás",
-        "description": "Településeken láttam, hogy egész családok betegedtek meg ugyanattól a gyomorfertőzéstől, kézről kézre adva. A megfelelő kézmosás az egyetlen legolcsóbb, legerősebb gyógyszer, amelyhez már hozzáférhet – nem kerül semmibe, és megelőzi azokat a betegségeket, amelyeket a közösségeinkben leggyakrabban tapasztalok.",
+        "description": "Településeken láttam, hogy egész családok betegedtek meg ugyanattól a gyomorfertőzéstől, kézről kézre adva. A megfelelő kézmosás az egyetlen legolcsóbb, legerősebb gyógyszer, amelyhez már hozzáfér – nem kerül semmibe, és megelőzi azokat a betegségeket, amelyeket a közösségeinkben leggyakrabban tapasztalok.",
         "tip1": "Mielőtt hozzáérne az ételhez, mielőtt etetne egy gyermeket, és minden WC-látogatás után mosakodjon meg. Láttam, hogy egy mosatlan kéz egy hétig tartó hasmenést okozott egy egész háztartásban",
-        "tip2": "Lassan számolj 20-ig, vagy dúdolj egy dalt. A legtöbben 5 másodpercig mosnak – ez szinte semmit sem távolít el. A kezei közötti súrlódás az, ami elpusztítja a baktériumokat",
+        "tip2": "Számolj lassan 20-ig, vagy dúdolj egy dalt. A legtöbben 5 másodpercig mosnak – ez szinte semmit sem távolít el. A kezei közötti súrlódás az, ami elpusztítja a baktériumokat",
         "tip3": "Nincs szappan? Dolgoztam olyan településeken, ahol nincs vezetékes víz. Ash működik. A homok működik. A víz önmagában súrolással jobban működik, mint a semmi. Ne hagyd, hogy a tökéletes megakadályozza a jót",
         "tip4": "Levegőn szárítsa meg a kezét, vagy használjon tiszta ruhát, amelyet naponta cserél. A mindenki által megosztott piszkos törölköző újra beszennyezi a tiszta kezet – ezt minden otthonlátogatás alkalmával elmagyarázom",
         "fact": "Azokban a közösségekben, amelyekkel együtt dolgoztam, a kézmosási kampányok három hónapon belül közel felére csökkentették a gyermekek hasmenéses eseteit. A WHO megerősíti: a kézmosás 40%-kal csökkenti a hasmenést és akár 21%-kal a légúti fertőzéseket.",
         "action": "Ma este álljatok gyermekeitekkel a vízforráshoz, és mossatok kezet együtt. Tedd családi szokássá minden étkezés előtt. A gyerekek, akik úgy tanulnak, hogy a szüleiket figyelik, ezt egy életen át viselik."
       },
       "vaccination": {
-        "title": "Oltás",
+        "title": "Védőoltás",
         "description": "Elkísértem roma anyákat egészségügyi központokba, ahol visszautasították őket, mert nem voltak okmányaik, nem beszélték a nyelvet, vagy egyszerűen csak azt mondták nekik, hogy jöjjenek vissza később. A védőoltások gyermekei törvényes joga – ingyenes, biztonságos és a leghatékonyabb védelem, amelyet egy szülő adhat. Ezt senki sem tagadhatja meg tőled.",
-        "tip1": "Európa minden országa születéstől kezdve ingyenes oltási ütemtervet biztosít. Ez nem jótékonyság – ez a gyermeked törvényes jogosultsága. Ha egy egészségügyi dolgozó megtagadja, kérje ki a felettesét, és ezt egyértelműen jelezze",
+        "tip1": "Európa minden országa születéstől kezdve ingyenes oltási ütemtervet biztosít. Ez nem jótékonyság – ez a gyermeke törvényes jogosultsága. Ha egy egészségügyi dolgozó megtagadja, kérje ki a felettesét, és ezt világosan jelezze",
         "tip2": "Az oltási kártya a legfontosabb dokumentum, amellyel gyermeke születési anyakönyvi kivonatát követően rendelkezik. Tartsa biztonságban, vigye magával minden orvosi látogatásra. Ha elveszett, bármelyik egészségügyi központnak ki kell adnia a pótlást – ne fogadja el az elutasítást",
-        "tip3": "Enyhe láz, fájó folt a karon, egy napig tartó nyűg – ez normális, és azt jelenti, hogy az oltóanyag működik. Több száz aggódó anyát nyugtattam meg ezzel kapcsolatban. 24-48 óra alatt elmúlik",
+        "tip3": "Enyhe láz, fájó folt a karon, egy napig tartó nyűg – ez normális, és azt jelenti, hogy az oltóanyag működik. Több száz aggódó anyát nyugtattam meg ezzel kapcsolatban. 24–48 óra alatt elmúlik",
         "tip4": "A legtöbb közegészségügyi központban nem kell időpontot kérnie az oltásokhoz. Lépjen be. Ha roma egészségügyi közvetítő dolgozik az Ön területén, kérje meg, hogy kísérje el Önt – erre vagyunk kiképezve",
-        "fact": "Egy településen, ahol dolgoztam, beütött a kanyaró, mert az átoltottság 60%-ra csökkent. Három gyermek került kórházba. Egy közösségi oltási kampány után elértük a 94%-ot – és a járványok megszűntek. Európa-szerte a vakcinák évente 2-3 millió ember halálát akadályozzák meg.",
-        "action": "Azonnal vegye ki gyermeke oltási kártyáját. Ellenőrizze az egészségügyi központ falán található ütemterv alapján. Ha valamelyik vakcina hiányzik, vagy nincs kártyája, ezen a héten keresse fel az egészségügyi központot. Hozd ezt az alkalmazást az ütemterv megjelenítéséhez, ha segít."
+        "fact": "Az egyik településen, ahol dolgoztam, beütött a kanyaró, mert az oltottság 60%-ra csökkent. Három gyermek került kórházba. Egy közösségi oltási kampány után elértük a 94%-ot – és a járványok megszűntek. Európa-szerte a vakcinák évente 2–3 millió halálesetet akadályoznak meg.",
+        "action": "Azonnal vegye ki gyermeke oltási kártyáját. Ellenőrizze az egészségügyi központ falán található ütemterv alapján. Ha valamelyik vakcina hiányzik, vagy nincs kártyája, keresse fel az egészségügyi központot ezen a héten. Hozd ezt az alkalmazást az ütemterv megjelenítéséhez, ha segít."
       },
       "cleanWater": {
         "title": "Tiszta Víz",
         "description": "Dolgoztam olyan településeken, ahol a családoknak közös vízpontja van, amely napi két órát üzemel, és olyan környékeken, ahol a csapvíz tisztának tűnik, de olyan baktériumokat hordoz, amelyek krónikus gyomorpanaszokat okoznak a gyermekeknél. A víz minősége nem mindig látható – a roma közösségekben pedig ritkán figyelik a hatóságok. Biztosan te vagy a családod vízügyi felügyelője.",
         "tip1": "Fedezzen le minden edényt, ahol vizet tárol. Láttam, hogy legyek, por, sőt állati eredetű hulladékok órákon belül beszennyezik a fedetlen vödröket, főleg meleg időben. Egy egyszerű lap a tetején megakadályozza a legtöbb szennyeződést",
-        "tip2": "Ha nem biztos a vízben, forralja fel egy teljes percig gördülő forrásban. Ez elpusztítja a baktériumok, vírusok és paraziták 99,9%-át. Szinte semmibe nem kerül, és működik – több tucat településen tanítottam ezt, ahol kérdéses volt a vízforrás",
+        "tip2": "Ha nem biztos a vízben, forralja fel egy teljes percig gördülő forrásban. Ez elpusztítja a baktériumok, vírusok és paraziták 99.9%-át. Szinte semmibe nem kerül, és működik – több tucat településen tanítottam ezt, ahol kérdéses volt a vízforrás",
         "tip3": "Mossa ki a víztartályokat szappannal és tiszta vízzel legalább hetente egyszer. A piszkos tartály a tiszta vizet piszkossá teszi. Ez az egyik leginkább figyelmen kívül hagyott oka az ismétlődő hasmenésnek, amelyet gyermekeknél láttam",
         "tip4": "A patakok, tavak és állótócsák soha nem ihatóak – még akkor sem, ha a víz tisztanak tűnik. A szem számára láthatatlan paraziták krónikus károsodást okoznak a gyermekek bélrendszerében és fejlődésében",
         "fact": "Közép- és Kelet-Európa számos roma településén a családok nem jutnak biztonságos vezetékes vízhez. Az Európai Roma Jogok Központja dokumentálta, hogy a roma negyedekben rendszeresen alul van ellátva a vízi infrastruktúra. A forrásban lévő víz nem ideális – ez egy túlélési stratégia, amíg a tiszta vízhez való joga nem teljesül.",
@@ -1736,17 +1780,17 @@
       },
       "firstAid": {
         "title": "Alapvető elsősegélynyújtás",
-        "description": "A távoli településeken és városi negyedekben, ahol hosszabb ideig tart a mentők megérkezése – vagy néha egyáltalán nem jönnek –, az élet és a halál közötti különbség az, hogy a vészhelyzet első perceiben tudják, mit kell tenni. Több száz roma közösség tagját képeztem ki az alapvető elsősegélynyújtásra, és láttam, hogy ez a tudás életeket mentett meg, mielőtt bármelyik orvos megérkezett volna.",
-        "tip1": "A 112 bármely európai telefonról működik – hitel nélkül, SIM-kártya nélkül is, még zárolt telefonról is. Tanítsd meg családod minden tagját, beleértve a 7 év feletti gyerekeket is, hogy tárcsázzák a 112-t, és mondják meg, hol vannak. Gyakorold ezt. Vészhelyzetben a pánik feledteti az embereket",
-        "tip2": "Erős vérzés esetén: nyomja meg erősen a lehető legtisztább ruhával – ing, fejkendő, bármi –, és ne emelje fel, hogy ellenőrizze. Tartsa nyomva, amíg a segítség meg nem érkezik. Láttam embereket veszélyesen vérezni, mert folyamatosan levették a ruhát, hogy megnézzék. Ha a vér átitatja, adjon hozzá további ruhát a tetejére",
+        "description": "A távoli településeken és városi negyedekben, ahol hosszabb ideig tart a mentők megérkezése – vagy néha egyáltalán nem jönnek –, az élet és a halál közötti különbség az, hogy a vészhelyzet első perceiben tudják, mit kell tenni. Több száz roma közösség tagját képeztem ki az alapvető elsősegélynyújtásra, és láttam, hogy ez a tudás életeket ment meg, mielőtt bármelyik orvos megérkezett volna.",
+        "tip1": "A 112 bármely európai telefonról működik – hitel nélkül, SIM-kártya nélkül is, még zárolt telefonról is. Tanítsd meg családod minden tagját, beleértve a 7 év feletti gyerekeket is, hogy tárcsázzák a 112 számot, és mondják meg, hol vannak. Gyakorold ezt. Vészhelyzetben a pánik feledteti az embereket",
+        "tip2": "Erős vérzés esetén: nyomja meg erősen a lehető legtisztább ruhával – ing, fejkendő, bármi –, és ne emelje fel, hogy ellenőrizze. Tartsa nyomva, amíg a segítség meg nem érkezik. Láttam embereket veszélyesen vérezni, mert folyamatosan levették a ruhát, hogy megnézzék. Ha a vér átázik, adjon hozzá további ruhát a tetejére",
         "tip3": "Égési sérülések: azonnal helyezze az égési sérülést hideg folyóvíz alá legalább 10 percre. Soha ne kenj fel vajat, olajat, fogkrémet vagy tojásfehérjét – olyan hagyományos gyógymódokkal, amelyekkel sok családban találkoztam, amelyek ténylegesen felfogják a hőt, és súlyosabb károkat és fertőzéseket okoznak.",
-        "tip4": "Ha valaki összeesik és nem lélegzik: hívja a 112-t, majd nyomja erősen és gyorsan a mellkasa közepét – percenként 100-szor (a „Stayin' Alive” dal tempója). Ne álljon meg, amíg a segítség meg nem érkezik. A tökéletlen CPR végtelenül jobb, mint a nem CPR",
+        "tip4": "Ha valaki összeesik és nem lélegzik: hívja a 112 számot, majd nyomja erősen és gyorsan a mellkasa közepén – percenként 100-szor (a 'Stayin' Alive' dal tempója). Ne álljon meg, amíg a segítség meg nem érkezik. A tökéletlen CPR végtelenül jobb, mint a nem CPR",
         "fact": "Tanulmányok azt mutatják, hogy azokban a közösségekben, ahol széles körben elterjedt az alapvető elsősegélynyújtási képzés, a szívmegállás utáni túlélés megduplázódik. Sok roma közösségben a mentőautók válaszideje lényegesen hosszabb, mint a nem roma területeken, ami még kritikusabbá teszi a kívülállók elsősegélynyújtását.",
-        "action": "Most azonnal kérdezze meg minden családtagot: tudja, hogyan kell hívni a 112-t? Tudja elég jól a lakcímünket ahhoz, hogy elmondja a diszpécsernek? Írja fel a teljes címét egy papírra, és tegye a telefon közelébe. Tanítsa meg gyermekeit ma."
+        "action": "Most azonnal kérdezze meg minden családtagot: tudja, hogyan kell hívni a 112 számot? Tudja elég jól a lakcímünket ahhoz, hogy elmondja a diszpécsernek? Írja fel a teljes címét egy papírra, és tegye a telefon közelébe. Tanítsa meg gyermekeit ma."
       }
     },
     "nutrition": {
-      "description": "Az évek során roma családokkal azt tanultam, hogy az étel nem csak táplálkozás — hanem az, amit megengedhetsz magadnak, ami elérhető a környékeden és amit a családod tud. Nem azt mondom, vedd meg a quinoát. Azt mondom, hogyan tápláld jól a családodat abból, amid van.",
+      "description": "A roma családoknál eltöltött éveim során megtanultam, hogy az étkezés soha nem csak a táplálkozásról szól – arról van szó, hogy mit engedhet meg magának, mi kapható a környéken, és mit tud a családja. Nem mondom, hogy vegyél quinoát. Elmondom, hogyan tápláld jól a családod abból, ami van.",
       "balancedDiet": {
         "title": "Jól étkezni bármilyen költségvetés mellett",
         "description": "A legnagyobb táplálkozási problémát a roma közösségekben nem az élelmiszerhiányban látom – ez túl sok az olcsó kenyér, a feldolgozott hús és a cukros italok, és túl kevés a zöldség, a tojás és a hüvelyesek. Ez nem akaraterőről szól. Arról szól, ami elérhető és megfizethető. A kis elmozdulások azonban óriási változásokat okoznak az Ön egészsége és gyermekei fejlődése szempontjából.",
@@ -1759,13 +1803,13 @@
       },
       "childNutrition": {
         "title": "Gyermekek táplálása az erős kezdéshez",
-        "description": "Az első 1000 nap – terhességtől 2 éves korig – alakítja a gyermek teljes jövőjét: agyát, immunrendszerét, tanulási képességét. Láttam, ahogy az alultáplált gyerekek a településeken nem a genetika miatt maradnak le társaiktól, hanem attól, amit a kritikus korai hónapokban ettek. Amit most etetsz a gyermekednek, az a legerőteljesebb befektetés, amit az életébe tehetsz.",
+        "description": "Az első 1,000 nap – terhességtől 2 életkorig – alakítja a gyermek teljes jövőjét: agyát, immunrendszerét, tanulási képességét. Láttam, ahogy az alultáplált gyerekek a településeken nem a genetika miatt maradnak le társaiktól, hanem attól, amit a kritikus korai hónapokban ettek. Amit most etetsz a gyermekednek, az a legerőteljesebb befektetés, amit az életébe tehetsz.",
         "tip1": "Az anyatej önmagában 6 hónapig az aranystandard – ingyenes, mindig elérhető, tökéletesen tápláló, és minden gyógyszernél jobban véd a fertőzések ellen. Dolgoztam olyan anyákkal, akik úgy gondolták, hogy a tápszer „modern” és jobb. Nem az. Az anyatej a technológiai evolúció tökéletesítése",
-        "tip2": "6 hónapos korban kezdje el a lágy ételek fogyasztását a szoptatás mellett: burgonyapüré, sárgarépa, banán, főtt tojássárgája. 3 naponta vezessen be egy új ételt, hogy figyelje a reakciókat. Sok anyával dolgozom túl későn (8-9 hónap) – ez késlelteti a fejlődést",
-        "tip3": "2 éven aluli gyermekek soha nem ihatnak cukrot, mézet, sót, kólát, chipset vagy édességet. Tudom, hogy a nagyszülők néha cukorral teát adnak, hogy megnyugtassák a babát – kérem, hagyja abba. A cukor ebben a korban élethosszig tartó sóvárgást programoz, és még azelőtt károsítja a fogakat, hogy azok teljesen kibújnának",
-        "tip4": "Napi egy tojás egy 6 hónaposnál idősebb gyermek számára a létező legegyszerűbb táplálkozási frissítés. Egy ecuadori tanulmány kimutatta, hogy a tojás 47%-kal csökkentette a növekedési ütemet. Ezt minden közösségi előadásban idézem, mert szinte minden család számára elérhető",
+        "tip2": "6 hónapos korában kezdje el a lágy ételek fogyasztását a szoptatás mellett: burgonyapüré, sárgarépa, banán, főtt tojássárgája. Vezessen be egy új ételt 3 naponta, hogy figyelje a reakciókat. Sok anyával dolgozom túl későn (8–9 hónap) – ez késlelteti a fejlődést",
+        "tip3": "A 2 év alatti gyermekek soha nem fogyaszthatnak cukrot, mézet, sót, kólát, chipset vagy édességet. Tudom, hogy a nagyszülők néha cukorral teát adnak, hogy megnyugtassák a babát – kérem, hagyja abba. A cukor ebben a korban élethosszig tartó sóvárgást programoz, és még azelőtt károsítja a fogakat, hogy azok teljesen kibújnának",
+        "tip4": "Napi egy tojás egy 6 hónaposnál idősebb gyermek számára a létező legegyszerűbb táplálkozási frissítés. Egy ecuadori tanulmány kimutatta, hogy a tojás 47%-kal csökkentette a satnyaságot. Ezt minden közösségi előadásban idézem, mert szinte minden család számára elérhető",
         "fact": "Azokban a közösségekben, ahol táplálkozási programokat vezettem, azok a gyerekek, akik 6 hónapon keresztül naponta kaptak egy tojást és egy adag zöldséget, mérhető javulást mutattak a növekedésben és a kognitív fejlődésben azokhoz képest, akik nem. Az alultápláltság nem pusztán a szegénységről szól – hanem arról, hogy tudjuk, mit kell előnyben részesíteni a rendelkezésünkre álló erőforrásokkal.",
-        "action": "Holnaptól adjon 6 hónaposnál idősebb gyermekének napi egy tojást (pépesített vagy rántottát). Ha gyermeke még 6 hónaposnál fiatalabb, és szoptat, fogyasszon egy további tojást – a tápanyagok átjutnak a tején."
+        "action": "Holnaptól adjon gyermekének 6 hónapon túl naponta egy tojást (pépesített vagy rántottát). Ha gyermeke még 6 hónaposnál fiatalabb, és Ön szoptat, fogyasszon egy további tojást – a tápanyagok átjutnak a tején."
       },
       "foodSafety": {
         "title": "Az élelmiszerek biztonságban tartása",
@@ -1774,160 +1818,160 @@
         "tip2": "A nyers csirke és hús soha nem érhet kenyeret, zöldséget vagy bármit, amit nyersen fogyasztanak el. Használjon külön vágófelületeket – még egy tiszta műanyag zacskó is működik. Ez a keresztszennyeződés az ételmérgezés első számú oka, amellyel találkozom",
         "tip3": "Ha az étel rossz szagú, rosszul néz ki vagy nyálkásnak érzi magát, dobja ki. Ne kóstolja meg, hogy ellenőrizze. Tudom, hogy az étel kidobása fájdalmas, ha szűkös a pénz, de egy ételmérgezés többe kerül a gyógyszerben és az elvesztett munkában, mint amennyit az étel ért.",
         "tip4": "Mossa meg az összes gyümölcsöt és zöldséget folyó víz alatt evés előtt, még akkor is, ha a héját tervezi. Vágáskor a külső felületen lévő szennyeződés átkerül a belsejébe. Ez különösen fontos a piaci termékek esetében, amelyeket esetleg sokan kezeltek",
-        "fact": "A WHO becslései szerint évente 600 millió ember betegszik meg szennyezett élelmiszertől, és a teher 40%-át 5 év alatti gyermekek viselik. Azokban a közösségekben, ahol élelmiszerbiztonságot tanítottam, az első nyáron jelentősen csökkent a gyomor-bélhurut miatti kórházi látogatások száma.",
-        "action": "Nézze meg most a konyháját: van-e nyers hús fent, vagy hozzáér a fogyasztásra kész ételhez? Van olyan főtt étel, amely több mint 2 órája ült ki? Javítsa meg ezt a két dolgot még ma – ezek a leggyakoribb veszélyek, amelyeket otthonlátogatások során látok."
+        "fact": "A WHO becslése szerint évente 600 millió ember betegszik meg szennyezett élelmiszertől, a 5 év alatti gyermekek pedig a teher 40%-át viselik. Azokban a közösségekben, ahol élelmiszerbiztonságot tanítottam, az első nyáron jelentősen csökkent a gyomor-bélhurut miatti kórházi látogatások száma.",
+        "action": "Nézze meg most a konyháját: van-e nyers hús fent, vagy hozzáér a fogyasztásra kész ételhez? Van olyan főtt étel, amely több mint 2 órán át áll a levegőn? Javítsa meg ezt a két dolgot még ma – ezek a leggyakoribb veszélyek, amelyeket otthonlátogatások során látok."
       }
     },
     "maternal": {
-      "description": "Roma nőket kísértem kórházakba, ahol külön szobába tették, tiszteletlenül bántak velük vagy megtagadták az epidurált, amit más nők kaptak. Láttam nőket is, akik olyan szövődményekben haltak meg, amit egyetlen szűréses vizit elkapott volna. A tested, a gyermeked, a jogaid. Ismerd mindhármat.",
+      "description": "Elkísértem roma nőket olyan kórházakba, ahol külön szobákba helyezték őket, tiszteletlenül beszéltek velük, vagy megtagadták az epidurális kezelést, amit más nők kaptak. Láttam olyan nőket is meghalni olyan szövődmények miatt, amelyeket egyetlen prenatális vizit is elkapott volna. A tested, a babád, a jogaid. Ismerd meg mind a hármat.",
       "prenatalCare": {
         "title": "Terhesgondozás",
-        "description": "A 15 éves közvetítői munka során többször is azt tapasztalom, hogy a roma nők már 6-7 hónapos terhesként mennek először orvoshoz – gyakran azért, mert jól érzik magukat, mert félnek a kórháztól, vagy mert senki sem magyarázta el, hogy a terhesgondozás ingyenes és joguk van. Ekkorra már hónapokig csendben kialakulhatnak olyan veszélyes állapotok, mint a pre-eclampsia vagy a terhességi cukorbetegség.",
+        "description": "A 15 éves közvetítői munka során ismételten azt a mintát látom, hogy a roma nők akkor mennek először orvoshoz, amikor már 6 vagy 7 hónapos terhesek – gyakran azért, mert jól érzik magukat, mert félnek a kórháztól, vagy mert senki sem magyarázta el, hogy a terhesgondozás ingyenes és joguk van. Ekkorra már hónapokig csendben kialakulhatnak olyan veszélyes állapotok, mint a pre-eclampsia vagy a terhességi cukorbetegség.",
         "tip1": "Keresse fel háziorvosát vagy szülésznőjét abban a pillanatban, amikor kimarad a menstruációja, és terhességre gyanakszik. Az első trimeszterben a folsav megakadályozza a baba agy- és gerinchibáit. A várakozás a legkritikusabb ablakba kerül. Ha nincs háziorvosa, egészségügyi közvetítője segíthet a regisztrációban – ez tevékenységünk alapvető része",
-        "tip2": "A napi 400 mikrogramm folsav szedését akkor kell elkezdeni, amikor teherbe akar esni, vagy amint megtudja, hogy teherbe esik. Ingyenes vagy nagyon olcsó bármelyik gyógyszertárban. Csomagokat viszek magammal otthoni látogatásra, mert ez az egyszerű tabletta megelőzi a pusztító születési rendellenességeket",
+        "tip2": "A napi 400mcg folsav adagolását akkor kell elkezdeni, amikor megpróbál teherbe esni, vagy amint megtudja, hogy teherbe esik. Ingyenes vagy nagyon olcsó bármelyik gyógyszertárban. Csomagokat viszek magammal otthoni látogatásra, mert ez az egyszerű tabletta megelőzi a pusztító születési rendellenességeket",
         "tip3": "A vasban gazdag élelmiszerek megakadályozzák a vérszegénységet, amelyet a terhes roma nők közel felénél tapasztalok: bab, lencse, sötét levelű zöldek, máj, vörös hús. A vérszegénység kimerít, veszélyesebbé teszi a szülést, és befolyásolja a baba agyfejlődését",
         "tip4": "Joga van ahhoz, hogy az Ön nyelvén várandós ellátásban részesüljön, méltó bánásmódban részesüljön, és hogy valaki elkísérje Önt a találkozókra. Ha egy orvos elutasító vagy tiszteletlen, panaszt tehet, és másik szolgáltatót kérhet. Dokumentálja a nevet, dátumot és az elhangzottakat. Ebben rendszeresen segítek a családoknak",
-        "fact": "Európában a roma nők 3-5-ször nagyobb valószínűséggel tapasztalnak terhességi szövődményeket, mint az átlagpopulációban, főként azért, mert később vagy egyáltalán nem jutnak terhesgondozáshoz. Azokban a közösségekben, ahol az első trimeszterben a terhes nők ellátásához való kapcsolódásán dolgoztam, a szövődmények aránya drámaian csökkent.",
+        "fact": "Európában a roma nők 3–5-szor nagyobb valószínűséggel tapasztalnak terhességi szövődményeket, mint az általános népesség körében, főként azért, mert később vagy egyáltalán nem jutnak hozzá a terhesgondozáshoz. Azokban a közösségekben, ahol az első trimeszterben a terhes nők ellátásához való kapcsolódásán dolgoztam, a szövődmények aránya drámaian csökkent.",
         "action": "Ha Ön terhes, vagy ismer olyan terhes nőt a közösségében, aki még nem járt orvosnál, kérjen időpontot még ma. Ha fél, vagy nem tudja, hogyan, menjen vele, vagy csatlakoztassa a helyi egészségügyi közvetítőhöz. Egy látogatás mindent megváltoztathat."
       },
       "safeDelivery": {
         "title": "Biztonságos szállítás",
         "description": "Megfogtam a mentőautókban szülő nők kezét, mert túl későn hagyták el, és ültem a kórházi folyosókon, ahol a roma nők a sorban utolsóként kerültek, míg a nem roma nők mentek előre. Mindkét helyzet megelőzhető. A szállítás megtervezése és a jogainak ismerete ezt a tapasztalatot válságból olyanná változtatja, amit Ön irányít.",
-        "tip1": "A 34. hétre készítsd el a szüléstervet: melyik kórházba, ki megy veled, hogyan érsz oda (főleg éjszaka), ki vigyáz a többi gyerekedre. Túl sok családot láttam az utolsó pillanatban tülekedni – és a stressz kihat a szülésre",
+        "tip1": "A 34. hétig készítsd el a szülési tervet: melyik kórházba, ki megy veled, hogyan érsz oda (főleg éjszaka), ki vigyáz a többi gyerekedre. Túl sok családot láttam az utolsó pillanatban tülekedni – és a stressz kihat a szülésre",
         "tip2": "Szinte minden európai országban joga van ahhoz, hogy kísérője (férj, anya, nővér, közvetítő) legyen veled a szülés és a szülés során. Ha a kórház nemet mond, hivatkozzon országa betegjogi törvényére. Ezeket a referenciákat hordozzuk és biztosítani tudjuk",
-        "tip3": "Ismerje meg az 5 veszélyjelet, ami azt jelenti, MENJ KÓRHÁZBA MOST, függetlenül attól, hogy hány óra van: (1) erős vérzés, (2) erős fejfájás duzzadt kezekkel/arccal, (3) a baba nem mozog, (4) vízszünet 37 hét előtt, (5) 38 °C feletti láz. Ne várjon reggelig. Ne próbálja ezeket otthon kezelni",
+        "tip3": "Ismerje meg a 5 veszélyjeleket, amelyek azt jelentik, MENJ KÓRHÁZBA MOST, függetlenül attól, hogy hány óra van: (1) erős vérzés, (2) erős fejfájás duzzadt kéz/arc mellett, (3) a baba mozgása leáll, (4) vízszünet a __PH__PH6 hét előtt, (__PH37_ hét előtt) 38°C. Ne várjon reggelig. Ne próbálja ezeket otthon kezelni",
         "tip4": "Szülés után legalább 24 órát maradjon kórházban megfigyelés céljából – még akkor is, ha jól érzi magát. Számos életveszélyes szövődmény (vérzés, fertőzés) jelentkezik az első 24 órában. Tudom, hogy a kórházi környezet ellenséges lehet, de az órákig tartó megfigyelés életeket menthet meg",
-        "fact": "Egy olyan régióban, ahol 5 évig dolgoztam, 60%-kal csökkentettük a roma anyák sürgősségi számát azzal, hogy minden várandós nőnek biztosítottuk a szülési tervet, a szállítási megállapodást és a kórházi táskát a 36. hétig. Nincs új technológia – csak az előkészítés és a kíséret.",
-        "action": "Ha Ön vagy valaki, akit ismer, elmúlt 30 hetes terhes: írja fel papírra a kórház nevét, telefonszámát és útvonalát. Tedd a falra. Csomagolj be egy táskát személyi igazolvánnyal, oltási kártyával, babaruhákkal és telefontöltővel. Ez 20 percet vesz igénybe, és életet menthet."
+        "fact": "Egy olyan régióban, ahol 5 évig dolgoztam, 60%-kal csökkentettük a roma anyák sürgősségi számát egyszerűen azzal, hogy minden várandós nőnek biztosítottuk a szülési tervet, a szállítási megállapodást és a 36. hétre becsomagolt kórházi táskát. Nincs új technológia – csak előkészítés és kíséret.",
+        "action": "Ha Ön vagy valaki, akit ismer, már elmúlt 30 hetes terhes: írja fel papírra a kórház nevét, telefonszámát és útvonalát. Tedd a falra. Csomagolj be egy táskát személyi igazolvánnyal, oltási kártyával, babaruhákkal és telefontöltővel. Ez 20 percet vesz igénybe, és életet menthet."
       },
       "breastfeeding": {
         "title": "Szoptatás",
         "description": "A roma kultúrában nagyra értékelik a szoptatást, mégis találkozom fiatal anyákkal, akiknek azt mondták a jó szándékú rokonok, hogy az első napokban adjanak vizet, teát vagy tápszert, mert „még nem jött meg a tej”. A kolosztrum – az a sűrű, sárgás első tej – nem annak a jele, hogy valami nincs rendben. Folyékony arany, tele antitestekkel, amelyek megvédik az újszülöttet azoktól a fertőzésektől, amelyek élete első heteiben a legveszélyesebbek.",
         "tip1": "A születést követő 1 órán belül helyezze a babát bőrrel a mellkasára, és hagyja, hogy megtalálja a mellét. Ez az első kolosztrum etetés a legfontosabb „vakcina”, amelyet a baba kap – ez védi a bélrendszert a fertőzésekkel szemben. Ne engedje, hogy bárki elvigye gyermekét, mielőtt ez megtörténik, kivéve, ha orvosi vészhelyzet áll fenn",
-        "tip2": "Igény szerint táplálkozzon – amikor a babán éhség jelei vannak (fejfordítás, kezek szopása, nyüzsgés). Az első hetekben ez 24 órán belül 10-14 alkalom lehet. Ez normális, és meghatározza az ellátást. Az óra nem tudja megmondani, hogy mikor éhes a babája – a baba elmondja",
-        "tip3": "Semmi vizet, teát, tápszert 6 hónapig, hacsak az orvos kifejezetten nem írja fel orvosi okból. Az anyatej összetétele a nap folyamán változik, hogy megfeleljen a baba pontos szükségleteinek – ezt egyetlen gyár sem tudja megismételni. Láttam, hogy jó szándékú nagymamák cukros vizet adtak, ami rigót és hasmenést okozott",
+        "tip2": "Igény szerint táplálkozzon – amikor a babán éhség jelei vannak (fejfordítás, kezek szopása, nyüzsgés). Az első hetekben ez 10–14 alkalommal fordulhat elő 24 órán belül. Ez normális, és meghatározza az ellátást. Az óra nem tudja megmondani, hogy mikor éhes a babája – a baba elmondja",
+        "tip3": "Nincs víz, nincs tea, nincs tápszer 6 hónapig, hacsak az orvos kifejezetten nem írja fel orvosi okból. Az anyatej összetétele a nap folyamán változik, hogy megfeleljen a baba pontos szükségleteinek – ezt egyetlen gyár sem tudja megismételni. Láttam, hogy jó szándékú nagymamák cukros vizet adtak, ami rigót és hasmenést okozott",
         "tip4": "Ha a szoptatás fáj, akkor a retesz rossz – nem a tested. Kérjen meg egy szülésznőt vagy egészségügyi dolgozót, hogy figyeljen egy táplálékot, és segítsen beállítani a pozíciót. A fájdalom a segítség jelzése, nem pedig a feladás jele. Anyák százainak segítettem megoldani azokat a reteszelési problémákat, amelyek egy munkamenet során megoldódtak",
         "fact": "Azokban a roma közösségekben, ahol léteznek szoptatást támogató programok, a 6 hónapig tartó kizárólagos szoptatás több mint 60%-kal csökkenti a csecsemők kórházi kezelését. Az anyatej szó szerint alkalmazkodik a környezetében keringő fertőzések elleni küzdelemhez – ez egy személyre szabott gyógyszer, amelyet szervezete ingyen állít elő.",
-        "action": "Ha Ön újdonsült anya vagy várandós: mondja el családjának most, hogy 6 hónapig kizárólag szoptatást tervez, és a támogatásukra van szüksége, nem pedig tanácsra más élelmiszerek hozzáadásával kapcsolatban. Ha a szoptatás fájdalmas, lépjen kapcsolatba szülésznőjével vagy egészségügyi közvetítőjével, mielőtt abbahagyja – a megoldás általában egyszerű."
+        "action": "Ha Ön újdonsült anya vagy várandós: mondja el családjának most, hogy 6 hónapig kizárólag szoptatást tervez, és az ő támogatásukra van szüksége, nem pedig tanácsra más élelmiszerek hozzáadásával kapcsolatban. Ha a szoptatás fájdalmas, lépjen kapcsolatba szülésznőjével vagy egészségügyi közvetítőjével, mielőtt abbahagyja – a megoldás általában egyszerű."
       },
       "postpartum": {
         "title": "Szülés utáni gondozás",
         "description": "A roma kultúrában a születés utáni hetek olyan időszakok, amikor a család az anya köré gyűlik, és ez gyönyörű. De láttam egy árnyoldalt is: az anyákat, akik minden nap sírnak, és azt mondják nekik, ez normális. Anyák, akik erősen véreznek, és túl sokáig várnak, hogy segítséget kérjenek. Anyák, akiknek fájdalmát elengedik, mert „a nők ezen mennek keresztül”. Az Ön felépülése ugyanolyan fontos, mint a baba egészsége – mert a babának szüksége van rád élve és egészségesen.",
-        "tip1": "A szervezetnek legalább 6 hétre van szüksége a gyógyuláshoz. A születés utáni vérzés (lochia) 2-4 hétig normális, de ha hirtelen megnövekszik, nagy vérrögöket tartalmaz, vagy rossz szagú, azonnal menjen kórházba. Láttam, hogy anyák veszítenek veszélyes mennyiségű vért, mert azt mondták nekik, hogy az erős vérzés normális. Nem az",
+        "tip1": "Testének legalább 6 hétre van szüksége a gyógyuláshoz. A születés utáni vérzés (lochia) normális 2–4 hétig, de ha hirtelen megnövekszik, nagy vérrögöket tartalmaz, vagy rossz szagú, azonnal menjen kórházba. Láttam, hogy anyák veszítenek veszélyes mennyiségű vért, mert azt mondták nekik, hogy az erős vérzés normális. Nem az",
         "tip2": "Ha tartósan szomorúnak, üresnek érzi magát, nem tud kapcsolatot teremteni a babájával, vagy arra gondol, hogy önmagának vagy babájának kárt okoz – nem vagy gyenge, nem vagy rossz anya, olyan egészségügyi állapotod van, amely reagál a kezelésre. Ezt minden otthonlátogatás alkalmával mondom, mert a közösségeinkben a szülés utáni depresszió körüli megbélyegzés életekbe kerül",
-        "tip3": "A 6 hetes szülés utáni szűrés nem kötelező – ellenőrzi a fertőzést, a gyógyulást, a vérnyomást és a mentális egészséget. Tapasztalataim szerint a roma nők kevesebb mint 30%-a vesz részt ezen a látogatáson. Kérem, legyen ebben a 30%-ban. Vigyél magaddal valakit, ha ez segít",
+        "tip3": "A 6 hetes szülés utáni kivizsgálás nem kötelező – ellenőrzi a fertőzést, a gyógyulást, a vérnyomást és a mentális egészséget. Tapasztalataim szerint a roma nők kevesebb mint 30%-a vesz részt ezen a látogatáson. Kérjük, legyen ebben a 30%-ban. Vigyél magaddal valakit, ha ez segít",
         "tip4": "Fogadja el a család minden segítségét a főzéssel, takarítással és gyermekgondozással kapcsolatban. Aludj, amikor a baba alszik. Az egyetlen feladatod a baba táplálása és a gyógyulás. Minden más várhat. Az általam ismert legerősebb anyák azok, akik elfogadták a segítséget",
-        "fact": "A szülés utáni depresszió minden ötödik nőt érint világszerte, de a becslések szerint a roma közösségekben még gyakoribb a szegénység, a diszkrimináció és az elszigeteltség miatt. Minden közösségben, ahol kortárssegítő csoportokat hoztam létre újdonsült anyák számára, csökkent a depresszió és nőtt a szoptatás aránya – mert a kapcsolat gyógyít.",
+        "fact": "A szülés utáni depresszió 1 5 nőt érint világszerte, de a becslések szerint még gyakrabban fordul elő a roma közösségekben a szegénység, a diszkrimináció és az elszigeteltség miatt. Minden közösségben, ahol kortárssegítő csoportokat hoztam létre újdonsült anyák számára, csökkent a depresszió és nőtt a szoptatás aránya – mert a kapcsolat gyógyít.",
         "action": "Ha az elmúlt 6 hétben szült, és nem volt szülés utáni szűrésen, hívja fel egészségügyi központját még ma. Ha tartósan szomorúnak vagy levertnek érzi magát, szóljon egy megbízható személynek – édesanyjának, egészségügyi közvetítőjének, bárkinek. Ez az első beszélgetés a legnehezebb lépés és a legfontosabb."
       }
     },
     "children": {
-      "description": "A roma gyerekek közösségeink jövője, és minden előnyt megérdemelnek. Munkám során láttam lemaradó gyerekeket — nem képességhiány miatt, hanem mert megelőzhető betegségek, elmulasztott oltások vagy észrevétlen késések elvették az esélyeiket. Ez a tudás visszaadja ezeket az esélyeket.",
+      "description": "A roma gyerekek jelentik közösségeink jövőjét, és minden előnyt megérdemelnek. Munkám során azt tapasztaltam, hogy a gyerekek lemaradnak – nem képességeik miatt, hanem azért, mert megelőzhető betegségek, kihagyott oltások vagy észrevétlen fejlődési lemaradások ellopták tőlük a lehetőségeket. Ez a tudás visszaadja ezeket a lehetőségeket.",
       "growthMilestones": {
         "title": "Növekedés és Fejlődés",
         "description": "Minden gyerek a saját tempójában fejlődik, és soha nem akarom, hogy a szülők pánikba eszenek a normális változás miatt. De láttam olyan gyerekeket is, akiknek a késleltetett fejlődését a családok úgy utasították el, hogy „utolérik”, amikor a korai beavatkozás változást hozhatott volna. Az, hogy tudjuk, mire kell figyelni, nem szorongás, hanem figyelem.",
         "tip1": "A havi mérés az első évben a legegyszerűbb megfigyelési eszköz. Egészségügyi központjában vannak növekedési diagramok, amelyek megmutatják, hogy gyermeke jó úton halad-e. Azonnal ki kell vizsgálni azt a gyermeket, aki abbahagyja a súlygyarapodást vagy hirtelen leesik a táblázatról – ez lehet olyan egyszerű, mint az etetés módosítása, vagy olyan fontos, mint egy alapbetegség elkapása.",
-        "tip2": "6 hónapos korára a legtöbb baba tárgyak után nyúl, és válaszol a nevére. 12 hónapra a legtöbben kimondanak néhány szót, és felállnak. 24 hónapos korára a legtöbben jól járnak, és rövid frázisokban beszélnek. Ha gyermeke jelentősen le van maradva ezektől a mérföldkövektől, kérjen fejlődési értékelést – a korai segítség jelenti a legnagyobb különbséget",
+        "tip2": "6 hónapos korára a legtöbb baba tárgyak után nyúl, és válaszol a nevére. 12 hónapig a legtöbben szólnak néhány szót, és felállnak. 24 hónapos korára a legtöbb jól jár, és rövid frázisokban beszél. Ha gyermeke jelentősen le van maradva ezektől a mérföldkövektől, kérjen fejlődési értékelést – a korai segítség jelenti a legnagyobb különbséget",
         "tip3": "Állandóan beszéljen gyermekével – mesélje el, mit csinál, nevezzen el tárgyakat, énekeljen dalokat. A roma családoknak erős szájhagyományuk van – használja ki. Azok a gyerekek, akik több szót hallanak, nagyobb szókinccsel és erősebb kognitív készségekkel rendelkeznek. Ez ingyenes és hatékonyabb minden játéknál",
-        "tip4": "Fogak: a baba ínyét születésétől kezdve nedves ruhával tisztítsa meg, és az első fogtól kezdve használjon egy pici kenetet a gyermek fogkrémből. Súlyos fogszuvasodást tapasztalok roma gyerekeknél 3 éves korukig, gyakran az éjszakai üveg édes teától – ez fájdalmat, fertőzést és étkezési problémákat okoz, amelyek befolyásolják a növekedést.",
-        "fact": "A kutatások azt mutatják, hogy azok a gyerekek, akiknek a fejlődési késleltetését 3 éves koruk előtt azonosítják és kezelik, ötször nagyobb valószínűséggel járnak iskolába az elvárt szinten. Azokon a településeken, ahol havi mérést és fejlődési szűrést állítottam be, háromszorosára nőtt a korai beavatkozásra utalók aránya – vagyis olyan segítséget kaptak a gyerekek, akikről egyébként hiányoztak volna.",
-        "action": "Ha gyermeke 2 éven aluli, vigye el testsúly-ellenőrzésre és fejlődési szűrésre az egészségügyi központjában ebben a hónapban. Ha gyermeke elmúlt 2 éves, és aggályai vannak a beszéddel, járással vagy viselkedéssel kapcsolatban, kérjen beutalót szakemberhez. Aggodalma jogos – cselekedjen vele."
+        "tip4": "Fogak: a baba ínyét születésétől kezdve nedves ruhával tisztítsa meg, és az első fogtól kezdve használjon egy pici kenetet a gyermek fogkrémből. Súlyos fogszuvasodást tapasztalok roma gyerekeknél 3 éves koruk szerint, gyakran éjszaka édes teásüvegek miatt – ez fájdalmat, fertőzést és étkezési problémákat okoz, amelyek befolyásolják a növekedést.",
+        "fact": "A kutatások azt mutatják, hogy azok a gyerekek, akiknek fejlődési késéseit 3 koruk előtt azonosítják és kezelik, 5-szor nagyobb valószínűséggel járnak iskolába az elvárt szinten. Azokon a településeken, ahol havi mérést és fejlődési szűrést állítottam be, háromszorosára nőtt a korai beavatkozásra utalók aránya – vagyis olyan segítséget kaptak a gyerekek, akikről egyébként hiányoztak volna.",
+        "action": "Ha gyermeke 2 év alatti, vigye el testsúly-ellenőrzésre és fejlődési szűrésre az egészségügyi központjában ebben a hónapban. Ha gyermeke elmúlt 2, és aggályai vannak a beszéddel, járással vagy viselkedéssel kapcsolatban, kérjen beutalót szakemberhez. Aggodalma jogos – cselekedjen vele."
       },
       "commonIllnesses": {
         "title": "Amikor gyermeke beteg",
         "description": "A túlzsúfolt lakásokkal, korlátozott higiéniával és hideg telekkel rendelkező településeken a gyerekek gyakran megbetegednek. A legtöbb ilyen betegség – hasmenés, köhögés, láz – otthon is kezelhető, ha tudja, mit kell tennie, és mikor kell fokoznia. De azt is láttam, hogy a szülők túl sokáig várnak, vagy rohannak a sürgősségi osztályokra olyan állapotok miatt, amelyeket egy egyszerű otthoni kezelés megoldott volna. Ez a modul megtanítja Önnek a különbséget.",
-        "tip1": "38,5°C alatti láz: gyermeke szervezete küzd a fertőzésekkel – ez jó. Tartsa őket kényelmesen, enyhén ruházza fel, és adjon sok folyadékot. 38,5°C feletti láz: gyermekeknek adjon paracetamolt a testsúlyuknak megfelelő adagban (NEM felnőtt paracetamolt). Ha a láz több mint 3 napig tart, vagy a gyermek szokatlanul álmos, forduljon orvoshoz",
-        "tip2": "A hasmenés a kiszáradás révén öl meg, nem maga a fertőzés. Abban a pillanatban, amikor a gyermeknek laza a széklete, kezdje el az orális folyadékpótlást: 1 liter tiszta forralt víz + 6 evőkanál cukor + fél teáskanál só. Néhány percenként igyon kis kortyokat. Ez a recept több gyermek életét mentette meg világszerte, mint bármely antibiotikum",
+        "tip1": "Láz 38.5°C alatt: gyermeke szervezete küzd a fertőzésekkel – ez jó. Tartsa őket kényelmesen, enyhén ruházza fel, és adjon sok folyadékot. 38.5°C feletti láz: gyermekeknek adjon paracetamolt a testsúlyuknak megfelelő adagban (NEM felnőtt paracetamolt). Ha a láz több mint 3 napig tart, vagy a gyermek szokatlanul álmos, forduljon orvoshoz",
+        "tip2": "A hasmenés a kiszáradás révén öl meg, nem maga a fertőzés. Abban a pillanatban, amikor a gyermeknek híg a széklete, kezdje el a szájüregi rehidratálást: 1 liter tiszta forralt víz + 6 szintû teáskanál cukor + fél teáskanál só. Néhány percenként igyon kis kortyokat. Ez a recept több gyermek életét mentette meg világszerte, mint bármely antibiotikum",
         "tip3": "AZONNAL VIGYE GYERMEKÉT KÓRHÁZBA, ha azt tapasztalja, hogy: gyors vagy nehéz légzés, mellkasi behúzás minden lélegzetvételnél, nem tud inni vagy szoptatni, ismételt hányás, szokatlan álmosság vagy nem ébred, görcsök vagy véres hasmenés. Ne várj. Ezek vészhelyzetek",
         "tip4": "Ne adjon antibiotikumot orvos felírása nélkül. Ne adjon ki más gyermek által felírt receptet. Ne használjon maradék antibiotikumot. Ezt folyamatosan látom a közösségeinkben, és ez olyan gyógyszerrezisztens baktériumokat hoz létre, amelyeket sokkal nehezebb kezelni. Az antibiotikumok nem segítenek a megfázás, az influenza vagy a legtöbb köhögés esetén",
         "fact": "Azokban a közösségekben, ahol dolgoztam, a szülők képzése az orális rehidratáló oldat elkészítésére és használatára több mint 40%-kal csökkentette a gyermekek hasmenéses kórházi kezelését egyetlen év alatt. A tudás ilyen erős – és az összetevők kevesebbe kerülnek, mint egy buszjegy a kórházba.",
-        "action": "Most jegyezze meg ezt a receptet: 1 liter tiszta víz + 6 teáskanál cukor + fél teáskanál só. Gyakorold egyszer az elkészítést. Ha akarja, kóstolja meg – olyan ízűnek kell lennie, mint a könny. Ennek készenléte azt jelenti, hogy ha gyermeke hajnali 2-kor hasmenést kap, azonnal intézkedhet a pánik helyett."
+        "action": "Most jegyezze meg ezt a receptet: 1 liter tiszta víz + 6 teáskanál cukor + fél teáskanál só. Gyakorold egyszer az elkészítést. Ha akarja, kóstolja meg – olyan ízűnek kell lennie, mint a könny. Ennek készenléte azt jelenti, hogy amikor gyermeke 2kor hasmenést kap, Ön azonnal intézkedhet a pánik helyett."
       },
       "immunization": {
         "title": "Oltási ütemterv",
         "description": "Közvetlen leszek: Európa-szerte a roma közösségekben az átoltottság alacsonyabb az országos átlagnál, és ez nem azért van, mert a roma szülők nem törődnek gyermekeikkel, hanem azért, mert az egészségügyi rendszer nem érte el őket tisztelettel, hozzáféréssel és információval. A félretájékoztatás a közösségi médián keresztül is terjed. Kanyarós gyerekeket tartottam kórházban, akiknek soha nem lett volna szabad ott lenniük. Minden be nem oltott gyerek olyan gyerek, amelyet a rendszer megbukott.",
-        "tip1": "Születéstől 6 hétig: BCG (tuberkulózis) és hepatitis B. Ezeket a kórházban adják be a hazabocsátás előtt. Ha gyermeke otthon született, élete első hetében vigye el az egészségügyi központba ezeknek az oltóanyagoknak a beadásáért. Ne várj",
-        "tip2": "2, 3, 4 hónapos: a „nagy három” kör – DTP (diftéria, tetanusz, szamárköhögés), gyermekbénulás, hib és hepatitis B. Ezek a csecsemőkori legkritikusabb vakcinák. Minden kör erősíti az immunitást. Az egyik hiánya az egész láncot gyengíti",
-        "tip3": "12-15 hónapos: MMR (kanyaró, mumpsz, rubeola). Nem tudom ezt eléggé hangsúlyozni. A kanyaró nem ártalmatlan gyermekkori betegség – öl, agykárosodást okoz, és elvakít. 2019-ben kanyarójárványt láttam egy romatelepen, mert a lefedettség 80% alá esett. Megelőzhető volt",
+        "tip1": "Születés 6 hétig: BCG (tuberkulózis) és hepatitis B. Ezeket a kórházban adják be a hazabocsátás előtt. Ha gyermeke otthon született, élete első hetében vigye el az egészségügyi központba ezeknek az oltóanyagoknak a beadásáért. Ne várj",
+        "tip2": "2, 3, 4 hónap: a „három nagy” kör – DTP (diftéria, tetanusz, szamárköhögés), gyermekbénulás, Hib és hepatitis B. Ezek a legkritikusabb csecsemőkori vakcinák. Minden kör erősíti az immunitást. Az egyik hiánya az egész láncot gyengíti",
+        "tip3": "12–15 hónap: MMR (kanyaró, mumpsz, rubeola). Nem tudom ezt eléggé hangsúlyozni. A kanyaró nem ártalmatlan gyermekkori betegség – öl, agykárosodást okoz, és elvakít. 2019-ban kanyarójárványt láttam egy roma településen, mert a lefedettség 80% alá esett. Megelőzhető volt",
         "tip4": "A védőoltások minden európai országban ingyenesek a kormányzati egészségügyi központokban. Nem kell biztosítás, nem kell tartózkodási engedély, nem kell időpont a legtöbb központban. Ha megtagadják a szolgáltatást, ez illegális – forduljon egészségügyi közvetítőjéhez vagy a betegjogi hivatalhoz",
-        "fact": "A romák és a nem romák oltási aránya közötti különbség egyes európai országokban meghaladja a 15 százalékpontot. Ezt a szakadékot nem a romák oltásokkal kapcsolatos hiedelmei okozzák – a felmérések folyamatosan azt mutatják, hogy a roma szülők azt szeretnék, ha gyermekeiket beoltatnák. A szakadékot a hozzáférési akadályok, az egészségügyben tapasztalható diszkrimináció és a tájékoztatás hiánya okozzák. Ennek a hiánynak a megszüntetése az Európai Szociális Charta 11. cikke értelmében állami kötelezettség.",
+        "fact": "A romák és a nem romák oltási aránya közötti különbség néhány európai országban meghaladja a 15 százalékpontot. Ezt a szakadékot nem a romák oltásokkal kapcsolatos hiedelmei okozzák – a felmérések folyamatosan azt mutatják, hogy a roma szülők azt szeretnék, ha gyermekeiket beoltatnák. A szakadékot a hozzáférési akadályok, az egészségügyben tapasztalható diszkrimináció és a tájékoztatás hiánya okozzák. Ennek a hiánynak a megszüntetése az Európai Szociális Charta 11. cikke értelmében állami kötelezettség.",
         "action": "Keresse meg gyermeke oltási kártyáját. Ha valamelyik védőoltás hiányzik, vagy ha nincs kártyája, keresse fel a legközelebbi egészségügyi központot ezen a héten. Ha akadályokba ütközik – nyelv, dokumentumok, elutasítás –, forduljon a helyi egészségügyi közvetítőhöz. Pontosan ezért vagyunk itt."
       }
     },
     "chronic": {
-      "description": "A romák átlagosan 10 évvel korábban halnak meg, mint az európai átlag. A különbség nagy része krónikus betegségekből — cukorbetegség, szívbetegség, légzőszervi betegség — jön, amelyek évekig csendben fejlődnek. Amikor megjelennek a tünetek, a kár már megtörtént. De a legtöbb megelőzhető és kezelhető, ha időben észreveszik.",
+      "description": "A romák az európai átlagnál 10 évvel fiatalabban halnak meg. Ennek a szakadéknak a nagy része krónikus betegségekből – cukorbetegség, szívbetegség, légúti betegségek – származik, amelyek lassan és csendesen alakulnak ki évek alatt. Mire a tünetek megjelennek, már károsodott. De a legtöbb megelőzhető, és minden kezelhető, ha korán elkapják.",
       "diabetes": {
         "title": "Cukorbetegség: A néma fenyegetés",
-        "description": "A 2-es típusú cukorbetegség az a krónikus betegség, amellyel leggyakrabban találkozom a roma közösségekben. Családokban fut, virágzik az olcsó, magas cukortartalmú étrenden, amelyre a szegénység rákényszeríti az embereket, és évekig károsítja a szemet, a vesét, a lábat és a szívet, mielőtt bármi rosszat érezne. Láttam, hogy a 40-es éveiben járó férfiak elveszítik lábujjaikat, nők pedig megvakulnak a cukorbetegség miatt, amelyet soha nem diagnosztizáltak, mert soha nem végeztek vérvizsgálatot. Ez megelőzhető.",
-        "tip1": "Ha a családjában valaki cukorbeteg, annak kockázata 2-3-szor nagyobb. Ez nem a sors – ez egy jelzés, hogy most cselekedjünk. Csökkentse a fehér kenyér, a cukor és a cukros italok fogyasztását. Cserélje babbal, lencsével, zöldségekkel és vízzel. Láttam, hogy a családok ezeken a változásokon keresztül teljesen visszafordították a cukorbetegség előtti állapotot",
-        "tip2": "Naponta 30 perc séta 58%-kal csökkenti a cukorbetegség kockázatát. Nem fut. Nem edzőterem. Séta. A közösségekben, akikkel együtt dolgozom, minden 35 év feletti embernek azt mondom: a séta a gyógyszer. Ingyenes, és jobban működik, mint a legtöbb tabletta a megelőzés érdekében",
-        "tip3": "Évente legalább egyszer kérjen éhgyomri vércukorszint-vizsgálatot egészségügyi központjában, ha Ön 35 év feletti, túlsúlyos, vagy ha van családja. Ez egy egyszerű ujjszúrási teszt, a legtöbb országban ingyenes, és 5 percet vesz igénybe. Ez az egy teszt évekkel a tünetek megjelenése előtt képes elkapni a cukorbetegséget",
+        "description": "A 2 típusú cukorbetegség az a krónikus betegség, amellyel leggyakrabban találkozom a roma közösségekben. Családokban fut, virágzik az olcsó, magas cukortartalmú étrenden, amelyre a szegénység rákényszeríti az embereket, és évekig károsítja a szemet, a vesét, a lábat és a szívet, mielőtt bármi rosszat érezne. Láttam, hogy a 40 éves férfiak elveszítik lábujjaikat, nők pedig megvakulnak a cukorbetegség miatt, amelyet soha nem diagnosztizáltak, mert soha nem végeztek vérvizsgálatot. Ez megelőzhető.",
+        "tip1": "Ha a családjában bárki cukorbeteg, a kockázata 2–3-szor nagyobb. Ez nem a sors – ez egy jelzés, hogy most cselekedjünk. Csökkentse a fehér kenyér, a cukor és a cukros italok fogyasztását. Cserélje babbal, lencsével, zöldségekkel és vízzel. Láttam, hogy a családok ezeken a változásokon keresztül teljesen visszafordították a cukorbetegség előtti állapotot",
+        "tip2": "Minden egyes napi 30 perces séta 58%-kal csökkenti a cukorbetegség kockázatát. Nem fut. Nem edzőterem. Séta. Minden 35 feletti embernek mondom a közösségekben, akikkel együtt dolgozom: a séta a gyógyszer. Ingyenes, és jobban működik, mint a legtöbb tabletta a megelőzés érdekében",
+        "tip3": "Évente legalább egyszer kérjen éhgyomri vércukorszint-vizsgálatot egészségügyi központjában, ha Ön 35 feletti, túlsúlyos, vagy ha van családja. Ez egy egyszerű ujjszúrási teszt, a legtöbb országban ingyenes, és 5 percet vesz igénybe. Ez az egy teszt évekkel a tünetek megjelenése előtt képes elkapni a cukorbetegséget",
         "tip4": "Ismerje meg azokat a figyelmeztető jeleket, amelyek arra utalnak, hogy a cukorbetegség már jelen van: állandó szomjúságérzet, nagyon gyakori vizelés (főleg éjszaka), homályos látás, lassan gyógyuló sebek, megmagyarázhatatlan fáradtság. Ha ezek közül kettő vagy több van, végezzen vizsgálatot ezen a héten – ne a következő hónapban",
-        "fact": "A szlovákiai és romániai roma közösségekben végzett vizsgálatok az országos átlag 2-3-szorosát mutatták ki, és az esetek többségét nem diagnosztizálták. Az egyik programban, amelyben részt vettem, a közösségi alapú szűrés a 40 év feletti, soha nem tesztelt felnőttek 18%-ánál mutatta ki a cukorbetegséget. Szinte mindegyiknek nem volt tünete.",
-        "action": "Ha elmúlt 35 éves, keresse fel egészségügyi központját és kérjen vércukorszint-vizsgálatot. 5 percet vesz igénybe. Ha az eredmény 5,6 mmol/L (100 mg/dL) felett van, azonnal el kell kezdenie a változtatásokat. Hozz magaddal egy családtagot – ha nagy a kockázatod, valószínűleg az övékét is."
+        "fact": "A szlovákiai és romániai roma közösségekben végzett vizsgálatok az országos átlag 2–3-szeresét mutatták ki, és az esetek többségét nem diagnosztizálták. Az egyik programban, amelyben részt vettem, a közösségi alapú szűrés a 40 év feletti, soha nem tesztelt felnőttek 18%-ánál mutatta ki a cukorbetegséget. Szinte mindegyiknek nem volt tünete.",
+        "action": "Ha elmúlt 35, keresse fel egészségügyi központját és kérjen vércukorszint-vizsgálatot. 5 percet vesz igénybe. Ha az eredmény 5.6 mmol/L (100 mg/dL) felett van, akkor most el kell kezdenie a módosításokat. Hozz magaddal egy családtagot – ha nagy a kockázatod, valószínűleg az övékét is."
       },
       "heartHealth": {
         "title": "A szíved",
-        "description": "A szív- és érrendszeri betegségek az első számú gyilkosok a roma közösségekben – nem a genetika miatt, hanem a körülmények miatt, amelyekben élünk: a szegénységből és a diszkriminációból eredő krónikus stressz, a magas dohányzási ráta, a szegénység által megengedhető étrend és a megelőző szűrések szinte hiánya. Részt vettem olyan 50-es éveikben járó férfiak temetésén, akik teljesen megelőzhető szívrohamban haltak meg. Ez a modul azért létezik, mert nem vagyok hajlandó többet részt venni.",
-        "tip1": "A dohányzás a legpusztítóbb dolog, amit a szívével tehet. Tudom, hogy ez mélyen beágyazódott közösségi kultúránkba, és nem azért vagyok itt, hogy ítélkezzek – de őszinteséggel tartozom. Minden cigaretta károsítja az ereket. Ha nem tudja abbahagyni, csökkentse. Ha képes leszokni, szíve 24 órán belül elkezdi helyreállítani magát",
-        "tip2": "A magas vérnyomást csendes gyilkosnak nevezik, mert addig nem érzel semmit, amíg el nem támad egy stroke vagy szívroham. Mérje meg vérnyomását bármelyik gyógyszertárban – ingyenes. A normál érték 120/80 alatt van. 140/90 felett veszélyes és kezelésre szorul. Veszélyesen magas vérnyomást tapasztaltam olyan embereknél, akik teljesen egészségesnek érezték magukat",
-        "tip3": "Csökkentse a sófogyasztást: A roma konyha ízletes és gyönyörű, de sok hagyományos étel nagyon sós. Só hozzáadása helyett használjon paprikát, fokhagymát, hagymát, fűszernövényeket és borsot. Ízlelőbimbói 2 héten belül alkalmazkodnak – az ételek íze jobb lesz, nem pedig rosszabb. Csak ettől a változástól 10 ponttal csökkent a vérnyomásom",
+        "description": "A szív- és érrendszeri betegségek az első számú gyilkosok a roma közösségekben – nem a genetika miatt, hanem a körülmények miatt, amelyekben élünk: a szegénységből és a diszkriminációból eredő krónikus stressz, a magas dohányzási ráta, a szegénység által megengedhető étrend és a megelőző szűrések szinte hiánya. Részt vettem olyan férfiak temetésén a 50-ban, akik szívrohamban haltak meg, ami teljesen megelőzhető volt. Ez a modul azért létezik, mert nem vagyok hajlandó többet részt venni.",
+        "tip1": "A dohányzás a legpusztítóbb dolog, amit a szívével tehet. Tudom, hogy ez mélyen beágyazódott közösségi kultúránkba, és nem azért vagyok itt, hogy ítélkezzek – de őszinteséggel tartozom. Minden cigaretta károsítja az ereket. Ha nem tudja abbahagyni, csökkentse. Ha fel tud lépni, szíve 24 órán belül helyreáll",
+        "tip2": "A magas vérnyomást csendes gyilkosnak nevezik, mert addig nem érzel semmit, amíg el nem támad egy stroke vagy szívroham. Mérje meg vérnyomását bármelyik gyógyszertárban – ingyenes. A normál érték 120/80 alatt van. A 140/90 feletti érték veszélyes és kezelést igényel. Veszélyesen magas vérnyomást tapasztaltam olyan embereknél, akik teljesen egészségesnek érezték magukat",
+        "tip3": "Csökkentse a sófogyasztást: A roma konyha ízletes és gyönyörű, de sok hagyományos étel nagyon sós. Só hozzáadása helyett használjon paprikát, fokhagymát, hagymát, fűszernövényeket és borsot. Ízlelőbimbói 2 héten belül alkalmazkodnak – az ételek jobb ízűek lesznek, nem pedig rosszabbak. Csak ettől a változástól 10 ponttal csökkent a vérnyomásom",
         "tip4": "A diszkriminációból, a szegénységből, a kilakoltatási fenyegetésekből és a családi konfliktusokból eredő krónikus stressz a szívbetegségek közvetlen oka. Ez nem vélemény, hanem dokumentált gyógyszer. A stresszhormonok éveken keresztül károsítják az ereket. Bármilyen módszer megtalálása a stressz oldására – séta, zene, ima, beszélgetés, közösség – szívgyógyszer",
-        "fact": "A roma férfiak átlagosan 10-15 évvel korábban halnak meg szív- és érrendszeri betegségekben, mint az általános népesség. Az Európai Bizottság saját adatai ezt mutatják. De a korai szívrohamok 80%-a megelőzhető életmódváltással, valamint a magas vérnyomás és a koleszterin korai kezelésével. A megelőzés működik – ha van hozzáférése.",
-        "action": "Ezen a héten két dolgot tegyél: (1) Menj el egy gyógyszertárba, és ellenőrizd a vérnyomásodat – írd le a számokat. (2) Számolja meg, hány cigarettát szív el naponta, és próbálja meg napi 3-mal csökkenteni. Ez a két intézkedés a leghatékonyabb szívmegelőző lépés, amelyet bármely egyén megtehet."
+        "fact": "A roma férfiak átlagosan 10–15 évvel korábban halnak meg szív- és érrendszeri betegségekben, mint az általános népesség. Az Európai Bizottság saját adatai ezt mutatják. De a korai szívrohamok 80%-a megelőzhető életmódváltással, valamint a magas vérnyomás és a koleszterin korai kezelésével. A megelőzés működik – ha van hozzáférése.",
+        "action": "Ezen a héten két dolgot csinálj: (1) Menj el egy gyógyszertárba, és ellenőrizd a vérnyomásodat – írd le a számokat. (2) Számolja meg, hány cigarettát szív el naponta, és próbálja meg napi 3-al csökkenteni. Ez a két intézkedés a leghatékonyabb szívmegelőző lépés, amelyet bármely egyén megtehet."
       },
       "respiratory": {
         "title": "Tüdő és légzés",
         "description": "Dolgoztam olyan településeken, ahol a családok fát, szenet, vagy akár műanyagot, gumit égetnek fűtésre télen. Ahol 8 ember alszik két szellőzés nélküli szobában. Ahol a nedvesség lefolyik a falakon, és minden sarokban fekete penész nő. A légúti megbetegedések ilyen körülmények között nem meglepőek – ez annak a lakásnak a megjósolható eredménye, amelyben senkinek sem kellene laknia. Miközben a jobb lakhatásért küzdünk, meg kell védenünk a tüdőnket is.",
         "tip1": "A beltéri füst a legközvetlenebb légúti veszély, amit látok. Ha szilárd tüzelőanyaggal fűt, gondoskodjon a szellőzésről – még az ablak megrepedése is segít. Soha ne égessen el műanyagot, gumit vagy festett fát – a gőzök olyan vegyi anyagokat tartalmaznak, amelyek maradandó tüdőkárosodást okoznak, különösen olyan gyermekeknél, akiknek a tüdeje még fejlődik.",
         "tip2": "A nedvesség és a penész asztmát, krónikus hörghurutot okoz, és minden légúti fertőzést súlyosbít. Törölje le a látható penészt víz és ecet vagy fehérítő keverékével. Nyissa ki az ablakokat naponta legalább 15 percre még télen is. Ha lehetséges, akaszd ki a nedves ruhaneműt a szabadba – a benti ruhák szárítása hatalmas mennyiségű nedvességet ad a levegőbe",
-        "tip3": "A 3 hétnél tovább tartó köhögést, különösen fogyással, éjszakai izzadásokkal vagy vérrel a köpetben, ki kell vizsgálni tuberkulózisra. A tbc ingyenes kezeléssel gyógyítható, de nagyon fertőző is. A roma közösségekben a tuberkulózis aránya több európai ország országos átlagának 3-5-szöröse. A korai tesztelés megvédi az egész családot",
-        "tip4": "A füstös vagy penészes környezetben felnövő gyermekek tüdőkapacitása tartósan csökkent – ​​egész életükben kevésbé egészséges tüdőt fognak hordozni. Még ha nem is tud azonnal változtatni lakáshelyzetén, a füstexpozíció csökkentése és a lehető legnagyobb szellőztetés védi a fejlődő tüdejét",
-        "fact": "A WHO a háztartások légszennyezettségét a negyedik legnagyobb globális egészségügyi kockázatként azonosítja. Azokon a roma telepeken, ahol dolgoztam, a gyerekek több mint 60%-ának volt visszatérő légúti fertőzése – ez az arány jelentősen csökkent, amikor a családok javították a szellőzést és csökkentették a hulladékok beltéri elégetését. A lakhatási körülmények nem a családok hibái, de az alkalmazkodási stratégiák életeket mentenek, miközben a rendszerszintű változásért küzdenek.",
-        "action": "Ma: ellenőrizze, nincs-e látható penész az otthonában, és tisztítsa meg hígított fehérítővel vagy ecettel. Nyisson ki legalább egy ablakot 15 percre. Ha valaki a háztartásában 3 hétnél tovább köhög, menjen el az egészségügyi központba tbc-szűrésre – az ingyenes és 15 percet vesz igénybe."
+        "tip3": "A 3 hétnél tovább tartó köhögést, különösen fogyással, éjszakai izzadásokkal vagy vérrel a köpetben, ki kell vizsgálni tuberkulózisra. A TB ingyenes kezeléssel gyógyítható, de nagyon fertőző is. A roma közösségekben a TB arány 3–5-szorosa több európai ország országos átlagának. A korai tesztelés megvédi az egész családot",
+        "tip4": "A füstös vagy penészes környezetben felnövő gyermekek tüdőkapacitása tartósan csökkent – egész életükben kevésbé egészséges tüdőt fognak hordozni. Még ha nem is tud azonnal változtatni lakáshelyzetén, a füstexpozíció csökkentése és a lehető legnagyobb szellőztetés védi a fejlődő tüdejét",
+        "fact": "A WHO a háztartások légszennyezését a negyedik legnagyobb globális egészségügyi kockázatként azonosítja. Azokon a roma telepeken, ahol dolgoztam, a gyerekek több mint 60%-ának volt visszatérő légúti fertőzése – ez az arány jelentősen csökkent, amikor a családok javították a szellőzést és csökkentették a hulladékok beltéri elégetését. A lakhatási körülmények nem a családok hibái, de az alkalmazkodási stratégiák életeket mentenek, miközben a rendszerszintű változásért küzdenek.",
+        "action": "Ma: ellenőrizze, nincs-e látható penész az otthonában, és tisztítsa meg hígított fehérítővel vagy ecettel. Nyisson meg legalább egy ablakot 15 percre. Ha valakinek a háztartásában több mint 3 hétig köhög, menjen el az egészségügyi központba egy TB szűrésre – ez ingyenes, és 15 percig tart."
       }
     },
     "mental": {
-      "description": "15 év roma közösségekben megtanultam, hogy a legnehezebb teher nem a testi betegség — hanem a diszkrimináció, a szegénység, a kilakoltatástól való félelem, a gyerekek jövője miatti aggodalom és az érzés, hogy a rendszerben senki sem törődik veled. Stressznek hívjuk. Ha évekig tart, mássá válik. Megérdemli, hogy elnevezzük, megértsük és kezeljük — szégyen nélkül.",
+      "description": "A roma közösségekben eltöltött 15 éves munka során megtanultam, hogy az embereket nem a testi betegség a legsúlyosabb teher, hanem a diszkrimináció, a szegénység, a kilakoltatástól való félelem, a gyermekeik jövője miatti aggódás és az az érzés, hogy a rendszerben senkit sem érdekel. Ezt nevezzük stressznek. Ha évekig tart, valami több lesz belőle. Megérdemli, hogy megnevezzék, megértsék és kezeljék – szégyen nélkül.",
       "stressManagement": {
         "title": "Stresszel élni",
-        "description": "Nem fogok úgy tenni, mintha egy légzőgyakorlat megoldaná a problémáit. Ha attól tart, hogy családját kilakoltatják, egyetlen meditációs alkalmazás sem fogja megoldani. De több száz emberrel dolgoztam együtt közösségeinkben, akik óriási stresszt hordoznak magukban, és láttam, mi történik, ha ez a stressz évekig nem kezelhető: szívrohamok a 40-es éveikben járó férfiaknál, nők, akik nem tudnak enni vagy aludni, gyerekek, akik feszültségtől felvillanyozó háztartásban nőnek fel. Nem tudjuk mindig megváltoztatni a körülményeinket, de megváltoztathatjuk, hogyan viseljük azokat.",
-        "tip1": "A 4-4-8 légzési módszer azonnal hat az idegrendszerére. Lélegezz be az orrán keresztül 4-ig, tartsd 4-ig, és lassan lélegezz ki a szádon keresztül 8-ig. Ezt 5-ször végezd. Leesik a pulzusod, ellazulnak az izmaid. Ezt tanítom a családoknak kórházi látogatások előtt, bírósági tárgyalások előtt, minden stresszes találkozás előtt. Ez egy olyan eszköz, amely mindig nálad van",
-        "tip2": "A gyaloglás a leginkább alábecsült gyógyszer a stresszre. 20 perc gyaloglás – nem gyors, csak gyaloglás – akár 30%-kal csökkenti a kortizol stresszhormon szintjét. Ha nem tudja elhagyni a házat, járjon körbe. Maga a mozgás az, ami működik, nem a díszlet",
+        "description": "Nem fogok úgy tenni, mintha egy légzőgyakorlat megoldaná a problémáit. Ha attól tart, hogy családját kilakoltatják, egyetlen meditációs alkalmazás sem fogja megoldani. De több száz emberrel dolgoztam együtt közösségeinkben, akik hatalmas stresszt hordoznak magukban, és láttam, mi történik, ha ez a stressz évekig nem kezelhető: szívrohamot kapnak férfiak 40korukban, nők, akik nem tudnak enni vagy aludni, gyerekek, akik feszültségtől felvillanyozó háztartásban nőnek fel. Nem tudjuk mindig megváltoztatni a körülményeinket, de megváltoztathatjuk, hogyan viseljük azokat.",
+        "tip1": "A 4-4-8 légzési módszer azonnal hat az idegrendszerére. Lélegezz be az orrán keresztül 4 számlálásig, tartsd le 4, és lassan lélegezz ki a szádon 8 ideig. Csináld ezt 5 alkalommal. Leesik a pulzusod, ellazulnak az izmaid. Ezt tanítom a családoknak kórházi látogatások előtt, bírósági tárgyalások előtt, minden stresszes találkozás előtt. Ez egy olyan eszköz, amely mindig nálad van",
+        "tip2": "A gyaloglás a leginkább alábecsült gyógyszer a stresszre. 20 perc séta – nem gyors, csak gyaloglás – akár 30%-kal csökkenti a kortizol stresszhormon szintjét. Ha nem tudja elhagyni a házat, járjon körbe. Maga a mozgás az, ami működik, nem a díszlet",
         "tip3": "Beszélj valakivel. Nem a probléma megoldása érdekében, csak azért, hogy megosszuk a súlyt. Láttam, hogy a férfiak a közösségeinkben mindent egyedül hordoznak, mert a segítségkérés gyengeségnek tűnik. A munka 15 éve alatt a legerősebb emberek, akikkel találkoztam, azok, akik megtanulták azt mondani, hogy „küzdök”",
         "tip4": "Légy tudatos azzal kapcsolatban, hogy mi jut eszedbe. A közösségi média, a hírek, a családi viták, amelyek újra visszajátszanak a fejedben – ezek olyan stresszforrások, amelyeket kontrollálhatsz. Nem azt mondom, hogy hagyd figyelmen kívül a valóságot. Azt mondom, válassza ki, mikor foglalkozik vele, és hozzon létre olyan tereket a napjában, ahol szándékosan megnyugszik",
         "fact": "A roma közösségek megtapasztalják az úgynevezett „kisebbségi stresszt” – a diszkrimináció, a kirekesztés és a szegénység krónikus élettani következményeit. A kutatások azt mutatják, hogy ez tartósan megemeli a kortizolszintet, felgyorsítva a szívbetegségek, a cukorbetegség és a mentális betegségek kialakulását. Ez nem gyengeség. A biológia az igazságtalanságra reagál.",
-        "action": "Ma este lefekvés előtt helyezze a telefont egy másik szobába, és gyakoroljon 4-4-8 légzést 5 percig. Ha van egy partner vagy családtag, aki hajlandó, tegyétek ezt együtt csendben. Ez az apró cselekedet határt szab a napi stressz és az alvás között – az alvás pedig az, amikor a szervezet helyreállítja a stressz által okozott károkat."
+        "action": "Ma este lefekvés előtt tegye a telefont egy másik szobába, és gyakoroljon 4-4-8 légzést 5 percig. Ha van egy partner vagy családtag, aki hajlandó, tegyétek ezt együtt csendben. Ez az apró cselekedet határvonalat hoz létre a napi stressz és az alvás között – az alvás pedig az, amikor a szervezet helyreállítja a stressz által okozott károkat."
       },
       "sleep": {
         "title": "Aludj orvosként",
         "description": "Túlzsúfolt otthonokban, ahol a tévé mindig be van kapcsolva, ahol a gyerekek a szülőkkel osztoznak ágyon, ahol a szomszédok vagy az utca zaja soha nem szűnik meg – az alvás nem adott. Ez olyasvalami, amiért meg kell küzdeni. És mégis, az alvás az, amikor a tested helyreállítja magát, amikor az agyad feldolgozza a napi stresszt, és amikor az immunrendszered újjáépül. A krónikus alváshiány ugyanolyan veszélyes, mint a dohányzás – és közösségeinkben szinte általános jelenség.",
-        "tip1": "Próbáljon meg minden nap nagyjából ugyanabban az időben aludni és ébredni, beleértve a hétvégéket is. Tudom, hogy ez nehéz műszakos munka, kisgyerekek vagy zajos környezet esetén – de még egy állandó 6 órás időtartam is helyreállítóbb, mint a véletlenszerű 8 órás blokkok. A tested ritmusra vágyik",
-        "tip2": "Az alvás előtti telefonok és képernyők az egyik legrosszabb modern alvásromboló. A kék fény jelzi az agyának, hogy nappal van. Ha használnia kell a telefont, állítsa éjszakai üzemmódba este 21 óra után. Még jobb, ha egy másik szobában töltse fel – azt tapasztaltam, hogy az alvás minősége drámaian javult ettől az egyetlen változtatástól",
-        "tip3": "A koffein 8 órán keresztül marad a szervezetben. Aznap délután 16 órakor a török ​​kávé vagy tea éjfélkor még aktív a véráramban. Ebéd után váltson gyógyteára (kamilla, hársfa). Ez az egyik legegyszerűbb fejlesztés, amit javaslok, és az emberek mindig meglepődnek, mennyit segít",
+        "tip1": "Próbáljon meg minden nap nagyjából ugyanabban az időben aludni és ébredni, beleértve a hétvégéket is. Tudom, hogy ez nehéz műszakos munka, kisgyermekek vagy zajos környezet esetén – de még egy 6 órás állandó ablak is helyreállítóbb, mint a véletlenszerű 8 órás blokkok. A tested ritmusra vágyik",
+        "tip2": "Az alvás előtti telefonok és képernyők az egyik legrosszabb modern alvásromboló. A kék fény jelzi az agyának, hogy nappal van. Ha használnia kell telefonját, állítsa éjszakai üzemmódba délután 9 után. Még jobb, ha egy másik szobában töltse fel – azt tapasztaltam, hogy az alvás minősége drámaian javult ettől az egyetlen változtatástól",
+        "tip3": "A koffein 8 óráig marad a rendszerben. Aznap délután a 4órás török ​​kávé vagy tea éjfélkor is aktív a véráramban. Ebéd után váltson gyógyteára (kamilla, hársfa). Ez az egyik legegyszerűbb fejlesztés, amit javaslok, és az emberek mindig meglepődnek, mennyit segít",
         "tip4": "Ha gyerekekkel vagy családtagokkal osztozik egy szobán, az apró változtatások segítenek: a folyamatos „világítási idő”, a zaj fokozatos csökkentése, függöny használata az alvás vizuális határának kialakítására. Tanítsd meg a gyerekeknek, hogy az alvás ideje a családi idő – amikor a háztartás együtt csendben van, mindenki jobban alszik",
-        "fact": "A marginalizált közösségekben végzett alvással kapcsolatos kutatások azt mutatják, hogy a túlzsúfoltság, a zaj és a stressz okozta krónikus alváshiány jelentősen hozzájárul az egészségügyi szakadékhoz. Azok az emberek, akik folyamatosan 6 óránál kevesebbet alszanak, négyszer nagyobb kockázatot kapnak a fertőzések elkapására, és kétszer nagyobb a szívbetegségek kockázata. Az alvás nem luxus, hanem a túlélés alapja.",
-        "action": "Ma este: állítson be lefekvés előtti ébresztőt a telefonján 30 percre, mielőtt lefekszik. Amikor megszólal, kapcsold ki a TV-t, tedd el a telefont, és feküdj a sötétben 4-4-8 légzéssel, amíg el nem alszol. Csináld ezt 7 éjszakán keresztül, és vedd észre a különbséget."
+        "fact": "A marginalizált közösségekben végzett alvással kapcsolatos kutatások azt mutatják, hogy a túlzsúfoltság, a zaj és a stressz okozta krónikus alváshiány jelentősen hozzájárul az egészségügyi szakadékhoz. Azoknál az embereknél, akik folyamatosan 6 óránál kevesebbet alszanak, 4-szor nagyobb a fertőzések elkapásának és 2x-szer nagyobb a szívbetegség kockázata. Az alvás nem luxus, hanem a túlélés alapja.",
+        "action": "Ma este: állítson be lefekvés előtti ébresztőt a telefonján 30 percre, mielőtt elaludna. Amikor csörög, kapcsolja ki a TV-t, tegye el a telefont, és feküdjön a sötétben, miközben 4-4-8 lélegzik, amíg el nem alszik. Tegye ezt 7 éjszakán keresztül, és vegye észre a különbséget."
       },
       "communitySupport": {
         "title": "A kapcsolat ereje",
         "description": "A roma kultúra már megért valamit, amit a nyugati orvoslás csak most mér: hogy az összetartozás, a család és a közösség olyan erősen védi az egészséget, mint bármely gyógyszer. Láttam, hogy emberek túlélték a legnehezebb körülményeket – kilakoltatást, betegséget, veszteséget –, mert a közösségük tartotta őket. És láttam, hogy az emberek sokkal kevesebb alatt esnek össze, amikor elszigeteltek voltak. A tudomány most megerősíti azt, amit őseink tudtak: a magány megöl, a kapcsolat gyógyít.",
         "tip1": "Ha ismer valakit a közösségében, aki a közelmúltban veszített el egy családtagját, betegséget diagnosztizáltak nála, elvesztette a munkáját vagy válságon megy keresztül – ne várja meg, hogy segítséget kérjen. Látogassa meg őket. Hozz ételt. Ülj le velük. A roma kultúrában ez az ösztön. Az egészségtudományban ezt „szociális receptnek” nevezik – és jobban működik, mint a legtöbb tabletta",
-        "tip2": "A szégyen az egészség ellensége. Találkoztam olyan emberekkel, akik évekig titkolták a cukorbetegséget, a depressziót, a HIV-vírust és a családon belüli erőszakot, mert féltek, mit mond majd a közösség. Valahányszor közösségünkben valaki nyíltan beszél a küzdelméről, az engedélyt ad másoknak. Nem kell mindent megosztanod – de valami megosztása megtöri a csendet, amitől az emberek betegek",
+        "tip2": "A szégyen az egészség ellensége. Találkoztam olyan emberekkel, akik évekig titkolták a cukorbetegséget, a depressziót, a HIV és a családon belüli erőszakot, mert féltek, mit mond majd a közösség. Valahányszor közösségünkben valaki nyíltan beszél a küzdelméről, az engedélyt ad másoknak. Nem kell mindent megosztanod – de valami megosztása megtöri a csendet, amitől az emberek betegek",
         "tip3": "Összejövetelek, ünnepségek, zene, ima, mesemondás – ezek nem vonják el a figyelmet az egészségről. Egészségesek. A tanulmányok azt mutatják, hogy a közösségi kulturális tevékenységekben való rendszeres részvétel csökkenti a depressziót és a szív- és érrendszeri kockázatot. Az általuk teremtett öröm és összetartozás mérhető gyógyszer",
         "tip4": "Nézze meg a közösségében élő időseket és elszigetelt embereket. Az egyedül élő ember, a nagymama, akinek a gyerekei elköltöztek, a férfi, aki nem járt összejövetelekre. Egy 10 perces látogatás vagy telefonhívás lehet az egyetlen emberi kapcsolatuk aznap – és ez lehet az, ami életben tartja őket",
-        "fact": "A Harvard 85 éves, a felnőttek egészségével foglalkozó tanulmánya arra a következtetésre jutott, hogy az egészség és a hosszú élettartam legerősebb előrejelzője a kapcsolatok minősége – nem az étrend, a testmozgás vagy a genetika. A magány 26%-kal növeli a halálozási kockázatot, ami napi 15 cigaretta elszívásának felel meg. A roma közösségek kulturális gazdagsággal rendelkeznek a társadalmi kapcsolatokban, amely valódi egészségügyi érték – védje meg.",
+        "fact": "A Harvard 85 éves, a felnőttek egészségével foglalkozó tanulmánya arra a következtetésre jutott, hogy az egészség és a hosszú élettartam legerősebb előrejelzője a kapcsolatok minősége – nem az étrend, a testmozgás vagy a genetika. A magány 26%-kal növeli a halálozási kockázatot, ami megfelel napi 15 cigaretta elszívásának. A roma közösségek kulturális gazdagsággal rendelkeznek a társadalmi kapcsolatokban, amely valódi egészségügyi érték – védje meg.",
         "action": "Ezen a héten lépj kapcsolatba egy olyan személlyel a közösségedben, akivel mostanában nem beszéltél. Nem szövegesen – hanggal vagy személyesen. Kérdezd meg, hogy vannak, és hallgasd meg. Ez a kapcsolati aktus az egészségfejlesztés a legtisztább formájában."
       },
       "seekHelp": {
         "title": "Amikor túl sok",
         "description": "Van egy pont, ahol a stressz, a szomorúság és az aggodalom átlép egy határvonalat, és valami szakszerű segítségre szorul – és a roma közösségekben ezt a határvonalat szinte soha nem ismerik fel, mert megtanítják elviselni, erősnek lenni, kezelni a családon belül. Láttam ennek a hallgatásnak az árát: férfiak, akik isznak, hogy megbirkózzanak, amíg a májuk elromlik, a nők, akik abbahagyják az evést, a tizenévesek, akik ártanak maguknak. A segítségkérés nem árulja el a kultúráját. Megvédi az életedet, hogy ott lehess azoknak, akiknek szükségük van rád.",
         "tip1": "Ha Ön vagy valaki, akit ismer, több mint 2 hétig nem tud normálisan működni – nem tud aludni, nem tud enni, nem tud gondoskodni a gyerekekről, folyton sír, vagy nincs energiája semmire – ez meghaladja a normál stresszt. Ez a depresszió, és olyan valóságos egészségügyi állapot, mint a cukorbetegség. Ez nem gyengeség, és reagál a kezelésre",
-        "tip2": "Az első lépés a háziorvosa. Mondja: \"Több mint 2 hete nagyon rosszul érzem magam, és segítségre van szükségem.\" Nem kell mindent megmagyaráznod. A háziorvos felmérheti Önt, és pszichológushoz vagy pszichiáterhez irányíthatja. Ez a szolgáltatás a legtöbb európai országban ingyenes vagy alacsony költségű. Ha a háziorvos elbocsát, keressen fel egy másikat",
-        "tip3": "Ha valaki a családjában megemlíti, hogy meg akar halni, el akar tűnni, vagy úgy érzi, hogy mindenkinek jobban járna nélküle – ezt azonnal vegye komolyan. Maradj velük. Távolítsa el a gyógyszerekhez és éles tárgyakhoz való hozzáférést. Hívja az országos krízisvonalat vagy a 112-t. Nem reagálja túl. Ezek a szavak segélykiáltások, amelyekre válaszolni kell",
-        "tip4": "A mentális egészségügyi gyógyszerek nem szégyenletesek, nem okoznak függőséget, és nem „őrültek számára”. Világszerte emberek millióinak írnak fel antidepresszánsokat, amelyek életeket menthetnek meg. Nem változtatják meg azt, aki vagy – feloldják a kémiai ködöt, amely megakadályoz abban, hogy az legyél, aki vagy. Láttam embereket, akik átalakultak a kezelés hatására, és évekig ellenálltak a megbélyegzés miatt",
+        "tip2": "Az első lépés a háziorvosa. Mondja: \"Több mint 2 hete nagyon rosszul érzem magam, és segítségre van szükségem.\" Nem kell mindent megmagyaráznod. A háziorvos felmérheti Önt, és pszichológushoz vagy pszichiáterhez irányíthatja. Ez a szolgáltatás a legtöbb európai országban ingyenes vagy alacsony költségű. Ha a háziorvosa elbocsát, keressen fel egy másikat",
+        "tip3": "Ha valaki a családjában megemlíti, hogy meg akar halni, el akar tűnni, vagy úgy érzi, hogy mindenkinek jobban járna nélküle – ezt azonnal vegye komolyan. Maradj velük. Távolítsa el a gyógyszerekhez és éles tárgyakhoz való hozzáférést. Hívja az országos krízisvonalat vagy a 112 telefonszámot. Nem reagálod túl. Ezek a szavak segélykiáltások, amelyekre válaszolni kell",
+        "tip4": "A mentális egészségügyi gyógyszerek nem szégyenletesek, nem okoznak függőséget, és nem „őrültek számára”. Világszerte emberek millióinak írnak fel antidepresszánsokat, és életeket menthetnek meg. Nem változtatják meg azt, aki vagy – feloldják a kémiai ködöt, amely megakadályoz abban, hogy az legyél, aki vagy. Láttam embereket, akik átalakultak a kezelés hatására, és évekig ellenálltak a megbélyegzés miatt",
         "fact": "A roma közösségekben a legmagasabb a depresszió és a szorongás aránya Európában, olyan strukturális tényezők miatt, mint a diszkrimináció, a szegénység és a szolgáltatásokhoz való hozzáférés hiánya. Ennek ellenére a roma közösségekben a mentálhigiénés szolgáltatások igénybevétele a legalacsonyabbak közé tartozik. Azokban a programokban, ahol segítettem az embereket a kulturálisan érzékeny mentális egészségügyi ellátáshoz kapcsolódni, az életminőség jelentős javulása volt – nemcsak az egyén, hanem az egész családja számára.",
-        "action": "Mentse el ezt a számot most azonnal a telefonjába: hazája mentális egészségügyi segélyvonala. Ha válságban vagy, hívd fel. Ha valaki, akit ismer, válságban van, hívja fel vele. Ha pedig több mint 2 hete küszködik, kérjen időpontot háziorvosához ezen a héten. Megérdemled, hogy jobban érezd magad, és van segítség."
+        "action": "Mentse el ezt a számot most azonnal a telefonjába: hazája mentális egészségügyi segélyvonala. Ha válságban vagy, hívd fel. Ha valaki, akit ismer, válságban van, hívja fel vele. Ha pedig több mint 2 hete küzd, foglaljon időpontot háziorvosához ezen a héten. Megérdemled, hogy jobban érezd magad, és van segítség."
       }
     }
   },
@@ -2004,7 +2048,123 @@
     "pillarProgress": "Tanulási előrehaladás pillérek szerint",
     "contactSupport": "Regionális koordinátor elérése",
     "resources": "Mediátor források",
-    "downloadGuide": "Terepi útmutató letöltése (PDF)"
+    "downloadGuide": "Terepi útmutató letöltése (PDF)",
+    "ecHint": "Románia vidéki egészségügyi közvetítői számára készült – POIDS / FSE+ integrált közösségi csapatok (ECI).",
+    "tabDashboard": "Áttekintés",
+    "tabCases": "Esetek",
+    "tabSessions": "Munkamenetek",
+    "tabIndicators": "Mutatók",
+    "tabTraining": "Edzés",
+    "tabTools": "Helyi eszközök",
+    "openCases": "Aktív esetek",
+    "sessionsThisMonth": "Foglalkozások ebben a hónapban",
+    "newCase": "Új ügy",
+    "newSession": "Napló információs munkamenet",
+    "casesTitle": "Ügykezelés",
+    "noCases": "Még nincs eset – adjon hozzá családot vagy személyt, akit támogat.",
+    "caseName": "Kedvezményezett",
+    "caseCategory": "Domain",
+    "caseStatus": "Állapot",
+    "caseNotes": "Beavatkozási terv és jegyzetek",
+    "nextVisit": "Következő látogatás (nem kötelező)",
+    "saveCase": "Eset mentése",
+    "caseSaved": "Az ügy mentve",
+    "categoryHealth": "Egészség és megelőzés",
+    "categorySocial": "Szociális támogatás",
+    "categoryEducation": "Oktatás",
+    "categoryRights": "Jogok és az ellátáshoz való hozzáférés",
+    "statusIdentified": "Azonosítva",
+    "statusAssessment": "Értékelés",
+    "statusPlan": "Beavatkozási terv",
+    "statusMonitoring": "Monitoring",
+    "statusClosed": "Zárt",
+    "householdSize": "Háztartás mérete",
+    "vulnerabilityLabel": "Sebezhetőségek (POIDS célcsoport)",
+    "healthFacilitationLabel": "Egészségügyi könnyítések",
+    "sessionsTitle": "Információs szekciók",
+    "noSessions": "Még nincsenek rögzített munkamenetek.",
+    "sessionTitle": "Munkamenet címe",
+    "sessionTopic": "Szabad téma",
+    "sessionLocation": "Helyszín (falu, iskola, kultúrház)",
+    "sessionAttendees": "Résztvevők (hozzávetőleges)",
+    "sessionNotes": "Jegyzetek és nyomon követés",
+    "sessionThemeLabel": "Közegészségügyi téma",
+    "saveSession": "Munkamenet mentése",
+    "sessionSaved": "Munkamenet mentve",
+    "toolsTitle": "Használja terepen családoknál",
+    "toolsScan": "Döntsön le egy egészségügyi mítoszt",
+    "toolsVaccines": "Vakcina útmutató",
+    "toolsRights": "Ismerje meg a jogait",
+    "toolsExplain": "Magyarázza el a receptet",
+    "toolsChat": "Kérdezze meg az egészségügyi tanácsadót",
+    "contactUjssGeneric": "Válassza ki a megyét az UJSS koordinátor betöltéséhez.",
+    "countyLabel": "A te megyéd",
+    "countyPlaceholder": "Válassza ki a megyét",
+    "syncIdle": "Kész",
+    "syncSyncing": "Szinkronizálás...",
+    "syncSynced": "Szinkronizálva",
+    "syncOffline": "Csak készülék",
+    "exportPrint": "Jelentés nyomtatása (PDF-ként mentés)",
+    "exportDownload": "HTML jelentés letöltése",
+    "reportTitle": "Egészségügyi mediátor tevékenységi jelentés",
+    "reportGenerated": "Generálva:",
+    "reportKpiSection": "Főbb mutatók",
+    "indicatorsTitle": "POIDS / SCI 2000 mutatók",
+    "indicatorsHint": "Automatikusan kiszámítva az esetekből, látogatásokból és munkamenetekből. Használja UJSS / DSP havi jelentésekhez.",
+    "indicatorsCoverage": "közösségi lefedettség",
+    "indicatorsActivity": "Terepi tevékenység",
+    "indicatorsHealthFacilitation": "Egészségügyi könnyítések (esetenként)",
+    "indicatorsSessionsByTheme": "Foglalkozások téma szerint (idén)",
+    "indicatorsVulnerability": "A kedvezményezettek veszélyeztetett csoportok szerint",
+    "indicatorsUniquePeople": "Egyedi kedvezményezettek",
+    "indicatorsHouseholds": "Emberek a háztartásokban",
+    "indicatorsClosedCases": "Lezárt ügyek",
+    "indicatorsVisitsThisYear": "Látogatások (évtől a mai napig)",
+    "indicatorsAttendeesThisYear": "Az ülés résztvevői (év)",
+    "trainingTitle": "ECI képzés",
+    "trainingSubtitle": "Bevezető út közösségi ápolónők, mediátorok és integrált csapat számára.",
+    "trainingProgress": "Befejezve",
+    "trainingMinutes": "min",
+    "trainingCompleted": "elkészült",
+    "trainingMarkComplete": "Megjelölés befejezettként",
+    "trainingMarkIncomplete": "Megjelölés hiányosként",
+    "trainingTierFoundations": "ECI alapítványok",
+    "trainingTierHealth": "Közegészségügy",
+    "trainingTierSocial": "Szociális és jogok",
+    "trainingTierFieldwork": "Terepi tevékenység",
+    "vuln_child": "Gyermekek (0-18)",
+    "vuln_schoolDropoutRisk": "Iskolai lemorzsolódás kockázata",
+    "vuln_pregnant": "Terhes nők",
+    "vuln_singleParent": "Egyedülálló szülők",
+    "vuln_minVeniturGarantat": "Garantált minimum jövedelem",
+    "vuln_elderly": "Idős",
+    "vuln_disability": "Fogyatékkal élők",
+    "vuln_romaCommunity": "roma közösség",
+    "vuln_noInsurance": "Nincs egészségbiztosítás",
+    "vuln_noDocuments": "Nincsenek személyi igazolványok",
+    "vuln_domesticViolence": "A családon belüli erőszak túlélői",
+    "facilitation_vaccinationFacilitated": "Az oltás megkönnyítette",
+    "facilitation_prenatalFacilitated": "Megkönnyített a terhesgondozás",
+    "facilitation_screeningReferral": "Szűrési beutaló",
+    "facilitation_chronicMonitoring": "Krónikus betegségek monitorozása",
+    "facilitation_tbCommunicableScreening": "TB/fertőző betegségek szűrése",
+    "facilitation_gpEnrollment": "Háziorvosi beiratkozás",
+    "facilitation_insuranceEnrollment": "Egészségbiztosítási beiratkozás (CNAS)",
+    "sessionTheme_vaccination": "Oltás",
+    "sessionTheme_maternalChild": "Anya és gyermek egészsége",
+    "sessionTheme_nutrition": "Táplálkozás és szoptatás",
+    "sessionTheme_hygiene": "Higiénia és higiénia",
+    "sessionTheme_tbCommunicable": "TBC és fertőző betegségek",
+    "sessionTheme_chronicDisease": "Krónikus betegségek (HTA, cukorbetegség)",
+    "sessionTheme_screening": "Szűrés (rák, NCD)",
+    "sessionTheme_mentalHealth": "Mentális egészség",
+    "sessionTheme_addiction": "Függőségek (alkohol, kábítószer, dohányzás)",
+    "sessionTheme_rights": "Jogok és az ellátáshoz való hozzáférés",
+    "sessionTheme_prevention": "Általános megelőzés",
+    "sessionTheme_other": "Más",
+    "roleBoundaryNotice": "Szerephatárra vonatkozó megjegyzés: Közösségi közvetítőként/ápolóként támogatod és megkönnyíted a hozzáférést. Ne végezzen orvosi tevékenységet, diagnosztikát, és ne írjon fel gyógyszereket. Klinikai döntésekkel kapcsolatban forduljon klinikai szakemberekhez.",
+    "dataMinimisationNote": "Adatminimalizálási figyelmeztetés: Csak a szükséges részleteket rögzítse az ellátás vagy a program értékelésének folyamatossága érdekében. Soha ne írjon be teljes nevet és címet együtt, etnikai hovatartozást, bevándorlási státuszt vagy klinikai diagnózist.",
+    "consentAttestation": "Megerősítem, hogy a megnevezett személy (vagy a nevében eljáró családtag vagy gyám) hozzájárult a látogatás rögzítéséhez."
   },
   "healthQuiz": {
     "meta": {
@@ -2229,8 +2389,8 @@
       "sayThis": "Mondd ezt:",
       "thenDo": "Ezután tegye ezt:",
       "patientOmbudsman": "Betegombudsman",
-      "antiDiscrimination": "Diszkrimináció elleni védelem",
-      "romaRightsOrg": "Roma jogvédő szervezet"
+      "antiDiscrimination": "Anti-Discrimination",
+      "romaRightsOrg": "Roma Rights Organization"
     },
     "rights": {
       "treatment": {

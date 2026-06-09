@@ -126,11 +126,11 @@ export function ConsultationFlow({ locale }: { locale: string }) {
           <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-600 shadow-xl shadow-emerald-500/25">
             <Stethoscope className="h-10 w-10 text-white" />
           </div>
-          <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
-          <p className="mt-2 text-sm text-gray-500">{t("heroSubtitle")}</p>
+          <h1 className="text-2xl font-black text-[var(--color-text-primary)]">{t("heroTitle")}</h1>
+          <p className="mt-2 text-sm text-[var(--color-text-secondary)]">{t("heroSubtitle")}</p>
         </div>
 
-        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
           {t("prompt")}
         </p>
 
@@ -142,7 +142,7 @@ export function ConsultationFlow({ locale }: { locale: string }) {
                 type="button"
                 key={c.id}
                 onClick={() => startConsultation(label)}
-                className="card-hover flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm animate-fade-in-up"
+                className="card-hover flex items-center gap-3 rounded-2xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-4 text-left shadow-sm animate-fade-in-up"
                 style={{ animationDelay: `${(i + 1) * 100}ms` }}
               >
                 <div
@@ -151,14 +151,14 @@ export function ConsultationFlow({ locale }: { locale: string }) {
                 >
                   <c.icon className="h-6 w-6" style={{ color: c.color }} />
                 </div>
-                <span className="text-sm font-bold text-gray-700">{label}</span>
+                <span className="text-sm font-bold text-[var(--color-text-primary)]">{label}</span>
               </button>
             );
           })}
         </div>
 
         <div className="mt-4">
-          <p className="mb-2 text-center text-xs text-gray-400">{t("orFreeform")}</p>
+          <p className="mb-2 text-center text-xs text-[var(--color-text-muted)]">{t("orFreeform")}</p>
           <div className="flex gap-2">
             <input
               value={input}
@@ -166,7 +166,7 @@ export function ConsultationFlow({ locale }: { locale: string }) {
               onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); startConsultation(input.trim()); } }}
               placeholder={t("freeformPlaceholder")}
               aria-label={t("freeformAria")}
-              className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+              className="flex-1 rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] text-[var(--color-text-primary)] px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
             />
             <button
               onClick={() => input.trim() && startConsultation(input.trim())}
@@ -186,12 +186,12 @@ export function ConsultationFlow({ locale }: { locale: string }) {
     return (
       <div className="flex h-[calc(100vh-10rem)] flex-col">
         <div className="mb-3 flex items-center gap-3">
-          <button onClick={reset} className="rounded-full bg-gray-100 p-2" aria-label={tCommon("back")}>
-            <ArrowLeft className="h-4 w-4 text-gray-600" />
+          <button onClick={reset} className="rounded-full bg-[var(--color-surface-hover)] p-2" aria-label={tCommon("back")}>
+            <ArrowLeft className="h-4 w-4 text-[var(--color-text-secondary)]" />
           </button>
           <div>
-            <h2 className="text-sm font-bold text-gray-900">{t("chatHeader")}</h2>
-            <p className="text-xs text-gray-400">{t("chatSubtitle")}</p>
+            <h2 className="text-sm font-bold text-[var(--color-text-primary)]">{t("chatHeader")}</h2>
+            <p className="text-xs text-[var(--color-text-muted)]">{t("chatSubtitle")}</p>
           </div>
         </div>
 
@@ -202,7 +202,7 @@ export function ConsultationFlow({ locale }: { locale: string }) {
                 className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
                   msg.role === "user"
                     ? "bg-emerald-500 text-white rounded-br-md"
-                    : "bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-md"
+                    : "bg-[var(--color-surface)] text-[var(--color-text-primary)] shadow-sm border border-[var(--color-border-subtle)] rounded-bl-md"
                 }`}
               >
                 <div className="whitespace-pre-wrap">{msg.content}</div>
@@ -211,8 +211,8 @@ export function ConsultationFlow({ locale }: { locale: string }) {
           ))}
           {loading && (
             <div className="flex justify-start">
-              <div className="rounded-2xl rounded-bl-md border border-gray-100 bg-white px-4 py-3 shadow-sm">
-                <div className="flex items-center gap-2 text-gray-400">
+              <div className="rounded-2xl rounded-bl-md border border-[var(--color-border-subtle)] bg-[var(--color-surface)] px-4 py-3 shadow-sm">
+                <div className="flex items-center gap-2 text-[var(--color-text-muted)]">
                   <Loader2 className="h-4 w-4 animate-spin" />
                   <span className="text-xs">{tCommon("thinking")}</span>
                 </div>
@@ -221,7 +221,7 @@ export function ConsultationFlow({ locale }: { locale: string }) {
           )}
         </div>
 
-        <div className="border-t border-gray-100 bg-white pt-3">
+        <div className="border-t border-[var(--color-border-subtle)] bg-[var(--color-surface)] pt-3">
           <div className="flex items-end gap-2">
             <input
               value={input}
@@ -229,7 +229,7 @@ export function ConsultationFlow({ locale }: { locale: string }) {
               onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); sendMessage(); } }}
               aria-label={t("answerAria")}
               placeholder={t("answerPlaceholder")}
-              className="flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+              className="flex-1 rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-subtle)] text-[var(--color-text-primary)] px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
               disabled={loading}
             />
             <button
@@ -256,7 +256,7 @@ export function ConsultationFlow({ locale }: { locale: string }) {
 
     return (
       <div className="space-y-4">
-        <button onClick={reset} className="flex items-center gap-2 text-sm text-gray-500">
+        <button onClick={reset} className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
           <ArrowLeft className="h-4 w-4" /> {t("newSession")}
         </button>
 
@@ -283,19 +283,19 @@ export function ConsultationFlow({ locale }: { locale: string }) {
             )}
 
             <div>
-              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-500">{t("assessment")}</p>
-              <p className="text-sm leading-relaxed text-gray-700">{summary.assessment}</p>
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-[var(--color-text-secondary)]">{t("assessment")}</p>
+              <p className="text-sm leading-relaxed text-[var(--color-text-primary)]">{summary.assessment}</p>
             </div>
 
-            <div className="rounded-xl bg-white p-3 shadow-sm">
+            <div className="rounded-xl bg-[var(--color-surface)] border border-[var(--color-border-subtle)] p-3 shadow-sm">
               <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-emerald-600">{t("whatToDo")}</p>
-              <p className="text-sm leading-relaxed text-gray-700">{summary.whatToDo}</p>
+              <p className="text-sm leading-relaxed text-[var(--color-text-primary)]">{summary.whatToDo}</p>
             </div>
 
             {summary.homeRemedies && (
-              <div className="rounded-xl bg-white p-3 shadow-sm">
+              <div className="rounded-xl bg-[var(--color-surface)] border border-[var(--color-border-subtle)] p-3 shadow-sm">
                 <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-blue-600">{t("homeCare")}</p>
-                <p className="text-sm leading-relaxed text-gray-700">{summary.homeRemedies}</p>
+                <p className="text-sm leading-relaxed text-[var(--color-text-primary)]">{summary.homeRemedies}</p>
               </div>
             )}
 
@@ -318,15 +318,15 @@ export function ConsultationFlow({ locale }: { locale: string }) {
         </button>
 
         {showVisitCard && (
-          <div className="rounded-2xl border-2 border-dashed border-indigo-200 bg-white p-5">
-            <div className="mb-3 flex items-center gap-2 border-b border-gray-100 pb-3">
+          <div className="rounded-2xl border-2 border-dashed border-indigo-200 bg-[var(--color-surface)] p-5">
+            <div className="mb-3 flex items-center gap-2 border-b border-[var(--color-border-subtle)] pb-3">
               <Stethoscope className="h-5 w-5 text-indigo-500" />
-              <span className="text-sm font-bold text-gray-900">{t("visitCardTitle")}</span>
+              <span className="text-sm font-bold text-[var(--color-text-primary)]">{t("visitCardTitle")}</span>
             </div>
-            <p className="text-sm leading-relaxed text-gray-700">
+            <p className="text-sm leading-relaxed text-[var(--color-text-primary)]">
               {summary.doctorVisitSummary}
             </p>
-            <p className="mt-3 text-[10px] text-gray-400">
+            <p className="mt-3 text-[10px] text-[var(--color-text-muted)]">
               {t("visitCardDisclaimer")}
             </p>
           </div>

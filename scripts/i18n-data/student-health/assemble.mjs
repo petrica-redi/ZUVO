@@ -11,7 +11,7 @@ const ROOT = join(HERE, "../../..");
 const OUT = join(HERE, "../student-health-translations.mjs");
 const EN = JSON.parse(readFileSync(join(ROOT, "messages/en.json"), "utf8")).studentHealth;
 
-const LOCALES = ["sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
+const LOCALES = ["it", "sq", "rom", "ro", "hu", "sk", "cs", "bg", "sr", "hr", "bs", "mk", "sl", "el", "tr"];
 const translations = { en: EN };
 
 for (const locale of LOCALES) {

@@ -43,6 +43,27 @@ export const REGIONS_UI_TRANSLATIONS = {
       excellent: "But lačho",
     },
   },
+  it: {
+    romaPop: "Pop. rom {population}",
+    detail: {
+      back: "Indietro",
+      romaPopulation: "Popolazione rom",
+      ofTotal: "di {total} totale ({percent})",
+      healthAccess: "Accesso alla salute",
+      healthChallenges: "Sfide sanitarie",
+      organizationsHelp: "Organizzazioni che possono aiutare",
+      emergency: "Emergenza: {number}",
+      ambulance: "Ambulanza: {number}",
+      askAboutHealth: "Chiedi sulla salute in {region}",
+    },
+    healthIndex: {
+      veryPoor: "Molto scarso",
+      poor: "Scarso",
+      fair: "Discreto",
+      good: "Buono",
+      excellent: "Eccellente",
+    },
+  },
   ro: {
     romaPop: "Pop. romă {population}",
     detail: {
