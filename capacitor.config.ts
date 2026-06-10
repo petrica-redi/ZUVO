@@ -60,7 +60,7 @@ const config: CapacitorConfig = {
     contentInset: "always",
     scrollEnabled: true,
     limitsNavigationsToAppBoundDomains: false,
-    backgroundColor: "#F4F6FB",
+    backgroundColor: "#F3F8F6",
     preferredContentMode: "mobile",
   },
 
@@ -68,14 +68,14 @@ const config: CapacitorConfig = {
     allowMixedContent: false,
     captureInput: true,
     webContentsDebuggingEnabled: process.env.NODE_ENV !== "production",
-    backgroundColor: "#F4F6FB",
+    backgroundColor: "#F3F8F6",
   },
 
   plugins: {
     SplashScreen: {
       launchShowDuration: 1500,
       launchAutoHide: true,
-      backgroundColor: "#4F46E5",
+      backgroundColor: "#0E8074",
       androidScaleType: "CENTER_CROP",
       showSpinner: false,
       splashFullScreen: true,
@@ -85,7 +85,7 @@ const config: CapacitorConfig = {
     },
     StatusBar: {
       style: "DARK",
-      backgroundColor: "#4F46E5",
+      backgroundColor: "#0E8074",
       overlaysWebView: false,
     },
     Keyboard: {

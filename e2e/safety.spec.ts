@@ -113,10 +113,16 @@ test.describe("Rate limiting", () => {
 });
 
 test.describe("Localised emergency content", () => {
-  test("home page shows 112 emergency CTA in default locale (Romanian)", async ({ page }) => {
-    await page.goto("/");
-    await expect(page.getByText(/Urgență\?/i).first()).toBeVisible();
-    await expect(page.getByText(/112/).first()).toBeVisible();
+  test.describe("Romanian (default locale)", () => {
+    // Force a Romanian browser so next-intl's Accept-Language negotiation
+    // resolves `/` to the default locale instead of the test runner's en-US.
+    test.use({ locale: "ro-RO" });
+
+    test("home page shows 112 emergency CTA in default locale (Romanian)", async ({ page }) => {
+      await page.goto("/");
+      await expect(page.getByText(/Urgență\?/i).first()).toBeVisible();
+      await expect(page.getByText(/112/).first()).toBeVisible();
+    });
   });
 
   test("English locale renders at /en prefix", async ({ page }) => {

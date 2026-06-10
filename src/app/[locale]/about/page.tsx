@@ -19,7 +19,7 @@ export default async function AboutPage({ params }: Props) {
 
   const values = [
     { icon: Heart, key: "care", color: "from-red-500 to-rose-600" },
-    { icon: Globe, key: "languages", color: "from-blue-500 to-indigo-600" },
+    { icon: Globe, key: "languages", color: "from-teal-500 to-cyan-600" },
     { icon: Shield, key: "evidence", color: "from-green-500 to-emerald-600" },
     { icon: Users, key: "community", color: "from-purple-500 to-violet-600" },
   ] as const;

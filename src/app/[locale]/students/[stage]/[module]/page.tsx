@@ -364,7 +364,7 @@ export default async function StudentModulePage({ params }: Props) {
                 stage={stage}
                 completeLabel={tCommon("markComplete")}
                 completedLabel={tCommon("completed")}
-                pillarColor="#4338CA"
+                pillarColor="#0D685F"
                 nextLessonLabel={t("workflow.startMission")}
                 quizLabel={t("workflow.startQuiz")}
                 backToAcademyLabel={t("quiz.continueHub")}

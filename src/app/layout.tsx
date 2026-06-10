@@ -36,10 +36,10 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   viewportFit: "cover",
-  // Dual-mode theme color: matches the canvas in light, deep navy in dark mode.
+  // Dual-mode theme color: matches the canvas in light, deep teal-ink in dark mode.
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F4F6FB" },
-    { media: "(prefers-color-scheme: dark)", color: "#0A0F1F" },
+    { media: "(prefers-color-scheme: light)", color: "#F3F8F6" },
+    { media: "(prefers-color-scheme: dark)", color: "#0A1311" },
   ],
 };
 
@@ -78,10 +78,10 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <link rel="apple-touch-icon" href="/icon-192.svg" />
         <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.svg" />
         <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.svg" />
-        <link rel="mask-icon" href="/icon-512.svg" color="#4F46E5" />
+        <link rel="mask-icon" href="/icon-512.svg" color="#0E8074" />
 
         {/* Microsoft tile (for installs from Edge / Windows) */}
-        <meta name="msapplication-TileColor" content="#4F46E5" />
+        <meta name="msapplication-TileColor" content="#0E8074" />
         <meta name="msapplication-TileImage" content="/icon-192.svg" />
 
         {customCss && <style dangerouslySetInnerHTML={{ __html: customCss }} />}

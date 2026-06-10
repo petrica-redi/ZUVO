@@ -16,6 +16,7 @@ export const LOCALES = [
   "sl",  // Slovenian
   "el",  // Greek
   "tr",  // Turkish
+  "it",  // Italian
 ] as const;
 
 export type Locale = (typeof LOCALES)[number];

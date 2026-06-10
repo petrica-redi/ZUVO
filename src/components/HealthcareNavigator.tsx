@@ -7,6 +7,7 @@ import {
   Stethoscope, Baby, Brain, Heart, Thermometer, Eye,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { STP_ENI_PHRASE_IT, STP_ENI_STEPS } from "@/data/italy-stp-eni-guide";
 
 type VisitCard = {
   patientSummary: string;
@@ -56,6 +57,7 @@ const COUNTRIES = [
   { code: "si", name: "Slovenia" },
   { code: "gr", name: "Greece" },
   { code: "tr", name: "Turkey" },
+  { code: "it", name: "Italy" },
 ];
 
 export function HealthcareNavigator({ locale }: { locale: string }) {
@@ -85,7 +87,7 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
       const data = await res.json();
       if (data.success && data.data) {
         setVisitCard(data.data);
-        setStep(5);
+        setStep(6);
       }
     } catch {
       /* retry */
@@ -229,9 +231,64 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
         </div>
 
         <button
-          onClick={generateCard}
+          onClick={() => {
+            if (country === "it" && hasInsurance !== "yes") setStep(5);
+            else void generateCard();
+          }}
           disabled={!country || loading}
           className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 py-3.5 text-sm font-semibold text-white shadow-lg active:scale-[0.98] disabled:opacity-50"
+        >
+          {country === "it" && hasInsurance !== "yes" ? (
+            <><Shield className="h-4 w-4" /> {t("stpEni.continue")}</>
+          ) : loading ? (
+            <><Loader2 className="h-4 w-4 animate-spin" /> {t("generating")}</>
+          ) : (
+            <><FileText className="h-4 w-4" /> {t("generateCard")}</>
+          )}
+        </button>
+      </div>
+    );
+  }
+
+  // Step 5: Italy STP/ENI guide (when uninsured or unknown)
+  if (step === 5 && country === "it") {
+    return (
+      <div>
+        <button onClick={() => setStep(4)} className="mb-4 flex items-center gap-1 text-sm text-gray-500">
+          <ArrowLeft className="h-4 w-4" /> {tCommon("back")}
+        </button>
+
+        <div className="mb-4 text-center">
+          <Shield className="mx-auto mb-2 h-8 w-8 text-teal-600" />
+          <h2 className="text-base font-bold text-gray-900">{t("stpEni.title")}</h2>
+          <p className="mt-1 text-xs text-gray-500">{t("stpEni.subtitle")}</p>
+        </div>
+
+        <div className="mb-4 space-y-3">
+          {STP_ENI_STEPS.map((s) => (
+            <div key={s.id} className="rounded-xl border border-teal-100 bg-teal-50/60 p-4">
+              <div className="flex items-start gap-3">
+                <span className="text-xl">{s.emoji}</span>
+                <div>
+                  <h3 className="text-sm font-bold text-teal-900">{t(s.titleKey)}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-teal-800">{t(s.bodyKey)}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mb-4 rounded-xl border border-dashed border-teal-300 bg-white p-4">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
+            {t("stpEni.phraseLabel")}
+          </p>
+          <p className="mt-2 text-sm italic leading-relaxed text-gray-700">{STP_ENI_PHRASE_IT}</p>
+        </div>
+
+        <button
+          onClick={() => void generateCard()}
+          disabled={loading}
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-teal-600 to-cyan-600 py-3.5 text-sm font-semibold text-white shadow-lg active:scale-[0.98] disabled:opacity-50"
         >
           {loading ? (
             <><Loader2 className="h-4 w-4 animate-spin" /> {t("generating")}</>
@@ -243,8 +300,8 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
     );
   }
 
-  // Step 5: Visit card result
-  if (step === 5 && visitCard) {
+  // Step 6: Visit card result
+  if (step === 6 && visitCard) {
     return (
       <div className="space-y-4">
         <button onClick={() => { setStep(1); setVisitCard(null); setIssueDetail(""); }} className="flex items-center gap-1 text-sm text-gray-500">

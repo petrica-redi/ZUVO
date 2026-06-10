@@ -25,6 +25,8 @@ import {
   printMediatorReport,
   type MediatorReportLabels,
 } from "@/lib/mediator/report";
+import { buildPoidsCsv, downloadCsv } from "@/lib/mediator/csv-export";
+import { getOrCreateWorkspaceId } from "@/lib/mediator/workspace-client";
 import { CATEGORY_LABEL_KEYS, STATUS_LABEL_KEYS, type MediatorLabels } from "./labels";
 
 export function ToolsTab({
@@ -96,6 +98,18 @@ export function ToolsTab({
       buildReport(),
       `raport-mediator-${new Date().toISOString().slice(0, 10)}.html`,
     );
+
+  const onCsvExport = () => {
+    const csv = buildPoidsCsv(
+      { version: 1, cases, visits, sessions, training: [] },
+      {
+        countyCode: countyCode || "—",
+        workspaceId: getOrCreateWorkspaceId(),
+        generatedAt: new Date().toISOString(),
+      },
+    );
+    downloadCsv(`poids-export-${new Date().toISOString().slice(0, 10)}.csv`, csv);
+  };
 
   return (
     <>
@@ -175,6 +189,16 @@ export function ToolsTab({
           <Download className="h-5 w-5 text-[var(--color-text-muted)]" />
           <span className="flex-1 text-left text-sm font-semibold text-[var(--color-text-primary)]">
             {labels.exportDownload}
+          </span>
+        </button>
+        <button
+          type="button"
+          onClick={onCsvExport}
+          className="flex items-center gap-3 rounded-2xl bg-[var(--color-brand-50)] p-4 shadow-1 ring-1 ring-[var(--color-brand-200)]"
+        >
+          <FileText className="h-5 w-5 text-[var(--color-brand-700)]" />
+          <span className="flex-1 text-left text-sm font-semibold text-[var(--color-brand-800)]">
+            {labels.exportCsv}
           </span>
         </button>
         <button

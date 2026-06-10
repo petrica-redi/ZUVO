@@ -82,6 +82,7 @@ export async function POST(req: NextRequest) {
         resourceId: user.id,
         metadata: {
           reason: parsed.data.reason ?? null,
+          hardDeletePending: true,
           scheduledHardDeleteAfter: new Date(
             now.getTime() + 30 * 24 * 60 * 60 * 1000,
           ).toISOString(),

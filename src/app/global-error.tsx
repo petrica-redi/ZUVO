@@ -31,7 +31,7 @@ export default function GlobalError({
           alignItems: "center",
           justifyContent: "center",
           background:
-            "radial-gradient(ellipse at top, rgba(99,102,241,0.18) 0%, transparent 60%), radial-gradient(ellipse at bottom, rgba(220,38,38,0.12) 0%, transparent 60%), linear-gradient(180deg, #0F172A 0%, #1E1B4B 100%)",
+            "radial-gradient(ellipse at top, rgba(24,154,140,0.18) 0%, transparent 60%), radial-gradient(ellipse at bottom, rgba(220,38,38,0.12) 0%, transparent 60%), linear-gradient(180deg, #0F172A 0%, #052925 100%)",
           fontFamily:
             "Geist, Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           color: "#F8FAFC",
@@ -128,7 +128,7 @@ export default function GlobalError({
                 fontWeight: 800,
                 cursor: "pointer",
                 background:
-                  "linear-gradient(135deg, #4F46E5 0%, #6D28D9 100%)",
+                  "linear-gradient(135deg, #189A8C 0%, #0D685F 100%)",
                 color: "white",
                 boxShadow:
                   "0 1px 2px rgba(79,70,229,0.10), 0 8px 24px rgba(79,70,229,0.30)",

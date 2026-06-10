@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { ShieldCheck, Activity, Users, FileText, Mail, BarChart3 } from "lucide-react";
 import { Card } from "@/components/ui";
+import { formatImpactNumber, getImpactStats } from "@/lib/impact/stats";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -18,6 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ImpactPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "impact" });
+  const stats = await getImpactStats();
+  const live = stats.source === "live";
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
@@ -39,25 +42,38 @@ export default async function ImpactPage({ params }: Props) {
           <div className="grid grid-cols-2 gap-4 mb-10 animate-fade-in-up delay-100">
             <Card variant="elevated" className="p-5 text-center">
               <ShieldCheck className="lucide h-6 w-6 mx-auto mb-2 text-[var(--color-success-accent)]" strokeWidth={2} />
-              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">12.4k</div>
+              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">
+                {live ? formatImpactNumber(stats.mythsChecked) : "—"}
+              </div>
               <div className="text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] mt-1">{t("statMyths")}</div>
             </Card>
             <Card variant="elevated" className="p-5 text-center">
               <Activity className="lucide h-6 w-6 mx-auto mb-2 text-[var(--color-danger-accent)]" strokeWidth={2} />
-              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">850</div>
+              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">
+                {live ? stats.emergenciesEscalated : "—"}
+              </div>
               <div className="text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] mt-1">{t("statEmergencies")}</div>
             </Card>
             <Card variant="elevated" className="p-5 text-center">
               <Users className="lucide h-6 w-6 mx-auto mb-2 text-[var(--color-info-accent)]" strokeWidth={2} />
-              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">45</div>
+              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">
+                {live ? stats.activeMediators : "—"}
+              </div>
               <div className="text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] mt-1">{t("statMediators")}</div>
             </Card>
             <Card variant="elevated" className="p-5 text-center">
               <FileText className="lucide h-6 w-6 mx-auto mb-2 text-[var(--color-ember-500)]" strokeWidth={2} />
-              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">3.2k</div>
+              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">
+                {live ? formatImpactNumber(stats.visitsThisYear) : "—"}
+              </div>
               <div className="text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] mt-1">{t("statVisits")}</div>
             </Card>
           </div>
+          {live && (
+            <p className="mb-8 text-center text-xs text-[var(--color-success-text)]">
+              {t("liveNote")} · {stats.countiesReporting} {t("countiesReporting")}
+            </p>
+          )}
 
           <Card variant="elevated" className="overflow-hidden border-0 gradient-brand grain-overlay text-white shadow-3 animate-fade-in-up delay-200">
             <div className="p-6 md:p-8 text-center">

@@ -218,7 +218,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           />
         </div>
         <div className="flex flex-col items-center text-center">
-          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-xl shadow-blue-500/25">
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-teal-500 to-cyan-600 shadow-xl shadow-teal-500/25">
             <FileText className="h-9 w-9 text-white" />
           </div>
           <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
@@ -324,7 +324,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
             type="button"
             onClick={() => handleExplain()}
             disabled={(!input.trim() && !image) || loading || preparing}
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all active:scale-95 disabled:opacity-50"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all active:scale-95 disabled:opacity-50"
           >
             {loading ? (
               <><Loader2 className="h-4 w-4 animate-spin" /> {t("ctaAnalyzing")}</>
@@ -377,8 +377,8 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
       {result && (
         <div className="space-y-4">
           {/* Diagnosis card */}
-          <div className="overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-50 shadow-sm">
-            <div className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-3">
+          <div className="overflow-hidden rounded-2xl border border-teal-100 bg-gradient-to-br from-teal-50 to-cyan-50 shadow-sm">
+            <div className="flex items-center gap-2 bg-gradient-to-r from-teal-500 to-cyan-600 px-4 py-3">
               <Heart className="h-5 w-5 text-white" />
               <span className="text-sm font-bold text-white">
                 {result.diagnosis.name}
@@ -416,7 +416,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           {result.medications.length > 0 && (
             <div>
               <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-gray-900">
-                <Pill className="h-4 w-4 text-indigo-500" /> {t("sections.medicationsTitle")}
+                <Pill className="h-4 w-4 text-teal-600" /> {t("sections.medicationsTitle")}
               </h3>
               <div className="space-y-2">
                 {result.medications.map((med, i) => (

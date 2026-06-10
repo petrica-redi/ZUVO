@@ -28,8 +28,8 @@ type Options = {
 };
 
 const BRAND_COLORS = [
-  "#6366F1", // brand-500
-  "#4338CA", // brand-700
+  "#189A8C", // brand-500
+  "#0D685F", // brand-700
   "#F59E0B", // ember-500
   "#10B981", // sage-500
   "#FBBF24", // gold accent

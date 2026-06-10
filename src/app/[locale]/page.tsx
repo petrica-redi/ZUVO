@@ -24,8 +24,10 @@ import {
   Syringe,
   MapPin,
   Handshake,
+  Landmark,
 } from "lucide-react";
 import { getPlatformConfig } from "@/lib/admin/actions";
+import { formatImpactNumber, getImpactStats } from "@/lib/impact/stats";
 import { LandingHeader } from "@/components/landing/LandingHeader";
 import { LandingFooter } from "@/components/landing/LandingFooter";
 import { ProfileShellOptOut } from "@/components/landing/ProfileShellOptOut";
@@ -45,6 +47,7 @@ export default async function HomePage({ params }: Props) {
   const tHome = await getTranslations({ locale, namespace: "home" });
   
   const platformConfig = await getPlatformConfig();
+  const impact = await getImpactStats();
   const heroTitle = platformConfig?.heroTitle || undefined;
   const heroSubtitle = platformConfig?.heroSubtitle || undefined;
   const heroImage = platformConfig?.heroImage || "/images/ai/ai-hero-wellbeing.png";
@@ -164,7 +167,7 @@ export default async function HomePage({ params }: Props) {
             className="pointer-events-none absolute inset-0 -z-10"
             style={{
               background:
-                "radial-gradient(ellipse 80% 60% at 70% 0%, rgba(99,102,241,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 0% 100%, rgba(110,140,94,0.10) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 100% 100%, rgba(251,191,36,0.06) 0%, transparent 60%)",
+                "radial-gradient(ellipse 80% 60% at 70% 0%, rgba(24,154,140,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 0% 100%, rgba(110,140,94,0.10) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 100% 100%, rgba(251,191,36,0.06) 0%, transparent 60%)",
             }}
           />
           <div
@@ -331,11 +334,33 @@ export default async function HomePage({ params }: Props) {
               {t("trustEyebrow")}
             </p>
             <div className="mt-7 grid grid-cols-2 gap-y-4 text-center md:grid-cols-4">
-              <Stat value="15" label={t("statLanguages")} />
-              <Stat value="45" label={t("statMediators")} />
-              <Stat value="12.4k" label={t("statMyths")} />
-              <Stat value="850" label={t("statEmergencies")} />
+              <Stat value={String(impact.languages)} label={t("statLanguages")} />
+              <Stat
+                value={impact.source === "live" ? String(impact.activeMediators) : "—"}
+                label={t("statMediators")}
+              />
+              <Stat
+                value={
+                  impact.source === "live"
+                    ? formatImpactNumber(impact.mythsChecked)
+                    : "—"
+                }
+                label={t("statMyths")}
+              />
+              <Stat
+                value={
+                  impact.source === "live"
+                    ? String(impact.emergenciesEscalated)
+                    : "—"
+                }
+                label={t("statEmergencies")}
+              />
             </div>
+            {impact.source === "live" && (
+              <p className="mt-4 text-center text-[10px] font-bold uppercase tracking-widest text-[var(--color-success-accent)]">
+                {t("liveTelemetry")}
+              </p>
+            )}
           </div>
         </section>
 
@@ -461,6 +486,79 @@ export default async function HomePage({ params }: Props) {
                   {t("methodologyCta")}
                   <ArrowRight className="lucide h-4 w-4" strokeWidth={2.2} />
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== GOVERNMENT DEPLOYMENT (Romania ↔ Italy) ========== */}
+        <section
+          aria-labelledby="gov-title"
+          className="section-marketing bg-[var(--color-surface)]"
+        >
+          <div className="mx-auto max-w-6xl px-5 md:px-8">
+            <header className="mb-10 max-w-3xl md:mb-14">
+              <p className="eyebrow">
+                <Landmark className="lucide h-3.5 w-3.5" strokeWidth={2} />
+                {t("govEyebrow")}
+              </p>
+              <h2
+                id="gov-title"
+                className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+                style={{ fontSize: "clamp(1.875rem, 1.3rem + 1.8vw, 3rem)" }}
+              >
+                {t("govTitle")}
+              </h2>
+              <p className="mt-5 max-w-2xl text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-base">
+                {t("govLead")}
+              </p>
+            </header>
+
+            <div className="grid gap-5 md:grid-cols-2 md:gap-6">
+              <CountryCard
+                flag="🇷🇴"
+                title={t("govRoTitle")}
+                status={t("govRoStatus")}
+                statusTone="live"
+                rows={[t("govRo1"), t("govRo2"), t("govRo3"), t("govRo4")]}
+              />
+              <CountryCard
+                flag="🇮🇹"
+                title={t("govItTitle")}
+                status={t("govItStatus")}
+                statusTone="planned"
+                rows={[t("govIt1"), t("govIt2"), t("govIt3"), t("govIt4")]}
+              />
+            </div>
+
+            <div className="mt-6 rounded-3xl border border-[var(--color-brand-200)] bg-[var(--color-brand-50)] p-6 md:p-8">
+              <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+                <p className="max-w-2xl text-sm leading-relaxed text-[var(--color-brand-900)] md:text-[15px]">
+                  <span className="font-extrabold">{t("govBridgeLabel")}</span>{" "}
+                  {t("govBridge")}
+                </p>
+                <Link
+                  href="/impact"
+                  className="inline-flex shrink-0 items-center gap-2 self-start rounded-full px-6 py-3.5 text-sm font-extrabold text-white gradient-brand grain-overlay shadow-brand transition-all hover:shadow-4 active:scale-[0.97] md:self-auto"
+                >
+                  {t("govCta")}
+                  <ArrowRight className="lucide h-4 w-4" strokeWidth={2.2} />
+                </Link>
+              </div>
+              <div className="mt-5 flex flex-wrap items-center gap-2">
+                <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-brand-800)]/70">
+                  {t("govFundingLabel")}
+                </span>
+                {["POIDS / FSE+", "EU4Health", "PNRR · M6", "AMIF", "Interreg"].map(
+                  (label) => (
+                    <span
+                      key={label}
+                      className="inline-flex items-center rounded-full border border-[var(--color-brand-300)] bg-white/70 px-3 py-1 text-[11px] font-bold text-[var(--color-brand-800)]"
+                    >
+                      {label}
+                    </span>
+                  )
+                )}
               </div>
             </div>
           </div>
@@ -777,6 +875,62 @@ function PlatformTile({
         aria-hidden
       />
     </Link>
+  );
+}
+
+function CountryCard({
+  flag,
+  title,
+  status,
+  statusTone,
+  rows,
+}: {
+  flag: string;
+  title: string;
+  status: string;
+  statusTone: "live" | "planned";
+  rows: string[];
+}) {
+  const statusClass =
+    statusTone === "live"
+      ? "bg-[var(--color-success-bg)] text-[var(--color-success-text)] border-[var(--color-success-border)]"
+      : "bg-[var(--color-warning-bg)] text-[var(--color-warning-text)] border-[var(--color-warning-border)]";
+  return (
+    <article className="flex flex-col rounded-3xl border border-[var(--color-border-subtle)] bg-[var(--color-bg-canvas)] p-7 shadow-1 md:p-8">
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <span aria-hidden className="text-3xl leading-none">
+            {flag}
+          </span>
+          <h3
+            className="font-editorial font-medium leading-tight text-[var(--color-text-primary)]"
+            style={{ fontSize: "clamp(1.25rem, 1rem + 0.8vw, 1.625rem)" }}
+          >
+            {title}
+          </h3>
+        </div>
+        <span
+          className={`inline-flex shrink-0 items-center rounded-full border px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-widest ${statusClass}`}
+        >
+          {status}
+        </span>
+      </div>
+      <ul className="mt-6 space-y-3">
+        {rows.map((row) => (
+          <li
+            key={row}
+            className="flex items-start gap-3 text-sm leading-relaxed text-[var(--color-text-secondary)]"
+          >
+            <CheckCircle2
+              className="lucide mt-0.5 h-4 w-4 shrink-0 text-[var(--color-brand-500)]"
+              strokeWidth={2}
+              aria-hidden
+            />
+            <span>{row}</span>
+          </li>
+        ))}
+      </ul>
+    </article>
   );
 }
 

@@ -837,7 +837,9 @@
     "statVisits": "Vizite pe teren înregistrate",
     "deployTitle": "Implementează în regiunea ta",
     "deployDesc": "Redi Health este pregătit ca platformă white-label pentru municipalități și ministere ale sănătății.",
-    "contactBtn": "Contactează echipa parteneriate"
+    "contactBtn": "Contactează echipa parteneriate",
+    "liveNote": "Cifre din baza de date live",
+    "countiesReporting": "județe raportează"
   },
   "methodology": {
     "title": "Guvernanță clinică & siguranță",
@@ -957,7 +959,27 @@
     "imageMosaicMediatorAlt": "Ilustrație: mediator în comunitate care împărtășește sănătate preventivă cu vecini.",
     "imageAudienceStudentsAlt": "Ilustrație: tineri colaborând la obiceiuri de zi cu zi pentru sănătate.",
     "imageAudienceCommunityAlt": "Ilustrație: cerc comunitar cald orientat către grijă preventivă.",
-    "imageAudiencePartnersAlt": "Ilustrație: decidenți ce analizează perspective anonimate de sănătate publică."
+    "imageAudiencePartnersAlt": "Ilustrație: decidenți ce analizează perspective anonimate de sănătate publică.",
+    "govEyebrow": "Pregătit pentru instituții publice",
+    "govTitle": "Construit să se conecteze la sistemele naționale de sănătate.",
+    "govLead": "Redi Health este proiectat ca infrastructură de sănătate publică gata de implementare: anonim pentru familii, responsabil pentru mediatori și măsurabil pentru ministere. Aceeași platformă însoțește o familie dintr-un sat românesc până într-o așezare din Italia — și raportează indicatorii pe care fiecare guvern îi datorează deja Bruxelles-ului.",
+    "govRoTitle": "România",
+    "govRoStatus": "Aliniat astăzi",
+    "govRo1": "Spațiu de lucru pentru mediatori aliniat cu POIDS / SCI 2000 și OUG 18/2017 privind asistența medicală comunitară.",
+    "govRo2": "Indicatori de facilitare: înscriere la medicul de familie, asigurare, vaccinare, îngrijire prenatală, screening TB.",
+    "govRo3": "Contactele UJSS din toate cele 41 de județe și un curriculum de formare ECI, integrate.",
+    "govRo4": "Interfață în primul rând în română, plus romani, maghiară și alte 12 limbi.",
+    "govItTitle": "Italia",
+    "govItStatus": "Pilot pregătit",
+    "govIt1": "Ghidare pentru codurile STP / ENI, astfel încât persoanele fără documente și cetățenii UE neînregistrați să ajungă la îngrijire esențială gratuită.",
+    "govIt2": "Spațiu de lucru adaptat rolului de mediatore culturale, districtelor ASL și rețelei consultori familiari.",
+    "govIt3": "Susține strategia națională pentru romi, sinti și caminanti (UNAR) cu rezultate măsurabile.",
+    "govIt4": "Continuitate transfrontalieră pentru cei aproape 1 milion de cetățeni români care trăiesc în Italia.",
+    "govBridgeLabel": "O familie, două sisteme.",
+    "govBridge": "O mamă care înregistrează o vaccinare în Bistrița-Năsăud își păstrează însoțitorul de sănătate al familiei când ajunge în Lazio — iar ambele ministere văd indicatorii de rezultat pe care îi finanțează.",
+    "govFundingLabel": "Se aliniază cu",
+    "govCta": "Solicită o prezentare pentru pilot",
+    "liveTelemetry": "Telemetrie live din platformă"
   },
   "footer": {
     "tagline": "În multe limbi pentru comunități rurale, zone excluse și romi în întreaga Europă.",
@@ -1225,6 +1247,22 @@
     "meta": {
       "title": "Navigator medical — Redi Health",
       "description": "Pregătește-te pentru vizita la medic — cartea de vizită, ce să iei, drepturile tale."
+    },
+    "stpEni": {
+      "title": "Obține codul STP sau ENI",
+      "subtitle": "În Italia poți accesa îngrijirea esențială chiar fără card de sănătate.",
+      "continue": "Cum accesezi îngrijirea în Italia",
+      "phraseLabel": "Spune asta la ghișeul ASL",
+      "whatTitle": "Ce este STP / ENI?",
+      "whatBody": "STP (Straniero Temporaneamente Presente) și ENI (Europeo Non Iscritto) sunt coduri care îți dau acces la îngrijire urgentă și esențială — gratuit.",
+      "whereTitle": "Unde mergi",
+      "whereBody": "Mergi la ASL-ul local (Azienda Sanitaria Locale) sau la un consultorio. Cere sportello STP / ENI.",
+      "bringTitle": "Ce să aduci",
+      "bringBody": "Orice act de identitate, dovada adresei dacă o ai, data nașterii. Lipsa documentelor nu înseamnă refuz în urgență.",
+      "sayTitle": "Ce să spui",
+      "sayBody": "Folosește fraza de mai jos. Poți aduce un mediator sau pe cineva de încredere.",
+      "rightsTitle": "Drepturile tale",
+      "rightsBody": "Îngrijirea de urgență nu poate fi refuzată. Vaccinările pentru copii, îngrijirea prenatală și tratamentul TB sunt incluse."
     }
   },
   "about": {
@@ -1392,7 +1430,8 @@
     "sessionTheme_addiction": "Adicții (alcool, droguri, fumat)",
     "sessionTheme_rights": "Drepturi și acces la servicii",
     "sessionTheme_prevention": "Prevenție generală",
-    "sessionTheme_other": "Altă temă"
+    "sessionTheme_other": "Altă temă",
+    "exportCsv": "Export indicatori POIDS (CSV)"
   },
   "training": {
     "modules": {

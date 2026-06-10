@@ -501,7 +501,8 @@
     "sessionTheme_addiction": "Addictions (alcohol, drugs, smoking)",
     "sessionTheme_rights": "Rights & access to care",
     "sessionTheme_prevention": "General prevention",
-    "sessionTheme_other": "Other"
+    "sessionTheme_other": "Other",
+    "exportCsv": "Export POIDS indicators (CSV)"
   },
   "profile": {
     "title": "Profile",
@@ -1253,7 +1254,9 @@
     "statVisits": "Field visits logged",
     "deployTitle": "Deploy in your region",
     "deployDesc": "Redi Health is white-label ready for municipalities and health ministries.",
-    "contactBtn": "Contact Partnerships"
+    "contactBtn": "Contact Partnerships",
+    "liveNote": "Figures from live database",
+    "countiesReporting": "counties reporting"
   },
   "methodology": {
     "title": "Clinical Governance & Safety",
@@ -1373,7 +1376,27 @@
     "imageMosaicMediatorAlt": "Illustration of a community mediator sharing health outreach with neighbours.",
     "imageAudienceStudentsAlt": "Illustration of young people collaborating on everyday health habits.",
     "imageAudienceCommunityAlt": "Illustration of a welcoming community circle centred on preventive care.",
-    "imageAudiencePartnersAlt": "Illustration of policymakers reviewing anonymised public-health insights."
+    "imageAudiencePartnersAlt": "Illustration of policymakers reviewing anonymised public-health insights.",
+    "govEyebrow": "Government-ready",
+    "govTitle": "Built to plug into national health systems.",
+    "govLead": "Redi Health is designed as deployable public-health infrastructure: anonymous for families, accountable for mediators, and measurable for ministries. The same platform follows a family from a Romanian village to an Italian settlement — and reports the indicators each government already owes Brussels.",
+    "govRoTitle": "Romania",
+    "govRoStatus": "Aligned today",
+    "govRo1": "Mediator workspace aligned with POIDS / SCI 2000 and OUG 18/2017 community health care.",
+    "govRo2": "Health facilitation indicators: GP enrollment, insurance, vaccination, prenatal care, TB screening.",
+    "govRo3": "All 41 county UJSS contacts and an ECI training curriculum built in.",
+    "govRo4": "Romanian-first interface with Romani, Hungarian and 12 more languages.",
+    "govItTitle": "Italy",
+    "govItStatus": "Pilot ready",
+    "govIt1": "Guided STP / ENI code navigation so undocumented and non-registered EU citizens reach free essential care.",
+    "govIt2": "Workspace mapped to the mediatore culturale role, ASL districts and consultori familiari.",
+    "govIt3": "Supports the national Roma, Sinti and Caminanti strategy (UNAR) with measurable outreach.",
+    "govIt4": "Cross-border continuity for the ~1 million Romanian citizens living in Italy.",
+    "govBridgeLabel": "One family, two systems.",
+    "govBridge": "A mother who records a vaccination in Bistrița-Năsăud keeps her family's health companion when she arrives in Lazio — and both ministries see the outcome indicators they fund.",
+    "govFundingLabel": "Maps to",
+    "govCta": "Request a pilot briefing",
+    "liveTelemetry": "Live platform telemetry"
   },
   "footer": {
     "tagline": "Multilingual literacy for underserved, rural and Roma communities stretching across fifteen European languages.",
@@ -1641,6 +1664,22 @@
     "meta": {
       "title": "Healthcare Navigator — Redi Health",
       "description": "Prepare for your doctor visit — visit card, what to bring, your rights."
+    },
+    "stpEni": {
+      "title": "Get your STP or ENI code",
+      "subtitle": "In Italy you can access essential care even without a health card.",
+      "continue": "How to get care in Italy",
+      "phraseLabel": "Say this at the ASL desk",
+      "whatTitle": "What is STP / ENI?",
+      "whatBody": "STP (Straniero Temporaneamente Presente) and ENI (Europeo Non Iscritto) are codes that give you access to urgent and essential care — free of charge.",
+      "whereTitle": "Where to go",
+      "whereBody": "Visit your local ASL (Azienda Sanitaria Locale) or a consultorio. Ask for the sportello STP / ENI.",
+      "bringTitle": "What to bring",
+      "bringBody": "Any ID you have, proof of address if available, and a note of your date of birth. No documents does not mean no care in an emergency.",
+      "sayTitle": "What to say",
+      "sayBody": "Use the phrase card below. You can also bring a mediator or someone you trust to translate.",
+      "rightsTitle": "Your rights",
+      "rightsBody": "Emergency care cannot be refused. Vaccinations for children, pregnancy care, and TB treatment are included in essential care."
     }
   },
   "about": {

@@ -42,7 +42,7 @@ function visual(subject: VisualTheme["subject"]): VisualTheme {
     emergency: { accent: "#EF4444", bg: "#FEF2F2", fg: "#7F1D1D" },
     care: { accent: "#DC2626", bg: "#FFF1F2", fg: "#881337" },
     water: { accent: "#0EA5E9", bg: "#ECFEFF", fg: "#164E63" },
-    shield: { accent: "#4F46E5", bg: "#EEF2FF", fg: "#312E81" },
+    shield: { accent: "#0E8074", bg: "#EFFAF7", fg: "#0C443F" },
     consent: { accent: "#DB2777", bg: "#FDF2F8", fg: "#831843" },
     airway: { accent: "#F97316", bg: "#FFF7ED", fg: "#7C2D12" },
     lab: { accent: "#0891B2", bg: "#ECFEFF", fg: "#164E63" },
@@ -424,7 +424,7 @@ export const STAGE_QUIZ_PASS_PCT = 70;
 export const STUDENT_HUB_THEME = {
   bg: "#F0F4FF",
   borderColor: "#C7D2FE",
-  color: "#4338CA",
+  color: "#0D685F",
 } as const;
 
 export function getModulesByStage(stage: StageId): StudentModule[] {

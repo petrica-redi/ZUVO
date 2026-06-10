@@ -18,7 +18,8 @@ export type AuditAction =
   | "module.started"
   | "module.completed"
   | "mediator.accessed_record"
-  | "mediator.exported_data";
+  | "mediator.exported_data"
+  | "user.data_exported";
 
 export type AuditParams = {
   userId: string;
@@ -36,10 +37,23 @@ export type AuditParams = {
  */
 export async function auditLog(params: AuditParams): Promise<void> {
   try {
-    // Import server client lazily to avoid bundling it into the browser.
+    const { getDb } = await import("@/db/client");
+    const db = getDb();
+    if (db) {
+      const { auditLog: auditTable } = await import("@/db/schema");
+      await db.insert(auditTable).values({
+        userId: params.userId,
+        action: params.action,
+        resourceType: params.resourceType ?? null,
+        resourceId: params.resourceId ?? null,
+        metadata: params.metadata ?? {},
+        ipAddress: params.ipAddress ?? null,
+      });
+      return;
+    }
+
     const { createClient } = await import("@/lib/supabase/server");
     const supabase = await createClient();
-
     const { error } = await supabase.from("audit_log").insert({
       user_id: params.userId,
       action: params.action,
@@ -49,10 +63,7 @@ export async function auditLog(params: AuditParams): Promise<void> {
       ip_address: params.ipAddress ?? null,
       created_at: new Date().toISOString(),
     });
-
-    if (error) {
-      console.error("[audit] insert failed:", error.message);
-    }
+    if (error) console.error("[audit] insert failed:", error.message);
   } catch (err) {
     console.error("[audit] unexpected error:", err);
   }

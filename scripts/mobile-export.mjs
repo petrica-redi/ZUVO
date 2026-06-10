@@ -23,7 +23,7 @@ const html = `<!doctype html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-    <meta name="theme-color" content="#4F46E5" />
+    <meta name="theme-color" content="#0E8074" />
     <title>Redi Health</title>
     <style>
       :root { color-scheme: light dark; }
@@ -37,7 +37,7 @@ const html = `<!doctype html>
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         background:
           radial-gradient(circle at 80% 0%, rgba(251, 191, 36, 0.18), transparent 32rem),
-          radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.18), transparent 32rem),
+          radial-gradient(circle at 10% 20%, rgba(14, 128, 116, 0.18), transparent 32rem),
           #F4F6FB;
         color: #0F172A;
       }

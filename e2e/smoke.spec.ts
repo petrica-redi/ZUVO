@@ -1,10 +1,10 @@
 import { test, expect } from "@playwright/test";
 
 test("home page loads with Redi Health branding", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/en");
   await expect(page).toHaveTitle(/Redi Health/);
   // Landing hero — editorial headline split across two lines.
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(/Trusted guidance/i);
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(/field workspace/i);
 });
 
 test("robots.txt is accessible", async ({ page }) => {

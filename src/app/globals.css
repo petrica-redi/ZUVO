@@ -4,10 +4,13 @@
    SASTIPE DESIGN SYSTEM — premium tokens
    =========================================================================
    Anchor palette:
-     - Graphite (slate neutrals)  — text, surfaces, depth
-     - Cobalt (indigo brand)      — primary actions, focus, identity
-     - Ember (amber accent)       — celebration, XP, premium moments
-     - Crimson (semantic only)    — emergency, danger, SOS
+     - Graphite (slate neutrals)   — text, surfaces, depth
+     - Adriatic (teal brand)       — primary actions, focus, identity.
+       A healthcare-trust teal: calmer than SaaS indigo, institutional
+       enough for ministries, warm enough for community surfaces. Pairs
+       natively with the sage + cream wellness layers below.
+     - Ember (amber accent)        — celebration, XP, premium moments
+     - Crimson (semantic only)     — emergency, danger, SOS
    Pillars retain their identity but get dual tones (accent + surface).
    ========================================================================= */
 
@@ -31,18 +34,18 @@
   --color-neutral-900:  #0F172A;
   --color-neutral-950:  #020617;
 
-  /* ---- Brand: Cobalt (primary) ---- */
-  --color-brand-50:   #EEF2FF;
-  --color-brand-100:  #E0E7FF;
-  --color-brand-200:  #C7D2FE;
-  --color-brand-300:  #A5B4FC;
-  --color-brand-400:  #818CF8;
-  --color-brand-500:  #6366F1;
-  --color-brand-600:  #4F46E5;
-  --color-brand-700:  #4338CA;
-  --color-brand-800:  #3730A3;
-  --color-brand-900:  #312E81;
-  --color-brand-950:  #1E1B4B;
+  /* ---- Brand: Adriatic (teal primary) ---- */
+  --color-brand-50:   #EFFAF7;
+  --color-brand-100:  #D4F3EC;
+  --color-brand-200:  #A9E6DC;
+  --color-brand-300:  #74D2C4;
+  --color-brand-400:  #3DB6A7;
+  --color-brand-500:  #189A8C;
+  --color-brand-600:  #0E8074;
+  --color-brand-700:  #0D685F;
+  --color-brand-800:  #0D534C;
+  --color-brand-900:  #0C443F;
+  --color-brand-950:  #052925;
 
   /* ---- Accent: Ember (amber/gold for XP, achievements, premium) ---- */
   --color-ember-50:   #FFFBEB;
@@ -68,7 +71,7 @@
   --color-bg:              var(--color-neutral-50);
   --color-bg-subtle:       var(--color-neutral-100);
   --color-bg-elevated:     var(--color-neutral-0);
-  --color-bg-canvas:       #F4F6FB;            /* App canvas, slightly cool */
+  --color-bg-canvas:       #F3F8F6;            /* App canvas, soft mint-neutral */
   --color-bg-inverse:      var(--color-neutral-900);
 
   --color-surface:         var(--color-neutral-0);
@@ -147,9 +150,9 @@
     0 12px 32px rgba(15, 23, 42, 0.10),
     0 24px 48px rgba(15, 23, 42, 0.06);
   --shadow-brand:
-    0 1px 2px rgba(79, 70, 229, 0.10),
-    0 8px 24px rgba(79, 70, 229, 0.20),
-    0 0 0 1px rgba(79, 70, 229, 0.08);
+    0 1px 2px rgba(14, 128, 116, 0.10),
+    0 8px 24px rgba(14, 128, 116, 0.22),
+    0 0 0 1px rgba(14, 128, 116, 0.08);
   --shadow-ember:
     0 1px 2px rgba(245, 158, 11, 0.10),
     0 8px 24px rgba(245, 158, 11, 0.20);
@@ -185,7 +188,7 @@
     --color-bg:              var(--color-neutral-950);
     --color-bg-subtle:       var(--color-neutral-900);
     --color-bg-elevated:     var(--color-neutral-800);
-    --color-bg-canvas:       #0A0F1F;
+    --color-bg-canvas:       #0A1311;
     --color-bg-inverse:      var(--color-neutral-50);
 
     --color-surface:         var(--color-neutral-900);
@@ -205,7 +208,7 @@
 
     --color-accent:          var(--color-brand-500);
     --color-accent-hover:    var(--color-brand-400);
-    --color-accent-soft:     rgba(99, 102, 241, 0.12);
+    --color-accent-soft:     rgba(24, 154, 140, 0.14);
     --color-accent-text:     var(--color-brand-300);
 
     --color-success-bg:      rgba(5, 150, 105, 0.12);
@@ -232,7 +235,7 @@
   --color-bg:              var(--color-neutral-950);
   --color-bg-subtle:       var(--color-neutral-900);
   --color-bg-elevated:     var(--color-neutral-800);
-  --color-bg-canvas:       #0A0F1F;
+  --color-bg-canvas:       #0A1311;
   --color-bg-inverse:      var(--color-neutral-50);
 
   --color-surface:         var(--color-neutral-900);
@@ -290,7 +293,7 @@ button {
 @media (min-width: 768px) {
   body {
     background:
-      radial-gradient(ellipse at top, rgba(99, 102, 241, 0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at top, rgba(24, 154, 140, 0.05) 0%, transparent 60%),
       radial-gradient(ellipse at bottom, rgba(245, 158, 11, 0.03) 0%, transparent 50%),
       var(--color-bg-canvas);
   }
@@ -436,9 +439,9 @@ button {
 /* --- Premium gradients --- */
 .gradient-brand {
   background:
-    radial-gradient(circle at 30% 0%, #6366F1 0%, transparent 50%),
-    radial-gradient(circle at 80% 100%, #A855F7 0%, transparent 50%),
-    linear-gradient(135deg, #4338CA 0%, #6D28D9 50%, #1E1B4B 100%);
+    radial-gradient(circle at 30% 0%, #189A8C 0%, transparent 50%),
+    radial-gradient(circle at 80% 100%, #34D399 0%, transparent 55%),
+    linear-gradient(135deg, #0D685F 0%, #0C5A60 50%, #052925 100%);
 }
 
 .gradient-ember {
@@ -455,9 +458,9 @@ button {
 
 .gradient-aurora {
   background:
-    radial-gradient(ellipse at 0% 0%, rgba(99, 102, 241, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 0%, rgba(24, 154, 140, 0.18) 0%, transparent 50%),
     radial-gradient(ellipse at 100% 100%, rgba(251, 191, 36, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 100% 0%, rgba(168, 85, 247, 0.10) 0%, transparent 50%);
+    radial-gradient(ellipse at 100% 0%, rgba(110, 140, 94, 0.12) 0%, transparent 50%);
 }
 
 /* --- Grain overlay (kills banding on gradients) --- */
@@ -525,8 +528,8 @@ button {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.45); }
-  50%      { box-shadow: 0 0 0 14px rgba(99, 102, 241, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(24, 154, 140, 0.45); }
+  50%      { box-shadow: 0 0 0 14px rgba(24, 154, 140, 0); }
 }
 
 @keyframes pulse-glow-emergency {

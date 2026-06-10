@@ -27,7 +27,7 @@ export function CapacitorBootstrap() {
         const { StatusBar, Style } = await import("@capacitor/status-bar");
         if (cancelled) return;
         await StatusBar.setStyle({ style: Style.Dark });
-        await StatusBar.setBackgroundColor({ color: "#4F46E5" });
+        await StatusBar.setBackgroundColor({ color: "#0E8074" });
         await StatusBar.setOverlaysWebView({ overlay: false });
       } catch {
         /* plugin not linked yet — non-fatal */

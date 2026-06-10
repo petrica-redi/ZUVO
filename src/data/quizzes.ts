@@ -20,7 +20,7 @@ export const QUIZZES: Quiz[] = [
     title: "Antibiotics",
     emoji: "💊",
     description: "Do you know when to use antibiotics?",
-    gradient: "from-blue-500 to-indigo-600",
+    gradient: "from-teal-500 to-cyan-600",
     questions: [
       { question: "Can antibiotics cure the flu?", options: ["Yes", "No", "Sometimes"], correctIndex: 1, explanation: "The flu is caused by a virus. Antibiotics only kill bacteria. Taking antibiotics for the flu does nothing and can make future infections harder to treat." },
       { question: "You feel better after 3 days of antibiotics. Should you stop?", options: ["Yes, you're cured", "No, finish the full course", "Take half the remaining pills"], correctIndex: 1, explanation: "ALWAYS finish the full course. If you stop early, some bacteria survive and become resistant. Next time, the same antibiotic won't work." },
