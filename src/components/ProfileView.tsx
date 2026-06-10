@@ -157,7 +157,7 @@ export function ProfileView({ labels }: { labels: Labels }) {
           }}
           className="flex items-center gap-3 rounded-2xl bg-[var(--color-surface)] p-4 shadow-1 transition-all hover:bg-[var(--color-surface-hover)] active:scale-[0.99]"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
             <Save className="lucide h-5 w-5" strokeWidth={1.85} />
           </div>
           <div className="flex-1 text-left">

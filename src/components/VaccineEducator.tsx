@@ -164,7 +164,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
         </button>
 
         <div className="text-center">
-          <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 shadow-lg">
+          <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 shadow-lg">
             <MessageCircle className="h-6 w-6 text-white" />
           </div>
           <h2 className="text-lg font-bold text-gray-900">{t("qaTitle")}</h2>
@@ -268,7 +268,7 @@ export function VaccineEducator({ locale }: { locale: string }) {
       {/* Ask about vaccines button */}
       <button
         onClick={() => setView("qa")}
-        className="mb-4 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 py-3 text-sm font-semibold text-white shadow-md transition-all active:scale-[0.98]"
+        className="mb-4 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-600 py-3 text-sm font-semibold text-white shadow-md transition-all active:scale-[0.98]"
       >
         <MessageCircle className="h-4 w-4" /> {t("askCta")}
       </button>

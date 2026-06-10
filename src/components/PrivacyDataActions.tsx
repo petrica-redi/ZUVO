@@ -120,13 +120,13 @@ export function PrivacyDataActions({
             type="button"
             onClick={handleExport}
             disabled={exporting}
-            className="flex flex-col gap-2 rounded-2xl border-2 border-gray-100 bg-white p-4 text-left transition hover:-translate-y-0.5 hover:border-indigo-200 hover:shadow-md disabled:cursor-wait disabled:opacity-60"
+            className="flex flex-col gap-2 rounded-2xl border-2 border-gray-100 bg-white p-4 text-left transition hover:-translate-y-0.5 hover:border-teal-200 hover:shadow-md disabled:cursor-wait disabled:opacity-60"
           >
             <div className="flex items-center gap-2">
               {exporting ? (
-                <Loader2 className="h-5 w-5 animate-spin text-indigo-500" />
+                <Loader2 className="h-5 w-5 animate-spin text-teal-600" />
               ) : (
-                <Download className="h-5 w-5 text-indigo-500" />
+                <Download className="h-5 w-5 text-teal-600" />
               )}
               <span className="text-sm font-black text-gray-900">{exportLabel}</span>
             </div>

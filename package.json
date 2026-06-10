@@ -28,7 +28,7 @@
     "mobile:open:android": "cap open android",
     "mobile:run:ios": "cap run ios",
     "mobile:run:android": "cap run android",
-    "mobile:assets": "capacitor-assets generate --iconBackgroundColor '#4F46E5' --iconBackgroundColorDark '#0A0F1F' --splashBackgroundColor '#F4F6FB' --splashBackgroundColorDark '#0A0F1F'",
+    "mobile:assets": "capacitor-assets generate --iconBackgroundColor '#0E8074' --iconBackgroundColorDark '#0A1311' --splashBackgroundColor '#F3F8F6' --splashBackgroundColorDark '#0A1311'",
     "mobile:export": "node scripts/mobile-export.mjs"
   },
   "dependencies": {

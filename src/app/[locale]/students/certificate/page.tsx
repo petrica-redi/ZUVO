@@ -37,7 +37,7 @@ export default async function CertificatePage({ params }: Props) {
             {/* The Certificate UI */}
             <div className="aspect-[1.414] w-full rounded-2xl bg-white p-8 shadow-2xl ring-1 ring-black/5 relative overflow-hidden flex flex-col items-center justify-center text-center">
               <div aria-hidden className="absolute -right-16 -top-16 h-48 w-48 rounded-full opacity-10 blur-3xl" style={{ background: "radial-gradient(circle, #FBBF24 0%, transparent 70%)" }} />
-              <div aria-hidden className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full opacity-10 blur-3xl" style={{ background: "radial-gradient(circle, #4F46E5 0%, transparent 70%)" }} />
+              <div aria-hidden className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full opacity-10 blur-3xl" style={{ background: "radial-gradient(circle, #0E8074 0%, transparent 70%)" }} />
               
               <GraduationCap className="lucide h-12 w-12 text-[var(--color-brand-600)] mb-4" strokeWidth={1.5} />
               

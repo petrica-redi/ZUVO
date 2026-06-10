@@ -311,16 +311,16 @@ export function ConsultationFlow({ locale }: { locale: string }) {
         {/* Doctor visit card */}
         <button
           onClick={() => setShowVisitCard(!showVisitCard)}
-          className="flex w-full items-center justify-center gap-2 rounded-xl border border-indigo-200 bg-indigo-50 py-3 text-sm font-semibold text-indigo-700 shadow-sm transition-all active:scale-[0.98]"
+          className="flex w-full items-center justify-center gap-2 rounded-xl border border-teal-200 bg-teal-50 py-3 text-sm font-semibold text-teal-700 shadow-sm transition-all active:scale-[0.98]"
         >
           <FileText className="h-4 w-4" />
           {showVisitCard ? t("hideVisitCard") : t("showVisitCard")}
         </button>
 
         {showVisitCard && (
-          <div className="rounded-2xl border-2 border-dashed border-indigo-200 bg-white p-5">
+          <div className="rounded-2xl border-2 border-dashed border-teal-200 bg-white p-5">
             <div className="mb-3 flex items-center gap-2 border-b border-gray-100 pb-3">
-              <Stethoscope className="h-5 w-5 text-indigo-500" />
+              <Stethoscope className="h-5 w-5 text-teal-600" />
               <span className="text-sm font-bold text-gray-900">{t("visitCardTitle")}</span>
             </div>
             <p className="text-sm leading-relaxed text-gray-700">

@@ -55,7 +55,7 @@ export default function RootNotFound() {
               color: "white",
               textDecoration: "none",
               background:
-                "linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)",
+                "linear-gradient(135deg, #189A8C 0%, #0D685F 100%)",
             }}
           >
             Go home

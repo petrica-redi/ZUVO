@@ -32,11 +32,11 @@ const SECTIONS = [
   {
     id: "learn" as const,
     items: [
-      { href: "/learn", icon: BookOpen, key: "topics", gradient: "from-blue-500 to-indigo-600" },
-      { href: "/students", icon: GraduationCap, key: "students", gradient: "from-indigo-500 to-violet-600" },
+      { href: "/learn", icon: BookOpen, key: "topics", gradient: "from-sky-500 to-blue-600" },
+      { href: "/students", icon: GraduationCap, key: "students", gradient: "from-teal-500 to-emerald-600" },
       { href: "/quiz", icon: GraduationCap, key: "quiz", gradient: "from-amber-500 to-orange-600" },
       { href: "/glossary", icon: BookOpen, key: "glossary", gradient: "from-teal-500 to-cyan-600" },
-      { href: "/rights", icon: Scale, key: "rights", gradient: "from-indigo-500 to-purple-600" },
+      { href: "/rights", icon: Scale, key: "rights", gradient: "from-violet-500 to-purple-600" },
       { href: "/stories", icon: Heart, key: "stories", gradient: "from-rose-500 to-pink-600" },
       { href: "/regions/romania", icon: MapPin, key: "regions", gradient: "from-red-500 to-red-700" },
     ],
@@ -44,7 +44,7 @@ const SECTIONS = [
   {
     id: "professional" as const,
     items: [
-      { href: "/mediator", icon: Shield, key: "mediator", gradient: "from-purple-500 to-indigo-600" },
+      { href: "/mediator", icon: Shield, key: "mediator", gradient: "from-teal-600 to-cyan-700" },
     ],
   },
   {

@@ -134,7 +134,7 @@ export function KnowYourRights() {
   return (
     <div>
       <div className="mb-6 text-center animate-fade-in-up">
-        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-xl shadow-indigo-500/25">
+        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-teal-500 to-emerald-600 shadow-xl shadow-teal-600/25">
           <Scale className="h-10 w-10 text-white" />
         </div>
         <h1 className="text-[22px] font-black text-gray-900">Know Your Rights</h1>
@@ -149,7 +149,7 @@ export function KnowYourRights() {
           className="card-hover flex w-full items-center gap-4 rounded-2xl bg-white p-4 text-left shadow-sm"
           style={{ border: "1px solid rgba(0,0,0,0.04)" }}
         >
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-md">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 shadow-md">
             <Shield className="h-6 w-6 text-white" />
           </div>
           <div>
