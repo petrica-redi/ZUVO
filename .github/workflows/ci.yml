@@ -53,7 +53,7 @@ jobs:
           SASTIPE_FORCE_ENV: preview
           NEXT_PUBLIC_APP_NAME: Redi Health
           NEXT_PUBLIC_DEFAULT_LOCALE: en
-          NEXT_PUBLIC_SUPPORTED_LOCALES: en,sq,rom,ro,hu,sk,cs,bg,sr,hr,bs,mk,sl,el,tr
+          NEXT_PUBLIC_SUPPORTED_LOCALES: en,sq,rom,ro,hu,sk,cs,bg,sr,hr,bs,mk,sl,el,tr,it
           NEXT_PUBLIC_APP_URL: https://redi.healthcare
           DATABASE_URL: postgres://ci:ci@localhost/ci
 
@@ -96,7 +96,7 @@ jobs:
           SASTIPE_FORCE_ENV: preview
           NEXT_PUBLIC_APP_NAME: Redi Health
           NEXT_PUBLIC_DEFAULT_LOCALE: en
-          NEXT_PUBLIC_SUPPORTED_LOCALES: en,sq,rom,ro,hu,sk,cs,bg,sr,hr,bs,mk,sl,el,tr
+          NEXT_PUBLIC_SUPPORTED_LOCALES: en,sq,rom,ro,hu,sk,cs,bg,sr,hr,bs,mk,sl,el,tr,it
           NEXT_PUBLIC_APP_URL: http://localhost:3000
           DATABASE_URL: postgres://ci:ci@localhost/ci
       - name: Run Lighthouse CI
