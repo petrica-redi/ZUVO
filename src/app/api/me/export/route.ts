@@ -9,13 +9,14 @@ import { NextRequest, NextResponse } from "next/server";
 import { eq } from "drizzle-orm";
 import { getDb } from "@/db/client";
 import {
-  auditLog,
+  auditLog as auditLogTable,
   healthLogs,
   notifications,
   progress,
   users,
 } from "@/db/schema";
 import { applyRateLimitAsync } from "@/lib/api/rate-limit";
+import { auditLog } from "@/lib/audit";
 import { resolveUser } from "@/lib/auth/server-user";
 
 export async function GET(req: NextRequest) {
@@ -47,7 +48,7 @@ export async function GET(req: NextRequest) {
   const [healthRows, progressRows, auditRows, notificationRows] = await Promise.all([
     db.select().from(healthLogs).where(eq(healthLogs.userId, user.id)).limit(5001),
     db.select().from(progress).where(eq(progress.userId, user.id)).limit(2001),
-    db.select().from(auditLog).where(eq(auditLog.userId, user.id)).limit(2001),
+    db.select().from(auditLogTable).where(eq(auditLogTable.userId, user.id)).limit(2001),
     db.select().from(notifications).where(eq(notifications.userId, user.id)).limit(501),
   ]);
 
@@ -77,6 +78,13 @@ export async function GET(req: NextRequest) {
       notifications: notificationRows.slice(0, 500),
     },
   };
+
+  void auditLog({
+    userId: user.id,
+    action: "user.data_exported",
+    resourceType: "user",
+    resourceId: user.id,
+  });
 
   const filename = `sastipe-data-export-${user.id.slice(0, 8)}-${new Date()
     .toISOString()

@@ -27,6 +27,7 @@ import {
   Landmark,
 } from "lucide-react";
 import { getPlatformConfig } from "@/lib/admin/actions";
+import { formatImpactNumber, getImpactStats } from "@/lib/impact/stats";
 import { LandingHeader } from "@/components/landing/LandingHeader";
 import { LandingFooter } from "@/components/landing/LandingFooter";
 import { ProfileShellOptOut } from "@/components/landing/ProfileShellOptOut";
@@ -46,6 +47,7 @@ export default async function HomePage({ params }: Props) {
   const tHome = await getTranslations({ locale, namespace: "home" });
   
   const platformConfig = await getPlatformConfig();
+  const impact = await getImpactStats();
   const heroTitle = platformConfig?.heroTitle || undefined;
   const heroSubtitle = platformConfig?.heroSubtitle || undefined;
   const heroImage = platformConfig?.heroImage || "/images/ai/ai-hero-wellbeing.png";
@@ -165,7 +167,7 @@ export default async function HomePage({ params }: Props) {
             className="pointer-events-none absolute inset-0 -z-10"
             style={{
               background:
-                "radial-gradient(ellipse 80% 60% at 70% 0%, rgba(99,102,241,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 0% 100%, rgba(110,140,94,0.10) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 100% 100%, rgba(251,191,36,0.06) 0%, transparent 60%)",
+                "radial-gradient(ellipse 80% 60% at 70% 0%, rgba(24,154,140,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 0% 100%, rgba(110,140,94,0.10) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 100% 100%, rgba(251,191,36,0.06) 0%, transparent 60%)",
             }}
           />
           <div
@@ -332,11 +334,33 @@ export default async function HomePage({ params }: Props) {
               {t("trustEyebrow")}
             </p>
             <div className="mt-7 grid grid-cols-2 gap-y-4 text-center md:grid-cols-4">
-              <Stat value="15" label={t("statLanguages")} />
-              <Stat value="45" label={t("statMediators")} />
-              <Stat value="12.4k" label={t("statMyths")} />
-              <Stat value="850" label={t("statEmergencies")} />
+              <Stat value={String(impact.languages)} label={t("statLanguages")} />
+              <Stat
+                value={impact.source === "live" ? String(impact.activeMediators) : "—"}
+                label={t("statMediators")}
+              />
+              <Stat
+                value={
+                  impact.source === "live"
+                    ? formatImpactNumber(impact.mythsChecked)
+                    : "—"
+                }
+                label={t("statMyths")}
+              />
+              <Stat
+                value={
+                  impact.source === "live"
+                    ? String(impact.emergenciesEscalated)
+                    : "—"
+                }
+                label={t("statEmergencies")}
+              />
             </div>
+            {impact.source === "live" && (
+              <p className="mt-4 text-center text-[10px] font-bold uppercase tracking-widest text-[var(--color-success-accent)]">
+                {t("liveTelemetry")}
+              </p>
+            )}
           </div>
         </section>
 

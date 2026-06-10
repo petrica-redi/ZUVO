@@ -6,6 +6,12 @@
       "main": true
     }
   },
+  "crons": [
+    {
+      "path": "/api/cron/purge",
+      "schedule": "0 3 * * *"
+    }
+  ],
   "redirects": [
     {
       "source": "/:path*",

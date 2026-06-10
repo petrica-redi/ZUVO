@@ -31,7 +31,7 @@ We **do not** store:
 | Resend | Transactional email | Email address, message content | US, with EU option |
 | Upstash | Rate limiting | Hashed identifier + count | Global, region-pinnable |
 
-We **scrub PII patterns** before sending text to OpenAI. See `src/lib/ai/scrub.ts`.
+We **scrub PII patterns** before sending text to OpenAI. See `src/lib/api/ai-budget.ts` (`scrubPii`, `sanitizeAiInput`).
 
 ## Data-subject rights
 

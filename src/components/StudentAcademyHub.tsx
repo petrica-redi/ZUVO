@@ -340,7 +340,7 @@ function Hero({
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(80% 60% at 100% 0%, rgba(99,102,241,0.10) 0%, transparent 60%), radial-gradient(60% 50% at 0% 100%, rgba(110,140,94,0.08) 0%, transparent 60%), radial-gradient(50% 50% at 100% 100%, rgba(251,191,36,0.06) 0%, transparent 60%)",
+            "radial-gradient(80% 60% at 100% 0%, rgba(14,128,116,0.10) 0%, transparent 60%), radial-gradient(60% 50% at 0% 100%, rgba(110,140,94,0.08) 0%, transparent 60%), radial-gradient(50% 50% at 100% 100%, rgba(251,191,36,0.06) 0%, transparent 60%)",
         }}
       />
       <div aria-hidden className="pointer-events-none absolute inset-0 grain-overlay opacity-60" />

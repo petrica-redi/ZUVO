@@ -83,6 +83,7 @@ const STATIC_KEYS = [
   "syncOffline",
   "exportPrint",
   "exportDownload",
+  "exportCsv",
   "reportTitle",
   "reportGenerated",
   "indicatorsTitle",

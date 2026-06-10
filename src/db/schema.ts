@@ -284,6 +284,8 @@ export const mediatorWorkspaces = pgTable(
     workspaceId: text("workspace_id").primaryKey(),
     userId: uuid("user_id"),
     countyCode: text("county_code"),
+    /** SHA-256 hash of the workspace sync secret (see workspace-auth.ts). */
+    secretHash: text("secret_hash"),
     payload: jsonb("payload").notNull().default({}),
     updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow().notNull(),
     createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),

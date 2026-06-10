@@ -30,7 +30,7 @@ Neon's serverless driver is already wired in `src/db/client.ts`. Just set `DATAB
 
 ### Row-level security
 
-Every user-data table must have RLS policies. The initial migration ships with policies for `users`, `health_logs`, `progress`, and `audit_log`. **Verify** with:
+Every user-data table must have RLS policies. Migrations ship policies for `users`, `health_logs`, `progress`, `audit_log`, and mediator tables (`mediator_workspaces`, `mediator_visits`) — see `supabase/migrations/20260610120000_security_and_rls.sql`. **Verify** with:
 
 ```sql
 SELECT schemaname, tablename, rowsecurity

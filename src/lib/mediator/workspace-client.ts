@@ -17,12 +17,28 @@ import { mergeWorkspace, parseWorkspacePayload } from "./merge-workspace";
 
 const STORAGE = {
   workspaceId: "redi_mediator_workspace_id",
+  workspaceSecret: "redi_mediator_workspace_secret",
   cases: "sastipe_mediator_cases",
   visits: "sastipe_mediator_visits",
   sessions: "sastipe_mediator_sessions",
   county: "sastipe_mediator_county",
   updatedAt: "sastipe_mediator_updated_at",
 } as const;
+
+function workspaceHeaders(workspaceId: string): Record<string, string> {
+  const headers: Record<string, string> = { "x-workspace-id": workspaceId };
+  if (typeof window !== "undefined") {
+    const secret = localStorage.getItem(STORAGE.workspaceSecret);
+    if (secret) headers["x-workspace-secret"] = secret;
+  }
+  return headers;
+}
+
+function storeWorkspaceSecret(secret: string | undefined): void {
+  if (secret && typeof window !== "undefined") {
+    localStorage.setItem(STORAGE.workspaceSecret, secret);
+  }
+}
 
 export type SyncStatus = "idle" | "syncing" | "synced" | "offline" | "error";
 
@@ -106,7 +122,7 @@ export async function fetchRemoteWorkspace(
   if (!workspaceId) return null;
   try {
     const res = await fetch("/api/mediator/workspace", {
-      headers: { "x-workspace-id": workspaceId },
+      headers: workspaceHeaders(workspaceId),
     });
     if (!res.ok) return null;
     const json = (await res.json()) as RemoteResponse;
@@ -133,7 +149,7 @@ export async function pushRemoteWorkspace(
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        "x-workspace-id": workspaceId,
+        ...workspaceHeaders(workspaceId),
       },
       body: JSON.stringify({
         countyCode: countyCode || null,
@@ -141,6 +157,14 @@ export async function pushRemoteWorkspace(
         updatedAt,
       }),
     });
+    if (res.ok) {
+      try {
+        const json = (await res.json()) as { data?: { workspaceSecret?: string } };
+        storeWorkspaceSecret(json.data?.workspaceSecret);
+      } catch {
+        /* ignore */
+      }
+    }
     return res.ok;
   } catch {
     return false;

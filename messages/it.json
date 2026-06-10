@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Redi Health — Care for underserved and rural communities",
-    "description": "Multilingual health literacy for people left out of mainstream care — rural areas, marginalized neighbourhoods, Roma communities across Europe."
+    "title": "Redi Health — Assistenza per comunità vulnerabili",
+    "description": "Compagno sanitario multilingue per famiglie e mediatori sul campo — Romania e Italia."
   },
   "nav": {
     "home": "Home",
@@ -502,7 +502,7 @@
     "sessionTheme_rights": "Rights & access to care",
     "sessionTheme_prevention": "General prevention",
     "sessionTheme_other": "Other",
-    "exportCsv": "Export POIDS indicators (CSV)"
+    "exportCsv": "Esporta indicatori POIDS (CSV)"
   },
   "profile": {
     "title": "Profile",
@@ -1116,7 +1116,7 @@
       "claim3": "Honey and lemon cure the flu",
       "truth3": "They soothe a sore throat, but do NOT cure the flu."
     },
-    "emergencyCta": "Emergency? Call 112",
+    "emergencyCta": "Emergenza? Chiama il 118",
     "emergencySub": "Available 24/7 across Europe",
     "seeAll": "See all",
     "learnGrowTitle": "Learn & Grow",
@@ -1280,8 +1280,8 @@
   },
   "landing": {
     "eyebrow": "Integrated community teams · rural Romania",
-    "heroLine1": "The health mediator's",
-    "heroLine2": "field workspace.",
+    "heroLine1": "Guida sanitaria di fiducia,",
+    "heroLine2": "nei villaggi e nei quartieri.",
     "heroLead": "Redi Health supports community health mediators and integrated teams (ECI) in rural Romania: case management, home visits, information sessions, and family-facing tools — in Romanian by default, resilient when the network drops. Aligned with POIDS / FSE+ programmes targeting 2,000+ communities.",
     "ctaPrimary": "Open mediator workspace",
     "ctaSecondary": "Tools for families",
@@ -1386,8 +1386,8 @@
     "govRo2": "Health facilitation indicators: GP enrollment, insurance, vaccination, prenatal care, TB screening.",
     "govRo3": "All 41 county UJSS contacts and an ECI training curriculum built in.",
     "govRo4": "Romanian-first interface with Romani, Hungarian and 12 more languages.",
-    "govItTitle": "Italy",
-    "govItStatus": "Pilot ready",
+    "govItTitle": "Italia",
+    "govItStatus": "Pilot pronto",
     "govIt1": "Guided STP / ENI code navigation so undocumented and non-registered EU citizens reach free essential care.",
     "govIt2": "Workspace mapped to the mediatore culturale role, ASL districts and consultori familiari.",
     "govIt3": "Supports the national Roma, Sinti and Caminanti strategy (UNAR) with measurable outreach.",
@@ -1396,7 +1396,7 @@
     "govBridge": "A mother who records a vaccination in Bistrița-Năsăud keeps her family's health companion when she arrives in Lazio — and both ministries see the outcome indicators they fund.",
     "govFundingLabel": "Maps to",
     "govCta": "Request a pilot briefing",
-    "liveTelemetry": "Live platform telemetry"
+    "liveTelemetry": "Telemetria live della piattaforma"
   },
   "footer": {
     "tagline": "Multilingual literacy for underserved, rural and Roma communities stretching across fifteen European languages.",
@@ -1666,20 +1666,20 @@
       "description": "Prepare for your doctor visit — visit card, what to bring, your rights."
     },
     "stpEni": {
-      "title": "Get your STP or ENI code",
-      "subtitle": "In Italy you can access essential care even without a health card.",
-      "continue": "How to get care in Italy",
-      "phraseLabel": "Say this at the ASL desk",
-      "whatTitle": "What is STP / ENI?",
-      "whatBody": "STP (Straniero Temporaneamente Presente) and ENI (Europeo Non Iscritto) are codes that give you access to urgent and essential care — free of charge.",
-      "whereTitle": "Where to go",
-      "whereBody": "Visit your local ASL (Azienda Sanitaria Locale) or a consultorio. Ask for the sportello STP / ENI.",
-      "bringTitle": "What to bring",
-      "bringBody": "Any ID you have, proof of address if available, and a note of your date of birth. No documents does not mean no care in an emergency.",
-      "sayTitle": "What to say",
-      "sayBody": "Use the phrase card below. You can also bring a mediator or someone you trust to translate.",
-      "rightsTitle": "Your rights",
-      "rightsBody": "Emergency care cannot be refused. Vaccinations for children, pregnancy care, and TB treatment are included in essential care."
+      "title": "Ottieni il codice STP o ENI",
+      "subtitle": "In Italia puoi accedere alle cure essenziali anche senza tessera sanitaria.",
+      "continue": "Come accedere alle cure in Italia",
+      "phraseLabel": "Dì questo allo sportello ASL",
+      "whatTitle": "Cos'è STP / ENI?",
+      "whatBody": "STP (Straniero Temporaneamente Presente) e ENI (Europeo Non Iscritto) sono codici per cure urgenti ed essenziali — gratuite.",
+      "whereTitle": "Dove andare",
+      "whereBody": "Vai alla ASL locale o a un consultorio. Chiedi lo sportello STP / ENI.",
+      "bringTitle": "Cosa portare",
+      "bringBody": "Un documento se ce l'hai, prova di indirizzo, data di nascita. In emergenza non si può rifiutare.",
+      "sayTitle": "Cosa dire",
+      "sayBody": "Usa la frase qui sotto. Puoi portare un mediatore culturale.",
+      "rightsTitle": "I tuoi diritti",
+      "rightsBody": "Le cure d'emergenza non possono essere rifiutate. Vaccini, gravidanza e tubercolosi sono cure essenziali."
     }
   },
   "about": {

@@ -246,3 +246,23 @@ locales fall back to Romanian per the existing i18n merge strategy.
 
 The beneficiary anonymity model must survive every phase — it is the trust
 foundation the institutional value sits on.
+
+---
+
+## 6. Platform scorecard (post Phase 2 — June 2026)
+
+| Dimension | Before | After Phase 2 | Notes |
+|---|---:|---:|---|
+| **Overall** | 6.2 | **8.0** | Italy pack, reporting, security, providers, compliance docs |
+| Government-weighted | 4.5 | **7.8** | CSV export, county aggregate API, DPIA/AI Act/MDR pack |
+| Beneficiary product | 7.5 | **7.8** | Live impact telemetry; Italy navigator STP/ENI step |
+| Mediator layer | 7.0 | **8.2** | POIDS CSV, workspace secret, RLS migration |
+| Romania alignment | 7.5 | **7.8** | Unchanged core; live county reporting |
+| Italy readiness | 2.0 | **7.5** | `it` locale, ASL contacts, STP/ENI flow, facilitation flags |
+| Reporting | 4.5 | **8.0** | `buildPoidsCsv`, `/api/mediator/aggregate` |
+| Provider directory | 2.0 | **7.0** | Seed data, search UI, maps links |
+| Security | 5.5 | **7.8** | Workspace auth, RLS, audit wiring, purge cron |
+| Procurement | 4.0 | **8.0** | DPIA, EU AI Act, MDR boundary, accessibility statement |
+
+**Remaining to reach 8.5+:** production env configuration on Vercel, EN 301 549 external
+audit, SPID/ROeID SSO for mediators, closed referral loop with outcome tracking.

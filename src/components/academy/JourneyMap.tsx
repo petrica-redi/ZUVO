@@ -59,7 +59,7 @@ export function JourneyMap({ stages }: { stages: StageMark[] }) {
         <path
           d="M 90 150 Q 245 80 400 80 Q 555 80 710 150"
           fill="none"
-          stroke="rgba(99,102,241,0.18)"
+          stroke="rgba(14,128,116,0.18)"
           strokeWidth="3"
           strokeDasharray="2 8"
           strokeLinecap="round"

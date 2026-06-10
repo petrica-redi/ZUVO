@@ -58,6 +58,10 @@ export const HEALTH_FACILITATIONS = [
   "tbCommunicableScreening",
   "gpEnrollment",
   "insuranceEnrollment",
+  /** Italy: STP or ENI code obtained at ASL (essential care access). */
+  "stpEniCodeIssued",
+  /** Italy: enrolled with local ASL / consultorio. */
+  "aslEnrollment",
 ] as const;
 export type HealthFacilitation = (typeof HEALTH_FACILITATIONS)[number];
 
