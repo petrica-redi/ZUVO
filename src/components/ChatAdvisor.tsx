@@ -246,8 +246,15 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
         </span>
       </div>
 
-      {/* Messages area */}
-      <div ref={scrollRef} className="flex-1 overflow-y-auto px-1 py-4">
+      {/* Messages area — announced to assistive tech as new replies stream in. */}
+      <div
+        ref={scrollRef}
+        role="log"
+        aria-live="polite"
+        aria-relevant="additions text"
+        aria-label={labels.askMeAnything}
+        className="flex-1 overflow-y-auto px-1 py-4"
+      >
         {messages.length === 0 && (
           <div className="relative flex flex-col items-center px-4 py-6 animate-fade-in-up">
             {/* Atmospheric backdrop card */}
@@ -370,7 +377,10 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
         ))}
 
         {error && (
-          <div className="mx-4 mb-3 rounded-2xl bg-red-50 p-4 text-center text-sm font-semibold text-red-600 border border-red-100 animate-scale-in">
+          <div
+            role="alert"
+            className="mx-4 mb-3 rounded-2xl bg-red-50 p-4 text-center text-sm font-semibold text-red-600 border border-red-100 animate-scale-in"
+          >
             {error}
           </div>
         )}
@@ -378,12 +388,18 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
 
       {/* Voice status banners */}
       {voiceError && (
-        <div className="mb-2 rounded-2xl border border-red-100 bg-red-50 px-4 py-2 text-xs font-semibold text-red-700">
+        <div
+          role="alert"
+          className="mb-2 rounded-2xl border border-red-100 bg-red-50 px-4 py-2 text-xs font-semibold text-red-700"
+        >
           {voiceError}
         </div>
       )}
       {detectedLang && (
-        <div className="mb-2 rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-2 text-[11px] font-semibold uppercase tracking-wide text-emerald-700">
+        <div
+          role="status"
+          className="mb-2 rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-2 text-[11px] font-semibold uppercase tracking-wide text-emerald-700"
+        >
           {tVoice("detected", { lang: detectedLang.toUpperCase() })}
         </div>
       )}
