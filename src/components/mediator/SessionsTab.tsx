@@ -7,7 +7,7 @@ import {
   type SessionTheme,
 } from "@/lib/mediator/types";
 import type { MediatorLabels } from "./labels";
-import { EmptyState, FormCard, SaveButton } from "./parts";
+import { EmptyState, FormCard, SaveButton, SectionTitle, fieldClass } from "./parts";
 
 function isThisMonth(iso: string): boolean {
   const d = new Date(iso);
@@ -65,19 +65,20 @@ export function SessionsTab({
 
   return (
     <>
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-bold text-[var(--color-text-primary)]">
-          {labels.sessionsTitle}
-        </h2>
-        <span className="text-xs text-[var(--color-text-muted)]">
+      <SectionTitle
+        action={
+          <span className="rounded-full bg-[var(--color-surface)] px-3 py-1 text-xs font-bold text-[var(--color-text-muted)] shadow-1">
           {labels.sessionsThisMonth}: {sessionsThisMonth}
-        </span>
-      </div>
+          </span>
+        }
+      >
+        {labels.sessionsTitle}
+      </SectionTitle>
 
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="mb-4 w-full rounded-xl bg-[var(--color-sage-700)] py-3 text-sm font-extrabold text-white"
+        className="mb-4 w-full rounded-2xl bg-gradient-to-r from-[var(--color-sage-700)] to-[var(--color-sage-600)] py-3 text-sm font-extrabold text-white shadow-[0_10px_26px_-14px_rgba(21,128,61,0.75)]"
       >
         {labels.newSession}
       </button>
@@ -90,7 +91,7 @@ export function SessionsTab({
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             aria-label={labels.sessionTitle}
-            className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            className={`mb-3 ${fieldClass}`}
           />
           <label className="mb-3 flex flex-col gap-1 text-[11px] font-semibold text-[var(--color-text-muted)]">
             {labels.sessionThemeLabel}
@@ -98,7 +99,7 @@ export function SessionsTab({
               value={theme}
               onChange={(e) => setTheme(e.target.value as SessionTheme)}
               aria-label={labels.sessionThemeLabel}
-              className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm text-[var(--color-text-primary)]"
+              className={fieldClass}
             >
               {SESSION_THEMES.map((t) => (
                 <option key={t} value={t}>
@@ -113,7 +114,7 @@ export function SessionsTab({
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
             aria-label={labels.sessionTopic}
-            className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            className={`mb-3 ${fieldClass}`}
           />
           <input
             type="text"
@@ -121,7 +122,7 @@ export function SessionsTab({
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             aria-label={labels.sessionLocation}
-            className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            className={`mb-3 ${fieldClass}`}
           />
           <input
             type="text"
@@ -130,7 +131,7 @@ export function SessionsTab({
             value={attendees}
             onChange={(e) => setAttendees(e.target.value)}
             aria-label={labels.sessionAttendees}
-            className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            className={`mb-3 ${fieldClass}`}
           />
           <textarea
             placeholder={labels.sessionNotes}
@@ -138,7 +139,7 @@ export function SessionsTab({
             onChange={(e) => setNotes(e.target.value)}
             aria-label={labels.sessionNotes}
             rows={3}
-            className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            className={`mb-3 ${fieldClass}`}
           />
           <SaveButton
             saved={saved}
@@ -153,11 +154,11 @@ export function SessionsTab({
       {sessions.length === 0 ? (
         <EmptyState message={labels.noSessions} />
       ) : (
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-3">
           {sessions.map((s) => (
             <li
               key={s.id}
-              className="rounded-2xl bg-[var(--color-surface)] p-4 shadow-1"
+              className="rounded-3xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-4 shadow-[0_10px_35px_-24px_rgba(15,23,42,0.28)]"
             >
               <div className="mb-1 flex items-center justify-between">
                 <span className="font-bold text-[var(--color-text-primary)]">{s.title}</span>

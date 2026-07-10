@@ -18,7 +18,7 @@ import {
   STATUS_LABEL_KEYS,
   type MediatorLabels,
 } from "./labels";
-import { EmptyState, FormCard, SaveButton } from "./parts";
+import { EmptyState, FormCard, SaveButton, SectionTitle, fieldClass } from "./parts";
 
 function toggle<T>(set: T[], value: T): T[] {
   return set.includes(value) ? set.filter((x) => x !== value) : [...set, value];
@@ -81,18 +81,19 @@ export function CasesTab({
 
   return (
     <>
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-bold text-[var(--color-text-primary)]">
-          {labels.casesTitle}
-        </h2>
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          className="rounded-full bg-[var(--color-sage-700)] px-4 py-2 text-xs font-extrabold text-white"
-        >
-          {labels.newCase}
-        </button>
-      </div>
+      <SectionTitle
+        action={
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            className="rounded-full bg-[var(--color-sage-700)] px-4 py-2 text-xs font-extrabold text-white shadow-[0_8px_20px_-12px_rgba(21,128,61,0.8)]"
+          >
+            {labels.newCase}
+          </button>
+        }
+      >
+        {labels.casesTitle}
+      </SectionTitle>
 
       {open && (
         <FormCard>
@@ -102,14 +103,14 @@ export function CasesTab({
             value={name}
             onChange={(e) => setName(e.target.value)}
             aria-label={labels.caseName}
-            className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            className={`mb-3 ${fieldClass}`}
           />
           <div className="mb-3 grid grid-cols-2 gap-2">
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value as CaseCategory)}
               aria-label={labels.caseCategory}
-              className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+              className={fieldClass}
             >
               {CASE_CATEGORIES.map((c) => (
                 <option key={c} value={c}>
@@ -121,7 +122,7 @@ export function CasesTab({
               value={status}
               onChange={(e) => setStatus(e.target.value as CaseStatus)}
               aria-label={labels.caseStatus}
-              className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+              className={fieldClass}
             >
               {CASE_STATUSES.map((s) => (
                 <option key={s} value={s}>
@@ -136,7 +137,7 @@ export function CasesTab({
               value={nextVisit}
               onChange={(e) => setNextVisit(e.target.value)}
               aria-label={labels.nextVisit}
-              className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+              className={fieldClass}
             />
             <input
               type="number"
@@ -147,7 +148,7 @@ export function CasesTab({
               value={householdSize}
               onChange={(e) => setHouseholdSize(e.target.value)}
               aria-label={labels.householdSize}
-              className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+              className={fieldClass}
             />
           </div>
 
@@ -207,7 +208,7 @@ export function CasesTab({
             onChange={(e) => setNotes(e.target.value)}
             aria-label={labels.caseNotes}
             rows={3}
-            className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            className={`mb-3 ${fieldClass}`}
           />
           <SaveButton
             saved={saved}
@@ -222,11 +223,11 @@ export function CasesTab({
       {cases.length === 0 ? (
         <EmptyState message={labels.noCases} />
       ) : (
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-3">
           {cases.map((c) => (
             <li
               key={c.id}
-              className="rounded-2xl bg-[var(--color-surface)] p-4 shadow-1"
+              className="rounded-3xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-4 shadow-[0_10px_35px_-24px_rgba(15,23,42,0.28)]"
             >
               <div className="mb-1 flex items-start justify-between gap-2">
                 <span className="font-bold text-[var(--color-text-primary)]">{c.name}</span>
