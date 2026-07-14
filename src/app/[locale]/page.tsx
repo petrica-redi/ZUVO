@@ -33,6 +33,7 @@ import { LandingFooter } from "@/components/landing/LandingFooter";
 import { ProfileShellOptOut } from "@/components/landing/ProfileShellOptOut";
 import { LandingVisualMosaic } from "@/components/landing/LandingVisualMosaic";
 import { CareModelSection } from "@/components/landing/CareModelSection";
+import { CareProcessSection } from "@/components/landing/CareProcessSection";
 import { IntegratedPlatformSection } from "@/components/landing/IntegratedPlatformSection";
 import { TechnologyShowcase } from "@/components/landing/TechnologyShowcase";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
@@ -298,6 +299,8 @@ export default async function HomePage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        <CareProcessSection />
 
         <LandingVisualMosaic
           eyebrow={t("visualEyebrow")}
