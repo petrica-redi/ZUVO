@@ -890,7 +890,75 @@
     "privacyTitle": "Construit pentru demo Consiliul Europei și ministere",
     "privacyBody": "Redi Health separă datele personale (comunitate), înregistrările pseudonimizate (mediatori), rezumatele clinice (doctori) și KPI-urile agregate (ministere). Arată stakeholderilor exact unde este granița de confidențialitate.",
     "privacyCta": "Citește metodologia de siguranță",
-    "demoActive": "Mod demo · vizualizare ca {persona}"
+    "demoActive": "Mod demo · vizualizare ca {persona}",
+    "switchPersona": "Schimbă persona",
+    "wiredNote": "Persona activă — navigarea și accesul la date sunt acum specifice rolului.",
+    "navAria": "Navigare persona",
+    "dawaPatient": "DawaMom · model îngrijire pacient",
+    "dawaAgent": "Agent Dawa Health · rețea de teren",
+    "dawaNetwork": "Inteligență rețea · vedere minister",
+    "dawaTelehealth": "Tele-Health · overlay clinician",
+    "dawaPlatform": "Operațiuni platformă · white-label",
+    "nav": {
+      "community": {
+        "home": "Acasă",
+        "ask": "Întreabă",
+        "scan": "Verifică",
+        "family": "Familie",
+        "more": "Mai mult"
+      },
+      "mediator": {
+        "field": "Teren",
+        "scan": "Scan",
+        "navigate": "Navigare",
+        "training": "Formare",
+        "more": "Mai mult"
+      },
+      "manager": {
+        "impact": "Impact",
+        "methodology": "Siguranță",
+        "demo": "Demo",
+        "more": "Mai mult"
+      },
+      "doctor": {
+        "queue": "Coadă",
+        "triage": "Triaj",
+        "demo": "Demo",
+        "more": "Mai mult"
+      },
+      "admin": {
+        "cms": "CMS",
+        "demo": "Demo",
+        "more": "Mai mult"
+      }
+    },
+    "panelCommunityTitle": "Pachetul tău de îngrijire",
+    "panelCommunitySubtitle": "Ghidare sănătate la domiciliu — ca abonamentul DawaMom",
+    "panelCommunityCare": "Sfaturi săptămânale",
+    "panelCommunityCareDesc": "Sfaturi personalizate în limba ta, pe telefon.",
+    "panelCommunityPrivacy": "Anonim implicit",
+    "panelCommunityPrivacyDesc": "Nu e nevoie de nume. Datele rămân pe dispozitiv.",
+    "panelCommunityAction1": "Scanează un zvon",
+    "panelCommunityAction2": "Găsește o clinică",
+    "panelMediatorTitle": "Kit agent de teren",
+    "panelMediatorSubtitle": "Spațiu Agent Sănătate — instrumente POIDS",
+    "panelMediatorJob1": "3 cazuri deschise · județul București",
+    "panelMediatorJob2": "2 vizite la domiciliu programate săptămâna aceasta",
+    "panelMediatorJob3": "1 sesiune comunitară · mituri vaccinare",
+    "panelMediatorKit": "Kit: jurnal vizite · indicatori POIDS · export CSV · sync offline",
+    "panelManagerTitle": "Inteligență rețea",
+    "panelManagerSubtitle": "Vedere minister — doar KPI-uri agregate",
+    "panelManagerStat1": "Județe",
+    "panelManagerStat2": "Mituri verificate",
+    "panelManagerStat3": "Nume expuse",
+    "panelManagerNote": "Zero înregistrări individuale de beneficiari în această vedere.",
+    "panelDoctorTitle": "Coadă Tele-Health",
+    "panelDoctorSubtitle": "Revizuiește trimiteri de teren — doar context clinic",
+    "panelDoctorNote": "Trimiterile folosesc ID-uri de caz și simptome. PII eliminat înainte de coadă.",
+    "panelAdminTitle": "CMS platformă",
+    "panelAdminSubtitle": "Operațiuni white-label — branding, fonturi, hero. Fără date pacienți.",
+    "panelAdminDesc": "Personalizează Redi Health pentru parteneri fără a atinge înregistrări de sănătate.",
+    "panelAdminCta": "Deschide panoul CMS"
   },
   "impact": {
     "title": "Impact asupra sănătății publice",

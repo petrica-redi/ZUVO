@@ -1307,7 +1307,75 @@
     "privacyTitle": "Built for Council of Europe & ministry demos",
     "privacyBody": "Redi Health separates personal health data (community), pseudonymised field records (mediators), clinical summaries (doctors), and aggregated KPIs (ministries). Show stakeholders exactly where the privacy boundary sits.",
     "privacyCta": "Read our safety methodology",
-    "demoActive": "Demo mode · viewing as {persona}"
+    "demoActive": "Demo mode · viewing as {persona}",
+    "switchPersona": "Switch persona",
+    "wiredNote": "Persona active — navigation and data access are now role-specific.",
+    "navAria": "Persona navigation",
+    "dawaPatient": "DawaMom · patient care model",
+    "dawaAgent": "Dawa Health Agent · field network",
+    "dawaNetwork": "Network intelligence · ministry view",
+    "dawaTelehealth": "Tele-Health · clinician overlay",
+    "dawaPlatform": "Platform operations · white-label",
+    "nav": {
+      "community": {
+        "home": "Home",
+        "ask": "Ask",
+        "scan": "Check",
+        "family": "Family",
+        "more": "More"
+      },
+      "mediator": {
+        "field": "Field",
+        "scan": "Scan",
+        "navigate": "Navigate",
+        "training": "Training",
+        "more": "More"
+      },
+      "manager": {
+        "impact": "Impact",
+        "methodology": "Safety",
+        "demo": "Demo",
+        "more": "More"
+      },
+      "doctor": {
+        "queue": "Queue",
+        "triage": "Triage",
+        "demo": "Demo",
+        "more": "More"
+      },
+      "admin": {
+        "cms": "CMS",
+        "demo": "Demo",
+        "more": "More"
+      }
+    },
+    "panelCommunityTitle": "Your care package",
+    "panelCommunitySubtitle": "Home-based health guidance — like DawaMom subscription care",
+    "panelCommunityCare": "Weekly health tips",
+    "panelCommunityCareDesc": "Tailored advice in your language, on your phone.",
+    "panelCommunityPrivacy": "Anonymous by default",
+    "panelCommunityPrivacyDesc": "No name required. Data stays on your device.",
+    "panelCommunityAction1": "Scan a rumour",
+    "panelCommunityAction2": "Find a clinic",
+    "panelMediatorTitle": "Agent field kit",
+    "panelMediatorSubtitle": "Health Agent workspace — POIDS-aligned field tools",
+    "panelMediatorJob1": "3 open cases · Bucharest county",
+    "panelMediatorJob2": "2 home visits scheduled this week",
+    "panelMediatorJob3": "1 community session · vaccination myths",
+    "panelMediatorKit": "Kit: visit log · POIDS indicators · CSV export · offline sync",
+    "panelManagerTitle": "Network intelligence",
+    "panelManagerSubtitle": "Ministry view — aggregated KPIs only (like Dawa network analytics)",
+    "panelManagerStat1": "Counties",
+    "panelManagerStat2": "Myths checked",
+    "panelManagerStat3": "Names exposed",
+    "panelManagerNote": "Zero individual beneficiary records in this view.",
+    "panelDoctorTitle": "Tele-Health queue",
+    "panelDoctorSubtitle": "Review field referrals — clinical context only, no contact details",
+    "panelDoctorNote": "Referrals use case IDs and symptoms. PII stripped before queue.",
+    "panelAdminTitle": "Platform CMS",
+    "panelAdminSubtitle": "White-label operations — branding, fonts, hero. No patient data.",
+    "panelAdminDesc": "Customise Redi Health for partners without touching health records.",
+    "panelAdminCta": "Open CMS dashboard"
   },
   "impact": {
     "title": "Public Health Impact",

@@ -90,3 +90,25 @@ export const DEMO_MEDIATOR_WORKSPACE: MediatorWorkspacePayload = {
 };
 
 export const DEMO_COUNTY = "B";
+
+/** Pseudonymised tele-health queue for clinician persona (Dawa tele-health model). */
+export const DEMO_DOCTOR_QUEUE = [
+  {
+    id: "ref-1",
+    ref: "Case #A-1042",
+    summary: "Fever 38.5°C · child · rural Teleorman",
+    severity: "amber" as const,
+  },
+  {
+    id: "ref-2",
+    ref: "Case #B-0887",
+    summary: "Prenatal referral · no insurance · Bucharest",
+    severity: "green" as const,
+  },
+  {
+    id: "ref-3",
+    ref: "Case #C-1203",
+    summary: "Chest pain + breathlessness · red-flag triage",
+    severity: "red" as const,
+  },
+];

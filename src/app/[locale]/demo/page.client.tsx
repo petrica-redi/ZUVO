@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback } from "react";
 import { Link, useRouter } from "@/navigation";
 import { useTranslations } from "next-intl";
 import {
@@ -18,15 +18,9 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
-import {
-  DEMO_PERSONAS,
-  DEMO_PERSONA_COOKIE,
-  DEMO_MODE_KEY,
-  dataAccessLabelKey,
-  type DemoPersonaId,
-} from "@/lib/demo/personas";
-import { DEMO_COUNTY, DEMO_MEDIATOR_WORKSPACE } from "@/lib/demo/seed-data";
-import { persistWorkspace } from "@/lib/mediator/workspace-client";
+import { useDemoPersona } from "@/components/demo/DemoPersonaProvider";
+import { DEMO_PERSONAS, dataAccessLabelKey, type DemoPersonaId } from "@/lib/demo/personas";
+import { getPersonaModel } from "@/lib/demo/persona-models";
 
 const ICONS = {
   users: Users,
@@ -36,47 +30,28 @@ const ICONS = {
   settings: Settings,
 } as const;
 
-function setCookie(name: string, value: string, days = 30) {
-  document.cookie = `${name}=${value}; path=/; max-age=${days * 86400}; SameSite=Lax`;
-}
-
 export default function DemoPageClient() {
   const t = useTranslations("demo");
   const router = useRouter();
-  const [active, setActive] = useState<DemoPersonaId>("community");
-  const [demoMode, setDemoMode] = useState(true);
+  const { personaId, demoMode, setPersona, enableDemoMode, model } = useDemoPersona();
 
-  useEffect(() => {
-    const stored = localStorage.getItem(DEMO_MODE_KEY);
-    if (stored === "false") setDemoMode(false);
-    const match = document.cookie.match(new RegExp(`${DEMO_PERSONA_COOKIE}=([^;]+)`));
-    if (match?.[1]) {
-      const id = match[1] as DemoPersonaId;
-      if (DEMO_PERSONAS.some((p) => p.id === id)) setActive(id);
-    }
-  }, []);
-
-  const selectPersona = useCallback((id: DemoPersonaId) => {
-    setActive(id);
-    setCookie(DEMO_PERSONA_COOKIE, id);
-    localStorage.setItem(DEMO_MODE_KEY, "true");
-    setDemoMode(true);
-
-    if (id === "mediator") {
-      persistWorkspace(DEMO_MEDIATOR_WORKSPACE, DEMO_COUNTY, () => {});
-    }
-  }, []);
+  const selectPersona = useCallback(
+    (id: DemoPersonaId) => {
+      setPersona(id);
+      enableDemoMode();
+    },
+    [setPersona, enableDemoMode],
+  );
 
   const launchPersona = useCallback(
     (id: DemoPersonaId) => {
       selectPersona(id);
-      const persona = DEMO_PERSONAS.find((p) => p.id === id);
-      if (persona) router.push(persona.href);
+      router.push(getPersonaModel(id).homeHref);
     },
     [selectPersona, router],
   );
 
-  const current = DEMO_PERSONAS.find((p) => p.id === active)!;
+  const current = DEMO_PERSONAS.find((p) => p.id === personaId)!;
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
@@ -112,7 +87,8 @@ export default function DemoPageClient() {
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {DEMO_PERSONAS.map((persona) => {
               const Icon = ICONS[persona.icon];
-              const isActive = active === persona.id;
+              const isActive = personaId === persona.id;
+              const personaModel = getPersonaModel(persona.id);
               return (
                 <button
                   key={persona.id}
@@ -144,7 +120,10 @@ export default function DemoPageClient() {
                       {t(dataAccessLabelKey(persona.dataAccess))}
                     </span>
                   </div>
-                  <h3 className="mt-4 font-display text-base font-extrabold text-[var(--color-text-primary)]">
+                  <p className="mt-2 text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
+                    {t(personaModel.dawaAnalogueKey)}
+                  </p>
+                  <h3 className="mt-1 font-display text-base font-extrabold text-[var(--color-text-primary)]">
                     {t(persona.labelKey)}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
@@ -161,6 +140,7 @@ export default function DemoPageClient() {
             <h2 className="font-display text-lg font-extrabold text-[var(--color-text-primary)]">
               {t("accessTitle", { persona: t(current.labelKey) })}
             </h2>
+            <p className="mt-2 text-xs text-[var(--color-text-muted)]">{t(model.dawaAnalogueKey)}</p>
 
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               <div>
@@ -195,7 +175,7 @@ export default function DemoPageClient() {
 
             <button
               type="button"
-              onClick={() => launchPersona(active)}
+              onClick={() => launchPersona(personaId)}
               className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full gradient-brand px-6 py-4 text-sm font-extrabold text-white shadow-brand transition-transform active:scale-[0.97] sm:w-auto"
             >
               {t("launch", { persona: t(current.labelKey) })}
@@ -223,14 +203,9 @@ export default function DemoPageClient() {
         </section>
 
         {demoMode && (
-          <div className="fixed bottom-20 left-1/2 z-30 -translate-x-1/2 px-4 sm:bottom-24">
-            <div className="flex items-center gap-3 rounded-full border border-[var(--color-border-subtle)] bg-white/95 px-4 py-2.5 shadow-3 backdrop-blur-md">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-[var(--color-brand-500)]" />
-              <span className="text-xs font-bold text-[var(--color-text-secondary)]">
-                {t("demoActive", { persona: t(current.labelKey) })}
-              </span>
-            </div>
-          </div>
+          <p className="pb-4 text-center text-[11px] font-bold text-[var(--color-success-accent)]">
+            {t("wiredNote")}
+          </p>
         )}
       </main>
       <BottomNav />

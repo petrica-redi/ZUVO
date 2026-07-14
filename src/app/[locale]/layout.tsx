@@ -8,6 +8,7 @@ import { getAppConfig } from "@/lib/env";
 import { ToastProvider } from "@/components/ui/Toast";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { InstallPrompt } from "@/components/InstallPrompt";
+import { DemoShell } from "@/components/demo/DemoShell";
 
 type Props = {
   children: ReactNode;
@@ -60,8 +61,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <ToastProvider>
-        <ErrorBoundary>{children}</ErrorBoundary>
-        <InstallPrompt />
+        <DemoShell>
+          <ErrorBoundary>{children}</ErrorBoundary>
+          <InstallPrompt />
+        </DemoShell>
       </ToastProvider>
     </NextIntlClientProvider>
   );
