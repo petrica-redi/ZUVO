@@ -7,7 +7,7 @@ import { isPathAllowedForPersona } from "@/lib/demo/persona-models";
 
 /**
  * When demo mode is active, redirects users away from routes their persona
- * cannot access — enforcing Dawa-style role boundaries.
+ * cannot access — enforcing role-specific boundaries.
  */
 export function PersonaGuard({ children }: { children: React.ReactNode }) {
   const { demoMode, personaId, model } = useDemoPersona();

@@ -33,7 +33,7 @@ const toneStyles = {
 };
 
 /**
- * Dawa-style integrated platform capability strip.
+ * Integrated platform capability strip.
  */
 export async function IntegratedPlatformSection() {
   const t = await getTranslations("landing");

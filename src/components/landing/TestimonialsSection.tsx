@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 const TESTIMONIALS = ["t1", "t2", "t3"] as const;
 
 /**
- * Dawa-style "Wall of Love" — community voices from rural Romania.
+ * Community voices from rural Romania.
  */
 export async function TestimonialsSection() {
   const t = await getTranslations("landing");

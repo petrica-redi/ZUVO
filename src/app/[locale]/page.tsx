@@ -215,7 +215,7 @@ export default async function HomePage({ params }: Props) {
 
                 <div className={`mt-9 flex flex-wrap items-center gap-3 animate-fade-in-up delay-300 ${heroLayout === "center" ? "justify-center" : ""}`}>
                   <Link
-                    href="/demo"
+                    href="/admin/login"
                     className="group inline-flex h-13 items-center gap-2 rounded-full px-7 py-4 text-sm font-extrabold text-white gradient-brand grain-overlay shadow-brand transition-all hover:shadow-4 active:scale-[0.97]"
                     style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
                   >

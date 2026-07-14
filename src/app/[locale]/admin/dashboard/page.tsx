@@ -7,6 +7,7 @@ import {
   FONT_EDITORIAL_OPTIONS,
   FONT_SANS_OPTIONS,
 } from "@/lib/admin/fonts";
+import { AdminPersonaSwitcher } from "@/components/admin/AdminPersonaSwitcher";
 import { LogOut, Save, Image as ImageIcon, Type, Code } from "lucide-react";
 
 export default function AdminDashboard() {
@@ -50,38 +51,50 @@ export default function AdminDashboard() {
     setMessage({ type: "", text: "" });
     const res = await savePlatformConfig(config);
     if (res.success) {
-      setMessage({ type: "success", text: "Settings saved! Refresh the site to see font changes." });
+      setMessage({ type: "success", text: "Settings saved! Refresh the site to see changes." });
     } else {
       setMessage({ type: "error", text: res.error || "Failed to save settings." });
     }
     setSaving(false);
   }
 
-  if (loading) return <div className="p-10 text-center">Loading Admin Panel...</div>;
+  if (loading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-[var(--color-bg-canvas)]">
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-[var(--color-blue-600)] border-t-transparent" />
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F0F9FF] to-[#ECFDF5] pb-20">
-      <header className="border-b border-[var(--color-border-subtle)] bg-white/80 backdrop-blur-md">
+    <div className="min-h-screen bg-[var(--color-bg-canvas)] pb-20">
+      <header className="sticky top-0 z-30 border-b border-[var(--color-border-subtle)] bg-white/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-          <h1 className="font-display text-xl font-extrabold text-[var(--color-text-primary)]">
-            Platform CMS
-          </h1>
+          <div>
+            <h1 className="font-display text-xl font-extrabold text-[var(--color-text-primary)]">
+              Admin CMS
+            </h1>
+            <p className="text-xs text-[var(--color-text-muted)]">Redi Health platform configuration</p>
+          </div>
           <button
+            type="button"
             onClick={() => logoutAdmin()}
-            className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100"
+            className="flex items-center gap-2 rounded-xl border border-[var(--color-border-subtle)] px-4 py-2 text-sm font-semibold text-[var(--color-text-secondary)] hover:bg-[var(--color-neutral-50)]"
           >
             <LogOut className="h-4 w-4" />
-            Sign Out
+            Sign out
           </button>
         </div>
       </header>
 
-      <main className="mx-auto mt-8 max-w-5xl px-6">
+      <main className="mx-auto mt-8 max-w-5xl space-y-8 px-6">
+        <AdminPersonaSwitcher />
+
         {message.text && (
           <div
-            className={`mb-6 rounded-lg p-4 ${
+            className={`rounded-2xl px-4 py-3 text-sm font-medium ${
               message.type === "success"
-                ? "bg-green-50 text-green-800"
+                ? "bg-[#ECFDF5] text-[#065F46]"
                 : "bg-red-50 text-red-800"
             }`}
           >
@@ -89,150 +102,122 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        <form onSubmit={handleSave} className="space-y-8">
-          <section className="rounded-2xl border border-[var(--color-border-subtle)] bg-white p-6 shadow-2">
-            <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900">
+        <form onSubmit={handleSave} className="space-y-6">
+          <section className="rounded-3xl border border-[var(--color-border-subtle)] bg-white p-6 shadow-2">
+            <h2 className="mb-5 flex items-center gap-2 font-display text-lg font-extrabold text-[var(--color-text-primary)]">
               <ImageIcon className="h-5 w-5 text-[var(--color-blue-600)]" />
-              Global Branding
+              Branding
             </h2>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Logo Image URL</label>
-              <input
-                type="text"
-                value={config.logoUrl}
-                onChange={(e) => setConfig({ ...config, logoUrl: e.target.value })}
-                placeholder="https://example.com/logo.png (leave blank for default)"
-                className="mt-1 w-full rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-              />
-            </div>
+            <label className="block text-sm font-medium text-[var(--color-text-secondary)]">
+              Logo URL
+            </label>
+            <input
+              type="url"
+              value={config.logoUrl}
+              onChange={(e) => setConfig({ ...config, logoUrl: e.target.value })}
+              placeholder="https://… (leave blank for default)"
+              className="mt-2 w-full rounded-xl border border-[var(--color-border-default)] px-4 py-3 text-sm focus:border-[var(--color-blue-600)] focus:outline-none focus:ring-2 focus:ring-[var(--color-blue-600)]/20"
+            />
           </section>
 
-          <section className="rounded-2xl border border-[var(--color-border-subtle)] bg-white p-6 shadow-2">
-            <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900">
+          <section className="rounded-3xl border border-[var(--color-border-subtle)] bg-white p-6 shadow-2">
+            <h2 className="mb-5 flex items-center gap-2 font-display text-lg font-extrabold text-[var(--color-text-primary)]">
               <Type className="h-5 w-5 text-[var(--color-brand-600)]" />
               Typography
             </h2>
             <div className="grid gap-4 md:grid-cols-3">
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Body font (UI)</label>
-                <select
-                  value={config.fontSans}
-                  onChange={(e) => setConfig({ ...config, fontSans: e.target.value })}
-                  className="mt-1 w-full rounded-md border border-gray-300 p-2"
-                >
-                  <option value="">Default (Inter)</option>
-                  {FONT_SANS_OPTIONS.map((f) => (
-                    <option key={f.id} value={f.id}>
-                      {f.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Display font (headings)</label>
-                <select
-                  value={config.fontDisplay}
-                  onChange={(e) => setConfig({ ...config, fontDisplay: e.target.value })}
-                  className="mt-1 w-full rounded-md border border-gray-300 p-2"
-                >
-                  <option value="">Default (Geist)</option>
-                  {FONT_DISPLAY_OPTIONS.map((f) => (
-                    <option key={f.id} value={f.id}>
-                      {f.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Editorial font (hero)</label>
-                <select
-                  value={config.fontEditorial}
-                  onChange={(e) => setConfig({ ...config, fontEditorial: e.target.value })}
-                  className="mt-1 w-full rounded-md border border-gray-300 p-2"
-                >
-                  <option value="">Default (Fraunces)</option>
-                  {FONT_EDITORIAL_OPTIONS.map((f) => (
-                    <option key={f.id} value={f.id}>
-                      {f.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
+              {[
+                { key: "fontSans" as const, label: "Body font", options: FONT_SANS_OPTIONS, fallback: "Inter" },
+                { key: "fontDisplay" as const, label: "Headings", options: FONT_DISPLAY_OPTIONS, fallback: "Geist" },
+                { key: "fontEditorial" as const, label: "Hero / editorial", options: FONT_EDITORIAL_OPTIONS, fallback: "Fraunces" },
+              ].map(({ key, label, options, fallback }) => (
+                <div key={key}>
+                  <label className="block text-sm font-medium text-[var(--color-text-secondary)]">{label}</label>
+                  <select
+                    value={config[key]}
+                    onChange={(e) => setConfig({ ...config, [key]: e.target.value })}
+                    className="mt-2 w-full rounded-xl border border-[var(--color-border-default)] px-3 py-2.5 text-sm"
+                  >
+                    <option value="">Default ({fallback})</option>
+                    {options.map((f) => (
+                      <option key={f.id} value={f.id}>
+                        {f.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              ))}
             </div>
           </section>
 
-          <section className="rounded-2xl border border-[var(--color-border-subtle)] bg-white p-6 shadow-2">
-            <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900">
+          <section className="rounded-3xl border border-[var(--color-border-subtle)] bg-white p-6 shadow-2">
+            <h2 className="mb-5 flex items-center gap-2 font-display text-lg font-extrabold text-[var(--color-text-primary)]">
               <Type className="h-5 w-5 text-[var(--color-blue-600)]" />
-              Hero Section
+              Hero section
             </h2>
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700">Hero Title Override</label>
+                <label className="block text-sm font-medium text-[var(--color-text-secondary)]">Title override</label>
                 <input
                   type="text"
                   value={config.heroTitle}
                   onChange={(e) => setConfig({ ...config, heroTitle: e.target.value })}
-                  placeholder="Leave blank to use translations"
-                  className="mt-1 w-full rounded-md border border-gray-300 p-2"
+                  className="mt-2 w-full rounded-xl border border-[var(--color-border-default)] px-4 py-3 text-sm"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Hero Subtitle Override</label>
+                <label className="block text-sm font-medium text-[var(--color-text-secondary)]">Subtitle override</label>
                 <textarea
                   value={config.heroSubtitle}
                   onChange={(e) => setConfig({ ...config, heroSubtitle: e.target.value })}
-                  placeholder="Leave blank to use translations"
                   rows={3}
-                  className="mt-1 w-full rounded-md border border-gray-300 p-2"
+                  className="mt-2 w-full rounded-xl border border-[var(--color-border-default)] px-4 py-3 text-sm"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Hero Background Image URL</label>
+                <label className="block text-sm font-medium text-[var(--color-text-secondary)]">Hero image URL</label>
                 <input
                   type="text"
                   value={config.heroImage}
                   onChange={(e) => setConfig({ ...config, heroImage: e.target.value })}
-                  placeholder="/images/ai/ai-hero-wellbeing.png"
-                  className="mt-1 w-full rounded-md border border-gray-300 p-2"
+                  className="mt-2 w-full rounded-xl border border-[var(--color-border-default)] px-4 py-3 text-sm"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Hero Layout</label>
+                <label className="block text-sm font-medium text-[var(--color-text-secondary)]">Layout</label>
                 <select
                   value={config.heroLayout}
                   onChange={(e) => setConfig({ ...config, heroLayout: e.target.value })}
-                  className="mt-1 w-full rounded-md border border-gray-300 p-2"
+                  className="mt-2 w-full rounded-xl border border-[var(--color-border-default)] px-3 py-2.5 text-sm"
                 >
-                  <option value="split">Split (Text left, Image right/bg)</option>
+                  <option value="split">Split</option>
                   <option value="center">Centered</option>
                 </select>
               </div>
             </div>
           </section>
 
-          <section className="rounded-2xl border border-[var(--color-border-subtle)] bg-white p-6 shadow-2">
-            <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900">
-              <Code className="h-5 w-5 text-gray-500" />
-              Advanced CSS
+          <section className="rounded-3xl border border-[var(--color-border-subtle)] bg-white p-6 shadow-2">
+            <h2 className="mb-5 flex items-center gap-2 font-display text-lg font-extrabold text-[var(--color-text-primary)]">
+              <Code className="h-5 w-5 text-[var(--color-text-muted)]" />
+              Custom CSS
             </h2>
             <textarea
               value={config.customCss}
               onChange={(e) => setConfig({ ...config, customCss: e.target.value })}
-              placeholder=":root { --color-accent: #2563EB; }"
               rows={5}
-              className="mt-1 w-full font-mono text-sm rounded-md border border-gray-300 p-2"
+              className="w-full rounded-xl border border-[var(--color-border-default)] px-4 py-3 font-mono text-sm"
             />
           </section>
 
-          <div className="flex justify-end">
+          <div className="flex justify-end pb-8">
             <button
               type="submit"
               disabled={saving}
-              className="flex items-center gap-2 rounded-full gradient-brand px-6 py-3 font-semibold text-white shadow-brand disabled:opacity-50"
+              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#059669] px-8 py-3.5 font-bold text-white shadow-brand disabled:opacity-50"
             >
               <Save className="h-5 w-5" />
-              {saving ? "Saving..." : "Save Changes"}
+              {saving ? "Saving…" : "Save changes"}
             </button>
           </div>
         </form>

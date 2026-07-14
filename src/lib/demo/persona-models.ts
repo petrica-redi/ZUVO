@@ -24,20 +24,11 @@ export type PersonaNavTab = {
   isPrimary?: boolean;
 };
 
-/**
- * Dawa Health analogues for stakeholder storytelling:
- * - community  → DawaMom patient / subscription care
- * - mediator   → Health Agent field network
- * - manager    → Ministry / network intelligence
- * - doctor     → Tele-Health clinician overlay
- * - admin      → Platform operations (white-label)
- */
 export type PersonaModel = {
   id: DemoPersonaId;
-  dawaAnalogueKey: string;
+  roleSubtitleKey: string;
   homeHref: string;
   navTabs: PersonaNavTab[];
-  /** Path prefixes allowed while this persona is active (demo mode). */
   allowedPrefixes: string[];
   accentVar: string;
   panelKey: "community" | "mediator" | "manager" | "doctor" | "admin";
@@ -49,7 +40,7 @@ const DEMO = "/demo";
 export const PERSONA_MODELS: Record<DemoPersonaId, PersonaModel> = {
   community: {
     id: "community",
-    dawaAnalogueKey: "dawaPatient",
+    roleSubtitleKey: "roleCommunity",
     homeHref: "/chat",
     accentVar: "var(--color-brand-600)",
     panelKey: "community",
@@ -85,7 +76,7 @@ export const PERSONA_MODELS: Record<DemoPersonaId, PersonaModel> = {
   },
   mediator: {
     id: "mediator",
-    dawaAnalogueKey: "dawaAgent",
+    roleSubtitleKey: "roleMediator",
     homeHref: "/mediator",
     accentVar: "var(--color-blue-600)",
     panelKey: "mediator",
@@ -109,7 +100,7 @@ export const PERSONA_MODELS: Record<DemoPersonaId, PersonaModel> = {
   },
   manager: {
     id: "manager",
-    dawaAnalogueKey: "dawaNetwork",
+    roleSubtitleKey: "roleManager",
     homeHref: "/impact",
     accentVar: "#7C3AED",
     panelKey: "manager",
@@ -123,7 +114,7 @@ export const PERSONA_MODELS: Record<DemoPersonaId, PersonaModel> = {
   },
   doctor: {
     id: "doctor",
-    dawaAnalogueKey: "dawaTelehealth",
+    roleSubtitleKey: "roleDoctor",
     homeHref: "/consult",
     accentVar: "#DC2626",
     panelKey: "doctor",
@@ -137,7 +128,7 @@ export const PERSONA_MODELS: Record<DemoPersonaId, PersonaModel> = {
   },
   admin: {
     id: "admin",
-    dawaAnalogueKey: "dawaPlatform",
+    roleSubtitleKey: "roleAdmin",
     homeHref: "/admin/dashboard",
     accentVar: "#475569",
     panelKey: "admin",
@@ -154,7 +145,6 @@ export function getPersonaModel(id: DemoPersonaId): PersonaModel {
   return PERSONA_MODELS[id];
 }
 
-/** Strip optional locale prefix from pathname. */
 export function stripLocalePrefix(pathname: string): string {
   const clean = pathname.replace(/^\/[a-z]{2,3}(?=\/|$)/, "") || "/";
   return clean === "" ? "/" : clean;

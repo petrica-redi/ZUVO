@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "demo" });
   const { appName } = getAppConfig();
-  return { title: `${t("tourIntroTitle")} — ${appName}`, description: t("tourIntroLead") };
+  return { title: `${t("overviewTitle")} — ${appName}`, description: t("overviewLead") };
 }
 
 export default function DemoPage() {

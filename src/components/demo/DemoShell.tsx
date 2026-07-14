@@ -3,16 +3,16 @@
 import type { ReactNode } from "react";
 import { DemoPersonaProvider } from "@/components/demo/DemoPersonaProvider";
 import { PersonaGuard } from "@/components/demo/PersonaGuard";
-import { DemoFab } from "@/components/demo/DemoFab";
 import { PersonaWelcome } from "@/components/demo/PersonaWelcome";
+import { AdminPersonaBanner } from "@/components/admin/AdminPersonaBanner";
 
 export function DemoShell({ children }: { children: ReactNode }) {
   return (
     <DemoPersonaProvider>
       <PersonaGuard>
         {children}
-        <DemoFab />
         <PersonaWelcome />
+        <AdminPersonaBanner />
       </PersonaGuard>
     </DemoPersonaProvider>
   );

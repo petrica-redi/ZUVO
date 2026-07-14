@@ -91,7 +91,7 @@ export const DEMO_MEDIATOR_WORKSPACE: MediatorWorkspacePayload = {
 
 export const DEMO_COUNTY = "B";
 
-/** Pseudonymised tele-health queue for clinician persona (Dawa tele-health model). */
+/** Pseudonymised tele-health queue for clinician persona. */
 export const DEMO_DOCTOR_QUEUE = [
   {
     id: "ref-1",

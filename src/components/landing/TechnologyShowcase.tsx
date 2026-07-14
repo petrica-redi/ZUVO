@@ -31,7 +31,7 @@ const TOOLS = [
 ] as const;
 
 /**
- * Dawa-inspired technology showcase — AI, screening, triage, voice.
+ * Technology showcase — AI, screening, triage, voice.
  */
 export async function TechnologyShowcase() {
   const t = await getTranslations("landing");

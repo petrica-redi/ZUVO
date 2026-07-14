@@ -87,7 +87,7 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
             <ThemeToggle />
           </div>
           <Link
-            href="/demo"
+            href="/admin/login"
             className="inline-flex h-10 items-center gap-2 rounded-full bg-gradient-to-r from-[#2563EB] to-[#059669] px-5 text-[13px] font-extrabold text-white shadow-[0_4px_20px_rgba(37,99,235,0.35)] transition-transform hover:scale-105 active:scale-95"
           >
             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/25 text-[10px]">▶</span>

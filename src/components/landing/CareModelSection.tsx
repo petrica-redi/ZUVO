@@ -23,7 +23,7 @@ const MODELS = [
 type ModelId = (typeof MODELS)[number]["id"];
 
 /**
- * Dawa-inspired care model explorer — shows how each persona connects
+ * Care model explorer — shows how each persona connects
  * to the platform (community member, mediator, outreach, tele-health, ministry).
  */
 export function CareModelSection() {

@@ -9,7 +9,7 @@ import { getPersonaModel } from "@/lib/demo/persona-models";
 import type { DemoPersonaId } from "@/lib/demo/personas";
 
 /**
- * Brief welcome overlay after launching a persona from the tour.
+ * Brief welcome overlay after launching a persona from Admin CMS.
  */
 export function PersonaWelcome() {
   const t = useTranslations("demo");
@@ -41,7 +41,7 @@ export function PersonaWelcome() {
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--color-blue-600)]">
-                {t(model.dawaAnalogueKey)}
+                {t(model.roleSubtitleKey)}
               </p>
               <h3 className="mt-1 font-display text-lg font-extrabold text-[var(--color-text-primary)]">
                 {t("welcomeTitle", {
@@ -62,7 +62,7 @@ export function PersonaWelcome() {
             </button>
           </div>
           <Link
-            href="/demo"
+            href="/admin/dashboard"
             className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-[var(--color-blue-600)]"
           >
             {t("switchPersona")}

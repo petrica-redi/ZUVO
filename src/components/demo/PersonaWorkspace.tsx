@@ -65,7 +65,7 @@ function VisualPanel({
       <div className="overflow-hidden rounded-3xl border border-[var(--color-border-subtle)] bg-white shadow-3">
         <div className={`bg-gradient-to-r ${accent} px-4 py-3 text-white`}>
           <p className="text-[10px] font-extrabold uppercase tracking-widest text-white/80">
-            {t(model.dawaAnalogueKey)}
+            {t(model.roleSubtitleKey)}
           </p>
           <p className="font-display text-sm font-extrabold">{t("panelLive")}</p>
         </div>
