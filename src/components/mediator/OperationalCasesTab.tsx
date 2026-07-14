@@ -36,7 +36,7 @@ import {
   urgencyTone,
 } from "@/components/operations/StatusBadge";
 import { TimelineStrip } from "@/components/operations/TimelineStrip";
-import { EmptyState, FormCard, SaveButton } from "./parts";
+import { FormCard, SaveButton } from "./parts";
 import { ProviderSearchPanel } from "./ProviderSearchPanel";
 import { ReferralPanel } from "./ReferralPanel";
 

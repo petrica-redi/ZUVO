@@ -8,12 +8,12 @@ import type { NavigationCase } from "@/lib/operations/types";
 
 export function MediatorStartPanel({
   cases,
-  onOpenNavigation,
+  onOpenCases,
   onOpenTasks,
   onOpenHelp,
 }: {
   cases: NavigationCase[];
-  onOpenNavigation: () => void;
+  onOpenCases: () => void;
   onOpenTasks: () => void;
   onOpenHelp: () => void;
 }) {
@@ -49,7 +49,7 @@ export function MediatorStartPanel({
       {pendingIntakes > 0 && (
         <button
           type="button"
-          onClick={onOpenNavigation}
+          onClick={onOpenCases}
           className="mb-3 flex w-full items-center gap-3 rounded-xl bg-[var(--color-warning-bg)] p-4 text-left transition-transform active:scale-[0.99]"
         >
           <HandHeart className="h-5 w-5 shrink-0 text-[var(--color-warning-text)]" />
@@ -68,7 +68,7 @@ export function MediatorStartPanel({
       <div className="flex flex-col gap-2 sm:flex-row">
         <button
           type="button"
-          onClick={onOpenNavigation}
+          onClick={onOpenCases}
           className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--color-sage-700)] px-4 py-3 text-sm font-bold text-white"
         >
           <ClipboardList className="h-4 w-4" />
