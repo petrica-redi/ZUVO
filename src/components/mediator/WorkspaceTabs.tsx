@@ -1,68 +1,29 @@
 "use client";
 
 import type { ComponentType } from "react";
-import {
-  BookOpen,
-  ClipboardList,
-  FolderOpen,
-  Globe,
-  LineChart,
-  ListTodo,
-  Navigation,
-  Presentation,
-  Wrench,
-} from "lucide-react";
+import { FolderOpen, Inbox, ListTodo, MoreHorizontal } from "lucide-react";
 import type { MediatorLabels } from "./labels";
 
-export type TabId =
-  | "overview"
-  | "navigation"
-  | "tasks"
-  | "crossBorder"
-  | "cases"
-  | "sessions"
-  | "indicators"
-  | "training"
-  | "tools";
+export type TabId = "inbox" | "cases" | "tasks" | "more";
 
 const ICONS: Record<
   TabId,
   ComponentType<{ className?: string; strokeWidth?: number }>
 > = {
-  overview: ClipboardList,
-  navigation: Navigation,
-  tasks: ListTodo,
-  crossBorder: Globe,
+  inbox: Inbox,
   cases: FolderOpen,
-  sessions: Presentation,
-  indicators: LineChart,
-  training: BookOpen,
-  tools: Wrench,
+  tasks: ListTodo,
+  more: MoreHorizontal,
 };
 
 const LABEL_KEY: Record<TabId, keyof MediatorLabels> = {
-  overview: "tabDashboard",
-  navigation: "tabNavigation",
-  tasks: "tabTasks",
-  crossBorder: "tabCrossBorder",
+  inbox: "tabInbox",
   cases: "tabCases",
-  sessions: "tabSessions",
-  indicators: "tabIndicators",
-  training: "tabTraining",
-  tools: "tabTools",
+  tasks: "tabTasks",
+  more: "tabMore",
 };
 
-const TABS: TabId[] = [
-  "overview",
-  "navigation",
-  "tasks",
-  "crossBorder",
-  "cases",
-  "sessions",
-  "indicators",
-  "training",
-  "tools",
-];
+const TABS: TabId[] = ["inbox", "cases", "tasks", "more"];
 
 export function WorkspaceTabs({
   labels,
@@ -89,7 +50,7 @@ export function WorkspaceTabs({
             role="tab"
             aria-selected={active}
             onClick={() => onChange(id)}
-            className={`flex min-h-[44px] min-w-[88px] flex-none items-center justify-center gap-1.5 whitespace-nowrap rounded-xl px-3 py-2.5 text-[11px] font-extrabold transition-colors ${
+            className={`flex min-h-[44px] min-w-[88px] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-xl px-3 py-2.5 text-xs font-extrabold transition-colors sm:text-[13px] ${
               active
                 ? "bg-[var(--color-surface)] text-[var(--color-text-primary)] shadow-1"
                 : "text-[var(--color-text-muted)]"

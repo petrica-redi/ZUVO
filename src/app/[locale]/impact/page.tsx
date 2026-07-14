@@ -18,7 +18,6 @@ import {
 } from "lucide-react";
 import { Card } from "@/components/ui";
 import { formatImpactNumber, getImpactStats } from "@/lib/impact/stats";
-import { DEMO_COUNTY_SNAPSHOTS } from "@/lib/demo/seed-data";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -34,6 +33,7 @@ export default async function ImpactPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "impact" });
   const stats = await getImpactStats();
   const live = stats.source === "live";
+  const countyRows = stats.countySnapshots;
   const copy =
     locale === "ro"
       ? {
@@ -214,16 +214,20 @@ export default async function ImpactPage({ params }: Props) {
                     </tr>
                   </thead>
                   <tbody>
-                    {DEMO_COUNTY_SNAPSHOTS.map((row) => (
+                    {countyRows.map((row) => (
                       <tr key={row.county} className="border-t border-[var(--color-border-subtle)]">
                         <td className="px-6 py-4 font-bold text-[var(--color-text-primary)]">{row.county}</td>
                         <td className="px-4 py-4 text-[var(--color-text-secondary)]">{row.mediators}</td>
                         <td className="px-4 py-4 text-[var(--color-text-secondary)]">{row.visits}</td>
                         <td className="px-4 py-4 text-[var(--color-text-secondary)]">{row.referrals}</td>
                         <td className="px-6 py-4">
-                          <span className="inline-flex items-center gap-1 font-bold text-emerald-700">
-                            <TrendingUp className="h-3.5 w-3.5" /> +{row.trend}%
-                          </span>
+                          {row.trend != null ? (
+                            <span className="inline-flex items-center gap-1 font-bold text-emerald-700">
+                              <TrendingUp className="h-3.5 w-3.5" /> +{row.trend}%
+                            </span>
+                          ) : (
+                            <span className="text-[var(--color-text-muted)]">—</span>
+                          )}
                         </td>
                       </tr>
                     ))}
@@ -231,7 +235,7 @@ export default async function ImpactPage({ params }: Props) {
                 </table>
               </div>
               <div className="divide-y divide-[var(--color-border-subtle)] md:hidden">
-                {DEMO_COUNTY_SNAPSHOTS.map((row) => (
+                {countyRows.map((row) => (
                   <div key={row.county} className="px-5 py-4">
                     <p className="font-bold text-[var(--color-text-primary)]">{row.county}</p>
                     <dl className="mt-2 grid grid-cols-2 gap-2 text-xs text-[var(--color-text-secondary)]">
@@ -249,7 +253,9 @@ export default async function ImpactPage({ params }: Props) {
                       </div>
                       <div>
                         <dt className="font-semibold">{copy.trend}</dt>
-                        <dd className="font-bold text-[var(--color-success-text)]">+{row.trend}%</dd>
+                        <dd className={row.trend != null ? "font-bold text-[var(--color-success-text)]" : ""}>
+                          {row.trend != null ? `+${row.trend}%` : "—"}
+                        </dd>
                       </div>
                     </dl>
                   </div>

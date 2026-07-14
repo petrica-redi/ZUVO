@@ -6,11 +6,20 @@
 import { count, sql } from "drizzle-orm";
 import { getDb } from "@/db/client";
 import { healthLogs, mediatorWorkspaces, progress } from "@/db/schema";
+import { ROMANIA_ECI_COUNTIES } from "@/data/romania-eci-contacts";
 import { aggregateNational } from "@/lib/mediator/aggregate";
 import { LOCALES } from "@/i18n/routing";
-import { DEMO_IMPACT_STATS } from "@/lib/demo/seed-data";
+import { DEMO_COUNTY_SNAPSHOTS, DEMO_IMPACT_STATS } from "@/lib/demo/seed-data";
 import type { ProgrammeIndicatorValue } from "@/lib/operations/types";
 import { getProgrammeIndicators } from "@/lib/operations/outcome-service";
+
+export type CountySnapshot = {
+  county: string;
+  mediators: number;
+  visits: number;
+  referrals: number;
+  trend: number | null;
+};
 
 export type ImpactStats = {
   source: "live" | "illustrative";
@@ -23,7 +32,38 @@ export type ImpactStats = {
   gpEnrollmentsFacilitated: number;
   countiesReporting: number;
   programmeIndicators: ProgrammeIndicatorValue[];
+  countySnapshots: CountySnapshot[];
 };
+
+const COUNTY_NAMES = new Map(ROMANIA_ECI_COUNTIES.map((c) => [c.code, c.name]));
+
+function countyName(code: string): string {
+  return COUNTY_NAMES.get(code) ?? code;
+}
+
+function referralCount(
+  facilitations: Record<string, number>,
+): number {
+  return (
+    (facilitations.screeningReferral ?? 0) +
+    (facilitations.gpEnrollment ?? 0) +
+    (facilitations.prenatalFacilitated ?? 0)
+  );
+}
+
+function toCountySnapshots(
+  national: ReturnType<typeof aggregateNational>,
+): CountySnapshot[] {
+  return national
+    .map((row) => ({
+      county: countyName(row.countyCode),
+      mediators: row.workspaceCount,
+      visits: row.visitsThisYear,
+      referrals: referralCount(row.facilitations),
+      trend: null,
+    }))
+    .sort((a, b) => b.visits - a.visits);
+}
 
 export async function getImpactStats(): Promise<ImpactStats> {
   const illustrativeIndicators: ProgrammeIndicatorValue[] = [
@@ -39,6 +79,10 @@ export async function getImpactStats(): Promise<ImpactStats> {
     languages: LOCALES.length,
     ...DEMO_IMPACT_STATS,
     programmeIndicators: illustrativeIndicators,
+    countySnapshots: DEMO_COUNTY_SNAPSHOTS.map((row) => ({
+      ...row,
+      trend: row.trend,
+    })),
   };
 
   const db = getDb();
@@ -88,6 +132,7 @@ export async function getImpactStats(): Promise<ImpactStats> {
       gpEnrollmentsFacilitated: gpEnrollments,
       countiesReporting: national.length,
       programmeIndicators: await getProgrammeIndicators("ministry_viewer"),
+      countySnapshots: toCountySnapshots(national),
     };
   } catch {
     return base;
