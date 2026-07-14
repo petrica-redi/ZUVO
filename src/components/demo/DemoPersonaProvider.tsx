@@ -4,7 +4,6 @@ import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
   useState,
   type ReactNode,
@@ -57,23 +56,28 @@ function seedPersonaData(id: DemoPersonaId) {
   }
 }
 
-export function DemoPersonaProvider({ children }: { children: ReactNode }) {
-  const [personaId, setPersonaId] = useState<DemoPersonaId>("community");
-  const [demoMode, setDemoMode] = useState(false);
-  const [hydrated, setHydrated] = useState(false);
+function readInitialDemoState(): {
+  personaId: DemoPersonaId;
+  demoMode: boolean;
+} {
+  if (typeof window === "undefined") {
+    return { personaId: "community", demoMode: false };
+  }
+  const storedMode = localStorage.getItem(DEMO_MODE_KEY);
+  const cookiePersona = readCookie(DEMO_PERSONA_COOKIE);
+  if (storedMode === "true" || cookiePersona) {
+    const personaId = isValidPersona(cookiePersona) ? cookiePersona : "community";
+    if (isValidPersona(cookiePersona)) seedPersonaData(cookiePersona);
+    return { personaId, demoMode: storedMode !== "false" };
+  }
+  return { personaId: "community", demoMode: false };
+}
 
-  useEffect(() => {
-    const storedMode = localStorage.getItem(DEMO_MODE_KEY);
-    const cookiePersona = readCookie(DEMO_PERSONA_COOKIE);
-    if (storedMode === "true" || cookiePersona) {
-      setDemoMode(storedMode !== "false");
-      if (isValidPersona(cookiePersona)) {
-        setPersonaId(cookiePersona);
-        seedPersonaData(cookiePersona);
-      }
-    }
-    setHydrated(true);
-  }, []);
+export function DemoPersonaProvider({ children }: { children: ReactNode }) {
+  const [initial] = useState(readInitialDemoState);
+  const [personaId, setPersonaId] = useState<DemoPersonaId>(initial.personaId);
+  const [demoMode, setDemoMode] = useState(initial.demoMode);
+  const hydrated = typeof window !== "undefined";
 
   const setPersona = useCallback((id: DemoPersonaId) => {
     setPersonaId(id);

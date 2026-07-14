@@ -5,7 +5,10 @@ import {
   BookOpen,
   ClipboardList,
   FolderOpen,
+  Globe,
   LineChart,
+  ListTodo,
+  Navigation,
   Presentation,
   Wrench,
 } from "lucide-react";
@@ -13,6 +16,9 @@ import type { MediatorLabels } from "./labels";
 
 export type TabId =
   | "overview"
+  | "navigation"
+  | "tasks"
+  | "crossBorder"
   | "cases"
   | "sessions"
   | "indicators"
@@ -24,6 +30,9 @@ const ICONS: Record<
   ComponentType<{ className?: string; strokeWidth?: number }>
 > = {
   overview: ClipboardList,
+  navigation: Navigation,
+  tasks: ListTodo,
+  crossBorder: Globe,
   cases: FolderOpen,
   sessions: Presentation,
   indicators: LineChart,
@@ -33,6 +42,9 @@ const ICONS: Record<
 
 const LABEL_KEY: Record<TabId, keyof MediatorLabels> = {
   overview: "tabDashboard",
+  navigation: "tabNavigation",
+  tasks: "tabTasks",
+  crossBorder: "tabCrossBorder",
   cases: "tabCases",
   sessions: "tabSessions",
   indicators: "tabIndicators",
@@ -42,6 +54,9 @@ const LABEL_KEY: Record<TabId, keyof MediatorLabels> = {
 
 const TABS: TabId[] = [
   "overview",
+  "navigation",
+  "tasks",
+  "crossBorder",
   "cases",
   "sessions",
   "indicators",
