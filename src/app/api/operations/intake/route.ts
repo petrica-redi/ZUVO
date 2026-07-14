@@ -11,6 +11,9 @@ import { auditLog } from "@/lib/audit";
 import { getClientIp } from "@/lib/api/validation";
 import { INTAKE_HELP_TYPES } from "@/lib/operations/constants";
 import { createIntake, listIntakes } from "@/lib/operations/case-service";
+import { routeIntake, findRoutingMatch } from "@/lib/operations/routing-service";
+import { createOperationNotification } from "@/lib/operations/notification-service";
+import { handleMissedAppointmentFromIntake } from "@/lib/operations/missed-appointment-service";
 import {
   databaseUnavailableResponse,
   resolveOperationActor,
@@ -80,6 +83,36 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  const routed = await routeIntake(intake.id);
+  const match = await findRoutingMatch({
+    countryCode: intake.countryCode,
+    municipalityCode: intake.municipalityCode,
+    preferredLanguage: intake.preferredLanguage,
+    helpType: intake.helpType,
+  });
+
+  if (match?.notifyWorkspaceId) {
+    void createOperationNotification({
+      workspaceId: match.notifyWorkspaceId,
+      notificationType: "intake_new",
+      title: "operations.notifIntakeNewTitle",
+      body: "operations.notifIntakeNewBody",
+      data: {
+        intakeId: intake.id,
+        referenceCode: intake.referenceCode,
+        helpType: intake.helpType,
+      },
+      sendEmail: true,
+    });
+  }
+
+  if (parsed.data.helpType === "missed_appointment") {
+    void handleMissedAppointmentFromIntake(
+      intake.id,
+      match?.notifyWorkspaceId,
+    );
+  }
+
   void auditLog({
     userId: "public",
     action: "operations.intake_created",
@@ -89,9 +122,24 @@ export async function POST(req: NextRequest) {
       referenceCode: intake.referenceCode,
       helpType: intake.helpType,
       countryCode: intake.countryCode,
+      routed: !!routed,
+      teamId: routed?.routedTeamId,
     },
     ipAddress: getClientIp(req),
   });
+
+  if (routed) {
+    void auditLog({
+      userId: "system",
+      action: "operations.intake_routed",
+      resourceType: "intake_request",
+      resourceId: intake.id,
+      metadata: {
+        teamId: routed.routedTeamId,
+        referenceCode: routed.referenceCode,
+      },
+    });
+  }
 
   return NextResponse.json(
     {
@@ -99,6 +147,8 @@ export async function POST(req: NextRequest) {
       data: {
         referenceCode: intake.referenceCode,
         id: intake.id,
+        status: routed?.status ?? intake.status,
+        routedTeamName: routed?.routedTeamName,
       },
     },
     { status: 201 },

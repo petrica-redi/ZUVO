@@ -5,6 +5,7 @@ import {
   caseStatusHistory,
   operationTasks,
   intakeRequests,
+  teams,
 } from "@/db/schema";
 import { generateCaseNumber, generateIntakeReference } from "./ids";
 import { suggestNextAction, suggestTasksForBarriers } from "./barrier-suggestions";
@@ -288,6 +289,7 @@ export async function createIntake(input: CreateIntakeInput): Promise<IntakeRequ
     helpType: row.helpType as IntakeRequest["helpType"],
     consentGranted: row.consentGranted,
     status: row.status as IntakeRequest["status"],
+    routedTeamId: row.routedTeamId ?? undefined,
     notes: row.notes,
     createdAt: row.createdAt?.toISOString() ?? now.toISOString(),
   };
@@ -297,24 +299,35 @@ export async function listIntakes(status?: string): Promise<IntakeRequest[]> {
   const db = getDb();
   if (!db) return [];
 
-  const base = db.select().from(intakeRequests).orderBy(desc(intakeRequests.createdAt)).limit(100);
+  const base = db
+    .select({
+      intake: intakeRequests,
+      teamName: teams.name,
+    })
+    .from(intakeRequests)
+    .leftJoin(teams, eq(intakeRequests.routedTeamId, teams.id))
+    .orderBy(desc(intakeRequests.createdAt))
+    .limit(100);
+
   const rows = status
     ? await base.where(eq(intakeRequests.status, status))
     : await base;
 
   return rows.map((row) => ({
-    id: row.id,
-    referenceCode: row.referenceCode,
-    preferredLanguage: row.preferredLanguage,
-    contactMethod: row.contactMethod,
-    contactValue: row.contactValue ?? undefined,
-    countryCode: row.countryCode,
-    municipalityCode: row.municipalityCode ?? undefined,
-    helpType: row.helpType as IntakeRequest["helpType"],
-    consentGranted: row.consentGranted,
-    status: row.status as IntakeRequest["status"],
-    notes: row.notes,
-    createdAt: row.createdAt?.toISOString() ?? new Date().toISOString(),
+    id: row.intake.id,
+    referenceCode: row.intake.referenceCode,
+    preferredLanguage: row.intake.preferredLanguage,
+    contactMethod: row.intake.contactMethod,
+    contactValue: row.intake.contactValue ?? undefined,
+    countryCode: row.intake.countryCode,
+    municipalityCode: row.intake.municipalityCode ?? undefined,
+    helpType: row.intake.helpType as IntakeRequest["helpType"],
+    consentGranted: row.intake.consentGranted,
+    status: row.intake.status as IntakeRequest["status"],
+    routedTeamId: row.intake.routedTeamId ?? undefined,
+    routedTeamName: row.teamName ?? undefined,
+    notes: row.intake.notes,
+    createdAt: row.intake.createdAt?.toISOString() ?? new Date().toISOString(),
   }));
 }
 
