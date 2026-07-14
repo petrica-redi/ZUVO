@@ -11,22 +11,35 @@ import type { DemoPersonaId } from "@/lib/demo/personas";
 /**
  * Brief welcome overlay after launching a persona from Admin CMS.
  */
+function readPendingWelcome(): DemoPersonaId | null {
+  if (typeof window === "undefined") return null;
+  const stored = sessionStorage.getItem("redi_demo_welcome");
+  if (stored && isPersona(stored)) {
+    sessionStorage.removeItem("redi_demo_welcome");
+    return stored;
+  }
+  return null;
+}
+
 export function PersonaWelcome() {
   const t = useTranslations("demo");
-  const { demoMode, personaId } = useDemoPersona();
-  const [show, setShow] = useState(false);
+  const { demoMode } = useDemoPersona();
   const [welcomeId, setWelcomeId] = useState<DemoPersonaId | null>(null);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     if (!demoMode) return;
-    const stored = sessionStorage.getItem("redi_demo_welcome");
-    if (stored && isPersona(stored)) {
-      setWelcomeId(stored);
+    const id = readPendingWelcome();
+    if (!id) return;
+    const showTimer = window.setTimeout(() => {
+      setWelcomeId(id);
       setShow(true);
-      sessionStorage.removeItem("redi_demo_welcome");
-      const timer = setTimeout(() => setShow(false), 5000);
-      return () => clearTimeout(timer);
-    }
+    }, 0);
+    const hideTimer = window.setTimeout(() => setShow(false), 5000);
+    return () => {
+      window.clearTimeout(showTimer);
+      window.clearTimeout(hideTimer);
+    };
   }, [demoMode]);
 
   if (!show || !welcomeId) return null;

@@ -9,6 +9,8 @@ import { healthLogs, mediatorWorkspaces, progress } from "@/db/schema";
 import { aggregateNational } from "@/lib/mediator/aggregate";
 import { LOCALES } from "@/i18n/routing";
 import { DEMO_IMPACT_STATS } from "@/lib/demo/seed-data";
+import type { ProgrammeIndicatorValue } from "@/lib/operations/types";
+import { getProgrammeIndicators } from "@/lib/operations/outcome-service";
 
 export type ImpactStats = {
   source: "live" | "illustrative";
@@ -20,13 +22,23 @@ export type ImpactStats = {
   visitsThisYear: number;
   gpEnrollmentsFacilitated: number;
   countiesReporting: number;
+  programmeIndicators: ProgrammeIndicatorValue[];
 };
 
 export async function getImpactStats(): Promise<ImpactStats> {
+  const illustrativeIndicators: ProgrammeIndicatorValue[] = [
+    { slug: "gp_registered", labelKey: "impact.indicatorGpRegistered", count: 186, suppressed: false },
+    { slug: "appointment_attended", labelKey: "impact.indicatorAppointmentAttended", count: 142, suppressed: false },
+    { slug: "insurance_obtained", labelKey: "impact.indicatorInsuranceObtained", count: 97, suppressed: false },
+    { slug: "vaccination_completed", labelKey: "impact.indicatorVaccinationCompleted", count: 64, suppressed: false },
+    { slug: "cases_completed", labelKey: "impact.indicatorCasesCompleted", count: 218, suppressed: false },
+  ];
+
   const base: ImpactStats = {
     source: "illustrative",
     languages: LOCALES.length,
     ...DEMO_IMPACT_STATS,
+    programmeIndicators: illustrativeIndicators,
   };
 
   const db = getDb();
@@ -75,6 +87,7 @@ export async function getImpactStats(): Promise<ImpactStats> {
       visitsThisYear: visitsYear,
       gpEnrollmentsFacilitated: gpEnrollments,
       countiesReporting: national.length,
+      programmeIndicators: await getProgrammeIndicators("ministry_viewer"),
     };
   } catch {
     return base;

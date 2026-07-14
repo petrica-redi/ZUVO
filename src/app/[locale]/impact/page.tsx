@@ -133,6 +133,46 @@ export default async function ImpactPage({ params }: Props) {
             })}
           </div>
 
+          <div className="mb-8">
+            <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+              <div>
+                <h2 className="font-display text-lg font-extrabold text-[var(--color-text-primary)]">
+                  {t("programmeIndicators")}
+                </h2>
+                <p className="mt-1 text-xs text-[var(--color-text-secondary)]">
+                  {t("programmeIndicatorsLead")}
+                </p>
+              </div>
+              <span
+                className={`rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider ${
+                  live
+                    ? "bg-[var(--color-success-bg)] text-emerald-800"
+                    : "bg-amber-100 text-amber-800"
+                }`}
+              >
+                {live ? t("dataLabelLive") : t("dataLabelIllustrative")}
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
+              {stats.programmeIndicators.map((indicator) => {
+                const labelKey = indicator.labelKey.replace(/^impact\./, "");
+                return (
+                <Card key={indicator.slug} variant="elevated" className="p-4 md:p-5">
+                  <div className="font-display text-2xl font-extrabold text-[var(--color-text-primary)] md:text-3xl">
+                    {indicator.count != null ? formatImpactNumber(indicator.count) : "—"}
+                  </div>
+                  <div className="mt-2 text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
+                    {t(labelKey)}
+                  </div>
+                  {indicator.suppressed && (
+                    <p className="mt-2 text-[10px] text-amber-700">{t("thresholdSuppressed")}</p>
+                  )}
+                </Card>
+                );
+              })}
+            </div>
+          </div>
+
           <div className="mb-8 grid gap-5 lg:grid-cols-[1.45fr_0.55fr]">
             <Card variant="elevated" className="overflow-hidden p-0">
               <div className="border-b border-[var(--color-border-subtle)] px-6 py-5">

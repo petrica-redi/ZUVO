@@ -25,3 +25,23 @@ export function canExportIdentifiable(role: string): boolean {
 export function ministryCannotSeePseudonym(role: string): boolean {
   return role === "ministry_viewer" || role === "manager";
 }
+
+export function canManageQualityFlags(role: string): boolean {
+  return ["admin", "supervisor"].includes(role);
+}
+
+export function canViewQualityFlags(role: string): boolean {
+  return ["admin", "supervisor", "mediator"].includes(role);
+}
+
+export function canExportScope(role: string, scope: string): boolean {
+  if (scope === "national" || scope === "organisation") {
+    return canReadAggregates(role);
+  }
+  return canExportIdentifiable(role) || role === "supervisor";
+}
+
+/** Suppress small-cell counts on ministry dashboards (k-anonymity). */
+export function applyIndicatorThreshold(count: number, minThreshold = 5): number | null {
+  return count >= minThreshold ? count : null;
+}

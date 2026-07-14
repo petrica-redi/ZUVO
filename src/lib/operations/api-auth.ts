@@ -12,6 +12,7 @@ import { mediatorWorkspaces, users } from "@/db/schema";
 import { isAdminApiAuthorized } from "@/lib/admin/api-auth";
 import { resolveUser } from "@/lib/auth/server-user";
 import { verifyWorkspaceSecret } from "@/lib/mediator/workspace-auth";
+import { REPORTING_ROLES, type ReportingRole } from "./constants";
 import type { OperationActor } from "./permissions";
 
 const workspaceIdSchema = z
@@ -82,5 +83,56 @@ export function databaseUnavailableResponse() {
   return NextResponse.json(
     { success: false, error: "Database unavailable", offline: true },
     { status: 503 },
+  );
+}
+
+export type ReportingActor = OperationActor & {
+  role: ReportingRole | string;
+};
+
+export function readReportingRole(req: NextRequest): string {
+  const header = req.headers.get("x-operations-role")?.trim();
+  if (header && (REPORTING_ROLES as readonly string[]).includes(header)) {
+    return header;
+  }
+  return "mediator";
+}
+
+export async function resolveReportingActor(
+  req: NextRequest,
+): Promise<ReportingActor | null> {
+  if (isAdminApiAuthorized(req)) {
+    const workspaceId = readWorkspaceId(req) ?? "system";
+    return {
+      workspaceId,
+      isAdmin: true,
+      role: readReportingRole(req),
+    };
+  }
+
+  const actor = await resolveOperationActor(req);
+  if (!actor) return null;
+
+  let role = readReportingRole(req);
+  const db = getDb();
+  if (db) {
+    const user = await resolveUser(req).catch(() => null);
+    if (user?.kind === "authenticated") {
+      const [u] = await db
+        .select({ role: users.role })
+        .from(users)
+        .where(eq(users.id, user.id))
+        .limit(1);
+      if (u?.role === "admin") role = "admin";
+    }
+  }
+
+  return { ...actor, role };
+}
+
+export function reportingUnauthorizedResponse() {
+  return NextResponse.json(
+    { success: false, error: "Reporting access required" },
+    { status: 403 },
   );
 }

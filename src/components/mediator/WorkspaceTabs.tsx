@@ -5,6 +5,7 @@ import {
   BookOpen,
   ClipboardList,
   FolderOpen,
+  Globe,
   LineChart,
   ListTodo,
   Navigation,
@@ -17,6 +18,7 @@ export type TabId =
   | "overview"
   | "navigation"
   | "tasks"
+  | "crossBorder"
   | "cases"
   | "sessions"
   | "indicators"
@@ -30,6 +32,7 @@ const ICONS: Record<
   overview: ClipboardList,
   navigation: Navigation,
   tasks: ListTodo,
+  crossBorder: Globe,
   cases: FolderOpen,
   sessions: Presentation,
   indicators: LineChart,
@@ -41,6 +44,7 @@ const LABEL_KEY: Record<TabId, keyof MediatorLabels> = {
   overview: "tabDashboard",
   navigation: "tabNavigation",
   tasks: "tabTasks",
+  crossBorder: "tabCrossBorder",
   cases: "tabCases",
   sessions: "tabSessions",
   indicators: "tabIndicators",
@@ -52,6 +56,7 @@ const TABS: TabId[] = [
   "overview",
   "navigation",
   "tasks",
+  "crossBorder",
   "cases",
   "sessions",
   "indicators",
