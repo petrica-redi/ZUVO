@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { getAppConfig } from "@/lib/env";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
+import { SosButton } from "@/components/SosButton";
 import {
   ShieldCheck,
   Activity,
@@ -79,6 +80,7 @@ export default async function ImpactPage({ params }: Props) {
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
       <Header />
+      <SosButton />
       <main id="main-content" className="flex-1 pb-8">
         <div className="mx-auto max-w-6xl px-4 py-8 md:px-8 md:py-12">
           <div className="mb-8 grid items-end gap-6 md:grid-cols-[1fr_auto] animate-fade-in-up">
@@ -185,12 +187,22 @@ export default async function ImpactPage({ params }: Props) {
                       {copy.countiesLead}
                     </p>
                   </div>
-                  <span className="rounded-full bg-violet-50 px-3 py-1 text-xs font-extrabold text-violet-700">
+                  <span className="rounded-full bg-[var(--color-sage-100)] px-3 py-1 text-xs font-extrabold text-[var(--color-sage-800)]">
                     {stats.countiesReporting} {t("countiesReporting")}
                   </span>
                 </div>
+                {!live && (
+                  <div className="mt-4 rounded-xl border border-[var(--color-warning-border)] bg-[var(--color-warning-bg)] px-4 py-3">
+                    <p className="text-xs font-bold text-[var(--color-warning-text)]">
+                      {t("demoCountyTitle")}
+                    </p>
+                    <p className="mt-1 text-xs text-[var(--color-text-secondary)]">
+                      {t("demoCountyLead")}
+                    </p>
+                  </div>
+                )}
               </div>
-              <div className="overflow-x-auto">
+              <div className="hidden overflow-x-auto md:block">
                 <table className="w-full min-w-[620px] text-left text-sm">
                   <thead className="bg-[var(--color-neutral-50)] text-[10px] uppercase tracking-wider text-[var(--color-text-muted)]">
                     <tr>
@@ -218,6 +230,31 @@ export default async function ImpactPage({ params }: Props) {
                   </tbody>
                 </table>
               </div>
+              <div className="divide-y divide-[var(--color-border-subtle)] md:hidden">
+                {DEMO_COUNTY_SNAPSHOTS.map((row) => (
+                  <div key={row.county} className="px-5 py-4">
+                    <p className="font-bold text-[var(--color-text-primary)]">{row.county}</p>
+                    <dl className="mt-2 grid grid-cols-2 gap-2 text-xs text-[var(--color-text-secondary)]">
+                      <div>
+                        <dt className="font-semibold">{t("statMediators")}</dt>
+                        <dd>{row.mediators}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold">{t("statVisits")}</dt>
+                        <dd>{row.visits}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold">{copy.referrals}</dt>
+                        <dd>{row.referrals}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold">{copy.trend}</dt>
+                        <dd className="font-bold text-[var(--color-success-text)]">+{row.trend}%</dd>
+                      </div>
+                    </dl>
+                  </div>
+                ))}
+              </div>
             </Card>
 
             <div className="grid gap-5">
@@ -229,9 +266,18 @@ export default async function ImpactPage({ params }: Props) {
                   {stats.gpEnrollmentsFacilitated}
                 </p>
                 <p className="mt-1 text-sm text-white/80">{copy.poisValue}</p>
-                <div className="mt-6 h-2 overflow-hidden rounded-full bg-white/15">
-                  <div className="h-full w-[72%] rounded-full bg-emerald-400" />
-                </div>
+                {live ? (
+                  <div className="mt-6 h-2 overflow-hidden rounded-full bg-white/15">
+                    <div
+                      className="h-full rounded-full bg-[var(--color-success-accent)]"
+                      style={{
+                        width: `${Math.min(100, Math.round((stats.gpEnrollmentsFacilitated / Math.max(stats.gpEnrollmentsFacilitated + 50, 1)) * 100))}%`,
+                      }}
+                    />
+                  </div>
+                ) : (
+                  <p className="mt-4 text-xs text-white/60">{copy.provenanceBodyDemo}</p>
+                )}
               </Card>
               <Card variant="elevated" className="p-6">
                 <h2 className="flex items-center gap-2 font-display text-base font-extrabold text-[var(--color-text-primary)]">

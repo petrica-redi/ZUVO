@@ -12,6 +12,7 @@ import { TasksTab } from "@/components/mediator/TasksTab";
 import type { MediatorLabels } from "@/components/mediator/labels";
 import { OverviewTab } from "@/components/mediator/OverviewTab";
 import { QualityPanel } from "@/components/mediator/QualityPanel";
+import { MediatorStartPanel } from "@/components/mediator/MediatorStartPanel";
 import { SessionsTab } from "@/components/mediator/SessionsTab";
 import { ToolsTab } from "@/components/mediator/ToolsTab";
 import { TrainingTab } from "@/components/mediator/TrainingTab";
@@ -53,6 +54,14 @@ export function MediatorDashboard({ labels }: { labels: MediatorLabels }) {
 
       {tab === "overview" && (
         <>
+          <MediatorStartPanel
+            cases={operations.cases}
+            onOpenNavigation={() => setTab("navigation")}
+            onOpenTasks={() => setTab("tasks")}
+            onOpenHelp={() => {
+              window.open("/help", "_blank", "noopener");
+            }}
+          />
           <OverviewTab
             labels={labels}
             visits={workspace.visits}

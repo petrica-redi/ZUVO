@@ -35,6 +35,9 @@ export function ProvidersList({
   interpreterLabel,
   directionsLabel,
   providers,
+  emptyNoResults,
+  emptyDirectory,
+  unavailableBanner,
 }: {
   locale: string;
   title: string;
@@ -44,6 +47,9 @@ export function ProvidersList({
   freeClinicLabel: string;
   interpreterLabel: string;
   directionsLabel: string;
+  emptyNoResults: string;
+  emptyDirectory: string;
+  unavailableBanner: string;
   providers: ProviderRow[];
 }) {
   const [query, setQuery] = useState("");
@@ -90,9 +96,18 @@ export function ProvidersList({
       </div>
 
       <div className="space-y-4 animate-fade-in-up delay-200">
-        {filtered.length === 0 ? (
+        {providers.length === 0 ? (
+          <div className="rounded-2xl border border-[var(--color-warning-border)] bg-[var(--color-warning-bg)] p-6 text-center">
+            <p className="text-sm font-semibold text-[var(--color-warning-text)]">
+              {unavailableBanner}
+            </p>
+            <p className="mt-2 text-sm text-[var(--color-text-secondary)]">
+              {emptyDirectory}
+            </p>
+          </div>
+        ) : filtered.length === 0 ? (
           <p className="text-center text-sm text-[var(--color-text-muted)]">
-            No clinics match your search.
+            {emptyNoResults}
           </p>
         ) : (
           filtered.map((provider) => (

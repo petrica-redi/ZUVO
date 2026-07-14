@@ -1,0 +1,96 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { ArrowRight, ClipboardList, HandHeart, ListTodo } from "lucide-react";
+import { fetchIntakes } from "@/lib/operations/support-client";
+import type { NavigationCase } from "@/lib/operations/types";
+
+export function MediatorStartPanel({
+  cases,
+  onOpenNavigation,
+  onOpenTasks,
+  onOpenHelp,
+}: {
+  cases: NavigationCase[];
+  onOpenNavigation: () => void;
+  onOpenTasks: () => void;
+  onOpenHelp: () => void;
+}) {
+  const t = useTranslations("operations");
+  const [pendingIntakes, setPendingIntakes] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      void fetchIntakes().then((rows) => {
+        setPendingIntakes(
+          rows.filter((r) => !["converted", "closed"].includes(r.status)).length,
+        );
+      });
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  const openCases = cases.filter(
+    (c) => !["completed", "closed_incomplete", "cancelled"].includes(c.status),
+  ).length;
+
+  if (openCases > 0 && pendingIntakes === 0) return null;
+
+  return (
+    <div className="mb-6 rounded-2xl border border-[var(--color-sage-200)] bg-gradient-to-br from-[var(--color-sage-50)] to-[var(--color-surface)] p-5 shadow-1">
+      <h2 className="mb-1 text-base font-bold text-[var(--color-text-primary)]">
+        {t("startPanelTitle")}
+      </h2>
+      <p className="mb-4 text-sm text-[var(--color-text-secondary)]">
+        {t("startPanelLead")}
+      </p>
+
+      {pendingIntakes > 0 && (
+        <button
+          type="button"
+          onClick={onOpenNavigation}
+          className="mb-3 flex w-full items-center gap-3 rounded-xl bg-[var(--color-warning-bg)] p-4 text-left transition-transform active:scale-[0.99]"
+        >
+          <HandHeart className="h-5 w-5 shrink-0 text-[var(--color-warning-text)]" />
+          <div className="flex-1">
+            <p className="text-sm font-bold text-[var(--color-warning-text)]">
+              {t("startPanelIntakes", { count: pendingIntakes })}
+            </p>
+            <p className="text-xs text-[var(--color-text-secondary)]">
+              {t("startPanelIntakesHint")}
+            </p>
+          </div>
+          <ArrowRight className="h-4 w-4 text-[var(--color-warning-text)]" />
+        </button>
+      )}
+
+      <div className="flex flex-col gap-2 sm:flex-row">
+        <button
+          type="button"
+          onClick={onOpenNavigation}
+          className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--color-sage-700)] px-4 py-3 text-sm font-bold text-white"
+        >
+          <ClipboardList className="h-4 w-4" />
+          {t("openCase")}
+        </button>
+        <button
+          type="button"
+          onClick={onOpenTasks}
+          className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] px-4 py-3 text-sm font-bold text-[var(--color-text-primary)]"
+        >
+          <ListTodo className="h-4 w-4" />
+          {t("tasksTitle")}
+        </button>
+      </div>
+
+      <button
+        type="button"
+        onClick={onOpenHelp}
+        className="mt-3 w-full text-center text-xs font-semibold text-[var(--color-sage-700)] underline-offset-2 hover:underline"
+      >
+        {t("startPanelPublicHelp")}
+      </button>
+    </div>
+  );
+}

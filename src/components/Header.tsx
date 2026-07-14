@@ -4,6 +4,7 @@ import { Link } from "@/navigation";
 import { LogoWordmark } from "@/components/Logo";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguagePicker } from "@/components/LanguagePicker";
+import { PlatformQuickLinks } from "@/components/PlatformQuickLinks";
 import { PersonaBanner } from "@/components/demo/PersonaBanner";
 import { PersonaWorkspace } from "@/components/demo/PersonaWorkspace";
 
@@ -18,6 +19,7 @@ export function Header() {
           >
             <LogoWordmark iconSize={30} />
           </Link>
+          <PlatformQuickLinks />
           <div className="flex items-center gap-2">
             <LanguagePicker variant="landing" />
             <ThemeToggle />

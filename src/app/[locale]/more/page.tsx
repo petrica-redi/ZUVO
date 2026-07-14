@@ -20,6 +20,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const SECTIONS = [
   {
+    id: "access" as const,
+    items: [
+      { href: "/help", icon: Heart, key: "help", gradient: "from-rose-500 to-red-600" },
+      { href: "/providers", icon: MapPin, key: "providers", gradient: "from-cyan-500 to-blue-600" },
+      { href: "/navigate", icon: Navigation, key: "navigate", gradient: "from-teal-500 to-emerald-600" },
+    ],
+  },
+  {
     id: "tools" as const,
     items: [
       { href: "/scan", icon: Search, key: "scan", gradient: "from-amber-400 to-orange-500" },
