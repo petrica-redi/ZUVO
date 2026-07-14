@@ -2,14 +2,21 @@
 
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ClipboardList, Plus } from "lucide-react";
 import { TASK_TYPES } from "@/lib/operations/constants";
 import type { OperationTask } from "@/lib/operations/types";
 import type { CreateTaskInput } from "@/lib/operations/types";
 import type { NavigationCase } from "@/lib/operations/types";
-import { EmptyState, FormCard, SaveButton } from "./parts";
+import {
+  StatusBadge,
+  taskStatusTone,
+} from "@/components/operations/StatusBadge";
+import { FormCard, SaveButton } from "./parts";
 
 type Filter = "all" | "today" | "overdue";
+
+const fieldClass =
+  "min-h-[44px] w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] px-3 py-2.5 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-sage-500)] focus:outline-none focus:ring-2 focus:ring-[var(--color-sage-200)]";
 
 export function TasksTab({
   tasks,
@@ -33,13 +40,27 @@ export function TasksTab({
 
   const today = new Date().toISOString().slice(0, 10);
 
+  const activeTasks = useMemo(
+    () => tasks.filter((task) => !["completed", "cancelled"].includes(task.status)),
+    [tasks],
+  );
+
+  const counts = useMemo(
+    () => ({
+      all: activeTasks.length,
+      today: activeTasks.filter((task) => task.dueDate === today).length,
+      overdue: activeTasks.filter((task) => task.dueDate && task.dueDate < today)
+        .length,
+    }),
+    [activeTasks, today],
+  );
+
   const filtered = useMemo(() => {
-    const active = tasks.filter((t) => !["completed", "cancelled"].includes(t.status));
-    if (filter === "today") return active.filter((t) => t.dueDate === today);
+    if (filter === "today") return activeTasks.filter((task) => task.dueDate === today);
     if (filter === "overdue")
-      return active.filter((t) => t.dueDate && t.dueDate < today);
-    return active;
-  }, [tasks, filter, today]);
+      return activeTasks.filter((task) => task.dueDate && task.dueDate < today);
+    return activeTasks;
+  }, [activeTasks, filter, today]);
 
   const submit = async () => {
     if (!title.trim()) return;
@@ -65,83 +86,133 @@ export function TasksTab({
     return c ? `${c.caseNumber} — ${c.beneficiaryPseudonym}` : id.slice(0, 8);
   };
 
+  const taskStatusLabel = (status: OperationTask["status"]) =>
+    t(`taskStatus_${status}`);
+
   return (
     <>
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-bold text-[var(--color-text-primary)]">
-          {t("tasksTitle")}
-        </h2>
+      <div className="mb-5 flex items-center justify-between gap-3">
+        <div>
+          <h2 className="text-lg font-bold text-[var(--color-text-primary)]">
+            {t("tasksTitle")}
+          </h2>
+          {activeTasks.length > 0 && (
+            <p className="mt-0.5 text-xs text-[var(--color-text-muted)]">
+              {t("tasksActiveCount", { count: activeTasks.length })}
+            </p>
+          )}
+        </div>
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="rounded-full bg-[var(--color-sage-700)] px-4 py-2 text-xs font-extrabold text-white"
+          aria-expanded={open}
+          className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full bg-[var(--color-sage-700)] px-4 py-2.5 text-xs font-extrabold text-white shadow-1 transition-transform active:scale-[0.98]"
         >
+          <Plus className="h-4 w-4" aria-hidden />
           {t("addTask")}
         </button>
       </div>
 
-      <div className="mb-4 flex gap-1 overflow-x-auto rounded-xl bg-[var(--color-surface-subtle)] p-1">
+      <div
+        className="mb-4 flex gap-1 overflow-x-auto rounded-xl bg-[var(--color-surface-subtle)] p-1"
+        role="tablist"
+        aria-label={t("tasksTitle")}
+      >
         {(["all", "today", "overdue"] as Filter[]).map((f) => (
           <button
             key={f}
             type="button"
+            role="tab"
+            aria-selected={filter === f}
             onClick={() => setFilter(f)}
-            className={`min-h-[40px] flex-1 rounded-lg px-2 py-2 text-[11px] font-extrabold ${
+            className={`flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-lg px-2 py-2 text-[11px] font-extrabold transition-colors ${
               filter === f
                 ? "bg-[var(--color-surface)] text-[var(--color-text-primary)] shadow-1"
                 : "text-[var(--color-text-muted)]"
             }`}
           >
             {t(`filter_${f}`)}
+            <span
+              className={`rounded-full px-1.5 py-0.5 text-[9px] ${
+                filter === f
+                  ? "bg-[var(--color-sage-100)] text-[var(--color-sage-800)]"
+                  : "bg-[var(--color-border-subtle)] text-[var(--color-text-muted)]"
+              }`}
+            >
+              {counts[f]}
+            </span>
           </button>
         ))}
       </div>
 
       {open && (
         <FormCard>
+          <h3 className="mb-4 text-base font-bold text-[var(--color-text-primary)]">
+            {t("addTask")}
+          </h3>
+          <label className="mb-1 block text-xs font-bold text-[var(--color-text-muted)]">
+            {t("taskTitle")}
+          </label>
           <input
             type="text"
             placeholder={t("taskTitle")}
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             aria-label={t("taskTitle")}
-            className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
+            className={`mb-3 ${fieldClass}`}
           />
-          <div className="mb-3 grid grid-cols-2 gap-2">
-            <select
-              value={taskType}
-              onChange={(e) => setTaskType(e.target.value as (typeof TASK_TYPES)[number])}
-              aria-label={t("taskType")}
-              className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
-            >
-              {TASK_TYPES.map((tt) => (
-                <option key={tt} value={tt}>
-                  {t(`taskType_${tt}`)}
-                </option>
-              ))}
-            </select>
-            <input
-              type="date"
-              value={dueDate}
-              onChange={(e) => setDueDate(e.target.value)}
-              aria-label={t("dueDate")}
-              className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
-            />
+          <div className="mb-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
+            <div>
+              <label className="mb-1 block text-xs font-bold text-[var(--color-text-muted)]">
+                {t("taskType")}
+              </label>
+              <select
+                value={taskType}
+                onChange={(e) =>
+                  setTaskType(e.target.value as (typeof TASK_TYPES)[number])
+                }
+                aria-label={t("taskType")}
+                className={fieldClass}
+              >
+                {TASK_TYPES.map((tt) => (
+                  <option key={tt} value={tt}>
+                    {t(`taskType_${tt}`)}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="mb-1 block text-xs font-bold text-[var(--color-text-muted)]">
+                {t("dueDate")}
+              </label>
+              <input
+                type="date"
+                value={dueDate}
+                onChange={(e) => setDueDate(e.target.value)}
+                aria-label={t("dueDate")}
+                className={fieldClass}
+              />
+            </div>
           </div>
           {cases.length > 0 && (
-            <select
-              value={caseId}
-              onChange={(e) => setCaseId(e.target.value)}
-              aria-label={t("linkedCase")}
-              className="mb-3 w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] p-3 text-sm"
-            >
-              <option value="">{t("noLinkedCase")}</option>
-              {cases.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.caseNumber} — {c.beneficiaryPseudonym}
-                </option>
-              ))}
-            </select>
+            <>
+              <label className="mb-1 block text-xs font-bold text-[var(--color-text-muted)]">
+                {t("linkedCase")}
+              </label>
+              <select
+                value={caseId}
+                onChange={(e) => setCaseId(e.target.value)}
+                aria-label={t("linkedCase")}
+                className={`mb-4 ${fieldClass}`}
+              >
+                <option value="">{t("noLinkedCase")}</option>
+                {cases.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.caseNumber} — {c.beneficiaryPseudonym}
+                  </option>
+                ))}
+              </select>
+            </>
           )}
           <SaveButton
             saved={saved}
@@ -154,29 +225,58 @@ export function TasksTab({
       )}
 
       {filtered.length === 0 ? (
-        <EmptyState message={t("noTasks")} />
+        <div className="rounded-2xl border border-dashed border-[var(--color-sage-200)] bg-[var(--color-surface)] p-8 text-center shadow-1">
+          <ClipboardList
+            className="mx-auto mb-3 h-10 w-10 text-[var(--color-sage-400)]"
+            strokeWidth={1.5}
+            aria-hidden
+          />
+          <p className="mb-1 text-sm font-semibold text-[var(--color-text-primary)]">
+            {filter === "overdue"
+              ? t("emptyTasksOverdueTitle")
+              : filter === "today"
+                ? t("emptyTasksTodayTitle")
+                : t("emptyTasksTitle")}
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)]">{t("noTasks")}</p>
+        </div>
       ) : (
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-3">
           {filtered.map((task) => {
-            const overdue = task.dueDate && task.dueDate < today;
+            const overdue = Boolean(task.dueDate && task.dueDate < today);
+            const dueToday = task.dueDate === today;
             return (
               <li
                 key={task.id}
-                className="rounded-2xl bg-[var(--color-surface)] p-4 shadow-1"
+                className="rounded-2xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-4 shadow-1"
               >
-                <div className="mb-1 flex items-start justify-between gap-2">
-                  <span className="font-bold text-[var(--color-text-primary)]">
-                    {task.title.startsWith("operations.") ? t(task.title.replace("operations.", "")) : task.title}
+                <div className="mb-2 flex items-start justify-between gap-2">
+                  <span className="font-bold leading-snug text-[var(--color-text-primary)]">
+                    {task.title.startsWith("operations.")
+                      ? t(task.title.replace("operations.", ""))
+                      : task.title}
                   </span>
-                  <span
-                    className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-extrabold ${
-                      overdue
-                        ? "bg-[var(--color-danger-bg)] text-[var(--color-danger-text)]"
-                        : "bg-[var(--color-sage-100)] text-[var(--color-sage-800)]"
-                    }`}
-                  >
-                    {task.status}
-                  </span>
+                  <div className="flex shrink-0 flex-col items-end gap-1">
+                    <StatusBadge
+                      label={taskStatusLabel(task.status)}
+                      tone={taskStatusTone(task.status, overdue)}
+                      size="sm"
+                    />
+                    {overdue && (
+                      <StatusBadge
+                        label={t("filter_overdue")}
+                        tone="danger"
+                        size="sm"
+                      />
+                    )}
+                    {dueToday && !overdue && (
+                      <StatusBadge
+                        label={t("filter_today")}
+                        tone="warning"
+                        size="sm"
+                      />
+                    )}
+                  </div>
                 </div>
                 <p className="text-xs text-[var(--color-text-muted)]">
                   {t(`taskType_${task.taskType}`)}
@@ -184,16 +284,16 @@ export function TasksTab({
                   {task.dueDate && ` · ${t("dueDate")}: ${task.dueDate}`}
                 </p>
                 {task.description && (
-                  <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                     {task.description}
                   </p>
                 )}
                 <button
                   type="button"
                   onClick={() => void onCompleteTask(task.id)}
-                  className="mt-3 flex items-center gap-1 rounded-full border border-[var(--color-success-accent)] px-3 py-1.5 text-[11px] font-bold text-[var(--color-success-text)]"
+                  className="mt-4 inline-flex min-h-[44px] items-center gap-2 rounded-xl border border-[var(--color-success-accent)] bg-[var(--color-success-bg)] px-4 py-2.5 text-xs font-bold text-[var(--color-success-text)] transition-transform active:scale-[0.98]"
                 >
-                  <CheckCircle2 className="h-3.5 w-3.5" />
+                  <CheckCircle2 className="h-4 w-4" aria-hidden />
                   {t("completeTask")}
                 </button>
               </li>
