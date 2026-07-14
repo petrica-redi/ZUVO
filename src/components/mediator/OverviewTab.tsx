@@ -6,10 +6,12 @@ import {
   ClipboardList,
   FolderOpen,
   Footprints,
+  ListTodo,
   Presentation,
   Users,
 } from "lucide-react";
 import type { MediatorCase, MediatorVisit } from "@/lib/mediator/types";
+import type { NavigationCase } from "@/lib/operations/types";
 import type { MediatorLabels } from "./labels";
 import { ActionRow, EmptyState, FormCard, SaveButton, StatCard } from "./parts";
 
@@ -23,15 +25,25 @@ export function OverviewTab({
   labels,
   visits,
   cases,
+  navCases,
+  urgentCases,
+  overdueTasks,
+  tasksDueToday,
   onSaveVisit,
   onGoToCases,
+  onGoToTasks,
   onGoToSessions,
 }: {
   labels: MediatorLabels;
   visits: MediatorVisit[];
   cases: MediatorCase[];
+  navCases: NavigationCase[];
+  urgentCases: number;
+  overdueTasks: number;
+  tasksDueToday: number;
   onSaveVisit: (visit: MediatorVisit) => void;
   onGoToCases: () => void;
+  onGoToTasks: () => void;
   onGoToSessions: () => void;
 }) {
   const [open, setOpen] = useState(false);
@@ -40,8 +52,11 @@ export function OverviewTab({
   const [saved, setSaved] = useState(false);
 
   const openCases = useMemo(
-    () => cases.filter((c) => c.status !== "closed").length,
-    [cases],
+    () =>
+      navCases.filter(
+        (c) => !["completed", "closed_incomplete", "cancelled"].includes(c.status),
+      ).length,
+    [navCases],
   );
   const visitsThisMonth = useMemo(
     () => visits.filter((v) => isThisMonth(v.visitDate)).length,
@@ -94,6 +109,29 @@ export function OverviewTab({
         />
       </div>
 
+      {(urgentCases > 0 || overdueTasks > 0 || tasksDueToday > 0) && (
+        <div className="mb-6 grid grid-cols-3 gap-2">
+          <StatCard
+            icon={AlertTriangle}
+            value={String(urgentCases)}
+          label={labels.urgentCases}
+          tone="warning"
+        />
+        <StatCard
+          icon={ListTodo}
+          value={String(tasksDueToday)}
+          label={labels.tasksDueToday}
+          tone="info"
+        />
+        <StatCard
+          icon={ListTodo}
+          value={String(overdueTasks)}
+          label={labels.overdueTasks}
+            tone="warning"
+          />
+        </div>
+      )}
+
       <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
         {labels.quickActions}
       </h2>
@@ -107,6 +145,11 @@ export function OverviewTab({
           icon={FolderOpen}
           label={labels.newCase}
           onClick={onGoToCases}
+        />
+        <ActionRow
+          icon={ListTodo}
+          label={labels.tabTasks}
+          onClick={onGoToTasks}
         />
         <ActionRow
           icon={Presentation}

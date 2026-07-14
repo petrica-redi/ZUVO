@@ -19,7 +19,14 @@ export type AuditAction =
   | "module.completed"
   | "mediator.accessed_record"
   | "mediator.exported_data"
-  | "user.data_exported";
+  | "user.data_exported"
+  | "operations.case_created"
+  | "operations.case_status_changed"
+  | "operations.task_created"
+  | "operations.task_completed"
+  | "operations.intake_created"
+  | "operations.intake_converted"
+  | "operations.data_exported";
 
 export type AuditParams = {
   userId: string;

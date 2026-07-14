@@ -4,12 +4,15 @@ import { useState } from "react";
 import { useLocale } from "next-intl";
 import { CasesTab } from "@/components/mediator/CasesTab";
 import { IndicatorsTab } from "@/components/mediator/IndicatorsTab";
+import { OperationalCasesTab } from "@/components/mediator/OperationalCasesTab";
+import { TasksTab } from "@/components/mediator/TasksTab";
 import type { MediatorLabels } from "@/components/mediator/labels";
 import { OverviewTab } from "@/components/mediator/OverviewTab";
 import { SessionsTab } from "@/components/mediator/SessionsTab";
 import { ToolsTab } from "@/components/mediator/ToolsTab";
 import { TrainingTab } from "@/components/mediator/TrainingTab";
 import { useMediatorWorkspace } from "@/components/mediator/useMediatorWorkspace";
+import { useOperations } from "@/components/mediator/useOperations";
 import { WorkspaceHeader } from "@/components/mediator/WorkspaceHeader";
 import { WorkspaceTabs, type TabId } from "@/components/mediator/WorkspaceTabs";
 
@@ -21,6 +24,7 @@ export function MediatorDashboard({ labels }: { labels: MediatorLabels }) {
   const locale = useLocale();
   const [tab, setTab] = useState<TabId>("overview");
   const workspace = useMediatorWorkspace(true);
+  const operations = useOperations(true);
 
   return (
     <div>
@@ -46,11 +50,33 @@ export function MediatorDashboard({ labels }: { labels: MediatorLabels }) {
           labels={labels}
           visits={workspace.visits}
           cases={workspace.cases}
+          navCases={operations.cases}
+          urgentCases={operations.urgentCases.length}
+          overdueTasks={operations.overdueTasks.length}
+          tasksDueToday={operations.tasksDueToday.length}
           onSaveVisit={(visit) =>
             workspace.update({ visits: [visit, ...workspace.visits] })
           }
-          onGoToCases={() => setTab("cases")}
+          onGoToCases={() => setTab("navigation")}
+          onGoToTasks={() => setTab("tasks")}
           onGoToSessions={() => setTab("sessions")}
+        />
+      )}
+
+      {tab === "navigation" && (
+        <OperationalCasesTab
+          cases={operations.cases}
+          onCreateCase={operations.createCase}
+          onUpdateStatus={operations.updateCaseStatus}
+        />
+      )}
+
+      {tab === "tasks" && (
+        <TasksTab
+          tasks={operations.tasks}
+          cases={operations.cases}
+          onCreateTask={operations.createTask}
+          onCompleteTask={operations.completeTask}
         />
       )}
 
