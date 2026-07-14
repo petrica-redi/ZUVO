@@ -55,17 +55,30 @@ export function BottomNav() {
                 href={href}
                 aria-label={label}
                 aria-current={isActive ? "page" : undefined}
-                className="flex flex-col items-center gap-0.5 py-1 touch-target transition-colors"
+                className="group flex flex-col items-center gap-1 py-1 touch-target"
               >
-                <Icon
-                  className={`lucide h-[24px] w-[24px] transition-all ${
-                    isActive ? "text-[var(--color-accent)]" : "text-[var(--color-text-muted)]"
-                  }`}
-                  strokeWidth={isActive ? 2 : 1.6}
-                />
                 <span
-                  className={`text-[11px] font-semibold transition-colors ${
-                    isActive ? "text-[var(--color-accent)]" : "text-[var(--color-text-muted)]"
+                  className={`flex h-9 w-[52px] items-center justify-center rounded-full transition-all duration-200 ${
+                    isActive
+                      ? "bg-[var(--color-accent-soft)]"
+                      : "bg-transparent group-hover:bg-[var(--color-surface-hover)]"
+                  }`}
+                  style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
+                >
+                  <Icon
+                    className={`lucide h-[22px] w-[22px] transition-all duration-200 ${
+                      isActive
+                        ? "text-[var(--color-accent)]"
+                        : "text-[var(--color-text-muted)] group-hover:text-[var(--color-text-secondary)]"
+                    }`}
+                    strokeWidth={isActive ? 2.2 : 1.7}
+                  />
+                </span>
+                <span
+                  className={`text-[10.5px] leading-none transition-colors ${
+                    isActive
+                      ? "font-bold text-[var(--color-accent)]"
+                      : "font-semibold text-[var(--color-text-muted)]"
                   }`}
                 >
                   {label}

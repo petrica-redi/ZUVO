@@ -134,31 +134,40 @@
   --color-pillar-mental-bg:         #ECFEFF;
   --color-pillar-mental-border:     #A5F3FC;
 
-  /* ---- Layered shadow tiers ---- */
+  /* ---- Layered shadow tiers ----
+     Modern soft-elevation model: negative-spread ambient + tight contact
+     shadow. Reads as a light object floating over the canvas rather than a
+     hard drop-shadow. Kept low-opacity and slate-tinted for a calm, clinical
+     feel that still separates surfaces on the mint canvas. */
   --shadow-1:
-    0 1px 2px rgba(15, 23, 42, 0.04),
-    0 1px 1px rgba(15, 23, 42, 0.03);
+    0 1px 1px rgba(15, 23, 42, 0.04),
+    0 1px 2px -1px rgba(15, 23, 42, 0.05);
   --shadow-2:
-    0 2px 4px rgba(15, 23, 42, 0.04),
-    0 4px 12px rgba(15, 23, 42, 0.06);
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 4px 8px -2px rgba(15, 23, 42, 0.06);
   --shadow-3:
-    0 1px 2px rgba(15, 23, 42, 0.04),
-    0 8px 24px rgba(15, 23, 42, 0.08),
-    0 2px 4px rgba(15, 23, 42, 0.04);
+    0 2px 4px -1px rgba(15, 23, 42, 0.05),
+    0 12px 24px -6px rgba(15, 23, 42, 0.10);
   --shadow-4:
-    0 1px 2px rgba(15, 23, 42, 0.04),
-    0 12px 32px rgba(15, 23, 42, 0.10),
-    0 24px 48px rgba(15, 23, 42, 0.06);
+    0 4px 8px -2px rgba(15, 23, 42, 0.05),
+    0 24px 48px -12px rgba(15, 23, 42, 0.16);
   --shadow-brand:
-    0 1px 2px rgba(14, 128, 116, 0.10),
-    0 8px 24px rgba(14, 128, 116, 0.22),
-    0 0 0 1px rgba(14, 128, 116, 0.08);
+    0 2px 6px -1px rgba(13, 104, 95, 0.24),
+    0 12px 28px -8px rgba(13, 104, 95, 0.32);
   --shadow-ember:
-    0 1px 2px rgba(245, 158, 11, 0.10),
-    0 8px 24px rgba(245, 158, 11, 0.20);
+    0 2px 6px -1px rgba(217, 119, 6, 0.22),
+    0 12px 28px -8px rgba(217, 119, 6, 0.30);
   --shadow-danger:
-    0 1px 2px rgba(220, 38, 38, 0.10),
-    0 8px 24px rgba(220, 38, 38, 0.25);
+    0 2px 6px -1px rgba(220, 38, 38, 0.22),
+    0 12px 28px -8px rgba(220, 38, 38, 0.32);
+
+  /* ---- Radius scale (consistent rounding language) ---- */
+  --radius-sm: 0.5rem;   /* 8px  — chips, small controls */
+  --radius-md: 0.75rem;  /* 12px — inputs, icon tiles */
+  --radius-lg: 1rem;     /* 16px — buttons, small cards */
+  --radius-xl: 1.5rem;   /* 24px — cards */
+  --radius-2xl: 2rem;    /* 32px — hero cards, sheets */
+  --radius-pill: 999px;
 
   /* ---- Fluid type scale (clamp) ---- */
   --text-xs:      clamp(0.6875rem, 0.65rem + 0.18vw, 0.75rem);
@@ -273,6 +282,17 @@ body {
   min-height: 100dvh;
   background: var(--color-bg-canvas);
   color: var(--color-text-primary);
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings wrap to balanced, even lines instead of an orphan word on the
+   last line — a small detail that reads as professionally typeset. */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+/* Paragraphs avoid single-word orphans. */
+p {
+  text-wrap: pretty;
 }
 
 a,
@@ -628,14 +648,17 @@ button {
 *:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
+/* Inputs get a soft brand halo instead of a hard outline — clearer affordance,
+   less jarring than a 2px ring butted against the field edge. */
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 0;
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
 }
 
 /* Refined Lucide icon stroke for premium feel */
