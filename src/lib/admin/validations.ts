@@ -11,5 +11,8 @@ export const configSchema = z.object({
   heroSubtitle: z.string().optional(),
   heroImage: z.string().optional(),
   heroLayout: z.enum(["split", "center"]).optional(),
+  fontSans: z.string().optional(),
+  fontDisplay: z.string().optional(),
+  fontEditorial: z.string().optional(),
   customCss: z.string().optional(),
 });

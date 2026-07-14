@@ -7,7 +7,7 @@ import { SosButton } from "@/components/SosButton";
 import {
   Search, Stethoscope, Syringe, Navigation, BookOpen,
   MapPin, Shield, User, Settings, ChevronRight, Heart, Activity,
-  Scale, GraduationCap,
+  Scale, GraduationCap, Sparkles,
 } from "lucide-react";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -45,6 +45,7 @@ const SECTIONS = [
     id: "professional" as const,
     items: [
       { href: "/mediator", icon: Shield, key: "mediator", gradient: "from-teal-600 to-cyan-700" },
+      { href: "/demo", icon: Sparkles, key: "demo", gradient: "from-blue-500 to-emerald-600" },
     ],
   },
   {

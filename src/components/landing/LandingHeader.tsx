@@ -68,6 +68,12 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
             {tFooter("methodology")}
           </Link>
           <Link
+            href="/demo"
+            className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
+          >
+            {t("demoNav")}
+          </Link>
+          <Link
             href="/impact"
             className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
           >
@@ -81,11 +87,10 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
             <ThemeToggle />
           </div>
           <Link
-            href="/mediator"
-            className="inline-flex h-9 items-center gap-1.5 rounded-full bg-[var(--color-text-primary)] px-4 text-[13px] font-extrabold text-[var(--color-bg-canvas)] shadow-2 transition-transform active:scale-95"
+            href="/demo"
+            className="inline-flex h-9 items-center gap-1.5 rounded-full bg-gradient-to-r from-[#2563EB] to-[#059669] px-4 text-[13px] font-extrabold text-white shadow-brand transition-transform active:scale-95"
           >
-            {t("navMediator")}
-            <ArrowRight className="lucide h-3.5 w-3.5" strokeWidth={2.2} />
+            {t("demoNav")}
           </Link>
         </div>
       </div>

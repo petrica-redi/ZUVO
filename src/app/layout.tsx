@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import { getLocale } from "next-intl/server";
 import { getAppConfig } from "@/lib/env";
 import { getPlatformConfig } from "@/lib/admin/actions";
+import { buildFontStyles } from "@/lib/admin/fonts";
 import { Inter, Geist, Fraunces } from "next/font/google";
 import "./globals.css";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
@@ -53,6 +54,11 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
 
   const platformConfig = await getPlatformConfig();
   const customCss = platformConfig?.customCss || "";
+  const fontStyles = buildFontStyles({
+    fontSans: platformConfig?.fontSans,
+    fontDisplay: platformConfig?.fontDisplay,
+    fontEditorial: platformConfig?.fontEditorial,
+  });
 
   return (
     <html
@@ -84,7 +90,16 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <meta name="msapplication-TileColor" content="#0E8074" />
         <meta name="msapplication-TileImage" content="/icon-192.svg" />
 
-        {customCss && <style dangerouslySetInnerHTML={{ __html: customCss }} />}
+        {fontStyles.linkHref && (
+          <link rel="stylesheet" href={fontStyles.linkHref} />
+        )}
+        {(fontStyles.css || customCss) && (
+          <style
+            dangerouslySetInnerHTML={{
+              __html: [fontStyles.css, customCss].filter(Boolean).join("\n"),
+            }}
+          />
+        )}
 
         {/* Inline theme bootstrapper to avoid flash of unstyled content. */}
         <script

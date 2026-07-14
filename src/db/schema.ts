@@ -304,6 +304,9 @@ export const platformConfig = pgTable("platform_config", {
   heroSubtitle: text("hero_subtitle"),
   heroImage: text("hero_image"),
   heroLayout: text("hero_layout").default("split"), // 'split' | 'center'
+  fontSans: text("font_sans"),
+  fontDisplay: text("font_display"),
+  fontEditorial: text("font_editorial"),
   customCss: text("custom_css"),
   updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
 });

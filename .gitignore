@@ -59,3 +59,4 @@ next-env.d.ts
 /android/app/build
 /android/local.properties
 /.capacitor
+.env*

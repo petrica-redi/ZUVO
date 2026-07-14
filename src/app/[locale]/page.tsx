@@ -32,6 +32,10 @@ import { LandingHeader } from "@/components/landing/LandingHeader";
 import { LandingFooter } from "@/components/landing/LandingFooter";
 import { ProfileShellOptOut } from "@/components/landing/ProfileShellOptOut";
 import { LandingVisualMosaic } from "@/components/landing/LandingVisualMosaic";
+import { CareModelSection } from "@/components/landing/CareModelSection";
+import { IntegratedPlatformSection } from "@/components/landing/IntegratedPlatformSection";
+import { TechnologyShowcase } from "@/components/landing/TechnologyShowcase";
+import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -167,7 +171,7 @@ export default async function HomePage({ params }: Props) {
             className="pointer-events-none absolute inset-0 -z-10"
             style={{
               background:
-                "radial-gradient(ellipse 80% 60% at 70% 0%, rgba(24,154,140,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 0% 100%, rgba(110,140,94,0.10) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 100% 100%, rgba(251,191,36,0.06) 0%, transparent 60%)",
+                "radial-gradient(ellipse 80% 60% at 70% 0%, rgba(37,99,235,0.14) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 0% 100%, rgba(16,185,129,0.12) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 100% 100%, rgba(13,148,136,0.08) 0%, transparent 60%)",
             }}
           />
           <div
@@ -364,6 +368,8 @@ export default async function HomePage({ params }: Props) {
           </div>
         </section>
 
+        <IntegratedPlatformSection />
+
         {/* ===== AUDIENCE TRIPTYCH ================================ */}
         <section className="section-marketing">
           <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -437,6 +443,10 @@ export default async function HomePage({ params }: Props) {
           </div>
         </section>
 
+        <CareModelSection />
+
+        <TechnologyShowcase />
+
         {/* ===== IMPACT + METHODOLOGY (split editorial) =========== */}
         <section className="section-marketing">
           <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -490,6 +500,8 @@ export default async function HomePage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        <TestimonialsSection />
 
         {/* ===== GOVERNMENT DEPLOYMENT (Romania ↔ Italy) ========== */}
         <section

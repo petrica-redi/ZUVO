@@ -6,8 +6,8 @@ import { getDb } from "@/db/client";
 import { platformConfig } from "@/db/schema";
 import { eq } from "drizzle-orm";
 
-const ADMIN_EMAIL = "petrica@redi-ngo.eu";
-const ADMIN_PASS = "Welcome2REDI*";
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL?.trim() || "petrica@redi-ngo.eu";
+const ADMIN_PASS = process.env.ADMIN_PASSWORD?.trim() || "Welcome2REDI*";
 const SESSION_COOKIE = "admin_session";
 
 export async function loginAdmin(data: FormData) {

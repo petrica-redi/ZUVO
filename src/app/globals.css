@@ -34,18 +34,24 @@
   --color-neutral-900:  #0F172A;
   --color-neutral-950:  #020617;
 
-  /* ---- Brand: Adriatic (teal primary) ---- */
-  --color-brand-50:   #EFFAF7;
-  --color-brand-100:  #D4F3EC;
-  --color-brand-200:  #A9E6DC;
-  --color-brand-300:  #74D2C4;
-  --color-brand-400:  #3DB6A7;
-  --color-brand-500:  #189A8C;
-  --color-brand-600:  #0E8074;
-  --color-brand-700:  #0D685F;
-  --color-brand-800:  #0D534C;
-  --color-brand-900:  #0C443F;
-  --color-brand-950:  #052925;
+  /* ---- Brand: Health green (Dawa-inspired, paired with medical blue) ---- */
+  --color-brand-50:   #ECFDF5;
+  --color-brand-100:  #D1FAE5;
+  --color-brand-200:  #A7F3D0;
+  --color-brand-300:  #6EE7B7;
+  --color-brand-400:  #34D399;
+  --color-brand-500:  #10B981;
+  --color-brand-600:  #059669;
+  --color-brand-700:  #047857;
+  --color-brand-800:  #065F46;
+  --color-brand-950:  #022C22;
+
+  /* ---- Medical blue (secondary trust accent) ---- */
+  --color-blue-50:    #EFF6FF;
+  --color-blue-100:   #DBEAFE;
+  --color-blue-500:   #3B82F6;
+  --color-blue-600:   #2563EB;
+  --color-blue-700:   #1D4ED8;
 
   /* ---- Accent: Ember (amber/gold for XP, achievements, premium) ---- */
   --color-ember-50:   #FFFBEB;
@@ -71,7 +77,7 @@
   --color-bg:              var(--color-neutral-50);
   --color-bg-subtle:       var(--color-neutral-100);
   --color-bg-elevated:     var(--color-neutral-0);
-  --color-bg-canvas:       #F3F8F6;            /* App canvas, soft mint-neutral */
+  --color-bg-canvas:       #F0F9FF;            /* Soft blue-green canvas */
   --color-bg-inverse:      var(--color-neutral-900);
 
   --color-surface:         var(--color-neutral-0);
@@ -89,10 +95,11 @@
   --color-text-inverse:    var(--color-neutral-0);
   --color-text-brand:      var(--color-brand-700);
 
-  --color-accent:          var(--color-brand-600);
-  --color-accent-hover:    var(--color-brand-700);
-  --color-accent-soft:     var(--color-brand-50);
-  --color-accent-text:     var(--color-brand-700);
+  --color-accent:          var(--color-blue-600);
+  --color-accent-hover:    var(--color-blue-700);
+  --color-accent-soft:     var(--color-blue-50);
+  --color-accent-text:     var(--color-blue-700);
+  --color-accent-green:    var(--color-brand-600);
 
   --color-success-bg:      #ECFDF5;
   --color-success-border:  #A7F3D0;
@@ -152,8 +159,8 @@
     0 4px 8px -2px rgba(15, 23, 42, 0.05),
     0 24px 48px -12px rgba(15, 23, 42, 0.16);
   --shadow-brand:
-    0 2px 6px -1px rgba(13, 104, 95, 0.24),
-    0 12px 28px -8px rgba(13, 104, 95, 0.32);
+    0 2px 6px -1px rgba(37, 99, 235, 0.22),
+    0 12px 28px -8px rgba(5, 150, 105, 0.28);
   --shadow-ember:
     0 2px 6px -1px rgba(217, 119, 6, 0.22),
     0 12px 28px -8px rgba(217, 119, 6, 0.30);
@@ -459,9 +466,9 @@ button {
 /* --- Premium gradients --- */
 .gradient-brand {
   background:
-    radial-gradient(circle at 30% 0%, #189A8C 0%, transparent 50%),
-    radial-gradient(circle at 80% 100%, #34D399 0%, transparent 55%),
-    linear-gradient(135deg, #0D685F 0%, #0C5A60 50%, #052925 100%);
+    radial-gradient(circle at 20% 0%, #3B82F6 0%, transparent 50%),
+    radial-gradient(circle at 80% 100%, #10B981 0%, transparent 55%),
+    linear-gradient(135deg, #1D4ED8 0%, #0D9488 45%, #059669 100%);
 }
 
 .gradient-ember {
@@ -478,9 +485,9 @@ button {
 
 .gradient-aurora {
   background:
-    radial-gradient(ellipse at 0% 0%, rgba(24, 154, 140, 0.18) 0%, transparent 50%),
-    radial-gradient(ellipse at 100% 100%, rgba(251, 191, 36, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 100% 0%, rgba(110, 140, 94, 0.12) 0%, transparent 50%);
+    radial-gradient(ellipse at 0% 0%, rgba(37, 99, 235, 0.14) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(16, 185, 129, 0.14) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 0%, rgba(13, 148, 136, 0.10) 0%, transparent 50%);
 }
 
 /* --- Grain overlay (kills banding on gradients) --- */
