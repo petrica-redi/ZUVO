@@ -70,7 +70,7 @@ export default async function HomePage({ params }: Props) {
         {/* ===== PLATFORM NAV DECK (first screen) ================== */}
         <section
           aria-labelledby="platform-nav-title"
-          className="relative border-b border-[var(--color-border-subtle)] bg-[var(--color-surface)]"
+          className="hidden"
         >
           <div className="mx-auto max-w-6xl px-5 pb-10 pt-8 md:px-8 md:pb-14 md:pt-10">
             <header className="mb-8 flex flex-col gap-3 md:mb-10 md:flex-row md:items-end md:justify-between">

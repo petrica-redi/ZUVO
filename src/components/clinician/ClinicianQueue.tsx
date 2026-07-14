@@ -120,10 +120,10 @@ export function ClinicianQueue({ locale }: { locale: string }) {
                       {item.ref}
                     </span>
                     <span className="mt-1 block text-xs leading-relaxed text-[var(--color-text-secondary)]">
-                      {item.summary}
+                      {lang === "ro" ? item.summaryRo : item.summary}
                     </span>
                     <span className="mt-2 block text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
-                      {item.received}
+                      {lang === "ro" ? item.receivedRo : item.received}
                     </span>
                   </span>
                   <ChevronRight className="mt-2 h-4 w-4 shrink-0 text-[var(--color-text-muted)]" />
@@ -140,7 +140,9 @@ export function ClinicianQueue({ locale }: { locale: string }) {
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/60">
                   {selected.ref}
                 </p>
-                <h2 className="mt-1 font-display text-xl font-extrabold">{selected.summary}</h2>
+                <h2 className="mt-1 font-display text-xl font-extrabold">
+                  {lang === "ro" ? selected.summaryRo : selected.summary}
+                </h2>
               </div>
               <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-extrabold ${severity[selected.severity].badge}`}>
                 {(() => {
@@ -156,15 +158,21 @@ export function ClinicianQueue({ locale }: { locale: string }) {
             <dl className="grid grid-cols-2 gap-4 rounded-2xl bg-[var(--color-neutral-50)] p-4 md:grid-cols-3">
               <div>
                 <dt className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">{copy.age}</dt>
-                <dd className="mt-1 text-sm font-bold text-[var(--color-text-primary)]">{selected.age}</dd>
+                <dd className="mt-1 text-sm font-bold text-[var(--color-text-primary)]">
+                  {lang === "ro" ? selected.ageRo : selected.age}
+                </dd>
               </div>
               <div>
                 <dt className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">{copy.received}</dt>
-                <dd className="mt-1 text-sm font-bold text-[var(--color-text-primary)]">{selected.received}</dd>
+                <dd className="mt-1 text-sm font-bold text-[var(--color-text-primary)]">
+                  {lang === "ro" ? selected.receivedRo : selected.received}
+                </dd>
               </div>
               <div className="col-span-2 md:col-span-1">
                 <dt className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">{copy.source}</dt>
-                <dd className="mt-1 text-sm font-bold text-[var(--color-text-primary)]">{selected.source}</dd>
+                <dd className="mt-1 text-sm font-bold text-[var(--color-text-primary)]">
+                  {lang === "ro" ? selected.sourceRo : selected.source}
+                </dd>
               </div>
             </dl>
 
@@ -175,7 +183,7 @@ export function ClinicianQueue({ locale }: { locale: string }) {
                   {copy.context}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                  {selected.context}
+                  {lang === "ro" ? selected.contextRo : selected.context}
                 </p>
               </div>
               <div className="rounded-2xl border border-[var(--color-border-subtle)] p-5">
@@ -184,7 +192,7 @@ export function ClinicianQueue({ locale }: { locale: string }) {
                   {copy.action}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                  {selected.action}
+                  {lang === "ro" ? selected.actionRo : selected.action}
                 </p>
               </div>
             </div>
