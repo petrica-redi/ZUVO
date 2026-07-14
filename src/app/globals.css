@@ -554,6 +554,11 @@ button {
   to   { transform: translateY(0); }
 }
 
+@keyframes demo-fab-pulse {
+  0%, 100% { box-shadow: 0 8px 28px rgba(37, 99, 235, 0.4); }
+  50%      { box-shadow: 0 8px 36px rgba(5, 150, 105, 0.55), 0 0 0 8px rgba(37, 99, 235, 0.12); }
+}
+
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 0 0 rgba(24, 154, 140, 0.45); }
   50%      { box-shadow: 0 0 0 14px rgba(24, 154, 140, 0); }

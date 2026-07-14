@@ -215,21 +215,21 @@ export default async function HomePage({ params }: Props) {
 
                 <div className={`mt-9 flex flex-wrap items-center gap-3 animate-fade-in-up delay-300 ${heroLayout === "center" ? "justify-center" : ""}`}>
                   <Link
-                    href="/mediator"
+                    href="/demo"
                     className="group inline-flex h-13 items-center gap-2 rounded-full px-7 py-4 text-sm font-extrabold text-white gradient-brand grain-overlay shadow-brand transition-all hover:shadow-4 active:scale-[0.97]"
                     style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
                   >
-                    {t("navMediator")}
+                    {t("demoCtaHero")}
                     <ArrowRight
                       className="lucide h-4 w-4 transition-transform group-hover:translate-x-0.5"
                       strokeWidth={2.2}
                     />
                   </Link>
                   <Link
-                    href="/methodology"
+                    href="/mediator"
                     className="inline-flex h-13 items-center gap-2 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] px-6 py-4 text-sm font-extrabold text-[var(--color-text-primary)] transition-all hover:border-[var(--color-text-primary)]"
                   >
-                    {t("ctaSecondary")}
+                    {t("ctaPrimary")}
                   </Link>
                 </div>
 

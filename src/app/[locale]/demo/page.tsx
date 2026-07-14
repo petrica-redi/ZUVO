@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
 import { getAppConfig } from "@/lib/env";
 import DemoPageClient from "./page.client";
@@ -9,9 +10,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "demo" });
   const { appName } = getAppConfig();
-  return { title: `${t("title")} — ${appName}`, description: t("lead") };
+  return { title: `${t("tourIntroTitle")} — ${appName}`, description: t("tourIntroLead") };
 }
 
 export default function DemoPage() {
-  return <DemoPageClient />;
+  return (
+    <Suspense fallback={<div className="min-h-[100dvh] bg-[#0A1628]" aria-busy="true" />}>
+      <DemoPageClient />
+    </Suspense>
+  );
 }
