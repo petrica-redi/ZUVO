@@ -33,7 +33,7 @@ export async function handleMissedAppointment(
   const db = getDb();
   if (!db) return null;
 
-  let caseId = input.caseId;
+  const caseId = input.caseId;
   let beneficiaryPseudonym = input.beneficiaryPseudonym;
   let urgency: "routine" | "priority" | "urgent" = "priority";
 

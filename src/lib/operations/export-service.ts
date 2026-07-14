@@ -1,6 +1,6 @@
 import { eq, desc } from "drizzle-orm";
 import { getDb } from "@/db/client";
-import { dataExports, navigationCases, qualityFlags } from "@/db/schema";
+import { dataExports, navigationCases } from "@/db/schema";
 import type { ExportScope, ExportType } from "./constants";
 import {
   canExportIdentifiable,

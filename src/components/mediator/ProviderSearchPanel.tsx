@@ -45,7 +45,8 @@ export function ProviderSearchPanel({
   }, [navCase]);
 
   useEffect(() => {
-    void runSearch();
+    const timer = window.setTimeout(() => void runSearch(), 0);
+    return () => window.clearTimeout(timer);
   }, [runSearch]);
 
   return (
