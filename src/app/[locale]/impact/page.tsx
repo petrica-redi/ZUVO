@@ -3,9 +3,21 @@ import { getTranslations } from "next-intl/server";
 import { getAppConfig } from "@/lib/env";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
-import { ShieldCheck, Activity, Users, FileText, Mail, BarChart3 } from "lucide-react";
+import {
+  ShieldCheck,
+  Activity,
+  Users,
+  FileText,
+  Mail,
+  BarChart3,
+  TrendingUp,
+  LockKeyhole,
+  MapPinned,
+  Database,
+} from "lucide-react";
 import { Card } from "@/components/ui";
 import { formatImpactNumber, getImpactStats } from "@/lib/impact/stats";
+import { DEMO_COUNTY_SNAPSHOTS } from "@/lib/demo/seed-data";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -21,59 +33,182 @@ export default async function ImpactPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "impact" });
   const stats = await getImpactStats();
   const live = stats.source === "live";
+  const copy =
+    locale === "ro"
+      ? {
+          eyebrow: "Tablou național · vedere minister",
+          provenanceLive: "Date operaționale live",
+          provenanceDemo: "Date demonstrative ilustrative",
+          provenanceBodyLive: "Agregate din spațiile mediatorilor, actualizate automat.",
+          provenanceBodyDemo:
+            "Scenariu realist pentru demonstrație. Nu reprezintă beneficiari sau rezultate reale.",
+          counties: "Acoperire pe județe",
+          countiesLead: "Date agregate pentru planificare — fără nume sau dosare individuale.",
+          county: "Județ",
+          referrals: "Trimiteri",
+          trend: "față de luna trecută",
+          safeguards: "Guvernanță și protecția datelor",
+          safeguard1: "Zero nume de beneficiari în această vedere",
+          safeguard2: "Prag minim înainte de afișarea unui indicator",
+          safeguard3: "Exporturi auditate și acces pe roluri",
+          pois: "Indicatori de acces facilitați",
+          poisValue: "înscrieri la medicul de familie",
+          updated: "Actualizat pentru prezentarea stakeholderilor",
+        }
+      : {
+          eyebrow: "National dashboard · ministry view",
+          provenanceLive: "Live operational data",
+          provenanceDemo: "Illustrative demonstration data",
+          provenanceBodyLive: "Aggregated from mediator workspaces and updated automatically.",
+          provenanceBodyDemo:
+            "A realistic presentation scenario. It does not represent real beneficiaries or outcomes.",
+          counties: "County coverage",
+          countiesLead: "Aggregated planning data — no names or individual case files.",
+          county: "County",
+          referrals: "Referrals",
+          trend: "vs last month",
+          safeguards: "Governance and data safeguards",
+          safeguard1: "Zero beneficiary names in this view",
+          safeguard2: "Minimum threshold before an indicator is shown",
+          safeguard3: "Audited exports and role-based access",
+          pois: "Access indicators facilitated",
+          poisValue: "GP enrolments",
+          updated: "Updated for stakeholder presentation",
+        };
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
       <Header />
       <main id="main-content" className="flex-1 pb-8">
-        <div className="mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
-          <div className="mb-8 text-center animate-fade-in-up">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-3xl gradient-brand grain-overlay shadow-brand">
-              <BarChart3 className="lucide h-8 w-8 text-white" strokeWidth={1.85} />
+        <div className="mx-auto max-w-6xl px-4 py-8 md:px-8 md:py-12">
+          <div className="mb-8 grid items-end gap-6 md:grid-cols-[1fr_auto] animate-fade-in-up">
+            <div>
+              <p className="eyebrow">
+                <MapPinned className="h-3.5 w-3.5" />
+                {copy.eyebrow}
+              </p>
+              <h1 className="font-editorial mt-3 text-4xl font-medium tracking-tight text-[var(--color-text-primary)] md:text-5xl">
+                {t("title")}
+              </h1>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-base">
+                {t("subtitle")}
+              </p>
             </div>
-            <h1 className="font-display text-3xl font-extrabold tracking-tight text-[var(--color-text-primary)] md:text-4xl">
-              {t("title")}
-            </h1>
-            <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-base max-w-md mx-auto">
-              {t("subtitle")}
-            </p>
+            <div
+              className={`max-w-sm rounded-2xl border px-4 py-3 ${
+                live
+                  ? "border-[var(--color-success-border)] bg-[var(--color-success-bg)]"
+                  : "border-amber-200 bg-amber-50"
+              }`}
+            >
+              <p className="flex items-center gap-2 text-xs font-extrabold text-[var(--color-text-primary)]">
+                <Database className="h-4 w-4" />
+                {live ? copy.provenanceLive : copy.provenanceDemo}
+              </p>
+              <p className="mt-1 text-[11px] leading-relaxed text-[var(--color-text-secondary)]">
+                {live ? copy.provenanceBodyLive : copy.provenanceBodyDemo}
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 mb-10 animate-fade-in-up delay-100">
-            <Card variant="elevated" className="p-5 text-center">
-              <ShieldCheck className="lucide h-6 w-6 mx-auto mb-2 text-[var(--color-success-accent)]" strokeWidth={2} />
-              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">
-                {live ? formatImpactNumber(stats.mythsChecked) : "—"}
-              </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] mt-1">{t("statMyths")}</div>
-            </Card>
-            <Card variant="elevated" className="p-5 text-center">
-              <Activity className="lucide h-6 w-6 mx-auto mb-2 text-[var(--color-danger-accent)]" strokeWidth={2} />
-              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">
-                {live ? stats.emergenciesEscalated : "—"}
-              </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] mt-1">{t("statEmergencies")}</div>
-            </Card>
-            <Card variant="elevated" className="p-5 text-center">
-              <Users className="lucide h-6 w-6 mx-auto mb-2 text-[var(--color-info-accent)]" strokeWidth={2} />
-              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">
-                {live ? stats.activeMediators : "—"}
-              </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] mt-1">{t("statMediators")}</div>
-            </Card>
-            <Card variant="elevated" className="p-5 text-center">
-              <FileText className="lucide h-6 w-6 mx-auto mb-2 text-[var(--color-ember-500)]" strokeWidth={2} />
-              <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)]">
-                {live ? formatImpactNumber(stats.visitsThisYear) : "—"}
-              </div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] mt-1">{t("statVisits")}</div>
-            </Card>
+          <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5 animate-fade-in-up delay-100">
+            {[
+              [ShieldCheck, formatImpactNumber(stats.mythsChecked), t("statMyths"), "text-emerald-600"],
+              [Activity, String(stats.emergenciesEscalated), t("statEmergencies"), "text-red-600"],
+              [Users, String(stats.activeMediators), t("statMediators"), "text-blue-600"],
+              [FileText, formatImpactNumber(stats.visitsThisYear), t("statVisits"), "text-violet-600"],
+            ].map(([Icon, value, label, tone]) => {
+              const StatIcon = Icon as typeof BarChart3;
+              return (
+                <Card key={String(label)} variant="elevated" className="p-5 md:p-6">
+                  <StatIcon className={`mb-4 h-5 w-5 ${tone}`} strokeWidth={2} />
+                  <div className="font-display text-3xl font-extrabold text-[var(--color-text-primary)] md:text-4xl">
+                    {String(value)}
+                  </div>
+                  <div className="mt-2 text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)] md:text-xs">
+                    {String(label)}
+                  </div>
+                </Card>
+              );
+            })}
           </div>
-          {live && (
-            <p className="mb-8 text-center text-xs text-[var(--color-success-text)]">
-              {t("liveNote")} · {stats.countiesReporting} {t("countiesReporting")}
-            </p>
-          )}
+
+          <div className="mb-8 grid gap-5 lg:grid-cols-[1.45fr_0.55fr]">
+            <Card variant="elevated" className="overflow-hidden p-0">
+              <div className="border-b border-[var(--color-border-subtle)] px-6 py-5">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <h2 className="font-display text-lg font-extrabold text-[var(--color-text-primary)]">
+                      {copy.counties}
+                    </h2>
+                    <p className="mt-1 text-xs text-[var(--color-text-secondary)]">
+                      {copy.countiesLead}
+                    </p>
+                  </div>
+                  <span className="rounded-full bg-violet-50 px-3 py-1 text-xs font-extrabold text-violet-700">
+                    {stats.countiesReporting} {t("countiesReporting")}
+                  </span>
+                </div>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[620px] text-left text-sm">
+                  <thead className="bg-[var(--color-neutral-50)] text-[10px] uppercase tracking-wider text-[var(--color-text-muted)]">
+                    <tr>
+                      <th className="px-6 py-3 font-extrabold">{copy.county}</th>
+                      <th className="px-4 py-3 font-extrabold">{t("statMediators")}</th>
+                      <th className="px-4 py-3 font-extrabold">{t("statVisits")}</th>
+                      <th className="px-4 py-3 font-extrabold">{copy.referrals}</th>
+                      <th className="px-6 py-3 font-extrabold">{copy.trend}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {DEMO_COUNTY_SNAPSHOTS.map((row) => (
+                      <tr key={row.county} className="border-t border-[var(--color-border-subtle)]">
+                        <td className="px-6 py-4 font-bold text-[var(--color-text-primary)]">{row.county}</td>
+                        <td className="px-4 py-4 text-[var(--color-text-secondary)]">{row.mediators}</td>
+                        <td className="px-4 py-4 text-[var(--color-text-secondary)]">{row.visits}</td>
+                        <td className="px-4 py-4 text-[var(--color-text-secondary)]">{row.referrals}</td>
+                        <td className="px-6 py-4">
+                          <span className="inline-flex items-center gap-1 font-bold text-emerald-700">
+                            <TrendingUp className="h-3.5 w-3.5" /> +{row.trend}%
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Card>
+
+            <div className="grid gap-5">
+              <Card variant="elevated" className="bg-gradient-to-br from-violet-700 to-indigo-800 p-6 text-white">
+                <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-white/70">
+                  {copy.pois}
+                </p>
+                <p className="mt-4 font-display text-4xl font-extrabold">
+                  {stats.gpEnrollmentsFacilitated}
+                </p>
+                <p className="mt-1 text-sm text-white/80">{copy.poisValue}</p>
+                <div className="mt-6 h-2 overflow-hidden rounded-full bg-white/15">
+                  <div className="h-full w-[72%] rounded-full bg-emerald-400" />
+                </div>
+              </Card>
+              <Card variant="elevated" className="p-6">
+                <h2 className="flex items-center gap-2 font-display text-base font-extrabold text-[var(--color-text-primary)]">
+                  <LockKeyhole className="h-5 w-5 text-emerald-600" />
+                  {copy.safeguards}
+                </h2>
+                <ul className="mt-4 space-y-3 text-xs leading-relaxed text-[var(--color-text-secondary)]">
+                  {[copy.safeguard1, copy.safeguard2, copy.safeguard3].map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </div>
+          </div>
 
           <Card variant="elevated" className="overflow-hidden border-0 gradient-brand grain-overlay text-white shadow-3 animate-fade-in-up delay-200">
             <div className="p-6 md:p-8 text-center">
@@ -92,6 +227,9 @@ export default async function ImpactPage({ params }: Props) {
               </a>
             </div>
           </Card>
+          <p className="mt-4 text-center text-[10px] uppercase tracking-wider text-[var(--color-text-muted)]">
+            {live ? t("liveNote") : copy.updated}
+          </p>
         </div>
       </main>
       <BottomNav />

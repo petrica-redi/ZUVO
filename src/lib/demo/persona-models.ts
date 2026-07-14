@@ -104,7 +104,7 @@ export const PERSONA_MODELS: Record<DemoPersonaId, PersonaModel> = {
     homeHref: "/impact",
     accentVar: "#7C3AED",
     panelKey: "manager",
-    allowedPrefixes: ["/impact", "/methodology", DEMO, SHARED_MORE, "/about"],
+    allowedPrefixes: ["/impact", "/methodology", "/privacy", DEMO, SHARED_MORE, "/about"],
     navTabs: [
       { key: "impact", href: "/impact", Icon: BarChart3, isPrimary: true },
       { key: "methodology", href: "/methodology", Icon: FileText },

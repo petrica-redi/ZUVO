@@ -9,9 +9,6 @@ CREATE TABLE IF NOT EXISTS platform_config (
   font_sans text,
   font_display text,
   font_editorial text,
-  font_sans text,
-  font_display text,
-  font_editorial text,
   custom_css text,
   updated_at timestamptz DEFAULT now()
 );

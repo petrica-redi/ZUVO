@@ -1,5 +1,5 @@
 /**
- * Drizzle ORM schema — Redi Health / Zuvo
+ * Drizzle ORM schema — Redi Health
  *
  * Primary persistence is Supabase PostgreSQL (with RLS).
  * This schema mirrors the core tables for type-safe queries via Drizzle.

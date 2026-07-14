@@ -36,7 +36,7 @@ export type AppConfig = {
 };
 
 export function getAppConfig(): AppConfig {
-  const appName = process.env.NEXT_PUBLIC_APP_NAME?.trim() || "Zuvo";
+  const appName = process.env.NEXT_PUBLIC_APP_NAME?.trim() || "Redi Health";
   const defaultLocaleRaw = process.env.NEXT_PUBLIC_DEFAULT_LOCALE?.trim();
   const defaultLocale = defaultLocaleRaw && supportedLocaleSchema.safeParse(defaultLocaleRaw).success ? (defaultLocaleRaw as SupportedLocale) : "ro";
   const supportedLocales = parseSupportedLocales(process.env.NEXT_PUBLIC_SUPPORTED_LOCALES);

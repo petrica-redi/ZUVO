@@ -1,6 +1,6 @@
 /**
- * Live platform impact statistics from the database.
- * Falls back to zero when DB is unavailable — never fabricates numbers.
+ * Platform impact statistics from the database.
+ * Falls back to an explicitly labelled illustrative stakeholder dataset.
  */
 
 import { count, sql } from "drizzle-orm";
@@ -8,9 +8,10 @@ import { getDb } from "@/db/client";
 import { healthLogs, mediatorWorkspaces, progress } from "@/db/schema";
 import { aggregateNational } from "@/lib/mediator/aggregate";
 import { LOCALES } from "@/i18n/routing";
+import { DEMO_IMPACT_STATS } from "@/lib/demo/seed-data";
 
 export type ImpactStats = {
-  source: "live" | "unavailable";
+  source: "live" | "illustrative";
   languages: number;
   activeMediators: number;
   mythsChecked: number;
@@ -23,15 +24,9 @@ export type ImpactStats = {
 
 export async function getImpactStats(): Promise<ImpactStats> {
   const base: ImpactStats = {
-    source: "unavailable",
+    source: "illustrative",
     languages: LOCALES.length,
-    activeMediators: 0,
-    mythsChecked: 0,
-    emergenciesEscalated: 0,
-    lessonsCompleted: 0,
-    visitsThisYear: 0,
-    gpEnrollmentsFacilitated: 0,
-    countiesReporting: 0,
+    ...DEMO_IMPACT_STATS,
   };
 
   const db = getDb();

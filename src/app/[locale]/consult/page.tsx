@@ -4,7 +4,7 @@ import { getAppConfig } from "@/lib/env";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { SosButton } from "@/components/SosButton";
-import { ConsultationFlow } from "@/components/ConsultationFlow";
+import { ConsultWorkspace } from "@/components/clinician/ConsultWorkspace";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -26,9 +26,7 @@ export default async function ConsultPage({ params }: Props) {
       <Header />
       <SosButton />
       <main id="main-content" className="flex-1 pb-2">
-        <div className="px-5 py-6">
-          <ConsultationFlow locale={locale} />
-        </div>
+        <ConsultWorkspace locale={locale} />
       </main>
       <BottomNav />
     </div>

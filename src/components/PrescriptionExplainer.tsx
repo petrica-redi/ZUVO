@@ -209,7 +209,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
       <div className="mb-6 animate-fade-in-up">
         <div className="relative mb-5 aspect-[21/11] w-full overflow-hidden rounded-3xl shadow-xl">
           <NextImage
-            src="/images/ai/ai-spot-prescription.png"
+            src="/images/ai/clinical-care.svg"
             alt={t("heroArtAlt")}
             fill
             className="object-cover object-[center_42%]"

@@ -14,7 +14,7 @@ export type TourStep = {
 export const TOUR_STEPS: TourStep[] = [
   {
     id: "community",
-    image: "/images/ai/ai-audience-community.png",
+    image: "/images/ai/community-care.svg",
     gradient: "from-[#059669] via-[#10B981] to-[#34D399]",
     glowColor: "rgba(16, 185, 129, 0.35)",
     roleBadgeKey: "roleBadgeCommunity",
@@ -24,7 +24,7 @@ export const TOUR_STEPS: TourStep[] = [
   },
   {
     id: "mediator",
-    image: "/images/ai/ai-spot-mediator.png",
+    image: "/images/ai/community-care.svg",
     gradient: "from-[#1D4ED8] via-[#2563EB] to-[#3B82F6]",
     glowColor: "rgba(37, 99, 235, 0.35)",
     roleBadgeKey: "roleBadgeMediator",
@@ -34,7 +34,7 @@ export const TOUR_STEPS: TourStep[] = [
   },
   {
     id: "doctor",
-    image: "/images/ai/ai-spot-prescription.png",
+    image: "/images/ai/clinical-care.svg",
     gradient: "from-[#B91C1C] via-[#DC2626] to-[#EF4444]",
     glowColor: "rgba(220, 38, 38, 0.3)",
     roleBadgeKey: "roleBadgeDoctor",
@@ -44,7 +44,7 @@ export const TOUR_STEPS: TourStep[] = [
   },
   {
     id: "manager",
-    image: "/images/ai/ai-audience-partners.png",
+    image: "/images/ai/network-care.svg",
     gradient: "from-[#6D28D9] via-[#7C3AED] to-[#8B5CF6]",
     glowColor: "rgba(124, 58, 237, 0.35)",
     roleBadgeKey: "roleBadgeManager",
@@ -54,7 +54,7 @@ export const TOUR_STEPS: TourStep[] = [
   },
   {
     id: "admin",
-    image: "/images/ai/ai-hero-wellbeing.png",
+    image: "/images/ai/network-care.svg",
     gradient: "from-[#334155] via-[#475569] to-[#64748B]",
     glowColor: "rgba(71, 85, 105, 0.3)",
     roleBadgeKey: "roleBadgeAdmin",

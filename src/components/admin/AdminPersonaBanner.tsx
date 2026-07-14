@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "@/navigation";
+import { usePathname, useRouter } from "@/navigation";
 import { useTranslations } from "next-intl";
-import { LayoutDashboard } from "lucide-react";
+import { LayoutDashboard, X } from "lucide-react";
 import { useDemoPersona } from "@/components/demo/DemoPersonaProvider";
 import { AdminPersonaSwitcher } from "@/components/admin/AdminPersonaSwitcher";
 
@@ -13,7 +13,8 @@ import { AdminPersonaSwitcher } from "@/components/admin/AdminPersonaSwitcher";
 export function AdminPersonaBanner() {
   const t = useTranslations("demo");
   const router = useRouter();
-  const { demoMode, personaId } = useDemoPersona();
+  const pathname = usePathname();
+  const { demoMode, personaId, disableDemoMode } = useDemoPersona();
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
@@ -23,7 +24,7 @@ export function AdminPersonaBanner() {
       .catch(() => setIsAdmin(false));
   }, []);
 
-  if (!isAdmin) return null;
+  if (!isAdmin || pathname.includes("/admin/")) return null;
 
   const roleLabel =
     demoMode && personaId !== "admin"
@@ -52,6 +53,19 @@ export function AdminPersonaBanner() {
             <LayoutDashboard className="h-3.5 w-3.5" />
             {t("adminBackCms")}
           </button>
+          {demoMode && (
+            <button
+              type="button"
+              onClick={() => {
+                disableDemoMode();
+                router.push("/admin/dashboard");
+              }}
+              className="inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold text-[var(--color-text-muted)] transition-colors hover:bg-[var(--color-neutral-50)] hover:text-[var(--color-text-primary)]"
+            >
+              <X className="h-3.5 w-3.5" />
+              Exit preview
+            </button>
+          )}
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ import {
 describe("getAppConfig", () => {
   it("returns safe defaults when env vars are absent", () => {
     const cfg = getAppConfig();
-    expect(cfg.appName).toBe("Zuvo");
+    expect(cfg.appName).toBe("Redi Health");
     // Source of truth lives in src/i18n/routing.ts → defaultLocale: "ro".
     expect(cfg.defaultLocale).toBe("ro");
     expect(cfg.supportedLocales).toEqual([...LOCALES]);

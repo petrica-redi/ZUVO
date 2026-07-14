@@ -123,7 +123,7 @@ export function CareModelSection() {
               {t(`careModel${active.charAt(0).toUpperCase() + active.slice(1)}Privacy` as "careModelCommunityPrivacy")}
             </p>
             <Link
-              href="/demo"
+              href="/admin/login"
               className="mt-6 inline-flex items-center gap-1.5 text-sm font-extrabold text-[var(--color-info-accent)] hover:underline"
             >
               {t("careModelDemoLink")}

@@ -3,7 +3,7 @@
 import { useId } from "react";
 
 /** Default product name — override with `NEXT_PUBLIC_APP_NAME`. */
-const BRAND_MARK = () => process.env.NEXT_PUBLIC_APP_NAME?.trim() || "Zuvo";
+const BRAND_MARK = () => process.env.NEXT_PUBLIC_APP_NAME?.trim() || "Redi Health";
 
 type Props = {
   size?: number;

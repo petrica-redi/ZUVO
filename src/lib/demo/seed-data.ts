@@ -91,6 +91,25 @@ export const DEMO_MEDIATOR_WORKSPACE: MediatorWorkspacePayload = {
 
 export const DEMO_COUNTY = "B";
 
+export const DEMO_IMPACT_STATS = {
+  activeMediators: 42,
+  mythsChecked: 1284,
+  emergenciesEscalated: 37,
+  lessonsCompleted: 3180,
+  visitsThisYear: 1205,
+  gpEnrollmentsFacilitated: 186,
+  countiesReporting: 6,
+} as const;
+
+export const DEMO_COUNTY_SNAPSHOTS = [
+  { county: "București", mediators: 14, visits: 438, referrals: 82, trend: 12 },
+  { county: "Teleorman", mediators: 8, visits: 246, referrals: 51, trend: 18 },
+  { county: "Dolj", mediators: 7, visits: 196, referrals: 43, trend: 9 },
+  { county: "Cluj", mediators: 5, visits: 128, referrals: 28, trend: 15 },
+  { county: "Iași", mediators: 4, visits: 104, referrals: 22, trend: 7 },
+  { county: "Timiș", mediators: 4, visits: 93, referrals: 19, trend: 11 },
+] as const;
+
 /** Pseudonymised tele-health queue for clinician persona. */
 export const DEMO_DOCTOR_QUEUE = [
   {
@@ -98,17 +117,32 @@ export const DEMO_DOCTOR_QUEUE = [
     ref: "Case #A-1042",
     summary: "Fever 38.5°C · child · rural Teleorman",
     severity: "amber" as const,
+    age: "7 years",
+    received: "12 min ago",
+    source: "Roma health mediator",
+    context: "Fever for 24 hours, drinking fluids, no breathing difficulty. Paracetamol given once.",
+    action: "Same-day clinical review. Continue fluids and monitor temperature.",
   },
   {
     id: "ref-2",
     ref: "Case #B-0887",
     summary: "Prenatal referral · no insurance · Bucharest",
     severity: "green" as const,
+    age: "29 years",
+    received: "34 min ago",
+    source: "Mobile outreach team",
+    context: "Estimated 18 weeks pregnant. No current warning signs. Needs prenatal registration pathway.",
+    action: "Route to partner maternity clinic and insurance navigation support.",
   },
   {
     id: "ref-3",
     ref: "Case #C-1203",
     summary: "Chest pain + breathlessness · red-flag triage",
     severity: "red" as const,
+    age: "58 years",
+    received: "Escalated 3 min ago",
+    source: "Community companion",
+    context: "Sudden chest pressure and shortness of breath. Deterministic red-flag rules activated.",
+    action: "112 escalation initiated. Clinician follow-up after emergency handover.",
   },
 ];

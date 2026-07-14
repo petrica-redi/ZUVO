@@ -90,6 +90,11 @@ export function ConsultationFlow({ locale }: { locale: string }) {
             { role: "assistant", content: data.data.message },
           ]);
         }
+      } else {
+        setMessages((prev) => [
+          ...prev,
+          { role: "assistant", content: data.error || tErrors("connection") },
+        ]);
       }
     } catch {
       setMessages((prev) => [

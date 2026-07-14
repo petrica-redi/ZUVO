@@ -7,25 +7,25 @@ const TOOLS = [
   {
     id: "ai",
     icon: Brain,
-    image: "/images/ai/ai-spot-facts.png",
+    image: "/images/ai/community-care.svg",
     gradient: "from-[#2563EB] to-[#059669]",
   },
   {
     id: "scan",
     icon: Search,
-    image: "/images/ai/ai-spot-facts.png",
+    image: "/images/ai/learning-care.svg",
     gradient: "from-[#1D4ED8] to-[#0D9488]",
   },
   {
     id: "triage",
     icon: Activity,
-    image: "/images/ai/ai-spot-symptoms.png",
+    image: "/images/ai/clinical-care.svg",
     gradient: "from-[#059669] to-[#10B981]",
   },
   {
     id: "voice",
     icon: Mic,
-    image: "/images/ai/ai-hero-wellbeing.png",
+    image: "/images/ai/network-care.svg",
     gradient: "from-[#3B82F6] to-[#14B8A6]",
   },
 ] as const;
@@ -113,7 +113,7 @@ export async function TechnologyShowcase() {
             </div>
           </div>
           <Link
-            href="/demo"
+            href="/admin/login"
             className="inline-flex shrink-0 items-center gap-2 rounded-full bg-gradient-to-r from-[#2563EB] to-[#059669] px-6 py-3 text-sm font-extrabold text-white shadow-brand transition-transform active:scale-[0.97]"
           >
             {t("techDemoCta")}

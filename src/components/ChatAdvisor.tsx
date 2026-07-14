@@ -258,7 +258,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
               />
               <div className="relative mb-6 aspect-[16/11] w-full overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] shadow-2">
                 <Image
-                  src="/images/ai/ai-hero-wellbeing.png"
+                  src="/images/ai/community-care.svg"
                   alt={tChat("heroArtAlt")}
                   fill
                   className="object-cover object-[center_30%]"

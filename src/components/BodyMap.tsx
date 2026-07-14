@@ -147,7 +147,7 @@ export function BodyMap({ locale }: { locale: string }) {
           title={t("heroTitle")}
           subtitle={t("heroSubtitle")}
           heroImage={{
-            src: "/images/ai/ai-hero-wellbeing.png",
+            src: "/images/ai/clinical-care.svg",
             alt: t("heroArtAlt"),
           }}
         />

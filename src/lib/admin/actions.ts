@@ -30,14 +30,14 @@ export async function loginAdmin(data: FormData) {
 export async function logoutAdmin() {
   const cookieStore = await cookies();
   cookieStore.delete(SESSION_COOKIE);
-  redirect("/en/admin/login");
+  redirect("/admin/login");
 }
 
 export async function verifyAdmin() {
   const cookieStore = await cookies();
   const session = cookieStore.get(SESSION_COOKIE);
   if (!session || session.value !== "authenticated") {
-    redirect("/en/admin/login");
+    redirect("/admin/login");
   }
 }
 

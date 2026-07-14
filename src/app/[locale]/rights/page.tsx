@@ -5,7 +5,7 @@ import { SosButton } from "@/components/SosButton";
 import { KnowYourRights } from "@/components/KnowYourRights";
 
 export const metadata: Metadata = {
-  title: "Know Your Rights — Zuvo",
+  title: "Know Your Rights — Redi Health",
   description: "Patient rights, discrimination help, and legal contacts for Roma communities",
 };
 

@@ -398,7 +398,7 @@ function Hero({
         <div className="relative border-t border-[var(--color-border-subtle)] bg-gradient-to-br from-[var(--color-cream-50)] via-white to-[var(--color-brand-50)] p-6 md:border-t-0 md:border-l md:p-8">
           <div className="relative mb-6 aspect-[21/11] w-full overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] shadow-2 md:aspect-[16/10]">
             <Image
-              src="/images/ai/ai-spot-academy.png"
+              src="/images/ai/learning-care.svg"
               alt={tL8("heroStatPanelImageAlt")}
               fill
               className="object-cover object-[center_35%]"

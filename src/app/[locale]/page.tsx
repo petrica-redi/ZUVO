@@ -55,7 +55,7 @@ export default async function HomePage({ params }: Props) {
   const impact = await getImpactStats();
   const heroTitle = platformConfig?.heroTitle || undefined;
   const heroSubtitle = platformConfig?.heroSubtitle || undefined;
-  const heroImage = platformConfig?.heroImage || "/images/ai/ai-hero-wellbeing.png";
+  const heroImage = platformConfig?.heroImage || "/images/ai/network-care.svg";
   const heroLayout = platformConfig?.heroLayout || "split";
 
   return (
@@ -309,25 +309,25 @@ export default async function HomePage({ params }: Props) {
           tiles={[
             {
               href: "/students",
-              src: "/images/ai/ai-spot-academy.png",
+              src: "/images/ai/learning-care.svg",
               label: t("navAcademy"),
               alt: t("imageMosaicAcademyAlt"),
             },
             {
               href: "/explain",
-              src: "/images/ai/ai-spot-prescription.png",
+              src: "/images/ai/clinical-care.svg",
               label: t("navExplain"),
               alt: t("imageMosaicPrescriptionAlt"),
             },
             {
               href: "/scan",
-              src: "/images/ai/ai-spot-facts.png",
+              src: "/images/ai/community-care.svg",
               label: t("navScan"),
               alt: t("imageMosaicFactsAlt"),
             },
             {
               href: "/mediator",
-              src: "/images/ai/ai-spot-mediator.png",
+              src: "/images/ai/community-care.svg",
               label: t("navMediator"),
               alt: t("imageMosaicMediatorAlt"),
             },
@@ -343,31 +343,31 @@ export default async function HomePage({ params }: Props) {
             <div className="mt-7 grid grid-cols-2 gap-y-4 text-center md:grid-cols-4">
               <Stat value={String(impact.languages)} label={t("statLanguages")} />
               <Stat
-                value={impact.source === "live" ? String(impact.activeMediators) : "—"}
+                value={String(impact.activeMediators)}
                 label={t("statMediators")}
               />
               <Stat
-                value={
-                  impact.source === "live"
-                    ? formatImpactNumber(impact.mythsChecked)
-                    : "—"
-                }
+                value={formatImpactNumber(impact.mythsChecked)}
                 label={t("statMyths")}
               />
               <Stat
-                value={
-                  impact.source === "live"
-                    ? String(impact.emergenciesEscalated)
-                    : "—"
-                }
+                value={String(impact.emergenciesEscalated)}
                 label={t("statEmergencies")}
               />
             </div>
-            {impact.source === "live" && (
-              <p className="mt-4 text-center text-[10px] font-bold uppercase tracking-widest text-[var(--color-success-accent)]">
-                {t("liveTelemetry")}
-              </p>
-            )}
+            <p
+              className={`mt-4 text-center text-[10px] font-bold uppercase tracking-widest ${
+                impact.source === "live"
+                  ? "text-[var(--color-success-accent)]"
+                  : "text-amber-700"
+              }`}
+            >
+              {impact.source === "live"
+                ? t("liveTelemetry")
+                : locale === "ro"
+                  ? "Scenariu demonstrativ · nu sunt rezultate reale"
+                  : "Demonstration scenario · not real outcomes"}
+            </p>
           </div>
         </section>
 
@@ -395,7 +395,7 @@ export default async function HomePage({ params }: Props) {
                 cta={t("studentCta")}
                 href="/students"
                 kicker={t("audienceKickerStudents")}
-                artSrc="/images/ai/ai-audience-students.png"
+                artSrc="/images/ai/learning-care.svg"
                 artAlt={t("imageAudienceStudentsAlt")}
               />
               <AudienceCard
@@ -406,7 +406,7 @@ export default async function HomePage({ params }: Props) {
                 cta={t("communityCta")}
                 href="/providers"
                 kicker={t("audienceKickerCommunity")}
-                artSrc="/images/ai/ai-audience-community.png"
+                artSrc="/images/ai/community-care.svg"
                 artAlt={t("imageAudienceCommunityAlt")}
               />
               <AudienceCard
@@ -417,7 +417,7 @@ export default async function HomePage({ params }: Props) {
                 cta={t("ministerCta")}
                 href="/impact"
                 kicker={t("audienceKickerPartners")}
-                artSrc="/images/ai/ai-audience-partners.png"
+                artSrc="/images/ai/network-care.svg"
                 artAlt={t("imageAudiencePartnersAlt")}
               />
             </div>
@@ -463,10 +463,31 @@ export default async function HomePage({ params }: Props) {
                   {t("impactTitle")}
                 </h2>
                 <ul className="mt-7 space-y-4 text-sm text-[var(--color-text-secondary)]">
-                  <ImpactRow icon={Heart} label={t("impactRow1")} value="42" />
-                  <ImpactRow icon={Brain} label={t("impactRow2")} value="3,180" />
-                  <ImpactRow icon={CheckCircle2} label={t("impactRow3")} value="1,205" />
+                  <ImpactRow
+                    icon={Heart}
+                    label={t("impactRow1")}
+                    value={formatImpactNumber(impact.emergenciesEscalated)}
+                  />
+                  <ImpactRow
+                    icon={Brain}
+                    label={t("impactRow2")}
+                    value={formatImpactNumber(impact.lessonsCompleted)}
+                  />
+                  <ImpactRow
+                    icon={CheckCircle2}
+                    label={t("impactRow3")}
+                    value={formatImpactNumber(impact.visitsThisYear)}
+                  />
                 </ul>
+                <p className="mt-4 text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
+                  {impact.source === "live"
+                    ? locale === "ro"
+                      ? "Date operaționale live"
+                      : "Live operational data"
+                    : locale === "ro"
+                      ? "Date demonstrative ilustrative"
+                      : "Illustrative demonstration data"}
+                </p>
                 <Link
                   href="/impact"
                   className="mt-8 inline-flex items-center gap-1.5 text-sm font-extrabold text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"

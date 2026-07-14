@@ -43,6 +43,10 @@ function writeCookie(name: string, value: string) {
   document.cookie = `${name}=${value}; path=/; max-age=${60 * 60 * 24 * 30}; SameSite=Lax`;
 }
 
+function clearCookie(name: string) {
+  document.cookie = `${name}=; path=/; max-age=0; SameSite=Lax`;
+}
+
 function isValidPersona(id: string | null): id is DemoPersonaId {
   return DEMO_PERSONAS.some((p) => p.id === id);
 }
@@ -86,7 +90,9 @@ export function DemoPersonaProvider({ children }: { children: ReactNode }) {
 
   const disableDemoMode = useCallback(() => {
     localStorage.setItem(DEMO_MODE_KEY, "false");
+    clearCookie(DEMO_PERSONA_COOKIE);
     setDemoMode(false);
+    setPersonaId("community");
   }, []);
 
   const value = useMemo<DemoPersonaContextValue>(
