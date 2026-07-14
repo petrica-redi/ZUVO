@@ -6,6 +6,7 @@ import { providers } from "@/db/schema";
 import { ensureProviderSeed } from "@/lib/providers/seed";
 import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
+import { SosButton } from "@/components/SosButton";
 import { ProvidersList } from "@/components/ProvidersList";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -22,6 +23,7 @@ export default async function ProvidersPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "providers" });
 
   const db = getDb();
+  const dbAvailable = Boolean(db);
   let rows: Array<{
     id: string;
     name: string;
@@ -45,6 +47,7 @@ export default async function ProvidersPage({ params }: Props) {
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
       <Header />
+      <SosButton />
       <main id="main-content" className="flex-1 pb-8">
         <ProvidersList
           locale={locale}
@@ -55,6 +58,9 @@ export default async function ProvidersPage({ params }: Props) {
           freeClinicLabel={t("freeClinic")}
           interpreterLabel={t("interpreter")}
           directionsLabel={t("getDirections")}
+          emptyNoResults={t("emptyNoResults")}
+          emptyDirectory={t("emptyDirectory")}
+          unavailableBanner={dbAvailable ? t("emptyNoResults") : t("unavailableBanner")}
           providers={rows}
         />
       </main>

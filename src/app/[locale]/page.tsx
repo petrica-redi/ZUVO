@@ -37,6 +37,7 @@ import { CareProcessSection } from "@/components/landing/CareProcessSection";
 import { IntegratedPlatformSection } from "@/components/landing/IntegratedPlatformSection";
 import { TechnologyShowcase } from "@/components/landing/TechnologyShowcase";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
+import { EmergencyStrip } from "@/components/operations/EmergencyStrip";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -67,10 +68,12 @@ export default async function HomePage({ params }: Props) {
       <LandingHeader logoUrl={platformConfig?.logoUrl || undefined} />
 
       <main id="main-content" className="relative">
+        <EmergencyStrip />
+
         {/* ===== PLATFORM NAV DECK (first screen) ================== */}
         <section
           aria-labelledby="platform-nav-title"
-          className="hidden"
+          className="border-b border-[var(--color-border-subtle)] bg-[var(--color-surface-subtle)]"
         >
           <div className="mx-auto max-w-6xl px-5 pb-10 pt-8 md:px-8 md:pb-14 md:pt-10">
             <header className="mb-8 flex flex-col gap-3 md:mb-10 md:flex-row md:items-end md:justify-between">
@@ -216,21 +219,27 @@ export default async function HomePage({ params }: Props) {
 
                 <div className={`mt-9 flex flex-wrap items-center gap-3 animate-fade-in-up delay-300 ${heroLayout === "center" ? "justify-center" : ""}`}>
                   <Link
-                    href="/admin/login"
+                    href="/help"
                     className="group inline-flex h-13 items-center gap-2 rounded-full px-7 py-4 text-sm font-extrabold text-white gradient-brand grain-overlay shadow-brand transition-all hover:shadow-4 active:scale-[0.97]"
                     style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
                   >
-                    {t("demoCtaHero")}
+                    {t("helpCtaHero")}
                     <ArrowRight
                       className="lucide h-4 w-4 transition-transform group-hover:translate-x-0.5"
                       strokeWidth={2.2}
                     />
                   </Link>
                   <Link
-                    href="/mediator"
+                    href="/chat"
                     className="inline-flex h-13 items-center gap-2 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] px-6 py-4 text-sm font-extrabold text-[var(--color-text-primary)] transition-all hover:border-[var(--color-text-primary)]"
                   >
                     {t("ctaPrimary")}
+                  </Link>
+                  <Link
+                    href="/admin/login"
+                    className="inline-flex h-13 items-center gap-2 rounded-full px-5 py-4 text-sm font-bold text-[var(--color-text-muted)] underline-offset-2 hover:text-[var(--color-text-secondary)] hover:underline"
+                  >
+                    {t("demoCtaHero")}
                   </Link>
                 </div>
 

@@ -15,6 +15,13 @@
     "more": "More",
     "ariaMain": "Navigație principală"
   },
+  "platformNav": {
+    "aria": "Servicii platformă",
+    "help": "Ajutor",
+    "providers": "Servicii",
+    "mediator": "Mediator",
+    "impact": "Impact"
+  },
   "hero": {
     "tagline": "Sănătatea ta, limba ta",
     "title": "Cunoaștere medicală\npentru fiecare comunitate",
@@ -675,6 +682,8 @@
       "truth3": "Calmează durerea în gât, dar NU vindecă gripa."
     },
     "emergencyCta": "Urgență? Sună la 112",
+    "emergencyLead": "Urgență medicală? Sună imediat la 112 — această platformă nu este un serviciu de urgență.",
+    "emergencyAria": "Informații de urgență",
     "emergencySub": "Disponibil 24/7 în toată Europa",
     "seeAll": "Vezi toate",
     "learnGrowTitle": "Învață & Crește",
@@ -701,12 +710,17 @@
     "metaDescription": "Toate instrumentele Redi Health într-un singur loc",
     "title": "Toate funcționalitățile",
     "sections": {
+      "access": "Acces la servicii",
       "tools": "Instrumente de sănătate",
       "learn": "Învață & Crește",
       "professional": "Profesional",
       "account": "Cont"
     },
     "items": {
+      "helpLabel": "Solicită ajutor de la un mediator",
+      "helpDesc": "Programări, asigurare, sprijin lingvistic",
+      "providersLabel": "Găsește o clinică",
+      "providersDesc": "Furnizori verificați în apropiere",
       "scanLabel": "Scaner de dezinformare",
       "scanDesc": "Verifică afirmațiile despre sănătate",
       "symptomsLabel": "Verificator de simptome",
@@ -1025,7 +1039,9 @@
     "indicatorAppointmentAttended": "Programări la care s-a participat",
     "indicatorInsuranceObtained": "Asigurări de sănătate obținute",
     "indicatorVaccinationCompleted": "Vaccinări finalizate",
-    "indicatorCasesCompleted": "Cazuri finalizate"
+    "indicatorCasesCompleted": "Cazuri finalizate",
+    "demoCountyTitle": "Instantaneu județean ilustrativ",
+    "demoCountyLead": "Doar pentru prezentări stakeholder — nu date reale de program"
   },
   "methodology": {
     "title": "Guvernanță clinică & siguranță",
@@ -1045,7 +1061,10 @@
     "verified": "Verificat prietenos cu romii",
     "freeClinic": "Servicii gratuite disponibile",
     "interpreter": "Interpret de limba romani",
-    "getDirections": "Vezi traseul"
+    "getDirections": "Vezi traseul",
+    "emptyNoResults": "Nicio clinică nu corespunde căutării.",
+    "emptyDirectory": "Directorul de furnizori este temporar indisponibil. Sună la 112 în caz de urgență sau folosește Solicită ajutor.",
+    "unavailableBanner": "Director offline — rezultate limitate."
   },
   "landing": {
     "eyebrow": "Alfabetizare pentru sănătate unde ajutorul întârzie",
@@ -1053,6 +1072,7 @@
     "heroLine2": "în sate și cartiere.",
     "heroLead": "Redi Health este un însoțitor cu AI, realizat împreună cu mediatori și medici, pentru orașele mici, comunitățile defavorizate — inclusiv cele rome — unde drumul până la spital este lung, iar comunicarea oficială rareori vine în dialectul tău. Limbaj simplu, mai multe limbi, rezistent atunci când rețeaua nu e stabilă.",
     "ctaPrimary": "Deschide Redi Health",
+    "helpCtaHero": "Solicită ajutor de la un mediator",
     "ctaSecondary": "Vezi metodologia",
     "trustEyebrow": "De încredere pentru mediatori, medici și ministere",
     "audienceEyebrow": "Pentru cine este construit Redi Health",
@@ -1152,6 +1172,7 @@
     "integratedTitle": "O singură platformă — de la sat la minister.",
     "integratedLead": "Îngrijire personalizată, screening inteligent și coordonare pe teren — construită pentru comunitățile rome și cartierele rurale din Europa.",
     "integratedChat": "Consilier AI de sănătate",
+    "integratedHelp": "Solicită ajutor",
     "integratedScan": "Scanner de dezinformare",
     "integratedSymptoms": "Triaj simptome",
     "integratedRecords": "Ajutor pentru rețete",
@@ -2011,6 +2032,13 @@
     "taskStatus_blocked": "Blocată",
     "taskStatus_completed": "Finalizată",
     "taskStatus_cancelled": "Anulată",
+    "startPanelTitle": "Începe aici",
+    "startPanelLead": "Urmează acești pași pentru a duce o persoană de la primul contact la îngrijire programată.",
+    "startPanelIntakes": "{count, plural, one {# persoană așteaptă să fie sunată} few {# persoane așteaptă să fie sunate} other {# de persoane așteaptă să fie sunate}}",
+    "startPanelIntakesHint": "Verifică în tabul Navigare și deschide un caz",
+    "startPanelPublicHelp": "Distribuie pagina publică de ajutor familiilor",
+    "helpOfflineSaved": "Salvat local — vom trimite când serviciul revine online",
+    "helpOfflineRef": "Referința ta (păstreaz-o):",
     "crossBorderTitle": "Continuitate transfrontalieră",
     "crossBorderHint": "Solicită transferuri către echipele din țara de destinație când beneficiarii au nevoie de continuitate a îngrijirii peste graniță. Consimțământul este obligatoriu înainte de orice partajare de date.",
     "handoverNew": "Solicită transfer",

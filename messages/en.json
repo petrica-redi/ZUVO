@@ -15,6 +15,13 @@
     "more": "More",
     "ariaMain": "Main navigation"
   },
+  "platformNav": {
+    "aria": "Platform services",
+    "help": "Get help",
+    "providers": "Find care",
+    "mediator": "Mediator",
+    "impact": "Impact"
+  },
   "hero": {
     "tagline": "Your health, your language",
     "title": "Ask anything\nabout your health",
@@ -1142,6 +1149,8 @@
       "truth3": "They soothe a sore throat, but do NOT cure the flu."
     },
     "emergencyCta": "Emergency? Call 112",
+    "emergencyLead": "Medical emergency? Call 112 now — this platform is not an emergency service.",
+    "emergencyAria": "Emergency information",
     "emergencySub": "Available 24/7 across Europe",
     "seeAll": "See all",
     "learnGrowTitle": "Learn & Grow",
@@ -1168,12 +1177,17 @@
     "metaDescription": "Every Redi Health tool in one place",
     "title": "All Features",
     "sections": {
+      "access": "Access support",
       "tools": "Health Tools",
       "learn": "Learn & Grow",
       "professional": "Professional",
       "account": "Account"
     },
     "items": {
+      "helpLabel": "Request mediator help",
+      "helpDesc": "Book appointments, insurance, language support",
+      "providersLabel": "Find a clinic",
+      "providersDesc": "Verified providers near you",
       "scanLabel": "Misinformation Scanner",
       "scanDesc": "Fact-check health claims",
       "symptomsLabel": "Symptom Checker",
@@ -1467,7 +1481,9 @@
     "indicatorAppointmentAttended": "Appointments attended",
     "indicatorInsuranceObtained": "Insurance obtained",
     "indicatorVaccinationCompleted": "Vaccinations completed",
-    "indicatorCasesCompleted": "Cases completed"
+    "indicatorCasesCompleted": "Cases completed",
+    "demoCountyTitle": "Illustrative county snapshot",
+    "demoCountyLead": "For stakeholder presentations only — not live programme data"
   },
   "methodology": {
     "title": "Clinical Governance & Safety",
@@ -1487,7 +1503,10 @@
     "verified": "Verified Roma-friendly",
     "freeClinic": "Free services available",
     "interpreter": "Romani interpreter",
-    "getDirections": "Get directions"
+    "getDirections": "Get directions",
+    "emptyNoResults": "No clinics match your search.",
+    "emptyDirectory": "The provider directory is temporarily unavailable. Call 112 in an emergency or use Request help.",
+    "unavailableBanner": "Directory offline — showing cached results when available."
   },
   "landing": {
     "eyebrow": "Integrated community teams · rural Romania",
@@ -1495,6 +1514,7 @@
     "heroLine2": "field workspace.",
     "heroLead": "Redi Health supports community health mediators and integrated teams (ECI) in rural Romania: case management, home visits, information sessions, and family-facing tools — in Romanian by default, resilient when the network drops. Aligned with POIDS / FSE+ programmes targeting 2,000+ communities.",
     "ctaPrimary": "Open mediator workspace",
+    "helpCtaHero": "Request mediator help",
     "ctaSecondary": "Tools for families",
     "trustEyebrow": "Trusted by mediators, clinicians, and ministries",
     "audienceEyebrow": "Who Redi Health is built for",
@@ -1594,6 +1614,7 @@
     "integratedTitle": "One platform — from village to ministry.",
     "integratedLead": "Personalised care, intelligent screening, and field coordination — built for Roma communities and rural neighbourhoods across Europe.",
     "integratedChat": "AI health advisor",
+    "integratedHelp": "Request help",
     "integratedScan": "Misinformation scanner",
     "integratedSymptoms": "Symptom triage",
     "integratedRecords": "Prescription helper",
@@ -2292,6 +2313,18 @@
     "taskStatus_blocked": "Blocked",
     "taskStatus_completed": "Completed",
     "taskStatus_cancelled": "Cancelled",
+    "startPanelTitle": "Start here",
+    "startPanelLead": "Follow these steps to move someone from first contact to booked care.",
+    "startPanelIntakes": "{count, plural, one {# person waiting for callback} other {# people waiting for callback}}",
+    "startPanelIntakesHint": "Review in the Navigation tab and open a case",
+    "startPanelPublicHelp": "Share the public help page with families",
+    "helpOfflineSaved": "Saved locally — we will submit when the service is back online",
+    "helpOfflineRef": "Your reference (save this):",
+    "loading": "Loading…",
+    "loadError": "Could not load data. Check your connection.",
+    "retry": "Try again",
+    "demoCountyTitle": "Illustrative county snapshot",
+    "demoCountyLead": "For stakeholder presentations only — not live programme data",
     "crossBorderTitle": "Cross-border continuity",
     "crossBorderHint": "Request handovers to destination teams when beneficiaries need care continuity across borders. Consent is required before any navigation data is shared.",
     "handoverNew": "Request handover",

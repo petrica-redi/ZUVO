@@ -45,8 +45,22 @@ export function HelpRequestForm() {
         success?: boolean;
         data?: { referenceCode: string };
         error?: string;
+        offline?: boolean;
       };
       if (!res.ok || !json.success) {
+        if (res.status === 503 || json.offline) {
+          const ref = `HELP-LOCAL-${Date.now().toString(36).toUpperCase()}`;
+          const payload = {
+            helpType,
+            contactMethod,
+            contactValue: contactValue.trim(),
+            notes: notes.trim(),
+            savedAt: new Date().toISOString(),
+          };
+          localStorage.setItem(`redi_help_pending_${ref}`, JSON.stringify(payload));
+          setReference(ref);
+          return;
+        }
         setError(json.error ?? t("submitError"));
         return;
       }
@@ -69,7 +83,9 @@ export function HelpRequestForm() {
           {t("helpConfirmed")}
         </h2>
         <p className="mb-4 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-          {t("helpConfirmedHint")}
+          {reference.startsWith("HELP-LOCAL-")
+            ? t("helpOfflineSaved")
+            : t("helpConfirmedHint")}
         </p>
         <div className="rounded-xl border border-[var(--color-success-accent)] bg-[var(--color-surface)] px-4 py-3">
           <p className="mb-1 text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
