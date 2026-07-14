@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FolderOpen, Plus } from "lucide-react";
+import { FolderOpen, Plus, ChevronDown, ChevronUp } from "lucide-react";
 import {
   BARRIER_SLUGS,
   CASE_STATUSES,
@@ -10,13 +10,23 @@ import {
   CATEGORY_SLUGS,
   STATUS_LABEL_KEYS,
   URGENCY_LABEL_KEYS,
+  type AttendanceOutcome,
   type BarrierSlug,
   type CaseStatus,
   type CaseUrgency,
   type CategorySlug,
 } from "@/lib/operations/constants";
-import type { NavigationCase } from "@/lib/operations/types";
-import type { CreateCaseInput } from "@/lib/operations/types";
+import type {
+  NavigationCase,
+  OperationalProvider,
+  Referral,
+  Appointment,
+} from "@/lib/operations/types";
+import type {
+  CreateCaseInput,
+  CreateReferralInput,
+  CreateAppointmentInput,
+} from "@/lib/operations/types";
 import { suggestTasksForBarriers } from "@/lib/operations/barrier-suggestions";
 import { getDefaultMunicipality } from "@/lib/operations/operations-client";
 import { EmergencyBanner } from "@/components/operations/EmergencyBanner";
@@ -27,6 +37,8 @@ import {
 } from "@/components/operations/StatusBadge";
 import { TimelineStrip } from "@/components/operations/TimelineStrip";
 import { EmptyState, FormCard, SaveButton } from "./parts";
+import { ProviderSearchPanel } from "./ProviderSearchPanel";
+import { ReferralPanel } from "./ReferralPanel";
 
 function toggle<T>(set: T[], value: T): T[] {
   return set.includes(value) ? set.filter((x) => x !== value) : [...set, value];
@@ -37,15 +49,36 @@ const fieldClass =
 
 export function OperationalCasesTab({
   cases,
+  referrals,
+  appointments,
   onCreateCase,
   onUpdateStatus,
+  onCreateReferral,
+  onCreateAppointment,
+  onConfirmAppointment,
+  onRecordAttendance,
+  onRefreshProviderData,
 }: {
   cases: NavigationCase[];
+  referrals: Referral[];
+  appointments: Appointment[];
   onCreateCase: (input: CreateCaseInput) => Promise<NavigationCase>;
   onUpdateStatus: (caseId: string, status: CaseStatus) => Promise<void>;
+  onCreateReferral: (input: CreateReferralInput) => Promise<Referral | null>;
+  onCreateAppointment: (input: CreateAppointmentInput) => Promise<Appointment | null>;
+  onConfirmAppointment: (appointmentId: string) => Promise<void>;
+  onRecordAttendance: (
+    appointmentId: string,
+    outcome: AttendanceOutcome,
+    followUpRequired: boolean,
+    notes?: string,
+  ) => Promise<void>;
+  onRefreshProviderData: (caseId: string) => Promise<void>;
 }) {
   const t = useTranslations("operations");
   const [open, setOpen] = useState(false);
+  const [expandedCaseId, setExpandedCaseId] = useState<string | null>(null);
+  const [selectedProvider, setSelectedProvider] = useState<OperationalProvider | null>(null);
   const [pseudonym, setPseudonym] = useState("");
   const [category, setCategory] = useState<CategorySlug>("other");
   const [mainProblem, setMainProblem] = useState("");
@@ -103,6 +136,24 @@ export function OperationalCasesTab({
       setOpen(false);
       reset();
     }, 1500);
+  };
+
+  const toggleCase = (caseId: string) => {
+    if (expandedCaseId === caseId) {
+      setExpandedCaseId(null);
+      setSelectedProvider(null);
+    } else {
+      setExpandedCaseId(caseId);
+      setSelectedProvider(null);
+      void onRefreshProviderData(caseId);
+    }
+  };
+
+  const handleSelectProvider = (navCase: NavigationCase, provider: OperationalProvider) => {
+    setSelectedProvider(provider);
+    if (navCase.status === "assessment" || navCase.status === "action_required") {
+      void onUpdateStatus(navCase.id, "provider_search");
+    }
   };
 
   const openCount = cases.filter(
@@ -301,7 +352,19 @@ export function OperationalCasesTab({
         </div>
       ) : (
         <ul className="flex flex-col gap-3">
-          {cases.map((c) => (
+          {cases.map((c) => {
+            const expanded = expandedCaseId === c.id;
+            const showProviderFlow = [
+              "provider_search",
+              "appointment_requested",
+              "appointment_confirmed",
+              "referred",
+              "follow_up",
+              "action_required",
+              "assessment",
+            ].includes(c.status);
+
+            return (
             <li
               key={c.id}
               className="rounded-2xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-4 shadow-1"
@@ -315,12 +378,29 @@ export function OperationalCasesTab({
                     {c.caseNumber}
                   </p>
                 </div>
-                <StatusBadge
-                  label={t(
-                    URGENCY_LABEL_KEYS[c.urgency].replace("operations.", ""),
+                <div className="flex items-center gap-2">
+                  <StatusBadge
+                    label={t(
+                      URGENCY_LABEL_KEYS[c.urgency].replace("operations.", ""),
+                    )}
+                    tone={urgencyTone(c.urgency)}
+                  />
+                  {showProviderFlow && (
+                    <button
+                      type="button"
+                      onClick={() => toggleCase(c.id)}
+                      aria-expanded={expanded}
+                      aria-label={t("providerAccess")}
+                      className="rounded-full p-1.5 text-[var(--color-text-muted)] hover:bg-[var(--color-sage-50)]"
+                    >
+                      {expanded ? (
+                        <ChevronUp className="h-4 w-4" />
+                      ) : (
+                        <ChevronDown className="h-4 w-4" />
+                      )}
+                    </button>
                   )}
-                  tone={urgencyTone(c.urgency)}
-                />
+                </div>
               </div>
 
               <TimelineStrip
@@ -398,8 +478,33 @@ export function OperationalCasesTab({
                     ))}
                 </div>
               )}
+
+              {expanded && showProviderFlow && (
+                <div className="mt-4 flex flex-col gap-4 border-t border-[var(--color-border-subtle)] pt-4">
+                  <ProviderSearchPanel
+                    navCase={c}
+                    onSelectProvider={(p) => handleSelectProvider(c, p)}
+                    selectedProviderId={
+                      expandedCaseId === c.id ? selectedProvider?.id : undefined
+                    }
+                  />
+                  {expandedCaseId === c.id && selectedProvider && (
+                    <ReferralPanel
+                      navCase={c}
+                      provider={selectedProvider}
+                      referrals={referrals}
+                      appointments={appointments}
+                      onCreateReferral={onCreateReferral}
+                      onCreateAppointment={onCreateAppointment}
+                      onConfirmAppointment={onConfirmAppointment}
+                      onRecordAttendance={onRecordAttendance}
+                    />
+                  )}
+                </div>
+              )}
             </li>
-          ))}
+            );
+          })}
         </ul>
       )}
     </>

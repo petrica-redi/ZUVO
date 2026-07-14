@@ -3,7 +3,15 @@
  */
 
 import type { NavigationCase, OperationTask } from "./types";
-import type { CreateCaseInput, CreateTaskInput } from "./types";
+import type {
+  CreateCaseInput,
+  CreateTaskInput,
+  CreateReferralInput,
+  CreateAppointmentInput,
+  OperationalProvider,
+  Referral,
+  Appointment,
+} from "./types";
 import {
   createLocalCase,
   createLocalTask,
@@ -12,6 +20,7 @@ import {
   listLocalTasks,
   updateLocalCaseStatus,
 } from "./local-store";
+import type { AttendanceOutcome } from "./constants";
 import {
   getOrCreateWorkspaceId,
   readLocalWorkspace,
@@ -176,4 +185,122 @@ export async function patchTaskComplete(
 export function getDefaultMunicipality(): string | undefined {
   const { countyCode } = readLocalWorkspace();
   return countyCode || undefined;
+}
+
+export async function searchProvidersForCase(
+  categorySlug: string,
+  language: string,
+  municipalityCode?: string,
+  countryCode = "RO",
+): Promise<OperationalProvider[]> {
+  try {
+    const params = new URLSearchParams({
+      categorySlug,
+      language,
+      countryCode,
+    });
+    if (municipalityCode) params.set("municipalityCode", municipalityCode);
+
+    const res = await fetch(`/api/operations/providers?${params}`, {
+      headers: workspaceHeaders(),
+    });
+    if (!res.ok) return [];
+    const json = (await res.json()) as { success?: boolean; data?: OperationalProvider[] };
+    return json.success && json.data ? json.data : [];
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchReferrals(caseId?: string): Promise<Referral[]> {
+  try {
+    const qs = caseId ? `?caseId=${caseId}` : "";
+    const res = await fetch(`/api/operations/referrals${qs}`, {
+      headers: workspaceHeaders(),
+    });
+    if (!res.ok) return [];
+    const json = (await res.json()) as { success?: boolean; data?: Referral[] };
+    return json.success && json.data ? json.data : [];
+  } catch {
+    return [];
+  }
+}
+
+export async function pushReferral(input: CreateReferralInput): Promise<Referral | null> {
+  try {
+    const res = await fetch("/api/operations/referrals", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...workspaceHeaders() },
+      body: JSON.stringify(input),
+    });
+    if (res.ok) {
+      const json = (await res.json()) as { data?: Referral };
+      return json.data ?? null;
+    }
+  } catch {
+    /* offline */
+  }
+  return null;
+}
+
+export async function fetchAppointments(caseId?: string): Promise<Appointment[]> {
+  try {
+    const qs = caseId ? `?caseId=${caseId}` : "";
+    const res = await fetch(`/api/operations/appointments${qs}`, {
+      headers: workspaceHeaders(),
+    });
+    if (!res.ok) return [];
+    const json = (await res.json()) as { success?: boolean; data?: Appointment[] };
+    return json.success && json.data ? json.data : [];
+  } catch {
+    return [];
+  }
+}
+
+export async function pushAppointment(
+  input: CreateAppointmentInput,
+): Promise<Appointment | null> {
+  try {
+    const res = await fetch("/api/operations/appointments", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...workspaceHeaders() },
+      body: JSON.stringify(input),
+    });
+    if (res.ok) {
+      const json = (await res.json()) as { data?: Appointment };
+      return json.data ?? null;
+    }
+  } catch {
+    /* offline */
+  }
+  return null;
+}
+
+export async function patchAppointmentConfirm(appointmentId: string): Promise<void> {
+  try {
+    await fetch(`/api/operations/appointments/${appointmentId}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json", ...workspaceHeaders() },
+      body: JSON.stringify({ status: "confirmed" }),
+    });
+  } catch {
+    /* offline */
+  }
+}
+
+export async function pushAttendance(
+  appointmentId: string,
+  outcome: AttendanceOutcome,
+  followUpRequired: boolean,
+  notes?: string,
+): Promise<void> {
+  try {
+    await fetch(`/api/operations/appointments/${appointmentId}/attendance`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...workspaceHeaders() },
+      body: JSON.stringify({ outcome, followUpRequired, notes }),
+    });
+  } catch {
+    /* offline */
+  }
 }

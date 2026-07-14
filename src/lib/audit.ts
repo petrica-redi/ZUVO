@@ -26,7 +26,32 @@ export type AuditAction =
   | "operations.task_completed"
   | "operations.intake_created"
   | "operations.intake_converted"
-  | "operations.data_exported";
+  | "operations.intake_routed"
+  | "operations.referral_created"
+  | "operations.referral_status_changed"
+  | "operations.appointment_created"
+  | "operations.appointment_status_changed"
+  | "operations.attendance_recorded"
+  | "operations.notification_sent"
+  | "operations.escalation_created"
+  | "operations.escalation_resolved"
+  | "operations.missed_appointment_recovery"
+  | "operations.attendance_recorded"
+  | "operations.appointment_created"
+  | "operations.appointment_status_changed"
+  | "operations.referral_created"
+  | "operations.referral_status_changed"
+  | "operations.data_exported"
+  | "operations.handover_created"
+  | "operations.handover_consent_recorded"
+  | "operations.handover_consent_withdrawn"
+  | "operations.handover_requested"
+  | "operations.handover_accepted"
+  | "operations.handover_rejected"
+  | "operations.handover_data_shared"
+  | "operations.handover_completed"
+  | "operations.handover_cancelled"
+  | "operations.guidance_updated";
 
 export type AuditParams = {
   userId: string;

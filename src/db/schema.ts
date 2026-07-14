@@ -179,6 +179,15 @@ export const providers = pgTable(
     phone: text("phone"),
     website: text("website"),
     region: text("region"), // albania, romania, etc.
+    countryCode: text("country_code").default("RO"),
+    municipalityCode: text("municipality_code"),
+    verificationState: text("verification_state").notNull().default("unverified"),
+    categorySlugs: jsonb("category_slugs").notNull().default([]),
+    email: text("email"),
+    contactPerson: text("contact_person"),
+    description: text("description"),
+    accessibilityNotes: text("accessibility_notes"),
+    organisationId: uuid("organisation_id"),
     isRomaFriendly: boolean("is_roma_friendly").notNull().default(false),
     isFreeClinic: boolean("is_free_clinic").notNull().default(false),
     hasInterpreter: boolean("has_interpreter").notNull().default(false),
@@ -188,7 +197,25 @@ export const providers = pgTable(
     createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
   },
-  (t) => [index("idx_provider_region").on(t.region, t.type)]
+  (t) => [
+    index("idx_provider_region").on(t.region, t.type),
+    index("idx_providers_verification").on(t.verificationState, t.countryCode),
+  ],
+);
+
+export const providerVerifications = pgTable(
+  "provider_verifications",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    providerId: uuid("provider_id").notNull(),
+    verificationState: text("verification_state").notNull(),
+    verifiedBy: text("verified_by"),
+    notes: text("notes"),
+    expiresAt: timestamp("expires_at", { withTimezone: true }),
+    metadata: jsonb("metadata").notNull().default({}),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [index("idx_provider_verifications").on(t.providerId, t.createdAt)],
 );
 
 export const providerRatings = pgTable(
@@ -529,4 +556,276 @@ export const intakeRequests = pgTable(
     updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
   },
   (t) => [index("idx_intake_status").on(t.status, t.countryCode)],
+);
+
+// ── Operational platform (Phase 3) ─────────────────────────────────────────
+
+export const routingRules = pgTable(
+  "routing_rules",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    organisationId: uuid("organisation_id"),
+    countryCode: text("country_code").notNull(),
+    municipalityCode: text("municipality_code"),
+    preferredLanguage: text("preferred_language"),
+    helpType: text("help_type"),
+    teamId: uuid("team_id").notNull(),
+    notifyWorkspaceId: text("notify_workspace_id"),
+    priority: integer("priority").notNull().default(0),
+    isActive: boolean("is_active").notNull().default(true),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [index("idx_routing_rules_lookup").on(t.countryCode, t.isActive, t.priority)],
+);
+
+export const notificationPreferences = pgTable("notification_preferences", {
+  workspaceId: text("workspace_id").primaryKey(),
+  emailEnabled: boolean("email_enabled").notNull().default(true),
+  inAppEnabled: boolean("in_app_enabled").notNull().default(true),
+  notifyEmail: text("notify_email"),
+  preferredLocale: text("preferred_locale").notNull().default("ro"),
+  intakeAlerts: boolean("intake_alerts").notNull().default(true),
+  escalationAlerts: boolean("escalation_alerts").notNull().default(true),
+  missedAppointmentAlerts: boolean("missed_appointment_alerts").notNull().default(true),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
+});
+
+export const operationNotifications = pgTable(
+  "operation_notifications",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    workspaceId: text("workspace_id").notNull(),
+    notificationType: text("notification_type").notNull(),
+    title: text("title").notNull(),
+    body: text("body").notNull(),
+    data: jsonb("data").notNull().default({}),
+    isRead: boolean("is_read").notNull().default(false),
+    emailSent: boolean("email_sent").notNull().default(false),
+    emailSentAt: timestamp("email_sent_at", { withTimezone: true }),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [index("idx_op_notif_workspace").on(t.workspaceId, t.isRead, t.createdAt)],
+);
+
+export const escalationRecords = pgTable(
+  "escalation_records",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    caseId: uuid("case_id"),
+    intakeId: uuid("intake_id"),
+    workspaceId: text("workspace_id").notNull(),
+    escalatedBy: text("escalated_by").notNull(),
+    assignedSupervisor: text("assigned_supervisor"),
+    reason: text("reason").notNull(),
+    status: text("status").notNull().default("open"),
+    priority: text("priority").notNull().default("priority"),
+    resolutionNotes: text("resolution_notes"),
+    resolvedAt: timestamp("resolved_at", { withTimezone: true }),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [index("idx_escalations_workspace").on(t.workspaceId, t.status, t.createdAt)],
+);
+
+// ── Cross-border continuity (Phase 5) ────────────────────────────────────────
+
+export const crossBorderHandovers = pgTable(
+  "cross_border_handovers",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    caseId: uuid("case_id").notNull(),
+    caseNumber: text("case_number").notNull(),
+    originCountryCode: text("origin_country_code").notNull(),
+    destinationCountryCode: text("destination_country_code").notNull(),
+    originWorkspaceId: text("origin_workspace_id").notNull(),
+    destinationWorkspaceId: text("destination_workspace_id"),
+    originTeamId: uuid("origin_team_id"),
+    destinationTeamId: uuid("destination_team_id"),
+    status: text("status").notNull().default("consent_pending"),
+    consentStatus: text("consent_status").notNull().default("pending"),
+    consentGrantedAt: timestamp("consent_granted_at", { withTimezone: true }),
+    consentRecordedBy: text("consent_recorded_by"),
+    reason: text("reason").notNull().default(""),
+    rejectionReason: text("rejection_reason"),
+    navigationSummary: jsonb("navigation_summary").notNull().default({}),
+    sharedPayload: jsonb("shared_payload"),
+    requestedBy: text("requested_by"),
+    acceptedBy: text("accepted_by"),
+    completedBy: text("completed_by"),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
+    completedAt: timestamp("completed_at", { withTimezone: true }),
+  },
+  (t) => [
+    index("idx_handover_origin").on(t.originWorkspaceId, t.status),
+    index("idx_handover_destination").on(t.destinationWorkspaceId, t.status),
+    index("idx_handover_case").on(t.caseId),
+  ],
+);
+
+export const crossBorderHandoverEvents = pgTable(
+  "cross_border_handover_events",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    handoverId: uuid("handover_id").notNull(),
+    eventType: text("event_type").notNull(),
+    actorWorkspaceId: text("actor_workspace_id").notNull(),
+    metadata: jsonb("metadata").notNull().default({}),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [index("idx_handover_events").on(t.handoverId, t.createdAt)],
+);
+
+export const countryAccessGuidance = pgTable(
+  "country_access_guidance",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    originCountryCode: text("origin_country_code").notNull(),
+    destinationCountryCode: text("destination_country_code").notNull(),
+    topicSlug: text("topic_slug").notNull(),
+    titleKey: text("title_key").notNull(),
+    contentTemplate: text("content_template").notNull().default(""),
+    sortOrder: integer("sort_order").notNull().default(0),
+    isActive: boolean("is_active").notNull().default(true),
+    organisationId: uuid("organisation_id"),
+    updatedBy: text("updated_by"),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [
+    index("idx_guidance_pair").on(
+      t.originCountryCode,
+      t.destinationCountryCode,
+      t.isActive,
+    ),
+  ],
+);
+
+// ── Phase 4: Outcomes & government reporting ───────────────────────────────
+
+export const caseOutcomes = pgTable(
+  "case_outcomes",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    caseId: uuid("case_id").notNull(),
+    workspaceId: text("workspace_id").notNull(),
+    outcomeType: text("outcome_type").notNull(),
+    status: text("status").notNull().default("pending"),
+    achievedAt: timestamp("achieved_at", { withTimezone: true }),
+    notes: text("notes").notNull().default(""),
+    evidenceRef: text("evidence_ref"),
+    recordedBy: text("recorded_by"),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [
+    index("idx_case_outcomes_workspace").on(t.workspaceId, t.outcomeType, t.status),
+  ],
+);
+
+export const qualityFlags = pgTable(
+  "quality_flags",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    caseId: uuid("case_id"),
+    workspaceId: text("workspace_id").notNull(),
+    flagType: text("flag_type").notNull(),
+    severity: text("severity").notNull().default("warning"),
+    status: text("status").notNull().default("open"),
+    message: text("message").notNull().default(""),
+    raisedBy: text("raised_by"),
+    resolvedBy: text("resolved_by"),
+    resolvedAt: timestamp("resolved_at", { withTimezone: true }),
+    metadata: jsonb("metadata").notNull().default({}),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [
+    index("idx_quality_flags_workspace").on(t.workspaceId, t.status, t.severity),
+  ],
+);
+
+export const dataExports = pgTable(
+  "data_exports",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    requestedBy: text("requested_by").notNull(),
+    role: text("role").notNull(),
+    exportType: text("export_type").notNull(),
+    scope: text("scope").notNull().default("workspace"),
+    rowCount: integer("row_count").notNull().default(0),
+    includesIdentifiable: boolean("includes_identifiable").notNull().default(false),
+    fileName: text("file_name"),
+    metadata: jsonb("metadata").notNull().default({}),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [
+    index("idx_data_exports_role").on(t.role, t.exportType, t.createdAt),
+  ],
+);
+
+// ── Operational platform (Phase 2) — provider access ─────────────────────
+
+export const referrals = pgTable(
+  "referrals",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    referralNumber: text("referral_number").notNull().unique(),
+    workspaceId: text("workspace_id").notNull(),
+    caseId: uuid("case_id").notNull(),
+    providerId: uuid("provider_id").notNull(),
+    status: text("status").notNull().default("draft"),
+    purpose: text("purpose").notNull().default(""),
+    notes: text("notes").notNull().default(""),
+    initiatedBy: text("initiated_by"),
+    scheduledFollowUp: text("scheduled_follow_up"),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [
+    index("idx_referrals_workspace").on(t.workspaceId, t.status),
+    index("idx_referrals_case").on(t.caseId),
+  ],
+);
+
+export const appointments = pgTable(
+  "appointments",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    workspaceId: text("workspace_id").notNull(),
+    caseId: uuid("case_id").notNull(),
+    providerId: uuid("provider_id").notNull(),
+    referralId: uuid("referral_id"),
+    status: text("status").notNull().default("requested"),
+    appointmentDate: text("appointment_date").notNull(),
+    appointmentTime: text("appointment_time"),
+    location: text("location"),
+    accompanimentRequired: boolean("accompaniment_required").notNull().default(false),
+    interpretationRequired: boolean("interpretation_required").notNull().default(false),
+    reminderSentAt: timestamp("reminder_sent_at", { withTimezone: true }),
+    notes: text("notes").notNull().default(""),
+    createdBy: text("created_by"),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [
+    index("idx_appointments_workspace").on(t.workspaceId, t.status),
+    index("idx_appointments_case").on(t.caseId),
+  ],
+);
+
+export const attendanceOutcomes = pgTable(
+  "attendance_outcomes",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    appointmentId: uuid("appointment_id").notNull(),
+    outcome: text("outcome").notNull(),
+    followUpRequired: boolean("follow_up_required").notNull().default(false),
+    followUpAction: text("follow_up_action"),
+    nextAppointmentId: uuid("next_appointment_id"),
+    notes: text("notes").notNull().default(""),
+    recordedBy: text("recorded_by"),
+    recordedAt: timestamp("recorded_at", { withTimezone: true }).defaultNow(),
+  },
+  (t) => [index("idx_attendance_appointment").on(t.appointmentId, t.recordedAt)],
 );

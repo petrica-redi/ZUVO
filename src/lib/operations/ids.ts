@@ -14,6 +14,14 @@ export function generateIntakeReference(): string {
   return `HELP-${ts}-${rand}`;
 }
 
+/** Generate referral numbers: REF-RO-2026-00042 */
+export function generateReferralNumber(countryCode = "RO"): string {
+  sequence += 1;
+  const year = new Date().getFullYear();
+  const seq = String(sequence).padStart(5, "0");
+  return `REF-${countryCode.toUpperCase()}-${year}-${seq}`;
+}
+
 /** Reset sequence in tests only */
 export function _resetCaseSequenceForTests(): void {
   sequence = 0;
