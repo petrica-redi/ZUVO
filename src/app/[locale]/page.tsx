@@ -38,6 +38,7 @@ import { IntegratedPlatformSection } from "@/components/landing/IntegratedPlatfo
 import { TechnologyShowcase } from "@/components/landing/TechnologyShowcase";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { EmergencyStrip } from "@/components/operations/EmergencyStrip";
+import { AiChatBubble, AiChatShell } from "@/components/ui/AiChatShell";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -980,39 +981,20 @@ function CountryCard({
 }
 
 function HeroComposition({ t }: { t: (key: string) => string }) {
+  const labels = {
+    label: t("heroCardLabel"),
+    verified: t("heroCardVerdict"),
+    trustFooter: t("heroCardFooter"),
+  };
+
   return (
     <div className="relative">
-      {/* Main card */}
-      <div className="relative rounded-[32px] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-7 shadow-4 md:p-9">
-        {/* Browser-chrome dots */}
-        <div className="flex items-center gap-1.5">
-          <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-danger-accent)]/40" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-warning-accent)]/40" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-success-accent)]/40" />
-          <span className="ml-3 text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
-            {t("heroCardLabel")}
-          </span>
-        </div>
-
-        {/* Fake conversation */}
-        <div className="mt-6 space-y-4">
-          <div className="ml-auto max-w-[85%] rounded-2xl rounded-br-md bg-[var(--color-text-primary)] px-4 py-3 text-sm text-[var(--color-bg-canvas)]">
-            {t("heroCardQuestion")}
-          </div>
-          <div className="max-w-[90%] rounded-2xl rounded-bl-md border border-[var(--color-border-subtle)] bg-[var(--color-bg-canvas)] px-4 py-3 text-sm leading-relaxed text-[var(--color-text-primary)]">
-            <span className="mb-1.5 inline-flex items-center gap-1 rounded-full bg-[var(--color-success-bg)] px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-success-text)]">
-              <CheckCircle2 className="lucide h-3 w-3" strokeWidth={2.2} /> {t("heroCardVerdict")}
-            </span>
-            <div className="mt-1">{t("heroCardAnswer")}</div>
-          </div>
-        </div>
-
-        {/* Footer stat row */}
-        <div className="mt-7 flex items-center gap-2 border-t border-[var(--color-border-subtle)] pt-5 text-xs text-[var(--color-text-muted)]">
-          <ShieldCheck className="lucide h-3.5 w-3.5 text-[var(--color-success-accent)]" strokeWidth={2} />
-          {t("heroCardFooter")}
-        </div>
-      </div>
+      <AiChatShell labels={labels} className="md:[&>div]:p-9">
+        <AiChatBubble role="user">{t("heroCardQuestion")}</AiChatBubble>
+        <AiChatBubble role="assistant" showVerified verifiedLabel={labels.verified}>
+          {t("heroCardAnswer")}
+        </AiChatBubble>
+      </AiChatShell>
 
       {/* Floating sage badge — sits low-left, clear of the card footer copy */}
       <div

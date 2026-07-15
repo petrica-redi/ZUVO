@@ -6,6 +6,12 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
 import { useDeepgramRecorder } from "@/lib/voice-recorder";
+import {
+  AiChatBubble,
+  AiChatShell,
+  AiChatThinking,
+  type AiChatLabels,
+} from "@/components/ui/AiChatShell";
 
 type Message = {
   id: string;
@@ -27,6 +33,7 @@ type Labels = {
 
 export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string }) {
   const tChat = useTranslations("chat");
+  const tAiChat = useTranslations("aiChat");
   const tVoice = useTranslations("voice");
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -235,6 +242,13 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
     }
   };
 
+  const shellLabels: AiChatLabels = {
+    label: tAiChat("label"),
+    badge: tAiChat("badge"),
+    verified: tAiChat("verified"),
+    trustFooter: tAiChat("trustFooter"),
+  };
+
   return (
     <div className="flex min-h-[60dvh] flex-1 flex-col">
       {/* Emergency banner */}
@@ -318,56 +332,37 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
           </div>
         )}
 
-        {messages.map((msg) => (
-          <div
-            key={msg.id}
-            className={`mb-3 flex ${msg.role === "user" ? "justify-end" : "justify-start"} animate-fade-in`}
-          >
-            <div
-              className={`max-w-[85%] rounded-3xl px-5 py-3.5 text-sm leading-relaxed ${
-                msg.role === "user"
-                  ? "rounded-br-lg text-white shadow-lg shadow-red-500/20"
-                  : "bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-lg"
-              }`}
-              style={msg.role === "user" ? { background: "linear-gradient(135deg, #C0392B 0%, #E74C3C 100%)" } : undefined}
-            >
-              {msg.role === "assistant" && msg.content === "" && isLoading ? (
-                <div className="flex items-center gap-2.5 text-[var(--color-text-muted)]">
-                  <div className="flex h-5 items-center gap-1">
-                    <span
-                      className="inline-block h-1.5 w-1.5 animate-bounce rounded-full bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-brand-700)]"
-                      style={{ animationDelay: "0ms" }}
-                    />
-                    <span
-                      className="inline-block h-1.5 w-1.5 animate-bounce rounded-full bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-ember-500)]"
-                      style={{ animationDelay: "150ms" }}
-                    />
-                    <span
-                      className="inline-block h-1.5 w-1.5 animate-bounce rounded-full bg-gradient-to-br from-[var(--color-ember-500)] to-[var(--color-ember-700)]"
-                      style={{ animationDelay: "300ms" }}
-                    />
-                  </div>
-                  <span className="text-[11px] font-extrabold uppercase tracking-widest text-[var(--color-text-secondary)]">
-                    {labels.thinking}
-                  </span>
-                </div>
-              ) : (
-                <div className="whitespace-pre-wrap">
-                  {msg.content}
-                  {msg.role === "assistant" && (
-                    <button 
-                      onClick={() => speakText(msg.content, locale)}
-                      className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-600 align-middle"
-                      aria-label={tVoice("readMessageAloud")}
-                    >
-                      <Volume2 className="h-4 w-4 inline-block" />
-                    </button>
+        {messages.length > 0 && (
+          <AiChatShell labels={shellLabels} className="mb-4">
+            {messages.map((msg) => (
+              <div key={msg.id} className="animate-fade-in">
+                <AiChatBubble
+                  role={msg.role}
+                  showVerified={msg.role === "assistant" && msg.content.length > 0}
+                  verifiedLabel={shellLabels.verified}
+                >
+                  {msg.role === "assistant" && msg.content === "" && isLoading ? (
+                    <AiChatThinking label={labels.thinking} />
+                  ) : (
+                    <div className="whitespace-pre-wrap">
+                      {msg.content}
+                      {msg.role === "assistant" && msg.content && (
+                        <button
+                          type="button"
+                          onClick={() => speakText(msg.content, locale)}
+                          className="ml-2 align-middle text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]"
+                          aria-label={tVoice("readMessageAloud")}
+                        >
+                          <Volume2 className="inline-block h-4 w-4" />
+                        </button>
+                      )}
+                    </div>
                   )}
-                </div>
-              )}
-            </div>
-          </div>
-        ))}
+                </AiChatBubble>
+              </div>
+            ))}
+          </AiChatShell>
+        )}
 
         {error && (
           <div className="mx-4 mb-3 rounded-2xl bg-red-50 p-4 text-center text-sm font-semibold text-red-600 border border-red-100 animate-scale-in">

@@ -2,11 +2,17 @@
 
 import { useState } from "react";
 import {
-  Stethoscope, Send, Loader2, AlertTriangle, CheckCircle2,
+  Stethoscope, Send, AlertTriangle, CheckCircle2,
   Clock, Siren, FileText, ArrowLeft, Thermometer, Baby,
   Brain, Wind, Eye, Bone, HeartPulse,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import {
+  AiChatBubble,
+  AiChatShell,
+  AiChatThinking,
+  type AiChatLabels,
+} from "@/components/ui/AiChatShell";
 
 type Message = { role: "user" | "assistant"; content: string };
 
@@ -53,6 +59,7 @@ const SEVERITY_STYLE = {
 
 export function ConsultationFlow({ locale }: { locale: string }) {
   const t = useTranslations("consult");
+  const tAiChat = useTranslations("aiChat");
   const tSeverity = useTranslations("severity");
   const tEmergency = useTranslations("emergency");
   const tCommon = useTranslations("common");
@@ -188,45 +195,46 @@ export function ConsultationFlow({ locale }: { locale: string }) {
 
   // Stage 2: Chat / gathering info
   if (stage === "chat") {
+    const shellLabels: AiChatLabels = {
+      label: tAiChat("label"),
+      badge: tAiChat("badge"),
+      verified: tAiChat("verified"),
+      trustFooter: tAiChat("trustFooter"),
+    };
+
     return (
       <div className="flex h-[calc(100vh-10rem)] flex-col">
         <div className="mb-3 flex items-center gap-3">
-          <button onClick={reset} className="rounded-full bg-gray-100 p-2" aria-label={tCommon("back")}>
-            <ArrowLeft className="h-4 w-4 text-gray-600" />
+          <button onClick={reset} className="rounded-full bg-[var(--color-surface-subtle)] p-2" aria-label={tCommon("back")}>
+            <ArrowLeft className="h-4 w-4 text-[var(--color-text-secondary)]" />
           </button>
           <div>
-            <h2 className="text-sm font-bold text-gray-900">{t("chatHeader")}</h2>
-            <p className="text-xs text-gray-400">{t("chatSubtitle")}</p>
+            <h2 className="text-sm font-bold text-[var(--color-text-primary)]">{t("chatHeader")}</h2>
+            <p className="text-xs text-[var(--color-text-muted)]">{t("chatSubtitle")}</p>
           </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto space-y-3 pb-4">
-          {messages.map((msg, i) => (
-            <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
-              <div
-                className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
-                  msg.role === "user"
-                    ? "bg-emerald-500 text-white rounded-br-md"
-                    : "bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-md"
-                }`}
+        <div className="flex-1 overflow-y-auto pb-4">
+          <AiChatShell labels={shellLabels}>
+            {messages.map((msg, i) => (
+              <AiChatBubble
+                key={i}
+                role={msg.role}
+                showVerified={msg.role === "assistant"}
+                verifiedLabel={shellLabels.verified}
               >
                 <div className="whitespace-pre-wrap">{msg.content}</div>
-              </div>
-            </div>
-          ))}
-          {loading && (
-            <div className="flex justify-start">
-              <div className="rounded-2xl rounded-bl-md border border-gray-100 bg-white px-4 py-3 shadow-sm">
-                <div className="flex items-center gap-2 text-gray-400">
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                  <span className="text-xs">{tCommon("thinking")}</span>
-                </div>
-              </div>
-            </div>
-          )}
+              </AiChatBubble>
+            ))}
+            {loading && (
+              <AiChatBubble role="assistant">
+                <AiChatThinking label={tCommon("thinking")} />
+              </AiChatBubble>
+            )}
+          </AiChatShell>
         </div>
 
-        <div className="border-t border-gray-100 bg-white pt-3">
+        <div className="border-t border-[var(--color-border-subtle)] bg-[var(--color-surface)] pt-3">
           <div className="flex items-end gap-2">
             <input
               value={input}
@@ -234,13 +242,13 @@ export function ConsultationFlow({ locale }: { locale: string }) {
               onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); sendMessage(); } }}
               aria-label={t("answerAria")}
               placeholder={t("answerPlaceholder")}
-              className="flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+              className="flex-1 rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-4 py-3 text-sm text-[var(--color-text-primary)] focus:border-[var(--color-brand-500)] focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-500)]/20"
               disabled={loading}
             />
             <button
               onClick={sendMessage}
               disabled={!input.trim() || loading}
-              className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white shadow-md transition-all active:scale-95 disabled:bg-gray-300"
+              className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[var(--color-text-primary)] text-[var(--color-bg-canvas)] shadow-md transition-all active:scale-95 disabled:bg-[var(--color-surface-subtle)] disabled:text-[var(--color-text-muted)]"
             >
               <Send className="h-4 w-4" />
             </button>
