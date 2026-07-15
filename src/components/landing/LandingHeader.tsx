@@ -6,7 +6,6 @@ import { LogoWordmark } from "@/components/Logo";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguagePicker } from "@/components/LanguagePicker";
 import { useTranslations } from "next-intl";
-import { ArrowRight } from "lucide-react";
 
 /**
  * Desktop-first sticky header for the marketing surface.
@@ -88,9 +87,9 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
           </div>
           <Link
             href="/admin/login"
-            className="inline-flex h-10 items-center gap-2 rounded-full bg-gradient-to-r from-[#2563EB] to-[#059669] px-5 text-[13px] font-extrabold text-white shadow-[0_4px_20px_rgba(37,99,235,0.35)] transition-transform hover:scale-105 active:scale-95"
+            className="glass-btn glass-btn-accent inline-flex h-10 items-center gap-2 rounded-full px-5 text-[13px] font-extrabold"
           >
-            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/25 text-[10px]">▶</span>
+            <span className="flex h-5 w-5 items-center justify-center rounded-full border border-white/30 bg-white/20 text-[10px] backdrop-blur-sm">▶</span>
             {t("demoNav")}
           </Link>
         </div>

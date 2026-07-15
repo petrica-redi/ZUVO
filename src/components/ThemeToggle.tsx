@@ -59,7 +59,7 @@ export function ThemeToggle() {
       <button
         type="button"
         aria-label={t("ariaLabel")}
-        className="h-9 w-9 rounded-xl bg-[var(--color-surface-subtle)] hairline"
+        className="glass-btn h-9 w-9 rounded-full"
       />
     );
   }
@@ -74,7 +74,7 @@ export function ThemeToggle() {
       onClick={cycle}
       aria-label={t("switchTo", { label })}
       title={label}
-      className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--color-surface-subtle)] text-[var(--color-text-secondary)] transition-all hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-text-primary)] active:scale-95 hairline"
+      className="glass-btn flex h-9 w-9 items-center justify-center rounded-full text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
     >
       <Icon className="lucide h-[18px] w-[18px]" strokeWidth={1.75} />
     </button>
