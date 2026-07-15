@@ -23,8 +23,8 @@ export const FONT_DISPLAY_OPTIONS: FontOption[] = [
 ];
 
 export const FONT_EDITORIAL_OPTIONS: FontOption[] = [
-  { id: "fraunces", label: "Fraunces (default)", family: "Fraunces", weights: "400;500;600;700" },
-  { id: "lora", label: "Lora", family: "Lora", weights: "400;500;600;700" },
+  { id: "lora", label: "Lora (default)", family: "Lora", weights: "400;500;600;700" },
+  { id: "fraunces", label: "Fraunces", family: "Fraunces", weights: "400;500;600;700" },
   { id: "playfair", label: "Playfair Display", family: "Playfair Display", weights: "400;500;600;700" },
   { id: "dm-serif", label: "DM Serif Display", family: "DM Serif Display", weights: "400" },
   { id: "libre-baskerville", label: "Libre Baskerville", family: "Libre Baskerville", weights: "400;700" },

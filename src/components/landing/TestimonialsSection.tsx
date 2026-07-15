@@ -19,7 +19,7 @@ export async function TestimonialsSection() {
           <p className="eyebrow justify-center">{t("testimonialsEyebrow")}</p>
           <h2
             id="testimonials-title"
-            className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+            className="font-headline mt-3 leading-[1.05] text-[var(--color-text-primary)]"
             style={{ fontSize: "clamp(1.75rem, 1.2rem + 1.8vw, 2.75rem)" }}
           >
             {t("testimonialsTitle")}

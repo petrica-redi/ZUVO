@@ -51,7 +51,7 @@ export async function IntegratedPlatformSection() {
           <p className="eyebrow justify-center">{t("integratedEyebrow")}</p>
           <h2
             id="integrated-platform-title"
-            className="font-editorial mx-auto mt-3 max-w-3xl font-medium leading-[1.05] text-[var(--color-text-primary)]"
+            className="font-headline mx-auto mt-3 max-w-3xl leading-[1.05] text-[var(--color-text-primary)]"
             style={{ fontSize: "clamp(1.75rem, 1.2rem + 1.8vw, 2.75rem)" }}
           >
             {t("integratedTitle")}

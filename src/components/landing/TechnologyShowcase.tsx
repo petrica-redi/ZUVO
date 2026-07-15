@@ -43,7 +43,7 @@ export async function TechnologyShowcase() {
           <p className="eyebrow">{t("techEyebrow")}</p>
           <h2
             id="tech-title"
-            className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+            className="font-headline mt-3 leading-[1.05] text-[var(--color-text-primary)]"
             style={{ fontSize: "clamp(1.875rem, 1.3rem + 1.8vw, 3rem)" }}
           >
             {t("techTitle")}

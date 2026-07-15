@@ -28,7 +28,7 @@ export function LandingVisualMosaic({
           <p className="eyebrow">{eyebrow}</p>
           <h2
             id="visual-mosaic-heading"
-            className="font-editorial mt-3 font-medium leading-[1.06] text-[var(--color-text-primary)]"
+            className="font-headline mt-3 leading-[1.06] text-[var(--color-text-primary)]"
             style={{ fontSize: "clamp(1.625rem, 1.05rem + 1.9vw, 2.375rem)" }}
           >
             {title}

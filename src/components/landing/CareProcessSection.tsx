@@ -50,7 +50,7 @@ export function CareProcessSection() {
           <p className="eyebrow justify-center">{t("processEyebrow")}</p>
           <h2
             id="care-process-title"
-            className="font-editorial mx-auto mt-3 max-w-3xl font-medium leading-[1.05] text-[var(--color-text-primary)]"
+            className="font-headline mx-auto mt-3 max-w-3xl leading-[1.05] text-[var(--color-text-primary)]"
             style={{ fontSize: "clamp(1.875rem, 1.3rem + 1.8vw, 3rem)" }}
           >
             {t("processTitle")}

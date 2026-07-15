@@ -41,7 +41,7 @@ export function DemoOverview() {
         <div className="text-center">
           <p className="eyebrow justify-center">{t("overviewEyebrow")}</p>
           <h1
-            className="font-editorial mx-auto mt-4 max-w-2xl font-medium leading-[1.05] text-[var(--color-text-primary)]"
+            className="font-headline mx-auto mt-4 max-w-2xl leading-[1.05] text-[var(--color-text-primary)]"
             style={{ fontSize: "clamp(2rem, 1.4rem + 2.5vw, 3.25rem)" }}
           >
             {t("overviewTitle")}
