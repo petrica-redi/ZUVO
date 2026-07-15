@@ -62,8 +62,8 @@ export function LanguagePicker({ variant = "default" }: { variant?: "default" | 
 
   const triggerClass =
     variant === "landing"
-      ? "flex items-center gap-1.5 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)]/90 px-3 py-1.5 text-[13px] font-semibold text-[var(--color-text-primary)] shadow-sm backdrop-blur-sm transition-all hover:border-[var(--color-text-primary)] hover:bg-[var(--color-surface)] active:scale-95 disabled:opacity-60"
-      : "flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:border-gray-300 hover:shadow active:scale-95 disabled:opacity-60";
+      ? "glass-btn flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-semibold disabled:opacity-60"
+      : "glass-btn flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium disabled:opacity-60";
 
   const globeClass =
     variant === "landing" ? "lucide h-3.5 w-3.5 text-[var(--color-text-secondary)]" : "lucide h-3.5 w-3.5 text-gray-500";
