@@ -41,7 +41,7 @@ export function CareModelSection() {
           <p className="eyebrow">{t("careModelEyebrow")}</p>
           <h2
             id="care-model-title"
-            className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+            className="font-headline mt-3 leading-[1.05] text-[var(--color-text-primary)]"
             style={{ fontSize: "clamp(1.875rem, 1.3rem + 1.8vw, 3rem)" }}
           >
             {t("careModelTitle")}

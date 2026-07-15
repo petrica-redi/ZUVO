@@ -82,7 +82,7 @@ export function ClinicianQueue({ locale }: { locale: string }) {
             <Stethoscope className="h-3.5 w-3.5" />
             {copy.eyebrow}
           </p>
-          <h1 className="font-editorial mt-3 text-4xl font-medium text-[var(--color-text-primary)] md:text-5xl">
+          <h1 className="font-headline mt-3 text-4xl text-[var(--color-text-primary)] md:text-5xl">
             {copy.title}
           </h1>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-base">

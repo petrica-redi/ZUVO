@@ -353,11 +353,18 @@ button {
   }
 }
 
-/* Editorial typography utilities — for the marketing surface only.
-   Use sparingly: hero, section opens, pull quotes. Body stays sans. */
+/* Headlines — operational sans, not decorative editorial serif */
+.font-headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+/* Legacy editorial utility — kept for admin overrides; no stylistic alternates */
 .font-editorial {
-  font-family: var(--font-editorial);
-  font-feature-settings: "ss01" on, "ss02" on, "ss03" on;
+  font-family: var(--font-display);
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 

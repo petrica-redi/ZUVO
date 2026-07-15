@@ -95,7 +95,7 @@ export function ToolHero({
           </div>
 
           <h1
-            className="font-editorial mt-4 font-medium leading-[1.02] text-[var(--color-text-primary)]"
+            className="font-headline mt-4 leading-[1.02] text-[var(--color-text-primary)]"
             style={{
               fontSize: "clamp(1.625rem, 1.15rem + 1.6vw, 2.5rem)",
               letterSpacing: "-0.02em",

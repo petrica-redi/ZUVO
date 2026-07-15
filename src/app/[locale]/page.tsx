@@ -88,7 +88,7 @@ export default async function HomePage({ params }: Props) {
                 </p>
                 <h2
                   id="platform-nav-title"
-                  className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+                  className="font-headline mt-3 leading-[1.05] text-[var(--color-text-primary)]"
                   style={{ fontSize: "clamp(1.5rem, 1.1rem + 1.4vw, 2rem)" }}
                 >
                   {t("navSubtitle")}
@@ -196,9 +196,9 @@ export default async function HomePage({ params }: Props) {
                 </span>
 
                 <h1
-                  className="font-editorial mt-5 font-medium leading-[0.95] text-[var(--color-text-primary)] animate-fade-in-up delay-100"
+                  className="font-headline mt-5 leading-[1.02] text-[var(--color-text-primary)] animate-fade-in-up delay-100"
                   style={{
-                    fontSize: "clamp(2.75rem, 1.6rem + 5vw, 5.5rem)",
+                    fontSize: "clamp(2.25rem, 1.5rem + 3.5vw, 4.25rem)",
                   }}
                 >
                   {heroTitle ? (
@@ -207,9 +207,7 @@ export default async function HomePage({ params }: Props) {
                     <>
                       <span>{t("heroLine1")}</span>
                       <br />
-                      <span className="italic" style={{ fontFeatureSettings: '"ss01" on' }}>
-                        {t("heroLine2")}
-                      </span>
+                      <span>{t("heroLine2")}</span>
                     </>
                   )}
                 </h1>
@@ -389,7 +387,7 @@ export default async function HomePage({ params }: Props) {
             <header className="mb-12 max-w-2xl md:mb-16">
               <p className="eyebrow">{t("audienceEyebrow")}</p>
               <h2
-                className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+                className="font-headline mt-3 leading-[1.05] text-[var(--color-text-primary)]"
                 style={{ fontSize: "clamp(2rem, 1.4rem + 2vw, 3.25rem)" }}
               >
                 {t("audienceTitle")}
@@ -440,7 +438,7 @@ export default async function HomePage({ params }: Props) {
             <header className="mb-10 max-w-2xl md:mb-14">
               <p className="eyebrow">{t("featuresEyebrow")}</p>
               <h2
-                className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+                className="font-headline mt-3 leading-[1.05] text-[var(--color-text-primary)]"
                 style={{ fontSize: "clamp(1.875rem, 1.3rem + 1.8vw, 3rem)" }}
               >
                 {t("featuresTitle")}
@@ -467,7 +465,7 @@ export default async function HomePage({ params }: Props) {
               <div>
                 <p className="eyebrow">{t("impactEyebrow")}</p>
                 <h2
-                  className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+                  className="font-headline mt-3 leading-[1.05] text-[var(--color-text-primary)]"
                   style={{ fontSize: "clamp(1.75rem, 1.2rem + 1.8vw, 2.5rem)" }}
                 >
                   {t("impactTitle")}
@@ -510,7 +508,7 @@ export default async function HomePage({ params }: Props) {
               <div className="rounded-3xl border border-[var(--color-border-subtle)] bg-[var(--color-cream-50)] p-7 md:p-10">
                 <p className="eyebrow">{t("methodologyEyebrow")}</p>
                 <h2
-                  className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-ink-900)]"
+                  className="font-headline mt-3 leading-[1.05] text-[var(--color-ink-900)]"
                   style={{ fontSize: "clamp(1.5rem, 1.1rem + 1.4vw, 2rem)" }}
                 >
                   {t("methodologyTitle")}
@@ -550,7 +548,7 @@ export default async function HomePage({ params }: Props) {
               </p>
               <h2
                 id="gov-title"
-                className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+                className="font-headline mt-3 leading-[1.05] text-[var(--color-text-primary)]"
                 style={{ fontSize: "clamp(1.875rem, 1.3rem + 1.8vw, 3rem)" }}
               >
                 {t("govTitle")}
@@ -637,7 +635,7 @@ export default async function HomePage({ params }: Props) {
           <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
             <p className="eyebrow justify-center">{t("finalEyebrow")}</p>
             <h2
-              className="font-editorial mt-4 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+              className="font-headline mt-4 leading-[1.05] text-[var(--color-text-primary)]"
               style={{ fontSize: "clamp(2rem, 1.5rem + 2.5vw, 3.75rem)" }}
             >
               {t("finalTitle")}
@@ -687,7 +685,7 @@ function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div>
       <div
-        className="font-editorial text-[var(--color-text-primary)]"
+        className="font-headline text-[var(--color-text-primary)]"
         style={{ fontSize: "clamp(1.875rem, 1.4rem + 2vw, 2.75rem)" }}
       >
         {value}
@@ -775,7 +773,7 @@ function AudienceCard({
         </div>
 
         <h3
-          className="font-editorial mt-7 font-medium leading-tight text-[var(--color-text-primary)]"
+          className="font-headline mt-7 leading-tight text-[var(--color-text-primary)]"
           style={{ fontSize: "clamp(1.25rem, 1rem + 0.8vw, 1.625rem)" }}
         >
           {title}
@@ -838,7 +836,7 @@ function ImpactRow({
       </div>
       <span className="flex-1 text-sm">{label}</span>
       <span
-        className="font-editorial text-[var(--color-text-primary)]"
+        className="font-headline text-[var(--color-text-primary)]"
         style={{ fontSize: "clamp(1.25rem, 1.1rem + 0.4vw, 1.5rem)" }}
       >
         {value}
@@ -949,7 +947,7 @@ function CountryCard({
             {flag}
           </span>
           <h3
-            className="font-editorial font-medium leading-tight text-[var(--color-text-primary)]"
+            className="font-headline leading-tight text-[var(--color-text-primary)]"
             style={{ fontSize: "clamp(1.25rem, 1rem + 0.8vw, 1.625rem)" }}
           >
             {title}
@@ -1004,7 +1002,7 @@ function HeroComposition({ t }: { t: (key: string) => string }) {
         <div className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-sage-700)]">
           {t("heroBadgeAvailable")}
         </div>
-        <div className="font-editorial mt-1 text-2xl leading-none text-[var(--color-sage-900)]">
+        <div className="font-headline mt-1 text-2xl leading-none text-[var(--color-sage-900)]">
           {t("heroBadgeLanguages")}
         </div>
       </div>

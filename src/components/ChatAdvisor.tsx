@@ -290,7 +290,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
                   AI + Mediators
                 </span>
                 <h2
-                  className="font-editorial mt-3 font-medium leading-[1.05] text-[var(--color-text-primary)]"
+                  className="font-headline mt-3 leading-[1.05] text-[var(--color-text-primary)]"
                   style={{ fontSize: "clamp(1.5rem, 1.15rem + 1.3vw, 2rem)" }}
                 >
                   {labels.askMeAnything}
