@@ -7,6 +7,12 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { VACCINES, AGE_GROUPS, type Vaccine } from "@/data/vaccines";
+import {
+  AiChatBubble,
+  AiChatShell,
+  AiChatThinking,
+  type AiChatLabels,
+} from "@/components/ui/AiChatShell";
 
 const IMPORTANCE_BADGE = {
   critical: { bg: "bg-red-100", text: "text-red-700" },
@@ -16,6 +22,8 @@ const IMPORTANCE_BADGE = {
 
 export function VaccineEducator({ locale }: { locale: string }) {
   const t = useTranslations("vaccines");
+  const tAiChat = useTranslations("aiChat");
+  const tCommon = useTranslations("common");
   const tErrors = useTranslations("errors");
   const [view, setView] = useState<"schedule" | "detail" | "qa">("schedule");
   const [selectedVaccine, setSelectedVaccine] = useState<Vaccine | null>(null);
@@ -157,57 +165,89 @@ export function VaccineEducator({ locale }: { locale: string }) {
 
   // Q&A view
   if (view === "qa") {
+    const shellLabels: AiChatLabels = {
+      label: tAiChat("label"),
+      badge: tAiChat("badge"),
+      verified: tAiChat("verified"),
+      trustFooter: tAiChat("trustFooter"),
+    };
+    const activeQuestion = qaQuestion.trim();
+
     return (
       <div className="space-y-4">
-        <button onClick={() => { setView("schedule"); setQaAnswer(""); }} className="text-sm text-gray-500 flex items-center gap-1">
+        <button
+          onClick={() => { setView("schedule"); setQaAnswer(""); }}
+          className="flex items-center gap-1 text-sm text-[var(--color-text-muted)]"
+        >
           <ChevronDown className="h-4 w-4 rotate-90" /> {t("backToSchedule")}
         </button>
 
         <div className="text-center">
-          <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 shadow-lg">
+          <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--color-sage-700)] shadow-lg">
             <MessageCircle className="h-6 w-6 text-white" />
           </div>
-          <h2 className="text-lg font-bold text-gray-900">{t("qaTitle")}</h2>
-          <p className="mt-1 text-sm text-gray-500">{t("qaSubtitle")}</p>
+          <h2 className="text-lg font-bold text-[var(--color-text-primary)]">{t("qaTitle")}</h2>
+          <p className="mt-1 text-sm text-[var(--color-text-secondary)]">{t("qaSubtitle")}</p>
         </div>
+
+        {(activeQuestion || qaAnswer || qaLoading) && (
+          <AiChatShell labels={shellLabels}>
+            {activeQuestion && (
+              <AiChatBubble role="user">
+                <div className="whitespace-pre-wrap">{activeQuestion}</div>
+              </AiChatBubble>
+            )}
+            {(qaAnswer || qaLoading) && (
+              <AiChatBubble
+                role="assistant"
+                showVerified={!!qaAnswer && !qaLoading}
+                verifiedLabel={shellLabels.verified}
+              >
+                {qaLoading && !qaAnswer ? (
+                  <AiChatThinking label={tCommon("thinking")} />
+                ) : (
+                  <div className="whitespace-pre-wrap">{qaAnswer}</div>
+                )}
+              </AiChatBubble>
+            )}
+          </AiChatShell>
+        )}
 
         <div className="flex gap-2">
           <input
             value={qaQuestion}
             onChange={(e) => setQaQuestion(e.target.value)}
             onKeyDown={(e) => { if (e.key === "Enter") askQuestion(); }}
-            aria-label={t("qaAria")} placeholder={t("qaPlaceholder")}
-            className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20"
+            aria-label={t("qaAria")}
+            placeholder={t("qaPlaceholder")}
+            className="flex-1 rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] px-4 py-3 text-sm text-[var(--color-text-primary)] focus:border-[var(--color-brand-500)] focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-500)]/20"
           />
           <button
             onClick={() => askQuestion()}
             disabled={!qaQuestion.trim() || qaLoading}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-purple-500 text-white shadow-md disabled:opacity-40"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--color-text-primary)] text-[var(--color-bg-canvas)] shadow-md disabled:opacity-40"
           >
             {qaLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
           </button>
         </div>
 
-        {!qaAnswer && (
+        {!qaAnswer && !qaLoading && (
           <div>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-400">{t("qaCommon")}</p>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
+              {t("qaCommon")}
+            </p>
             <div className="space-y-2">
               {commonFears.map((q) => (
                 <button
                   key={q}
+                  type="button"
                   onClick={() => askQuestion(q)}
-                  className="w-full rounded-xl border border-gray-100 bg-white p-3 text-left text-sm text-gray-700 shadow-sm transition-all active:scale-[0.98]"
+                  className="w-full rounded-xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-3 text-left text-sm text-[var(--color-text-primary)] shadow-sm transition-all active:scale-[0.98]"
                 >
                   {q}
                 </button>
               ))}
             </div>
-          </div>
-        )}
-
-        {qaAnswer && (
-          <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
-            <p className="whitespace-pre-wrap text-sm leading-relaxed text-gray-700">{qaAnswer}</p>
           </div>
         )}
       </div>

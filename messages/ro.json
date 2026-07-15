@@ -844,6 +844,12 @@
       "description": "Pune orice întrebare de sănătate. Primește răspunsuri clare și de încredere."
     }
   },
+  "aiChat": {
+    "label": "întreabă Redi",
+    "badge": "AI + Mediatori",
+    "verified": "Verificat",
+    "trustFooter": "Surse verificate · PII mascate · 0 date vândute"
+  },
   "demo": {
     "eyebrow": "Demo stakeholder",
     "title": "Experimentează Redi Health din fiecare rol.",
