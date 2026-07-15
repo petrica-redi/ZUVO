@@ -1,20 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Redi Health">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="192" y2="192" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#189A8C"/>
-      <stop offset="55%" stop-color="#0D685F"/>
-      <stop offset="100%" stop-color="#052925"/>
+    <linearGradient id="bg" x1="24" y1="24" x2="168" y2="168" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="55%" stop-color="#0E8074"/>
+      <stop offset="100%" stop-color="#0C5A60"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.72" cy="0.22" r="0.7">
-      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#FBBF24" stop-opacity="0"/>
-    </radialGradient>
   </defs>
   <rect width="192" height="192" rx="42" fill="url(#bg)"/>
-  <rect width="192" height="192" rx="42" fill="url(#glow)"/>
-  <path d="M55 130 H137" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="11" stroke-linecap="round"/>
-  <path d="M64 130 A32 32 0 0 1 128 130" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" fill="none"/>
-  <circle cx="96" cy="108" r="13" fill="#FBBF24"/>
-  <circle cx="96" cy="108" r="13" fill="none" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="3.5"/>
-  <path d="M96 74 V64" stroke="#FBBF24" stroke-width="9" stroke-linecap="round"/>
+  <path d="M96 44v104" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round"/>
+  <path d="M120 58c-10 12.5-15.5 24-15.5 35.2a15.5 15.5 0 0 1-31 0C73.5 82 79 70.5 89 58" stroke="#FFFFFF" stroke-width="9.5" stroke-linecap="round" fill="none"/>
 </svg>

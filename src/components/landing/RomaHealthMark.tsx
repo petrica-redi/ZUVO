@@ -1,5 +1,5 @@
 /**
- * Redi Health mark — medical cross over Roma flag colours.
+ * Redi Health mark — teal tile with Rod of Asclepius (matches header logo).
  */
 export function RomaHealthMark({ className = "h-12 w-12" }: { className?: string }) {
   return (
@@ -10,23 +10,22 @@ export function RomaHealthMark({ className = "h-12 w-12" }: { className?: string
       className={className}
       aria-hidden
     >
-      <rect width="48" height="48" rx="12" fill="#003DA5" />
-      <rect y="16" width="48" height="16" fill="#006A4E" />
-      <rect y="32" width="48" height="16" fill="#CE1126" />
-      <circle cx="24" cy="24" r="9" fill="#003DA5" stroke="#F5F5F5" strokeWidth="1.5" />
-      {[0, 45, 90, 135, 180, 225, 270, 315].map((deg) => (
-        <line
-          key={deg}
-          x1="24"
-          y1="24"
-          x2={24 + 7 * Math.cos((deg * Math.PI) / 180)}
-          y2={24 + 7 * Math.sin((deg * Math.PI) / 180)}
-          stroke="#F5F5F5"
-          strokeWidth="1.2"
-        />
-      ))}
-      <rect x="21" y="14" width="6" height="20" rx="1" fill="white" />
-      <rect x="14" y="21" width="20" height="6" rx="1" fill="white" />
+      <defs>
+        <linearGradient id="roma-mark-bg" x1="6" y1="6" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#14B8A6" />
+          <stop offset="55%" stopColor="#0E8074" />
+          <stop offset="100%" stopColor="#0C5A60" />
+        </linearGradient>
+      </defs>
+      <rect width="48" height="48" rx="12" fill="url(#roma-mark-bg)" />
+      <path d="M24 11v26" stroke="#FFFFFF" strokeWidth="2.8" strokeLinecap="round" />
+      <path
+        d="M29 14.5c-2.5 3.1-3.8 6-3.8 8.8a3.6 3.6 0 0 1-7.2 0c0-2.8 1.3-5.7 3.8-8.8"
+        stroke="#FFFFFF"
+        strokeWidth="2.3"
+        strokeLinecap="round"
+        fill="none"
+      />
     </svg>
   );
 }

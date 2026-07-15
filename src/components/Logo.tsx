@@ -13,12 +13,12 @@ type Props = {
 };
 
 /**
- * Community health mark: Roma flag (blue / green) with a central Rod of Asclepius.
- * Built to stay legible from favicon size up to header lockups.
+ * Redi Health mark — teal gradient tile with a single Rod of Asclepius.
+ * Aligned with PWA icons; no overlapping Roma wheel (reads as a "no" symbol).
  */
 export function Logo({ size = 36, className, inverted = false }: Props) {
   const uid = useId().replace(/:/g, "");
-  const bgId = `zuvo-flag-${uid}`;
+  const gradId = `redi-bg-${uid}`;
 
   if (inverted) {
     return (
@@ -31,17 +31,17 @@ export function Logo({ size = 36, className, inverted = false }: Props) {
         aria-label={BRAND_MARK()}
         className={className}
       >
-        <rect width="40" height="40" rx="11" fill="currentColor" fillOpacity="0.12" />
+        <rect width="40" height="40" rx="10" fill="currentColor" fillOpacity="0.14" />
         <path
-          d="M20 10v20M14 16h12M14 24h12"
+          d="M20 9v22"
           stroke="currentColor"
-          strokeWidth="2.2"
+          strokeWidth="2.4"
           strokeLinecap="round"
         />
         <path
-          d="M20 12c-3 4-5 7-5 10a5 5 0 0 0 10 0c0-3-2-6-5-10z"
+          d="M24.2 12.2c-2.1 2.6-3.2 5-3.2 7.4a3 3 0 0 1-6 0c0-2.4 1.1-4.8 3.2-7.4"
           stroke="currentColor"
-          strokeWidth="1.8"
+          strokeWidth="2"
           strokeLinecap="round"
           fill="none"
         />
@@ -60,61 +60,63 @@ export function Logo({ size = 36, className, inverted = false }: Props) {
       className={className}
     >
       <defs>
-        <clipPath id={`${bgId}-clip`}>
-          <rect width="40" height="40" rx="11" />
-        </clipPath>
+        <linearGradient id={gradId} x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#14B8A6" />
+          <stop offset="55%" stopColor="#0E8074" />
+          <stop offset="100%" stopColor="#0C5A60" />
+        </linearGradient>
       </defs>
 
-      <g clipPath={`url(#${bgId}-clip)`}>
-        <rect width="40" height="20" fill="#0038A8" />
-        <rect y="20" width="40" height="20" fill="#006B3F" />
-        {/* Roma wheel (simplified) */}
-        <circle cx="20" cy="20" r="7.5" fill="none" stroke="#C8102E" strokeWidth="1.6" />
-        {Array.from({ length: 8 }).map((_, i) => {
-          const a = (i * Math.PI) / 4;
-          const x1 = 20 + Math.cos(a) * 3.2;
-          const y1 = 20 + Math.sin(a) * 3.2;
-          const x2 = 20 + Math.cos(a) * 7.2;
-          const y2 = 20 + Math.sin(a) * 7.2;
-          return (
-            <line
-              key={i}
-              x1={x1}
-              y1={y1}
-              x2={x2}
-              y2={y2}
-              stroke="#C8102E"
-              strokeWidth="1.1"
-              strokeLinecap="round"
-            />
-          );
-        })}
-        {/* Rod of Asclepius */}
-        <path
-          d="M20 11.5v17"
-          stroke="#F8FAFC"
-          strokeWidth="2"
-          strokeLinecap="round"
-        />
-        <path d="M15.5 16h9M15.5 24h9" stroke="#F8FAFC" strokeWidth="1.6" strokeLinecap="round" />
-        <path
-          d="M23.5 14.5c-2.2 2.8-3.2 5.2-3.2 7.2a3.2 3.2 0 0 1-6.4 0c0-2 1-4.4 3.2-7.2"
-          stroke="#F8FAFC"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          fill="none"
-        />
-      </g>
+      <rect width="40" height="40" rx="10" fill={`url(#${gradId})`} />
+
+      {/* Rod of Asclepius — single clear symbol */}
+      <path
+        d="M20 9v22"
+        stroke="#FFFFFF"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+      />
+      <path
+        d="M24.2 12.2c-2.1 2.6-3.2 5-3.2 7.4a3 3 0 0 1-6 0c0-2.4 1.1-4.8 3.2-7.4"
+        stroke="#FFFFFF"
+        strokeWidth="2"
+        strokeLinecap="round"
+        fill="none"
+      />
 
       <rect
         width="40"
         height="40"
-        rx="11"
+        rx="10"
         fill="none"
-        stroke="rgba(15,23,42,0.12)"
+        stroke="rgba(15,23,42,0.08)"
         strokeWidth="1"
       />
     </svg>
+  );
+}
+
+function WordmarkText({ name }: { name: string }) {
+  const parts = name.trim().split(/\s+/);
+  if (parts.length >= 2) {
+    return (
+      <span className="flex flex-col leading-[1.05]">
+        <span className="font-display text-[0.95rem] font-extrabold tracking-tight text-[var(--color-brand-700)]">
+          {parts[0]}
+        </span>
+        <span className="font-display text-[0.95rem] font-bold tracking-tight text-[var(--color-text-primary)]">
+          {parts.slice(1).join(" ")}
+        </span>
+      </span>
+    );
+  }
+
+  return (
+    <span
+      className="font-display text-[1.05rem] font-extrabold leading-none tracking-tight text-[var(--color-text-primary)]"
+    >
+      {name}
+    </span>
   );
 }
 
@@ -128,20 +130,17 @@ export function LogoWordmark({
   className?: string;
   logoUrl?: string;
 }) {
+  const name = BRAND_MARK();
+
   return (
     <span className={`flex items-center gap-2.5 ${className ?? ""}`}>
       {logoUrl ? (
         /* eslint-disable-next-line @next/next/no-img-element */
-        <img src={logoUrl} alt="Logo" style={{ height: iconSize, width: "auto" }} />
+        <img src={logoUrl} alt="" style={{ height: iconSize, width: "auto" }} />
       ) : (
         <Logo size={iconSize} />
       )}
-      <span
-        className="font-display text-[1.125rem] font-extrabold leading-none text-[var(--color-text-primary)]"
-        style={{ letterSpacing: "-0.025em" }}
-      >
-        {BRAND_MARK()}
-      </span>
+      <WordmarkText name={name} />
     </span>
   );
 }
