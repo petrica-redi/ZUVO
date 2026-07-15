@@ -650,6 +650,79 @@ button {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* --- Stakeholder access + glass inputs --- */
+.stakeholder-access-section {
+  background:
+    radial-gradient(ellipse 70% 55% at 15% 20%, rgba(37, 99, 235, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 85% 80%, rgba(5, 150, 105, 0.22) 0%, transparent 55%),
+    linear-gradient(165deg, #0b1220 0%, #0f1b2d 42%, #0a1311 100%);
+}
+
+.stakeholder-access-section__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.stakeholder-access-section__orb--blue {
+  top: -8%;
+  left: -6%;
+  width: min(480px, 55vw);
+  height: min(480px, 55vw);
+  background: rgba(37, 99, 235, 0.35);
+}
+
+.stakeholder-access-section__orb--teal {
+  right: -8%;
+  bottom: -12%;
+  width: min(420px, 50vw);
+  height: min(420px, 50vw);
+  background: rgba(13, 148, 136, 0.28);
+}
+
+.stakeholder-login-panel {
+  position: relative;
+}
+
+.stakeholder-login-panel__glow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 40px;
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.22), transparent 65%);
+  pointer-events: none;
+}
+
+.glass-input {
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--color-text-primary);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 1px 2px rgba(15, 23, 42, 0.04);
+  transition:
+    border-color 0.2s var(--ease-emphasized),
+    box-shadow 0.2s var(--ease-emphasized),
+    background 0.2s var(--ease-emphasized);
+}
+
+.glass-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.glass-input:hover {
+  border-color: rgba(37, 99, 235, 0.22);
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: rgba(37, 99, 235, 0.45);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
 /* --- Hairlines (premium 0.5px borders) --- */
 .hairline { box-shadow: inset 0 0 0 1px var(--color-border-subtle); }
 .hairline-strong { box-shadow: inset 0 0 0 1px var(--color-border-default); }

@@ -5,14 +5,27 @@ import { redirect } from "next/navigation";
 import { getDb } from "@/db/client";
 import { platformConfig } from "@/db/schema";
 import { eq } from "drizzle-orm";
+import { loginSchema } from "@/lib/admin/validations";
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL?.trim() || "petrica@redi-ngo.eu";
 const ADMIN_PASS = process.env.ADMIN_PASSWORD?.trim() || "Welcome2REDI*";
 const SESSION_COOKIE = "admin_session";
 
+export async function getAdminLoginEmail() {
+  return ADMIN_EMAIL;
+}
+
 export async function loginAdmin(data: FormData) {
-  const email = data.get("email");
-  const password = data.get("password");
+  const parsed = loginSchema.safeParse({
+    email: String(data.get("email") ?? "").trim(),
+    password: String(data.get("password") ?? ""),
+  });
+
+  if (!parsed.success) {
+    return { success: false, error: "Invalid credentials" };
+  }
+
+  const { email, password } = parsed.data;
 
   if (email === ADMIN_EMAIL && password === ADMIN_PASS) {
     const cookieStore = await cookies();
