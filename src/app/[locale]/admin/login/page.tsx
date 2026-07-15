@@ -1,92 +1,65 @@
-"use client";
+import Image from "next/image";
+import { Link } from "@/navigation";
+import { getTranslations } from "next-intl/server";
+import { ArrowLeft, Shield, Users, Stethoscope, BarChart3 } from "lucide-react";
+import { StakeholderLoginForm } from "@/components/auth/StakeholderLoginForm";
+import { getAdminLoginEmail } from "@/lib/admin/actions";
 
-import { useState } from "react";
-import { Link, useRouter } from "@/navigation";
-import { loginAdmin } from "@/lib/admin/actions";
-import { Lock, LogIn, ArrowLeft } from "lucide-react";
+const ROLES = [
+  { id: "community", icon: Users },
+  { id: "mediator", icon: Shield },
+  { id: "doctor", icon: Stethoscope },
+  { id: "manager", icon: BarChart3 },
+] as const;
 
-export default function AdminLogin() {
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setLoading(true);
-    setError("");
-    const formData = new FormData(e.currentTarget);
-    const res = await loginAdmin(formData);
-    if (res.success) {
-      router.push("/admin/dashboard");
-    } else {
-      setError(res.error || "Login failed");
-      setLoading(false);
-    }
-  }
+export default async function AdminLoginPage() {
+  const t = await getTranslations("auth");
+  const defaultEmail = await getAdminLoginEmail();
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[var(--color-bg-canvas)] px-4 py-12">
-      <div className="w-full max-w-md">
+    <div className="stakeholder-access-section relative min-h-screen overflow-hidden">
+      <div className="stakeholder-access-section__orb stakeholder-access-section__orb--blue" aria-hidden />
+      <div className="stakeholder-access-section__orb stakeholder-access-section__orb--teal" aria-hidden />
+
+      <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col px-5 py-8 md:px-8 md:py-12">
         <Link
           href="/"
-          className="mb-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]"
+          className="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-white/65 transition-colors hover:text-white"
         >
           <ArrowLeft className="h-4 w-4" />
-          Back to site
+          {t("backToSite")}
         </Link>
 
-        <div className="overflow-hidden rounded-3xl border border-[var(--color-border-subtle)] bg-white shadow-3">
-          <div className="bg-gradient-to-r from-[#1D4ED8] to-[#059669] px-8 py-7 text-center text-white">
-            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 backdrop-blur-sm">
-              <Lock className="h-7 w-7" strokeWidth={2} />
-            </div>
-            <h1 className="font-display text-2xl font-extrabold">Admin login</h1>
-            <p className="mt-2 text-sm text-white/85">
-              Sign in to manage content and preview the platform as any role
+        <div className="flex flex-1 flex-col items-center justify-center gap-12 py-10 lg:flex-row lg:items-center lg:justify-between lg:gap-20">
+          <div className="max-w-lg text-center lg:text-left">
+            <p className="eyebrow justify-center text-white/55 lg:justify-start">{t("pageEyebrow")}</p>
+            <h1
+              className="font-headline mt-4 leading-[1.02] text-white"
+              style={{ fontSize: "clamp(2.25rem, 1.5rem + 2.8vw, 3.5rem)" }}
+            >
+              {t("pageTitle")}
+            </h1>
+            <p className="mt-5 text-base leading-relaxed text-white/72 md:text-[17px]">
+              {t("pageLead")}
             </p>
+
+            <ul className="mt-8 hidden space-y-3 lg:block">
+              {ROLES.map(({ id, icon: Icon }) => (
+                <li key={id} className="flex items-center gap-3 text-sm text-white/75">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-white/10 text-white">
+                    <Icon className="h-4 w-4" strokeWidth={2} />
+                  </span>
+                  {t(`role${id.charAt(0).toUpperCase() + id.slice(1)}Title` as "roleCommunityTitle")}
+                </li>
+              ))}
+            </ul>
+
+            <div className="pointer-events-none relative mx-auto mt-10 h-40 w-40 opacity-70 lg:mx-0">
+              <Image src="/images/ai/network-care.svg" alt="" fill className="object-contain" sizes="160px" />
+            </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4 p-8">
-            <div>
-              <label className="mb-1.5 block text-sm font-semibold text-[var(--color-text-secondary)]">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                required
-                className="w-full rounded-xl border border-[var(--color-border-default)] px-4 py-3 text-sm transition-colors focus:border-[var(--color-blue-500)] focus:outline-none focus:ring-2 focus:ring-[var(--color-blue-500)]/20"
-                placeholder="petrica@redi-ngo.eu"
-              />
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-semibold text-[var(--color-text-secondary)]">
-                Password
-              </label>
-              <input
-                type="password"
-                name="password"
-                required
-                className="w-full rounded-xl border border-[var(--color-border-default)] px-4 py-3 text-sm transition-colors focus:border-[var(--color-blue-500)] focus:outline-none focus:ring-2 focus:ring-[var(--color-blue-500)]/20"
-                placeholder="••••••••"
-              />
-            </div>
-
-            {error && (
-              <div className="rounded-xl bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
-                {error}
-              </div>
-            )}
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#059669] py-3.5 font-bold text-white shadow-brand transition-transform hover:brightness-105 active:scale-[0.98] disabled:opacity-50"
-            >
-              <LogIn className="h-5 w-5" />
-              {loading ? "Signing in…" : "Sign in"}
-            </button>
-          </form>
+          <StakeholderLoginForm defaultEmail={defaultEmail} variant="page" />
         </div>
       </div>
     </div>

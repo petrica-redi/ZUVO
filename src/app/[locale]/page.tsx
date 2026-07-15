@@ -36,6 +36,7 @@ import { CareModelSection } from "@/components/landing/CareModelSection";
 import { CareProcessSection } from "@/components/landing/CareProcessSection";
 import { IntegratedPlatformSection } from "@/components/landing/IntegratedPlatformSection";
 import { TechnologyShowcase } from "@/components/landing/TechnologyShowcase";
+import { StakeholderAccessSection } from "@/components/landing/StakeholderAccessSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { EmergencyStrip } from "@/components/operations/EmergencyStrip";
 import { AiChatBubble, AiChatShell } from "@/components/ui/AiChatShell";
@@ -457,6 +458,8 @@ export default async function HomePage({ params }: Props) {
         <CareModelSection />
 
         <TechnologyShowcase />
+
+        <StakeholderAccessSection />
 
         {/* ===== IMPACT + METHODOLOGY (split editorial) =========== */}
         <section className="section-marketing">

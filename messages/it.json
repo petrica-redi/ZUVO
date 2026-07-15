@@ -1832,5 +1832,38 @@
         "k3": "Submit to UJSS / county DSP by the 5th of the month."
       }
     }
+  },
+  "auth": {
+    "sectionEyebrow": "Accesso stakeholder",
+    "sectionTitle": "Anteprima la piattaforma in ogni ruolo.",
+    "sectionLead": "Accedi per esplorare strumenti comunitari, flussi mediatori, code cliniche e dashboard ministeriali — con dati demo isolati e limiti GDPR.",
+    "pageEyebrow": "Anteprima sicura",
+    "pageTitle": "Workspace stakeholder",
+    "pageLead": "Inserisci le credenziali per aprire il CMS, scegliere un ruolo e avviare un tour guidato in meno di un minuto.",
+    "formTitle": "Accedi",
+    "formLead": "Solo partner ministeriali e team Redi.",
+    "emailLabel": "Email di lavoro",
+    "emailPlaceholder": "tu@redi-ngo.eu",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Inserisci la password",
+    "signIn": "Entra nel workspace",
+    "signingIn": "Accesso in corso…",
+    "errorGeneric": "Email o password non validi. Riprova.",
+    "privacyNote": "Sessione 7 giorni · Hosting UE · Nessun PII in modalità demo",
+    "exploreDemo": "Esplora prima la panoramica demo →",
+    "backToSite": "Torna al sito",
+    "showPassword": "Mostra password",
+    "hidePassword": "Nascondi password",
+    "trustGdpr": "Conforme GDPR",
+    "trustEu": "Hosting UE",
+    "trustPersona": "Isolamento persona",
+    "roleCommunityTitle": "Membro comunità",
+    "roleCommunityDesc": "Chiedi, verifica miti, trova cliniche",
+    "roleMediatorTitle": "Mediatore sul campo",
+    "roleMediatorDesc": "Visite, outreach, note di caso",
+    "roleDoctorTitle": "Clinico",
+    "roleDoctorDesc": "Coda, consulto, passaggi",
+    "roleManagerTitle": "Partner ministeriale",
+    "roleManagerDesc": "Impatto, governance, reportistica"
   }
 }
