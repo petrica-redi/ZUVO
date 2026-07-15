@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 605" fill="none" role="img" aria-label="Trusted conversational health companion">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8F6F3"/>
+      <stop offset="55%" stop-color="#F4FBF8"/>
+      <stop offset="100%" stop-color="#FFF7ED"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E8074"/>
+      <stop offset="100%" stop-color="#0C5A60"/>
+    </linearGradient>
+    <linearGradient id="ember" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <filter id="bubble" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="880" height="605" fill="url(#sky)"/>
+  <circle cx="760" cy="95" r="120" fill="#BBF7D0" opacity="0.45"/>
+  <circle cx="120" cy="520" r="150" fill="#99F6E4" opacity="0.35"/>
+  <ellipse cx="440" cy="560" rx="360" ry="70" fill="#D1FAE5" opacity="0.55"/>
+
+  <!-- Decorative wellness icons -->
+  <g opacity="0.55">
+    <circle cx="720" cy="430" r="28" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="3"/>
+    <path d="M720 418v24M708 430h24" stroke="#059669" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="170" cy="150" r="24" fill="#FFF7ED" stroke="#FDE68A" stroke-width="3"/>
+    <path d="M170 142c0-8 6-12 10-12s10 4 10 12c0 10-10 18-10 18s-10-8-10-18z" fill="#F59E0B" opacity="0.85"/>
+  </g>
+
+  <!-- Main chat card -->
+  <g filter="url(#soft)">
+    <rect x="470" y="95" width="330" height="360" rx="28" fill="#FFFFFF" stroke="#D1FAE5" stroke-width="2"/>
+    <circle cx="500" cy="125" r="7" fill="#FCA5A5" opacity="0.75"/>
+    <circle cx="522" cy="125" r="7" fill="#FDE68A" opacity="0.9"/>
+    <circle cx="544" cy="125" r="7" fill="#86EFAC" opacity="0.9"/>
+    <text x="565" y="130" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" letter-spacing="0.12em" fill="#64748B">ASK REDI</text>
+
+    <!-- User bubble -->
+    <g filter="url(#bubble)">
+      <rect x="585" y="160" width="185" height="58" rx="18" fill="#0F172A"/>
+      <rect x="585" y="160" width="185" height="58" rx="18" fill="#0F172A"/>
+      <rect x="598" y="178" width="132" height="10" rx="5" fill="#F8FAFC" opacity="0.92"/>
+      <rect x="598" y="196" width="98" height="8" rx="4" fill="#CBD5E1" opacity="0.8"/>
+    </g>
+
+    <!-- AI bubble -->
+    <g filter="url(#bubble)">
+      <rect x="495" y="240" width="255" height="118" rx="20" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="510" y="255" width="86" height="20" rx="10" fill="#DCFCE7"/>
+      <circle cx="522" cy="265" r="5" fill="#16A34A"/>
+      <text x="534" y="269" font-family="system-ui,Segoe UI,sans-serif" font-size="9" font-weight="800" letter-spacing="0.08em" fill="#166534">VERIFIED</text>
+      <rect x="510" y="286" width="210" height="9" rx="4.5" fill="#CBD5E1" opacity="0.85"/>
+      <rect x="510" y="304" width="188" height="9" rx="4.5" fill="#CBD5E1" opacity="0.7"/>
+      <rect x="510" y="322" width="160" height="9" rx="4.5" fill="#CBD5E1" opacity="0.55"/>
+    </g>
+
+    <!-- Trust row -->
+    <path d="M500 385h270" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="512" cy="408" r="10" fill="#DCFCE7"/>
+    <path d="M508 408l3 3 7-7" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="530" y="402" width="170" height="8" rx="4" fill="#94A3B8" opacity="0.55"/>
+  </g>
+
+  <!-- Health mediator / companion figure -->
+  <g filter="url(#soft)">
+    <!-- Body -->
+    <path d="M205 500c0-95 38-145 95-145s95 50 95 145" fill="url(#coat)"/>
+    <path d="M205 500h190v55c-63 18-127 18-190 0v-55z" fill="#0F766E"/>
+    <!-- Stethoscope hint -->
+    <path d="M248 365c18-8 38-8 56 0" stroke="#F0FDFA" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="318" cy="372" r="10" fill="#F0FDFA" opacity="0.85"/>
+
+    <!-- Head -->
+    <circle cx="300" cy="250" r="62" fill="#C6865A"/>
+    <path d="M248 205c18-42 52-62 84-54 28 7 46 34 46 68 0 8-2 14-5 20-18 30-48 44-79 44-24 0-46-10-62-28-8-9-14-22-16-36-2-14 0-28 8-40 10-14 26-24 44-28 8-2 16-2 24 0" fill="#1E293B"/>
+
+    <!-- Friendly face -->
+    <circle cx="278" cy="258" r="5" fill="#1F2937"/>
+    <circle cx="322" cy="258" r="5" fill="#1F2937"/>
+    <path d="M286 286c10 12 28 12 38 0" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+    <!-- Welcoming hand toward chat -->
+    <path d="M355 360c42-8 72 8 98 42" stroke="#C6865A" stroke-width="22" stroke-linecap="round" fill="none"/>
+    <circle cx="458" cy="410" r="16" fill="#C6865A"/>
+
+    <!-- Community member (smaller, diverse) -->
+    <circle cx="130" cy="318" r="34" fill="#8B5E3C"/>
+    <path d="M96 318c0-24 15-38 34-38s34 14 34 38" fill="#F59E0B"/>
+    <circle cx="118" cy="312" r="3.5" fill="#111827"/>
+    <circle cx="142" cy="312" r="3.5" fill="#111827"/>
+    <path d="M120 326c6 5 14 5 20 0" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M88 430c0-48 19-72 42-72s42 24 42 72" fill="#FB923C"/>
+  </g>
+
+  <!-- Floating preventive-health badge -->
+  <g filter="url(#bubble)">
+    <rect x="58" y="78" width="190" height="54" rx="16" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+    <circle cx="84" cy="105" r="14" fill="url(#brand)"/>
+    <path d="M84 98v14M77 105h14" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <text x="108" y="100" font-family="system-ui,Segoe UI,sans-serif" font-size="10" font-weight="800" letter-spacing="0.08em" fill="#0F766E">PREVENTIVE</text>
+    <text x="108" y="116" font-family="system-ui,Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#64748B">health guidance</text>
+  </g>
+
+  <!-- AI sparkle badge -->
+  <g filter="url(#bubble)">
+    <rect x="650" y="44" width="168" height="40" rx="14" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2"/>
+    <path d="M668 64l4-10 4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="url(#ember)"/>
+    <text x="692" y="69" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="800" fill="#92400E">AI + Mediators</text>
+  </g>
+</svg>

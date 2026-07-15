@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Send, AlertTriangle, MessageCircle, Mic, MicOff, Loader2, Volume2, Sparkles } from "lucide-react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
 import { useDeepgramRecorder } from "@/lib/voice-recorder";
@@ -270,13 +269,13 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
                 aria-hidden
                 className="pointer-events-none absolute inset-0 grain-overlay opacity-50"
               />
-              <div className="relative mb-6 aspect-[16/11] w-full overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] shadow-2">
-                <Image
-                  src="/images/ai/community-care.svg"
+              <div className="relative mb-6 aspect-[16/11] w-full overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-[var(--color-brand-50)] shadow-2">
+                {/* SVG served directly — Next/Image rasterizes SVG and breaks in production */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/ai/chat-companion.svg"
                   alt={tChat("heroArtAlt")}
-                  fill
-                  className="object-cover object-[center_30%]"
-                  sizes="(max-width:768px) 100vw, 480px"
+                  className="h-full w-full object-cover object-center"
                 />
               </div>
               <div className="relative flex flex-col items-center text-center">
