@@ -1372,6 +1372,7 @@
     "adminPreviewLead": "Choose a persona from the dropdown, then click Preview — navigation and data access change instantly.",
     "adminPersonaLabel": "View as",
     "adminPreviewBtn": "Preview",
+    "adminPreviewLoading": "Launching…",
     "adminStepChoose": "Choose a role",
     "adminStepPreview": "Click Preview",
     "adminBannerEyebrow": "Admin preview",
