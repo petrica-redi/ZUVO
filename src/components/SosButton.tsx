@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Phone, X, Heart, Shield, Pill, MapPin, AlertTriangle } from "lucide-react";
 
@@ -29,6 +29,18 @@ export function SosButton() {
   const [showFirstAid, setShowFirstAid] = useState<string | null>(null);
 
   const numbers = EMERGENCY_NUMBERS.default;
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        setShowFirstAid(null);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   if (!open) {
     return (
@@ -61,7 +73,15 @@ export function SosButton() {
       role="dialog"
       aria-modal="true"
       aria-label={t("title")}
+      onClick={() => {
+        setOpen(false);
+        setShowFirstAid(null);
+      }}
     >
+      <div
+        className="flex flex-1 flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
       <div className="flex items-center justify-between p-5">
         <div className="flex items-center gap-3">
           <AlertTriangle className="lucide h-7 w-7 text-rose-400" strokeWidth={1.85} />
@@ -159,6 +179,7 @@ export function SosButton() {
             </p>
           </div>
         )}
+      </div>
       </div>
     </div>
   );

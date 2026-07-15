@@ -5,6 +5,7 @@ import { getLocale } from "next-intl/server";
 import { getAppConfig } from "@/lib/env";
 import { getPlatformConfig } from "@/lib/admin/actions";
 import { buildFontStyles } from "@/lib/admin/fonts";
+import { sanitizeCustomCss } from "@/lib/admin/sanitize-css";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
@@ -44,7 +45,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   const shellMode = shellModeHeader === "mobile" ? "mobile" : "desktop";
 
   const platformConfig = await getPlatformConfig();
-  const customCss = platformConfig?.customCss || "";
+  const customCss = sanitizeCustomCss(platformConfig?.customCss || "");
   const fontStyles = buildFontStyles({
     fontSans: platformConfig?.fontSans,
     fontDisplay: platformConfig?.fontDisplay,

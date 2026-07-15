@@ -33,11 +33,10 @@ export function StakeholderLoginForm({
 
     if (res.success) {
       router.push(redirectTo);
-      return;
+    } else {
+      setError(res.error || t("errorGeneric"));
+      setLoading(false);
     }
-
-    setError(res.error || t("errorGeneric"));
-    setLoading(false);
   }
 
   const shellClass =

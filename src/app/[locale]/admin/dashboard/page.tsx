@@ -28,22 +28,27 @@ export default function AdminDashboard() {
   });
 
   useEffect(() => {
-    getPlatformConfig().then((data) => {
-      if (data) {
-        setConfig({
-          logoUrl: data.logoUrl || "",
-          heroTitle: data.heroTitle || "",
-          heroSubtitle: data.heroSubtitle || "",
-          heroImage: data.heroImage || "",
-          heroLayout: data.heroLayout || "split",
-          fontSans: data.fontSans || "",
-          fontDisplay: data.fontDisplay || "",
-          fontEditorial: data.fontEditorial || "",
-          customCss: data.customCss || "",
-        });
-      }
-      setLoading(false);
-    });
+    getPlatformConfig()
+      .then((data) => {
+        if (data) {
+          setConfig({
+            logoUrl: data.logoUrl || "",
+            heroTitle: data.heroTitle || "",
+            heroSubtitle: data.heroSubtitle || "",
+            heroImage: data.heroImage || "",
+            heroLayout: data.heroLayout || "split",
+            fontSans: data.fontSans || "",
+            fontDisplay: data.fontDisplay || "",
+            fontEditorial: data.fontEditorial || "",
+            customCss: data.customCss || "",
+          });
+        }
+        setLoading(false);
+      })
+      .catch(() => {
+        setMessage({ type: "error", text: "Could not load platform settings. You can still edit and save." });
+        setLoading(false);
+      });
   }, []);
 
   async function handleSave(e: React.FormEvent) {
