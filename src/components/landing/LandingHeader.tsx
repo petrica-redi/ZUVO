@@ -89,7 +89,7 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
             href="/admin/login"
             className="glass-btn glass-btn-accent inline-flex h-10 items-center gap-2 rounded-full px-5 text-[13px] font-extrabold"
           >
-            <span className="flex h-5 w-5 items-center justify-center rounded-full border border-white/30 bg-white/20 text-[10px] backdrop-blur-sm">▶</span>
+            <span className="glass-btn-icon flex h-5 w-5 items-center justify-center rounded-full text-[10px]">▶</span>
             {t("demoNav")}
           </Link>
         </div>
