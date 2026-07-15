@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "@/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -34,6 +35,7 @@ const LANGUAGES: LanguageOption[] = [
 
 export function LanguagePicker({ variant = "default" }: { variant?: "default" | "landing" }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
   const t = useTranslations("language");
@@ -52,12 +54,25 @@ export function LanguagePicker({ variant = "default" }: { variant?: "default" | 
   }
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
     if (!open) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
   }, [open]);
 
   const triggerClass =
@@ -83,9 +98,10 @@ export function LanguagePicker({ variant = "default" }: { variant?: "default" | 
         <span className="uppercase text-xs tracking-wide">{current.code}</span>
       </button>
 
-      {/* Full-screen sheet */}
-      {open && (
-        <div className="fixed inset-0 z-50 flex flex-col" role="dialog" aria-modal="true" aria-labelledby="lang-picker-title" onClick={() => setOpen(false)}>
+      {/* Full-screen sheet — portaled so sticky headers cannot trap it */}
+      {open && mounted
+        ? createPortal(
+        <div className="fixed inset-0 z-[80] flex flex-col" role="dialog" aria-modal="true" aria-labelledby="lang-picker-title" onClick={() => setOpen(false)}>
           {/* Backdrop */}
           <div className="flex-1 bg-black/40 backdrop-blur-sm" />
 
@@ -140,8 +156,10 @@ export function LanguagePicker({ variant = "default" }: { variant?: "default" | 
               })}
             </ul>
           </div>
-        </div>
-      )}
+        </div>,
+        document.body,
+      )
+        : null}
     </>
   );
 }

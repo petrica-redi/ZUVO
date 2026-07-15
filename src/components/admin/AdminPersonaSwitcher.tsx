@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "@/navigation";
+import { useRouter, usePathname } from "@/navigation";
 import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronDown, Eye, Users, Shield, BarChart3, Stethoscope, Loader2 } from "lucide-react";
@@ -27,6 +27,7 @@ type Props = {
 export function AdminPersonaSwitcher({ variant = "card" }: Props) {
   const t = useTranslations("demo");
   const router = useRouter();
+  const pathname = usePathname();
   const { personaId, setPersona, enableDemoMode } = useDemoPersona();
   const [selected, setSelected] = useState<DemoPersonaId>(
     personaId === "admin" ? "community" : personaId,
@@ -44,7 +45,11 @@ export function AdminPersonaSwitcher({ variant = "card" }: Props) {
     return () => document.removeEventListener("mousedown", onPointerDown);
   }, [open]);
 
-  const preview = useCallback(async () => {
+  useEffect(() => {
+    setPreviewing(false);
+  }, [pathname]);
+
+  const preview = useCallback(() => {
     if (previewing) return;
     setPreviewing(true);
     setOpen(false);
@@ -53,6 +58,7 @@ export function AdminPersonaSwitcher({ variant = "card" }: Props) {
     sessionStorage.setItem("redi_demo_welcome", selected);
     const href = getPersonaModel(selected).homeHref;
     router.push(href);
+    window.setTimeout(() => setPreviewing(false), 4000);
   }, [selected, setPersona, enableDemoMode, router, previewing]);
 
   const selectedPersona = PREVIEW_PERSONAS.find((p) => p.id === selected)!;
