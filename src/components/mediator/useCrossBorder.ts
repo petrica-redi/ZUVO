@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import type { CountryAccessGuidance } from "@/lib/operations/guidance-service";
+import type { CountryAccessGuidance } from "@/lib/operations/guidance-shared";
 import type { CrossBorderHandover } from "@/lib/operations/handover-service";
 import type { CreateHandoverInput } from "@/lib/operations/handover-service";
 import {

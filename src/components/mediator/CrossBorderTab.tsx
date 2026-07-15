@@ -8,7 +8,7 @@ import {
   type HandoverStatus,
 } from "@/lib/operations/handover-constants";
 import { URGENCY_LABEL_KEYS } from "@/lib/operations/constants";
-import { renderGuidanceTemplate } from "@/lib/operations/guidance-service";
+import { renderGuidanceTemplate } from "@/lib/operations/guidance-shared";
 import type { CrossBorderHandover } from "@/lib/operations/handover-service";
 import type { NavigationCase } from "@/lib/operations/types";
 import type { CrossBorderState } from "./useCrossBorder";
