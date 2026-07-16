@@ -151,7 +151,7 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
         title={labels.title}
         subtitle={labels.subtitle}
         heroImage={{
-          src: "/images/ai/community-care.svg",
+          src: "/images/surfaces/scan.png",
           alt: tScan("heroArtAlt"),
         }}
       />

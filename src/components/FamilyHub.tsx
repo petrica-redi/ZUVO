@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import {
   Plus, Heart, Trash2, ChevronRight,
-  Syringe, Activity, Calendar, X,
+  Syringe, Activity, Calendar, X, Users,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { ToolHero } from "@/components/ui";
+import { surfaceVisual } from "@/lib/visuals/surfaces";
 
 type FamilyMember = {
   id: string;
@@ -312,15 +314,14 @@ export function FamilyHub() {
   // Family list view
   return (
     <div>
-      <div className="mb-6 text-center animate-fade-in-up">
-        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-pink-500 to-rose-600 shadow-xl shadow-pink-500/25">
-          <Heart className="h-10 w-10 text-white" />
-        </div>
-        <h1 className="text-2xl font-black text-gray-900">Family Health</h1>
-        <p className="mt-2 text-sm text-gray-500">
-          Track health for your whole family. All data stays on your phone.
-        </p>
-      </div>
+      <ToolHero
+        icon={Users}
+        eyebrow="Family"
+        title="Family Health"
+        subtitle="Track health for your whole family. All data stays on your phone."
+        accent="sage"
+        heroImage={surfaceVisual("family")}
+      />
 
       {/* Family members */}
       {members.length > 0 && (

@@ -58,7 +58,7 @@ export default async function HomePage({ params }: Props) {
   const impact = await getImpactStats();
   const heroTitle = platformConfig?.heroTitle || undefined;
   const heroSubtitle = platformConfig?.heroSubtitle || undefined;
-  const heroImage = platformConfig?.heroImage || "/images/ai/network-care.svg";
+  const heroImage = platformConfig?.heroImage || "/images/hero/village-dawn.png";
   const heroLayout = platformConfig?.heroLayout || "split";
 
   return (
@@ -318,25 +318,25 @@ export default async function HomePage({ params }: Props) {
           tiles={[
             {
               href: "/students",
-              src: "/images/ai/learning-care.svg",
+              src: "/images/ai/ai-spot-academy.png",
               label: t("navAcademy"),
               alt: t("imageMosaicAcademyAlt"),
             },
             {
               href: "/explain",
-              src: "/images/ai/clinical-care.svg",
+              src: "/images/ai/ai-spot-prescription.png",
               label: t("navExplain"),
               alt: t("imageMosaicPrescriptionAlt"),
             },
             {
               href: "/scan",
-              src: "/images/ai/community-care.svg",
+              src: "/images/surfaces/scan.png",
               label: t("navScan"),
               alt: t("imageMosaicFactsAlt"),
             },
             {
               href: "/mediator",
-              src: "/images/ai/community-care.svg",
+              src: "/images/ai/ai-spot-mediator.png",
               label: t("navMediator"),
               alt: t("imageMosaicMediatorAlt"),
             },
@@ -404,7 +404,7 @@ export default async function HomePage({ params }: Props) {
                 cta={t("studentCta")}
                 href="/students"
                 kicker={t("audienceKickerStudents")}
-                artSrc="/images/ai/learning-care.svg"
+                artSrc="/images/ai/ai-audience-students.png"
                 artAlt={t("imageAudienceStudentsAlt")}
               />
               <AudienceCard
@@ -415,7 +415,7 @@ export default async function HomePage({ params }: Props) {
                 cta={t("communityCta")}
                 href="/providers"
                 kicker={t("audienceKickerCommunity")}
-                artSrc="/images/ai/community-care.svg"
+                artSrc="/images/ai/ai-audience-community.png"
                 artAlt={t("imageAudienceCommunityAlt")}
               />
               <AudienceCard
@@ -426,7 +426,7 @@ export default async function HomePage({ params }: Props) {
                 cta={t("ministerCta")}
                 href="/impact"
                 kicker={t("audienceKickerPartners")}
-                artSrc="/images/ai/network-care.svg"
+                artSrc="/images/ai/ai-audience-partners.png"
                 artAlt={t("imageAudiencePartnersAlt")}
               />
             </div>

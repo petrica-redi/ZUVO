@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SurfaceBanner } from "@/components/ui/SurfaceBanner";
 import { OperationalCasesTab } from "@/components/mediator/OperationalCasesTab";
 import { TasksTab } from "@/components/mediator/TasksTab";
 import type { MediatorLabels } from "@/components/mediator/labels";
@@ -24,12 +25,13 @@ export function MediatorDashboard({ labels }: { labels: MediatorLabels }) {
 
   return (
     <div>
-      <h1 className="mb-1 text-2xl font-bold text-[var(--color-text-primary)]">
-        {labels.title}
-      </h1>
-      <p className="mb-2 text-sm text-[var(--color-text-secondary)]">
-        {labels.subtitle}
-      </p>
+      <SurfaceBanner
+        surface="mediator"
+        eyebrow={labels.title}
+        title={labels.title}
+        lead={labels.subtitle}
+        compact
+      />
       <p className="mb-3 text-xs text-[var(--color-text-muted)]">{labels.ecHint}</p>
 
       <WorkspaceHeader

@@ -7,25 +7,25 @@ const TOOLS = [
   {
     id: "ai",
     icon: Brain,
-    image: "/images/ai/community-care.svg",
+    image: "/images/ai/chat-companion.svg",
     gradient: "from-[#0A1220] to-[#0E8074]",
   },
   {
     id: "scan",
     icon: Search,
-    image: "/images/ai/learning-care.svg",
+    image: "/images/surfaces/scan.png",
     gradient: "from-[#0F3D38] to-[#0E8074]",
   },
   {
     id: "triage",
     icon: Activity,
-    image: "/images/ai/clinical-care.svg",
+    image: "/images/surfaces/symptoms.png",
     gradient: "from-[#0E8074] to-[#14B8A6]",
   },
   {
     id: "voice",
     icon: Mic,
-    image: "/images/ai/network-care.svg",
+    image: "/images/ai/ai-audience-community.png",
     gradient: "from-[#134E4A] to-[#0E8074]",
   },
 ] as const;

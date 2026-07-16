@@ -13,6 +13,8 @@ import {
   AiChatThinking,
   type AiChatLabels,
 } from "@/components/ui/AiChatShell";
+import { ToolHero } from "@/components/ui";
+import { surfaceVisual } from "@/lib/visuals/surfaces";
 
 const IMPORTANCE_BADGE = {
   critical: { bg: "bg-red-100", text: "text-red-700" },
@@ -257,13 +259,14 @@ export function VaccineEducator({ locale }: { locale: string }) {
   // Main schedule view
   return (
     <div>
-      <div className="mb-6 text-center animate-fade-in-up">
-        <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-green-500 to-emerald-600 shadow-xl shadow-emerald-500/25">
-          <Syringe className="h-10 w-10 text-white" />
-        </div>
-        <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
-        <p className="mt-2 text-sm text-gray-500">{t("heroSubtitle")}</p>
-      </div>
+      <ToolHero
+        icon={Syringe}
+        eyebrow="Vaccines"
+        title={t("heroTitle")}
+        subtitle={t("heroSubtitle")}
+        accent="brand"
+        heroImage={surfaceVisual("vaccines")}
+      />
 
       {/* Child age checker */}
       <div className="mb-4 rounded-2xl border border-blue-100 bg-blue-50 p-4">

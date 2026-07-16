@@ -13,10 +13,10 @@ import {
   BarChart3,
   TrendingUp,
   LockKeyhole,
-  MapPinned,
   Database,
 } from "lucide-react";
 import { Card } from "@/components/ui";
+import { SurfaceBanner } from "@/components/ui/SurfaceBanner";
 import { formatImpactNumber, getImpactStats } from "@/lib/impact/stats";
 
 export const dynamic = "force-dynamic";
@@ -86,19 +86,14 @@ export default async function ImpactPage({ params }: Props) {
       <SosButton />
       <main id="main-content" className="flex-1 pb-8">
         <div className="mx-auto max-w-6xl px-4 py-8 md:px-8 md:py-12">
-          <div className="mb-8 grid items-end gap-6 md:grid-cols-[1fr_auto] animate-fade-in-up">
-            <div>
-              <p className="eyebrow">
-                <MapPinned className="h-3.5 w-3.5" />
-                {copy.eyebrow}
-              </p>
-              <h1 className="font-headline mt-3 text-4xl tracking-tight text-[var(--color-text-primary)] md:text-5xl">
-                {t("title")}
-              </h1>
-              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-base">
-                {t("subtitle")}
-              </p>
-            </div>
+          <SurfaceBanner
+            surface="impact"
+            eyebrow={copy.eyebrow}
+            title={t("title")}
+            lead={t("subtitle")}
+          />
+
+          <div className="mb-8 flex justify-end animate-fade-in-up">
             <div
               className={`max-w-sm rounded-2xl border px-4 py-3 ${
                 live
