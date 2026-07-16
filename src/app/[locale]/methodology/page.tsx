@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { BottomNav } from "@/components/BottomNav";
 import { Shield, Lock, FileCheck } from "lucide-react";
 import { Card } from "@/components/ui";
+import { SurfaceBanner } from "@/components/ui/SurfaceBanner";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -24,17 +25,13 @@ export default async function MethodologyPage({ params }: Props) {
       <Header />
       <main id="main-content" className="flex-1 pb-8">
         <div className="mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
-          <div className="mb-10 text-center animate-fade-in-up">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-[var(--color-surface)] shadow-1">
-              <Shield className="lucide h-8 w-8 text-[var(--color-success-accent)]" strokeWidth={1.85} />
-            </div>
-            <h1 className="font-display text-3xl font-extrabold tracking-tight text-[var(--color-text-primary)] md:text-4xl">
-              {t("title")}
-            </h1>
-            <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-base max-w-md mx-auto">
-              {t("subtitle")}
-            </p>
-          </div>
+          <SurfaceBanner
+            surface="methodology"
+            eyebrow={locale === "ro" ? "Guvernanță clinică" : "Clinical governance"}
+            title={t("title")}
+            lead={t("subtitle")}
+            compact
+          />
 
           <div className="space-y-6">
             <Card variant="elevated" className="p-6 animate-fade-in-up delay-100">

@@ -55,7 +55,7 @@ export default async function AdminLoginPage() {
             </ul>
 
             <div className="pointer-events-none relative mx-auto mt-10 h-40 w-40 opacity-70 lg:mx-0">
-              <Image src="/images/ai/network-care.svg" alt="" fill className="object-contain" sizes="160px" />
+              <Image src="/images/surfaces/impact.png" alt="" fill className="object-cover opacity-70" sizes="160px" />
             </div>
           </div>
 

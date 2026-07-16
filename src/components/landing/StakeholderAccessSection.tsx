@@ -84,7 +84,7 @@ export async function StakeholderAccessSection() {
           <div className="relative">
             <div className="pointer-events-none absolute -right-6 -top-8 hidden h-48 w-48 opacity-80 lg:block">
               <Image
-                src="/images/ai/network-care.svg"
+                src="/images/surfaces/impact.png"
                 alt=""
                 fill
                 className="object-contain"

@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { STP_ENI_PHRASE_IT, STP_ENI_STEPS } from "@/data/italy-stp-eni-guide";
+import { ToolHero } from "@/components/ui";
+import { surfaceVisual } from "@/lib/visuals/surfaces";
 
 type VisitCard = {
   patientSummary: string;
@@ -100,13 +102,14 @@ export function HealthcareNavigator({ locale }: { locale: string }) {
   if (step === 1) {
     return (
       <div>
-        <div className="mb-6 text-center animate-fade-in-up">
-          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-xl shadow-cyan-500/25">
-            <Navigation className="h-10 w-10 text-white" />
-          </div>
-          <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
-          <p className="mt-2 text-sm text-gray-500">{t("heroSubtitle")}</p>
-        </div>
+        <ToolHero
+          icon={Navigation}
+          eyebrow="Navigate"
+          title={t("heroTitle")}
+          subtitle={t("heroSubtitle")}
+          accent="ink"
+          heroImage={surfaceVisual("navigate")}
+        />
 
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
           {t("issuePrompt")}

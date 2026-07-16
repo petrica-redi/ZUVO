@@ -9,7 +9,8 @@ import {
   MapPin,
   ShieldCheck,
 } from "lucide-react";
-import { Card, Badge } from "@/components/ui";
+import { Card, Badge, ToolHero } from "@/components/ui";
+import { surfaceVisual } from "@/lib/visuals/surfaces";
 
 type ProviderRow = {
   id: string;
@@ -68,17 +69,14 @@ export function ProvidersList({
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
-      <div className="mb-8 text-center animate-fade-in-up">
-        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-3xl gradient-brand grain-overlay shadow-brand">
-          <Map className="lucide h-8 w-8 text-white" strokeWidth={1.85} />
-        </div>
-        <h1 className="font-display text-3xl font-extrabold tracking-tight text-[var(--color-text-primary)] md:text-4xl">
-          {title}
-        </h1>
-        <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-base">
-          {subtitle}
-        </p>
-      </div>
+      <ToolHero
+        icon={Map}
+        eyebrow="Clinics"
+        title={title}
+        subtitle={subtitle}
+        accent="brand"
+        heroImage={surfaceVisual("providers")}
+      />
 
       <div className="relative mb-6 animate-fade-in-up delay-100">
         <input

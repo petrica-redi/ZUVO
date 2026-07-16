@@ -77,7 +77,7 @@
   --color-bg:              var(--color-neutral-50);
   --color-bg-subtle:       var(--color-neutral-100);
   --color-bg-elevated:     var(--color-neutral-0);
-  --color-bg-canvas:       #F0F9FF;            /* Soft blue-green canvas */
+  --color-bg-canvas:       #F3F7F5;            /* Soft sage-cream canvas */
   --color-bg-inverse:      var(--color-neutral-900);
 
   --color-surface:         var(--color-neutral-0);
@@ -95,10 +95,10 @@
   --color-text-inverse:    var(--color-neutral-0);
   --color-text-brand:      var(--color-brand-700);
 
-  --color-accent:          var(--color-blue-600);
-  --color-accent-hover:    var(--color-blue-700);
-  --color-accent-soft:     var(--color-blue-50);
-  --color-accent-text:     var(--color-blue-700);
+  --color-accent:          var(--color-brand-600);
+  --color-accent-hover:    var(--color-brand-700);
+  --color-accent-soft:     var(--color-brand-50);
+  --color-accent-text:     var(--color-brand-700);
   --color-accent-green:    var(--color-brand-600);
 
   --color-success-bg:      #ECFDF5;
@@ -908,6 +908,11 @@ button {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes surface-ken {
+  from { transform: scale(1.04) translate3d(0, 0, 0); }
+  to   { transform: scale(1.1) translate3d(-1.5%, -1%, 0); }
+}
+
 @keyframes fade-in {
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -964,6 +969,13 @@ button {
 }
 .animate-fade-in {
   animation: fade-in 0.4s var(--ease-out) both;
+}
+.animate-surface-ken {
+  animation: surface-ken 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.surface-hero {
+  isolation: isolate;
 }
 .animate-scale-in {
   animation: scale-in 0.35s var(--ease-spring-out) both;
