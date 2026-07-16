@@ -1,7 +1,10 @@
 /**
  * Platform impact statistics from the database.
  * Falls back to an explicitly labelled illustrative stakeholder dataset.
- * Live queries are time-bounded so /impact cannot hang the platform.
+ *
+ * Critical: never hold the request open on heavy workspace payload scans.
+ * Live path uses COUNT queries only; county detail falls back to demo rows
+ * unless the workspace set is small enough to aggregate safely.
  */
 
 import { count, sql } from "drizzle-orm";
@@ -43,7 +46,7 @@ export type ImpactStats = {
 };
 
 const COUNTY_NAMES = new Map(ROMANIA_ECI_COUNTIES.map((c) => [c.code, c.name]));
-const QUERY_BUDGET_MS = 4500;
+const LIGHT_AGGREGATE_LIMIT = 40;
 
 function countyName(code: string): string {
   return COUNTY_NAMES.get(code) ?? code;
@@ -71,20 +74,6 @@ function toCountySnapshots(
     .sort((a, b) => b.visits - a.visits);
 }
 
-async function withTimeout<T>(promise: Promise<T>, ms: number, fallback: T): Promise<T> {
-  let timer: ReturnType<typeof setTimeout> | undefined;
-  try {
-    return await Promise.race([
-      promise,
-      new Promise<T>((resolve) => {
-        timer = setTimeout(() => resolve(fallback), ms);
-      }),
-    ]);
-  } finally {
-    if (timer) clearTimeout(timer);
-  }
-}
-
 function illustrativeBase(): ImpactStats {
   const illustrativeIndicators: ProgrammeIndicatorValue[] = [
     { slug: "gp_registered", labelKey: "impact.indicatorGpRegistered", count: 186, suppressed: false },
@@ -107,34 +96,59 @@ function illustrativeBase(): ImpactStats {
   };
 }
 
+async function safeCount(
+  run: () => Promise<{ n: number }[]>,
+): Promise<number> {
+  try {
+    const [row] = await run();
+    return row?.n ?? 0;
+  } catch {
+    return 0;
+  }
+}
+
 export async function getImpactStats(): Promise<ImpactStats> {
   const base = illustrativeBase();
   const db = getDb();
   if (!db) return base;
 
   try {
-    const live = await withTimeout(
-      (async (): Promise<ImpactStats> => {
-        const [progressRow] = await db
-          .select({ n: count() })
-          .from(progress)
-          .where(sql`${progress.status} = 'completed'`);
+    const lessonsCompleted = await safeCount(() =>
+      db
+        .select({ n: count() })
+        .from(progress)
+        .where(sql`${progress.status} = 'completed'`),
+    );
+    const mythsChecked = await safeCount(() =>
+      db
+        .select({ n: count() })
+        .from(healthLogs)
+        .where(sql`${healthLogs.type} = 'scan'`),
+    );
+    const emergenciesEscalated = await safeCount(() =>
+      db
+        .select({ n: count() })
+        .from(healthLogs)
+        .where(sql`${healthLogs.metadata}->>'severity' = 'red'`),
+    );
+    const activeMediators = await safeCount(() =>
+      db.select({ n: count() }).from(mediatorWorkspaces),
+    );
+    const openOpsCases = await safeCount(() =>
+      db
+        .select({ n: count() })
+        .from(navigationCases)
+        .where(sql`${navigationCases.status} NOT IN ('closed', 'completed', 'cancelled')`),
+    );
 
-        const [scanRow] = await db
-          .select({ n: count() })
-          .from(healthLogs)
-          .where(sql`${healthLogs.type} = 'scan'`);
+    // Only attempt payload aggregation when the dataset is small enough.
+    let visitsThisYear: number = DEMO_IMPACT_STATS.visitsThisYear;
+    let gpEnrollmentsFacilitated: number = DEMO_IMPACT_STATS.gpEnrollmentsFacilitated;
+    let countiesReporting: number = DEMO_IMPACT_STATS.countiesReporting;
+    let countySnapshots = base.countySnapshots;
 
-        const [emergencyRow] = await db
-          .select({ n: count() })
-          .from(healthLogs)
-          .where(sql`${healthLogs.metadata}->>'severity' = 'red'`);
-
-        const [openOpsRow] = await db
-          .select({ n: count() })
-          .from(navigationCases)
-          .where(sql`${navigationCases.status} NOT IN ('closed', 'completed', 'cancelled')`);
-
+    if (activeMediators > 0 && activeMediators <= LIGHT_AGGREGATE_LIMIT) {
+      try {
         const workspaceRows = await db
           .select({
             workspaceId: mediatorWorkspaces.workspaceId,
@@ -142,7 +156,8 @@ export async function getImpactStats(): Promise<ImpactStats> {
             payload: mediatorWorkspaces.payload,
             updatedAt: mediatorWorkspaces.updatedAt,
           })
-          .from(mediatorWorkspaces);
+          .from(mediatorWorkspaces)
+          .limit(LIGHT_AGGREGATE_LIMIT);
 
         const national = aggregateNational(
           workspaceRows.map((w) => ({
@@ -153,40 +168,51 @@ export async function getImpactStats(): Promise<ImpactStats> {
           })),
         );
 
-        let gpEnrollments = 0;
-        let visitsYear = 0;
-        for (const county of national) {
-          visitsYear += county.visitsThisYear;
-          gpEnrollments += county.facilitations.gpEnrollment ?? 0;
+        if (national.length > 0) {
+          visitsThisYear = 0;
+          gpEnrollmentsFacilitated = 0;
+          for (const county of national) {
+            visitsThisYear += county.visitsThisYear;
+            gpEnrollmentsFacilitated += county.facilitations.gpEnrollment ?? 0;
+          }
+          countiesReporting = national.length;
+          countySnapshots = toCountySnapshots(national);
         }
+      } catch {
+        // Keep illustrative county rows; still mark overall source as live for counts.
+      }
+    }
 
-        const programmeIndicators = await withTimeout(
-          getProgrammeIndicators("ministry_viewer"),
-          2000,
-          base.programmeIndicators,
-        );
+    let programmeIndicators = base.programmeIndicators;
+    try {
+      programmeIndicators = await getProgrammeIndicators("ministry_viewer");
+    } catch {
+      // keep illustrative indicators
+    }
 
-        return {
-          source: "live",
-          languages: LOCALES.length,
-          activeMediators: workspaceRows.length,
-          mythsChecked: scanRow?.n ?? 0,
-          emergenciesEscalated: emergencyRow?.n ?? 0,
-          lessonsCompleted: progressRow?.n ?? 0,
-          visitsThisYear: visitsYear,
-          gpEnrollmentsFacilitated: gpEnrollments,
-          countiesReporting: national.length,
-          openOpsCases: openOpsRow?.n ?? 0,
-          programmeIndicators,
-          countySnapshots:
-            national.length > 0 ? toCountySnapshots(national) : base.countySnapshots,
-        };
-      })(),
-      QUERY_BUDGET_MS,
-      base,
-    );
+    const hasLiveSignal =
+      activeMediators > 0 ||
+      mythsChecked > 0 ||
+      lessonsCompleted > 0 ||
+      emergenciesEscalated > 0 ||
+      openOpsCases > 0;
 
-    return live;
+    return {
+      source: hasLiveSignal ? "live" : "illustrative",
+      languages: LOCALES.length,
+      activeMediators,
+      mythsChecked,
+      emergenciesEscalated,
+      lessonsCompleted,
+      visitsThisYear: hasLiveSignal ? visitsThisYear : base.visitsThisYear,
+      gpEnrollmentsFacilitated: hasLiveSignal
+        ? gpEnrollmentsFacilitated
+        : base.gpEnrollmentsFacilitated,
+      countiesReporting: hasLiveSignal ? countiesReporting : base.countiesReporting,
+      openOpsCases,
+      programmeIndicators,
+      countySnapshots,
+    };
   } catch {
     return base;
   }

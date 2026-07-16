@@ -19,6 +19,9 @@ import {
 import { Card } from "@/components/ui";
 import { formatImpactNumber, getImpactStats } from "@/lib/impact/stats";
 
+export const dynamic = "force-dynamic";
+export const maxDuration = 15;
+
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
