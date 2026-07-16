@@ -115,10 +115,10 @@ export default async function ImpactPage({ params }: Props) {
 
           <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5 animate-fade-in-up delay-100">
             {[
-              [ShieldCheck, formatImpactNumber(stats.mythsChecked), t("statMyths"), "text-emerald-600"],
+              [ShieldCheck, formatImpactNumber(stats.mythsChecked), t("statMyths"), "text-[var(--color-brand-700)]"],
               [Activity, String(stats.emergenciesEscalated), t("statEmergencies"), "text-red-600"],
-              [Users, String(stats.activeMediators), t("statMediators"), "text-blue-600"],
-              [FileText, formatImpactNumber(stats.visitsThisYear), t("statVisits"), "text-violet-600"],
+              [Users, String(stats.activeMediators), t("statMediators"), "text-[var(--color-ink-900)]"],
+              [FileText, formatImpactNumber(stats.visitsThisYear), t("statVisits"), "text-[var(--color-brand-600)]"],
             ].map(([Icon, value, label, tone]) => {
               const StatIcon = Icon as typeof BarChart3;
               return (
@@ -134,6 +134,14 @@ export default async function ImpactPage({ params }: Props) {
               );
             })}
           </div>
+
+          {live && stats.openOpsCases > 0 ? (
+            <p className="mb-8 text-xs font-semibold text-[var(--color-text-secondary)]">
+              {locale === "ro"
+                ? `${stats.openOpsCases} cazuri operaționale deschise în platformă (spații mediatori + flux operațional).`
+                : `${stats.openOpsCases} open operational cases across mediator workspaces and the ops layer.`}
+            </p>
+          ) : null}
 
           <div className="mb-8">
             <div className="mb-4 flex flex-wrap items-end justify-between gap-3">

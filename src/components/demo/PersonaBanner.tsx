@@ -23,7 +23,7 @@ export function PersonaBanner() {
 
   return (
     <div
-      className="sticky top-14 z-40 border-b border-white/20 bg-gradient-to-r from-[#1D4ED8] to-[#059669] px-4 py-2 text-white"
+      className="sticky top-14 z-40 border-b border-[var(--color-border-subtle)] bg-[var(--color-ink-900)] px-4 py-2 text-white"
       role="status"
     >
       <div className="mx-auto flex max-w-3xl items-center justify-between gap-3">

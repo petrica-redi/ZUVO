@@ -49,11 +49,11 @@ export function StakeholderLoginForm({
       <div className="stakeholder-login-panel__glow" aria-hidden />
 
       <div className="relative overflow-hidden rounded-[28px] border border-white/20 bg-white/80 shadow-4 backdrop-blur-2xl">
-        <div className="h-1 bg-gradient-to-r from-[#2563EB] via-[#0D9488] to-[#059669]" />
+        <div className="h-1 bg-gradient-to-r from-[var(--color-ink-900)] via-[#0F3D38] to-[#0E8074]" />
 
         <div className="p-7 md:p-8">
           <div className="mb-6 flex items-start gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2563EB] to-[#059669] text-white shadow-brand">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-ink-900)] text-white shadow-2">
               <Lock className="h-5 w-5" strokeWidth={2} />
             </div>
             <div>

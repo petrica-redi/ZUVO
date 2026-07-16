@@ -5,10 +5,10 @@ import { StakeholderLoginForm } from "@/components/auth/StakeholderLoginForm";
 import { getAdminLoginEmail } from "@/lib/admin/actions";
 
 const ROLES = [
-  { id: "community", icon: Users, gradient: "from-[#2563EB] to-[#3B82F6]" },
-  { id: "mediator", icon: Shield, gradient: "from-[#0D9488] to-[#059669]" },
-  { id: "doctor", icon: Stethoscope, gradient: "from-[#1D4ED8] to-[#0D9488]" },
-  { id: "manager", icon: BarChart3, gradient: "from-[#059669] to-[#10B981]" },
+  { id: "community", icon: Users, gradient: "from-[#0E8074] to-[#14B8A6]" },
+  { id: "mediator", icon: Shield, gradient: "from-[#0A1220] to-[#0F3D38]" },
+  { id: "doctor", icon: Stethoscope, gradient: "from-[#134E4A] to-[#0E8074]" },
+  { id: "manager", icon: BarChart3, gradient: "from-[#0F3D38] to-[#0E8074]" },
 ] as const;
 
 /**
