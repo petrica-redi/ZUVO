@@ -142,9 +142,9 @@ export async function getImpactStats(): Promise<ImpactStats> {
     );
 
     // Only attempt payload aggregation when the dataset is small enough.
-    let visitsThisYear = DEMO_IMPACT_STATS.visitsThisYear;
-    let gpEnrollmentsFacilitated = DEMO_IMPACT_STATS.gpEnrollmentsFacilitated;
-    let countiesReporting = DEMO_IMPACT_STATS.countiesReporting;
+    let visitsThisYear: number = DEMO_IMPACT_STATS.visitsThisYear;
+    let gpEnrollmentsFacilitated: number = DEMO_IMPACT_STATS.gpEnrollmentsFacilitated;
+    let countiesReporting: number = DEMO_IMPACT_STATS.countiesReporting;
     let countySnapshots = base.countySnapshots;
 
     if (activeMediators > 0 && activeMediators <= LIGHT_AGGREGATE_LIMIT) {
