@@ -21,8 +21,12 @@ export function getDb(): DbClient | null {
 
   sqlClient = postgres(url, {
     max: 1,
-    idle_timeout: 20,
-    connect_timeout: 10,
+    idle_timeout: 10,
+    connect_timeout: 5,
+    // Prevent runaway queries from holding the serverless function open.
+    connection: {
+      statement_timeout: 3000,
+    },
     ssl: "require",
     prepare: false,
   });
