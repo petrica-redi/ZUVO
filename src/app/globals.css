@@ -977,6 +977,243 @@ button {
 .surface-hero {
   isolation: isolate;
 }
+
+/* Premium claim / chat composer — medical blue text, layered chrome */
+.premium-composer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid color-mix(in srgb, var(--color-blue-500) 28%, var(--color-border-subtle));
+  background:
+    linear-gradient(180deg, var(--color-blue-50) 0%, #ffffff 42%, #ffffff 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 10px 36px rgba(37, 99, 235, 0.1),
+    0 2px 8px rgba(15, 23, 42, 0.04);
+  transition:
+    border-color 0.2s var(--ease-emphasized),
+    box-shadow 0.2s var(--ease-emphasized),
+    transform 0.2s var(--ease-emphasized);
+}
+
+.premium-composer::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-blue-600) 0%,
+    #38bdf8 45%,
+    var(--color-brand-500) 100%
+  );
+  opacity: 0.95;
+}
+
+.premium-composer:focus-within {
+  border-color: color-mix(in srgb, var(--color-blue-600) 55%, transparent);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 0 0 4px rgba(37, 99, 235, 0.14),
+    0 16px 40px rgba(37, 99, 235, 0.14),
+    0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.premium-composer__chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1.1rem 0.15rem;
+}
+
+.premium-composer__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-blue-700);
+}
+
+.premium-composer__meta {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: color-mix(in srgb, var(--color-blue-600) 55%, transparent);
+  font-variant-numeric: tabular-nums;
+}
+
+.premium-composer__input {
+  width: 100%;
+  resize: none;
+  border: none;
+  background: transparent;
+  padding: 0.65rem 1.15rem 0.55rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  color: var(--color-blue-700);
+  caret-color: var(--color-blue-600);
+}
+
+.premium-composer__input::placeholder {
+  font-weight: 500;
+  color: color-mix(in srgb, var(--color-blue-500) 52%, #94a3b8);
+}
+
+.premium-composer__input:focus {
+  outline: none;
+}
+
+.premium-composer__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.35rem 0.85rem 0.85rem;
+}
+
+.premium-composer__mic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--color-blue-500) 22%, transparent);
+  background: color-mix(in srgb, var(--color-blue-50) 80%, white);
+  color: var(--color-blue-600);
+  transition:
+    background 0.15s var(--ease-emphasized),
+    color 0.15s var(--ease-emphasized),
+    transform 0.15s var(--ease-emphasized);
+}
+
+.premium-composer__mic:hover {
+  background: var(--color-blue-100);
+  color: var(--color-blue-700);
+}
+
+.premium-composer__mic[data-active="true"] {
+  border-color: transparent;
+  background: #fee2e2;
+  color: #dc2626;
+  animation: pulse-glow-emergency 1.8s var(--ease-in-out) infinite;
+}
+
+.premium-composer__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: white;
+  background: linear-gradient(135deg, var(--color-blue-600) 0%, #1d4ed8 55%, #0e7490 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.22) inset,
+    0 8px 22px rgba(37, 99, 235, 0.28);
+  transition:
+    transform 0.15s var(--ease-emphasized),
+    box-shadow 0.15s var(--ease-emphasized),
+    opacity 0.15s var(--ease-emphasized);
+}
+
+.premium-composer__submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25) inset,
+    0 12px 28px rgba(37, 99, 235, 0.34);
+}
+
+.premium-composer__submit:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.premium-composer__submit:disabled {
+  opacity: 0.45;
+  box-shadow: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .premium-composer {
+    border-color: color-mix(in srgb, var(--color-blue-500) 35%, rgba(255, 255, 255, 0.08));
+    background:
+      linear-gradient(
+        180deg,
+        color-mix(in srgb, #1e3a5f 70%, #0a1311) 0%,
+        color-mix(in srgb, #0f1b2d 88%, #0a1311) 100%
+      );
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.06) inset,
+      0 12px 36px rgba(37, 99, 235, 0.16);
+  }
+
+  :root:not([data-theme="light"]) .premium-composer__label {
+    color: #93c5fd;
+  }
+
+  :root:not([data-theme="light"]) .premium-composer__meta {
+    color: color-mix(in srgb, #93c5fd 60%, transparent);
+  }
+
+  :root:not([data-theme="light"]) .premium-composer__input {
+    color: #bfdbfe;
+    caret-color: #60a5fa;
+  }
+
+  :root:not([data-theme="light"]) .premium-composer__input::placeholder {
+    color: color-mix(in srgb, #93c5fd 45%, #64748b);
+  }
+
+  :root:not([data-theme="light"]) .premium-composer__mic {
+    border-color: color-mix(in srgb, #60a5fa 28%, transparent);
+    background: color-mix(in srgb, #1e3a5f 55%, transparent);
+    color: #93c5fd;
+  }
+}
+
+[data-theme="dark"] .premium-composer {
+  border-color: color-mix(in srgb, var(--color-blue-500) 35%, rgba(255, 255, 255, 0.08));
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, #1e3a5f 70%, #0a1311) 0%,
+      color-mix(in srgb, #0f1b2d 88%, #0a1311) 100%
+    );
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 12px 36px rgba(37, 99, 235, 0.16);
+}
+
+[data-theme="dark"] .premium-composer__label {
+  color: #93c5fd;
+}
+
+[data-theme="dark"] .premium-composer__meta {
+  color: color-mix(in srgb, #93c5fd 60%, transparent);
+}
+
+[data-theme="dark"] .premium-composer__input {
+  color: #bfdbfe;
+  caret-color: #60a5fa;
+}
+
+[data-theme="dark"] .premium-composer__input::placeholder {
+  color: color-mix(in srgb, #93c5fd 45%, #64748b);
+}
+
+[data-theme="dark"] .premium-composer__mic {
+  border-color: color-mix(in srgb, #60a5fa 28%, transparent);
+  background: color-mix(in srgb, #1e3a5f 55%, transparent);
+  color: #93c5fd;
+}
 .animate-scale-in {
   animation: scale-in 0.35s var(--ease-spring-out) both;
 }

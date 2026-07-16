@@ -382,54 +382,60 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
         </div>
       )}
 
-      {/* Input area */}
-      <div className="border-t border-[var(--color-border-subtle)] bg-[var(--color-surface)]/90 backdrop-blur-xl p-3">
-        <div className="flex items-end gap-2">
-          {voiceSupported && (
+      {/* Input area — premium blue-text composer */}
+      <div className="border-t border-[var(--color-border-subtle)] bg-[var(--color-surface)]/90 p-3 backdrop-blur-xl">
+        <div className="premium-composer !rounded-[24px]">
+          <div className="premium-composer__chrome !pb-0">
+            <span className="premium-composer__label">
+              <Sparkles className="h-3.5 w-3.5" strokeWidth={2.2} aria-hidden />
+              {shellLabels.label}
+            </span>
+            <span className="premium-composer__meta" aria-hidden>
+              {input.trim().length > 0 ? `${input.trim().length}` : "···"}
+            </span>
+          </div>
+          <div className="flex items-end gap-2 px-2.5 pb-2.5 pt-0.5">
+            {voiceSupported && (
+              <button
+                type="button"
+                onClick={toggleVoice}
+                disabled={isTranscribing}
+                className="premium-composer__mic !h-11 !w-11"
+                data-active={voiceActive ? "true" : "false"}
+                aria-label={voiceActive ? tVoice("stop") : tVoice("start")}
+                aria-pressed={voiceActive}
+                title={deepgramSupported ? tVoice("micDeepgram") : tVoice("start")}
+              >
+                {isTranscribing ? (
+                  <Loader2 className="h-5 w-5 animate-spin" />
+                ) : voiceActive ? (
+                  <MicOff className="h-5 w-5" />
+                ) : (
+                  <Mic className="h-5 w-5" />
+                )}
+              </button>
+            )}
+            <textarea
+              ref={inputRef}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder={labels.placeholder}
+              rows={1}
+              className="premium-composer__input !min-h-[2.75rem] !flex-1 !px-3 !py-2.5 !text-[15px]"
+              disabled={isLoading}
+              aria-label={tChat("inputAria")}
+            />
             <button
               type="button"
-              onClick={toggleVoice}
-              disabled={isTranscribing}
-              className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full transition-all ${
-                voiceActive
-                  ? "bg-red-100 text-red-600 animate-pulse"
-                  : isTranscribing
-                    ? "bg-[var(--color-brand-50)] text-[var(--color-brand-700)]"
-                    : "bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-hover)]"
-              }`}
-              aria-label={voiceActive ? tVoice("stop") : tVoice("start")}
-              aria-pressed={voiceActive}
-              title={deepgramSupported ? tVoice("micDeepgram") : tVoice("start")}
+              onClick={() => sendMessage()}
+              disabled={!input.trim() || isLoading}
+              className="premium-composer__submit !h-11 !w-11 !justify-center !rounded-full !px-0"
+              aria-label={tChat("sendAria")}
             >
-              {isTranscribing ? (
-                <Loader2 className="h-5 w-5 animate-spin" />
-              ) : voiceActive ? (
-                <MicOff className="h-5 w-5" />
-              ) : (
-                <Mic className="h-5 w-5" />
-              )}
+              <Send className="h-5 w-5" />
             </button>
-          )}
-          <textarea
-            ref={inputRef}
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder={labels.placeholder}
-            rows={1}
-            className="flex-1 resize-none rounded-2xl border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-5 py-3.5 text-sm text-[var(--color-text-primary)] focus:border-[var(--color-accent)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/20"
-            disabled={isLoading}
-            aria-label={tChat("inputAria")}
-          />
-          <button
-            onClick={() => sendMessage()}
-            disabled={!input.trim() || isLoading}
-            className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full text-white shadow-3 transition-all active:scale-90 disabled:bg-[var(--color-surface-subtle)] disabled:text-[var(--color-text-muted)]"
-            style={{ background: !input.trim() || isLoading ? undefined : "linear-gradient(135deg, #0E8074 0%, #0C5A60 100%)" }}
-            aria-label={tChat("sendAria")}
-          >
-            <Send className="h-5 w-5" />
-          </button>
+          </div>
         </div>
       </div>
     </div>
