@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
-import { Search, Mic, Share2, AlertTriangle, CheckCircle2, XCircle, Loader2, Volume2 } from "lucide-react";
+import { Search, Mic, Share2, AlertTriangle, CheckCircle2, XCircle, Loader2, Volume2, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
 import { ToolHero } from "@/components/ui";
@@ -156,36 +156,50 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
         }}
       />
 
-      {/* Input area */}
-      <div className="mb-4 rounded-2xl border-2 border-gray-200 bg-white p-1 shadow-sm focus-within:border-[#C0392B] focus-within:ring-4 focus-within:ring-[#C0392B]/10 transition-all">
+      {/* Input area — premium blue-text composer */}
+      <div className="premium-composer mb-5">
+        <div className="premium-composer__chrome">
+          <span className="premium-composer__label">
+            <Sparkles className="h-3.5 w-3.5" strokeWidth={2.2} aria-hidden />
+            {labels.orDescribe}
+          </span>
+          <span className="premium-composer__meta" aria-hidden>
+            {claim.trim().length > 0 ? `${claim.trim().length}` : "···"}
+          </span>
+        </div>
         <textarea
           value={claim}
-          onChange={(e) => { setClaim(e.target.value); setResult(null); }}
+          onChange={(e) => {
+            setClaim(e.target.value);
+            setResult(null);
+            setError(null);
+          }}
           onKeyDown={handleKeyDown}
-          aria-label={tScan("inputAria")} placeholder={labels.placeholder}
-          rows={3}
-          className="w-full resize-none rounded-xl border-none bg-transparent px-4 py-3 text-sm focus:outline-none"
+          aria-label={tScan("inputAria")}
+          placeholder={labels.placeholder}
+          rows={4}
+          className="premium-composer__input"
         />
-        <div className="flex items-center justify-between px-3 pb-2">
+        <div className="premium-composer__toolbar">
           {voiceSupported ? (
             <button
+              type="button"
               onClick={toggleListening}
-              className={`rounded-full p-2 transition-all ${
-                isListening 
-                  ? "bg-red-100 text-red-600 animate-pulse" 
-                  : "bg-gray-100 text-gray-400 hover:bg-gray-200"
-              }`}
+              className="premium-composer__mic"
+              data-active={isListening ? "true" : "false"}
               aria-label={isListening ? tVoice("stop") : tVoice("start")}
+              aria-pressed={isListening}
             >
               <Mic className="h-4 w-4" />
             </button>
           ) : (
-            <div className="w-8" />
+            <div className="w-10" aria-hidden />
           )}
           <button
+            type="button"
             onClick={handleScan}
             disabled={!claim.trim() || loading}
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#C0392B] to-[#E74C3C] px-5 py-2 text-sm font-semibold text-white shadow-md transition-all active:scale-95 disabled:opacity-50"
+            className="premium-composer__submit"
           >
             {loading ? (
               <>
