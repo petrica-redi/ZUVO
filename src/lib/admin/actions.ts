@@ -1,18 +1,27 @@
 "use server";
 
-import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getDb } from "@/db/client";
 import { platformConfig } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { loginSchema } from "@/lib/admin/validations";
+import {
+  clearAdminSessionCookie,
+  readAdminSessionCookie,
+  setAdminSessionCookie,
+  verifyAdminSessionToken,
+} from "@/lib/admin/session";
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL?.trim() || "petrica@redi-ngo.eu";
 const ADMIN_PASS = process.env.ADMIN_PASSWORD?.trim() || "Welcome2REDI*";
-const SESSION_COOKIE = "admin_session";
 
 export async function getAdminLoginEmail() {
   return ADMIN_EMAIL;
+}
+
+export async function isAdminAuthenticated(): Promise<boolean> {
+  const token = await readAdminSessionCookie();
+  return verifyAdminSessionToken(token, ADMIN_EMAIL);
 }
 
 export async function loginAdmin(data: FormData) {
@@ -28,28 +37,19 @@ export async function loginAdmin(data: FormData) {
   const { email, password } = parsed.data;
 
   if (email === ADMIN_EMAIL && password === ADMIN_PASS) {
-    const cookieStore = await cookies();
-    cookieStore.set(SESSION_COOKIE, "authenticated", {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      maxAge: 60 * 60 * 24 * 7, // 1 week
-      path: "/",
-    });
+    await setAdminSessionCookie(email);
     return { success: true };
   }
   return { success: false, error: "Invalid credentials" };
 }
 
 export async function logoutAdmin() {
-  const cookieStore = await cookies();
-  cookieStore.delete(SESSION_COOKIE);
+  await clearAdminSessionCookie();
   redirect("/admin/login");
 }
 
 export async function verifyAdmin() {
-  const cookieStore = await cookies();
-  const session = cookieStore.get(SESSION_COOKIE);
-  if (!session || session.value !== "authenticated") {
+  if (!(await isAdminAuthenticated())) {
     redirect("/admin/login");
   }
 }
@@ -57,9 +57,13 @@ export async function verifyAdmin() {
 export async function getPlatformConfig() {
   const db = getDb();
   if (!db) return null;
-  
+
   try {
-    const config = await db.select().from(platformConfig).where(eq(platformConfig.id, "default")).limit(1);
+    const config = await db
+      .select()
+      .from(platformConfig)
+      .where(eq(platformConfig.id, "default"))
+      .limit(1);
     return config[0] || null;
   } catch (e) {
     console.error("Failed to fetch platform config:", e);
@@ -73,9 +77,16 @@ export async function savePlatformConfig(data: Record<string, unknown>) {
   if (!db) throw new Error("Database not connected");
 
   try {
-    const existing = await db.select().from(platformConfig).where(eq(platformConfig.id, "default")).limit(1);
+    const existing = await db
+      .select()
+      .from(platformConfig)
+      .where(eq(platformConfig.id, "default"))
+      .limit(1);
     if (existing.length > 0) {
-      await db.update(platformConfig).set({ ...data, updatedAt: new Date() }).where(eq(platformConfig.id, "default"));
+      await db
+        .update(platformConfig)
+        .set({ ...data, updatedAt: new Date() })
+        .where(eq(platformConfig.id, "default"));
     } else {
       await db.insert(platformConfig).values({ id: "default", ...data });
     }

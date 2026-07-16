@@ -8,25 +8,25 @@ const TOOLS = [
     id: "ai",
     icon: Brain,
     image: "/images/ai/community-care.svg",
-    gradient: "from-[#2563EB] to-[#059669]",
+    gradient: "from-[#0A1220] to-[#0E8074]",
   },
   {
     id: "scan",
     icon: Search,
     image: "/images/ai/learning-care.svg",
-    gradient: "from-[#1D4ED8] to-[#0D9488]",
+    gradient: "from-[#0F3D38] to-[#0E8074]",
   },
   {
     id: "triage",
     icon: Activity,
     image: "/images/ai/clinical-care.svg",
-    gradient: "from-[#059669] to-[#10B981]",
+    gradient: "from-[#0E8074] to-[#14B8A6]",
   },
   {
     id: "voice",
     icon: Mic,
     image: "/images/ai/network-care.svg",
-    gradient: "from-[#3B82F6] to-[#14B8A6]",
+    gradient: "from-[#134E4A] to-[#0E8074]",
   },
 ] as const;
 
@@ -98,9 +98,9 @@ export async function TechnologyShowcase() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-4 rounded-3xl border border-[var(--color-border-subtle)] bg-gradient-to-r from-[#EFF6FF] to-[#ECFDF5] p-8 text-center md:flex-row md:justify-between md:text-left">
+        <div className="mt-10 flex flex-col items-center gap-4 rounded-3xl border border-[var(--color-border-subtle)] bg-[var(--color-surface-subtle)] p-8 text-center md:flex-row md:justify-between md:text-left">
           <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2563EB] to-[#059669] text-white">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[var(--color-ink-900)] text-white">
               <Shield className="lucide h-6 w-6" strokeWidth={2} />
             </div>
             <div>
@@ -113,8 +113,8 @@ export async function TechnologyShowcase() {
             </div>
           </div>
           <Link
-            href="/admin/login"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-gradient-to-r from-[#2563EB] to-[#059669] px-6 py-3 text-sm font-extrabold text-white shadow-brand transition-transform active:scale-[0.97]"
+            href="/#stakeholder-access"
+            className="admin-btn-primary inline-flex shrink-0 items-center gap-2 px-6 py-3 text-sm"
           >
             {t("techDemoCta")}
             <ArrowRight className="lucide h-4 w-4" strokeWidth={2.2} />

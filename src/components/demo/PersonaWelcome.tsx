@@ -49,11 +49,11 @@ export function PersonaWelcome() {
   return (
     <div className="fixed inset-x-4 top-20 z-[60] mx-auto max-w-md animate-fade-in-up">
       <div className="overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-white shadow-4">
-        <div className="h-1.5 bg-gradient-to-r from-[#2563EB] to-[#059669]" />
+        <div className="h-1.5 bg-gradient-to-r from-[var(--color-ink-900)] to-[#0E8074]" />
         <div className="p-5">
           <div className="flex items-start justify-between gap-3">
             <div>
-              <p className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--color-blue-600)]">
+              <p className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--color-text-muted)]">
                 {t(model.roleSubtitleKey)}
               </p>
               <h3 className="mt-1 font-display text-lg font-extrabold text-[var(--color-text-primary)]">
@@ -76,7 +76,7 @@ export function PersonaWelcome() {
           </div>
           <Link
             href="/admin/dashboard"
-            className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-[var(--color-blue-600)]"
+            className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-[var(--color-ink-900)]"
           >
             {t("switchPersona")}
             <ArrowRight className="h-3.5 w-3.5" />

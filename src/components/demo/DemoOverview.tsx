@@ -28,8 +28,8 @@ export function DemoOverview() {
             Redi Health
           </Link>
           <Link
-            href="/admin/login"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#2563EB] to-[#059669] px-5 py-2.5 text-sm font-extrabold text-white shadow-brand"
+            href="/#stakeholder-access"
+            className="admin-btn-primary inline-flex items-center gap-2 px-5 py-2.5 text-sm"
           >
             <LogIn className="h-4 w-4" />
             {t("overviewLoginCta")}
@@ -86,7 +86,7 @@ export function DemoOverview() {
           })}
         </div>
 
-        <div className="mt-12 rounded-3xl border border-[var(--color-border-subtle)] bg-gradient-to-br from-[#EFF6FF] to-[#ECFDF5] p-8 text-center shadow-2">
+        <div className="mt-12 rounded-3xl border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-8 text-center shadow-2">
           <h2 className="font-display text-xl font-extrabold text-[var(--color-text-primary)]">
             {t("overviewCtaTitle")}
           </h2>
@@ -94,8 +94,8 @@ export function DemoOverview() {
             {t("overviewCtaLead")}
           </p>
           <Link
-            href="/admin/login"
-            className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#2563EB] to-[#059669] px-8 py-4 text-base font-extrabold text-white shadow-brand transition-transform active:scale-[0.98]"
+            href="/#stakeholder-access"
+            className="admin-btn-primary mt-6 inline-flex items-center gap-2 px-8 py-4 text-base"
           >
             <LogIn className="h-5 w-5" />
             {t("overviewLoginCta")}
