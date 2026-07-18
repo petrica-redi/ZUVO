@@ -1407,7 +1407,10 @@
     "govFundingLabel": "Maps to",
     "govCta": "Request a pilot briefing",
     "liveTelemetry": "Telemetria live della piattaforma",
-    "navRegister": "Crea account"
+    "navRegister": "Crea account",
+    "signUpCtaHero": "Crea account",
+    "signInCtaHero": "Accedi",
+    "navSignIn": "Accedi"
   },
   "footer": {
     "tagline": "Multilingual literacy for underserved, rural and Roma communities stretching across fifteen European languages.",
@@ -1870,19 +1873,19 @@
   "staffAuth": {
     "registerMetaTitle": "Crea account — Redi Health",
     "registerTitle": "Crea il tuo account",
-    "registerLead": "Registrati con qualsiasi email o Google. Dopo la verifica email, un amministratore approva l'account e assegna il ruolo.",
+    "registerLead": "Crea un account con email o Google. Poi: verifica email → un admin approva e assegna il ruolo → accedi.",
     "displayName": "Nome completo",
     "email": "Email",
     "password": "Password (min. 8 caratteri)",
     "registerSubmit": "Crea account",
-    "registerSuccess": "Controlla la posta — abbiamo inviato un link di verifica. Dopo la conferma, un admin approverà l'accesso.",
+    "registerSuccess": "Prossimo passo: apri la posta e tocca il link di verifica. Poi un admin approverà l’accesso — riceverai un’email.",
     "haveAccount": "Hai già un account?",
     "loginLink": "Accedi",
     "googleContinue": "Continua con Google",
     "orDivider": "oppure",
     "loginMetaTitle": "Accesso — Redi Health",
     "loginTitle": "Accesso staff",
-    "loginLead": "Usa email verificata e password, oppure continua con Google. L'accesso inizia dopo l'approvazione dell'admin.",
+    "loginLead": "Già approvato? Accedi con email e password, o Google. Nuovo? Crea prima un account.",
     "loginSubmit": "Accedi",
     "noAccount": "Non hai un account?",
     "registerLink": "Crea un account",
@@ -1894,7 +1897,7 @@
     "verifyErrorLead": "Questo link non è valido o è scaduto.",
     "pendingMetaTitle": "In attesa di approvazione — Redi Health",
     "pendingPageTitle": "In attesa di approvazione admin",
-    "pendingLead": "L'email è verificata. petrica@redi-ngo.eu approverà l'account e assegnerà un ruolo (professore, mediatore, infermiere, medico, manager o amministratore). Riceverai un'email quando l'accesso sarà pronto.",
+    "pendingLead": "Email confermata. L’admin (petrica@redi-ngo.eu) approverà l’account e assegnerà un ruolo. Ti avviseremo via email.",
     "adminAccountsTitle": "Account staff",
     "adminAccountsLead": "Valida le nuove registrazioni, assegna ruoli e rivedi gli account approvati o rifiutati.",
     "pendingTitle": "In attesa di approvazione",
@@ -1914,6 +1917,11 @@
     "loadError": "Impossibile caricare gli account. Accedi come admin e riprova.",
     "createAccountCta": "Crea account",
     "staffLoginCta": "Accesso staff",
-    "fieldAltLead": "Preferisci l'auto-registrazione? Crea un account — verifichiamo l'email, poi un admin assegna il ruolo."
+    "fieldAltLead": "Preferisci l'auto-registrazione? Crea un account — verifichiamo l'email, poi un admin assegna il ruolo.",
+    "stepRegister": "Account",
+    "stepVerify": "Email",
+    "stepPending": "Approvazione",
+    "stepLogin": "Accesso",
+    "registerSuccessNext": "Ho verificato l’email"
   }
 }

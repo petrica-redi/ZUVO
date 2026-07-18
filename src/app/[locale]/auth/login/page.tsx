@@ -32,6 +32,10 @@ export default async function StaffAuthLoginPage({ params }: Props) {
               registerLink: t("registerLink"),
               google: t("googleContinue"),
               orDivider: t("orDivider"),
+              stepRegister: t("stepRegister"),
+              stepVerify: t("stepVerify"),
+              stepPending: t("stepPending"),
+              stepLogin: t("stepLogin"),
             }}
           />
         </div>

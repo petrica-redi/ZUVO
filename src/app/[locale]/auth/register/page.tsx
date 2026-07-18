@@ -30,10 +30,15 @@ export default async function RegisterPage({ params }: Props) {
               password: t("password"),
               submit: t("registerSubmit"),
               success: t("registerSuccess"),
+              successNext: t("registerSuccessNext"),
               haveAccount: t("haveAccount"),
               loginLink: t("loginLink"),
               google: t("googleContinue"),
               orDivider: t("orDivider"),
+              stepRegister: t("stepRegister"),
+              stepVerify: t("stepVerify"),
+              stepPending: t("stepPending"),
+              stepLogin: t("stepLogin"),
             }}
           />
         </div>

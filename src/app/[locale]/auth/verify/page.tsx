@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/navigation";
 import { Header } from "@/components/Header";
 import { verifyStaffEmail } from "@/lib/staff/actions";
+import { AuthFlowSteps } from "@/components/auth/AuthFlowSteps";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -26,6 +27,15 @@ export default async function VerifyEmailPage({ params, searchParams }: Props) {
       <Header />
       <main id="main-content" className="flex flex-1 items-center justify-center px-5 py-10">
         <div className="w-full max-w-md rounded-[28px] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 shadow-2 md:p-8">
+          <AuthFlowSteps
+            active={result.success ? "pending" : "verify"}
+            labels={{
+              register: t("stepRegister"),
+              verify: t("stepVerify"),
+              pending: t("stepPending"),
+              login: t("stepLogin"),
+            }}
+          />
           {result.success ? (
             <div className="space-y-3">
               <h1 className="font-headline text-2xl font-extrabold text-[var(--color-text-primary)]">

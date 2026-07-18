@@ -6,6 +6,7 @@ import { Link } from "@/navigation";
 import { Loader2 } from "lucide-react";
 import { loginStaffAccount } from "@/lib/staff/actions";
 import { OAuthButtons } from "@/components/auth/OAuthButtons";
+import { AuthFlowSteps } from "@/components/auth/AuthFlowSteps";
 
 export function StaffLoginForm({
   locale,
@@ -22,6 +23,10 @@ export function StaffLoginForm({
     registerLink: string;
     google: string;
     orDivider: string;
+    stepRegister: string;
+    stepVerify: string;
+    stepPending: string;
+    stepLogin: string;
   };
 }) {
   const router = useRouter();
@@ -47,6 +52,16 @@ export function StaffLoginForm({
         });
       }}
     >
+      <AuthFlowSteps
+        active="login"
+        labels={{
+          register: labels.stepRegister,
+          verify: labels.stepVerify,
+          pending: labels.stepPending,
+          login: labels.stepLogin,
+        }}
+      />
+
       <div>
         <h1 className="font-headline text-2xl font-extrabold text-[var(--color-text-primary)]">
           {labels.title}

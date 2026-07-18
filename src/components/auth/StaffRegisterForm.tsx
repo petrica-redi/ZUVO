@@ -2,9 +2,10 @@
 
 import { useState, useTransition } from "react";
 import { Link } from "@/navigation";
-import { Loader2 } from "lucide-react";
+import { Loader2, Mail } from "lucide-react";
 import { registerStaffAccount } from "@/lib/staff/actions";
 import { OAuthButtons } from "@/components/auth/OAuthButtons";
+import { AuthFlowSteps } from "@/components/auth/AuthFlowSteps";
 
 export function StaffRegisterForm({
   locale,
@@ -19,10 +20,15 @@ export function StaffRegisterForm({
     password: string;
     submit: string;
     success: string;
+    successNext: string;
     haveAccount: string;
     loginLink: string;
     google: string;
     orDivider: string;
+    stepRegister: string;
+    stepVerify: string;
+    stepPending: string;
+    stepLogin: string;
   };
 }) {
   const [pending, startTransition] = useTransition();
@@ -31,11 +37,28 @@ export function StaffRegisterForm({
 
   if (done) {
     return (
-      <div className="space-y-3 rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-6 text-sm text-emerald-900">
-        <p className="font-bold">{labels.success}</p>
-        <Link href="/auth/login" className="font-bold underline">
-          {labels.loginLink}
-        </Link>
+      <div className="space-y-4">
+        <AuthFlowSteps
+          active="verify"
+          labels={{
+            register: labels.stepRegister,
+            verify: labels.stepVerify,
+            pending: labels.stepPending,
+            login: labels.stepLogin,
+          }}
+        />
+        <div className="space-y-3 rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-6 text-sm text-emerald-900">
+          <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+            <Mail className="h-5 w-5" />
+          </div>
+          <p className="font-bold">{labels.success}</p>
+          <Link
+            href="/auth/pending"
+            className="inline-flex min-h-[44px] items-center rounded-full bg-[var(--color-ink-900)] px-5 text-sm font-bold text-white"
+          >
+            {labels.successNext}
+          </Link>
+        </div>
       </div>
     );
   }
@@ -58,6 +81,16 @@ export function StaffRegisterForm({
         });
       }}
     >
+      <AuthFlowSteps
+        active="register"
+        labels={{
+          register: labels.stepRegister,
+          verify: labels.stepVerify,
+          pending: labels.stepPending,
+          login: labels.stepLogin,
+        }}
+      />
+
       <div>
         <h1 className="font-headline text-2xl font-extrabold text-[var(--color-text-primary)]">
           {labels.title}
