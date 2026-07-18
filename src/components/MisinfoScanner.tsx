@@ -2,10 +2,19 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
-import { Search, Mic, Share2, AlertTriangle, CheckCircle2, XCircle, Loader2, Volume2 } from "lucide-react";
+import {
+  Search,
+  Mic,
+  Share2,
+  AlertTriangle,
+  CheckCircle2,
+  XCircle,
+  Loader2,
+  Volume2,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
-import { ToolHero } from "@/components/ui";
+import { PlatformToolRail } from "@/components/PlatformToolRail";
 
 type Verdict = {
   verdict: "verified" | "misleading" | "false";
@@ -81,7 +90,7 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
   const [history, setHistory] = useState<{ claim: string; verdict: Verdict }[]>([]);
 
   const { isListening, supported: voiceSupported, toggleListening } = useSpeechRecognition({
-    onResult: useCallback((text) => setClaim((prev) => prev + " " + text), [])
+    onResult: useCallback((text) => setClaim((prev) => prev + " " + text), []),
   });
 
   useEffect(() => {
@@ -100,6 +109,7 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
     if (!claim.trim() || loading) return;
     setLoading(true);
     setResult(null);
+    setError(null);
 
     try {
       const res = await fetch("/api/scan", {
@@ -111,7 +121,9 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
       const data = await res.json();
       if (res.ok && data?.success === true && isVerdict(data?.data)) {
         setResult(data.data);
-        setHistory((prev) => [{ claim: claim.trim(), verdict: data.data as Verdict }, ...prev].slice(0, 10));
+        setHistory((prev) =>
+          [{ claim: claim.trim(), verdict: data.data as Verdict }, ...prev].slice(0, 10),
+        );
       } else {
         setError(
           typeof data?.error === "string" ? data.error : tScan("errors.analyze"),
@@ -138,42 +150,49 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
-      handleScan();
+      void handleScan();
     }
   };
 
   return (
-    <div>
-      <ToolHero
-        icon={Search}
-        accent="ember"
-        eyebrow={tScan("eyebrow")}
-        title={labels.title}
-        subtitle={labels.subtitle}
-        heroImage={{
-          src: "/images/surfaces/scan.png",
-          alt: tScan("heroArtAlt"),
-        }}
-      />
+    <div className="platform-shell">
+      <PlatformToolRail />
 
-      {/* Input area */}
-      <div className="mb-4 rounded-2xl border-2 border-gray-200 bg-white p-1 shadow-sm focus-within:border-[#C0392B] focus-within:ring-4 focus-within:ring-[#C0392B]/10 transition-all">
+      <header className="mb-4 animate-fade-in-up">
+        <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
+          {tScan("eyebrow")}
+        </p>
+        <h1 className="platform-title font-headline mt-1.5 text-[1.65rem] leading-[1.1] tracking-tight sm:text-[1.9rem]">
+          {labels.title}
+        </h1>
+        <p className="mt-1.5 max-w-2xl text-sm font-medium leading-relaxed text-[var(--color-text-secondary)]">
+          {labels.subtitle}
+        </p>
+      </header>
+
+      <div className="platform-glass-panel mb-4 animate-fade-in-up delay-100 focus-within:ring-2 focus-within:ring-[var(--color-accent)]/35">
         <textarea
           value={claim}
-          onChange={(e) => { setClaim(e.target.value); setResult(null); }}
+          onChange={(e) => {
+            setClaim(e.target.value);
+            setResult(null);
+            setError(null);
+          }}
           onKeyDown={handleKeyDown}
-          aria-label={tScan("inputAria")} placeholder={labels.placeholder}
+          aria-label={tScan("inputAria")}
+          placeholder={labels.placeholder}
           rows={3}
-          className="w-full resize-none rounded-xl border-none bg-transparent px-4 py-3 text-sm focus:outline-none"
+          className="w-full resize-none rounded-xl border-none bg-transparent px-1 py-1 text-sm font-medium text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:outline-none"
         />
-        <div className="flex items-center justify-between px-3 pb-2">
+        <div className="mt-2 flex items-center justify-between gap-2">
           {voiceSupported ? (
             <button
+              type="button"
               onClick={toggleListening}
-              className={`rounded-full p-2 transition-all ${
-                isListening 
-                  ? "bg-red-100 text-red-600 animate-pulse" 
-                  : "bg-gray-100 text-gray-400 hover:bg-gray-200"
+              className={`rounded-full p-2.5 transition-all ${
+                isListening
+                  ? "bg-[var(--color-danger-bg)] text-[var(--color-danger-text)] animate-pulse"
+                  : "bg-[var(--color-surface-subtle)] text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]"
               }`}
               aria-label={isListening ? tVoice("stop") : tVoice("start")}
             >
@@ -183,9 +202,10 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
             <div className="w-8" />
           )}
           <button
-            onClick={handleScan}
+            type="button"
+            onClick={() => void handleScan()}
             disabled={!claim.trim() || loading}
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#C0392B] to-[#E74C3C] px-5 py-2 text-sm font-semibold text-white shadow-md transition-all active:scale-95 disabled:opacity-50"
+            className="platform-cta-primary !flex-none px-5 disabled:opacity-50"
           >
             {loading ? (
               <>
@@ -203,52 +223,56 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
       </div>
 
       {error && (
-        <div className="mb-4 rounded-2xl bg-red-50 p-4 text-sm font-medium text-red-600 animate-scale-in">
+        <div className="mb-4 rounded-2xl border border-[var(--color-danger-border)] bg-[var(--color-danger-bg)] p-4 text-sm font-semibold text-[var(--color-danger-text)] animate-scale-in">
           {error}
         </div>
       )}
 
-      {/* Result card */}
       {result && (
-        <div className={`mb-6 overflow-hidden rounded-3xl border-2 ${VERDICT_STYLES[result.verdict].border} ${VERDICT_STYLES[result.verdict].bg} shadow-lg animate-scale-in`}>
-          {/* Verdict badge */}
-          <div className={`flex items-center gap-3 bg-gradient-to-r ${VERDICT_STYLES[result.verdict].gradient} px-5 py-4`}>
+        <div
+          className={`mb-6 overflow-hidden rounded-3xl border-2 ${VERDICT_STYLES[result.verdict].border} ${VERDICT_STYLES[result.verdict].bg} shadow-lg animate-scale-in`}
+        >
+          <div
+            className={`flex items-center gap-3 bg-gradient-to-r ${VERDICT_STYLES[result.verdict].gradient} px-5 py-4`}
+          >
             {(() => {
               const Icon = VERDICT_STYLES[result.verdict].icon;
               return <Icon className="h-6 w-6 text-white" />;
             })()}
             <span className="text-base font-black uppercase tracking-wider text-white">
-              {result.verdict === "verified" ? labels.verdictVerified :
-               result.verdict === "misleading" ? labels.verdictMisleading :
-               labels.verdictFalse}
+              {result.verdict === "verified"
+                ? labels.verdictVerified
+                : result.verdict === "misleading"
+                  ? labels.verdictMisleading
+                  : labels.verdictFalse}
             </span>
           </div>
 
-          {/* Content */}
           <div className="p-4">
             <div className="flex items-start justify-between">
               <h3 className={`mb-2 text-base font-bold ${VERDICT_STYLES[result.verdict].text}`}>
                 {result.emoji} {result.headline}
               </h3>
-              <button 
+              <button
+                type="button"
                 onClick={() => speakText(result.explanation, locale)}
-                className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-600"
+                className="ml-2 flex-shrink-0 text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]"
                 aria-label={tVoice("readExplanationAloud")}
               >
                 <Volume2 className="h-5 w-5" />
               </button>
             </div>
-            <p className="mb-3 text-sm leading-relaxed text-gray-700">
+            <p className="mb-3 text-sm font-medium leading-relaxed text-[var(--color-text-secondary)]">
               {result.explanation}
             </p>
-            <p className="mb-3 text-xs text-gray-400">
+            <p className="mb-3 text-xs font-semibold text-[var(--color-text-muted)]">
               {tScan("sourceLabel")}: {result.source}
             </p>
 
-            {/* Share button */}
             <button
+              type="button"
               onClick={handleShare}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-gray-200 transition-all active:scale-[0.98]"
+              className="platform-cta-secondary w-full"
             >
               <Share2 className="h-4 w-4" />
               {labels.shareButton}
@@ -257,23 +281,30 @@ export function MisinfoScanner({ labels, locale }: { labels: Labels; locale: str
         </div>
       )}
 
-      {/* History */}
       {history.length > 0 && !result && (
-        <div>
-          <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+        <div className="animate-fade-in">
+          <h3 className="mb-3 text-xs font-extrabold uppercase tracking-wider text-[var(--color-text-muted)]">
             {labels.recentChecks}
           </h3>
           <div className="flex flex-col gap-2">
             {history.map((h, i) => (
               <button
                 key={i}
-                onClick={() => { setClaim(h.claim); setResult(h.verdict); }}
-                className="flex items-start gap-3 rounded-xl bg-white p-3 text-left shadow-sm ring-1 ring-gray-100 transition-all active:scale-[0.99]"
+                type="button"
+                onClick={() => {
+                  setClaim(h.claim);
+                  setResult(h.verdict);
+                }}
+                className="platform-glass-panel flex items-start gap-3 !p-3 text-left transition-transform active:scale-[0.99]"
               >
                 <span className="mt-0.5 text-lg">{h.verdict.emoji}</span>
-                <div className="flex-1 min-w-0">
-                  <p className="truncate text-sm font-medium text-gray-800">{h.claim}</p>
-                  <p className="text-xs text-gray-400">{h.verdict.headline}</p>
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-sm font-bold text-[var(--color-text-primary)]">
+                    {h.claim}
+                  </p>
+                  <p className="text-xs font-medium text-[var(--color-text-muted)]">
+                    {h.verdict.headline}
+                  </p>
                 </div>
               </button>
             ))}

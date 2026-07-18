@@ -32,11 +32,11 @@ export default async function ScanPage({ params }: Props) {
   };
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
+    <div className="flex min-h-[100dvh] flex-col bg-[#EDE6F8]">
       <Header />
       <SosButton />
       <main id="main-content" className="flex-1 pb-2">
-        <div className="px-5 py-6">
+        <div className="px-4 py-4 sm:px-5 sm:py-5">
           <MisinfoScanner labels={labels} locale={locale} />
         </div>
       </main>

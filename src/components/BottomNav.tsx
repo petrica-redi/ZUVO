@@ -10,17 +10,17 @@ import {
   Home,
   FileText,
   MessageCircle,
-  Users,
   LayoutGrid,
   Inbox,
   ScanSearch,
 } from "lucide-react";
 
+/** Global dock: home + AI search + chatbot + prescriptions on every page. */
 const DEFAULT_TABS = [
   { key: "home", href: "/", Icon: Home },
-  { key: "explain", href: "/explain", Icon: FileText },
+  { key: "scan", href: "/scan", Icon: ScanSearch },
   { key: "chat", href: "/chat", Icon: MessageCircle, isPrimary: true },
-  { key: "family", href: "/family", Icon: Users },
+  { key: "explain", href: "/explain", Icon: FileText },
   { key: "more", href: "/more", Icon: LayoutGrid },
 ] as const;
 

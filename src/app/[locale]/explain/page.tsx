@@ -18,13 +18,12 @@ export default async function ExplainPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "explain" });
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
+    <div className="flex min-h-[100dvh] flex-col bg-[#EDE6F8]">
       <Header />
       <SosButton />
       <main id="main-content" className="flex-1 pb-2">
-        <div className="px-5 py-6">
-          {/* Disclaimer */}
-          <div className="mb-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-700 animate-fade-in">
+        <div className="px-4 py-4 sm:px-5 sm:py-5">
+          <div className="mb-3 rounded-2xl border border-amber-300/70 bg-amber-50 px-4 py-3 text-xs font-semibold text-amber-900 animate-fade-in">
             <strong>{t("disclaimerBold")}</strong> {t("disclaimerBody")}
           </div>
           <PrescriptionExplainer locale={locale} />

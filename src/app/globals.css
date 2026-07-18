@@ -1250,8 +1250,9 @@ select:focus-visible {
 }
 
 /* =========================================================================
-   Mediator workspace — purple glass field surface
+   Platform tool surfaces — purple glass (scan, mediator, etc.)
    ========================================================================= */
+.platform-shell,
 .mediator-shell {
   --color-bg-canvas: #F1ECF9;
   --color-bg: #F1ECF9;
@@ -1307,6 +1308,8 @@ select:focus-visible {
     0 18px 40px -28px rgba(46, 16, 101, 0.35);
 }
 
+[data-theme="dark"] .platform-shell,
+:root:not([data-theme="light"]) .platform-shell,
 [data-theme="dark"] .mediator-shell,
 :root:not([data-theme="light"]) .mediator-shell {
   --color-bg-canvas: #140C24;
@@ -1337,11 +1340,13 @@ select:focus-visible {
     0 20px 44px -28px rgba(0, 0, 0, 0.65);
 }
 
+.platform-title,
 .mediator-title {
   color: var(--color-text-primary);
   text-shadow: none;
 }
 
+.platform-command-rail,
 .mediator-command-rail {
   padding: 0.35rem;
   border-radius: 20px;
@@ -1354,6 +1359,8 @@ select:focus-visible {
     0 8px 24px -16px rgba(76, 29, 149, 0.35);
 }
 
+[data-theme="dark"] .platform-command-rail,
+:root:not([data-theme="light"]) .platform-command-rail,
 [data-theme="dark"] .mediator-command-rail,
 :root:not([data-theme="light"]) .mediator-command-rail {
   background: rgba(28, 18, 52, 0.62);
@@ -1363,6 +1370,7 @@ select:focus-visible {
     0 10px 28px -16px rgba(0, 0, 0, 0.55);
 }
 
+.platform-tool-chip,
 .mediator-tool-chip {
   display: inline-flex;
   align-items: center;
@@ -1381,15 +1389,18 @@ select:focus-visible {
     transform 140ms var(--ease-emphasized);
 }
 
+.platform-tool-chip:hover,
 .mediator-tool-chip:hover {
   background: var(--color-accent-soft);
   color: var(--color-accent-text);
 }
 
+.platform-tool-chip:active,
 .mediator-tool-chip:active {
   transform: scale(0.97);
 }
 
+.platform-tool-chip[data-active="true"],
 .mediator-tool-chip[data-active="true"] {
   color: #fff;
   background:
@@ -1400,6 +1411,7 @@ select:focus-visible {
     0 8px 18px -10px rgba(91, 33, 182, 0.65);
 }
 
+.platform-glass-panel,
 .mediator-glass-panel {
   border-radius: 22px;
   padding: 1.25rem;
@@ -1412,6 +1424,8 @@ select:focus-visible {
     0 12px 32px -20px rgba(76, 29, 149, 0.35);
 }
 
+[data-theme="dark"] .platform-glass-panel,
+:root:not([data-theme="light"]) .platform-glass-panel,
 [data-theme="dark"] .mediator-glass-panel,
 :root:not([data-theme="light"]) .mediator-glass-panel {
   background: rgba(32, 22, 58, 0.72);
@@ -1421,6 +1435,7 @@ select:focus-visible {
     0 14px 34px -20px rgba(0, 0, 0, 0.55);
 }
 
+.platform-cta-primary,
 .mediator-cta-primary {
   display: inline-flex;
   flex: 1;
@@ -1442,14 +1457,17 @@ select:focus-visible {
   transition: transform 140ms var(--ease-emphasized), filter 160ms var(--ease-emphasized);
 }
 
+.platform-cta-primary:hover,
 .mediator-cta-primary:hover {
   filter: brightness(1.05);
 }
 
+.platform-cta-primary:active,
 .mediator-cta-primary:active {
   transform: scale(0.985);
 }
 
+.platform-cta-secondary,
 .mediator-cta-secondary {
   display: inline-flex;
   flex: 1;
@@ -1469,14 +1487,18 @@ select:focus-visible {
   transition: transform 140ms var(--ease-emphasized), background 160ms var(--ease-emphasized);
 }
 
+.platform-cta-secondary:hover,
 .mediator-cta-secondary:hover {
   background: var(--color-accent-soft);
 }
 
+.platform-cta-secondary:active,
 .mediator-cta-secondary:active {
   transform: scale(0.985);
 }
 
+[data-theme="dark"] .platform-cta-secondary,
+:root:not([data-theme="light"]) .platform-cta-secondary,
 [data-theme="dark"] .mediator-cta-secondary,
 :root:not([data-theme="light"]) .mediator-cta-secondary {
   background: rgba(255, 255, 255, 0.06);
