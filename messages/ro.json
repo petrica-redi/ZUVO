@@ -13,7 +13,11 @@
     "chat": "Ask",
     "family": "Family",
     "more": "More",
-    "ariaMain": "Navigație principală"
+    "ariaMain": "Navigație principală",
+    "fieldInbox": "Inbox",
+    "fieldCases": "Cazuri",
+    "fieldTasks": "Sarcini",
+    "fieldTools": "Navigare"
   },
   "platformNav": {
     "aria": "Servicii platformă",
@@ -1775,7 +1779,11 @@
     "qualityFlag_duplicate_entry": "Posibil duplicat",
     "qualityFlag_incomplete_barriers": "Bariere nedocumentate",
     "qualityFlag_overdue_followup": "Urmărire restantă",
-    "qualityFlag_no_recent_contact": "Fără contact recent"
+    "qualityFlag_no_recent_contact": "Fără contact recent",
+    "syncOfflineBanner": "Lucrați offline. Cazurile și sarcinile se salvează pe dispozitiv. Trimiterile și programările necesită internet.",
+    "tabPoidsCases": "Raportare POIDS / SCI",
+    "visitLinkedCase": "Caz legat",
+    "visitNoCase": "Fără caz (vizită liberă)"
   },
   "training": {
     "modules": {
@@ -2220,7 +2228,17 @@
     "notifEscalationTitle": "Caz escaladat",
     "notifEscalationBody": "Un caz a fost escaladat către supervizor.",
     "notifEscalationResolvedTitle": "Escaladare rezolvată",
-    "notifEscalationResolvedBody": "O escaladare a fost marcată ca rezolvată."
+    "notifEscalationResolvedBody": "O escaladare a fost marcată ca rezolvată.",
+    "consentStatus": "Consimțământ",
+    "consentPending": "În așteptare",
+    "consentGranted": "Acordat",
+    "offlineRequiresNetwork": "Această acțiune necesită internet (trimitere / programare). Reîncercați când sunteți online.",
+    "loading": "Se încarcă…",
+    "retry": "Reîncearcă",
+    "loadError": "Nu s-au putut încărca datele.",
+    "demoCountyTitle": "Județ demonstrativ",
+    "demoCountyLead": "Date ilustrative",
+    "consentWithdrawn": "Retras"
   },
   "auth": {
     "sectionEyebrow": "Acces stakeholder",
@@ -2254,5 +2272,20 @@
     "roleDoctorDesc": "Coadă, consult, predări",
     "roleManagerTitle": "Partener ministerial",
     "roleManagerDesc": "Impact, guvernanță, raportare"
+  },
+  "fieldAuth": {
+    "metaTitle": "Autentificare teren — Redi Health",
+    "title": "Autentificare personal de teren",
+    "lead": "Conturi nominale pentru mediatori sanitari, asistenți medicali comunitari și manageri de caz. Datele se leagă de județul și echipa ta.",
+    "email": "Email de serviciu",
+    "password": "Parolă",
+    "submit": "Intră în spațiul de lucru",
+    "logout": "Ieșire",
+    "rosterMissing": "Lista de personal de teren (FIELD_STAFF_ROSTER) nu este configurată pe acest mediu. Contactați administratorul platformei înainte de utilizare.",
+    "errorGeneric": "Autentificare eșuată. Verificați datele.",
+    "roleMediator": "Mediator sanitar",
+    "roleNurse": "Asistent medical comunitar",
+    "roleCaseManager": "Manager de caz",
+    "roleSupervisor": "Supervizor"
   }
 }

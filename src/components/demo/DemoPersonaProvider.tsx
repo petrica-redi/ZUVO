@@ -18,9 +18,6 @@ import {
   getPersonaModel,
   type PersonaModel,
 } from "@/lib/demo/persona-models";
-import { DEMO_COUNTY, DEMO_MEDIATOR_WORKSPACE } from "@/lib/demo/seed-data";
-import { persistWorkspace } from "@/lib/mediator/workspace-client";
-
 type DemoPersonaContextValue = {
   personaId: DemoPersonaId;
   model: PersonaModel;
@@ -50,12 +47,6 @@ function isValidPersona(id: string | null): id is DemoPersonaId {
   return DEMO_PERSONAS.some((p) => p.id === id);
 }
 
-function seedPersonaData(id: DemoPersonaId) {
-  if (id === "mediator") {
-    persistWorkspace(DEMO_MEDIATOR_WORKSPACE, DEMO_COUNTY, () => {});
-  }
-}
-
 function readInitialDemoState(): {
   personaId: DemoPersonaId;
   demoMode: boolean;
@@ -67,7 +58,7 @@ function readInitialDemoState(): {
   const cookiePersona = readCookie(DEMO_PERSONA_COOKIE);
   if (storedMode === "true" || cookiePersona) {
     const personaId = isValidPersona(cookiePersona) ? cookiePersona : "community";
-    if (isValidPersona(cookiePersona)) seedPersonaData(cookiePersona);
+    // Never seed/overwrite real mediator workspace data from demo personas.
     return { personaId, demoMode: storedMode !== "false" };
   }
   return { personaId: "community", demoMode: false };
@@ -84,7 +75,7 @@ export function DemoPersonaProvider({ children }: { children: ReactNode }) {
     writeCookie(DEMO_PERSONA_COOKIE, id);
     localStorage.setItem(DEMO_MODE_KEY, "true");
     setDemoMode(true);
-    seedPersonaData(id);
+    // Intentionally do not write demo seed into production workspace keys.
   }, []);
 
   const enableDemoMode = useCallback(() => {

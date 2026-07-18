@@ -12,6 +12,8 @@ import { mediatorWorkspaces, users } from "@/db/schema";
 import { isAdminApiAuthorized } from "@/lib/admin/api-auth";
 import { resolveUser } from "@/lib/auth/server-user";
 import { verifyWorkspaceSecret } from "@/lib/mediator/workspace-auth";
+import { getFieldSession } from "@/lib/field/session";
+import { fieldRoleToReportingRole } from "@/lib/field/types";
 import { REPORTING_ROLES, type ReportingRole } from "./constants";
 import type { OperationActor } from "./permissions";
 
@@ -37,6 +39,13 @@ export async function resolveOperationActor(
   const workspaceId = readWorkspaceId(req);
   if (!workspaceId) return null;
 
+  // Named field session always wins for its bound workspace.
+  const field = await getFieldSession().catch(() => null);
+  if (field) {
+    if (field.workspaceId !== workspaceId) return null;
+    return { workspaceId: field.workspaceId, isAdmin: false };
+  }
+
   const db = getDb();
   if (db) {
     const [row] = await db
@@ -46,7 +55,14 @@ export async function resolveOperationActor(
       .limit(1);
 
     const secret = readWorkspaceSecret(req);
-    if (row && !verifyWorkspaceSecret(secret, row.secretHash)) return null;
+
+    // Production: workspace must exist and present a valid secret.
+    if (process.env.NODE_ENV === "production") {
+      if (!row) return null;
+      if (!verifyWorkspaceSecret(secret, row.secretHash)) return null;
+    } else if (row && !verifyWorkspaceSecret(secret, row.secretHash)) {
+      return null;
+    }
   }
 
   let isAdmin = isAdminApiAuthorized(req);
@@ -90,11 +106,43 @@ export type ReportingActor = OperationActor & {
   role: ReportingRole | string;
 };
 
-export function readReportingRole(req: NextRequest): string {
-  const header = req.headers.get("x-operations-role")?.trim();
-  if (header && (REPORTING_ROLES as readonly string[]).includes(header)) {
-    return header;
+/**
+ * Reporting role is NEVER taken from client headers in production.
+ * Client-supplied `x-operations-role` is ignored (privilege-escalation fix).
+ */
+export function readReportingRole(_req?: NextRequest): string {
+  return "mediator";
+}
+
+async function resolveTrustedReportingRole(
+  req: NextRequest,
+  actor: OperationActor,
+): Promise<string> {
+  // Admin API key → full admin reporting (server-proven).
+  if (isAdminApiAuthorized(req) || actor.isAdmin) return "admin";
+
+  // Field staff session cookie (MoU named login).
+  const field = await getFieldSession().catch(() => null);
+  if (field && field.workspaceId === actor.workspaceId) {
+    return fieldRoleToReportingRole(field.role);
   }
+
+  // Supabase authenticated user role from DB.
+  const db = getDb();
+  if (db) {
+    const user = await resolveUser(req).catch(() => null);
+    if (user?.kind === "authenticated") {
+      const [u] = await db
+        .select({ role: users.role })
+        .from(users)
+        .where(eq(users.id, user.id))
+        .limit(1);
+      if (u?.role === "admin") return "admin";
+      if (u?.role === "mediator") return "mediator";
+      if (u?.role === "content_manager") return "supervisor";
+    }
+  }
+
   return "mediator";
 }
 
@@ -106,25 +154,16 @@ export async function resolveReportingActor(
     return {
       workspaceId,
       isAdmin: true,
-      role: readReportingRole(req),
+      role: "admin",
     };
   }
 
   const actor = await resolveOperationActor(req);
   if (!actor) return null;
 
-  let role = readReportingRole(req);
-  const db = getDb();
-  if (db) {
-    const user = await resolveUser(req).catch(() => null);
-    if (user?.kind === "authenticated") {
-      const [u] = await db
-        .select({ role: users.role })
-        .from(users)
-        .where(eq(users.id, user.id))
-        .limit(1);
-      if (u?.role === "admin") role = "admin";
-    }
+  const role = await resolveTrustedReportingRole(req, actor);
+  if (!(REPORTING_ROLES as readonly string[]).includes(role) && role !== "admin") {
+    return { ...actor, role: "mediator" };
   }
 
   return { ...actor, role };

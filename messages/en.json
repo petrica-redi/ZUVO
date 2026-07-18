@@ -13,7 +13,11 @@
     "chat": "Ask",
     "family": "Family",
     "more": "More",
-    "ariaMain": "Main navigation"
+    "ariaMain": "Main navigation",
+    "fieldInbox": "Inbox",
+    "fieldCases": "Cases",
+    "fieldTasks": "Tasks",
+    "fieldTools": "Navigate"
   },
   "platformNav": {
     "aria": "Platform services",
@@ -541,7 +545,11 @@
     "qualityFlag_duplicate_entry": "Possible duplicate entry",
     "qualityFlag_incomplete_barriers": "Barriers not documented",
     "qualityFlag_overdue_followup": "Overdue follow-up",
-    "qualityFlag_no_recent_contact": "No recent contact logged"
+    "qualityFlag_no_recent_contact": "No recent contact logged",
+    "syncOfflineBanner": "You are offline. Cases and tasks save on this device. Referrals and appointments require internet.",
+    "tabPoidsCases": "POIDS / SCI reporting",
+    "visitLinkedCase": "Linked case",
+    "visitNoCase": "No case (standalone visit)"
   },
   "profile": {
     "title": "Profile",
@@ -2506,7 +2514,12 @@
     "notifEscalationTitle": "Case escalated",
     "notifEscalationBody": "A case was escalated to the supervisor queue.",
     "notifEscalationResolvedTitle": "Escalation resolved",
-    "notifEscalationResolvedBody": "A supervisor escalation was marked resolved."
+    "notifEscalationResolvedBody": "A supervisor escalation was marked resolved.",
+    "consentStatus": "Consent",
+    "consentPending": "Pending",
+    "consentGranted": "Granted",
+    "offlineRequiresNetwork": "This action requires internet (referral / appointment). Try again when you are online.",
+    "consentWithdrawn": "Withdrawn"
   },
   "auth": {
     "sectionEyebrow": "Stakeholder access",
@@ -2540,5 +2553,20 @@
     "roleDoctorDesc": "Queue, consult, handoffs",
     "roleManagerTitle": "Ministry partner",
     "roleManagerDesc": "Impact, governance, reporting"
+  },
+  "fieldAuth": {
+    "metaTitle": "Field login — Redi Health",
+    "title": "Field staff login",
+    "lead": "Named accounts for health mediators, community nurses, and case managers. Your data is bound to your county and team.",
+    "email": "Work email",
+    "password": "Password",
+    "submit": "Enter workspace",
+    "logout": "Sign out",
+    "rosterMissing": "The field staff roster (FIELD_STAFF_ROSTER) is not configured on this environment. Contact the platform administrator before use.",
+    "errorGeneric": "Login failed. Check your credentials.",
+    "roleMediator": "Health mediator",
+    "roleNurse": "Community nurse",
+    "roleCaseManager": "Case manager",
+    "roleSupervisor": "Supervisor"
   }
 }
