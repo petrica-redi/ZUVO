@@ -87,6 +87,10 @@ export type MediatorVisit = {
   memberName: string;
   notes: string;
   visitDate: string;
+  /** Linked navigation / care-pathway case id when recorded from a case. */
+  caseId?: string;
+  /** Human-readable case number for offline display. */
+  caseNumber?: string;
 };
 
 export type MediatorCase = {
@@ -155,6 +159,8 @@ export const mediatorVisitSchema: z.ZodType<MediatorVisit> = z.object({
   memberName: z.string().max(160).default(""),
   notes: z.string().max(4000).default(""),
   visitDate: isoDate,
+  caseId: z.string().max(64).optional(),
+  caseNumber: z.string().max(40).optional(),
 });
 
 export const mediatorCaseSchema: z.ZodType<MediatorCase> = z.object({

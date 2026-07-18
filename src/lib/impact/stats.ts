@@ -141,11 +141,18 @@ export async function getImpactStats(): Promise<ImpactStats> {
         .where(sql`${navigationCases.status} NOT IN ('closed', 'completed', 'cancelled')`),
     );
 
-    // Only attempt payload aggregation when the dataset is small enough.
-    let visitsThisYear: number = DEMO_IMPACT_STATS.visitsThisYear;
-    let gpEnrollmentsFacilitated: number = DEMO_IMPACT_STATS.gpEnrollmentsFacilitated;
-    let countiesReporting: number = DEMO_IMPACT_STATS.countiesReporting;
-    let countySnapshots = base.countySnapshots;
+    // Never mix illustrative county/visit figures into a "live" response.
+    let visitsThisYear = 0;
+    let gpEnrollmentsFacilitated = 0;
+    let countiesReporting = 0;
+    let countySnapshots: CountySnapshot[] = base.countySnapshots.map((c) => ({
+      ...c,
+      mediators: 0,
+      visits: 0,
+      referrals: 0,
+      trend: null,
+    }));
+    let aggregatesAreLive = false;
 
     if (activeMediators > 0 && activeMediators <= LIGHT_AGGREGATE_LIMIT) {
       try {
@@ -177,17 +184,20 @@ export async function getImpactStats(): Promise<ImpactStats> {
           }
           countiesReporting = national.length;
           countySnapshots = toCountySnapshots(national);
+          aggregatesAreLive = true;
         }
       } catch {
-        // Keep illustrative county rows; still mark overall source as live for counts.
+        // Leave zeros — do not fall back to demo numbers under a live badge.
       }
     }
 
     let programmeIndicators = base.programmeIndicators;
+    let programmeLive = false;
     try {
       programmeIndicators = await getProgrammeIndicators("ministry_viewer");
+      programmeLive = true;
     } catch {
-      // keep illustrative indicators
+      // keep illustrative indicators only when nothing else is live
     }
 
     const hasLiveSignal =
@@ -204,14 +214,30 @@ export async function getImpactStats(): Promise<ImpactStats> {
       mythsChecked,
       emergenciesEscalated,
       lessonsCompleted,
-      visitsThisYear: hasLiveSignal ? visitsThisYear : base.visitsThisYear,
-      gpEnrollmentsFacilitated: hasLiveSignal
+      visitsThisYear: aggregatesAreLive
+        ? visitsThisYear
+        : hasLiveSignal
+          ? 0
+          : base.visitsThisYear,
+      gpEnrollmentsFacilitated: aggregatesAreLive
         ? gpEnrollmentsFacilitated
-        : base.gpEnrollmentsFacilitated,
-      countiesReporting: hasLiveSignal ? countiesReporting : base.countiesReporting,
+        : hasLiveSignal
+          ? 0
+          : base.gpEnrollmentsFacilitated,
+      countiesReporting: aggregatesAreLive
+        ? countiesReporting
+        : hasLiveSignal
+          ? 0
+          : base.countiesReporting,
       openOpsCases,
-      programmeIndicators,
-      countySnapshots,
+      programmeIndicators: programmeLive || !hasLiveSignal
+        ? programmeIndicators
+        : base.programmeIndicators.map((p) => ({ ...p, value: 0 })),
+      countySnapshots: aggregatesAreLive
+        ? countySnapshots
+        : hasLiveSignal
+          ? countySnapshots
+          : base.countySnapshots,
     };
   } catch {
     return base;

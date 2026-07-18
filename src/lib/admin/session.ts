@@ -6,8 +6,16 @@ const SESSION_MAX_AGE_MS = 60 * 60 * 24 * 7; // 7 days
 const TOKEN_VERSION = "v1";
 
 function sessionSecret(): string {
+  const dedicated = process.env.ADMIN_SESSION_SECRET?.trim();
+  if (dedicated) return dedicated;
+
+  // Production must set a dedicated signing secret — never fall back to
+  // password / cron / hardcoded strings (MoU deployment requirement).
+  if (process.env.NODE_ENV === "production") {
+    throw new Error("ADMIN_SESSION_SECRET must be set in production");
+  }
+
   return (
-    process.env.ADMIN_SESSION_SECRET?.trim() ||
     process.env.ADMIN_PASSWORD?.trim() ||
     process.env.CRON_SECRET?.trim() ||
     "redi-dev-session-secret"

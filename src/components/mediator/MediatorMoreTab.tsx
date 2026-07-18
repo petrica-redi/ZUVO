@@ -38,7 +38,7 @@ const SECTIONS: {
   icon: typeof FolderOpen;
   labelKey: keyof MediatorLabels;
 }[] = [
-  { id: "poidsCases", icon: FolderOpen, labelKey: "tabCases" },
+  { id: "poidsCases", icon: FolderOpen, labelKey: "tabPoidsCases" },
   { id: "sessions", icon: Presentation, labelKey: "tabSessions" },
   { id: "indicators", icon: LineChart, labelKey: "tabIndicators" },
   { id: "training", icon: BookOpen, labelKey: "tabTraining" },

@@ -1,4 +1,4 @@
-import { eq, and, desc } from "drizzle-orm";
+import { eq, and, desc, inArray, sql } from "drizzle-orm";
 import { getDb } from "@/db/client";
 import {
   navigationCases,
@@ -6,6 +6,7 @@ import {
   operationTasks,
   intakeRequests,
   teams,
+  routingRules,
 } from "@/db/schema";
 import { generateCaseNumber, generateIntakeReference } from "./ids";
 import { suggestNextAction, suggestTasksForBarriers } from "./barrier-suggestions";
@@ -295,23 +296,47 @@ export async function createIntake(input: CreateIntakeInput): Promise<IntakeRequ
   };
 }
 
-export async function listIntakes(status?: string): Promise<IntakeRequest[]> {
+/**
+ * List intakes visible to a workspace actor.
+ * Scoped via routing_rules.notifyWorkspaceId — never returns the global inbox.
+ * Admins see all intakes.
+ */
+export async function listIntakes(
+  actor: OperationActor,
+  status?: string,
+): Promise<IntakeRequest[]> {
   const db = getDb();
   if (!db) return [];
 
-  const base = db
+  let allowedTeamIds: string[] | null = null;
+  if (!actor.isAdmin) {
+    const rules = await db
+      .select({ teamId: routingRules.teamId })
+      .from(routingRules)
+      .where(eq(routingRules.notifyWorkspaceId, actor.workspaceId));
+    allowedTeamIds = [...new Set(rules.map((r) => r.teamId))];
+    if (allowedTeamIds.length === 0) {
+      // No routing assignment — return empty (do not leak national inbox).
+      return [];
+    }
+  }
+
+  const conditions = [];
+  if (status) conditions.push(eq(intakeRequests.status, status));
+  if (allowedTeamIds) {
+    conditions.push(inArray(intakeRequests.routedTeamId, allowedTeamIds));
+  }
+
+  const rows = await db
     .select({
       intake: intakeRequests,
       teamName: teams.name,
     })
     .from(intakeRequests)
     .leftJoin(teams, eq(intakeRequests.routedTeamId, teams.id))
+    .where(conditions.length ? and(...conditions) : sql`true`)
     .orderBy(desc(intakeRequests.createdAt))
     .limit(100);
-
-  const rows = status
-    ? await base.where(eq(intakeRequests.status, status))
-    : await base;
 
   return rows.map((row) => ({
     id: row.intake.id,
