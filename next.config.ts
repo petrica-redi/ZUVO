@@ -84,6 +84,8 @@ function buildCsp(): string {
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Landing + impact stats hit the DB per locale during static generation.
+  staticPageGenerationTimeout: 180,
   images: {
     formats: ["image/avif", "image/webp"],
   },

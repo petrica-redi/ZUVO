@@ -107,7 +107,7 @@ async function safeCount(
   }
 }
 
-export async function getImpactStats(): Promise<ImpactStats> {
+async function getImpactStatsLive(): Promise<ImpactStats> {
   const base = illustrativeBase();
   const db = getDb();
   if (!db) return base;
@@ -239,6 +239,21 @@ export async function getImpactStats(): Promise<ImpactStats> {
           ? countySnapshots
           : base.countySnapshots,
     };
+  } catch {
+    return base;
+  }
+}
+
+/** Bound DB wait so static locale builds cannot hang the deploy. */
+export async function getImpactStats(): Promise<ImpactStats> {
+  const base = illustrativeBase();
+  try {
+    return await Promise.race([
+      getImpactStatsLive(),
+      new Promise<ImpactStats>((resolve) => {
+        setTimeout(() => resolve(base), 4000);
+      }),
+    ]);
   } catch {
     return base;
   }

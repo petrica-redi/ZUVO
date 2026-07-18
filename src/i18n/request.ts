@@ -13,7 +13,10 @@ function mergeMessages(fallback: Messages, messages: Messages): Messages {
 
   for (const [key, value] of Object.entries(messages)) {
     const fallbackValue = merged[key];
-    merged[key] = isRecord(fallbackValue) && isRecord(value) ? mergeMessages(fallbackValue, value) : value;
+    merged[key] =
+      isRecord(fallbackValue) && isRecord(value)
+        ? mergeMessages(fallbackValue, value)
+        : value;
   }
 
   return merged;
@@ -24,13 +27,35 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const locale = hasLocale(routing.locales, requested)
     ? requested
     : routing.defaultLocale;
-  const messages = (await import(`../../messages/${locale}.json`)).default;
+
+  // English is the complete catalog; Romanian (default) and each locale layer on top.
+  const en = (await import(`../../messages/en.json`)).default as Messages;
+  const defaultMessages = (await import(
+    `../../messages/${routing.defaultLocale}.json`
+  )).default as Messages;
+  const localeMessages =
+    locale === "en"
+      ? en
+      : ((await import(`../../messages/${locale}.json`)).default as Messages);
+
+  const catalog = mergeMessages(en, defaultMessages);
+  const messages =
+    locale === routing.defaultLocale
+      ? catalog
+      : locale === "en"
+        ? mergeMessages(defaultMessages, en)
+        : mergeMessages(catalog, localeMessages);
 
   return {
     locale,
-    messages:
-      locale === routing.defaultLocale
-        ? messages
-        : mergeMessages((await import(`../../messages/${routing.defaultLocale}.json`)).default, messages),
+    messages,
+    getMessageFallback({ namespace, key }) {
+      return namespace ? `${namespace}.${key}` : key;
+    },
+    onError(error) {
+      if (process.env.NODE_ENV === "development") {
+        console.warn("[i18n]", error.message);
+      }
+    },
   };
 });
