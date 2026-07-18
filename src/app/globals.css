@@ -1,50 +1,49 @@
 @import "tailwindcss";
 
 /* =========================================================================
-   SASTIPE DESIGN SYSTEM — premium tokens
+   REDI HEALTH DESIGN SYSTEM — Violet glass (level 6)
    =========================================================================
    Anchor palette:
-     - Graphite (slate neutrals)   — text, surfaces, depth
-     - Adriatic (teal brand)       — primary actions, focus, identity.
-       A healthcare-trust teal: calmer than SaaS indigo, institutional
-       enough for ministries, warm enough for community surfaces. Pairs
-       natively with the sage + cream wellness layers below.
-     - Ember (amber accent)        — celebration, XP, premium moments
-     - Crimson (semantic only)     — emergency, danger, SOS
-   Pillars retain their identity but get dual tones (accent + surface).
+     - Lavender mist canvas          — soft atmosphere, not flat white
+     - Amethyst purple               — identity, actions, focus
+     - Deep violet ink               — typography depth
+     - Ember                         — celebration / XP only
+     - Crimson                       — emergency / SOS only
+   Level 6: refined glass + opaque type. Not sparse, not over-styled.
    ========================================================================= */
 
 @theme inline {
-  /* Type stack */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-display: var(--font-display, var(--font-inter)), ui-sans-serif, system-ui, sans-serif;
-  --font-editorial: var(--font-editorial, "Fraunces"), Georgia, "Times New Roman", serif;
+  /* Type stack — Fraunces display + Source Sans 3 UI */
+  --font-sans: var(--font-source-sans), "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Fraunces, Georgia, "Times New Roman", serif;
+  --font-editorial: var(--font-fraunces), Fraunces, Georgia, "Times New Roman", serif;
 
-  /* ---- 11-step neutral scale (slate-anchored, slightly warm) ---- */
+  /* ---- 11-step neutral scale (violet-tinted) ---- */
   --color-neutral-0:    #FFFFFF;
-  --color-neutral-50:   #F8FAFC;
-  --color-neutral-100:  #F1F5F9;
-  --color-neutral-200:  #E2E8F0;
-  --color-neutral-300:  #CBD5E1;
-  --color-neutral-400:  #94A3B8;
-  --color-neutral-500:  #64748B;
-  --color-neutral-600:  #475569;
-  --color-neutral-700:  #334155;
-  --color-neutral-800:  #1E293B;
-  --color-neutral-900:  #0F172A;
-  --color-neutral-950:  #020617;
+  --color-neutral-50:   #F7F5FB;
+  --color-neutral-100:  #EDE9F5;
+  --color-neutral-200:  #D9D2E8;
+  --color-neutral-300:  #B8ADC9;
+  --color-neutral-400:  #8E82A8;
+  --color-neutral-500:  #6B5F84;
+  --color-neutral-600:  #51466A;
+  --color-neutral-700:  #3B3250;
+  --color-neutral-800:  #282236;
+  --color-neutral-900:  #1A1524;
+  --color-neutral-950:  #0F0C16;
 
-  /* ---- Brand: Adriatic teal (institutional healthcare trust) ---- */
-  --color-brand-50:   #F0F9F7;
-  --color-brand-100:  #D5F0EB;
-  --color-brand-200:  #A8E0D5;
-  --color-brand-300:  #6FC9B8;
-  --color-brand-400:  #36B09A;
-  --color-brand-500:  #14967F;
-  --color-brand-600:  #0E8074;
-  --color-brand-700:  #0B655C;
-  --color-brand-800:  #0A4F49;
-  --color-brand-950:  #052F2C;
+  /* ---- Brand: Amethyst purple ---- */
+  --color-brand-50:   #F5F3FF;
+  --color-brand-100:  #EDE9FE;
+  --color-brand-200:  #DDD6FE;
+  --color-brand-300:  #C4B5FD;
+  --color-brand-400:  #A78BFA;
+  --color-brand-500:  #8B5CF6;
+  --color-brand-600:  #7C3AED;
+  --color-brand-700:  #6D28D9;
+  --color-brand-800:  #5B21B6;
+  --color-brand-900:  #4C1D95;
+  --color-brand-950:  #2E1065;
 
   /* ---- Medical blue (secondary trust accent) ---- */
   --color-blue-50:    #EFF6FF;
@@ -77,18 +76,18 @@
   --color-bg:              var(--color-neutral-50);
   --color-bg-subtle:       var(--color-neutral-100);
   --color-bg-elevated:     var(--color-neutral-0);
-  --color-bg-canvas:       #F3F7F5;            /* Soft sage-cream canvas */
-  --color-bg-inverse:      var(--color-neutral-900);
+  --color-bg-canvas:       #F0EBF8;            /* Lavender mist canvas */
+  --color-bg-inverse:      var(--color-brand-950);
 
-  --color-surface:         var(--color-neutral-0);
-  --color-surface-subtle:  var(--color-neutral-50);
+  --color-surface:         rgba(255, 255, 255, 0.88);
+  --color-surface-subtle:  #F5F2FB;
   --color-surface-hover:   var(--color-neutral-100);
 
-  --color-border-subtle:   rgba(15, 23, 42, 0.06);
-  --color-border-default:  rgba(15, 23, 42, 0.10);
-  --color-border-strong:   rgba(15, 23, 42, 0.18);
+  --color-border-subtle:   rgba(76, 29, 149, 0.08);
+  --color-border-default:  rgba(76, 29, 149, 0.14);
+  --color-border-strong:   rgba(76, 29, 149, 0.24);
 
-  --color-text-primary:    var(--color-neutral-900);
+  --color-text-primary:    #1E1035;
   --color-text-secondary:  var(--color-neutral-600);
   --color-text-tertiary:   var(--color-neutral-500);
   --color-text-muted:      var(--color-neutral-400);
@@ -147,20 +146,20 @@
      hard drop-shadow. Kept low-opacity and slate-tinted for a calm, clinical
      feel that still separates surfaces on the mint canvas. */
   --shadow-1:
-    0 1px 1px rgba(15, 23, 42, 0.04),
-    0 1px 2px -1px rgba(15, 23, 42, 0.05);
+    0 1px 1px rgba(46, 16, 101, 0.04),
+    0 1px 2px -1px rgba(46, 16, 101, 0.05);
   --shadow-2:
-    0 1px 2px rgba(15, 23, 42, 0.04),
-    0 4px 8px -2px rgba(15, 23, 42, 0.06);
+    0 1px 2px rgba(46, 16, 101, 0.04),
+    0 4px 8px -2px rgba(46, 16, 101, 0.08);
   --shadow-3:
-    0 2px 4px -1px rgba(15, 23, 42, 0.05),
-    0 12px 24px -6px rgba(15, 23, 42, 0.10);
+    0 2px 4px -1px rgba(46, 16, 101, 0.05),
+    0 12px 24px -6px rgba(46, 16, 101, 0.12);
   --shadow-4:
-    0 4px 8px -2px rgba(15, 23, 42, 0.05),
-    0 24px 48px -12px rgba(15, 23, 42, 0.16);
+    0 4px 8px -2px rgba(46, 16, 101, 0.06),
+    0 24px 48px -12px rgba(46, 16, 101, 0.16);
   --shadow-brand:
-    0 2px 6px -1px rgba(37, 99, 235, 0.22),
-    0 12px 28px -8px rgba(5, 150, 105, 0.28);
+    0 2px 8px -1px rgba(124, 58, 237, 0.28),
+    0 14px 32px -10px rgba(91, 33, 182, 0.38);
   --shadow-ember:
     0 2px 6px -1px rgba(217, 119, 6, 0.22),
     0 12px 28px -8px rgba(217, 119, 6, 0.30);
@@ -204,7 +203,7 @@
     --color-bg:              var(--color-neutral-950);
     --color-bg-subtle:       var(--color-neutral-900);
     --color-bg-elevated:     var(--color-neutral-800);
-    --color-bg-canvas:       #0A1311;
+    --color-bg-canvas:       #120C1C;
     --color-bg-inverse:      var(--color-neutral-50);
 
     --color-surface:         var(--color-neutral-900);
@@ -224,7 +223,7 @@
 
     --color-accent:          var(--color-brand-500);
     --color-accent-hover:    var(--color-brand-400);
-    --color-accent-soft:     rgba(24, 154, 140, 0.14);
+    --color-accent-soft:     rgba(124, 58, 237, 0.22);
     --color-accent-text:     var(--color-brand-300);
 
     --color-success-bg:      rgba(5, 150, 105, 0.12);
@@ -251,7 +250,7 @@
   --color-bg:              var(--color-neutral-950);
   --color-bg-subtle:       var(--color-neutral-900);
   --color-bg-elevated:     var(--color-neutral-800);
-  --color-bg-canvas:       #0A1311;
+  --color-bg-canvas:       #120C1C;
   --color-bg-inverse:      var(--color-neutral-50);
 
   --color-surface:         var(--color-neutral-900);
@@ -287,7 +286,10 @@ html {
 
 body {
   min-height: 100dvh;
-  background: var(--color-bg-canvas);
+  background:
+    radial-gradient(ellipse 65% 35% at 0% 0%, rgba(167, 139, 250, 0.14), transparent 55%),
+    radial-gradient(ellipse 50% 30% at 100% 0%, rgba(196, 181, 253, 0.1), transparent 50%),
+    var(--color-bg-canvas);
   color: var(--color-text-primary);
   text-rendering: optimizeLegibility;
 }
@@ -320,8 +322,9 @@ button {
 @media (min-width: 768px) {
   body {
     background:
-      radial-gradient(ellipse at top, rgba(24, 154, 140, 0.05) 0%, transparent 60%),
-      radial-gradient(ellipse at bottom, rgba(245, 158, 11, 0.03) 0%, transparent 50%),
+      radial-gradient(ellipse 80% 50% at 10% -10%, rgba(43, 196, 168, 0.12) 0%, transparent 55%),
+      radial-gradient(ellipse 70% 45% at 100% 0%, rgba(14, 128, 116, 0.10) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(6, 61, 58, 0.06) 0%, transparent 55%),
       var(--color-bg-canvas);
   }
 
@@ -353,43 +356,44 @@ button {
   }
 }
 
-/* Headlines — operational sans, not decorative editorial serif */
+/* Headlines — Fraunces display for a distinctive Redi Health voice */
 .font-headline {
   font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.08;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  font-variation-settings: "SOFT" 40, "WONK" 0.4;
 }
 
-/* Legacy editorial utility — kept for admin overrides; no stylistic alternates */
 .font-editorial {
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-editorial);
+  font-weight: 600;
   letter-spacing: -0.02em;
+  font-variation-settings: "SOFT" 50, "WONK" 0.6;
 }
 
 /* Sage wellness palette — layered on top of the indigo brand. Use for
    secondary surfaces, soft outlines, and "calm" trust strips. */
 :root {
-  --color-sage-50:  #F6F9F4;
-  --color-sage-100: #ECF2E8;
-  --color-sage-200: #D6E2CD;
-  --color-sage-300: #B8CCAB;
-  --color-sage-400: #8FAB7E;
-  --color-sage-500: #6E8C5E;
-  --color-sage-600: #557047;
-  --color-sage-700: #3F5635;
-  --color-sage-800: #2D3E25;
-  --color-sage-900: #1C2918;
+  --color-sage-50:  #F5F3FF;
+  --color-sage-100: #EDE9FE;
+  --color-sage-200: #DDD6FE;
+  --color-sage-300: #C4B5FD;
+  --color-sage-400: #A78BFA;
+  --color-sage-500: #8B5CF6;
+  --color-sage-600: #7C3AED;
+  --color-sage-700: #6D28D9;
+  --color-sage-800: #5B21B6;
+  --color-sage-900: #4C1D95;
 
   --color-cream-50:  #FBF8F3;
   --color-cream-100: #F4EFE6;
   --color-cream-200: #E8DECC;
   --color-cream-300: #D9C9AC;
 
-  --color-ink-700: #1F2A3D;
-  --color-ink-800: #131C2E;
-  --color-ink-900: #0A1220;
+  --color-ink-700: #3B2760;
+  --color-ink-800: #2A1A48;
+  --color-ink-900: #1E1035;
 }
 
 /* Marketing section utility — generous vertical rhythm, subtle separator. */
@@ -458,10 +462,99 @@ button {
 }
 
 .glass-bar {
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid var(--color-border-subtle);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.72) 100%);
+  backdrop-filter: blur(22px) saturate(190%);
+  -webkit-backdrop-filter: blur(22px) saturate(190%);
+  border-bottom: 1px solid rgba(76, 29, 149, 0.08);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+}
+[data-theme="dark"] .glass-bar,
+:root:not([data-theme="light"]) .glass-bar {
+  background:
+    linear-gradient(180deg, rgba(20, 12, 36, 0.9) 0%, rgba(20, 12, 36, 0.72) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+/* --- Premium tactile interactions --- */
+.card-hover {
+  transition:
+    transform 240ms var(--ease-emphasized),
+    box-shadow 240ms var(--ease-emphasized),
+    border-color 240ms var(--ease-emphasized);
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-4);
+}
+.card-hover:active {
+  transform: translateY(-1px) scale(0.995);
+  transition-duration: 90ms;
+}
+
+/* Press feedback for any interactive tile/row */
+.press {
+  transition: transform 140ms var(--ease-emphasized), background 160ms var(--ease-emphasized);
+}
+.press:active {
+  transform: scale(0.98);
+}
+
+/* Soft brand ring for icon tiles */
+.tile-brand {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(196, 181, 253, 0.4) 0%, transparent 60%),
+    linear-gradient(140deg, var(--color-brand-600) 0%, var(--color-brand-900) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 6px 18px -6px rgba(91, 33, 182, 0.45);
+}
+.tile-ember {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(253, 224, 138, 0.5) 0%, transparent 60%),
+    linear-gradient(140deg, var(--color-ember-500) 0%, var(--color-ember-700) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 6px 18px -6px rgba(180, 83, 9, 0.5);
+}
+.tile-ink {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(167, 139, 250, 0.28) 0%, transparent 60%),
+    linear-gradient(140deg, #2A1A48 0%, #1E1035 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 6px 18px -6px rgba(30, 16, 53, 0.55);
+}
+.tile-danger {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(252, 165, 165, 0.5) 0%, transparent 60%),
+    linear-gradient(140deg, var(--color-crimson-500) 0%, var(--color-crimson-700) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 6px 18px -6px rgba(153, 27, 27, 0.5);
+}
+
+/* Floating bottom-nav dock */
+.nav-dock {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.8) 100%);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(76, 29, 149, 0.09);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.7) inset,
+    0 8px 30px -8px rgba(46, 16, 101, 0.18),
+    0 2px 8px -2px rgba(46, 16, 101, 0.1);
+}
+[data-theme="dark"] .nav-dock,
+:root:not([data-theme="light"]) .nav-dock {
+  background:
+    linear-gradient(180deg, rgba(28, 18, 52, 0.92) 0%, rgba(20, 12, 36, 0.84) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 8px 30px -8px rgba(0, 0, 0, 0.5);
 }
 
 /* --- Glass buttons (header controls) --- */
@@ -695,8 +788,10 @@ button {
 
 .glass-input {
   border: 1px solid rgba(15, 23, 42, 0.1);
-  background: rgba(255, 255, 255, 0.72);
-  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.82);
+  /* Always a light surface — keep text dark regardless of theme. */
+  color: #0E1916;
+  color-scheme: light;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
     0 1px 2px rgba(15, 23, 42, 0.04);
@@ -707,7 +802,7 @@ button {
 }
 
 .glass-input::placeholder {
-  color: var(--color-text-muted);
+  color: #5A736C;
 }
 
 .glass-input:hover {
@@ -836,8 +931,99 @@ button {
 /* --- Premium gradients --- */
 .gradient-brand {
   background:
-    radial-gradient(circle at 18% 0%, rgba(14, 128, 116, 0.55) 0%, transparent 52%),
-    linear-gradient(135deg, #0A1220 0%, #0F3D38 48%, #0E8074 100%);
+    radial-gradient(circle at 18% 0%, rgba(196, 181, 253, 0.4) 0%, transparent 52%),
+    linear-gradient(135deg, #2E1065 0%, #5B21B6 48%, #7C3AED 100%);
+}
+
+/* Full-bleed marketing hero plane */
+.hero-bleed {
+  position: relative;
+  isolation: isolate;
+  min-height: min(100svh, 920px);
+  color: #fff;
+  overflow: hidden;
+}
+.hero-bleed__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bleed__media img {
+  object-fit: cover;
+  object-position: center 28%;
+  animation: surface-ken 28s var(--ease-out) infinite alternate;
+  will-change: transform;
+}
+.hero-bleed__veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(105deg, rgba(30, 16, 53, 0.88) 0%, rgba(46, 16, 101, 0.62) 42%, rgba(76, 29, 149, 0.28) 68%, rgba(30, 16, 53, 0.48) 100%),
+    linear-gradient(to top, rgba(15, 12, 22, 0.78) 0%, transparent 48%);
+  animation: veil-breathe 8s ease-in-out infinite alternate;
+}
+.hero-bleed__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: inherit;
+  align-items: flex-end;
+  /* Clear fixed header + in-hero emergency strip */
+  padding-block: clamp(7.5rem, 16vh, 10rem) clamp(2.5rem, 8vh, 5rem);
+}
+.btn-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3.25rem;
+  padding: 0.9rem 1.55rem;
+  border-radius: 1rem;
+  font-size: 0.9375rem;
+  font-weight: 750;
+  color: #fff;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(196, 181, 253, 0.4) 0%, transparent 52%),
+    linear-gradient(135deg, #2E1065 0%, #5B21B6 48%, #7C3AED 100%);
+  box-shadow: var(--shadow-brand);
+  transition: transform 180ms var(--ease-emphasized), box-shadow 180ms var(--ease-emphasized);
+}
+.btn-brand:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-4);
+}
+.btn-brand:active {
+  transform: translateY(0) scale(0.98);
+}
+.btn-ghost-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3.25rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 1rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: background 180ms var(--ease-emphasized), border-color 180ms var(--ease-emphasized);
+}
+.btn-ghost-light:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+@keyframes brand-rise {
+  from { opacity: 0; transform: translateY(28px); filter: blur(4px); }
+  to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@keyframes veil-breathe {
+  from { opacity: 0.92; }
+  to   { opacity: 1; }
+}
+.animate-brand-rise {
+  animation: brand-rise 900ms var(--ease-emphasized) both;
 }
 
 .gradient-ember {
@@ -1065,4 +1251,202 @@ select:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* =========================================================================
+   Platform tool surfaces — purple glass (scan, mediator, etc.)
+   ========================================================================= */
+/* Level 6 shell: one quiet wash + opaque glass panels — not foggy blobs. */
+.platform-shell,
+.mediator-shell {
+  --color-text-secondary: #4C3A66;
+  --color-text-muted: #7C6B94;
+  position: relative;
+  min-height: 100%;
+  border-radius: 22px;
+  padding: 1rem 0.95rem 1.25rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(245, 243, 255, 0.35) 100%);
+  border: 1px solid rgba(91, 33, 182, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 10px 28px -20px rgba(46, 16, 101, 0.28);
+}
+
+[data-theme="dark"] .platform-shell,
+:root:not([data-theme="light"]) .platform-shell,
+[data-theme="dark"] .mediator-shell,
+:root:not([data-theme="light"]) .mediator-shell {
+  --color-text-secondary: #D4C8EF;
+  --color-text-muted: #9B88C4;
+  background:
+    linear-gradient(180deg, rgba(38, 26, 68, 0.55) 0%, rgba(20, 12, 36, 0.35) 100%);
+  border-color: rgba(167, 139, 250, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 12px 30px -20px rgba(0, 0, 0, 0.55);
+}
+
+.platform-title,
+.mediator-title {
+  color: var(--color-text-primary);
+  text-shadow: none;
+}
+
+.platform-command-rail,
+.mediator-command-rail {
+  padding: 0.28rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(91, 33, 182, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    0 4px 14px -10px rgba(76, 29, 149, 0.28);
+}
+
+[data-theme="dark"] .platform-command-rail,
+:root:not([data-theme="light"]) .platform-command-rail,
+[data-theme="dark"] .mediator-command-rail,
+:root:not([data-theme="light"]) .mediator-command-rail {
+  background: rgba(28, 18, 52, 0.62);
+  border-color: rgba(196, 181, 253, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 10px 28px -16px rgba(0, 0, 0, 0.55);
+}
+
+.platform-tool-chip,
+.mediator-tool-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 38px;
+  padding: 0.45rem 0.8rem;
+  border-radius: 12px;
+  font-size: 11.5px;
+  font-weight: 750;
+  letter-spacing: 0.01em;
+  color: var(--color-text-secondary);
+  background: transparent;
+  transition:
+    background 180ms var(--ease-emphasized),
+    color 180ms var(--ease-emphasized),
+    transform 140ms var(--ease-emphasized);
+}
+
+.platform-tool-chip:hover,
+.mediator-tool-chip:hover {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-text);
+}
+
+.platform-tool-chip:active,
+.mediator-tool-chip:active {
+  transform: scale(0.97);
+}
+
+.platform-tool-chip[data-active="true"],
+.mediator-tool-chip[data-active="true"] {
+  color: #fff;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(196, 181, 253, 0.55) 0%, transparent 55%),
+    linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 8px 18px -10px rgba(91, 33, 182, 0.65);
+}
+
+.platform-glass-panel,
+.mediator-glass-panel {
+  border-radius: 18px;
+  padding: 1.1rem;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(91, 33, 182, 0.11);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 8px 22px -16px rgba(76, 29, 149, 0.28);
+}
+
+[data-theme="dark"] .platform-glass-panel,
+:root:not([data-theme="light"]) .platform-glass-panel,
+[data-theme="dark"] .mediator-glass-panel,
+:root:not([data-theme="light"]) .mediator-glass-panel {
+  background: rgba(32, 22, 58, 0.72);
+  border-color: rgba(196, 181, 253, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 14px 34px -20px rgba(0, 0, 0, 0.55);
+}
+
+.platform-cta-primary,
+.mediator-cta-primary {
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #fff;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(196, 181, 253, 0.45) 0%, transparent 50%),
+    linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 10px 22px -12px rgba(91, 33, 182, 0.6);
+  transition: transform 140ms var(--ease-emphasized), filter 160ms var(--ease-emphasized);
+}
+
+.platform-cta-primary:hover,
+.mediator-cta-primary:hover {
+  filter: brightness(1.05);
+}
+
+.platform-cta-primary:active,
+.mediator-cta-primary:active {
+  transform: scale(0.985);
+}
+
+.platform-cta-secondary,
+.mediator-cta-secondary {
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--color-border-default);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 140ms var(--ease-emphasized), background 160ms var(--ease-emphasized);
+}
+
+.platform-cta-secondary:hover,
+.mediator-cta-secondary:hover {
+  background: var(--color-accent-soft);
+}
+
+.platform-cta-secondary:active,
+.mediator-cta-secondary:active {
+  transform: scale(0.985);
+}
+
+[data-theme="dark"] .platform-cta-secondary,
+:root:not([data-theme="light"]) .platform-cta-secondary,
+[data-theme="dark"] .mediator-cta-secondary,
+:root:not([data-theme="light"]) .mediator-cta-secondary {
+  background: rgba(255, 255, 255, 0.06);
 }

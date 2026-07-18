@@ -36,7 +36,7 @@ export function WorkspaceTabs({
 }) {
   return (
     <div
-      className="mb-6 flex gap-1 overflow-x-auto rounded-2xl bg-[var(--color-surface-subtle)] p-1"
+      className="mb-6 flex gap-1 overflow-x-auto rounded-2xl border border-[var(--color-border-subtle)] bg-[var(--color-surface-subtle)] p-1 backdrop-blur-xl"
       role="tablist"
       aria-label={labels.title}
     >
@@ -52,8 +52,8 @@ export function WorkspaceTabs({
             onClick={() => onChange(id)}
             className={`flex min-h-[44px] min-w-[88px] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-xl px-3 py-2.5 text-xs font-extrabold transition-colors sm:text-[13px] ${
               active
-                ? "bg-[var(--color-surface)] text-[var(--color-text-primary)] shadow-1"
-                : "text-[var(--color-text-muted)]"
+                ? "bg-[var(--color-accent)] text-white shadow-1"
+                : "text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]"
             }`}
           >
             <Icon className="h-4 w-4 shrink-0" strokeWidth={2} />

@@ -51,7 +51,14 @@ export type AuditAction =
   | "operations.handover_data_shared"
   | "operations.handover_completed"
   | "operations.handover_cancelled"
-  | "operations.guidance_updated";
+  | "operations.guidance_updated"
+  | "staff.registered"
+  | "staff.register_email_failed"
+  | "staff.login"
+  | "staff.approved"
+  | "staff.bulk_invite"
+  | "staff.invite_accepted"
+  | "field.case_opened_with_consent";
 
 export type AuditParams = {
   userId: string;

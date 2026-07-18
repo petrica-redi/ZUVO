@@ -6,21 +6,21 @@ import { getAppConfig } from "@/lib/env";
 import { getPlatformConfig } from "@/lib/admin/actions";
 import { buildFontStyles } from "@/lib/admin/fonts";
 import { sanitizeCustomCss } from "@/lib/admin/sanitize-css";
-import { Inter, Geist } from "next/font/google";
+import { Fraunces, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { ServiceWorkerRegistrar } from "@/components/ServiceWorkerRegistrar";
 import { CapacitorBootstrap } from "@/components/CapacitorBootstrap";
 import { ProtocolRouteHandler } from "@/components/ProtocolRouteHandler";
 
-const inter = Inter({
+const sourceSans = Source_Sans_3({
   subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext", "greek"],
-  variable: "--font-inter",
+  variable: "--font-source-sans",
   display: "swap",
 });
 
-const geist = Geist({
+const fraunces = Fraunces({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-display",
+  variable: "--font-fraunces",
   display: "swap",
 });
 
@@ -31,8 +31,8 @@ export const viewport: Viewport = {
   viewportFit: "cover",
   // Dual-mode theme color: matches the canvas in light, deep teal-ink in dark mode.
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F3F8F6" },
-    { media: "(prefers-color-scheme: dark)", color: "#0A1311" },
+    { media: "(prefers-color-scheme: light)", color: "#E8F2EF" },
+    { media: "(prefers-color-scheme: dark)", color: "#041614" },
   ],
 };
 
@@ -56,7 +56,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     <html
       lang={locale}
       data-shell-mode={shellMode}
-      className={`${inter.variable} ${geist.variable}`}
+      className={`${sourceSans.variable} ${fraunces.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -76,10 +76,10 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <link rel="apple-touch-icon" href="/icon-192.svg" />
         <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.svg" />
         <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.svg" />
-        <link rel="mask-icon" href="/icon-512.svg" color="#0E8074" />
+        <link rel="mask-icon" href="/icon-512.svg" color="#0B655C" />
 
         {/* Microsoft tile (for installs from Edge / Windows) */}
-        <meta name="msapplication-TileColor" content="#0E8074" />
+        <meta name="msapplication-TileColor" content="#0B655C" />
         <meta name="msapplication-TileImage" content="/icon-192.svg" />
 
         {fontStyles.linkHref && (

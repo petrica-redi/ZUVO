@@ -61,6 +61,7 @@ export function OverviewTab({
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [notes, setNotes] = useState("");
+  const [caseId, setCaseId] = useState("");
   const [saved, setSaved] = useState(false);
 
   const phaseLabels = {
@@ -106,17 +107,29 @@ export function OverviewTab({
   const fieldClass =
     "min-h-[44px] w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] px-3 py-2.5 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-sage-500)] focus:outline-none focus:ring-2 focus:ring-[var(--color-sage-200)]";
 
+  const openNavCases = useMemo(
+    () =>
+      navCases.filter(
+        (c) => !["completed", "closed_incomplete", "cancelled"].includes(c.status),
+      ),
+    [navCases],
+  );
+
   const submit = () => {
     if (!name.trim()) return;
+    const linked = openNavCases.find((c) => c.id === caseId);
     onSaveVisit({
       id: crypto.randomUUID(),
       memberName: name.trim(),
       notes: notes.trim(),
       visitDate: new Date().toISOString(),
+      caseId: linked?.id,
+      caseNumber: linked?.caseNumber,
     });
     setSaved(true);
     setName("");
     setNotes("");
+    setCaseId("");
     setTimeout(() => {
       setSaved(false);
       setOpen(false);
@@ -298,6 +311,22 @@ export function OverviewTab({
             className={`mb-3 ${fieldClass}`}
           />
           <label className="mb-1 block text-xs font-bold text-[var(--color-text-muted)]">
+            {labels.visitLinkedCase}
+          </label>
+          <select
+            value={caseId}
+            onChange={(e) => setCaseId(e.target.value)}
+            aria-label={labels.visitLinkedCase}
+            className={`mb-3 ${fieldClass}`}
+          >
+            <option value="">{labels.visitNoCase}</option>
+            {openNavCases.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.caseNumber} — {c.beneficiaryPseudonym}
+              </option>
+            ))}
+          </select>
+          <label className="mb-1 block text-xs font-bold text-[var(--color-text-muted)]">
             {labels.notes}
           </label>
           <textarea
@@ -351,6 +380,11 @@ export function OverviewTab({
                   {new Date(v.visitDate).toLocaleDateString()}
                 </time>
               </div>
+              {v.caseNumber ? (
+                <p className="mb-1 text-[11px] font-bold uppercase tracking-wider text-[var(--color-brand-700)]">
+                  {v.caseNumber}
+                </p>
+              ) : null}
               {v.notes && (
                 <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
                   {v.notes}

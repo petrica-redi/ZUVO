@@ -2,9 +2,8 @@
 
 import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
-import Image from "next/image";
 
-type Accent = "brand" | "ember" | "sage" | "danger" | "ink";
+type Accent = "brand" | "ember" | "sage" | "danger" | "ink" | "violet";
 
 const ACCENTS: Record<
   Accent,
@@ -16,7 +15,7 @@ const ACCENTS: Record<
   }
 > = {
   brand: {
-    bg: "from-[var(--color-brand-50)] via-[var(--color-cream-50,#F7F4EE)] to-white",
+    bg: "from-[var(--color-brand-50)] via-white to-[var(--color-brand-50)]",
     dot: "var(--color-brand-600)",
     iconBg: "from-[var(--color-ink-900)] to-[var(--color-brand-700)]",
     iconText: "text-white",
@@ -45,20 +44,25 @@ const ACCENTS: Record<
     iconBg: "from-[var(--color-ink-900)] to-[#0F3D38]",
     iconText: "text-white",
   },
+  violet: {
+    bg: "from-[#F5F3FF] via-white to-[#EDE9FE]",
+    dot: "#6D28D9",
+    iconBg: "from-[#7C3AED] to-[#5B21B6]",
+    iconText: "text-white",
+  },
 };
 
 /**
- * Editorial hero for tool pages — full-bleed photographic panel by default
- * when `heroImage` is provided (premium register, not inset SVG cards).
+ * Compact tool header — text + icon only. Photographic heroes were removed
+ * so pages open straight on functionality.
  */
 export function ToolHero({
   icon: Icon,
   eyebrow,
   title,
   subtitle,
-  accent = "brand",
+  accent = "violet",
   aside,
-  heroImage,
   children,
 }: {
   icon: LucideIcon;
@@ -67,96 +71,45 @@ export function ToolHero({
   subtitle?: string;
   accent?: Accent;
   aside?: ReactNode;
-  /** Premium surface photograph — rendered as a full-bleed media plane. */
+  /** @deprecated Ignored — photo heroes removed in favour of tool-first layouts. */
   heroImage?: { src: string; alt: string };
   children?: ReactNode;
 }) {
   const a = ACCENTS[accent];
 
-  if (heroImage) {
-    return (
-      <section className="surface-hero relative mb-6 overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] shadow-2 md:rounded-[32px]">
-        <div className="relative min-h-[280px] md:min-h-[320px]">
-          <Image
-            src={heroImage.src}
-            alt={heroImage.alt}
-            fill
-            priority
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 960px"
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-r from-[var(--color-ink-900)]/88 via-[var(--color-ink-900)]/55 to-[var(--color-ink-900)]/20"
-            aria-hidden
-          />
-          <div className="relative flex h-full min-h-[280px] flex-col justify-end p-5 md:min-h-[320px] md:p-8">
-            <div className="max-w-xl">
-              <div className="flex items-center gap-3">
-                <div
-                  className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-white/12 text-white ring-1 ring-white/25 backdrop-blur-md md:h-12 md:w-12`}
-                >
-                  <Icon className="lucide h-5 w-5 md:h-6 md:w-6" strokeWidth={1.85} />
-                </div>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] text-white/85 backdrop-blur-md">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--color-brand-300)]" />
-                  {eyebrow}
-                </span>
-              </div>
-              <h1
-                className="font-headline mt-4 leading-[1.02] text-white"
-                style={{
-                  fontSize: "clamp(1.75rem, 1.2rem + 1.8vw, 2.75rem)",
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                {title}
-              </h1>
-              {subtitle ? (
-                <p className="mt-3 max-w-prose text-sm leading-relaxed text-white/78 md:text-[15px]">
-                  {subtitle}
-                </p>
-              ) : null}
-              {children ? <div className="mt-4">{children}</div> : null}
-              {aside ? <div className="mt-4">{aside}</div> : null}
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section
-      className={`relative mb-6 overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] bg-gradient-to-br ${a.bg} shadow-1 md:rounded-[32px]`}
+      className={`relative mb-5 overflow-hidden rounded-[22px] border border-[var(--color-border-subtle)] bg-gradient-to-br ${a.bg} shadow-1`}
     >
-      <div aria-hidden className="pointer-events-none absolute inset-0 grain-overlay opacity-50" />
-      <div className="relative p-5 md:p-7">
+      <div aria-hidden className="pointer-events-none absolute inset-0 grain-overlay opacity-40" />
+      <div className="relative p-4 md:p-5">
         <div className="flex items-center gap-3">
           <div
-            className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${a.iconBg} grain-overlay shadow-2 md:h-14 md:w-14`}
+            className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${a.iconBg} grain-overlay shadow-2`}
           >
-            <Icon className={`lucide h-6 w-6 ${a.iconText} md:h-7 md:w-7`} strokeWidth={1.85} />
+            <Icon className={`lucide h-5 w-5 ${a.iconText}`} strokeWidth={1.85} />
           </div>
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-white/85 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-text-secondary)] shadow-1 backdrop-blur">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-text-secondary)] shadow-1 backdrop-blur">
             <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ background: a.dot }} />
             {eyebrow}
           </span>
         </div>
         <h1
-          className="font-headline mt-4 leading-[1.02] text-[var(--color-text-primary)]"
+          className="font-headline mt-3 leading-[1.08] text-[var(--color-text-primary)]"
           style={{
-            fontSize: "clamp(1.625rem, 1.15rem + 1.6vw, 2.5rem)",
+            fontSize: "clamp(1.45rem, 1.1rem + 1.2vw, 2rem)",
             letterSpacing: "-0.02em",
           }}
         >
           {title}
         </h1>
         {subtitle ? (
-          <p className="mt-2 max-w-prose text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-[15px]">
+          <p className="mt-1.5 max-w-prose text-sm font-medium leading-relaxed text-[var(--color-text-secondary)]">
             {subtitle}
           </p>
         ) : null}
-        {children ? <div className="mt-4">{children}</div> : null}
+        {children ? <div className="mt-3">{children}</div> : null}
+        {aside ? <div className="mt-3">{aside}</div> : null}
       </div>
     </section>
   );

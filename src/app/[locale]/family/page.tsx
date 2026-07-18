@@ -17,8 +17,10 @@ export default function FamilyPage() {
       <Header />
       <SosButton />
       <main id="main-content" className="flex-1 pb-2">
-        <div className="px-5 py-6">
-          <FamilyHub />
+        <div className="px-4 py-4 sm:px-5 sm:py-5">
+          <div className="platform-shell">
+            <FamilyHub />
+          </div>
         </div>
       </main>
       <BottomNav />

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Send, AlertTriangle, MessageCircle, Mic, MicOff, Loader2, Volume2, Sparkles } from "lucide-react";
+import { Send, AlertTriangle, Mic, MicOff, Loader2, Volume2, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useSpeechRecognition, speakText } from "@/lib/voice";
 import { useDeepgramRecorder } from "@/lib/voice-recorder";
@@ -11,6 +11,7 @@ import {
   AiChatThinking,
   type AiChatLabels,
 } from "@/components/ui/AiChatShell";
+import { PlatformToolRail } from "@/components/PlatformToolRail";
 
 type Message = {
   id: string;
@@ -249,9 +250,11 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
   };
 
   return (
-    <div className="flex min-h-[60dvh] flex-1 flex-col">
+    <div className="platform-shell flex min-h-[60dvh] flex-1 flex-col !pb-3">
+      <PlatformToolRail />
+
       {/* Emergency banner */}
-      <div className="flex items-center gap-2 rounded-2xl bg-red-50 px-4 py-2.5 text-xs font-semibold text-red-700 border border-red-100">
+      <div className="flex items-center gap-2 rounded-2xl border border-red-200 bg-red-50 px-4 py-2.5 text-xs font-semibold text-red-700">
         <AlertTriangle className="h-4 w-4 flex-shrink-0" />
         <span>
           {labels.emergencyCall}{" "}
@@ -262,40 +265,17 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
       {/* Messages area */}
       <div ref={scrollRef} className="flex-1 overflow-y-auto px-1 py-4">
         {messages.length === 0 && (
-          <div className="relative flex flex-col items-center px-4 py-6 animate-fade-in-up">
-            {/* Atmospheric backdrop card */}
-            <div className="relative w-full overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] bg-gradient-to-br from-[var(--color-brand-50)] via-white to-[var(--color-ember-50)] p-6 shadow-1 md:p-8">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 grain-overlay opacity-50"
-              />
-              <div className="relative mb-6 aspect-[16/11] w-full overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-[var(--color-brand-50)] shadow-2">
-                {/* SVG served directly — Next/Image rasterizes SVG and breaks in production */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/ai/chat-companion.svg"
-                  alt={tChat("heroArtAlt")}
-                  className="h-full w-full object-cover object-center"
-                />
-              </div>
-              <div className="relative flex flex-col items-center text-center">
-                <div
-                  className="mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-brand-700)] shadow-2 grain-overlay"
-                  style={{ background: "linear-gradient(135deg, var(--color-brand-500) 0%, var(--color-brand-700) 50%, var(--color-ember-500) 100%)" }}
-                >
-                  <MessageCircle className="h-8 w-8 text-white" strokeWidth={1.85} />
-                </div>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/85 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-brand-700)] shadow-1 backdrop-blur">
+          <div className="relative flex flex-col items-center py-2 animate-fade-in-up">
+            <div className="platform-glass-panel w-full">
+              <div className="flex flex-col items-start text-left">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-accent-soft)] px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
                   <Sparkles className="lucide h-3 w-3" strokeWidth={2} />
                   AI + Mediators
                 </span>
-                <h2
-                  className="font-headline mt-3 leading-[1.05] text-[var(--color-text-primary)]"
-                  style={{ fontSize: "clamp(1.5rem, 1.15rem + 1.3vw, 2rem)" }}
-                >
+                <h2 className="platform-title font-headline mt-3 text-[1.55rem] leading-[1.08] tracking-tight sm:text-[1.75rem]">
                   {labels.askMeAnything}
                 </h2>
-                <p className="mt-3 max-w-xs text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                <p className="mt-2 max-w-md text-sm font-medium leading-relaxed text-[var(--color-text-secondary)]">
                   {labels.disclaimer}
                 </p>
               </div>
@@ -425,7 +405,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
             onClick={() => sendMessage()}
             disabled={!input.trim() || isLoading}
             className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full text-white shadow-3 transition-all active:scale-90 disabled:bg-[var(--color-surface-subtle)] disabled:text-[var(--color-text-muted)]"
-            style={{ background: !input.trim() || isLoading ? undefined : "linear-gradient(135deg, #0E8074 0%, #0C5A60 100%)" }}
+            style={{ background: !input.trim() || isLoading ? undefined : "linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)" }}
             aria-label={tChat("sendAria")}
           >
             <Send className="h-5 w-5" />

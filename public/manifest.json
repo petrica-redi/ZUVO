@@ -6,11 +6,20 @@
   "start_url": "/?utm_source=pwa",
   "scope": "/",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui", "browser"],
-  "background_color": "#F3F8F6",
-  "theme_color": "#0E8074",
+  "display_override": [
+    "standalone",
+    "minimal-ui",
+    "browser"
+  ],
+  "background_color": "#E8F2EF",
+  "theme_color": "#0B655C",
   "orientation": "portrait",
-  "categories": ["health", "education", "medical", "lifestyle"],
+  "categories": [
+    "health",
+    "education",
+    "medical",
+    "lifestyle"
+  ],
   "iarc_rating_id": "",
   "lang": "en",
   "dir": "ltr",
@@ -41,28 +50,48 @@
       "short_name": "Academy",
       "description": "Open the gamified health literacy academy",
       "url": "/students?utm_source=pwa_shortcut",
-      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon-192.svg",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Ask Redi Health",
       "short_name": "Ask",
       "description": "AI health assistant chat",
       "url": "/chat?utm_source=pwa_shortcut",
-      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon-192.svg",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Symptom check",
       "short_name": "Symptoms",
       "description": "Triage common symptoms",
       "url": "/symptoms?utm_source=pwa_shortcut",
-      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon-192.svg",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Emergency (SOS)",
       "short_name": "SOS",
       "description": "Emergency numbers and first-aid guide",
       "url": "/?sos=1&utm_source=pwa_shortcut",
-      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon-192.svg",
+          "sizes": "192x192"
+        }
+      ]
     }
   ],
   "share_target": {

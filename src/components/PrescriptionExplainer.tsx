@@ -7,7 +7,7 @@ import {
   Camera, Upload, X, ImageIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import NextImage from "next/image";
+import { PlatformToolRail } from "@/components/PlatformToolRail";
 
 const MAX_DIMENSION = 2048;
 const MAX_OUTPUT_BYTES = 5_000_000; // 5 MB binary post-base64
@@ -204,36 +204,33 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
   };
 
   return (
-    <div>
-      {/* Header */}
-      <div className="mb-6 animate-fade-in-up">
-        <div className="relative mb-5 aspect-[21/11] w-full overflow-hidden rounded-3xl shadow-xl">
-          <NextImage
-            src="/images/ai/ai-spot-prescription.png"
-            alt={t("heroArtAlt")}
-            fill
-            className="object-cover object-[center_42%]"
-            sizes="(max-width:768px) 100vw, 42rem"
-            priority
-          />
-        </div>
-        <div className="flex flex-col items-center text-center">
-          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-teal-500 to-cyan-600 shadow-xl shadow-teal-500/25">
-            <FileText className="h-9 w-9 text-white" />
-          </div>
-          <h1 className="text-2xl font-black text-gray-900">{t("heroTitle")}</h1>
-          <p className="mt-2 max-w-md text-sm text-gray-500">{t("heroSubtitle")}</p>
-        </div>
-      </div>
+    <div className="platform-shell">
+      <PlatformToolRail />
 
-      {/* Camera + Upload row */}
+      <header className="mb-4 animate-fade-in-up">
+        <div className="mb-2 flex items-center gap-2">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--color-accent)] text-white shadow-1">
+            <FileText className="h-4 w-4" strokeWidth={2.1} />
+          </span>
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-accent-text)]">
+            {t("cta")}
+          </p>
+        </div>
+        <h1 className="platform-title font-headline text-[1.65rem] leading-[1.1] tracking-tight sm:text-[1.9rem]">
+          {t("heroTitle")}
+        </h1>
+        <p className="mt-1.5 max-w-2xl text-sm font-medium leading-relaxed text-[var(--color-text-secondary)]">
+          {t("heroSubtitle")}
+        </p>
+      </header>
+
+      {/* Camera + Upload row — first actions, no illustration */}
       <div className="mb-3 grid grid-cols-2 gap-2">
         <button
           type="button"
           onClick={() => cameraInputRef.current?.click()}
           disabled={preparing || loading}
-          className="group flex items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-[var(--color-brand-300)] bg-[var(--color-brand-50)]/60 px-4 py-3.5 text-sm font-extrabold text-[var(--color-brand-800)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-brand-500)] hover:bg-[var(--color-brand-50)] disabled:cursor-wait disabled:opacity-60"
-          style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
+          className="platform-cta-primary !min-h-[48px]"
         >
           <Camera className="lucide h-4 w-4" strokeWidth={2} />
           {t("takePhoto")}
@@ -242,8 +239,7 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
           type="button"
           onClick={() => uploadInputRef.current?.click()}
           disabled={preparing || loading}
-          className="group flex items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-[var(--color-border-strong)] bg-[var(--color-surface)] px-4 py-3.5 text-sm font-extrabold text-[var(--color-text-primary)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-text-primary)] disabled:cursor-wait disabled:opacity-60"
-          style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
+          className="platform-cta-secondary !min-h-[48px]"
         >
           <Upload className="lucide h-4 w-4" strokeWidth={2} />
           {t("uploadImage")}
@@ -309,22 +305,22 @@ export function PrescriptionExplainer({ locale }: { locale: string }) {
       )}
 
       {/* Input */}
-      <div className="mb-4 rounded-2xl border-2 border-gray-200 bg-white p-1 shadow-sm transition-all focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/10">
+      <div className="platform-glass-panel mb-4 focus-within:ring-2 focus-within:ring-[var(--color-accent)]/35">
         <textarea
           value={input}
           onChange={(e) => { setInput(e.target.value); setResult(null); }}
-          onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); handleExplain(); } }}
+          onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void handleExplain(); } }}
           placeholder={image ? t("placeholderWithImage") : t("placeholder")}
           aria-label={t("inputAria")}
           rows={3}
-          className="w-full resize-none rounded-xl border-none bg-transparent px-4 py-3 text-sm focus:outline-none"
+          className="w-full resize-none rounded-xl border-none bg-transparent px-1 py-1 text-sm font-medium text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:outline-none"
         />
-        <div className="flex items-center justify-end px-3 pb-2">
+        <div className="mt-2 flex items-center justify-end">
           <button
             type="button"
-            onClick={() => handleExplain()}
+            onClick={() => void handleExplain()}
             disabled={(!input.trim() && !image) || loading || preparing}
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all active:scale-95 disabled:opacity-50"
+            className="platform-cta-primary !flex-none px-5 disabled:opacity-50"
           >
             {loading ? (
               <><Loader2 className="h-4 w-4 animate-spin" /> {t("ctaAnalyzing")}</>

@@ -1,0 +1,157 @@
+import { sendEmail } from "@/lib/resend";
+import { getAppConfig } from "@/lib/env";
+
+function appBaseUrl(): string {
+  return getAppConfig().appUrl?.replace(/\/$/, "") || "https://redi.healthcare";
+}
+
+export async function sendVerificationEmail(input: {
+  to: string;
+  displayName: string;
+  token: string;
+  locale?: string;
+}): Promise<{ id: string } | null> {
+  const locale = input.locale || "ro";
+  const verifyUrl = `${appBaseUrl()}/${locale}/auth/verify?token=${encodeURIComponent(input.token)}`;
+  const name = input.displayName || input.to;
+
+  return sendEmail({
+    to: input.to,
+    subject: "Confirmă adresa de email — Redi Health",
+    text: `Salut ${name},\n\nConfirmă emailul pentru contul Redi Health:\n${verifyUrl}\n\nLinkul expiră în 48 de ore.\n\n— Redi Health`,
+    html: `
+      <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;padding:24px;color:#0A1220">
+        <h1 style="font-size:22px;margin:0 0 12px">Confirmă emailul</h1>
+        <p style="line-height:1.55">Salut ${escapeHtml(name)},</p>
+        <p style="line-height:1.55">Apasă butonul de mai jos pentru a verifica adresa și a trimite contul spre aprobare.</p>
+        <p style="margin:28px 0">
+          <a href="${verifyUrl}" style="display:inline-block;background:#0A1220;color:#fff;text-decoration:none;padding:14px 22px;border-radius:999px;font-weight:700">
+            Verifică emailul
+          </a>
+        </p>
+        <p style="font-size:13px;color:#64748b;line-height:1.5">Linkul expiră în 48 de ore. Dacă nu ai cerut acest cont, ignoră mesajul.</p>
+      </div>
+    `,
+    tags: [{ name: "purpose", value: "staff_email_verify" }],
+  });
+}
+
+export async function sendAdminNewRegistrationEmail(input: {
+  applicantEmail: string;
+  displayName: string;
+  provider: string;
+}): Promise<{ id: string } | null> {
+  const adminEmail = process.env.ADMIN_EMAIL?.trim() || "petrica@redi-ngo.eu";
+  const reviewUrl = `${appBaseUrl()}/ro/admin/dashboard/accounts`;
+
+  // Don't email the admin about their own bootstrap signup.
+  if (input.applicantEmail.trim().toLowerCase() === adminEmail.toLowerCase()) {
+    return null;
+  }
+
+  return sendEmail({
+    to: adminEmail,
+    subject: `Cont nou de aprobat: ${input.displayName}`,
+    text: `Un nou cont așteaptă aprobare.\n\nNume: ${input.displayName}\nEmail: ${input.applicantEmail}\nProvider: ${input.provider}\n\nAprobă aici: ${reviewUrl}\n`,
+    html: `
+      <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;padding:24px;color:#0A1220">
+        <h1 style="font-size:20px">Cont nou de aprobat</h1>
+        <p><strong>${escapeHtml(input.displayName)}</strong> (${escapeHtml(input.applicantEmail)})</p>
+        <p>Provider: ${escapeHtml(input.provider)}</p>
+        <p><a href="${reviewUrl}">Deschide panoul de conturi</a></p>
+      </div>
+    `,
+    tags: [{ name: "purpose", value: "staff_admin_notify" }],
+  });
+}
+
+/** Lets the applicant know their verified account is waiting on admin approval. */
+export async function sendPendingApprovalEmail(input: {
+  to: string;
+  displayName: string;
+}): Promise<{ id: string } | null> {
+  const loginUrl = `${appBaseUrl()}/ro/auth/login`;
+  return sendEmail({
+    to: input.to,
+    subject: "Contul tău așteaptă aprobarea administratorului — Redi Health",
+    text: `Salut ${input.displayName},\n\nEmailul tău este verificat. Un administrator trebuie să aprobe contul înainte să poți intra în platformă.\n\nRevino la autentificare după aprobare:\n${loginUrl}\n`,
+    html: `
+      <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;padding:24px;color:#0A1220">
+        <h1 style="font-size:22px;margin:0 0 12px">Așteaptă aprobarea</h1>
+        <p style="line-height:1.55">Salut ${escapeHtml(input.displayName)},</p>
+        <p style="line-height:1.55">Emailul tău este verificat. Un administrator trebuie să aprobe contul înainte să poți intra în platformă.</p>
+        <p style="margin:28px 0">
+          <a href="${loginUrl}" style="display:inline-block;background:#0A1220;color:#fff;text-decoration:none;padding:14px 22px;border-radius:999px;font-weight:700">
+            Mergi la autentificare
+          </a>
+        </p>
+      </div>
+    `,
+    tags: [{ name: "purpose", value: "staff_pending_approval" }],
+  });
+}
+
+export async function sendAccountApprovedEmail(input: {
+  to: string;
+  displayName: string;
+  role: string;
+}): Promise<{ id: string } | null> {
+  const loginUrl = `${appBaseUrl()}/ro/auth/login`;
+  return sendEmail({
+    to: input.to,
+    subject: "Contul tău Redi Health a fost aprobat",
+    text: `Salut ${input.displayName},\n\nContul tău a fost aprobat cu rolul: ${input.role}.\nAutentifică-te: ${loginUrl}\n`,
+    html: `
+      <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;padding:24px;color:#1E1035">
+        <h1 style="font-size:22px">Cont aprobat</h1>
+        <p>Salut ${escapeHtml(input.displayName)},</p>
+        <p>Contul tău a fost aprobat cu rolul <strong>${escapeHtml(input.role)}</strong>.</p>
+        <p><a href="${loginUrl}" style="display:inline-block;background:#7C3AED;color:#fff;text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:700">Intră în platformă</a></p>
+      </div>
+    `,
+    tags: [{ name: "purpose", value: "staff_approved" }],
+  });
+}
+
+export async function sendStaffInviteEmail(input: {
+  to: string;
+  displayName: string;
+  role: string;
+  token: string;
+  countryCode: string;
+  locale?: string;
+}): Promise<{ id: string } | null> {
+  const locale = input.locale || (input.countryCode === "IT" ? "it" : "ro");
+  const inviteUrl = `${appBaseUrl()}/${locale}/auth/register?invite=${encodeURIComponent(input.token)}`;
+  const name = input.displayName || input.to;
+  return sendEmail({
+    to: input.to,
+    subject:
+      input.countryCode === "IT"
+        ? "Invito Redi Health — mediatore / infermiere"
+        : "Invitație Redi Health — mediator / asistent medical",
+    text: `Salut ${name},\n\nAi fost invitat(ă) pe Redi Health cu rolul ${input.role}.\nCreează contul aici:\n${inviteUrl}\n\nLinkul expiră în 14 zile.\n`,
+    html: `
+      <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;padding:24px;color:#1E1035">
+        <h1 style="font-size:22px;margin:0 0 12px">Invitație Redi Health</h1>
+        <p style="line-height:1.55">Salut ${escapeHtml(name)},</p>
+        <p style="line-height:1.55">Ai fost invitat(ă) ca <strong>${escapeHtml(input.role)}</strong> pe platforma de mediere sanitară.</p>
+        <p style="margin:28px 0">
+          <a href="${inviteUrl}" style="display:inline-block;background:#7C3AED;color:#fff;text-decoration:none;padding:14px 22px;border-radius:999px;font-weight:700">
+            Creează contul
+          </a>
+        </p>
+        <p style="font-size:13px;color:#6B5A82;line-height:1.5">Linkul expiră în 14 zile.</p>
+      </div>
+    `,
+    tags: [{ name: "purpose", value: "staff_invite" }],
+  });
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}

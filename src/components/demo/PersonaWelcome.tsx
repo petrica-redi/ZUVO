@@ -49,7 +49,7 @@ export function PersonaWelcome() {
   return (
     <div className="fixed inset-x-4 top-20 z-[60] mx-auto max-w-md animate-fade-in-up">
       <div className="overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-white shadow-4">
-        <div className="h-1.5 bg-gradient-to-r from-[var(--color-ink-900)] to-[#0E8074]" />
+        <div className="h-1.5 bg-gradient-to-r from-[var(--color-ink-900)] to-[#7C3AED]" />
         <div className="p-5">
           <div className="flex items-start justify-between gap-3">
             <div>

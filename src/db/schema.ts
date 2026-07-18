@@ -335,6 +335,8 @@ export const platformConfig = pgTable("platform_config", {
   fontDisplay: text("font_display"),
   fontEditorial: text("font_editorial"),
   customCss: text("custom_css"),
+  /** Visual page-builder content: { [slug: string]: PageBlock[] } */
+  pageBlocks: jsonb("page_blocks"),
   updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
 });
 
@@ -828,4 +830,64 @@ export const attendanceOutcomes = pgTable(
     recordedAt: timestamp("recorded_at", { withTimezone: true }).defaultNow(),
   },
   (t) => [index("idx_attendance_appointment").on(t.appointmentId, t.recordedAt)],
+);
+
+/** Self-registered staff awaiting email verify + admin role approval. */
+export const staffAccounts = pgTable(
+  "staff_accounts",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    email: text("email").notNull().unique(),
+    passwordHash: text("password_hash"),
+    displayName: text("display_name").notNull().default(""),
+    authProvider: text("auth_provider").notNull().default("email"),
+    supabaseAuthId: uuid("supabase_auth_id").unique(),
+    emailVerifiedAt: timestamp("email_verified_at", { withTimezone: true }),
+    verificationToken: text("verification_token"),
+    verificationExpiresAt: timestamp("verification_expires_at", { withTimezone: true }),
+    status: text("status").notNull().default("pending_verification"),
+    role: text("role"),
+    workspaceId: text("workspace_id"),
+    countyCode: text("county_code"),
+    organisationId: uuid("organisation_id"),
+    countryCode: text("country_code").notNull().default("RO"),
+    regionCode: text("region_code"),
+    canApprove: boolean("can_approve").notNull().default(false),
+    onboardingCompletedAt: timestamp("onboarding_completed_at", { withTimezone: true }),
+    invitedBy: text("invited_by"),
+    rejectionReason: text("rejection_reason"),
+    approvedAt: timestamp("approved_at", { withTimezone: true }),
+    approvedBy: text("approved_by"),
+    lastLoginAt: timestamp("last_login_at", { withTimezone: true }),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow().notNull(),
+  },
+  (t) => [
+    index("idx_staff_accounts_status").on(t.status, t.createdAt),
+    index("idx_staff_accounts_verification").on(t.verificationToken),
+    index("idx_staff_accounts_org").on(t.organisationId, t.status),
+  ],
+);
+
+/** Bulk / manager invites for field staff (nurses, mediators, doctors). */
+export const staffInvites = pgTable(
+  "staff_invites",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    email: text("email").notNull(),
+    displayName: text("display_name").notNull().default(""),
+    role: text("role").notNull().default("mediator"),
+    organisationId: uuid("organisation_id"),
+    countryCode: text("country_code").notNull().default("RO"),
+    regionCode: text("region_code"),
+    token: text("token").notNull().unique(),
+    invitedBy: text("invited_by").notNull(),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    acceptedAt: timestamp("accepted_at", { withTimezone: true }),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
+  },
+  (t) => [
+    index("idx_staff_invites_email").on(t.email),
+    index("idx_staff_invites_token").on(t.token),
+  ],
 );
