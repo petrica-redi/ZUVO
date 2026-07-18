@@ -10,7 +10,7 @@ import {
 import { AdminPersonaSwitcher } from "@/components/admin/AdminPersonaSwitcher";
 import { AdminShellOptOut } from "@/components/admin/AdminShellOptOut";
 import { Link } from "@/navigation";
-import { LogOut, Save, Image as ImageIcon, Type, Code, Users } from "lucide-react";
+import { LogOut, Save, Image as ImageIcon, Type, Code, Users, Eye } from "lucide-react";
 
 export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
@@ -99,8 +99,6 @@ export default function AdminDashboard() {
         </header>
 
         <main className="mx-auto mt-8 max-w-5xl space-y-6 px-6">
-          <AdminPersonaSwitcher />
-
           <Link
             href="/admin/dashboard/accounts"
             className="admin-cms-section flex items-center justify-between gap-4 transition hover:border-[var(--color-ink-900)]"
@@ -248,6 +246,17 @@ export default function AdminDashboard() {
               </button>
             </div>
           </form>
+
+          <section className="admin-cms-section">
+            <h2 className="admin-cms-section__title">
+              <Eye className="h-5 w-5 text-[var(--color-text-secondary)]" />
+              Preview as role
+            </h2>
+            <p className="mb-4 text-sm text-[var(--color-text-secondary)]">
+              Optional — open the platform as any persona to check navigation and access.
+            </p>
+            <AdminPersonaSwitcher variant="compact" />
+          </section>
         </main>
       </div>
     </>
