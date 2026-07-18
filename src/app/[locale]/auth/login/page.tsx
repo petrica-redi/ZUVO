@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { StaffLoginForm } from "@/components/auth/StaffLoginForm";
 import { isGoogleOAuthEnabled } from "@/lib/staff/google-oauth";
+import { isNativeGoogleOAuthConfigured } from "@/lib/staff/google-native";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -15,7 +16,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function StaffAuthLoginPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "staffAuth" });
-  const googleEnabled = await isGoogleOAuthEnabled();
+  const [supabaseGoogle, nativeGoogle] = await Promise.all([
+    isGoogleOAuthEnabled(),
+    Promise.resolve(isNativeGoogleOAuthConfigured()),
+  ]);
+  const googleEnabled = supabaseGoogle || nativeGoogle;
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
@@ -25,6 +30,7 @@ export default async function StaffAuthLoginPage({ params }: Props) {
           <StaffLoginForm
             locale={locale}
             googleEnabled={googleEnabled}
+            preferNativeGoogle={nativeGoogle}
             labels={{
               title: t("loginTitle"),
               lead: t("loginLead"),

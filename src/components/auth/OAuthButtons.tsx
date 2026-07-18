@@ -8,6 +8,7 @@ export function OAuthButtons({
   labels,
   locale = "ro",
   googleEnabled = true,
+  preferNativeGoogle = false,
 }: {
   labels: {
     google: string;
@@ -15,8 +16,10 @@ export function OAuthButtons({
     googleUnavailable?: string;
   };
   locale?: string;
-  /** When false, button stays visible but explains email signup instead of redirecting to Supabase JSON error. */
+  /** Supabase Google provider enabled OR native Google OAuth configured. */
   googleEnabled?: boolean;
+  /** Prefer /api/auth/google/start (works without Supabase Google provider). */
+  preferNativeGoogle?: boolean;
 }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -28,16 +31,22 @@ export function OAuthButtons({
   const startGoogle = async () => {
     setError(null);
 
-    if (!googleEnabled) {
+    if (!googleEnabled && !preferNativeGoogle) {
       setError(unavailable);
       return;
     }
 
     setLoading(true);
+
+    // Native Google OAuth — does not need Supabase Auth Google provider.
+    if (preferNativeGoogle) {
+      window.location.assign(`/api/auth/google/start?locale=${encodeURIComponent(locale)}`);
+      return;
+    }
+
     try {
       const supabase = createClient();
       const origin = window.location.origin;
-      // Default locale (ro) uses as-needed prefix — prefer unprefixed callback.
       const callbackPath =
         locale === "ro" ? "/auth/callback" : `/${locale}/auth/callback`;
 
@@ -62,7 +71,6 @@ export function OAuthButtons({
         return;
       }
 
-      // Last-mile guard: if Supabase still returns JSON (provider off), stay on page.
       try {
         const probe = await fetch(data.url, {
           method: "GET",
@@ -78,9 +86,8 @@ export function OAuthButtons({
           window.location.assign(location);
           return;
         }
-        // Opaque / CORS: fall through to navigate; server already said enabled.
       } catch {
-        // CORS on probe — navigate only when server said enabled.
+        // CORS on probe — navigate when server said enabled.
       }
 
       window.location.assign(data.url);
@@ -104,7 +111,7 @@ export function OAuthButtons({
         type="button"
         onClick={startGoogle}
         disabled={loading}
-        aria-disabled={!googleEnabled}
+        aria-disabled={!googleEnabled && !preferNativeGoogle}
         className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-2xl border border-[var(--color-border-default)] bg-white px-4 text-sm font-bold text-[var(--color-text-primary)] shadow-1 transition hover:bg-[var(--color-surface-subtle)] disabled:opacity-60"
       >
         {loading ? (
@@ -114,7 +121,7 @@ export function OAuthButtons({
         )}
         {labels.google}
       </button>
-      {!googleEnabled ? (
+      {!googleEnabled && !preferNativeGoogle ? (
         <p className="text-center text-xs font-medium text-[var(--color-text-muted)]">
           {unavailable}
         </p>

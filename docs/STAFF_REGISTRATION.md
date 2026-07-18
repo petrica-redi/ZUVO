@@ -26,26 +26,32 @@ Pilot roster login (`FIELD_STAFF_ROSTER` at `/mediator/login`) remains available
 
 ## Enable Google / Gmail login (required once)
 
-Without this, “Continue with Google” hits Supabase with  
-`Unsupported provider: provider is not enabled`.
+The app supports **native Google OAuth** at `/api/auth/google/*` so Gmail login
+works **without** enabling the Supabase Google provider.
 
-1. **Google Cloud Console** → [Credentials / Clients](https://console.cloud.google.com/auth/clients)  
-   - Create an **OAuth 2.0 Client ID** (Web application)  
-   - Authorized redirect URI (exact):  
-     `https://zukissjunpxmlrgbvbtb.supabase.co/auth/v1/callback`  
-   - Copy **Client ID** and **Client Secret**
+### CLI (recommended)
 
-2. **Supabase Dashboard** → project `zukissjunpxmlrgbvbtb` → **Authentication → Providers → Google**  
-   - Enable Google  
-   - Paste Client ID + Client Secret → Save
+1. Create a **Web** OAuth client in [Google Cloud Console](https://console.cloud.google.com/auth/clients)  
+   Redirect URI (exact): `https://redi.healthcare/api/auth/google/callback`
 
-3. **Supabase → Authentication → URL configuration**  
-   - Site URL: `https://redi.healthcare`  
-   - Redirect allow list include:  
-     `https://redi.healthcare/auth/callback`  
-     `https://redi.healthcare/*/auth/callback`
+2. Run:
 
-4. Reload `/auth/register` — the Google button becomes active automatically.
+```bash
+export GOOGLE_CLIENT_ID="xxxxx.apps.googleusercontent.com"
+export GOOGLE_CLIENT_SECRET="xxxxx"
+export VERCEL_TOKEN="..."   # if not already set
+# Optional — also flips Supabase Auth → Google on:
+# export SUPABASE_ACCESS_TOKEN="..."   # https://supabase.com/dashboard/account/tokens
+node scripts/setup-google-oauth.mjs
+./scripts/deploy-prod.sh
+```
+
+3. Reload `/auth/register` — **Continue with Google** uses the native flow.
+
+### Manual Supabase provider (optional)
+
+Dashboard → Authentication → Providers → Google → enable + paste the same Client ID/Secret.  
+Supabase callback URI: `https://zukissjunpxmlrgbvbtb.supabase.co/auth/v1/callback`
 
 ## Roles → workspace
 

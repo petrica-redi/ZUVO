@@ -12,9 +12,11 @@ export function StaffLoginForm({
   locale,
   labels,
   googleEnabled = true,
+  preferNativeGoogle = false,
 }: {
   locale: string;
   googleEnabled?: boolean;
+  preferNativeGoogle?: boolean;
   labels: {
     title: string;
     lead: string;
@@ -113,6 +115,7 @@ export function StaffLoginForm({
       <OAuthButtons
         locale={locale}
         googleEnabled={googleEnabled}
+        preferNativeGoogle={preferNativeGoogle}
         labels={{
           google: labels.google,
           orDivider: labels.orDivider,
