@@ -69,6 +69,18 @@ export function getOrCreateWorkspaceId(): string {
   return id;
 }
 
+/**
+ * Bind the browser workspace to a named field-staff assignment.
+ * Called after MoU field login so ops/API calls use the roster workspace id.
+ */
+export function bindFieldWorkspace(workspaceId: string, countyCode?: string): void {
+  if (typeof window === "undefined" || !workspaceId.trim()) return;
+  localStorage.setItem(STORAGE.workspaceId, workspaceId.trim());
+  if (countyCode?.trim()) {
+    localStorage.setItem(STORAGE.county, countyCode.trim().toUpperCase());
+  }
+}
+
 export function readLocalWorkspace(): LocalWorkspaceSnapshot {
   if (typeof window === "undefined") {
     return {

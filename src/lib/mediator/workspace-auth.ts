@@ -19,7 +19,10 @@ export function verifyWorkspaceSecret(
   secret: string | null | undefined,
   storedHash: string | null | undefined,
 ): boolean {
-  if (!storedHash) return true; // legacy workspace — open until first secret rotation
+  // Production: reject legacy open workspaces (null hash). Force secret rotation.
+  if (!storedHash) {
+    return process.env.NODE_ENV !== "production";
+  }
   if (!secret?.trim()) return false;
   return hashWorkspaceSecret(secret.trim()) === storedHash;
 }

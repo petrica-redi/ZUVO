@@ -11,8 +11,7 @@ import { useTranslations } from "next-intl";
  * Desktop-first sticky header for the marketing surface.
  *
  * - Transparent at top, glass-blurred after the first scroll tick.
- * - Inline nav (impact, methodology, providers) on md+.
- * - Falls back to the wordmark + primary CTA on mobile.
+ * - Inline nav on md+; Sign in / Sign up always visible in the right cluster.
  */
 export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
   const [scrolled, setScrolled] = useState(false);
@@ -33,15 +32,15 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
       }`}
       style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5 md:px-8">
         <Link
           href="/"
-          className="rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
+          className="shrink-0 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
         >
           <LogoWordmark iconSize={28} logoUrl={logoUrl} />
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           <Link
             href="/mediator"
             className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
@@ -67,12 +66,6 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
             {tFooter("methodology")}
           </Link>
           <Link
-            href="/admin/login"
-            className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
-          >
-            {t("demoNav")}
-          </Link>
-          <Link
             href="/impact"
             className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
           >
@@ -80,17 +73,22 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
           </Link>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           <LanguagePicker variant="landing" />
           <div className="hidden md:block">
             <ThemeToggle />
           </div>
           <Link
-            href="/#stakeholder-access"
-            className="glass-btn glass-btn-accent inline-flex h-10 items-center gap-2 rounded-full px-5 text-[13px] font-extrabold"
+            href="/auth/login"
+            className="inline-flex h-10 items-center rounded-full px-3 text-[13px] font-bold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)] sm:px-4"
           >
-            <span className="glass-btn-icon flex h-5 w-5 items-center justify-center rounded-full text-[10px]">▶</span>
-            {t("demoNav")}
+            {t("signInCtaHero")}
+          </Link>
+          <Link
+            href="/auth/register"
+            className="glass-btn glass-btn-accent inline-flex h-10 items-center rounded-full px-4 text-[13px] font-extrabold sm:px-5"
+          >
+            {t("signUpCtaHero")}
           </Link>
         </div>
       </div>
