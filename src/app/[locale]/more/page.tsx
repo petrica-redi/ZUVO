@@ -83,9 +83,10 @@ export default async function MorePage({ params }: Props) {
       <Header />
       <SosButton />
       <main id="main-content" className="flex-1 pb-2">
-        <div className="px-5 py-6">
+        <div className="px-4 py-4 sm:px-5 sm:py-5">
+          <div className="platform-shell">
           <h1
-            className="font-headline mb-6 text-3xl text-[var(--color-text-primary)] animate-fade-in-up"
+            className="platform-title font-headline mb-5 text-[1.75rem] tracking-tight animate-fade-in-up"
           >
             {t("title")}
           </h1>
@@ -93,13 +94,13 @@ export default async function MorePage({ params }: Props) {
           {SECTIONS.map((section, si) => (
             <div
               key={section.id}
-              className="mb-6 animate-fade-in-up"
+              className="mb-5 animate-fade-in-up"
               style={{ animationDelay: `${(si + 1) * 100}ms` }}
             >
-              <h2 className="mb-3 text-xs font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
+              <h2 className="mb-2.5 text-xs font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
                 {t(`sections.${section.id}`)}
               </h2>
-              <div className="overflow-hidden rounded-3xl bg-[var(--color-surface)] hairline shadow-2">
+              <div className="platform-glass-panel overflow-hidden !p-0">
                 {section.items.map((item, i) => (
                   <Link
                     key={item.href}
@@ -127,6 +128,7 @@ export default async function MorePage({ params }: Props) {
               </div>
             </div>
           ))}
+          </div>
         </div>
       </main>
       <BottomNav />

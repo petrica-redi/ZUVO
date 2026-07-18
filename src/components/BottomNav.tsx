@@ -88,7 +88,7 @@ function BottomNavInner() {
                   className="flex flex-col items-center -mt-7"
                 >
                   <div
-                    className="flex h-[58px] w-[58px] items-center justify-center rounded-[20px] transition-transform active:scale-90 animate-pulse-glow gradient-brand grain-overlay ring-4 ring-[var(--color-bg-canvas)]"
+                    className="flex h-[54px] w-[54px] items-center justify-center rounded-[18px] transition-transform active:scale-90 gradient-brand ring-[3px] ring-[var(--color-bg-canvas)]"
                     style={{ boxShadow: "var(--shadow-brand)" }}
                   >
                     <Icon className="lucide h-[26px] w-[26px] text-white" strokeWidth={2.2} />

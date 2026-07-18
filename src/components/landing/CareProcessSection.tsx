@@ -14,11 +14,11 @@ import { useTranslations } from "next-intl";
 import { RomaHealthMark } from "@/components/landing/RomaHealthMark";
 
 const STEPS = [
-  { id: "join", icon: Smartphone, color: "#0E8074" },
-  { id: "connect", icon: HeartHandshake, color: "#12907A" },
-  { id: "mobile", icon: Ambulance, color: "#2FAF98" },
-  { id: "mediator", icon: Shield, color: "#0B655C" },
-  { id: "telehealth", icon: Video, color: "#084A44" },
+  { id: "join", icon: Smartphone, color: "#7C3AED" },
+  { id: "connect", icon: HeartHandshake, color: "#6D28D9" },
+  { id: "mobile", icon: Ambulance, color: "#8B5CF6" },
+  { id: "mediator", icon: Shield, color: "#5B21B6" },
+  { id: "telehealth", icon: Video, color: "#4C1D95" },
 ] as const;
 
 type StepId = (typeof STEPS)[number]["id"];
@@ -68,7 +68,7 @@ export function CareProcessSection() {
           />
           <div
             aria-hidden
-            className="absolute left-[10%] top-[2.75rem] hidden h-0.5 bg-gradient-to-r from-[#0E8074] to-[#2FAF98] transition-all duration-500 md:block"
+            className="absolute left-[10%] top-[2.75rem] hidden h-0.5 bg-gradient-to-r from-[#7C3AED] to-[#A78BFA] transition-all duration-500 md:block"
             style={{
               width: `${(activeIndex / (STEPS.length - 1)) * 80}%`,
             }}
@@ -128,10 +128,10 @@ export function CareProcessSection() {
 
         {/* Active step detail card */}
         <div className="relative mx-auto mt-10 max-w-3xl md:mt-14">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#084A44] via-[#0E8074] to-[#063D3A] p-7 text-white shadow-4 md:p-10">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#2E1065] via-[#6D28D9] to-[#4C1D95] p-7 text-white shadow-4 md:p-10">
             <div
               aria-hidden
-              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#2BC4A8]/40 blur-3xl"
+              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#A78BFA]/40 blur-3xl"
             />
             <div
               aria-hidden

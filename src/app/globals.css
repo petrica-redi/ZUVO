@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 /* =========================================================================
-   REDI HEALTH DESIGN SYSTEM — Adriatic mist
+   REDI HEALTH DESIGN SYSTEM — Violet glass (level 6)
    =========================================================================
    Anchor palette:
-     - Mist canvas (cool teal-greys) — atmosphere, not flat white
-     - Adriatic teal                 — identity, actions, focus
-     - Deep lagoon ink               — typography depth (teal-tinted, not slate)
+     - Lavender mist canvas          — soft atmosphere, not flat white
+     - Amethyst purple               — identity, actions, focus
+     - Deep violet ink               — typography depth
      - Ember                         — celebration / XP only
      - Crimson                       — emergency / SOS only
+   Level 6: refined glass + opaque type. Not sparse, not over-styled.
    ========================================================================= */
 
 @theme inline {
@@ -17,32 +18,32 @@
   --font-display: var(--font-fraunces), Fraunces, Georgia, "Times New Roman", serif;
   --font-editorial: var(--font-fraunces), Fraunces, Georgia, "Times New Roman", serif;
 
-  /* ---- 11-step neutral scale (lagoon-tinted, not cold slate) ---- */
+  /* ---- 11-step neutral scale (violet-tinted) ---- */
   --color-neutral-0:    #FFFFFF;
-  --color-neutral-50:   #F3F7F6;
-  --color-neutral-100:  #E5EEEC;
-  --color-neutral-200:  #CDDCD8;
-  --color-neutral-300:  #A9BFB9;
-  --color-neutral-400:  #7A958E;
-  --color-neutral-500:  #5A736C;
-  --color-neutral-600:  #425851;
-  --color-neutral-700:  #2F403B;
-  --color-neutral-800:  #1C2A26;
-  --color-neutral-900:  #0E1916;
-  --color-neutral-950:  #06100E;
+  --color-neutral-50:   #F7F5FB;
+  --color-neutral-100:  #EDE9F5;
+  --color-neutral-200:  #D9D2E8;
+  --color-neutral-300:  #B8ADC9;
+  --color-neutral-400:  #8E82A8;
+  --color-neutral-500:  #6B5F84;
+  --color-neutral-600:  #51466A;
+  --color-neutral-700:  #3B3250;
+  --color-neutral-800:  #282236;
+  --color-neutral-900:  #1A1524;
+  --color-neutral-950:  #0F0C16;
 
-  /* ---- Brand: Adriatic teal ---- */
-  --color-brand-50:   #EEF8F5;
-  --color-brand-100:  #D2EFE8;
-  --color-brand-200:  #A5DFD2;
-  --color-brand-300:  #6BC7B4;
-  --color-brand-400:  #2FAF98;
-  --color-brand-500:  #12907A;
-  --color-brand-600:  #0E8074;
-  --color-brand-700:  #0B655C;
-  --color-brand-800:  #084A44;
-  --color-brand-900:  #063D3A;
-  --color-brand-950:  #041F1D;
+  /* ---- Brand: Amethyst purple ---- */
+  --color-brand-50:   #F5F3FF;
+  --color-brand-100:  #EDE9FE;
+  --color-brand-200:  #DDD6FE;
+  --color-brand-300:  #C4B5FD;
+  --color-brand-400:  #A78BFA;
+  --color-brand-500:  #8B5CF6;
+  --color-brand-600:  #7C3AED;
+  --color-brand-700:  #6D28D9;
+  --color-brand-800:  #5B21B6;
+  --color-brand-900:  #4C1D95;
+  --color-brand-950:  #2E1065;
 
   /* ---- Medical blue (secondary trust accent) ---- */
   --color-blue-50:    #EFF6FF;
@@ -75,18 +76,18 @@
   --color-bg:              var(--color-neutral-50);
   --color-bg-subtle:       var(--color-neutral-100);
   --color-bg-elevated:     var(--color-neutral-0);
-  --color-bg-canvas:       #E8F2EF;            /* Adriatic mist canvas */
+  --color-bg-canvas:       #F0EBF8;            /* Lavender mist canvas */
   --color-bg-inverse:      var(--color-brand-950);
 
-  --color-surface:         var(--color-neutral-0);
-  --color-surface-subtle:  #F2F8F6;
+  --color-surface:         rgba(255, 255, 255, 0.88);
+  --color-surface-subtle:  #F5F2FB;
   --color-surface-hover:   var(--color-neutral-100);
 
-  --color-border-subtle:   rgba(6, 31, 29, 0.07);
-  --color-border-default:  rgba(6, 31, 29, 0.12);
-  --color-border-strong:   rgba(6, 31, 29, 0.22);
+  --color-border-subtle:   rgba(76, 29, 149, 0.08);
+  --color-border-default:  rgba(76, 29, 149, 0.14);
+  --color-border-strong:   rgba(76, 29, 149, 0.24);
 
-  --color-text-primary:    #071A18;
+  --color-text-primary:    #1E1035;
   --color-text-secondary:  var(--color-neutral-600);
   --color-text-tertiary:   var(--color-neutral-500);
   --color-text-muted:      var(--color-neutral-400);
@@ -145,20 +146,20 @@
      hard drop-shadow. Kept low-opacity and slate-tinted for a calm, clinical
      feel that still separates surfaces on the mint canvas. */
   --shadow-1:
-    0 1px 1px rgba(6, 31, 29, 0.04),
-    0 1px 2px -1px rgba(6, 31, 29, 0.05);
+    0 1px 1px rgba(46, 16, 101, 0.04),
+    0 1px 2px -1px rgba(46, 16, 101, 0.05);
   --shadow-2:
-    0 1px 2px rgba(6, 31, 29, 0.04),
-    0 4px 8px -2px rgba(6, 31, 29, 0.07);
+    0 1px 2px rgba(46, 16, 101, 0.04),
+    0 4px 8px -2px rgba(46, 16, 101, 0.08);
   --shadow-3:
-    0 2px 4px -1px rgba(6, 31, 29, 0.05),
-    0 12px 24px -6px rgba(6, 31, 29, 0.11);
+    0 2px 4px -1px rgba(46, 16, 101, 0.05),
+    0 12px 24px -6px rgba(46, 16, 101, 0.12);
   --shadow-4:
-    0 4px 8px -2px rgba(6, 31, 29, 0.06),
-    0 24px 48px -12px rgba(6, 31, 29, 0.16);
+    0 4px 8px -2px rgba(46, 16, 101, 0.06),
+    0 24px 48px -12px rgba(46, 16, 101, 0.16);
   --shadow-brand:
-    0 2px 8px -1px rgba(14, 128, 116, 0.28),
-    0 14px 32px -10px rgba(6, 61, 58, 0.35);
+    0 2px 8px -1px rgba(124, 58, 237, 0.28),
+    0 14px 32px -10px rgba(91, 33, 182, 0.38);
   --shadow-ember:
     0 2px 6px -1px rgba(217, 119, 6, 0.22),
     0 12px 28px -8px rgba(217, 119, 6, 0.30);
@@ -202,7 +203,7 @@
     --color-bg:              var(--color-neutral-950);
     --color-bg-subtle:       var(--color-neutral-900);
     --color-bg-elevated:     var(--color-neutral-800);
-    --color-bg-canvas:       #041614;
+    --color-bg-canvas:       #120C1C;
     --color-bg-inverse:      var(--color-neutral-50);
 
     --color-surface:         var(--color-neutral-900);
@@ -222,7 +223,7 @@
 
     --color-accent:          var(--color-brand-500);
     --color-accent-hover:    var(--color-brand-400);
-    --color-accent-soft:     rgba(24, 154, 140, 0.14);
+    --color-accent-soft:     rgba(124, 58, 237, 0.22);
     --color-accent-text:     var(--color-brand-300);
 
     --color-success-bg:      rgba(5, 150, 105, 0.12);
@@ -249,7 +250,7 @@
   --color-bg:              var(--color-neutral-950);
   --color-bg-subtle:       var(--color-neutral-900);
   --color-bg-elevated:     var(--color-neutral-800);
-  --color-bg-canvas:       #0A1311;
+  --color-bg-canvas:       #120C1C;
   --color-bg-inverse:      var(--color-neutral-50);
 
   --color-surface:         var(--color-neutral-900);
@@ -285,7 +286,10 @@ html {
 
 body {
   min-height: 100dvh;
-  background: var(--color-bg-canvas);
+  background:
+    radial-gradient(ellipse 65% 35% at 0% 0%, rgba(167, 139, 250, 0.14), transparent 55%),
+    radial-gradient(ellipse 50% 30% at 100% 0%, rgba(196, 181, 253, 0.1), transparent 50%),
+    var(--color-bg-canvas);
   color: var(--color-text-primary);
   text-rendering: optimizeLegibility;
 }
@@ -371,25 +375,25 @@ button {
 /* Sage wellness palette — layered on top of the indigo brand. Use for
    secondary surfaces, soft outlines, and "calm" trust strips. */
 :root {
-  --color-sage-50:  #F6F9F4;
-  --color-sage-100: #ECF2E8;
-  --color-sage-200: #D6E2CD;
-  --color-sage-300: #B8CCAB;
-  --color-sage-400: #8FAB7E;
-  --color-sage-500: #6E8C5E;
-  --color-sage-600: #557047;
-  --color-sage-700: #3F5635;
-  --color-sage-800: #2D3E25;
-  --color-sage-900: #1C2918;
+  --color-sage-50:  #F5F3FF;
+  --color-sage-100: #EDE9FE;
+  --color-sage-200: #DDD6FE;
+  --color-sage-300: #C4B5FD;
+  --color-sage-400: #A78BFA;
+  --color-sage-500: #8B5CF6;
+  --color-sage-600: #7C3AED;
+  --color-sage-700: #6D28D9;
+  --color-sage-800: #5B21B6;
+  --color-sage-900: #4C1D95;
 
   --color-cream-50:  #FBF8F3;
   --color-cream-100: #F4EFE6;
   --color-cream-200: #E8DECC;
   --color-cream-300: #D9C9AC;
 
-  --color-ink-700: #1A322E;
-  --color-ink-800: #102420;
-  --color-ink-900: #071A18;
+  --color-ink-700: #3B2760;
+  --color-ink-800: #2A1A48;
+  --color-ink-900: #1E1035;
 }
 
 /* Marketing section utility — generous vertical rhythm, subtle separator. */
@@ -462,13 +466,13 @@ button {
     linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.72) 100%);
   backdrop-filter: blur(22px) saturate(190%);
   -webkit-backdrop-filter: blur(22px) saturate(190%);
-  border-bottom: 1px solid rgba(6, 31, 29, 0.06);
+  border-bottom: 1px solid rgba(76, 29, 149, 0.08);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
 }
 [data-theme="dark"] .glass-bar,
 :root:not([data-theme="light"]) .glass-bar {
   background:
-    linear-gradient(180deg, rgba(8, 26, 24, 0.86) 0%, rgba(8, 26, 24, 0.66) 100%);
+    linear-gradient(180deg, rgba(20, 12, 36, 0.9) 0%, rgba(20, 12, 36, 0.72) 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
 }
@@ -500,11 +504,11 @@ button {
 /* Soft brand ring for icon tiles */
 .tile-brand {
   background:
-    radial-gradient(circle at 30% 20%, rgba(43, 196, 168, 0.35) 0%, transparent 60%),
-    linear-gradient(140deg, var(--color-brand-700) 0%, var(--color-brand-900) 100%);
+    radial-gradient(circle at 30% 20%, rgba(196, 181, 253, 0.4) 0%, transparent 60%),
+    linear-gradient(140deg, var(--color-brand-600) 0%, var(--color-brand-900) 100%);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.25),
-    0 6px 18px -6px rgba(6, 61, 58, 0.5);
+    0 6px 18px -6px rgba(91, 33, 182, 0.45);
 }
 .tile-ember {
   background:
@@ -516,11 +520,11 @@ button {
 }
 .tile-ink {
   background:
-    radial-gradient(circle at 30% 20%, rgba(43, 196, 168, 0.22) 0%, transparent 60%),
-    linear-gradient(140deg, var(--color-ink-800) 0%, var(--color-ink-900) 100%);
+    radial-gradient(circle at 30% 20%, rgba(167, 139, 250, 0.28) 0%, transparent 60%),
+    linear-gradient(140deg, #2A1A48 0%, #1E1035 100%);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    0 6px 18px -6px rgba(7, 26, 24, 0.55);
+    0 6px 18px -6px rgba(30, 16, 53, 0.55);
 }
 .tile-danger {
   background:
@@ -537,16 +541,16 @@ button {
     linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.8) 100%);
   backdrop-filter: blur(24px) saturate(190%);
   -webkit-backdrop-filter: blur(24px) saturate(190%);
-  border: 1px solid rgba(6, 31, 29, 0.07);
+  border: 1px solid rgba(76, 29, 149, 0.09);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.7) inset,
-    0 8px 30px -8px rgba(6, 31, 29, 0.18),
-    0 2px 8px -2px rgba(6, 31, 29, 0.1);
+    0 8px 30px -8px rgba(46, 16, 101, 0.18),
+    0 2px 8px -2px rgba(46, 16, 101, 0.1);
 }
 [data-theme="dark"] .nav-dock,
 :root:not([data-theme="light"]) .nav-dock {
   background:
-    linear-gradient(180deg, rgba(10, 28, 26, 0.92) 0%, rgba(10, 28, 26, 0.8) 100%);
+    linear-gradient(180deg, rgba(28, 18, 52, 0.92) 0%, rgba(20, 12, 36, 0.84) 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.05) inset,
@@ -927,8 +931,8 @@ button {
 /* --- Premium gradients --- */
 .gradient-brand {
   background:
-    radial-gradient(circle at 18% 0%, rgba(43, 196, 168, 0.45) 0%, transparent 52%),
-    linear-gradient(135deg, #041F1D 0%, #084A44 46%, #0E8074 100%);
+    radial-gradient(circle at 18% 0%, rgba(196, 181, 253, 0.4) 0%, transparent 52%),
+    linear-gradient(135deg, #2E1065 0%, #5B21B6 48%, #7C3AED 100%);
 }
 
 /* Full-bleed marketing hero plane */
@@ -955,8 +959,8 @@ button {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(105deg, rgba(4, 31, 29, 0.88) 0%, rgba(4, 31, 29, 0.62) 42%, rgba(4, 31, 29, 0.28) 68%, rgba(4, 31, 29, 0.45) 100%),
-    linear-gradient(to top, rgba(4, 22, 20, 0.78) 0%, transparent 48%);
+    linear-gradient(105deg, rgba(30, 16, 53, 0.88) 0%, rgba(46, 16, 101, 0.62) 42%, rgba(76, 29, 149, 0.28) 68%, rgba(30, 16, 53, 0.48) 100%),
+    linear-gradient(to top, rgba(15, 12, 22, 0.78) 0%, transparent 48%);
   animation: veil-breathe 8s ease-in-out infinite alternate;
 }
 .hero-bleed__content {
@@ -979,8 +983,8 @@ button {
   font-weight: 750;
   color: #fff;
   background:
-    radial-gradient(circle at 18% 0%, rgba(43, 196, 168, 0.45) 0%, transparent 52%),
-    linear-gradient(135deg, #041F1D 0%, #084A44 46%, #0E8074 100%);
+    radial-gradient(circle at 18% 0%, rgba(196, 181, 253, 0.4) 0%, transparent 52%),
+    linear-gradient(135deg, #2E1065 0%, #5B21B6 48%, #7C3AED 100%);
   box-shadow: var(--shadow-brand);
   transition: transform 180ms var(--ease-emphasized), box-shadow 180ms var(--ease-emphasized);
 }
@@ -1252,92 +1256,35 @@ select:focus-visible {
 /* =========================================================================
    Platform tool surfaces — purple glass (scan, mediator, etc.)
    ========================================================================= */
+/* Level 6 shell: one quiet wash + opaque glass panels — not foggy blobs. */
 .platform-shell,
 .mediator-shell {
-  --color-bg-canvas: #F1ECF9;
-  --color-bg: #F1ECF9;
-  --color-bg-subtle: #E8E0F5;
-  --color-surface: rgba(255, 255, 255, 0.86);
-  --color-surface-subtle: rgba(245, 243, 255, 0.92);
-  --color-surface-hover: #EDE9FE;
-  --color-border-subtle: rgba(76, 29, 149, 0.1);
-  --color-border-default: rgba(76, 29, 149, 0.16);
-  --color-border-strong: rgba(76, 29, 149, 0.28);
-  --color-text-primary: #1E1035;
   --color-text-secondary: #4C3A66;
-  --color-text-tertiary: #6B5A82;
   --color-text-muted: #7C6B94;
-  --color-text-brand: #5B21B6;
-  --color-accent: #6D28D9;
-  --color-accent-hover: #5B21B6;
-  --color-accent-soft: #EDE9FE;
-  --color-accent-text: #5B21B6;
-  --color-brand-50: #F5F3FF;
-  --color-brand-100: #EDE9FE;
-  --color-brand-200: #DDD6FE;
-  --color-brand-300: #C4B5FD;
-  --color-brand-400: #A78BFA;
-  --color-brand-500: #8B5CF6;
-  --color-brand-600: #7C3AED;
-  --color-brand-700: #6D28D9;
-  --color-brand-800: #5B21B6;
-  --color-brand-900: #4C1D95;
-  --color-brand-950: #2E1065;
-  --color-sage-50: #F5F3FF;
-  --color-sage-100: #EDE9FE;
-  --color-sage-200: #DDD6FE;
-  --color-sage-300: #C4B5FD;
-  --color-sage-600: #7C3AED;
-  --color-sage-700: #6D28D9;
-  --color-sage-800: #5B21B6;
-  --color-ink-700: #3B2760;
-  --color-ink-800: #2A1A48;
-  --color-ink-900: #1E1035;
-  --shadow-brand: 0 10px 28px -10px rgba(91, 33, 182, 0.55);
   position: relative;
   min-height: 100%;
-  border-radius: 28px;
-  padding: 1.1rem 1rem 1.4rem;
+  border-radius: 22px;
+  padding: 1rem 0.95rem 1.25rem;
   background:
-    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(167, 139, 250, 0.35) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 40% at 95% 0%, rgba(196, 181, 253, 0.28) 0%, transparent 50%),
-    linear-gradient(165deg, #F7F4FC 0%, #EFE8FA 48%, #E8E0F5 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(245, 243, 255, 0.35) 100%);
   border: 1px solid rgba(91, 33, 182, 0.1);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.75),
-    0 18px 40px -28px rgba(46, 16, 101, 0.35);
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 10px 28px -20px rgba(46, 16, 101, 0.28);
 }
 
 [data-theme="dark"] .platform-shell,
 :root:not([data-theme="light"]) .platform-shell,
 [data-theme="dark"] .mediator-shell,
 :root:not([data-theme="light"]) .mediator-shell {
-  --color-bg-canvas: #140C24;
-  --color-bg: #140C24;
-  --color-bg-subtle: #1C1233;
-  --color-surface: rgba(30, 20, 52, 0.78);
-  --color-surface-subtle: rgba(38, 26, 68, 0.88);
-  --color-surface-hover: rgba(55, 36, 96, 0.9);
-  --color-border-subtle: rgba(196, 181, 253, 0.1);
-  --color-border-default: rgba(196, 181, 253, 0.18);
-  --color-border-strong: rgba(196, 181, 253, 0.32);
-  --color-text-primary: #F5F3FF;
   --color-text-secondary: #D4C8EF;
-  --color-text-tertiary: #B7A6D9;
   --color-text-muted: #9B88C4;
-  --color-text-brand: #C4B5FD;
-  --color-accent: #A78BFA;
-  --color-accent-hover: #C4B5FD;
-  --color-accent-soft: rgba(109, 40, 217, 0.35);
-  --color-accent-text: #E9D5FF;
   background:
-    radial-gradient(ellipse 70% 45% at 12% -8%, rgba(109, 40, 217, 0.45) 0%, transparent 55%),
-    radial-gradient(ellipse 55% 35% at 92% 5%, rgba(139, 92, 246, 0.28) 0%, transparent 50%),
-    linear-gradient(165deg, #1A1030 0%, #140C24 55%, #10091C 100%);
-  border-color: rgba(167, 139, 250, 0.16);
+    linear-gradient(180deg, rgba(38, 26, 68, 0.55) 0%, rgba(20, 12, 36, 0.35) 100%);
+  border-color: rgba(167, 139, 250, 0.14);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 20px 44px -28px rgba(0, 0, 0, 0.65);
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 12px 30px -20px rgba(0, 0, 0, 0.55);
 }
 
 .platform-title,
@@ -1348,15 +1295,15 @@ select:focus-visible {
 
 .platform-command-rail,
 .mediator-command-rail {
-  padding: 0.35rem;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(91, 33, 182, 0.12);
+  padding: 0.28rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(91, 33, 182, 0.1);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    0 8px 24px -16px rgba(76, 29, 149, 0.35);
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    0 4px 14px -10px rgba(76, 29, 149, 0.28);
 }
 
 [data-theme="dark"] .platform-command-rail,
@@ -1374,12 +1321,12 @@ select:focus-visible {
 .mediator-tool-chip {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  min-height: 42px;
-  padding: 0.55rem 0.95rem;
-  border-radius: 14px;
-  font-size: 12px;
-  font-weight: 800;
+  gap: 0.4rem;
+  min-height: 38px;
+  padding: 0.45rem 0.8rem;
+  border-radius: 12px;
+  font-size: 11.5px;
+  font-weight: 750;
   letter-spacing: 0.01em;
   color: var(--color-text-secondary);
   background: transparent;
@@ -1413,15 +1360,15 @@ select:focus-visible {
 
 .platform-glass-panel,
 .mediator-glass-panel {
-  border-radius: 22px;
-  padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(22px) saturate(180%);
-  -webkit-backdrop-filter: blur(22px) saturate(180%);
-  border: 1px solid rgba(91, 33, 182, 0.12);
+  border-radius: 18px;
+  padding: 1.1rem;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(91, 33, 182, 0.11);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.85),
-    0 12px 32px -20px rgba(76, 29, 149, 0.35);
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 8px 22px -16px rgba(76, 29, 149, 0.28);
 }
 
 [data-theme="dark"] .platform-glass-panel,

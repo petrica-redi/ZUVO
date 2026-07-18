@@ -56,9 +56,9 @@ export function Logo({ size = 36, className, inverted = false }: Props) {
     >
       <defs>
         <linearGradient id={gradId} x1="6" y1="3" x2="33" y2="37" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#2BC4A8" />
-          <stop offset="52%" stopColor="#0E8074" />
-          <stop offset="100%" stopColor="#084A44" />
+          <stop offset="0%" stopColor="#A78BFA" />
+          <stop offset="52%" stopColor="#7C3AED" />
+          <stop offset="100%" stopColor="#4C1D95" />
         </linearGradient>
       </defs>
 

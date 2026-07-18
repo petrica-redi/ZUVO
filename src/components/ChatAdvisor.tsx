@@ -405,7 +405,7 @@ export function ChatAdvisor({ labels, locale }: { labels: Labels; locale: string
             onClick={() => sendMessage()}
             disabled={!input.trim() || isLoading}
             className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full text-white shadow-3 transition-all active:scale-90 disabled:bg-[var(--color-surface-subtle)] disabled:text-[var(--color-text-muted)]"
-            style={{ background: !input.trim() || isLoading ? undefined : "linear-gradient(135deg, #0E8074 0%, #0C5A60 100%)" }}
+            style={{ background: !input.trim() || isLoading ? undefined : "linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)" }}
             aria-label={tChat("sendAria")}
           >
             <Send className="h-5 w-5" />

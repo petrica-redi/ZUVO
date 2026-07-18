@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Redi Health">
   <defs>
     <linearGradient id="bg" x1="28" y1="14" x2="160" y2="178" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2BC4A8"/>
-      <stop offset="52%" stop-color="#0E8074"/>
-      <stop offset="100%" stop-color="#084A44"/>
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="52%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
     </linearGradient>
   </defs>
   <path d="M96 8C36 8 8 36 8 96s28 88 88 88 88-28 88-88S156 8 96 8Z" fill="url(#bg)"/>

@@ -955,17 +955,17 @@
     "nav": {
       "community": {
         "home": "Acasă",
-        "ask": "Întreabă",
-        "scan": "Verifică",
-        "family": "Familie",
+        "scan": "Căutare AI",
+        "chat": "Chat",
+        "explain": "Rețete",
         "more": "Mai mult"
       },
       "mediator": {
-        "field": "Teren",
-        "scan": "Scan",
-        "navigate": "Navigare",
-        "training": "Formare",
-        "more": "Mai mult"
+        "home": "Acasă",
+        "scan": "Căutare AI",
+        "chat": "Chat",
+        "explain": "Rețete",
+        "fieldInbox": "Inbox"
       },
       "manager": {
         "impact": "Impact",

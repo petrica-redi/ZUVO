@@ -1402,17 +1402,17 @@
     "nav": {
       "community": {
         "home": "Home",
-        "ask": "Ask",
-        "scan": "Check",
-        "family": "Family",
+        "scan": "AI search",
+        "chat": "Chat",
+        "explain": "Rx",
         "more": "More"
       },
       "mediator": {
-        "field": "Field",
-        "scan": "Scan",
-        "navigate": "Navigate",
-        "training": "Training",
-        "more": "More"
+        "home": "Home",
+        "scan": "AI search",
+        "chat": "Chat",
+        "explain": "Rx",
+        "fieldInbox": "Inbox"
       },
       "manager": {
         "impact": "Impact",

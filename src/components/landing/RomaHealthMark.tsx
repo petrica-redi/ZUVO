@@ -12,9 +12,9 @@ export function RomaHealthMark({ className = "h-12 w-12" }: { className?: string
     >
       <defs>
         <linearGradient id="roma-mark-bg" x1="8" y1="4" x2="40" y2="44" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#2BC4A8" />
-          <stop offset="52%" stopColor="#0E8074" />
-          <stop offset="100%" stopColor="#084A44" />
+          <stop offset="0%" stopColor="#A78BFA" />
+          <stop offset="52%" stopColor="#7C3AED" />
+          <stop offset="100%" stopColor="#4C1D95" />
         </linearGradient>
       </defs>
       <path

@@ -59,7 +59,7 @@ export function StakeholderLoginForm({
           } as React.CSSProperties
         }
       >
-        <div className="h-1 bg-gradient-to-r from-[var(--color-ink-900)] via-[#0F3D38] to-[#0E8074]" />
+        <div className="h-1 bg-gradient-to-r from-[var(--color-ink-900)] via-[#2A1A48] to-[#7C3AED]" />
 
         <div className="p-7 md:p-8">
           <div className="mb-6 flex items-start gap-3">
