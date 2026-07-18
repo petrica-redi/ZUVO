@@ -71,6 +71,16 @@ Roles: `mediator` | `nurse` | `case_manager` | `supervisor`
 - [ ] Disable public demo persona seeding on field devices
 - [ ] Verify `/impact` shows live zeros rather than illustrative figures when aggregates unavailable
 
+## Staff self-registration (parallel path)
+
+Named roster login remains for pilot cohorts. Self-registration is documented in [`docs/STAFF_REGISTRATION.md`](./STAFF_REGISTRATION.md):
+
+- `/auth/register` + Resend email verification
+- Admin approval + role assignment at `/admin/dashboard/accounts`
+- Optional Google OAuth via Supabase
+
+Requires `RESEND_API_KEY`, `staff_accounts` migration, and (for Google) Supabase Google provider + public Supabase keys.
+
 ## Still required from ministries / ops (outside this PR)
 
 - Ministry SSO / eIDAS (current roster is MoU-pilot identity)

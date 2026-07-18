@@ -67,6 +67,12 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
             {tFooter("methodology")}
           </Link>
           <Link
+            href="/auth/register"
+            className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
+          >
+            {t("navRegister")}
+          </Link>
+          <Link
             href="/admin/login"
             className="text-sm font-semibold text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
           >

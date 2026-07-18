@@ -9,7 +9,8 @@ import {
 } from "@/lib/admin/fonts";
 import { AdminPersonaSwitcher } from "@/components/admin/AdminPersonaSwitcher";
 import { AdminShellOptOut } from "@/components/admin/AdminShellOptOut";
-import { LogOut, Save, Image as ImageIcon, Type, Code } from "lucide-react";
+import { Link } from "@/navigation";
+import { LogOut, Save, Image as ImageIcon, Type, Code, Users } from "lucide-react";
 
 export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
@@ -99,6 +100,24 @@ export default function AdminDashboard() {
 
         <main className="mx-auto mt-8 max-w-5xl space-y-6 px-6">
           <AdminPersonaSwitcher />
+
+          <Link
+            href="/admin/dashboard/accounts"
+            className="admin-cms-section flex items-center justify-between gap-4 transition hover:border-[var(--color-ink-900)]"
+          >
+            <div className="flex items-center gap-3">
+              <Users className="h-5 w-5 text-[var(--color-text-secondary)]" />
+              <div>
+                <p className="font-headline text-base font-extrabold text-[var(--color-text-primary)]">
+                  Staff accounts
+                </p>
+                <p className="text-sm text-[var(--color-text-secondary)]">
+                  Approve registrations and assign roles (professor, mediator, nurse, doctor, manager, administrator).
+                </p>
+              </div>
+            </div>
+            <span className="text-sm font-bold text-[var(--color-brand-700)]">Open →</span>
+          </Link>
 
           {message.text ? (
             <div
