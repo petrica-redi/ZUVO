@@ -784,8 +784,10 @@ button {
 
 .glass-input {
   border: 1px solid rgba(15, 23, 42, 0.1);
-  background: rgba(255, 255, 255, 0.72);
-  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.82);
+  /* Always a light surface — keep text dark regardless of theme. */
+  color: #0E1916;
+  color-scheme: light;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
     0 1px 2px rgba(15, 23, 42, 0.04);
@@ -796,7 +798,7 @@ button {
 }
 
 .glass-input::placeholder {
-  color: var(--color-text-muted);
+  color: #5A736C;
 }
 
 .glass-input:hover {

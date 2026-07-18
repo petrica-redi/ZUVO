@@ -48,7 +48,17 @@ export function StakeholderLoginForm({
     <div className={shellClass}>
       <div className="stakeholder-login-panel__glow" aria-hidden />
 
-      <div className="relative overflow-hidden rounded-[28px] border border-white/20 bg-white/80 shadow-4 backdrop-blur-2xl">
+      <div
+        className="relative overflow-hidden rounded-[28px] border border-white/20 bg-white/90 shadow-4 backdrop-blur-2xl [color-scheme:light]"
+        style={
+          {
+            "--color-text-primary": "#0E1916",
+            "--color-text-secondary": "#425851",
+            "--color-text-muted": "#5A736C",
+            "--color-surface-hover": "#E5EEEC",
+          } as React.CSSProperties
+        }
+      >
         <div className="h-1 bg-gradient-to-r from-[var(--color-ink-900)] via-[#0F3D38] to-[#0E8074]" />
 
         <div className="p-7 md:p-8">
