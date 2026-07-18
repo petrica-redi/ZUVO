@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { StaffRegisterForm } from "@/components/auth/StaffRegisterForm";
+import { isGoogleOAuthEnabled } from "@/lib/staff/google-oauth";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -14,6 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function RegisterPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "staffAuth" });
+  const googleEnabled = await isGoogleOAuthEnabled();
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
@@ -22,6 +24,7 @@ export default async function RegisterPage({ params }: Props) {
         <div className="w-full max-w-md rounded-[28px] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 shadow-2 md:p-8">
           <StaffRegisterForm
             locale={locale}
+            googleEnabled={googleEnabled}
             labels={{
               title: t("registerTitle"),
               lead: t("registerLead"),
@@ -35,6 +38,7 @@ export default async function RegisterPage({ params }: Props) {
               loginLink: t("loginLink"),
               google: t("googleContinue"),
               orDivider: t("orDivider"),
+              googleUnavailable: t("googleUnavailable"),
               stepRegister: t("stepRegister"),
               stepVerify: t("stepVerify"),
               stepPending: t("stepPending"),

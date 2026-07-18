@@ -21,8 +21,31 @@ Pilot roster login (`FIELD_STAFF_ROSTER` at `/mediator/login`) remains available
 | `RESEND_API_KEY` | Required or verification emails fail |
 | `RESEND_FROM_EMAIL` | Verified domain in Resend |
 | `ADMIN_EMAIL` / `ADMIN_PASSWORD` / `ADMIN_SESSION_SECRET` | CMS approval gate |
-| Supabase Google provider | Redirect: `https://redi.healthcare/<locale>/auth/callback` |
+| Supabase Google provider | See below — until enabled, UI keeps email signup and shows a clear message |
 | `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Client OAuth |
+
+## Enable Google / Gmail login (required once)
+
+Without this, “Continue with Google” hits Supabase with  
+`Unsupported provider: provider is not enabled`.
+
+1. **Google Cloud Console** → [Credentials / Clients](https://console.cloud.google.com/auth/clients)  
+   - Create an **OAuth 2.0 Client ID** (Web application)  
+   - Authorized redirect URI (exact):  
+     `https://zukissjunpxmlrgbvbtb.supabase.co/auth/v1/callback`  
+   - Copy **Client ID** and **Client Secret**
+
+2. **Supabase Dashboard** → project `zukissjunpxmlrgbvbtb` → **Authentication → Providers → Google**  
+   - Enable Google  
+   - Paste Client ID + Client Secret → Save
+
+3. **Supabase → Authentication → URL configuration**  
+   - Site URL: `https://redi.healthcare`  
+   - Redirect allow list include:  
+     `https://redi.healthcare/auth/callback`  
+     `https://redi.healthcare/*/auth/callback`
+
+4. Reload `/auth/register` — the Google button becomes active automatically.
 
 ## Roles → workspace
 

@@ -1922,6 +1922,7 @@
     "stepVerify": "Email",
     "stepPending": "Approvazione",
     "stepLogin": "Accesso",
-    "registerSuccessNext": "Ho verificato l’email"
+    "registerSuccessNext": "Ho verificato l’email",
+    "googleUnavailable": "L’accesso Google non è ancora attivo. Usa email e password qui sotto (anche indirizzi Gmail)."
   }
 }

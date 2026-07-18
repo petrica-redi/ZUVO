@@ -7,35 +7,86 @@ import { createClient } from "@/lib/supabase/client";
 export function OAuthButtons({
   labels,
   locale = "ro",
+  googleEnabled = true,
 }: {
-  labels: { google: string; orDivider: string };
+  labels: {
+    google: string;
+    orDivider: string;
+    googleUnavailable?: string;
+  };
   locale?: string;
+  /** When false, button stays visible but explains email signup instead of redirecting to Supabase JSON error. */
+  googleEnabled?: boolean;
 }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const unavailable =
+    labels.googleUnavailable ||
+    "Google login is not enabled yet. Create an account with your email below.";
+
   const startGoogle = async () => {
-    setLoading(true);
     setError(null);
+
+    if (!googleEnabled) {
+      setError(unavailable);
+      return;
+    }
+
+    setLoading(true);
     try {
       const supabase = createClient();
       const origin = window.location.origin;
-      const { error: oauthError } = await supabase.auth.signInWithOAuth({
+      // Default locale (ro) uses as-needed prefix — prefer unprefixed callback.
+      const callbackPath =
+        locale === "ro" ? "/auth/callback" : `/${locale}/auth/callback`;
+
+      const { data, error: oauthError } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${origin}/${locale}/auth/callback`,
+          redirectTo: `${origin}${callbackPath}`,
+          skipBrowserRedirect: true,
           queryParams: { access_type: "offline", prompt: "consent" },
         },
       });
+
       if (oauthError) {
-        setError(oauthError.message);
+        setError(friendlyOAuthError(oauthError.message, unavailable));
         setLoading(false);
+        return;
       }
+
+      if (!data.url) {
+        setError(unavailable);
+        setLoading(false);
+        return;
+      }
+
+      // Last-mile guard: if Supabase still returns JSON (provider off), stay on page.
+      try {
+        const probe = await fetch(data.url, {
+          method: "GET",
+          redirect: "manual",
+        });
+        if (probe.status === 400 || probe.status === 422) {
+          setError(unavailable);
+          setLoading(false);
+          return;
+        }
+        const location = probe.headers.get("location");
+        if (location) {
+          window.location.assign(location);
+          return;
+        }
+        // Opaque / CORS: fall through to navigate; server already said enabled.
+      } catch {
+        // CORS on probe — navigate only when server said enabled.
+      }
+
+      window.location.assign(data.url);
     } catch (e) {
       setError(
-        e instanceof Error
-          ? e.message
-          : "Google login is not configured yet.",
+        e instanceof Error ? friendlyOAuthError(e.message, unavailable) : unavailable,
       );
       setLoading(false);
     }
@@ -53,6 +104,7 @@ export function OAuthButtons({
         type="button"
         onClick={startGoogle}
         disabled={loading}
+        aria-disabled={!googleEnabled}
         className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-2xl border border-[var(--color-border-default)] bg-white px-4 text-sm font-bold text-[var(--color-text-primary)] shadow-1 transition hover:bg-[var(--color-surface-subtle)] disabled:opacity-60"
       >
         {loading ? (
@@ -62,6 +114,11 @@ export function OAuthButtons({
         )}
         {labels.google}
       </button>
+      {!googleEnabled ? (
+        <p className="text-center text-xs font-medium text-[var(--color-text-muted)]">
+          {unavailable}
+        </p>
+      ) : null}
       {error ? (
         <p className="text-center text-xs font-medium text-red-600" role="alert">
           {error}
@@ -69,6 +126,13 @@ export function OAuthButtons({
       ) : null}
     </div>
   );
+}
+
+function friendlyOAuthError(message: string, fallback: string): string {
+  if (/not enabled|unsupported provider|validation_failed/i.test(message)) {
+    return fallback;
+  }
+  return message || fallback;
 }
 
 function GoogleIcon() {

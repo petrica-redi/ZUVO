@@ -2344,6 +2344,7 @@
     "stepVerify": "Email",
     "stepPending": "Aprobare",
     "stepLogin": "Acces",
-    "registerSuccessNext": "Am verificat emailul"
+    "registerSuccessNext": "Am verificat emailul",
+    "googleUnavailable": "Google nu este activat încă pe platformă. Folosește emailul și parola de mai sus (funcționează și cu Gmail)."
   }
 }

@@ -10,8 +10,10 @@ import { AuthFlowSteps } from "@/components/auth/AuthFlowSteps";
 export function StaffRegisterForm({
   locale,
   labels,
+  googleEnabled = true,
 }: {
   locale: string;
+  googleEnabled?: boolean;
   labels: {
     title: string;
     lead: string;
@@ -25,6 +27,7 @@ export function StaffRegisterForm({
     loginLink: string;
     google: string;
     orDivider: string;
+    googleUnavailable?: string;
     stepRegister: string;
     stepVerify: string;
     stepPending: string;
@@ -148,7 +151,12 @@ export function StaffRegisterForm({
 
       <OAuthButtons
         locale={locale}
-        labels={{ google: labels.google, orDivider: labels.orDivider }}
+        googleEnabled={googleEnabled}
+        labels={{
+          google: labels.google,
+          orDivider: labels.orDivider,
+          googleUnavailable: labels.googleUnavailable,
+        }}
       />
 
       <p className="text-center text-sm text-[var(--color-text-secondary)]">
