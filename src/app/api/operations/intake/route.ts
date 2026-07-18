@@ -49,7 +49,7 @@ export async function GET(req: NextRequest) {
   if (!getDb()) return databaseUnavailableResponse();
 
   const status = req.nextUrl.searchParams.get("status") ?? undefined;
-  const intakes = await listIntakes(status);
+  const intakes = await listIntakes(actor, status);
   return NextResponse.json({ success: true, data: intakes });
 }
 

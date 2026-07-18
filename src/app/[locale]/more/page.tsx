@@ -18,49 +18,58 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: t("metaTitle"), description: t("metaDescription") };
 }
 
+type Tone = "brand" | "ember" | "ink" | "danger";
+
+const TONE_CLASS: Record<Tone, string> = {
+  brand: "tile-brand",
+  ember: "tile-ember",
+  ink: "tile-ink",
+  danger: "tile-danger",
+};
+
 const SECTIONS = [
   {
     id: "access" as const,
     items: [
-      { href: "/help", icon: Heart, key: "help", gradient: "from-rose-500 to-red-600" },
-      { href: "/providers", icon: MapPin, key: "providers", gradient: "from-cyan-500 to-blue-600" },
-      { href: "/navigate", icon: Navigation, key: "navigate", gradient: "from-teal-500 to-emerald-600" },
+      { href: "/help", icon: Heart, key: "help", tone: "danger" as Tone },
+      { href: "/providers", icon: MapPin, key: "providers", tone: "brand" as Tone },
+      { href: "/navigate", icon: Navigation, key: "navigate", tone: "brand" as Tone },
     ],
   },
   {
     id: "tools" as const,
     items: [
-      { href: "/scan", icon: Search, key: "scan", gradient: "from-amber-400 to-orange-500" },
-      { href: "/symptoms", icon: Activity, key: "symptoms", gradient: "from-red-500 to-rose-600" },
-      { href: "/consult", icon: Stethoscope, key: "consult", gradient: "from-violet-500 to-purple-600" },
-      { href: "/vaccines", icon: Syringe, key: "vaccines", gradient: "from-emerald-500 to-green-600" },
-      { href: "/navigate", icon: Navigation, key: "navigate", gradient: "from-cyan-500 to-blue-600" },
+      { href: "/scan", icon: Search, key: "scan", tone: "ember" as Tone },
+      { href: "/symptoms", icon: Activity, key: "symptoms", tone: "danger" as Tone },
+      { href: "/consult", icon: Stethoscope, key: "consult", tone: "ink" as Tone },
+      { href: "/vaccines", icon: Syringe, key: "vaccines", tone: "brand" as Tone },
+      { href: "/navigate", icon: Navigation, key: "navigate", tone: "brand" as Tone },
     ],
   },
   {
     id: "learn" as const,
     items: [
-      { href: "/learn", icon: BookOpen, key: "topics", gradient: "from-sky-500 to-blue-600" },
-      { href: "/students", icon: GraduationCap, key: "students", gradient: "from-teal-500 to-emerald-600" },
-      { href: "/quiz", icon: GraduationCap, key: "quiz", gradient: "from-amber-500 to-orange-600" },
-      { href: "/glossary", icon: BookOpen, key: "glossary", gradient: "from-teal-500 to-cyan-600" },
-      { href: "/rights", icon: Scale, key: "rights", gradient: "from-violet-500 to-purple-600" },
-      { href: "/stories", icon: Heart, key: "stories", gradient: "from-rose-500 to-pink-600" },
-      { href: "/regions/romania", icon: MapPin, key: "regions", gradient: "from-red-500 to-red-700" },
+      { href: "/learn", icon: BookOpen, key: "topics", tone: "ink" as Tone },
+      { href: "/students", icon: GraduationCap, key: "students", tone: "brand" as Tone },
+      { href: "/quiz", icon: GraduationCap, key: "quiz", tone: "ember" as Tone },
+      { href: "/glossary", icon: BookOpen, key: "glossary", tone: "ink" as Tone },
+      { href: "/rights", icon: Scale, key: "rights", tone: "ink" as Tone },
+      { href: "/stories", icon: Heart, key: "stories", tone: "danger" as Tone },
+      { href: "/regions/romania", icon: MapPin, key: "regions", tone: "brand" as Tone },
     ],
   },
   {
     id: "professional" as const,
     items: [
-      { href: "/mediator", icon: Shield, key: "mediator", gradient: "from-teal-600 to-cyan-700" },
-      { href: "/demo", icon: Sparkles, key: "demo", gradient: "from-blue-500 to-emerald-600" },
+      { href: "/mediator", icon: Shield, key: "mediator", tone: "brand" as Tone },
+      { href: "/demo", icon: Sparkles, key: "demo", tone: "ember" as Tone },
     ],
   },
   {
     id: "account" as const,
     items: [
-      { href: "/profile", icon: User, key: "profile", gradient: "from-gray-500 to-gray-600" },
-      { href: "/about", icon: Settings, key: "about", gradient: "from-gray-400 to-gray-500" },
+      { href: "/profile", icon: User, key: "profile", tone: "ink" as Tone },
+      { href: "/about", icon: Settings, key: "about", tone: "ink" as Tone },
     ],
   },
 ];
@@ -74,10 +83,10 @@ export default async function MorePage({ params }: Props) {
       <Header />
       <SosButton />
       <main id="main-content" className="flex-1 pb-2">
-        <div className="px-5 py-6">
+        <div className="px-4 py-4 sm:px-5 sm:py-5">
+          <div className="platform-shell">
           <h1
-            className="mb-6 font-display text-2xl font-extrabold tracking-tight text-[var(--color-text-primary)] animate-fade-in-up"
-            style={{ letterSpacing: "-0.025em" }}
+            className="platform-title font-headline mb-5 text-[1.75rem] tracking-tight animate-fade-in-up"
           >
             {t("title")}
           </h1>
@@ -85,40 +94,41 @@ export default async function MorePage({ params }: Props) {
           {SECTIONS.map((section, si) => (
             <div
               key={section.id}
-              className="mb-6 animate-fade-in-up"
+              className="mb-5 animate-fade-in-up"
               style={{ animationDelay: `${(si + 1) * 100}ms` }}
             >
-              <h2 className="mb-3 text-xs font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
+              <h2 className="mb-2.5 text-xs font-extrabold uppercase tracking-widest text-[var(--color-text-muted)]">
                 {t(`sections.${section.id}`)}
               </h2>
-              <div className="overflow-hidden rounded-3xl bg-[var(--color-surface)] hairline shadow-1">
+              <div className="platform-glass-panel overflow-hidden !p-0">
                 {section.items.map((item, i) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`flex items-center gap-4 px-5 py-4 transition-colors hover:bg-[var(--color-surface-hover)] active:bg-[var(--color-surface-subtle)] ${
+                    className={`press group flex items-center gap-4 px-4 py-3.5 transition-colors hover:bg-[var(--color-surface-hover)] active:bg-[var(--color-surface-subtle)] ${
                       i > 0 ? "border-t border-[var(--color-border-subtle)]" : ""
                     }`}
                   >
                     <div
-                      className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${item.gradient} shadow-2`}
+                      className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl ${TONE_CLASS[item.tone]} transition-transform duration-200 group-hover:scale-[1.06]`}
                     >
-                      <item.icon className="lucide h-5 w-5 text-white" strokeWidth={1.85} />
+                      <item.icon className="lucide h-5 w-5 text-white" strokeWidth={1.9} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <span className="text-sm font-bold text-[var(--color-text-primary)]">
                         {t(`items.${item.key}Label`)}
                       </span>
-                      <p className="text-xs text-[var(--color-text-secondary)]">
+                      <p className="truncate text-xs text-[var(--color-text-secondary)]">
                         {t(`items.${item.key}Desc`)}
                       </p>
                     </div>
-                    <ChevronRight className="lucide h-5 w-5 flex-shrink-0 text-[var(--color-text-muted)]" strokeWidth={1.75} />
+                    <ChevronRight className="lucide h-5 w-5 flex-shrink-0 text-[var(--color-text-muted)] transition-transform duration-200 group-hover:translate-x-0.5" strokeWidth={1.75} />
                   </Link>
                 ))}
               </div>
             </div>
           ))}
+          </div>
         </div>
       </main>
       <BottomNav />

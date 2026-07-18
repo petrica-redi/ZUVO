@@ -87,8 +87,12 @@ export function OperationalCasesTab({
   const [barriers, setBarriers] = useState<BarrierSlug[]>([]);
   const [barrierNotes, setBarrierNotes] = useState("");
   const [targetDate, setTargetDate] = useState("");
+  const [consentStatus, setConsentStatus] = useState<"pending" | "granted" | "withdrawn">(
+    "pending",
+  );
   const [saved, setSaved] = useState(false);
   const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [offlineNotice, setOfflineNotice] = useState<string | null>(null);
 
   const phaseLabels = {
     intake: t("timelineIntake"),
@@ -107,6 +111,7 @@ export function OperationalCasesTab({
     setBarriers([]);
     setBarrierNotes("");
     setTargetDate("");
+    setConsentStatus("pending");
     setSuggestions([]);
   };
 
@@ -129,6 +134,7 @@ export function OperationalCasesTab({
       targetDate: targetDate || undefined,
       municipalityCode: getDefaultMunicipality(),
       source: "mediator_dashboard",
+      consentStatus,
     });
     setSaved(true);
     setTimeout(() => {
@@ -136,6 +142,23 @@ export function OperationalCasesTab({
       setOpen(false);
       reset();
     }, 1500);
+  };
+
+  const wrapOnlineAction = async <T,>(
+    action: () => Promise<T | null>,
+    offlineMessage: string,
+  ): Promise<T | null> => {
+    if (typeof navigator !== "undefined" && !navigator.onLine) {
+      setOfflineNotice(offlineMessage);
+      return null;
+    }
+    const result = await action();
+    if (result == null) {
+      setOfflineNotice(offlineMessage);
+    } else {
+      setOfflineNotice(null);
+    }
+    return result;
   };
 
   const toggleCase = (caseId: string) => {
@@ -162,6 +185,15 @@ export function OperationalCasesTab({
 
   return (
     <>
+      {offlineNotice ? (
+        <div
+          className="mb-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-950"
+          role="status"
+        >
+          {offlineNotice}
+        </div>
+      ) : null}
+
       <div className="mb-5 flex items-center justify-between gap-3">
         <div>
           <h2 className="text-lg font-bold text-[var(--color-text-primary)]">
@@ -201,6 +233,22 @@ export function OperationalCasesTab({
             aria-label={t("beneficiaryPseudonym")}
             className={`mb-3 ${fieldClass}`}
           />
+
+          <label className="mb-1 block text-xs font-bold text-[var(--color-text-muted)]">
+            {t("consentStatus")}
+          </label>
+          <select
+            value={consentStatus}
+            onChange={(e) =>
+              setConsentStatus(e.target.value as "pending" | "granted" | "withdrawn")
+            }
+            aria-label={t("consentStatus")}
+            className={`mb-3 ${fieldClass}`}
+          >
+            <option value="pending">{t("consentPending")}</option>
+            <option value="granted">{t("consentGranted")}</option>
+            <option value="withdrawn">{t("consentWithdrawn")}</option>
+          </select>
 
           <div className="mb-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
             <div>
@@ -494,8 +542,18 @@ export function OperationalCasesTab({
                       provider={selectedProvider}
                       referrals={referrals}
                       appointments={appointments}
-                      onCreateReferral={onCreateReferral}
-                      onCreateAppointment={onCreateAppointment}
+                      onCreateReferral={(input) =>
+                        wrapOnlineAction(
+                          () => onCreateReferral(input),
+                          t("offlineRequiresNetwork"),
+                        )
+                      }
+                      onCreateAppointment={(input) =>
+                        wrapOnlineAction(
+                          () => onCreateAppointment(input),
+                          t("offlineRequiresNetwork"),
+                        )
+                      }
                       onConfirmAppointment={onConfirmAppointment}
                       onRecordAttendance={onRecordAttendance}
                     />

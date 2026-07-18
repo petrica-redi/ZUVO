@@ -15,12 +15,12 @@ export function Header() {
         <div className="glass-bar flex h-14 items-center justify-between gap-2 px-4">
           <Link
             href="/"
-            className="rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
+            className="-mx-1 rounded-xl px-1 outline-none transition-transform active:scale-95 focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
           >
             <LogoWordmark iconSize={30} />
           </Link>
           <PlatformQuickLinks />
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
             <LanguagePicker variant="landing" />
             <ThemeToggle />
           </div>

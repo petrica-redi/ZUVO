@@ -12,19 +12,56 @@ import {
   verifyAdminSessionToken,
 } from "@/lib/admin/session";
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL?.trim() || "petrica@redi-ngo.eu";
-const ADMIN_PASS = process.env.ADMIN_PASSWORD?.trim() || "Welcome2REDI*";
+function requireAdminEnv(): { email: string; password: string } {
+  const email = process.env.ADMIN_EMAIL?.trim();
+  const password = process.env.ADMIN_PASSWORD?.trim();
+
+  if (process.env.NODE_ENV === "production") {
+    if (!email || !password) {
+      throw new Error("ADMIN_EMAIL and ADMIN_PASSWORD must be set in production");
+    }
+    if (!process.env.ADMIN_SESSION_SECRET?.trim()) {
+      throw new Error("ADMIN_SESSION_SECRET must be set in production");
+    }
+    return { email, password };
+  }
+
+  // Development-only fallbacks — never ship these as production defaults.
+  return {
+    email: email || "dev-admin@localhost",
+    password: password || "dev-admin-password",
+  };
+}
 
 export async function getAdminLoginEmail() {
-  return ADMIN_EMAIL;
+  try {
+    return requireAdminEnv().email;
+  } catch {
+    return "";
+  }
 }
 
 export async function isAdminAuthenticated(): Promise<boolean> {
-  const token = await readAdminSessionCookie();
-  return verifyAdminSessionToken(token, ADMIN_EMAIL);
+  try {
+    const { email } = requireAdminEnv();
+    const token = await readAdminSessionCookie();
+    return verifyAdminSessionToken(token, email);
+  } catch {
+    return false;
+  }
 }
 
 export async function loginAdmin(data: FormData) {
+  let admin: { email: string; password: string };
+  try {
+    admin = requireAdminEnv();
+  } catch {
+    return {
+      success: false,
+      error: "Admin credentials are not configured for this environment.",
+    };
+  }
+
   const parsed = loginSchema.safeParse({
     email: String(data.get("email") ?? "").trim(),
     password: String(data.get("password") ?? ""),
@@ -36,7 +73,7 @@ export async function loginAdmin(data: FormData) {
 
   const { email, password } = parsed.data;
 
-  if (email === ADMIN_EMAIL && password === ADMIN_PASS) {
+  if (email === admin.email && password === admin.password) {
     await setAdminSessionCookie(email);
     return { success: true };
   }

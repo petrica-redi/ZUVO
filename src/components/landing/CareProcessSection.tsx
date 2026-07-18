@@ -14,11 +14,11 @@ import { useTranslations } from "next-intl";
 import { RomaHealthMark } from "@/components/landing/RomaHealthMark";
 
 const STEPS = [
-  { id: "join", icon: Smartphone, color: "#2563EB" },
-  { id: "connect", icon: HeartHandshake, color: "#0D9488" },
-  { id: "mobile", icon: Ambulance, color: "#059669" },
-  { id: "mediator", icon: Shield, color: "#1D4ED8" },
-  { id: "telehealth", icon: Video, color: "#7C3AED" },
+  { id: "join", icon: Smartphone, color: "#7C3AED" },
+  { id: "connect", icon: HeartHandshake, color: "#6D28D9" },
+  { id: "mobile", icon: Ambulance, color: "#8B5CF6" },
+  { id: "mediator", icon: Shield, color: "#5B21B6" },
+  { id: "telehealth", icon: Video, color: "#4C1D95" },
 ] as const;
 
 type StepId = (typeof STEPS)[number]["id"];
@@ -68,7 +68,7 @@ export function CareProcessSection() {
           />
           <div
             aria-hidden
-            className="absolute left-[10%] top-[2.75rem] hidden h-0.5 bg-gradient-to-r from-[#2563EB] to-[#059669] transition-all duration-500 md:block"
+            className="absolute left-[10%] top-[2.75rem] hidden h-0.5 bg-gradient-to-r from-[#7C3AED] to-[#A78BFA] transition-all duration-500 md:block"
             style={{
               width: `${(activeIndex / (STEPS.length - 1)) * 80}%`,
             }}
@@ -83,16 +83,16 @@ export function CareProcessSection() {
                   <button
                     type="button"
                     onClick={() => setActive(id)}
-                    className="group flex flex-col items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-blue-500)] focus-visible:ring-offset-2"
+                    className="group flex flex-col items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-500)] focus-visible:ring-offset-2"
                     aria-current={isActive ? "step" : undefined}
                   >
                     <span
                       className={`relative flex h-14 w-14 items-center justify-center rounded-full border-2 bg-white transition-all duration-300 md:h-[4.5rem] md:w-[4.5rem] ${
                         isActive
-                          ? "scale-110 border-[var(--color-blue-500)] shadow-3"
+                          ? "scale-110 border-[var(--color-brand-500)] shadow-3"
                           : isPast
-                            ? "border-[var(--color-blue-400)] shadow-1"
-                            : "border-[var(--color-border-default)] group-hover:border-[var(--color-blue-300)] group-hover:shadow-2"
+                            ? "border-[var(--color-brand-400)] shadow-1"
+                            : "border-[var(--color-border-default)] group-hover:border-[var(--color-brand-300)] group-hover:shadow-2"
                       }`}
                     >
                       <Icon
@@ -128,14 +128,14 @@ export function CareProcessSection() {
 
         {/* Active step detail card */}
         <div className="relative mx-auto mt-10 max-w-3xl md:mt-14">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#1E40AF] p-7 text-white shadow-4 md:p-10">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#2E1065] via-[#6D28D9] to-[#4C1D95] p-7 text-white shadow-4 md:p-10">
             <div
               aria-hidden
-              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#3B82F6]/40 blur-3xl"
+              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#A78BFA]/40 blur-3xl"
             />
             <div
               aria-hidden
-              className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-[#059669]/30 blur-3xl"
+              className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-[#2FAF98]/30 blur-3xl"
             />
             <div
               aria-hidden
@@ -165,7 +165,7 @@ export function CareProcessSection() {
                 </p>
                 <Link
                   href={STEP_HREFS[active]}
-                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-extrabold text-[#1D4ED8] transition-transform hover:brightness-105 active:scale-[0.98]"
+                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-extrabold text-[var(--color-brand-700)] transition-transform hover:brightness-105 active:scale-[0.98]"
                 >
                   {t("processCta")}
                   <ArrowRight className="h-4 w-4" strokeWidth={2.2} />
