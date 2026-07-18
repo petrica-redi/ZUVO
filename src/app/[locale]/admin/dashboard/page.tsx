@@ -10,7 +10,7 @@ import {
 import { AdminPersonaSwitcher } from "@/components/admin/AdminPersonaSwitcher";
 import { AdminShellOptOut } from "@/components/admin/AdminShellOptOut";
 import { Link } from "@/navigation";
-import { LogOut, Save, Image as ImageIcon, Type, Code, Users, Eye } from "lucide-react";
+import { LogOut, Save, Image as ImageIcon, Type, Code, Users, Eye, LayoutTemplate } from "lucide-react";
 
 export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
@@ -111,6 +111,24 @@ export default function AdminDashboard() {
                 </p>
                 <p className="text-sm text-[var(--color-text-secondary)]">
                   Approve registrations and assign roles (professor, mediator, nurse, doctor, manager, administrator).
+                </p>
+              </div>
+            </div>
+            <span className="text-sm font-bold text-[var(--color-brand-700)]">Open →</span>
+          </Link>
+
+          <Link
+            href="/admin/dashboard/builder"
+            className="admin-cms-section flex items-center justify-between gap-4 transition hover:border-[var(--color-ink-900)]"
+          >
+            <div className="flex items-center gap-3">
+              <LayoutTemplate className="h-5 w-5 text-[var(--color-text-secondary)]" />
+              <div>
+                <p className="font-headline text-base font-extrabold text-[var(--color-text-primary)]">
+                  Page builder
+                </p>
+                <p className="text-sm text-[var(--color-text-secondary)]">
+                  Build custom pages visually — text, photos, videos, buttons and steps. Change layout, fonts and background without code.
                 </p>
               </div>
             </div>

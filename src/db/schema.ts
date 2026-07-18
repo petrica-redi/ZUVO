@@ -335,6 +335,8 @@ export const platformConfig = pgTable("platform_config", {
   fontDisplay: text("font_display"),
   fontEditorial: text("font_editorial"),
   customCss: text("custom_css"),
+  /** Visual page-builder content: { [slug: string]: PageBlock[] } */
+  pageBlocks: jsonb("page_blocks"),
   updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
 });
 
