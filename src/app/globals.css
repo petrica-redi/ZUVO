@@ -1,50 +1,48 @@
 @import "tailwindcss";
 
 /* =========================================================================
-   SASTIPE DESIGN SYSTEM — premium tokens
+   REDI HEALTH DESIGN SYSTEM — Adriatic mist
    =========================================================================
    Anchor palette:
-     - Graphite (slate neutrals)   — text, surfaces, depth
-     - Adriatic (teal brand)       — primary actions, focus, identity.
-       A healthcare-trust teal: calmer than SaaS indigo, institutional
-       enough for ministries, warm enough for community surfaces. Pairs
-       natively with the sage + cream wellness layers below.
-     - Ember (amber accent)        — celebration, XP, premium moments
-     - Crimson (semantic only)     — emergency, danger, SOS
-   Pillars retain their identity but get dual tones (accent + surface).
+     - Mist canvas (cool teal-greys) — atmosphere, not flat white
+     - Adriatic teal                 — identity, actions, focus
+     - Deep lagoon ink               — typography depth (teal-tinted, not slate)
+     - Ember                         — celebration / XP only
+     - Crimson                       — emergency / SOS only
    ========================================================================= */
 
 @theme inline {
-  /* Type stack */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-display: var(--font-display, var(--font-inter)), ui-sans-serif, system-ui, sans-serif;
-  --font-editorial: var(--font-editorial, "Fraunces"), Georgia, "Times New Roman", serif;
+  /* Type stack — Fraunces display + Source Sans 3 UI */
+  --font-sans: var(--font-source-sans), "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Fraunces, Georgia, "Times New Roman", serif;
+  --font-editorial: var(--font-fraunces), Fraunces, Georgia, "Times New Roman", serif;
 
-  /* ---- 11-step neutral scale (slate-anchored, slightly warm) ---- */
+  /* ---- 11-step neutral scale (lagoon-tinted, not cold slate) ---- */
   --color-neutral-0:    #FFFFFF;
-  --color-neutral-50:   #F8FAFC;
-  --color-neutral-100:  #F1F5F9;
-  --color-neutral-200:  #E2E8F0;
-  --color-neutral-300:  #CBD5E1;
-  --color-neutral-400:  #94A3B8;
-  --color-neutral-500:  #64748B;
-  --color-neutral-600:  #475569;
-  --color-neutral-700:  #334155;
-  --color-neutral-800:  #1E293B;
-  --color-neutral-900:  #0F172A;
-  --color-neutral-950:  #020617;
+  --color-neutral-50:   #F3F7F6;
+  --color-neutral-100:  #E5EEEC;
+  --color-neutral-200:  #CDDCD8;
+  --color-neutral-300:  #A9BFB9;
+  --color-neutral-400:  #7A958E;
+  --color-neutral-500:  #5A736C;
+  --color-neutral-600:  #425851;
+  --color-neutral-700:  #2F403B;
+  --color-neutral-800:  #1C2A26;
+  --color-neutral-900:  #0E1916;
+  --color-neutral-950:  #06100E;
 
-  /* ---- Brand: Adriatic teal (institutional healthcare trust) ---- */
-  --color-brand-50:   #F0F9F7;
-  --color-brand-100:  #D5F0EB;
-  --color-brand-200:  #A8E0D5;
-  --color-brand-300:  #6FC9B8;
-  --color-brand-400:  #36B09A;
-  --color-brand-500:  #14967F;
+  /* ---- Brand: Adriatic teal ---- */
+  --color-brand-50:   #EEF8F5;
+  --color-brand-100:  #D2EFE8;
+  --color-brand-200:  #A5DFD2;
+  --color-brand-300:  #6BC7B4;
+  --color-brand-400:  #2FAF98;
+  --color-brand-500:  #12907A;
   --color-brand-600:  #0E8074;
   --color-brand-700:  #0B655C;
-  --color-brand-800:  #0A4F49;
-  --color-brand-950:  #052F2C;
+  --color-brand-800:  #084A44;
+  --color-brand-900:  #063D3A;
+  --color-brand-950:  #041F1D;
 
   /* ---- Medical blue (secondary trust accent) ---- */
   --color-blue-50:    #EFF6FF;
@@ -77,18 +75,18 @@
   --color-bg:              var(--color-neutral-50);
   --color-bg-subtle:       var(--color-neutral-100);
   --color-bg-elevated:     var(--color-neutral-0);
-  --color-bg-canvas:       #F3F7F5;            /* Soft sage-cream canvas */
-  --color-bg-inverse:      var(--color-neutral-900);
+  --color-bg-canvas:       #E8F2EF;            /* Adriatic mist canvas */
+  --color-bg-inverse:      var(--color-brand-950);
 
   --color-surface:         var(--color-neutral-0);
-  --color-surface-subtle:  var(--color-neutral-50);
+  --color-surface-subtle:  #F2F8F6;
   --color-surface-hover:   var(--color-neutral-100);
 
-  --color-border-subtle:   rgba(15, 23, 42, 0.06);
-  --color-border-default:  rgba(15, 23, 42, 0.10);
-  --color-border-strong:   rgba(15, 23, 42, 0.18);
+  --color-border-subtle:   rgba(6, 31, 29, 0.07);
+  --color-border-default:  rgba(6, 31, 29, 0.12);
+  --color-border-strong:   rgba(6, 31, 29, 0.22);
 
-  --color-text-primary:    var(--color-neutral-900);
+  --color-text-primary:    #071A18;
   --color-text-secondary:  var(--color-neutral-600);
   --color-text-tertiary:   var(--color-neutral-500);
   --color-text-muted:      var(--color-neutral-400);
@@ -147,20 +145,20 @@
      hard drop-shadow. Kept low-opacity and slate-tinted for a calm, clinical
      feel that still separates surfaces on the mint canvas. */
   --shadow-1:
-    0 1px 1px rgba(15, 23, 42, 0.04),
-    0 1px 2px -1px rgba(15, 23, 42, 0.05);
+    0 1px 1px rgba(6, 31, 29, 0.04),
+    0 1px 2px -1px rgba(6, 31, 29, 0.05);
   --shadow-2:
-    0 1px 2px rgba(15, 23, 42, 0.04),
-    0 4px 8px -2px rgba(15, 23, 42, 0.06);
+    0 1px 2px rgba(6, 31, 29, 0.04),
+    0 4px 8px -2px rgba(6, 31, 29, 0.07);
   --shadow-3:
-    0 2px 4px -1px rgba(15, 23, 42, 0.05),
-    0 12px 24px -6px rgba(15, 23, 42, 0.10);
+    0 2px 4px -1px rgba(6, 31, 29, 0.05),
+    0 12px 24px -6px rgba(6, 31, 29, 0.11);
   --shadow-4:
-    0 4px 8px -2px rgba(15, 23, 42, 0.05),
-    0 24px 48px -12px rgba(15, 23, 42, 0.16);
+    0 4px 8px -2px rgba(6, 31, 29, 0.06),
+    0 24px 48px -12px rgba(6, 31, 29, 0.16);
   --shadow-brand:
-    0 2px 6px -1px rgba(37, 99, 235, 0.22),
-    0 12px 28px -8px rgba(5, 150, 105, 0.28);
+    0 2px 8px -1px rgba(14, 128, 116, 0.28),
+    0 14px 32px -10px rgba(6, 61, 58, 0.35);
   --shadow-ember:
     0 2px 6px -1px rgba(217, 119, 6, 0.22),
     0 12px 28px -8px rgba(217, 119, 6, 0.30);
@@ -204,7 +202,7 @@
     --color-bg:              var(--color-neutral-950);
     --color-bg-subtle:       var(--color-neutral-900);
     --color-bg-elevated:     var(--color-neutral-800);
-    --color-bg-canvas:       #0A1311;
+    --color-bg-canvas:       #041614;
     --color-bg-inverse:      var(--color-neutral-50);
 
     --color-surface:         var(--color-neutral-900);
@@ -320,8 +318,9 @@ button {
 @media (min-width: 768px) {
   body {
     background:
-      radial-gradient(ellipse at top, rgba(24, 154, 140, 0.05) 0%, transparent 60%),
-      radial-gradient(ellipse at bottom, rgba(245, 158, 11, 0.03) 0%, transparent 50%),
+      radial-gradient(ellipse 80% 50% at 10% -10%, rgba(43, 196, 168, 0.12) 0%, transparent 55%),
+      radial-gradient(ellipse 70% 45% at 100% 0%, rgba(14, 128, 116, 0.10) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(6, 61, 58, 0.06) 0%, transparent 55%),
       var(--color-bg-canvas);
   }
 
@@ -353,19 +352,20 @@ button {
   }
 }
 
-/* Headlines — operational sans, not decorative editorial serif */
+/* Headlines — Fraunces display for a distinctive Redi Health voice */
 .font-headline {
   font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.08;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  font-variation-settings: "SOFT" 40, "WONK" 0.4;
 }
 
-/* Legacy editorial utility — kept for admin overrides; no stylistic alternates */
 .font-editorial {
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-editorial);
+  font-weight: 600;
   letter-spacing: -0.02em;
+  font-variation-settings: "SOFT" 50, "WONK" 0.6;
 }
 
 /* Sage wellness palette — layered on top of the indigo brand. Use for
@@ -387,9 +387,9 @@ button {
   --color-cream-200: #E8DECC;
   --color-cream-300: #D9C9AC;
 
-  --color-ink-700: #1F2A3D;
-  --color-ink-800: #131C2E;
-  --color-ink-900: #0A1220;
+  --color-ink-700: #1A322E;
+  --color-ink-800: #102420;
+  --color-ink-900: #071A18;
 }
 
 /* Marketing section utility — generous vertical rhythm, subtle separator. */
@@ -836,8 +836,98 @@ button {
 /* --- Premium gradients --- */
 .gradient-brand {
   background:
-    radial-gradient(circle at 18% 0%, rgba(14, 128, 116, 0.55) 0%, transparent 52%),
-    linear-gradient(135deg, #0A1220 0%, #0F3D38 48%, #0E8074 100%);
+    radial-gradient(circle at 18% 0%, rgba(43, 196, 168, 0.45) 0%, transparent 52%),
+    linear-gradient(135deg, #041F1D 0%, #084A44 46%, #0E8074 100%);
+}
+
+/* Full-bleed marketing hero plane */
+.hero-bleed {
+  position: relative;
+  isolation: isolate;
+  min-height: min(100svh, 920px);
+  color: #fff;
+  overflow: hidden;
+}
+.hero-bleed__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bleed__media img {
+  object-fit: cover;
+  object-position: center 28%;
+  animation: surface-ken 28s var(--ease-out) infinite alternate;
+  will-change: transform;
+}
+.hero-bleed__veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(105deg, rgba(4, 31, 29, 0.88) 0%, rgba(4, 31, 29, 0.62) 42%, rgba(4, 31, 29, 0.28) 68%, rgba(4, 31, 29, 0.45) 100%),
+    linear-gradient(to top, rgba(4, 22, 20, 0.78) 0%, transparent 48%);
+  animation: veil-breathe 8s ease-in-out infinite alternate;
+}
+.hero-bleed__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: inherit;
+  align-items: flex-end;
+  padding-block: clamp(5.5rem, 12vh, 8rem) clamp(2.5rem, 8vh, 5rem);
+}
+.btn-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3.25rem;
+  padding: 0.9rem 1.55rem;
+  border-radius: 1rem;
+  font-size: 0.9375rem;
+  font-weight: 750;
+  color: #fff;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(43, 196, 168, 0.45) 0%, transparent 52%),
+    linear-gradient(135deg, #041F1D 0%, #084A44 46%, #0E8074 100%);
+  box-shadow: var(--shadow-brand);
+  transition: transform 180ms var(--ease-emphasized), box-shadow 180ms var(--ease-emphasized);
+}
+.btn-brand:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-4);
+}
+.btn-brand:active {
+  transform: translateY(0) scale(0.98);
+}
+.btn-ghost-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3.25rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 1rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: background 180ms var(--ease-emphasized), border-color 180ms var(--ease-emphasized);
+}
+.btn-ghost-light:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+@keyframes brand-rise {
+  from { opacity: 0; transform: translateY(28px); filter: blur(4px); }
+  to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@keyframes veil-breathe {
+  from { opacity: 0.92; }
+  to   { opacity: 1; }
+}
+.animate-brand-rise {
+  animation: brand-rise 900ms var(--ease-emphasized) both;
 }
 
 .gradient-ember {

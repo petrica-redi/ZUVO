@@ -8,17 +8,18 @@ const BRAND_MARK = () => process.env.NEXT_PUBLIC_APP_NAME?.trim() || "Redi Healt
 type Props = {
   size?: number;
   className?: string;
-  /** Render the dark inverted variant (white mark on transparent). */
+  /** Render the light mark for dark / photographic surfaces. */
   inverted?: boolean;
 };
 
 /**
- * Redi Health mark — teal gradient tile with a single Rod of Asclepius.
- * Aligned with PWA icons; no overlapping Roma wheel (reads as a "no" symbol).
+ * Redi Health mark — circular Adriatic seal with a rising care path.
+ * Reads as community health + continuity, not a generic clinic tile.
  */
 export function Logo({ size = 36, className, inverted = false }: Props) {
   const uid = useId().replace(/:/g, "");
-  const gradId = `redi-bg-${uid}`;
+  const gradId = `redi-seal-${uid}`;
+  const ringId = `redi-ring-${uid}`;
 
   if (inverted) {
     return (
@@ -31,20 +32,24 @@ export function Logo({ size = 36, className, inverted = false }: Props) {
         aria-label={BRAND_MARK()}
         className={className}
       >
-        <rect width="40" height="40" rx="10" fill="currentColor" fillOpacity="0.14" />
-        <path
-          d="M20 9v22"
+        <circle cx="20" cy="20" r="19" fill="currentColor" fillOpacity="0.14" />
+        <circle
+          cx="20"
+          cy="20"
+          r="18.25"
           stroke="currentColor"
-          strokeWidth="2.4"
-          strokeLinecap="round"
+          strokeOpacity="0.35"
+          strokeWidth="1.5"
         />
         <path
-          d="M24.2 12.2c-2.1 2.6-3.2 5-3.2 7.4a3 3 0 0 1-6 0c0-2.4 1.1-4.8 3.2-7.4"
+          d="M12.5 24.5c2.2-1.1 3.6-2.8 4.2-5.1.4-1.6 1.1-2.4 2.2-2.4 1.3 0 2 .9 2.5 2.6.7 2.4 1.8 4.1 4.1 5.1"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth="2.2"
           strokeLinecap="round"
+          strokeLinejoin="round"
           fill="none"
         />
+        <circle cx="20" cy="12.2" r="1.7" fill="currentColor" />
       </svg>
     );
   }
@@ -60,51 +65,77 @@ export function Logo({ size = 36, className, inverted = false }: Props) {
       className={className}
     >
       <defs>
-        <linearGradient id={gradId} x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#14B8A6" />
-          <stop offset="55%" stopColor="#0E8074" />
-          <stop offset="100%" stopColor="#0C5A60" />
+        <linearGradient id={gradId} x1="6" y1="4" x2="34" y2="36" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#2BC4A8" />
+          <stop offset="45%" stopColor="#0E8074" />
+          <stop offset="100%" stopColor="#063D3A" />
+        </linearGradient>
+        <linearGradient id={ringId} x1="20" y1="2" x2="20" y2="38" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.05" />
         </linearGradient>
       </defs>
 
-      <rect width="40" height="40" rx="10" fill={`url(#${gradId})`} />
+      <circle cx="20" cy="20" r="19" fill={`url(#${gradId})`} />
+      <circle cx="20" cy="20" r="18.25" stroke={`url(#${ringId})`} strokeWidth="1.5" />
 
-      {/* Rod of Asclepius — single clear symbol */}
+      {/* Rising care path — continuity of community health */}
       <path
-        d="M20 9v22"
+        d="M12.5 24.5c2.2-1.1 3.6-2.8 4.2-5.1.4-1.6 1.1-2.4 2.2-2.4 1.3 0 2 .9 2.5 2.6.7 2.4 1.8 4.1 4.1 5.1"
         stroke="#FFFFFF"
-        strokeWidth="2.4"
+        strokeWidth="2.35"
         strokeLinecap="round"
-      />
-      <path
-        d="M24.2 12.2c-2.1 2.6-3.2 5-3.2 7.4a3 3 0 0 1-6 0c0-2.4 1.1-4.8 3.2-7.4"
-        stroke="#FFFFFF"
-        strokeWidth="2"
-        strokeLinecap="round"
+        strokeLinejoin="round"
         fill="none"
       />
-
-      <rect
-        width="40"
-        height="40"
-        rx="10"
-        fill="none"
-        stroke="rgba(15,23,42,0.08)"
-        strokeWidth="1"
-      />
+      <circle cx="20" cy="12.2" r="1.85" fill="#FFFFFF" />
     </svg>
   );
 }
 
-function WordmarkText({ name }: { name: string }) {
+function WordmarkText({
+  name,
+  inverted = false,
+  size = "nav",
+}: {
+  name: string;
+  inverted?: boolean;
+  size?: "nav" | "hero";
+}) {
   const parts = name.trim().split(/\s+/);
+  const primary = inverted ? "text-white" : "text-[var(--color-brand-800)]";
+  const secondary = inverted ? "text-white/85" : "text-[var(--color-ink-900)]";
+
+  if (size === "hero") {
+    return (
+      <span className="flex flex-col leading-[0.92]">
+        <span
+          className={`font-headline tracking-[-0.04em] ${primary}`}
+          style={{ fontSize: "clamp(3.25rem, 2.2rem + 5vw, 6.5rem)" }}
+        >
+          {parts[0] ?? name}
+        </span>
+        {parts.length > 1 ? (
+          <span
+            className={`font-headline mt-1 tracking-[-0.03em] ${secondary}`}
+            style={{ fontSize: "clamp(2.4rem, 1.6rem + 3.8vw, 4.75rem)" }}
+          >
+            {parts.slice(1).join(" ")}
+          </span>
+        ) : null}
+      </span>
+    );
+  }
+
   if (parts.length >= 2) {
     return (
-      <span className="flex flex-col leading-[1.05]">
-        <span className="font-display text-[0.95rem] font-extrabold tracking-tight text-[var(--color-brand-700)]">
+      <span className="flex flex-col leading-[1.02]">
+        <span className={`font-headline text-[1.05rem] tracking-[-0.03em] ${primary}`}>
           {parts[0]}
         </span>
-        <span className="font-display text-[0.95rem] font-bold tracking-tight text-[var(--color-text-primary)]">
+        <span
+          className={`font-sans text-[0.72rem] font-semibold uppercase tracking-[0.18em] ${secondary}`}
+        >
           {parts.slice(1).join(" ")}
         </span>
       </span>
@@ -112,9 +143,7 @@ function WordmarkText({ name }: { name: string }) {
   }
 
   return (
-    <span
-      className="font-display text-[1.05rem] font-extrabold leading-none tracking-tight text-[var(--color-text-primary)]"
-    >
+    <span className={`font-headline text-[1.15rem] tracking-[-0.03em] ${primary}`}>
       {name}
     </span>
   );
@@ -125,10 +154,12 @@ export function LogoWordmark({
   iconSize = 32,
   className,
   logoUrl,
+  inverted = false,
 }: {
   iconSize?: number;
   className?: string;
   logoUrl?: string;
+  inverted?: boolean;
 }) {
   const name = BRAND_MARK();
 
@@ -138,9 +169,30 @@ export function LogoWordmark({
         /* eslint-disable-next-line @next/next/no-img-element */
         <img src={logoUrl} alt="" style={{ height: iconSize, width: "auto" }} />
       ) : (
-        <Logo size={iconSize} />
+        <Logo size={iconSize} inverted={inverted} className={inverted ? "text-white" : undefined} />
       )}
-      <WordmarkText name={name} />
+      <WordmarkText name={name} inverted={inverted} />
     </span>
+  );
+}
+
+/** Hero-scale brand signal — wordmark dominates the first viewport. */
+export function LogoHero({
+  className,
+  inverted = true,
+}: {
+  className?: string;
+  inverted?: boolean;
+}) {
+  const name = BRAND_MARK();
+  return (
+    <div className={`flex flex-col gap-5 ${className ?? ""}`}>
+      <Logo
+        size={56}
+        inverted={inverted}
+        className={inverted ? "text-white drop-shadow-sm" : undefined}
+      />
+      <WordmarkText name={name} inverted={inverted} size="hero" />
+    </div>
   );
 }

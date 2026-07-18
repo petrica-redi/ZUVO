@@ -16,7 +16,6 @@ import {
   Phone,
   Stethoscope,
   Globe,
-  Lock,
   CheckCircle2,
   FileText,
   Brain,
@@ -28,6 +27,7 @@ import {
 } from "lucide-react";
 import { getPlatformConfig } from "@/lib/admin/actions";
 import { formatImpactNumber, getImpactStats } from "@/lib/impact/stats";
+import { LogoHero } from "@/components/Logo";
 import { LandingHeader } from "@/components/landing/LandingHeader";
 import { LandingFooter } from "@/components/landing/LandingFooter";
 import { ProfileShellOptOut } from "@/components/landing/ProfileShellOptOut";
@@ -39,7 +39,6 @@ import { TechnologyShowcase } from "@/components/landing/TechnologyShowcase";
 import { StakeholderAccessSection } from "@/components/landing/StakeholderAccessSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { EmergencyStrip } from "@/components/operations/EmergencyStrip";
-import { AiChatBubble, AiChatShell } from "@/components/ui/AiChatShell";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -59,7 +58,6 @@ export default async function HomePage({ params }: Props) {
   const heroTitle = platformConfig?.heroTitle || undefined;
   const heroSubtitle = platformConfig?.heroSubtitle || undefined;
   const heroImage = platformConfig?.heroImage || "/images/hero/village-dawn.png";
-  const heroLayout = platformConfig?.heroLayout || "split";
 
   return (
     <>
@@ -72,144 +70,76 @@ export default async function HomePage({ params }: Props) {
       <main id="main-content" className="relative">
         <EmergencyStrip />
 
-        {/* ===== HERO ============================================== */}
-        <section className={`relative overflow-hidden ${heroLayout === "center" ? "text-center" : ""}`}>
-          {/* Atmospheric backdrop */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 -z-10"
-            style={{
-              background:
-                "radial-gradient(ellipse 80% 60% at 70% 0%, rgba(37,99,235,0.14) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 0% 100%, rgba(16,185,129,0.12) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 100% 100%, rgba(13,148,136,0.08) 0%, transparent 60%)",
-            }}
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 -z-10 grain-overlay opacity-60"
-          />
-
-          <div className="mx-auto max-w-6xl px-5 pb-16 pt-12 md:px-8 md:pb-28 md:pt-24">
-            <div className="grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
-              <div className={heroLayout === "center" ? "mx-auto flex flex-col items-center" : ""}>
-                <span className="eyebrow animate-fade-in-up">
-                  <span
-                    className="inline-block h-1.5 w-1.5 rounded-full"
-                    style={{ background: "var(--color-accent)" }}
-                  />
-                  {t("eyebrow")}
-                </span>
+        {/* ===== HERO — brand-first full bleed ================== */}
+        <section className="hero-bleed" aria-labelledby="hero-headline">
+          <div className="hero-bleed__media" aria-hidden>
+            <Image
+              src={heroImage}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-[center_28%]"
+            />
+          </div>
+          <div className="hero-bleed__veil" aria-hidden />
+          <div className="hero-bleed__content">
+            <div className="mx-auto w-full max-w-6xl px-5 md:px-8">
+              <div className="max-w-3xl">
+                <div className="animate-brand-rise">
+                  <LogoHero />
+                </div>
 
                 <h1
-                  className="font-headline mt-5 leading-[1.02] text-[var(--color-text-primary)] animate-fade-in-up delay-100"
+                  id="hero-headline"
+                  className="mt-8 max-w-2xl font-headline text-white/95 animate-brand-rise"
                   style={{
-                    fontSize: "clamp(2.25rem, 1.5rem + 3.5vw, 4.25rem)",
+                    fontSize: "clamp(1.55rem, 1.15rem + 1.6vw, 2.35rem)",
+                    animationDelay: "120ms",
                   }}
                 >
                   {heroTitle ? (
                     <span>{heroTitle}</span>
                   ) : (
                     <>
-                      <span>{t("heroLine1")}</span>
-                      <br />
+                      <span>{t("heroLine1")} </span>
                       <span>{t("heroLine2")}</span>
                     </>
                   )}
                 </h1>
 
-                <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-[var(--color-text-secondary)] md:text-lg animate-fade-in-up delay-200">
-                  {heroSubtitle || t("heroLead")}
+                <p
+                  className="mt-4 max-w-xl text-[15px] leading-relaxed text-white/78 md:text-lg animate-brand-rise"
+                  style={{ animationDelay: "220ms" }}
+                >
+                  {heroSubtitle || t("heroLeadShort")}
                 </p>
 
-                <div className={`mt-9 flex flex-wrap items-center gap-3 animate-fade-in-up delay-300 ${heroLayout === "center" ? "justify-center" : ""}`}>
-                  <Link
-                    href="/auth/register"
-                    className="group inline-flex h-13 items-center gap-2 rounded-full px-7 py-4 text-sm font-extrabold text-white gradient-brand grain-overlay shadow-brand transition-all hover:shadow-4 active:scale-[0.97]"
-                    style={{ transitionTimingFunction: "var(--ease-emphasized)" }}
-                  >
+                <div
+                  className="mt-9 flex flex-wrap items-center gap-3 animate-brand-rise"
+                  style={{ animationDelay: "320ms" }}
+                >
+                  <Link href="/auth/register" className="btn-brand group">
                     {t("signUpCtaHero")}
                     <ArrowRight
                       className="lucide h-4 w-4 transition-transform group-hover:translate-x-0.5"
                       strokeWidth={2.2}
                     />
                   </Link>
-                  <Link
-                    href="/auth/login"
-                    className="inline-flex h-13 items-center gap-2 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] px-6 py-4 text-sm font-extrabold text-[var(--color-text-primary)] transition-all hover:border-[var(--color-text-primary)]"
-                  >
+                  <Link href="/auth/login" className="btn-ghost-light">
                     {t("signInCtaHero")}
                   </Link>
                   <Link
                     href="/help"
-                    className="inline-flex h-13 items-center gap-2 rounded-full px-5 py-4 text-sm font-bold text-[var(--color-text-muted)] underline-offset-2 hover:text-[var(--color-text-secondary)] hover:underline"
+                    className="inline-flex min-h-[3.25rem] items-center px-3 text-sm font-semibold text-white/70 underline-offset-4 transition-colors hover:text-white hover:underline"
                   >
                     {t("helpCtaHero")}
                   </Link>
                 </div>
-
-                <div className={`mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[var(--color-text-muted)] animate-fade-in-up delay-400 ${heroLayout === "center" ? "justify-center" : ""}`}>
-                  <span className="flex items-center gap-1.5">
-                    <ShieldCheck className="lucide h-3.5 w-3.5 text-[var(--color-success-accent)]" strokeWidth={2} />
-                    {t("trustBadge1")}
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <Globe className="lucide h-3.5 w-3.5" strokeWidth={2} />
-                    {t("trustBadge2")}
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <Lock className="lucide h-3.5 w-3.5" strokeWidth={2} />
-                    {t("trustBadge3")}
-                  </span>
-                </div>
-
-                <nav
-                  aria-label={t("branchNavAria")}
-                  className="mt-10 animate-fade-in-up"
-                  style={{ animationDelay: "420ms", animationFillMode: "both" }}
-                >
-                  <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
-                    {t("branchEyebrow")}
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    <HeroBranchChip
-                      href="/students"
-                      icon={GraduationCap}
-                      label={t("branchAcademy")}
-                    />
-                    <HeroBranchChip
-                      href="/explain"
-                      icon={FileText}
-                      label={t("branchPrescription")}
-                    />
-                    <HeroBranchChip href="/scan" icon={Search} label={t("branchFacts")} />
-                    <HeroBranchChip
-                      href="/mediator"
-                      icon={Handshake}
-                      label={t("branchMediator")}
-                    />
-                  </div>
-                </nav>
-              </div>
-
-              {/* Hero composition — faux app card over AI artwork */}
-              <div className="relative isolate min-h-[300px] md:min-h-0">
-                <div className="absolute inset-0 -z-10 overflow-hidden rounded-[32px] md:rounded-[40px]" aria-hidden>
-                  <Image
-                    src={heroImage}
-                    alt={t("heroBackdropAlt")}
-                    fill
-                    priority
-                    className="object-cover object-[center_28%]"
-                    sizes="(max-width: 768px) 100vw, 44vw"
-                  />
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-canvas)] via-[var(--color-bg-canvas)]/60 to-transparent md:bg-gradient-to-l md:from-transparent md:via-[var(--color-bg-canvas)]/35 md:to-[var(--color-bg-canvas)]/92"
-                    aria-hidden
-                  />
-                </div>
-                <HeroComposition t={t} />
               </div>
             </div>
           </div>
+          <span className="sr-only">{t("heroBackdropAlt")}</span>
         </section>
 
         {/* ===== PLATFORM NAV DECK ================== */}
@@ -237,7 +167,7 @@ export default async function HomePage({ params }: Props) {
               </div>
               <a
                 href="tel:112"
-                className="inline-flex items-center gap-2 self-start rounded-full border border-[var(--color-danger-accent)]/30 bg-[var(--color-danger-bg)] px-4 py-2 text-xs font-extrabold text-[var(--color-danger-text)] transition-all hover:bg-[var(--color-danger-accent)] hover:text-white"
+                className="inline-flex items-center gap-2 self-start rounded-2xl border border-[var(--color-danger-accent)]/30 bg-[var(--color-danger-bg)] px-4 py-2 text-xs font-extrabold text-[var(--color-danger-text)] transition-all hover:bg-[var(--color-danger-accent)] hover:text-white"
               >
                 <Phone className="lucide h-3.5 w-3.5" strokeWidth={2.4} />
                 {tHome("emergencyCta")}
@@ -308,8 +238,6 @@ export default async function HomePage({ params }: Props) {
             </div>
           </div>
         </section>
-
-
 
         <CareProcessSection />
 
@@ -666,26 +594,6 @@ export default async function HomePage({ params }: Props) {
 
 // ── Sub-components ─────────────────────────────────────────────────────
 
-function HeroBranchChip({
-  href,
-  icon: Icon,
-  label,
-}: {
-  href: string;
-  icon: ComponentType<{ className?: string; strokeWidth?: number }>;
-  label: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] px-3.5 py-2 text-[11px] font-extrabold tracking-tight text-[var(--color-text-primary)] shadow-1 transition-all hover:border-[var(--color-accent)] hover:bg-[var(--color-accent-soft)] md:min-h-0 md:px-4 md:text-xs"
-    >
-      <Icon className="lucide h-3.5 w-3.5 shrink-0 text-[var(--color-accent-text)]" strokeWidth={2.2} />
-      <span>{label}</span>
-    </Link>
-  );
-}
-
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div>
@@ -983,47 +891,3 @@ function CountryCard({
   );
 }
 
-function HeroComposition({ t }: { t: (key: string) => string }) {
-  const labels = {
-    label: t("heroCardLabel"),
-    verified: t("heroCardVerdict"),
-    trustFooter: t("heroCardFooter"),
-  };
-
-  return (
-    <div className="relative">
-      <AiChatShell labels={labels} className="md:[&>div]:p-9">
-        <AiChatBubble role="user">{t("heroCardQuestion")}</AiChatBubble>
-        <AiChatBubble role="assistant" showVerified verifiedLabel={labels.verified}>
-          {t("heroCardAnswer")}
-        </AiChatBubble>
-      </AiChatShell>
-
-      {/* Floating sage badge — sits low-left, clear of the card footer copy */}
-      <div
-        className="absolute -bottom-8 left-2 rounded-2xl border border-[var(--color-sage-200)] bg-[var(--color-sage-50)] px-4 py-3 shadow-2 md:-bottom-10 md:left-0"
-        aria-hidden
-      >
-        <div className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--color-sage-700)]">
-          {t("heroBadgeAvailable")}
-        </div>
-        <div className="font-headline mt-1 text-2xl leading-none text-[var(--color-sage-900)]">
-          {t("heroBadgeLanguages")}
-        </div>
-      </div>
-
-      {/* Floating ember badge */}
-      <div
-        className="absolute -right-3 -top-3 rounded-2xl border border-[var(--color-ember-200)] bg-[var(--color-ember-50)] px-3.5 py-2.5 shadow-2"
-        aria-hidden
-      >
-        <div className="flex items-center gap-1.5">
-          <Sparkles className="lucide h-3.5 w-3.5 text-[var(--color-ember-600)]" strokeWidth={2} />
-          <span className="text-[11px] font-extrabold text-[var(--color-ember-800)]">
-            {t("heroBadgeMix")}
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-}

@@ -7,24 +7,25 @@ export type FontOption = {
 };
 
 export const FONT_SANS_OPTIONS: FontOption[] = [
-  { id: "inter", label: "Inter (default)", family: "Inter", weights: "400;500;600;700" },
+  { id: "source-sans-3", label: "Source Sans 3 (default)", family: "Source Sans 3", weights: "400;500;600;700" },
   { id: "dm-sans", label: "DM Sans", family: "DM Sans", weights: "400;500;600;700" },
-  { id: "source-sans-3", label: "Source Sans 3", family: "Source Sans 3", weights: "400;600;700" },
   { id: "nunito-sans", label: "Nunito Sans", family: "Nunito Sans", weights: "400;600;700" },
   { id: "work-sans", label: "Work Sans", family: "Work Sans", weights: "400;500;600;700" },
+  { id: "inter", label: "Inter", family: "Inter", weights: "400;500;600;700" },
 ];
 
 export const FONT_DISPLAY_OPTIONS: FontOption[] = [
-  { id: "geist", label: "Geist (default)", family: "Geist", weights: "400;500;600;700" },
+  { id: "fraunces", label: "Fraunces (default)", family: "Fraunces", weights: "500;600;700;800" },
   { id: "plus-jakarta", label: "Plus Jakarta Sans", family: "Plus Jakarta Sans", weights: "500;600;700;800" },
   { id: "outfit", label: "Outfit", family: "Outfit", weights: "500;600;700;800" },
   { id: "manrope", label: "Manrope", family: "Manrope", weights: "500;600;700;800" },
   { id: "sora", label: "Sora", family: "Sora", weights: "500;600;700;800" },
+  { id: "geist", label: "Geist", family: "Geist", weights: "400;500;600;700" },
 ];
 
 export const FONT_EDITORIAL_OPTIONS: FontOption[] = [
-  { id: "lora", label: "Lora (default)", family: "Lora", weights: "400;500;600;700" },
-  { id: "fraunces", label: "Fraunces", family: "Fraunces", weights: "400;500;600;700" },
+  { id: "fraunces", label: "Fraunces (default)", family: "Fraunces", weights: "400;500;600;700" },
+  { id: "lora", label: "Lora", family: "Lora", weights: "400;500;600;700" },
   { id: "playfair", label: "Playfair Display", family: "Playfair Display", weights: "400;500;600;700" },
   { id: "dm-serif", label: "DM Serif Display", family: "DM Serif Display", weights: "400" },
   { id: "libre-baskerville", label: "Libre Baskerville", family: "Libre Baskerville", weights: "400;700" },
