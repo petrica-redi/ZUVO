@@ -42,13 +42,14 @@ export function LandingHeader({ logoUrl }: { logoUrl?: string }) {
           <LogoWordmark iconSize={32} logoUrl={logoUrl} inverted={inverted} />
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-4 xl:gap-5 lg:flex">
           {(
             [
+              ["/chat", t("navChat")],
+              ["/scan", t("navScan")],
+              ["/explain", t("navExplain")],
               ["/mediator", t("navMediator")],
-              ["/students", t("navAcademy")],
               ["/providers", t("navProviders")],
-              ["/methodology", tFooter("methodology")],
               ["/impact", tFooter("impact")],
             ] as const
           ).map(([href, label]) => (

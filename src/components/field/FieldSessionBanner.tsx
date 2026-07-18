@@ -26,12 +26,12 @@ export function FieldSessionBanner({
   const t = useTranslations("fieldAuth");
 
   return (
-    <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-[var(--color-brand-200)] bg-[var(--color-brand-50)] px-4 py-3">
+    <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-[var(--color-border-default)] bg-[var(--color-surface-subtle)] px-4 py-3 backdrop-blur-xl">
       <div className="min-w-0">
-        <p className="truncate text-sm font-extrabold text-[var(--color-ink-900)]">
+        <p className="truncate text-sm font-extrabold text-[var(--color-text-primary)]">
           {displayName}
         </p>
-        <p className="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-brand-700)]">
+        <p className="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-accent-text)]">
           {t(ROLE_KEY[role] as "roleMediator")}
           {countyCode ? ` · ${countyCode}` : ""}
           <span className="ml-2 font-mono normal-case tracking-normal text-[var(--color-text-muted)]">
@@ -42,7 +42,7 @@ export function FieldSessionBanner({
       <form action={logoutFieldStaff}>
         <button
           type="submit"
-          className="inline-flex min-h-[40px] items-center gap-1.5 rounded-xl border border-[var(--color-border-default)] bg-white px-3 text-xs font-bold text-[var(--color-text-secondary)]"
+          className="inline-flex min-h-[40px] items-center gap-1.5 rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] px-3 text-xs font-bold text-[var(--color-text-secondary)]"
         >
           <LogOut className="h-3.5 w-3.5" />
           {t("logout")}

@@ -17,10 +17,16 @@
     "fieldInbox": "Inbox",
     "fieldCases": "Cases",
     "fieldTasks": "Tasks",
-    "fieldTools": "Navigate"
+    "fieldTools": "Navigate",
+    "scan": "AI search"
   },
   "platformNav": {
     "aria": "Platform services",
+    "ariaTools": "Platform tools",
+    "home": "Home",
+    "chat": "Chatbot",
+    "scan": "AI search",
+    "explain": "Prescriptions",
     "help": "Get help",
     "providers": "Find care",
     "mediator": "Mediator",
@@ -1569,7 +1575,7 @@
     "navSubtitle": "Eight guided paths — academy, prescriptions, myths, outreach, and more.",
     "navAsk": "Ask the AI",
     "navAskDesc": "A conversational health advisor.",
-    "navScan": "Fact-check a claim",
+    "navScan": "AI search",
     "navScanDesc": "Paste a WhatsApp or TikTok rumor.",
     "navSymptoms": "Check symptoms",
     "navSymptomsDesc": "Guided triage — never a diagnosis.",
@@ -1579,7 +1585,7 @@
     "navAcademyDesc": "Gamified health literacy lessons.",
     "navProviders": "Find a clinic",
     "navProvidersDesc": "Roma-friendly providers near you.",
-    "navExplain": "Prescription helper",
+    "navExplain": "Prescriptions",
     "navExplainDesc": "Understand dosing, warnings, and photo uploads.",
     "navMediator": "Mediator workspace",
     "navMediatorDesc": "Log visits and community outreach.",
@@ -1753,7 +1759,8 @@
     "signUpCtaHero": "Create account",
     "signInCtaHero": "Sign in",
     "navSignIn": "Sign in",
-    "heroLeadShort": "Field tools for mediators and families across rural communities — offline-ready, multilingual, built for the care that happens between clinics."
+    "heroLeadShort": "Field tools for mediators and families across rural communities — offline-ready, multilingual, built for the care that happens between clinics.",
+    "navChat": "Chatbot"
   },
   "footer": {
     "tagline": "Multilingual literacy for underserved, rural and Roma communities stretching across fifteen European languages.",

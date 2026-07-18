@@ -17,10 +17,16 @@
     "fieldInbox": "Inbox",
     "fieldCases": "Cazuri",
     "fieldTasks": "Sarcini",
-    "fieldTools": "Navigare"
+    "fieldTools": "Navigare",
+    "scan": "Căutare AI"
   },
   "platformNav": {
     "aria": "Servicii platformă",
+    "ariaTools": "Instrumente platformă",
+    "home": "Acasă",
+    "chat": "Chatbot",
+    "scan": "Căutare AI",
+    "explain": "Rețete",
     "help": "Ajutor",
     "providers": "Servicii",
     "mediator": "Mediator",
@@ -1122,7 +1128,7 @@
     "navSubtitle": "Opt căi ghidate — academie, rețete, mituri, teren și multe altele.",
     "navAsk": "Întreabă AI-ul",
     "navAskDesc": "Un asistent de sănătate cu care vorbești.",
-    "navScan": "Verifică o afirmație",
+    "navScan": "Căutare AI",
     "navScanDesc": "Lipește un zvon de pe WhatsApp sau TikTok.",
     "navSymptoms": "Verifică simptomele",
     "navSymptomsDesc": "Triaj ghidat — niciodată un diagnostic.",
@@ -1132,7 +1138,7 @@
     "navAcademyDesc": "Lecții gamificate de educație pentru sănătate.",
     "navProviders": "Găsește o clinică",
     "navProvidersDesc": "Cabinete prietenoase cu romii, în apropiere.",
-    "navExplain": "Ajutor pentru rețete",
+    "navExplain": "Rețete",
     "navExplainDesc": "Înțelege dozele, avertismentele și fotografiile.",
     "navMediator": "Spațiul mediatorului",
     "navMediatorDesc": "Înregistrează vizite și activitate în comunitate.",
@@ -1306,7 +1312,8 @@
     "signUpCtaHero": "Creează cont",
     "signInCtaHero": "Autentifică-te",
     "navSignIn": "Autentifică-te",
-    "heroLeadShort": "Instrumente de teren pentru mediatori și familii din comunitățile rurale — offline, multilingve, create pentru îngrijirea dintre cabinete."
+    "heroLeadShort": "Instrumente de teren pentru mediatori și familii din comunitățile rurale — offline, multilingve, create pentru îngrijirea dintre cabinete.",
+    "navChat": "Chatbot"
   },
   "footer": {
     "tagline": "În multe limbi pentru comunități rurale, zone excluse și romi în întreaga Europă.",

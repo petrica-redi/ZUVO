@@ -29,7 +29,7 @@ export function WorkspaceHeader({
     syncStatus === "synced"
       ? "bg-[var(--color-success-bg)] text-[var(--color-success-text)]"
       : syncStatus === "syncing"
-        ? "bg-[var(--color-brand-100)] text-[var(--color-brand-800)]"
+        ? "bg-[var(--color-accent-soft)] text-[var(--color-accent-text)]"
         : "bg-[var(--color-warning-bg)] text-[var(--color-warning-text)]";
 
   const Icon =
@@ -41,12 +41,12 @@ export function WorkspaceHeader({
 
   return (
     <div className="mb-5 flex flex-wrap items-end gap-3">
-      <label className="flex min-w-[200px] flex-1 flex-col gap-1 text-xs font-semibold text-[var(--color-text-muted)]">
+      <label className="flex min-w-[200px] flex-1 flex-col gap-1 text-xs font-bold text-[var(--color-text-secondary)]">
         {labels.countyLabel}
         <select
           value={countyCode}
           onChange={(e) => onChangeCounty(e.target.value)}
-          className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] p-2.5 text-sm text-[var(--color-text-primary)]"
+          className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] p-2.5 text-sm font-semibold text-[var(--color-text-primary)] backdrop-blur-md"
         >
           <option value="">{labels.countyPlaceholder}</option>
           {ROMANIA_ECI_COUNTIES.map((c) => (

@@ -12,8 +12,6 @@ import {
 } from "@/components/mediator/labels";
 import { getFieldSession, isFieldRosterReady } from "@/lib/field/actions";
 import { isAdminAuthenticated } from "@/lib/admin/actions";
-import { FieldSessionBanner } from "@/components/field/FieldSessionBanner";
-
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -47,20 +45,12 @@ export default async function MediatorPage({ params }: Props) {
   ) as MediatorLabels;
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-[var(--color-bg-canvas)]">
+    <div className="flex min-h-[100dvh] flex-col bg-[#EDE6F8]">
       <Header />
       <SosButton />
       <main id="main-content" className="flex-1 pb-2">
-        <div className="px-5 py-6">
-          {fieldSession ? (
-            <FieldSessionBanner
-              displayName={fieldSession.displayName}
-              role={fieldSession.role}
-              countyCode={fieldSession.countyCode}
-              workspaceId={fieldSession.workspaceId}
-            />
-          ) : null}
-          <Suspense fallback={<div className="h-40 animate-pulse rounded-2xl bg-[var(--color-surface-subtle)]" />}>
+        <div className="px-4 py-4 sm:px-5 sm:py-5">
+          <Suspense fallback={<div className="h-40 animate-pulse rounded-2xl bg-[#E8E0F5]" />}>
             <MediatorDashboard
               labels={labels}
               fieldSession={

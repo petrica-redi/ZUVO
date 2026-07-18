@@ -13,9 +13,7 @@ import {
   Users,
   LayoutGrid,
   Inbox,
-  FolderOpen,
-  ListTodo,
-  Briefcase,
+  ScanSearch,
 } from "lucide-react";
 
 const DEFAULT_TABS = [
@@ -26,13 +24,16 @@ const DEFAULT_TABS = [
   { key: "more", href: "/more", Icon: LayoutGrid },
 ] as const;
 
-/** Professional field chrome when staff are on the mediator workspace. */
+/**
+ * Field chrome keeps platform tools reachable (home, AI scan, chat, Rx)
+ * while the centre shortcut returns to the mediator inbox.
+ */
 const FIELD_TABS = [
-  { key: "fieldInbox", href: "/mediator?tab=inbox", Icon: Inbox, isPrimary: true },
-  { key: "fieldCases", href: "/mediator?tab=cases", Icon: FolderOpen },
-  { key: "fieldTasks", href: "/mediator?tab=tasks", Icon: ListTodo },
-  { key: "fieldTools", href: "/navigate", Icon: Briefcase },
-  { key: "more", href: "/mediator?tab=more", Icon: LayoutGrid },
+  { key: "home", href: "/", Icon: Home },
+  { key: "scan", href: "/scan", Icon: ScanSearch },
+  { key: "chat", href: "/chat", Icon: MessageCircle, isPrimary: true },
+  { key: "explain", href: "/explain", Icon: FileText },
+  { key: "fieldInbox", href: "/mediator?tab=inbox", Icon: Inbox },
 ] as const;
 
 function BottomNavInner() {
@@ -69,7 +70,9 @@ function BottomNavInner() {
             const isActive = onFieldSurface
               ? hrefTab
                 ? currentTab === hrefTab
-                : cleanPath.startsWith(hrefPath) && !href.includes("tab=")
+                : hrefPath === "/"
+                  ? cleanPath === "/"
+                  : cleanPath === hrefPath || cleanPath.startsWith(`${hrefPath}/`)
               : cleanPath === hrefPath ||
                 (hrefPath !== "/" && cleanPath.startsWith(hrefPath));
             const label = demoMode

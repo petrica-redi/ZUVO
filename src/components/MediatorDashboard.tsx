@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { SurfaceBanner } from "@/components/ui/SurfaceBanner";
 import { OperationalCasesTab } from "@/components/mediator/OperationalCasesTab";
 import { TasksTab } from "@/components/mediator/TasksTab";
 import type { MediatorLabels } from "@/components/mediator/labels";
+import { MediatorCommandRail } from "@/components/mediator/MediatorCommandRail";
 import { MediatorInboxTab } from "@/components/mediator/MediatorInboxTab";
 import { MediatorMoreTab } from "@/components/mediator/MediatorMoreTab";
 import { useMediatorWorkspace } from "@/components/mediator/useMediatorWorkspace";
@@ -13,6 +13,7 @@ import { useCrossBorder } from "@/components/mediator/useCrossBorder";
 import { useOperations } from "@/components/mediator/useOperations";
 import { WorkspaceHeader } from "@/components/mediator/WorkspaceHeader";
 import { WorkspaceTabs, type TabId } from "@/components/mediator/WorkspaceTabs";
+import { FieldSessionBanner } from "@/components/field/FieldSessionBanner";
 import { bindFieldWorkspace } from "@/lib/mediator/workspace-client";
 import type { FieldRole } from "@/lib/field/types";
 
@@ -31,8 +32,8 @@ type FieldSessionProp = {
 };
 
 /**
- * Top-level orchestrator for `/mediator`. County selector, four-tab workspace
- * (Inbox · Cases · Tasks · More), KPI indicators, training, and tools.
+ * Top-level orchestrator for `/mediator`. Opens on tools + workspace tabs —
+ * no photographic hero. Purple glass field surface with persistent platform menu.
  */
 export function MediatorDashboard({
   labels,
@@ -70,19 +71,33 @@ export function MediatorDashboard({
   }, [fieldSession?.countyCode, bound]);
 
   return (
-    <div>
-      <SurfaceBanner
-        surface="mediator"
-        eyebrow={labels.title}
-        title={labels.title}
-        lead={labels.subtitle}
-        compact
-      />
-      <p className="mb-3 text-xs text-[var(--color-text-muted)]">{labels.ecHint}</p>
+    <div className="mediator-shell">
+      {fieldSession ? (
+        <FieldSessionBanner
+          displayName={fieldSession.displayName}
+          role={fieldSession.role}
+          countyCode={fieldSession.countyCode}
+          workspaceId={fieldSession.workspaceId}
+        />
+      ) : null}
+
+      <MediatorCommandRail />
+
+      <header className="mb-4 animate-fade-in-up">
+        <h1 className="mediator-title font-headline text-[1.65rem] leading-[1.1] tracking-tight sm:text-[1.9rem]">
+          {labels.title}
+        </h1>
+        <p className="mt-1.5 max-w-2xl text-sm font-medium leading-relaxed text-[var(--color-text-secondary)]">
+          {labels.subtitle}
+        </p>
+        <p className="mt-2 text-xs font-semibold text-[var(--color-text-muted)]">
+          {labels.ecHint}
+        </p>
+      </header>
 
       {(workspace.syncStatus === "offline" || workspace.syncStatus === "error") && (
         <div
-          className="mb-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-950"
+          className="mb-4 rounded-2xl border border-amber-300/80 bg-amber-50 px-4 py-3 text-sm font-semibold text-amber-950"
           role="status"
         >
           {labels.syncOfflineBanner}
