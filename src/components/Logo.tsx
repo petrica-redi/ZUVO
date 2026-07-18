@@ -13,13 +13,11 @@ type Props = {
 };
 
 /**
- * Redi Health mark — circular Adriatic seal with a rising care path.
- * Reads as community health + continuity, not a generic clinic tile.
+ * Redi Health mark — Adriatic seal with a clear pulse + care node.
  */
 export function Logo({ size = 36, className, inverted = false }: Props) {
   const uid = useId().replace(/:/g, "");
   const gradId = `redi-seal-${uid}`;
-  const ringId = `redi-ring-${uid}`;
 
   if (inverted) {
     return (
@@ -32,24 +30,24 @@ export function Logo({ size = 36, className, inverted = false }: Props) {
         aria-label={BRAND_MARK()}
         className={className}
       >
-        <circle cx="20" cy="20" r="19" fill="currentColor" fillOpacity="0.14" />
+        <circle cx="20" cy="20" r="19" fill="currentColor" fillOpacity="0.16" />
         <circle
           cx="20"
           cy="20"
           r="18.25"
           stroke="currentColor"
-          strokeOpacity="0.35"
+          strokeOpacity="0.4"
           strokeWidth="1.5"
         />
+        {/* ECG-style care pulse */}
         <path
-          d="M12.5 24.5c2.2-1.1 3.6-2.8 4.2-5.1.4-1.6 1.1-2.4 2.2-2.4 1.3 0 2 .9 2.5 2.6.7 2.4 1.8 4.1 4.1 5.1"
+          d="M9 21h5.2l2.2-6.2 3.4 12.4 2.6-6.2H31"
           stroke="currentColor"
-          strokeWidth="2.2"
+          strokeWidth="2.3"
           strokeLinecap="round"
           strokeLinejoin="round"
           fill="none"
         />
-        <circle cx="20" cy="12.2" r="1.7" fill="currentColor" />
       </svg>
     );
   }
@@ -67,28 +65,22 @@ export function Logo({ size = 36, className, inverted = false }: Props) {
       <defs>
         <linearGradient id={gradId} x1="6" y1="4" x2="34" y2="36" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#2BC4A8" />
-          <stop offset="45%" stopColor="#0E8074" />
+          <stop offset="48%" stopColor="#0E8074" />
           <stop offset="100%" stopColor="#063D3A" />
-        </linearGradient>
-        <linearGradient id={ringId} x1="20" y1="2" x2="20" y2="38" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.35" />
-          <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.05" />
         </linearGradient>
       </defs>
 
       <circle cx="20" cy="20" r="19" fill={`url(#${gradId})`} />
-      <circle cx="20" cy="20" r="18.25" stroke={`url(#${ringId})`} strokeWidth="1.5" />
+      <circle cx="20" cy="20" r="18.25" stroke="rgba(255,255,255,0.28)" strokeWidth="1.5" />
 
-      {/* Rising care path — continuity of community health */}
       <path
-        d="M12.5 24.5c2.2-1.1 3.6-2.8 4.2-5.1.4-1.6 1.1-2.4 2.2-2.4 1.3 0 2 .9 2.5 2.6.7 2.4 1.8 4.1 4.1 5.1"
+        d="M9 21h5.2l2.2-6.2 3.4 12.4 2.6-6.2H31"
         stroke="#FFFFFF"
-        strokeWidth="2.35"
+        strokeWidth="2.4"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
       />
-      <circle cx="20" cy="12.2" r="1.85" fill="#FFFFFF" />
     </svg>
   );
 }
@@ -104,7 +96,7 @@ function WordmarkText({
 }) {
   const parts = name.trim().split(/\s+/);
   const primary = inverted ? "text-white" : "text-[var(--color-brand-800)]";
-  const secondary = inverted ? "text-white/85" : "text-[var(--color-ink-900)]";
+  const secondary = inverted ? "text-white/80" : "text-[var(--color-ink-900)]";
 
   if (size === "hero") {
     return (
@@ -188,7 +180,7 @@ export function LogoHero({
   return (
     <div className={`flex flex-col gap-5 ${className ?? ""}`}>
       <Logo
-        size={56}
+        size={58}
         inverted={inverted}
         className={inverted ? "text-white drop-shadow-sm" : undefined}
       />

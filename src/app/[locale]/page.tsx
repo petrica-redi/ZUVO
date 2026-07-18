@@ -38,7 +38,6 @@ import { IntegratedPlatformSection } from "@/components/landing/IntegratedPlatfo
 import { TechnologyShowcase } from "@/components/landing/TechnologyShowcase";
 import { StakeholderAccessSection } from "@/components/landing/StakeholderAccessSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
-import { EmergencyStrip } from "@/components/operations/EmergencyStrip";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -68,8 +67,6 @@ export default async function HomePage({ params }: Props) {
       <LandingHeader logoUrl={platformConfig?.logoUrl || undefined} />
 
       <main id="main-content" className="relative">
-        <EmergencyStrip />
-
         {/* ===== HERO — brand-first full bleed ================== */}
         <section className="hero-bleed" aria-labelledby="hero-headline">
           <div className="hero-bleed__media" aria-hidden>
@@ -83,6 +80,23 @@ export default async function HomePage({ params }: Props) {
             />
           </div>
           <div className="hero-bleed__veil" aria-hidden />
+
+          {/* Safety line under the fixed header, still on the photo */}
+          <div className="absolute inset-x-0 top-14 z-[3] border-b border-white/10 bg-[rgba(4,22,20,0.4)] backdrop-blur-md md:top-16">
+            <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-5 py-2 md:px-8">
+              <p className="text-[11px] font-semibold text-white/75 md:text-xs">
+                {tHome("emergencyLead")}
+              </p>
+              <a
+                href="tel:112"
+                className="inline-flex min-h-[36px] items-center gap-1.5 rounded-lg border border-white/25 bg-white/10 px-3 py-1.5 text-[11px] font-extrabold text-white transition-colors hover:bg-white/18"
+              >
+                <Phone className="h-3.5 w-3.5" strokeWidth={2.4} />
+                {tHome("emergencyCta")}
+              </a>
+            </div>
+          </div>
+
           <div className="hero-bleed__content">
             <div className="mx-auto w-full max-w-6xl px-5 md:px-8">
               <div className="max-w-3xl">

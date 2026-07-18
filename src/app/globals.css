@@ -874,7 +874,8 @@ button {
   display: flex;
   min-height: inherit;
   align-items: flex-end;
-  padding-block: clamp(5.5rem, 12vh, 8rem) clamp(2.5rem, 8vh, 5rem);
+  /* Clear fixed header + in-hero emergency strip */
+  padding-block: clamp(7.5rem, 16vh, 10rem) clamp(2.5rem, 8vh, 5rem);
 }
 .btn-brand {
   display: inline-flex;
