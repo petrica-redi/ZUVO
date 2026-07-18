@@ -54,15 +54,12 @@ function BottomNavInner() {
 
   return (
     <nav
-      className="sticky bottom-0 z-40"
+      className="sticky bottom-0 z-40 px-3 pb-[max(0.6rem,env(safe-area-inset-bottom))] pt-2"
       role="navigation"
       aria-label={demoMode ? tDemo("navAria") : tNav("ariaMain")}
     >
-      <div
-        className="glass-bar pb-safe-bottom"
-        style={{ borderTop: "1px solid var(--color-border-subtle)", borderBottom: "none" }}
-      >
-        <div className="flex items-end justify-around px-1 pt-1.5 pb-2">
+      <div className="nav-dock mx-auto max-w-md rounded-[26px]">
+        <div className="flex items-end justify-around px-1.5 pt-1.5 pb-1.5">
           {tabs.map(({ key, href, Icon, ...rest }) => {
             const isPrimary = "isPrimary" in rest && rest.isPrimary;
             const hrefPath = href.split("?")[0] ?? href;
@@ -85,15 +82,15 @@ function BottomNavInner() {
                   key={key}
                   href={href}
                   aria-label={label}
-                  className="flex flex-col items-center -mt-5"
+                  className="flex flex-col items-center -mt-7"
                 >
                   <div
-                    className="flex h-[56px] w-[56px] items-center justify-center rounded-full transition-transform active:scale-90 animate-pulse-glow gradient-brand grain-overlay"
+                    className="flex h-[58px] w-[58px] items-center justify-center rounded-[20px] transition-transform active:scale-90 animate-pulse-glow gradient-brand grain-overlay ring-4 ring-[var(--color-bg-canvas)]"
                     style={{ boxShadow: "var(--shadow-brand)" }}
                   >
                     <Icon className="lucide h-[26px] w-[26px] text-white" strokeWidth={2.2} />
                   </div>
-                  <span className="mt-0.5 text-[11px] font-bold text-[var(--color-accent)]">
+                  <span className="mt-1 text-[11px] font-bold text-[var(--color-accent)]">
                     {label}
                   </span>
                 </Link>

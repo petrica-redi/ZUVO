@@ -51,7 +51,7 @@ export function SosButton() {
             hapticWarning(),
           );
         }}
-        className="absolute right-3 top-16 z-50 flex h-12 w-12 items-center justify-center rounded-full gradient-emergency grain-overlay shadow-danger animate-pulse-glow-emergency transition-transform active:scale-95"
+        className="fixed right-4 top-[72px] z-40 flex h-12 w-12 items-center justify-center rounded-full gradient-emergency shadow-danger animate-pulse-glow-emergency transition-transform active:scale-95"
         aria-label={t("buttonAria")}
       >
         <div className="flex flex-col items-center">
