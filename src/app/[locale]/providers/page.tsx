@@ -9,6 +9,9 @@ import { BottomNav } from "@/components/BottomNav";
 import { SosButton } from "@/components/SosButton";
 import { ProvidersList } from "@/components/ProvidersList";
 
+// Providers hit the DB (and may seed) — must not block static generation.
+export const dynamic = "force-dynamic";
+
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

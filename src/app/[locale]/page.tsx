@@ -3,6 +3,10 @@ import type { ComponentType } from "react";
 import Image from "next/image";
 import { Link } from "@/navigation";
 import { getTranslations } from "next-intl/server";
+
+/** Avoid per-locale static timeouts when impact/config DB reads are slow. */
+export const dynamic = "force-dynamic";
+export const revalidate = 300;
 import {
   ArrowRight,
   Sparkles,
