@@ -44,6 +44,11 @@ export async function sendAdminNewRegistrationEmail(input: {
   const adminEmail = process.env.ADMIN_EMAIL?.trim() || "petrica@redi-ngo.eu";
   const reviewUrl = `${appBaseUrl()}/ro/admin/dashboard/accounts`;
 
+  // Don't email the admin about their own bootstrap signup.
+  if (input.applicantEmail.trim().toLowerCase() === adminEmail.toLowerCase()) {
+    return null;
+  }
+
   return sendEmail({
     to: adminEmail,
     subject: `Cont nou de aprobat: ${input.displayName}`,
@@ -57,6 +62,32 @@ export async function sendAdminNewRegistrationEmail(input: {
       </div>
     `,
     tags: [{ name: "purpose", value: "staff_admin_notify" }],
+  });
+}
+
+/** Lets the applicant know their verified account is waiting on admin approval. */
+export async function sendPendingApprovalEmail(input: {
+  to: string;
+  displayName: string;
+}): Promise<{ id: string } | null> {
+  const loginUrl = `${appBaseUrl()}/ro/auth/login`;
+  return sendEmail({
+    to: input.to,
+    subject: "Contul tău așteaptă aprobarea administratorului — Redi Health",
+    text: `Salut ${input.displayName},\n\nEmailul tău este verificat. Un administrator trebuie să aprobe contul înainte să poți intra în platformă.\n\nRevino la autentificare după aprobare:\n${loginUrl}\n`,
+    html: `
+      <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;padding:24px;color:#0A1220">
+        <h1 style="font-size:22px;margin:0 0 12px">Așteaptă aprobarea</h1>
+        <p style="line-height:1.55">Salut ${escapeHtml(input.displayName)},</p>
+        <p style="line-height:1.55">Emailul tău este verificat. Un administrator trebuie să aprobe contul înainte să poți intra în platformă.</p>
+        <p style="margin:28px 0">
+          <a href="${loginUrl}" style="display:inline-block;background:#0A1220;color:#fff;text-decoration:none;padding:14px 22px;border-radius:999px;font-weight:700">
+            Mergi la autentificare
+          </a>
+        </p>
+      </div>
+    `,
+    tags: [{ name: "purpose", value: "staff_pending_approval" }],
   });
 }
 

@@ -5,11 +5,14 @@ Self-service accounts for Redi Health staff (email or Google), with Resend verif
 ## Flow
 
 1. User opens `/auth/register` (or Continues with Google).
-2. **Email path:** account created as `pending_verification` → Resend sends verification link → `/auth/verify?token=…` → status becomes `pending_approval`.
-3. **Google path:** Supabase OAuth → `/[locale]/auth/callback` → `staff_accounts` upsert as `pending_approval` (email already verified by Google).
-4. Admin (`ADMIN_EMAIL`, typically `petrica@redi-ngo.eu`) signs into CMS → **Staff accounts** → `/admin/dashboard/accounts`.
-5. Admin **Approves** and assigns a role: `professor` | `mediator` | `nurse` | `doctor` | `manager` | `administrator`.
-6. User signs in at `/auth/login`. Approved field-capable roles receive a `field_session` and land in `/mediator`. Administrators matching `ADMIN_EMAIL` also receive the CMS session.
+2. **Email path:** account created as `pending_verification` → Resend sends verification link → `/auth/verify?token=…` → status becomes `pending_approval`. Applicant also gets a “waiting for approval” email; admin gets a review notify email.
+3. **Google path:** native OAuth (`/api/auth/google/*`) or Supabase callback → `staff_accounts` upsert as `pending_approval` (email already verified by Google). Same notify emails as above.
+4. **Bootstrap exception:** if the Google/email identity matches `ADMIN_EMAIL`, the account is auto-approved as `administrator` (no self-approval loop).
+5. Admin (`ADMIN_EMAIL`, typically `petrica@redi-ngo.eu`) signs into CMS → **Staff accounts** → `/admin/dashboard/accounts`.
+6. Admin **Approves** and assigns a role: `professor` | `mediator` | `nurse` | `doctor` | `manager` | `administrator`.
+7. User signs in at `/auth/login`. Approved field-capable roles receive a `field_session` and land in `/mediator`. Administrators matching `ADMIN_EMAIL` also receive the CMS session.
+
+Without `RESEND_API_KEY` + `RESEND_FROM_EMAIL`, verification and approval emails are silently skipped (health reports `email: unconfigured`).
 
 Pilot roster login (`FIELD_STAFF_ROSTER` at `/mediator/login`) remains available as a parallel path.
 

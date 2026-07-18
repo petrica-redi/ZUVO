@@ -15,6 +15,7 @@ import {
 import {
   sendAccountApprovedEmail,
   sendAdminNewRegistrationEmail,
+  sendPendingApprovalEmail,
   sendVerificationEmail,
 } from "@/lib/staff/emails";
 import {
@@ -38,6 +39,124 @@ async function maybeSetAdminCmsSession(email: string, role: StaffRole) {
   } catch {
     // Admin env not configured — skip CMS session.
   }
+}
+
+async function isBootstrapAdminEmail(email: string): Promise<boolean> {
+  try {
+    const adminEmail = (await getAdminLoginEmail()).toLowerCase();
+    return Boolean(adminEmail) && email.trim().toLowerCase() === adminEmail;
+  } catch {
+    return false;
+  }
+}
+
+async function activateApprovedStaff(row: {
+  id: string;
+  email: string;
+  displayName: string;
+  role: string | null;
+  workspaceId: string | null;
+  countyCode: string | null;
+}): Promise<{ status: "approved"; redirectTo: string }> {
+  if (!isStaffRole(row.role)) {
+    return { status: "approved", redirectTo: "/auth/pending" };
+  }
+
+  const db = getDb();
+  const workspaceId =
+    row.workspaceId || generateWorkspaceId(row.role, row.countyCode || "RO");
+
+  if (db) {
+    if (!row.workspaceId) {
+      await db
+        .update(staffAccounts)
+        .set({ workspaceId, updatedAt: new Date() })
+        .where(eq(staffAccounts.id, row.id));
+    }
+    await db
+      .update(staffAccounts)
+      .set({ lastLoginAt: new Date(), updatedAt: new Date() })
+      .where(eq(staffAccounts.id, row.id));
+  }
+
+  if (canAccessFieldWorkspace(row.role)) {
+    await setFieldSessionCookie({
+      email: row.email,
+      displayName: row.displayName,
+      role: staffRoleToFieldRole(row.role),
+      workspaceId,
+      countyCode: (row.countyCode || "").toUpperCase(),
+    });
+  }
+
+  await maybeSetAdminCmsSession(row.email, row.role);
+
+  if (row.role === "administrator") {
+    return { status: "approved", redirectTo: "/admin/dashboard" };
+  }
+  if (row.role === "professor") {
+    return { status: "approved", redirectTo: "/students" };
+  }
+  return { status: "approved", redirectTo: "/mediator" };
+}
+
+/** Site owner (ADMIN_EMAIL) skips the approval queue. */
+async function bootstrapApproveAdmin(input: {
+  id: string;
+  email: string;
+  displayName: string;
+}): Promise<{ status: "approved"; redirectTo: string } | null> {
+  if (!(await isBootstrapAdminEmail(input.email))) return null;
+  const db = getDb();
+  if (!db) return null;
+
+  const workspaceId = generateWorkspaceId("administrator", "RO");
+  const [updated] = await db
+    .update(staffAccounts)
+    .set({
+      status: "approved",
+      role: "administrator",
+      workspaceId,
+      countyCode: "RO",
+      approvedAt: new Date(),
+      approvedBy: "system-bootstrap",
+      rejectionReason: null,
+      emailVerifiedAt: new Date(),
+      verificationToken: null,
+      verificationExpiresAt: null,
+      updatedAt: new Date(),
+    })
+    .where(eq(staffAccounts.id, input.id))
+    .returning();
+
+  if (!updated) return null;
+
+  void auditLog({
+    userId: updated.id,
+    action: "staff.approved",
+    resourceType: "staff_account",
+    resourceId: updated.id,
+    metadata: { email: updated.email, bootstrap: true, role: "administrator" },
+  });
+
+  return activateApprovedStaff(updated);
+}
+
+async function notifyPendingApproval(input: {
+  email: string;
+  displayName: string;
+  provider: string;
+}) {
+  if (await isBootstrapAdminEmail(input.email)) return;
+  void sendAdminNewRegistrationEmail({
+    applicantEmail: input.email,
+    displayName: input.displayName,
+    provider: input.provider,
+  });
+  void sendPendingApprovalEmail({
+    to: input.email,
+    displayName: input.displayName,
+  });
 }
 
 const registerSchema = z.object({
@@ -162,6 +281,15 @@ export async function verifyStaffEmail(token: string): Promise<{
   }
 
   if (row.status === "pending_verification") {
+    const bootstrapped = await bootstrapApproveAdmin({
+      id: row.id,
+      email: row.email,
+      displayName: row.displayName,
+    });
+    if (bootstrapped) {
+      return { success: true };
+    }
+
     await db
       .update(staffAccounts)
       .set({
@@ -173,8 +301,8 @@ export async function verifyStaffEmail(token: string): Promise<{
       })
       .where(eq(staffAccounts.id, row.id));
 
-    void sendAdminNewRegistrationEmail({
-      applicantEmail: row.email,
+    await notifyPendingApproval({
+      email: row.email,
       displayName: row.displayName,
       provider: row.authProvider,
     });
@@ -308,8 +436,15 @@ export async function upsertOAuthStaffAccount(input: {
       })
       .returning();
 
-    void sendAdminNewRegistrationEmail({
-      applicantEmail: email,
+    const bootstrapped = await bootstrapApproveAdmin({
+      id: created.id,
+      email: created.email,
+      displayName: created.displayName,
+    });
+    if (bootstrapped) return bootstrapped;
+
+    await notifyPendingApproval({
+      email,
       displayName: created.displayName,
       provider: input.provider,
     });
@@ -328,6 +463,18 @@ export async function upsertOAuthStaffAccount(input: {
     })
     .where(eq(staffAccounts.id, existing.id));
 
+  if (
+    existing.status === "pending_verification" ||
+    existing.status === "pending_approval"
+  ) {
+    const bootstrapped = await bootstrapApproveAdmin({
+      id: existing.id,
+      email: existing.email,
+      displayName: existing.displayName || input.displayName,
+    });
+    if (bootstrapped) return bootstrapped;
+  }
+
   if (existing.status === "pending_verification") {
     await db
       .update(staffAccounts)
@@ -338,8 +485,8 @@ export async function upsertOAuthStaffAccount(input: {
         updatedAt: new Date(),
       })
       .where(eq(staffAccounts.id, existing.id));
-    void sendAdminNewRegistrationEmail({
-      applicantEmail: email,
+    await notifyPendingApproval({
+      email,
       displayName: existing.displayName || input.displayName,
       provider: input.provider,
     });
@@ -354,39 +501,7 @@ export async function upsertOAuthStaffAccount(input: {
   }
 
   if (existing.status === "approved" && isStaffRole(existing.role)) {
-    const workspaceId =
-      existing.workspaceId ||
-      generateWorkspaceId(existing.role, existing.countyCode || "RO");
-    if (!existing.workspaceId) {
-      await db
-        .update(staffAccounts)
-        .set({ workspaceId, updatedAt: new Date() })
-        .where(eq(staffAccounts.id, existing.id));
-    }
-    await db
-      .update(staffAccounts)
-      .set({ lastLoginAt: new Date(), updatedAt: new Date() })
-      .where(eq(staffAccounts.id, existing.id));
-
-    if (canAccessFieldWorkspace(existing.role)) {
-      await setFieldSessionCookie({
-        email: existing.email,
-        displayName: existing.displayName,
-        role: staffRoleToFieldRole(existing.role),
-        workspaceId,
-        countyCode: (existing.countyCode || "").toUpperCase(),
-      });
-    }
-
-    await maybeSetAdminCmsSession(existing.email, existing.role);
-
-    if (existing.role === "administrator") {
-      return { status: "approved", redirectTo: "/admin/dashboard" };
-    }
-    if (existing.role === "professor") {
-      return { status: "approved", redirectTo: "/students" };
-    }
-    return { status: "approved", redirectTo: "/mediator" };
+    return activateApprovedStaff(existing);
   }
 
   return { status: "pending_approval", redirectTo: "/auth/pending" };
