@@ -1,5 +1,5 @@
 /**
- * Redi Health mark — Adriatic seal with care pulse (matches header logo).
+ * Redi Health mark — soft squircle with a clean heart (matches header logo).
  */
 export function RomaHealthMark({ className = "h-12 w-12" }: { className?: string }) {
   return (
@@ -11,21 +11,19 @@ export function RomaHealthMark({ className = "h-12 w-12" }: { className?: string
       aria-hidden
     >
       <defs>
-        <linearGradient id="roma-mark-bg" x1="8" y1="6" x2="40" y2="42" gradientUnits="userSpaceOnUse">
+        <linearGradient id="roma-mark-bg" x1="8" y1="4" x2="40" y2="44" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#2BC4A8" />
-          <stop offset="48%" stopColor="#0E8074" />
-          <stop offset="100%" stopColor="#063D3A" />
+          <stop offset="52%" stopColor="#0E8074" />
+          <stop offset="100%" stopColor="#084A44" />
         </linearGradient>
       </defs>
-      <circle cx="24" cy="24" r="22.5" fill="url(#roma-mark-bg)" />
-      <circle cx="24" cy="24" r="21.5" stroke="rgba(255,255,255,0.28)" strokeWidth="1.5" />
       <path
-        d="M10.5 25.5h6.5l2.8-7.8 4.2 15.5 3.2-7.7H37.5"
-        stroke="#FFFFFF"
-        strokeWidth="2.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
+        d="M24 2C9 2 2 9 2 24S9 46 24 46 46 39 46 24 39 2 24 2Z"
+        fill="url(#roma-mark-bg)"
+      />
+      <path
+        d="M24 35.4c-.6 0-1.2-.22-1.68-.64C16.44 29.7 12.6 26.4 12.6 21.6c0-3.43 2.64-6.19 6-6.19 2.06 0 4.03 1.03 5.4 2.71 1.37-1.68 3.34-2.71 5.4-2.71 3.36 0 6 2.76 6 6.19 0 4.8-3.84 8.1-9.72 13.16-.48.42-1.08.64-1.68.64Z"
+        fill="#FFFFFF"
       />
     </svg>
   );

@@ -1,12 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Redi Health">
   <defs>
-    <linearGradient id="bg" x1="28" y1="20" x2="164" y2="172" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="28" y1="14" x2="160" y2="178" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#2BC4A8"/>
-      <stop offset="48%" stop-color="#0E8074"/>
-      <stop offset="100%" stop-color="#063D3A"/>
+      <stop offset="52%" stop-color="#0E8074"/>
+      <stop offset="100%" stop-color="#084A44"/>
     </linearGradient>
   </defs>
-  <circle cx="96" cy="96" r="91" fill="url(#bg)"/>
-  <circle cx="96" cy="96" r="87.5" stroke="rgba(255,255,255,0.28)" stroke-width="6"/>
-  <path d="M42 102h26l11-30 17 60 13-30h41" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M96 8C36 8 8 36 8 96s28 88 88 88 88-28 88-88S156 8 96 8Z" fill="url(#bg)"/>
+  <path d="M96 142c-2.4 0-4.8-.9-6.7-2.6C65.7 118.8 50 105 50 85.7c0-13.7 10.6-24.8 24-24.8 8.3 0 16.1 4.1 21.6 10.9C101.1 65 108.9 60.9 117.2 60.9c13.4 0 24 11.1 24 24.8 0 19.3-15.7 33.1-39.3 53.7-1.9 1.7-4.3 2.6-6.7 2.6Z" fill="#FFFFFF"/>
 </svg>

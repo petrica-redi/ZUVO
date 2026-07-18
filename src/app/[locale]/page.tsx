@@ -106,10 +106,11 @@ export default async function HomePage({ params }: Props) {
 
                 <h1
                   id="hero-headline"
-                  className="mt-8 max-w-2xl font-headline text-white/95 animate-brand-rise"
+                  className="mt-8 max-w-2xl font-headline text-white animate-brand-rise"
                   style={{
                     fontSize: "clamp(1.55rem, 1.15rem + 1.6vw, 2.35rem)",
                     animationDelay: "120ms",
+                    textShadow: "0 2px 18px rgba(4,22,20,0.4)",
                   }}
                 >
                   {heroTitle ? (
@@ -123,8 +124,8 @@ export default async function HomePage({ params }: Props) {
                 </h1>
 
                 <p
-                  className="mt-4 max-w-xl text-[15px] leading-relaxed text-white/78 md:text-lg animate-brand-rise"
-                  style={{ animationDelay: "220ms" }}
+                  className="mt-4 max-w-xl text-[15px] font-medium leading-relaxed text-white/90 md:text-lg animate-brand-rise"
+                  style={{ animationDelay: "220ms", textShadow: "0 1px 12px rgba(4,22,20,0.35)" }}
                 >
                   {heroSubtitle || t("heroLeadShort")}
                 </p>
@@ -288,7 +289,7 @@ export default async function HomePage({ params }: Props) {
         />
 
         {/* ===== TRUST STRIP ====================================== */}
-        <section className="border-y border-[var(--color-border-subtle)] bg-[var(--color-cream-50)] py-7 md:py-10">
+        <section className="border-y border-[var(--color-border-subtle)] bg-[var(--color-surface-subtle)] py-7 md:py-10">
           <div className="mx-auto max-w-6xl px-5 md:px-8">
             <p className="text-center text-[11px] font-extrabold uppercase tracking-[0.22em] text-[var(--color-text-muted)]">
               {t("trustEyebrow")}
@@ -452,7 +453,7 @@ export default async function HomePage({ params }: Props) {
                 </Link>
               </div>
 
-              <div className="rounded-3xl border border-[var(--color-border-subtle)] bg-[var(--color-cream-50)] p-7 md:p-10">
+              <div className="rounded-3xl border border-[var(--color-border-subtle)] bg-[var(--color-surface-subtle)] p-7 md:p-10">
                 <p className="eyebrow">{t("methodologyEyebrow")}</p>
                 <h2
                   className="font-headline mt-3 leading-[1.05] text-[var(--color-ink-900)]"
@@ -638,10 +639,10 @@ const AUDIENCE_THEMES = {
     chip: "bg-[var(--color-sage-100)] text-[var(--color-sage-800)]",
   },
   ember: {
-    bg: "bg-[var(--color-ember-50)]",
-    border: "border-[var(--color-ember-200)]",
-    icon: "text-[var(--color-ember-700)] bg-white",
-    chip: "bg-[var(--color-ember-100)] text-[var(--color-ember-800)]",
+    bg: "bg-[var(--color-neutral-50)]",
+    border: "border-[var(--color-neutral-200)]",
+    icon: "text-[var(--color-ink-800)] bg-white",
+    chip: "bg-[var(--color-neutral-100)] text-[var(--color-ink-800)]",
   },
 } as const;
 
@@ -798,10 +799,10 @@ const TILE_THEMES = {
     primaryBg: "bg-[var(--color-sage-50)]",
   },
   ember: {
-    iconBg: "bg-[var(--color-ember-100)]",
-    iconText: "text-[var(--color-ember-700)]",
-    ring: "hover:border-[var(--color-ember-400)]",
-    primaryBg: "bg-[var(--color-ember-50)]",
+    iconBg: "bg-[var(--color-neutral-100)]",
+    iconText: "text-[var(--color-ink-800)]",
+    ring: "hover:border-[var(--color-neutral-300)]",
+    primaryBg: "bg-[var(--color-neutral-50)]",
   },
 } as const;
 

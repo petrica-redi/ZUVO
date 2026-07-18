@@ -16,7 +16,7 @@ const ACCENTS: Record<
   }
 > = {
   brand: {
-    bg: "from-[var(--color-brand-50)] via-[var(--color-cream-50,#F7F4EE)] to-white",
+    bg: "from-[var(--color-brand-50)] via-white to-[var(--color-brand-50)]",
     dot: "var(--color-brand-600)",
     iconBg: "from-[var(--color-ink-900)] to-[var(--color-brand-700)]",
     iconText: "text-white",

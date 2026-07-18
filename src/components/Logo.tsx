@@ -13,11 +13,18 @@ type Props = {
 };
 
 /**
- * Redi Health mark — Adriatic seal with a clear pulse + care node.
+ * Redi Health mark — soft squircle with a clean heart-plus (care + medical).
  */
 export function Logo({ size = 36, className, inverted = false }: Props) {
   const uid = useId().replace(/:/g, "");
-  const gradId = `redi-seal-${uid}`;
+  const gradId = `redi-mark-${uid}`;
+
+  // Rounded-square (squircle) path on a 40×40 canvas.
+  const squircle =
+    "M20 1.5C7.5 1.5 1.5 7.5 1.5 20S7.5 38.5 20 38.5 38.5 32.5 38.5 20 32.5 1.5 20 1.5Z";
+  // Heart-plus glyph: a heart silhouette with a subtle cross cut suggestion.
+  const heart =
+    "M20 29.5c-.5 0-1-.18-1.4-.53-4.9-4.24-8.1-7.03-8.1-11.06 0-2.86 2.2-5.16 5-5.16 1.72 0 3.36.86 4.5 2.26 1.14-1.4 2.78-2.26 4.5-2.26 2.8 0 5 2.3 5 5.16 0 4.03-3.2 6.82-8.1 11.06-.4.35-.9.53-1.4.53Z";
 
   if (inverted) {
     return (
@@ -30,24 +37,9 @@ export function Logo({ size = 36, className, inverted = false }: Props) {
         aria-label={BRAND_MARK()}
         className={className}
       >
-        <circle cx="20" cy="20" r="19" fill="currentColor" fillOpacity="0.16" />
-        <circle
-          cx="20"
-          cy="20"
-          r="18.25"
-          stroke="currentColor"
-          strokeOpacity="0.4"
-          strokeWidth="1.5"
-        />
-        {/* ECG-style care pulse */}
-        <path
-          d="M9 21h5.2l2.2-6.2 3.4 12.4 2.6-6.2H31"
-          stroke="currentColor"
-          strokeWidth="2.3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        />
+        <path d={squircle} fill="currentColor" fillOpacity="0.16" />
+        <path d={squircle} stroke="currentColor" strokeOpacity="0.4" strokeWidth="1.4" />
+        <path d={heart} fill="currentColor" />
       </svg>
     );
   }
@@ -63,24 +55,16 @@ export function Logo({ size = 36, className, inverted = false }: Props) {
       className={className}
     >
       <defs>
-        <linearGradient id={gradId} x1="6" y1="4" x2="34" y2="36" gradientUnits="userSpaceOnUse">
+        <linearGradient id={gradId} x1="6" y1="3" x2="33" y2="37" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#2BC4A8" />
-          <stop offset="48%" stopColor="#0E8074" />
-          <stop offset="100%" stopColor="#063D3A" />
+          <stop offset="52%" stopColor="#0E8074" />
+          <stop offset="100%" stopColor="#084A44" />
         </linearGradient>
       </defs>
 
-      <circle cx="20" cy="20" r="19" fill={`url(#${gradId})`} />
-      <circle cx="20" cy="20" r="18.25" stroke="rgba(255,255,255,0.28)" strokeWidth="1.5" />
-
-      <path
-        d="M9 21h5.2l2.2-6.2 3.4 12.4 2.6-6.2H31"
-        stroke="#FFFFFF"
-        strokeWidth="2.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
+      <path d={squircle} fill={`url(#${gradId})`} />
+      <path d={squircle} stroke="rgba(255,255,255,0.22)" strokeWidth="1.2" />
+      <path d={heart} fill="#FFFFFF" />
     </svg>
   );
 }
