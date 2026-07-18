@@ -54,6 +54,8 @@ function decodePayload(encoded: string): FieldSessionPayload | null {
       role?: string;
       workspaceId?: string;
       countyCode?: string;
+      countryCode?: string;
+      staffRole?: string;
       exp?: number;
       nonce?: string;
     };
@@ -75,6 +77,8 @@ function decodePayload(encoded: string): FieldSessionPayload | null {
       role: raw.role as FieldRole,
       workspaceId: raw.workspaceId,
       countyCode: raw.countyCode ?? "",
+      countryCode: raw.countryCode === "IT" || raw.countryCode === "RO" ? raw.countryCode : undefined,
+      staffRole: raw.staffRole,
       exp: Number(raw.exp),
       nonce: raw.nonce,
     };
@@ -89,6 +93,8 @@ export function createFieldSessionToken(input: {
   role: FieldRole;
   workspaceId: string;
   countyCode: string;
+  countryCode?: "RO" | "IT";
+  staffRole?: string;
 }): string {
   const exp = Date.now() + SESSION_MAX_AGE_MS;
   const nonce = randomBytes(8).toString("base64url");
@@ -118,6 +124,8 @@ export async function setFieldSessionCookie(input: {
   role: FieldRole;
   workspaceId: string;
   countyCode: string;
+  countryCode?: "RO" | "IT";
+  staffRole?: string;
 }) {
   const cookieStore = await cookies();
   cookieStore.set(SESSION_COOKIE, createFieldSessionToken(input), {

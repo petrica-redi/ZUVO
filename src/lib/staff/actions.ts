@@ -4,7 +4,7 @@ import { eq, desc } from "drizzle-orm";
 import { z } from "zod";
 import { redirect } from "next/navigation";
 import { getDb } from "@/db/client";
-import { staffAccounts } from "@/db/schema";
+import { staffAccounts, staffInvites } from "@/db/schema";
 import { verifyAdmin, getAdminLoginEmail } from "@/lib/admin/actions";
 import {
   generateVerificationToken,
@@ -57,14 +57,23 @@ async function activateApprovedStaff(row: {
   role: string | null;
   workspaceId: string | null;
   countyCode: string | null;
+  countryCode?: string | null;
+  regionCode?: string | null;
 }): Promise<{ status: "approved"; redirectTo: string }> {
   if (!isStaffRole(row.role)) {
     return { status: "approved", redirectTo: "/auth/pending" };
   }
 
   const db = getDb();
+  const region = (row.regionCode || row.countyCode || "").toUpperCase();
+  const country =
+    row.countryCode === "IT" || row.countryCode === "RO"
+      ? row.countryCode
+      : region && ["LAZ", "CAM", "LOM", "PIE", "VEN", "EMR", "TOS", "PUG", "SIC", "SAR"].includes(region)
+        ? "IT"
+        : "RO";
   const workspaceId =
-    row.workspaceId || generateWorkspaceId(row.role, row.countyCode || "RO");
+    row.workspaceId || generateWorkspaceId(row.role, region || country);
 
   if (db) {
     if (!row.workspaceId) {
@@ -85,7 +94,9 @@ async function activateApprovedStaff(row: {
       displayName: row.displayName,
       role: staffRoleToFieldRole(row.role),
       workspaceId,
-      countyCode: (row.countyCode || "").toUpperCase(),
+      countyCode: region,
+      countryCode: country,
+      staffRole: row.role,
     });
   }
 
@@ -164,6 +175,7 @@ const registerSchema = z.object({
   password: z.string().min(8).max(200),
   displayName: z.string().trim().min(2).max(120),
   locale: z.string().trim().max(8).optional(),
+  inviteToken: z.string().trim().max(120).optional(),
 });
 
 const loginSchema = z.object({
@@ -188,6 +200,7 @@ export async function registerStaffAccount(data: FormData): Promise<{
     password: String(data.get("password") ?? ""),
     displayName: String(data.get("displayName") ?? ""),
     locale: String(data.get("locale") ?? "ro"),
+    inviteToken: String(data.get("inviteToken") ?? "") || undefined,
   });
   if (!parsed.success) {
     return { success: false, error: "Completează corect numele, emailul și o parolă de minim 8 caractere." };
@@ -207,6 +220,15 @@ export async function registerStaffAccount(data: FormData): Promise<{
     };
   }
 
+  let invite: Awaited<ReturnType<typeof import("@/lib/staff/invite").getInviteByToken>> = null;
+  if (parsed.data.inviteToken) {
+    const { getInviteByToken } = await import("@/lib/staff/invite");
+    invite = await getInviteByToken(parsed.data.inviteToken);
+    if (invite && invite.email.toLowerCase() !== email) {
+      return { success: false, error: "Invitația este pentru un alt email." };
+    }
+  }
+
   const token = generateVerificationToken();
   const expires = new Date(Date.now() + 48 * 60 * 60 * 1000);
 
@@ -215,14 +237,34 @@ export async function registerStaffAccount(data: FormData): Promise<{
     .values({
       email,
       passwordHash: hashPassword(parsed.data.password),
-      displayName: parsed.data.displayName,
+      displayName: parsed.data.displayName || invite?.displayName || email,
       authProvider: "email",
       status: "pending_verification",
       verificationToken: token,
       verificationExpiresAt: expires,
+      organisationId: invite?.organisationId ?? null,
+      countryCode: invite?.countryCode === "IT" ? "IT" : "RO",
+      regionCode: invite?.regionCode ?? null,
+      countyCode: invite?.regionCode ?? null,
+      role: invite && isStaffRole(invite.role) ? invite.role : null,
+      invitedBy: invite?.invitedBy ?? null,
       updatedAt: new Date(),
     })
     .returning({ id: staffAccounts.id });
+
+  if (invite) {
+    await db
+      .update(staffInvites)
+      .set({ acceptedAt: new Date() })
+      .where(eq(staffInvites.id, invite.id));
+    void auditLog({
+      userId: row?.id ?? email,
+      action: "staff.invite_accepted",
+      resourceType: "staff_invite",
+      resourceId: invite.id,
+      metadata: { email, role: invite.role },
+    });
+  }
 
   const sent = await sendVerificationEmail({
     to: email,
@@ -554,8 +596,11 @@ export async function listStaffAccounts(): Promise<StaffAccountRow[]> {
 const approveSchema = z.object({
   id: z.string().uuid(),
   role: z.enum(STAFF_ROLES),
-  countyCode: z.string().trim().max(8).optional(),
+  countyCode: z.string().trim().max(12).optional(),
+  countryCode: z.enum(["RO", "IT"]).optional(),
+  regionCode: z.string().trim().max(12).optional(),
   workspaceId: z.string().trim().max(80).optional(),
+  canApprove: z.boolean().optional(),
 });
 
 export async function approveStaffAccount(data: FormData): Promise<{
@@ -570,23 +615,37 @@ export async function approveStaffAccount(data: FormData): Promise<{
     id: String(data.get("id") ?? ""),
     role: String(data.get("role") ?? ""),
     countyCode: String(data.get("countyCode") ?? "") || undefined,
+    countryCode: String(data.get("countryCode") ?? "") || undefined,
+    regionCode: String(data.get("regionCode") ?? "") || undefined,
     workspaceId: String(data.get("workspaceId") ?? "") || undefined,
+    canApprove: String(data.get("canApprove") ?? "") === "true",
   });
   if (!parsed.success) {
     return { success: false, error: "Selectează un rol valid." };
   }
 
   const adminEmail = await getAdminLoginEmail();
+  const region =
+    parsed.data.regionCode?.toUpperCase() ||
+    parsed.data.countyCode?.toUpperCase() ||
+    "RO";
+  const country = parsed.data.countryCode || (region.length === 3 ? "IT" : "RO");
   const workspaceId =
-    parsed.data.workspaceId ||
-    generateWorkspaceId(parsed.data.role, parsed.data.countyCode || "RO");
+    parsed.data.workspaceId || generateWorkspaceId(parsed.data.role, region);
+  const canApprove =
+    parsed.data.canApprove ||
+    parsed.data.role === "manager" ||
+    parsed.data.role === "administrator";
 
   const [updated] = await db
     .update(staffAccounts)
     .set({
       status: "approved",
       role: parsed.data.role,
-      countyCode: parsed.data.countyCode?.toUpperCase() || null,
+      countyCode: region,
+      regionCode: region,
+      countryCode: country,
+      canApprove,
       workspaceId,
       approvedAt: new Date(),
       approvedBy: adminEmail || "admin",

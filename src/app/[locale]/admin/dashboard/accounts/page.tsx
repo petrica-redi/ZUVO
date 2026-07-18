@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { redirect } from "next/navigation";
 import { Link } from "@/navigation";
 import { AccountApprovalPanel } from "@/components/admin/AccountApprovalPanel";
+import { BulkInvitePanel } from "@/components/admin/BulkInvitePanel";
 import { isAdminAuthenticated } from "@/lib/admin/actions";
 
 export default async function AdminAccountsPage({
@@ -40,6 +41,8 @@ export default async function AdminAccountsPage({
             ← Dashboard
           </Link>
         </div>
+
+        <BulkInvitePanel />
 
         <AccountApprovalPanel
           labels={{

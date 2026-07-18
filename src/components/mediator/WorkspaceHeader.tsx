@@ -1,8 +1,10 @@
 "use client";
 
 import { Cloud, CloudOff, RefreshCw } from "lucide-react";
-import { ROMANIA_ECI_COUNTIES } from "@/data/romania-eci-contacts";
+import { useTranslations } from "next-intl";
 import type { SyncStatus } from "@/lib/mediator/workspace-client";
+import type { FieldCountry } from "@/lib/field/geography";
+import { regionsForCountry } from "@/lib/field/geography";
 import type { MediatorLabels } from "./labels";
 
 const SYNC_LABEL: Record<SyncStatus, keyof MediatorLabels> = {
@@ -15,16 +17,22 @@ const SYNC_LABEL: Record<SyncStatus, keyof MediatorLabels> = {
 
 export function WorkspaceHeader({
   labels,
-  countyCode,
-  onChangeCounty,
+  countryCode,
+  regionCode,
+  onChangeCountry,
+  onChangeRegion,
   syncStatus,
 }: {
   labels: MediatorLabels;
-  countyCode: string;
-  onChangeCounty: (code: string) => void;
+  countryCode: FieldCountry;
+  regionCode: string;
+  onChangeCountry: (code: FieldCountry) => void;
+  onChangeRegion: (code: string) => void;
   syncStatus: SyncStatus;
 }) {
+  const t = useTranslations("fieldOs");
   const labelKey = SYNC_LABEL[syncStatus];
+  const regions = regionsForCountry(countryCode);
   const tone =
     syncStatus === "synced"
       ? "bg-[var(--color-success-bg)] text-[var(--color-success-text)]"
@@ -41,17 +49,31 @@ export function WorkspaceHeader({
 
   return (
     <div className="mb-5 flex flex-wrap items-end gap-3">
-      <label className="flex min-w-[200px] flex-1 flex-col gap-1 text-xs font-bold text-[var(--color-text-secondary)]">
-        {labels.countyLabel}
+      <label className="flex min-w-[120px] flex-col gap-1 text-xs font-bold text-[var(--color-text-secondary)]">
+        {t("countryLabel")}
         <select
-          value={countyCode}
-          onChange={(e) => onChangeCounty(e.target.value)}
+          value={countryCode}
+          onChange={(e) => onChangeCountry(e.target.value as FieldCountry)}
+          className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] p-2.5 text-sm font-semibold text-[var(--color-text-primary)]"
+        >
+          <option value="RO">{t("countryRO")}</option>
+          <option value="IT">{t("countryIT")}</option>
+        </select>
+      </label>
+
+      <label className="flex min-w-[200px] flex-1 flex-col gap-1 text-xs font-bold text-[var(--color-text-secondary)]">
+        {countryCode === "IT" ? t("regionLabelIT") : labels.countyLabel}
+        <select
+          value={regionCode}
+          onChange={(e) => onChangeRegion(e.target.value)}
           className="rounded-xl border border-[var(--color-border-default)] bg-[var(--color-surface)] p-2.5 text-sm font-semibold text-[var(--color-text-primary)] backdrop-blur-md"
         >
-          <option value="">{labels.countyPlaceholder}</option>
-          {ROMANIA_ECI_COUNTIES.map((c) => (
-            <option key={c.code} value={c.code}>
-              {c.name}
+          <option value="">
+            {countryCode === "IT" ? t("regionPlaceholderIT") : labels.countyPlaceholder}
+          </option>
+          {regions.map((r) => (
+            <option key={r.code} value={r.code}>
+              {r.detail ? `${r.name} — ${r.detail}` : r.name}
             </option>
           ))}
         </select>

@@ -12,10 +12,16 @@ export function StaffRegisterForm({
   labels,
   googleEnabled = true,
   preferNativeGoogle = false,
+  inviteToken,
+  inviteEmail,
+  inviteName,
 }: {
   locale: string;
   googleEnabled?: boolean;
   preferNativeGoogle?: boolean;
+  inviteToken?: string;
+  inviteEmail?: string;
+  inviteName?: string;
   labels: {
     title: string;
     lead: string;
@@ -105,12 +111,17 @@ export function StaffRegisterForm({
         </p>
       </div>
 
+      {inviteToken ? (
+        <input type="hidden" name="inviteToken" value={inviteToken} />
+      ) : null}
+
       <label className="block text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
         {labels.name}
         <input
           name="displayName"
           required
           minLength={2}
+          defaultValue={inviteName ?? ""}
           className="mt-1.5 min-h-[48px] w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] px-3 text-sm"
         />
       </label>
@@ -121,6 +132,8 @@ export function StaffRegisterForm({
           type="email"
           required
           autoComplete="email"
+          defaultValue={inviteEmail ?? ""}
+          readOnly={Boolean(inviteEmail)}
           className="mt-1.5 min-h-[48px] w-full rounded-xl border border-[var(--color-border-default)] bg-[var(--color-bg-canvas)] px-3 text-sm"
         />
       </label>

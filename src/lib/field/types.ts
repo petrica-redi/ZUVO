@@ -24,7 +24,12 @@ export type FieldSessionPayload = {
   displayName: string;
   role: FieldRole;
   workspaceId: string;
+  /** RO județ or IT ASL region code. */
   countyCode: string;
+  /** Programme country — RO or IT. */
+  countryCode?: "RO" | "IT";
+  /** Original staff role when known (doctor, nurse, …). */
+  staffRole?: string;
   exp: number;
   nonce: string;
 };

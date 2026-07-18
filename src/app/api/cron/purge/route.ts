@@ -1,8 +1,8 @@
 /**
- * GET /api/cron/purge — GDPR hard-delete queue processor.
+ * GET /api/cron/purge — GDPR hard-delete + retention processor.
  *
- * Invoked daily by Vercel Cron. Removes audit_log rows marked for hard delete
- * older than 30 days. Requires CRON_SECRET via Authorization header.
+ * Invoked daily by Vercel Cron. Removes soft-deleted users older than 30 days
+ * and prunes audit_log rows older than 24 months (configurable).
  */
 import { NextRequest, NextResponse } from "next/server";
 import { and, eq, lt, sql } from "drizzle-orm";
@@ -43,9 +43,23 @@ export async function GET(req: NextRequest) {
     purged += 1;
   }
 
+  // Retention: drop non-critical audit rows older than 24 months.
+  const auditCutoff = new Date();
+  auditCutoff.setMonth(auditCutoff.getMonth() - 24);
+  const pruned = await db
+    .delete(auditLog)
+    .where(
+      and(
+        lt(auditLog.createdAt, auditCutoff),
+        sql`${auditLog.action} NOT IN ('user.deleted', 'staff.approved', 'operations.handover_consent_recorded')`,
+      ),
+    )
+    .returning({ id: auditLog.id });
+
   return NextResponse.json({
     success: true,
     purged,
+    auditPruned: pruned.length,
     checkedAt: new Date().toISOString(),
   });
 }

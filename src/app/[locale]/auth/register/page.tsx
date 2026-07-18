@@ -4,8 +4,12 @@ import { Header } from "@/components/Header";
 import { StaffRegisterForm } from "@/components/auth/StaffRegisterForm";
 import { isGoogleOAuthEnabled } from "@/lib/staff/google-oauth";
 import { isNativeGoogleOAuthConfigured } from "@/lib/staff/google-native";
+import { getInviteByToken } from "@/lib/staff/invite";
 
-type Props = { params: Promise<{ locale: string }> };
+type Props = {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ invite?: string }>;
+};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -13,12 +17,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: t("registerMetaTitle"), description: t("registerLead") };
 }
 
-export default async function RegisterPage({ params }: Props) {
+export default async function RegisterPage({ params, searchParams }: Props) {
   const { locale } = await params;
+  const { invite: inviteToken } = await searchParams;
   const t = await getTranslations({ locale, namespace: "staffAuth" });
-  const [supabaseGoogle, nativeGoogle] = await Promise.all([
+  const [supabaseGoogle, nativeGoogle, invite] = await Promise.all([
     isGoogleOAuthEnabled(),
     Promise.resolve(isNativeGoogleOAuthConfigured()),
+    inviteToken ? getInviteByToken(inviteToken) : Promise.resolve(null),
   ]);
   const googleEnabled = supabaseGoogle || nativeGoogle;
 
@@ -31,9 +37,12 @@ export default async function RegisterPage({ params }: Props) {
             locale={locale}
             googleEnabled={googleEnabled}
             preferNativeGoogle={nativeGoogle}
+            inviteToken={invite?.token}
+            inviteEmail={invite?.email}
+            inviteName={invite?.displayName}
             labels={{
-              title: t("registerTitle"),
-              lead: t("registerLead"),
+              title: invite ? t("registerInviteTitle") : t("registerTitle"),
+              lead: invite ? t("registerInviteLead") : t("registerLead"),
               name: t("displayName"),
               email: t("email"),
               password: t("password"),

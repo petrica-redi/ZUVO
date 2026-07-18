@@ -102,14 +102,49 @@ export async function sendAccountApprovedEmail(input: {
     subject: "Contul tău Redi Health a fost aprobat",
     text: `Salut ${input.displayName},\n\nContul tău a fost aprobat cu rolul: ${input.role}.\nAutentifică-te: ${loginUrl}\n`,
     html: `
-      <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;padding:24px;color:#0A1220">
+      <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;padding:24px;color:#1E1035">
         <h1 style="font-size:22px">Cont aprobat</h1>
         <p>Salut ${escapeHtml(input.displayName)},</p>
         <p>Contul tău a fost aprobat cu rolul <strong>${escapeHtml(input.role)}</strong>.</p>
-        <p><a href="${loginUrl}" style="display:inline-block;background:#0E8074;color:#fff;text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:700">Intră în platformă</a></p>
+        <p><a href="${loginUrl}" style="display:inline-block;background:#7C3AED;color:#fff;text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:700">Intră în platformă</a></p>
       </div>
     `,
     tags: [{ name: "purpose", value: "staff_approved" }],
+  });
+}
+
+export async function sendStaffInviteEmail(input: {
+  to: string;
+  displayName: string;
+  role: string;
+  token: string;
+  countryCode: string;
+  locale?: string;
+}): Promise<{ id: string } | null> {
+  const locale = input.locale || (input.countryCode === "IT" ? "it" : "ro");
+  const inviteUrl = `${appBaseUrl()}/${locale}/auth/register?invite=${encodeURIComponent(input.token)}`;
+  const name = input.displayName || input.to;
+  return sendEmail({
+    to: input.to,
+    subject:
+      input.countryCode === "IT"
+        ? "Invito Redi Health — mediatore / infermiere"
+        : "Invitație Redi Health — mediator / asistent medical",
+    text: `Salut ${name},\n\nAi fost invitat(ă) pe Redi Health cu rolul ${input.role}.\nCreează contul aici:\n${inviteUrl}\n\nLinkul expiră în 14 zile.\n`,
+    html: `
+      <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;padding:24px;color:#1E1035">
+        <h1 style="font-size:22px;margin:0 0 12px">Invitație Redi Health</h1>
+        <p style="line-height:1.55">Salut ${escapeHtml(name)},</p>
+        <p style="line-height:1.55">Ai fost invitat(ă) ca <strong>${escapeHtml(input.role)}</strong> pe platforma de mediere sanitară.</p>
+        <p style="margin:28px 0">
+          <a href="${inviteUrl}" style="display:inline-block;background:#7C3AED;color:#fff;text-decoration:none;padding:14px 22px;border-radius:999px;font-weight:700">
+            Creează contul
+          </a>
+        </p>
+        <p style="font-size:13px;color:#6B5A82;line-height:1.5">Linkul expiră în 14 zile.</p>
+      </div>
+    `,
+    tags: [{ name: "purpose", value: "staff_invite" }],
   });
 }
 

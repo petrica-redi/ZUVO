@@ -60,6 +60,8 @@ export default async function MediatorPage({ params }: Props) {
                       role: fieldSession.role,
                       workspaceId: fieldSession.workspaceId,
                       countyCode: fieldSession.countyCode,
+                      countryCode: fieldSession.countryCode,
+                      staffRole: fieldSession.staffRole,
                     }
                   : null
               }

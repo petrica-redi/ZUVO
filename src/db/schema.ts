@@ -849,6 +849,12 @@ export const staffAccounts = pgTable(
     role: text("role"),
     workspaceId: text("workspace_id"),
     countyCode: text("county_code"),
+    organisationId: uuid("organisation_id"),
+    countryCode: text("country_code").notNull().default("RO"),
+    regionCode: text("region_code"),
+    canApprove: boolean("can_approve").notNull().default(false),
+    onboardingCompletedAt: timestamp("onboarding_completed_at", { withTimezone: true }),
+    invitedBy: text("invited_by"),
     rejectionReason: text("rejection_reason"),
     approvedAt: timestamp("approved_at", { withTimezone: true }),
     approvedBy: text("approved_by"),
@@ -859,5 +865,29 @@ export const staffAccounts = pgTable(
   (t) => [
     index("idx_staff_accounts_status").on(t.status, t.createdAt),
     index("idx_staff_accounts_verification").on(t.verificationToken),
+    index("idx_staff_accounts_org").on(t.organisationId, t.status),
+  ],
+);
+
+/** Bulk / manager invites for field staff (nurses, mediators, doctors). */
+export const staffInvites = pgTable(
+  "staff_invites",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    email: text("email").notNull(),
+    displayName: text("display_name").notNull().default(""),
+    role: text("role").notNull().default("mediator"),
+    organisationId: uuid("organisation_id"),
+    countryCode: text("country_code").notNull().default("RO"),
+    regionCode: text("region_code"),
+    token: text("token").notNull().unique(),
+    invitedBy: text("invited_by").notNull(),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    acceptedAt: timestamp("accepted_at", { withTimezone: true }),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
+  },
+  (t) => [
+    index("idx_staff_invites_email").on(t.email),
+    index("idx_staff_invites_token").on(t.token),
   ],
 );

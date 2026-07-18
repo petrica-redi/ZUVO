@@ -55,7 +55,10 @@ export type AuditAction =
   | "staff.registered"
   | "staff.register_email_failed"
   | "staff.login"
-  | "staff.approved";
+  | "staff.approved"
+  | "staff.bulk_invite"
+  | "staff.invite_accepted"
+  | "field.case_opened_with_consent";
 
 export type AuditParams = {
   userId: string;

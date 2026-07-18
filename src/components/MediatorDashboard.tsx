@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { OperationalCasesTab } from "@/components/mediator/OperationalCasesTab";
 import { TasksTab } from "@/components/mediator/TasksTab";
@@ -14,8 +14,17 @@ import { useOperations } from "@/components/mediator/useOperations";
 import { WorkspaceHeader } from "@/components/mediator/WorkspaceHeader";
 import { WorkspaceTabs, type TabId } from "@/components/mediator/WorkspaceTabs";
 import { FieldSessionBanner } from "@/components/field/FieldSessionBanner";
+import { MyShiftHome } from "@/components/field/MyShiftHome";
+import { ConsentCaseWizard, type ConsentCaseDraft } from "@/components/field/ConsentCaseWizard";
+import { DoctorVisitPack } from "@/components/field/DoctorVisitPack";
 import { bindFieldWorkspace } from "@/lib/mediator/workspace-client";
 import type { FieldRole } from "@/lib/field/types";
+import {
+  inferCountryFromRegion,
+  regionLabel,
+  type FieldCountry,
+} from "@/lib/field/geography";
+import { auditClientEvent } from "@/lib/field/client-audit";
 
 function tabFromQuery(value: string | null): TabId {
   if (value === "cases" || value === "tasks" || value === "more" || value === "inbox") {
@@ -29,11 +38,12 @@ type FieldSessionProp = {
   role: FieldRole;
   workspaceId: string;
   countyCode: string;
+  countryCode?: FieldCountry;
+  staffRole?: string;
 };
 
 /**
- * Top-level orchestrator for `/mediator`. Opens on tools + workspace tabs —
- * no photographic hero. Purple glass field surface with persistent platform menu.
+ * Field OS orchestrator — My Shift first, consent-gated cases, RO/IT geography.
  */
 export function MediatorDashboard({
   labels,
@@ -45,6 +55,13 @@ export function MediatorDashboard({
   const searchParams = useSearchParams();
   const [tab, setTab] = useState<TabId>(() => tabFromQuery(searchParams.get("tab")));
   const [bound, setBound] = useState(!fieldSession);
+  const [consentOpen, setConsentOpen] = useState(false);
+  const [countryCode, setCountryCode] = useState<FieldCountry>(() => {
+    if (fieldSession?.countryCode) return fieldSession.countryCode;
+    if (fieldSession?.countyCode) return inferCountryFromRegion(fieldSession.countyCode);
+    return "RO";
+  });
+  const [regionCode, setRegionCode] = useState(fieldSession?.countyCode ?? "");
 
   useEffect(() => {
     setTab(tabFromQuery(searchParams.get("tab")));
@@ -67,8 +84,44 @@ export function MediatorDashboard({
     if (fieldSession?.countyCode && !workspace.countyCode) {
       workspace.update({ countyCode: fieldSession.countyCode });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- bind once when session present
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fieldSession?.countyCode, bound]);
+
+  const role = fieldSession?.role ?? "mediator";
+  const showDoctorPack =
+    fieldSession?.staffRole === "doctor" || role === "case_manager" || role === "supervisor";
+
+  const geoLabel = useMemo(
+    () => (regionCode ? regionLabel(countryCode, regionCode) : ""),
+    [countryCode, regionCode],
+  );
+
+  async function handleConsentCase(draft: ConsentCaseDraft) {
+    await operations.createCase({
+      beneficiaryPseudonym: draft.beneficiaryLabel,
+      countryCode,
+      municipalityCode: regionCode || undefined,
+      preferredLanguage: countryCode === "IT" ? "it" : "ro",
+      consentStatus: "granted",
+      source: "mediator_dashboard",
+      categorySlug:
+        draft.purpose === "literacy"
+          ? "medication_access"
+          : draft.purpose === "referral"
+            ? "gp_registration"
+            : "other",
+      mainProblem: draft.notes || draft.purpose,
+      urgency: "priority",
+      notes: draft.notes,
+      barriers: [],
+    });
+    auditClientEvent("field.case_opened_with_consent", {
+      purpose: draft.purpose,
+      country: countryCode,
+      region: regionCode,
+    });
+    setTab("cases");
+  }
 
   return (
     <div className="mediator-shell">
@@ -76,24 +129,23 @@ export function MediatorDashboard({
         <FieldSessionBanner
           displayName={fieldSession.displayName}
           role={fieldSession.role}
-          countyCode={fieldSession.countyCode}
+          countyCode={regionCode || fieldSession.countyCode}
           workspaceId={fieldSession.workspaceId}
         />
       ) : null}
 
       <MediatorCommandRail />
 
-      <header className="mb-4 animate-fade-in-up">
-        <h1 className="mediator-title font-headline text-[1.65rem] leading-[1.1] tracking-tight sm:text-[1.9rem]">
-          {labels.title}
-        </h1>
-        <p className="mt-1.5 max-w-2xl text-sm font-medium leading-relaxed text-[var(--color-text-secondary)]">
-          {labels.subtitle}
-        </p>
-        <p className="mt-2 text-xs font-semibold text-[var(--color-text-muted)]">
-          {labels.ecHint}
-        </p>
-      </header>
+      <MyShiftHome
+        role={role}
+        displayName={fieldSession?.displayName ?? labels.title}
+        countryCode={countryCode}
+        regionCode={regionCode}
+        urgentCount={operations.urgentCases.length}
+        tasksDue={operations.tasksDueToday.length + operations.overdueTasks.length}
+        onOpenTab={setTab}
+        onOpenConsentCase={() => setConsentOpen(true)}
+      />
 
       {(workspace.syncStatus === "offline" || workspace.syncStatus === "error") && (
         <div
@@ -106,10 +158,26 @@ export function MediatorDashboard({
 
       <WorkspaceHeader
         labels={labels}
-        countyCode={workspace.countyCode}
-        onChangeCounty={(code) => workspace.update({ countyCode: code })}
+        countryCode={countryCode}
+        regionCode={regionCode}
+        onChangeCountry={(code) => {
+          setCountryCode(code);
+          setRegionCode("");
+        }}
+        onChangeRegion={(code) => {
+          setRegionCode(code);
+          workspace.update({ countyCode: code });
+        }}
         syncStatus={workspace.syncStatus}
       />
+
+      {showDoctorPack ? (
+        <DoctorVisitPack
+          cases={operations.cases}
+          regionLabel={geoLabel}
+          countryCode={countryCode}
+        />
+      ) : null}
 
       <WorkspaceTabs labels={labels} tab={tab} onChange={setTab} />
 
@@ -160,7 +228,7 @@ export function MediatorDashboard({
       {tab === "more" && (
         <MediatorMoreTab
           labels={labels}
-          countyCode={workspace.countyCode}
+          countyCode={regionCode || workspace.countyCode}
           poidsCases={workspace.cases}
           visits={workspace.visits}
           sessions={workspace.sessions}
@@ -183,6 +251,12 @@ export function MediatorDashboard({
           }}
         />
       )}
+
+      <ConsentCaseWizard
+        open={consentOpen}
+        onClose={() => setConsentOpen(false)}
+        onConfirm={handleConsentCase}
+      />
     </div>
   );
 }
