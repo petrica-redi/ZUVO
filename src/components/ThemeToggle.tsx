@@ -19,19 +19,20 @@ function applyTheme(theme: Theme) {
 }
 
 function readStoredTheme(): Theme {
-  if (typeof window === "undefined") return "system";
+  if (typeof window === "undefined") return "dark";
   try {
     const v = localStorage.getItem(STORAGE_KEY);
     if (v === "light" || v === "dark" || v === "system") return v;
   } catch {
     /* ignore */
   }
-  return "system";
+  // Aurora navy is the brand default when no preference is stored.
+  return "dark";
 }
 
 export function ThemeToggle() {
   const t = useTranslations("theme");
-  const [theme, setTheme] = useState<Theme>("system");
+  const [theme, setTheme] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -46,8 +47,7 @@ export function ThemeToggle() {
     const next: Theme = theme === "light" ? "dark" : theme === "dark" ? "system" : "light";
     setTheme(next);
     try {
-      if (next === "system") localStorage.removeItem(STORAGE_KEY);
-      else localStorage.setItem(STORAGE_KEY, next);
+      localStorage.setItem(STORAGE_KEY, next);
     } catch {
       /* ignore */
     }
